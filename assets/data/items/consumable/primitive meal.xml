@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemConsumable name="primitive meal" weight="2" value="60">
+<description>An alien salad? at least you hope it's a salad. it looks like a salad at least so...bon apetit?</description>
+<effectrecover modifier="ENDURANCE" modstrength="0.2" modvalue="30" modifies="SATIATION">
+The flavours, the textures, such variety. You're not sure what you just experienced, but it might be an acquired taste. Certainly nutritious though.
+</effectrecover>
+</ItemConsumable>

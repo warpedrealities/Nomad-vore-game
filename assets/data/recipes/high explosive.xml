@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="high explosive" requiredskill="0" startunlocked="false">
+<description>
+A bomb, a very powerful bomb.
+</description>
+<ingredient item="volatile crystal" quantity="4"/>
+<ingredient item="scrap metal" quantity="4"/>
+<result item="high explosive"/>
+</recipe>

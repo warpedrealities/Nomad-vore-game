@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="goldL.png"/>
+<name>Laurisse</name>
+<description>Her Majesty Laurisse reclines upon aa sprawl of cushions. Her tall lizard demi form is clad in a vivid red kimono like robe of embroidered fine cloth and crowned with a slender golden band atop her head. The gleaming red covering all but her face and front of her torso are all immaculately clean and her dusky gold skin is smooth and unmarred. Even in such leisurely langour though she radiates a subtle aura of confidence and power, this is one used to command.</description>
+<rpg>
+<experiencevalue value="10"/>
+<ability ability="STRENGTH" value="8" />
+<ability ability="AGILITY" value="10" />
+<ability ability="DEXTERITY" value="10" />
+<ability ability="ENDURANCE" value="8" />
+<ability ability="CHARM" value="10" />
+<ability ability="INTELLIGENCE" value="10" />
+<stat stat="HEALTH" value="40"/>
+<stat stat="RESOLVE" value="40"/>
+<attribute attribute="KINETIC" value="2"/>
+<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<missText count="2">
+<text>the warrior's mace doesn't connect with TARGET</text>
+<text>the warrior attempts to pummel TARGET but the blow doesn't connect</text>
+</missText>
+<hitText count="2">
+<text>the warrior hits TARGET for VALUE points of damage</text>
+<text>the warrior hammers TARGET for VALUE points of damage</text>
+</hitText>
+</combatMove>
+<combatMove name="arrow" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4">
+<effectDamage type="KINETIC" minValue="1" maxValue="8" modifier="STRENGTH"/>
+<missText count="1">
+<text>the warrior looses a bolt at TARGET but it misses</text>
+</missText>
+<hitText count="1">
+<text>the warrior fires a bolt at TARGET for VALUE points of damage</text>
+</hitText>
+</combatMove>
+</rpg>
+
+<respawn delay="300"/>
+<disposition value="55"/>
+<defeated conversation="alpha_minoris_II/saurianqueen/defeat" />
+<seduced conversation="alpha_minoris_II/saurianqueen/seduced" />
+<victory conversation="alpha_minoris_II/saurianqueen/victory" />
+<seducer conversation="alpha_minoris_II/saurianqueen/victory" />
+<talk conversation="alpha_minoris_II/saurianqueen/chat" />
+<controller AI="staystill"/>
+<faction value="saurian"/>
+</NPC>

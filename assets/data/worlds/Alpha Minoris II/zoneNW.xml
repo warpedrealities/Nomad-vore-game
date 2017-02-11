@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="plains.png">
+<tileset count-x="4" count-y="4">
+<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="1" vision="0" movement="0"> dry alien grass </tile>
+<tile sprite="2" vision="1" movement="2"> tree</tile>
+<tile sprite="3" vision="1" movement="2"> rock</tile>
+<tile sprite="4" vision="0" movement="1"> water</tile>
+<tile sprite="5" vision="1" movement="2"> rock wall</tile>
+</tileset>
+<transition direction="east">zoneN</transition>
+<description>The wide open spaces of this plain provide little in the way of places to hide. But at least that means that anything wishing you ill won't be able to sneak up on you.</description>
+
+<mapgen>
+<randprefab width="5" height="6">
+<row>22222</row>
+<row>26262</row>
+<row>66266</row>
+<row>66266</row>
+<row>66666</row>
+<row>26662</row>
+<pairedportal sprite="3" destination="Cave zone" x="2" y="3" ID="11" facing="4">A cavern entrance</pairedportal>
+</randprefab>
+<perlin>
+<band low="-1.0" high="-0.7">
+
+<floodfill tile="2"/>	
+</band>
+
+<band low="-0.7" high="-0.05">
+<noise tile="2" scarcity="22"/>
+<floodfill tile="1"/>	
+</band>
+
+<band low="-0.05" high="0.0">
+
+<floodfill tile="4"/>	
+</band>
+<band low="0.0" high="0.7">
+<noise tile="2" scarcity="22"/>
+<floodfill tile="1"/>	
+</band>
+<band low="0.7" high="1.0">
+
+<floodfill tile="2"/>	
+</band>
+</perlin>
+<floodfill tile="1"/>	
+<SeedNPCs min="12" max="24" name="AlphaMinoris_II/arkosaur"/>
+<walloff wall="5" sides="northwestsouth"/>
+</mapgen>
+
+</zone>

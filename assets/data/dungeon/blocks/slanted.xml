@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<blocks>
+
+<block name="junction">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>11222222</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+</block>
+<block name="hall">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>11222222</row>
+<widget x="6" y="4" name="chest" info="normalchest"/>
+<widget x="4" y="3" name="machinery" info=""/>
+<widget x="4" y="5" name="machinery" info=""/>
+</block>
+<block name="horizontal">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>25222252</row>
+<row>00000000</row>
+<row>00000000</row>
+<row>00000000</row>
+<row>00000000</row>
+<row>00000000</row>
+</block>
+
+<block name="vertical">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11200000</row>
+<row>11400000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11400000</row>
+<row>11200000</row>
+</block>
+
+<block name="junctionROOM">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>11222222</row>
+<row>11211112</row>
+<row>11111112</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11222222</row>
+<widget x="5" y="3" name="chest" info="normalchest"/>
+<widget x="4" y="6" name="machinery" info=""/>
+<widget x="4" y="3" name="machinery" info=""/>
+</block>
+
+<block name="horizontalROOM">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>22221222</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22222222</row>
+<widget x="6" y="4" name="chest" info="normalchest"/>
+<widget x="4" y="4" name="machinery" info=""/>
+<widget x="2" y="4" name="machinery" info=""/>
+</block>
+
+<block name="verticalROOM">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11222222</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11111112</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11222222</row>
+<widget x="6" y="4" name="chest" info="normalchest"/>
+<widget x="4" y="5" name="machinery" info=""/>
+<widget x="4" y="3" name="machinery" info=""/>
+</block>
+
+<block name="horizontalTHRU">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11211211</row>
+<row>11211211</row>
+<row>21221212</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22222222</row>
+<widget x="6" y="6" name="chest" info="normalchest"/>
+<widget x="4" y="4" name="machinery" info=""/>
+<widget x="4" y="2" name="machinery" info=""/>
+</block>
+
+<block name="verticalTHRU">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11222222</row>
+<row>11111112</row>
+<row>22211112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22211112</row>
+<row>11111112</row>
+<row>11222222</row>
+<widget x="6" y="4" name="chest" info="normalchest"/>
+<widget x="4" y="4" name="machinery" info=""/>
+<widget x="4" y="2" name="machinery" info=""/>
+</block>
+
+<block name="horizontalU">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11122111</row>
+<row>11122111</row>
+<row>21122112</row>
+<row>21122112</row>
+<row>21122112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22222222</row>
+</block>
+
+<block name="verticalU">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11222222</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>22222112</row>
+<row>22222112</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>11222222</row>
+</block>
+
+<block name="horizontalUTrap">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11122111</row>
+<row>11122111</row>
+<row>21122112</row>
+<row>21122112</row>
+<row>21122112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22222222</row>
+<widget x="5" y="2" name="shockfloor" info=""/>
+</block>
+
+<block name="verticalUTrap">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11222222</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>22222112</row>
+<row>22222112</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>11222222</row>
+<widget x="6" y="2" name="shockfloor" info=""/>
+</block>
+<block name="horizontalTrap">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>22222222</row>
+<row>00000000</row>
+<row>00000000</row>
+<row>00000000</row>
+<row>00000000</row>
+<row>00000000</row>
+<widget x="4" y="1" name="shockfloor" info=""/>
+</block>
+
+<block name="verticalTrap">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11200000</row>
+<widget x="1" y="3" name="shockfloor" info=""/>
+</block>
+
+<block name="horizontalTHRUTrap">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11211211</row>
+<row>11211211</row>
+<row>21221212</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22222222</row>
+<widget x="6" y="6" name="chest" info="normalchest"/>
+<widget x="4" y="4" name="machinery" info=""/>
+<widget x="4" y="2" name="machinery" info=""/>
+<widget x="4" y="3" name="shockfloor" info=""/>
+</block>
+
+<block name="verticalTHRUTrap">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11222222</row>
+<row>11111112</row>
+<row>22211112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22211112</row>
+<row>11111112</row>
+<row>11222222</row>
+<widget x="6" y="4" name="chest" info="normalchest"/>
+<widget x="4" y="4" name="machinery" info=""/>
+<widget x="4" y="2" name="machinery" info=""/>
+<widget x="4" y="3" name="shockfloor" info=""/>
+</block>
+
+<block name="horizontalROOMTrap">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>22221222</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22222222</row>
+<widget x="6" y="4" name="chest" info="normalchest"/>
+<widget x="4" y="4" name="machinery" info=""/>
+<widget x="2" y="4" name="machinery" info=""/>
+<widget x="4" y="1" name="shockfloor" info=""/>
+</block>
+
+<block name="verticalROOMTrap">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11222222</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11111112</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11222222</row>
+<widget x="6" y="4" name="chest" info="normalchest"/>
+<widget x="4" y="5" name="machinery" info=""/>
+<widget x="4" y="3" name="machinery" info=""/>
+<widget x="1" y="3" name="shockfloor" info=""/>
+
+</block>
+
+<block name="horizontalCloset0">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>21222212</row>
+<row>21200212</row>
+<row>21200212</row>
+<row>21200212</row>
+<row>22200222</row>
+<row>00000000</row>
+<widget x="6" y="2" name="panelH" info="closet" variable="15"/>
+<widget x="1" y="2" name="panelH" info="closet" variable="15"/>
+<widget x="4" y="0" name="monstercloset" info=""/>
+<spawn x="6" y="3" tag="0"/>
+<spawn x="1" y="3" tag="0"/>
+</block>
+
+<block name="verticalCloset0">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11222220</row>
+<row>11111120</row>
+<row>11222220</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11222220</row>
+<row>11111120</row>
+<row>11222220</row>
+<widget x="2" y="6" name="panelV" info="closet" variable="15"/>
+<widget x="2" y="1" name="panelV" info="closet" variable="15"/>
+<widget x="0" y="4" name="monstercloset" info=""/>
+<spawn x="3" y="6" tag="0"/>
+<spawn x="3" y="1" tag="0"/>
+</block>
+
+<block name="horizontalCloset1">
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<row>11111111</row>
+<row>11111111</row>
+<row>21222212</row>
+<row>21200212</row>
+<row>21200212</row>
+<row>21200212</row>
+<row>22200222</row>
+<row>00000000</row>
+<widget x="6" y="2" name="panelH" info="closet" variable="15"/>
+<widget x="1" y="2" name="panelH" info="closet" variable="15"/>
+<widget x="4" y="1" name="monstercloset" info=""/>
+<spawn x="6" y="3" tag="0"/>
+<spawn x="1" y="3" tag="0"/>
+</block>
+
+<block name="verticalCloset1">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<edge value="WEST"/>
+<row>11222220</row>
+<row>11111120</row>
+<row>11222220</row>
+<row>11200000</row>
+<row>11200000</row>
+<row>11222220</row>
+<row>11111120</row>
+<row>11222220</row>
+<widget x="2" y="6" name="panelV" info="closet" variable="15"/>
+<widget x="2" y="1" name="panelV" info="closet" variable="15"/>
+<widget x="1" y="4" name="monstercloset" info=""/>
+<spawn x="3" y="6" tag="0"/>
+<spawn x="3" y="1" tag="0"/>
+</block>
+
+
+</blocks>

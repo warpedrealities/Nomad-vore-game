@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text> scene with this one not ready yet
+</text>
+<choice destination="devour0" text="eat her">
+<assertion evaluate="hasperk" perk="oralvore"/>
+</choice>
+<choice destination="end" text="leave her be"/>
+</page>
+
+<page ID="devour0">
+<text>
+not written yet
+</text>
+<effect type="feed" value="85"/>
+<special effect="removenpc"/>
+<choice destination="end" text="carry on"/>
+</page>
+
+</Conversation>

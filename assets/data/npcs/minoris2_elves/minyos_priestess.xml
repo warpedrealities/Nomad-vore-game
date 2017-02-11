@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="greenP.png"/>
+<name>Shanna</name>
+<description>Of all the elves this one is the most decorated, her green skin streaked with blue curving lines of body paint and she has enough jewelry on to make clinking noises when she moves. She's also got the religiously mandated funny hat on.</description>
+<rpg>
+<experiencevalue value="10"/>
+<ability ability="STRENGTH" value="8" />
+<ability ability="AGILITY" value="10" />
+<ability ability="DEXTERITY" value="10" />
+<ability ability="ENDURANCE" value="8" />
+<ability ability="CHARM" value="10" />
+<ability ability="INTELLIGENCE" value="10" />
+<stat stat="HEALTH" value="50"/>
+<stat stat="RESOLVE" value="50"/>
+<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
+<missText count="1">
+<text>the villager's punch fails to connect with TARGET</text>
+</missText>
+<hitText count="1">
+<text>the villager hits TARGET for VALUE points of damage</text>
+</hitText>
+</combatMove>
+</rpg>
+
+<respawn delay="1000"/>
+<disposition value="55"/>
+<defeated conversation="alpha_minoris_II/minyospriestess/defeat" />
+<seduced conversation="alpha_minoris_II/minyospriestess/seduced" />
+<victory conversation="alpha_minoris_II/minyospriestess/victory" />
+<seducer conversation="alpha_minoris_II/minyospriestess/victory" />
+<talk conversation="alpha_minoris_II/minyospriestess/chat" />
+<controller AI="staystill"/>
+<faction value="minyos"/>
+</NPC>

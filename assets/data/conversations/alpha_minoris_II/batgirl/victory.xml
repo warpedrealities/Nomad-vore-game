@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Conversation>
+<!--written by tirat-->
+<page ID="start">
+<preference fetish="absorption"/>
+<text>
+The batgirl grins as you flop on your butt in front of her. Seems like she just won the battle and got you for… fun? The girl winks and moves closer, wrapping her large wings around you and enveloping you in the feeling of private warmth and her body all around. Maybe she only wants to give you a big hug? And also show off her naked boobies.
+</text>
+<choice destination="absorb0" text="hugs arent dangerous"/>
+</page>
+
+<page ID="absorb0">
+<text>
+You chuckle and lean closer as well, cuddling the batgirl as much as her wings allow you. She coos and hugs you in return, this time really enveloping your form. Maybe only your feet are still visible underneath? Her body warmth feels so good! And the batgirl even grinds into your front, playfully squeezing you and gently rubbing with her soft wings. The closeness feels good! So very private, thanks to the wings ‘curtain’ 
+</text>
+<!--
+<choice destination="sex0" text="may as well screw her">
+<assertion evaluate="haspart" part="penis"/>
+</choice>
+-->
+<choice destination="willcheck" text="maybe not so safe"/>
+</page>
+
+<page ID="sex0">
+<text>
+
+
+</text>
+
+</page>
+
+<check ID="willcheck">
+<test what="WILLPOWER" DC="10"/>
+<outcome destination="escape"/>
+<outcome destination="absorb1"/>
+</check>
+
+<page ID="escape">
+<text>
+You relax for a moment, giving the batgirl a chance to share her body warmth and softness with you. But as the hug becomes really intimate, you find enough will to squirm and pull back realizing that this will probably end badly for you as nice as it is. Suddenly slipping free from the soft wings and shoving her away easily in her surprise. And with the hug broken, the batgirl frowns at you and even shows her tongue, then going to jump and disappear in the darkness above.
+</text>
+<special effect="removenpc"/>
+<effect type="heal" value="0.1"/>
+<choice destination="end" text="hopefully a good choice."/>
+</page>
+
+<page ID="absorb1">
+<text>
+This hug feels so very relaxing, you can probably just stay here and enjoy the batgirl’s company. But strangely your body starts feeling even warmer and softer, fuzzier. Needs fade away slowly as the batgirl pets you here and there. You notice how her flesh seems to welcome your own, fusing like molten wax. You find it hard to be alarmed by the wonderful sensation of flowing into her soft warmth.
+</text>
+<choice destination="absorb2" text="sink in"/>
+</page>
+
+<page ID="absorb2">
+<text>
+More and more as she churrs and snuggles you close with her wings you feel yourself diminishing. Your arms sinking into her, absorbing into her flanks as you seem to shrink down, head now level with that impressive cleavage. You find yourself letting out a moan as her breasts part around your face, and then you turn silent, merging into her.
+</text>
+<choice destination="absorbGO" text="absorbed"/>
+</page>
+
+<gameover ID="absorbGO">
+<text>
+The batgirl remains in one place for several minutes as you fade away, not moving much as the process continues. Your outlines slowly shrink and disappear beneath the curtain of her wings. Eventually leaving no visible bulges. Not long ago she'd drawn you behind that shroud. But minutes later those wings move apart and only revealing only a few tatters and remnants of your equipment and clothes. But what's perhaps a better indicator of her thorough snuggling skills are her nicely enlarged breasts, curvier rump and more padded middle. beyond these things not a trace of you remains, that was an impressive disappearing act.
+</text>
+</gameover>
+
+</Conversation>

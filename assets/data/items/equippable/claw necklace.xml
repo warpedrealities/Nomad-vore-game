@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ItemEquip name="claw necklace" weight="1" slot="ACCESSORY" value="250">
+<description>
+A necklace of raptor claws, gives one a ferocious and feral air. +1 to melee
+</description>
+<modifier>
+<melee value="1"/>
+
+</modifier>
+</ItemEquip>

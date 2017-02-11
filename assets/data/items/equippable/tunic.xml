@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="primitive tunic" weight="4" slot="BODY" value="100">
+<description>
+A medieval tunic. It's thick padding protects and conceals to equal degrees but being made of less sophisticated fabric it is somewhat flammable.  +2 kinetic defence, -1 thermal defence -1 seduction.
+</description>
+<modifier>
+<kinetic value="2"/>
+<seduction value="-1"/>
+<thermal value="-1"/>
+
+</modifier>
+</ItemEquip>

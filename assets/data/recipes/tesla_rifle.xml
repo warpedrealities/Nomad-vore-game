@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="Tesla rifle" requiredskill="1" startunlocked="false">
+<description>
+A sophisticated evolution of the principles of the zap gun that channels and focuses the power of the thunderstone for greater effectiveness.
+</description>
+<ingredient item="thunderstone" quantity="1"/>
+<ingredient item="scrap metal" quantity="6"/>
+<ingredient item="computation valve" quantity="2"/>
+<ingredient item="battery" quantity="4"/>
+<result item="tesla rifle"/>
+</recipe>

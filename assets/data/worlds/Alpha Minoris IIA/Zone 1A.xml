@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="defaultnew.png">
+<tileset count-x="4" count-y="8">
+<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="1" vision="0" movement="0"> dirt </tile>
+<tile sprite="5" vision="0" movement="0"> strange grass</tile>
+<tile sprite="13" vision="1" movement="2" smart="true"> a rock wall</tile>
+<tile sprite="10" vision="0" movement="2" > shrub</tile>
+<tile sprite="9" vision="0" movement="2" > boulder</tile>
+<tile sprite="6" vision="0" movement="2" > boulder</tile>
+<tile sprite="7" vision="0" movement="0" > grass</tile>
+<tile sprite="8" vision="0" movement="0" > grass</tile>
+<tile sprite="2" vision="0" movement="0" > dirt</tile>
+<tile sprite="3" vision="0" movement="0" > dirt</tile>
+</tileset>
+
+<description>the air smells strange and alien, the world unfamiliar and strewn with strange rocks. A mound of off colour stone rises nearby. You feel all the more a lack of belonging as you regard your surroundings.</description>
+<transition direction="east">Zone 2A</transition>
+<transition direction="south">Zone 1B</transition>
+<mapgen>
+<partition xmin="8" xmax="56" ymin="8" ymax="56">
+<randprefab width="5" height="5">
+<row>33333</row>
+<row>31213</row>
+<row>31113</row>
+<row>31113</row>
+<row>33333</row>
+<pairedportal x="2" y="1" sprite="1" ID="16" destination="escapepod" facing="4"> Escape pod hatch </pairedportal>
+<placeWidget x="0" y="0" name="SPRITE" width="5" height="5" file="escapepod"/>
+</randprefab>
+
+<randprefab width="5" height="6">
+<row>32223</row>
+<row>24242</row>
+<row>44244</row>
+<row>44244</row>
+<row>44444</row>
+<row>24442</row>
+<pairedportal sprite="3" destination="Cave zone" x="2" y="3" ID="11" facing="4">A cavern entrance</pairedportal>
+<placeWidget x="2" y="0" name="DESCRIBER">
+This rock formation juts up above the rocks surrounding it. It's discoloured stone hinting at its uniqueness but gives no hint as to what secrets that cave entrance might hold.
+</placeWidget>
+</randprefab>
+
+<randprefab width="3" height="3">
+<row>222</row>
+<row>222</row>
+<row>222</row>
+<placeWidget x="1" y="1" name="dropcontainer">
+<lootTable>
+<loot item="medicine" chance="0.5"/>
+<loot item="medicine" chance="1.0"/>
+<loot item="space meal" chance="0.5"/>
+<loot item="space meal" chance="1.0"/>
+</lootTable>
+</placeWidget>
+</randprefab>
+</partition>
+<perlin>
+<band low="-1.0" high="-0.5">
+
+<floodfill tile="3"/>	
+</band>
+
+<band low="-0.5" high="0.0">
+<noise tile="4" scarcity="22"/>
+<noise tile="6" scarcity="22"/>
+<noise tile="7" scarcity="22"/>
+<floodfill tile="2">	
+<SeedNPCs min="8" max="16" name="Alpha_Minoris_IIA/fawn"> </SeedNPCs>
+</floodfill>
+</band>
+<band low="0.0" high="0.1">
+<floodfill tile="3"/>
+</band>
+<band low="0.1" high="0.5">
+<noise tile="4" scarcity="22"/>
+<noise tile="6" scarcity="22"/>
+<noise tile="7" scarcity="22"/>
+<floodfill tile="2"/>
+</band>
+<band low="0.5" high="1.0">
+<noise tile="5" scarcity="22"/>
+<noise tile="8" scarcity="22"/>
+<noise tile="9" scarcity="22"/>
+<floodfill tile="1"/>	
+</band>
+
+</perlin>
+<auditpaths carve="2"/>
+<walloff wall="3" sides="northwest"/>
+</mapgen>
+
+</zone>

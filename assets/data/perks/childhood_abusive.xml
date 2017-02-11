@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<perk name="abusive childhood" >
+<requirement count="1">
+<req>CHARGEN</req>
+</requirement>
+<description> Your childhood was not a happy one, you became adept at evading danger at an early age but those you could not evade left their mark. +1 to agility, -1 to endurance.</description>
+<modifier affects="ENDURANCE" value="-1"  type="ABILITY"/>
+<modifier affects="AGILITY" value="1"  type="ABILITY"/>
+<maxrank value="1"/>
+</perk>

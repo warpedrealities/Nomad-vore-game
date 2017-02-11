@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<perk name="labourious childhood" >
+<requirement count="1"><req>CHARGEN</req></requirement>
+<description> Your childhood was marked by toil. Whether by necessity or coercion you entered the unskilled labour market at an early age. Your education suffered, but your physique was shaped by your exertion. +1 strength, -1 intelligence.</description>
+<modifier affects="INTELLIGENCE" value="-1"  type="ABILITY"/>
+<modifier affects="STRENGTH" value="1"  type="ABILITY"/>
+<maxrank value="1"/>
+</perk>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="arctic.png">
+<tileset count-x="8" count-y="8">
+<tile sprite="2" vision="2" movement="2"> metal wall</tile>
+<tile sprite="1" vision="0" movement="0"> ice</tile>
+<tile sprite="2" vision="0" movement="0"> snow</tile>
+<tile sprite="3" vision="0" movement="2"> snowy boulder</tile>
+<tile sprite="4" vision="2" movement="2"> frozen wall</tile>
+<tile sprite="5" vision="0" movement="1"> abyss</tile>
+</tileset>
+<transition direction="north">Zone 1A</transition>
+<description>The wind howls between the rocky prominences above you. Below those jagged peaks the valleys and canyons are deeply filled with snow.</description>
+<mapgen>
+
+<preloadprefab width="7" height="7" preloadID="4">
+<row>3333333</row>
+<row>3355533</row>
+<row>3555553</row>
+<row>3553553</row>
+<row>3553553</row>
+<row>3353533</row>
+<row>3333333</row>
+<recordVector x="3" y="3" ID="4" zone="Cave 2A"/>
+<pairedportal sprite="3" destination="Cave 2A" x="3" y="3" ID="11">a tunnel into the depths</pairedportal>
+</preloadprefab>
+<perlin>
+<band low="-1.0" high="-0.8">
+<floodfill tile="4"/>
+</band>
+<band low="-0.6" high="-0.5">
+<floodfill tile="4"/>
+</band>
+<band low="-0.2" high="0.0">
+<floodfill tile="4"/>
+</band>
+<band low="0.5" high="0.6">
+<floodfill tile="4"/>
+</band>
+<band low="0.8" high="1.0">
+<floodfill tile="4"/>
+</band>
+</perlin>
+<noise tile="3" scarcity="10"/>
+<floodfill tile="2"/>
+<walloff wall="4" sides="southwesteast"/>
+
+</mapgen>
+
+</zone>

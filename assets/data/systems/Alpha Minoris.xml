@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<System>
+<Star x="0" y="0" sprite="star" intensity="15"/>
+<World x="6" y="6">Alpha Minoris IIA</World>
+<World x="10" y="10">Alpha Minoris II</World>
+<World x="-8" y="18">Alpha Minoris III</World>
+<Station x="13" y="11">Space Hulk 0</Station>
+<Spaceship x="2" y="2" file="shuttlecomplete"/>
+</System>

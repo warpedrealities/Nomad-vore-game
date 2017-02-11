@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="jungle.png">
+<tileset count-x="4" count-y="4">
+<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="2" vision="0" movement="0"> jungle vegetation</tile>
+<tile sprite="3" vision="0" movement="0"> jungle mud</tile>
+<tile sprite="4" vision="0" movement="0"> jungle grass</tile>
+<tile sprite="6" vision="1" movement="2"> drooping jungle tree</tile>
+<tile sprite="7" vision="1" movement="2"> thick and proud jungle tree</tile>
+<tile sprite="8" vision="1" movement="2"> twisted jungle tree</tile>
+<tile sprite="5" vision="1" movement="2"> a rock wall</tile>
+<tile sprite="13" vision="0" movement="0"> stone floor</tile>
+</tileset>
+<transition direction="north">alien village</transition>
+<description>This valley is strewn with jumbled stone, as if riven apart chaotically by some cataclysm. The scattered rocky debris means this place could hide many dangers out of plain sight.</description>
+
+<mapgen>
+<randprefab width="9" height="9">
+<row>888999888</row>
+<row>899999998</row>
+<row>899999998</row>
+<row>999888999</row>
+<row>999898999</row>
+<row>999898999</row>
+<row>899999998</row>
+<row>899999998</row>
+<row>888999888</row>
+<pairedportal sprite="3" destination="zorr" x="4" y="4" ID="11" facing="0">a dungeon entrance</pairedportal>
+</randprefab>
+<clumps lowerlimit="0" upperlimit="45">
+<floodfill tile="7"></floodfill>
+</clumps>
+<noise tile="2" scarcity="6"/>
+<noise tile="1" scarcity="6"/>
+<floodfill tile="3">
+<SeedNPCs min="12" max="32" name="AlphaMinoris_II/raptor"> </SeedNPCs>
+<Seedwidgets min="16" max="32" name="dekubush" />
+</floodfill>
+
+<auditpaths carve="7"/>
+<walloff wall="7" sides="westsoutheast"/>
+</mapgen>
+
+</zone>

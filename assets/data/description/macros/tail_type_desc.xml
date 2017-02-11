@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<macrovalue part="tail" variable="type">
+<translate value="0" string="lizard"/>
+<translate value="1" string="course"/>
+<translate value="2" string="rough"/>
+</macrovalue>

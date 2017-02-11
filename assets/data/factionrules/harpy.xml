@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<rules>
+
+<superRule subject="BrightFeather" level="1" violation="ATTACK">
+<factionRelationship faction="harpy" mod="-5"/>
+</superRule>
+<witness name="BrightFeather"/>
+<superRule subject="harpy" level="1" violation="ATTACK">
+<factionRelationship faction="harpy" mod="-5"/>
+</superRule>
+<witness name="harpy"/>
+</rules>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ItemWeapon name="lightsword" weight="1" value="1000">
+<description>
+A cylindrical sword hilt from which projects on demand a radiant blade. 3-8 thermal damage.
+</description>
+
+<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" ammoCost="1">
+<effectDamage type="THERMAL" minValue="3" maxValue="8" modifier="STRENGTH"/>
+<missText count="1">
+<text>you fail to slash TARGET</text>
+</missText>
+<hitText count="1">
+<text>you burn TARGET for VALUE thermal damage</text>
+</hitText>
+</combatMove>
+<energy refill="ENERGY" efficiency="5" capacity="25"/>
+</ItemWeapon>

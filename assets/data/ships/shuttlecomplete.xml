@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Ship width="5" height="5" wrecked="0" sprite="shuttle">
+
+<shipstats>
+<movecost value="10"/>
+<hullpoints value="40"/>
+<systemcapacity value="5"/>
+<hardpoints value="1"/>
+<thrustcost value="0.5"/>
+</shipstats>
+
+<layout width="16" height="16" spriteset="ship.png">
+<tileset>
+<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+</tileset>
+<description>This shuttle is fully equipped and used for developer testing purposes, if you're seeing this and not me you are NAUGHTY</description>
+<mapgen>
+<prefab positionX="0" positionY="0" width="5">
+<row>01210</row>
+<row>12221</row>
+<row>12221</row>
+<row>12221</row>
+<row>12221</row>
+<row>01110</row>
+
+</prefab>
+<pairedportal x="2" y="0" sprite="1" ID="-101" facing="0"> Exterior hatch </pairedportal>
+<placeWidget x="1" y="1" name="slot">
+<contains name="cargocontainer">
+<lootTable>
+<loot item="explosive grenade" chance="1.0"/>
+<loot item="explosive grenade" chance="1.0"/>
+<loot item="explosive grenade" chance="1.0"/>
+<loot item="plasma pistol" chance="1.0"/>
+<loot item="plasma canister" chance="1.0"/>
+<loot item="plasma canister" chance="1.0"/>
+
+</lootTable>
+</contains>
+</placeWidget>
+
+<placeWidget x="1" y="4" name="slot">
+<contains name="generator"/>
+</placeWidget>
+<placeWidget x="2" y="4" name="slot">
+<contains name="navconsole"/>
+</placeWidget>
+<placeWidget x="3" y="4" name="slot">
+<contains name="fueltank">
+<resource type="FUEL" value="40"/>
+</contains>
+</placeWidget>
+
+<placeWidget x="3" y="1" name="slot">
+<contains name="datacomputer">
+</contains>
+</placeWidget>
+</mapgen>
+</layout>
+<exterior width="5">
+<row>00000</row>
+<row>01010</row>
+<row>01110</row>
+<row>01110</row>
+<row>00100</row>
+<pairedportal x="2" y="1" sprite="1" ID="-101" destination="shuttlecomplete" facing="4"> shuttle hatch </pairedportal>
+</exterior>
+</Ship>

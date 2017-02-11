@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="bed" requiredskill="0" startunlocked="true">
+<description>
+A single bed. Suitable to provide space for one person to sleep.
+</description>
+<ingredient item="scrap metal" quantity="2"/>
+<ingredient item="fabric" quantity="8"/>
+<result item="single bed"/>
+</recipe>

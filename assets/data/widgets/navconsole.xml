@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<navconsole sprite="23" name="control console" health="10">
+<contains minimum="2" maximum="4">computation valve</contains>
+<description>A control panel containing all the necessary navigation controls to operate a starship. </description>
+<resistance resists="KINETIC" strength="2"></resistance>
+</navconsole>

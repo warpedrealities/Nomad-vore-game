@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<zone width="64" height="32" spriteset="spacehulk.png">
+
+<tileset count-x="8" count-y="4">
+<tile sprite="17" vision="0" movement="0"> a metal floor</tile>
+<tile sprite="1" vision="1" movement="2" smart="true"> a metal wall</tile>
+<tile sprite="18" vision="0" movement="0"> a floor panel</tile>
+<tile sprite="19" vision="1" movement="2"> an absurdly sturdy console</tile>
+<tile sprite="20" vision="1" movement="2"> a near invincible bit of machinery</tile>
+<tile sprite="21" vision="0" movement="0"> a dried creamy stain</tile>
+</tileset>
+
+<description>The air is cold and stale, the halls dark. Broken wiring dangles from the overheads and broken machinery is interspersed with pitted steel.</description>
+
+<mapgen>
+
+
+<blockDungeon extent="20">
+<loadBlocks file="spacehulk"/>
+<keyBlock x="4" y="0">
+<row>00000000</row>
+<row>02221220</row>
+<row>22111122</row>
+<row>11111111</row>
+<row>11111111</row>
+<row>22111122</row>
+<row>02111120</row>
+<row>02211220</row>
+<edge value="EAST"/>
+<edge value="WEST"/>
+<edge value="NORTH"/>
+<widget x="4" y="1" name="airlockN" variable="-101"/>
+</keyBlock>
+
+<keyBlock heat="2">
+<row>02222222</row>
+<row>02333332</row>
+<row>22353532</row>
+<row>21111111</row>
+<row>21111111</row>
+<row>22353532</row>
+<row>02333332</row>
+<row>02222222</row>
+<edge value="EAST"/>
+<widget x="1" y="4" name="mechanism" info="interaction/interplanetary reactor" variable="26"/>
+</keyBlock>
+
+<keyBlock heat="2">
+<row>02222200</row>
+<row>02141220</row>
+<row>22114122</row>
+<row>11111112</row>
+<row>11111112</row>
+<row>22114122</row>
+<row>02141220</row>
+<row>02222200</row>
+<edge value="WEST"/>
+<widget x="6" y="4" name="computer" info="interaction/spacehulkcomputer" variable="27"/>
+</keyBlock>
+<clean value="2"/>
+<lootTable identity="normalchest">
+<loot item="heavy plate" chance="0.5"/>
+<loot item="computation valve" chance="0.5"/>
+<loot item="scrap metal" chance="0.5"/>
+<loot item="medicine" chance="0.2"/>
+<loot item="battery" chance="0.2"/>
+</lootTable>
+
+</blockDungeon>
+<partition xmin="24" xmax="48" ymin="0" ymax="12" inverse="true">
+<SeedNPCs min="8" max="16" name="zetamorph"> </SeedNPCs>
+</partition>
+<placeItem x="34" y="6">
+<item itemname="Laser rifle" energy="0"/>
+<item itemname="power-cell" energy="0"/>
+<item itemname="note" exposition="nia05"/>
+</placeItem>
+
+<degrade chance="4" degradethis="0" replacewith="5"/>
+
+</mapgen>
+
+</zone>

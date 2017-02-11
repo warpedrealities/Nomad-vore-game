@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<widgetcontainer sprite="18" name="chest" health="20">
+<description>wooden chest</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+</widgetcontainer>

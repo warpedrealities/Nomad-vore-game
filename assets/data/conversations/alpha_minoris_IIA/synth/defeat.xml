@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text>there's no interactions to be had with defeated synth's yet. </text>
+<choice destination="end" text="darn" />
+</page>
+</Conversation>

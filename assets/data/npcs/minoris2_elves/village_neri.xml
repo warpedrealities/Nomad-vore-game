@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="greenN.png"/>
+<name>Neri</name>
+<description>This perky pointy eared green skinned babe eyes you with a friendly yet mischevious grin. Dressed only in a skirt her breasts hang free to admire, but what might be more of interest is the curve of her round ass or in front the bulge down at her crotch.</description>
+<rpg >
+<experiencevalue value="10"/>
+<ability ability="STRENGTH" value="8" />
+<ability ability="AGILITY" value="10" />
+<ability ability="DEXTERITY" value="10" />
+<ability ability="ENDURANCE" value="8" />
+<ability ability="CHARM" value="10" />
+<ability ability="INTELLIGENCE" value="10" />
+<stat stat="HEALTH" value="30"/>
+<stat stat="RESOLVE" value="20"/>
+<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
+<missText count="1">
+<text>the Neri's punch fails to connect with TARGET</text>
+</missText>
+<hitText count="1">
+<text>the Neri hits TARGET for VALUE points of damage</text>
+</hitText>
+</combatMove>
+</rpg>
+
+<respawn delay="100"/>
+<disposition value="55"/>
+<talk conversation="alpha_minoris_II/Neri/chat" />
+<controller AI="village_encounter"/>
+<faction value="minyos"/>
+</NPC>

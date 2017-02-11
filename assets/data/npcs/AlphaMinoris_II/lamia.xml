@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Harpy>
+<sprite value="lamia.png"/>
+
+<name>wild lamia</name>
+<description>An intimidatingly large lamia woman. Her dark green tail as thick as a tree trunk, and could possibly be as long as one as well, but it was hard to tell with how sporadically winded up her body was. Long brown hair draped messily over her bare chest, hardly able to cover her sizable breasts. Everything about her screamed 'feral', be it the lack of clothes, the snakelike movement, and the way her attention locked onto every little detail in the forest around her. She was very clearly in hunt mode, and must have had quite the hunger to sate.</description>
+<rpg>
+<experiencevalue value="25"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<stat stat="HEALTH" value="40"/>
+<stat stat="RESOLVE" value="30"/>
+<attribute attribute="MELEE" value="2"/>
+<attribute attribute="PARRY" value="2"/>
+<combatMove name="coil" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0">
+<missText count="1">
+<text>The lamia fails to coil up TARGET</text>
+</missText>
+<hitText count="1">
+<text>The lamia wraps TARGET in her coils</text>
+</hitText>
+<effectStatus probability="100">
+<applyText>TARGET is wrapped in snakey coils.</applyText>
+<statusBind uid="20" icon="4"  numModifiers="2">
+<removeText> TARGET has escaped the lamia coils.</removeText>
+<effect attribute="RANGED" modifier="-2"/>
+<effect attribute="MELEE" modifier="-2"/>
+<bind strength="15" originDependent="true"/>
+<struggle count="2">
+<text>TARGET struggles against the lamia coils but cannot escape
+</text>
+<text>TARGET tries to get out of the lamia coils, but fails
+</text>
+</struggle>
+</statusBind>
+
+</effectStatus>
+</combatMove>
+<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0">
+<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<missText count="1">
+<text>The lamia fails to squeeze TARGET</text>
+</missText>
+<hitText count="1">
+<text>The lamia squeezes TARGET for VALUE damage</text>
+</hitText>
+</combatMove>
+</rpg>
+
+<respawn delay="2000"/>
+
+<disposition value="25"/>
+<defeated conversation="alpha_minoris_II/lamia/defeat" />
+<seduced conversation="alpha_minoris_II/lamia/defeat" />
+<victory conversation="alpha_minoris_II/lamia/victory" />
+<seducer conversation="alpha_minoris_II/lamia/victory" />
+<controller AI="lamia"/>
+<faction value="monster"/>
+</Harpy>

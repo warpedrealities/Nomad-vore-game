@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<perk name="violent youth" >
+<requirement count="1"><req>CHARGEN</req></requirement>
+<description>In your youth you got into a lot of fights. Whether it was martial arts or the brutal thuggery of street, bar and back alley violence you know how to deflect a blow and how to deliver one. melee +1, parry +1
+</description>
+<modifier affects="MELEE" value="1"  type="ATTRIBUTE"/>
+<modifier affects="PARRY" value="1"  type="ATTRIBUTE"/>
+<maxrank value="1"/>
+</perk>

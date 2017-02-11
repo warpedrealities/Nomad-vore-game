@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<perk name="flirt">
+<description> 
+Your vivacious personality can weaken the resolve of individuals at a distance, your seduce move is now ranged.
+</description>
+<moveModifier name="seduce" pattern="RANGED">
+
+</moveModifier>
+<maxrank value="1"/>
+
+</perk>

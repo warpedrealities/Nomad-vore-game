@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="E-cell" weight="1" value="100">
+<description>
+Energy cell, little more than a charge/discharge apparatus attached to a battery.
+</description>
+<energy refill="ENERGY" efficiency="1" capacity="5"/>
+</ItemAmmo>

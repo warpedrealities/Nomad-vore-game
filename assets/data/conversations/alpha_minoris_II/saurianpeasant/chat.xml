@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<condition evaluate="FACTIONFLAG" value="1" operator="equals" flag="allegiance"/>
+<text>
+"Greetings to you friend"
+</text>
+<choice destination="about" text="Dammath?"/>
+<choice destination="end" text="*nod and carry on*"/>
+</page>
+
+<page ID="start">
+<text>
+"Greetings stranger, and welcome to Dammath"
+</text>
+<choice destination="about" text="Dammath?"/>
+<choice destination="end" text="greetings and farewell"/>
+</page>
+
+<page ID="about">
+<condition evaluate="FACTIONFLAG" value="1" operator="equals" flag="allegiance"/>
+<text>
+"Dammath is the bastion of the queendom of Lauriss and saurian kind. You are welcome here, as friend of scale and queendom."
+</text>
+<choice destination="end" text="informative, farewell"/>
+</page>
+<page ID="about">
+
+<text>
+"Dammath is the bastion of the queendom of Lauriss and saurian kind. We hope you will enjoy your time here, strangers are ever welcome to trade. Though the southlands are harsh they have not impoverished us, but be warned we will not treat kindly those who would befriend our ancient adversary."
+</text>
+<choice destination="adversary" text="your ancient adversary?"/>
+<choice destination="end" text="informative, farewell"/>
+</page>
+
+<page ID="adversary">
+<text>
+"They dwell to the north, coveting the soft and fertile lands for themselves. These tail-less ones are a blight upon our world, seek audience with our queen should you wish to know more."
+</text>
+<choice destination="end" text="i might go and do that, farewell"/>
+</page>
+
+</Conversation>

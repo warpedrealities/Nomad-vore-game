@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ItemWeapon name="laser pistol" weight="2" value="350">
+<description>
+A laser pistol for self defence against belligerent wildlife and other minor threats, or so the packaging claims. 1-6 thermal damage with a coherent light beam.
+</description>
+<modifier>
+
+</modifier>
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
+<missText count="1">
+<text>you fail to shoot TARGET </text>
+</missText>
+<hitText count="1">
+<text>you shoot TARGET for VALUE heat damage</text>
+</hitText>
+</combatMove>
+<energy refill="ENERGY" efficiency="10" capacity="100"/>
+</ItemWeapon>

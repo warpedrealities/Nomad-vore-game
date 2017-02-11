@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="greenA.png"/>
+<name>Avei</name>
+<description>This emerald elf is dressed most conservatively in a flowing robe that extends to her ankles. The fabric is old and frayed but was clearly embroidered once, strange symbols showing in faded thread. Even covered by the robe though the curves of her derriere are on display.</description>
+<rpg>
+<experiencevalue value="10"/>
+<ability ability="STRENGTH" value="8" />
+<ability ability="AGILITY" value="10" />
+<ability ability="DEXTERITY" value="10" />
+<ability ability="ENDURANCE" value="8" />
+<ability ability="CHARM" value="10" />
+<ability ability="INTELLIGENCE" value="10" />
+<stat stat="HEALTH" value="50"/>
+<stat stat="RESOLVE" value="50"/>
+<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
+<missText count="1">
+<text>the villager's punch fails to connect with TARGET</text>
+</missText>
+<hitText count="1">
+<text>the villager hits TARGET for VALUE points of damage</text>
+</hitText>
+</combatMove>
+</rpg>
+
+<respawn delay="1000"/>
+<disposition value="55"/>
+<defeated conversation="alpha_minoris_II/minyosalchemist/defeat" />
+<seduced conversation="alpha_minoris_II/minyosalchemist/seduced" />
+<victory conversation="alpha_minoris_II/minyosalchemist/victory" />
+<seducer conversation="alpha_minoris_II/minyosalchemist/victory" />
+<talk conversation="alpha_minoris_II/minyosalchemist/chat" />
+<controller AI="staystill"/>
+<faction value="minyos"/>
+</NPC>

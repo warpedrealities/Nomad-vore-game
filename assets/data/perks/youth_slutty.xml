@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<perk name="slutty youth" >
+<requirement count="1"><req>CHARGEN</req></requirement>
+<description>In your youth you'd open your legs for nearly anybody. Least if there was something in it for you, you learned to use your understanding of pleasure and your seductive wiles to open doors for you. Even if many doors led to the bed chamber. pleasure +1, seduction +1
+</description>
+<modifier affects="PLEASURE" value="1"  type="ATTRIBUTE"/>
+<modifier affects="SEDUCTION" value="1"  type="ATTRIBUTE"/>
+<maxrank value="1"/>
+</perk>

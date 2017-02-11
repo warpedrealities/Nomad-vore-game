@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Station numDocks="1">
+<entitysprite filename="hulk" size="1.0"/>
+<zone x="0" y="0" surface="0">spacehulk</zone>
+
+</Station>

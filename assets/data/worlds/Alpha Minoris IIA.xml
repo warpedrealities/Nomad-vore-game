@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<world>
+<entitysprite filename="greenmoon" size="1.0"/>
+<zone x="1" y="0" surface="1">Zone 2B</zone>
+<zone x="0" y="0" surface="1">Zone 1B</zone>
+<zone x="1" y="1" surface="1">Zone 2A</zone>
+<zone x="1" y="1" surface="0">factory</zone>
+<zone x="0" y="1" surface="1">Zone 1A</zone>
+<zone x="0" y="-1" surface="-1">Cave zone</zone>
+<zone x="0" y="-2" surface="-1">Deep Cave zone</zone>
+<zone x="0" y="1" surface="0">escapepod</zone>
+<zone x="0" y="0" surface="0">mountain</zone>
+<ship name="shuttle" posX="1" posY="0"></ship>
+</world>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<start>
+<system value="Alpha Minoris"/>
+<world value="Alpha Minoris II"/>
+<zone value="shuttle0"/>
+<position x="2" y="2"/>
+<item value="Laser Pistol"/>
+<item value="Knife"/>
+<item value="jumpsuit"/>
+<item value="medkit"/>
+
+<appearance>
+<bodypart partname="body">
+<partvalue variablename="height" value="60"/>
+</bodypart>
+<bodypart partname="hair">
+
+</bodypart>
+
+</appearance>
+</start>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ItemWeapon name="shortsword" weight="3" value="250">
+<description>
+A small well balanced combat blade with an extended guard. does 3-6 damage. has +1 parry due to its balance.
+</description>
+<modifier>
+<parry value="1"/>
+</modifier>
+<combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="1">
+<effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="STRENGTH"/>
+<missText count="1">
+<text>you fail to slash TARGET </text>
+</missText>
+<hitText count="1">
+<text>you slash TARGET for VALUE kinetic damage</text>
+</hitText>
+</combatMove>
+</ItemWeapon>

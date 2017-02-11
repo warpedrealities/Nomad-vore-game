@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<shipsystem sprite="28" name="generator" health="30">
+<contains minimum="1" maximum="2">scrap metal</contains>
+<description>a fuel consuming generator that produces energy.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+<shipResource capacity="25" resource="ENERGY"/>
+<shipConverter>
+<convertFrom value="FUEL"/>
+<convertTo value="ENERGY"/>
+<conversionEfficiency value="10"/>
+<conversionRate value="0.01"/>
+</shipConverter>
+</shipsystem>

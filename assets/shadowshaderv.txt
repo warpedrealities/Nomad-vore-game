@@ -1,0 +1,17 @@
+#version 150 core
+
+uniform mat4 projMatrix;
+uniform mat4 modelMatrix;
+
+in vec4 in_Position;
+in vec2 in_TextureCoord;
+in float in_Light;
+
+out vec2 pass_TextureCoord;
+out float pass_Light;
+
+void main(void) {
+	gl_Position = projMatrix*modelMatrix*in_Position;
+	pass_Light=in_Light;
+	pass_TextureCoord = in_TextureCoord;
+}

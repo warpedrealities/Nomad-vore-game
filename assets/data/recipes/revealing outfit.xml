@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="revealing outfit" requiredskill="1" startunlocked="true">
+<description>
+A revealing outfit cut from primitive cloth.
+</description>
+<ingredient item="fabric" quantity="4"/>
+<result item="revealing outfit"/>
+</recipe>

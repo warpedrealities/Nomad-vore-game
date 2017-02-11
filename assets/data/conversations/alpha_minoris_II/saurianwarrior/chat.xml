@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<condition evaluate="FACTIONFLAG" value="1" operator="equals" flag="allegiance"/>
+<text>
+"Welcome to Dammath Friend"
+</text>
+
+<choice destination="end" text="*nod and carry on*"/>
+</page>
+
+<page ID="start">
+<text>
+"Welcome to Dammath Stranger"
+</text>
+<choice destination="end" text="greetings and farewell"/>
+</page>
+
+</Conversation>

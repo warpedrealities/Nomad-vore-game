@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<preference fetish="analvore"/>
+<text>
+The warrior smirks down at you as you fall before her, then reaches down, lifting up her skirt as she steps astride your head and shoulders, squatting down she smothers your face with her rear end. Those ample soft buttcheeks covering your face, squishing down to either side of your ears. Her sphincter pressed against your nose as she mhmms, shifts her hips and then pushing down further over you. Your head squeezing up between those cheeks with a plop and chuckle from the voracious green elf as you start to slip inside her ass.
+</text>
+<choice destination="analvore0" end="into the depths"/>
+</page>
+
+<page ID="analvore0">
+<text>
+The elven warrior moans and shimmies her hips, clenching and dragging your shoulders into her bowels as well. Her hungry emerald rump stretching around your chest as she shifts from her squat and leans back with hands back behind herself. The elven warrior assuming a posture so you're better aligned with her sphincter as she continues ravenously drawing you up and into her debauched arse. Her derriere working down towards your waist, her belly stretching out as you slide further through her bowels, through her guts and towards her stomach.
+</text>
+<choice destination="analvore1" text="deeper"/>
+</page>
+
+<page ID="analvore1">
+<text>
+The hot stifling pressure of her insides pushes against your upper body from all sides as she claims your ass with the hungry sphincter of her own. The elf groaning in delight and leaning back even further, nearly on her back as she starts to claim your legs. Soon you'll be utterly gone within that victorious green elf ass. Your legs unable to squirm or struggle now as they're pushed together by the tight anal ring of her pucker sliding down over your thighs.
+</text>
+<choice destination="analvore2" text="all the way in"/>
+</page>
+
+<page ID="analvore2">
+<text>
+The elf is finally on her back entirely now as she finishes you off, her ass rippling down around your calves. Her buttcheeks sliding closer and closer together as she nears your feet and her belly bulges and stretches out. Your body curling trapped inside her as she finishes you off, dragging your feet past their sphincter and they disappear into her ass with a plop as your toes vanish into her ass. The elf mhmming as she rubs her middle, feeling you trapped inside her as a meal "Mmmm, don't worry my meal. You'll soon be part of a better warrior than you could ever be." she says and then chuckles "You'll probably go to my ass, most do." she remarks as gurgling gets ready to work you over.
+</text>
+<choice destination="strugglecheck" text="*try to escape her ass*"/>
+</page>
+
+<check ID="strugglecheck">
+<test what="STRUGGLE" DC="12"/>
+<outcome destination="escape"/>
+<outcome destination="gurgle"/>
+</check>
+
+<page ID="escape">
+<text>
+Bested though you might of been in combat, you're not going to go quietly to your supposed fate in assfat purgatory. And so you set about trying to force your way back the way you came, struggling and shoving around to find the exit and stretch it as you start worming your way back out of her. The elf frowning "Now now, stop being a sore loser, losers get turned into assfat now...get back in there!" she remarks as you make progress, she squirms on the ground and clenches as your hands shove back out of her ass. But it seems she's not strong enough to stop you from escaping her, groaning and gasping and protesting as she writhes on the ground and you squirm out of her rump leaving her dazed on the ground as you stagger to your feet.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="*back up*"/>
+</page>
+
+<page ID="gurgle">
+<text>
+Bested though you might of been in combat, you're not going to go quietly to your supposed fate in assfat purgatory. And so you set about trying to force your way back the way you came, struggling and shoving around to try and find the exit so you can start worming your way out of her. The elf smiles and squeezes on her gut as she smugly chides you  "Now now, stop being a sore loser, losers get turned into assfat and that's exactly what you're going to be" she says and moans as her insides get to work on you in earnest, your form starting to digest in the depths of her body as it seems you cannot muster a successful escape from her insides.
+</text>
+<choice destination="gameover" text="gurgle"/>
+</page>
+
+<gameover ID="gameover">
+<text>
+Eaten by her ass and imprisoned in her belly your struggles do naught but please the elf who has so utterly bested you. The green warrior feeling you weaken gets back to her feet, content to continue her patrol as gradually her lumpy bulgy middle turns round and soft. And your whimpers and squirms give way to gurgles and churns as she digests you away into a slurry of nutrients, much going to fuel her activities in the war against the perfidious reptiles. Though admittedly a good proportion of you goes to increase the roundness of her ass, improving that already luscious pear into an even more ample set of alluring curves. Soon enough her belly is flat and the only evidence of your existence is an extra layer of rump fat on the elf who devoured you.
+</text>
+</gameover>
+
+
+</Conversation>

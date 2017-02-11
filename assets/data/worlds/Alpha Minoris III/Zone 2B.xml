@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="arctic.png">
+<tileset count-x="8" count-y="8">
+<tile sprite="2" vision="2" movement="2"> metal wall</tile>
+<tile sprite="2" vision="0" movement="0"> snow</tile>
+<tile sprite="1" vision="0" movement="0"> ice</tile>
+<tile sprite="3" vision="0" movement="2"> snowy boulder</tile>
+<tile sprite="4" vision="2" movement="2"> frozen wall</tile>
+<tile sprite="5" vision="0" movement="1"> abyss</tile>
+</tileset>
+
+<description>The plateau is cut off from the rest of the world. A bleak forbidding expanse with little protection against the wind.</description>
+<mapgen>
+
+<preloadprefab width="7" height="7" preloadID="4">
+<row>2222222</row>
+<row>2255532</row>
+<row>2555552</row>
+<row>2552552</row>
+<row>2552552</row>
+<row>2252532</row>
+<row>2222222</row>
+<recordVector x="3" y="3" ID="4" zone="Cave 2B"/>
+<pairedportal sprite="3" destination="Cave 2B" x="3" y="3" ID="11">a tunnel into the depths</pairedportal>
+</preloadprefab>
+<cavegen iterations="2" tile="5" threshold="45" bounds="100" minfloor="0.5">
+<noise tile="3" scarcity="10"/>
+<floodfill tile="1"/>
+</cavegen>
+
+<walloff wall="5" sides="westnortheastsouth"/>
+<auditpaths carve="0" replace="1"/>
+</mapgen>
+
+</zone>

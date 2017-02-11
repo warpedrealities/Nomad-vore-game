@@ -1,0 +1,357 @@
+package actor;
+
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.lwjgl.util.vector.Vector4f;
+
+import combat.CombatMove;
+import combat.statusEffects.StatusEffect;
+import faction.Faction;
+
+import nomad.Universe;
+
+import actorRPG.Actor_RPG;
+import actorRPG.RPGActionHandler;
+
+
+import rendering.Square_Int;
+import shared.Vec2f;
+import view.ViewScene;
+import view.ModelController_Int;
+import vmo.GameManager;
+import widgets.WidgetItemPile;
+import zone.Tile;
+import zone.Zone_int;
+
+public abstract class Actor implements Attackable {
+
+	Vec2f actorPosition;
+	String actorName;
+	boolean actorVisibility;
+
+	Zone_int collisionInterface;
+	Square_Int spriteInterface;
+	Actor_RPG actorRPG;
+	RPGActionHandler RPGHandler;
+	String actorDescription;
+	Faction actorFaction;
+	
+	int moveCost=2;
+	boolean isFlying;
+
+	
+	public RPGActionHandler getRPGHandler()
+	{
+		return RPGHandler;
+	}
+	
+	public Vec2f getPosition()
+	{
+		return actorPosition;
+	}
+	
+
+	
+	public String getDescription()
+	{
+		return actorDescription;
+	}
+	
+	public boolean getPeace()
+	{
+		return false;
+	}
+	
+	public void setPosition(Vec2f position)
+	{
+		actorPosition=position;
+		if (spriteInterface!=null)
+		{
+			spriteInterface.reposition(actorPosition);
+		}
+	}
+	
+	public void setSpriteInterface(Square_Int sinterface)
+	{
+		spriteInterface=sinterface;
+		if (actorRPG.getStat(Actor_RPG.HEALTH)<=0)
+		{
+			spriteInterface.setImage(2);
+		}
+		if (actorRPG.getStat(Actor_RPG.RESOLVE)<=0)
+		{
+			spriteInterface.setImage(3);
+		}
+	}
+	
+	public void setCollisioninterface( Zone_int zinterface)
+	{
+		collisionInterface=zinterface;
+		if (collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y)!=null)
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+		}
+	}
+	
+	public boolean getVisible()
+	{
+		return actorVisibility;
+	}
+
+	
+	abstract public int getAttackIndex();
+	
+	public boolean isHostile(String faction)
+	{
+
+		
+		int factionRelation=actorFaction.getRelationship(faction);
+		if (factionRelation<50)
+		{
+			if (getPeace())
+			{
+				return false;
+			}
+			return true;
+		}
+		
+		return false;
+	}
+
+	
+	public boolean getFlying()
+	{
+		return isFlying;
+	}
+	
+	public void Update()
+	{
+		if (RPGHandler.getActive()==true)
+		{
+			Tile tile=collisionInterface.getTile((int)actorPosition.x,(int)actorPosition.y);
+			if (tile!=null)
+			{
+				actorVisibility=visible(tile);
+				spriteInterface.setVisible(actorVisibility);
+			}
+		}
+	}
+	
+	abstract boolean visible(Tile tile);
+	
+	
+	public Square_Int getSpriteInterface()
+	{
+		return spriteInterface;
+	}
+	
+	boolean Move0()
+	{
+		if (collisionInterface.passable((int)actorPosition.x, (int)actorPosition.y+1, getFlying()))
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(null);
+			actorPosition.y+=1;
+			spriteInterface.reposition(actorPosition);
+			actorRPG.addBusy(getMoveCost());
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+			return true;
+		}
+		return false;
+	}
+	boolean Move1()
+	{
+		if (collisionInterface.passable((int)actorPosition.x+1, (int)actorPosition.y+1, getFlying()))
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(null);
+			actorPosition.y+=1;
+			actorPosition.x+=1;
+			spriteInterface.reposition(actorPosition);
+			actorRPG.addBusy(getMoveCost());
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+			return true;
+		}		
+		return false;
+	}
+	boolean Move2()
+	{
+		if (collisionInterface.passable((int)actorPosition.x+1, (int)actorPosition.y, getFlying()))
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(null);
+			actorPosition.x+=1;
+			spriteInterface.reposition(actorPosition);
+			actorRPG.addBusy(getMoveCost());
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+			return true;
+		}		
+		return false;
+	}
+	boolean Move3()
+	{
+		if (collisionInterface.passable((int)actorPosition.x+1, (int)actorPosition.y-1, getFlying()))
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(null);
+			actorPosition.y-=1;
+			actorPosition.x+=1;
+			spriteInterface.reposition(actorPosition);
+			actorRPG.addBusy(getMoveCost());
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+			return true;
+		}	
+		return false;
+	}
+	boolean Move4()
+	{
+		if (collisionInterface.passable((int)actorPosition.x, (int)actorPosition.y-1, getFlying()))
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(null);
+			actorPosition.y-=1;
+			spriteInterface.reposition(actorPosition);
+			actorRPG.addBusy(getMoveCost());
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+			return true;
+		}
+		return false;
+	}
+	
+	boolean Move5()
+	{
+		if (collisionInterface.passable((int)actorPosition.x-1, (int)actorPosition.y-1, getFlying()))
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(null);
+			actorPosition.y-=1;
+			actorPosition.x-=1;
+			spriteInterface.reposition(actorPosition);
+			actorRPG.addBusy(getMoveCost());
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+			return true;
+		}
+		return false;
+	}
+	boolean Move6()
+	{
+		if (collisionInterface.passable((int)actorPosition.x-1, (int)actorPosition.y, getFlying()))
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(null);
+			actorPosition.x-=1;
+			spriteInterface.reposition(actorPosition);
+			actorRPG.addBusy(getMoveCost());
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+			return true;
+		}
+		return false;
+	}
+	boolean Move7()
+	{
+		if (collisionInterface.passable((int)actorPosition.x-1, (int)actorPosition.y+1, getFlying()))
+		{
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(null);
+			actorPosition.y+=1;
+			actorPosition.x-=1;
+			spriteInterface.reposition(actorPosition);
+			actorRPG.addBusy(getMoveCost());
+			collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y).setActorInTile(this);
+			return true;
+		}
+		return false;
+	}
+	
+	int getMoveCost()
+	{
+		if (actorRPG.getStarving())
+		{
+			return moveCost*2;
+		}
+		return moveCost;
+	}
+	public boolean move(int direction)
+	{
+		if (actorRPG.getBindState()>-1)
+		{
+			actorRPG.struggle();
+			
+			return true;
+		}
+		switch (direction)
+		{
+		case 0:
+			return Move0();
+		case 1:
+			return Move1();
+		case 2:
+			return Move2();
+		case 3:
+			return Move3();
+		case 4:
+			return Move4();
+		case 5:
+			return Move5();
+		case 6:
+			return Move6();
+		case 7:
+			return Move7();
+		
+		}
+		
+		return false;
+	}
+
+
+	abstract public void Interact(Player player);
+	
+	abstract public CombatMove getCombatMove();
+	
+	abstract public void Defeat(Actor victor, boolean resolve);
+
+	public Actor_RPG getRPG()
+	{
+		return actorRPG;
+	}
+
+	public String getName() {
+
+		return actorName;
+	}
+	
+	abstract public boolean Respawn(long time);
+	
+	public void addBusy(int value)
+	{
+		actorRPG.addBusy(value);
+
+	}
+	
+	public void setBusy(int value)
+	{
+		actorRPG.setBusy(value);
+	}
+
+	abstract public String getSpriteName();
+
+	abstract public void Save(DataOutputStream dstream) throws IOException;
+
+	abstract public void Load(DataInputStream dstream) throws IOException;
+
+	public Faction getActorFaction() {
+		return actorFaction;
+	}
+
+	public void setActorFaction(Faction actorFaction) {
+		this.actorFaction = actorFaction;
+	}
+	
+	public int getUID()
+	{
+		return -1;
+	}
+	
+	abstract public boolean canSave();
+
+	abstract public boolean isBlocking();
+	
+	abstract void checkSpawnable();
+	
+}

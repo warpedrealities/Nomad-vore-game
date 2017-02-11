@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<condition evaluate="LOCALFLAG" value="1" operator="equals" flag="first"/>
+<text> "Greetings again visitor. Come to keep me company again?"
+</text>
+<choice destination="unbirth0" text="I want to be inside you"/>
+<choice destination="friends" text="Can you make your sisters not attack me?">
+<condition evaluate="LOCALFLAG" value="0" operator="equals" flag="friends"/>
+</choice>
+<choice destination="unlock0" text="I want to be able to do what you do">
+<assertnot evaluate="hasperk" perk="unbirthing"/>
+<assertion evaluate="haspart" part="vagina"/>
+</choice>
+<choice destination="why" text="Why did the harpy carry me up here?"/>
+<choice destination="different" text="you seem different from the others"/>
+<choice destination="end" text="not right now"/>
+</page>
+<page ID="start">
+<effect type="setlocalflag" flag="first" value="1"/>
+<text> "Hello, what have we here? you must of made someone happy to have ended up here" The harpy cocks her head to the side and examines you then smiles "I am called BrightFeather. I'm sure you will be enjoyable company."
+</text>
+<choice destination="unbirth0" text="I want to be inside you"/>
+<choice destination="friends" text="Can you make your sisters not attack me?">
+<condition evaluate="LOCALFLAG" value="0" operator="equals" flag="friends"/>
+</choice>
+<choice destination="unlock0" text="I want to be able to do what you do">
+<assertnot evaluate="hasperk" perk="unbirthing"/>
+<assertion evaluate="haspart" part="vagina"/>
+</choice>
+<choice destination="why" text="Why did the harpy carry me up here?"/>
+<choice destination="different" text="you seem different from the others"/>
+<choice destination="end" text="actually not just now"/>
+</page>
+
+<page ID="hub">
+<text>
+"Of course, I so seldom get to enjoy conversation. Ask your questions."
+</text>
+<choice destination="unbirth0" text="I want to be inside you"/>
+<choice destination="friends" text="Can you make your sisters not attack me?">
+<condition evaluate="LOCALFLAG" value="0" operator="equals" flag="friends"/>
+</choice>
+<choice destination="unlock0" text="I want to be able to do what you do">
+<assertnot evaluate="hasperk" perk="unbirthing"/>
+<assertion evaluate="haspart" part="vagina"/>
+</choice>
+<choice destination="why" text="Why did the harpy carry me up here?"/>
+<choice destination="different" text="you seem different from the others"/>
+<choice destination="end" text="actually not just now"/>
+</page>
+
+<page ID="unbirth0">
+<text>"oho, want to have the same kind of fun with me you've been having with my sisters? I accept of course." she smiles in delight and <conditional><assertion evaluate="slothasitem" slot="2"/>waiting for you to undress so that she can begin. </conditional> She prepares herself by running her feathery wing against her sex, moistening up though harpies probably suffer for their lack of fingers here. Still you can certainly help out, and her delighted coo as you delve between her thighs with your tongue indicates she's certainly appreciative.
+</text>
+<choice destination="unbirth1" text="start on in"/>
+</page>
+
+<page ID="unbirth1">
+<text>
+"my, you're eager" Brightfeather moaned out as you pressed facefirst into her sex. The harpy shivering in delight and cooing as she clenches and suckles on your face using her welcoming snatch. Bright doesn't tug you in though, even as being a harpy her nethers are easily strong enough to do so, letting you take your time and only gradually ease your shoulders and chest past her netherlips. Your breasts disappearing between her thighs, into the wonderfully snug warmth of her lustful passage.
+</text>
+<choice destination="unbirth2" text="continue"/>
+</page>
+
+<page ID="unbirth2">
+<text>
+Brightfeather's moans and coos as you willingly work your way into her are quite nice to listen to. Though muffled by the hot and wet flesh of her womb around your ears and drowned out partially by the rthyhmic pulsing of her biology "I can really see why they thought i'd enjoy meeting you." Bright exclaims as your hips pass her netherlips, your form starting to curl up inside her. Your legs brush ineffectually against the ground a few moments before she takes over, easily tugging your legs in. Soon Bright feather is sealing you inside as you utterly disappear between her legs, taking your place within the gravid dome of her pregnant middle as you curl within her womb.
+</text>
+<choice destination="unbirth3" text="get settled in"/>
+</page>
+
+<page ID="unbirth3">
+<text>
+Her womb is delightfully comfortable, hot and moist. Her body snugly containing your naked form. The harpy runs a wing over the dome in her middle and shifts to get comfortable on the ground with you within her "mhmm, comfortable my friend?" she asks with a smile, looking at the bulge of your curled up form.
+</text>
+<choice destination="unbirthendo" text="yes, can i rest here a while?"/>
+</page>
+
+<page ID="unbirthendo">
+<text>
+"Of course friend, enjoy your nap. I will enjoy your company even as you slumber." Brightfeather remarks and stretching before furling her wings about herself snugly and closing her eyes. Resting with you as you doze off into slumber in the warmth of her womb. The sounds of her body around you lulling you into sleep. It's many hours before you awaken anew. Ready to be let out, Brightfeather gently easing you out on the ground and giving you a few grooming licks and a smile before you bid your leave after that enjoyable experience.
+</text>
+<effect type="heal" value="1.00"/>
+<choice destination="end" text="*thank bright and leave*"/>
+</page>
+
+<page ID="friends">
+<text>
+"Mhmm tiring of their attentions? Well I suppose they are a bit rough. I will tell them, but this will only last so long as you also play nice you understand. Should you hurt them they will assume you're errant womb fodder again."
+</text>
+<effect type="setlocalflag" flag="friends" value="1"/>
+<effect type="modFactionDisposition" value="55"/>
+<choice destination="hub" text="I'd like to ask something else"/>
+<choice destination="end" text="I need to go Brightfeather"/>
+</page>
+
+<page ID="unlock0">
+<text>
+"You mean like how you got here?" Brightfeather giggles "I can change you, grant you the ability to feed people to your womb...melt them for your pleasure if you wish." she pauses and then adds "but to do that, you'd need to trust me, and go inside of me." she says gliding a wing down between her legs to rub at her blondefurred mound.
+</text>
+<choice destination="unlock1" text="I trust you Brightfeather"/>
+<choice destination="unlockcancel" text="I'm not ready to go that far"/>
+</page>
+
+<page ID="unlock1">
+<text>
+"well now. I'll do my best not to betray such trust." Brightfeather says and waits for you to be ready <conditional><assertion evaluate="slothasitem" slot="2"/>, watching in curiousity as you undress.</conditional> Once you are she settles herself down in a seated position, leaning back and spreading her thighs in invitation.
+</text>
+<choice destination="unlock2" text="crawl into her"/>
+</page>
+
+<page ID="unlock2">
+<text>
+"just crawl in, don't be scared." says Brightfeather, perhaps a little teasingly with her grinning and spreading her wings on the ground behind her for support as she watches your approach, first with nervousness and then with resolve as you remind yourself this is a way of gaining the means to do this to others. Brightfeather letting out a gasping moan as you work your hands inside her "mhmm, hope this feels different for you like it does for me." she says as her moist heated harpy nethers clench around your hands, then relax, then clench again as you slowly begin to ease your arms deeper inside of her.
+</text>
+<choice destination="unlock3" text="It's different with Bright"/>
+</page>
+
+<page ID="unlock3">
+<text>
+"I'm glad you agree." Bright murmurs and half lids her eyes as she curls a wing forwards to urge your head down between your arms. The last you see her smile and then darkness as you plunge into the welcoming heat of her moist tunnel. The harpy moaning and clenching around you, gently drawing in your upper body in cooperation with your crawling motions. Though once she reaches your waist you can do little to help her enwomb you.
+</text>
+<choice destination="unlock4" text="let her take you inside"/>
+</page>
+
+<page ID="unlock4">
+<text>
+Bright moaned, coo'd and gradually, slowly, almost leisurely..drew you up inside herself. Her middle swelling out with your curled up form as your legs disappear inside you. Bright running a wing over the pregnant dome and smiling "you might want to take a nap, this'll take some time my friend."
+</text>
+<choice destination="unlock5" text="nap time"/>
+</page>
+
+<page ID="unlock5">
+<text>
+In the warm comforting heat it's easy to take her advice, falling asleep in the warm embrace of her womb. You don't feel her start to change you, her essence flowing in to course through you and leave you subtly changed to be more like her kind. When you eventually rouse and shift around you hear her giggle "ready to be let out then?" she asks and at hearing your assent starts to clench and push you out. Allowing you to stretch muscles that are starting to cramp as you emerge into the open air again. When fully released you delve fingers down, finding yourself newly more pliant you realize she's done what she said "mhmm, use it wisely..a womb is a powerful thing." she says playfully as she gets to her feet.
+</text>
+<special effect="giveperk" perk="unbirthing"/>
+<choice destination="end" text="thank you bright"/>
+</page>
+
+
+<page ID="unlockcancel">
+<text>
+"Quite alright, I am perfectly happy for you to keep me company out here. But I can't change you without taking you into my womb."
+</text>
+<choice destination="hub" text="I'd like to ask something else"/>
+<choice destination="end" text="I need to go Brightfeather"/>
+</page>
+
+<page ID="why">
+<text>
+"My sisters know I crave company. and not just their own, you must of convinced one of them that you'd be good company for me, and so they brought you to me."
+</text>
+<choice destination="hub" text="I'd like to ask something else"/>
+<choice destination="end" text="That's interesting, I must take my leave"/>
+</page>
+
+<page ID="different">
+<text>
+"less driven by base desires? more talkative?" she chuckles "I know. While I admit I am partial to the recreations of my simpler sisters. I am more curious about more regarding you than how you'd feel staining the inside of my thighs."
+</text>
+<choice destination="stupid" text="so you're smarter than your sisters?"/>
+</page>
+
+<page ID="stupid">
+<text>
+"Perhaps you would see it that way. I believe it's more that they are, satisfied with a simpler life?" she says consideringly "yes, that's how I would view it. Untroubled by greater concerns they live a life of simple pleasures. While I am dissatisfied, my curiousity drives me to seek out different things."
+</text>
+<choice destination="hub" text="I'd like to ask something else"/>
+<choice destination="end" text="That's interesting, I must take my leave"/>
+</page>
+
+
+
+</Conversation>

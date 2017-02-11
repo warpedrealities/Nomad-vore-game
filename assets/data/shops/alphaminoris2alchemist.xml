@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<shop profitratio="1.25">
+<inventoryitem name="hermilixir" probability="100" quantity="20" cost="500"/>
+<inventoryitem name="pussy juice" probability="100" quantity="20" cost="250"/>
+<inventoryitem name="phalifungi" probability="100" quantity="20" cost="250"/>
+</shop>

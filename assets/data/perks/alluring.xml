@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<perk name="alluring">
+<requirement count="1">
+<req>LEVEL5</req>
+</requirement>
+
+<description> 
+You truly are a spectacularly arousing person to be around when you want to be. Your seduction now can cause an additional 2 resolve damage per rank.
+</description>
+<moveModifier name="seduce">
+<change type="MOD" >
+<effectDamage type="TEASE" minValue="0" maxValue="2" modifier="CHARM"/>
+</change>
+
+</moveModifier>
+<maxrank value="1"/>
+
+</perk>

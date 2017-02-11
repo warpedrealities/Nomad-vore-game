@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<perk name="lover">
+<description> A winsome smile, a sway of the hips, a gentle caress. Victory can be won without harkening to the blade or the closed fist. +1 to pleasure, +1 to seduction.</description>
+<modifier affects="PLEASURE" value="1"  type="ATTRIBUTE"/>
+<modifier affects="SEDUCTION" value="1"  type="ATTRIBUTE"/>
+<maxrank value="3"/>
+
+</perk>

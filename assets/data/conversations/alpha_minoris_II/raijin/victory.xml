@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<Conversation>
+<!--written by serenity-->
+<page ID="start">
+<text>
+With a powerful blast of lightning the lizard lass sends you tumbling backwards and sprawling on the ground. The room spins for a few moments and you have trouble concentrating on your surroundings. A warm feeling around your feet and a wet squelching sound bring memory of the odd lizard girl flooding back into your mind. You look up just in time to see your ankles disappear into her anus, a look of bliss plastered on her face.
+</text>
+<preference fetish="analvore"/>
+<choice destination="analvore0" text="eaten by perverted lizard ass?!"/>
+</page>
+
+<page ID="analvore0">
+<text>
+You start to struggle, arms out at your sides trying to push yourself away from the raijin, but her tail swiftly wraps around your waist and tugs you forwards. The tail moves forward as more of your body vanishes into the lizard rump, the raijin strokes her sex as your hips, stomach, chest, and finally shoulders are stuffed between her cheeks.
+</text>
+<choice destination="analvore1" text="dragged inside"/>
+</page>
+
+<page ID="analvore1">
+<text>
+Finally with only your head sticking out she sits down, shoving you the rest of the way in. You’re bent into an awkward position, your feet deep within her and your head stuck in her rectum. A tug on your toes leads you to believe that if you don’t escape, though, you may be heading for a one way tour of her digestive system.
+</text>
+<choice destination="struggle" text="escape sounds good"/>
+<choice destination="pleasure" text="try and coax her into letting you go"/>
+</page>
+
+<page ID="struggle">
+<text>
+Your writhe back and forth, attempting to reverse the pull of the intestines. Though muffled by flesh, you hear the lizard lass moan, enjoying your struggles within her.
+</text>
+<choice destination="strugglecheck" text="force your way out"/>
+</page>
+
+<check ID="strugglecheck">
+<test what="STRUGGLE" DC="10"/>
+<outcome destination="struggleescape"/>
+<outcome destination="struggledigest0"/>
+</check>
+
+<page ID="struggleescape">
+<text>
+With a throaty moan the raijin achieves orgasm and her rectum momentarily loosens its grip on you. You wiggle forward and manage to push your head back out. A few more wiggles and you free your arms and pull yourself from the rump. You look back at the lizard girl and she seems stunned with pleasure for the moment.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="5"/>
+<choice destination="end" text="get up"/>
+</page>
+
+<page ID="struggledigest0">
+<text>
+You hear the raijin moan and feel the colon loosen its squeeze on you. Your heart fills with hope as you see a light ahead of you, the rectum opening back up! Your struggles are working! Your hopes are then dashed as the tip of the raijin’s tail slides into the rectum.It wiggles it’s way up to your forehead and pushes against you. With a worried cry, you realize the tail is shoving you further into the lizard. You attempt to bat it away with your head but only succeed in slipping back further.
+</text>
+<choice destination="struggledigest1" text="unable to escape"/>
+</page>
+
+<page ID="struggledigest1">
+<text>
+The intestinal walls grip your body and pull you backwards, through a winding maze of gut. Villi tickle your feet as they are pulled into the small intestine, and soon you find your entire body being rubbed down but the intestinal walls. It might almost be enjoyable if it weren’t for the caustic bases filling that particular organ. Bile eats away at your clothing and stings your skin as you continue your journey. It’s almost a relief when you reach your final destination. The stomach.
+</text>
+<choice destination="gameover" text="trapped in the stomach"/>
+</page>
+
+<page ID="pleasure">
+<text>
+As you are stuffed into the odd end of the lizard lass’s digestive tract you take a moment to consider your life up to now. You crash landed on a hostile world, repair a shuttle craft using broken robots, and now you’re in an anthropomorphic lizard’s ass. Deciding things can’t get any weirder, you begin to rub the raijin’s intestinal walls in the hopes that pleasuring her will cause her to release you, preferably with no digestion involved. The rubbing seems to help, or at least you think it does. She gasps in surprise as you begin to rub, and the shift position as she starts to lie down to better stroke herself.
+</text>
+<choice destination="pleasurecheck" text="nothing to lose"/>
+</page>
+
+<check ID="pleasurecheck">
+<test what="PLEASURE" DC="10"/>
+<outcome destination="pleasureescape"/>
+<outcome destination="pleasuredigest0"/>
+</check>
+
+<page ID="pleasureescape">
+<text>
+The intestinal walls quiver with your every touch and even from your position in the lizard’s rump you can hear her breath begin to quicken. Wet noises filter through her flesh as her fingers explore her velvety folds. Shlurp, her fingers push deeply into her vagina and she moans, the sound reverberating around you. With a cry she cums, the intestinal walls pressing down on you as she does. As her body convulses with pleasure you are pushed out of the anus. As your head hits the fresh air it is met with a small spray of femcum, a minor annoyance compared to what you just went through. Her juices assist in lubricating your exit and you soon find yourself laying on the ground opposite to her, smelly and slimy, but free for the time being.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="5"/>
+<choice destination="end" text="get up"/>
+</page>
+
+<page ID="pleasuredigest0">
+<text>
+Well you’ve certainly done something. The raijin seems to be thoroughly enjoying your movements, though it seems she doesn’t think that you’re moving quite enough. She bends her tail and pushes it in to join you. As she uses it like a dildo the tip pushes against the top of your head repeatedly. What at first is a minor annoyance soon turns into a major problem as it begins to push you further into her bowels. As you scramble to try to halt the process, your increased movement only causes her to thrust faster. The intestinal walls firmly grip your feet and you are pulled upwards! 
+</text>
+<choice destination="pleasuredigest1" text="forced up and in"/>
+</page>
+
+<page ID="pleasuredigest1">
+<text>
+The bright side is you’re out of her ass! The downside is that’s because you’re on your way to her stomach. You slip and slide upwards, winding through her intestinal tract as she continues to moan and touch herself. She cums just as you are squeezed through a sphincter and into her stomach. Well at least you were able to help her out with that!
+</text>
+<choice destination="gameover" text="trapped in the stomach"/>
+</page>
+
+<gameover ID="gameover">
+<text>
+It’s not long before the digestive acids begins pouring in. The raijin purrs in delight as you writhe in the digestive slop, enzymes slowly breaking your body down and providing energy for the lizard lady to capture more meals with. As you press frantically against the stomach walls, searching for an escape route, you feel the raijin press back, pushing the caustic walls against your skin. The lizard shudders for a few moments as she orgasms and finally collapses on top of you, eliminating any possibility of escape. She naps as you’re reduced to mush and absorbed by her intestines, filling out her curves and padding her tush. 
+</text>
+</gameover>
+
+</Conversation>

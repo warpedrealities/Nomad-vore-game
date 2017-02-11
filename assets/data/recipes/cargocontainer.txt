@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="cargocontainer" requiredskill="0" startunlocked="true">
+<description>
+A spaceship cargo container. Suitable for securing items. Useful as unsecured items tend to be fairly lethal aboard a starship under thrust.
+</description>
+<ingredient item="scrap metal" quantity="8"/>
+<result item="cargo container"/>
+</recipe>

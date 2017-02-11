@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<blocks>
+<block name="NS corridor">
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+
+<row>00211200</row>
+<row>00211200</row>
+<row>00211200</row>
+<row>00211200</row>
+<row>00211200</row>
+<row>00211200</row>
+<row>00211200</row>
+<row>00211200</row>
+
+</block>
+
+<block name="WE corridor">
+<edge value="WEST"/>
+<edge value="EAST"/>
+
+<row>00000000</row>
+<row>00000000</row>
+<row>22222222</row>
+<row>11111111</row>
+<row>11111111</row>
+<row>22222222</row>
+<row>00000000</row>
+<row>00000000</row>
+
+</block>
+
+<block name="WS corridor">
+<edge value="WEST"/>
+<edge value="SOUTH"/>
+
+<row>00211200</row>
+<row>00211200</row>
+<row>22211200</row>
+<row>11111200</row>
+<row>11111200</row>
+<row>22222200</row>
+<row>00000000</row>
+<row>00000000</row>
+
+</block>
+
+<block name="SE corridor">
+<edge value="SOUTH"/>
+<edge value="EAST"/>
+
+<row>00211200</row>
+<row>00211200</row>
+<row>00211222</row>
+<row>00211111</row>
+<row>00211111</row>
+<row>00222222</row>
+<row>00000000</row>
+<row>00000000</row>
+
+</block>
+
+<block name="WN corridor">
+<edge value="WEST"/>
+<edge value="NORTH"/>
+
+<row>00000000</row>
+<row>00000000</row>
+<row>22222200</row>
+<row>11111200</row>
+<row>11111200</row>
+<row>22211200</row>
+<row>00211200</row>
+<row>00211200</row>
+
+</block>
+<block name="NE corridor">
+<edge value="EAST"/>
+<edge value="NORTH"/>
+
+<row>00000000</row>
+<row>00000000</row>
+<row>00222222</row>
+<row>00211111</row>
+<row>00211111</row>
+<row>00211222</row>
+<row>00211200</row>
+<row>00211200</row>
+
+</block>
+
+<block name="room">
+<edge value="WEST"/>
+<edge value="SOUTH"/>
+<edge value="NORTH"/>
+<edge value="EAST"/>
+<row>22211222</row>
+<row>21111112</row>
+<row>21222212</row>
+<row>11222211</row>
+<row>11222211</row>
+<row>21222212</row>
+<row>21111112</row>
+<row>22211222</row>
+
+</block>
+
+<block name="chamber">
+<edge value="WEST"/>
+<edge value="NORTH"/>
+<edge value="EAST"/>
+<row>22222222</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>11122111</row>
+<row>11122111</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22211222</row>
+
+</block>
+
+<block name="broad junction">
+<edge value="WEST"/>
+<edge value="SOUTH"/>
+<edge value="EAST"/>
+<row>22211222</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>11111111</row>
+<row>11111111</row>
+<row>22222222</row>
+<row>00000000</row>
+<row>00000000</row>
+
+</block>
+
+<block name="t junction">
+<edge value="WEST"/>
+<edge value="NORTH"/>
+<edge value="SOUTH"/>
+<row>00211200</row>
+<row>00211200</row>
+<row>22211200</row>
+<row>11111200</row>
+<row>11111200</row>
+<row>22211200</row>
+<row>00211200</row>
+<row>00211200</row>
+
+</block>
+
+
+</blocks>

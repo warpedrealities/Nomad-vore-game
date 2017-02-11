@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<lootTable>
+<loot item="Knife" chance="1"/>
+<loot item="lightsword" chance="1" addendum="10"/>
+<loot item="repulsor belt" chance="1" addendum="10"/>
+<loot item="entropic amulet" chance="1"/>
+<loot item="fingerless gloves" chance="1"/>
+<loot item="risque necklace" chance="1"/>
+<loot item="shortsword" chance="1"/>
+<loot item="scarf" chance="1"/>
+<loot item="helmet" chance="1"/>
+<loot item="chainmail" chance="1"/>
+<loot item="fuel cell(poor)" chance="1"/>
+</lootTable>

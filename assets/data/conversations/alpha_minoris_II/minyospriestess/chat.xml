@@ -1,0 +1,136 @@
+﻿<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<condition operator="equals" evaluate="LOCALFLAG" flag="talked" value="1"/>
+<!--subsequent meetings-->
+<text>
+"Greetings again star traveller."
+</text>
+<choice destination="history" text="I would like to know your history"/>
+<choice destination="statue0" text="you misplaced something?">
+<condition operator="equals" evaluate="LOCALFLAG" flag="quest" value="0"/>
+</choice>
+<choice destination="statue1" text="about that statue">
+<condition operator="equals" evaluate="LOCALFLAG" flag="quest" value="1"/>
+</choice>
+<choice destination="friends" text="I wish to be more than a stranger to your people">
+<condition operator="equals" evaluate="GLOBALFLAG" flag="rockscleared" value="1"/>
+<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance" value="0"/>
+</choice>
+<choice destination="end" text="farewell"/>
+</page>
+
+<page ID="start">
+<!--first meeting-->
+<text>
+The priestess seems to be frowning and searching around the room when you approach, but stops and her eyes alight upon you swiftly "Forgive me star traveller, I have misplaced something of mine. It is most distracting" she sketches out some form of ritualistic gesture "I am Shanna, keeper of histories, speaker for the spirits and priestess of this village."
+</text>
+<effect type="setlocalflag" flag="talked" value="1"/>
+<choice destination="history" text="I would like to know your history"/>
+<choice destination="statue0" text="you misplaced something?">
+<condition operator="equals" evaluate="LOCALFLAG" flag="quest" value="0"/>
+</choice>
+<choice destination="end" text="nice to meet you but farewell"/>
+</page>
+
+<page ID="friends">
+<condition operator="greaterthan" evaluate="FACTIONFLAG" flag="friendship" value="1"/>
+<text>
+"You have proven yourself stranger, your deeds are known. You have given of yourself to the village of minyos. So yes, if you truly wish I will declare to all the village that you are our friend and ally, ever to be welcomed and provided for by our people."
+</text>
+<choice destination="allegiance" text="yes, i am sure."/>
+<choice destination="end" text="I need more time to think about it"/>
+</page>
+
+<page ID="allegiance">
+<text>
+The priestess brings you before the village, ringing a bell to bring forth additional green elves to gather. And announces to them "You see before you the stranger from the stars, she came to us alone. She did not know us, yet she gave of herself to us. Now she has affirmed her desire for a deeper friendship. So it is time for us to give of ourselves to this stranger, you are alone no longer, we will comfort you, we will protect you, we will provide for you. and though your journey may take you far, know that we will always welcome you. Let all know that you are kin of the queendi, and rejoice." after the ceremony there is much cheering and celebration. You have sworn allegiance to the village of minyos.
+</text>
+<effect type="setfactionflag" flag="allegiance" value="1"/>
+<effect type="manipulatefactionflag" faction="saurian" flag="allegiance" value="-1"/>
+<effect type="manipulateDisposition" faction="saurian" value="-25"/>
+<effect type="modfactiondisposition" value="25"/>
+<choice destination="end" text="end"/>
+</page>
+
+<page ID="friends">
+<condition operator="equals" evaluate="FACTIONFLAG" flag="friendship" value="0"/>
+<text>
+"Yes? you want us to call you friend? and what have you done for the Quendi?" the priestess asks with a sardonic eyebrow "Go, show that you are friend of quendi, then we will call you friend of quendi." 
+</text>
+<choice destination="end" text="I'll think about it"/>
+</page>
+<page ID="history">
+<condition operator="equals" evaluate="FACTIONFLAG" flag="friendship" value="1"/>
+<condition operator="equals" evaluate="GLOBALFLAG" flag="rockscleared" value="0"/>
+<text>
+"Normally I would not share such things. But you have proven a friend of our people. So I will tell you. For many generations we have lived upon this, our home. In peace we traded with star travellers such as yourselves who visited this world. All this ended when the ancient enemy came from the stars. They invaded seeking our land and our wealth. These reptilian monsters were relentless, we fought them and the struggle lasted many years. Their evil depredations caused us to lose many wonders we once knew. Finally we called upon the great spirits of the sky, who destroyed the ancient enemy. The way to what was once their lands forever cut off."
+</text>
+<choice destination="raptors" text="the lizards in the valley are still around"/>
+<choice destination="end" text="My thanks, farewell"/>
+</page>
+
+<page ID="history">
+<condition operator="equals" evaluate="FACTIONFLAG" flag="friendship" value="1"/>
+<condition operator="equals" evaluate="GLOBALFLAG" flag="rockscleared" value="1"/>
+<text>
+"Normally I would not share such things. But you have proven a friend of our people. So I will tell you. For many generations we have lived upon this, our home. In peace we traded with star travellers such as yourselves who visited this world. All this ended when the ancient enemy who now plagues us once more originally came from the stars. They invaded seeking our land and our wealth. These reptilian monsters were relentless, we fought them and the struggle lasted many years. Their evil depredations caused us to lose many wonders we once knew. We thought they had been wiped from this world, but have seen them abroad upon our lands once more."
+</text>
+<choice destination="raptors" text="you don't mean the lizards in the valley do you?"/>
+<choice destination="end" text="My thanks, farewell"/>
+</page>
+
+<page ID="raptors">
+<text>
+"The lizards you speak of are a pale imitation of the evil of their progenitors. When we drove them forth the callous creatures did not seek to take with them their unborn young, several clutches survived and grew to be the ones of which you speak. But without the words and wisdoms of their foul ancestors they are but little threat, they're actually rather tastey and alone are no match for a Quendi."
+</text>
+<choice destination="end" text="My thanks, farewell"/>
+</page>
+
+<page ID="history">
+
+<text>
+"Our history is not to be shared with outsiders."
+</text>
+<choice destination="end" text="I meant no offence, farewell"/>
+</page>
+<page ID="statue0">
+<!-- establish quest-->
+<effect type="setlocalflag" flag="quest" value="1"/>
+<text>
+"Ah so good of you to ask traveller. I've misplaced a statue, it has ritual significance. But if it's not here it must be in the village somewhere. If you could do me the favour of fetching it for me I would be ever so grateful."
+</text>
+<choice destination="look" text="can't you find it yourself?"/>
+<choice destination="end" text="I'll go look"/>
+</page>
+
+<page ID="look">
+<text>
+"Yes but I am expecting a visitor soon. And I wouldn't want to leave this place unattended. Besides, you're a new visitor here and have an adventuresome look to you. You're probably going to search the entire village for hidden secrets or other such nonsense while bothering the residents so you may as well be useful to me while you do so."
+</text>
+<choice destination="end" text="I guess you have a point"/>
+</page>
+
+<page ID="statue1">
+<!-- has item-->
+<condition evaluate="HASITEM" operator="greaterthan" value="1" item="elf statue"/>
+<text>
+"You found it. Here, it's not much. But I believe it's appropriate you have this gold for your assistance." she says taking the statue from you and handing you a small bag of gold for your troubles.
+</text>
+<effect type="setfactionflag" flag="friendship" value="1"/>
+<effect type="removeitem" item="elf statue" value="1"/>
+<effect type="setlocalflag" flag="quest" value="2"/>
+<effect type="givegold" value="50"/>
+<effect type="experience" value="25"/>
+<choice destination="end" text="you're welcome"/>
+</page>
+
+<page ID="statue1">
+<!-- does not have item-->
+<text>
+"I'm sure the statue is in the village somewhere. Have you looked everywhere yet?"
+</text>
+<choice destination="end" text="I'll keep looking then"/>
+</page>
+
+</Conversation>

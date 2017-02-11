@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="goldraptor.png"/>
+<name>gold raptor</name>
+<description> The lizardgirl stands a few inches taller than her less strikingly coloured compatriots. But with a body softer and less lean than their own. From the tip of her tail to the top of her brow she's a pale yellow while only an orange highlight on her crotch breaking the hue and highlighting her genitals. That shaft hanging semi flaccid as she looks back at you. Her back, limbs and the topside of her tail are scaled in a more glistening reddish hue.</description>
+<rpg>
+<experiencevalue value="25"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+
+<stat stat="HEALTH" value="30"/>
+<stat stat="RESOLVE" value="30"/>
+<attribute attribute="DODGE" value="2"/>
+<attribute attribute="DODGE" value="2"/>
+<combatMove name="display" pattern="RANGED" bonusAttribute="SEDUCTION" timeCost="2" bonusToHit="-2">
+<effectDamage type="TEASE" minValue="0" maxValue="3" modifier="STRENGTH"/>
+<effectDamage type="PHEREMONE" minValue="0" maxValue="3" modifier="STRENGTH"/>
+<missText count="1">
+<text>The gold raptor's display fails to arouse TARGET</text>
+</missText>
+<hitText count="1">
+<text>TARGET loses VALUE resolve to the alluring scent and seductive display of the golden raptor</text>
+
+</hitText>
+</combatMove>
+</rpg>
+<respawn delay="2000"/>
+<defeated conversation="alpha_minoris_II/goldraptor/defeat" />
+<seduced conversation="alpha_minoris_II/goldraptor/seduced" />
+<victory conversation="alpha_minoris_II/goldraptor/victory" />
+<seducer conversation="alpha_minoris_II/goldraptor/victory" />
+<controller AI="gold_raptor"/>
+<faction value="monster"/>
+</NPC>

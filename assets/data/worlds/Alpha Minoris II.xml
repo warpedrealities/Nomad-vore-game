@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<world>
+<entitysprite filename="jungleplanet" size="3.0"/>
+<zone x="2" y="2" surface="1">alien village</zone>
+<zone x="2" y="2" surface="0">village basement</zone>
+<zone x="2" y="1" surface="1">zoneE</zone>
+<zone x="1" y="2" surface="1">zoneN</zone>
+<zone x="1" y="1" surface="1">zoneC</zone>
+<zone x="0" y="2" surface="1">zoneNW</zone>
+<zone x="1" y="0" surface="1">zoneS</zone>
+<zone x="0" y="2" surface="0">Cave zone</zone>
+<zone x="0" y="2" surface="0">Deep Cave zone</zone>
+<zone x="2" y="1" surface="0">zorr</zone>
+<zone x="0" y="0" surface="1">saurian village</zone>
+<zone x="0" y="0" surface="0">Mine zone</zone>
+</world>

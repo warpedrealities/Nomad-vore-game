@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="Zap gun" requiredskill="0" startunlocked="false">
+<description>
+A gun built to fire zaps of electrical energy at foes.
+</description>
+<ingredient item="thunderstone" quantity="1"/>
+<ingredient item="scrap metal" quantity="3"/>
+<ingredient item="computation valve" quantity="1"/>
+<ingredient item="battery" quantity="2"/>
+<result item="zap gun"/>
+</recipe>

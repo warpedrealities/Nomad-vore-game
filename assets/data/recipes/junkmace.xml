@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="Junkmace" requiredskill="0" startunlocked="true">
+<description>
+Form a handle out of metal rods and stems and a head out of assorted weighty junk and you have the junk mace.
+</description>
+<ingredient item="scrap metal" quantity="8"/>
+<result item="Junkmace"/>
+</recipe>

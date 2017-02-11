@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ItemWeapon name="explosive grenade" weight="1" value="50">
+<description>
+A chemical explosive grenade. Be at least 3 meters away from it 3 seconds after the pin is pulled. Does 1-6 thermal and 1-6 kinetic damage.
+</description>
+<combatMove name="boom" ammoCost="1" pattern="BOMB" bonusAttribute="RANGED" timeCost="2" bonusToHit="2">
+<effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="DEXTERITY"/>
+<effectDamage type="THERMAL" minValue="3" maxValue="6" modifier="DEXTERITY"/>
+<missText count="1">
+
+<text>TARGET is unscathed </text>
+</missText>
+<hitText count="1">
+<text>TARGET suffers VALUE damage</text>
+</hitText>
+<energySource value="stack"/>
+</combatMove>
+<stackEquip value="true"/>
+</ItemWeapon>

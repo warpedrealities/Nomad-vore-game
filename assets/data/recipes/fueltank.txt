@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="fuel tank" requiredskill="-1" startunlocked="true">
+<description>
+Spaceship fuel tank. A place to store fuel to make it available to the ship's engines.
+</description>
+<ingredient item="scrap metal" quantity="10"/>
+<result item="fuel tank"/>
+</recipe>

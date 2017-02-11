@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text>
+The interplanetary reactor could be removed from its mountings with a bit of work.
+</text>
+<choice destination="remove" text="do it"/>
+<choice destination="end" text="not now"/>
+</page>
+<page ID="remove">
+<text>
+You lever the reactor out of its mountings and can now take it with you
+</text>
+<effect type="giveitem" value="1" item="interplanetary reactor" />
+<special effect="destroywidget"/>
+<choice destination="end" text="got what i came for"/>
+</page>
+</Conversation>

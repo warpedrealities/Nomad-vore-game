@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemResource name="herb" weight="1" value="12.0" >
+<description>A herb, useful for the creation of medicine or drugs.</description>
+
+</ItemResource>

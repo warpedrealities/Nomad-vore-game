@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<preference fetish="tailvore"/>
+<text>
+scene not written
+</text>
+<choice destination="GO" text="scene not ready"/>
+</page>
+
+<gameover ID="GO">
+<text>
+you've met a terrible fate
+</text>
+</gameover>
+
+</Conversation>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<macrorange part="penis" variable="length">
+<range lowerbound="0" upperbound="5" string="small"/>
+<range lowerbound="5" upperbound="7" string="average"/>
+<range lowerbound="7" upperbound="9" string="large"/>
+<range lowerbound="9" upperbound="12" string="pornstar"/>
+<range lowerbound="12" upperbound="16" string="foot long"/>
+<range lowerbound="16" upperbound="24" string="huge"/>
+<range lowerbound="24" upperbound="28" string="two foot"/>
+<range lowerbound="28" upperbound="34" string="knee knocking"/>
+<range lowerbound="34" upperbound="38" string="enormous"/>
+</macrorange>

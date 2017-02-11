@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Nomad/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Nomad/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="slick-util.jar"/>
+	<classpathentry kind="lib" path="luaj-jme-3.0.1.jar"/>
+	<classpathentry kind="lib" path="luaj-jse-3.0.1.jar"/>
+	<classpathentry kind="lib" path="TWL.jar"/>
+	<classpathentry kind="lib" path="rlforj.0.2.jar"/>
+	<classpathentry kind="lib" path="lib">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Nomad/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-glfw.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-opengl.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-stb.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-glfw-natives-windows.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-natives-windows.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-opengles-natives-windows.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-opengl-natives-windows.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-stb-natives-windows.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

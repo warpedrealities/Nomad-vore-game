@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="jumpsuit" weight="2" slot="BODY" value="100">
+<description>
+A spaceforce uniform jumpsuit covering almost ones entire body. It's stylish and blue but probably isn't the most seductive or alluring of outfits. +1 thermokinetic defence, -2 seduction.
+</description>
+<modifier>
+<kinetic value="1"/>
+<seduction value="-2"/>
+<thermal value="1"/>
+
+</modifier>
+</ItemEquip>

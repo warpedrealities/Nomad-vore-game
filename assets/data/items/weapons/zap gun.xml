@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ItemWeapon name="zap gun" weight="4" value="400">
+<description>
+A complex jumble of wires and framework surrounding a blue crystalline core. Its business end consists of a pair of stubby prongs. Does 1-6 shock damage.
+</description>
+<modifier>
+
+</modifier>
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+
+<effectDamage type="SHOCK" minValue="1" maxValue="6" modifier="NONE"/>
+
+<missText count="1">
+<text>you fail to zap TARGET </text>
+</missText>
+<hitText count="1">
+<text>you zap TARGET with a nasty jolt for VALUE damage</text>
+</hitText>
+</combatMove>
+<energy refill="ENERGY E-cell power-cell" efficiency="2" capacity="24"/>
+</ItemWeapon>

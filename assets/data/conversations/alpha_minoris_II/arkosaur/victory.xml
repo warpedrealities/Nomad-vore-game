@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<preference fetish="ferals"/>
+<preference fetish="oralvore"/>
+<text>
+That last blow flings you to the ground and the beast rumbles threateningly it's clear that it could crush you flat. But instead it proves itself less of a herbivore than you thought as it drops its scooplike jaws low and seizes your feet inside them. It's hot wet breath washing over your calves as it lumbers forwards and with a dreadful glucking gulping sound forces your feet into its throat proper. It's short fat neck shows little in the way of bulges as it eats you alive.
+</text>
+<choice destination="oralvore0" text="treated as food"/>
+</page>
+
+<page ID="oralvore0">
+<text>
+The dumb creature continues swallowing you down, impersonal both in its dimwitted animal nature and its supposedly prey orientated eyes neither of which can orientate on you as it swallows your legs. Its steaming hot innards greeting your feet as it works you down into its belly, its gut starting to sag down between its legs as it eats you alive.
+</text>
+<choice destination="oralvore1" text="continue"/>
+
+</page>
+
+<page ID="oralvore1">
+<text>
+Unmindful of your weak struggles it forces you down, working up over your hips and then lifting its head and your upper body up off the ground. The arkosaur's jaws flex wide as it gulps, dragging part of your middle past its jaws as they wrap tight against around your torso. And then it repeats the procedure, chugging you down like the bothersome large morsel you are. Your efforts to grab its jaws and halt your descent no match for the power of its body epitomized in the throat rippling around you. Despite your struggles you find yourself consumed, the last you see of the outside world framed by your protruding arms and its roundtoothed jaws.
+</text>
+<choice destination="oralvore2" text="consumed"/>
+</page>
+
+<page ID="oralvore2">
+<text>
+You feel the beast move off again, lumbering with the low hanging weight of your curled up form in its gut brushing against the grasses but impeding the saurian herbivore very little. Your body ably contained behind stomach walls and reddish brown hide as it resumes its motions, adding to the vegetative detritus surrounding you as it grazes and its gut gurgles. That sweltering stomach gearing up to break down a far more protein rich meal. It might be best to try and force an escape lest you be smothered in pulped grass or ground down into slurry within this stomach, blandishments needless to say will serve you little to escape this primeval beast.
+</text>
+<choice destination="strugglecheck" text="struggle"/>
+</page>
+
+
+<check ID="strugglecheck">
+<test what="STRUGGLE" DC="10"/>
+<outcome destination="struggleescape"/>
+<outcome destination="struggledigest"/>
+</check>
+
+<page ID="struggleescape">
+<text>
+The beast is clearly unaccustomed to a meal that struggles and moves around, letting out a series of grumbling bellows as you push around at its insides. It's stomach glorping hotly around you as you shove at the churning walls, back and forth making the arkosaur's belly sway and jostle against its legs. The upset finally too much it seems as the creature lets out a strangled bellow and shudders, horking you up in a deluge of plantmatter and ooze. It's unpleasant, but at least you're out safe. And if anything it was even more unpleasant for the arkosaur that slumps onto its belly with a distressed snort.
+</text>
+<choice destination="end" text="back away"/>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+</page>
+
+<page ID="struggledigest">
+<text>
+The beast is clearly unaccustomed to a meal that struggles and moves around, letting out a series of grumbling bellows as you push around at its insides. It's stomach glorping hotly around you as you shove at the churning walls, back and forth making the arkosaur's belly sway and jostle against its legs. The beast waddling forwards, and tearing up a thick mass of plants. Clearly the arkosaur's solution to a grumbling stomach, the damnedest thing is it works.. the mass pouring in atop you impedes your movements, cushions your shoves against the beasts insides. A few more masses and half smothered in plantmatter you're forced to abandon your attempts. The stomach enzymes forming a soup of dissolving plantmatter around you that will soon add your body to the mix as well.</text>
+<choice destination="struggleGO" text="gurgle"/>
+</page>
+
+<gameover ID="struggleGO">
+<text>
+The beast continued lumbering about, only eventually settling down to digest you. Settling on its belly it presses the glorping mass around you, making it even harder to escape even after having made it impossible. Gradually you fade away, the beast ruminating in an empty headed doze as within you employ the last of your energies in a vain attempt to stay above the gloop before succumbing. The beast's stomach is unused to dealing with meat, but your body is broken down just the same even if it is a long and slow process. Within two days nothing remains in its belly but the vegetation its constantly packing into its maw, all you amounted to was nothing but an extra layer of fat padding the beast's flanks. Truly the most ignoble of ends.
+</text>
+
+</gameover>
+
+</Conversation>

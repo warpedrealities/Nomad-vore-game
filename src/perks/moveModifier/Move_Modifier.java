@@ -1,0 +1,85 @@
+package perks.moveModifier;
+
+import java.util.ArrayList;
+
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import combat.CombatMove;
+import combat.CombatMove.AttackPattern;
+import combat.effect.Effect;
+import combat.effect.Effect_Damage;
+import combat.effect.Effect_Recover;
+import combat.effect.Effect_Status;
+import perks.moveModifier.Effect_Change.modifierType;
+
+public class Move_Modifier {
+
+	private String moveName;
+	int attackBonus;
+	private AttackPattern attackPattern;
+	
+	private ArrayList<Effect_Change> modifiers;
+	
+	public Move_Modifier(Element Enode)
+	{
+		moveName=Enode.getAttribute("name");
+		
+		if (Enode.getAttribute("bonusToHit").length()>0)
+		{
+			attackBonus=Integer.parseInt(Enode.getAttribute("bonusToHit"));
+		}
+		if (Enode.getAttribute("pattern").length()>0)
+		{
+			attackPattern=CombatMove.strToPattern(Enode.getAttribute("pattern"));
+		}
+		
+		modifiers=new ArrayList<Effect_Change>();
+		NodeList list=Enode.getChildNodes();
+		for (int i=0;i<list.getLength();i++)
+		{
+			if (list.item(i).getNodeType()==Node.ELEMENT_NODE)
+			{
+				Element e=(Element)list.item(i);
+				if (e.getTagName().equals("change"))
+				{
+					Effect_Change modifier=new Effect_Change(e);
+					modifiers.add(modifier);
+				}
+			}
+		}
+	}
+
+	public Object getMoveName() {
+		return moveName;
+	}
+	
+	public void applyModifier(CombatMove move, int rank)
+	{
+		move.setAttackBonus(move.getAttackBonus()+attackBonus);
+		
+		move.setAttackPattern(attackPattern);
+		
+		int index=0;
+		for (int i=0;i<modifiers.size();i++)
+		{
+			if (modifiers.get(i).getType()==modifierType.ADD)
+			{
+				move.getEffects().add(modifiers.get(i).getEffect());
+			}
+			else if (modifiers.get(i).getEffect().getClass().isInstance(move.getEffects().get(index)))
+			{
+				
+				applyChange(move.getEffects().get(index),modifiers.get(i).getEffect());			
+				index++;
+			}
+		}
+	}
+	
+	private void applyChange(Effect effect, Effect modifier)
+	{
+		effect.applyChange(modifier);
+	}
+
+}

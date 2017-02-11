@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgetharvestable sprite="33">
+<contains minimum="1" maximum="2">fruit</contains>
+<usedescription>You pick some alien fruit</usedescription>
+<description>An alien plant, its fruit might be edible</description>
+<regeneration regentime="2000"/>
+</widgetharvestable>

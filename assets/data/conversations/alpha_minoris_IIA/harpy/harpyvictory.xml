@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<preference fetish="unbirth"/>
+<condition operator="lessthan" evaluate="LOCALFLAG" flag="disposition" value="2"/>
+<condition operator="lessthan" evaluate="DICEROLL" value="10"/>
+<text>Slumped into a rough seated posture you're right where the harpy wants you. Alighting and then with a giggle twirling around to seat herself atop your head.<conditional><assertion evaluate="haspart" part="hair"/>Your <macro id="hair_desc_short"/> hair becoming stained with her sexual juices from those perpetually salivating harpy netherlips. </conditional> The harpy letting out a delighted coo before her nethers begin stretching over your skull and she wriggles her hips to work her way down over you. The harpy starting to cram you into her hungry snatch to sate it once and for all.</text>
+<choice destination="unbirth0" text="continue" />
+</page>
+<page ID="start">
+<preference fetish="unbirth"/>
+<condition operator="lessthan" evaluate="LOCALFLAG" flag="disposition" value="2"/>
+
+<text>your view of the sky above is eclipsed as the harpy lands legs astride your head, that moist snatch dripping drops of pearlescent harpy lust that splatter against your face as she coos in anticipation and wriggles her hips before descending upon you. Her nethers mashing against your facial features, grinding back and forth before she shoves herself down with a gasp and you feel her powerful birth canal seize your skull and pull. The harpy clenching rthythmically, those powerful muscles working seemingly in reverse of normal but with great ability as she works you deeper inside. </text>
+<choice destination="unbirth1" text="continue" />
+</page>
+
+
+<page ID="unbirth0">
+<text>With your head wedged up inside of her she seems to find little difficulty working the rest of you in, cramming you head first into her womb as she shifts her hips up and down. a lewd and debauched act of gratification that works your body inch by inch deeper into the slit between her legs, her middle bulging with first your head and then your entire upper body as she crams you in. Finally only your legs are left, your flailing put to an end as she squeezes them together with her own and then shoves your feet against the ground. the harpy letting out a delighted cry and a splattering of her sexual nectar as she works you deeper in, another thrust and only those feet are left. the harpy clenching and pressing her thighs together as even those disappear and you're drawn up entirely into her womb.</text>
+<choice destination="wombed" text="wombed"/>
+</page>
+<page ID="unbirth1">
+<text>The mere hunger of her voracious pussy it seems is enough to claim your shoulders and chest and from there her gasping and moaning shifting of her hips back and forth is enough to wedge your butt under her and up inside of her body. Once she's claimed your arse its merely a matter of time, the harpy letting out ever more delighted coos as you're forced to curl up inside the heat of her soft but yet ravenous womb. The harpy standing legs astride as your own legs slip up into her drooling nethers and you're sealed within her.</text>
+<choice destination="wombed" text="wombed"/>
+</page>
+
+<page ID="wombed">
+<text>Trapped within the depths of the harpies womb you hear her coo in delight and feel past the syrupy nether juices and cradling confines her wings rub over the bulge you make in her. It would seem you might be at her mercy. And judging by the hot sensual tingle and possessive clench of her womb around your body it might not be a mercy that's forthcoming.</text>
+<choice destination="struggle" text="struggle to escape"/>
+<choice destination="pleasure" text="try to please her"/>
+<choice destination="submit" text="just let it happen"/>
+</page>
+<page ID="struggle">
+<text> As the womb clenches you push back, struggling to try and force your way out before her womb succeeds in liquidating you!</text>
+<choice destination="strugglecheck" text="struggle"/>
+
+</page>
+<check ID="strugglecheck">
+<test what="STRUGGLE" DC="10"/>
+<outcome destination="struggleescape"/>
+<outcome destination="strugglegush"/>
+</check>
+<page ID="struggleescape">
+<text>The harpy lets out a gasp, and then a groan as you shove at her insides, worming your arms downwards to force her to dilate. your form unceremoniously squeezing out from between her legs as she shudders and whines. Her form now lies slumped behind you, sore and stunned from having herself stretched wide from within.. you should probably take advantage of this opportunity to run.</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="get clear"/>
+</page>
+<page ID="strugglegush">
+<text>You struggle and push, but cannot find purchase. the womb is clenching and seemingly without exit as the harpy gasps and moans and rubs against her struggling middle with both wings. You put up a valiant but ultimately futile struggle with slickening fingers and softening limbs. But soon, she's able to do you in with a clench of her victorious womb.</text>
+<choice destination="gushedSTR" text="Not so strong now..."/>
+</page>
+
+<page ID="pleasure">
+<text>Your only choice, to pleasure her from within to try and make her orgasm you out whole. You rub the insides of the clenching womb as best you can to try and make her reach her peak before you succumb to the digestive caress of her womb.</text>
+<choice destination="pleasurecheck" text="get rubbing"/>
+</page>
+<check ID="pleasurecheck">
+<test what="PLEASURE" DC="8"/>
+<outcome destination="pleasureescape"/>
+<outcome destination="pleasuregush"/>
+</check>
+<page ID="pleasureescape">
+<text>The harpy moans under your deft touch, gasping until with a clench and unclench you take your opportunity. Sliding forth out of her spasming orgasming nethers covered in juices. The harpy looks dazed in pleasure by the unexpected experience and doesn't seem to hold a grudge for you cheating her out of turning you into an orgasm seen as you gave her one a strange but satisfying way.</text>
+<special effect="nonhostile"/>
+<effect type="heal" value="0.1"/>
+<effect type="incrementlocalflag" flag="disposition" value="2"/>
+<choice destination="end" text="get up"/>
+</page>
+<page ID="pleasuregush">
+<text>The harpy moans under your deft touch, gasping as you pleasure her from inside. But for all your efforts soon you soften nonetheless, soften and then slosh and finally slop as her womb melts you down into feminine nectar. She seems almost disappointed in a way that you can no longer please her that way, almost disappointed.</text>
+<choice destination="gushedPL" text="*slosh*"/>
+</page>
+
+
+<page ID="submit">
+<text>The harpy probably deserves to have you as an orgasm after she went to the trouble of catching you and stuffing you in her womb. Why not let her do it, the hot womb juices soaking into and digesting your body feel rather arousing after all.</text>
+<choice destination="melt" text="let it happen"/>
+</page>
+
+<page ID="melt">
+<text>The harpy spends a few enjoyable hours leisurely turning you into girlcum. Her body working your unresisting form over with kneading ripples and hot syrupy juices until finally you transition almost unnoticably from solid to liquid within her. Your form one with her orgasm.</text>
+<choice destination="gushedSUR" text="sploosh"/>
+</page>
+
+<page ID="start">
+<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition" value="2"/>
+<text> The harpy has defeated you, landing in front of you she uses one wing to coax your face up against her wet nethers. She might not you as an orgasm, but she clearly wants you to pleasure her.</text>
+<choice destination="giveoral" text="get licking"/>
+</page>
+<page ID="giveoral">
+<text>You lick at her downy muff, hearing her coo and moan and maybe giggle a little. Her sex rippling around your tongue as she urges you deeper and her nectar becomes more prominent. Gradually her delighted noises become more and more prominent and that wing grinds you more firmly against her snatch until with a cry she climaxes, soaking your face with her orgasm. She releases you but you can tell that in light of this domination next time you might not be so lucky and the juices gushing forth from her sex when she catches you..will be made OF you.</text>
+<special effect="nonhostile"/>
+<effect type="heal" value="0.1"/>
+<choice destination="end" text="get up"/>
+<special effect="healnpc"/>
+<effect type="incrementlocalflag" flag="disposition" value="-1"/>
+</page>
+
+
+<gameover ID="gushedSTR">
+<text>Your body had liquefied inside with a final clench and now she pleasures herself, tracing a wing between her thighs to rub back and forth as she shudders in pleasure. knowing that she's defeated and melted you utterly within her despite your struggles she lets out a long drawn out moan of delight, bringing herself steadily to climax and sending a gush of your remnants oozing out over her wing..soaking the ground as well in your liquefied form as you're now nothing more than a puddle of harpy juice splattered beneath her.</text>
+</gameover>
+
+<gameover ID="gushedPL">
+<text>The harpy was already close and touching herself from your earlier ministrations, pleasuring herself to the sensations as your wriggling attempts to rub her from inside become the slop and slosh of a womb full of girlcum ready to be splattered on the ground. Her hips bucking and her thighs grinding against eachother as she rocks in place and then lets out a cry, splattering you across the inside of her thighs and the forest floor. the harpy blushing and smiling as she takes off to dry her legs in the wind and leaves what's left of you a cooling puddle soaking into the dirt. For all your attempts to please her, you're just another orgasm.</text>
+</gameover>
+
+<gameover ID="gushedSUR">
+<text>She notices only gradually that all inside her is slosh, and her womb is leaking with the overful desire to release the remnants of its prey. With the help of another harpy helpfully delving down below her waist as she reclines she soon has you out of her, your form sloshing and melting until within a delighted sigh she leaves you painting the face and chest of her friend. Your form now nothing more than a layer of girly nectar staining the two harpies as they snuggle up together.</text>
+</gameover>
+
+</Conversation>

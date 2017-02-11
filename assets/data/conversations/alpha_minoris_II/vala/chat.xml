@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<assertion evaluate="isCompanion"/>
+<text>
+what do you need from me?
+</text>
+<choice destination="leave" text="I think we should part company"/>
+<choice destination="end" text="nope"/>
+</page>
+<page ID="start">
+<assertion evaluate="isFaction" faction="player"/>
+<text>
+hello again traveller. What do you need from me?
+</text>
+<choice destination="join" text="i want you to travel with me again">
+<assertion evaluates="companionSlotFree"/>
+</choice>
+<choice destination="end" text="nothing at the moment"/>
+</page>
+<page ID="start">
+<!--allied with elves, can recruit-->
+<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance" value="1"/>
+<text>
+Hello traveller, have you need of a warrior on your journey?
+</text>
+<choice destination="recruit" text="yes i do">
+<assertion evaluate="companionSlotFree"/>
+</choice>
+<choice destination="end" text="no i dont, bye"/>
+</page>
+<page ID="start">
+<!-- not allied with elves, cannot recruit-->
+<text>
+Hello traveller
+</text>
+<choice destination="end" text="no i dont, bye"/>
+</page>
+<page ID="leave">
+<text>
+Very well, I hope to travel with you again soon.
+</text>
+<special effect="removecompanion"/>
+<choice destination="end" text="fare well"/>
+</page>
+
+<page ID="recruit">
+<text>
+Excellent, I look forward to fighting at your side
+</text>
+<special effect="makecompanion"/>
+<choice destination="end" text="that's the plan"/>
+</page>
+
+<page ID="join">
+<text>
+I am happy to be travelling with you again
+</text>
+<special effect="makecompanion"/>
+<choice destination="end" text="lets go"/>
+</page>
+
+</Conversation>

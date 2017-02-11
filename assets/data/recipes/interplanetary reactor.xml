@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="interplanetary reactor" requiredskill="0" startunlocked="false">
+<description>
+A reactor that includes the fuel efficiency of spaceship engines.
+</description>
+<ingredient item="scrap metal" quantity="10"/>
+<ingredient item="heavy plate" quantity="5"/>
+<ingredient item="computation valve" quantity="5"/>
+<result item="interplanetary reactor"/>
+</recipe>

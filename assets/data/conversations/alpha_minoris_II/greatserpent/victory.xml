@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<preference fetish="ferals"/>
+<text>
+Your will crumbles, your mind fills with tantalizing thoughts of sliding down that smooth throat. Like so many others before you approach the serpent as it slithers to meet you, your thoughts locked on self sacrificial desires. The serpent seems to smile and its alluring tongue runs down and then back up the sides of its inviting mouth. The glimpses of soft wet pink as it flexes and stretches its jaw look wonderful to your eyes and you cannot help but crave to feel them caress your flesh.<conditional><assertion evaluate="slothasitem" slot="2"/>To help with that desire you quickly peel out of your <readequipment slot="2"/> under its tantalizing gaze.</conditional> 
+</text>
+<choice destination="oralvore0" text="*give yourself to the serpent*">
+<preference fetish="oralvore"/>
+</choice>
+<choice destination="cockvore0" text="*crawl under the serpent*">
+<preference fetish="cockvore"/>
+</choice>
+<choice destination="gameover" text="doomed">
+<notpreference fetish="cockvore"/>
+<notpreference fetish="oralvore"/>
+</choice>
+</page>
+
+<page ID="cockvore0">
+<text>
+The serpent watches you approach, but lets out a merp as you pass its head and trace your hands along the smooth flesh of its underside. The serpent shifting, rolling partially onto its side as you trace your way down its long sinous body towards its hips. the serpent watching you curiously, murring from the stroking of your hands until you reach your goal coaxing another merp out of the surprised serpent. Your hands resting on a long vent along the underside of its body and setting to work, rubbing along the side of that slit, working up and down with your hands and tugging gently outwards each time. The serpent's eyes half lidding as you dutifully get it ready, shaft and sack finally popping free of the defensive hide. That thick and oh so wonderful shaft now out in the open air for you to worship and adore.
+</text>
+<choice destination="cockvore1" text="see if it will accept you"/>
+
+</page>
+
+<page ID="cockvore1">
+<text>
+You stroke almost reverently over that hardening length, but with increasing impatience as you smell the serpent's pre ooze forth. The reptile chirring and hissing in pleasure as you lap at its cocktip and redouble your stroking efforts. soon enough you can wait no more and with a needy moan you thrust your head into the serpent's tip. That thick fleshy organ rippling and schlurping around your shoulders, oozing copious precum to stain and lubricate your body as you push into the loins of your magnificent predator.
+</text>
+<choice destination="cockvore2" text="*crawl in*"/>
+</page>
+
+<page ID="cockvore2">
+<text>
+The serpent's hisses and groans of pleasure are wonderful to hear, though muffled by the flesh of the hungry cock currently rippling down over your upper body. The serpent can be felt writhing in delight underneath you as you slide further and further inside, the angle shifting about with its sinous flexing making it difficult for you to feed yourself deeper in. But not to be deterred you slide deeper into the beast's cock, sliding your hips past its drooling cocktip and finally shoving off the ground. Your weight settling deeper in as the serpent's cock shifts skywards, your form starting to swell out the proudly displayed sack of the predator. The curves of its orbs replaced with the contours of your body as your feet steadily slide down towards its tip and then pop inside, once sealed into the loins of the creature who dominated you it doesn't take you long at all to settle down the rest of the way into the cummy embrace of its balls.
+</text>
+<choice destination="cockvoresubmit" text="*relax into the churn*"/>
+<choice destination="cockvoreresistcheck" text="*try to snap out of it*"/>
+</page>
+
+<page ID="cockvoresubmit">
+<text>
+The serpent curls sinously to nuzzle against its own sack and feel the shape of your body curled contentedly in those gooey confines. As you settle in the cum coating you and engulfing you begins to churn and slosh, glorping wonderfully as you relax and let the magnificent predatory creature take and claim you as its pleasure fluid. Not trying to escape you feel the serpent's tongue lick at the softening bulge you make through the skin of its own sack and chirr approvingly as you turn soft and creamy.
+</text>
+<choice destination="cockvoresubmitGO" text="*gurgle*"/>
+</page>
+
+<gameover ID="cockvoresubmitGO">
+<text>
+As you churn away in the balls of the serpent you feel it get onto its feet, supporting on three claws letting you sway in its balls as gradually the lumpy contours of your form round out and you churn entirely into serpentseed. The creature mmmhmming and then reaches its free claw up underneath itself, wrapping a hindlimb's grasp around its cock and starting to stroke off with a chirring hiss of delight. The serpent's balls glorping as they smoothly even out your consistency into a smooth mass of thick sticky jizz, an action that precedes your release though not by much. the serpent letting out a growl of pleasure and cumming, climaxing, sending gallons of your form splattering all over the floor underneath it as nothing but a hot sticky puddle of cum.
+</text>
+</gameover>
+
+<check ID="cockvoreresistcheck">
+<test what="WILLPOWER" DC="10"/>
+<outcome destination="cockescape"/>
+<outcome destination="cockdigest"/>
+</check>
+
+<page ID="cockescape">
+<text>
+As nice as it is the niggling thought is if you just relax and stay in the serpent's bloated sack you're soon gonna be melted down into naught but jizz. Which might put a serious crimp on your future plans, still, it feels luxurious and you can feel the desire to just comfortably merge with the churning goo you're bathing in. However, your will is strong and your desires for things other than a spunky fate strong and so steadily as an act of volition your mind clears. And once your mind is clear its time to push your way out, the serpent's length pliant, weak, lacking the strength to deal with truly resistive prey it provides little impediment as hands first you thrust your way back out. The serpent shuddering and squirming with many a hiss as you worm your way out of its shaft and into the open air, squeezing free in a sticky mass and leaving the serpent to recover and back up. The beasty truly to pull that exposed shaft and deflated sack back into itself for protection from your likely ire.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="get clear"/>
+</page>
+
+<page ID="cockdigest">
+<text>
+The sensations are wonderful, and the desire to give yourself fully to the great serpent's sack is all consuming. A niggling thought teases just at the back of your mind, the idea you should be doing something else other than just letting the churning cum slowly melt you. But the thought remains tantalizingly out of your conscious awareness and in time you forget it entirely, the wonderful sensations of your steady softening and increasingly creamy form taking all your attention.
+</text>
+<choice destination="cockGO" text="*burble*"/>
+</page>
+
+<gameover ID="cockGO">
+<text>
+With nary a fuss of protest you liquidate inside the churning balls of the serpent. A lower leg of your magnificent predator caressing its bloated sack as steadily the shape and outline of your body disappears, dissolving into the hot cum encompassing you until you're an indistinguishable addition to its seed. And as that happens the serpent moistens its lips and begins to stroke off with the claw of that hindlimb wrapped around its shaft, working itself to pleasure with groans and growls of pleasure. It seems to take only a little effort to orgasm you out, splattering hot seed on the floor beneath the creature as you blast out of its shaft and form a nice puddle of former protaganist.
+</text>
+</gameover>
+
+<page ID="oralvore0">
+<text>
+The serpent pauses before you, its jaws gaping and stretching open in front of you. Its long tongue flicking out to lick over and taste you, coaxing a moan of desire from your lips. You reach out a hand, feeling up the inside of your majestic predator's mouth. Warm, wet, soft and inviting, you close your eyes and lean forwards. Pressing your hands into the serpent's throat, feeling it yield and then flex pressing around your hands and tugging them in. Pushing deeper forwards you feel the serpent gulp, its jaws flexing around your torso and then starting to lift you up off your feet as you slide deeper down its throat.
+</text>
+<choice destination="oralvore1" text="slide down that throat"/>
+</page>
+
+<page ID="oralvore1">
+<text>
+The serpent lifts its head up, the throat angling down now around your arms and head as it settles atop its coils. The great and majestic predator hissing softly in delight as its tongue laps over your body and it parts its jaws further, then GLUCKS gulping you down another few inches and bringing those stubby teeth firmly into place around your legs. You find yourself waving those legs around outside its lips, your impatience getting the better of you as all your beguiled mind can think of is getting inside this serpent's belly. The long slide down its throat awaiting as you squirm and try to rub against the inside of its throat, a bulge in the length of its body, as you try to coax it to swallow again. Though the serpent appears to be taking its time savouring you.
+</text>
+<choice destination="oralvore2" text="swallowed at last"/>
+</page>
+
+<page ID="oralvore2">
+<text>
+You feel it finally tipping its head all the way back at last, the long slide down its throat finally beginning as it chugs down your legs in a series of jaw flexing glucks until your feet utterly disappear. The serpent hissing in delight as the bulge of your form eases down its neck, passing its forelimbs as it reaches up a claw to rub and caress the bulge of yet another beguiled meal sliding down to meet her fate. The serpentine predator mhmming and curling on the ground as you settle inside its belly, a long and steamy chamber of enzymes and pressing flesh that'll process you down to a slurry of meat for the wonderful predator who devoured you.
+</text>
+<choice destination="willcheck" text="*try to snap out of it*"/>
+<choice destination="submit" text="*be a good little meal*"/>
+</page>
+<check ID="willcheck">
+<test what="WILLPOWER" DC="10"/>
+<outcome destination="willsuccess"/>
+<outcome destination="struggledigest"/>
+</check>
+
+<page ID="willsuccess">
+<text>
+A niggling sense of wrongness begins to permeate your mind, though the lingering beguilement bestowed by those luminous blue eyes is like a heavy blanket smothering your mind in a contented desire to enjoy your surroundings. It'd be so easy to simply.. NO! you shake your head vigorously and gradually feel the fog clear, you're in this serpent's belly and if you don't get out you're gonna end up digested like all those saurian warriors who tried to best the thing before. But even with your will now your own there's still the problem of how to escape this powerful creature's belly.
+</text>
+<choice destination="strugglecheck" text="try to get out of here!"/>
+</page>
+
+<check ID="strugglecheck">
+<test what="STRUGGLE" DC="10"/>
+<outcome destination="escape"/>
+<outcome destination="struggledigest"/>
+</check>
+
+<page ID="escape">
+<text>
+You push and shove at the inside of your captor's belly, getting a startled hiss from the creature as it uncurls and writhes on the spot in discomfort at your antics. It tosses is head one way, then the other and tries to push down on its belly to still your struggles, perhaps being slender it lacks the weight to really force you to be still though. The serpent hisses and redoubles its writhing as you succeed in upsetting its stomach and start worming your way up its throat, clambering through its parted jaws as it gags and glacks unhappily. As you look back from your spot perched on its lower jaw for a moment it locks eyes with you and you feel the desire to calm down and let it swallow you back down, but you have fallen for this once before and so a swipe at the serpent's eyes makes it hiss and pull back sharply spilling you to the ground. The serpent slithering a few paces back and hissing, though seems a bit dazed and blinks repeatedly.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunNPC" value="10"/>
+<choice destination="end" text="back away"/>
+</page>
+
+<page ID="submit">
+<text>
+You see no reason not to stay here and digest. IT's what you wanted, it was your idea to want to be food for this wonderful serpent creature. As the enzymes start to soak your flesh you moan and stretch out, luxuriating in their caress as you bask in the heat of her belly. The serpent smiling softly as it arcs its head read and nuzzles gently at your sides, tenderly licking the bulge you make inside your predator as its body begins making you into food. In utter beguiled contentment you relax and exhale, letting her work you down.
+</text>
+<choice destination="submitGO" text="*gurgle*"/>
+</page>
+
+<page ID="struggledigest">
+<text>
+Despite your best efforts you cannot escape the insides of the serpent. Whether weak in mind or might you can do naught but gurgle away as the serpent's belly begins to work you over and work you down. Your form gradually forming a softened lump in the serpent's belly as it curls and nuzzles at its gut to feel you steadily moosh.
+</text>
+<choice destination="struggleGO" text="*Gurgle*"/>
+</page>
+
+<gameover ID="submitGO">
+<text>
+Gradually and without resisting you melt away inside the serpent. Your form breaking down into a stew of former girl and fed down into her guts. That bulge in the serpent's belly flattening out steadily as your form, 'freely' given, goes to nourish your large and magnificent predator. The serpent slithering slowly back into the shadows of the mine now that its middle is once again trim and all that you are is now a part of the creature, yet another victim of its beguiling gaze to meet an end inside of it.
+</text>
+</gameover>
+
+<gameover ID="struggleGO">
+<text>
+Gradually the lump in the serpent's tail disappears as you dissolve. Your form turning to a thick goopy mass of liquidated person and fed through the depths of its body as it rests there in the depths of the mine. Soon enough not a trace of you remains but for the smile on the serpent's muzzle and the eagerness in its gait as it stalks back into the shadows of the mine.
+</text>
+</gameover>
+
+<gameover ID="gameover">
+<text>
+You have met a terrible fate
+</text>
+</gameover>
+
+</Conversation>

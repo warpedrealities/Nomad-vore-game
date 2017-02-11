@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<macrovalue part="hair" variable="colour">
+<translate value="0" string="golden"/>
+<translate value="1" string="brown"/>
+<translate value="2" string="fiery"/>
+<translate value="3" string="dark"/>
+<translate value="3" string="silvery"/>
+</macrovalue>

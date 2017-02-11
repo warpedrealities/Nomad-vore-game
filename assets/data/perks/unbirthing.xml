@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<perk name="unbirthing" >
+<description> Your nethers can be pliant beyond your wildest dreams when the hunger strikes them, and your womb has become both accomodating to those your own size and larger and something that can liquidate them at your will. unlocks unbirthing. </description>
+<requirement count="1"><req>BODYvagina</req></requirement>
+
+<maxrank value="1"/>
+
+</perk>

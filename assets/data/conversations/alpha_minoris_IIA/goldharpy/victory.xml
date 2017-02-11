@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<preference fetish="unbirth"/>
+<text> Brightfeather perches atop you, setting a claw atop your chest to pin you down as she looks down at you "I'm very disappointed stranger. I had hoped you could be so much more." she says with a frown, then before you can ask much more than what she squats down over your face. Her nethers parting around your face and then clenching, drawing you in, her inner muscles well trained and powerful.
+</text>
+<choice destination="unbirth0" text="pussy food"/>
+</page>
+
+<page ID="unbirth0">
+<text>
+"You're just another boring person stranger." Brightfeather berates and moans as she hauls your shoulders and chest inside herself, starting to swell out "and this is the most interesting thing you can do for me." she says squatting over your squirming body and drawing you in.
+</text>
+<choice destination="unbirth1" text="be interesting womb food"/>
+</page>
+
+<page ID="unbirth1">
+<text>
+Brightfeather blushes as she feels herself stretching out around you, her womb being packed with your curled up form as she forces you inside "mhmm, ah, maybe you can...redeem yourself..though." she moans as she rocks her hips down over your own, claiming them as well and then standing..wings spread for support as your legs hang between her own. Her sexual juices staining them as she rolls rthythmic contractions over you to draw you inside herself.
+</text>
+<choice destination="unbirth2" text="all the way in"/>
+</page>
+
+<page ID="unbirth2">
+<text>
+Brightfeather adjusts her stride as your feet are pulled up, and then in. Her thighs coming together sealing you inside of her nethers. The harpy 'queen' mhmming softly and stroking a wing over the bulge you make "just another orgasm for me, is that all you'll amount to?" she murmurs softly and settles slowly into a seated position. She leans back with the bulge you make resting on her thighs.
+</text>
+<choice destination="submit" text="yes, thats all i am"/>
+<choice destination="pleasure" text="try to pleasure her"/>
+</page>
+
+<page ID="submit">
+<text>
+It's only fair for the gorgeous harpy to use you that way. The thought makes you shiver, but submit to your fate. Whether its a shiver of arousal or fear you keep to yourself as you feel her moving around, letting out a ringing call that echoes off the mountain while you are helplessly imprisoned inside of her. You have a bit of time to wonder what she's planning, until she seats herself on a boulder and you feel her gasp and tense. Brightfeather being serviced by one of her more simple sisters, the harpy licking at her folds lustily as she moans and starts melting you down.
+</text>
+<choice destination="submitGO" text="just an orgasm"/>
+</page>
+
+<gameover ID="submitGO">
+<text>
+You hear Brightfeather moaning and gasping as the cooing harpy licks and nuzzles at her sex. But gradually the sound fades into the hot wet contractions of her womb around you and the sound of your ears liquidating as you soften and slosh away inside her. Brightfeather pressing a wing against the top of her middle, feeling you squish and yield to the limb and covering the harpy pleasuring her with her feathers. Bright letting out a gasping cry as her womb squishes you down into nothing but juices and sends you gushing out over the harpy's face and breasts as nothing more than girljizz, staining the ground and the two partners. You were brought up here to be 'interesting' to Brightfeather, and judging by her flushed face and your gushy remnants staining her legs you might have succeeded.
+</text>
+
+</gameover>
+
+<page ID="pleasure">
+<text>
+No you're not going to just end up a stain. Though she can barely hear anything you might say, only by pleasuriing her into letting you go can you have a hope of avoiding being a gush. Brightfeather letting out a little mhmm and smiling as you start to squirm around and rub at her insides "mhmmm what are you up to in there stranger?" she remarks and leans back a bit more as you get to work. Your persuasive fingers all that lie between you and being her orgasm.
+</text>
+<choice destination="pleasurecheck" text="be persuasive"/>
+</page>
+
+<check ID="pleasurecheck">
+<test what="PLEASURE" DC="12"/>
+<outcome destination="pleasureescape"/>
+<outcome destination="pleasuregush"/>
+</check>
+
+<page ID="pleasureescape">
+<text>
+You hear her mhmm, and then moan and gasp "oooh stranger that's...mhmm, keep..." she fades into animalistic pleasure sounds as she writhes on the stones. Her sex sopping wet as you squirm and rub vigorously around within her depths, feeling her pleasure build and then finally peak as an orgasm rocks through her. Her nethers spasming and then relaxing, she seems only too willing to let you out again when you try to squirm free. Brightfeather smiling as she looks down on your wet body "well now, I suppose you do deserve another chance after that."
+</text>
+<special effect="nonhostile"/>
+<choice destination="end" text="a lucky escape"/>
+</page>
+
+<gameover ID="pleasuregush">
+<text>
+You hear her mhmm, and then moan and gasp "oooh stranger that's...mhmm, keep..." she fades into animalistic pleasure sounds as she writhes on the stones. Her sex sopping wet as you squirm and rub vigorously around within her depths, feeling her pleasure slowly and gradually build and then finally peak as an orgasm rocks through her. Her nethers clenching on your softened form, squeezing your worked over body until you come apart in a spray of liquids staining her inner thighs. Your body now just a puddle beneath her as she pants and flushes "mhmm, ah stranger...I think you didn't plan on ending this way..but thank you."
+</text>
+
+</gameover>
+</Conversation>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<perk name="distracting">
+<requirement count="1">
+<req>PERKseductress</req>
+</requirement>
+<description> 
+Those seduced seldom wish to practice the ways of war. Your seductive abilities now inflict a short term debuff on enemies.
+</description>
+<moveModifier name="seduce">
+<change type="ADD" >
+<effectStatus probability="25" rangedDecay="1">
+<proportionalEffect stat="RESOLVE" proportion="1"/>
+<probabilityModifier value="INTELLIGENCE"/>
+<statusTag tag="seduction"/>
+<applyText>TARGET is distracted.</applyText>
+<statusAttribMod uid="50" icon="0" duration="10" numModifiers="2">
+<removeText> TARGET is no longer distracted.</removeText>
+<effect attribute="RANGED" modifier="-8"/>
+<effect attribute="MELEE" modifier="-8"/>
+</statusAttribMod>
+</effectStatus>
+</change>
+
+</moveModifier>
+<maxrank value="1"/>
+
+</perk>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Ship width="5" height="5" wrecked="1" sprite="escapepod">
+<layout width="16" height="16" spriteset="ship.png">
+<tileset>
+<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+</tileset>
+<description>The escape pod is silent, you are alone</description>
+<mapgen>
+<prefab positionX="0" positionY="0" width="5">
+<row>01210</row>
+<row>11211</row>
+<row>12221</row>
+<row>11211</row>
+<row>01110</row>
+</prefab>
+<pairedportal x="2" y="0" sprite="1" ID="-101" facing="0"> Exterior hatch </pairedportal>
+<breakable name="cryopod" x="2" y="3" sprite="17" hp="10" items="1">
+<description>A cryogenic stasis chamber, able to preserve life by slowing metabolic processes to a near stop.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+<Item>scrap metal</Item>
+</breakable>
+<breakable name="cryopod" x="3" y="2" sprite="17" hp="10" items="1">
+<description>A cryogenic stasis chamber, able to preserve life by slowing metabolic processes to a near stop.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+<Item>scrap metal</Item>
+</breakable>
+<breakable name="cryopod" x="1" y="2" sprite="17" hp="10" items="1">
+<description>A cryogenic stasis chamber, able to preserve life by slowing metabolic processes to a near stop.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+<Item>scrap metal</Item>
+</breakable>
+</mapgen>
+</layout>
+<exterior width="5">
+<row>00000</row>
+<row>01010</row>
+<row>01110</row>
+<row>01110</row>
+<row>00000</row>
+<pairedportal x="2" y="1" sprite="1" ID="-101" destination="escapepod" facing="4"> Escape pod hatch </pairedportal>
+</exterior>
+</Ship>

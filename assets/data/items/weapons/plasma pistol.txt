@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ItemWeapon name="plasma pistol" weight="3" value="450">
+<description>
+The bulky storage torus and magnetic coils give this weapon an outline vaguely reminiscent of a hair dryer. Does 2-8 thermokinetic damage or 2-12 if overcharged.
+</description>
+<modifier>
+
+</modifier>
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="1" maxValue="4" modifier="NONE"/>
+<missText count="1">
+<text>you fail to blast TARGET</text>
+</missText>
+<hitText count="1">
+<text>you blast TARGET for VALUE thermokinetic damage</text>
+</hitText>
+</combatMove>
+<combatMove name="overcharge" ammoCost="2" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
+<missText count="1">
+<text>you fail to blast TARGET</text>
+</missText>
+<hitText count="1">
+<text>you blast TARGET with a radiant bolt for VALUE thermokinetic damage</text>
+</hitText>
+</combatMove>
+<energy refill="plasma canister" efficiency="1" capacity="30"/>
+</ItemWeapon>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<macrovalue part="hair" variable="style">
+<translate value="0" string="ponytail"/>
+<translate value="1" string="crewcut"/>
+<translate value="2" string="wavey"/>
+<translate value="3" string="long"/>
+<translate value="3" string="messy"/>
+</macrovalue>

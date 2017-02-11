@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="vala.png"/>
+<name>Vala</name>
+<description>A slender pointy eared greenskin stands before you. A shortsword sheathed and lashed to her waist. The rest of her outfit barely enough for modesty wrapped around petite breasts and a less pronounced ass than that of her kind.</description>
+<rpg>
+<experiencevalue value="20"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<stat stat="HEALTH" value="40"/>
+<stat stat="RESOLVE" value="40"/>
+<attribute attribute="DODGE" value="2"/>
+<attribute attribute="PARRY" value="2"/>
+<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<missText count="2">
+<text>Vala's sword slash doesn't connect with TARGET</text>
+<text>Vala attempts to stab TARGET but the blow doesn't connect</text>
+</missText>
+<hitText count="2">
+<text>Vala hits TARGET for VALUE points of damage</text>
+<text>Vala slashes TARGET for VALUE points of damage</text>
+</hitText>
+</combatMove>
+</rpg>
+
+<respawn delay="300"/>
+<disposition value="55"/>
+<defeated conversation="alpha_minoris_II/vala/defeat" />
+<seduced conversation="alpha_minoris_II/vala/defeat" />
+<talk conversation="alpha_minoris_II/vala/chat" />
+<controller AI="melee_companion"/>
+<faction value="minyos"/>
+</NPC>

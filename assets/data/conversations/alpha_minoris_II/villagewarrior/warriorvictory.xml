@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<preference fetish="analvore"/>
+<text>"You have broken our laws traveller, and now..you must be punished." the warrior looks down at your expression and grins "your punishment is death inside my ass." she remarks, taking a position astride your form giving you a perfect look up her skirt at the bountiful curves her rear end. A look you soon get up close as she squats down, shoving your face up between those smothering cheeks. Her pucker pressing against your face, the green elven warrior moaning as she grinds back and forth against your face before she'll begin to take you in. Pressing that dark green star more firmly against your head and slowly and steadily stretching it open.
+</text>
+<choice destination="analvore0" text="into darkness"/>
+</page>
+
+<page ID="analvore0">
+<text>
+The warrior lets out a gasp as her sphincter engulfs your head, schlorping it inside the tightness of her bowels. The green woman's rear clenching upon you possessively as she chuckles and fends off your attempts to force her ass off your shoulders. All you achieve to give her fleeting gropes as she shifts from squatting to leaning back and clenches, a rolling ripple of that practiced predatory passage dragging your shoulders into her. Her voracious ass squeezing around your chest with another rippling contraction, Her hands splayed out to either side as she draws you inside "lets see you make trouble when you're just fat on my thighs traveller." she taunts and lets out a lustful moan from the struggling that elicits.
+</text>
+<choice destination="analvore1" text="up her rear"/>
+</page>
+
+<page ID="analvore1">
+<text> The warrior spends a bit longer cramming your middle in, her own belly bulging from your form wedged into her guts up to your waist. And then she stands, simply clenching to draw your squirming legs into her rear end.. Each clench grabbing ahold of you about the point of disappearance and schlorping you a few more inches inside of her rear end. The warrior smiling, tracing a hand over the bulge of her green belly and using the other for support as she half lids her eyes and introduces you fully to the village justass system. She bends forwards briefly as she reaches your calves, perhaps to show off the feet sticking out of her rear..then with a final clench she sucks them in, her asscheeks sealing past your toes and the entirety of you lodged in the hot depths of her body.
+</text>
+<choice destination="analvore2" text="trapped in the gut"/>
+</page>
+
+<page ID="analvore2">
+<text>
+"nearly where you belong outsider, just a bit further to go and you can do no more harm." the warrior sits down, thinking that sufficient to keep you inside as her innards ripple and draw you smoothly and slowly up through her towards her belly and the digestive fate that awaits you. You feel her hands rubbing and drumming lightly on her green belly as she works you inwards, you could either let your felonious self be drawn up into her belly or try to struggle. It'd be too tricky to escape her stomach if you wait until then, so now is your only chance..to wriggle back out her ass despite the difficulty.
+</text>
+<choice destination="struggle" text="try to escape her ass!"/>
+<choice destination="submit" text="let the gut carry you along"/>
+</page>
+
+<page ID="struggle">
+<text>
+"oh no, you can't ah...escape this traveller.." the warrior gasps and chides you as you start to struggle. Trying to wriggle back the way you came through the tight and clenching tube of her gut and bowel. It's all the more tricky to try and slide out of her ass feetfirst, but its your only chance not to end up fat on her rump.
+</text>
+<choice destination="strugglecheck" text="try to struggle out"/>
+</page>
+<check ID="strugglecheck">
+<test what="STRUGGLE" DC="12"/>
+<outcome destination="escape"/>
+<outcome destination="gurgle"/>
+</check>
+
+<page ID="escape">
+<text> despite her claim you can't appeal it seems you can at least get a stay of your sentence. The chuckles and mhmms of your jailor turning to gasps of surprise and grunts of discomfort as you worm your way backwards, in startlement she jumps to her feet at feeling your own feet poking through her rear and this gives you the opening you need to conduct a jailbreak. It's not dignified, its not comfortable, and it's probably not good for your personal hygiene but soon you're worming back out of her.. leaving her flustered and frustrated as your heads and arms slip free of her ass and the entirety of you lands in a heap beneath her. Though probably now is the time to make tracks before she tries to apprehend you again.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="flee"/>
+</page>
+
+<page ID="gurgle">
+<text>The warrior moans as you squirm, wriggling against the pull of her intestines that form a formfitting tube around you and despite your efforts draw you ever deeper inside her. That green belly being rubbed over vigorously as slowly you lose the battle, sliding up into her stomach and giving her more contours to rub. Soon enough you're packed away entirely in her digestive chamber and with half lidded eyes she rubs the bulge of her gut as it gets to work on you. Struggling at this point does you no good, her throat entrance isn't pliable from a recent trip and back the way you came would do no more than give her intestines something to absorb more directly. Enzymes soak you and slowly you succumb, grinding and gurgling down inside her your struggles turn to weak twitches and then fluid glorpings as her belly turns nice and round. For your crimes against her people you are now nothing but soup sloshing around in her belly.
+</text>
+<choice destination="struggleGO" text="digested"/>
+</page>
+
+<page ID="submit">
+<text>Well you did break their laws. And it'd be you against the rest of the village and their hungry asses if you did escape. Maybe one should just submit to punishment. At least in a way you'd be giving back to the community you harmed, by making this elf warrior's rump even more alluring. The warrior raises an eyebrow as she feels you slide up into her belly without resistance, submitting to your punishment without a struggle. That hot stomach welcoming you with steaming enzymes and hungry gurgles that set to work on breaking you down "mhmm, glad you've seen sense assfood.. your crimes mean you belong on my hips." the warrioress says softly, giving her belly a pat as she realizes you're really not going to put up a fight.
+</text>
+<choice destination="submitGO" text="digested"/>
+</page>
+
+<gameover ID="struggleGO">
+<text>
+"mhmm, good assfood." the warrior remarks as she feels a thorough gurgle glorp through her belly indicating you're utterly digested now. Standing she goes about her day as the gut bulge steadily diminishes, filtering your gooey remains back the way you came and absorbing everything good about your body to add to what is truly magnificent about her own. By the time you're done away with entirely and her belly is flat her rump and thighs have become even more curvaceous and appealing to look at. Not that you get to appreciate the view you contributed to.
+</text>
+</gameover>
+
+<gameover ID="submitGO">
+<text> The warrioress strolls around, supporting your weight easily as you do little to shift around and throw her off balance. Her gurgling gut roiling around you, steadily breaking you down until in her middle there is naught but a smooth dome swiftly shrinking back. And as belly shrinks her ass, thighs and hips are rounded out from impressive to downright legendary proportions. Your form a slurry that went to feed the sexyness of her most alluring part, giving back to her community by making her more eyecatching.
+</text>
+</gameover>
+
+</Conversation>

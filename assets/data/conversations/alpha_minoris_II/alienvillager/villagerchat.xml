@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<condition evaluate="FACTIONFLAG" value="1" operator="equals" flag="allegiance"/>
+<text>
+The pointy eared humanoid is similar in most regards to humans but for her pale green skin. She stands around five foot high and is shapely, especially if viewed from behind. She wears a skirt that does little to hide her wondrous ass, in fact it seems to highlight it, and no top. Her breasts sway free on her chest small and pert "greetings and well met friend." she says at your approach.
+</text>
+<choice destination="seduction" text="attempt to seduce"/>
+<choice destination="info" text="ask some questions"/>
+<choice destination="earth" text="ask about earth"/>
+<choice destination="end" text="well bye"/>
+</page>
+<page ID="start">
+<text>
+The pointy eared humanoid is similar in most regards to humans but for her pale green skin. She stands around five foot high and is shapely, especially if viewed from behind. She wears a skirt that does little to hide her wondrous ass, in fact it seems to highlight it, and no top. Her breasts sway free on her chest small and pert "greetings stranger from the stars." she says at your approach.
+</text>
+<choice destination="seduction" text="attempt to seduce"/>
+<choice destination="info" text="ask some questions"/>
+<choice destination="earth" text="ask about earth"/>
+<choice destination="end" text="well bye"/>
+</page>
+
+<!--written by serenity-->
+<page ID="seduction">
+<condition evaluate="LOCALFLAG" value="0" operator="equals" flag="attempt"/>
+<text>
+Gears turn slowly in your head. You realize that this alien villager is quite sexually appealing. You sashay your hips and flutter your eyes at the comely villager, eager to do your best impression of the legendary Captain Kirk and have freaky sex with every alien life form you meet. This is the best idea you’ve ever had.
+</text>
+
+<choice destination="seductioncheck" text="to boldly go"/>
+</page>
+
+<check ID="seductioncheck">
+<test what="SEDUCTION" DC="10"/>
+<outcome destination="seductionwin"/>
+<outcome destination="seductionloss"/>
+</check>
+
+<page ID="seduction">
+<condition evaluate="LOCALFLAG" value="1" operator="equals" flag="attempt"/>
+<text>
+The seduction attempt seems to be becoming less effective with time as she frowns "Why do you keep doing this? I'm not going to change my mind just cause you stand funny."
+</text>
+<effect type="setlocalflag" flag="attempt" value="2"/>
+<choice destination="end" text="slink off"/>
+</page>
+
+<page ID="seduction">
+<condition evaluate="LOCALFLAG" value="2" operator="equals" flag="attempt"/>
+<text>
+Her scowl deepens as you attempt another come on. “Is this some strange habit of your people? An inability to accept no as an answer? It’s a wonder that you haven’t died off long ago. You would think that evolution would have just turned your species directly into butt fat by this point of time if that were the case.”
+</text>
+<effect type="setlocalflag" flag="attempt" value="3"/>
+<choice destination="end" text="dejectedly leave"/>
+</page>
+
+<page ID="seduction">
+<text>
+“Still? Still? You know what, fine, I am tired of having to deal with you. But you need to prove that you’re quite skilled with that tongue of yours in something other than bothering people.” With this she lifts up her strange space skirt revealing her delectible greenframed cleft. She motions for you to kneel in front of her.
+</text>
+<choice destination="seductionfail0" text="get on your knees"/>
+</page>
+
+<page ID="seductionfail0">
+<text>
+You take your cue, kneeling down on both knees and leaning in to lap gently at her exposed slit. She casually drapes one leg over top of your shoulder and reaches down to spread her labia with her fingers. Deciding that she must be pleased with your abilities you dive in, lapping and licking and swirling your tongue around. Unfortunately it quickly becomes apparent that she isn’t too happy with you at all. Her fingers move away as her free hand presses against the back of your head and shoves you into her snatch. Before you even get the chance to flail, she begins to work her way down your body. 
+</text>
+<choice destination="seductionfail1" text="ahcrap"/>
+</page>
+
+<page ID="seductionfail1">
+<text>
+Unphased by your cries of protest, she moans in delight, her snatch eagerly devouring you body. You feel your shoulders and chest slide into the dripping folds as your head journeys deeper into her. From there she squats lower until she gets to your hips and then uses her hands to straighten your legs into a more manageable position. Gripping your feet, she pushes you up further still until you are completely tucked away in her womb. 
+</text>
+<choice destination="seductionfail2" text="too late for regrets"/>
+</page>
+
+<gameover ID="seductionfail2">
+<text>
+“Hmm, I knew you would make a terrible mate. Your entire body and still it seems you’re hard pressed to satisfy me. Plus you’ve ruined my skirt.” Her body clenches around you. “Well at least you can still make me gush.” A tingling sensation creeps up and down your body and you feel your senses slowly turning numb. You lift your hand up to try and work some feeling back into it, only to find that it has liquidated. You would be quite surprised by this odd turn of events, except it seems the rest of you has been converted into femcum as well. As you can no longer really think for yourself, you decide to just go with the flow. And the flow is out. On to the ground. As an orgasm. Maybe this counts as seduction?
+</text>
+
+</gameover>
+
+<page ID="seductionloss">
+<text>
+She looks at you with confusion. Maybe alien mating rituals are different than your’s? As you attempt to lay it on a bit thicker, understanding dawns across her face. “O-oh! No, I'm not interested in girls like you. I am, um, flattered that you’d ask though?” Well shoot, it seems that that didn’t work.
+</text>
+<effect type="setlocalflag" flag="attempt" value="1"/>
+<choice destination="end" text="make your apologies"/>
+</page>
+
+<page ID="seductionwin">
+<text>
+You flutter your eyes, you sashay your hips, you whisper sweet nothings into her comically large ear. Soon she is putty in your hands, hot, green putty. Your hands move to her bare breasts, groping and squeezing as you nibble at her ear. She is quite responsive to your ear nibbles, much more so than you’d expect. You make a note that the alien villager’s ears may be an erogenous zone. You move on from ear nibbles to kissing her and groping the ample curves of her ass, making out with her as a prelude to something more.
+</text>
+<choice destination="oralsex0" text="*urge her down*"/>
+<!--
+<choice destination="oralvore0" text="i wonder how she'd taste">
+<assertion evaluate="hasperk" perk="oralvore"/>
+</choice>
+<choice destination="sex0" text="bend her over">
+<assertion evaluate="haspart" part="penis"/>
+</choice>
+-->
+</page>
+
+<page ID="oralvore0">
+<text>
+
+
+</text>
+
+</page>
+
+<page ID="oralsex0">
+<text>
+You place your hands on her shoulders and push gently, firmly guiding her down in front of you. She seems to have at least some idea of what you have in mind and as she lowers herself quickly, 
+<conditional><assertion evaluate="slothasitem" slot="2"/>pulling your garments out of her way as she goes</conditional>.
+</text>
+<choice destination="oralsex1" text="enjoyment of alien tongue"/>
+<choice destination="cockvore0" text="Hungry loins">
+<assertion evaluate="hasperk" perk="oralvore"/>
+<assertion evaluate="haspart" part="penis"/>
+</choice>
+</page>
+
+
+
+<page ID="oralsex1">
+<assertion evaluate="haspart" part="vagina"/>
+<text>
+She gives your crotch a few sniffs and you suddenly realise you aren’t sure if these aliens have the same idea of sex as you do. Before you’re able to worry too much about possible silly sex rituals, though, she buries her face in your snatch. She is terribly enthusiastic about it, and you begin to worry that you did too good of a job with your seduction. Your legs wobble and threaten to give out as she applies her oral ministrations, tongue swirling about within you. She cups your buttocks carefully to steady you as your body shudders of its own accord. You soon find yourself cumming all over the alien’s face, though she doesn’t seem to mind. She licks her face clean and ruffles your hair playfully,  
+<conditional><assertion evaluate="slothasitem" slot="2"/>and once you’ve recovered your breath she helps you back into your attire.</conditional> She certainly is a helpful alien.
+</text>
+<choice destination="end" text="oh yes"/>
+
+</page>
+
+
+<page ID="oralsex1">
+<assertion evaluate="haspart" part="penis"/>
+<text>
+She gives your crotch a few sniffs and you suddenly realise you aren’t sure if these aliens have the same idea of sex as you do. Before you're able to worry too much though she takes your shaft in one hand, stroking it and leaning in to lick your hardening length afore engulfing it. The alien elf mhmming appreciatively at the flavour as she slides your shaft into her mouth all the way to the hilt, nuzzling into your crotch as her throat ripples and tugs around your <macro ID="penis_size_desc"/> shaft and she starts to bob up and down. The elf facefucking herself vigorously using your cock making you shudder and moan, weak in the knees as she supports yourself with a grip on your hips. The elf keeping you steady until with a cry you're pushed over the edge, pouring your creamy jizz down her throat as she mhmms...swallowing and pulling off slowly. The elf wiping her lips clean and smiling up at you.
+<conditional><assertion evaluate="slothasitem" slot="2"/>and once you’ve recovered your breath she helps you back into your attire.</conditional> She certainly is a helpful alien.
+</text>
+<choice destination="end" text="oh yes"/>
+
+</page>
+
+<page ID="info">
+<text>
+Ask and I will answer traveller.
+</text>
+<choice destination="danger" text="what dangers are nearby?"/>
+<choice destination="pad0" text="what's with the stone platform?"/>
+<choice destination="supplies" text="where can i get supplies?"/>
+<choice destination="end" text="actually i've changed my mind, bye."/>
+</page>
+
+<page ID="danger">
+<text>
+Nothing is beyond the village right now, its like this world isn't finished.
+</text>
+<choice destination="info" text="I would like to ask another question"/>
+<choice destination="end" text="Thanks, bye"/>
+</page>
+
+<page ID="pad0">
+<text>
+Is it not true that these lahn-ding pads are used by star craft bearing cargo to perch upon the surface of worlds? we have built this pad of stone that vessels from the stars will come to our village bearing cargo.
+</text>
+<choice destination="pad1" text="I'm fairly sure that's not how it works."/>
+<choice destination="info" text="I would like to ask another question"/>
+<choice destination="end" text="Thanks, bye"/>
+</page>
+
+<page ID="pad1">
+<text>
+It is true that we have long waited for your arrival. But with your arrival you have surely proved the merits of our work. I have no doubt that now many vessels will come to our village bearing cargo in future. Yours is but the first.
+</text>
+<choice destination="info" text="I would like to ask another question"/>
+<choice destination="end" text="Thanks, bye"/>
+</page>
+
+<page ID="supplies">
+<text>
+Ask of the storekeeper. She is eager to trade with star travellers for any cargo they might have and will show you what we can offer you.
+</text>
+<choice destination="info" text="I would like to ask another question"/>
+<choice destination="end" text="Thanks, bye"/>
+</page>
+
+<page ID="earth">
+<text>
+I have never heard of such a world.
+</text>
+<choice destination="info" text="I would like to ask another question"/>
+<choice destination="end" text="Thanks, bye"/>
+</page>
+
+</Conversation>

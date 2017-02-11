@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<macrovalue part="scales" variable="colour">
+<translate value="0" string="green"/>
+<translate value="1" string="yellow"/>
+<translate value="2" string="brown"/>
+<translate value="3" string="ochre"/>
+<translate value="4" string="orange"/>
+<translate value="5" string="red"/>
+<translate value="6" string="white"/>
+<translate value="7" string="grey"/>
+<translate value="8" string="black"/>
+</macrovalue>

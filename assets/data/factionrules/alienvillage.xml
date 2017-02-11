@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rules>
+
+<superRule subject="villager" level="2" violation="ATTACK">
+<factionRelationship faction="minyos" mod="-10"/>
+</superRule>
+<superRule subject="warrior" level="2" violation="ATTACK">
+<factionRelationship faction="minyos" mod="-10"/>
+</superRule>
+
+<superRule subject="Minyos shopkeeper" level="2" violation="ATTACK">
+<factionRelationship faction="minyos" mod="-10"/>
+</superRule>
+
+<witness name="villager"/>
+<witness name="warrior"/>
+<witness name="Minyos shopkeeper"/>
+</rules>

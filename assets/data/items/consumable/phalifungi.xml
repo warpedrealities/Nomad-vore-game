@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ItemConsumable name="phalifungi" weight="0.5" value="250">
+<description>A very suggestive engineered fungi. Carefully prepared and treated to amplify its effects.</description>
+<effectmutator>
+<criteriaAssertion part="vagina" />
+<mutation part="vagina" bodychange="remove">
+you no longer have a vagina.
+</mutation>
+</effectmutator>
+<effectmutator>
+<criteriaAssertion part="penis"/>
+<mutation part="penis" variable="length" modifier="3">
+your penis grows CHANGE inches, you are now in possession of a shaft VALUE inches in length
+</mutation>
+</effectmutator>
+<effectmutator>
+<criteriaAssertion part="penis" negative="true" />
+<mutation part="penis" bodychange="add" variable="length" set="6">
+You now have a penis.
+</mutation>
+</effectmutator>
+
+</ItemConsumable>

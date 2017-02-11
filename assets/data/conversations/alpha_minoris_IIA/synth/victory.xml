@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<preference fetish="oralvore"/>
+<text>"now ma'am, please relax and enjoy your experience." the synth remarks as she stutters to a halt looming over you and smiles. She bends forwards and with unyielding hands grasps about your body and hauls you upwards. "Omnico has worked hard to make this as authentic and pleasant as possible." she explains afore her jaws ratchet open wide. Moist air wafting out as the synthetic woman shows off her gape afore setting about devouring you, engulfing your head and cramming it inside. The warm fluids oozing around you as that throat stretches and undulates, smoothly swelling around your head and gripping it to draw you inside. They really did put a lot of effort into making it feel like you really are being eaten alive by someone.</text>
+<choice destination="oralvore0" text="a real enough pred" />
+</page>
+
+<page ID="oralvore0">
+<text>
+The synth holds you aloft as she devours you, her slender form holding surprising strength. Your legs squirm or flail around uselessly, hanging in the air as she chugs you down. Her tongue carefully tasting over you thoroughly, leaving you coated in artificial saliva as you slide on down. Your head plunging down past her esophagus, her gut steamy hot and wet and easily stretching as you're fed in. You hear her moan around your middle and then waistline as she engulfs more of you. Her hands stroking possessively over her gut as it swells out. Your form starting to curl inside the prison of her belly as it pushes out with your contours.
+</text>
+<choice destination="oralvore1" text="continue"/>
+</page>
+
+<page ID="oralvore1">
+<text>
+The synth tips her head back, your legs swaying back and forth over her head as she chugs and rthythmically works you down the rest of the way. Her jaws flexing wide and narrow around your thighs, then calves, then finally flexing hard around your ankles as she swallows a final time. The synth gobbling you down and sealing her jaws up past your feet with a snap, mhmming appreciatively and reaching down to rub over her belly and utters satisfied lipsmacks "You were delicious customer." she says, her gut sagging down with your weight now you're curled up within the tightness of her belly, trapped inside the synth's containing gut.
+</text>
+<choice destination="struggle" text="try to get out of here"/>
+<choice destination="submit" text="relax, it's cosy"/>
+</page>
+
+<check ID="struggle">
+<test what="STRUGGLE" DC="12"/>
+<outcome destination="struggleescape"/>
+<outcome destination="struggletrapped0"/>
+</check>
+
+<page ID="struggleescape">
+<text>
+You're not about to stay around being carried around as a belly pet by a walking talking sex doll. And you set about trying to shove your way back upwards, the synth uttering a staticky hork and flailing her arms afore trying to push down on the top of her belly with both hands firmly. The synth protesting your lack of acquiescence "please calm down ma'am, trying to get out prematurely will only harm your customer experience." she says, not deterred however you shove your way up, finally finding the entrance to her throat and worming your hands up and out. The synth stumbling as her jaws are forced apart and your fingers grasp at the flanks of her lips. With the grip you can easily pull your way out despite her protests, the gynoid stumbling and flailing and falling on her but as you work your upper body past her jaws, then flop out onto the ground and wriggle free. It's undignified, but you've gotten free.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="get clear"/>
+</page>
+
+<page ID="struggletrapped0">
+<text>
+You're not about to stay around being carried around as a belly pet by a walking talking sex doll. And you set about trying to shove your way back upwards, the synth uttering a staticky hork and flailing her arms afore trying to push down on the top of her belly with both hands firmly. The synth protesting your lack of acquiescence "please calm down ma'am, trying to get out prematurely will only harm your customer experience." and shoves down, you lose track of her the entrance of her belly as she sets about pushing and kneading at you with her hands rather firmly "customers who are unruly need time out." she says as you start to tire out and realize that she has you beat. In your weakened state you're unable to object as she sets about toting you around. the wandering synth jostling and swaying you about in her gut as she goes about the tunnels. It would seem you might be here for a while.
+</text>
+<choice destination="struggletrapped1" text="in for the long haul"/>
+</page>
+
+<page ID="struggletrapped1">
+<text>
+After a timeless period of jostling and swaying without references for how long has passed you feel the gynoid come to a halt "we hope you have enjoyed your extended stay inside this demonstration model and will get in contact with a sales representative to make a purchase." she intones and then doubles over, gut flexing then pressing in around you. The synth starting to hork you up, forcing you up her throat and taking ahold of you as you start to emerge into the light, pulling you free and supporting you until she can set you down wetly and gently on the floor in front of her. She smiles "please take the time to fill out a customer satisfaction survey." she says and then looks around and adds "we seem to be out of towels at the moment, Omnico apologizes for the inconvenience."
+</text>
+<effect type="imprison" value="400"/>
+<special effect="nonhostile"/>
+<effect type="heal" value="0.1"/>
+<choice destination="end" text="get up"/>
+</page>
+
+<page ID="submit">
+<text>
+"Enjoy yourself customer, we hope you find your experience to your liking." says the synth as you decide its fairly warm and comfortable inside her and to just let yourself be a burden on this synth for a bit. You feel the gynoid rub her belly now and then as she wanders around, swaying you gently from side to side inside as she walks. Occasionally she'd pause to reach down and snug her massively distended gut with both hands, cradling the bulges of your form inside her. When the time comes she remarks "we hope you have enjoyed your extended stay inside this demonstration model and will get in contact with a sales representative to make a purchase." and starts horking you up. Her insides efficiently pressing around you and pushing you up and out of her body. Emerging headfirst from her mouth you find her hands waiting for you, supporting you until she can grasp under your arms and help ease you out of her throat entirely. The synth setting you down on the floor with a bright smile "please take the time to fill out a customer satisfaction survey." she says and then looks around and adds "we seem to be out of towels at the moment, Omnico apologizes for the inconvenience."
+</text>
+<effect type="imprison" value="100"/>
+<special effect="nonhostile"/>
+<effect type="heal" value="0.1"/>
+<choice destination="end" text="get up"/>
+</page>
+
+
+</Conversation>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text>
+The raptor girl chirrs at lustfully at your approach, rubbing her thighs together. It's clear from the sweet nectar of her loins you've enthralled her.
+</text>
+<choice destination="sex0" text="have sex with her">
+<assertion evaluate="haspart" part="penis"/>
+</choice>
+<choice destination="end" text="leave her be"/>
+</page>
+
+<page ID="sex0">
+<text>
+<conditional><assertion evaluate="slothasitem" slot="2"/> Pausing only to undress before getting down to business </conditional>you present your <macro ID="penis_size_desc"/> shaft to the raptor, stroking it to hardness and looking at her and it suggestively. There's no way to convey your desire to her with words, but it so matches her own desires, dropping down onto all fours she looks over her shoulder at you and raises her tail. An invitation you'd be a fool not to take up, grasping her tail with one hand and your length with the other as you settle in behind her.
+</text>
+<choice destination="sex1" text="give the needy slut what she wants"/>
+</page>
+
+<page ID="sex1">
+<condition operator="greaterthan" evaluate="BODYVALUE" bodypart="penis" partvalue="length" value="18"/>
+<text>
+You tease for only a bit of time before working your ample endowment into her, the raptor letting out a gasping chirr as she's stretched out but rocking her hips back to meet yours even if you're stretching her so much your dick can be seen on her belly like a coke can under a blanket. Her tail curls around your waist as you set your hands on her hips, then start to thrust urged on by her movements and delighted chirrings. Soon you're falling into a rthythm of mutual pleasure, rutting her vigorously as she animalisticly coaxes you to ever greater feats of penetration.
+</text>
+<choice destination="sex2" text="fill her up"/>
+</page>
+
+<page ID="sex1">
+<text>
+You tease for only a bit of time before working your hard cock into her, the raptor letting out a gasping chirr as she's you fit snugly within her and rocking her hips back to meet yours, clenching around your cock eagerly with her nethers. Her tail curls around your waist as you set your hands on her hips, then start to thrust urged on by her movements and delighted chirrings. Soon you're falling into a rthythm of mutual pleasure, rutting her vigorously as she animalisticly coaxes you to ever greater feats of penetration.
+</text>
+<choice destination="sex2" text="fill her up"/>
+</page>
+
+<page ID="sex2">
+<text>
+It's too much, the lusty reptile pushing you over the edge as you feel her gasping and squeezing down on your cock in climax. Your <macro ID="penis_size_desc"/> shaft erupting inside her nethers, filling her with the hot cum she craved so deeply. The reptile gasping and murring as you pump her full of cum and she clenches, milking you until you're done and pull out of her. The raptor mhmming, flush with afterglow as she slides a hand down between her legs then brings it up to her lips to taste your seed. She seems remarkably well pleased with your prowess.
+</text>
+<special effect="nonhostile"/>
+<special effect="healnpc"/>
+<choice destination="end" text="it's the best way to make friends"/>
+</page>
+
+</Conversation>

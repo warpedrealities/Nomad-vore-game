@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<perk name="scholastic childhood" >
+<requirement count="1"><req>CHARGEN</req></requirement>
+<description>Your parents pushed you to achieve great things in your education. Your academic excellence however left little time for the development of physical stamina. intelligence +1, endurance -1
+</description>
+<modifier affects="INTELLIGENCE" value="1"  type="ABILITY"/>
+<modifier affects="ENDURANCE" value="-1"  type="ABILITY"/>
+<maxrank value="1"/>
+</perk>

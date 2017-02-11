@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="greatserpent.png"/>
+
+<name>great serpent</name>
+<description>A serpentine creature that must be at least 40 feet long from its tapering jaws all the way to the flare of long fur around its tailtip. Its body is crested along its entire length with long fur and its colour is the hue of a leaden grey sky. The rest of its body is covered in smooth near black charcoal hued hide. Beneath its two pairs of small birdlike or lizardlike legs grip the ground, they hardly seem to be any use for walking at that size but do help to stabilize that slender form. As you regard the thing it inevitably regards you in turn, forked tongue flicking out past stubby teeth as its radiant blue eyes meet yours and you feel your mind waiver.
+</description>
+<rpg>
+<experiencevalue value="100"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<stat stat="HEALTH" value="60"/>
+<stat stat="RESOLVE" value="60"/>
+<attribute attribute="TEASE" value="6"/>
+<combatMove name="beguile" pattern="RANGED" bonusAttribute="SEDUCTION" timeCost="2" bonusToHit="0">
+<effectDamage type="PSYCHIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<missText count="2">
+<text>The great serpent's tantalizing eyes fail to beguile TARGET</text>
+<text>The great serpent locks eyes with TARGET but does not affect them</text>
+</missText>
+<hitText count="2">
+<text>TARGET finds their will slipping by VALUE points as they meet the serpent's gaze</text>
+<text>the great serpent beguiles TARGET removing VALUE points of their resolve</text>
+
+</hitText>
+</combatMove>
+<combatMove name="self heal" pattern="SELF" bonusAttribute="SEDUCTION" timeCost="2" bonusToHit="0">
+<effectrecover modifier="ENDURANCE" modstrength="0.2" modvalue="6" modifies="HEALTH">
+The medicine makes you feel better, who'd of thought it.
+</effectrecover>
+<missText count="1">
+<text></text>
+</missText>
+<hitText count="1">
+<text></text>
+</hitText>
+</combatMove>
+<statusTags count="2">
+<tag>seduction</tag>
+</statusTags>
+</rpg>
+
+<defeated conversation="alpha_minoris_II/greatserpent/defeat" />
+<seduced conversation="alpha_minoris_II/greatserpent/defeat" />
+<victory conversation="alpha_minoris_II/greatserpent/victory" />
+<seducer conversation="alpha_minoris_II/greatserpent/victory" />
+<controller AI="great_serpent"/>
+<faction value="monster"/>
+</NPC>

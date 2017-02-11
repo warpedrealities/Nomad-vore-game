@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<macrovalue part="skin" variable="colour">
+<translate value="0" string="white"/>
+<translate value="1" string="pale"/>
+<translate value="2" string="tanned"/>
+<translate value="3" string="caramel"/>
+<translate value="4" string="brown"/>
+<translate value="5" string="ebony"/>
+</macrovalue>

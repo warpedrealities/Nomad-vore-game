@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<macrorange part="body" variable="weight">
+<range lowerbound="0" upperbound="10" string="emaciated"/>
+<range lowerbound="10" upperbound="25" string="slender"/>
+<range lowerbound="25" upperbound="40" string="thin"/>
+<range lowerbound="40" upperbound="60" string="average"/>
+<range lowerbound="60" upperbound="75" string="chubby"/>
+<range lowerbound="75" upperbound="90" string="heavyset"/>
+<range lowerbound="90" upperbound="100" string="thick"/>
+</macrorange>

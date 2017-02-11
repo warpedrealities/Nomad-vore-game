@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<intro count="5">
+<text>
+Your health bar (red, topmost) is your resistance to being taken as unwilling prey or otherwise meeting a terrible fate. Healing items are useful for recovery. LBREAK 
+Your resolve bar (pink, below) is your resistance to becoming willing prey. LBREAK 
+your satiation bar (green, lowest) inversely represents your level of hunger, and is constantly depleting as you need food in order to live. LBREAK
+when your satiation is over 50% you slowly regenerate health, but this results in increased satiation consumption rate so healing items may be a preferable option LBREAK
+when your resolve is less than total it automatically recovers regardless of your satiation level LBREAK
+when your satiation level reaches 0 you will begin to rapidly take starvation damage LBREAK 
+page 1 (d or right to move to next page)
+</text>
+<text> 
+To move your character around the game world use the arrowkeys, WASD keys or the numpad. to wait a little press 5, to wait a significant period of time press R. LBREAK
+To compress time hold down the shift key or the control key while performing other actions. LBREAK
+page 2 (d or right to move to next page, a or left to move to the prior page)
+</text>
+<text>
+The text window bottom can be expanded and contracted with home and end LBREAK
+and it can be scrolled with page up and page down LBREAK
+the list panels can also be manipulated with page up and page down or by grabbing the scrollbar with click and hold and moving it up and down LBREAK
+
+</text>
+<text>
+To act on the world around you you can click the mouse on that tile. LBREAK
+One alternate way to attack a hostile enemy in an adjacent tile move into their space LBREAK
+An alternate way to attack enemies, even distant ones, without using the mouse is to activate the retro targeter with the O key. this will toggle on a mode which lets you browse through targets in a list and attack by pressing space or enter LBREAK
+page 3 (d or right to move to next page, a or left to move to the prior page)
+</text>
+<text>
+To select the way in which you interact with the world (look, interact, attack, special) you can click the button on the lower left side of the player status ui and this will bring up a dropdown. Special will contain all non standard moves like seduction, unlocked specials, weapon alternate fire and etc. LBREAK
+the hotkeys to do this without the dropdown is (L)ook,attac(K),(I)nteract,s(P)ecial. LBREAK 
+additionally all dropdowns are amenable to the use of the number keys along the upper row of the keyboard. LBREAK 
+You additionally have a quickslot triggerable by clicking Q, this will use the item in the quickslot or swap with the equipped weapon LBREAK
+page 4 (end of file, a or left to move to the prior page)
+</text>
+</intro>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text>
+HEINLEIN ESCAPE POD N.7 LBREAK 
+PLANETFALL SUCCESSFUL ON MOON OF 2ND PLANET LBREAK  
+WARNING NAVIGATIONAL SYSTEM DAMAGED LBREAK 
+GALACTIC POSITIONING FIX FAILED LBREAK 
+EXACT LOCATION UNKNOWN LBREAK 
+AWAITING INPUT
+</text>
+<effect type="setglobalflag" flag="ESCAPEPOD" value="1"/>
+<choice destination="atmosphere" text="atmospheric readings"/>
+<choice destination="signals" text="perform signal scan"/>
+<choice destination="scan" text="replay descent sensor logs"/>
+<choice destination="end" text="exit"/>
+</page>
+
+<page ID="atmosphere">
+<text>
+OXYGEN NITROGEN MIX OKAY LBREAK 
+TEMPERATURE OKAY LBREAK 
+COMPATABILITY WITH HUMAN LIFE CONFIRMED
+</text>
+<choice destination="start" text="back"/>
+<choice destination="end" text="exit"/>
+</page>
+
+<page ID="signals">
+<text>
+SCANNING FOR LOCAL SIGNALS LBREAK 
+SIGNAL ACTIVITY DUE EAST LBREAK 
+WARNING:SIGNALS INDECIPHERABLE, ACTIVE ALIEN TECHNOLOGY LIKELY LBREAK 
+SCANNING FOR LONG RANGE SIGNALS LBREAK 
+SIGNAL DETECTED FROM  ORBIT 2ND PLANET LBREAK 
+WARNING: SIGNALS INDECIPHERABLE,  CAUTION ADVISED LBREAK 
+</text>
+<choice destination="calculation" text="calculate chance of rescue"/>
+<choice destination="start" text="back"/>
+<choice destination="end" text="exit"/>
+</page>
+<page ID="calculation">
+<text>
+NO SIGNALS OF TERRAN ORIGIN  DETECTED IN LOCAL AREA LBREAK  
+NO SIGNALS OF TERRAN ORIGIN  DETECTED IN SYSTEM LBREAK  
+CHANCE OF RESCUE: 0% LBREAK 
+ADVISORY: EVIDENCE OF ADVANCED  TECHNOLOGY DETECTED IN LOCAL AREA, LBREAK CHANCE OF ACQUIRING SPACECRAFT OF  NON TERRESTRIAL ORIGIN: NON-ZERO LBREAK 
+
+</text>
+<choice destination="signals" text="back"/>
+<choice destination="end" text="exit"/>
+</page>
+
+<page ID="scan">
+<text>
+REPLAYING EXTERIOR CAMERA FOOTAGE FROM DESCENT LBREAK 
+It looks like there's a rocky outcropping that's a different colour from the others near where you landed. Additionally there's some extensive ruins to the east and a large mountain southwest, though its sheer flanks would make it next to impossible to reach the summit. Most tantalizingly however a glimpse through the tree cover to the south east shows a stubby winged metal craft resting in the forest there. Assuming its a spacecraft then getting it to work might be your only chance to get off this rock.
+</text>
+<choice destination="start" text="back"/>
+<choice destination="end" text="exit"/>
+</page>
+
+</Conversation>

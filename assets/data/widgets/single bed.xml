@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<widgetaccomodation sprite="30" name="bed" health="20">
+<contains minimum="1" maximum="2">scrap metal</contains>
+<contains minimum="1" maximum="2">fabric</contains>
+<description>a bed, comfy</description>
+<capacity value="1"/>
+<resistance resists="KINETIC" strength="2"></resistance>
+</widgetaccomodation>

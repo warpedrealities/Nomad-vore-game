@@ -1,0 +1,60 @@
+﻿<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text>The lamia is slumped in defeat, a heap of muscular coils and a dazed and panting feminine upper half lying before you. She watches your approach uncertainly, but certainly cannot resist if you were to take advantage of her in this state.</text>
+<choice destination="tailsex0" text="stick that tailtip somewhere">
+<assertion evaluate="haspart" part="vagina"/>
+</choice>
+<choice destination="end" text="not interested right now"/>
+</page>
+<!--written by mac tavish-->
+<page ID="tailsex0">
+<text>
+With a haughty smirk, <conditional><assertion evaluate="slothasitem" slot="2"/>you undo your belt and drop trow, </conditional>then clamber atop the scaley pile, grabbing the end of her tail along the way, until you’re face-to-face with her. Your free hand goes to her chin, covering it with your palm as your fingers squeeze her cheeks and force her gaze downward, forcing her to watch as you thread her tail between your legs from behind and start grinding on it. This also serves, after a moment, to hide the silly expression on your face and your hunched neck and shoulders as you finagle the still-protesting appendage between your slickened labia.
+
+</text>
+<choice destination="tailsex1" text="ride the snake"/>
+<choice destination="unbirth0" text="you want more than just the tip inside">
+<assertion evaluate="hasperk" perk="unbirthing"/>
+</choice>
+</page>
+
+<page ID="tailsex1">
+<text>
+Once you’ve fed a good, sturdy amount of that smooth-scaled tail into your sopping sex, both of your hands are free to grab her by the shoulders, and you press your weight into her, making a rape-bed of her coils. Once some of the latter few inches are pinned under your crossed ankles behind you, you make sure you’re straddling her hips, then start moving yours, riding that length of squirming tail like so much cock.
+</text>
+<choice destination="tailsex2" text="proceed"/>
+</page>
+
+<page ID="tailsex2">
+<text>
+Once you’re comfortable with the rhythm and certain of her submission, those tits of hers start looking like much more pleasant handholds, and your fingertips deeply dimple the supple flesh as you squeeze one roughly, her nipple grinding against your palm. The other hand moves between your legs to stimulate your clit, her own sex left ungraced by friction aside from the occasional brush of her own tail. When your orgasm finally comes, hers is still rising and, as cruelly as she surely would have treated you, had the tables been turned, you don’t even grant her that much, slipping up and off of her to re-gird your loins, leaving her desperate and mewling.
+</text>
+<choice destination="end" text="who cares, you've had your fun"/>
+<special effect="removenpc"/>
+</page>
+
+<page ID="unbirth0">
+<text>
+After a few moments of enjoying the lamia’s wriggling struggles, the thought crosses your mind that you’d like a bit more than a few paltry inches of tail inside of you and, after eyeing the massive length of the girleater, you decide that there would be some poetic justice in indulging your perverse impulse. Rising slightly, you turn around and lie down on your victim’s body, a hand at the back of her head keeping it by yours so that she can stare down your body as you begin to draw hers in. Your vaginal walls pulse and ripple around her tail, which stretches them out the further up its taper you travel. Her eyes widen in horror, and her weak squirms under and in you only serve to stimulate you, drawing out moans from deep within your chest as you get your feet involved, gripping the tail between them and dragging it in, to feed the ever-growing, undulating bulge.
+</text>
+<choice destination="unbirth1" text="suck her in"/>
+</page>
+
+<page ID="unbirth1">
+<text>
+Eventually, you run out of tail, and must lean forward. Thankfully, at this point, her upper body is close enough that you can hook your insteps over her shoulders. In that time, however, she manages to twist around onto her belly, the motion subsequently rolling the rest of her muscular coils around inside your loins as she starts clawing at the ground in a last-ditch effort to escape. But it’s too late, and there’s too much of her already trapped, at the mercy of your reverse contractions, and your folds are soon hugging at her waist, then her shoulders.
+</text>
+<choice destination="unbirth2" text="snake makes the best pussy food"/>
+</page>
+
+<page ID="unbirth2">
+<text>
+ The last the world ever properly sees of her, as the light shrinks in her sight, are her weakly-scrabbling fingers. After that, you’re free to nap where you are, folding your arms under your chin to elevate it above your bulging bed of flesh, which begins to squirm less and less as its occupant slowly loses oxygen. Then, stillness and quiet, as the walls of your womb squeeze mercilessly at the massive form, compacting it down and juicing it into sweet, feminine fluids. The final disappearance of the bump is preceded by your busy fingers finally being able to easily reach down there to get to work and is accompanied by your shrill cry and a clear, sticky spray that would make most firehoses jealous of its intensity.
+</text>
+<choice destination="end" text="done making a mess of a snake"/>
+<effect type="feed" value="110"/>
+<special effect="removenpc"/>
+</page>
+
+</Conversation>

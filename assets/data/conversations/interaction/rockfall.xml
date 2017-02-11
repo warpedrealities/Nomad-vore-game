@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text>This rock fall completely blocks the pass through the mountains, you'll need explosives in order to clear it.
+</text>
+<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="FIRST"/>
+<choice destination="bomb" text="blow up the rock">
+<condition evaluate="HASITEM" operator="greaterthan" value="1" item="high explosive"/>
+</choice>
+<choice destination="end" text="exit"/>
+</page>
+
+<page ID="bomb">
+<text>
+You lodge the bomb at the base of the rock fall, lit the fuse and then ran well clear. The blast was deafening, pulverizing the rock to powder and clearing the pass. Though the sound of it will surely have been heard for many miles, the newly accessable path will not remain secret for any time at all.
+</text>
+<effect type="removeitem" item="high explosive" value="1"/>
+<effect type="setglobalflag" flag="rockscleared" value="1"/>
+<special effect="destroywidget"/>
+<choice destination="end" text="exit"/>
+</page>
+
+<page ID="start">
+<text>This rock fall completely blocks the pass through the mountains, you'll need explosives in order to clear it. You think you can create a bomb for this if you had a sufficiently volatile material.
+</text>
+<special effect="blueprint" ID="high explosive"/>
+<effect type="setlocalflag" flag="FIRST" value="1"/>
+
+<choice destination="end" text="exit"/>
+</page>
+</Conversation>

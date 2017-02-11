@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="gatorG.png"/>
+<name>gator</name>
+<description> It's bulk moves with terrible speed and dreadful purpose. The thrashing of its tail stirs the muck and smashes aside the reeds, across its back run scales like a raiment of interlocking shields. At the prow its malevolent eyes gaze from atop a great and mighty maw that menaces with a legion of teeth martial'd into uneven rows. This thing is a primeval terror, and no doubt you now have its attention.
+</description>
+<rpg>
+<experiencevalue value="35"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<stat stat="HEALTH" value="40"/>
+<stat stat="RESOLVE" value="40"/>
+<attribute attribute="TEASE" value="6"/>
+<attribute attribute="KINETIC" value="4"/>
+<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
+<missText count="2">
+<text>The gator tries to bite TARGET</text>
+<text>The gator attempts to bite TARGET</text>
+</missText>
+<hitText count="2">
+<text>The gator bites TARGET for VALUE damage</text>
+<text>The gator chomps on TARGET for VALUE damage</text>
+</hitText>
+<effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="STRENGTH"/>
+</combatMove>
+<statusTags count="2">
+<tag>seduction</tag>
+</statusTags>
+</rpg>
+
+<respawn delay="2000"/>
+<flying />
+<defeated conversation="alpha_minoris_II/gator/defeat" />
+<seduced conversation="alpha_minoris_II/gator/defeat" />
+<victory conversation="alpha_minoris_II/gator/victory" />
+<seducer conversation="alpha_minoris_II/gator/victory" />
+<controller AI="harpy_adv"/>
+<faction value="monster"/>
+</NPC>

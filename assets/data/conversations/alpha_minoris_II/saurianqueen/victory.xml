@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<text>
+write this gameover later
+</text>
+<choice destination="gameover" text="perish"/>
+</page>
+
+<gameover ID="gameover">
+<text>
+it would seem you've met a terrible fate
+
+</text>
+
+</gameover>
+
+</Conversation>

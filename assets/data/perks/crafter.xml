@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<perk name="crafter">
+<description> Build useful stuff from useless stuff, you're like a one woman A-TEAM. +1 to crafting</description>
+<modifier affects="CRAFTING" value="1"  type="ATTRIBUTE"/>
+<maxrank value="3"/>
+
+</perk>

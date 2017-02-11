@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<perk name="jury rigger">
+<description> Improvised repairs might not be good repairs, but they are repairs. +1 to repair </description>
+<modifier affects="CRAFTING" value="1"  type="ATTRIBUTE"/>
+<maxrank value="3"/>
+
+</perk>

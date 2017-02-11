@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<default>
+ 
+<attack name="punch" ammoCost="0" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<effectDamage type="KINETIC" minValue="0" maxValue="4" modifier="STRENGTH"/>
+<missText count="1">
+<text>your punch doesn't connect</text>
+</missText>
+<hitText count="1">
+<text>your punch connects, hitting TARGET for VALUE damage.</text>
+</hitText>
+</attack>
+ 
+<seduce name="seduce" ammoCost="0" pattern="MELEE" bonusAttribute="SEDUCTION"
+ 
+timeCost="2">
+<effectDamage type="TEASE" minValue="1" maxValue="6" modifier="CHARM" rangeDecay="1"/>
+<missText count="1">
+<text>you fail to arouse TARGET</text>
+</missText>
+<hitText count="5">
+<text>you tease TARGET by slowly running a hand up your inner thigh, for VALUE points.</text>
+<text>you tease TARGET by trailing a hand quickly up your stomach to cup one of your breasts, for VALUE points.</text>
+<text>you tease TARGET by bringing your shoulders forward, pushing your breasts together, for VALUE points.</text>
+<text>you tease TARGET by putting your index finger to your lips and swirling your tongue around it, for VALUE points.</text>
+<text>you tease TARGET by turning around, turning your head to look over your shoulder, and wiggling your arse at them, for VALUE points.</text>
+</hitText>
+</seduce>
+ 
+</default>

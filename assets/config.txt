@@ -1,0 +1,5 @@
+
+screenscale
+0.8
+textscale
+1.25

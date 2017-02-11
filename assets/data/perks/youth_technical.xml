@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<perk name="techy youth" >
+<requirement count="1"><req>CHARGEN</req></requirement>
+<description>In your youth you were never happier than around machinery and electronics. Robotic tournaments, device refurbishment, apprentice mechanic. The point is you've learned to fix, and to improvise. crafting +1, repair +1.
+</description>
+<modifier affects="CRAFTING" value="1"  type="ATTRIBUTE"/>
+<modifier affects="REPAIR" value="1"  type="ATTRIBUTE"/>
+<maxrank value="1"/>
+</perk>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<shop profitratio="1.25">
+<inventoryitem name="primitive meal" probability="100" quantity="20"/>
+<inventoryitem name="primitive meal" probability="100" quantity="20"/>
+<inventoryitem name="medicine" probability="100" quantity="5" />
+<inventoryitem name="medicine" probability="50" quantity="5" />
+<inventoryitem name="blue crystal" probability="100" quantity="20" />
+<inventoryitem name="blue crystal" probability="50" quantity="20" />
+<inventoryitem name="fabric" probability="100" quantity="20" />
+<inventoryitem name="fabric" probability="50" quantity="20" />
+<inventoryitem name="claw necklace" probability="100" quantity="1"/>
+<buymodifier name="deku nut" cost="100"/>
+</shop>

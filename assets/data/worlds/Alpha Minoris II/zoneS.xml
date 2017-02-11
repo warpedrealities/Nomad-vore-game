@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="swamp.png">
+<tileset count-x="4" count-y="4">
+<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="2" vision="0" movement="0"> vegetation</tile>
+<tile sprite="3" vision="0" movement="0"> mud</tile>
+<tile sprite="4" vision="0" movement="0"> grass</tile>
+<tile sprite="6" vision="1" movement="2"> drooping tree</tile>
+<tile sprite="7" vision="1" movement="2"> thick and proud tree</tile>
+<tile sprite="8" vision="1" movement="2"> twisted tree</tile>
+<tile sprite="5" vision="1" movement="2"> rock wall</tile>
+<tile sprite="9" vision="0" movement="1"> swamp water</tile>
+</tileset>
+<transition direction="west">saurian village</transition>
+<description> </description>
+
+<mapgen>
+<prefab positionX="32" positionY="59" width="5">
+<row>22222</row>
+<row>28282</row>
+<row>28282</row>
+<row>28282</row>
+<row>88888</row>
+<pairedportal sprite="3" destination="zoneC" x="2" y="3" ID="15" facing="4">a narrow mountain pass</pairedportal>
+</prefab>
+<perlin>
+<band low="-1.0" high="-0.8">
+<floodfill tile="8"/>
+</band>
+<band low="-0.6" high="-0.5">
+<floodfill tile="8"/>
+</band>
+<band low="-0.0" high="0.1">
+<floodfill tile="8"/>
+</band>
+
+<band low="0.4" high="0.6">
+<floodfill tile="8"/>
+</band>
+<band low="0.8" high="1.0">
+<floodfill tile="8"/>
+</band>
+</perlin>
+<noise tile="2" scarcity="8"/>
+<noise tile="3" scarcity="8"/>
+<noise tile="4" scarcity="12"/>
+<noise tile="5" scarcity="12"/>
+<noise tile="6" scarcity="12"/>
+<floodfill tile="2">
+<SeedNPCs min="8" max="16" name="AlphaMinoris_II/gator"/>
+<Seedwidgets min="16" max="32" name="herb bush" />
+</floodfill>
+<degrade chance="10" degradethis="7" replacewith="4"/>
+<auditpaths carve="9" replace="2"/>
+<walloff wall="7" sides="northsouth"/>
+</mapgen>
+
+</zone>

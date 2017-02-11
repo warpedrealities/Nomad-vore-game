@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="jungle.png">
+<zonerules ruleset="battlefield_alphaminoris"/>
+<tileset count-x="4" count-y="4">
+<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="3" vision="0" movement="0"> a platform of crude masonry </tile>
+<tile sprite="2" vision="0" movement="0"> jungle vegetation</tile>
+<tile sprite="3" vision="0" movement="0"> jungle mud</tile>
+<tile sprite="4" vision="0" movement="0"> jungle grass</tile>
+<tile sprite="6" vision="1" movement="2"> drooping jungle tree</tile>
+<tile sprite="7" vision="1" movement="2"> thick and proud jungle tree</tile>
+<tile sprite="8" vision="1" movement="2"> twisted jungle tree</tile>
+<tile sprite="5" vision="1" movement="2"> rock wall</tile>
+</tileset>
+<transition direction="north">zoneN</transition>
+<description>This area is a maze of dense plant life, an overgrown profusion that hides old scars. The rusty fragments and broken stones hint at past conflict long past and well hidden. </description>
+
+<mapgen>
+<prefab positionX="32" positionY="0" width="5">
+<row>99999</row>
+<row>99299</row>
+<row>99299</row>
+<row>99299</row>
+<row>99299</row>
+
+<pairedportal sprite="3" destination="zoneS" x="2" y="1" ID="15">a narrow mountain pass</pairedportal>
+<placeWidget x="2" y="3" name="invincible" info="interaction/rockfall" variable="49"/>
+</prefab>
+
+<clumps lowerlimit="0" upperlimit="45">
+<noise tile="5" scarcity="8"/>
+<floodfill tile="3"></floodfill>
+</clumps>
+<clumps lowerlimit="0" upperlimit="45">
+<noise tile="6" scarcity="8"/>
+<floodfill tile="4"></floodfill>
+</clumps>
+<clumps lowerlimit="0" upperlimit="45">
+<noise tile="7" scarcity="8"/>
+<floodfill tile="4"></floodfill>
+</clumps>
+<floodfill tile="2">
+
+</floodfill>
+<walloff wall="8" sides="southeastwest"/>
+<placeWidget x="8" y="8" name="SPAWNER">
+<radius value="8"/>
+<spawnLimit value="6"/>
+<script value="alphaminorisbattlespawns"/>
+<spawns count="1">
+<data npc="minoris2_saurian/saurianraider" min="2" max="4" chance="50"/>
+</spawns>
+</placeWidget>
+<placeWidget x="56" y="56" name="SPAWNER">
+<radius value="8"/>
+<spawnLimit value="6"/>
+<script value="alphaminorisbattlespawns"/>
+<spawns count="1">
+<data npc="minoris2_elves/elfraider" min="2" max="4" chance="50"/>
+</spawns>
+</placeWidget>
+</mapgen>
+
+</zone>

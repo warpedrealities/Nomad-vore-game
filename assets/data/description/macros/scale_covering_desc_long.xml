@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<macrovalue part="scales" variable="covering">
+<translate value="0" string="body in patches"/>
+<translate value="1" string="just your tail"/>
+<translate value="2" string="limbs"/>
+<translate value="3" string="entire body but for your face and front of your torso"/>
+<translate value="4" string="entire body"/>
+</macrovalue>

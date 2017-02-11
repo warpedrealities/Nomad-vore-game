@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ItemConsumable name="pussy juice" weight="0.5" value="250">
+<description>Refined substance, nicknamed pussy juice for an unusual but easily guessable reason.</description>
+<effectmutator>
+<criteriaAssertion part="vagina" negative="true"/>
+<mutation part="vagina" bodychange="add">
+Well, now you have a vagina again.
+</mutation>
+</effectmutator>
+</ItemConsumable>

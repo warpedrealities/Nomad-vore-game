@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="navconsole" requiredskill="-1" startunlocked="true">
+<description>
+A control panel containing all the necessary navigation controls to operate a starship.
+</description>
+<ingredient item="computation valve" quantity="10"/>
+<result item="nav console"/>
+</recipe>

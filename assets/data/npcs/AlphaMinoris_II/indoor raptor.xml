@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="raptor.png"/>
+<name>raptor girl</name>
+<description>The raptor girls eyes you with a cunning and predatory look to her. Her entire body athletic, slender, swift and powerfully sleek. Her body mostly covered in brown scales on her limbs and much of her torso except for a subdued orange tone on the insides of her hands, feet and her front extending from her face down her neck and over her chest down to her mound. As for the rest of her from above her buttocks extends a reptilian tail, brown on top and orange below and her fingers and toes all end in claws.</description>
+<rpg>
+<experiencevalue value="20"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+
+<stat stat="HEALTH" value="30"/>
+<stat stat="RESOLVE" value="20"/>
+<attribute attribute="DODGE" value="2"/>
+<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0">
+<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<missText count="2">
+<text>The raptor girl fails to claw TARGET</text>
+<text>The raptor girl's kick does not connect with TARGET </text>
+</missText>
+<hitText count="2">
+<text>The raptor girl claws TARGET for VALUE damage</text>
+<text>The raptor girl kicks TARGET for VALUE damage</text>
+</hitText>
+</combatMove>
+</rpg>
+<respawn delay="2000"/>
+<disposition value="25"/>
+<defeated conversation="alpha_minoris_II/raptor/defeat" />
+<seduced conversation="alpha_minoris_II/raptor/seduced" />
+<victory conversation="alpha_minoris_II/raptor/victory" />
+<seducer conversation="alpha_minoris_II/raptor/victory" />
+<controller AI="indoor_raptor"/>
+<faction value="monster"/>
+</NPC>

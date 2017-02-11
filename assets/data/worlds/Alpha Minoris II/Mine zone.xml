@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<zone width="32" height="32" spriteset="cave.png">
+<tileset count-x="4" count-y="4">
+<tile sprite="2" vision="0" movement="0"> dusty mineshaft floor </tile>
+<tile sprite="1" vision="1" movement="2"> rock wall</tile>
+<tile sprite="3" vision="1" movement="2"> a rock boulder</tile>
+</tileset>
+
+<description></description>
+<mapgen>
+
+<blockDungeon extent="8">
+<loadBlocks file="dirtsimple"/>
+<keyBlock x="1" y="0">
+<row>00000000</row>
+<row>02222222</row>
+<row>22111112</row>
+<row>11121211</row>
+<row>11122211</row>
+<row>22111112</row>
+<row>02111122</row>
+<row>02211220</row>
+<edge value="EAST"/>
+<edge value="WEST"/>
+<edge value="NORTH"/>
+<widget x="4" y="3" name="entrance" variable="11" info="saurian village"/>
+</keyBlock>
+<clean value="2"/>
+</blockDungeon>
+<walloff wall="1" sides="northwesteastsouth"/>
+<SeedNPCs min="3" max="6" name="minoris2_saurian/saurianworker">
+<script spawn="dammathworkers"/>
+</SeedNPCs> 
+<SeedNPCs min="1" max="1" name="AlphaMinoris_II/great serpent">
+<script death="dammathquest0death"/>
+</SeedNPCs>
+</mapgen>
+
+</zone>

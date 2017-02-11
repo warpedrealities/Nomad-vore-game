@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="gender"/>
+<text>
+You have fallen before a saurian warrior out in the wilderness, from your position down in the dirt you can get a good look up under the hem of her armoured tunic and you see...
+</text>
+<choice destination="genderF" text="a hungry snatch">
+<preference fetish="unbirth"/>
+</choice>
+<choice destination="genderH" text="a girthy cock">
+<preference fetish="cockvore"/>
+</choice>
+<choice destination="gameover" text="a fate too terrible to contemplate">
+<notpreference fetish="cockvore"/>
+<notpreference fetish="unbirth"/>
+</choice>
+</page>
+
+<page ID="genderF">
+<text>
+A hairless snatch nestled between her legs, already moist and pliant as she sees where your gaze is going and reaches down to fondle herself, gently parting her lower lips. The hot pink of her nethers a dreadful invitation as she flashes them at you.
+</text>
+<effect type="setlocalflag" flag="gender" value="-1"/>
+<choice destination="start" text="prepare for liquidation"/>
+</page>
+
+<page ID="start">
+<!--female-->
+<condition evaluate="LOCALFLAG" operator="equals" value="-1" flag="gender"/>
+<text>
+The saurian looks down at you and grins, dropping down into a squat. As she spreads her thighs you see her hairless snatch drooling wetly for you and she chuckles following your gaze "Mhmm, that's it..you're going in there." she says with a mhmmm and then reaches out. The saurian warrior grabbing your feet afore you can pull them away, instead they're pulled towards her and together so she can press them against her hot and hungry nethers "No escape" she taunts with a growl as she engulfs your feet with her ravenous pussy "but feel free to struggle, it'll feel better for me."
+</text>
+<choice destination="unbirth0" text="helpless to resist"/>
+</page>
+
+<page ID="unbirth0">
+<text>
+You can't help but protest your fate, but your lustful predator is having none of it and simply chuckles and grins as she grabs your legs and feeds them into her snatch. You feel the hot tightness of her sex squeeze down over your thighs and your feet plunge into her soft yet ravenous womb as she chirrs in delight and watches your face, takinga perverse form of glee in studying your expression as she draws you into herself. You can see her middle bulging and as it does she leans back, releasing you with her hands yet clenching all the more vigorously with her sex. The warrior's might such that even now she seems able to draw you in without a hope of escape.
+</text>
+<choice destination="unbirth1" text="drawn inside"/>
+</page>
+
+<page ID="unbirth1">
+<text>
+In, in in. With each rippling clench of her nethers and lewd schlorp more of your body is drawn inside her. Her hungry snatch and voracious womb claiming ever more of you as she chirrs in delight "mhmmm, you're gonna feel so good gushing down the inside of my thighs." she says and grins wickedly, revelling in the sensations as the bulge of your curling form eclipses her view of your head and arms sliding down between her legs. Your predator throws her head back and reaching down to frig her clit as you're dragged inside her. Her thighs are outlining your view of the outline now as you scrabble in vain for purchase to resist 
+her voracious snatch but you both know that soon you'll end up inside of her.
+</text>
+<choice destination="unbirth2" text="overtaken utterly"/>
+</page>
+
+<page ID="unbirth2">
+<text>
+You feel her clenching nethers ripple up around your head, your last view of the outside world framed by her lower lips afore being sealed into wet and squeezing darkness. Your arms flail and grasp uselessly a moment more before being drawn up inside of her as she chirrs in delight. The predatory warrior pressing her arms over her distended middle and clenching her thighs together to prevent you escaping back out "all roads end traveller, and this one ends with you as wombfodder." she says and gives her roundness a pat. Your body soon finishes being drawn up inside her, entombed within that hungry womb you know she intends only ill for you now.
+</text>
+<choice destination="UBStruggleCheck" text="try to get out of her"/>
+<choice destination="UBPleasureCheck" text="try to pleasure her into letting you go"/>
+<choice destination="UBSubmit" text="submit to being fluid"/>
+</page>
+
+<check ID="UBStruggleCheck">
+<test what="STRUGGLE" DC="14"/>
+<outcome destination="UBStruggleEscape"/>
+<outcome destination="UBStruggleDigest"/>
+</check>
+
+<page ID="UBStruggleEscape">
+<text>
+
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="get clear"/>
+</page>
+
+<page ID="UBStruggleDigest">
+<text>
+
+</text>
+<choice destination="UBSTRUGGLEGO" text="*slosh*"/>
+</page>
+
+<gameover ID="UBSTRUGGLEGO">
+<text>
+
+</text>
+</gameover>
+
+<check ID="UBPleasureCheck">
+<test what="PLEASURE" DC="10"/>
+<outcome destination="UBPleasureEscape"/>
+<outcome destination="UBPleasureDigest"/>
+</check>
+
+<page ID="UBPleasureEscape">
+<text>
+
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="get clear"/>
+</page>
+
+<page ID="UBPleasureDigest">
+<text>
+
+</text>
+<choice destination="UBPleasureGO" text="*slosh*"/>
+</page>
+
+<gameover ID="UBSTRUGGLEGO">
+<text>
+
+</text>
+</gameover>
+
+
+<page ID="UBSubmit">
+<text>
+
+</text>
+<choice destination="UBSUBMITGO" text="*slosh*/>
+</page>
+
+
+
+<page ID="genderH">
+<text>
+A thick tanned cock and some hefty hairless balls. The lizard sees where your gaze is drifting and cracks a smile, reaching down under her tunic to wrap one hand around that cock and stroke it as it twitches and a single glop of musk pre oozes forth to dribble on the ground beneath her and tantalize your nose with its scent.
+</text>
+<effect type="setlocalflag" flag="gender" value="1"/>
+<choice destination="start" text="so gonna get shafted"/>
+</page>
+
+<page ID="start">
+<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="gender"/>
+<!--herm-->
+<text>
+The saurian looks down at you and grins, stroking her firm cock and glancing down meaningfully at your feet afore a droplet of her pre drops upon them "I think we both know what's coming next." she says and drops down into a squat, grabbing your feet even as you try to pull them away from her, guiding them toes first into the tip of her hungry cock "I hope you fight as well in my balls as you did out here, I love a squirmy load." she taunts as her shaft bulges out around your feet and she leans forwards to grasp your legs and feed you deeper inside.
+</text>
+<choice destination="cockvore0" text="get schlurped up"/>
+</page>
+
+<page ID="cockvore0">
+<text>
+You do squirm, though it does little more than make her moan as her voracious shaft ripples and schlurps its way up your legs. It certainly doesn't help you escape as your feet dip into her cum and she works her hands forwards up your body to help work you into her loins.
+</text>
+<choice destination="cockvore1" text="helplessly drawn inside"/>
+</page>
+
+<page ID="cockvore1">
+<text>
+Down you slide as she reaches your waist, her balls starting to bulge out as your legs are fed into their ravenous and sticky embrace. Contours of your feet imprinting on her sack rather nicely as she crams you in with a delighted moan and shuddering blissed out mannerisms. The lizard giving you a little smooch "good cockfood" she says and then forces more of a kiss out of you afore you can protest. The lizard violating your mouth with her long tongue as she shoves your body down into her cock..breaking the kiss to smile and place a hand atop your head "goodbye cockfood" she says and then all goes dark as she shoves the last of you into her cock. 
+</text>
+<choice destination="cockvore2" text="disappear"/>
+</page>
+
+<page ID="cockvore2">
+<text>
+The saurian warrior who bested you now settles back into a seated position, stroking over the bulges made in her shaft from your head and upper body as you slide down entirely into her bloated sack "mhmmm, too few of my fights end this way." she says and then chuckles "but you were easier to get down than an elf, always hard to get their hips in." she says and continues stroking herself as you're entirely crammed into her balls. Stewing in hot cum you seem doomed to meet a melty fate.
+</text>
+<choice destination="CVstruggle" page="struggle"/>
+<choice destination="CVpleasure" page="rub"/>
+<choice destination="CVsubmit" page="submit"/>
+</page>
+
+<page ID="CVsubmit">
+<!-- continue patrol, fuck another warrior with the cum-->
+<text>
+You consider your fate, and relax, settling comfortably into the cummy confines of her balls. The lizard looks down at her sack and pokes "not going to fight for your life? suit yourself" she says and fondles herself, getting to her feet with a grunt. The lizard's heavy balls swaying against her thighs, weighed down and bulging with your body as she goes to join the other lizards on their patrol. Your form swaying side to side each time she steps, rthythmically sloshing left and right as you soften in the gently burbling confines. Your compliant form in for a nice slow churning digestion in her balls, gradually those nuts soften and round out as you're creamed, melted and finally liquidated. Her balls now round and inflated, full of hot cream and nothing else as you're utterly digested into the reptile warrior's virile cum.
+</text>
+<choice destination="CVsubmitGO" text="gurgle"/>
+</page>
+
+<gameover ID="CVsubmitGO">
+<text>
+One of our vanquisher's comrades had been giving her blushing looks for much of the patrol, so it was on the way back that she acted. The predatory lizard with balls full of your cummified remains snagging her friend and tugging her into the bushes earning a giggle, and frenzied clumsy makeouts as the two stumble and fumble till they find themselves laying down one atop the other. The hermier of the two wasting no more time with foreplay and thrusting into her horny partner, gasps and chirrs and moans audible from the rustling bushes as the pair go at it. And not a small amount of sloshing sounds. Whatever dim quasi awareness you have now can feel sloshing and tensing as the lizard ruts her comrade, and then a tightening as the herm climaxes. Your form gushing in thick spurts into the other lizard's womb, filling her up, filling her out, filling her to overbrimming with all the cum you've made until the jizz spills out to pool under their thighs. The two gasping and panting and kissing in the afterglow as the last of you leaks out. The pair are quiet for a few minutes, then finally emerge from the bushes somewhat more sticky for the experience. 
+</text>
+</gameover>
+
+<page ID="CVstruggle">
+<!-- kneeling/sitting and stroking off-->
+<text>
+Your only hope is to make enough of a fuss that she'll be forced to let you go. All you need to do is find the entrance to start sliding back up her cock amidst all this sticky cum, as you begin to push and shove around you hear the lizard gasp and chirr blissfully "oh yeah that's the stuff." she exclaims, apparently finding your vigorous movements pleasurable as she closes her eyes and begins to jerk off vigorously, the sack beginning to churn around you as you jostle it against the ground and her thighs.
+</text>
+<choice destination="CVstrugglecheck" text="must escape!"/>
+</page>
+
+<check ID="CVstrugglecheck">
+
+<test what="STRUGGLE" DC="14"/>
+<outcome destination="CVstruggleescape"/>
+<outcome destination="CVstruggledigest"/>
+</check>
+
+<page ID="CVstruggleescape">
+<text>
+You push around inside her sack, shoving at the inside of her cummy balls every which way with your hands and feet. Shoving and rubbing them against your imprisoning confines as she jerks off, then lets out a startled gasp and shudders in bliss "ah don't...noo stay.." she protests incoherently as you push your hands up through her shaft and shove off from the inside of her sack. The lizard overwhelmed by the sensation as you course up her sensitive shaft, under her stroking hands that do nothing to jerk you back down as you force your way out into the open air, hands grasping her tip them pulling yourself forwards and out of her loins. the lizard slumping into a heap as the last of you comes out "..get...get back in there.. i wasn't done melting you." she protests, making a grabbing motion in your direction as she pants and tries to recover from that experience.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="get clear"/>
+</page>
+
+<page ID="CVstruggledigest">
+<text>
+You push around inside her sack, shoving at the inside of her cummy balls every which way with your hands and feet. Shoving and rubbing them against your imprisoning confines as she jerks off and blissfully moans and utters muffled approvals. But you can't find the way out of her balls, and as you shove at the inside of her sack you feel your hands spread out and mush away into glops of cum. It's too late, your body is soft and weak and creamy and starting to come apart. And her pleasure is becoming overwhelming as her active sack starts to squeeze and churn over your weakened form ever more strongly. 
+</text>
+<choice destination="CVstruggleGO" text="gurgle"/>
+</page>
+
+<gameover ID="CVstruggleGO">
+<text>
+"yes, yes yes" the lizard chants as she strokes off and feels her balls burble and churn, softening and rounding out with a final loud blorping sound as you dissolve away entirely in her sack. Her chanting of delight taking on a more insistent tone, her strokes already as vigorous as can be as she feels all that pent up cum in her balls now needing to be unleashed. Your remains compacting under pressure it seems afore she lets out a screaming cry of bliss, cock erupting with hot cum blasting out of her tip to stain the ground. All that remains of you now a stain on the ground in front of her as she gasps and chirrs and feels shot after shot of your remnants ejaculate up her cock until she's spent. The lizard panting in bliss as she admires her handiwork, you were a much better cumstain than you were a warrior.
+</text>
+
+</gameover>
+
+
+<page ID="CVpleasure">
+<!-- laying on back stroking off, auto fellatio lizard?-->
+<text>
+Your only hope to get her to let you out is to pleasure her into orgasm from inside. Hopefully it'll let you be able to escape and so you start rubbing around at the inside of her sack, hearing her gasp and chirr in delight from your antics. You feel her slip onto her back, her swaying balls shifting with the motion to settle against the ground and her tail as she spreas her legs and jerks off. The lizard laying back as her balls shift with the imprints of your hands pushing out the inside of her nuts.
+</text>
+<choice destination="CVpleasurecheck" text="need to get out of here!"/>
+</page>
+
+<check ID="CVpleasurecheck">
+
+<test what="PLEASURE" DC="10"/>
+<outcome destination="CVpleasureescape"/>
+<outcome destination="CVpleasuredigest"/>
+</check>
+
+<page ID="CVpleasureescape">
+<text>
+You rub vigourously around the inside of the lizardwarrior's sack as she vigorously jerks off. Your efforts yielding increasingly empassioned moans and chirrs from your predator as you rub around the cummy confines and finally bearing fruit. The lizard shuddering, hips spasming up as she ejaculates and you shoot back up her dick whole and intact. Your hands coming through her tip and groping her tits a bit afore you pull yourself out of her cock entirely, the dazed lizard stained with her own climax and chirring is in no state to stop your escape but might recover once she's had a chance for a breather.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="get clear"/>
+</page>
+
+<page ID="CVpleasuredigest">
+<text>
+You rub vigourously around the inside of the lizardwarrior's sack as she vigorously jerks off. Your actions are clearly giving the lizard a great deal of pleasure, her moans and chirrs and gasps are audible over the burble of her balls as they churn around you. In her passion she arches forwards to lick her cocktip as her balls start to lose their lumpy bulges, as your body starts to get churned in record time inside her now rather stimulated sack. The lizard shuddering in bliss as you lose your fight for solidity and slosh away into jizz inside her balls.
+</text>
+<choice destination="CVpleasureGO" text="gurgle"/>
+</page>
+
+<gameover ID="CVpleasureGO">
+<text>
+The lizard warrior moans in triumphant bliss as her balls round out entirely and arches further forwards. She succeeds in the feat of getting her own engorged girl eating cock into her mouth, moaning around her own tip as she strokes the exposed length until it erupts. Her cock ejaculating wad after wad of you down her throat, the saurian swallowing you whole in your now liquid form, guzzling you down into her belly to gain a round belly paunch as her balls deflate. She finally lets the cock pop free when she can take no more, straightening out on the ground in time to get her face coated in the final spurt of your creamy remains. The lizard just laying there in debauched bliss and the aftermath of her messy use for you. Quite a sticky way to go.
+</text>
+
+</gameover>
+
+<gameover ID="gameover">
+<text>
+It would seem you've met a terrible fate
+</text>
+
+</gameover>
+
+</Conversation>

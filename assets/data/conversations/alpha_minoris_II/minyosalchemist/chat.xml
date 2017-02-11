@@ -1,0 +1,196 @@
+﻿<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<!-- post quest meeting-->
+<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="ratquest" value="5"/>
+<text>
+"Hello friend. What can I offer you today?"
+</text>
+<choice destination="who" text="who are you?"/>
+<choice destination="tableprelude" text="I think you dropped something under the table"/>
+<choice destination="shop" text="what can you sell me?"/>
+<choice destination="end" text="later."/>
+</page>
+
+<page ID="shop">
+<text> “I'm sure you'll find something to make your life more exciting” 
+</text>
+<special effect="shop" ID="alphaminoris2alchemist"/>
+</page>
+
+<page ID="tableprelude">
+<text>
+"Oh my, are you sure?" she says coyly and grins knowingly "Perhaps you'd like to go down there and look for it." she suggests with a wink.
+</text>
+<choice destination="table" text="*crawl under*"/>
+</page>
+
+<page ID="start">
+<condition operator="equals" evaluate="LOCALFLAG" flag="talked" value="1"/>
+<!-- additional meeting-->
+<text>
+"Oh hello again, sorry but I can't do anything for you without access to my ingredients."
+</text>
+<choice destination="who" text="who are you?"/>
+<choice destination="rats" text="I would like to talk to you about the rats"/>
+<choice destination="end" text="darn, goodbye then"/>
+</page>
+
+<page ID="table">
+<text> Avei steps aside letting you have access to the space beneath her table, its blocked off on 3 sides by wooden panels leaving only one way in or out. But it'll let you get to know her better so you crawl into the darkened space while she watches you playfully. You can't see anything down here with you except the floor mattes. But as you're talking stock you feel 
+<conditional><assertion evaluate="slothasitem" slot="2"/> your rump being bared followed by </conditional> the touch of something warm against your nethers.
+</text>
+<choice destination="sex0" text="it's a cock">
+<preference fetish="sex"/>
+<assertion evaluate="haspart" part="vagina"/>
+</choice>
+<choice destination="lick0" text="it's her tongue"/>
+</page>
+
+<page ID="sex0">
+<text>
+You feel her grasp your hip with one hand and use the other to rub her tip up and down your netherlips teasingly "see, told you you'd find your reward down there." she says and chuckles before canting her head to the side consideringly "I have some stuff I prepared a while back that could make this even more fun. Let you really get close to me, want to try it?" she asks releasing her grip on your rear to fondle a container of paste on the table above you.
+</text>
+<choice destination="cocktf0" text="sure">
+<preference fetish="cocktransformation"/>
+</choice>
+<choice destination="sex1" text="this is fun enough"/>
+</page>
+
+<page ID="sex1">
+<text>
+"suits me fine." she sets and sets the jar aside "always next time." she remarks and shifts her hands back to your ass, thrusting into your sex with a mhmm and little foreplay. Her thick cock spearing deep inside you, her balls brushing against your thighs as she fucks you down there trapped under her table. Her hands firmly grasping your hips as she begins to work her hips back and forth, ploughing you leisurely.
+</text>
+<choice destination="sex2" text="get fucked"/>
+</page>
+
+<page ID="sex2">
+<text>
+"mhmm, you know friend. you're quite a good lay." remarks Avei as she steadily fucks you, her green cock sliding in and out of your nethers and pushing pleasured sounds out of your lips. The herm elf moaning at the feelings of your nethers and the sheer dominative thrill of having you trapped down there with no choice but to take her cock. Her pace increases steadily as she hears your cries and seems to meditate on that one fact. That you must take her cock.
+</text>
+<choice destination="sex3" text="finish"/>
+</page>
+
+<page ID="sex3">
+<text>
+Avei's pace is now vigorous and lustful, balls slapping against your thighs, hips slapping against your ass as she pounds away. Her moans and gasps of pleasure mingling with your own, you can feel your pleasure build..can feel her pace shift slightly, drawing it out..nice enough to let you cum first, only when she feels you spasm and shudder crying out in bliss does she let herself go. Avei's hot cum pouring into your innards, filling you up with that deliciously debauched warmth. The alchemist leaning on the table for a moment as her cock pulses and then her orgasm tapers off, pulling out of your sex and cleaning herself off as she stands to one side to let you out from under there.
+</text>
+<choice destination="end" text="*crawl out*"/>
+</page>
+
+<page ID="cocktf0">
+<text>
+"Excellent, You'll love it I just know it." she says happily, uncorking the jar of mystery ointment and smearing it over her cock. Avei soon enough completing the application and guiding herself into your welcoming sex "Knew from the moment I laid eyes on you." she remarks, the stuff acting initially as a wonderful lubricating gel easing the sliding of her cock inside you. Avei half closing her eyes and humming softly as she works her shaft in and out slowly, wonderful hot tingles and tugging sensations spreading through you out from where her cock is filling you out with its wonderful throbbing heat.
+</text>
+<choice destination="cocktf1" text="*her dick feels.. sticky*"/>
+</page>
+
+<page ID="cocktf1">
+<text>
+You feel her thrusts slow as the lube seems to turn not so much to friction but to a form of glue. Hot sensations radiating out through you, wonderful pleasure throbbing through you as she eases her hips up firmly against your ass. In the darkness it's hard to tell what's happening, the sensations enough to make you moan even as you try to inquire just what that stuff was you agreed to have used on you was. Unfortunately your query is cut short by the sensation of upwelling musky fluid filling your mouth making you splutter "Oh can you feel it? I just knew you'd love becoming a part of me friend." Avei says taking the moaning splutter as a sound of delight. You squirm around, feeling pleasure shoot through you, but trapped beneath the table and rooted ass to crotch to the green elf blocking the only exit you can do little to change her mind.
+</text>
+<choice destination="cocktf2" text="get CLOSE to her"/>
+</page>
+
+<page ID="cocktf2">
+<text>
+You can feel your body changing, feel her pleasure throbbing through you as you wordlessly ooze her pre and steadily lose the use of your arms and legs. The former turning limp, weak, your hands nubs of flesh that cannot support you making you rest your face against the floor matts while the latter curl upwards, sticking against Avei's thighs and then sliding up further and losing definition as they join together to form a fertile green sack and heavy virile balls within it. You're losing yourself, diminishing into a mere cock between the alchemist's legs as she continues to stroke the tubular base of her new cock. Whatever your opinions Avei believes you're as into this as she is, but if you have doubts now might be the best time to change your mind and learn to love the idea of this somewhat drastic reward.
+</text>
+<choice destination="cocktf3" text="cockified"/>
+</page>
+
+<page ID="cocktf3">
+<text>
+Avei moans, panting, uttering blissful exclaimations of yes and "be my cock" as she strokes at you. You feel yourself shrinking, becoming a more manageable shaft as your limbless veiny tube of a body lifts up off the ground. Boneless now you're held aloft by her arousal pulsing through you. It won't be much longer now and you feel her  pulling her hips further back from the table edge so she can easier stroke her shaft, letting more of your green and veiny flesh be exposed to the light.
+</text>
+<choice destination="cocktfGO" text="life as a dick"/>
+</page>
+
+<gameover ID="cocktfGO">
+<text>
+You feel the last traces of your former self and identity as an independent being slip away as she moans and strokes your form. As your face swells out and loses definition and your mouth turns vertical she pulls you free from underneath the table. The table you'd disappeared under as a person and emerge from now as her green and throbbing cock, her hands now have full access to your body. Her eager stroking running your length as she washes away your more complicated wants with a relentless wave of hot pleasure thundering in your mind... Her pleasure finally reaching a peak as she climaxes through you, making you truly hers as she shudders and splatters the floor mats beneath the table with thick cum "aaah, best reward...make you a part of someone sexy. And now we get to have so much fun together." she pants, patting her softening new cock and delighting in the extra size you gave her.
+</text>
+
+</gameover>
+
+<page ID="lick0">
+<assertion evaluate="haspart" part="vagina"/>
+<text>
+You feel her tongue delve into your sex and hear her giggle at your gasp of pleasure "I see you've found your reward." she teases, hands massaging the sides of your ass as she delves once again. Her tongue lapping deeper into your sex, lapping into your increasingly wet and aroused nethers as you moan and soon start to writhe under the table. She really is quite work good at this, clearly having expertise in the arts of pleasure.
+</text>
+<choice destination="lick1" text="mhmmm"/>
+</page>
+
+<page ID="lick1">
+<text>
+Her tongue laps, expertly twirling through your soaked snatch and seeking out your most pleasurable spots. Pleasure washing through you, building, rolling back and forth in your depths as you're helplessly and delightfully trapped at the mercy of her tongue. Her hands giving you an encouraging squeeze and rub as she feels you get close, urging you on, let go she seems to say without words. And you do, gasping and shuddering as you stain her mouth, chin and chest with sexual juices. She smiles and withdraws from your panting form "Mhmm, tastey and fun...come back again sometime." she says encouragingly, freeing up the path for you to exit the space under the table again.
+
+</text>
+<choice destination="end" text="*crawl out*"/>
+</page>
+
+
+<page ID="rats">
+<condition operator="equals" evaluate="GLOBALFLAG" flag="ratquest" value="4"/>
+<!--completed quest-->
+<text>
+"Oh are they gone?" she goes to listen at the stairs, then looks down and finally returns "They're gone. I'm ever so grateful." she says and then hands over a small bag of gold, then smiles "Though if you want a more...personal reward, I did say you could get to know me better." she mhmms at your curiousity and adds "Lets just say if you look under my table you'll find my reward there."
+</text>
+<effect type="setglobalflag" flag="ratquest" value="5"/>
+<effect type="setfactionflag" flag="friendship" value="1"/>
+<effect type="givegold" value="100"/>
+<effect type="experience" value="50"/>
+<choice destination="table" text="let me go look then"/>
+<choice destination="end" text="your thanks is all i need"/>
+</page>
+
+
+<page ID="rats">
+<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="ratquest" value="1"/>
+<condition operator="lessthan" evaluate="GLOBALFLAG" flag="ratquest" value="4"/>
+<!-- in the midst of quest-->
+<text>
+"I can still hear them moving around down there, I don't think they're gone."
+</text>
+<choice destination="end" text="guess I must of missed some. be right back."/>
+</page>
+
+
+<page ID="rats">
+<condition operator="equals" evaluate="GLOBALFLAG" flag="ratquest" value="0"/>
+<!--start quest-->
+<text>
+"There are rats in my basement. They're messing with my equipment and ruining my ingredients. I cannot work under these conditions...You look like a brave sort, do you think you could sor this out for me? I assure you the rats are individually rather small. Shouldn't be too dangerous for someone like you."
+</text>
+
+<choice destination="acceptquest" text="I'll deal with the problem for you then"/>
+<choice destination="end" text="no i'm not an exterminator, bye"/>
+</page>
+
+<page ID="acceptquest">
+<text>
+"Oh excellent, you must be ever so brave. Perhaps once you've done this for me we could get to know eachother better. I can be ever so grateful".
+</text>
+
+<effect type="setglobalflag" flag="ratquest" value="1"/>
+<choice destination="end" text="that sounds good, I'll be back soon."/>
+</page>
+
+<page ID="who">
+<text>
+"My name is Avei, I'm an alchemist. I can do the most amazing things with the right ingredients...amazing and, fun, things."
+</text>
+<choice destination="end" text="thankyou for the information"/>
+</page>
+
+<page ID="start">
+<!-- first meeting-->
+<text>
+"Nibbled, again." she tosses a chewed root aside in frustration as you approach then turns to you with a smile "greetings stranger, forgive me. I just have a bit of a rat problem interfering with my work at the moment. I'm sure once it's resolved I can be of service. "
+</text>
+<effect type="setlocalflag" flag="talked" value="1"/>
+<choice destination="who" text="who are you?"/>
+<choice destination="rats" text="what sort of rat problem?"/>
+<choice destination="end" text="I'll return later then"/>
+</page>
+</Conversation>

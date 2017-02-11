@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ItemWeapon name="magnabuss" weight="5" value="750">
+<description>
+The gun seems to be a magnetic accelerator, its barrel lined with toroidal acceleration coils. A breach action allows it to be loaded with ballbearings.
+</description>
+<modifier>
+
+</modifier>
+<combatMove name="shoot" ammoCost="6" pattern="RANGED" bonusAttribute="RANGED" timeCost="2">
+<effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>
+<effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>
+<effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>
+<effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>
+<effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>
+<effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>
+
+<missText count="1">
+<text>you fail to blast TARGET</text>
+</missText>
+<hitText count="1">
+<text>you blast TARGET with hyper velocity bearings for VALUE kinetic damage</text>
+</hitText>
+</combatMove>
+<energy refill="ball bearings" efficiency="1" capacity="6"/>
+</ItemWeapon>

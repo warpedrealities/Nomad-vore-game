@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text>
+no interaction to be had with a defeated elf yet
+</text>
+<choice destination="end" text="well bye"/>
+</page>
+
+</Conversation>

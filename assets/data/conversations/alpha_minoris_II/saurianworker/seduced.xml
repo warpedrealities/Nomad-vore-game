@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<text>
+write this
+</text>
+<choice destination="end" text="end"/>
+</page>
+</Conversation>

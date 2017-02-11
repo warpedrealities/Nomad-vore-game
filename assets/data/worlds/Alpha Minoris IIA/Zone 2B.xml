@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="forest.png">
+<tileset count-x="4" count-y="4">
+<tile sprite="3" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="3" vision="0" movement="0"> dirt </tile>
+<tile sprite="2" vision="0" movement="0"> strange grass</tile>
+<tile sprite="4" vision="1" movement="2"> an alien tree</tile>
+<tile sprite="5" vision="0" movement="1"> water</tile>
+<tile sprite="6" vision="1" movement="2"> a twisted alien tree</tile>
+</tileset>
+<description>The strange air of an alien world can be felt on your face</description>
+
+<transition direction="west">Zone 1B</transition>
+<transition direction="north">Zone 2A</transition>
+<mapgen>
+<randprefab width="3" height="3">
+<row>222</row>
+<row>222</row>
+<row>222</row>
+<placeWidget x="1" y="1" name="dropcontainer">
+<lootTable>
+<loot item="medicine" chance="0.5"/>
+<loot item="medicine" chance="1.0"/>
+<loot item="space meal" chance="0.5"/>
+<loot item="space meal" chance="1.0"/>
+</lootTable>
+</placeWidget>
+</randprefab>
+<clumps lowerlimit="0" upperlimit="35">
+<floodfill tile="3"></floodfill>
+</clumps>
+<noise tile="2" scarcity="4"/>
+<noise tile="5" scarcity="8"/>
+<floodfill tile="1">
+
+</floodfill>
+<walloff wall="5" sides="southeast"/>
+</mapgen>
+
+</zone>

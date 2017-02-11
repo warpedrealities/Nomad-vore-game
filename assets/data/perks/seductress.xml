@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<perk name="seductress">
+<description> In a world of debauchery and danger wiles can be as dangerous as weapons. +2 to seduction.</description>
+<modifier affects="SEDUCTION" value="2"  type="ATTRIBUTE"/>
+<maxrank value="3"/>
+
+</perk>

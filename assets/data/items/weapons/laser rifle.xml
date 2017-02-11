@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ItemWeapon name="Laser rifle" weight="4" value="500">
+<description>
+A rugged laser rifle, its long barrel makes it unwieldy in close quarters. 3-6 thermal damage.
+</description>
+<modifier>
+
+</modifier>
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-2">
+<effectDamage type="THERMAL" minValue="3" maxValue="6" modifier="NONE"/>
+<missText count="1">
+<text>you fail to shoot TARGET </text>
+</missText>
+<hitText count="1">
+<text>you shoot TARGET for VALUE heat damage</text>
+</hitText>
+</combatMove>
+<energy refill="ENERGY E-cell power-cell" efficiency="5" capacity="50"/>
+</ItemWeapon>

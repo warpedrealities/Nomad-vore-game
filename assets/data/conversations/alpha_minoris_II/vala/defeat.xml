@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<assertion evaluate="isCompanion"/>
+<text>
+ouch
+</text>
+<choice destination="help" text="lemme help you with that"/>
+<choice destination="end" text="your own fault"/>
+</page>
+<page ID="start">
+<text>
+thanks
+</text>
+<special effect="healnpc"/>
+<choice destination="end" text="you're welcome"/>
+</page>
+<page ID="start">
+<text>
+insert text here
+</text>
+<choice destination="end" text="well bye"/>
+</page>
+</Conversation>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ItemEquip name="scary mask" weight="2" slot="HEAD" value="1250">
+<description>
+a frightening mask carved of wood, with slitted eyes and a toothsome grimace it makes you feel more ferocious just looking at it nevermind wearing it. probably wont do anything for your charms though. +2 melee, -2 seduction.
+</description>
+<modifier>
+<melee value="2"/>
+<seduction value="-2"/>
+
+</modifier>
+</ItemEquip>

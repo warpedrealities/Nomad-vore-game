@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ItemEquip name="entropic amulet" weight="2" slot="ACCESSORY" value="350">
+<description>
+An amulet made of a disc of strange dull, heavy and perpetually cool metal. +1 thermal defence
+</description>
+<modifier>
+<thermal value="1"/>
+
+</modifier>
+</ItemEquip>

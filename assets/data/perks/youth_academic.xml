@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<perk name="academic youth" >
+<requirement count="1"><req>CHARGEN</req></requirement>
+<description>You got a degree in the high sciences of physics and biology from a university. Took a few years but surely it was worth it. science +2
+</description>
+<modifier affects="SCIENCE" value="2"  type="ATTRIBUTE"/>
+<maxrank value="1"/>
+</perk>

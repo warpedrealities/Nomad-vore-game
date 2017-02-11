@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<perk name="scientist">
+<description> Knowledge is power. You've had to bone up on the various fields of study in a hurry now your life depends on it. +2 science. </description>
+<modifier affects="SCIENCE" value="2"  type="ATTRIBUTE"/>
+
+<maxrank value="3"/>
+
+</perk>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Conversation>
+<page ID="start">
+<text> There's no interactions with a defeated brightfeather yet.
+</text>
+<choice destination="end" text="darn"/>
+</page>
+
+
+</Conversation>
