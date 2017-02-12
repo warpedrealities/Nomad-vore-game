@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <ItemWeapon name="Junkmace" weight="4" value="200">
+<tagSet value="P"/>
 <description>
-An improvised cudgel lashed together from scrap and junk. It has a weighty heft to it and will probably be good for smacking folk around. Does 3-6 kinetic damage.
+An improvised cudgel lashed together from scrap and junk. It has a weighty heft to it and will probably be good for smacking folk around. Does 3-6 kinetic damage. (P)
 </description>
 <modifier>
 <parry value="1"/>

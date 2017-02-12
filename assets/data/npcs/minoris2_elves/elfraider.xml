@@ -41,6 +41,6 @@
 <victory conversation="alpha_minoris_II/elfraider/victory" />
 <seducer conversation="alpha_minoris_II/elfraider/victory" />
 <talk conversation="alpha_minoris_II/elfraider/chat" />
-<controller AI="patrol"/>
+<controller AI="patrol1"/>
 <faction value="minyos"/>
 </NPC>

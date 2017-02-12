@@ -135,7 +135,7 @@ public class Player_RPG implements Actor_RPG {
 		moveList.add(defaultMoves[1]);
 		//read perks
 	//	handlePerkBasedMoves();
-		new Player_RPG_moveHandler().handlePerkBasedMoves(moveList, playerPerks);
+		new Player_RPG_moveHandler().handlePerkBasedMoves((Player)actor,moveList, playerPerks);
 		
 		cooldownHandler.updateList(Arrays.copyOf(moveList.toArray(),moveList.size(),CombatMove[].class));
 	}

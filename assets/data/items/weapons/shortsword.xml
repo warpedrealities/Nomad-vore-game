@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <ItemWeapon name="shortsword" weight="3" value="250">
+<tagSet value="S"/>
 <description>
-A small well balanced combat blade with an extended guard. does 3-6 damage. has +1 parry due to its balance.
+A small well balanced combat blade with an extended guard. does 3-6 damage. has +1 parry due to its balance. (S)
 </description>
 <modifier>
 <parry value="1"/>

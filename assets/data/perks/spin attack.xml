@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<perk name="spin attack">
+<requirement count="1">
+<req>PERKwarrior</req>
+</requirement>
+<description> 
+you're able to attack everyone around you with a whirling spin attack, though it completes somewhat slower than a regular attack  (-4 to hit, +2 time cost, circle, weapon tag: S)
+</description>
+<weaponMove name="spin" bonusToHit="-4" tag="S" pattern="CIRCLE" timeModifier="2">
+</weaponMove>
+<maxrank value="1"/>
+
+</perk>

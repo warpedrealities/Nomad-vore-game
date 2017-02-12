@@ -397,6 +397,51 @@ public class ZoneInteractionHandler {
 		}
 	}
 	*/
+	
+	public static int  getDirection(Vec2f o, Vec2f p)
+	{
+		int d=0;
+		if (o.x>p.x)
+		{
+			d=d+1; //east
+		}
+		if (o.x<p.x)
+		{
+			d=d+2;//west
+		}	
+		if (o.y>p.y)
+		{
+			d=d+4; //south
+		}
+		if (o.y<p.y)
+		{
+			d=d+8; //north
+		}		
+		switch (d)
+		{
+
+		case 2:
+			return 2;			
+		case 1:
+			return 6;
+		case 4:
+			return 4;
+		case 5:
+			return 5;
+		case 6:
+			return 3;
+		case 8:
+			return 0;
+		case 9:
+			return 7;
+		case 10:
+			return 1;
+		}
+		
+		
+		return -1;
+	}
+	
 	public static Vec2f getPos(int i, Vec2f p)
 	{
 		switch (i)
@@ -521,32 +566,7 @@ public class ZoneInteractionHandler {
 		
 				return player.useMove(number,attackable);
 			}
-			/*
-			for (int i=0;i<m_zone.zoneActors.size();i++)
-			{
-				if (m_zone.zoneActors.get(i)!=player && m_zone.zoneActors.get(i).getVisible()==true && m_zone.zoneActors.get(i).getAttackable())
-				{
-					int xt=(int)m_zone.zoneActors.get(i).getPosition().x;
-					int yt=(int)m_zone.zoneActors.get(i).getPosition().y;
-					if (xt==x && yt==y)
-					{
-						//conduct attack
-						Attackable attackable=(Attackable)m_zone.zoneActors.get(i);
-//						player.Attack(attackable,m_view);
-						if (player.getMove(number).isNonViolent())
-						{
-							violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Seduce);
-						}
-						else
-						{
-							violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Attack);	
-						}
-				
-						return player.useMove(number,attackable);
-					}
-				}
-			}	
-			*/
+		
 		}
 
 		return false;		

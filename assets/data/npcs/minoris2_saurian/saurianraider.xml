@@ -41,6 +41,6 @@
 <victory conversation="alpha_minoris_II/saurianraider/victory" />
 <seducer conversation="alpha_minoris_II/saurianraider/victory" />
 <talk conversation="alpha_minoris_II/saurianraider/chat" />
-<controller AI="patrol"/>
+<controller AI="patrol0"/>
 <faction value="saurian"/>
 </NPC>

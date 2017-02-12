@@ -50,6 +50,13 @@ public class Perk {
 							new PerkMoveModifier(childnode)		
 									);
 				}
+				if (childnode.getTagName()=="weaponMove")
+				{
+					elements.add(
+							new PerkWeaponMove(childnode)		
+									);
+				}
+				
 				if (childnode.getTagName()=="modifier")
 				{
 					elements.add(

@@ -26,7 +26,7 @@ import actorRPG.RPG_Helper;
 
 public class CombatMove {
 
-	public enum AttackPattern{P_MELEE(0),P_RANGED(2),P_SHORT(1),P_SELF(-1),P_BOMB(4),P_CONE(3);
+	public enum AttackPattern{P_MELEE(0),P_SWEEP(1),P_CIRCLE(2),P_SHORT(3),P_RANGED(4),P_CONE(5),P_BOMB(6),P_SELF(-1);
 	
 		int value;
 		AttackPattern(int value)
@@ -251,6 +251,14 @@ public class CombatMove {
 		{
 			return AttackPattern.P_MELEE;
 		}
+		if (string.equals("SWEEP"))
+		{
+			return AttackPattern.P_SWEEP;
+		}
+		if (string.equals("CIRCLE"))
+		{
+			return AttackPattern.P_CIRCLE;
+		}
 		if (string.equals("RANGED"))
 		{
 			return AttackPattern.P_RANGED;
@@ -329,7 +337,8 @@ public class CombatMove {
 			{
 				return false;
 			}
-			if (attackPattern==attackPattern.P_MELEE && distance >=2)
+			if ((attackPattern==attackPattern.P_MELEE||attackPattern==attackPattern.P_CIRCLE||
+					attackPattern==attackPattern.P_SWEEP) && distance >=2)
 			{
 				return false;
 			}
@@ -356,10 +365,17 @@ public class CombatMove {
 			{
 				r=999;
 			}
-	
+			if (attackPattern==attackPattern.P_SWEEP)
+			{
+				return CombatAura.doSweep(this, origin, target);
+			}
+			if (attackPattern==attackPattern.P_CIRCLE)
+			{
+				return CombatAura.doCircle(this, origin, target);
+			}
 			if (attackPattern==attackPattern.P_BOMB)
 			{
-				CombatAura.doExplosion(this,origin,target);
+				return CombatAura.doExplosion(this,origin,target,true);
 			}
 			
 			if (def<=r)
@@ -559,6 +575,15 @@ public class CombatMove {
 			this.attackPattern = attackPattern;
 		}
 
+	}
+
+	public void setTimeCost(int timeCost) {
+		this.timeCost = timeCost;
+	}
+
+	public void setName(String moveName2) {
+		this.moveName=moveName2;
+		
 	}
 
 

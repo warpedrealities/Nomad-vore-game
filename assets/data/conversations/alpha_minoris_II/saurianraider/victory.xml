@@ -119,7 +119,7 @@ You feel her clenching nethers ripple up around your head, your last view of the
 <text>
 
 </text>
-<choice destination="UBSUBMITGO" text="*slosh*/>
+<choice destination="UBSUBMITGO" text="*slosh*"/>
 </page>
 
 
@@ -159,9 +159,9 @@ Down you slide as she reaches your waist, her balls starting to bulge out as you
 <text>
 The saurian warrior who bested you now settles back into a seated position, stroking over the bulges made in her shaft from your head and upper body as you slide down entirely into her bloated sack "mhmmm, too few of my fights end this way." she says and then chuckles "but you were easier to get down than an elf, always hard to get their hips in." she says and continues stroking herself as you're entirely crammed into her balls. Stewing in hot cum you seem doomed to meet a melty fate.
 </text>
-<choice destination="CVstruggle" page="struggle"/>
-<choice destination="CVpleasure" page="rub"/>
-<choice destination="CVsubmit" page="submit"/>
+<choice destination="CVstruggle" text="struggle"/>
+<choice destination="CVpleasure" text="rub"/>
+<choice destination="CVsubmit" text="submit"/>
 </page>
 
 <page ID="CVsubmit">

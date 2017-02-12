@@ -28,9 +28,10 @@ function combat(controllable,sense,script,hostile)
 end
 
 function shouldPatrol(controllable,sense,script)
-
-
-
+	a=script:getValue(3)
+	if not (a>0) then
+		patrol(controllable,sense,script)
+	end
 end
 
 function patrol(controllable,sense,script)
@@ -78,6 +79,6 @@ function main(controllable, sense, script)
 	if not (hostile == nil ) and not controllable:getPeace() then
 		combat(controllable,sense,script,hostile)
 	else
-	patrol(controllable,sense,script)
+	shouldPatrol(controllable,sense,script)
 	end
 end  

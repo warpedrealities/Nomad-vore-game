@@ -7,6 +7,7 @@ import org.w3c.dom.NodeList;
 public class ItemWidget extends Item {
 
 	private String widgetName;
+
 	
 	public String getWidgetName()
 	{

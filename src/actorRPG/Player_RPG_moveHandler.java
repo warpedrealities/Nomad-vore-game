@@ -4,9 +4,13 @@ import perks.PerkElement;
 import perks.PerkInstance;
 import perks.PerkMove;
 import perks.PerkMoveModifier;
+import perks.PerkWeaponMove;
 
 import java.util.ArrayList;
+
+import actor.Player;
 import combat.CombatMove;
+import item.ItemWeapon;
 
 public class Player_RPG_moveHandler {
 
@@ -23,7 +27,7 @@ public class Player_RPG_moveHandler {
 		}
 	}
 	
-	public void handlePerkBasedMoves(ArrayList<CombatMove> moves, ArrayList<PerkInstance> perks)
+	public void handlePerkBasedMoves(Player player,ArrayList<CombatMove> moves, ArrayList<PerkInstance> perks)
 	{
 		ArrayList<moveModifierInstance> moveModifier=new ArrayList<>();
 		
@@ -41,12 +45,32 @@ public class Player_RPG_moveHandler {
 					moveModifier.add(new moveModifierInstance(perks.get(i).getPerkRank(),
 							(PerkMoveModifier)perks.get(i).getPerk().getElement(j)));
 				}
+				if (PerkWeaponMove.class.isInstance(perk.getElement(j)))
+				{
+					handleWeaponMove((PerkWeaponMove)perks.get(i).getPerk().getElement(j),player,moves,perks.get(i).getPerkRank());
+				}
 			}
 		}
 		
 		if (moveModifier.size()>0)
 		{
 			handleMoveModifiers(moves,moveModifier);
+		}
+	}
+	
+	private void handleWeaponMove(PerkWeaponMove perk,Player player,ArrayList<CombatMove> moves, int rank)
+	{
+		if (player.getInventory().getSlot(0)!=null && ItemWeapon.class.isInstance(player.getInventory().getSlot(0).getItem()))
+		{
+			ItemWeapon weapon=(ItemWeapon)player.getInventory().getSlot(0).getItem();
+			//weapon is eligible to use the move
+			if (weapon.getTagSet().contains(perk.getTag()))
+			{
+				CombatMove move=weapon.getMove(0);
+				
+				moves.add(perk.createMove(rank,move));
+				
+			}
 		}
 	}
 	

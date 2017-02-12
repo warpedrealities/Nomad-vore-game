@@ -633,14 +633,18 @@ public class Zone implements ILosBoard, Zone_int{
 	{
 		for (int i=zoneActors.size()-1;i>=0;i--)
 		{
-			if (zoneActors.get(i).Respawn(GameManager.getClock()))
+			if (zoneActors.get(i)!=null)
 			{
-				zoneActors.remove(i);
+				if (zoneActors.get(i).Respawn(GameManager.getClock()))
+				{
+					zoneActors.remove(i);
+				}
+				if (getTile((int)zoneActors.get(i).getPosition().x,(int)zoneActors.get(i).getPosition().y)!=null)
+				{
+					zoneTileGrid[(int) zoneActors.get(i).getPosition().x][(int) zoneActors.get(i).getPosition().y].setActorInTile(zoneActors.get(i));	
+				}			
 			}
-			if (getTile((int)zoneActors.get(i).getPosition().x,(int)zoneActors.get(i).getPosition().y)!=null)
-			{
-				zoneTileGrid[(int) zoneActors.get(i).getPosition().x][(int) zoneActors.get(i).getPosition().y].setActorInTile(zoneActors.get(i));	
-			}
+
 			
 		}
 		

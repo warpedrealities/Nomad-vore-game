@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <ItemWeapon name="sister sword" weight="3" value="250">
+<tagSet value="S"/>
 <description>
-A leaf shaped metal blade, curving patterns etched into the flat of it on either side.
+A leaf shaped metal blade, curving patterns etched into the flat of it on either side. (S)
 </description>
 <modifier>
 <parry value="1"/>

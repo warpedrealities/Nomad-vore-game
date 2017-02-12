@@ -17,15 +17,57 @@ import zone.Zone;
 
 public class CombatAura {
 
+	static public boolean doSweep(CombatMove move, Actor origin, Attackable target)
+	{
+		Zone zone=Universe.getInstance().getCurrentZone();
+		
+		int d=ZoneInteractionHandler.getDirection(origin.getPosition(), target.getPosition());
+		
+		for (int i=d-1;i<d+2;i++)
+		{
+			int local=i;
+			if (i<0)
+			{
+				local=8+i;
+			}
+			if (i>7)
+			{
+				local=i-8;
+			}
+			Vec2f p=ZoneInteractionHandler.getPos(local, origin.getPosition());
+			if (move.isNonViolent())
+			{
+				ViewScene.m_interface.Flash(p, 4);
+				explodeTile(zone,(int)p.x,(int)p.y,move,origin);
+			}
+			else
+			{
+				ViewScene.m_interface.Flash(p, 3);
+				explodeTile(zone,(int)p.x,(int)p.y,move,origin);
+			}
+		}
+		return true;
+	}
 	
+
+	public static boolean doCircle(CombatMove combatMove, Actor origin, Attackable target) {
+
+		return doExplosion(combatMove, origin, origin, false);
+	}	
 	
-	static public boolean doExplosion(CombatMove move, Actor origin, Attackable target) {
+	static public boolean doExplosion(CombatMove move, Actor origin, Attackable target, boolean center) {
 		
 		Zone zone=Universe.getInstance().getCurrentZone();
 		
 		if (move.isNonViolent())
 		{
-			ViewScene.m_interface.Flash(target.getPosition(), 4);
+	
+			if (center)
+			{
+				ViewScene.m_interface.Flash(target.getPosition(), 4);
+				explodeTile(zone,(int)target.getPosition().x,(int)target.getPosition().y,move,origin);		
+			}
+
 			for (int i=0;i<8;i++)
 			{
 				Vec2f p=ZoneInteractionHandler.getPos(i, target.getPosition());
@@ -36,7 +78,12 @@ public class CombatAura {
 		}
 		else
 		{
-			ViewScene.m_interface.Flash(target.getPosition(), 3);		
+		
+			if (center)
+			{
+				ViewScene.m_interface.Flash(target.getPosition(), 3);
+				explodeTile(zone,(int)target.getPosition().x,(int)target.getPosition().y,move,origin);
+			}
 			for (int i=0;i<8;i++)
 			{
 				Vec2f p=ZoneInteractionHandler.getPos(i, target.getPosition());
@@ -45,7 +92,7 @@ public class CombatAura {
 				
 			}
 		}
-		return false;
+		return true;
 	}
 	
 	
@@ -61,7 +108,6 @@ public class CombatAura {
 			{
 				Attackable attackable=(Attackable)zone.zoneTileGrid[x][y].getWidgetObject();
 				//attack this		
-		//		attackable.Harm(player.getAttack().getDamage(0), player,0);
 				ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Attack);
 				attack(origin,move,attackable);
 			}		
@@ -90,32 +136,7 @@ public class CombatAura {
 			}
 			attack(origin,move,attackable);
 		}
-		/*
-		for (int i=0;i<zone.zoneActors.size();i++)
-		{
-			if (zone.zoneActors.get(i)!=origin && zone.zoneActors.get(i).getVisible()==true && zone.zoneActors.get(i).getAttackable())
-			{
-				int xt=(int)zone.zoneActors.get(i).getPosition().x;
-				int yt=(int)zone.zoneActors.get(i).getPosition().y;
-				if (xt==x && yt==y)
-				{
-					//conduct attack
-					Attackable attackable=(Attackable)zone.zoneActors.get(i);
-//					player.Attack(attackable,m_view);
-					
-					if (move.isNonViolent())
-					{
-						ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Seduce);
-					}
-					else
-					{
-						ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Attack);	
-					}
-					attack(origin,move,attackable);
-				}
-			}
-		}	
-		*/
+	
 	}
 
 	static private boolean getVisible(Vec2f p)
@@ -128,7 +149,6 @@ public class CombatAura {
 		}
 		return false;
 	}
-	
 	
 	static private void attack(Actor origin, CombatMove move, Attackable target)
 	{
@@ -197,4 +217,5 @@ public class CombatAura {
 		}
 		
 	}
+
 }

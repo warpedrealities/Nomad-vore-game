@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<perk name="powerblow">
+<requirement count="1">
+<req>PERKwarrior</req>
+</requirement>
+<description> 
+You're able to unleash a mighty blow with all your force behind it. Reckless it tends to be a tad less accurate though (-4 to hit, +2 to damage, weapon tag: P)
+</description>
+<weaponMove name="powerblow" bonusToHit="-4" tag="P">
+<change type="MOD">
+<effectDamage type="KINETIC" minValue="2" maxValue="2" modifier="STRENGTH"/>
+</change>
+</weaponMove>
+<maxrank value="1"/>
+
+</perk>

@@ -17,6 +17,7 @@ import perks.moveModifier.Effect_Change.modifierType;
 public class Move_Modifier {
 
 	private String moveName;
+	int timeModifier;
 	int attackBonus;
 	private AttackPattern attackPattern;
 	
@@ -34,7 +35,10 @@ public class Move_Modifier {
 		{
 			attackPattern=CombatMove.strToPattern(Enode.getAttribute("pattern"));
 		}
-		
+		if (Enode.getAttribute("timeModifier").length()>0)
+		{
+			timeModifier=Integer.parseInt(Enode.getAttribute("timeModifier"));
+		}	
 		modifiers=new ArrayList<Effect_Change>();
 		NodeList list=Enode.getChildNodes();
 		for (int i=0;i<list.getLength();i++)
@@ -51,13 +55,14 @@ public class Move_Modifier {
 		}
 	}
 
-	public Object getMoveName() {
+	public String getMoveName() {
 		return moveName;
 	}
 	
 	public void applyModifier(CombatMove move, int rank)
 	{
 		move.setAttackBonus(move.getAttackBonus()+attackBonus);
+		move.setTimeCost(move.getTimeCost()+timeModifier);
 		
 		move.setAttackPattern(attackPattern);
 		

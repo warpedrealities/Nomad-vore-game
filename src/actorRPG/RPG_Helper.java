@@ -135,7 +135,10 @@ public class RPG_Helper {
 		{
 			return Actor_RPG.SCIENCE;
 		}
-
+		if (str.contains("SECURITY"))
+		{
+			return Actor_RPG.SECURITY;
+		}
 		if (str.contains("LEADERSHIP"))
 		{
 			return Actor_RPG.LEADERSHIP;

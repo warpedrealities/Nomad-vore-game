@@ -16,7 +16,8 @@ import actor.Modifier;
 
 public class ItemWeapon extends ItemEquip {
 
-
+	private String tagSet="";
+	
 	public ItemWeapon(Element Inode, int uid) {
 		super(uid);
 		NodeList children=Inode.getChildNodes();
@@ -57,8 +58,18 @@ public class ItemWeapon extends ItemEquip {
 						stackEquip=true;
 					}
 				}
+				if (Enode.getTagName()=="tagSet")
+				{	
+					tagSet=Enode.getAttribute("value");
+				}
 			}
 		}	
 	}
+
+	public String getTagSet() {
+		return tagSet;
+	}
+	
+	
 
 }

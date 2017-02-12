@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<perk name="cleave">
+<requirement count="1">
+<req>PERKwarrior</req>
+</requirement>
+<description> 
+you're able to unleash a broad attack able to hit multiple foes at once so long as they're close together (-4 to hit, arc, weapon tag: S)
+</description>
+<weaponMove name="cleave" bonusToHit="-4" tag="S" pattern="SWEEP">
+</weaponMove>
+<maxrank value="1"/>
+
+</perk>

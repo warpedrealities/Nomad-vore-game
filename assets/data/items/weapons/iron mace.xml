@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <ItemWeapon name="iron mace" weight="4" value="400">
+<tagSet value="P"/>
 <description>
-A forged iron mace. A hefty nobbled metal ball on a wooden handle. Does 1-8 kinetic damage.
+A forged iron mace. A hefty nobbled metal ball on a wooden handle. Does 1-8 kinetic damage. (P)
 </description>
 <modifier>
 <parry value="1"/>
