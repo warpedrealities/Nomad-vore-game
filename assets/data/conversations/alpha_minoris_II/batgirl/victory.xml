@@ -13,19 +13,27 @@ The batgirl grins as you flop on your butt in front of her. Seems like she just 
 <text>
 You chuckle and lean closer as well, cuddling the batgirl as much as her wings allow you. She coos and hugs you in return, this time really enveloping your form. Maybe only your feet are still visible underneath? Her body warmth feels so good! And the batgirl even grinds into your front, playfully squeezing you and gently rubbing with her soft wings. The closeness feels good! So very private, thanks to the wings ‘curtain’ 
 </text>
-<!--
+
 <choice destination="sex0" text="may as well screw her">
 <assertion evaluate="haspart" part="penis"/>
 </choice>
--->
+
 <choice destination="willcheck" text="maybe not so safe"/>
 </page>
 
 <page ID="sex0">
 <text>
+In the cosy privacy of her wings you feel her warm body against you and decide that screwing her is probably the best idea you've ever had. You <conditional><assertion evaluate="slothasitem" slot="2"/>  pull it out and then </conditional> stroke your cock to hardness while smooching along the batgirl's jaw, the bat letting out a little giggle and coo as she helps you line yourself up with her cleft. The batgirl grinding herself against you, her softness only helping you get hard and coaxing you on until you spear her on your length. The batty letting out a gasp and smiling, wrapping her wings around you in approval of your idea for a lovely bit of foreplay.
+</text>
+<choice destination="sex1" text="boning"/>
+</page>
+
+<page ID="sex1">
+<text>
 
 
 </text>
+
 
 </page>
 

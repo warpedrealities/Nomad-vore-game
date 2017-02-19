@@ -11,7 +11,7 @@
 <inventoryitem name="hermilixir" probability="100" quantity="20"/>
 <inventoryitem name="pussy juice" probability="100" quantity="20" />
 <inventoryitem name="phalifungi" probability="100" quantity="20"/>
-
+<inventoryitem name="tadge oil" probability="100" quantity="20" />
 <conditionalitem name="crossbow" probability="100" quantity="3">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>

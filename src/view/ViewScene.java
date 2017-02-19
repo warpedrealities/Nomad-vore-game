@@ -1382,7 +1382,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 	public void StartConversation(String conversation, NPC npc, boolean badEnd) {
 		if (m_screen==null)
 		{
-			DialogueScreen scr=new DialogueScreen(m_textureIds[0],m_textureIds[7],m_textureIds[8],sceneController.getUniverse().player,m_text,this);
+			DialogueScreen scr=new DialogueScreen(m_textureIds[0],m_textureIds[7],m_textureIds[8],SceneBase.getVariables()[0],sceneController.getUniverse().player,m_text,this);
 			if (scr.Load(conversation, npc)==false && badEnd)
 			{
 				if (badEnd)
@@ -1406,7 +1406,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 	public void StartConversation(String conversation, WidgetConversation widget) {
 		if (m_screen==null)
 		{
-			DialogueScreen scr=new DialogueScreen(m_textureIds[0],m_textureIds[7],m_textureIds[8],sceneController.getUniverse().player,m_text,this);
+			DialogueScreen scr=new DialogueScreen(m_textureIds[0],m_textureIds[7],m_textureIds[8],SceneBase.getVariables()[0],sceneController.getUniverse().player,m_text,this);
 			if (scr.Load(conversation, null)==false)
 			{
 			

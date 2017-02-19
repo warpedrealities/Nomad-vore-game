@@ -29,7 +29,7 @@
 <placeWidget x="1" y="1" name="slot">
 <contains name="cargocontainer">
 <lootTable>
-<loot item="explosive grenade" chance="1.0"/>
+<loot item="phalifungi" chance="1.0"/>
 <loot item="explosive grenade" chance="1.0"/>
 <loot item="explosive grenade" chance="1.0"/>
 <loot item="plasma pistol" chance="1.0"/>

@@ -28,6 +28,7 @@ public class Encyclopedia {
 		researchList=new HashMap<String,Research>();
 		entryList=new ArrayList<Entry>();
 		
+		
 	}
 	
 	

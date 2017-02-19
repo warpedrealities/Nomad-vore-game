@@ -21,8 +21,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import description.MacroLibrary;
-
-
+import dialogue.choiceHandler.ChoiceHandler;
+import dialogue.choiceHandler.ChoiceLoader;
 import actor.NPC;
 import actor.Player;
 import actorRPG.RPG_Helper;
@@ -46,8 +46,10 @@ public class DialogueScreen extends Screen implements Callback {
 	NodeList m_children;
 	TextView m_text;
 	Window m_window;
-	Button m_buttons[];
 	Image portraitImage;
+	
+	ChoiceHandler choiceHandler;
+	ChoiceLoader choiceLoader;
 	
 	int m_numchoices;
 	String m_choices[];
@@ -72,23 +74,20 @@ public class DialogueScreen extends Screen implements Callback {
 	
 	
 	
-	public DialogueScreen( int frame, int button, int buttonalt,Player player, TextView textview,ModelController_Int callback)
+	public DialogueScreen( int frame, int button, int buttonalt, int tint,Player player, TextView textview,ModelController_Int callback)
 	{
 		m_player=player;
 		m_text=textview;
 		m_window=new Window(new Vec2f (3,-1), new Vec2f(17,17), frame,true);
-		m_buttons=new Button[8];
 		m_choices=new String[8];
 		
 		portraitImage=new Image(new Vec2f(-17,-1),new Vec2f(17,17),"assets/art/portraits/test.png");
 		portraitImage.setVisible(false);
-		
-		for (int i=0;i<8;i++)
-		{
-			m_buttons[i]=new Button(new Vec2f(0.5F,14.5F-(i*2)),new Vec2f(16,2),button, this,"text",i,0.8F);
-			m_window.add(m_buttons[i]);
-		}
+
 		m_stagnation=0;
+		
+		choiceLoader=new ChoiceLoader();
+		choiceHandler=new ChoiceHandler(new Vec2f(4,15.5F),tint,this);
 	}
 	
 	public boolean Load(String Conversation, NPC npc)
@@ -136,9 +135,9 @@ public class DialogueScreen extends Screen implements Callback {
 	
 	@Override
 	public void start(MouseHook hook) {
-		// TODO Auto-generated method stub
-		hook.Register(m_window);
 
+		hook.Register(m_window);
+		hook.Register(choiceHandler);
 	}
 	
 	
@@ -149,6 +148,7 @@ public class DialogueScreen extends Screen implements Callback {
 		m_text.Draw(buffer, matrixloc);
 		
 		portraitImage.Draw(buffer, matrixloc);
+		choiceHandler.Draw(buffer, matrixloc);
 	}
 	
 	boolean FindNode(String id) throws MalformedDialogException
@@ -249,17 +249,9 @@ public class DialogueScreen extends Screen implements Callback {
 				
 			}
 		}
-		for (int i=0;i<8;i++)
-		{
-			if (i<m_numchoices)
-			{
-				m_buttons[i].setActive(true);
-			}
-			else
-			{
-				m_buttons[i].setActive(false);		
-			}
-		}
+		choiceHandler.addChoices(choiceLoader.getChoices(),choiceLoader.getCount());
+		choiceLoader.reset();
+
 	}
 
 	private void processPortrait(Element e) {
@@ -330,9 +322,8 @@ public class DialogueScreen extends Screen implements Callback {
 	{
 		if (m_evaluator.EvalConditional(node)==true)
 		{
-			
+			choiceLoader.addString(node.getAttribute("text"));
 			m_choices[m_numchoices]=node.getAttribute("destination");
-			m_buttons[m_numchoices].setString(node.getAttribute("text"));
 			m_numchoices++;
 		}
 	}
@@ -410,6 +401,7 @@ public class DialogueScreen extends Screen implements Callback {
 		portraitImage.discard();
 		m_window.discard();
 		mouse.Remove(m_window);
+		mouse.Remove(choiceHandler);
 	}
 
 	
@@ -421,6 +413,8 @@ public class DialogueScreen extends Screen implements Callback {
 		{
 			if (ID<m_numchoices)
 			{
+				m_text.AddText(m_player.getName()+":"+choiceHandler.getchoice(ID));
+				m_text.BuildStrings();
 				if (m_choices[ID].equals("end"))
 				{
 					EndConversation();
@@ -459,6 +453,7 @@ public class DialogueScreen extends Screen implements Callback {
 			keyboardControls();
 		}
 		m_text.update(DT);
+		choiceHandler.update(DT);
 	}
 
 	private void keyboardControls()
@@ -499,7 +494,7 @@ public class DialogueScreen extends Screen implements Callback {
 	
 	@Override
 	public void Callback() {
-		// TODO Auto-generated method stub
-		
+
+		ButtonCallback(choiceHandler.getIndex(),null);
 	}
 }
