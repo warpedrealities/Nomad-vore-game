@@ -13,11 +13,11 @@ The batgirl grins as you flop on your butt in front of her. Seems like she just 
 <text>
 You chuckle and lean closer as well, cuddling the batgirl as much as her wings allow you. She coos and hugs you in return, this time really enveloping your form. Maybe only your feet are still visible underneath? Her body warmth feels so good! And the batgirl even grinds into your front, playfully squeezing you and gently rubbing with her soft wings. The closeness feels good! So very private, thanks to the wings ‘curtain’ 
 </text>
-
+<!--
 <choice destination="sex0" text="may as well screw her">
 <assertion evaluate="haspart" part="penis"/>
 </choice>
-
+-->
 <choice destination="willcheck" text="maybe not so safe"/>
 </page>
 
@@ -30,10 +30,16 @@ In the cosy privacy of her wings you feel her warm body against you and decide t
 
 <page ID="sex1">
 <text>
+You're a bit weak from being bested by the batgirl but faced with her soft warm nethers and her willing cooperation you find your vigor returning rapidly. Your hips thrusting as you fuck her in the embrace of her wings but no one would be fooled that you're just engaged in vigorous cuddling, the batty's moans, the lewd slurps and your ass contours pushing out the leathery wings between thrusts make it oh so obvious that you're fucking the batgirl with wild abandon.
+</text>
+<choice destination="sex2" text="fuck and finish"/>
+</page>
+
+<page ID="sex2">
+<text>
 
 
 </text>
-
 
 </page>
 
