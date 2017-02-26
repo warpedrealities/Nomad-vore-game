@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="leather outfit" weight="4" slot="BODY" value="250">
+<description>
+An outfit of black leather with matching jacket and leather jeans, makes you feel like a biker. +2 kinetic, +!, -1 seduction.
+</description>
+<modifier>
+<kinetic value="2"/>
+<seduction value="-1"/>
+<thermal value="2"/>
+
+</modifier>
+</ItemEquip>

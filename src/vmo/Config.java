@@ -11,7 +11,7 @@ public class Config {
 	float m_scale;
 	float m_textscale;
 	boolean verboseCombat;
-	public static final int VERSION=19;
+	public static final int VERSION=20;
 	
 	public Config()
 	{

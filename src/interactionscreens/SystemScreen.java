@@ -170,8 +170,19 @@ public class SystemScreen extends Screen implements Callback {
 				if (resourceObj.getResourceConversions().get(i).getItemName().equals(item.getItem().getName()))
 				{
 					//remove item
-					
-					resourceObj.addResource(resourceObj.getResourceConversions().get(i).getItemValue());
+					if (ItemDepletableInstance.class.isInstance(item))
+					{
+						ItemDepletableInstance idi=(ItemDepletableInstance)item;
+						ItemHasEnergy ihe=(ItemHasEnergy)idi.getItem();
+						
+						float ratio=(float)idi.getEnergy()/ihe.getEnergy().getMaxEnergy();
+						resourceObj.addResource(resourceObj.getResourceConversions().get(i).getItemValue()*ratio);
+					}
+					else
+					{
+						resourceObj.addResource(resourceObj.getResourceConversions().get(i).getItemValue());
+					}
+	
 					
 					player.getInventory().RemoveItem(item);
 					return true;

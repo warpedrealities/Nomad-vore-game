@@ -34,6 +34,20 @@ This drone has crashed remarkably intact, though only in the sense that it reach
 </placeWidget>
 </randprefab>
 
+<randprefab width="3" height="3">
+<row>222</row>
+<row>222</row>
+<row>222</row>
+<placeWidget x="1" y="1" name="cargocontainer">
+<lootTable>
+	<lootSubTable chance="1" file="cargodrops_primary"/>
+	<lootSubTable chance="1" file="cargodrops_secondary"/>
+	<lootSubTable chance="0.5" file="resource_tier_1"/>
+	<lootSubTable chance="0.5" file="consumable_tier_1"/>
+</lootTable>
+</placeWidget>
+</randprefab>
+
 <clumps lowerlimit="0" upperlimit="45">
 <noise tile="5" scarcity="6"/>
 <floodfill tile="3"></floodfill>

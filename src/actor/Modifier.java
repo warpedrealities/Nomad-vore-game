@@ -57,6 +57,10 @@ public class Modifier {
 				{
 					m_modifiers[Actor_RPG.RANGED]=Integer.parseInt(Enode.getAttribute("value"));
 				}			
+				if (Enode.getTagName()=="tease")
+				{
+					m_modifiers[Actor_RPG.TEASE]=Integer.parseInt(Enode.getAttribute("value"));	
+				}
 			}
 		}
 	}

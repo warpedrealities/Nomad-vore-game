@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="isotope" weight="1" value="100">
+<description>
+a nuclear isotope, fissionable.
+</description>
+<energy efficiency="1" capacity="1"/>
+</ItemAmmo>

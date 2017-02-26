@@ -48,7 +48,7 @@
 </placeWidget>
 <placeWidget x="3" y="4" name="slot">
 <contains name="fueltank">
-<resource type="FUEL" value="40"/>
+<resource type="FUEL" value="20"/>
 </contains>
 </placeWidget>
 

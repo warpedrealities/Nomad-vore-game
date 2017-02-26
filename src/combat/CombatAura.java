@@ -6,6 +6,9 @@ import actor.Player;
 import actorRPG.Actor_RPG;
 import faction.violation.FactionRule.ViolationType;
 import nomad.Universe;
+import rlforj.los.ConePrecisePremisive;
+import rlforj.los.IConeFovAlgorithm;
+import rlforj.los.PrecisePermissive;
 import shared.Vec2f;
 import view.ViewScene;
 import view.ZoneInteractionHandler;
@@ -17,6 +20,8 @@ import zone.Zone;
 
 public class CombatAura {
 
+	static IConeFovAlgorithm coneAlgorithm;
+	
 	static public boolean doSweep(CombatMove move, Actor origin, Attackable target)
 	{
 		Zone zone=Universe.getInstance().getCurrentZone();
@@ -48,8 +53,49 @@ public class CombatAura {
 		}
 		return true;
 	}
-	
+	static public int getAngle(Vec2f target) {
+	    float angle = (float) Math.toDegrees(Math.atan2(target.y, target.x));
 
+	    if(angle < 0){
+	        angle += 360;
+	    }
+
+	    return (int)angle;
+	}
+	
+	private static int calculateAngle(Vec2f origin, Vec2f target)
+	{
+		int degrees=getAngle(new Vec2f(target.x-origin.x,target.y-origin.y));
+		
+		degrees-=15;
+		if(degrees < 0){
+			degrees += 360;
+		}	
+		return degrees;
+	}
+	
+	public static boolean doCone(CombatMove combatMove, Actor origin, Attackable target)
+	{
+		CombatProjector projector=new CombatProjector(origin,Universe.getInstance().getCurrentZone(),combatMove);
+		
+		if (coneAlgorithm==null)
+		{
+			coneAlgorithm=new ConePrecisePremisive();
+		}
+		
+		//angle must be in degrees not radians as its in integers
+		int angle=calculateAngle(origin.getPosition(),target.getPosition());
+		int finAngle=angle+30;
+		if (finAngle>360)
+		{
+			finAngle=finAngle-360;
+		}
+		coneAlgorithm.visitConeFieldOfView(projector, (int)origin.getPosition().x, (int)origin.getPosition().y, 
+				8, angle , finAngle);
+		return true;
+
+	}
+	
 	public static boolean doCircle(CombatMove combatMove, Actor origin, Attackable target) {
 
 		return doExplosion(combatMove, origin, origin, false);

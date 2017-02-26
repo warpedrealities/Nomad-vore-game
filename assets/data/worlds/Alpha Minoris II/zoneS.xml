@@ -23,6 +23,21 @@
 <row>88888</row>
 <pairedportal sprite="3" destination="zoneC" x="2" y="3" ID="15" facing="4">a narrow mountain pass</pairedportal>
 </prefab>
+
+<randprefab width="3" height="3">
+<row>222</row>
+<row>222</row>
+<row>222</row>
+<placeWidget x="1" y="1" name="cargocontainer">
+<lootTable>
+	<lootSubTable chance="1" file="cargodrops_primary"/>
+	<lootSubTable chance="1" file="cargodrops_secondary"/>
+	<lootSubTable chance="0.5" file="resource_tier_1"/>
+	<lootSubTable chance="0.5" file="consumable_tier_1"/>
+</lootTable>
+</placeWidget>
+</randprefab>
+
 <perlin>
 <band low="-1.0" high="-0.8">
 <floodfill tile="8"/>

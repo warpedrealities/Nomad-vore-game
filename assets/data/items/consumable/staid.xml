@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ItemConsumable name="staid" weight="0.5" value="250">
+<description>A pharmacological product, 'by accountants for accountants' if the bottle is to be believed. Dampens lust and reinforcing will. +6 willpower, -6 seduction.</description>
+<effectstatus probability="100">
+<applyText> tastes like a dusty book, blech.
+</applyText>
+<statusAttribMod uid="17" icon="8" duration="60" numModifiers="2">
+<effect attribute="WILLPOWER" modifier="6"/>
+<effect attribute="SEDUCTION" modifier="-6"/>
+<removeText>You can feel your sex drive recover.
+</removeText>
+</statusAttribMod>
+</effectstatus>
+</ItemConsumable>

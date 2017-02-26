@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<perk name="head turner">
+<requirement count="1">
+<req>PERKflirt</req>
+</requirement>
+<description> 
+Your ability to project your charms are so impressive you can weaken the resolve of groups of enemy at once.
+</description>
+<moveModifier name="seduce" pattern="CONE">
+
+
+</moveModifier>
+<maxrank value="1"/>
+
+</perk>

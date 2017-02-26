@@ -3,6 +3,8 @@
 <loot item="Knife" chance="1"/>
 <loot item="lightsword" chance="1" addendum="10"/>
 <loot item="repulsor belt" chance="1" addendum="10"/>
+<loot item="glittergirl armour" chance="1"/>
+<loot item="leather outfit" chance="1"/>
 <loot item="entropic amulet" chance="1"/>
 <loot item="fingerless gloves" chance="1"/>
 <loot item="risque necklace" chance="1"/>

@@ -421,7 +421,14 @@ public class Zone implements ILosBoard, Zone_int{
 	@Override
 	public boolean contains(int x, int y) 
 	{
-
+		if (x<0 || y<0)
+		{
+			return false;
+		}
+		if (x>=zoneWidth || y>=zoneHeight)
+		{
+			return false;
+		}
 		return true;
 	}
 

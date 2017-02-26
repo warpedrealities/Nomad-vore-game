@@ -259,6 +259,10 @@ public class CombatMove {
 		{
 			return AttackPattern.P_CIRCLE;
 		}
+		if (string.equals("CONE"))
+		{
+			return AttackPattern.P_CONE;
+		}
 		if (string.equals("RANGED"))
 		{
 			return AttackPattern.P_RANGED;
@@ -347,7 +351,7 @@ public class CombatMove {
 			int def=CombatLookup.getBaseDefence(distance, defAttribute)+target.getAttribute(defAttribute);
 			//get attack bonus
 			int bonus=origin.getRPG().getAttribute(bonusAttribute);
-			if (distance>=2)
+			if (distance>=2 && attackPattern!=AttackPattern.P_CONE)
 			{
 				ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x,target.getPosition().y),
 						new Vec2f(origin.getPosition().x,
@@ -376,6 +380,10 @@ public class CombatMove {
 			if (attackPattern==attackPattern.P_BOMB)
 			{
 				return CombatAura.doExplosion(this,origin,target,true);
+			}
+			if (attackPattern==attackPattern.P_CONE)
+			{
+				return CombatAura.doCone(this,origin,target);
 			}
 			
 			if (def<=r)
@@ -419,7 +427,7 @@ public class CombatMove {
 				if (visible)
 				{
 
-					if (attackPattern!=AttackPattern.P_BOMB)
+					if (attackPattern==AttackPattern.P_MELEE||attackPattern==AttackPattern.P_RANGED||attackPattern==AttackPattern.P_SHORT)
 					{
 						if (isNonViolent())
 						{

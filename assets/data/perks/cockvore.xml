@@ -2,7 +2,6 @@
 <perk name="cockvore" >
 <requirement count="2">
 <req>BODYpenis</req>
-<req>LEVEL50</req>
 </requirement>
 <description> Your trouser snake hungers. Your cock can grow and eat other beings, turning them into your seed inside your balls. </description>
 <maxrank value="1"/>

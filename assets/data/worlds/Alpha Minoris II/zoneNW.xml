@@ -12,6 +12,20 @@
 <description>The wide open spaces of this plain provide little in the way of places to hide. But at least that means that anything wishing you ill won't be able to sneak up on you.</description>
 
 <mapgen>
+
+<randprefab width="3" height="3">
+<row>222</row>
+<row>222</row>
+<row>222</row>
+<placeWidget x="1" y="1" name="cargocontainer">
+<lootTable>
+	<lootSubTable chance="1" file="cargodrops_primary"/>
+	<lootSubTable chance="1" file="cargodrops_secondary"/>
+	<lootSubTable chance="0.5" file="resource_tier_1"/>
+	<lootSubTable chance="0.5" file="consumable_tier_1"/>
+</lootTable>
+</placeWidget>
+</randprefab>
 <randprefab width="5" height="6">
 <row>22222</row>
 <row>26262</row>
