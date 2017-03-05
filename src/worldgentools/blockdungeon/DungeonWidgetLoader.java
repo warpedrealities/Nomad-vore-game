@@ -1,11 +1,13 @@
 package worldgentools.blockdungeon;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import item.Item;
 import shared.ParserHelper;
 
 import widgets.Widget;
@@ -14,6 +16,7 @@ import widgets.WidgetContainer;
 import widgets.WidgetConversation;
 import widgets.WidgetDoor;
 import widgets.WidgetHarvestable;
+import widgets.WidgetItemPile;
 import widgets.WidgetPortal;
 import widgets.traps.Widget_Trap;
 import worldgentools.LootTable;
@@ -28,8 +31,26 @@ public class DungeonWidgetLoader {
 		
 	}
 	
+	public Widget addItemPile(WidgetDefinition definition)
+	{
+		LootTable lt=lootTables.get(definition.getWidgetInfo());
+		ArrayList<Item> itemList=lt.generateLoot();
+		
+		WidgetItemPile pile=new WidgetItemPile(2,"a pile of items containing ");
+		for (int i=0;i<itemList.size();i++)
+		{
+			pile.AddItem(itemList.get(i));
+		}
+
+		return pile;
+	}
+	
 	public Widget loadWidget(WidgetDefinition definition)
 	{
+		if (definition.getWidgetName().equals("itempile"))
+		{
+			return addItemPile(definition);
+		}
 		Document doc=ParserHelper.LoadXML("assets/data/widgets/"+definition.getWidgetName()+".xml");
 		Element root=doc.getDocumentElement();
 	    Element n=(Element)doc.getFirstChild();	

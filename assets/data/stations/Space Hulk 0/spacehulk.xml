@@ -17,6 +17,8 @@
 
 <blockDungeon extent="20">
 <loadBlocks file="spacehulk"/>
+
+
 <keyBlock x="4" y="0">
 <row>00000000</row>
 <row>02221220</row>
@@ -32,18 +34,7 @@
 <widget x="4" y="1" name="airlockN" variable="-101"/>
 </keyBlock>
 
-<keyBlock heat="2">
-<row>02222222</row>
-<row>02333332</row>
-<row>22353532</row>
-<row>21111111</row>
-<row>21111111</row>
-<row>22353532</row>
-<row>02333332</row>
-<row>02222222</row>
-<edge value="EAST"/>
-<widget x="1" y="4" name="mechanism" info="interaction/interplanetary reactor" variable="26"/>
-</keyBlock>
+
 
 <keyBlock heat="2">
 <row>02222200</row>
@@ -55,17 +46,55 @@
 <row>02141220</row>
 <row>02222200</row>
 <edge value="WEST"/>
-<widget x="6" y="4" name="computer" info="interaction/spacehulkcomputer" variable="27"/>
+<widget x="6" y="4" name="console" info="interaction/spacehulkcomputer" variable="31"/>
 </keyBlock>
+
+
+<prefabBlock heat="2" width="2" height="1" blockCount="2">
+<edge value="EAST"/>
+<block>
+<row>02222222</row>
+<row>02333332</row>
+<row>22353532</row>
+<row>21111111</row>
+<row>21111111</row>
+<row>22353532</row>
+<row>02333332</row>
+<row>02222222</row>
+<spawn x="1" y="6" tag="0"/>
+<spawn x="1" y="1" tag="0"/>
+<widget x="1" y="4" name="mechanism" info="interaction/interplanetary reactor" variable="26"/>
+</block>
+<block>
+<row>22211222</row>
+<row>23333332</row>
+<row>23533532</row>
+<row>11111111</row>
+<row>11111111</row>
+<row>23533532</row>
+<row>23333332</row>
+<row>22211222</row>
+<edge value="EAST"/>
+<edge value="SOUTH"/>
+<edge value="NORTH"/>
+<widget x="0" y="3" name="panelH" info="engineering" variable="20"/>
+<widget x="0" y="4" name="panelH" info="engineering" variable="20"/>
+<widget x="2" y="4" name="itempile" info="spacehulk_note"/>
+</block>
+</prefabBlock>
+
 <clean value="2"/>
 <lootTable identity="normalchest">
-<loot item="heavy plate" chance="0.5"/>
-<loot item="computation valve" chance="0.5"/>
-<loot item="scrap metal" chance="0.5"/>
-<loot item="medicine" chance="0.2"/>
-<loot item="battery" chance="0.2"/>
+<lootSubTable chance="0.5" file="spacehulk_resources"/>
+<lootSubTable chance="0.5" file="spacehulk_consumables"/>
+<lootSubTable chance="0.5" file="spacehulk_resources"/>
+<lootSubTable chance="0.5" file="spacehulk_consumables"/>
 </lootTable>
+<lootTable identity="spacehulk_note">
+<loot item="note" chance="1.0" addendum="zer03"/>
 
+</lootTable>
+<npcType value="zetamorph"/>
 </blockDungeon>
 <partition xmin="24" xmax="48" ymin="0" ymax="12" inverse="true">
 <SeedNPCs min="8" max="16" name="zetamorph"> </SeedNPCs>

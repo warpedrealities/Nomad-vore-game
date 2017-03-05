@@ -10,6 +10,8 @@ import item.Item;
 import item.ItemAmmo;
 import item.ItemDepletableInstance;
 import item.ItemEnergy;
+import item.ItemExpositionInstance;
+import item.ItemKeyInstance;
 import item.ItemStack;
 
 import java.nio.FloatBuffer;
@@ -89,7 +91,18 @@ public class ShopScreen extends Screen implements Callback
 			return;
 		}
 	//	add item to player inventory
-		player.getInventory().AddItem(Universe.getInstance().getLibrary().getItem(item.getName()));
+		Item itemBought=Universe.getInstance().getLibrary().getItem(item.getName());
+		if (ItemKeyInstance.class.isInstance(itemBought))
+		{
+			ItemKeyInstance iki=(ItemKeyInstance)itemBought;
+			iki.setLock(item.getTag());
+		}
+		if (ItemExpositionInstance.class.isInstance(itemBought))
+		{
+			ItemExpositionInstance iei=(ItemExpositionInstance)itemBought;
+			iei.setExposition(item.getTag());
+		}
+		player.getInventory().AddItem(itemBought);
 	//	deduct currency
 		if (shopData.isUseCredits())
 		{
@@ -177,7 +190,17 @@ public class ShopScreen extends Screen implements Callback
 		{
 			v=valt;
 		}
-		ShopLineItem line=new ShopLineItem(item.getName(),1,v*shopData.getProfitRatio());
+		ShopLineItem line=new ShopLineItem(item.getItem().getName(),1,v*shopData.getProfitRatio());
+		if (ItemKeyInstance.class.isInstance(item))
+		{
+			ItemKeyInstance iki=(ItemKeyInstance)item;
+			line.setTag(iki.getLock());
+		}
+		if (ItemExpositionInstance.class.isInstance(item))
+		{
+			ItemExpositionInstance iei=(ItemExpositionInstance)item;
+			line.setTag(iei.getExposition());
+		}
 		shopList.add(line);
 	}
 	
@@ -315,6 +338,10 @@ public class ShopScreen extends Screen implements Callback
 		for (int i=0;i<shopList.size();i++)
 		{
 			str[i]=shopList.get(i).getName();
+			if (shopList.get(i).getTag()!=null)
+			{
+				str[i]=str[i]+" "+shopList.get(i).getTag();
+			}
 			str[i]=str[i]+" x"+shopList.get(i).getQuantity();
 			if (shopData.isUseCredits())
 			{

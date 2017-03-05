@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<shop profitratio="1.25">
+<inventoryitem name="scrap metal" probability="50" quantity="20" cost="50"/>
+<inventoryitem name="scrap metal" probability="50" quantity="10" cost="50"/>
+<inventoryitem name="scrap metal" probability="50" quantity="5" cost="50"/>
+<inventoryitem name="battery" probability="50" quantity="2" cost="200"/>
+<inventoryitem name="heavy plate" probability="50" quantity="2" cost="200"/>
+<inventoryitem name="computation valve" probability="50" quantity="2" cost="200"/>
+<inventoryitem name="battery" probability="50" quantity="1" cost="200"/>
+<inventoryitem name="heavy plate" probability="50" quantity="1" cost="200"/>
+<inventoryitem name="computation valve" probability="50" quantity="1" cost="200"/>
+</shop>

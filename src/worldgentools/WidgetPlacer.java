@@ -3,6 +3,7 @@ package worldgentools;
 import item.Item;
 import item.ItemDepletableInstance;
 import item.ItemExpositionInstance;
+import item.ItemKeyInstance;
 import nomad.Universe;
 
 import org.w3c.dom.Document;
@@ -84,6 +85,11 @@ public class WidgetPlacer {
 						{
 							ItemExpositionInstance iei=(ItemExpositionInstance)item;
 							iei.setExposition(Enode.getAttribute("exposition"));
+						}
+						if (ItemKeyInstance.class.isInstance(item))
+						{
+							ItemKeyInstance iki=(ItemKeyInstance)item;
+							iki.setLock(Enode.getAttribute("lock"));
 						}
 						if (ItemDepletableInstance.class.isInstance(item))
 						{
@@ -295,8 +301,6 @@ public class WidgetPlacer {
 	if (root.getTagName().contains("navconsole"))
 	{
 		widget=new WidgetNavConsole(root);
-		
-	
 	}	
 	if (root.getTagName().contains("conversation"))
 	{
@@ -315,7 +319,14 @@ public class WidgetPlacer {
 			ws.setWidget((WidgetBreakable)genWidget((Element)children.item(0)));
 		}
 	
-	}				
+	}			
+	
+		NodeList descOverride=Enode.getElementsByTagName("description");
+		if (widget!=null && descOverride.getLength()>0)
+		{
+			Element e=(Element)descOverride.item(0);
+			widget.setDescription(e.getTextContent().replace("\n", ""));
+		}
 		return widget;
 	}
 

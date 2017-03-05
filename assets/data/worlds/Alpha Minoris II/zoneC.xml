@@ -27,6 +27,23 @@
 <placeWidget x="2" y="3" name="invincible" info="interaction/rockfall" variable="49"/>
 </prefab>
 
+<randprefab width="5" height="5">
+<row>33333</row>
+<row>33333</row>
+<row>31113</row>
+<row>33333</row>
+<row>33333</row>
+<placeItem x="4" y="2">
+<item itemname="note" exposition="emi03"/>
+<item itemname="note" exposition="emi04"/>
+</placeItem>
+<placeWidget x="0" y="0" name="SPRITE" width="5" height="5" file="wreck2"/>
+<placeWidget x="1" y="1" name="DESCRIBER">
+A spaceship, its nose buried in the ground, the impact has fatally compromised the chassis as you can see crumple points around where the nose disappears into the dirt.
+</placeWidget>
+</randprefab>
+
+
 <clumps lowerlimit="0" upperlimit="45">
 <noise tile="5" scarcity="8"/>
 <floodfill tile="3"></floodfill>

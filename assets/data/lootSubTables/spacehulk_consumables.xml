@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<lootTable>
+<loot item="medicine" chance="4"/>
+<loot item="clarity" chance="4"/>
+<loot item="isotope" chance="2"/>
+<loot item="explosive grenade" chance="2"/>
+</lootTable>

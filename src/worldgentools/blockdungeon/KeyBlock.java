@@ -4,7 +4,7 @@ import org.w3c.dom.Element;
 
 import zone.Zone;
 
-public class KeyBlock extends Block {
+public class KeyBlock extends StandardBlock {
 
 	int keyHeat;
 
@@ -18,6 +18,7 @@ public class KeyBlock extends Block {
 		
 	}
 
+	@Override
 	public int getKeyHeat() {
 		return keyHeat;
 	}

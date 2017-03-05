@@ -23,7 +23,8 @@ public class BlockDungeonGenerator {
 	ArrayList<String> npcList;
 	Zone zone;
 	ArrayList<Block>blockList;
-	ArrayList<KeyBlock> keyBlocks;
+	ArrayList<Block> keyBlocks;
+
 	int keyIndex;
 	int lockedKeys;
 	int extent;
@@ -39,7 +40,8 @@ public class BlockDungeonGenerator {
 		zoneGrid=grid;
 		this.zone=zone;
 		blockList=new ArrayList<Block>();
-		keyBlocks=new ArrayList<KeyBlock>();
+		keyBlocks=new ArrayList<Block>();
+		
 		openings=new ArrayList<Opening>();
 		keyLocations=new ArrayList<Vec2i>();
 		npcList=new ArrayList<String>();
@@ -70,6 +72,7 @@ public class BlockDungeonGenerator {
 				{
 					blockList.addAll(BlockLoader.load(Enode.getAttribute("file")));
 				}
+
 				if (Enode.getTagName()=="lootTable")
 				{
 					widgetLoader.loadLootTable(Enode);
@@ -81,6 +84,10 @@ public class BlockDungeonGenerator {
 				if (Enode.getTagName()=="clean")
 				{
 					clean=Integer.parseInt(Enode.getAttribute("value"));
+				}
+				if (Enode.getTagName()=="prefabBlock")
+				{
+					keyBlocks.add(new Prefab_Block(Enode));
 				}
 				if (Enode.getTagName()=="keyBlock")
 				{
@@ -100,6 +107,7 @@ public class BlockDungeonGenerator {
 				}
 			}
 		}
+		
 		
 		while (true)
 		{
@@ -161,20 +169,29 @@ public class BlockDungeonGenerator {
 							position=new Vec2i(k,j);
 							calculateOpenings(k,j,blockGrid[k][j]);
 						}
-			
+						else
+						{
+							blockGrid[k][j]=0;
+						}
 					}
+					
 				
 				}
 			}
 			keyLocations.add(position);
 		}
+
 		for (int k=0;k<blockGrid.length;k++)
 		{
 			for (int j=0;j<blockGrid[0].length;j++)
 			{
-				
+				if (blockGrid[k][j]>0)
+				{
+					blockGrid[k][j]=0;
+				}
 			}
 		}
+
 	}
 	
 	private void grow(int blocksLeft)
@@ -194,13 +211,18 @@ public class BlockDungeonGenerator {
 			float heat=calculateHeatMap(openings.get(r).position.x,openings.get(r).position.y);
 			if (heat>keyBlocks.get(keyIndex).getKeyHeat() && Universe.m_random.nextBoolean())
 			{
-				if ((openings.get(r).edgeValue & keyBlocks.get(keyIndex).getEdgeValue())!=0)
+				if ((openings.get(r).edgeValue & keyBlocks.get(keyIndex).getEdgeValue())!=0 
+						&& keyBlocks.get(keyIndex).canPlace(openings.get(r).position.x, openings.get(r).position.y, blockGrid))
 				{
-					int v=(keyIndex*-1)-1;
-					blockGrid[openings.get(r).position.x][openings.get(r).position.y]=v;
-					
-					keyLocations.add(new Vec2i(openings.get(r).position.x,openings.get(r).position.y));
-					openings.remove(r);
+					if (blockGrid[openings.get(r).position.x][openings.get(r).position.y]==0)
+					{
+						int v=(keyIndex*-1)-1;
+						keyBlocks.get(keyIndex).mark(openings.get(r).position.x, openings.get(r).position.y, blockGrid, openings);
+						blockGrid[openings.get(r).position.x][openings.get(r).position.y]=v;
+						
+						keyLocations.add(new Vec2i(openings.get(r).position.x,openings.get(r).position.y));
+						openings.remove(r);
+					}
 					b=true;
 					keyIndex++;
 				}
@@ -210,12 +232,15 @@ public class BlockDungeonGenerator {
 		if (b==false)
 		{
 			//find blocks
-			int block=BlockDungeonHelper.getBlock(blockList, openings.get(r).edgeValue, false);
-			blockGrid[openings.get(r).position.x][openings.get(r).position.y]=block+1;
-			Opening opening=openings.get(r);
-		
+			if (blockGrid[openings.get(r).position.x][openings.get(r).position.y]==0)
+			{
+				int block=BlockDungeonHelper.getBlock(blockList, openings.get(r).edgeValue, false);
+				blockGrid[openings.get(r).position.x][openings.get(r).position.y]=block+1;
+				Opening opening=openings.get(r);
+				calculateOpenings(opening.position.x,opening.position.y,block+1);				
+			}
 			openings.remove(r);
-			calculateOpenings(opening.position.x,opening.position.y,block+1);
+
 		
 		}
 		if (blocksLeft>0 && openings.size()>0)
@@ -265,7 +290,7 @@ public class BlockDungeonGenerator {
 		return true;
 	}
 	
-	private void addOpening(int value, int x, int y)
+	public static void addOpening(int value, int x, int y,ArrayList<Opening> openings)
 	{
 		//check for duplicate opening
 		Opening opening=null;
@@ -298,7 +323,7 @@ public class BlockDungeonGenerator {
 			if (isInGrid(x,y+1))
 				if (blockGrid[x][y+1]==0)
 			{
-				addOpening(4,x,y+1);
+				addOpening(4,x,y+1,openings);
 			}
 		}
 		
@@ -309,7 +334,7 @@ public class BlockDungeonGenerator {
 			if (isInGrid(x+1,y))
 					if (blockGrid[x+1][y]==0)
 			{
-				addOpening(8,x+1,y);
+				addOpening(8,x+1,y,openings);
 			}
 		}
 		
@@ -321,7 +346,7 @@ public class BlockDungeonGenerator {
 			if (isInGrid(x,y-1))
 				if (blockGrid[x][y-1]==0)
 			{
-				addOpening(1,x,y-1);
+				addOpening(1,x,y-1,openings);
 			}
 		}
 
@@ -332,7 +357,7 @@ public class BlockDungeonGenerator {
 			if (isInGrid(x-1,y))
 				if (blockGrid[x-1][y]==0)
 			{
-				addOpening(2,x-1,y);
+				addOpening(2,x-1,y,openings);
 			}
 		}
 		
@@ -356,11 +381,11 @@ public class BlockDungeonGenerator {
 		{
 			for (int j=0;j<blockGrid[i].length;j++)
 			{
-				if (blockGrid[i][j]<0)
+				if (blockGrid[i][j]<0 && blockGrid[i][j]>-100)
 				{
 					keyBlocks.get((blockGrid[i][j]*-1)-1).apply(i,j,zoneGrid,zone,widgetLoader,templates);
 				}
-				if (blockGrid[i][j]>0)
+				if (blockGrid[i][j]>0 && blockGrid[i][j]<100)
 				{
 					blockList.get(blockGrid[i][j]-1).apply(i,j,zoneGrid,zone,widgetLoader,templates);
 				}

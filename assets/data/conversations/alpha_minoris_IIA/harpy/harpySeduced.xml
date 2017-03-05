@@ -55,6 +55,9 @@ Best keep her happy from the outside. You delve your tongue deeply, but keep the
 <page ID="receiveoral">
 <assertion evaluate="haspart" part="penis"/>
 <text>You stand before the harpy, your firm <macro ID="penis_size_desc"/> shaft erect in front of her face. She seems unsure how to deal with it initially, but soon leans in to lick and then when that yields encouraging sounds from you takes it into her mouth. At your moan she seems all the more encouraged, not flinching from the hand you place on her head to urge her on and make her slowly take you deeper. Gradually you guide this harpy how to please you, your hand on her head and the sound of your voice make her an apt pupil. And soon she is bobbing will proficiency, sucking and licking over your cock and wrapping her wings around your thighs to keep you where she can suckle you easily. Her blush, and the faint mhmms of muffled trills sounding against your cock indicate you're not the only one getting something out of this as she works.</text>
+<choice destination="cockvore0" text="not enough">
+<assertion evaluate="hasperk" perk="cockvore"/>
+</choice>
 <choice destination="receiveblowjobfinish" text="Ooohh, yes!"/>
 </page>
 
@@ -98,7 +101,7 @@ You rest one hand on your newly rounded middle, feeling the harpy curling up pur
 
 <page ID="gushedharpy">
 <text>
-You get settled on the grass and lean back as she gets comfortable inside you. But it makes it all the sweeter to do what comes next, one hand straying down beneath the bulge the sharpy makes to fondle yourself as your womb gets to work. The harpy letting out a startled chirp, then moan as hot sexual fluids permeate her and your womb contracts rthythmically to work her over.. you can feel her shifting around, grinding against whatever she can as you moan and pleasure yourself to the sensations from your increasingly cauldron like womb. As you feel yourself getting close you hear a delighted cry and feel a shudder inside, both abruptly cut off as the harpy's molten form begins dissolving and then is reduced to fluid by a final rolling contraction of your womb. The pleasure is too much and with a cry of your own you feel your climax hit, gushes and splatters of copious femmecum staining your thighs and the ground beneath you. The harpy now utterly converted into your orgasm, a few errant feathers in the stain all that's left to show who she was.
+You get settled on the grass and lean back as she gets comfortable inside you. But it makes it all the sweeter to do what comes next, one hand straying down beneath the bulge the sharpy makes to fondle yourself as your womb gets to work. The harpy letting out a startled chirp, then moan as hot sexual fluids permeate her and your womb contracts rthythmically to work her over.. you can feel her shifting around, grinding against whatever she can as you moan and pleasure yourself to the sensations from your increasingly cauldron like womb. As you feel yourself getting close you hear a delighted cry and feel a shudder inside, both abruptly cut off as the harpy's molten form begins dissolving and then is reduced to fluid by a final rolling contraction of your womb. The pleasure is too much and with a cry of your own you feel your climax hit, gushes and splatters of copious femmecum staining your thighs and the ground beneath you. The harpy now utterly converted into your orgasm, a few errant feathers in the stain is tall that's left to show who she was.
 </text>
 <effect type="feed" value="85"/>
 <special effect="removenpc"/>
@@ -107,6 +110,56 @@ You get settled on the grass and lean back as she gets comfortable inside you. B
 <page ID="releasedharpy">
 <text>
 As she gets comfortable so do you. Deciding to enjoy simply having her inside for a while, listening to the occasional mhmm and coo as she rests in your womb. The harpy content and moving little even as you every few minutes run fingers across your engorged middle. Eventually though she's had enough time resting inside you. Standing up which causes her to chirp softly as her domain shifts around you set about releasing her, the muscular contractions making her squirm around all the more before she's reborn. The harpy dropping from your nethers to land on the grass in a soaked heap, your sexual juices matting her feathers. But for all the grooming she's gonna have to do now it's clear from her expression that being unbirthed by you was rather enjoyable for her. The harpy blushing and smiling as she looks up at you, then sets about with that aforementioned grooming.
+</text>
+<special effect="nonhostile"/>
+<special effect="healnpc"/>
+<effect type="incrementlocalflag" flag="disposition" value="2"/>
+<choice destination="end" text="carry on"/>
+</page>
+
+<page ID="cockvore0">
+<!--written by chefjellyguy-->
+<text>
+As you feel her lips bob back an forth, you get an instinctual desire. Without thinking, you pull her head off of your shaft, and shove her into its now open tip. She pulls her head back in surprise, but then as you hear her soft cooing trill you realize she's enraptured enough by you to accept even this. Her head nuzzles against your cock's lips as you thrust, starting the process of feeding her into your drooling tip.
+</text>
+<choice destination="cockvore1" text="i want her all the way in"/>
+
+</page>
+
+<page ID="cockvore1">
+<text>
+The harpy's shoulders and the start of her feathered wings tickle the inside of your rod as you start claiming her in earnest. The sensations truly delightful, her muffled little trill from the depths of your cock as the harpy begins to enter it indicate that she's equally enraptured by the ravenous softness she's being ushered into. The harpy's feathered wings tucked to her sides as your cock pulls slowly over her form and feel her pressing and nuzzling up against the inside of your shaft as she's fed inside.
+</text>
+<choice destination="cockvore2" text="keep going"/>
+
+</page>
+
+<page ID="cockvore2">
+<text>
+The sensations of her gentle squirms and nuzzles are delightful as you rock your hips urging her to go deeper. her body disappears into your staff causing your balls to slosh as your sack becomes more gravid. Her middle sliding in easily, her wings rubbing against your sensitive cock as you draw her sopping wet sex inside your own. Your mingled lubrications will only make her legs slide in all the easier, straightening up you can feel her feet dangling outside your dick, sexjuices dribbling down to drip from her clawtips as you focus on thrusting and pushing her in. Soon she'll be curled up in your balls.
+</text>
+<choice destination="cockvore3" text="all the way in"/>
+</page>
+
+<page ID="cockvore3">
+<text>
+You rest one hand on your swollen right nut, feeling the harpy curling up purring inside the sweltering cradle of your balls and her clawed feet still dangling outside your tip. You can't help but savour the moment, at least until those feet twitch..perhaps she's impatient to get inside. The submissive harpy yearns to curl up inside your balls and you cannot help but oblige, eyes half lidding with a final rippling contraction your rod finnally draws her up inside you, droping her within you with a splash. Her form gently shifting to get comfortable, entirely under your power now as she basks in the softness and heat.
+</text>
+<choice destination="cockgushedharpy" text="gush her"/>
+<choice destination="cockreleasedharpy" text="hold her a while"/>
+</page>
+
+<page ID="cockgushedharpy">
+<text>
+You get settled on the grass and lean back as she gets comfortable inside you. But it makes it all the sweeter to do what comes next, one hand straying down to your rod while your balls churn loudly. The harpy letting out a startled chirp, then moan as hot sexual fluids permeate her and your balls contract rthythmically to work her over.. you can feel her shifting around, grinding against whatever she can as you moan and pleasure yourself to the sensations from your increasingly cauldron like sack. As you feel yourself getting close you hear a delighted cry and feel a shudder inside your nuts, both abruptly cut off as the harpy's molten form begins dissolving and then is reduced to cum by a final rolling contraction of your sack. The pleasure is too much and with a thrust of your hips you feel your climax hit, gushes and splatters of harpy-sperm painting the ground in front of you. The harpy now utterly converted into your orgasm, a few errant feathers in the stain is all that's left to show who she was.
+</text>
+<effect type="feed" value="85"/>
+<special effect="removenpc"/>
+<choice destination="end" text="well that was fun"/>
+</page>
+<page ID="cockreleasedharpy">
+<text>
+As she gets comfortable so do you. Deciding to enjoy simply having her inside for a while, listening to the occasional mhmm and coo as she rests in your nuts. The harpy content and moving little even as you every few minutes run fingers across your engorged sack. Eventually though she's had enough time resting inside you. Standing up which causes her to chirp softly as her domain shifts around you set about releasing her, your rod stiffens as it feels the form slowly come up from the sack below. you cant take the pleasure as cum shoots out in forced blasts, shooting the harpy out at high speeds. Before she crashes to the ground, however, she caches herself with her cum-stained wings, falling to the ground safely. Despite the dangerous exit, the harpy is obviously enthralled with the experience, never having had that much fun in her life. The harpy blushes and smiles as she looks up at you, then sets off with cleaning the cum off of herself.
 </text>
 <special effect="nonhostile"/>
 <special effect="healnpc"/>

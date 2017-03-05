@@ -92,5 +92,9 @@ abstract public class Widget {
 		}
 
 	}
+
+	public void setDescription(String textContent) {
+		widgetDescription=textContent;
+	}
 	
 }

@@ -167,9 +167,17 @@ public class TextView extends GUIBase {
 			}
 			if (str.indexOf("LBREAK")!=-1)
 			{
+				if (str.length()>"LBREAK".length())
+				{
+					str=str.replace("LBREAK", "");
+					builder.append(str);
+					builder.append(" ");	
+				}
+				else
 				displayStrings.add(builder.toString());
 				builder=new StringBuilder();
 				highlightedLine++;
+				
 			}
 			else
 			{

@@ -84,7 +84,6 @@
 <POIITEM>
 <item itemname="elf statue"/>
 </POIITEM>
-
 <walloff wall="6" sides="northeast"/>
 </mapgen>
 

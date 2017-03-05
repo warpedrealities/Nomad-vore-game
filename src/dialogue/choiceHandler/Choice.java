@@ -100,7 +100,7 @@ public class Choice {
 		while (scanner.hasNext())
 		{
 			String str=scanner.next();
-			if (str.length()+length>48)
+			if (str.length()+length>40)
 			{
 				length=0;
 				if (list.size()>0)

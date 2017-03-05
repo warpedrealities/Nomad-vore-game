@@ -12,8 +12,8 @@ import shared.ParserHelper;
 
 public class BlockLoader {
 
-	public static Collection<? extends Block> load(String filename) {
-		ArrayList <Block> blocks=new ArrayList<Block>();
+	public static Collection<? extends StandardBlock> load(String filename) {
+		ArrayList <StandardBlock> blocks=new ArrayList<StandardBlock>();
 		Document doc=ParserHelper.LoadXML("assets/data/dungeon/blocks/"+filename+".xml");
 		Element root=(Element)doc.getFirstChild();
 		NodeList children=root.getChildNodes();
@@ -27,7 +27,7 @@ public class BlockLoader {
 					//run each step successively
 					if (Enode.getTagName()=="block")
 					{
-						blocks.add(new Block(Enode));
+						blocks.add(new StandardBlock(Enode));
 					}
 				}
 			}

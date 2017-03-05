@@ -130,4 +130,89 @@ public class BlockDungeonHelper {
 		return false;
 	}
 	
+	public static boolean inGrid(int [][] grid, int x, int y)
+	{
+		if (x>0 && x<grid.length)
+		{
+			if (y>0 && y<grid[0].length)
+			{
+				return true;
+			}
+			
+		}
+		return false;
+	}
+	
+	public static boolean checkDR(int [][] grid, int x, int y, int width, int height)
+	{
+		for (int i=0;i<width;i++)
+		{
+			for (int j=0;j<height;j++)
+			{
+				if (!inGrid(grid,x+i,y+j))
+				{
+					return false;
+				}
+				if (grid[x+i][y+j]!=0)
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	public static boolean checkUR(int [][] grid, int x, int y, int width, int height)
+	{
+		for (int i=0;i<width;i++)
+		{
+			for (int j=0;j<height;j++)
+			{
+				if (!inGrid(grid,x+i,y-j))
+				{
+					return false;
+				}
+				if (grid[x+i][y-j]!=0)
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	public static boolean checkDL(int [][] grid, int x, int y, int width, int height)
+	{
+		for (int i=0;i<width;i++)
+		{
+			for (int j=0;j<height;j++)
+			{
+				if (!inGrid(grid,x-i,y+j))
+				{
+					return false;
+				}
+				if (grid[x-i][y+j]!=0)
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	public static boolean checkUL(int [][] grid, int x, int y, int width, int height)
+	{
+		for (int i=0;i<width;i++)
+		{
+			for (int j=0;j<height;j++)
+			{
+				if (!inGrid(grid,x-i,y+j))
+				{
+					return false;
+				}
+				if (grid[x-i][y+j]!=0)
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 }

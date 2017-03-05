@@ -1,35 +1,31 @@
 <?xml version="1.0"?>
 <Conversation>
 <page ID="start">
+<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="SYSTEM"/>
 <text>
-This computer can access countless thousands of bytes of data on its reel to reel tapes. It seems the blueprint repository tapes are still in good condition.
+S3cur1ty pr0t0c0ls 1n 3ff3ct: 3ng1n33r1ng l0ckd0wn 3n4bl3d  
 </text>
-<choice destination="blueprints" text="access blueprint repository"/>
+<choice destination="lockdown" text="disable lockdown"/>
 <choice destination="end" text="exit"/>
 </page>
-<page ID="blueprints">
-<text>
-tape directory: interplanetary reactor, solar furnace, photonic cannon.
-</text>
 
-<choice destination="reactor" text="access interplanetary reactor blueprint"/>
-<choice destination="corruption" text="access solar furnace blueprint"/>
-<choice destination="corruption" text="access photonic cannon blueprint"/>
-<choice destination="end" text="exit"/>
-</page>
-<page ID="reactor">
+<page ID="lockdown">
 <text>
-Containment using ferrous high density plates and low level magnetic fields creates a chamber where fuel can be safely ignited, the exhaust and unburnt fuel can then be channeled into the drives allowing a second stage of ignition and a more complete burning of fuel and as a result more energetic and higher velocity exhaust.
+s3cur1ty pr0t0c0ls r3sc1nd3d, 3ng1n33r1ng l0ckd0wn d1s4bl3d
 </text>
-<special effect="blueprint" ID="interplanetary reactor"/>
-<choice destination="blueprints" text="back"/>
+<effect type="setlocalflag" flag="SYSTEM" value="1"/>
+<special effect="opendoor" lock="engineering"/>
+<special effect="opendoor" lock="engineering"/>
 <choice destination="end" text="exit"/>
 </page>
-<page ID="corruption">
+
+<page ID="start">
+<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="SYSTEM"/>
 <text>
-tape read error
+SYST3M N0RM4L 
 </text>
-<choice destination="blueprints" text="back"/>
+<choice destination="lockdown" text="disable lockdown"/>
 <choice destination="end" text="exit"/>
 </page>
+
 </Conversation>

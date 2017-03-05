@@ -83,7 +83,18 @@
 </perlin>
 <walloff wall="7" sides="southwest"/>
 <POIWidget name="craftingtable"/>
-	<placeNPC x="22" y="22" name="minoris2_saurian/saurianSuri"/>
+<POIprefab width="2" height="2">
+<row>33</row>
+<row>33</row>
+<placeWidget x="1" y="1" name="mechanism" info="interaction/saurian_pump" variable="50">
+<description>
+A mechanical pump connected by an array of belts, cogs and gears to an engine that relieves the saurians of the need to have to operate the pump by hand.
+</description>
+</placeWidget>
+<placeNPC x="0" y="0" name="minoris2_saurian/saurianmechanic"/>
+</POIprefab>
+
+<placeNPC x="22" y="22" name="minoris2_saurian/saurianSuri"/>
 	
 <POINPC name="minoris2_saurian/saurianshopkeep"/>
 <POICornerDecorate floor="2">

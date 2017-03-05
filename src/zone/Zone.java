@@ -288,7 +288,7 @@ public class Zone implements ILosBoard, Zone_int{
 			if (zoneActors.get(i).getPosition().x>=0 && zoneActors.get(i).getPosition().x<getWidth() &&
 				zoneActors.get(i).getPosition().y>=0 && zoneActors.get(i).getPosition().y<getHeight())
 			{
-				if (zoneActors.get(i).getRPG().getStat(Actor_RPG.HEALTH)<=0 || zoneActors.get(i).getRPG().getStat(Actor_RPG.RESOLVE)<=0)
+				if (zoneActors.get(i).getRPG().getStat(Actor_RPG.HEALTH)<=0)
 				{
 					if (NPC.class.isInstance(zoneActors.get(i)))
 					{
