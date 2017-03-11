@@ -87,7 +87,6 @@ A chance to talk about machines and the earnest if somewhat ill tutored mechanic
 <text>
 "you think you fixed it? let me check." she says and then goes to prod at the pump afore throwing the circuit breaker closed and then letting out a squee as the machine stutters and shudders to life. The pump gears grinding and squeeling makes Nissa frantic for a moment or two as she applies liberal lubrication, the noise becoming steadily more healthy. Nissa stepping back just as water starts to belch and burst up out of the pump to fill the bucket "it works! it really works you fixed it oh thankyou!" the lizard mechanic turns around and embraces you, overjoyed by the restoration of the pump and without a care for the stains on her tunic she might be exposing you to with her exuberant celebration.
 </text>
-<effect type="givegold" value="100"/>
 <effect type="experience" value="50"/>
 <effect type="setfactionflag" flag="friendship" value="1"/>
 <effect type="setglobalflag" flag="dammathquest1" value="3"/>

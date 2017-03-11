@@ -175,6 +175,10 @@ public class CombatMove {
 					{
 						energySource=-1;
 					}
+					if (value.equals("satiation"))
+					{
+						energySource=-2;
+					}
 				}
 			}
 		}

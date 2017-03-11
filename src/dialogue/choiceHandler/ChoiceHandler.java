@@ -18,12 +18,12 @@ public class ChoiceHandler extends GUIBase {
 	
 	Choice [] choices;
 	int numChoices;
-	String [] choiceText;
+	ChoiceText [] choiceText;
 	
 	public ChoiceHandler(Vec2f p,int tint,Callback callback) {
 		corner=p;
 		choices=new Choice[8];
-		choiceText=new String[8];
+		choiceText=new ChoiceText[8];
 		this.callback=callback;
 		
 		numChoices=8;
@@ -128,8 +128,8 @@ public class ChoiceHandler extends GUIBase {
 		numChoices=count;
 		for (int i=0;i<count;i++)
 		{
-			choiceText[i]=choices2[i];
-			choices[i].addText((i+1)+". "+choices2[i]);
+			choiceText[i]=new ChoiceText(choices2[i]);
+			choices[i].addText((i+1)+". "+choiceText[i].getText());
 		}
 		resetChoicePos();
 	}
@@ -138,7 +138,7 @@ public class ChoiceHandler extends GUIBase {
 		return index;
 	}
 
-	public String getchoice(int i) {
+	public ChoiceText getchoice(int i) {
 		return choiceText[i];
 	}
 

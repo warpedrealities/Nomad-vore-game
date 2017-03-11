@@ -45,6 +45,10 @@ function main(controllable, sense, script)
 	combat(controllable,sense,pos,hostile)
 
 	else
+		b=controllable:getValue(0);
+		if (b>0) then
+			controllable:setValue(0,b-1);
+		end
 		a=math.random(0,16)
 		if (a<8) then
 			controllable:move(a);

@@ -23,6 +23,8 @@ import org.w3c.dom.NodeList;
 import description.MacroLibrary;
 import dialogue.choiceHandler.ChoiceHandler;
 import dialogue.choiceHandler.ChoiceLoader;
+import dialogue.choiceHandler.ChoiceText;
+import dialogue.random.Randomizer_Library;
 import actor.NPC;
 import actor.Player;
 import actorRPG.RPG_Helper;
@@ -375,6 +377,15 @@ public class DialogueScreen extends Screen implements Callback {
 					}
 					buffer.append(MacroLibrary.getInstance().lookupMacro(m_player.getLook(), s));				
 				}
+				if (Enode.getTagName().equals("random"))
+				{
+					String s=Enode.getAttribute("id");
+					if (s.length()<=0)
+					{
+						s=Enode.getAttribute("ID");
+					}
+					buffer.append(Randomizer_Library.getInstance().getRandomizedText(s));		
+				}
 				if (Enode.getTagName().equals("measurement"))
 				{
 					String part=Enode.getAttribute("part");
@@ -404,6 +415,27 @@ public class DialogueScreen extends Screen implements Callback {
 		mouse.Remove(choiceHandler);
 	}
 
+	private void echoChoice(ChoiceText choice)
+	{
+		switch (choice.getDisplayType())
+		{
+			case NONE:
+			
+			break;
+			case SELF:
+				m_text.AddText(m_player.getName()+":"+choice.getText());
+			break;
+			
+			case NARRATOR:
+				m_text.AddText(":"+choice.getText());
+			break;
+			
+			case NPC:
+				m_text.AddText(m_npc.getName()+":"+choice.getText());
+			break;
+		
+		}
+	}
 	
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) 
@@ -413,7 +445,8 @@ public class DialogueScreen extends Screen implements Callback {
 		{
 			if (ID<m_numchoices)
 			{
-				m_text.AddText(m_player.getName()+":"+choiceHandler.getchoice(ID));
+				echoChoice(choiceHandler.getchoice(ID));
+	
 				m_text.BuildStrings();
 				if (m_choices[ID].equals("end"))
 				{

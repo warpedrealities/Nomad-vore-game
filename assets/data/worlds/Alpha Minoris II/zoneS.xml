@@ -68,6 +68,14 @@
 <degrade chance="10" degradethis="7" replacewith="4"/>
 <auditpaths carve="9" replace="2"/>
 <walloff wall="7" sides="northsouth"/>
+<placeWidget x="32" y="32" name="SPAWNER">
+<radius value="30"/>
+<spawnLimit value="1"/>
+<script value="alphaminorisbattlespawns"/>
+<spawns count="1">
+<data npc="AlphaMinoris_II/draconian" min="1" max="2" chance="25"/>
+</spawns>
+</placeWidget>
 </mapgen>
 
 </zone>

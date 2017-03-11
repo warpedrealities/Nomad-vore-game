@@ -44,7 +44,7 @@ public class Player_RPG implements Actor_RPG {
 	int playerExperience, playerLevel;
 	int abilities[];
 	float stats[];
-	int statmax[];
+	int statMax[];
 	int attributes[];
 	float subAbilities[];
 	Inventory playerInventory;
@@ -172,7 +172,7 @@ public class Player_RPG implements Actor_RPG {
 		this.actor=actor;
 		abilities=new int[6];
 		stats=new float[4];
-		statmax=new int[4];
+		statMax=new int[4];
 		attributes=new int[23];
 		subAbilities=new float[4];
 		for (int i=0;i<22;i++)
@@ -247,7 +247,7 @@ public class Player_RPG implements Actor_RPG {
 		
 		for (int i=0;i<3;i++)
 		{
-			stats[i]=statmax[i]*1.0F;
+			stats[i]=statMax[i]*1.0F;
 		}	
 	}
 	
@@ -264,12 +264,12 @@ public class Player_RPG implements Actor_RPG {
 			}
 		}
 		
-		if (stats[HEALTH]<statmax[HEALTH])
+		if (stats[HEALTH]<statMax[HEALTH])
 		{
 			stats[HEALTH]+=subAbilities[REGENERATION]*duration*2; stats[SATIATION]-=subAbilities[REGENERATION]*2*duration;				
 		}
 
-		if (stats[RESOLVE]<statmax[RESOLVE])
+		if (stats[RESOLVE]<statMax[RESOLVE])
 		{
 			stats[RESOLVE]+=0.1F*duration;	
 		}
@@ -287,9 +287,9 @@ public class Player_RPG implements Actor_RPG {
 		*/
 		for (int i=0;i<stats.length;i++)
 		{
-			if (stats[i]>statmax[i])
+			if (stats[i]>statMax[i])
 			{
-				stats[i]=statmax[i];
+				stats[i]=statMax[i];
 			}
 		}
 		cooldownHandler.update(duration);
@@ -318,9 +318,9 @@ public class Player_RPG implements Actor_RPG {
 		}
 		else
 		{
-			if (stats[HEALTH]<statmax[HEALTH])
+			if (stats[HEALTH]<statMax[HEALTH])
 			{
-				if ( stats[SATIATION]>statmax[SATIATION]*subAbilities[REGENTHRESHOLD])
+				if ( stats[SATIATION]>statMax[SATIATION]*subAbilities[REGENTHRESHOLD])
 				{
 					stats[HEALTH]+=subAbilities[REGENERATION]; stats[SATIATION]-=subAbilities[REGENERATION]*2;		
 				}			
@@ -328,7 +328,7 @@ public class Player_RPG implements Actor_RPG {
 		}
 
 
-		if (stats[RESOLVE]<statmax[RESOLVE])
+		if (stats[RESOLVE]<statMax[RESOLVE])
 		{
 			stats[RESOLVE]+=0.05F;	
 		}
@@ -340,19 +340,19 @@ public class Player_RPG implements Actor_RPG {
 	void Calcstats()
 	{		
 		defaultStats();
-		statmax[0]=10+(abilities[ENDURANCE]*4);
-		statmax[1]=10+(abilities[INTELLIGENCE]*4);
-		statmax[2]=50+(abilities[ENDURANCE]*20);
+		statMax[0]=10+(abilities[ENDURANCE]*4);
+		statMax[1]=10+(abilities[INTELLIGENCE]*4);
+		statMax[2]=50+(abilities[ENDURANCE]*20);
 		
 		float v=(abilities[ENDURANCE]-3)*playerLevel;
-		statmax[0]+=v;
+		statMax[0]+=v;
 		v=(abilities[INTELLIGENCE]-3)*playerLevel;
-		statmax[1]+=v;
+		statMax[1]+=v;
 		v=(abilities[INTELLIGENCE]-3)*playerLevel*2;
-		statmax[2]+=v;
+		statMax[2]+=v;
 		
-		statmax[3]=10;
-		PerkProcessor processor=new PerkProcessor(attributes,statmax,abilities,subAbilities);
+		statMax[3]=10;
+		PerkProcessor processor=new PerkProcessor(attributes,statMax,abilities,subAbilities);
 		for (int i=0;i<playerPerks.size();i++)
 		{
 			processor.processPerkPhaseOne(playerPerks.get(i));
@@ -438,14 +438,14 @@ public class Player_RPG implements Actor_RPG {
 
 	@Override
 	public int getStatMax(int i) {
-		return statmax[i];
+		return statMax[i];
 	}
 
 	public void IncreaseStat(int target, int value) {
 		stats[target]+=value;
-		if (stats[target]>statmax[target])
+		if (stats[target]>statMax[target])
 		{
-			stats[target]=statmax[target];
+			stats[target]=statMax[target];
 		}
 	}
 
@@ -497,9 +497,9 @@ public class Player_RPG implements Actor_RPG {
 	public void setStat(int stat, int value) {
 	
 		stats[stat]=value;
-		if (stats[stat]>statmax[stat])
+		if (stats[stat]>statMax[stat])
 		{
-			stats[stat]=statmax[stat];
+			stats[stat]=statMax[stat];
 		}
 	}
 
@@ -518,7 +518,18 @@ public class Player_RPG implements Actor_RPG {
 	@Override
 	public void ReduceStat(int stat, int value) {
 		stats[stat]-=value;
-		regenDelay=20;
+		if (value>0)
+		{
+			regenDelay=20;	
+		}
+		if (stats[stat]<0)
+		{
+			stats[stat]=0;
+		}
+		if (stats[stat]>statMax[stat])
+		{
+			stats[stat]=statMax[stat];
+		}
 	}
 	
 	public ArrayList<PerkInstance> getPlayerPerks()
@@ -550,9 +561,9 @@ public class Player_RPG implements Actor_RPG {
 			dstream.writeFloat(stats[i]);
 		}
 		//save max stats
-		for (int i=0;i<statmax.length;i++)
+		for (int i=0;i<statMax.length;i++)
 		{
-			dstream.writeInt(statmax[i]);
+			dstream.writeInt(statMax[i]);
 		}
 		
 		for (int i=0;i<subAbilities.length;i++)
@@ -577,7 +588,7 @@ public class Player_RPG implements Actor_RPG {
 		this.actor=actor;
 		abilities=new int[6];
 		stats=new float[4];
-		statmax=new int[4];
+		statMax=new int[4];
 		subAbilities=new float[4];
 		attributes=new int[23];
 		for (int i=0;i<14;i++)
@@ -612,9 +623,9 @@ public class Player_RPG implements Actor_RPG {
 			stats[i]=dstream.readFloat();
 		}
 		//load max stats
-		for (int i=0;i<statmax.length;i++)
+		for (int i=0;i<statMax.length;i++)
 		{
-			statmax[i]=dstream.readInt();
+			statMax[i]=dstream.readInt();
 		}
 		
 		for (int i=0;i<subAbilities.length;i++)
@@ -695,8 +706,8 @@ public class Player_RPG implements Actor_RPG {
 		playerExperience-=getNextLevel();
 		playerLevel++;
 		addPerk(perk);
-		stats[0]=statmax[0];
-		stats[1]=statmax[1];
+		stats[0]=statMax[0];
+		stats[1]=statMax[1];
 	}
 
 	@Override
@@ -795,9 +806,9 @@ public class Player_RPG implements Actor_RPG {
 		{
 			karmaMeter=100;
 		}
-		if (stats[Actor_RPG.SATIATION]>statmax[Actor_RPG.SATIATION])
+		if (stats[Actor_RPG.SATIATION]>statMax[Actor_RPG.SATIATION])
 		{
-			stats[Actor_RPG.SATIATION]=statmax[Actor_RPG.SATIATION];
+			stats[Actor_RPG.SATIATION]=statMax[Actor_RPG.SATIATION];
 		}
 	}
 	
@@ -817,9 +828,9 @@ public class Player_RPG implements Actor_RPG {
 		{
 			karmaMeter=0;
 		}
-		if (stats[Actor_RPG.SATIATION]>statmax[Actor_RPG.SATIATION])
+		if (stats[Actor_RPG.SATIATION]>statMax[Actor_RPG.SATIATION])
 		{
-			stats[Actor_RPG.SATIATION]=statmax[Actor_RPG.SATIATION];
+			stats[Actor_RPG.SATIATION]=statMax[Actor_RPG.SATIATION];
 		}
 	}
 	

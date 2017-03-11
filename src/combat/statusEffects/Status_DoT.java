@@ -27,7 +27,7 @@ public class Status_DoT implements StatusEffect {
 	int strength;
 	String tag;
 	String affectText;
-	int abilityTest;
+	int abilityTest=-1;
 	
 	String removeText;
 	AttribMod []modifiers;
@@ -99,7 +99,12 @@ public class Status_DoT implements StatusEffect {
 		}
 		removeText=ParserHelper.LoadString(dstream);
 		tag=ParserHelper.LoadString(dstream);
-		affectText=ParserHelper.LoadString(dstream);
+		boolean b=dstream.readBoolean();
+		if (b)
+		{
+			affectText=ParserHelper.LoadString(dstream);		
+		}
+
 		int uid=dstream.readInt();
 		if (uid!=-1)
 		{
@@ -137,7 +142,16 @@ public class Status_DoT implements StatusEffect {
 		}
 		ParserHelper.SaveString(dstream,removeText);
 		ParserHelper.SaveString(dstream, tag);
-		ParserHelper.SaveString(dstream, affectText);
+		if (affectText!=null)
+		{
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, affectText);		
+		}
+		else
+		{
+			dstream.writeBoolean(false);
+		}
+
 		if (origin==null)
 		{
 			dstream.writeInt(-1);
@@ -179,7 +193,7 @@ public class Status_DoT implements StatusEffect {
 			
 			subject.ReduceStat(modifiers[0].attribute, modifiers[0].modifier);
 			
-			if (subject.getActor().getVisible()==true && ViewScene.m_interface!=null)
+			if (subject.getActor().getVisible()==true && ViewScene.m_interface!=null && affectText!=null)
 			{
 				String str=affectText.replace("VALUE", Integer.toString(modifiers[0].modifier));
 				ViewScene.m_interface.DrawText(str.replace("TARGET", subject.getName()));
@@ -198,12 +212,16 @@ public class Status_DoT implements StatusEffect {
 					return;
 				}		
 			}
-			int m=subject.getAbilityMod(abilityTest);
-			int r=GameManager.m_random.nextInt(20)+m;
-			if (r>strength)
+			if (abilityTest!=-1)
 			{
-				duration=0;
+				int m=subject.getAbilityMod(abilityTest);
+				int r=GameManager.m_random.nextInt(20)+m;
+				if (r>strength)
+				{
+					duration=0;
+				}		
 			}
+
 			
 		}
 	

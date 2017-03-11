@@ -45,7 +45,7 @@ public class Effect_Status extends Effect {
 	ProportionalEffect proportionalEffect;
 	
 	int probability;
-	int probabilityModifier;
+	int probabilityModifier=-1;
 	float rangedDecay=0;
 	StatusEffect effect;
 	String applyText;

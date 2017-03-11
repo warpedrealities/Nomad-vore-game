@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<text>
+The draconian looms over you in all her sexy yet intimidating glory and looks down upon you with a smirk <random id="draconian_insults"/> she scorns, rubbing in her victory. Though as she regards you and assesses you can tell she intends to make her victory total and her domination over you complete. You can see in her eyes the moment she makes her decision and says that
+</text>
+<choice destination="cockvore0" text="&all you're good for is to sate my lust">
+<preference fetish="cockvore"/>
+</choice>
+<choice destination="analvore0" text="&you deserve to die without dignity">
+<preference fetish="analvore"/>
+</choice>
+<choice destination="gameover" text="a fate too terrible to contemplate">
+<notpreference fetish="cockvore"/>
+<notpreference fetish="analvore"/>
+</choice>
+</page>
+
+<page ID="cockvore0">
+<text>
+
+</text>
+
+</page>
+
+<page ID="analvore0">
+<text>
+"An ignoble fate is fitting for a small thing such as you."
+
+</text>
+
+</page>
+
+
+<gameover ID="gameover">
+<text>
+It would seem you've met a terrible fate
+</text>
+
+</gameover>
+
+</Conversation>

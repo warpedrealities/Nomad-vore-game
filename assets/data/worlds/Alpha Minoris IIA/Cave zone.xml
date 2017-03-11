@@ -28,7 +28,7 @@ as you approach the tunnel that plunges yet deeper into the earth you scent even
 </placeWidget>
 </randprefab>
 <auditpaths carve="0"/>
-<noise tile="2" scarcity="4"/>
+<noise tile="2" scarcity="6"/>
 
 
 

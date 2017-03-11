@@ -35,9 +35,9 @@ This drone has crashed remarkably intact, though only in the sense that it reach
 </randprefab>
 
 <randprefab width="3" height="3">
-<row>222</row>
-<row>222</row>
-<row>222</row>
+<row>333</row>
+<row>333</row>
+<row>333</row>
 <placeWidget x="1" y="1" name="cargocontainer">
 <lootTable>
 	<lootSubTable chance="1" file="cargodrops_primary"/>
@@ -66,6 +66,17 @@ This drone has crashed remarkably intact, though only in the sense that it reach
 <Seedwidgets min="16" max="32" name="fruitbush" />
 <SeedNPCs min="8" max="16" name="AlphaMinoris_II/lamia"/>
 <walloff wall="7" sides="north"/>
+<prefab positionX="32" positionY="32" width="1" height="1">
+<row>3</row>
+<randprefab>
+<placeWidget x="32" y="32" name="SPAWNER">
+<radius value="30"/>
+<spawnLimit value="1"/>
+<script value="alphaminorisbattlespawns"/>
+<spawns count="1">
+<data npc="AlphaMinoris_II/draconian" min="1" max="2" chance="25"/>
+</spawns>
+</placeWidget>
 </mapgen>
 
 </zone>

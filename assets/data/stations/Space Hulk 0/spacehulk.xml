@@ -77,8 +77,8 @@
 <edge value="EAST"/>
 <edge value="SOUTH"/>
 <edge value="NORTH"/>
-<widget x="0" y="3" name="panelH" info="engineering" variable="20"/>
-<widget x="0" y="4" name="panelH" info="engineering" variable="20"/>
+<widget x="0" y="3" name="panelH_invincible" info="engineering" variable="20"/>
+<widget x="0" y="4" name="panelH_invincible" info="engineering" variable="20"/>
 <widget x="2" y="4" name="itempile" info="spacehulk_note"/>
 </block>
 </prefabBlock>

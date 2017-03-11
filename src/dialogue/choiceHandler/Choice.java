@@ -14,12 +14,16 @@ import vmo.Game;
 
 public class Choice {
 
+	public enum DisplayType{NONE,NARRATOR,SELF,NPC};
 	boolean lit;
 	int lineCount;
 	int tintID;
 	NuFont lines[];
 	Vec2f position;
 	int width=32;
+	
+	DisplayType displayType;
+	
 	
 	public Choice(int tint)
 	{
@@ -56,6 +60,8 @@ public class Choice {
 	{
 		this.lit=lit;
 	}
+	
+
 	
 	public void addText(String string)
 	{

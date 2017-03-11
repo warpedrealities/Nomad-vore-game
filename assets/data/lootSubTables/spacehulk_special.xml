@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<lootTable>
+<loot item="power gauntlet" chance="1" addendum="0"/>
+<loot item="autopistol" chance="1" addendum="0"/>
+</lootTable>

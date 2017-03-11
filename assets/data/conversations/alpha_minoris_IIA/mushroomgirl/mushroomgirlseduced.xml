@@ -13,6 +13,18 @@ The other arm stretched out in your direction, the enthralled, young little thin
 <choice destination="oralvore1" text="Just a little taste...">
 <assertion evaluate="hasperk" perk="oralvore"/>
 </choice>
+<choice destination="study" text="study her">
+<assertnot evaluate="hasResearch" research="mushroomfolk"/>
+</choice>
+</page>
+
+<page ID="study">
+<text>
+you study the mushroom extensively, your scans collecting a large amount of data. You benignly give the mushroom girl a chance to scurry off now you're done probing her.
+</text>
+<special effect="removenpc"/>
+<special effect="research" DC="10" data="mushroomfolk"/>
+<choice destination="end" text="time to do some research"/>
 </page>
 
 <page ID="oralvore1">
