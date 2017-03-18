@@ -2,9 +2,19 @@
 <Conversation>
 <page ID="start">
 <text>
-no interaction to be had with a defeated elf yet
+The elf is defeated and lies at your mercy, looking up at you warily as you loom over her. Her heaving chest and rounded ass providing much to appreciate in the view. Though as she feels your gaze weigh heavily upon her she squirms and asks much afeared "what are you going to do to me?"
 </text>
-<choice destination="end" text="well bye"/>
+<choice destination="oralvore0" text="$All that fighting has helped me work up an appetite">
+<assertion evaluate="hasperk" perk="oralvore"/>
+</choice>
+<choice destination="end" text="$nothing, this time."/>
+</page>
+
+<page ID="oralvore0">
+<text>
+
+</text>
+
 </page>
 
 </Conversation>

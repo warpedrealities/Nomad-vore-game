@@ -31,7 +31,7 @@ public class ChoiceText {
 			displayType=DisplayType.SELF;
 			string=string.substring(1);
 		}		
-		if (string.charAt(0)=='&')
+		if (string.charAt(0)=='#')
 		{
 			displayType=DisplayType.NPC;
 			string=string.substring(1);

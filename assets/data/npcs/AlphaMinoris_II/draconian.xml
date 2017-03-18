@@ -14,9 +14,9 @@
 <ability ability="INTELLIGENCE" value="5" />
 <stat stat="HEALTH" value="50"/>
 <stat stat="RESOLVE" value="40"/>
-<attribute attribute="DODGE" value="2"/>
-<attribute attribute="PARRY" value="2"/>
-<attribute attribute="WILLPOWER" value="2"/>
+<attribute attribute="DODGE" value="4"/>
+<attribute attribute="PARRY" value="4"/>
+<attribute attribute="WILLPOWER" value="4"/>
 <combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4">
 <effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="STRENGTH"/>
 <missText count="2">
@@ -28,8 +28,9 @@
 <text>The draconian slashes at TARGET for VALUE damage</text>
 </hitText>
 </combatMove>
-<combatMove name="flame" pattern="RANGED" bonusAttribute="MELEE" timeCost="2" bonusToHit="4">
-<effectDamage type="THERMAL" minValue="2" maxValue="7" modifier="STRENGTH"/>
+<combatMove name="flame" pattern="RANGED" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
+<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="STRENGTH"/>
 <missText count="2">
 <text>The draconian blasts fire ineffectually at TARGET</text>
 <text>The draconian breathes fire at TARGET without hitting</text>

@@ -37,7 +37,24 @@ You're a bit weak from being bested by the batgirl but faced with her soft warm 
 
 <page ID="sex2">
 <text>
+The batgirl's pleasured sounds mingle with your gasps and pants as you thrust in and out of her, fucking her with all the vigor your current state allows you. Fortuitously your stamina proves enough, the batgirl letting out a squeel of delight as with your waning energy you buck your hips and cum up into her. Your cock spurting hot jizz up into the batgirl who'd defeated and seized you. She murrs as you finish your little romp with her, though after a few moments you realize that you can't actually pull out of her..and the batgirl gives you a smooch, snuggling you close and smiling.
+</text>
+<choice destination="absorbAlt0" text="uh oh"/>
+<choice destination="cocker0" text="*smile back*">
+<preference fetish="cocktransformation"/>
+<assertion evaluate="hasperk" perk="cockmerging"/>
+</choice>
+</page>
 
+<page ID="absorbAlt0">
+<text>
+The batgirl keeps on smiling and snuggling you close as you realize your cock is merged into her sex, your body starting to sink into her as she murrs. The batgirl squeezing you against her chest with her wings, smooshing you against the softness of her belly and breasts until your skin stucks to hers and you start to sink in. Your exhausted form is helplessly starting to add to the soft curvaceousness of her own as she holds you close. the wings doing much to hide your disappearing act though as your legs stick to her own even her wings cannot hide your fate.
+</text>
+<choice destination="absorbGO" text="sink in"/>
+</page>
+
+<page ID="cocker0">
+<text>
 
 </text>
 

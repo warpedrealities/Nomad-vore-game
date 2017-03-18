@@ -37,7 +37,7 @@
 </walloff>
 <auditpaths carve="2"/>
 <auditpaths carve="2" exclude="impassable"/>
-<auditpaths carve="0" exclude="impassable"/>
+<auditpaths carve="0"/>
 </mapgen>
 
 </zone>

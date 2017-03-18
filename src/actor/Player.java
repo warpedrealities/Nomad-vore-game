@@ -797,9 +797,13 @@ public class Player extends Actor
 				{
 					ItemStack stack=(ItemStack)playerInventory.getSlot(0);
 					stack.setCount(stack.getCount()-move.getAmmoCost());
-					
+					if (move.isThrowWeapon())
+					{
+						ThrownWeaponHandler.throwWeapon(attackable.getPosition(), playerInventory.getSlot(0));
+					}
 					if (stack.getCount()==0)
 					{
+		
 						UnEquip(0);
 						ViewScene.m_interface.UpdateInfo();	
 					}
@@ -821,12 +825,7 @@ public class Player extends Actor
 			}
 			else
 			{
-				if (move.isThrowWeapon())
-				{
-					ThrownWeaponHandler.throwWeapon(attackable.getPosition(), playerInventory.getSlot(0));
-					UnEquip(0);
-					ViewScene.m_interface.UpdateInfo();
-				}
+		
 			}
 			actorRPG.addBusy(move.getTimeCost());
 		}	
