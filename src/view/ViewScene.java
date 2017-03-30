@@ -1380,8 +1380,14 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 	
 	@Override
 	public void StartConversation(String conversation, NPC npc, boolean badEnd) {
-		if (m_screen==null)
+		if (m_screen!=null)
 		{
+			sceneController.getUniverse().getPlayer().calcMove();
+			UpdateInfo();
+			m_screen.discard(m_hook);
+			m_screen=null;
+		}
+
 			DialogueScreen scr=new DialogueScreen(m_textureIds[0],m_textureIds[7],m_textureIds[8],SceneBase.getVariables()[0],sceneController.getUniverse().player,m_text,this);
 			if (scr.Load(conversation, npc)==false && badEnd)
 			{
@@ -1389,7 +1395,6 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 				{
 					Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"It seems you've met a terrible fate"));
 				}
-
 			}
 			else
 			{
@@ -1397,15 +1402,18 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 				m_screen=scr;
 			
 				m_screen.start(m_hook);			
-			}
-		
-		}
+			}	
 	}
 
 	@Override
 	public void StartConversation(String conversation, WidgetConversation widget) {
-		if (m_screen==null)
+		if (m_screen!=null)
 		{
+			sceneController.getUniverse().getPlayer().calcMove();
+			UpdateInfo();
+			m_screen.discard(m_hook);
+			m_screen=null;
+		}
 			DialogueScreen scr=new DialogueScreen(m_textureIds[0],m_textureIds[7],m_textureIds[8],SceneBase.getVariables()[0],sceneController.getUniverse().player,m_text,this);
 			if (scr.Load(conversation, null)==false)
 			{
@@ -1419,8 +1427,6 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 			
 				m_screen.start(m_hook);			
 			}
-		
-		}
 	}
 
 	

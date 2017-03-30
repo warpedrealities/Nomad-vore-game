@@ -111,6 +111,7 @@ public class ShopData {
 		String itemName=enode.getAttribute("name");
 		int quantity=Integer.parseInt(enode.getAttribute("quantity"));
 		float cost=0;
+		String tag=null;
 		if (enode.getAttribute("cost").length()>0)
 		{
 			cost=Float.parseFloat(enode.getAttribute("cost"));
@@ -119,6 +120,11 @@ public class ShopData {
 		{
 			cost=Universe.getInstance().getLibrary().getItem(itemName).getItemValue()*profitRatio;
 		}
+		if (enode.getAttribute("tag").length()>0)
+		{
+			tag=enode.getAttribute("tag");
+		}
+
 		int chance=Integer.parseInt(enode.getAttribute("probability"));
 		int roll=Universe.m_random.nextInt(100);
 		if (roll<chance)
@@ -131,6 +137,7 @@ public class ShopData {
 			else
 			{
 				item=new ShopLineItem(itemName,quantity,cost);
+				item.setTag(tag);
 				sellInventory.put(itemName, item);
 			}
 			

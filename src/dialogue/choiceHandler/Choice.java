@@ -32,9 +32,7 @@ public class Choice {
 		lines=new NuFont[2];
 		
 		lines[0]=new NuFont(new Vec2f(0,0),64,0.6F*Game.sceneManager.getConfig().getTextscale());
-		lines[0].setString("text text text text text text text text text text");
 		lines[1]=new NuFont(new Vec2f(0,0),64,0.6F*Game.sceneManager.getConfig().getTextscale());	
-		lines[1].setString("text text text text text text text text text text");
 	}
 	
 	public int getLineCount()

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemConsumable name="mysterious bottle" weight="2" value="50">
+<description>A tightly sealed bottle, what it contains is a mystery, you'd have to open it to find out...but what's the worst that could happen?</description>
+<effectDialogue>interaction/mysteriousBottle</effectDialogue>
+</ItemConsumable>

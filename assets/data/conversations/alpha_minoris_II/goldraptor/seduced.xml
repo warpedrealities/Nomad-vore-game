@@ -1,9 +1,22 @@
 <?xml version="1.0"?>
 <Conversation>
 <page ID="start">
-<text> there's no interaction to be had with a defeated gold raptor yet.
+<text> the gold raptor's lustful blush shows plain on her face as she fondles herself and regards you with intense desire. She's clearly enraptured to the core by you, overwhelmed by your charms it'd be easy to bend the once seductive creature to your desires. As you continue to regard her a soft needy whine issues from her throat and she goes as if to touch you.
 </text>
-<choice destination="end" text="darn"/>
+<choice destination="unbirth0" text="*push her down to her knees*">
+<assertion evaluate="hasperk" perk="unbirthing"/>
+<preference fetish="unbirth"/>
+</choice>
+<choice destination="end" text="*push her away*"/>
 </page>
+
+<page ID="unbirth0">
+<text>
+
+
+</text>
+
+</page>
+
 
 </Conversation>

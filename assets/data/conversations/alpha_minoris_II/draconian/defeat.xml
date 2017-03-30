@@ -3,10 +3,49 @@
 
 <page ID="start">
 <text>
-
+In defeat the draconian is incredulous, glaring at you but the heat of her gaze is augmented and dampened by the stunned disbelief that still warrs with it on her face. The proud creature tries to stand at your approach, but stumbles back down as her form is too weakened by the conflict to manage the movement. The draconian laid low once again in a way that makes her snarl and hiss "This is intolerable, I cannot lose to one such as you."
 </text>
-
+<choice destination="oralvore0" text="$But you have, and now, now I want a celebratory feast">
+<assertion evaluate="hasperk" perk="oralvore"/>
+</choice>
+<choice destination="end" text="$And yet it happened, think on that for a while"/>
 </page>
 
+<page ID="oralvore0">
+<text>
+"Surely you jest, it cannot end this way." the draconian scoffs, apparently unwilling to believe your intentions even as you loom over her and prepare yourself mentally and physically to put this oh so superior draconian in her place. She's still incredulous even as you squat down to more easily meet her eye level and grab her shoulders "unhand me you inferio-MMPH!" and with that her belittling prattle is silenced by your encroaching mouth as you wrap it around her face and engulf her head. A last look at her shocked expression afore you work over those horns and hair and all the way to her neck. The draconian shoving at your chest in protest as you savour her flavour, and take your first swallow. The draconian letting out a muffled protest and squirming anew as somehow the being she'd thought herself the better to was actually eating her alive.
+</text>
+<choice destination="oralvore1" text="victory makes her taste all the sweeter"/>
+</page>
+
+<page ID="oralvore1">
+<text>
+Her shock seems to wear off quickly as you work down over her shoulders and towards the round delightfullness of her breasts and she realizes you're truly eating her. The draconian's indignant growls and protestations remain muffled by the tightness of your throat as despite her efforts she begins to slide on down through it. The draconian's flexing wings spread wide to stop you getting past her shoulders, the splayed wings resisting your efforts for a time forcing you to reach up and shove and press them down. The effort of overcoming her powerful body by main force only possible in her weakened state and even then it takes a time for her flight muscles to tire and her strength to be once again exhausted. With a mhmm you lap at her collar and force her wings down against her back, pinning them swiftly as you engulf her chest at long last with your mouth. Her breasts are heavenly as they press against your tongue, all the more delicious for the challenge in earning this sumptous feast. You feel her trying to shove at you with her part pinned arms and reward her for her efforts with a trip deeper inside you, cramming her head deeper in and starting to work towards her tastey tail augmented ass.
+</text>
+<choice destination="oralvore2" text="continue"/>
+</page>
+
+<page ID="oralvore2">
+<text>
+The draconian struggles and squirms and protests but to no avail as you cram her middle past your lips. And in turn you're starting to cram her into your belly "unha-undevour me you impertinent..gah!" she snarls, alas the price of forcing  her into your belly is she gets to talk again without her face being squeezed and muffled by your throat. You swallow hard to mash her face against the inside of your belly and groan as your middle swells out, forcing the draconian to curl in submission as you work your lips over her ass and swallow that down as well. Now you only have her tail and legs left to devour and the sight of the finish line for your meal stirrs you on "Give up this foolishness at once, you cannot devour one as superior as I!"..also shutting up the draconian and proving her wrong stirs you on, that as well. And so you swallow hard and vigorously, a mix of skin and scale sliding over your tongue as you polish her off steadily. The final frantically twitching tip of her tail protruding from your lips before you gulp that down as well, sealing the arrogant dragongirl into your body.
+</text>
+<choice destination="oralvore3" text="delicious, but she may not keep quiet."/>
+</page>
+
+<page ID="oralvore3">
+<text>
+"You'll pay for this indignity! When I get out of here." she exclaims in outrage and shoves at your insides, attempting to force her way back out within moment's of being tightly squeezed and packed away in your belly. Your middle jostling and swaying and bobbing with contours of her wings, tail and other limbs pushing out at your tummy flesh in a somewhat disagreeable way. Still, you have her right where you want her, and where her continued defiance of the TRUE superior predator here can be easily rectified.
+</text>
+<choice destination="oralvore4" text="$somehow i doubt you'll get much revenge when I've digested you"/>
+</page>
+
+<page ID="oralvore4">
+<text>
+"digest me?! you wouldn't!" she protests but despite her continued disbelief that you could treat her that way your stomach makes it quite clear that to you she's now just another meal. The churning and grinding of your gurgling belly starts to press down on her from all sides "I am a dragon, a mighty and superior-" she protests and then for the first time whimpers as your enzymes begin to take their toll "I cannot end in the belly of some lowly-" she protests again later as her struggles weaken and slow "Dragons should not..." she manages, but this one sounds more like a plea as her ongoing digestion begins to break down her cast iron pride as it does her body. Her final words are weak, almost pitiable "please-don't" she begs afore finally being gurgled away. The draconian now more soup than girl now as your gut smooths out and her remains are converted into nothing but fuel for you, for all her arrogance and so called superior in the end she's just a satisfying meal conquered by your belly like any other. Gradually even the round softness of your belly fades and shrinks down to nothing as she's absorbed into your form.
+</text>
+<effect type="feed" value="120"/>
+<special effect="removenpc"/>
+<choice destination="end" text="carry on"/>
+</page>
 
 </Conversation>

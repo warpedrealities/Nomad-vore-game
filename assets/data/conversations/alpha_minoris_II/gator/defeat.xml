@@ -1,9 +1,42 @@
 <?xml version="1.0"?>
 <Conversation>
 <page ID="start">
-<text> there's no interaction to be had with a defeated gator yet.
+<text> The beast wallows in a somehow even more dimwitted stupor than its base state of being. Sprawled on its belly it watches you, rasping breathes billowing between its long and toothsome jaws. The reptilian monster twitches weakly as you near, trying to push up off the ground but unable to do so in its current weakened and defeated state. It's at your mercy, but do you have any interest in a monstrous beast such as this.
 </text>
-<choice destination="end" text="darn"/>
+<choice destination="oralvore0" text="yes, and I'm hungry enough to eat the whole thing">
+<assertion evaluate="hasperk" perk="oralvore"/>
+</choice>
+<choice destination="end" text="nope, no interest at all"/>
+</page>
+
+<page ID="oralvore0">
+<text>
+It seems impossible, but you've seen much that seems impossible already. And so despite your skepticism you decide to give it a try, approaching the beast from behind where its long scaley tail rests and it cannot see or comprehend what you're about to do. The thick length of that tail just before you, ending in a blunt tip that you take in your hands and feel the creature stir only a little in puzzlement at your actions. It's puzzlement only grows as the warm wet embrace of your mouth slides up along its tail and you begin to swallow it down, the beast's primeval mind aeons away from being able to comprehend something so preposterous as that you might try to devour it. And its small minded confusion allows you to make good progress up its tail, curling the bulk of that tail in your gut and making it ride down against the ground as you move forwards and cram its rear legs past your lips.
+</text>
+<choice destination="oralvore1" text="devour the beast!"/>
+</page>
+
+<page ID="oralvore1">
+<text>
+You're halfway along the creature's body before it truly becomes aware of just how much things are amiss. It's lower legs and tail stretching out your gut mightily as they're squeezed within your smaller form and the beast lets out an outraged snarl and attempts to thrash away from you. But with its hindlimbs contained there's nought it can gain from that and what's more it can't twist enough to get its mighty jaws upon you. The beast twisting to and thro with hisses and growls as it attempts to escape, but your inexorable hunger cannot be denied as you steadily encroach up on the reptile's forelimbs.
+</text>
+<choice destination="oralvore2" text="finish it off"/>
+</page>
+
+<page ID="oralvore2">
+<text>
+The beast thrashes and snaps its lethal jaws, but as you tuck its forelimbs past your lips there's no chance it can reach you. The mighty and primeval predatory beast proving no match for your gluttonous appetite as you finally work up over its head. Those mighty jaws proving problematic as they gape wide but then a moment's mis-step from your dull witted meal and you're up past the hinge as it attempted to snap on empty air. The beast hissing helplessly as you steadily polish it off, watching the end of that long snout slide closer and closer until you finally snap your own jaws shut and swallow. The creature squirming and thrashing about restlessly and hissing as you imprison its scaled bulk tightly in your belly. The hefty outline shifting about as your gut sags low and round and large with the form of your meal.
+</text>
+<choice destination="oralvore3" text="the beast makes a satisfying meal"/>
+</page>
+
+<page ID="oralvore3">
+<text>
+The beast's delightfully satiating bulk shifts and squirms around inside you in a futile and dull witted attempt to escape. But for all its power your stomach seems more powerful now you have it in there, the muscular walls of your gut containing its powerful struggles. And not just contain but work over, as you feel the beast snarl and hiss amidst the gurgling and churning sensations of your gut getting to work on digesting your meal. Those scales, that formidable body, all put up a fierce and sturdy resistance to your gut getting what you want. You lay back and run hands over your immense gut, and gradually as a formidable amount of time passes you feel the beast weaken. It's struggles fading away to nothing. Then too its contours and outlines begin to fade away, softening and rounding out as the terrible lizard becomes nothing more than food for you. Its scales worn to nothing, its bones ground to mush and its meat now a thick broth sloshing through your innards. As still more time passes the final legacy of the beast fades away, your gut slimming back down to nothing as the alien reptile is completely and utterly digested by you.
+</text>
+<effect type="feed" value="120"/>
+<special effect="removenpc"/>
+<choice destination="end" text="carry on"/>
 </page>
 
 </Conversation>

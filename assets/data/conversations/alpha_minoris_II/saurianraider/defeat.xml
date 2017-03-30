@@ -3,8 +3,51 @@
 
 <page ID="start">
 <text>
-no interaction to be had with a defeated reptile yet
+The saurian warrior sees you approach her defeated form and pushes herself up with difficulty into a seated position, growling as she sees your smile "I suppose it is too much to expect you to be gracious in victory." she says, clearly expecting you to do something to or with her now you have her at your mercy.
 </text>
-<choice destination="end" text="end"/>
+<choice destination="cockvore0" text="$I think victory is worth celebrating with a good cockmeal">
+<assertion evaluate="hasperk" perk="cockvore"/>
+</choice>
+
+</choice>
+<choice destination="end" text="$actually, it isn't. I don't intend to do anything to you"/>
 </page>
+
+<page ID="cockvore0">
+<text>
+The saurian glares at realizing the fate you have in store for her, though flushes slightly as you prepare yourself <conditional><assertion evaluate="slothasitem" slot="2"/>, by stripping off below the waist and </conditional> by stroking your shaft to hardness, feeling it grow under your palm from its <macro ID="penis_size_desc"/> size to something more suitable for the task at hand "You will pay for this." she says shuddering as she breathes in your heady musk. Your cock oozing pre and wafting lewd scents "i will not go unavenged traveller." she threatens, prompting you to silence her with a cock to the face. One hand grabbing her hair to shove her firmly against your tip, mashing her face against your cockslit and starting to schlurp her inside in a way that muffles the lizard nicely. And her smooth scaley body is just going to feel so good going down you can already tell even as you've only reached her shoulders.
+</text>
+<choice destination="cockvore1" text="$you'd of done the same to me, now be a good lizard and be food for my dick"/>
+</page>
+
+<page ID="cockvore1">
+<text>
+The warrior lizard has no answer to that, but then she's muffled by hot throbbing dick sliding down over her anyway. The lizard squirming and struggling mightily but without any success as you schlurp her steadily into your cock. Your rocking hips forcing thrusting her into your cumslit inch by inch over her chest and down towards h er hips, that partially scaled and all firm form swelling out your cock and sliding closer and closer to your awaiting balls. And her tail tantalizes as it sways and swishes around with her vigorous but futile resistance.
+</text>
+<choice destination="cockvore2" text="she feels so good sliding in there!"/>
+</page>
+
+<page ID="cockvore2">
+<text>
+The warrior lets out a gasping "you won't-" as her head slides into your sack before plunging facefirst into a pool of sticky jizz. The reptile redoubling her struggles delightfully as she's dunked into your cum, a substance she'll get quite acquainted with as you melt her into your next load. As you crest her hips and thighs that vigorous flailing tail starts to rub against the inside of your shaft. Her tail moving this way and that with great rapidity and making you groan in delight but gradually her tail is constrained as you schlurp up that and her legs as well. Only the lower portion of her legs and lower half of her tail left protruding from your cocktip as her upper body thrashes and squirms protestingly in your swollen balls.
+</text>
+<choice destination="cockvore3" text="finish her off"/>
+</page>
+
+<page ID="cockvore3">
+<text>
+You look at the protruding parts of her and smile, stroking both hands up and down your bulging shaft to coax the rest of her down where she belongs. Your shaft schlurping lewdly and easily along her calves and scaley tail as you jerk her down into your loins. The saurian warrior hissing and snarling as she feels the last of her sealed away disappearing past your cocktip and she squirms to push out against the inside of your sack and try to stop her descent into your balls. But she's no match for the triumphant strength of your cock as you plunged her entirely into your balls "you...release me!" she demands defiantly as she squirms around, pleasingly thrashing in the hot cummy bath you're giving her as you fondle yourself and revel in your victory.
+</text>
+<choice destination="cockvore4" Text="$you'll make a very nice load"/>
+</page>
+
+<page ID="cockvore4">
+<text>
+"You will pay for this!" she protests as your balls gurgle and you stroke off "you'll pay for this..." the repeating makes it sound like she's trying to convince herself as she struggles against the churning of your sack. But the saurian warrior is no match for the might of your balls as they work her over and down. The saurian's struggles and threats of far fetched retribution fade away gradually, being replaced with the sloshing sensations of cum and the churns of thick cum as she melted away. Soon enough not an ounce of the saurian remains unconquered by your ravenous balls. the sensation of the last of her churning away so toe curlingly exquisite it has you stroking off again. The pleasing load of your former adversary now applying a steady needy pressure as she swells your sack and you jerk off, stroking yourself steadily and then faster and more vigorously as your pleasure builds. A pleasure that soon erupts, former saurian splattering all over the ground as you pump wads and wads of hot cum out of your shaft, orgasming the remnants of your foe out to form a sticky puddle. Very satisfying all told.
+</text>
+<effect type="feed" value="85"/>
+<special effect="removenpc"/>
+<choice destination="end" text="carry on"/>
+</page>
+
 </Conversation>

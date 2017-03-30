@@ -14,6 +14,7 @@ import combat.effect.Effect_Perk;
 import combat.effect.Effect_Recover;
 import combat.effect.Effect_Status;
 import combat.statusEffects.Status_Defence;
+import combat.effect.Effect_Dialogue;
 
 
 
@@ -65,6 +66,10 @@ public class ItemConsumable extends Item
 				if (Enode.getTagName()=="effectmodifier")
 				{	
 					effectList.add(new Effect_Modifier(Enode));
+				}
+				if (Enode.getTagName()=="effectDialogue")
+				{	
+					effectList.add(new Effect_Dialogue(Enode));
 				}
 			}
 		}

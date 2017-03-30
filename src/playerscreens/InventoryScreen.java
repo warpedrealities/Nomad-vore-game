@@ -17,6 +17,7 @@ import item.Item;
 import item.ItemAmmo;
 import item.ItemConsumable;
 import item.ItemDepletableInstance;
+
 import item.ItemEquip;
 import item.ItemExpositionInstance;
 import item.ItemHasEnergy;
@@ -70,8 +71,11 @@ public class InventoryScreen extends Screen implements Callback {
 	Popup popup;
 	UI_Popup popupBig;
 	
+	boolean screenAlive;
+	
 	public InventoryScreen(int frame, int button, int buttonalt,Player player, int tint,ModelController_Int callback)
 	{
+		screenAlive=true;
 		m_callback=callback;
 		m_control=1;
 		m_list=new List(new Vec2f(3,-14.3F),16,frame,tint,this);
@@ -294,6 +298,7 @@ public class InventoryScreen extends Screen implements Callback {
 		m_button.discard();
 		popup.discard();
 		popupBig.discard();
+		screenAlive=false;
 	}
 
 
@@ -330,9 +335,10 @@ public class InventoryScreen extends Screen implements Callback {
 			}
 			calculateWarning();
 		}
-		
-		//reset list	
-			ResetList();
+	
+				//reset list				
+				ResetList();				
+
 		}
 	}
 	
@@ -367,27 +373,29 @@ public class InventoryScreen extends Screen implements Callback {
 	
 	void ResetList()
 	{
-		String str[]=new String[m_player.getInventory().getNumItems()];
-		for (int i=0;i<str.length;i++)
+		if (screenAlive)
 		{
-			str[i]=m_player.getInventory().getItem(i).getName()+" "+m_player.getInventory().getItem(i).getWeight();
+			String str[]=new String[m_player.getInventory().getNumItems()];
+			for (int i=0;i<str.length;i++)
+			{
+				str[i]=m_player.getInventory().getItem(i).getName()+" "+m_player.getInventory().getItem(i).getWeight();
+				
+			}
+			m_encumbrance.setString("weight:"+Integer.toString(m_player.getInventory().getWeight())+"/"+Integer.toString(m_player.getInventory().getCapacity()));
+			m_list.GenList(str);
 			
-		}
-		m_encumbrance.setString("weight:"+Integer.toString(m_player.getInventory().getWeight())+"/"+Integer.toString(m_player.getInventory().getCapacity()));
-		m_list.GenList(str);
-		
-		for (int i=0;i<5;i++)
-		{
-			if (m_player.getInventory().getSlot(i)!=null)
+			for (int i=0;i<5;i++)
 			{
-				m_slots[i].setString(m_player.getInventory().getSlot(i).getName());	
-			}
-			else
-			{
-				m_slots[i].setString("none");
-			}
+				if (m_player.getInventory().getSlot(i)!=null)
+				{
+					m_slots[i].setString(m_player.getInventory().getSlot(i).getName());	
+				}
+				else
+				{
+					m_slots[i].setString("none");
+				}
+			}		
 		}
-		
 	}
 	
 	void Equip()

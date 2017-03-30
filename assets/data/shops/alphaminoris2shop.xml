@@ -9,5 +9,6 @@
 <inventoryitem name="fabric" probability="100" quantity="20" />
 <inventoryitem name="fabric" probability="50" quantity="20" />
 <inventoryitem name="claw necklace" probability="100" quantity="1"/>
+<inventoryitem name="mysterious bottle" probability="100" quantity="1"/>
 <buymodifier name="deku nut" cost="100"/>
 </shop>
