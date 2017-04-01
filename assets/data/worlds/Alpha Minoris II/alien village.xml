@@ -84,6 +84,7 @@
 <POIITEM>
 <item itemname="elf statue"/>
 </POIITEM>
+<POINPC name="minoris2_elves/doggy"/>
 <walloff wall="6" sides="northeast"/>
 </mapgen>
 

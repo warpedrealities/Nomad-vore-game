@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="greenDLowercase.png"/>
+<name>doggy</name>
+<description>
+A demi doggy girl, squatting down comfortably in place minding her own business here. Her furry white tail floofy and wagging at the attention you give her while her floppy dog ears twitch slightly and she looks back at you. She's wearing naught but a collar and a loincloth, perhaps she's some sort of domesticated pet for the elves.
+</description>
+<rpg >
+<experiencevalue value="10"/>
+<ability ability="STRENGTH" value="8" />
+<ability ability="AGILITY" value="10" />
+<ability ability="DEXTERITY" value="10" />
+<ability ability="ENDURANCE" value="8" />
+<ability ability="CHARM" value="10" />
+<ability ability="INTELLIGENCE" value="10" />
+<stat stat="HEALTH" value="30"/>
+<stat stat="RESOLVE" value="20"/>
+<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
+<missText count="1">
+<text>the doggy's punch fails to connect with TARGET</text>
+</missText>
+<hitText count="1">
+<text>the doggy hits TARGET for VALUE points of damage</text>
+</hitText>
+</combatMove>
+</rpg>
+
+<respawn delay="1000"/>
+<talk conversation="alpha_minoris_II/doggy/chat" />
+<controller AI="staystill"/>
+<faction value="minyos"/>
+</NPC>

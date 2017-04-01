@@ -24,7 +24,7 @@
 </combatMove>
 </rpg>
 
-<respawn delay="100"/>
+<respawn delay="2000"/>
 <disposition value="55"/>
 <defeated conversation="alpha_minoris_II/alienvillager/villagerdefeat" />
 <seduced conversation="alpha_minoris_II/alienvillager/villagerseduced" />
