@@ -22,14 +22,18 @@ public class QuickslotHandler {
 	public void handle() {
 
 		Item item=player.getInventory().getSlot(Inventory.QUICK);
-		if (ItemWeapon.class.isInstance(item.getItem()))
+		if (item!=null)
 		{
-			handleSwap(item);
+			if (ItemWeapon.class.isInstance(item.getItem()))
+			{
+				handleSwap(item);
+			}
+			if (ItemConsumable.class.isInstance(item.getItem()))
+			{
+				handleConsumable(item);
+			}		
 		}
-		if (ItemConsumable.class.isInstance(item.getItem()))
-		{
-			handleConsumable(item);
-		}
+
 	}
 
 	private void handleSwap(Item item) {
@@ -58,12 +62,15 @@ public class QuickslotHandler {
 				if (stack.getCount()<=0)
 				{
 					player.getInventory().setSlot(null, Inventory.QUICK);
+					
 				}
+				
 			}
 			else
 			{
 				player.getInventory().setSlot(null, Inventory.QUICK);
 			}
+			ViewScene.m_interface.UpdateInfo();
 		}
 	}
 

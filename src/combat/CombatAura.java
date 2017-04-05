@@ -206,7 +206,7 @@ public class CombatAura {
 		//get defence
 		int def=CombatLookup.getBaseDefence(0, defAttribute)+target.getAttribute(defAttribute);
 		//get attack bonus
-		int bonus=origin.getRPG().getAttribute(move.getBonusAttribute());
+		int bonus=move.getAttackBonus()+origin.getRPG().getAttribute(move.getBonusAttribute());
 		boolean visible=getVisible(target.getPosition());
 		int r=GameManager.m_random.nextInt(20)+bonus;
 		if (def<=r)

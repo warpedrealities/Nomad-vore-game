@@ -104,13 +104,13 @@ public class Game implements SceneManager {
 		sceneManager=this;
 		graphicsConfiguration=new Config();
 		
-		
+		/*
 		  try {
 		       System.setErr(new PrintStream(new FileOutputStream(System.getProperty("user.dir")+"/error.log")));
 		   } catch (FileNotFoundException ex) {
 		        ex.printStackTrace();
 		   }
-		
+		*/
 
         // Initialize GLFW. Most GLFW functions will not work before doing this.
         if (! glfwInit() )
@@ -237,6 +237,7 @@ public class Game implements SceneManager {
 		m_vshader=this.loadShader("assets/shaders/shaderv.txt", GL20.GL_VERTEX_SHADER);
 		m_fshader=this.loadShader("assets/shaders/shaderf.txt", GL20.GL_FRAGMENT_SHADER);
 		m_pshader=GL20.glCreateProgram();
+		System.err.println("system debug primary shader program id is "+m_pshader);
 		GL20.glAttachShader(m_pshader, m_vshader);
 		GL20.glAttachShader(m_pshader, m_fshader);
 		
@@ -253,6 +254,7 @@ public class Game implements SceneManager {
 		m_vshadowshader=this.loadShader("assets/shaders/shadowshaderv.txt", GL20.GL_VERTEX_SHADER);
 		m_fshadowshader=this.loadShader("assets/shaders/shadowshaderf.txt", GL20.GL_FRAGMENT_SHADER);
 		m_pshadowshader=GL20.glCreateProgram();
+		System.err.println("system debug shadow shader program id is "+m_pshadowshader);
 		GL20.glAttachShader(m_pshadowshader, m_vshadowshader);
 		GL20.glAttachShader(m_pshadowshader, m_fshadowshader);
 		

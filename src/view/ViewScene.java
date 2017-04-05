@@ -1398,6 +1398,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 			}
 			else
 			{
+				scr.setTalkingNpc(npc);
 				m_disabled=true;
 				m_screen=scr;
 			

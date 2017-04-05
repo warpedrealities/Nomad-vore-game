@@ -354,7 +354,7 @@ public class CombatMove {
 			//get defence
 			int def=CombatLookup.getBaseDefence(distance, defAttribute)+target.getAttribute(defAttribute);
 			//get attack bonus
-			int bonus=origin.getRPG().getAttribute(bonusAttribute);
+			int bonus=attackBonus+origin.getRPG().getAttribute(bonusAttribute);
 			if (distance>=2 && attackPattern!=AttackPattern.P_CONE)
 			{
 				ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x,target.getPosition().y),

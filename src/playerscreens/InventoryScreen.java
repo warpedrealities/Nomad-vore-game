@@ -324,8 +324,10 @@ public class InventoryScreen extends Screen implements Callback {
 			{
 				m_player.ApplyEffect(consumable.getEffect(i));	
 				popup.setClock(10);
-	
-				popup.setText(ViewScene.m_interface.getLastMessage());
+				if (ViewScene.m_interface.getLastMessage()!=null)
+				{
+					popup.setText(ViewScene.m_interface.getLastMessage());
+				}			
 			}
 			
 			m_player.setBusy(2);

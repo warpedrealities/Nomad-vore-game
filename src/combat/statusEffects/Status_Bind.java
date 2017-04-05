@@ -146,7 +146,7 @@ public class Status_Bind extends Status_AttribMod {
 			int x=dstream.readInt();
 			int y=dstream.readInt();
 			Actor actor=Universe.getInstance().getCurrentZone().getActor(x, y);
-			if (actor.getName().equals(originName))
+			if (actor!=null && actor.getName().equals(originName))
 			{
 				origin=actor;
 			}

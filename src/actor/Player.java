@@ -772,7 +772,7 @@ public class Player extends Actor
 			{	
 				actorRPG.setStat(Actor_RPG.SATIATION, actorRPG.getStat(Actor_RPG.SATIATION)-move.getAmmoCost());
 			}
-			if (slot!=-1)
+			if (slot>=0)
 			{			
 				if (playerInventory.getSlot(slot)!=null && ItemDepletableInstance.class.isInstance(playerInventory.getSlot(slot)))
 				{

@@ -174,7 +174,6 @@ public class SceneController implements Sense {
 	}
 
 	public void useQuickslot() {
-		// TODO Auto-generated method stub
 		quickslotHandler.handle();
 
 		

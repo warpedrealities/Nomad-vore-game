@@ -42,7 +42,7 @@ import widgets.WidgetConversation;
 
 public class DialogueScreen extends Screen implements Callback {
 
-	NPC m_npc;
+	NPC talkingNpc;
 	Player m_player;
 	Element m_root;
 	NodeList m_children;
@@ -92,6 +92,18 @@ public class DialogueScreen extends Screen implements Callback {
 		choiceHandler=new ChoiceHandler(new Vec2f(4,15.5F),tint,this);
 	}
 	
+	public NPC getTalkingNpc() {
+		return talkingNpc;
+	}
+
+
+
+	public void setTalkingNpc(NPC npc) {
+		this.talkingNpc = npc;
+	}
+
+
+
 	public boolean Load(String Conversation, NPC npc)
 	{
 		Document doc=ParserHelper.LoadXML("assets/data/conversations/"+Conversation+".xml");
@@ -121,7 +133,7 @@ public class DialogueScreen extends Screen implements Callback {
 	{
 		m_processor.setWidget(widget);
 		m_evaluator.setWidget(widget);
-		if (m_npc==null)
+		if (talkingNpc==null)
 		{
 			try
 			{
@@ -431,10 +443,11 @@ public class DialogueScreen extends Screen implements Callback {
 			break;
 			
 			case NPC:
-				m_text.AddText(m_npc.getName()+":"+choice.getText());
+				m_text.AddText(talkingNpc.getName()+":"+choice.getText());
 			break;
 		
 		}
+		m_text.BuildStrings();
 	}
 	
 	@Override

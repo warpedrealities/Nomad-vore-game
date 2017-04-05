@@ -77,12 +77,12 @@ public class Help_Scene extends SceneBase implements MyListener{
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_A)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_4)||Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT) && clock<=0)
 		{
 			back();
-			clock=1;
+			clock=2;
 		}	
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_D)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_6)||Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT) && clock<=0)
 		{
 			forward();
-			clock=1;
+			clock=2;
 		}				
 	}
 	
