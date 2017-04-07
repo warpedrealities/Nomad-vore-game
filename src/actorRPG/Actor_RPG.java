@@ -20,7 +20,8 @@ public interface Actor_RPG {
 	public static final int HEALTH=0;
 	public static final int RESOLVE=1;
 	public static final int SATIATION=2;
-	//public static final int AIR=3;
+	public static final int ACTION=3;
+
 	
 	public static final int KINETIC=0;
 	public static final int THERMAL=1;
@@ -89,4 +90,5 @@ public interface Actor_RPG {
 	public void removeStatus(int uid);
 	public Actor getActor();
 	public StatusEffectHandler getStatusEffectHandler();
+	public void recover(int i);
 }

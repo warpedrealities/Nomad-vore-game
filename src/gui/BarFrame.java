@@ -22,7 +22,7 @@ public class BarFrame extends GUIBase {
 		m_fonts[1]=new NuFont(new Vec2f(position.x+4,position.y+1),16,0.8F);
 		m_fonts[0].setString(tag);
 		m_fonts[1].setString(Integer.toString(value));
-		m_bar=new ProportionBar(position, new Vec2f(16,1), value, max, offset, texture);
+		m_bar=new ProportionBar(position, new Vec2f(16,0.9F), value, max, offset, texture);
 	}
 	
 	public void setVisible(boolean value)

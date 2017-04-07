@@ -7,7 +7,7 @@ A heavy metal power glove and battery laden bracer. The whole thing is studded w
 <modifier>
 <parry value="0"/>
 </modifier>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="STRENGTH"/>
 <missText count="1">
 <text>you fail to punch TARGET </text>
@@ -16,7 +16,7 @@ A heavy metal power glove and battery laden bracer. The whole thing is studded w
 <text>you punch TARGET for VALUE kinetic damage</text>
 </hitText>
 </combatMove>
-<combatMove name="powerpunch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" ammoCost="1">
+<combatMove name="powerpunch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" ammoCost="1" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="STRENGTH"/>
 <effectDamage type="SHOCK" minValue="2" maxValue="7" modifier="NONE"/>
 <missText count="1">

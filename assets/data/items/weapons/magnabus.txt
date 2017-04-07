@@ -6,7 +6,7 @@ The gun seems to be a magnetic accelerator, its barrel lined with toroidal accel
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="6" pattern="RANGED" bonusAttribute="RANGED" timeCost="2">
+<combatMove name="shoot" ammoCost="6" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>
 <effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>
 <effectDamage type="KINETIC" minValue="0" maxValue="3" modifier="NONE"/>

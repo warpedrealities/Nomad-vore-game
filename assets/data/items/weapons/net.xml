@@ -6,7 +6,7 @@ A net woven out of fabric strips and suitably weighted. Good for temporarily imm
 <modifier>
 
 </modifier>
-<combatMove name="throw" ammoCost="1" pattern="SHORT" bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2" throw="true">
+<combatMove name="throw" ammoCost="1" pattern="SHORT" bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2" throw="true" actionCost="2" basicAction="true">
 <effectStatus probability="100">
 <applyText>TARGET is caught in a net</applyText>
 <statusBind uid="20" icon="4"  numModifiers="2">

@@ -6,7 +6,7 @@ A rugged laser rifle, its long barrel makes it unwieldy in close quarters. 3-6 t
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-2">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-2" actionCost="2" basicAction="true">
 <effectDamage type="THERMAL" minValue="3" maxValue="6" modifier="NONE"/>
 <missText count="1">
 <text>you fail to shoot TARGET </text>

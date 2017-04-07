@@ -9,15 +9,6 @@
 <item value="jumpsuit"/>
 <item value="medkit"/>
 <item value="space meal"/>
-<item value="tadge oil"/>
-<item value="phalifungi"/>
-<item value="phalifungi"/>
-<item value="phalifungi"/>
-<item value="phalifungi"/>
-<item value="phalifungi"/>
-<item value="phalifungi"/>
-<item value="phalifungi"/>
-<item value="phalifungi"/>
 <appearance>
 <bodypart partname="body">
 <partvalue variablename="height" value="60"/>

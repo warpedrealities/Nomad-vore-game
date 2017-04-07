@@ -50,6 +50,8 @@ public class CombatMove {
 	private boolean nonViolent,toggleAbility;
 	private boolean throwWeapon;
 	private int energySource=0;
+	private int actionCost;
+	private boolean basicAction;
 	
 	public CombatMove(Effect effect, AttackPattern pattern, String moveName, String hitText, String missText, int attackBonus, int bonusAttribute)
 	{
@@ -74,6 +76,15 @@ public class CombatMove {
 		if (Enode.getAttribute("bonusToHit").length()>0)
 		{
 			attackBonus=Integer.parseInt(Enode.getAttribute("bonusToHit"));
+		}
+		if (Enode.getAttribute("basicAction").equals("true"))
+		{
+			basicAction=true;
+		}
+		//action cost
+		if (Enode.getAttribute("actionCost").length()>0)
+		{
+			actionCost=Integer.parseInt(Enode.getAttribute("actionCost"));
 		}
 		//ammocost
 		if (Enode.getAttribute("ammoCost").length()>0)
@@ -185,6 +196,22 @@ public class CombatMove {
 		
 	}
 	
+	public int getActionCost() {
+		return actionCost;
+	}
+
+	public void setActionCost(int actionCost) {
+		this.actionCost = actionCost;
+	}
+
+	public boolean isBasicAction() {
+		return basicAction;
+	}
+
+	public void setBasicAction(boolean basicAction) {
+		this.basicAction = basicAction;
+	}
+
 	public CombatMove() {
 		
 		effects=new ArrayList<Effect>();

@@ -491,21 +491,13 @@ public class Zone implements ILosBoard, Zone_int{
 	@Override
 	public Actor getActor(int x, int y) {
 
-		if (zoneTileGrid[x][y]!=null && zoneTileGrid[x][y].getActorInTile()!=null)
+		if (x>=0 && x<zoneWidth && y>=0 && y<zoneHeight)
 		{
-			return zoneTileGrid[x][y].getActorInTile();
-		}
-		/*
-		for (int i=0;i<zoneActors.size();i++)
-		{
-			int x0=(int)zoneActors.get(i).getPosition().x;
-			int y0=(int)zoneActors.get(i).getPosition().y;
-			if (x==x0 && y==y0)
+			if (zoneTileGrid[x][y]!=null && zoneTileGrid[x][y].getActorInTile()!=null)
 			{
-				return zoneActors.get(i);
-			}
+				return zoneTileGrid[x][y].getActorInTile();
+			}			
 		}
-		*/
 		return null;
 	}
 

@@ -6,7 +6,7 @@ A laser pistol for self defence against belligerent wildlife and other minor thr
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
 <effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
 <missText count="1">
 <text>you fail to shoot TARGET </text>

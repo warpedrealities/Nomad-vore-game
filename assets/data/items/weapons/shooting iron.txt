@@ -6,7 +6,7 @@ A dusty revolver, alien script carved into its handle. A servicable six shot wea
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="NONE"/>
 <missText count="1">
 <text>you fail to shoot TARGET</text>

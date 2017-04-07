@@ -6,7 +6,7 @@ A bulky handgun with a complicated looking firing mechanism and an elongated cli
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="NONE"/>
 <missText count="1">
 <text>you fail to shoot TARGET</text>
@@ -15,7 +15,7 @@ A bulky handgun with a complicated looking firing mechanism and an elongated cli
 <text>you shoot TARGET for VALUE kinetic damage</text>
 </hitText>
 </combatMove>
-<combatMove name="burst" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<combatMove name="burst" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="0" maxValue="5" modifier="NONE"/>
 <effectDamage type="KINETIC" minValue="0" maxValue="5" modifier="NONE"/>
 <effectDamage type="KINETIC" minValue="0" maxValue="5" modifier="NONE"/>

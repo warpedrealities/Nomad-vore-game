@@ -6,7 +6,7 @@ Starting from the stock the weapon starts with a bank of daisy chained batteries
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" actionCost="2" basicAction="true">
 
 <effectDamage type="SHOCK" minValue="4" maxValue="8" modifier="NONE"/>
 

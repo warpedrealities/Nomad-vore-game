@@ -6,7 +6,7 @@ A semi auto handgun but with burst fire capability. inflicts 3-6 kinetic damage 
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="NONE"/>
 <missText count="1">
 <text>you fail to shoot TARGET</text>
@@ -15,7 +15,7 @@ A semi auto handgun but with burst fire capability. inflicts 3-6 kinetic damage 
 <text>you shoot TARGET for VALUE kinetic damage</text>
 </hitText>
 </combatMove>
-<combatMove name="burst" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" bonusToHit="-2">
+<combatMove name="burst" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" bonusToHit="-2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="NONE"/>
 <effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="NONE"/>
 <effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="NONE"/>

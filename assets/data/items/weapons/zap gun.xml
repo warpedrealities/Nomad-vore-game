@@ -6,7 +6,7 @@ A complex jumble of wires and framework surrounding a blue crystalline core. Its
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
 
 <effectDamage type="SHOCK" minValue="1" maxValue="6" modifier="NONE"/>
 

@@ -353,11 +353,13 @@ public class Player extends Actor
 		}	
 		if (Keyboard.isKeyDown(GLFW_KEY_KP_5))
 		{
+			actorRPG.recover(2);
 			actorRPG.addBusy(2);
 			return true;
 		}	
 		if (Keyboard.isKeyDown(GLFW_KEY_R))
 		{
+			actorRPG.recover(20);
 			actorRPG.addBusy(20);
 			ViewScene.m_interface.screenFade(0.5F);
 			return true;
@@ -461,42 +463,6 @@ public class Player extends Actor
 		
 		return actorRPG.getCombatMove(0);
 	}
-/*	
-	@Override
-	public int Harm(Damage attack, Actor actor,int bonus) 
-	{
-		int v=RPGHandler.Harm(attack, actor, bonus);
-		
-		if (actorRPG.getStat(Actor_RPG.HEALTH)<=0)
-		{
-			if (NPC.class.isInstance(actor))
-			{
-				ViewScene.m_interface.PlayerBeaten((NPC)actor, false);		
-			}
-
-		}
-		return v;
-	}
-	
-	@Override
-	public int Weaken(int strength, int type, Actor actor) 
-	{
-		int v=RPGHandler.Weaken(strength, type, actor);
-		
-		if (actorRPG.getStat(Actor_RPG.RESOLVE)<=0)
-		{
-			if (NPC.class.isInstance(actor))
-			{
-				ViewScene.m_interface.PlayerBeaten((NPC)actor, true);		
-			}
-
-		}	
-		
-		
-		return v;
-	}
-*/
-	
 	
 	public void healTo(float proportion)
 	{
@@ -785,6 +751,20 @@ public class Player extends Actor
 				}
 			}
 		}
+		boolean actionDepleted=false;
+		if (move.getActionCost()<=actorRPG.getStat(Actor_RPG.ACTION))
+		{
+			if (move.isBasicAction()==true)
+			{
+				actionDepleted=true;
+			}
+			else
+			{
+				ViewScene.m_interface.DrawText("AP cost not met");
+				return false;
+			}
+		}
+		
 		//use move
 		boolean b=move.useMove(this, attackable);
 		//remove energy		
@@ -827,7 +807,16 @@ public class Player extends Actor
 			{
 		
 			}
-			actorRPG.addBusy(move.getTimeCost());
+			((Player_RPG)actorRPG).useAction(move.getActionCost());
+			if (actionDepleted)
+			{
+				actorRPG.addBusy(move.getTimeCost()*2);		
+			}
+			else
+			{
+				actorRPG.addBusy(move.getTimeCost());			
+			}
+
 		}	
 		return b;
 	}

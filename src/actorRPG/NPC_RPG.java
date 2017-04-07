@@ -308,4 +308,10 @@ public class NPC_RPG implements Actor_RPG{
 		// TODO Auto-generated method stub
 		return actor;
 	}
+
+	@Override
+	public void recover(int i) {
+		// TODO Auto-generated method stub
+		
+	}
 }

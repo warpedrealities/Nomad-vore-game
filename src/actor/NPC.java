@@ -476,9 +476,13 @@ public class NPC extends Actor implements Controllable {
 		}
 		else
 		{
-			if (RPGHandler.getActive()==false)
+			if (actorRPG.getStat(Actor_RPG.HEALTH)<=0)
 			{
 				return true;
+			}
+			if (actorRPG.getStat(Actor_RPG.RESOLVE)<=0)
+			{
+				actorRPG.setStat(Actor_RPG.RESOLVE, actorRPG.getStatMax(Actor_RPG.RESOLVE));
 			}
 		}
 		return false;

@@ -6,7 +6,7 @@ A sharp knife, suitable for chopping vegetables and maybe self defence in close 
 <modifier>
 <parry value="0"/>
 </modifier>
-<combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="DEXTERITY"/>
 <missText count="1">
 <text>you fail to stab TARGET </text>

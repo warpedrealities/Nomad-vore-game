@@ -6,7 +6,7 @@ A cobbled together hamdgun with a large dishlike front end and a stubby body tha
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
 
 <effectDamage type="SHOCK" minValue="0" maxValue="1" modifier="NONE"/>
 <effectStatus probability="25">

@@ -63,6 +63,8 @@ public class Player_RPG implements Actor_RPG {
 	
 	int busy;
 	float karmaMeter;
+	boolean regenAction;
+
 	
 	public void genMoveList()
 	{
@@ -245,7 +247,7 @@ public class Player_RPG implements Actor_RPG {
 	void SetInitialValues()
 	{
 		
-		for (int i=0;i<3;i++)
+		for (int i=0;i<4;i++)
 		{
 			stats[i]=statMax[i]*1.0F;
 		}	
@@ -272,6 +274,10 @@ public class Player_RPG implements Actor_RPG {
 		if (stats[RESOLVE]<statMax[RESOLVE])
 		{
 			stats[RESOLVE]+=0.1F*duration;	
+		}
+		if (stats[ACTION]<statMax[ACTION])
+		{
+			stats[ACTION]+=statMax[ACTION];	
 		}
 		statusEffectHandler.clearStatusEffects(actor, this);
 		/*
@@ -335,6 +341,16 @@ public class Player_RPG implements Actor_RPG {
 		statusEffectHandler.update(1, this);
 		
 		cooldownHandler.update(1);
+		
+		if (regenAction && stats[ACTION]<statMax[ACTION])
+		{
+			stats[ACTION]+=(statMax[ACTION]/120.0F);
+		}
+		if (busy<=0)
+		{
+			regenAction=true;
+		}
+	
 	}
 
 	void Calcstats()
@@ -343,15 +359,17 @@ public class Player_RPG implements Actor_RPG {
 		statMax[0]=10+(abilities[ENDURANCE]*4);
 		statMax[1]=10+(abilities[INTELLIGENCE]*4);
 		statMax[2]=50+(abilities[ENDURANCE]*20);
-		
+		statMax[3]=30;
+			
 		float v=(abilities[ENDURANCE]-3)*playerLevel;
 		statMax[0]+=v;
 		v=(abilities[INTELLIGENCE]-3)*playerLevel;
 		statMax[1]+=v;
 		v=(abilities[INTELLIGENCE]-3)*playerLevel*2;
 		statMax[2]+=v;
+		v=playerLevel*2;
+		statMax[3]+=v;
 		
-		statMax[3]=10;
 		PerkProcessor processor=new PerkProcessor(attributes,statMax,abilities,subAbilities);
 		for (int i=0;i<playerPerks.size();i++)
 		{
@@ -708,6 +726,7 @@ public class Player_RPG implements Actor_RPG {
 		addPerk(perk);
 		stats[0]=statMax[0];
 		stats[1]=statMax[1];
+		stats[3]=statMax[3];
 	}
 
 	@Override
@@ -913,6 +932,25 @@ public class Player_RPG implements Actor_RPG {
 	public void modKarmaMeter(float value) {
 		this.karmaMeter = karmaMeter+value;
 	}
-	
-	
+
+
+
+	@Override
+	public void recover(int i) {
+
+		if (stats[ACTION]<statMax[ACTION])
+		{
+			stats[ACTION]+=(statMax[ACTION]/60.0F);
+		}	
+		regenAction=false;
+	}
+	public void useAction(int amount)
+	{
+		stats[Actor_RPG.ACTION]-=amount;
+		if (stats[Actor_RPG.ACTION]<=0)
+		{
+			stats[Actor_RPG.ACTION]=0;
+		}
+		regenAction=false;
+	}
 }

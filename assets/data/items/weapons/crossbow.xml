@@ -6,7 +6,7 @@ A crossbow and matching bolt pouch. It can be recocked with a handle leading to 
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="3" rangedbias="4" bonusToHit="-2">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="3" rangedbias="4" bonusToHit="-2" actionCost="2" basicAction="true">
 <effectDamage type="KINETIC" minValue="3" maxValue="8" modifier="NONE"/>
 <missText count="1">
 <text>you fail to shoot TARGET</text>

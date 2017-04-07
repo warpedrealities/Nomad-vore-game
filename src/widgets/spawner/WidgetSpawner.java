@@ -198,7 +198,12 @@ public class WidgetSpawner extends Widget {
 		int r=Universe.getInstance().m_random.nextInt(100);
 		if (r<data.getChance())
 		{
-			int count=data.getMinCount()+Universe.getInstance().m_random.nextInt(data.getMaxCount()-data.getMinCount());
+			
+			int count=data.getMinCount();
+			if (data.getMaxCount()>data.getMinCount())
+			{
+				count+=Universe.getInstance().m_random.nextInt(data.getMaxCount()-data.getMinCount());
+			}
 			Document doc=ParserHelper.LoadXML("assets/data/npcs/"+data.getFilename()+".xml");
 		    Element n=(Element)doc.getFirstChild();
 			NPC npc=new NPC(n,new Vec2f(0,0),data.getFilename());

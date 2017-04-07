@@ -127,7 +127,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 			m_text.AddText(sceneController.getActiveZone().zoneDescription);
 			m_text.BuildStrings();
 		}
-		m_bars=new BarFrame[3];
+		m_bars=new BarFrame[4];
 		m_buttons=new Button2[5];
 		for (int i=0;i<4;i++)
 		{
@@ -152,21 +152,20 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 				str1="character";
 				break;
 			case 3:
-				str="oxygen";
+				str="action";
 			
 				str1="file";
 				break;
 			}
 			
 			m_buttons[i]=new Button2(new Vec2f(8.5F,6.5F-(i*2)),new Vec2f(8,2),m_textureIds[7],this, str1,i,m_textureIds[8],1.2F);
-			if (i<3)
+			if (i<4)
 			{
-				m_bars[i]=new BarFrame(new Vec2f(8.5F,15.5F-(i*1.4F)), str, 
+				m_bars[i]=new BarFrame(new Vec2f(8.5F,15.7F-(i*1.0F)), str, 
 						sceneController.getUniverse().player.getRPG().getStat(i), 
 						sceneController.getUniverse().player.getRPG().getStatMax(i), 1+i, m_textureIds[6]);
 				m_window.add(m_bars[i]);				
-			}
-
+			}	
 			m_window.add(m_buttons[i]);
 			
 		}
@@ -248,7 +247,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 			m_text.AddText(sceneController.getActiveZone().zoneDescription);
 			m_text.BuildStrings();
 		}
-		m_bars=new BarFrame[3];
+		m_bars=new BarFrame[4];
 		m_buttons=new Button2[5];
 		for (int i=0;i<4;i++)
 		{
@@ -273,21 +272,20 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 				str1="character";
 				break;
 			case 3:
-				str="oxygen";
+				str="action";
 			
 				str1="file";
 				break;
 			}
 			
-			m_buttons[i]=new Button2(new Vec2f(8.5F,6.5F-(i*2)),new Vec2f(8,2),m_textureIds[7],this, str1,i,m_textureIds[8],1);
-			if (i<3)
+			m_buttons[i]=new Button2(new Vec2f(8.5F,6.5F-(i*2)),new Vec2f(8,2),m_textureIds[7],this, str1,i,m_textureIds[8],1.2F);
+			if (i<4)
 			{
-				m_bars[i]=new BarFrame(new Vec2f(8.5F,15.5F-(i*1.4F)), str, 
+				m_bars[i]=new BarFrame(new Vec2f(8.5F,15.7F-(i*1.0F)), str, 
 						sceneController.getUniverse().player.getRPG().getStat(i), 
 						sceneController.getUniverse().player.getRPG().getStatMax(i), 1+i, m_textureIds[6]);
-				m_window.add(m_bars[i]);			
-			}
-	
+				m_window.add(m_bars[i]);				
+			}				
 			m_window.add(m_buttons[i]);
 			
 		}
@@ -366,19 +364,10 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 	
 	public void redrawBars()
 	{
-		for (int i=0;i<3;i++)
+		for (int i=0;i<4;i++)
 		{
 			m_bars[i].setValue(sceneController.getUniverse().player.getRPG().getStat(i));
 		}			
-		if (sceneController.getUniverse().player.getRPG().getStat(3)<
-				sceneController.getUniverse().player.getRPG().getStatMax(3))
-		{
-			
-		}
-		else
-		{
-			m_bars[3].setVisible(false);
-		}
 		
 		statusDisplay.redraw();
 		cooldownDisplay.redraw();
@@ -536,6 +525,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 						
 						sceneController.getHandler().attack(p,sceneController.getUniverse().player);
 						m_reader.UpdateEnergy();
+						redrawBars();
 					break;
 					
 					case SPECIAL:
