@@ -20,6 +20,7 @@ public class Effect_Recover extends Effect {
 	public final static int SATIATION=0;
 	public final static int HEALTH=1;
 	public final static int RESOLVE=2;
+	public final static int ACTION=3;
 	public static int ModfromString(String str)
 	{
 		if (str.contains("SATIATION"))
@@ -35,7 +36,10 @@ public class Effect_Recover extends Effect {
 		{
 			return RESOLVE;
 		}	
-			
+		if (str.contains("ACTION"))
+		{
+			return RESOLVE;
+		}				
 		return -1;
 	}
 	
@@ -82,7 +86,9 @@ public class Effect_Recover extends Effect {
 		case Effect_Recover.RESOLVE:
 			actor.getRPG().IncreaseStat(Actor_RPG.RESOLVE, value);
 			break;
-		
+		case Effect_Recover.ACTION:
+			actor.getRPG().IncreaseStat(Actor_RPG.ACTION, value);
+			break;
 		}
 		ViewScene.m_interface.DrawText(m_description);
 		return value;

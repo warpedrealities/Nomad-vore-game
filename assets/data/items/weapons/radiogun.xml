@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <ItemWeapon name="radio gun" weight="2" value="100">
+<tagSet value="A"/>
 <description>
-A cobbled together hamdgun with a large dishlike front end and a stubby body that houses a crude computation unit intended to spam command signals rapidly at whatever its targeting.
+A cobbled together hamdgun with a large dishlike front end and a stubby body that houses a crude computation unit intended to spam command signals rapidly at whatever its targeting. (A)
 </description>
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true" moveType="FIGHT">
 
 <effectDamage type="SHOCK" minValue="0" maxValue="1" modifier="NONE"/>
 <effectStatus probability="25">

@@ -5,7 +5,7 @@
 In this world of voracious orifices, beguiling aliens and horrifying danger sometimes all that stands between you and peril is the ability to run away like the dreaded vorpal bunny was chasing you. Sprinting burns calories fast though, beware.
 </description>
 <move count="1">
-<combatmove name="sprint" toggledability="true" timeCost="1" cooldown="30" icon="0" pattern="SELF" bonusAttribute="MELEE"> 
+<combatmove name="sprint" toggledability="true" timeCost="1" cooldown="30" icon="0" pattern="SELF" bonusAttribute="MELEE" moveType="MOVEMENT"> 
 <hitText count="1">
 <text></text>
 </hitText>
@@ -16,7 +16,7 @@ In this world of voracious orifices, beguiling aliens and horrifying danger some
 <applyText>TARGET is now sprinting</applyText>
 <statusSubAbilityMod uid="22" icon="5" duration="1000" numModifiers="2">
 <effect attribute="MOVECOST" modifier="-100"/>
-<effect attribute="METABOLISM" modifier="10"/>
+<effect attribute="MOVEAPCOST" modifier="100"/>
 <removeText> TARGET is no longer sprinting</removeText>
 </statusSubAbilityMod>
 </effectStatus>

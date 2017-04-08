@@ -5,7 +5,7 @@
 The best gunslingers often focus more on how not to be shot over further advancing their ability to shoot others. And as such cultivate a form of threat awareness that can be maintained for the length of a single fight. Grants dodge boost special move +4.
 </description>
 <move count="3">
-<combatmove name="hyper awareness" timeCost="2" cooldown="300" icon="1" pattern="SELF" bonusAttribute="RANGED"> 
+<combatmove name="hyper awareness" timeCost="2" cooldown="300" icon="1" pattern="SELF" bonusAttribute="RANGED" actionCost="2" moveType="FIGHT"> 
 <hitText count="1">
 <text></text>
 </hitText>

@@ -252,6 +252,7 @@ public class Player extends Actor
 	@Override
 	public boolean move(int direction)
 	{
+		boolean b=false;
 		Vec2f p=ZoneInteractionHandler.getPos(direction, getPosition());
 		Actor actor=Universe.getInstance().getCurrentZone().getActor((int)p.x, (int)p.y);
 		if (actor!=null && NPC.class.isInstance(actor))
@@ -259,7 +260,7 @@ public class Player extends Actor
 			if (actor.isBlocking()==false)
 			{
 				actor.setPosition(new Vec2f(actorPosition.x,actorPosition.y));
-				return super.move(direction);
+				b= super.move(direction);
 			}
 			else
 			{
@@ -271,7 +272,19 @@ public class Player extends Actor
 			}
 
 		}
-		return super.move(direction);
+		b= super.move(direction);
+		if (b==true)
+		{
+			if (actorRPG.getSubAbility(Actor_RPG.MOVEAPCOST)>0)
+			{
+				((Player_RPG)actorRPG).useAction((int)actorRPG.getSubAbility(Actor_RPG.MOVEAPCOST));
+				if (actorRPG.getStat(Actor_RPG.ACTION)<=0)
+				{
+					actorRPG.addBusy((int)actorRPG.getSubAbility(Actor_RPG.MOVECOST));
+				}
+			}
+		}
+		return b;
 	}
 
 	private boolean altControlFinal()
@@ -752,7 +765,7 @@ public class Player extends Actor
 			}
 		}
 		boolean actionDepleted=false;
-		if (move.getActionCost()<=actorRPG.getStat(Actor_RPG.ACTION))
+		if (move.getActionCost()>=actorRPG.getStat(Actor_RPG.ACTION))
 		{
 			if (move.isBasicAction()==true)
 			{

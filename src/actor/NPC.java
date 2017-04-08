@@ -428,7 +428,7 @@ public class NPC extends Actor implements Controllable {
 	@Override
 	public void Defeat(Actor victor,boolean resolve)
 	{
-		if (Player.class.isInstance(victor))
+		if (Player.class.isInstance(victor) && victor.isHostile(this.getActorFaction().getFilename()))
 		{
 			((Player_RPG)Universe.getInstance().getPlayer().getRPG()).addEXP(((NPC_RPG)actorRPG).getExpValue());		
 		}

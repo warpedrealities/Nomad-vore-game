@@ -14,6 +14,7 @@ import item.ItemWeapon;
 
 public class Player_RPG_moveHandler {
 
+	private int moveLists[];
 	
 	public class moveModifierInstance
 	{
@@ -27,8 +28,9 @@ public class Player_RPG_moveHandler {
 		}
 	}
 	
-	public void handlePerkBasedMoves(Player player,ArrayList<CombatMove> moves, ArrayList<PerkInstance> perks)
+	public void handlePerkBasedMoves(Player player,ArrayList<CombatMove> moves,int []moveLists, ArrayList<PerkInstance> perks)
 	{
+		this.moveLists=moveLists;
 		ArrayList<moveModifierInstance> moveModifier=new ArrayList<>();
 		
 		for (int i=0;i<perks.size();i++)
@@ -68,7 +70,7 @@ public class Player_RPG_moveHandler {
 			{
 				CombatMove move=weapon.getMove(0);
 				
-				moves.add(perk.createMove(rank,move));
+				addMove(moves,perk.createMove(rank,move));
 				
 			}
 		}
@@ -111,7 +113,7 @@ public class Player_RPG_moveHandler {
 		modifier.modifier.getMove().applyModifier(move, modifier.rank);
 		
 		
-		moves.add(move);
+		addMove(moves,move);
 	}
 	
 	private CombatMove pickMove(ArrayList<CombatMove> moves, moveModifierInstance modifier) {
@@ -139,7 +141,41 @@ public class Player_RPG_moveHandler {
 				return;
 			}
 		}
-		moves.add(move);
+		addMove(moves,move);
 	}
+
+	private int getMoveCategoryOffset(int index)
+	{
+		switch (index)
+		{
+			case 0:
+			return 1;
+			
+			case 1:
+				
+			return 1+moveLists[0];
+			
+			case 2:
+				
+			return 1+moveLists[0]+moveLists[1];
+			
+			case 3:
+				
+			return 1+moveLists[0]+moveLists[1]+moveLists[2];
+		
+		}
+		return 0;
+	}	
+	
+	private void addMove(ArrayList<CombatMove> moves,CombatMove move)
+	{
+		int index=0;
+		index=getMoveCategoryOffset(move.getMoveType().getValue()+1);	
+		
+		moves.add(index,move);
+		moveLists[move.getMoveType().getValue()]++;
+	}
+	
+	
 
 }

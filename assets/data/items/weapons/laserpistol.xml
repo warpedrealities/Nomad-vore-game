@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <ItemWeapon name="laser pistol" weight="2" value="350">
+<tagSet value="A"/>
 <description>
-A laser pistol for self defence against belligerent wildlife and other minor threats, or so the packaging claims. 1-6 thermal damage with a coherent light beam.
+A laser pistol for self defence against belligerent wildlife and other minor threats, or so the packaging claims. 1-6 thermal damage with a coherent light beam. (A)
 </description>
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true" moveType="FIGHT">
 <effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
 <missText count="1">
 <text>you fail to shoot TARGET </text>

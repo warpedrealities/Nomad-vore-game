@@ -45,6 +45,10 @@ public class RPG_Helper {
 		{
 			return Actor_RPG.SATIATION;
 		}
+		if (str.contains("ACTION"))
+		{
+			return Actor_RPG.ACTION;
+		}
 		return -1;
 		
 	}
@@ -168,7 +172,10 @@ public class RPG_Helper {
 		{
 			return Actor_RPG.MOVECOST;
 		}
-
+		if (string.equals("MOVEAPCOST"))
+		{
+			return Actor_RPG.MOVEAPCOST;
+		}
 		return 0;
 	}
 }

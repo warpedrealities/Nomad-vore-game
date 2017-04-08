@@ -53,7 +53,7 @@ public class LootSubTable extends LootEntry{
 		
 		for (int i=0;i<loot.size();i++)
 		{
-			if (r>lrange && r<lrange+loot.get(i).getChance())
+			if (r>lrange && r<=lrange+loot.get(i).getChance())
 			{
 				return Universe.getInstance().getLibrary().getItem(loot.get(i).getItem());
 			}

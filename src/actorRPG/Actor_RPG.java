@@ -51,6 +51,7 @@ public interface Actor_RPG {
 	public static final int REGENTHRESHOLD=1;
 	public static final int METABOLISM=2;
 	public static final int MOVECOST=3;
+	public static final int MOVEAPCOST=4;
 	
 	public CombatMove getCombatMove(int index);
 	public int getAttribute(int i);
@@ -91,4 +92,5 @@ public interface Actor_RPG {
 	public Actor getActor();
 	public StatusEffectHandler getStatusEffectHandler();
 	public void recover(int i);
+	public float getSubAbility(int i);
 }

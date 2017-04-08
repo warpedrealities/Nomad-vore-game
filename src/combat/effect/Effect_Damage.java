@@ -57,7 +57,7 @@ public class Effect_Damage extends Effect {
 			break;
 			
 		case Actor_RPG.SHOCK:
-			target.addBusy(strength/2);
+			target.addBusy(strength);
 			break;
 			
 		case Actor_RPG.TEASE:

@@ -4,7 +4,7 @@
 <description> You have the ability to secrete an arousing scent that lowers the resolve of all those who are exposed to it, changing their perceptions and making them more amenable to your will. It should be noticed that your body manufacturing these pheremones has a metabolic cost. 1-6 pheremone damage.
 </description>
 <move count="1">
-<combatmove name="pheremone dispersal" ammoCost="2" timeCost="2" pattern="CIRCLE" bonusAttribute="SEDUCTION" bonusToHit="2"> 
+<combatmove name="pheremone dispersal" ammoCost="2" timeCost="2" pattern="CIRCLE" bonusAttribute="SEDUCTION" bonusToHit="2" moveType="DOMINATE"> 
 <effectDamage type="PHEREMONE" minValue="1" maxValue="6" modifier="CHARM"/>
 <missText count="1">
 <text>TARGET fails to be aroused by the scents</text>

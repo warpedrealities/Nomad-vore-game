@@ -10,12 +10,13 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import nomad.Universe;
 
 public class Inventory {
 
-	ArrayList <Item> m_items;
+	List <Item> m_items;
 	int m_capacity;
 	float m_weight;
 	Item m_slots[];
@@ -28,7 +29,7 @@ public class Inventory {
 	public final static int HEAD=3;
 	public final static int QUICK=4;
 	
-	public ArrayList<Item> getItems()
+	public List<Item> getItems()
 	{
 		return m_items;
 	}
@@ -351,6 +352,14 @@ public class Inventory {
 	public void setSlot(Item item, int index)
 	{
 		m_slots[index]=item;
+	}
+
+	public void setItems(List<Item> newlist) {
+		m_items=newlist;
+	}
+
+	public void sort() {
+		m_items.sort(null);
 	}
 	
 }

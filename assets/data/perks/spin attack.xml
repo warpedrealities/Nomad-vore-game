@@ -6,7 +6,7 @@
 <description> 
 you're able to attack everyone around you with a whirling spin attack, though it completes somewhat slower than a regular attack  (-4 to hit, +2 time cost, circle, weapon tag: S)
 </description>
-<weaponMove name="spin" bonusToHit="-4" tag="S" pattern="CIRCLE" timeModifier="2">
+<weaponMove name="spin" bonusToHit="-4" tag="S" pattern="CIRCLE" timeModifier="2" actionCost="1" moveType="FIGHT">
 </weaponMove>
 <maxrank value="1"/>
 

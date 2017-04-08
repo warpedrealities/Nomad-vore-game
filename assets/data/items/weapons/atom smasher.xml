@@ -6,7 +6,7 @@ A man portable nuclear weapon, the atom smasher initiates the fission of a small
 <modifier>
 
 </modifier>
-<combatMove name="blast" ammoCost="1" pattern="CONE" bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2" actionCost="2" basicAction="true">
+<combatMove name="blast" ammoCost="1" pattern="CONE" bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2" actionCost="2" basicAction="true" moveType="FIGHT">
 <effectDamage type="THERMAL" minValue="6" maxValue="12" modifier="NONE"/>
 <missText count="1">
 <text>TARGET manages to avoid the irradiative blast </text>

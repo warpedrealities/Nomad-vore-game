@@ -270,7 +270,7 @@ public class CraftingScreen extends Screen implements Callback {
 	private boolean hasIngredient(CraftingIngredient craftingIngredient) {
 		int count=0;
 		
-		ArrayList<Item> list=player.getInventory().getItems();
+		java.util.List<Item> list=player.getInventory().getItems();
 		for (int i=0;i<list.size();i++)
 		{
 			if (list.get(i).getItem().getName().contains(craftingIngredient.getItemName()))

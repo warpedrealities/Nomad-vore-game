@@ -50,10 +50,11 @@ public class Player_RPG implements Actor_RPG {
 	Inventory playerInventory;
 	ArrayList<PerkInstance> playerPerks;
 	ArrayList<CombatMove> moveList;
-	
+	private int moveLists[]=new int[4];
 	CooldownHandler cooldownHandler;
 	
 	private CombatMove[] defaultMoves;
+
 	private int regenDelay;
 	int moveChoice;
 	
@@ -70,6 +71,10 @@ public class Player_RPG implements Actor_RPG {
 	{
 		//clear
 		moveList.clear();
+		for (int i=0;i<4;i++)
+		{
+			moveLists[i]=0;
+		}
 		//read inventory
 
 		if (playerInventory.getSlot(0)!=null)
@@ -88,10 +93,15 @@ public class Player_RPG implements Actor_RPG {
 			{
 				ItemDepletableInstance di=(ItemDepletableInstance)playerInventory.getSlot(0);
 				ItemWeapon weapon=(ItemWeapon)di.getItem();
-				for (int i=0;i<weapon.getMoveCount();i++)
+				moveList.add(weapon.getMove(0));
+				if (weapon.getMoveCount()>1)
 				{
-					moveList.add(weapon.getMove(i));
+					for (int i=1;i<weapon.getMoveCount();i++)
+					{
+						addMove(weapon.getMove(i));
+					}		
 				}
+
 				//check if weapon move 0 has enough energy to use
 				if (moveList.get(0).getAmmoCost()>di.getEnergy())
 				{
@@ -134,15 +144,21 @@ public class Player_RPG implements Actor_RPG {
 			}		
 		}
 		//read seduction
-		moveList.add(defaultMoves[1]);
+		addMove(defaultMoves[1]);
 		//read perks
 	//	handlePerkBasedMoves();
-		new Player_RPG_moveHandler().handlePerkBasedMoves((Player)actor,moveList, playerPerks);
+		new Player_RPG_moveHandler().handlePerkBasedMoves((Player)actor,moveList,moveLists, playerPerks);
 		
 		cooldownHandler.updateList(Arrays.copyOf(moveList.toArray(),moveList.size(),CombatMove[].class));
 	}
 
-	
+	private void addMove(CombatMove move)
+	{
+		int index=0;
+		index=getMoveCategoryOffset(move.getMoveType().getValue()+1);
+		moveList.add(index,move);
+		moveLists[move.getMoveType().getValue()]++;
+	}
 	
 	public int getBindState() {
 		return statusEffectHandler.getBindState();
@@ -176,7 +192,7 @@ public class Player_RPG implements Actor_RPG {
 		stats=new float[4];
 		statMax=new int[4];
 		attributes=new int[23];
-		subAbilities=new float[4];
+		subAbilities=new float[5];
 		for (int i=0;i<22;i++)
 		{
 			attributes[i]=0;
@@ -192,7 +208,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=00;
+		playerExperience=2000;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -201,6 +217,7 @@ public class Player_RPG implements Actor_RPG {
 		Calcstats();
 		SetInitialValues();
 		karmaMeter=50.0F;
+		subAbilities[MOVEAPCOST]=0;
 	}
 	
 	private void defaultStats()
@@ -215,7 +232,7 @@ public class Player_RPG implements Actor_RPG {
 			abilities[i]=5;
 		}	
 		
-		subAbilities[METABOLISM]=0.05F;
+		subAbilities[METABOLISM]=0.025F;
 		subAbilities[REGENERATION]=0.05F;
 		subAbilities[REGENTHRESHOLD]=0.5F;
 		subAbilities[MOVECOST]=1.0F;
@@ -328,7 +345,7 @@ public class Player_RPG implements Actor_RPG {
 			{
 				if ( stats[SATIATION]>statMax[SATIATION]*subAbilities[REGENTHRESHOLD])
 				{
-					stats[HEALTH]+=subAbilities[REGENERATION]; stats[SATIATION]-=subAbilities[REGENERATION]*2;		
+					stats[HEALTH]+=subAbilities[REGENERATION]; stats[SATIATION]-=subAbilities[REGENERATION];		
 				}			
 			}		
 		}
@@ -344,7 +361,7 @@ public class Player_RPG implements Actor_RPG {
 		
 		if (regenAction && stats[ACTION]<statMax[ACTION])
 		{
-			stats[ACTION]+=(statMax[ACTION]/120.0F);
+			stats[ACTION]+=getActionRegen();
 		}
 		if (busy<=0)
 		{
@@ -607,7 +624,7 @@ public class Player_RPG implements Actor_RPG {
 		abilities=new int[6];
 		stats=new float[4];
 		statMax=new int[4];
-		subAbilities=new float[4];
+		subAbilities=new float[5];
 		attributes=new int[23];
 		for (int i=0;i<14;i++)
 		{
@@ -933,14 +950,21 @@ public class Player_RPG implements Actor_RPG {
 		this.karmaMeter = karmaMeter+value;
 	}
 
-
+	private float getActionRegen()
+	{
+		if (stats[SATIATION]>statMax[SATIATION]*0.5F)
+		{
+			return statMax[ACTION]/120.0F;			
+		}
+		return statMax[ACTION]/240.0F;
+	}
 
 	@Override
 	public void recover(int i) {
 
 		if (stats[ACTION]<statMax[ACTION])
 		{
-			stats[ACTION]+=(statMax[ACTION]/60.0F);
+			stats[ACTION]+=getActionRegen()*2;
 		}	
 		regenAction=false;
 	}
@@ -953,4 +977,34 @@ public class Player_RPG implements Actor_RPG {
 		}
 		regenAction=false;
 	}
+
+	public int getMoveCategoryOffset(int index)
+	{
+		switch (index)
+		{
+			case 0:
+			return 1;
+			
+			case 1:
+				
+			return 1+moveLists[0];
+			
+			case 2:
+				
+			return 1+moveLists[0]+moveLists[1];
+			
+			case 3:
+				
+			return 1+moveLists[0]+moveLists[1]+moveLists[2];
+		
+		}
+		return 0;
+	}
+
+	public int getMoveCategorySize(int index) {
+		return moveLists[index];
+	}
+	
+	
+
 }

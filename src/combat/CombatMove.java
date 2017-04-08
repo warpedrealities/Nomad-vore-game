@@ -10,6 +10,7 @@ import org.w3c.dom.NodeList;
 
 import combat.effect.Effect;
 import combat.effect.Effect_Damage;
+import combat.effect.Effect_Movement;
 import combat.effect.Effect_Status;
 import combat.statusEffects.StatusEffect;
 import combat.effect.Effect_Recover;
@@ -40,10 +41,24 @@ public class CombatMove {
 		}
 		
 	}
+	public enum MoveType{FIGHT(0),DOMINATE(1),MOVEMENT(2),OTHER(3);
+		int value;
+		MoveType(int value)
+		{
+			this.value=value;
+		}
+		
+		public int getValue()
+		{
+			return value;
+		}		
+	};
+	
 	public enum ItemThrow{T_KEEP,T_THROW,T_ONCE};
 	private String moveName;
 	private int ammoCost,timeCost,moveCooldown, attackBonus, bonusAttribute, rangedBias,icon;
 	private AttackPattern attackPattern;
+	private MoveType moveType;
 	private ArrayList<Effect> effects;
 	private String[] hitText;
 	private String[] missText;
@@ -76,6 +91,10 @@ public class CombatMove {
 		if (Enode.getAttribute("bonusToHit").length()>0)
 		{
 			attackBonus=Integer.parseInt(Enode.getAttribute("bonusToHit"));
+		}
+		if (Enode.getAttribute("moveType").length()>0)
+		{
+			moveType=strToType(Enode.getAttribute("moveType"));
 		}
 		if (Enode.getAttribute("basicAction").equals("true"))
 		{
@@ -154,7 +173,11 @@ public class CombatMove {
 				{
 					effects.add(new Effect_Status(e));
 				}
-
+				
+				if (e.getTagName().equals("effectMovement"))
+				{
+					effects.add(new Effect_Movement(e));
+				}
 				if (e.getTagName().equals("missText"))
 				{
 					genMiss(e);
@@ -275,7 +298,22 @@ public class CombatMove {
 			}
 		}
 	}
-
+	static public MoveType strToType(String string)
+	{
+		if (string.equals("DOMINATE"))
+		{
+			return MoveType.DOMINATE;
+		}
+		if (string.equals("MOVEMENT"))
+		{
+			return MoveType.MOVEMENT;
+		}		
+		if (string.equals("OTHER"))
+		{
+			return MoveType.OTHER;
+		}
+		return MoveType.FIGHT;
+	}
 	static public AttackPattern strToPattern(String string)
 	{
 		if (string.equals("MELEE"))
@@ -623,6 +661,10 @@ public class CombatMove {
 	public void setName(String moveName2) {
 		this.moveName=moveName2;
 		
+	}
+
+	public MoveType getMoveType() {
+		return moveType;
 	}
 
 

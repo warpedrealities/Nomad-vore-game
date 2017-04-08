@@ -28,6 +28,7 @@ import item.Item.ItemUse;
 
 import java.io.IOException;
 import java.nio.FloatBuffer;
+import java.util.Collections;
 
 import org.lwjgl.glfw.GLFW;
 
@@ -494,6 +495,7 @@ public class InventoryScreen extends Screen implements Callback {
 		
 		case 3:
 			m_player.calcMove();
+			m_player.getInventory().sort();
 			m_callback.Remove();
 			break;
 

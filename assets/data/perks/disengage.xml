@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<perk name="Disengage">
+<description> 
+
+</description>
+<combatmove name="disengage" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" cooldown="300" icon="4" pattern="MELEE"  actionCost="2" moveType="MOVEMENT"> 
+<missText count="1">
+<text>you to disengage from TARGET .</text>
+</missText>
+<hitText count="1">
+<text>you disengage from TARGET</text>
+</hitText>
+<effectMovement moveType="SELF_AWAY" distance="4" abilityMod="AGILITY"/>
+</combatmove>
+<maxrank value="1"/>
+
+</perk>

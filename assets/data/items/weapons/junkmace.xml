@@ -2,13 +2,13 @@
 <ItemWeapon name="Junkmace" weight="4" value="200">
 <tagSet value="P"/>
 <description>
-An improvised cudgel lashed together from scrap and junk. It has a weighty heft to it and will probably be good for smacking folk around. Does 3-6 kinetic damage. (P)
+An improvised cudgel lashed together from scrap and junk. It has a weighty heft to it and will probably be good for smacking folk around. 3AP Does 3-6 kinetic damage. (P)
 </description>
 <modifier>
 <parry value="1"/>
 </modifier>
-<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true">
-<effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="STRENGTH"/>
+<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="3" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="4" maxValue="7" modifier="STRENGTH"/>
 <missText count="1">
 <text>you fail to bludgeon TARGET .</text>
 </missText>

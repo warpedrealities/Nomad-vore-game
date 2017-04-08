@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <ItemWeapon name="Knife" weight="1" value="50">
 <description>
-A sharp knife, suitable for chopping vegetables and maybe self defence in close quarters. Does 1-6 kinetic damage.
+A sharp knife, suitable for chopping vegetables and maybe self defence in close quarters. 2AP Does 2-7 kinetic damage.
 </description>
 <modifier>
 <parry value="0"/>
 </modifier>
-<combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true">
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="DEXTERITY"/>
+<combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="DEXTERITY"/>
 <missText count="1">
 <text>you fail to stab TARGET </text>
 </missText>

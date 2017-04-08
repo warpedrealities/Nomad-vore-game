@@ -19,6 +19,8 @@ public class Move_Modifier {
 	private String moveName;
 	int timeModifier;
 	int attackBonus;
+	int actionCost;
+	boolean basicAction=false;
 	private AttackPattern attackPattern;
 	
 	private ArrayList<Effect_Change> modifiers;
@@ -26,7 +28,15 @@ public class Move_Modifier {
 	public Move_Modifier(Element Enode)
 	{
 		moveName=Enode.getAttribute("name");
-		
+		if (Enode.getAttribute("basicAction").equals("true"))
+		{
+			basicAction=true;
+		}
+		//action cost
+		if (Enode.getAttribute("actionCost").length()>0)
+		{
+			actionCost=Integer.parseInt(Enode.getAttribute("actionCost"));
+		}
 		if (Enode.getAttribute("bonusToHit").length()>0)
 		{
 			attackBonus=Integer.parseInt(Enode.getAttribute("bonusToHit"));
@@ -62,8 +72,8 @@ public class Move_Modifier {
 	public void applyModifier(CombatMove move, int rank)
 	{
 		move.setAttackBonus(move.getAttackBonus()+attackBonus);
-		move.setTimeCost(move.getTimeCost()+timeModifier);
-		
+		move.setTimeCost(move.getTimeCost()*timeModifier);
+		move.setActionCost(move.getActionCost()*actionCost);
 		move.setAttackPattern(attackPattern);
 		
 		int index=0;

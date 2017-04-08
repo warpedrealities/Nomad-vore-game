@@ -58,7 +58,19 @@ import artificial_intelligence.Sense;
 public class ViewScene extends SceneBase implements ModelController_Int,MyListener,Callback{
 
 	public static ModelController_Int m_interface;
-	enum ViewMode {SELECT,LOOK,INTERACT,ATTACK,SPECIAL};
+	enum ViewMode {SELECT(true),FIGHT(true),DOMINATE(true),MOVEMENT(true),OTHER(true),LOOK(false),INTERACT(false),ATTACK(false),SPECIAL(false);
+		boolean value;
+		ViewMode(boolean value)
+		{
+			this.value=value;
+		}
+		
+		boolean getValue()
+		{
+			return value;
+		}
+	
+	};
 	ViewMode m_mode;
 
 	
@@ -472,14 +484,10 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 	public void Update(float dt) 
 	{
 		m_dropdown.update(dt);
-		if (m_dropdown.getVisible()==false && m_mode==ViewMode.SELECT)
+		if (m_dropdown.getVisible()==false && m_mode.getValue())
 		{
-			Universe.getInstance().getPlayer().setMove(1);
-			m_buttons[4].setString(Universe.getInstance().getPlayer().getMove(1).getMoveName());
-			m_dropdown.setVisible(false);
-			m_buttons[4].setActive(true);
-			m_mode=ViewMode.SPECIAL;
-			
+			m_mode=DropdownHandler.handleClosure(m_mode, Universe.getInstance().getPlayer(), m_buttons[4]);
+			m_buttons[4].setActive(true);		
 		}
 		if (FXanimationControl.getActive()==true)
 		{
@@ -535,6 +543,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 						//	m_dropdown.setVisible(true);							
 						//	m_dropdown.AdjustPos(new Vec2f(p.x-1.0F,p.y-1.0F));
 						}
+						redrawBars();
 						m_reader.UpdateEnergy();
 						break;
 					}			
@@ -986,7 +995,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 				
 				case 4:
 				m_dropdown.setVisible(true);
-				genStandardDropDown();
+				DropdownHandler.genStandardDropdown(m_dropdown);
 				m_dropdown.AdjustPos(new Vec2f(p.x-1.0F,p.y-1.0F));
 				break;
 			}		
@@ -995,9 +1004,6 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 		if (m_dropdown.getVisible()==true && ID==12)
 		{
 			handleDropdown();
-		//	setMode(m_dropdown.getSelect());
-		//	m_dropdown.setVisible(false);
-		//	m_buttons[4].setActive(true);
 		}
 		
 	}
@@ -1064,8 +1070,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_P))
 			{
-				genSelectDropDown();
-				m_mode=ViewMode.SELECT;
+				m_mode=DropdownHandler.selectMove(Universe.getInstance().getPlayer(), m_mode, m_dropdown.getSelect(), m_buttons[4], m_dropdown);
 				m_dropdown.setVisible(true);
 				m_time=0.2F;
 			}
@@ -1093,31 +1098,16 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 	
 	void handleDropdown()
 	{
-		if (m_mode==ViewMode.SELECT)
+		if (m_mode.getValue())
 		{
-			if (Universe.getInstance().getPlayer().getMove(m_dropdown.getSelect()+1)!=null)
-			{
-				Universe.getInstance().getPlayer().setMove(m_dropdown.getSelect()+1);
-				m_buttons[4].setString(Universe.getInstance().getPlayer().getMove(m_dropdown.getSelect()+1).getMoveName());
-				m_dropdown.setVisible(false);
-				m_buttons[4].setActive(true);
-				m_mode=ViewMode.SPECIAL;			
-			}
-			else
-			{
-				Universe.getInstance().getPlayer().setMove(1);
-				m_buttons[4].setString(Universe.getInstance().getPlayer().getMove(1).getMoveName());
-				m_dropdown.setVisible(false);
-				m_buttons[4].setActive(true);
-				m_mode=ViewMode.SPECIAL;	
-			}
+			m_mode=DropdownHandler.selectMove(Universe.getInstance().getPlayer(), m_mode, m_dropdown.getSelect(), m_buttons[4], m_dropdown);
 
 		}
 		else
 		{
 			if (m_dropdown.getSelect()==3)
 			{
-				genSelectDropDown();
+				DropdownHandler.genSpecialDropdown(m_dropdown, Universe.getInstance().getPlayer());
 				m_mode=ViewMode.SELECT;
 			}
 			else

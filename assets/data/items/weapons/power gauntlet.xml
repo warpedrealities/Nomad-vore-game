@@ -2,13 +2,13 @@
 <ItemWeapon name="power gauntlet" weight="4" value="350">
 <tagSet value="P"/>
 <description>
-A heavy metal power glove and battery laden bracer. The whole thing is studded with wires and electrodes. Does 2-7 kinetic damage. or 4-14 electrokinetic damage. tag: P
+A heavy metal power glove and battery laden bracer. The whole thing is studded with wires and electrodes. 2AP Does 3-8 kinetic damage. or 6-16 electrokinetic damage. tag: P
 </description>
 <modifier>
 <parry value="0"/>
 </modifier>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true">
-<effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="STRENGTH"/>
+<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="3" maxValue="8" modifier="STRENGTH"/>
 <missText count="1">
 <text>you fail to punch TARGET </text>
 </missText>
@@ -16,9 +16,9 @@ A heavy metal power glove and battery laden bracer. The whole thing is studded w
 <text>you punch TARGET for VALUE kinetic damage</text>
 </hitText>
 </combatMove>
-<combatMove name="powerpunch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" ammoCost="1" actionCost="2" basicAction="true">
-<effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="STRENGTH"/>
-<effectDamage type="SHOCK" minValue="2" maxValue="7" modifier="NONE"/>
+<combatMove name="powerpunch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" ammoCost="1" actionCost="2" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="3" maxValue="8" modifier="STRENGTH"/>
+<effectDamage type="SHOCK" minValue="3" maxValue="8" modifier="NONE"/>
 <missText count="1">
 <text>your sparking fist fails to connect with TARGET </text>
 </missText>

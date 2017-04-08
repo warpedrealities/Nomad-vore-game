@@ -314,4 +314,9 @@ public class NPC_RPG implements Actor_RPG{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public float getSubAbility(int i) {
+		return 0;
+	}
 }

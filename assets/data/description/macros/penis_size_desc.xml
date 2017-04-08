@@ -9,4 +9,6 @@
 <range lowerbound="24" upperbound="28" string="two foot"/>
 <range lowerbound="28" upperbound="34" string="knee knocking"/>
 <range lowerbound="34" upperbound="38" string="enormous"/>
+<range lowerbound="38" upperbound="60" string="person sized"/>
+<range lowerbound="60" upperbound="999" string="preposterously gargantuan"/>
 </macrorange>

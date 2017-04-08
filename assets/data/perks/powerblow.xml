@@ -6,7 +6,7 @@
 <description> 
 You're able to unleash a mighty blow with all your force behind it. Reckless it tends to be a tad less accurate though (-4 to hit, +2 to damage, weapon tag: P)
 </description>
-<weaponMove name="powerblow" bonusToHit="-4" tag="P">
+<weaponMove name="powerblow" bonusToHit="-4" tag="P" actionCost="1" moveType="FIGHT">
 <change type="MOD">
 <effectDamage type="KINETIC" minValue="2" maxValue="2" modifier="STRENGTH"/>
 </change>

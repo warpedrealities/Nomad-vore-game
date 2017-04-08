@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <ItemWeapon name="plasma pistol" weight="3" value="450">
+<tagSet value="A"/>
 <description>
-The bulky storage torus and magnetic coils give this weapon an outline vaguely reminiscent of a hair dryer. Does 2-8 thermokinetic damage or 2-12 if overcharged.
+The bulky storage torus and magnetic coils give this weapon an outline vaguely reminiscent of a hair dryer. Does 2-8 thermokinetic damage or 2-12 if overcharged. (A)
 </description>
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true" moveType="FIGHT">
 <effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="NONE"/>
 <effectDamage type="THERMAL" minValue="1" maxValue="4" modifier="NONE"/>
 <missText count="1">
@@ -16,7 +17,7 @@ The bulky storage torus and magnetic coils give this weapon an outline vaguely r
 <text>you blast TARGET for VALUE thermokinetic damage</text>
 </hitText>
 </combatMove>
-<combatMove name="overcharge" ammoCost="2" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true">
+<combatMove name="overcharge" ammoCost="2" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true" moveType="FIGHT">
 <effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="NONE"/>
 <effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
 <missText count="1">

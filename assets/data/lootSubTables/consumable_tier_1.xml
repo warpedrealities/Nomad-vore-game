@@ -2,6 +2,7 @@
 <lootTable>
 <loot item="medicine" chance="8"/>
 <loot item="ration" chance="16"/>
+<loot item="space soda" chance="4"/>
 <loot item="clarity" chance="4"/>
 <loot item="bullets" chance="4"/>
 <loot item="staid" chance="2"/>

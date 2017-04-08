@@ -9,6 +9,7 @@ import nomad.Universe;
 import rlforj.los.ConePrecisePremisive;
 import rlforj.los.IConeFovAlgorithm;
 import rlforj.los.PrecisePermissive;
+import rlforj.los.ShadowCasting;
 import shared.Vec2f;
 import view.ViewScene;
 import view.ZoneInteractionHandler;
@@ -80,7 +81,7 @@ public class CombatAura {
 		
 		if (coneAlgorithm==null)
 		{
-			coneAlgorithm=new ConePrecisePremisive();
+			coneAlgorithm=new ShadowCasting();
 		}
 		
 		//angle must be in degrees not radians as its in integers

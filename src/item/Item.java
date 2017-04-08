@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import shared.ParserHelper;
 
-public class Item {
+public class Item implements Comparable{
 
 	private int UID;
 	String m_name,m_description;
@@ -58,6 +58,12 @@ public class Item {
 
 		dstream.write(0);
 		ParserHelper.SaveString(dstream, m_name);
+	}
+
+	@Override
+	public int compareTo(Object arg0) {
+		Item item=(Item)arg0;
+		return getItem().getName().compareTo(item.getItem().getName());
 	}
 	
 }
