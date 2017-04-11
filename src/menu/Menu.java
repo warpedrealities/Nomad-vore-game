@@ -15,7 +15,7 @@ import org.lwjgl.util.vector.Matrix4f;
 import chargen.PlayerStartScene;
 
 import particlesystem.ParticleEmitter;
-
+import preloader.PreloadReport;
 import shared.Callback;
 import shared.MyListener;
 import shared.SceneBase;
@@ -38,9 +38,15 @@ public class Menu extends SceneBase implements MyListener, Callback {
 	Screen m_screen;
 	MouseHook m_hook;
 	Text version;
+	PreloadReport preload;
 	
 	public Menu(int[] variables) {
 		super(variables);
+		if (Universe.getInstance()==null)
+		{
+			preload=new PreloadReport();
+			preload.run();			
+		}
 
 		SetupTextures();
 		m_GUImatrix=new Matrix4f();
@@ -182,7 +188,7 @@ public class Menu extends SceneBase implements MyListener, Callback {
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
 
-		if (m_screen==null)
+		if (m_screen==null && (preload==null||preload.isComplete()))
 		{
 			switch (ID)
 			{

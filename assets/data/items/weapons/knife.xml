@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <ItemWeapon name="Knife" weight="1" value="50">
+<tagSet value="M"/>
 <description>
 A sharp knife, suitable for chopping vegetables and maybe self defence in close quarters. 2AP Does 2-7 kinetic damage.
 </description>

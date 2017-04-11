@@ -104,16 +104,22 @@ public class Player_RPG_moveHandler {
 		//create modifiable move
 		if (!checkNameList(list,move.getMoveName()))
 		{
+			int d=moves.indexOf(move);
 			moves.remove(move);
 			move=move.clone();
+			moves.add(d,move);
 			list.add(move.getMoveName());
 		}	
+		else
+		{
+			addMove(moves,move);		
+		}
 		//apply modifiers over the top of the move
 		
 		modifier.modifier.getMove().applyModifier(move, modifier.rank);
 		
 		
-		addMove(moves,move);
+
 	}
 	
 	private CombatMove pickMove(ArrayList<CombatMove> moves, moveModifierInstance modifier) {

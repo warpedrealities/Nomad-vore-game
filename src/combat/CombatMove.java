@@ -252,6 +252,7 @@ public class CombatMove {
 		move.rangedBias=rangedBias;
 		move.icon=icon;
 		move.attackPattern=attackPattern;
+		move.moveType=moveType;
 		
 		for (int i=0;i<effects.size();i++)
 		{

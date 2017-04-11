@@ -38,7 +38,7 @@ public class Effect_Recover extends Effect {
 		}	
 		if (str.contains("ACTION"))
 		{
-			return RESOLVE;
+			return ACTION;
 		}				
 		return -1;
 	}

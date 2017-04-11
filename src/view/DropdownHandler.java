@@ -7,13 +7,29 @@ import actorRPG.Player_RPG;;
 
 public class DropdownHandler {
 
-	static public void genStandardDropdown(DropDown dropDown)
+	static public void genStandardDropdown(DropDown dropDown,Player player)
 	{
-		String str0[]=new String[4];
+		Player_RPG rpg=(Player_RPG)player.getRPG();
+		String str=rpg.getQuickAction();
+		String str0[];
+		if (str==null)
+		{
+			str0=new String[4];		
+		}
+		else
+		{
+			str0=new String[5];		
+		}
+
 		str0[0]="look";
 		str0[1]="interact";
 		str0[2]="attack";
 		str0[3]="special";
+		
+		if (str!=null)
+		{	
+			str0[4]=str;
+		}
 		dropDown.BuildFonts(str0);	
 	}
 	
@@ -133,6 +149,10 @@ public class DropdownHandler {
 	static public ViewScene.ViewMode subMenu(int submenu,Player player, int selection, Button2 button,DropDown dropdown)
 	{
 		Player_RPG rpg=(Player_RPG)player.getRPG();
+		if (selection>=rpg.getMoveCategorySize(submenu))
+		{
+			return ViewScene.ViewMode.SPECIAL;	
+		}
 		int index=selection+rpg.getMoveCategoryOffset(submenu);
 		player.setMove(index);
 		button.setString(player.getMove(index).getMoveName());

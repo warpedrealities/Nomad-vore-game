@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ItemWeapon name="lightsword" weight="1" value="1000">
-<tagSet value="S"/>
+<tagSet value="SM"/>
 <description>
 A cylindrical sword hilt from which projects on demand a radiant blade. 1AP does 4-9 thermal damage. (S)
 </description>

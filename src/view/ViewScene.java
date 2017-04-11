@@ -52,6 +52,7 @@ import actor.Actor;
 import actor.CompanionTool;
 import actor.NPC;
 import actorRPG.Actor_RPG;
+import actorRPG.Player_RPG;
 import artificial_intelligence.BrainBank;
 import artificial_intelligence.Sense;
 
@@ -995,7 +996,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 				
 				case 4:
 				m_dropdown.setVisible(true);
-				DropdownHandler.genStandardDropdown(m_dropdown);
+				DropdownHandler.genStandardDropdown(m_dropdown,sceneController.getUniverse().player);
 				m_dropdown.AdjustPos(new Vec2f(p.x-1.0F,p.y-1.0F));
 				break;
 			}		
@@ -1040,7 +1041,11 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 		{
 			Game.sceneManager.SwapScene(new Help_Scene());
 		}
-		
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F2))
+		{
+			m_screen=new QuickActionSelector(m_textureIds[0],m_textureIds[7],m_textureIds[8],sceneController.getUniverse().player,m_variables[0],this);
+			m_screen.start(m_hook);
+		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_Q))
 		{
 			sceneController.useQuickslot();
@@ -1070,7 +1075,8 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_P))
 			{
-				m_mode=DropdownHandler.selectMove(Universe.getInstance().getPlayer(), m_mode, m_dropdown.getSelect(), m_buttons[4], m_dropdown);
+				DropdownHandler.genSpecialDropdown(m_dropdown,Universe.getInstance().getPlayer());
+				m_mode=ViewMode.SELECT;
 				m_dropdown.setVisible(true);
 				m_time=0.2F;
 			}
@@ -1113,6 +1119,7 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 			else
 			{
 				//visibility off, set mode
+				Player_RPG rpg=(Player_RPG)Universe.getInstance().getPlayer().getRPG();
 				switch (m_dropdown.getSelect())
 				{
 					case 0:
@@ -1127,6 +1134,14 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 						m_mode=ViewMode.ATTACK;
 						m_buttons[4].setString("attack");
 						Universe.getInstance().getPlayer().setMove(0);
+						break;
+					case 4:
+						m_mode=ViewMode.SPECIAL;
+						if (rpg.useQuickMove())
+						{
+							m_buttons[4].setString(rpg.getQuickAction());				
+						}
+
 						break;
 				}
 				m_dropdown.setVisible(false);
@@ -1556,7 +1571,10 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 
 	@Override
 	public void redraw() {
-		//m_view.generate(sceneController.getActiveZone());
+		m_viewmatrix.m30=0;m_viewmatrix.m31=0;
+		
+		m_viewmatrix.translate(new Vector2f(-1*sceneController.getUniverse().player.getPosition().x-9,
+				-1*sceneController.getUniverse().player.getPosition().y+7));	
 		m_view.vision(sceneController.getActiveZone(), sceneController.getActiveZone().zoneActors,sceneController.getUniverse().player.getPosition());
 	}
 

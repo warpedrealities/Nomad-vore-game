@@ -2,7 +2,7 @@
 <ItemWeapon name="laser pistol" weight="2" value="350">
 <tagSet value="A"/>
 <description>
-A laser pistol for self defence against belligerent wildlife and other minor threats, or so the packaging claims. 1-6 thermal damage with a coherent light beam. (A)
+A laser pistol for self defence against belligerent wildlife and other minor threats, or so the packaging claims. AP 2 1-6 thermal damage with a coherent light beam. (A)
 </description>
 <modifier>
 

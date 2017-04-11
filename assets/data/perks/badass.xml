@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<perk name="badass" >
+<requirement count="1">
+<req>PERKtough</req>
+</requirement>
+<description> You're not just tough, you're BADASS. +1 to thermokinetic defence.</description>
+<modifier affects="KINETIC" value="1" type="ATTRIBUTE"/>
+<modifier affects="THERMAL" value="1" type="ATTRIBUTE"/>
+<maxrank value="1"/>
+
+</perk>

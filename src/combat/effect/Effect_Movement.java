@@ -57,7 +57,7 @@ public class Effect_Movement extends Effect {
 	private int applySelf(Actor origin, Actor target)
 	{
 		int localDistance=origin.getRPG().getAbilityMod(abilityMod)+distance;
-		if (movementType==MovementType.self_towards)
+		if (movementType==MovementType.self_away)
 		{
 			CombatMovementHandler.MoveAway(origin, target,localDistance);
 		}

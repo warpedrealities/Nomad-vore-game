@@ -28,6 +28,7 @@ public class DropDown extends GUIBase{
 	MouseHook m_hook;
 	int m_tintID;
 	float m_initialize;
+	float clock;
 
 	public DropDown (int background, Vec2f pos, Vec2f size,MyListener listener,int colour)
 	{	
@@ -108,6 +109,10 @@ public class DropDown extends GUIBase{
 	@Override
 	public void update(float DT) 
 	{		
+		if (clock>0)
+		{
+			clock-=DT;
+		}
 		if (m_visible==true)
 		{
 			if (m_initialize>0)
@@ -130,7 +135,11 @@ public class DropDown extends GUIBase{
 			}
 			else
 			{
-				keyboardControl();
+				if (clock<=0)
+				{
+					keyboardControl();
+				}
+				
 				if (m_mouseIn==true)
 				{
 					m_visible=false;
@@ -146,46 +155,55 @@ public class DropDown extends GUIBase{
 	{
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_1))
 		{
+			clock=0.2F;
 			m_select=0;
 			m_listener.ButtonCallback(12, null);
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_2))
 		{
+			clock=0.2F;
 			m_select=1;
 			m_listener.ButtonCallback(12, null);
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_3))
 		{
+			clock=0.2F;
 			m_select=2;
 			m_listener.ButtonCallback(12, null);
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_4))
 		{
+			clock=0.2F;
 			m_select=3;
 			m_listener.ButtonCallback(12, null);
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_5))
 		{
+			clock=0.2F;
 			m_select=4;
 			m_listener.ButtonCallback(12, null);
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_6))
 		{
+			clock=0.2F;
 			m_select=5;
 			m_listener.ButtonCallback(12, null);
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_7))
 		{
+			clock=0.2F;
 			m_select=6;
 			m_listener.ButtonCallback(12, null);
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_8))
 		{
+			clock=0.2F;
 			m_select=7;
 			m_listener.ButtonCallback(12, null);
 		}		
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_9))
 		{
+			clock=0.2F;
 			m_select=8;
 			m_listener.ButtonCallback(12, null);
 		}		
@@ -197,7 +215,7 @@ public class DropDown extends GUIBase{
 	{
 		if (m_visible==true && m_initialize<=0)
 		{
-			if (m_select<m_font.length && m_strings[m_select]!=null)
+			if (m_select<m_font.length && (m_strings.length>m_select && m_strings[m_select]!=null))
 			{
 				m_listener.ButtonCallback(12, pos);
 				return true;

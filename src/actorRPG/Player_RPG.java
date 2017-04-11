@@ -52,6 +52,7 @@ public class Player_RPG implements Actor_RPG {
 	ArrayList<CombatMove> moveList;
 	private int moveLists[]=new int[4];
 	CooldownHandler cooldownHandler;
+	String quickAction;
 	
 	private CombatMove[] defaultMoves;
 
@@ -236,6 +237,8 @@ public class Player_RPG implements Actor_RPG {
 		subAbilities[REGENERATION]=0.05F;
 		subAbilities[REGENTHRESHOLD]=0.5F;
 		subAbilities[MOVECOST]=1.0F;
+		
+		quickAction=null;
 	}
 	
 	public int getPlayerExperience()
@@ -616,6 +619,16 @@ public class Player_RPG implements Actor_RPG {
 		dstream.writeFloat(karmaMeter);
 		
 		cooldownHandler.save(dstream);
+		
+		if (quickAction==null)
+		{
+			dstream.writeBoolean(false);
+		}
+		else
+		{
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, quickAction);
+		}
 	}	
 	
 
@@ -682,6 +695,12 @@ public class Player_RPG implements Actor_RPG {
 		karmaMeter=dstream.readFloat();
 		
 		cooldownHandler.load(dstream);
+		
+		boolean b=dstream.readBoolean();
+		if (b)
+		{
+			quickAction=ParserHelper.LoadString(dstream);
+		}
 	}
 
 	public PerkInstance getPerkInstance(Perk perk) {
@@ -1005,6 +1024,34 @@ public class Player_RPG implements Actor_RPG {
 		return moveLists[index];
 	}
 	
+	public String getQuickAction()
+	{
+		return this.quickAction;
+	}
+	
+	public void setQuickAction(String actionName)
+	{
+		this.quickAction=actionName;
+	}
+	
+	public boolean useQuickMove()
+	{
+		if (quickAction==null)
+		{
+			return false;
+		}
+		for (int i=0;i<moveList.size();i++)
+		{
+			if (moveList.get(i).getMoveName().equals(quickAction))
+			{
+				moveChoice=i;
+				return true;
+			}
+		}
+		
+		quickAction=null;
+		return false;
+	}
 	
 
 }

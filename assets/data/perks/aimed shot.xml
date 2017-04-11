@@ -4,7 +4,7 @@
 <req>PERKmarksman</req>
 </requirement>
 <description> 
-Through focus and steady hands you can increase your accuracy, +4 to hit, but double ap cost. weapon tag: A)
+Through focus and steady hands you can increase your accuracy, +4 to hit, but double ap cost. weapon tag: (A)
 </description>
 <weaponMove name="aimed shot" bonusToHit="4" tag="A" actionCost="2" moveType="FIGHT">
 </weaponMove>

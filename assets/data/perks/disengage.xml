@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
 <perk name="Disengage">
 <description> 
-
+It's quite easy to get in over your head. And the best way of not dying is to get out of those situations very quickly. This is the act of doing just that with a dexterous leap away from an opponent.
 </description>
-<combatmove name="disengage" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" cooldown="300" icon="4" pattern="MELEE"  actionCost="2" moveType="MOVEMENT"> 
+<move count="1">
+<combatmove name="disengage" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" cooldown="100" icon="4" pattern="MELEE"  actionCost="2" moveType="MOVEMENT"> 
 <missText count="1">
-<text>you to disengage from TARGET .</text>
+<text>you fail to disengage from TARGET .</text>
 </missText>
 <hitText count="1">
 <text>you disengage from TARGET</text>
 </hitText>
 <effectMovement moveType="SELF_AWAY" distance="4" abilityMod="AGILITY"/>
 </combatmove>
+</move>
 <maxrank value="1"/>
 
 </perk>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<perk name="defensive mastery" >
+<requirement count="1">
+<req>PERKwarrior</req>
+</requirement>
+<description> All that is required for victory is to first make yourself invincible, then await your opponent becoming vulnerable. You have worked hard to better deflect and ward off blows from your person. +2 to parry.</description>
+<modifier affects="PARRY" value="2" type="ATTRIBUTE"/>
+<maxrank value="3"/>
+
+</perk>

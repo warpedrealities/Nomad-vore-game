@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ItemWeapon name="warhammer" weight="8" value="500">
+<tagSet value="PM"/>
+<description>
+A heavy hammer with a long two hander haft. 4AP Does 6-9 kinetic damage. (P)
+</description>
+<modifier>
+<parry value="1"/>
+</modifier>
+<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="4" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="6" maxValue="9" modifier="STRENGTH"/>
+<missText count="1">
+<text>you fail to crush TARGET .</text>
+</missText>
+<hitText count="1">
+<text>you crush TARGET for VALUE kinetic damage</text>
+</hitText>
+</combatMove>
+</ItemWeapon>

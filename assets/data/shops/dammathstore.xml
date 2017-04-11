@@ -18,6 +18,9 @@
 <conditionalitem name="iron mace" probability="100" quantity="3">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>
+<conditionalitem name="warhammer" probability="100" quantity="1">
+<conditional operator="equals" value="3" flag="dammathquest0"/>
+</conditionalitem>
 <conditionalitem name="iron buckler" probability="100" quantity="3">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>
@@ -30,5 +33,6 @@
 <conditionalitem name="bolts" probability="50" quantity="10">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>
+
 <buymodifier name="herb" cost="25"/>
 </shop>
