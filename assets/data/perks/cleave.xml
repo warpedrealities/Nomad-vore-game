@@ -4,9 +4,9 @@
 <req>PERKwarrior</req>
 </requirement>
 <description> 
-you're able to unleash a broad attack able to hit multiple foes at once so long as they're close together (-4 to hit, arc, weapon tag: S)
+you're able to unleash a broad attack able to hit multiple foes at once so long as they're close together (x2 AP, arc, weapon tag: S)
 </description>
-<weaponMove name="cleave" bonusToHit="-4" tag="S" pattern="SWEEP" actionCost="1" moveType="FIGHT">
+<weaponMove name="cleave" bonusToHit="0" tag="S" pattern="SWEEP" actionCost="2" moveType="FIGHT">
 </weaponMove>
 <maxrank value="1"/>
 

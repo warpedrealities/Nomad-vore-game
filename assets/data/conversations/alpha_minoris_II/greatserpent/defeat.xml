@@ -1,10 +1,122 @@
 <?xml version="1.0"?>
 <Conversation>
-
+<!--written by Sideremelane-->
 <page ID="start">
-<text>
-There's no interactions to be had with a defeated great serpent yet
+<text> The great Serpent is a coiled heap of black hide and fur, its eyes closed in confusion and hurt.
 </text>
-<choice destination="end" text="well darn"/>
+<choice destination="oralvore0" text="Eyes bigger than your belly.">
+<assertion evaluate="hasperk" perk="oralvore"/>
+</choice>
+<choice destination="cockvore0" text="Show it a REAL 'Great Serpent'">
+<assertion evaluate="hasperk" perk="cockvore"/>
+</choice>
+<choice destination="Unbirth0" text="Oh GOD no, its massive...">
+<assertion evaluate="hasperk" perk="unbirthing"/>
+</choice>
+<choice destination="end" text="You defeated it, let it be."/>
 </page>
+
+<page ID="cockvore0">
+<text>
+You stroke your cock, bringing it to quick arousal, the shaft pointing slightly upwards, proud of your body, balls dangling freely, shifting themselves within thier fleshy skin sack as they prepare for the... No, you cannot possibly believe you can get the Great Serpent in there?
+You grab the limp tailtip of the defeated serpent, even the end of its tail giving you some difficulty as you hoist it to the already drooling cocktip awaiting it. With a sigh of pleasure, you slip the point of its tail in, and you groan, your cockslit gliding smoothly around the steadily widening girth of the serpents tail. After a few blissful moments, you pause to take stock, your balls already sloshing with the tail curled around your testicles. You've barely started on this, and already you are straining to support the weight between your legs! You cannot stop now though, despite it all, this feels amazing, and you want more!
+</text>
+<choice destination="cockvore1" text="Tail first, then more tail first, then more..."/>
+</page>
+
+<page ID="cockvore1">
+<text>
+Your cock is taut around your prey now, stretched to the point of barely containing the massive girth now crammed inside your urethra, the furry ridge down its spine sending a shiver of tickling delight through your loins with every added inch. Your ballsack is now heavily spread on the ground, your legs forced to straddle the mass as you feed ever more of the defeated serpent into your engorged shaft. 
+A brief twinge of pain spasms through you, and you gasp, but then a fresh flood of pleasure washes over you, and you desperatly grab more of the coils and pull, cramming more and more down your cock, the serpent curling into tight coils within. It has begun to stir, its head shifting slightly as it becomes aware of its prediciment. Tiny limbs flail as you stuff them in, your stretched skin shifting with the bulges they make as they glide down your length. 
+</text>
+<choice destination="cockvore2" text="Too much"/>
+</page>
+
+<page ID="cockvore2">
+<text>
+It's too much, surely you cannot stretch ANY further?! The serpents head turns towards you, eyes rolling as it prepares to turn the tables. In desperation, you grunt, and pull, and you feel something tear, but the serpent is slurped rapidly from view, slithering helpessly into your instaiable cock and almost transluscent ballsack. Its head is pulled out of sight last, jaws agape as it sucks in a helpless lungful of air to sustain it inside you. Your cock tightens behind it, sealing it within, but you notice, even in your lust-clouded state, that it seems to have stretched a bit as a result of this abuse.
+</text>
+<choice destination="cockvore3" text="Can't move"/>
+</page>
+
+<page ID="cockvore3">
+<text>
+And now you've got your prey, not tucked away, but stuffed, crammed into your ballsack, struggling to escape the over-stretched confines, much to your delight, and slight discomfort. But even the pain is muted, transfigured into pleasure by the sensations of squirming FULLNESS. You stroke your cock rapidly, as your sack starts to churn, melting the trapped serpent into cum. After an age, you climax, spurting gallons of melted serpent across the floor, walls, ceiling... You pant in release, the afterglow so intense, it almost feels like it's still fighting in there...
+</text>
+<choice destination="cockvore4" text="Still can't move"/>
+</page>
+
+<page ID="cockvore4">
+<text>
+Its still alive! You've melted half of it into cum and spunked it all over everything but it's still struggling to escape from your now half filled sack. You hesitantly stroke your flaccid cock, painfully teasing it into hardness again, your body shuddering in forced pleasure over and over, and it huuuurrrts, until it doesn't, and you shake and scream in release, the last of the serpent exploding from your cock in a slithering spurt, its semi-liquid form writhing on the floor, until it flops, and collapses into a huge, gooey puddle with a few scattered bones.
+</text>
+<effect type="feed" value="85"/>
+<special effect="removenpc"/>
+<choice destination="end" text="So much mess"/>
+</page>
+Was going to have a +whatever size to penis to reflect the level of abuse it just took here but clearly was not using the right code.
+
+<page ID="oralvore0">
+<text>
+The Great Serpent lies defeated in front of you, coil upon coil of flesh and bone and hide. Your belly rumbles, reminding you it's been, oh, at least a few minutes since you last ate. No, it's not possible, this thing is HUGE and you are only... well, you ARE hungry. Your lips part slightly as you think about it, and a flood of saliva gushes from your mouth, you can actually FEEL the contractions under your tongue as your saliva glands work overtime, pumping slick, lubricating drool into your mouth. Maybe just some of it? Hesitantly you approach, and pick up the heavy tailtip. Just the TAIL is almost more than you can hoist, and you think you can get this into your mouth? Well, yeah, of course you do. You raise the tailtip to your lips, and slip it in. You suckle for a moment, then swallow, working your voracious gullet around the rapidly growing girth of the giant serpent.
+</text>
+<choice destination="oralvore1" text="Looks like a plateful"/>
+</page>
+
+<page ID="oralvore1">
+<text>
+You gulp, over and over, swallowing more and more of the snakelike form down into your gurgling gut, which already has you leaning, then falling to your knees with the added weight. You try to clench your jaw after you feel completely full, in some instinctive effort to bite off the excess, but your jaw muscles aren't strong enough, and your gullet is still working, peristalsis now claiming the serpent on its own with no more active involvement from you. The snakelike form stir, as it becomes aware of its prediciment, weakly struggling to attempt to free itself, or even turn the tables, but you have other ideas. You reach out, grabbing the rough hide, and cram it in, more pulling yourself over it than swallowing, but the effect works, filling your guts with writhing serpent.
+</text>
+<choice destination="oralvore2" text="Sore belly"/>
+</page>
+
+<page ID="oralvore2">
+<text>
+You feel like you are getting the worst bellyache, and you still have a ways to go. You work up the serpents torso, its chest sinking into your straining mouth, its head swaying to and fro, as it desperatly attempts to slither free, but its still weak, unable to overcome the power of your gullet, and it lets out a cry of despair as your lips work over its head, teeth closing around its snout with a final, glad, slurp and *GLP* as your gullet fully claims the defeated serpent. Finally your lips part again, and you let out a gasp of relief, and a sudden wet *BELCH* that shakes dust loost from the ceiling.
+</text>
+<choice destination="oralvore3" text="Digest"/>
+</page>
+
+<page ID="oralvore3">
+<text>
+You are comically perched on top of your own gut, the shape of the coiled serpent clearly visible under your skin, your stomach gurgling and sloshing lewdly as it begins working to break down the huge mass of meat you just ingested. Said mas of meat doesn't want to go quietly however, and you let out several more echoing belches over the course of the next several hours as you digest your prey. Until it's almost gone however, you are essentially trapped in place, held by the weight in your gut. By the time you can move, the serpent is almost gone, you can merely feel a few fragmented bones and mushy meat beneath your stretchmarked skin. You slowly begin making your way back out of the cave, still sloshing.
+</text>
+<effect type="feed" value="450"/>
+<special effect="removenpc"/>
+<choice destination="end" text="Urp, indeed."/>
+</page>
+
+<page ID="Unbirth0">
+<text>
+You step forward confidently, the black tailtip looks inviting anf firm, your drooling nether lips hot and slick between your legs just at the thought of all that girth and length. You crouch, and stroke your slit against the rough hide, slicking it with your juices, and sending fresh waves of arousal through you. You reach down between your thighs, and lift the tailtip, guiding it expertly between your legs, and in, pressing your pussy lips open with ease. You moan, and press harder, easing more in, and then out again. You masturbate with the tail, working it deeper with every thrust, until you feel the point poke your cervix... You gasp, and in a moment of wild abandon, decide, what the hell. 
+</text>
+<choice destination="Unbirth1" text="The tailtip does fit... You want more!"/>
+</page>
+
+<page ID="Unbirth1">
+<text>
+You grasp the girth of the serpent, and pull, rocking forward on your heels to slide more and more of the vast form into your hungry pussy, your womb swallowing the tail greedily. You pause only to gasp air, and shudder from a slowly building, ongoing climax. You ease forward, working more of the serpent in, and push harder, your belly swelling with the weight filling it, and you are forced to drop to all fours. You turn, lifting a leg over the serpent to straddle it in reverse, and you shove backwards, forcing more into yourself than you ever thought possible. You soon reach your limit, not of your womb, but of your strength, simply unable to lift your belly any further back, almost a third of the beast now within you. 
+</text>
+<choice destination="Unbirth2" text="Feels so good, but maybe you should stop and let the beast go..."/>
+</page>
+
+<page ID="Unbirth2">
+<text>
+The serpent slowly awakens, and finds itself partially inserted into your cunt! Its dim reptilian brain responds with a conflicting panic, both trying to escape, but also deeply aroused by the scent of your juices and enticed by the warmth of your swollen womb. As a result, instead of struggling to escape by heading away from you, it responds by trying to slither BACKWARDS. You had been half asleep, lost in the ongoing orgasm wracking you with shuddering bliss, when suddenly you are rammed from behind and you feel your pussy stretched even further as the serpents body enters yours in a rushing, slithering motion tha you can neither escape from nor control!
+</text>
+<choice destination="Unbirth3" text="All the way in."/>
+</page>
+
+<page ID="Unbirth3">
+<text>
+You manage to get onto your side, shaking and crying out in shock and pleasure as you are invaded by the confused reptile, your belly swollen beyond its limits, filling the corridor with your taut skin. With a remarkable surge of final motion, the serpent, having seemingly decided your snatch was a safe place to hide, tucks itself into your pussy, only its face still visible, you can reach around under the huge swollen mass of your belly to feel its nose, peeking between your drooling nether lips... At your touch though, it pulls itself in, and you finally climax, your body wracking and shaking over and over, your womb clenching and squeezing the trapped serpent, which too late realizes its mistake, and what emerges from your snatch as it tries to escape, is just an unending flood of feminine cum that sends a small tidal wave across the floor of the passageway.
+</text>
+
+
+
+<effect type="feed" value="150"/>
+<special effect="removenpc"/>
+<choice destination="end" text="You finished the whole thing!"/>
+</page>
+
 </Conversation>

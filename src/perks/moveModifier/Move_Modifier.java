@@ -72,7 +72,10 @@ public class Move_Modifier {
 	public void applyModifier(CombatMove move, int rank)
 	{
 		move.setAttackBonus(move.getAttackBonus()+attackBonus);
-		move.setTimeCost(move.getTimeCost()*timeModifier);
+		if (timeModifier>0)
+		{
+			move.setTimeCost(move.getTimeCost()*timeModifier);		
+		}
 		move.setActionCost(move.getActionCost()*actionCost);
 		move.setAttackPattern(attackPattern);
 		
