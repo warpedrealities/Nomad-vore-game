@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<perk name="mighty boot">
+<description> 
+By judicious application of the mighty boot you can send your foes flying away from you with a mighty kick. Be mighty!
+</description>
+<move count="1">
+<combatmove name="mighty boot" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" cooldown="100" icon="5" pattern="MELEE"  actionCost="4" moveType="MOVEMENT"> 
+<missText count="1">
+<text>you fail to land a mighty kick on TARGET .</text>
+</missText>
+<hitText count="1">
+<text>you deliver a mighty kick to TARGET</text>
+</hitText>
+<effectMovement moveType="TARGET_AWAY" distance="4" abilityMod="STRENGTH"/>
+<effectStatus probability="10">
+<applyText>TARGET is reeling from the might of your mighty boot</applyText>
+<statusStun uid="9" duration="10">
+TARGET is no longer stunned
+</statusStun>
+</effectStatus>
+</combatmove>
+</move>
+<maxrank value="1"/>
+
+</perk>

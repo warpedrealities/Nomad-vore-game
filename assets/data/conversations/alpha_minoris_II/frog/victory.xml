@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+<preference fetish="oralvore"/>
+<text>
+With that final kick you're sent reeling back and then slump in a heap in front of your curvaceous predator. The frog girl squatting down to give you a look over, grinning broadly and uttering a little ribbit followed by a chuckle as she sizes you up as her meal. Her appreciation indicated doubly so when you hear the gurgle of her belly, seemingly not muffled by that layer of chub wrapped around her middle. The ample amphibian seems to be done anticipating and appreciating you visually though, or perhaps unwilling to wait let you recover. And so your predator hauls you up with smooth yet firm hands on your upper arms. You feel that flexible and long tongue lash out and run up and down your body, tasteing you, curling around your frame as her mouth gapes wide before you, then chomps down. The frog girl engulfing your head in her wide mouth in one movement. Your predator moaning in delight as she samples your face and neck and you feel her prodigious rack and groaning belly pressed softly against your body as she positions herself to start gobbling you down.
+</text>
+<choice destination="oralvore0" text="tasted and devoured"/>
+</page>
+
+<page ID="oralvore0">
+<text>
+Cuddled close to her you can feel the soft warmth of her padded frame and the eagerness of her body to contain yours as she keeps you snug and under control while eating you alive. Her arms are powerful despite the softness of how they feel and they hold you firm as she swallows, a powerful loud glucking gulp pulling your chest into her mouth and your head into her throat. The amphibian curving you inwards easily as her hands shift down to your thighs and you slide easily down her throat towards her belly. Your struggles and protests of no import to her though some of the more spirited acts of defiance at least get her to chuckle muffledly around her ample mouthful of space traveller.
+</text>
+<choice destination="oralvore1" text="continue"/>
+</page>
+
+<page ID="oralvore1">
+<text>
+As the amphibian eats you alive that tongue gets, simply everywhere, twining between your legs, curling around your body and intruding between your thighs. the voracious frog seems to be intent on sampling you thoroughly as she eats you alive, your legs waving around in the air now as she starts to work you into her belly. The frog's gut starting to swell out as you're packed away behind her chub. The insides of the voracious frog stretching easily to contain you, proving positively soft, roomy and accomodating compared to other stomachs you'd had the misfortune to experience. It seems that soft fleshy sack behind that padded tummy is to be your new home as she's working your ass past her lips and crams your upper body inside her belly.
+</text>
+<choice destination="oralvore2" text="continue"/>
+</page>
+
+<page ID="oralvore2">
+<text>
+Over halfway past her gaping jaws now you know it won't take her long to chug you down. The amphibian grabbing ahold of your leg by your calf and ignoring the flailing of the other as she tips her head back and gulps and gobbles you down. The frog finally snapping her jaws shut and smacking her lips in satisfaction behind your feet. Your form sliding down and curling up inside her gut as she rubs and kneads at her middle with both hands. The froggy woman letting out a delighted ribbit and croak of pleasure then chuckles and patpats her middle as you push out, being able to only make indistinct handprints as you shove out against the thick walls of her tummy.
+</text>
+<choice destination="submit" text="get comfortable and get digested"/>
+<choice destination="struggle" text="try to escape her belly by force"/>
+</page>
+
+<page ID="submit">
+<text>
+
+</text>
+<choice destination="submitGO" text="let it happen"/>
+</page>
+
+<gameover ID="submitGO">
+<text>
+
+
+</text>
+</gameover>
+
+<page ID="struggle">
+<text>
+
+</text>
+<choice destination="strugglecheck" text="must escape"/>
+</page>
+
+<check ID="strugglecheck">
+<test what="STRUGGLE" DC="12"/>
+<outcome destination="escape"/>
+<outcome destination="gurgle"/>
+</check>
+
+<page ID="escape">
+<text>
+
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="*back up*"/>
+</page>
+
+<page ID="gurgle">
+<text>
+
+</text>
+<choice destination="struggleGO" text="gurgle"/>
+</page>
+
+<gameover ID="struggleGO">
+<text>
+
+</text>
+</gameover>
+
+
+</Conversation>

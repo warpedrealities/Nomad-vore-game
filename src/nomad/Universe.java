@@ -340,11 +340,15 @@ public class Universe extends GameManager
 	
 	public void save(String filename) throws IOException
 	{
-		if (!filename.equals(saveName))
+		if (!filename.equals(saveName) && filename.length()>0)
 		{
 			File file=new File("saves/"+filename);
 			FileTools.deleteFolder(file);
-			file.mkdir();
+			if (!file.mkdir())
+			{
+				
+				throw new IOException("failed to create new save directory");
+			}
 		}
 		saveCopy(filename);
 		saveName=filename;

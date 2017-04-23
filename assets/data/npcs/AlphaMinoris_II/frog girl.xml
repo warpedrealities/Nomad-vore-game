@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="frog.png"/>
+<name>frog girl</name>
+<description> A curvaceously figured humanoid, her skin a smooth brilliant emerald over all but her pale cream belly and she wears not a shred of clothing about her body. Her amphibious form possessed of hefty tits, ample thighs and a soft padded belly. She eyes you with an undeniably predatory air and a preposterously long tongue flicks out of her mouth a moment with the air of a living hose unfurling from a reel.</description>
+<rpg>
+<experiencevalue value="35"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+
+<stat stat="HEALTH" value="40"/>
+<stat stat="RESOLVE" value="25"/>
+<attribute attribute="DODGE" value="2"/>
+<attribute attribute="PARRY" value="2"/>
+<combatMove name="kick" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0">
+<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<missText count="2">
+<text>The froggy snaps out a powerful kick that does not connect with TARGET</text>
+<text>TARGET evades a kick from the froggy</text>
+</missText>
+<hitText count="1">
+<text>The frog girl kicks TARGET for VALUE damage</text>
+</hitText>
+</combatMove>
+<combatMove name="lick" pattern="MELEE" bonusAttribute="SEDUCTION" timeCost="2" bonusToHit="0">
+<effectDamage type="TEASE" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<missText count="1">
+<text>The frog girl fails to lick TARGET</text>
+</missText>
+<hitText count="1">
+<text>TARGET loses VALUE resolve to the teasing licks of the frog girl</text>
+</hitText>
+</combatMove>
+</rpg>
+<combatmove name="tongue" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" pattern="RANGED" moveType="MOVEMENT"> 
+<missText count="2">
+<text>the frog girl lashes out her tongue at TARGET who dodges the attack.</text>
+<text>the frog girl's amazingly long tail snaps out and flicks harmlessly past TARGET before reeling back in.</text>
+</missText>
+<hitText count="2">
+<text>the frog girl lashes out her tongue at TARGET and wraps it around her briefly, tugging her closer</text>
+<text>the frog girl snags TARGET with her tongue and hauls them closer</text>
+</hitText>
+<effectMovement moveType="TARGET_TOWARDS" distance="3" abilityMod="STRENGTH"/>
+</combatmove>
+
+
+</rpg>
+<defeated conversation="alpha_minoris_II/frog/defeat" />
+<seduced conversation="alpha_minoris_II/frog/seduced" />
+<victory conversation="alpha_minoris_II/frog/victory" />
+<seducer conversation="alpha_minoris_II/frog/seducer" />
+<controller AI="frog"/>
+<respawn delay="2000"/>
+<faction value="monster"/>
+</NPC>

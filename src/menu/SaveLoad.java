@@ -206,7 +206,7 @@ public class SaveLoad extends Screen implements Callback{
 				}
 				break;
 			case 3:
-				if (textEntry==true)
+				if (textEntry==true && m_text.m_string.length()>2)
 				{
 					buildDirectory();
 					textEntry=false;

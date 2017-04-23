@@ -37,4 +37,38 @@ public class CombatMovementHandler {
 		actor.setPosition(last);
 		ViewScene.m_interface.redraw();
 	}
+
+	public static void MoveTowards(Actor actor, Actor to, int distance) {
+		// TODO Auto-generated method stub
+		Vec2f direction=new Vec2f(to.getPosition().x-actor.getPosition().x,to.getPosition().y-actor.getPosition().y);
+		direction.normalize();
+		Vec2f p=new Vec2f(actor.getPosition().x,actor.getPosition().y);
+		Vec2f last=p;
+		float d=to.getPosition().getDistance(actor.getPosition());
+		if (d<distance)
+		{
+			distance=(int)d;
+		}
+		for (int i=0;i<distance;i++)
+		{
+			
+			p.x+=direction.x; p.y+=direction.y;
+			int x=(int)p.x; int y=(int)p.y;
+			Tile t=Universe.getInstance().getCurrentZone().getTile(x, y);
+			if (t==null)
+			{
+				break;
+			}
+			if (t.getDefinition().getBlockVision())
+			{
+				break;
+			}
+			if (t.getDefinition().getMovement()==TileMovement.WALK && t.getActorInTile()==null)
+			{
+				last=new Vec2f(x,y);
+			}	
+		}
+		actor.setPosition(last);
+		ViewScene.m_interface.redraw();		
+	}
 }
