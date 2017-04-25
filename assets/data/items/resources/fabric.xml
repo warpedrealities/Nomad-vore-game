@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <ItemResource name="fabric" weight="1" value="45.0">
-<description>A piece of fabric. Could be fashioned into clothing or other things in skilled hands.</description>
+	<description>A piece of fabric. Could be fashioned into clothing or
+		other things in skilled hands.</description>
 
 </ItemResource>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ItemResource name="fuel cell(poor)" weight="2" value="200.0">
-<description>This canister contains congealed irradiated sludge.</description>
+	<description>This canister contains congealed irradiated sludge.</description>
 
 </ItemResource>

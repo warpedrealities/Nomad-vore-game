@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <ItemConsumable name="deku nut" weight="0.1" value="10">
-<description>A brown nut, it looks nobbly and rough. Doesn't look that nutritious to you.</description>
-<effectrecover modifier="ENDURANCE" modstrength="0.2" modvalue="5" modifies="SATIATION">
-The nut is crunchy, and bitter.
-</effectrecover>
+	<description>A brown nut, it looks nobbly and rough. Doesn't look that
+		nutritious to you.</description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="5" modifies="SATIATION">
+		The nut is crunchy, and bitter.
+	</effectrecover>
 </ItemConsumable>

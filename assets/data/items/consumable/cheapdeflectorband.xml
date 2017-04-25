@@ -1,13 +1,19 @@
 <?xml version="1.0"?>
 <ItemConsumable name="deflector band" weight="1" value="250">
-<description>A self contained reflective shield bracelet. To fit a thermal shielding unit in something so small meant an integral non replenishable fuel cell and less robust parts however.</description>
+	<description>A self contained reflective shield bracelet. To fit a
+		thermal shielding unit in something so small meant an integral non
+		replenishable fuel cell and less robust parts however.</description>
 
-<effectstatus probability="100">
-<statusDefence uid="10" icon="0" duration="150"  numModifiers="1">
-<strength value="20"/>
-<effect attribute="THERMAL" modifier="4"/>
-<removeText> with a dying fizzle, series of popping sounds and a scent of burning electronics the deflector band is reduced to a piece of unsightly useless jewelry.</removeText>
-</statusDefence>
-<applyText>with a shrill whine the bracelet powers on. A faint shimmer of deflective energy forming around you.</applyText>
-</effectstatus>
+	<effectstatus probability="100">
+		<statusDefence uid="10" icon="0" duration="150"
+			numModifiers="1">
+			<strength value="20" />
+			<effect attribute="THERMAL" modifier="4" />
+			<removeText> with a dying fizzle, series of popping sounds and a
+				scent of burning electronics the deflector band is reduced to a
+				piece of unsightly useless jewelry.</removeText>
+		</statusDefence>
+		<applyText>with a shrill whine the bracelet powers on. A faint shimmer
+			of deflective energy forming around you.</applyText>
+	</effectstatus>
 </ItemConsumable>

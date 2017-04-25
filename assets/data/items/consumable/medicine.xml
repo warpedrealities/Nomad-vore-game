@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <ItemConsumable name="medicine" weight="1" value="100">
-<description>Alien medicine, probably safe to use but even if not what choice do you have. </description>
-<effectrecover modifier="ENDURANCE" modstrength="0.2" modvalue="6" modifies="HEALTH">
-The medicine makes you feel better, who'd of thought it.
-</effectrecover>
+	<description>Alien medicine, probably safe to use but even if not what
+		choice do you have. </description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="6" modifies="HEALTH">
+		The medicine makes you feel better, who'd of thought it.
+	</effectrecover>
 </ItemConsumable>

@@ -1,120 +1,246 @@
 <?xml version="1.0"?>
 <Conversation>
-<!--
-<page ID="start">
-<preference fetish="analvore"/>
-<condition operator="lessthan" evaluate="DICEROLL" value="10"/>
-</page>
--->
-<page ID="start">
-<preference fetish="oralvore"/>
-<text>
-The raptor girl looms over you, cocking her head to the side and licking her lips as she regards your prone form. Her movements are flighty and she hisses darting forwards as you move, but upon realizing the fight has truly been taken out of you she smiles. The raptor girl bounding forwards to land in a squat, <conditional><assertion evaluate="slothasitem" slot="2"/>yanking off your foot coverings</conditional> and lifting both feet to her lips. That long reptilian tongue lapping over your toes teasingly and she makes an exaggerated chirring sound as if teasing, tightening her grasp on your ankles when you try to pull away.
-</text>
-<choice destination="oralvore0" text="raptor food"/>
+	<!-- <page ID="start"> <preference fetish="analvore"/> <condition operator="lessthan" 
+		evaluate="DICEROLL" value="10"/> </page> -->
+	<page ID="start">
+		<preference fetish="oralvore" />
+		<text>
+			The raptor girl looms over you, cocking her head to the side and
+			licking her lips as she regards your prone form. Her movements are
+			flighty and she hisses darting forwards as you move, but upon
+			realizing the fight has truly been taken out of you she smiles. The
+			raptor girl bounding forwards to land in a squat,
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				yanking off your foot coverings
+			</conditional>
+			and lifting both feet to her lips. That long reptilian tongue lapping
+			over your toes teasingly and she makes an exaggerated chirring sound
+			as if teasing, tightening her grasp on your ankles when you try to
+			pull away.
+		</text>
+		<choice destination="oralvore0" text="raptor food" />
 
-</page>
+	</page>
 
-<page ID="oralvore0">
-<text>
-Your feet go in and this time the chirring isn't feigned as the raptor savours your feet. She half closes her eyes with her lips wrapped around your ankles, but her eyes snap open again as you try to pull back and her hands snap forwards to grasp your legs and pull you towards her. Your reptilian predator starting to take hearty eager gulps, cramming your feet down her throat and working her way up your legs. That lean body clearly hungry for the coming meal as you feel her belly growl just beneath your feet before they're plunged inside. Her hands alternating up towards your waist as your legs disappear past her lips and down her throat, starting to swell out her middle with the bulges of your feet visibly pressing out her belly.
-</text>
-<choice destination="oralvore1" text="rest of the way"/>
+	<page ID="oralvore0">
+		<text>
+			Your feet go in and this time the chirring isn't feigned as the raptor
+			savours your feet. She half closes her eyes with her lips wrapped
+			around your ankles, but her eyes snap open again as you try to pull
+			back and her hands snap forwards to grasp your legs and pull you
+			towards her. Your reptilian predator starting to take hearty eager
+			gulps, cramming your feet down her throat and working her way up your
+			legs. That lean body clearly hungry for the coming meal as you feel
+			her belly growl just beneath your feet before they're plunged inside.
+			Her hands alternating up towards your waist as your legs disappear
+			past her lips and down her throat, starting to swell out her middle
+			with the bulges of your feet visibly pressing out her belly.
+		</text>
+		<choice destination="oralvore1" text="rest of the way" />
 
-</page>
+	</page>
 
-<page ID="oralvore1">
-<text>
-It doesn't take her long to take in your thighs, lips around your waist she straightens up leaving your upper body at an angle. Her tail swaying in delight and her belly bulging with the curled up shape of your legs. From here it's a simple matter to eat the rest of you despite your struggles and protests, her hands hoisting you up and feeding you in. That greedy gullet claiming your middle and chest before forcing your arms above your head, in desperation you splay them against the hungry tug of her throat, but know it will buy you but a little time with your vision framed by the red encompassing mouth of the femme lizard. Her swallows are thwarted, dragging around your saliva soaked upper body but making no headway, a reprieve of but a few moments.
-</text>
-<choice destination="oralvore2" text="swallowed completely"/>
+	<page ID="oralvore1">
+		<text>
+			It doesn't take her long to take in your thighs, lips around your waist
+			she straightens up leaving your upper body at an angle. Her tail
+			swaying in delight and her belly bulging with the curled up shape of
+			your legs. From here it's a simple matter to eat the rest of you
+			despite your struggles and protests, her hands hoisting you up and
+			feeding you in. That greedy gullet claiming your middle and chest
+			before forcing your arms above your head, in desperation you splay
+			them against the hungry tug of her throat, but know it will buy you
+			but a little time with your vision framed by the red encompassing
+			mouth of the femme lizard. Her swallows are thwarted, dragging around
+			your saliva soaked upper body but making no headway, a reprieve of
+			but a few moments.
+		</text>
+		<choice destination="oralvore2" text="swallowed completely" />
 
-</page>
+	</page>
 
-<page ID="oralvore2">
-<text>
-You see through the gap of her jaws her hands reach up, forcing your arms together and dislodging them as she takes a final swallow. The raptor girl letting out a long drawn out chirr of pleasure that sounds in your ears along with her gulps as your head slides down her throat. Your hands the last of you to go being schlurped up past her lips and forming a bulge that disappears past her neck swiftly as you're utterly devoured. As this happens your predator sits down comfortably and rests both hands on her now massively distended and domed out orange belly. Your form made to curl up helplessly within her gut as it gurgles softly in welcome around you, that chirr of delight from feeling so full not letting up as it comes from the raptor who ate you. You could try taking advantage of that, or maybe struggling free.
-</text>
-<choice destination="struggle" text="struggle"/>
-<choice destination="pleasure" text="pleasure"/>
-<choice destination="submit" text="submit"/>
-</page>
+	<page ID="oralvore2">
+		<text>
+			You see through the gap of her jaws her hands reach up, forcing your
+			arms together and dislodging them as she takes a final swallow. The
+			raptor girl letting out a long drawn out chirr of pleasure that
+			sounds in your ears along with her gulps as your head slides down her
+			throat. Your hands the last of you to go being schlurped up past her
+			lips and forming a bulge that disappears past her neck swiftly as
+			you're utterly devoured. As this happens your predator sits down
+			comfortably and rests both hands on her now massively distended and
+			domed out orange belly. Your form made to curl up helplessly within
+			her gut as it gurgles softly in welcome around you, that chirr of
+			delight from feeling so full not letting up as it comes from the
+			raptor who ate you. You could try taking advantage of that, or maybe
+			struggling free.
+		</text>
+		<choice destination="struggle" text="struggle" />
+		<choice destination="pleasure" text="pleasure" />
+		<choice destination="submit" text="submit" />
+	</page>
 
-<page ID="struggle">
-<text>
-You can feel her chirring triumphantly, but you're not beaten yet. You start kicking up a fuss within her, trying to unsettle that gurgling gut and force her to disgorge your struggling form. The muscular flesh pressing around you yielding slightly as you thrust your hands, elbows and feet against her insides. The Raptor letting out a startled urp and yelp as she clutches her jostling belly as it gurgles and wobbles around with you inside.
-</text>
-<choice destination="strugglecheck" text="try to make her spit you out"/>
+	<page ID="struggle">
+		<text>
+			You can feel her chirring triumphantly, but you're not beaten yet. You
+			start kicking up a fuss within her, trying to unsettle that gurgling
+			gut and force her to disgorge your struggling form. The muscular
+			flesh pressing around you yielding slightly as you thrust your hands,
+			elbows and feet against her insides. The Raptor letting out a
+			startled urp and yelp as she clutches her jostling belly as it
+			gurgles and wobbles around with you inside.
+		</text>
+		<choice destination="strugglecheck" text="try to make her spit you out" />
 
-</page>
+	</page>
 
-<check ID="strugglecheck">
-<test what="STRUGGLE" DC="10"/>
-<outcome destination="struggleescape"/>
-<outcome destination="struggledigest"/>
-</check>
+	<check ID="strugglecheck">
+		<test what="STRUGGLE" DC="10" />
+		<outcome destination="struggleescape" />
+		<outcome destination="struggledigest" />
+	</check>
 
-<page ID="struggleescape">
-<text>
-The raptor starts to look more and more distressed as you shove at her insides, unsettling her until finally she can take it no more. Doubling over on all fours as she noisily disgorges you back out of her belly, you land in a heap somewhat wetter than when you went in. The raptor girl looks dizzy and disorientated and nauseous after horking you back up, she shouldn't be an immediate threat.
-</text>
-<choice destination="end" text="back away"/>
-<effect type="heal" value="0.1"/>
-<effect type="stunnpc" value="10"/>
-</page>
+	<page ID="struggleescape">
+		<text>
+			The raptor starts to look more and more distressed as you shove at her
+			insides, unsettling her until finally she can take it no more.
+			Doubling over on all fours as she noisily disgorges you back out of
+			her belly, you land in a heap somewhat wetter than when you went in.
+			The raptor girl looks dizzy and disorientated and nauseous after
+			horking you back up, she shouldn't be an immediate threat.
+		</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+	</page>
 
-<gameover ID="struggledigest">
-<text>
-The raptor starts to look more and more distressed as you shove at her insides, but while you're hard at work so is her belly. And soon you're in no fit state to struggle out of her, the gurgles and churns and glorps of her belly starting to replace the sound of your struggles and the yelps and hisses of her distress are replaced with the resumption of that pleased chirring. You've lost your final struggle, your body getting increasingly broken down by her gurgling gut. In time you can't even twitch, being digested down entirely as her gut rounds out into a smooth massive dome full of soupified remnants. The raptor girl chirring in delight and running her hands over the mass as her belly starts to compact and shrink down again, absorbing your nourishment and letting it course through her body.
-</text>
-</gameover>
+	<gameover ID="struggledigest">
+		<text>
+			The raptor starts to look more and more distressed as you shove at her
+			insides, but while you're hard at work so is her belly. And soon
+			you're in no fit state to struggle out of her, the gurgles and churns
+			and glorps of her belly starting to replace the sound of your
+			struggles and the yelps and hisses of her distress are replaced with
+			the resumption of that pleased chirring. You've lost your final
+			struggle, your body getting increasingly broken down by her gurgling
+			gut. In time you can't even twitch, being digested down entirely as
+			her gut rounds out into a smooth massive dome full of soupified
+			remnants. The raptor girl chirring in delight and running her hands
+			over the mass as her belly starts to compact and shrink down again,
+			absorbing your nourishment and letting it course through her body.
+		</text>
+	</gameover>
 
-<page ID="pleasure">
-<text>
-She's chirring, enjoying herself..maybe if she lost herself in the moment you could escape. You set about moving around in there, but not struggling more..rubbing, especially focusing your attention down below you. You hear her make a startled mip of delight as your rubbing begins to bear fruit, but mere pleasure won't be enough. It's time to see if your fingers are magic enough to bring her to orgasm from the inside.
-</text>
-<choice destination="pleasurecheck" text="magic hands, go"/>
-</page>
+	<page ID="pleasure">
+		<text>
+			She's chirring, enjoying herself..maybe if she lost herself in the moment
+			you could escape. You set about moving around in there, but not
+			struggling more..rubbing, especially focusing your attention down
+			below you. You hear her make a startled mip of delight as your
+			rubbing begins to bear fruit, but mere pleasure won't be enough. It's
+			time to see if your fingers are magic enough to bring her to orgasm
+			from the inside.
+		</text>
+		<choice destination="pleasurecheck" text="magic hands, go" />
+	</page>
 
-<check ID="pleasurecheck">
-<test what="PLEASURE" DC="12"/>
-<outcome destination="pleasureescape"/>
-<outcome destination="pleasuredigest"/>
-</check>
+	<check ID="pleasurecheck">
+		<test what="PLEASURE" DC="12" />
+		<outcome destination="pleasureescape" />
+		<outcome destination="pleasuredigest" />
+	</check>
 
-<page ID="pleasureescape">
-<text>
-The chirring moaning sounds are music to your ears, louder than the sound of her belly around you as one hand delves down past the bulge of her belly and into her naughtyness. The raptor sprawled out on her back as you rub her inside, her gut swaying back and forth rthythmically as you please her and she masturbates to the sensation. As things are getting increasingly hot inside her you reach your triumph, the raptor letting out a delighted cry and arching her back, thrusting her hips skywards and staining her own tail with femmecum. The opportunity as she bucks and shudders and slumps into afterglow too good to ignore, and the raptor acks and glucks as you force your way out of her during the relaxing post masturbatory slump. Leaving her flushed and sour on the ground, it'll take her a bit to recover..but she's not likely to treat you kindly for escaping her belly and spoiling her afterglow.
-</text>
-<choice destination="end" text="back away"/>
-<effect type="heal" value="0.1"/>
-<effect type="stunnpc" value="10"/>
-</page>
+	<page ID="pleasureescape">
+		<text>
+			The chirring moaning sounds are music to your ears, louder than the
+			sound of her belly around you as one hand delves down past the bulge
+			of her belly and into her naughtyness. The raptor sprawled out on her
+			back as you rub her inside, her gut swaying back and forth
+			rthythmically as you please her and she masturbates to the sensation.
+			As things are getting increasingly hot inside her you reach your
+			triumph, the raptor letting out a delighted cry and arching her back,
+			thrusting her hips skywards and staining her own tail with femmecum.
+			The opportunity as she bucks and shudders and slumps into afterglow
+			too good to ignore, and the raptor acks and glucks as you force your
+			way out of her during the relaxing post masturbatory slump. Leaving
+			her flushed and sour on the ground, it'll take her a bit to
+			recover..but she's not likely to treat you kindly for escaping her
+			belly and spoiling her afterglow.
+		</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+	</page>
 
-<page ID="pleasuredigest">
-<text>
-The chirring moaning sounds are music to your ears, louder than the sound of her belly around you as one hand delves down past the bulge of her belly and into her naughtyness. The raptor sprawled on her back, eyes closed and fingers busily working in bliss as you work to please her and her gut works on you. The glorping, moaning, gurgling and chirring all combining into a symphony of predatory bliss around you. As things get hot and you work with diminishing strength you reach your triumph, her pleasure rocking through her as the raptor girl arches her back and cries.. her tail staining with juices. Her full body spasm of delight pressing down on you as her belly contracts, squeezing you and forcing your semi digested form to give way. She slumps back in afterglow, but there'll be no escape for you. You've been here too long and the clench of her muscular stomach walls has left you unable to escape, you're in for the long haul now.
-</text>
-<choice destination="pleasureGO" text="get digested"/>
-</page>
+	<page ID="pleasuredigest">
+		<text>
+			The chirring moaning sounds are music to your ears, louder than the
+			sound of her belly around you as one hand delves down past the bulge
+			of her belly and into her naughtyness. The raptor sprawled on her
+			back, eyes closed and fingers busily working in bliss as you work to
+			please her and her gut works on you. The glorping, moaning, gurgling
+			and chirring all combining into a symphony of predatory bliss around
+			you. As things get hot and you work with diminishing strength you
+			reach your triumph, her pleasure rocking through her as the raptor
+			girl arches her back and cries.. her tail staining with juices. Her
+			full body spasm of delight pressing down on you as her belly
+			contracts, squeezing you and forcing your semi digested form to give
+			way. She slumps back in afterglow, but there'll be no escape for you.
+			You've been here too long and the clench of her muscular stomach
+			walls has left you unable to escape, you're in for the long haul now.
+		</text>
+		<choice destination="pleasureGO" text="get digested" />
+	</page>
 
-<gameover ID="pleasureGO">
-<text>
-You tried. You failed. But at least you gave the raptor demi a pleasing orgasm to remember you by as you succumb inside her. The raptor girl closing her eyes, resting her hands on the bulge of your diminishing form. Your shape steadily breaking down, gurgling away into soup inside her as she relaxes in afterglow. The raptor able to cherish the drawn out pleasurable sensations of her afterglow and the pleasure of digesting you as she lays there. Your form soon entirely liquid, compacting her belly under her fingers as you're absorbed into her. Her belly making little gurgles and burbles quietly as it trims back down, until you're utterly digested and not a trace of you remains, not even a bit of pudge on her middle that's as slim as it was before. All that will be left to remember you by is a saucy memory and a tingle of past pleasure for the raptor girl who'd claimed you.
-</text>
-</gameover>
+	<gameover ID="pleasureGO">
+		<text>
+			You tried. You failed. But at least you gave the raptor demi a pleasing
+			orgasm to remember you by as you succumb inside her. The raptor girl
+			closing her eyes, resting her hands on the bulge of your diminishing
+			form. Your shape steadily breaking down, gurgling away into soup
+			inside her as she relaxes in afterglow. The raptor able to cherish
+			the drawn out pleasurable sensations of her afterglow and the
+			pleasure of digesting you as she lays there. Your form soon entirely
+			liquid, compacting her belly under her fingers as you're absorbed
+			into her. Her belly making little gurgles and burbles quietly as it
+			trims back down, until you're utterly digested and not a trace of you
+			remains, not even a bit of pudge on her middle that's as slim as it
+			was before. All that will be left to remember you by is a saucy
+			memory and a tingle of past pleasure for the raptor girl who'd
+			claimed you.
+		</text>
+	</gameover>
 
-<page ID="submit">
-<text>
-As you settle in comfortably you realize the truth of your desire. To let this powerful, cunning and sexy predator claim you. The raptor chirrs and prods her belly curiously as you relax in its gurgling confines, puzzled perhaps by your lack of resistance. But after the effort of overcoming you she's not going to question a nice easy time digesting you too hard. You feel it as she rubs her belly, with each gurgle and glorp of her stomach around you you succumb a little more to her innards..yield a little more to her hands, weaken a little more such that even if you wanted to put up a fight it's too late now. You can feel yourself becoming one with her, starting to ease apart layer by layer.
-</text>
-<choice destination="submitGO" text="get digested"/>
-</page>
+	<page ID="submit">
+		<text>
+			As you settle in comfortably you realize the truth of your desire. To
+			let this powerful, cunning and sexy predator claim you. The raptor
+			chirrs and prods her belly curiously as you relax in its gurgling
+			confines, puzzled perhaps by your lack of resistance. But after the
+			effort of overcoming you she's not going to question a nice easy time
+			digesting you too hard. You feel it as she rubs her belly, with each
+			gurgle and glorp of her stomach around you you succumb a little more
+			to her innards..yield a little more to her hands, weaken a little
+			more such that even if you wanted to put up a fight it's too late
+			now. You can feel yourself becoming one with her, starting to ease
+			apart layer by layer.
+		</text>
+		<choice destination="submitGO" text="get digested" />
+	</page>
 
-<gameover ID="submitGO">
-<text>
-The raptor girl remained seated and stroking, both of you losing track of time. Probably she can't put a finger on when you transitioned from digesting prey to nourishing soup within her but it happens all the same as your relaxed form breaks down and sloshes about. Her gut gradually turning round and smooth instead of bulgy and contoured and it shrinks back down. Your body given to her utterly, nothing more than fuel to nourish and sustain the predatory femme lizard. It's not perhaps the end that you could of foreseen, but it's the end you chose in the end.
-</text>
-</gameover>
+	<gameover ID="submitGO">
+		<text>
+			The raptor girl remained seated and stroking, both of you losing track
+			of time. Probably she can't put a finger on when you transitioned
+			from digesting prey to nourishing soup within her but it happens all
+			the same as your relaxed form breaks down and sloshes about. Her gut
+			gradually turning round and smooth instead of bulgy and contoured and
+			it shrinks back down. Your body given to her utterly, nothing more
+			than fuel to nourish and sustain the predatory femme lizard. It's not
+			perhaps the end that you could of foreseen, but it's the end you
+			chose in the end.
+		</text>
+	</gameover>
 
 </Conversation>

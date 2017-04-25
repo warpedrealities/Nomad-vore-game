@@ -1,144 +1,206 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<!--written by andrea_crawford-->
-<preference fetish="oralvore"/>
-<text>
+	<page ID="start">
+		<!--written by andrea_crawford -->
+		<preference fetish="oralvore" />
+		<text>
 
-Entranced you stumble towards the shroom girl, who puts a hand against her mouth to hide a giggle at your clearly pheremone addled state.
-She seems so downright adorable as she looks up at you and licks her lips, parting them slowly to allow you a first glance inside.
-Her flesh is of a darker hue than her pale, grey skin, and moisture glistens on her tongue as you peer over it, towards the end of her mouth and the opening of her throat.
-You cannot help it, cannot resist the luring temptation an dip your fingers inside, feeling her lick over your hand - and your desire grows.
-You have to get inside.
+			Entranced you stumble towards the shroom girl, who puts a hand against her
+			mouth to hide a giggle at your clearly pheremone addled state.
+			She seems so downright adorable as she looks up at you and licks her
+			lips, parting them slowly to allow you a first glance inside.
+			Her flesh is of a darker hue than her pale, grey skin, and moisture
+			glistens on her tongue as you peer over it, towards the end of her
+			mouth and the opening of her throat.
+			You cannot help it, cannot resist the luring temptation an dip your
+			fingers inside, feeling her lick over your hand - and your desire
+			grows.
+			You have to get inside.
 
-</text>
-<choice destination="down the hatch" text="So inviting..."/>
-</page>
-
-
-<page ID="down the hatch">
-<text>
-
-The next giggle from the mushroom girl is a tad muffled, as your arms are wriggling their way down her throat, your fingers pushing aside the soft, wet flesh to make way for you.
-Gracefully her hands reach up to grasp your arms and aid you, to ease you down into her lithe, little body.
-Her throat stretches easily as you push deeper, squeezing first your head, then shoulders into it to follow the lead of your arms.
-LBREAK
-Even your breasts are no obstacle for the petite girl, as they are quickly compressed against your chest, sliding over her tongue and into her gullet in one quick move.
-Your feet leave the ground just as your hips are devoured, your butt bulging out the small cheeks of the mushroom girl for a moment, before a quite notable bulge trails down her neck to sink deeper into her body.
-While you want to keep your legs still to make it easier for the short female to devour you, your arousal-ridden mind has you squirm and twist inside her.
-But despite your accidental resistant, the young creature seems to be easily capable of handling a prey your side, and not long after you find yourself curled up inside her belly.
-LBREAK
-With a happy giggle and a stiffled hiccup from outside, you can feel her hands caressing you through the stretched skin.
-
-</text>
-<choice destination="swallowed" text="Finally inside..."/>
-</page>
+		</text>
+		<choice destination="down the hatch" text="So inviting..." />
+	</page>
 
 
-<page ID="swallowed">
-<text>
+	<page ID="down the hatch">
+		<text>
 
-The mushroom girl continues her treatment, rubbing her hands over her massive gut, following your curves with her fingers as you press yourself against her gentle touch with need.
-Kneaded around by surprisingly strong stomach muscles, squished into the slippery surface of the grey, fleshy walls, you cannot help but moan.
-You can hear her giggling happily upon that, but when her gleeful noises get washed out by gurgling sounds around you, your head finally starts to clear.
-LBREAK
-Inside the mushroom girl's belly, you are out of reach for her pheromones and their effect wears off just in time.
-Taking in your surroundings with blinking, still lust-heavy eyes, you wonder what to make of this situation.
-Sure, you could try to fight back, struggle and squirm for all that it is worth - but is it really worth it?
-It is so cosy and warm in here, you are hugged to tight by the cutie's short, little form, and she seems so happy about you being there.
-Surely you do not want to disrupt this by selfish, rebellious behaviour?
+			The next giggle from the mushroom girl is a tad muffled, as your arms
+			are wriggling their way down her throat, your fingers pushing aside
+			the soft, wet flesh to make way for you.
+			Gracefully her hands reach up to grasp your arms and aid you, to ease you down
+			into her lithe, little body.
+			Her throat stretches easily as you push deeper, squeezing first your
+			head, then shoulders into it to follow the lead of your arms.
+			LBREAK
+			Even your breasts are no obstacle for the petite girl, as they are
+			quickly compressed against your chest, sliding over her tongue and
+			into her gullet in one quick move.
+			Your feet leave the ground just as your hips are devoured, your butt
+			bulging out the small cheeks of the mushroom girl for a moment,
+			before a quite notable bulge trails down her neck to sink deeper into
+			her body.
+			While you want to keep your legs still to make it easier for the short
+			female to devour you, your arousal-ridden mind has you squirm and
+			twist inside her.
+			But despite your accidental resistant, the young creature seems to be
+			easily capable of handling a prey your side, and not long after you
+			find yourself curled up inside her belly.
+			LBREAK
+			With a happy giggle and a stiffled hiccup from outside, you can feel her
+			hands caressing you through the stretched skin.
 
-</text>
-<choice destination="digest" text="So comfy in here..."/>
-<choice destination="struggle" text="Not this time!"/>
-</page>
-
-
-<page ID="struggle">
-<text>
-
-Fun or not, you decide that your time in this belly is up.
-With her lithe, light-built frame, the young girl will hardly be able to put up any notable resistance on your way out, and you begin to flex your muscles.
-Well, when you do so.
-LBREAK
-In just a minute. 
-LBREAK
-Any moment now.
-LBREAK
-Right after you fought off this amazingly cozy feeling of being inside her...
-LBREAK
-Blinking, you clear your head and redouble your efforts, weakly pushing against her dark flesh, stretching yourself.
-But then you slump back into the old position with another groan, as her stomach squelches and kneads around you.
-Turns out not her strength is what you will have to fight to get out of this, but instead the lustful feelings burning inside you, assaulting your pheromone-weakened mind.
-
-</text>
-<choice destination="strugglecheck" text="Must resist!"/>
-</page>
-
-<check ID="strugglecheck">
-<test what="WILLPOWER" DC="10"/>
-<outcome destination="escape"/>
-<outcome destination="succumb"/>
-</check>
+		</text>
+		<choice destination="swallowed" text="Finally inside..." />
+	</page>
 
 
-<page ID="escape">
-<text>
+	<page ID="swallowed">
+		<text>
 
-The mushroom girl urks and lets out a whimper as you begin to push against her belly, almost causing you to cease your resistance.
-The poor girl.
-But no! You must not be considerate of her right now, or you will never escape.
-Steeling yourself, you push upwards, against the tiny opening at the top, where the entrance of her throat is located.
-LBREAK
-Moments later, you find yourself laying on the rocky cavern floor in a pool of mixed juices and body fluids, catching your breath.
-In the end, getting out of your predator was quite easy.
-After you had overcome your mental blockade, you were able to push up and out of her without much of a trouble.
-LBREAK
-Turning your head towards the mushroom girl, you take a look at your recent hostess.
-The petite girl is down on her knees, obviously much more exhausted from the ordeal than you.
-She still coughs and sputters on occasion, whimpering, pleading with her eyes for you to get back into her now empty belly.
-you feel a little bad for her, but not bad enough to go back to being mushroom food.
+			The mushroom girl continues her treatment, rubbing her hands over her
+			massive gut, following your curves with her fingers as you press
+			yourself against her gentle touch with need.
+			Kneaded around by surprisingly strong stomach muscles, squished into the
+			slippery surface of the grey, fleshy walls, you cannot help but moan.
+			You can hear her giggling happily upon that, but when her gleeful
+			noises get washed out by gurgling sounds around you, your head
+			finally starts to clear.
+			LBREAK
+			Inside the mushroom girl's belly, you are out of reach for her pheromones
+			and their effect wears off just in time.
+			Taking in your surroundings with blinking, still lust-heavy eyes, you
+			wonder what to make of this situation.
+			Sure, you could try to fight back, struggle and squirm for all that it is
+			worth - but is it really worth it?
+			It is so cosy and warm in here, you are hugged to tight by the cutie's
+			short, little form, and she seems so happy about you being there.
+			Surely you do not want to disrupt this by selfish, rebellious
+			behaviour?
 
-</text>
-<effect type="heal" value="0.1"/>
-<effect type="stunNPC" value="10"/>
-<choice destination="end" text="Get back to your feet, quick!"/>
-</page>
-
-
-<page ID="succumb">
-<text>
-
-You shake your head and try to clear it, but with the soothing gurgles of the stomach around you, and the remainders the the pheromones still lingering in your system, it is hard to focus.
-The mushroom girl giggles and patpats her full belly, as your half hearted kicks and shoves make her middle jostle and sway - but to no avail.
-Your hands and feet slide off the slippery surface of the churning stomach walls, causing you to lose your weak grip every time, and your will to fight vanishes.
-Try as you might, you are unable to clear your mind from the tempting ideas to give in, and soon enough you stop your struggles and allow yourself to sink deeper into the fluids surrounding you.
-
-</text>
-<choice destination="food" text="Gurgle..."/>
-</page>
+		</text>
+		<choice destination="digest" text="So comfy in here..." />
+		<choice destination="struggle" text="Not this time!" />
+	</page>
 
 
-<page ID="digest">
-<text>
+	<page ID="struggle">
+		<text>
 
-You yawn and settle in, the mushroom girl murring as she rubs her belly and feels you doze within the cosyness of her gut.
-Her stomach gurgles softly around you, and you can feel its gentle embrace squeezing you over and over, working its digestive enzymes into your skin.
-But you do not mind.
-In the end, it is for a good cause - and she really is a cutie.
+			Fun or not, you decide that your time in this belly is up.
+			With her lithe, light-built frame, the young girl will hardly be able to
+			put up any notable resistance on your way out, and you begin to flex
+			your muscles.
+			Well, when you do so.
+			LBREAK
+			In just a minute.
+			LBREAK
+			Any moment now.
+			LBREAK
+			Right after you fought off this amazingly cozy feeling of being inside
+			her...
+			LBREAK
+			Blinking, you clear your head and redouble your efforts, weakly pushing
+			against her dark flesh, stretching yourself.
+			But then you slump back into the old position with another groan, as her
+			stomach squelches and kneads around you.
+			Turns out not her strength is what you will have to fight to get out of
+			this, but instead the lustful feelings burning inside you, assaulting
+			your pheromone-weakened mind.
 
-</text>
-<choice destination="food" text="Gurgle..."/>
-</page>
+		</text>
+		<choice destination="strugglecheck" text="Must resist!" />
+	</page>
+
+	<check ID="strugglecheck">
+		<test what="WILLPOWER" DC="10" />
+		<outcome destination="escape" />
+		<outcome destination="succumb" />
+	</check>
 
 
-<gameover ID="food">
-<text>
+	<page ID="escape">
+		<text>
 
-Over what feels like a few hours, your whole form is squeezed and churned about, squelched into the juices sloshing around in the short girl's enlarget gut.
-You have long passed out when your previously clearly visible outlines begin to soften, and her noisily gurgling stomach adopts the form of a large and soft, round sphere.
-The mushroom girl giggles and stretches, her sloshy belly now gradually shrinking as your digested form is absorbed to feed her cute body.
+			The mushroom girl urks and lets out a whimper as you begin to push
+			against her belly, almost causing you to cease your resistance.
+			The poor girl.
+			But no! You must not be considerate of her right now, or you will never
+			escape.
+			Steeling yourself, you push upwards, against the tiny opening at the top,
+			where the entrance of her throat is located.
+			LBREAK
+			Moments later, you find yourself laying on the rocky cavern floor in a pool
+			of mixed juices and body fluids, catching your breath.
+			In the end, getting out of your predator was quite easy.
+			After you had overcome your mental blockade, you were able to push up and
+			out of her without much of a trouble.
+			LBREAK
+			Turning your head towards the mushroom girl, you take a look at your recent
+			hostess.
+			The petite girl is down on her knees, obviously much more exhausted from
+			the ordeal than you.
+			She still coughs and sputters on occasion, whimpering, pleading with her
+			eyes for you to get back into her now empty belly.
+			you feel a little bad for her, but not bad enough to go back to being
+			mushroom food.
 
-</text>
-</gameover>
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunNPC" value="10" />
+		<choice destination="end" text="Get back to your feet, quick!" />
+	</page>
+
+
+	<page ID="succumb">
+		<text>
+
+			You shake your head and try to clear it, but with the soothing gurgles
+			of the stomach around you, and the remainders the the pheromones
+			still lingering in your system, it is hard to focus.
+			The mushroom girl giggles and patpats her full belly, as your half
+			hearted kicks and shoves make her middle jostle and sway - but to no
+			avail.
+			Your hands and feet slide off the slippery surface of the churning
+			stomach walls, causing you to lose your weak grip every time, and
+			your will to fight vanishes.
+			Try as you might, you are unable to clear your mind from the tempting
+			ideas to give in, and soon enough you stop your struggles and allow
+			yourself to sink deeper into the fluids surrounding you.
+
+		</text>
+		<choice destination="food" text="Gurgle..." />
+	</page>
+
+
+	<page ID="digest">
+		<text>
+
+			You yawn and settle in, the mushroom girl murring as she rubs her belly
+			and feels you doze within the cosyness of her gut.
+			Her stomach gurgles softly around you, and you can feel its gentle
+			embrace squeezing you over and over, working its digestive enzymes
+			into your skin.
+			But you do not mind.
+			In the end, it is for a good cause - and she really is a cutie.
+
+		</text>
+		<choice destination="food" text="Gurgle..." />
+	</page>
+
+
+	<gameover ID="food">
+		<text>
+
+			Over what feels like a few hours, your whole form is squeezed and churned
+			about, squelched into the juices sloshing around in the short girl's
+			enlarget gut.
+			You have long passed out when your previously clearly visible outlines
+			begin to soften, and her noisily gurgling stomach adopts the form of
+			a large and soft, round sphere.
+			The mushroom girl giggles and stretches, her sloshy belly now gradually
+			shrinking as your digested form is absorbed to feed her cute body.
+
+		</text>
+	</gameover>
 </Conversation>

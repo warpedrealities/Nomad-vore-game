@@ -94,7 +94,11 @@ public class WidgetHarvestable extends Widget {
 	{
 		if (m_picked==false)
 		{
-			int r=(GameManager.m_random.nextInt(m_max-m_min))+m_min;
+			int r=m_min;
+			if (m_max-m_min>0)
+			{
+				r+=(GameManager.m_random.nextInt(m_max-m_min));
+			}
 			
 			for (int i=0;i<r;i++)
 			{

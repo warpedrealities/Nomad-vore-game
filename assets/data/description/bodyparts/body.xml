@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <part name="body">
-<variable name="height" value="10"/>
-<variable name="weight" value="50"/>
+	<variable name="height" value="10" />
+	<variable name="weight" value="50" />
 </part>

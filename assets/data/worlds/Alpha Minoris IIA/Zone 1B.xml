@@ -92,7 +92,7 @@ A crashed spaceship lies partially buried here. Judging by the angle of its skyw
 <band low="-0.4" high="-0.1">
 <floodfill tile="2">
 <Seedwidgets min="16" max="32" name="fruitbush" />
-
+<Seedwidgets min="8" max="16" name="gourdbush" />
 <SeedNPCs min="8" max="16" name="Alpha_Minoris_IIA/harpy"> </SeedNPCs>
 
 </floodfill>

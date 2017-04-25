@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <rules>
-<superRule subject="saurian warrior" level="1" violation="ATTACK">
-<factionRelationship faction="saurian" mod="-5"/>
-</superRule>
-<superRule subject="elf warrior" level="1" violation="ATTACK">
-<factionRelationship faction="minyos" mod="-5"/>
-</superRule>
-<witness name="elf warrior"/>
-<witness name="saurian warrior"/>
+	<superRule subject="saurian warrior" level="1" violation="ATTACK">
+		<factionRelationship faction="saurian" mod="-5" />
+	</superRule>
+	<superRule subject="elf warrior" level="1" violation="ATTACK">
+		<factionRelationship faction="minyos" mod="-5" />
+	</superRule>
+	<witness name="elf warrior" />
+	<witness name="saurian warrior" />
 </rules>

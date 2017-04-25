@@ -1,148 +1,234 @@
 ﻿<?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<condition evaluate="LOCALFLAG" value="1" operator="equals" flag="first"/>
-<text>
-“greetings again, traveller from the stars. What can I do for you?”
-</text>
-<choice destination="job0" text="*inquire about tasks*">
-<condition operator="equals" evaluate="LOCALFLAG" flag="swordquest" value="0"/>
-</choice>
-<choice destination="job1" text="*inquire about tasks*">
-<condition operator="equals" evaluate="LOCALFLAG" flag="swordquest" value="1"/>
-</choice>
-<choice destination="shop" text="ask to buy things"/>
-<choice destination="know" text="ask to know more about her people">
-<preference fetish="analvore"/>
-</choice>
-<choice destination="lands" text="ask about the surrounding lands"/>
-<choice destination="end" text="ask for nothing"/>
-</page>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" value="1" operator="equals"
+			flag="first" />
+		<text>
+			“greetings again, traveller from the stars. What can I do for you?”
+		</text>
+		<choice destination="job0" text="*inquire about tasks*">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="swordquest"
+				value="0" />
+		</choice>
+		<choice destination="job1" text="*inquire about tasks*">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="swordquest"
+				value="1" />
+		</choice>
+		<choice destination="shop" text="ask to buy things" />
+		<choice destination="know" text="ask to know more about her people">
+			<preference fetish="analvore" />
+		</choice>
+		<choice destination="lands" text="ask about the surrounding lands" />
+		<choice destination="end" text="ask for nothing" />
+	</page>
 
-<page ID="job0">
-<!--quest start-->
-<text>
-Your inquiry about a job makes her smile "well traveller, seen as you want to make yourself useful...there is something you can do for me. My sister went missing investigating the ruins in the valley to the south. She was almost certainly devoured by a raptor, but if you could recover her sword so I have something to remember her by I'd be very grateful."
-</text>
-<choice destination="end" text="I'd be happy to get your sword for you"/>
-<choice destination="end" text="I might get around to it"/>
-<effect type="setlocalflag" flag="swordquest" value="1"/>
-</page>
-<page ID="job1">
-<!--quest completion-->
-<condition evaluate="HASITEM" operator="greaterthan" value="1" item="sister sword"/>
-<text>
-"You found it? oh thankyou traveller. It's in surprisingly good condition for how long its been down there isn't it. Now that's workmanship." she smiles and taking the sword from you hands you a bag of coin for your troubles. 
-</text>
-<effect type="givegold" value="100"/>
-<effect type="experience" value="50"/>
-<effect type="setfactionflag" flag="friendship" value="1"/>
+	<page ID="job0">
+		<!--quest start -->
+		<text>
+			Your inquiry about a job makes her smile "well traveller, seen as you
+			want to make yourself useful...there is something you can do for me.
+			My sister went missing investigating the ruins in the valley to the
+			south. She was almost certainly devoured by a raptor, but if you
+			could recover her sword so I have something to remember her by I'd be
+			very grateful."
+		</text>
+		<choice destination="end" text="I'd be happy to get your sword for you" />
+		<choice destination="end" text="I might get around to it" />
+		<effect type="setlocalflag" flag="swordquest" value="1" />
+	</page>
+	<page ID="job1">
+		<!--quest completion -->
+		<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="sister sword" />
+		<text>
+			"You found it? oh thankyou traveller. It's in surprisingly good condition
+			for how long its been down there isn't it. Now that's workmanship."
+			she smiles and taking the sword from you hands you a bag of coin for
+			your troubles.
+		</text>
+		<effect type="givegold" value="100" />
+		<effect type="experience" value="50" />
+		<effect type="setfactionflag" flag="friendship" value="1" />
 
-<effect type="setlocalflag" flag="swordquest" value="2"/>
-<effect type="removeitem" item="sister sword" value="1"/>
-<choice destination="end" text="your thanks is all I need"/>
-</page>
-<page ID="job1">
-<!--quest proceeding-->
-<text>
-"Have you found my sister's sword yet? I know the ruins are a dangerous place, but your strange devices should keep you safe down there."
-</text>
-<choice destination="end" text="I'm still looking"/>
-<choice destination="end" text="i don't feel like the risk is worth it"/>
-</page>
-<page ID="start">
-<text>
-“Oooh, you are something new.” Her voice calls out to you as you approach her. “A being from the stars? Oh I do hope so, I have prepared for many years to trade for Cargo.”
+		<effect type="setlocalflag" flag="swordquest" value="2" />
+		<effect type="removeitem" item="sister sword" value="1" />
+		<choice destination="end" text="your thanks is all I need" />
+	</page>
+	<page ID="job1">
+		<!--quest proceeding -->
+		<text>
+			"Have you found my sister's sword yet? I know the ruins are a dangerous
+			place, but your strange devices should keep you safe down there."
+		</text>
+		<choice destination="end" text="I'm still looking" />
+		<choice destination="end" text="i don't feel like the risk is worth it" />
+	</page>
+	<page ID="start">
+		<text>
+			“Oooh, you are something new.” Her voice calls out to you as you approach
+			her. “A being from the stars? Oh I do hope so, I have prepared for
+			many years to trade for Cargo.”
 
-</text>
-<effect type="setlocalflag" flag="first" value="1"/>
-<choice destination="shop" text="ask to buy things"/>
-<choice destination="know" text="ask to know more about her people">
-<preference fetish="analvore"/>
-</choice>
-<choice destination="lands" text="ask about the surrounding lands"/>
-<choice destination="end" text="ask for nothing"/>
-</page>
-<page ID="shop">
-<text> “Well I don’t have much to interest a star traveller right now. Pretty crystals, food and medicine mostly. If you happen to go south I'd appreciate any Deku nuts you find in the valley. We are rather partial to them.” 
-</text>
-<special effect="shop" ID="alphaminoris2shop"/>
-</page>
+		</text>
+		<effect type="setlocalflag" flag="first" value="1" />
+		<choice destination="shop" text="ask to buy things" />
+		<choice destination="know" text="ask to know more about her people">
+			<preference fetish="analvore" />
+		</choice>
+		<choice destination="lands" text="ask about the surrounding lands" />
+		<choice destination="end" text="ask for nothing" />
+	</page>
+	<page ID="shop">
+		<text> “Well I don’t have much to interest a star traveller right now.
+			Pretty crystals, food and medicine mostly. If you happen to go south
+			I'd appreciate any Deku nuts you find in the valley. We are rather
+			partial to them.”
+		</text>
+		<special effect="shop" ID="alphaminoris2shop" />
+	</page>
 
-<page ID="lands">
-<text>
-“Hmm? Oh yes I suppose that is a prudent, if boring, question if you plan on adventuring. To the south are number of ravenous raptor girls. They’re shy enough when caught alone but will swarm you in a pack. There are also some rarer rajini down there, I would love to inspect one of them up close. To the west is dense jungle. Plenty of fruit to be found but it’s also inhabited by a large number of snake women. They will happily coil and devour a cute thing like you. All in all I’d recommending staying in the comfort of our village, where surely no one will try to consume you.”
-</text>
-<choice destination="shop" text="I would like to buy things"/>
-<choice destination="know" text="i would like to know more about your people">
-<preference fetish="analvore"/>
-</choice>
-<choice destination="end" text="another time perhaps"/>
-</page>
+	<page ID="lands">
+		<text>
+			“Hmm? Oh yes I suppose that is a prudent, if boring, question if you plan
+			on adventuring. To the south are number of ravenous raptor girls.
+			They’re shy enough when caught alone but will swarm you in a pack.
+			There are also some rarer rajini down there, I would love to inspect
+			one of them up close. To the west is dense jungle. Plenty of fruit to
+			be found but it’s also inhabited by a large number of snake women.
+			They will happily coil and devour a cute thing like you. All in all
+			I’d recommending staying in the comfort of our village, where surely
+			no one will try to consume you.”
+		</text>
+		<choice destination="shop" text="I would like to buy things" />
+		<choice destination="know"
+			text="i would like to know more about your people">
+			<preference fetish="analvore" />
+		</choice>
+		<choice destination="end" text="another time perhaps" />
+	</page>
 
-<page ID="know">
-<text>
-“Hmm, you must be from off world if you do not know about the Quendi. We are the dominant species on the planet after all.” She lets a small, musical sigh. “But I can of course answer your questions. Provided they aren’t too ridiculous. What are they?”
+	<page ID="know">
+		<text>
+			“Hmm, you must be from off world if you do not know about the Quendi. We
+			are the dominant species on the planet after all.” She lets a small,
+			musical sigh. “But I can of course answer your questions. Provided
+			they aren’t too ridiculous. What are they?”
 
-You quickly bring up the most pressing question about the elven aliens on your mind. Namely: Their shapely asses. How do they all get their ass to be so nice and round? It is truly a head puzzler.
+			You quickly bring up the most pressing question about the elven aliens
+			on your mind. Namely: Their shapely asses. How do they all get their
+			ass to be so nice and round? It is truly a head puzzler.
 
-“Ah yes, imagine such a thing would be a mystery to one not versed in our ways. It is a very elaborate ritual which we undertake in order create these perfect derrieres. Would you like me to show you it?”
-</text>
-<choice destination="analvore0" text="yes"/>
-<choice destination="refuse" text="no"/>
-</page>
+			“Ah yes, imagine such a thing would be a mystery to one not versed in
+			our ways. It is a very elaborate ritual which we undertake in order
+			create these perfect derrieres. Would you like me to show you it?”
+		</text>
+		<choice destination="analvore0" text="yes" />
+		<choice destination="refuse" text="no" />
+	</page>
 
-<page ID="refuse">
-<text>
-“Ah, a shame. Some other time then. Anything else I can help you with?”
-</text>
-<choice destination="shop" text="I would like to buy things"/>
-<choice destination="lands" text="I would like to know more about the surrounding lands"/>
-<choice destination="end" text="nothing at the moment"/>
-</page>
-<!--written by serenity-->
-<page ID="analvore0">
-<text>
-“Splendid. Now this is very much a two person job so I will need your assistance!” You agree to help, after all you’re dying to know the secret to a perfect ass. She walks over and quickly shuts the door before returning to the center of the room. Quickly slipping out of her many pocketed robes <conditional><assertion evaluate="slothasitem" slot="2"/>she motions for you to do the same with your jumpsuit. Deciding that when in Rome you might as well do as the Romans do, you peel off your clothing.</conditional> A moment passes as you stand there awkwardly, naked as the day you were born, and she looks you over. “Hmm, yes I do believe the ritual will work for you, but only if you do exactly as I say.”
-</text>
-<choice destination="analvore1" text="continue"/>
-</page>
+	<page ID="refuse">
+		<text>
+			“Ah, a shame. Some other time then. Anything else I can help you with?”
+		</text>
+		<choice destination="shop" text="I would like to buy things" />
+		<choice destination="lands"
+			text="I would like to know more about the surrounding lands" />
+		<choice destination="end" text="nothing at the moment" />
+	</page>
+	<!--written by serenity -->
+	<page ID="analvore0">
+		<text>
+			“Splendid. Now this is very much a two person job so I will need your
+			assistance!” You agree to help, after all you’re dying to know the
+			secret to a perfect ass. She walks over and quickly shuts the door
+			before returning to the center of the room. Quickly slipping out of
+			her many pocketed robes
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				she motions for you to do the same with your jumpsuit. Deciding that
+				when in Rome you might as well do as the Romans do, you peel off
+				your clothing.
+			</conditional>
+			A moment passes as you stand there awkwardly, naked as the day you
+			were born, and she looks you over. “Hmm, yes I do believe the ritual
+			will work for you, but only if you do exactly as I say.”
+		</text>
+		<choice destination="analvore1" text="continue" />
+	</page>
 
-<page ID="analvore1">
-<text>
-You are over joyed at the prospect. Finally all of your hopes and dreams will be realized, you will have the perfect ass. That will make the crash landing and all of your excessively dangerous and life threatening adventures worth it. She instructs you to kneel down before her and you excitedly do so.
-LBREAK
-“Now for the next step you must raise your face towards the skies and shut your eyes. Only then will you gain your great surprise.” Ignoring the awful rhyme you do as instructed. While at first nothing seems to happen you soon feel something press against your face and a pressure grow around your head. Opening your eyes to see what’s going on, you see naught but darkness. Smelly darkness. Lifting your arms up to figure out what’s going on you feel a pair of round, squishy orbs descending around your neck. A low moan echoes from above you.
-</text>
-<choice destination="analvore2" text="panic"/>
-</page>
+	<page ID="analvore1">
+		<text>
+			You are over joyed at the prospect. Finally all of your hopes and dreams
+			will be realized, you will have the perfect ass. That will make the
+			crash landing and all of your excessively dangerous and life
+			threatening adventures worth it. She instructs you to kneel down
+			before her and you excitedly do so.
+			LBREAK
+			“Now for the next step you must raise your face towards the skies and
+			shut your eyes. Only then will you gain your great surprise.”
+			Ignoring the awful rhyme you do as instructed. While at first nothing
+			seems to happen you soon feel something press against your face and a
+			pressure grow around your head. Opening your eyes to see what’s going
+			on, you see naught but darkness. Smelly darkness. Lifting your arms
+			up to figure out what’s going on you feel a pair of round, squishy
+			orbs descending around your neck. A low moan echoes from above you.
+		</text>
+		<choice destination="analvore2" text="panic" />
+	</page>
 
-<page ID="analvore2">
-<text>
-You decide that sheer, blind panic is the best way to solve this situation. You flail wildly as the odd spheres continue to drop down over you and stuff you into the fetid darkness. Once your arms are pinned to your side, and you can no longer flail, you decide to stand up and push whatever is on you off. This proves to be disastrous. Rather than throw your attacker off, you are simply shoved further into the slimy darkness, your entire torso pushing past those orbs. There are some more echoing moans and you believe you hear a wet squelching noise as your hips and legs are stuffed in as well by a pair of hands.
-</text>
-<choice destination="analvore3" text="*ask if everything is all right*"/>
-</page>
+	<page ID="analvore2">
+		<text>
+			You decide that sheer, blind panic is the best way to solve this
+			situation. You flail wildly as the odd spheres continue to drop down
+			over you and stuff you into the fetid darkness. Once your arms are
+			pinned to your side, and you can no longer flail, you decide to stand
+			up and push whatever is on you off. This proves to be disastrous.
+			Rather than throw your attacker off, you are simply shoved further
+			into the slimy darkness, your entire torso pushing past those orbs.
+			There are some more echoing moans and you believe you hear a wet
+			squelching noise as your hips and legs are stuffed in as well by a
+			pair of hands.
+		</text>
+		<choice destination="analvore3" text="*ask if everything is all right*" />
+	</page>
 
-<page ID="analvore3">
-<text>
-Well at least hands means that there’s still someone out there right? You’re not just disappearing into blind nothingness, there must be some reason for your surroundings. You call out, asking the shopkeeper if everything’s alright. “Hmm? Oh yes dear, everything’s fantastic. Do wiggle some more for me, it feels sublime!” Confused by such an answer you ask where you are. “Where? Why you’re in my ass of course! How else am I supposed to improve my tush?”
-</text>
-<choice destination="analvore4" text="*protest this turn of events*"/>
-</page>
+	<page ID="analvore3">
+		<text>
+			Well at least hands means that there’s still someone out there right?
+			You’re not just disappearing into blind nothingness, there must be
+			some reason for your surroundings. You call out, asking the
+			shopkeeper if everything’s alright. “Hmm? Oh yes dear, everything’s
+			fantastic. Do wiggle some more for me, it feels sublime!” Confused by
+			such an answer you ask where you are. “Where? Why you’re in my ass of
+			course! How else am I supposed to improve my tush?”
+		</text>
+		<choice destination="analvore4" text="*protest this turn of events*" />
+	</page>
 
-<page ID="analvore4">
-<text>
-As you begin to complain that she was supposed to improve your backside, not hers, you are tugged upwards by your surroundings. Your feet finally enter her with an audible pop and you are drawn up, up, up until you finally reach a hot, wet sack. Before you have a chance to question where you are the acidic sting of your surroundings clues you in. As you kick and squirm for your life you hear the shopkeeper let out a rather loud moan.
-</text>
-<choice destination="analvoreGO" text="struggle"/>
-</page>
+	<page ID="analvore4">
+		<text>
+			As you begin to complain that she was supposed to improve your
+			backside, not hers, you are tugged upwards by your surroundings. Your
+			feet finally enter her with an audible pop and you are drawn up, up,
+			up until you finally reach a hot, wet sack. Before you have a chance
+			to question where you are the acidic sting of your surroundings clues
+			you in. As you kick and squirm for your life you hear the shopkeeper
+			let out a rather loud moan.
+		</text>
+		<choice destination="analvoreGO" text="struggle" />
+	</page>
 
-<gameover ID="analvoreGO">
-<text>
-“Ah, yes, please do kick more. It is quite enjoyable. You see my species gains significant pleasure from eating living beings. Ahh, especially feeling them move about inside. Fret not, though, you will be put to great use. As ass fat.” Further taunts from her are drowned out by the sounds of your imminent digestion. Gurgles and groans fill the air as the stomach bubbles you down to mush and the intestines then convert you to yet another layer of fat on the shopkeeper’s backside.
-</text>
+	<gameover ID="analvoreGO">
+		<text>
+			“Ah, yes, please do kick more. It is quite enjoyable. You see my species
+			gains significant pleasure from eating living beings. Ahh, especially
+			feeling them move about inside. Fret not, though, you will be put to
+			great use. As ass fat.” Further taunts from her are drowned out by
+			the sounds of your imminent digestion. Gurgles and groans fill the
+			air as the stomach bubbles you down to mush and the intestines then
+			convert you to yet another layer of fat on the shopkeeper’s backside.
+		</text>
 
-</gameover>
+	</gameover>
 
 </Conversation>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ItemWidget name="research computer" weight="10" value="1000">
-<description>A powerful computer usable for research</description>
-<placeditem widget="datacomputer"/>
+	<description>A powerful computer usable for research</description>
+	<placeditem widget="datacomputer" />
 </ItemWidget>

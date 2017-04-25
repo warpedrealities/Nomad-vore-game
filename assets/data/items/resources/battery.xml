@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <ItemResource name="battery" weight="1" value="100">
-<description>A battery. Not connected to anything so can't power anything directly. But can be used to build something that needs to use power.</description>
+	<description>A battery. Not connected to anything so can't power
+		anything directly. But can be used to build something that needs to
+		use power.</description>
 
 </ItemResource>

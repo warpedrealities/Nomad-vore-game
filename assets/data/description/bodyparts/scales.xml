@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <part name="scales">
-<variable name="colour" value="0"/>
-<variable name="type" value="0"/>
-<variable name="covering" value="0"/>
+	<variable name="colour" value="0" />
+	<variable name="type" value="0" />
+	<variable name="covering" value="0" />
 </part>

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Conversation>
 
-<page ID="start">
-<text>
-"I'm sorry I can't talk right now, I have work to do"
-</text>
-<choice destination="end" text="*nod and carry on*"/>
-</page>
+	<page ID="start">
+		<text>
+			"I'm sorry I can't talk right now, I have work to do"
+		</text>
+		<choice destination="end" text="*nod and carry on*" />
+	</page>
 
 </Conversation>

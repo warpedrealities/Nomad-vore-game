@@ -1,98 +1,166 @@
 <?xml version="1.0"?>
 <Conversation>
-<!--written by tirat-->
-<page ID="start">
-<preference fetish="absorption"/>
-<text>
-The batgirl grins as you flop on your butt in front of her. Seems like she just won the battle and got you for… fun? The girl winks and moves closer, wrapping her large wings around you and enveloping you in the feeling of private warmth and her body all around. Maybe she only wants to give you a big hug? And also show off her naked boobies.
-</text>
-<choice destination="absorb0" text="hugs arent dangerous"/>
-</page>
+	<!--written by tirat -->
+	<page ID="start">
+		<preference fetish="absorption" />
+		<text>
+			The batgirl grins as you flop on your butt in front of her. Seems like
+			she just won the battle and got you for… fun? The girl winks and
+			moves closer, wrapping her large wings around you and enveloping you
+			in the feeling of private warmth and her body all around. Maybe she
+			only wants to give you a big hug? And also show off her naked
+			boobies.
+		</text>
+		<choice destination="absorb0" text="hugs arent dangerous" />
+	</page>
 
-<page ID="absorb0">
-<text>
-You chuckle and lean closer as well, cuddling the batgirl as much as her wings allow you. She coos and hugs you in return, this time really enveloping your form. Maybe only your feet are still visible underneath? Her body warmth feels so good! And the batgirl even grinds into your front, playfully squeezing you and gently rubbing with her soft wings. The closeness feels good! So very private, thanks to the wings ‘curtain’ 
-</text>
-<!--
-<choice destination="sex0" text="may as well screw her">
-<assertion evaluate="haspart" part="penis"/>
-</choice>
--->
-<choice destination="willcheck" text="maybe not so safe"/>
-</page>
+	<page ID="absorb0">
+		<text>
+			You chuckle and lean closer as well, cuddling the batgirl as much as her
+			wings allow you. She coos and hugs you in return, this time really
+			enveloping your form. Maybe only your feet are still visible
+			underneath? Her body warmth feels so good! And the batgirl even
+			grinds into your front, playfully squeezing you and gently rubbing
+			with her soft wings. The closeness feels good! So very private,
+			thanks to the wings ‘curtain’
+		</text>
+		<!-- <choice destination="sex0" text="may as well screw her"> <assertion 
+			evaluate="haspart" part="penis"/> </choice> -->
+		<choice destination="willcheck" text="maybe not so safe" />
+	</page>
 
-<page ID="sex0">
-<text>
-In the cosy privacy of her wings you feel her warm body against you and decide that screwing her is probably the best idea you've ever had. You <conditional><assertion evaluate="slothasitem" slot="2"/>  pull it out and then </conditional> stroke your cock to hardness while smooching along the batgirl's jaw, the bat letting out a little giggle and coo as she helps you line yourself up with her cleft. The batgirl grinding herself against you, her softness only helping you get hard and coaxing you on until you spear her on your length. The batty letting out a gasp and smiling, wrapping her wings around you in approval of your idea for a lovely bit of foreplay.
-</text>
-<choice destination="sex1" text="boning"/>
-</page>
+	<page ID="sex0">
+		<text>
+			In the cosy privacy of her wings you feel her warm body against you
+			and decide that screwing her is probably the best idea you've ever
+			had. You
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				pull it out and then
+			</conditional>
+			stroke your cock to hardness while smooching along the batgirl's jaw,
+			the bat letting out a little giggle and coo as she helps you line
+			yourself up with her cleft. The batgirl grinding herself against you,
+			her softness only helping you get hard and coaxing you on until you
+			spear her on your length. The batty letting out a gasp and smiling,
+			wrapping her wings around you in approval of your idea for a lovely
+			bit of foreplay.
+		</text>
+		<choice destination="sex1" text="boning" />
+	</page>
 
-<page ID="sex1">
-<text>
-You're a bit weak from being bested by the batgirl but faced with her soft warm nethers and her willing cooperation you find your vigor returning rapidly. Your hips thrusting as you fuck her in the embrace of her wings but no one would be fooled that you're just engaged in vigorous cuddling, the batty's moans, the lewd slurps and your ass contours pushing out the leathery wings between thrusts make it oh so obvious that you're fucking the batgirl with wild abandon.
-</text>
-<choice destination="sex2" text="fuck and finish"/>
-</page>
+	<page ID="sex1">
+		<text>
+			You're a bit weak from being bested by the batgirl but faced with her soft
+			warm nethers and her willing cooperation you find your vigor
+			returning rapidly. Your hips thrusting as you fuck her in the embrace
+			of her wings but no one would be fooled that you're just engaged in
+			vigorous cuddling, the batty's moans, the lewd slurps and your ass
+			contours pushing out the leathery wings between thrusts make it oh so
+			obvious that you're fucking the batgirl with wild abandon.
+		</text>
+		<choice destination="sex2" text="fuck and finish" />
+	</page>
 
-<page ID="sex2">
-<text>
-The batgirl's pleasured sounds mingle with your gasps and pants as you thrust in and out of her, fucking her with all the vigor your current state allows you. Fortuitously your stamina proves enough, the batgirl letting out a squeel of delight as with your waning energy you buck your hips and cum up into her. Your cock spurting hot jizz up into the batgirl who'd defeated and seized you. She murrs as you finish your little romp with her, though after a few moments you realize that you can't actually pull out of her..and the batgirl gives you a smooch, snuggling you close and smiling.
-</text>
-<choice destination="absorbAlt0" text="uh oh"/>
-<choice destination="cocker0" text="*smile back*">
-<preference fetish="cocktransformation"/>
-<assertion evaluate="hasperk" perk="cockmerging"/>
-</choice>
-</page>
+	<page ID="sex2">
+		<text>
+			The batgirl's pleasured sounds mingle with your gasps and pants as you
+			thrust in and out of her, fucking her with all the vigor your current
+			state allows you. Fortuitously your stamina proves enough, the
+			batgirl letting out a squeel of delight as with your waning energy
+			you buck your hips and cum up into her. Your cock spurting hot jizz
+			up into the batgirl who'd defeated and seized you. She murrs as you
+			finish your little romp with her, though after a few moments you
+			realize that you can't actually pull out of her..and the batgirl
+			gives you a smooch, snuggling you close and smiling.
+		</text>
+		<choice destination="absorbAlt0" text="uh oh" />
+		<choice destination="cocker0" text="*smile back*">
+			<preference fetish="cocktransformation" />
+			<assertion evaluate="hasperk" perk="cockmerging" />
+		</choice>
+	</page>
 
-<page ID="absorbAlt0">
-<text>
-The batgirl keeps on smiling and snuggling you close as you realize your cock is merged into her sex, your body starting to sink into her as she murrs. The batgirl squeezing you against her chest with her wings, smooshing you against the softness of her belly and breasts until your skin stucks to hers and you start to sink in. Your exhausted form is helplessly starting to add to the soft curvaceousness of her own as she holds you close. the wings doing much to hide your disappearing act though as your legs stick to her own even her wings cannot hide your fate.
-</text>
-<choice destination="absorbGO" text="sink in"/>
-</page>
+	<page ID="absorbAlt0">
+		<text>
+			The batgirl keeps on smiling and snuggling you close as you realize your
+			cock is merged into her sex, your body starting to sink into her as
+			she murrs. The batgirl squeezing you against her chest with her
+			wings, smooshing you against the softness of her belly and breasts
+			until your skin stucks to hers and you start to sink in. Your
+			exhausted form is helplessly starting to add to the soft
+			curvaceousness of her own as she holds you close. the wings doing
+			much to hide your disappearing act though as your legs stick to her
+			own even her wings cannot hide your fate.
+		</text>
+		<choice destination="absorbGO" text="sink in" />
+	</page>
 
-<page ID="cocker0">
-<text>
+	<page ID="cocker0">
+		<text>
 
-</text>
+		</text>
 
-</page>
+	</page>
 
-<check ID="willcheck">
-<test what="WILLPOWER" DC="10"/>
-<outcome destination="escape"/>
-<outcome destination="absorb1"/>
-</check>
+	<check ID="willcheck">
+		<test what="WILLPOWER" DC="10" />
+		<outcome destination="escape" />
+		<outcome destination="absorb1" />
+	</check>
 
-<page ID="escape">
-<text>
-You relax for a moment, giving the batgirl a chance to share her body warmth and softness with you. But as the hug becomes really intimate, you find enough will to squirm and pull back realizing that this will probably end badly for you as nice as it is. Suddenly slipping free from the soft wings and shoving her away easily in her surprise. And with the hug broken, the batgirl frowns at you and even shows her tongue, then going to jump and disappear in the darkness above.
-</text>
-<special effect="removenpc"/>
-<effect type="heal" value="0.1"/>
-<choice destination="end" text="hopefully a good choice."/>
-</page>
+	<page ID="escape">
+		<text>
+			You relax for a moment, giving the batgirl a chance to share her body
+			warmth and softness with you. But as the hug becomes really intimate,
+			you find enough will to squirm and pull back realizing that this will
+			probably end badly for you as nice as it is. Suddenly slipping free
+			from the soft wings and shoving her away easily in her surprise. And
+			with the hug broken, the batgirl frowns at you and even shows her
+			tongue, then going to jump and disappear in the darkness above.
+		</text>
+		<special effect="removenpc" />
+		<effect type="heal" value="0.1" />
+		<choice destination="end" text="hopefully a good choice." />
+	</page>
 
-<page ID="absorb1">
-<text>
-This hug feels so very relaxing, you can probably just stay here and enjoy the batgirl’s company. But strangely your body starts feeling even warmer and softer, fuzzier. Needs fade away slowly as the batgirl pets you here and there. You notice how her flesh seems to welcome your own, fusing like molten wax. You find it hard to be alarmed by the wonderful sensation of flowing into her soft warmth.
-</text>
-<choice destination="absorb2" text="sink in"/>
-</page>
+	<page ID="absorb1">
+		<text>
+			This hug feels so very relaxing, you can probably just stay here and
+			enjoy the batgirl’s company. But strangely your body starts feeling
+			even warmer and softer, fuzzier. Needs fade away slowly as the
+			batgirl pets you here and there. You notice how her flesh seems to
+			welcome your own, fusing like molten wax. You find it hard to be
+			alarmed by the wonderful sensation of flowing into her soft warmth.
+		</text>
+		<choice destination="absorb2" text="sink in" />
+	</page>
 
-<page ID="absorb2">
-<text>
-More and more as she churrs and snuggles you close with her wings you feel yourself diminishing. Your arms sinking into her, absorbing into her flanks as you seem to shrink down, head now level with that impressive cleavage. You find yourself letting out a moan as her breasts part around your face, and then you turn silent, merging into her.
-</text>
-<choice destination="absorbGO" text="absorbed"/>
-</page>
+	<page ID="absorb2">
+		<text>
+			More and more as she churrs and snuggles you close with her wings you
+			feel yourself diminishing. Your arms sinking into her, absorbing into
+			her flanks as you seem to shrink down, head now level with that
+			impressive cleavage. You find yourself letting out a moan as her
+			breasts part around your face, and then you turn silent, merging into
+			her.
+		</text>
+		<choice destination="absorbGO" text="absorbed" />
+	</page>
 
-<gameover ID="absorbGO">
-<text>
-The batgirl remains in one place for several minutes as you fade away, not moving much as the process continues. Your outlines slowly shrink and disappear beneath the curtain of her wings. Eventually leaving no visible bulges. Not long ago she'd drawn you behind that shroud. But minutes later those wings move apart and only revealing only a few tatters and remnants of your equipment and clothes. But what's perhaps a better indicator of her thorough snuggling skills are her nicely enlarged breasts, curvier rump and more padded middle. beyond these things not a trace of you remains, that was an impressive disappearing act.
-</text>
-</gameover>
+	<gameover ID="absorbGO">
+		<text>
+			The batgirl remains in one place for several minutes as you fade away,
+			not moving much as the process continues. Your outlines slowly shrink
+			and disappear beneath the curtain of her wings. Eventually leaving no
+			visible bulges. Not long ago she'd drawn you behind that shroud. But
+			minutes later those wings move apart and only revealing only a few
+			tatters and remnants of your equipment and clothes. But what's
+			perhaps a better indicator of her thorough snuggling skills are her
+			nicely enlarged breasts, curvier rump and more padded middle. beyond
+			these things not a trace of you remains, that was an impressive
+			disappearing act.
+		</text>
+	</gameover>
 
 </Conversation>

@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 <ItemEquip name="chainmail" weight="8" slot="BODY" value="750">
-<description>
-Medieval armour, fairly formless and weighty, the metal links and under garment seem to provide decent physical protection. +2 kinetic, +1 thermal, -2 shock.
-</description>
-<modifier>
-<kinetic value="2"/>
-<thermal value="1"/>
-<shock value="-2"/>
-<seduction value="-2"/>
-</modifier>
+	<description>
+		Medieval armour, fairly formless and weighty, the metal links and under
+		garment seem to provide decent physical protection. +2 kinetic, +1
+		thermal, -2 shock.
+	</description>
+	<modifier>
+		<kinetic value="2" />
+		<thermal value="1" />
+		<shock value="-2" />
+		<seduction value="-2" />
+	</modifier>
 </ItemEquip>

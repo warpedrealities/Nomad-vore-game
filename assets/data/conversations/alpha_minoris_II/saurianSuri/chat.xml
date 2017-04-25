@@ -1,227 +1,392 @@
 <?xml version="1.0"?>
 <Conversation>
 
-<page ID="start">
-<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="talked"/>
-<!-- first time-->
-<text>
-"Hey star traveller. Can I ask like a huge favour of you?" the lizard smiles brightly, though as she continues to get it out her gaze lowers and she blushes "see I'm Suri and well, I'm not quite ready for breeding, but I kinda wanna feel what being a mom is like. Can I maybe...practice on you?"
-</text>
-<effect type="setlocalflag" flag="talked" value="1"/>
-<choice destination="unbirthA0" text="sure, sounds fun">
-<preference fetish="unbirth"/>
-</choice>
-<choice destination="end" text="not interested"/>
-</page>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="talked" />
+		<!-- first time -->
+		<text>
+			"Hey star traveller. Can I ask like a huge favour of you?" the lizard
+			smiles brightly, though as she continues to get it out her gaze
+			lowers and she blushes "see I'm Suri and well, I'm not quite ready
+			for breeding, but I kinda wanna feel what being a mom is like. Can I
+			maybe...practice on you?"
+		</text>
+		<effect type="setlocalflag" flag="talked" value="1" />
+		<choice destination="unbirthA0" text="sure, sounds fun">
+			<preference fetish="unbirth" />
+		</choice>
+		<choice destination="end" text="not interested" />
+	</page>
 
-<page ID="start">
-<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="talked"/>
-<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="times"/>
-<!--refused-->
-<text>
-"Oh uh, hi star traveller..have you changed your mind? I can't ask anyone else, and I really wanna know how it feels to hold another inside me like that."
-</text>
-<choice destination="unbirthA0" text="yeah i changed my mind">
-<preference fetish="unbirth"/>
-</choice>
-<choice destination="end" text="no I havent"/>
-</page>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="talked" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="times" />
+		<!--refused -->
+		<text>
+			"Oh uh, hi star traveller..have you changed your mind? I can't ask
+			anyone else, and I really wanna know how it feels to hold another
+			inside me like that."
+		</text>
+		<choice destination="unbirthA0" text="yeah i changed my mind">
+			<preference fetish="unbirth" />
+		</choice>
+		<choice destination="end" text="no I havent" />
+	</page>
 
-<page ID="start">
-<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="talked"/>
-<condition evaluate="LOCALFLAG" operator="greaterthan" value="0" flag="times"/>
-<!--subsequent times-->
-<text>
-"ooh, hi again. What can I do for ya?"
-</text>
-<choice destination="unbirthBcheck" text="Do you want to practice some more?">
-<preference fetish="unbirth"/>
-</choice>
-<choice destination="end" text="no I havent"/>
-</page>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="talked" />
+		<condition evaluate="LOCALFLAG" operator="greaterthan"
+			value="0" flag="times" />
+		<!--subsequent times -->
+		<text>
+			"ooh, hi again. What can I do for ya?"
+		</text>
+		<choice destination="unbirthBcheck" text="Do you want to practice some more?">
+			<preference fetish="unbirth" />
+		</choice>
+		<choice destination="end" text="no I havent" />
+	</page>
 
-<page ID="unbirthA0">
-<text>
-You follow Suri out of view <conditional><assertion evaluate="slothasitem" slot="2"/>and undress as Suri giggles and blushes</conditional> "Almost can't believe I'm getting to do this." she says as she undoes the wrap around her hips. Her hairless snatch now revealed between the softness of her tanned inner thighs. Already moist she sets the wrap aside and then lays out on the ground, spreading her thighs "I think you should just like...crawl in?" she suggests with a blush and a chirr as she reaches down to stroke her sex, soaking her fingers then spreading her slit in invitation to you.
-</text>
-<choice destination="unbirthA1" text="get closer"/>
-</page>
+	<page ID="unbirthA0">
+		<text>
+			You follow Suri out of view
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				and undress as Suri giggles and blushes
+			</conditional>
+			"Almost can't believe I'm getting to do this." she says as she undoes
+			the wrap around her hips. Her hairless snatch now revealed between
+			the softness of her tanned inner thighs. Already moist she sets the
+			wrap aside and then lays out on the ground, spreading her thighs "I
+			think you should just like...crawl in?" she suggests with a blush and
+			a chirr as she reaches down to stroke her sex, soaking her fingers
+			then spreading her slit in invitation to you.
+		</text>
+		<choice destination="unbirthA1" text="get closer" />
+	</page>
 
-<page ID="unbirthA1">
-<text>
-Suri giggles a bit and twitches her tail under you as you settle onto your knees and then crawl fowards towards the open invitation of her nethers. That tail rubbing up between your own legs naughtily as you lean in to give her a lick. That lick making the tail twitch and flick underneath you as Suri chirrs "ah, mhmm...nice but i'm already wet enough for ya." she says and then giggles, using her free hand to mash your face lewdly against her netherlips. The naughty lil lizard moaning as you nuzzle into her, and then steadily part her folds around you. Your head disappearing inside her with a lewd schlorp, her thighs clenching around your upper body instinctively as her warm channel tugs you deeper inside her. Suri's silken soft warm welcoming your head as you push yourself deeper inside.
-</text>
-<choice destination="unbirthA2" text="deeper"/>
-</page>
+	<page ID="unbirthA1">
+		<text>
+			Suri giggles a bit and twitches her tail under you as you settle onto
+			your knees and then crawl fowards towards the open invitation of her
+			nethers. That tail rubbing up between your own legs naughtily as you
+			lean in to give her a lick. That lick making the tail twitch and
+			flick underneath you as Suri chirrs "ah, mhmm...nice but i'm already
+			wet enough for ya." she says and then giggles, using her free hand to
+			mash your face lewdly against her netherlips. The naughty lil lizard
+			moaning as you nuzzle into her, and then steadily part her folds
+			around you. Your head disappearing inside her with a lewd schlorp,
+			her thighs clenching around your upper body instinctively as her warm
+			channel tugs you deeper inside her. Suri's silken soft warm welcoming
+			your head as you push yourself deeper inside.
+		</text>
+		<choice destination="unbirthA2" text="deeper" />
+	</page>
 
-<page ID="unbirthA2">
-<text>
-"oh, oh my this is...wonderful" suri exclaims with a gasp, sliding a hand up to tenderly rub the bulge made by your head and shoulders inside her. You can't help but agree, her warmth welcoming you as you push off against the ground with your feet. More of your body disappearing between her thighs as she chirrs and pants in delight, clenching rthythmically around your midriff, then hips until only your legs are left outside of her. Her middle now distended, bulged, massively pregnant with your upper body curled inside the cradle of her womb. A delightful embrace you cannot help but crave for the whole of your body.
-</text>
-<choice destination="unbirthA3" text="all the way in"/>
-</page>
+	<page ID="unbirthA2">
+		<text>
+			"oh, oh my this is...wonderful" suri exclaims with a gasp, sliding a hand
+			up to tenderly rub the bulge made by your head and shoulders inside
+			her. You can't help but agree, her warmth welcoming you as you push
+			off against the ground with your feet. More of your body disappearing
+			between her thighs as she chirrs and pants in delight, clenching
+			rthythmically around your midriff, then hips until only your legs are
+			left outside of her. Her middle now distended, bulged, massively
+			pregnant with your upper body curled inside the cradle of her womb. A
+			delightful embrace you cannot help but crave for the whole of your
+			body.
+		</text>
+		<choice destination="unbirthA3" text="all the way in" />
+	</page>
 
-<page ID="unbirthA3">
-<effect type="passtime" value="75"/>
-<text>
-"almost there...thanks so much for...mhmm" Suri moans in delight and clenches, dragging your legs deeper inside. She can't see past the massive dome of her belly, now can she seem to keep her hands off of it as she draws you steadily the rest of the way inside of her womb. Her inexperienced sex seeming quite adept at tucking you away completely within her as your feet vanish between her thighs and she gasps in delight. "Ooh...ah, comfy in there? feels so good to have you. Hope you don't mind if I keep you in there for a while, I want to enjoy this."
-</text>
-<choice destination="unbirthAend" text="fine with me Suri"/>
-</page>
+	<page ID="unbirthA3">
+		<effect type="passtime" value="75" />
+		<text>
+			"almost there...thanks so much for...mhmm" Suri moans in delight and
+			clenches, dragging your legs deeper inside. She can't see past the
+			massive dome of her belly, now can she seem to keep her hands off of
+			it as she draws you steadily the rest of the way inside of her womb.
+			Her inexperienced sex seeming quite adept at tucking you away
+			completely within her as your feet vanish between her thighs and she
+			gasps in delight. "Ooh...ah, comfy in there? feels so good to have
+			you. Hope you don't mind if I keep you in there for a while, I want
+			to enjoy this."
+		</text>
+		<choice destination="unbirthAend" text="fine with me Suri" />
+	</page>
 
-<page ID="unbirthAend">
+	<page ID="unbirthAend">
 
-<special effect="marktime"/>
-<text>
-The bulge in Suri's middle is treated good naturedly by the other villagers of Dammath as she hauls you around. Your form cradled snugly within her own for what's probably several hours as she enjoys doting on her taut tummy with strokes and pats now and then. It's during this period you find her warm softness luls you into sleep. Sometime later though you awaken to her clenching "ah, sorry. But I kinda wanna be slim again, hope you don't mind?" she says apologetically as she pushes you out exactly where you went in, your stuff still in the bushes nearby. Suri blushes as she rises to her feet and puts her skirt back on "It was fun though, I hope you enjoyed being womb filler for me." she says with a smile.
-</text>
-<effect type="heal" value="1.00"/>
-<effect type="setlocalflag" flag="times" value="1"/>
-<choice destination="end" text="It was fun suri, maybe we can do it again sometime"/>
-</page>
+		<special effect="marktime" />
+		<text>
+			The bulge in Suri's middle is treated good naturedly by the other
+			villagers of Dammath as she hauls you around. Your form cradled
+			snugly within her own for what's probably several hours as she enjoys
+			doting on her taut tummy with strokes and pats now and then. It's
+			during this period you find her warm softness luls you into sleep.
+			Sometime later though you awaken to her clenching "ah, sorry. But I
+			kinda wanna be slim again, hope you don't mind?" she says
+			apologetically as she pushes you out exactly where you went in, your
+			stuff still in the bushes nearby. Suri blushes as she rises to her
+			feet and puts her skirt back on "It was fun though, I hope you
+			enjoyed being womb filler for me." she says with a smile.
+		</text>
+		<effect type="heal" value="1.00" />
+		<effect type="setlocalflag" flag="times" value="1" />
+		<choice destination="end"
+			text="It was fun suri, maybe we can do it again sometime" />
+	</page>
 
-<page ID="unbirthBcheck">
-<condition evaluate="TIMEPASSED" operator="lessthan" value="3"/>
-<text>
-"Eh, already? eager one aren't you. It's not that I didn't enjoy having you in there, it's just can we do it a bit later?" she smiles apologetically, blushing as she turns your offer down.
-</text>
-<choice destination="end" text="I'll come back later"/>
-</page>
-<page ID="unbirthBcheck">
-<condition evaluate="TIMEPASSED" operator="greaterthan" value="3"/>
-<text>
-"...mhmm, eager to get all tucked away inside my womb again hmm? Sure. Though I think this practice is starting to be more for your benefit than mine" she teases with a blush.
-</text>
-<choice destination="unbirthB0" text="whatever you say 'mom'."/>
-</page>
+	<page ID="unbirthBcheck">
+		<condition evaluate="TIMEPASSED" operator="lessthan" value="3" />
+		<text>
+			"Eh, already? eager one aren't you. It's not that I didn't enjoy having
+			you in there, it's just can we do it a bit later?" she smiles
+			apologetically, blushing as she turns your offer down.
+		</text>
+		<choice destination="end" text="I'll come back later" />
+	</page>
+	<page ID="unbirthBcheck">
+		<condition evaluate="TIMEPASSED" operator="greaterthan"
+			value="3" />
+		<text>
+			"...mhmm, eager to get all tucked away inside my womb again hmm? Sure. Though
+			I think this practice is starting to be more for your benefit than
+			mine" she teases with a blush.
+		</text>
+		<choice destination="unbirthB0" text="whatever you say 'mom'." />
+	</page>
 
-<page ID="unbirthB0">
-<text>
-Suri blushes deeply as you tease her right back "stoppit." she protests, but smiles. It's clear that it appeals to her maternal instincts even if it does make her embarassed. She slips back into the bushes, slipping off her skirt again<conditional><assertion evaluate="slothasitem" slot="2"/> as you undress and get ready as well</conditional>. Suri laying out and assuming the position, thighs spread, one hand tracing down between her legs to invite you into her warmth again "Mhmm, well then, come inside your momma" she says with a giggle, blushing a bit deeper as she tosses the word back at you and you work first one hand, then both of them, into her hot nethers. The lizard starting to chirr in delight as you work your hands all the way into her up as far as her womb, sliding your head into the heat of her inner embrace.
-</text>
-<choice destination="unbirthB1" text="back inside"/>
-</page>
+	<page ID="unbirthB0">
+		<text>
+			Suri blushes deeply as you tease her right back "stoppit." she
+			protests, but smiles. It's clear that it appeals to her maternal
+			instincts even if it does make her embarassed. She slips back into
+			the bushes, slipping off her skirt again
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				as you undress and get ready as well
+			</conditional>
+			. Suri laying out and assuming the position, thighs spread, one hand
+			tracing down between her legs to invite you into her warmth again
+			"Mhmm, well then, come inside your momma" she says with a giggle,
+			blushing a bit deeper as she tosses the word back at you and you work
+			first one hand, then both of them, into her hot nethers. The lizard
+			starting to chirr in delight as you work your hands all the way into
+			her up as far as her womb, sliding your head into the heat of her
+			inner embrace.
+		</text>
+		<choice destination="unbirthB1" text="back inside" />
+	</page>
 
-<page ID="unbirthB1">
-<text>
-Suri's nethers tug gently around your shoulders and chest, drawing you into her warmth inch by inch with more ease than the first time. The lizard gasping, chirring and running a hand over her middle in delight as you begin to nestle into her warm insides. Her tail curling up around you lovingly as she clenches and tugs inside your middle, her own midriff stretching wonderfully as your upper body gets situated. Her warmth, her snug embrace, all of that washing over you as you try to tug your legs past her netherlips faster, wanting to curl up entirely inside this caring young lizard.
-</text>
-<choice destination="unbirthB2" text="all the way"/>
-</page>
+	<page ID="unbirthB1">
+		<text>
+			Suri's nethers tug gently around your shoulders and chest, drawing you into
+			her warmth inch by inch with more ease than the first time. The
+			lizard gasping, chirring and running a hand over her middle in
+			delight as you begin to nestle into her warm insides. Her tail
+			curling up around you lovingly as she clenches and tugs inside your
+			middle, her own midriff stretching wonderfully as your upper body
+			gets situated. Her warmth, her snug embrace, all of that washing over
+			you as you try to tug your legs past her netherlips faster, wanting
+			to curl up entirely inside this caring young lizard.
+		</text>
+		<choice destination="unbirthB2" text="all the way" />
+	</page>
 
-<page ID="unbirthB2">
-<effect type="passtime" value="75"/>
-<text>
-"mhmm eager aren't we." remarks Suri and moans, eyes slipping closed as she arches her back and tugs your legs inside. Your feet sliding up between her thighs, and disappearing as she clenches her legs together forcing them up past her netherlips. The lizard's womb encompassing you entirely yet again as you curl once more in her wonderfully snug embrace. Suri laying there chirring in delight and tracing a hand over her middle as gradually you settle inside her, lulled by the warmth, softness and the steady rthythm of her body around you.
-</text>
-<choice destination="unbirthB3" text="nap"/>
-</page>
+	<page ID="unbirthB2">
+		<effect type="passtime" value="75" />
+		<text>
+			"mhmm eager aren't we." remarks Suri and moans, eyes slipping closed as
+			she arches her back and tugs your legs inside. Your feet sliding up
+			between her thighs, and disappearing as she clenches her legs
+			together forcing them up past her netherlips. The lizard's womb
+			encompassing you entirely yet again as you curl once more in her
+			wonderfully snug embrace. Suri laying there chirring in delight and
+			tracing a hand over her middle as gradually you settle inside her,
+			lulled by the warmth, softness and the steady rthythm of her body
+			around you.
+		</text>
+		<choice destination="unbirthB3" text="nap" />
+	</page>
 
-<page ID="unbirthB3">
+	<page ID="unbirthB3">
 
-<special effect="marktime"/>
-<text>
-The sight of Suri playing with her new friend again garners little more than doting smiles. Not that you would notice, encompassed entirely within the darkness of her womb you are asleep within her warmth in minutes. Your last waking thought before pleasant dreams have their say how nice the lizard is to heft you around like this and keep you warm and safe inside her. Time passing with her curling up in her own bed, protectively wrapped snuggling around the bulge of your form as she sleeps.
-</text>
-<effect type="heal" value="1.00"/>
-<choice destination="unbirthBend" text="wake up"/>
-</page>
+		<special effect="marktime" />
+		<text>
+			The sight of Suri playing with her new friend again garners little more
+			than doting smiles. Not that you would notice, encompassed entirely
+			within the darkness of her womb you are asleep within her warmth in
+			minutes. Your last waking thought before pleasant dreams have their
+			say how nice the lizard is to heft you around like this and keep you
+			warm and safe inside her. Time passing with her curling up in her own
+			bed, protectively wrapped snuggling around the bulge of your form as
+			she sleeps.
+		</text>
+		<effect type="heal" value="1.00" />
+		<choice destination="unbirthBend" text="wake up" />
+	</page>
 
-<page ID="unbirthBend">
-<!-- transformation phase 1, no scales, no tail-->
-<preference fetish="transformation"/>
-<condition evaluate="SCRIPT" src="alpha_minoris_II/saurianSuri/suri_phase0"/>
+	<page ID="unbirthBend">
+		<!-- transformation phase 1, no scales, no tail -->
+		<preference fetish="transformation" />
+		<condition evaluate="SCRIPT"
+			src="alpha_minoris_II/saurianSuri/suri_phase0" />
 
-<special effect="mutation">
-<!--herm-->
-<criteriaAssertion part="penis"/>
-<mutation part="scales" variable="type" set="0" bodychange="add"/>
-<mutation part="scales" variable="colour" set="5"/>
-<mutation part="scales" variable="covering" set="0"/>
+		<special effect="mutation">
+			<!--herm -->
+			<criteriaAssertion part="penis" />
+			<mutation part="scales" variable="type" set="0" bodychange="add" />
+			<mutation part="scales" variable="colour" set="5" />
+			<mutation part="scales" variable="covering" set="0" />
 
-</special>
-<special effect="mutation">
-<!--female-->
-<criteriaAssertion part="penis" negative="true"/>
-<mutation part="scales" variable="type" set="0" bodychange="add"/>
-<mutation part="scales" variable="colour" set="3"/>
-<mutation part="scales" variable="covering" set="0"/>
+		</special>
+		<special effect="mutation">
+			<!--female -->
+			<criteriaAssertion part="penis" negative="true" />
+			<mutation part="scales" variable="type" set="0" bodychange="add" />
+			<mutation part="scales" variable="colour" set="3" />
+			<mutation part="scales" variable="covering" set="0" />
 
-</special>
-<!--patchy scales-->
-<text>
-You awaken to the sensation of something different, but can't figure out quite what it is. Suri's attention is quickly garnered by your movements as you squirm around and try to feel over yourself to figure out the strange sensation. The lizard pausing what she's doing to glance down and rub a hand over her pregnant domed out middle "Mhmm, you're awfully restless, ready to be let out?" she asks and then takes your movements as assent and steps into the privacy of the bushes. The young yet motherly lizard squatting down and gasping as she tenses and squeezes you out steadily. Your form spilling out into the open air as she groans and lets out a chirr, and as you settle moistly onto the ground the change you felt earlier is revealed. <macro id="scale_colour_desc"/> scales glistening on your limbs, dappling in scattered patches along your body. Suri's eyes widening in surprise "oh, ah, i didn't expect this to happen." she says and fidgets placing her fingers together "please tell me you're not mad?"
-</text>
-<choice destination="end" text="It's okay, I kind of like it"/>
-<choice destination="end" text="Well this is an unwelcome surprise.."/>
-</page>
+		</special>
+		<!--patchy scales -->
+		<text>
+			You awaken to the sensation of something different, but can't figure
+			out quite what it is. Suri's attention is quickly garnered by your
+			movements as you squirm around and try to feel over yourself to
+			figure out the strange sensation. The lizard pausing what she's doing
+			to glance down and rub a hand over her pregnant domed out middle
+			"Mhmm, you're awfully restless, ready to be let out?" she asks and
+			then takes your movements as assent and steps into the privacy of the
+			bushes. The young yet motherly lizard squatting down and gasping as
+			she tenses and squeezes you out steadily. Your form spilling out into
+			the open air as she groans and lets out a chirr, and as you settle
+			moistly onto the ground the change you felt earlier is revealed.
+			<macro id="scale_colour_desc" />
+			scales glistening on your limbs, dappling in scattered patches along
+			your body. Suri's eyes widening in surprise "oh, ah, i didn't expect
+			this to happen." she says and fidgets placing her fingers together
+			"please tell me you're not mad?"
+		</text>
+		<choice destination="end" text="It's okay, I kind of like it" />
+		<choice destination="end" text="Well this is an unwelcome surprise.." />
+	</page>
 
-<page ID="unbirthBend">
-<!-- transformation phase 2, patchy scales-->
-<condition evaluate="SCRIPT" src="alpha_minoris_II/saurianSuri/suri_phase1"/>
-<preference fetish="transformation"/>
-<special effect="mutation">
-<!--herm-->
-<criteriaAssertion part="penis"/>
+	<page ID="unbirthBend">
+		<!-- transformation phase 2, patchy scales -->
+		<condition evaluate="SCRIPT"
+			src="alpha_minoris_II/saurianSuri/suri_phase1" />
+		<preference fetish="transformation" />
+		<special effect="mutation">
+			<!--herm -->
+			<criteriaAssertion part="penis" />
 
-<mutation part="scales" variable="colour" set="5"/>
-<mutation part="scales" variable="covering" set="2"/>
+			<mutation part="scales" variable="colour" set="5" />
+			<mutation part="scales" variable="covering" set="2" />
 
-</special>
-<special effect="mutation">
-<!--female-->
-<criteriaAssertion part="penis" negative="true"/>
+		</special>
+		<special effect="mutation">
+			<!--female -->
+			<criteriaAssertion part="penis" negative="true" />
 
-<mutation part="scales" variable="colour" set="3"/>
-<mutation part="scales" variable="covering" set="2"/>
+			<mutation part="scales" variable="colour" set="3" />
+			<mutation part="scales" variable="covering" set="2" />
 
-</special>
-<!-- limb scales-->
-<text>
-You awaken to realize that you must of absorbed more saurian DNA from Suri while you were sleeping. As you can feel the somewhat familiar sensation of a change having been worked upon you while you slept. Feeling over your arms and legs you can feel smooth scales now covering almost the entirety of your limbs, You prod at the inside of the womb to get Suri's attention. The saurian settling with a bit of trepidation behind some bushes to squeeze back out. Your <macro id="scale_colour_desc"/> new scales gleaming wetly in the light as Suri gasps and leans back blushing as you looks down at you and you stretch slowly "Mhmm, you know. I think you look cuter with scales." she says and reaches down to help you up. Suri is rather unapologetic, but then, you went in again after last time, you must like having more saurian genes. And Suri seems willing to gradually transform you into one of her own kind.
-</text>
-<choice destination="end" text="I'll have to think about whether I want to go the whole way"/>
-</page>
+		</special>
+		<!-- limb scales -->
+		<text>
+			You awaken to realize that you must of absorbed more saurian DNA from
+			Suri while you were sleeping. As you can feel the somewhat familiar
+			sensation of a change having been worked upon you while you slept.
+			Feeling over your arms and legs you can feel smooth scales now
+			covering almost the entirety of your limbs, You prod at the inside of
+			the womb to get Suri's attention. The saurian settling with a bit of
+			trepidation behind some bushes to squeeze back out. Your
+			<macro id="scale_colour_desc" />
+			new scales gleaming wetly in the light as Suri gasps and leans back
+			blushing as you looks down at you and you stretch slowly "Mhmm, you
+			know. I think you look cuter with scales." she says and reaches down
+			to help you up. Suri is rather unapologetic, but then, you went in
+			again after last time, you must like having more saurian genes. And
+			Suri seems willing to gradually transform you into one of her own
+			kind.
+		</text>
+		<choice destination="end"
+			text="I'll have to think about whether I want to go the whole way" />
+	</page>
 
 
-<page ID="unbirthBend">
-<!-- transformation phase 3, no tail-->
-<condition evaluate="SCRIPT" src="alpha_minoris_II/saurianSuri/suri_phase2"/>
-<preference fetish="transformation"/>
-<special effect="mutation">
-<!--herm-->
-<criteriaAssertion part="penis"/>
+	<page ID="unbirthBend">
+		<!-- transformation phase 3, no tail -->
+		<condition evaluate="SCRIPT"
+			src="alpha_minoris_II/saurianSuri/suri_phase2" />
+		<preference fetish="transformation" />
+		<special effect="mutation">
+			<!--herm -->
+			<criteriaAssertion part="penis" />
 
-<mutation part="scales" variable="colour" set="5"/>
-<mutation part="tail" variable="type" set="0" bodychange="add"/>
-<mutation part="scales" variable="covering" set="3"/>
+			<mutation part="scales" variable="colour" set="5" />
+			<mutation part="tail" variable="type" set="0" bodychange="add" />
+			<mutation part="scales" variable="covering" set="3" />
 
-</special>
-<special effect="mutation">
-<!--female-->
-<criteriaAssertion part="penis" negative="true"/>
+		</special>
+		<special effect="mutation">
+			<!--female -->
+			<criteriaAssertion part="penis" negative="true" />
 
-<mutation part="scales" variable="colour" set="3"/>
-<mutation part="tail" variable="type" set="0" bodychange="add"/>
-<mutation part="scales" variable="covering" set="3"/>
+			<mutation part="scales" variable="colour" set="3" />
+			<mutation part="tail" variable="type" set="0" bodychange="add" />
+			<mutation part="scales" variable="covering" set="3" />
 
-</special>
-<effect type="setfactionflag" flag="allegiance" value="1"/>
-<effect type="manipulatefactionflag" faction="minyos" flag="allegiance" value="-1"/>
-<effect type="manipulateDisposition" faction="minyos" value="-25"/>
-<effect type="modfactiondisposition" value="25"/>
-<!--all but face and back scales, also grows tail-->
-<text>
-You're familiar by now with the sensation of waking up to changes inside the adorable Suri. But this change is more drastic than others, sharing space with an ample fleshy mass that turns out to be a part of you and anchored to your ass. A long lizardy tail of your own. Suri feels you squirming around and then giggles, eager to see what's happened this time she sways her way into the bushes and squats down with a smile. She gasps and mhmms and then shudders in delight as you push out of her headfirst, slowly easing out until you slip free, your long tail last to emerge and ooloured <macro id="scale_colour_desc"/> like the rest of your scales that now cover all but your face and the front of your torso. You've fully gone native now it seems. Suri smiles and leans in to give you a smooch "I guess I made you one of us now, this was better than I could of imagined." she says and then gives your still damp form a hug, sliding hands down to stroke your tail before disentangling. Though Suri's grin probably isn't going away any time soon.
-</text>
-<choice destination="end" text="It's one way to make friends I suppose."/>
-</page>
+		</special>
+		<effect type="setfactionflag" flag="allegiance" value="1" />
+		<effect type="manipulatefactionflag" faction="minyos" flag="allegiance"
+			value="-1" />
+		<effect type="manipulateDisposition" faction="minyos" value="-25" />
+		<effect type="modfactiondisposition" value="25" />
+		<!--all but face and back scales, also grows tail -->
+		<text>
+			You're familiar by now with the sensation of waking up to changes
+			inside the adorable Suri. But this change is more drastic than
+			others, sharing space with an ample fleshy mass that turns out to be
+			a part of you and anchored to your ass. A long lizardy tail of your
+			own. Suri feels you squirming around and then giggles, eager to see
+			what's happened this time she sways her way into the bushes and
+			squats down with a smile. She gasps and mhmms and then shudders in
+			delight as you push out of her headfirst, slowly easing out until you
+			slip free, your long tail last to emerge and ooloured
+			<macro id="scale_colour_desc" />
+			like the rest of your scales that now cover all but your face and the
+			front of your torso. You've fully gone native now it seems. Suri
+			smiles and leans in to give you a smooch "I guess I made you one of
+			us now, this was better than I could of imagined." she says and then
+			gives your still damp form a hug, sliding hands down to stroke your
+			tail before disentangling. Though Suri's grin probably isn't going
+			away any time soon.
+		</text>
+		<choice destination="end" text="It's one way to make friends I suppose." />
+	</page>
 
-<page ID="unbirthBend">
-<text>
-You awaken sometime later, from the angle you can tell Suri is up and about and push out to get her attention. You hear her giggle around you and make her apologies to whatever muffled individuals she was interacting with before walking back to the bushes where your stuff was stashed. The naughty lizard patting her middle and then squatting down, the familiar clench and release of her insides pressing around you as gradually you're eased out into the world. Emerging headfirst into the cool air once more as she gasps and groans above you, squeezing you out inch by inch until your feet finally pop free of her sex. Suri taking a few moments to lick over you with a smile "Mhmm, hope you enjoyed. But I think that's enough inside time for you don't you?"
-</text>
-<choice destination="end" text="for now yes, but perhaps later."/>
-</page>
+	<page ID="unbirthBend">
+		<text>
+			You awaken sometime later, from the angle you can tell Suri is up and
+			about and push out to get her attention. You hear her giggle around
+			you and make her apologies to whatever muffled individuals she was
+			interacting with before walking back to the bushes where your stuff
+			was stashed. The naughty lizard patting her middle and then squatting
+			down, the familiar clench and release of her insides pressing around
+			you as gradually you're eased out into the world. Emerging headfirst
+			into the cool air once more as she gasps and groans above you,
+			squeezing you out inch by inch until your feet finally pop free of
+			her sex. Suri taking a few moments to lick over you with a smile
+			"Mhmm, hope you enjoyed. But I think that's enough inside time for
+			you don't you?"
+		</text>
+		<choice destination="end" text="for now yes, but perhaps later." />
+	</page>
 
 </Conversation>

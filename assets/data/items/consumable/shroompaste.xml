@@ -1,13 +1,18 @@
 <?xml version="1.0"?>
 <ItemConsumable name="shroompaste" weight="1" value="250">
-<description>Dried fungoid paste, its inert spores flooding ones senses might provide a protection against pheremones.</description>
-<effectstatus probability="100">
-<applyText> Smells mouldy, but at least you cant smell anything alluring through this funk.
-</applyText>
-<statusAttribMod uid="13" icon="3" duration="60" numModifiers="1">
-<effect attribute="PHEREMONE" modifier="3"/>
-<removeText>The paste is no longer oozing spores, as they filter out of your system they no longer saturate it as a ward against pheremone influence.
-</removeText>
-</statusAttribMod>
-</effectstatus>
+	<description>Dried fungoid paste, its inert spores flooding ones senses
+		might provide a protection against pheremones.</description>
+	<effectstatus probability="100">
+		<applyText> Smells mouldy, but at least you cant smell anything
+			alluring through this funk.
+		</applyText>
+		<statusAttribMod uid="13" icon="3" duration="60"
+			numModifiers="1">
+			<effect attribute="PHEREMONE" modifier="3" />
+			<removeText>The paste is no longer oozing spores, as they filter out
+				of your system they no longer saturate it as a ward against
+				pheremone influence.
+			</removeText>
+		</statusAttribMod>
+	</effectstatus>
 </ItemConsumable>

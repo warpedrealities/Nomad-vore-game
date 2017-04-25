@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <ItemConsumable name="medkit" weight="2" value="250">
-<description>A standard medical kit. </description>
-<effectrecover modifier="ENDURANCE" modstrength="0.2" modvalue="12" modifies="HEALTH">
-Your injuries heal feel less pressing now that you have given yourself medical attention.
-</effectrecover>
+	<description>A standard medical kit. </description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="12" modifies="HEALTH">
+		Your injuries heal feel less pressing now that you have given yourself
+		medical attention.
+	</effectrecover>
 </ItemConsumable>

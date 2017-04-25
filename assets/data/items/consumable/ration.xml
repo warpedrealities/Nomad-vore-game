@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <ItemConsumable name="ration" weight="1" value="40">
-<description>Dried alien ration bar. Amazingly its still preserved after all this time, though this makes one wonder how edible it really is. </description>
-<effectrecover modifier="ENDURANCE" modstrength="0.2" modvalue="20" modifies="SATIATION">
-It's oddly tasteless, a bit crunchy and settles in ones belly like a leaden weight. Won't be winning any culinary awards any time soon.
-</effectrecover>
+	<description>Dried alien ration bar. Amazingly its still preserved
+		after all this time, though this makes one wonder how edible it really
+		is. </description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="25" modifies="SATIATION">
+		It's oddly tasteless, a bit crunchy and settles in ones belly like a
+		leaden weight. Won't be winning any culinary awards any time soon.
+	</effectrecover>
 </ItemConsumable>

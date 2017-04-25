@@ -1,148 +1,259 @@
 <?xml version="1.0"?>
 <Conversation>
 
-<page ID="start">
-<preference fetish="cockvore"/>
-<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="talked"/>
-<text>
-The green elfin girl packing extra seems to be happy to see you as she greets you with a bounce and a smile "Hi I'm Neri, the official greeter for the village of Minyos." She says, something twitching under her skirt as she seems to pre-empt your next question and plough ahead before you can say anything "that means its my job to schlurp new visitors into my balls as part of the official Minyos welcome. You look like you need a welcoming wouldn't you agree?"
-</text>
-<effect type="setlocalflag" flag="talked" value="1"/>
-<choice destination="agree" text="agree"/>
-<choice destination="refuse" text="disagree"/>
-</page>
+	<page ID="start">
+		<preference fetish="cockvore" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="talked" />
+		<text>
+			The green elfin girl packing extra seems to be happy to see you as she
+			greets you with a bounce and a smile "Hi I'm Neri, the official
+			greeter for the village of Minyos." She says, something twitching
+			under her skirt as she seems to pre-empt your next question and
+			plough ahead before you can say anything "that means its my job to
+			schlurp new visitors into my balls as part of the official Minyos
+			welcome. You look like you need a welcoming wouldn't you agree?"
+		</text>
+		<effect type="setlocalflag" flag="talked" value="1" />
+		<choice destination="agree" text="agree" />
+		<choice destination="refuse" text="disagree" />
+	</page>
 
-<page ID="agree">
-<text>
-"Excellent, lets get you nice and thoroughly welcomed." says Neri and smiles, reaching down to undo her skirt and let it fall down around her ankles revealing her cock. That green shaft already rising to attention and helped along by a few eager strokes she gives it as it seems to grow a bit larger and then larger still "just have to get it ready." she comments. <conditional><assertion evaluate="slothasitem" slot="2"/>As you take the time she's getting ready to get ready yourself by undressing.</conditional>
-</text>
-<choice destination="cockvore0" text="time to get wellcummed"/>
-<effect type="setlocalflag" flag="talked" value="2"/>
-</page>
+	<page ID="agree">
+		<text>
+			"Excellent, lets get you nice and thoroughly welcomed." says Neri and
+			smiles, reaching down to undo her skirt and let it fall down around
+			her ankles revealing her cock. That green shaft already rising to
+			attention and helped along by a few eager strokes she gives it as it
+			seems to grow a bit larger and then larger still "just have to get it
+			ready." she comments.
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				As you take the time she's getting ready to get ready yourself by
+				undressing.
+			</conditional>
+		</text>
+		<choice destination="cockvore0" text="time to get wellcummed" />
+		<effect type="setlocalflag" flag="talked" value="2" />
+	</page>
 
-<page ID="cockvore0">
-<text>
-"mhmm. All ready." she remarks as she finishes stroking herself to firmness. Her cock now standing proud jutting out from her hips as she motions you onto a fallen treetrunk "lets not waste anymore time. give me your foot" she says, taking it when proferred and guiding it into her tip "you might want to hold onto something" she remarks as her cock schlurps around your foot, accepting it remarkably easily deep into her length. Hot pre soaking your calves up to the knee as you feel your foot pushing out the inside of her sack and she motions for you to give her your other foot. Neri sliding it in and letting out a groan of delight at feeling both of your feet pushing against the underside of her sack.
-</text>
-<choice destination="cockvore1" text="slide in"/>
+	<page ID="cockvore0">
+		<text>
+			"mhmm. All ready." she remarks as she finishes stroking herself to
+			firmness. Her cock now standing proud jutting out from her hips as
+			she motions you onto a fallen treetrunk "lets not waste anymore time.
+			give me your foot" she says, taking it when proferred and guiding it
+			into her tip "you might want to hold onto something" she remarks as
+			her cock schlurps around your foot, accepting it remarkably easily
+			deep into her length. Hot pre soaking your calves up to the knee as
+			you feel your foot pushing out the inside of her sack and she motions
+			for you to give her your other foot. Neri sliding it in and letting
+			out a groan of delight at feeling both of your feet pushing against
+			the underside of her sack.
+		</text>
+		<choice destination="cockvore1" text="slide in" />
 
-</page>
+	</page>
 
-<page ID="cockvore1">
-<text>
-"that's it, you're being an excellent greetee so far." she remarks as she takes both your hands to support them, moaning as her hot cock ripples and schlurps up your thighs steadily. Hot pre bubbling up around you as she works you inside her bulging shaft, your legs starting to curl and soon your knees are pushing out her sack nicely as they're plunged into the cum within. Her cocktip rising up around your chest as she moans even louder "a truly excellent greetee." she reiterates as she engulfs your hips, her cock bulging mightily around your lower body as she prepares to schlurp in your upper half.
-</text>
-<choice destination="cockvore2" text="all the way down"/>
+	<page ID="cockvore1">
+		<text>
+			"that's it, you're being an excellent greetee so far." she remarks as she
+			takes both your hands to support them, moaning as her hot cock
+			ripples and schlurps up your thighs steadily. Hot pre bubbling up
+			around you as she works you inside her bulging shaft, your legs
+			starting to curl and soon your knees are pushing out her sack nicely
+			as they're plunged into the cum within. Her cocktip rising up around
+			your chest as she moans even louder "a truly excellent greetee." she
+			reiterates as she engulfs your hips, her cock bulging mightily around
+			your lower body as she prepares to schlurp in your upper half.
+		</text>
+		<choice destination="cockvore2" text="all the way down" />
 
-</page>
+	</page>
 
-<page ID="cockvore2">
-<text>
-Her cock slides up to your shoulders, and she grins "Welcome to the village of Minyos." she says as she places a hand atop your head and gives you a push. Your head vanishing entirely into her tip and your arms soon following. Hot musky pre and cum surrounding you utterly as you plunge down her cock, her hands tracing the bulges in her cock as she slides you down entirely into her balls. Your form curling up between her legs as she reaches down to scoop up her skirt and put it back on, though it does nearly nothing to hide her immense bulging and highly visible sack.
-</text>
-<choice destination="cockvore3" text="settle in"/>
+	<page ID="cockvore2">
+		<text>
+			Her cock slides up to your shoulders, and she grins "Welcome to the
+			village of Minyos." she says as she places a hand atop your head and
+			gives you a push. Your head vanishing entirely into her tip and your
+			arms soon following. Hot musky pre and cum surrounding you utterly as
+			you plunge down her cock, her hands tracing the bulges in her cock as
+			she slides you down entirely into her balls. Your form curling up
+			between her legs as she reaches down to scoop up her skirt and put it
+			back on, though it does nearly nothing to hide her immense bulging
+			and highly visible sack.
+		</text>
+		<choice destination="cockvore3" text="settle in" />
 
-</page>
+	</page>
 
-<page ID="cockvore3">
-<text>
-You feel her moving around, walking with a rolling gait with you trapped in her balls. Your confines jostling and swaying around with each step, sloshing the hot cum back and forth around you. You're utterly covered in the stuff and it occurs to you she never mentioned when she'd let you out of her balls. She seems to be simply going about her day normally despite the impediment of you in her loins.
-</text>
-<choice destination="speakup" text="ask about getting out"/>
-<choice destination="staysilent" text="keep quiet"/>
+	<page ID="cockvore3">
+		<text>
+			You feel her moving around, walking with a rolling gait with you trapped
+			in her balls. Your confines jostling and swaying around with each
+			step, sloshing the hot cum back and forth around you. You're utterly
+			covered in the stuff and it occurs to you she never mentioned when
+			she'd let you out of her balls. She seems to be simply going about
+			her day normally despite the impediment of you in her loins.
+		</text>
+		<choice destination="speakup" text="ask about getting out" />
+		<choice destination="staysilent" text="keep quiet" />
 
-</page>
+	</page>
 
-<page ID="speakup">
-<text>
-"What you want to be let out already?" Neri asks with a pout, reaching down to pat and stroke her sack where you bulge out her nuts"I wanted to keep you in there longer, I'll let you out later okay?" she suggests, as wonderfully hot tingles soak your flesh. Her oozing cum seeming to seep into your pores. It's truly a luxurious sensation, why not stick around a little longer.
-</text>
-<choice destination="insist" text="let me out"/>
-<choice destination="hushup" text="i'll wait"/>
+	<page ID="speakup">
+		<text>
+			"What you want to be let out already?" Neri asks with a pout, reaching
+			down to pat and stroke her sack where you bulge out her nuts"I wanted
+			to keep you in there longer, I'll let you out later okay?" she
+			suggests, as wonderfully hot tingles soak your flesh. Her oozing cum
+			seeming to seep into your pores. It's truly a luxurious sensation,
+			why not stick around a little longer.
+		</text>
+		<choice destination="insist" text="let me out" />
+		<choice destination="hushup" text="i'll wait" />
 
-</page>
-
-
-<page ID="insist">
-<text>
-"Fine, but come back anytime if you change your mind that you haven't been properly welcomed to the village okay?" Neri says and finds a good spot, settling on a fallen tree and stroking herself. The hermy green elf vigorously working her cock with mounting moans until with a final moan she reaches her climax, sending you rocketing back up her cock.
-</text>
-<choice destination="letout" text="woosh"/>
-
-</page>
-
-<page ID="letout">
-<text> You land in a hot creamy puddle of her jizz in front of her. Neri pouts a little but smiles "hope you enjoyed your stay inside my balls, come back anytime." she says <conditional><assertion evaluate="slothasitem" slot="2"/>and offers you your clothes so you can get dressed again</conditional>. Neri fondling her cock a little more before letting it soften and slip back under the concealment of her skirt.
-</text>
-<choice destination="end" text="well that was an experience"/>
-</page>
-
-<page ID="hushup">
-<text> You decide to be quiet and she takes that as assent "alright then." Neri says and returns to going about her business. Going back to sloshing you back and forth in her glorping sack as she moves around, her thighs pressing against you rthythmically when she walks, rubbing her cum into your body.
-</text>
-<choice destination="hushdigest0" text="relax"/>
-
-</page>
-
-<page ID="hushdigest0">
-<text>
-You find yourself utterly relaxing in her sack, going with the motion as she carries you around and lets you enjoy sloshing inside her. It's so relaxing it feels almost..like you can't move, you begin to realize things are going further. Your form soft, her balls once sharply bulged now soft and round as you burble inside her all creamy and white. Your attempts to bring this to Neri's attention resulting in only a gurgle and gasp as you begin to spread out. Your movements to try and push out just spreading your form out into the surrounding cum.
-</text>
-<choice destination="digestGO" text="melt away"/>
-</page>
-
-<gameover ID="digestGO">
-<text>
-Inside her balls you begin to succumb entirely, the sloshing sway of her sack, her rubbing thighs..all working to dissolve your weakened form into the surrounding spunk. Neri grinning a bit as she feels that churning take on a more pronounced and liquid feel and patpats her sack "ooh, now you're nice and well cummed visitor." she says and grins "I can let you out now." she continues stroking herself to hardness and then further. The green elf masturbating as you slosh and flow fluidly in her sack as naught but cum now. Neri reaching her peak and shuddering, crying out as she sends you arcing out to splatter all across the ground. A thick liquid stain of her jizz pooling there your only remains. She surveys her handiwork and leans in "let me tell you a secret" she says conspiratorially to the puddle "there's no such thing as an official greeter for visitors in this village, i made it all up."
-</text>
-
-</gameover>
-
-<page ID="staysilent">
-<text>
-You decide to keep quiet, confident everything is going to plan. Besides, this cumbath feels..wonderful. You can really feel the thick goo soaking into your skin as you marinate in her seed. You can feel her moving around, chattering away over trivialities with other elves, sitting, standing, walking. She really is being quite generous in hauling around the burden of you as she goes about her business.
-</text>
-<choice destination="staydigest0" text="enjoy the bath"/>
-</page>
-
-<page ID="staydigest0">
-<text>
-You feel yourself easing into your surroundings, utterly comfortable. The sack conforming precisely to your shape as you spread out and soften. You can feel yourself melting, but everything is going according to plan. It's not something to worry about, her sack now round and starting to shift into two orbs anew as your oozing form loses definition and conforms more and more to your surroundings.
-</text>
-<choice destination="digestGO" text="melt away"/>
-</page>
-
-<page ID="refuse">
-<text>"But it's my job. really. Fine though, I can't exactly force ya. come back if you change your mind though." she seems put out but has taken the rejection at least a little gracefully.
-</text>
-<choice destination="end" text="sure, if that happens"/>
-</page>
-
-<page ID="start">
-<preference fetish="cockvore"/>
-<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="talked"/>
-<text>
-"Oh hi, it's you again. You ready to be welcomed to the village yet? I'm not doing very good at my job if I don't welcome every visitor the village has. Especially ones as delightful as you."
-</text>
-<choice destination="agree" text="yes"/>
-<choice destination="end" text="no, bye"/>
-</page>
+	</page>
 
 
-<page ID="start">
-<preference fetish="cockvore"/>
-<condition evaluate="LOCALFLAG" operator="equals" value="2" flag="talked"/>
-<text>
-"Oh hi again, nice to see you. Hope you've been enjoying yourself here. Anything I can do to help you?" asks Neri fondling herself through her skirt lightly.
-</text>
-<choice destination="agree" text="I need another welcome"/>
-<choice destination="end" text="well bye"/>
-</page>
+	<page ID="insist">
+		<text>
+			"Fine, but come back anytime if you change your mind that you haven't been
+			properly welcomed to the village okay?" Neri says and finds a good
+			spot, settling on a fallen tree and stroking herself. The hermy green
+			elf vigorously working her cock with mounting moans until with a
+			final moan she reaches her climax, sending you rocketing back up her
+			cock.
+		</text>
+		<choice destination="letout" text="woosh" />
 
-<page ID="start">
-<text>
-"Oh uh, nope nothing to see here." she adjusts her clothing and frowns "Nothing for you anyway, I can just tell you wouldn't appreciate it."
-</text>
-<choice destination="end" text="well bye"/>
-</page>
+	</page>
+
+	<page ID="letout">
+		<text>
+			You land in a hot creamy puddle of her jizz in front of her. Neri
+			pouts a little but smiles "hope you enjoyed your stay inside my
+			balls, come back anytime." she says
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				and offers you your clothes so you can get dressed again
+			</conditional>
+			. Neri fondling her cock a little more before letting it soften and
+			slip back under the concealment of her skirt.
+		</text>
+		<choice destination="end" text="well that was an experience" />
+	</page>
+
+	<page ID="hushup">
+		<text> You decide to be quiet and she takes that as assent "alright
+			then." Neri says and returns to going about her business. Going back
+			to sloshing you back and forth in her glorping sack as she moves
+			around, her thighs pressing against you rthythmically when she walks,
+			rubbing her cum into your body.
+		</text>
+		<choice destination="hushdigest0" text="relax" />
+
+	</page>
+
+	<page ID="hushdigest0">
+		<text>
+			You find yourself utterly relaxing in her sack, going with the motion as
+			she carries you around and lets you enjoy sloshing inside her. It's
+			so relaxing it feels almost..like you can't move, you begin to
+			realize things are going further. Your form soft, her balls once
+			sharply bulged now soft and round as you burble inside her all creamy
+			and white. Your attempts to bring this to Neri's attention resulting
+			in only a gurgle and gasp as you begin to spread out. Your movements
+			to try and push out just spreading your form out into the surrounding
+			cum.
+		</text>
+		<choice destination="digestGO" text="melt away" />
+	</page>
+
+	<gameover ID="digestGO">
+		<text>
+			Inside her balls you begin to succumb entirely, the sloshing sway of her
+			sack, her rubbing thighs..all working to dissolve your weakened form
+			into the surrounding spunk. Neri grinning a bit as she feels that
+			churning take on a more pronounced and liquid feel and patpats her
+			sack "ooh, now you're nice and well cummed visitor." she says and
+			grins "I can let you out now." she continues stroking herself to
+			hardness and then further. The green elf masturbating as you slosh
+			and flow fluidly in her sack as naught but cum now. Neri reaching her
+			peak and shuddering, crying out as she sends you arcing out to
+			splatter all across the ground. A thick liquid stain of her jizz
+			pooling there your only remains. She surveys her handiwork and leans
+			in "let me tell you a secret" she says conspiratorially to the puddle
+			"there's no such thing as an official greeter for visitors in this
+			village, i made it all up."
+		</text>
+
+	</gameover>
+
+	<page ID="staysilent">
+		<text>
+			You decide to keep quiet, confident everything is going to plan.
+			Besides, this cumbath feels..wonderful. You can really feel the thick
+			goo soaking into your skin as you marinate in her seed. You can feel
+			her moving around, chattering away over trivialities with other
+			elves, sitting, standing, walking. She really is being quite generous
+			in hauling around the burden of you as she goes about her business.
+		</text>
+		<choice destination="staydigest0" text="enjoy the bath" />
+	</page>
+
+	<page ID="staydigest0">
+		<text>
+			You feel yourself easing into your surroundings, utterly comfortable.
+			The sack conforming precisely to your shape as you spread out and
+			soften. You can feel yourself melting, but everything is going
+			according to plan. It's not something to worry about, her sack now
+			round and starting to shift into two orbs anew as your oozing form
+			loses definition and conforms more and more to your surroundings.
+		</text>
+		<choice destination="digestGO" text="melt away" />
+	</page>
+
+	<page ID="refuse">
+		<text>"But it's my job. really. Fine though, I can't exactly force ya.
+			come back if you change your mind though." she seems put out but has
+			taken the rejection at least a little gracefully.
+		</text>
+		<choice destination="end" text="sure, if that happens" />
+	</page>
+
+	<page ID="start">
+		<preference fetish="cockvore" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="talked" />
+		<text>
+			"Oh hi, it's you again. You ready to be welcomed to the village yet? I'm
+			not doing very good at my job if I don't welcome every visitor the
+			village has. Especially ones as delightful as you."
+		</text>
+		<choice destination="agree" text="yes" />
+		<choice destination="end" text="no, bye" />
+	</page>
+
+
+	<page ID="start">
+		<preference fetish="cockvore" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="2"
+			flag="talked" />
+		<text>
+			"Oh hi again, nice to see you. Hope you've been enjoying yourself here.
+			Anything I can do to help you?" asks Neri fondling herself through
+			her skirt lightly.
+		</text>
+		<choice destination="agree" text="I need another welcome" />
+		<choice destination="end" text="well bye" />
+	</page>
+
+	<page ID="start">
+		<text>
+			"Oh uh, nope nothing to see here." she adjusts her clothing and frowns
+			"Nothing for you anyway, I can just tell you wouldn't appreciate it."
+		</text>
+		<choice destination="end" text="well bye" />
+	</page>
 </Conversation>

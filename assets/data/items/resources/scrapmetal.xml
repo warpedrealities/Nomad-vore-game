@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ItemResource name="scrap metal" weight="1" value="25">
-<description>A handful of fragments and metal parts.</description>
+	<description>A handful of fragments and metal parts.</description>
 
 </ItemResource>

@@ -1,114 +1,291 @@
 <?xml version="1.0"?>
 <Conversation>
 
-<page ID="start">
-<preference fetish="cocktransformation"/>
-<text>
-Weakened by poison you've fallen before your diminutive opponent, ending up in an undignified sprawl on your front. The horny bug girl fluttering and bounding eagerly, landing in a squat over you. <conditional><assertion evaluate="slothasitem" slot="2"/> yanking off your clothing and exposing your hips to the air before </conditional>grabbing her shaft and stroking, eagerly and vigorously jerking herself to hardness as she uses her other hand to keep you from wriggling away even as she transitions into rubbing that cock of hers against the softness of your bare skin.
-</text>
-<choice destination="sex0" text="get fucked"/>
-</page>
+	<page ID="start">
+		<preference fetish="cocktransformation" />
+		<text>
+			Weakened by poison you've fallen before your diminutive opponent,
+			ending up in an undignified sprawl on your front. The horny bug girl
+			fluttering and bounding eagerly, landing in a squat over you.
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				yanking off your clothing and exposing your hips to the air before
+			</conditional>
+			grabbing her shaft and stroking, eagerly and vigorously jerking
+			herself to hardness as she uses her other hand to keep you from
+			wriggling away even as she transitions into rubbing that cock of hers
+			against the softness of your bare skin.
+		</text>
+		<choice destination="sex0" text="get fucked" />
+	</page>
 
-<page ID="sex0">
-<assertion evaluate="haspart" part="vagina"/>
-<text>
-The small herm can be felt fumbling eagerly. one hand rubbing and stroking around your hips and thighs and then grabbing one of your legs, angling it up and out a bit exposing your nether afore you feel her middle press against your rear and her modest endowment arcing up to press into your snatch. the horny wee critter enacting the most grievous violation on your doped body. The drug of her poison meaning you're in no fate to resist as she begins to thrust in and out of your sex vigorously.
-</text>
-<choice destination="struggle" text="*try to resist anyway*"/>
-<choice destination="submit" text="*think of england*"/>
-</page>
+	<page ID="sex0">
+		<assertion evaluate="haspart" part="vagina" />
+		<text>
+			The small herm can be felt fumbling eagerly. one hand rubbing and
+			stroking around your hips and thighs and then grabbing one of your
+			legs, angling it up and out a bit exposing your nether afore you feel
+			her middle press against your rear and her modest endowment arcing up
+			to press into your snatch. the horny wee critter enacting the most
+			grievous violation on your doped body. The drug of her poison meaning
+			you're in no fate to resist as she begins to thrust in and out of
+			your sex vigorously.
+		</text>
+		<choice destination="struggle" text="*try to resist anyway*" />
+		<choice destination="submit" text="*think of england*" />
+	</page>
 
-<page ID="sex0">
-<text>
-The small herm can be felt fumbling around between your legs, but swiftly she makes a confused disapointed noise not finding what she hoped for. But undeterred she changes her aim up and inwards at your exposed bottom, pressing into your ass with her modest endowment. The lixi soon going to town on your derriere's tight hole instead, raping your rear while her poison leaves you in no fit to resist her actions.
-</text>
-<choice destination="struggle" text="*try to resist anyway*"/>
-<choice destination="submit" text="*think of england*"/>
-</page>
+	<page ID="sex0">
+		<text>
+			The small herm can be felt fumbling around between your legs, but
+			swiftly she makes a confused disapointed noise not finding what she
+			hoped for. But undeterred she changes her aim up and inwards at your
+			exposed bottom, pressing into your ass with her modest endowment. The
+			lixi soon going to town on your derriere's tight hole instead, raping
+			your rear while her poison leaves you in no fit to resist her
+			actions.
+		</text>
+		<choice destination="struggle" text="*try to resist anyway*" />
+		<choice destination="submit" text="*think of england*" />
+	</page>
 
-<page ID="submit">
-<text>
-As she starts to thrust into you you decide that maybe it's not that bad to be used for her pleasure. She is after all very cute and wonderfully sexually aggressive. At your mhmming and lack of resistance she chitters and gives you a pat on the back. The lixi taking her time, making up in enthusiasm for her modest size as she fucks you eagerly and lustily. Her chitters and chirrs of delight becoming more eager as she ruts, but alas all must come to an end and soon you feel her cock spurt and spasm pouring sticky white cream deep inside your warm body. You shiver in delight at the sensation and feel her drive her cock deep inside you and nestle it there, not pulling out even as her orgasm subsides. And soon you feel the reason why as strange hot sensations creep out sensually from her cock within you, starting to anchor your hips to her crotch and spreading out to change you. The little bug girl clearly intent on turning you into a longer and girthier cock between her legs.
-</text>
-<choice destination="acceptCTF0" text="acceptance"/>
-<choice destination="struggleCTF1" text="struggle"/>
-</page>
+	<page ID="submit">
+		<text>
+			As she starts to thrust into you you decide that maybe it's not that
+			bad to be used for her pleasure. She is after all very cute and
+			wonderfully sexually aggressive. At your mhmming and lack of
+			resistance she chitters and gives you a pat on the back. The lixi
+			taking her time, making up in enthusiasm for her modest size as she
+			fucks you eagerly and lustily. Her chitters and chirrs of delight
+			becoming more eager as she ruts, but alas all must come to an end and
+			soon you feel her cock spurt and spasm pouring sticky white cream
+			deep inside your warm body. You shiver in delight at the sensation
+			and feel her drive her cock deep inside you and nestle it there, not
+			pulling out even as her orgasm subsides. And soon you feel the reason
+			why as strange hot sensations creep out sensually from her cock
+			within you, starting to anchor your hips to her crotch and spreading
+			out to change you. The little bug girl clearly intent on turning you
+			into a longer and girthier cock between her legs.
+		</text>
+		<choice destination="acceptCTF0" text="acceptance" />
+		<choice destination="struggleCTF1" text="struggle" />
+	</page>
 
-<page ID="acceptCTF0">
-<text>
-You find yourself blushing rather than struggling at the thought. While it's perhaps not a future you visualized for yourself before now as her blood begins to flow in your veins you find yourself looking forward to swaying between her legs. The lixi seems confused by your murring stretching underneath her, as you wriggle to get comfortable and stretch your toes out only to feel them curl inwards into fleshy lumps. The lixi's curiousity you allay with a stroke, reaching up and back to caress her, meeting her gaze askance and letting her see the acceptance in your eyes. The lixi's face suddenly breaking out into a delighted grin and she smooches your arm afore chirring and stroking her hands along your veiny flanks. Her hands joining your own just as your murrs and her chirrs and clicks of pleasure form a duet of delight as two become one in so naughty a fashion.
-</text>
-<choice destination="acceptCTF1" text="wonderful changes"/>
-</page>
+	<page ID="acceptCTF0">
+		<text>
+			You find yourself blushing rather than struggling at the thought. While
+			it's perhaps not a future you visualized for yourself before now as
+			her blood begins to flow in your veins you find yourself looking
+			forward to swaying between her legs. The lixi seems confused by your
+			murring stretching underneath her, as you wriggle to get comfortable
+			and stretch your toes out only to feel them curl inwards into fleshy
+			lumps. The lixi's curiousity you allay with a stroke, reaching up and
+			back to caress her, meeting her gaze askance and letting her see the
+			acceptance in your eyes. The lixi's face suddenly breaking out into a
+			delighted grin and she smooches your arm afore chirring and stroking
+			her hands along your veiny flanks. Her hands joining your own just as
+			your murrs and her chirrs and clicks of pleasure form a duet of
+			delight as two become one in so naughty a fashion.
+		</text>
+		<choice destination="acceptCTF1" text="wonderful changes" />
+	</page>
 
-<page ID="acceptCTF1">
-<text>
-Gradually you feel yourself merging into a part of her body. Under her eager hands, her excitement, pleasure and eagerness all too contagious and you find yourself urging her on in making you into her cock. Your legs gradually folding upwards and inwards, folding at the knees and then again until they form into indistinguishable masses of flesh extruding a sack around themselves. Your hands and her own gliding down in delight to feel over her new fertile balls made of your legs, churning with hot seed to spread her genes. You feel her tongue as she gives you a smooch on the back and then licks, feeling your upper body begin to change. Your torso going veiny under her hands, your spine softening and your inside organs simplifying into hot throbbing dickmeat and cumtubing with messy sounding squeelches. You taste her musky cum in your mouth and know it wont be much longer, before both are you are satisfied with the completion of your transformation.
-</text>
-<choice destination="acceptCTF2" text="cum through me!"/>
-</page>
+	<page ID="acceptCTF1">
+		<text>
+			Gradually you feel yourself merging into a part of her body. Under her eager
+			hands, her excitement, pleasure and eagerness all too contagious and
+			you find yourself urging her on in making you into her cock. Your
+			legs gradually folding upwards and inwards, folding at the knees and
+			then again until they form into indistinguishable masses of flesh
+			extruding a sack around themselves. Your hands and her own gliding
+			down in delight to feel over her new fertile balls made of your legs,
+			churning with hot seed to spread her genes. You feel her tongue as
+			she gives you a smooch on the back and then licks, feeling your upper
+			body begin to change. Your torso going veiny under her hands, your
+			spine softening and your inside organs simplifying into hot throbbing
+			dickmeat and cumtubing with messy sounding squeelches. You taste her
+			musky cum in your mouth and know it wont be much longer, before both
+			are you are satisfied with the completion of your transformation.
+		</text>
+		<choice destination="acceptCTF2" text="cum through me!" />
+	</page>
 
-<page ID="acceptCTF2">
-<text>
-The bug girl seems to take your desires even without knowing the words, and rocks her hips grinding her body against your tubular torso, her immense new shaft of veiny cockflesh. Only your arms marr the perfection of her new dick and as she strokes over your flanks you obligingly press your arms to your sides. You feel your hands sticking against your flanks, knowing you'll not need them in your new role you relax and murr as the change works up your arms. Soon those limbs are stuck to your sides entirely, sinking away as your head swells out and the lixi buzzes and chitters in anticipation of the completion of your transformation. Your form becoming a bit more manageable between her legs as your neck and shoulders turn to foreskin and your face finishes puffing out into a pre drooling bell. Finally you feel it as your eyes close and sink away, sealing you into darkness. Though with the sensations of her stroking hands and the sounds of her delight you find yourself not really missing the sensation of sight that's been taken from you. You're her new cock, a great big third leg for the lil hermy bug girl and her strokes over your form are ever so wonderful to experience.
-</text>
-<choice destination="acceptGO" text="climax and aftermath"/>
-</page>
+	<page ID="acceptCTF2">
+		<text>
+			The bug girl seems to take your desires even without knowing the words,
+			and rocks her hips grinding her body against your tubular torso, her
+			immense new shaft of veiny cockflesh. Only your arms marr the
+			perfection of her new dick and as she strokes over your flanks you
+			obligingly press your arms to your sides. You feel your hands
+			sticking against your flanks, knowing you'll not need them in your
+			new role you relax and murr as the change works up your arms. Soon
+			those limbs are stuck to your sides entirely, sinking away as your
+			head swells out and the lixi buzzes and chitters in anticipation of
+			the completion of your transformation. Your form becoming a bit more
+			manageable between her legs as your neck and shoulders turn to
+			foreskin and your face finishes puffing out into a pre drooling bell.
+			Finally you feel it as your eyes close and sink away, sealing you
+			into darkness. Though with the sensations of her stroking hands and
+			the sounds of her delight you find yourself not really missing the
+			sensation of sight that's been taken from you. You're her new cock, a
+			great big third leg for the lil hermy bug girl and her strokes over
+			your form are ever so wonderful to experience.
+		</text>
+		<choice destination="acceptGO" text="climax and aftermath" />
+	</page>
 
-<gameover ID="acceptGO">
-<text>
-Her hands stroke vigorously and you throb with the pleasure you share with her. Such pleasures that reach crescendo, a rising climax that roils and pulses through you sending forth splatters of hot jizz to stain the stones and make the breeder bug buzz in delight. After a small eternity of mind smotheringly intense the climax tapers off, having lost count of the spurts you wonder whether all such uses will be as astoundingly overhwleming in future. Gradually you soften and turn flaccid between her legs. You're more manageable now, far larger than what she had before but not so large she'd have trouble moving. The bug girl gives her new cock a pat, happy that you willingly gave yourself in the end to increase her dick size she slinks off into the shadows. When you're next aware she's showing you off in her mating display to one of the large female lixi, your form hard under her stroking hands and swaying and bobbing with her animalistic gyrations and hip thrusts. The display must of been pleasing to the eye though as soon, you get to experience sex from the perspective of a cock. The breeder getting her chance to mate and thrust you into the willing holes of the large Lixi girl, spurting cum through you to pass her genes on and create the next generation of bugs. And this was not the first sexual conquest your body serving as her dick size led to, again...and again, you feel her go through the display and plunge you in and out of willing and tight Lixi nethers. Again and again you shoot her loads of cum into a succession of females. As fates go, one could hardly say your adventure ended badly. You are this pintsize cassanova's cock, and it's certainly an exciting place to be!
-</text>
+	<gameover ID="acceptGO">
+		<text>
+			Her hands stroke vigorously and you throb with the pleasure you share
+			with her. Such pleasures that reach crescendo, a rising climax that
+			roils and pulses through you sending forth splatters of hot jizz to
+			stain the stones and make the breeder bug buzz in delight. After a
+			small eternity of mind smotheringly intense the climax tapers off,
+			having lost count of the spurts you wonder whether all such uses will
+			be as astoundingly overhwleming in future. Gradually you soften and
+			turn flaccid between her legs. You're more manageable now, far larger
+			than what she had before but not so large she'd have trouble moving.
+			The bug girl gives her new cock a pat, happy that you willingly gave
+			yourself in the end to increase her dick size she slinks off into the
+			shadows. When you're next aware she's showing you off in her mating
+			display to one of the large female lixi, your form hard under her
+			stroking hands and swaying and bobbing with her animalistic gyrations
+			and hip thrusts. The display must of been pleasing to the eye though
+			as soon, you get to experience sex from the perspective of a cock.
+			The breeder getting her chance to mate and thrust you into the
+			willing holes of the large Lixi girl, spurting cum through you to
+			pass her genes on and create the next generation of bugs. And this
+			was not the first sexual conquest your body serving as her dick size
+			led to, again...and again, you feel her go through the display and
+			plunge you in and out of willing and tight Lixi nethers. Again and
+			again you shoot her loads of cum into a succession of females. As
+			fates go, one could hardly say your adventure ended badly. You are
+			this pintsize cassanova's cock, and it's certainly an exciting place
+			to be!
+		</text>
 
-</gameover>
+	</gameover>
 
-<check ID="struggle">
-<test what="STRUGGLE" DC="10"/>
-<outcome destination="struggleescape"/>
-<outcome destination="struggleCTF0"/>
-</check>
+	<check ID="struggle">
+		<test what="STRUGGLE" DC="10" />
+		<outcome destination="struggleescape" />
+		<outcome destination="struggleCTF0" />
+	</check>
 
-<page ID="struggleescape">
-<text>
-You are no ones rape toy, and so despite the poison weakening you you gather your resolve and try to squirm out from under her.. the chitin clad violator clicking and hissing at you angrily as you try to get away. But somehow you gain the coordination and strength to grab ahold her exoskeleton clad form and shove her back, her cock popping free from your body as she stumbles and fwumps to the ground. However she is quick to recover and she glares not so easily thwarted and attempts to re-leap atop you, luckily while most of her is hard one particular part is soft and delicate and vulnerable to a good kick. The lexi falls to the ground truly beaten back now whimpering she curls up into a ball of agony clutching herself and giving you time to get away and recover some of your strength. Though she's liable to recover herself from that kick before too long.
-</text>
-<effect type="heal" value="0.1"/>
-<effect type="stunnpc" value="10"/>
-<choice destination="end" text="get clear"/>
-</page>
+	<page ID="struggleescape">
+		<text>
+			You are no ones rape toy, and so despite the poison weakening you you
+			gather your resolve and try to squirm out from under her.. the chitin
+			clad violator clicking and hissing at you angrily as you try to get
+			away. But somehow you gain the coordination and strength to grab
+			ahold her exoskeleton clad form and shove her back, her cock popping
+			free from your body as she stumbles and fwumps to the ground. However
+			she is quick to recover and she glares not so easily thwarted and
+			attempts to re-leap atop you, luckily while most of her is hard one
+			particular part is soft and delicate and vulnerable to a good kick.
+			The lexi falls to the ground truly beaten back now whimpering she
+			curls up into a ball of agony clutching herself and giving you time
+			to get away and recover some of your strength. Though she's liable to
+			recover herself from that kick before too long.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
 
-<page ID="struggleCTF0">
-<text>
-You are no one's rape toy, and you struggle against the one violating you. Hearing her chitter and click angrily as you squirm around, but despite your efforts your body is weak and the grip of her poisons are wrong. You feel her thrust hard within you, cock sliding deep and then being held there. And then you feel her true intent start to be enacted, veins permeating out from the insectgirl's thick dick..merging to your hot snug insides. Your hips starting to fuse to her crotch as she chirrs and chitters more lustfully now and strokes over you..and you realize the truth, you're not going to be her rape toy..you're going to be her COCK.
-</text>
-<choice destination="struggleCTF1" text="oh no!"/>
-</page>
+	<page ID="struggleCTF0">
+		<text>
+			You are no one's rape toy, and you struggle against the one violating
+			you. Hearing her chitter and click angrily as you squirm around, but
+			despite your efforts your body is weak and the grip of her poisons
+			are strrong. You feel her thrust hard within you, cock sliding deep and
+			then being held there. And then you feel her true intent start to be
+			enacted, veins permeating out from the insectgirl's thick
+			dick..merging to your hot snug insides. Your hips starting to fuse to
+			her crotch as she chirrs and chitters more lustfully now and strokes
+			over you..and you realize the truth, you're not going to be her rape
+			toy..you're going to be her COCK.
+		</text>
+		<choice destination="struggleCTF1" text="oh no!" />
+	</page>
 
-<page ID="struggleCTF1">
-<text>
-You attempt to struggle at the sensation of your body fusing to her loins but the drugs make you weak and the sensations of her clawed hands stroking along your increasingly veiny and pale sides is awfully distracting. Your torso becoming more sensitive even as your limbs begin to weaken and turn limp and nonresponsive. Though not before your attempts to push yourself off of the cock you're now fused with sinks your hands into her crotch. The lixi chirring and rocking her hips as she transforms you, grinding her own sack against your thighs, sticking them in place..her scrotal flesh beginning to stretch and slide up over your legs. Her loins engulfing them, immersing them entirely in the lusty heat and visibly showing the bulges and outlines and contours of your legs pushing out the inside of her sack before your legs begin to devolve entirely into a fertile and virile pair of balls. 
-</text>
-<choice destination="struggleCTF2" text="arms are next"/>
-</page>
+	<page ID="struggleCTF1">
+		<text>
+			You attempt to struggle at the sensation of your body fusing to her
+			loins but the drugs make you weak and the sensations of her clawed
+			hands stroking along your increasingly veiny and pale sides is
+			awfully distracting. Your torso becoming more sensitive even as your
+			limbs begin to weaken and turn limp and nonresponsive. Though not
+			before your attempts to push yourself off of the cock you're now
+			fused with sinks your hands into her crotch. The lixi chirring and
+			rocking her hips as she transforms you, grinding her own sack against
+			your thighs, sticking them in place..her scrotal flesh beginning to
+			stretch and slide up over your legs. Her loins engulfing them,
+			immersing them entirely in the lusty heat and visibly showing the
+			bulges and outlines and contours of your legs pushing out the inside
+			of her sack before your legs begin to devolve entirely into a fertile
+			and virile pair of balls.
+		</text>
+		<choice destination="struggleCTF2" text="arms are next" />
+	</page>
 
-<page ID="struggleCTF2">
-<text>
-the diminutive lixi herm chitters happily and wraps her arms around you as she leans back. The bug girl settling into a seated position, your upper body jutting from her hips and your lower legs change. the bug girl reaching down to caress and stroke over her sack containing your legs as they convert entirely into her balls, the heft of which seem to please her a great deal even as the changes creep up your torso now. your arms oozing into your sides, merging into a pair of throbbing veins flanking your torso as it becomes increasingly her throbbing breeding tool. Your mouth full of pre as the bug strokes her hands up towards your head, coaxing the changes up beneath her eager palms as she chitters gleefully and your face begins to change.
-</text>
-<choice destination="struggleCTF3" text="no going back now"/>
-</page>
+	<page ID="struggleCTF2">
+		<text>
+			the diminutive lixi herm chitters happily and wraps her arms around you
+			as she leans back. The bug girl settling into a seated position, your
+			upper body jutting from her hips as your lower legs change. the bug
+			girl reaching down to caress and stroke over her sack containing your
+			legs as they convert entirely into her balls, the heft of which seem
+			to please her a great deal even as the changes creep up your torso
+			now. your arms oozing into your sides, merging into a pair of
+			throbbing veins flanking your torso as it becomes increasingly her
+			throbbing breeding tool. Your mouth full of pre as the bug strokes
+			her hands up towards your head, coaxing the changes up beneath her
+			eager palms as she chitters gleefully and your face begins to change.
+		</text>
+		<choice destination="struggleCTF3" text="no going back now" />
+	</page>
 
-<page ID="struggleCTF3">
-<text>
-Your face changes, regressing, swelling out and simplifying as your features are erased. Your identity subsumed by your new purpose as the lil hermy insect girl vigorously jerks off her new dick, and truly that's all you are now as you're sealed into darkness by the removal of your eyes. You're a cock, a throbbing shaft in her hands as she strokes over her now much more impressive endowment. You feel her climax boiling, the last of your agency keeping her gushing orgasm at bay. But as she jerks off you feel pleasure, her pleasure, filling your being with every stroke of her palms and every throb of her heartbeat that pulses through you. Her balls tense, and you feel your will eroding as you realize, your body is hers, your purpose...is this. the lixi lets out a hissing chittering cry of bliss as she climaxes, her cum erupting through you, splattering the ground in thick jizz.
-</text>
-<choice destination="struggleCTFGO" text="aftermath"/>
-</page>
+	<page ID="struggleCTF3">
+		<text>
+			Your face changes, regressing, swelling out and simplifying as your
+			features are erased. Your identity subsumed by your new purpose as
+			the lil hermy insect girl vigorously jerks off her new dick, and
+			truly that's all you are now as you're sealed into darkness by the
+			removal of your eyes. You're a cock, a throbbing shaft in her hands
+			as she strokes over her now much more impressive endowment. You feel
+			her climax boiling, the last of your agency keeping her gushing
+			orgasm at bay. But as she jerks off you feel pleasure, her pleasure,
+			filling your being with every stroke of her palms and every throb of
+			her heartbeat that pulses through you. Her balls tense, and you feel
+			your will eroding as you realize, your body is hers, your
+			purpose...is this. the lixi lets out a hissing chittering cry of
+			bliss as she climaxes, her cum erupting through you, splattering the
+			ground in thick jizz.
+		</text>
+		<choice destination="struggleCTFGO" text="aftermath" />
+	</page>
 
-<gameover ID="struggleCTFGO">
-<text>
-The lixi's orgasm tapers off steadily, last spurts jetting forth from her new cock and you're dimly aware even as she stands up and you soften between her thighs. Your perceptions turning vague for a time, flaccid as her new hefty third leg you're unaware of her search for a female. The lixi breeder presenting herself to one of those tall and imposing female workers. The bug woman watching the herm's eager display, the breeder stroking herself to hardness making you engorge jutting and swaying and bouncing from her hips as she strokes and gyrates.. the female must of liked what she saw for soon that gyration and swaying gives way to thrusting and the sensation of hot wonderful nethers wrapped tightly around you as you're put to use. The lixi's new cock netting her breeding rights with this female, and many others, as you're used to shoot load after load into a succession of willing holes you find yourself forgetting your old life. Your existence as anything but her cock a distant dream, but you could hardly be happier than you are now as this insectherm's big and well used dick.
-</text>
-</gameover>
+	<gameover ID="struggleCTFGO">
+		<text>
+			The lixi's orgasm tapers off steadily, last spurts jetting forth from
+			her new cock and you're dimly aware even as she stands up and you
+			soften between her thighs. Your perceptions turning vague for a time,
+			flaccid as her new hefty third leg you're unaware of her search for a
+			female. The lixi breeder presenting herself to one of those tall and
+			imposing female workers. The bug woman watching the herm's eager
+			display, the breeder stroking herself to hardness making you engorge
+			jutting and swaying and bouncing from her hips as she strokes and
+			gyrates.. the female must of liked what she saw for soon that
+			gyration and swaying gives way to thrusting and the sensation of hot
+			wonderful nethers wrapped tightly around you as you're put to use.
+			The lixi's new cock netting her breeding rights with this female, and
+			many others, as you're used to shoot load after load into a
+			succession of willing holes you find yourself forgetting your old
+			life. Your existence as anything but her cock a distant dream, but
+			you could hardly be happier than you are now as this insectherm's big
+			and well used dick.
+		</text>
+	</gameover>
 
 </Conversation>

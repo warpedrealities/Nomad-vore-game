@@ -1,223 +1,447 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition" value="4"/>
-<text>The harpy leans up at your approach, nuzzling against you and looking up at you with clear desire both for your delightful company and your pleasurable ministrations.</text>
-<choice destination="receiveoral" text="get her to pleasure you"/>
-<choice destination="giveoral" text="give the girl attention"/>
-<choice destination="end" text="do nothing"/>
-</page>
-<page ID="start">
-<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition" value="2"/>
-<text>The harpy coos and watches your approach with arousal and fondness. Her soaked inner thighs show how clearly happy she is to fall into submission to you once again.</text>
-<choice destination="receiveoral" text="get her to pleasure you"/>
-<choice destination="giveoral" text="give the girl attention"/>
-<choice destination="end" text="do nothing"/>
-</page>
-<page ID="start">
-<text>The harpy gasps, eyes full of desire as she rubs one feathered wing against the sopping cleft between her thighs. Aroused and enthralled she pants submissively at your approach, it's clear what she wants.</text>
-<choice destination="receiveoral" text="get her to pleasure you"/>
-<choice destination="giveoral" text="give the girl attention"/>
-<choice destination="end" text="do nothing"/>
-</page>
-<page ID="giveoral">
-<text>You urge her onto her back and her thighs spread in anticipation, she lets out little coos as she looks down at you and you get to work. That soaked snatch ever so inviting, a few experimental licks making her shudder and making it clear those pliant netherlips could welcome your entire body and not just your tongue if you wanted. Or you could keep pleasuring the harpy from the outside.</text>
-<choice destination="unbirth" text="Crawl into the harpy">
+	<page ID="start">
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition"
+			value="4" />
+		<text>The harpy leans up at your approach, nuzzling against you and
+			looking up at you with clear desire both for your delightful company
+			and your pleasurable ministrations.</text>
+		<choice destination="receiveoral" text="get her to pleasure you" />
+		<choice destination="giveoral" text="give the girl attention" />
+		<choice destination="end" text="do nothing" />
+	</page>
+	<page ID="start">
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition"
+			value="2" />
+		<text>The harpy coos and watches your approach with arousal and
+			fondness. Her soaked inner thighs show how clearly happy she is to
+			fall into submission to you once again.</text>
+		<choice destination="receiveoral" text="get her to pleasure you" />
+		<choice destination="giveoral" text="give the girl attention" />
+		<choice destination="end" text="do nothing" />
+	</page>
+	<page ID="start">
+		<text>The harpy gasps, eyes full of desire as she rubs one feathered
+			wing against the sopping cleft between her thighs. Aroused and
+			enthralled she pants submissively at your approach, it's clear what
+			she wants.</text>
+		<choice destination="receiveoral" text="get her to pleasure you" />
+		<choice destination="giveoral" text="give the girl attention" />
+		<choice destination="end" text="do nothing" />
+	</page>
+	<page ID="giveoral">
+		<text>You urge her onto her back and her thighs spread in
+			anticipation, she lets out little coos as she looks down at you and
+			you get to work. That soaked snatch ever so inviting, a few
+			experimental licks making her shudder and making it clear those
+			pliant netherlips could welcome your entire body and not just your
+			tongue if you wanted. Or you could keep pleasuring the harpy from the
+			outside.</text>
+		<choice destination="unbirth" text="Crawl into the harpy">
 
-</choice>
-<choice destination="giveoralfinish" text="just keep licking"/>
-</page>
-<page ID="giveoralfinish">
-<text>
-Best keep her happy from the outside. You delve your tongue deeply, but keep the rest of you outside as you stroke her writhing thighs and lap at her aroused nether reaches. Dexterous flicks resulting in delighted coos and ever more laboured moans and pants as your cunning tongue works her higher and higher. Her pleasure finally cresting in a gush of pleasure fluids for you to lap up and a delighted cry from the harpy. Her form subsiding into blissed out happy pants as she lays there awash with afterglow and smiling from your tender ministrations.
-</text>
-<effect type="incrementlocalflag" flag="disposition" value="2"/>
-<choice destination="end" text="get up"/>
-<special effect="healnpc"/>
-<special effect="nonhostile"/>
-</page>
-<page ID="receiveoral">
-<assertion evaluate="haspart" part="vagina"/>
-<text> You stand bestride the harpy and as she looks up she beholds your own netherlips. Blushing heavily she needs no further coaxing from your hand and your fingers lightly twining into her hair for her to start licking. Her eyes half lidding as she coos and laps at your sex, wriggling her hips as she laps submissively at your folds. The lustful harpy willingly servicing you with her mouth and tongue, licking deep and pleasurably into your snatch.</text>
-<choice destination="unbirthpred0" text="deeper">
-<assertion evaluate="hasperk" perk="unbirthing"/>
-<preference fetish="unbirth"/>
-</choice>
-<choice destination="receiveoralfinish" text="Ooohh, yes!"/>
-</page>
-<page ID="receiveoralfinish">
-<text>The harpy works, her coos muffled as she licks and nuzzles almost worshipfully. But soon your pleasure cannot any longer be contained and with a shuddering gasp from your lips and a gush of sexual juices from the lips below you reach climax. the harpy blushes and mhmming as she licks the flavour off her stained face and is released to slump down by your thighs, a most delightful bit of fun that.</text>
-<special effect="nonhostile"/>
-<choice destination="end" text="fun indeed"/>
-<special effect="healnpc"/>
-</page>
+		</choice>
+		<choice destination="giveoralfinish" text="just keep licking" />
+	</page>
+	<page ID="giveoralfinish">
+		<text>
+			Best keep her happy from the outside. You delve your tongue deeply, but
+			keep the rest of you outside as you stroke her writhing thighs and
+			lap at her aroused nether reaches. Dexterous flicks resulting in
+			delighted coos and ever more laboured moans and pants as your cunning
+			tongue works her higher and higher. Her pleasure finally cresting in
+			a gush of pleasure fluids for you to lap up and a delighted cry from
+			the harpy. Her form subsiding into blissed out happy pants as she
+			lays there awash with afterglow and smiling from your tender
+			ministrations.
+		</text>
+		<effect type="incrementlocalflag" flag="disposition" value="2" />
+		<choice destination="end" text="get up" />
+		<special effect="healnpc" />
+		<special effect="nonhostile" />
+	</page>
+	<page ID="receiveoral">
+		<assertion evaluate="haspart" part="vagina" />
+		<text> You stand bestride the harpy and as she looks up she beholds
+			your own netherlips. Blushing heavily she needs no further coaxing
+			from your hand and your fingers lightly twining into her hair for her
+			to start licking. Her eyes half lidding as she coos and laps at your
+			sex, wriggling her hips as she laps submissively at your folds. The
+			lustful harpy willingly servicing you with her mouth and tongue,
+			licking deep and pleasurably into your snatch.</text>
+		<choice destination="unbirthpred0" text="deeper">
+			<assertion evaluate="hasperk" perk="unbirthing" />
+			<preference fetish="unbirth" />
+		</choice>
+		<choice destination="receiveoralfinish" text="Ooohh, yes!" />
+	</page>
+	<page ID="receiveoralfinish">
+		<text>The harpy works, her coos muffled as she licks and nuzzles
+			almost worshipfully. But soon your pleasure cannot any longer be
+			contained and with a shuddering gasp from your lips and a gush of
+			sexual juices from the lips below you reach climax. the harpy blushes
+			and mhmming as she licks the flavour off her stained face and is
+			released to slump down by your thighs, a most delightful bit of fun
+			that.</text>
+		<special effect="nonhostile" />
+		<choice destination="end" text="fun indeed" />
+		<special effect="healnpc" />
+	</page>
 
-<page ID="receiveoral">
-<assertion evaluate="haspart" part="penis"/>
-<text>You stand before the harpy, your firm <macro ID="penis_size_desc"/> shaft erect in front of her face. She seems unsure how to deal with it initially, but soon leans in to lick and then when that yields encouraging sounds from you takes it into her mouth. At your moan she seems all the more encouraged, not flinching from the hand you place on her head to urge her on and make her slowly take you deeper. Gradually you guide this harpy how to please you, your hand on her head and the sound of your voice make her an apt pupil. And soon she is bobbing will proficiency, sucking and licking over your cock and wrapping her wings around your thighs to keep you where she can suckle you easily. Her blush, and the faint mhmms of muffled trills sounding against your cock indicate you're not the only one getting something out of this as she works.</text>
-<choice destination="cockvore0" text="not enough">
-<assertion evaluate="hasperk" perk="cockvore"/>
-</choice>
-<choice destination="receiveblowjobfinish" text="Ooohh, yes!"/>
-</page>
+	<page ID="receiveoral">
+		<assertion evaluate="haspart" part="penis" />
+		<text>
+			You stand before the harpy, your firm
+			<macro ID="penis_size_desc" />
+			shaft erect in front of her face. She seems unsure how to deal with
+			it initially, but soon leans in to lick and then when that yields
+			encouraging sounds from you takes it into her mouth. At your moan she
+			seems all the more encouraged, not flinching from the hand you place
+			on her head to urge her on and make her slowly take you deeper.
+			Gradually you guide this harpy how to please you, your hand on her
+			head and the sound of your voice make her an apt pupil. And soon she
+			is bobbing will proficiency, sucking and licking over your cock and
+			wrapping her wings around your thighs to keep you where she can
+			suckle you easily. Her blush, and the faint mhmms of muffled trills
+			sounding against your cock indicate you're not the only one getting
+			something out of this as she works.
+		</text>
+		<choice destination="cockvore0" text="not enough">
+			<assertion evaluate="hasperk" perk="cockvore" />
+		</choice>
+		<choice destination="receiveblowjobfinish" text="Ooohh, yes!" />
+	</page>
 
-<page ID="receiveblowjobfinish">
-<text>The harpy works, her coos muffled as she sucks and schlurps almost worshipfully. But soon your pleasure cannot any longer be contained and with a shuddering gasp from your lips you reach climax, ejaculating hot cum down her throat. As you pull out the harpy blushes and mhmming as she licks the flavour off her lips and mulling over the taste. After a moment more you release her to slump down by your thighs, a most delightful bit of fun that.</text>
-<special effect="nonhostile"/>
-<choice destination="end" text="fun indeed"/>
-<special effect="healnpc"/>
-</page>
+	<page ID="receiveblowjobfinish">
+		<text>The harpy works, her coos muffled as she sucks and schlurps
+			almost worshipfully. But soon your pleasure cannot any longer be
+			contained and with a shuddering gasp from your lips you reach climax,
+			ejaculating hot cum down her throat. As you pull out the harpy
+			blushes and mhmming as she licks the flavour off her lips and mulling
+			over the taste. After a moment more you release her to slump down by
+			your thighs, a most delightful bit of fun that.</text>
+		<special effect="nonhostile" />
+		<choice destination="end" text="fun indeed" />
+		<special effect="healnpc" />
+	</page>
 
-<page ID="unbirthpred0">
-<text>
-Your hand on the back of her head becomes more insistent, pressing her forwards..making her lick deeper and to her surprise making her face slide into your parting folds with a squelch of moistness and a hearty moan from you. She stiffens a moment in surprise, but then as you hear her soft cooing trill you realize she's enraptured enough by you to accept even this. Her shoulders wriggling up against your netherlips as you adjust your posture, and prepare to feed your drooling pussy.
-</text>
-<choice destination="unbirthpred1" text="i want her all the way in"/>
+	<page ID="unbirthpred0">
+		<text>
+			Your hand on the back of her head becomes more insistent, pressing her
+			forwards..making her lick deeper and to her surprise making her face
+			slide into your parting folds with a squelch of moistness and a
+			hearty moan from you. She stiffens a moment in surprise, but then as
+			you hear her soft cooing trill you realize she's enraptured enough by
+			you to accept even this. Her shoulders wriggling up against your
+			netherlips as you adjust your posture, and prepare to feed your
+			drooling pussy.
+		</text>
+		<choice destination="unbirthpred1" text="i want her all the way in" />
 
-</page>
+	</page>
 
-<page ID="unbirthpred1">
-<text>
-The harpy's shoulders and the start of her feathered wings tickle the inside of your nethers as you start claiming her in earnest. The sensations truly delightful, her muffled little trill from the depths of your womb as the harpy begins to enter it indicating she's equally enraptured by the ravenous softness she's being ushered into. The harpy's feathered wings tucked to her sides as you squat down slowly over her form and feel her pressing and nuzzling up against the inside of your womb as she's fed inside.
-</text>
-<choice destination="unbirthpred2" text="keep going"/>
+	<page ID="unbirthpred1">
+		<text>
+			The harpy's shoulders and the start of her feathered wings tickle the
+			inside of your nethers as you start claiming her in earnest. The
+			sensations truly delightful, her muffled little trill from the depths
+			of your womb as the harpy begins to enter it indicating she's equally
+			enraptured by the ravenous softness she's being ushered into. The
+			harpy's feathered wings tucked to her sides as you squat down slowly
+			over her form and feel her pressing and nuzzling up against the
+			inside of your womb as she's fed inside.
+		</text>
+		<choice destination="unbirthpred2" text="keep going" />
 
-</page>
+	</page>
 
-<page ID="unbirthpred2">
-<text>
-The sensations of her gentle squirms and nuzzles are delightful as you rock your hips upon her and slowly lower your hips, her body disappearing up between your legs with debauched slurping noises as your middle starts to become ever more gravid. Her middle sliding in easily, her wings rubbing against your sensitive inners as you draw her sopping wet sex inside your own. Your mingled lubrications will only make her legs slide in all the easier, straightening up you can feel her feet dangling between your legs, sexjuices dribbling down to drip from her clawtips as you focus on clenching and drawing her up. Soon she'll be utterly enwombed.
-</text>
-<choice destination="unbirthpred3" text="all the way in"/>
-</page>
+	<page ID="unbirthpred2">
+		<text>
+			The sensations of her gentle squirms and nuzzles are delightful as you
+			rock your hips upon her and slowly lower your hips, her body
+			disappearing up between your legs with debauched slurping noises as
+			your middle starts to become ever more gravid. Her middle sliding in
+			easily, her wings rubbing against your sensitive inners as you draw
+			her sopping wet sex inside your own. Your mingled lubrications will
+			only make her legs slide in all the easier, straightening up you can
+			feel her feet dangling between your legs, sexjuices dribbling down to
+			drip from her clawtips as you focus on clenching and drawing her up.
+			Soon she'll be utterly enwombed.
+		</text>
+		<choice destination="unbirthpred3" text="all the way in" />
+	</page>
 
-<page ID="unbirthpred3">
-<text>
-You rest one hand on your newly rounded middle, feeling the harpy curling up purring inside the sweltering cradle of your womb and her clawed feet still dangling between your thighs. You can't help but savour the moment, at least until those feet twitch..perhaps she's impatient to get inside. The submissive harpy wanting to curl up inside you and you cannot help but oblige, eyes half lidding with a final rippling contraction you draw her up inside you, sealing her deep within. Her form gently shifting to get comfortable, entirely under your power now as she basks in the softness and heat.
-</text>
-<choice destination="gushedharpy" text="gush her"/>
-<choice destination="releasedharpy" text="hold her a while"/>
-</page>
+	<page ID="unbirthpred3">
+		<text>
+			You rest one hand on your newly rounded middle, feeling the harpy
+			curling up purring inside the sweltering cradle of your womb and her
+			clawed feet still dangling between your thighs. You can't help but
+			savour the moment, at least until those feet twitch..perhaps she's
+			impatient to get inside. The submissive harpy wanting to curl up
+			inside you and you cannot help but oblige, eyes half lidding with a
+			final rippling contraction you draw her up inside you, sealing her
+			deep within. Her form gently shifting to get comfortable, entirely
+			under your power now as she basks in the softness and heat.
+		</text>
+		<choice destination="gushedharpy" text="gush her" />
+		<choice destination="releasedharpy" text="hold her a while" />
+	</page>
 
-<page ID="gushedharpy">
-<text>
-You get settled on the grass and lean back as she gets comfortable inside you. But it makes it all the sweeter to do what comes next, one hand straying down beneath the bulge the sharpy makes to fondle yourself as your womb gets to work. The harpy letting out a startled chirp, then moan as hot sexual fluids permeate her and your womb contracts rthythmically to work her over.. you can feel her shifting around, grinding against whatever she can as you moan and pleasure yourself to the sensations from your increasingly cauldron like womb. As you feel yourself getting close you hear a delighted cry and feel a shudder inside, both abruptly cut off as the harpy's molten form begins dissolving and then is reduced to fluid by a final rolling contraction of your womb. The pleasure is too much and with a cry of your own you feel your climax hit, gushes and splatters of copious femmecum staining your thighs and the ground beneath you. The harpy now utterly converted into your orgasm, a few errant feathers in the stain is tall that's left to show who she was.
-</text>
-<effect type="feed" value="85"/>
-<special effect="removenpc"/>
-<choice destination="end" text="well that was fun"/>
-</page>
-<page ID="releasedharpy">
-<text>
-As she gets comfortable so do you. Deciding to enjoy simply having her inside for a while, listening to the occasional mhmm and coo as she rests in your womb. The harpy content and moving little even as you every few minutes run fingers across your engorged middle. Eventually though she's had enough time resting inside you. Standing up which causes her to chirp softly as her domain shifts around you set about releasing her, the muscular contractions making her squirm around all the more before she's reborn. The harpy dropping from your nethers to land on the grass in a soaked heap, your sexual juices matting her feathers. But for all the grooming she's gonna have to do now it's clear from her expression that being unbirthed by you was rather enjoyable for her. The harpy blushing and smiling as she looks up at you, then sets about with that aforementioned grooming.
-</text>
-<special effect="nonhostile"/>
-<special effect="healnpc"/>
-<effect type="incrementlocalflag" flag="disposition" value="2"/>
-<choice destination="end" text="carry on"/>
-</page>
+	<page ID="gushedharpy">
+		<text>
+			You get settled on the grass and lean back as she gets comfortable
+			inside you. But it makes it all the sweeter to do what comes next,
+			one hand straying down beneath the bulge the sharpy makes to fondle
+			yourself as your womb gets to work. The harpy letting out a startled
+			chirp, then moan as hot sexual fluids permeate her and your womb
+			contracts rthythmically to work her over.. you can feel her shifting
+			around, grinding against whatever she can as you moan and pleasure
+			yourself to the sensations from your increasingly cauldron like womb.
+			As you feel yourself getting close you hear a delighted cry and feel
+			a shudder inside, both abruptly cut off as the harpy's molten form
+			begins dissolving and then is reduced to fluid by a final rolling
+			contraction of your womb. The pleasure is too much and with a cry of
+			your own you feel your climax hit, gushes and splatters of copious
+			femmecum staining your thighs and the ground beneath you. The harpy
+			now utterly converted into your orgasm, a few errant feathers in the
+			stain is tall that's left to show who she was.
+		</text>
+		<effect type="feed" value="85" />
+		<special effect="removenpc" />
+		<choice destination="end" text="well that was fun" />
+	</page>
+	<page ID="releasedharpy">
+		<text>
+			As she gets comfortable so do you. Deciding to enjoy simply having her
+			inside for a while, listening to the occasional mhmm and coo as she
+			rests in your womb. The harpy content and moving little even as you
+			every few minutes run fingers across your engorged middle. Eventually
+			though she's had enough time resting inside you. Standing up which
+			causes her to chirp softly as her domain shifts around you set about
+			releasing her, the muscular contractions making her squirm around all
+			the more before she's reborn. The harpy dropping from your nethers to
+			land on the grass in a soaked heap, your sexual juices matting her
+			feathers. But for all the grooming she's gonna have to do now it's
+			clear from her expression that being unbirthed by you was rather
+			enjoyable for her. The harpy blushing and smiling as she looks up at
+			you, then sets about with that aforementioned grooming.
+		</text>
+		<special effect="nonhostile" />
+		<special effect="healnpc" />
+		<effect type="incrementlocalflag" flag="disposition" value="2" />
+		<choice destination="end" text="carry on" />
+	</page>
 
-<page ID="cockvore0">
-<!--written by chefjellyguy-->
-<text>
-As you feel her lips bob back an forth, you get an instinctual desire. Without thinking, you pull her head off of your shaft, and shove her into its now open tip. She pulls her head back in surprise, but then as you hear her soft cooing trill you realize she's enraptured enough by you to accept even this. Her head nuzzles against your cock's lips as you thrust, starting the process of feeding her into your drooling tip.
-</text>
-<choice destination="cockvore1" text="i want her all the way in"/>
+	<page ID="cockvore0">
+		<!--written by chefjellyguy -->
+		<text>
+			As you feel her lips bob back an forth, you get an instinctual desire.
+			Without thinking, you pull her head off of your shaft, and shove her
+			into its now open tip. She pulls her head back in surprise, but then
+			as you hear her soft cooing trill you realize she's enraptured enough
+			by you to accept even this. Her head nuzzles against your cock's lips
+			as you thrust, starting the process of feeding her into your drooling
+			tip.
+		</text>
+		<choice destination="cockvore1" text="i want her all the way in" />
 
-</page>
+	</page>
 
-<page ID="cockvore1">
-<text>
-The harpy's shoulders and the start of her feathered wings tickle the inside of your rod as you start claiming her in earnest. The sensations truly delightful, her muffled little trill from the depths of your cock as the harpy begins to enter it indicate that she's equally enraptured by the ravenous softness she's being ushered into. The harpy's feathered wings tucked to her sides as your cock pulls slowly over her form and feel her pressing and nuzzling up against the inside of your shaft as she's fed inside.
-</text>
-<choice destination="cockvore2" text="keep going"/>
+	<page ID="cockvore1">
+		<text>
+			The harpy's shoulders and the start of her feathered wings tickle the
+			inside of your rod as you start claiming her in earnest. The
+			sensations truly delightful, her muffled little trill from the depths
+			of your cock as the harpy begins to enter it indicate that she's
+			equally enraptured by the ravenous softness she's being ushered into.
+			The harpy's feathered wings tucked to her sides as your cock pulls
+			slowly over her form and feel her pressing and nuzzling up against
+			the inside of your shaft as she's fed inside.
+		</text>
+		<choice destination="cockvore2" text="keep going" />
 
-</page>
+	</page>
 
-<page ID="cockvore2">
-<text>
-The sensations of her gentle squirms and nuzzles are delightful as you rock your hips urging her to go deeper. her body disappears into your staff causing your balls to slosh as your sack becomes more gravid. Her middle sliding in easily, her wings rubbing against your sensitive cock as you draw her sopping wet sex inside your own. Your mingled lubrications will only make her legs slide in all the easier, straightening up you can feel her feet dangling outside your dick, sexjuices dribbling down to drip from her clawtips as you focus on thrusting and pushing her in. Soon she'll be curled up in your balls.
-</text>
-<choice destination="cockvore3" text="all the way in"/>
-</page>
+	<page ID="cockvore2">
+		<text>
+			The sensations of her gentle squirms and nuzzles are delightful as you
+			rock your hips urging her to go deeper. her body disappears into your
+			staff causing your balls to slosh as your sack becomes more gravid.
+			Her middle sliding in easily, her wings rubbing against your
+			sensitive cock as you draw her sopping wet sex inside your own. Your
+			mingled lubrications will only make her legs slide in all the easier,
+			straightening up you can feel her feet dangling outside your dick,
+			sexjuices dribbling down to drip from her clawtips as you focus on
+			thrusting and pushing her in. Soon she'll be curled up in your balls.
+		</text>
+		<choice destination="cockvore3" text="all the way in" />
+	</page>
 
-<page ID="cockvore3">
-<text>
-You rest one hand on your swollen right nut, feeling the harpy curling up purring inside the sweltering cradle of your balls and her clawed feet still dangling outside your tip. You can't help but savour the moment, at least until those feet twitch..perhaps she's impatient to get inside. The submissive harpy yearns to curl up inside your balls and you cannot help but oblige, eyes half lidding with a final rippling contraction your rod finnally draws her up inside you, droping her within you with a splash. Her form gently shifting to get comfortable, entirely under your power now as she basks in the softness and heat.
-</text>
-<choice destination="cockgushedharpy" text="gush her"/>
-<choice destination="cockreleasedharpy" text="hold her a while"/>
-</page>
+	<page ID="cockvore3">
+		<text>
+			You rest one hand on your swollen right nut, feeling the harpy curling
+			up purring inside the sweltering cradle of your balls and her clawed
+			feet still dangling outside your tip. You can't help but savour the
+			moment, at least until those feet twitch..perhaps she's impatient to
+			get inside. The submissive harpy yearns to curl up inside your balls
+			and you cannot help but oblige, eyes half lidding with a final
+			rippling contraction your rod finnally draws her up inside you,
+			droping her within you with a splash. Her form gently shifting to get
+			comfortable, entirely under your power now as she basks in the
+			softness and heat.
+		</text>
+		<choice destination="cockgushedharpy" text="gush her" />
+		<choice destination="cockreleasedharpy" text="hold her a while" />
+	</page>
 
-<page ID="cockgushedharpy">
-<text>
-You get settled on the grass and lean back as she gets comfortable inside you. But it makes it all the sweeter to do what comes next, one hand straying down to your rod while your balls churn loudly. The harpy letting out a startled chirp, then moan as hot sexual fluids permeate her and your balls contract rthythmically to work her over.. you can feel her shifting around, grinding against whatever she can as you moan and pleasure yourself to the sensations from your increasingly cauldron like sack. As you feel yourself getting close you hear a delighted cry and feel a shudder inside your nuts, both abruptly cut off as the harpy's molten form begins dissolving and then is reduced to cum by a final rolling contraction of your sack. The pleasure is too much and with a thrust of your hips you feel your climax hit, gushes and splatters of harpy-sperm painting the ground in front of you. The harpy now utterly converted into your orgasm, a few errant feathers in the stain is all that's left to show who she was.
-</text>
-<effect type="feed" value="85"/>
-<special effect="removenpc"/>
-<choice destination="end" text="well that was fun"/>
-</page>
-<page ID="cockreleasedharpy">
-<text>
-As she gets comfortable so do you. Deciding to enjoy simply having her inside for a while, listening to the occasional mhmm and coo as she rests in your nuts. The harpy content and moving little even as you every few minutes run fingers across your engorged sack. Eventually though she's had enough time resting inside you. Standing up which causes her to chirp softly as her domain shifts around you set about releasing her, your rod stiffens as it feels the form slowly come up from the sack below. you cant take the pleasure as cum shoots out in forced blasts, shooting the harpy out at high speeds. Before she crashes to the ground, however, she caches herself with her cum-stained wings, falling to the ground safely. Despite the dangerous exit, the harpy is obviously enthralled with the experience, never having had that much fun in her life. The harpy blushes and smiles as she looks up at you, then sets off with cleaning the cum off of herself.
-</text>
-<special effect="nonhostile"/>
-<special effect="healnpc"/>
-<effect type="incrementlocalflag" flag="disposition" value="2"/>
-<choice destination="end" text="carry on"/>
-</page>
+	<page ID="cockgushedharpy">
+		<text>
+			You get settled on the grass and lean back as she gets comfortable
+			inside you. But it makes it all the sweeter to do what comes next,
+			one hand straying down to your rod while your balls churn loudly. The
+			harpy letting out a startled chirp, then moan as hot sexual fluids
+			permeate her and your balls contract rthythmically to work her over..
+			you can feel her shifting around, grinding against whatever she can
+			as you moan and pleasure yourself to the sensations from your
+			increasingly cauldron like sack. As you feel yourself getting close
+			you hear a delighted cry and feel a shudder inside your nuts, both
+			abruptly cut off as the harpy's molten form begins dissolving and
+			then is reduced to cum by a final rolling contraction of your sack.
+			The pleasure is too much and with a thrust of your hips you feel your
+			climax hit, gushes and splatters of harpy-sperm painting the ground
+			in front of you. The harpy now utterly converted into your orgasm, a
+			few errant feathers in the stain is all that's left to show who she
+			was.
+		</text>
+		<effect type="feed" value="85" />
+		<special effect="removenpc" />
+		<choice destination="end" text="well that was fun" />
+	</page>
+	<page ID="cockreleasedharpy">
+		<text>
+			As she gets comfortable so do you. Deciding to enjoy simply having her
+			inside for a while, listening to the occasional mhmm and coo as she
+			rests in your nuts. The harpy content and moving little even as you
+			every few minutes run fingers across your engorged sack. Eventually
+			though she's had enough time resting inside you. Standing up which
+			causes her to chirp softly as her domain shifts around you set about
+			releasing her, your rod stiffens as it feels the form slowly come up
+			from the sack below. you cant take the pleasure as cum shoots out in
+			forced blasts, shooting the harpy out at high speeds. Before she
+			crashes to the ground, however, she caches herself with her
+			cum-stained wings, falling to the ground safely. Despite the
+			dangerous exit, the harpy is obviously enthralled with the
+			experience, never having had that much fun in her life. The harpy
+			blushes and smiles as she looks up at you, then sets off with
+			cleaning the cum off of herself.
+		</text>
+		<special effect="nonhostile" />
+		<special effect="healnpc" />
+		<effect type="incrementlocalflag" flag="disposition" value="2" />
+		<choice destination="end" text="carry on" />
+	</page>
 
-<page ID="unbirth">
-<text>Ducking your head down and thrusting forwards its surprisingly easy to work your way past her netherlips. Surprising but not unwelcome, least to the harpy who lets out a gasp and delighted coo, clenching and rocking her hips to ease you inside herself. The harpies middle distending as you crawl up inside of her womb. Your squirming legs starting to disappear up between her thighs as you curl within her. A final wriggle from you and clench from her enough to make your feet disappear into her sex. Your body now contained entirely within the lustful harpy you'd seduced, cradled by the warmth of her womb.</text>
-<choice destination="unbirth1" text="continue"/>
-</page>
+	<page ID="unbirth">
+		<text>Ducking your head down and thrusting forwards its surprisingly
+			easy to work your way past her netherlips. Surprising but not
+			unwelcome, least to the harpy who lets out a gasp and delighted coo,
+			clenching and rocking her hips to ease you inside herself. The
+			harpies middle distending as you crawl up inside of her womb. Your
+			squirming legs starting to disappear up between her thighs as you
+			curl within her. A final wriggle from you and clench from her enough
+			to make your feet disappear into her sex. Your body now contained
+			entirely within the lustful harpy you'd seduced, cradled by the
+			warmth of her womb.</text>
+		<choice destination="unbirth1" text="continue" />
+	</page>
 
-<page ID="unbirth1">
-<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition" value="4"/>
-<condition evaluate="LOCALFLAG" value="0" operator="equals" flag="carried"/>
-<text>The harpy gasps and mhmms, running a wing over her middle. She seems to consider for a moment, uncharacteristically thoughtful, then takes flight. You feel her leap into the air, her wings beating, easily carrying up and away as a bulge in her womb. Whatever the harpy has in mind even attempting to squirm out this high up would be a bad plan so you're along for the ride.</text>
-<choice destination="unbirthtravel" text="going somewhere"/>
+	<page ID="unbirth1">
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition"
+			value="4" />
+		<condition evaluate="LOCALFLAG" value="0" operator="equals"
+			flag="carried" />
+		<text>The harpy gasps and mhmms, running a wing over her middle. She
+			seems to consider for a moment, uncharacteristically thoughtful, then
+			takes flight. You feel her leap into the air, her wings beating,
+			easily carrying up and away as a bulge in her womb. Whatever the
+			harpy has in mind even attempting to squirm out this high up would be
+			a bad plan so you're along for the ride.</text>
+		<choice destination="unbirthtravel" text="going somewhere" />
 
-</page>
+	</page>
 
-<page ID="unbirthtravel">
-<effect type="setlocalflag" flag="carried" value="1"/>
-<text>
-You feel the harpy come in and land, the rthythmic rock up and down of the womb holding you coming to an end. She pauses, chirps and then squats down..her womb clenching and pushing, shoving you back out slick with juices into the chill of the open air. The harpy fluttering back up and away before you can get your bearings, visible receding into the distance a moment as you look up and then get to your feet. You have no idea why she brought you here beyond apparently having enjoyed your company a few times.
-</text>
-<special effect="transition" x="8" y="8" destination="mountain"/>
-<choice destination="end" text="where am i now?"/>
-</page>
+	<page ID="unbirthtravel">
+		<effect type="setlocalflag" flag="carried" value="1" />
+		<text>
+			You feel the harpy come in and land, the rthythmic rock up and down of
+			the womb holding you coming to an end. She pauses, chirps and then
+			squats down..her womb clenching and pushing, shoving you back out
+			slick with juices into the chill of the open air. The harpy
+			fluttering back up and away before you can get your bearings, visible
+			receding into the distance a moment as you look up and then get to
+			your feet. You have no idea why she brought you here beyond
+			apparently having enjoyed your company a few times.
+		</text>
+		<special effect="transition" x="8" y="8" destination="mountain" />
+		<choice destination="end" text="where am i now?" />
+	</page>
 
-<page ID="unbirth1">
-<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition" value="2"/>
-<text>The harpy pants, blushing, and brings her wings around her middle tenderly as she gets comfortable with you inside her womb. The harpy's eyes drifting closed even as the heat, comfort and sound of her body around you luls you into a doze and then outright slumber. Safely cradled inside the harpy womb.</text>
-<choice destination="unbirth3" text="Womb-healing!"/>
-</page>
+	<page ID="unbirth1">
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition"
+			value="2" />
+		<text>The harpy pants, blushing, and brings her wings around her
+			middle tenderly as she gets comfortable with you inside her womb. The
+			harpy's eyes drifting closed even as the heat, comfort and sound of
+			her body around you luls you into a doze and then outright slumber.
+			Safely cradled inside the harpy womb.</text>
+		<choice destination="unbirth3" text="Womb-healing!" />
+	</page>
 
-<page ID="unbirth1">
-<condition operator="lessthan" evaluate="LOCALFLAG" flag="disposition" value="2"/>
-<text>The harpy pants, blushing, but then brings one wing down to rub her nethers and the soft and gentle confines of her womb around you take a possessive clench. As you squirm to get comfortable after being unsettled you hear the harpy giggle and moan, apparently having a use for you now that you're in there as she pleasures herself with her wing and starts to cook you into juices inside herself.</text>
-<choice destination="unbirth2" text="Not a good idea"/>
-</page>
+	<page ID="unbirth1">
+		<condition operator="lessthan" evaluate="LOCALFLAG" flag="disposition"
+			value="2" />
+		<text>The harpy pants, blushing, but then brings one wing down to rub
+			her nethers and the soft and gentle confines of her womb around you
+			take a possessive clench. As you squirm to get comfortable after
+			being unsettled you hear the harpy giggle and moan, apparently having
+			a use for you now that you're in there as she pleasures herself with
+			her wing and starts to cook you into juices inside herself.</text>
+		<choice destination="unbirth2" text="Not a good idea" />
+	</page>
 
 
 
-<page ID="unbirth2">
-<text>You start to struggle and your muffled pleas emanate from her middle to no avail. The harpy giggling and moaning as she gets off and you soften, turning increasingly sloshy and goopy as she melts you steadily into femcum. A rolling clenching ripple of her womb soon enough to mash your weakening form into a slosh of sex juices within her.</text>
-<choice destination="gushed" text="*Bloop*"/>
-</page>
+	<page ID="unbirth2">
+		<text>You start to struggle and your muffled pleas emanate from her
+			middle to no avail. The harpy giggling and moaning as she gets off
+			and you soften, turning increasingly sloshy and goopy as she melts
+			you steadily into femcum. A rolling clenching ripple of her womb soon
+			enough to mash your weakening form into a slosh of sex juices within
+			her.</text>
+		<choice destination="gushed" text="*Bloop*" />
+	</page>
 
-<page ID="unbirth3">
-<effect type="heal" value="1.00"/>
-<text>You awake hours later, whole and in fact feeling better than you were before. Your wriggles stirring the harpy to wakefulness as well and making it clear you want out, the harpy standing legs astride to release you back into the open air with a gasp. Your body returning to the world slick with juices but healed by your stay in her womb. The harpy rather friendly and doting it seems as she gives you a few licks before returning to the air.</text>
-<choice destination="end" text="get up"/>
-<special effect="healnpc"/>
-<special effect="nonhostile"/>
-</page>
+	<page ID="unbirth3">
+		<effect type="heal" value="1.00" />
+		<text>You awake hours later, whole and in fact feeling better than you
+			were before. Your wriggles stirring the harpy to wakefulness as well
+			and making it clear you want out, the harpy standing legs astride to
+			release you back into the open air with a gasp. Your body returning
+			to the world slick with juices but healed by your stay in her womb.
+			The harpy rather friendly and doting it seems as she gives you a few
+			licks before returning to the air.</text>
+		<choice destination="end" text="get up" />
+		<special effect="healnpc" />
+		<special effect="nonhostile" />
+	</page>
 
-<gameover ID="gushed">
-<text>The harpy moans in pleasure as she feels you liquefy inside her. Juices oozing out onto her busy wing, she probably thinks you make a much better orgasm than lover and wastes no more time in wing frigging herself the rest of the way to climax. Your form splattering out over her wing, her thighs and the ground beneath her. Your form now nothing more than a gush of her pleasure fluids as a result of your mistake in trusting her womb to be safe.</text>
-</gameover>
+	<gameover ID="gushed">
+		<text>The harpy moans in pleasure as she feels you liquefy inside her.
+			Juices oozing out onto her busy wing, she probably thinks you make a
+			much better orgasm than lover and wastes no more time in wing
+			frigging herself the rest of the way to climax. Your form splattering
+			out over her wing, her thighs and the ground beneath her. Your form
+			now nothing more than a gush of her pleasure fluids as a result of
+			your mistake in trusting her womb to be safe.</text>
+	</gameover>
 
 </Conversation>

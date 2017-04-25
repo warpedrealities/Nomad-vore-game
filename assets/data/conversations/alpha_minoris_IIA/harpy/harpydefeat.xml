@@ -1,92 +1,214 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<text>The harpy lies gasping and defeated on the ground, her moist nethers are inviting. but perhaps you'd prefer to purely indulge in your own pleasure <conditional><assertion evaluate="hasperk" perk="oralvore"/>or your own hunger...</conditional></text>
-<choice destination="receiveoral" text="Force her to lick you"/>
-<choice destination="giveoral" text="Lick her folds"/>
-<choice destination="meal0" text="she'd make a great meal">
-<assertion evaluate="hasperk" perk="oralvore"/>
-</choice>
-<choice destination="end" text="do nothing"/>
-</page>
-<page ID="giveoral">
-<text>With her legs splayed you see no reason not to sample her defeated folds. Getting situated to lick at her warm nethers you hear her gasp and feel her sex pliant against your tongue. You could probably force your way up inside of her from this position, if you wanted. Or keep this purely a matter of your tongue, her snatch and her increasingly empassioned coos.</text>
-<choice destination="unbirth" text="Crawl into the harpy"/>
-<choice destination="giveoralfinish" text="just keep licking"/>
-</page>
-<page ID="giveoralfinish">
-<text>
-You decide to keep on enjoying those moans and coos from the helpless harpy you're licking from the outside. stroking her thighs as you keep on licking, the scent of her downy sex flooding your nostrils as the sound of her gasps and moans fill your ears. Several minutes of helpless but hardly resistive writhing from the harpy culminates in her letting out a cry and staining your face with juices. the panting and cooing harpy you leave on the ground as you get back to your feet seems rather appreciative of your lewd efforts to please her.
-</text>
-<effect type="incrementlocalflag" flag="disposition" value="2"/>
-<choice destination="end" text="get up"/>
-<special effect="healnpc"/>
-<special effect="nonhostile"/>
-</page>
+	<page ID="start">
+		<text>
+			The harpy lies gasping and defeated on the ground, her moist nethers
+			are inviting. but perhaps you'd prefer to purely indulge in your own
+			pleasure
+			<conditional>
+				<assertion evaluate="hasperk" perk="oralvore" />
+				or your own hunger...
+			</conditional>
+		</text>
+		<choice destination="receiveoral" text="Force her to lick you" />
+		<choice destination="giveoral" text="Lick her folds" />
+		<choice destination="meal0" text="she'd make a great meal">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="end" text="do nothing" />
+	</page>
+	<page ID="giveoral">
+		<text>With her legs splayed you see no reason not to sample her
+			defeated folds. Getting situated to lick at her warm nethers you hear
+			her gasp and feel her sex pliant against your tongue. You could
+			probably force your way up inside of her from this position, if you
+			wanted. Or keep this purely a matter of your tongue, her snatch and
+			her increasingly empassioned coos.</text>
+		<choice destination="unbirth" text="Crawl into the harpy" />
+		<choice destination="giveoralfinish" text="just keep licking" />
+	</page>
+	<page ID="giveoralfinish">
+		<text>
+			You decide to keep on enjoying those moans and coos from the helpless
+			harpy you're licking from the outside. stroking her thighs as you
+			keep on licking, the scent of her downy sex flooding your nostrils as
+			the sound of her gasps and moans fill your ears. Several minutes of
+			helpless but hardly resistive writhing from the harpy culminates in
+			her letting out a cry and staining your face with juices. the panting
+			and cooing harpy you leave on the ground as you get back to your feet
+			seems rather appreciative of your lewd efforts to please her.
+		</text>
+		<effect type="incrementlocalflag" flag="disposition" value="2" />
+		<choice destination="end" text="get up" />
+		<special effect="healnpc" />
+		<special effect="nonhostile" />
+	</page>
 
-<page ID="receiveoral">
-<assertion evaluate="haspart" part="vagina"/>
-<text> You climb over the harpy's defeated form,<conditional><assertion evaluate="slothasitem" slot="2"/>lowering your pants and underwear,</conditional> you place your crotch right over the bird-lady's face. She scrunches her eyes a bit, but eventually starts lapping at your folds.Maybe this is a typical form of dominance being asserted amongst harpy kind cause she seems not...inexperienced, her tongue touching such delightful places as you hold her in place against your snatch.</text>
-<choice destination="receiveoralfinish" text="Ooohh, yes!"/>
-</page>
+	<page ID="receiveoral">
+		<assertion evaluate="haspart" part="vagina" />
+		<text>
+			You climb over the harpy's defeated form,
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				lowering your pants and underwear,
+			</conditional>
+			you place your crotch right over the bird-lady's face. She scrunches
+			her eyes a bit, but eventually starts lapping at your folds.Maybe
+			this is a typical form of dominance being asserted amongst harpy kind
+			cause she seems not...inexperienced, her tongue touching such
+			delightful places as you hold her in place against your snatch.
+		</text>
+		<choice destination="receiveoralfinish" text="Ooohh, yes!" />
+	</page>
 
-<page ID="receiveoralfinish">
-<text>You can't help but enjoy the moment, that deft tongue lapping deep within as you close your eyes and rub her hair. the harpy girl submissively lapping at your folds as you grind on her face, spending many minutes simply being serviced by the harpy until finally she pushes you to your peak. Her licking rewarded with a gush of your juices staining her face, the harpy flushing in humiliation as you release her..but too weak to protest further she flutters away during your afterglow.</text>
-<choice destination="end" text="fun indeed"/>
-<special effect="removenpc"/>
-</page>
+	<page ID="receiveoralfinish">
+		<text>You can't help but enjoy the moment, that deft tongue lapping
+			deep within as you close your eyes and rub her hair. the harpy girl
+			submissively lapping at your folds as you grind on her face, spending
+			many minutes simply being serviced by the harpy until finally she
+			pushes you to your peak. Her licking rewarded with a gush of your
+			juices staining her face, the harpy flushing in humiliation as you
+			release her..but too weak to protest further she flutters away during
+			your afterglow.</text>
+		<choice destination="end" text="fun indeed" />
+		<special effect="removenpc" />
+	</page>
 
-<page ID="receiveoral">
-<assertion evaluate="haspart" part="penis"/>
-<text> You climb over the harpy's defeated form,<conditional><assertion evaluate="slothasitem" slot="2"/>whipping out your <macro ID="penis_size_desc"/> length,</conditional> stroking yourself to hardness and rubbing yourself against her face, smothering her with musk. She scrunches her eyes a bit, and flinches away from your tip when you try to stick it in her mouth. But she relents as you grab her head and make it clear that you're in charge here. The harpy stretching her lips around your <macro ID="penis_size_desc"/> shaft. She's fairly inexperienced with this, but once you've grabbed her head with both hands you can help her past both her reluctance and her lack of skill. Starting to rthyhmically thrust into her face, enjoyably using her mouth as she utters muffled protests.</text>
-<choice destination="receiveblowjobfinish" text="Ooohh, yes!"/>
-</page>
+	<page ID="receiveoral">
+		<assertion evaluate="haspart" part="penis" />
+		<text>
+			You climb over the harpy's defeated form,
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				whipping out your
+				<macro ID="penis_size_desc" />
+				length,
+			</conditional>
+			stroking yourself to hardness and rubbing yourself against her face,
+			smothering her with musk. She scrunches her eyes a bit, and flinches
+			away from your tip when you try to stick it in her mouth. But she
+			relents as you grab her head and make it clear that you're in charge
+			here. The harpy stretching her lips around your
+			<macro ID="penis_size_desc" />
+			shaft. She's fairly inexperienced with this, but once you've grabbed
+			her head with both hands you can help her past both her reluctance
+			and her lack of skill. Starting to rthyhmically thrust into her face,
+			enjoyably using her mouth as she utters muffled protests.
+		</text>
+		<choice destination="receiveblowjobfinish" text="Ooohh, yes!" />
+	</page>
 
-<page ID="receiveblowjobfinish">
-<text>You can't help but revel in your use of the harpy, the feathery girl helpless as you fuck her face and feel your pleasure build. The unfamiliar use clearly putting a strain on the harpy especially with your actions being none too gentle. In only a short time your needs are satisfied, the harpy's eyes widening as you climax, holding her head in place to pump seed down her throat afore only slowly letting her up. Your last few wads of cum ending up in her mouth as you pull out. The harpy spitting the seed out on the ground, flushed with shame from the violation, she attempts to weakly buffet you with her wings but is in no good state to exact retribution right now. The harpy instead settling for flying away with the funk of your shaft permeating her nostrils and the taste of your seed smothering her tongue.</text>
-<choice destination="end" text="fun indeed"/>
-<special effect="removenpc"/>
-</page>
+	<page ID="receiveblowjobfinish">
+		<text>You can't help but revel in your use of the harpy, the feathery
+			girl helpless as you fuck her face and feel your pleasure build. The
+			unfamiliar use clearly putting a strain on the harpy especially with
+			your actions being none too gentle. In only a short time your needs
+			are satisfied, the harpy's eyes widening as you climax, holding her
+			head in place to pump seed down her throat afore only slowly letting
+			her up. Your last few wads of cum ending up in her mouth as you pull
+			out. The harpy spitting the seed out on the ground, flushed with
+			shame from the violation, she attempts to weakly buffet you with her
+			wings but is in no good state to exact retribution right now. The
+			harpy instead settling for flying away with the funk of your shaft
+			permeating her nostrils and the taste of your seed smothering her
+			tongue.</text>
+		<choice destination="end" text="fun indeed" />
+		<special effect="removenpc" />
+	</page>
 
-<page ID="unbirth">
-<text>Well she's there. why not use her as a sleeping bag. thrusting both hands inside of her causes her to gasp in surprise and gives you the leverage needed to work your way inside of her. She writhes protesting, but not TOO much as you shove your upper body into her womb, curling up so you can haul your legs into her. Your body entirely disappearing into the snatch of your defeated foe with a slurp and coo from the harpy's netherlips and lips respectively. Its really rather comfortable inside her, snug and warm and seemingly safe for now.</text>
-<choice destination="unbirth1" text="continue"/>
-</page>
+	<page ID="unbirth">
+		<text>Well she's there. why not use her as a sleeping bag. thrusting
+			both hands inside of her causes her to gasp in surprise and gives you
+			the leverage needed to work your way inside of her. She writhes
+			protesting, but not TOO much as you shove your upper body into her
+			womb, curling up so you can haul your legs into her. Your body
+			entirely disappearing into the snatch of your defeated foe with a
+			slurp and coo from the harpy's netherlips and lips respectively. Its
+			really rather comfortable inside her, snug and warm and seemingly
+			safe for now.</text>
+		<choice destination="unbirth1" text="continue" />
+	</page>
 
-<page ID="unbirth1">
-<text>The womb kneads at you, relaxing..massaging..liquidating. Putting yourself at the mercy of someone who you got the better of is not going to go down as the best plan ever. your form starts to get increasingly sloshy as you feel her wings rub at the bulge you make.</text>
-<choice destination="unbirth2" text="Not a good idea"/>
-</page>
+	<page ID="unbirth1">
+		<text>The womb kneads at you, relaxing..massaging..liquidating.
+			Putting yourself at the mercy of someone who you got the better of is
+			not going to go down as the best plan ever. your form starts to get
+			increasingly sloshy as you feel her wings rub at the bulge you make.</text>
+		<choice destination="unbirth2" text="Not a good idea" />
+	</page>
 
-<gameover ID="unbirth2">
-<text>You squirm around, trying to find a way out of your willing tomb, but alas, it's too late for you, the womb closing in all around as you soften up until with a final squish she pulps your body into femcum in a single rolling contraction.</text>
-<choice destination="gushed" text="*Bloop*"/>
-</gameover>
+	<gameover ID="unbirth2">
+		<text>You squirm around, trying to find a way out of your willing
+			tomb, but alas, it's too late for you, the womb closing in all around
+			as you soften up until with a final squish she pulps your body into
+			femcum in a single rolling contraction.</text>
+		<choice destination="gushed" text="*Bloop*" />
+	</gameover>
 
-<gameover ID="gushed">
-<text>The harpy lets out a little giggle and then a delighted coo as she feather frigs your remains out onto the ground. She can't help but be bemused by the way you chose to take advantage of her defeat, though she can hardly complain about the results. In fact the only downside is none of the harpies are going to believe anyone could be so silly as to climb inside a harpy like that!</text>
-</gameover>
+	<gameover ID="gushed">
+		<text>The harpy lets out a little giggle and then a delighted coo as
+			she feather frigs your remains out onto the ground. She can't help
+			but be bemused by the way you chose to take advantage of her defeat,
+			though she can hardly complain about the results. In fact the only
+			downside is none of the harpies are going to believe anyone could be
+			so silly as to climb inside a harpy like that!</text>
+	</gameover>
 
-<page ID="meal0">
-<text> You approach her, the lick of your lips something she knows well as you <conditional><assertion evaluate="slothasitem" slot="2"/>take off your clothes,</conditional> pull her upright and lick over her face. But beaten she can only squirm and whimper as you engulf her head, starting to eat the harpy alive.</text>
+	<page ID="meal0">
+		<text>
+			You approach her, the lick of your lips something she knows well as
+			you
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				take off your clothes,
+			</conditional>
+			pull her upright and lick over her face. But beaten she can only
+			squirm and whimper as you engulf her head, starting to eat the harpy
+			alive.
+		</text>
 
-<choice destination="meal1" text="swallow her up"/>
-</page>
-<page ID="meal1">
-<text> Her taste despite her standards of hygiene is delectible. Her feathered form starting to disappear inside you as you greedily swallow, groping her arse as you eat her alive. Your throat and then belly bulging with the outline of her head as she becomes steadily a filling meal for her better. As you engulf her rear end you cannot help but savour that snatch of hers, the perpetually moist nethers once a threat now a flavoursome compliment to the meal you're now ingesting.</text>
-<choice destination="meal2" text="all the way in"/>
-</page>
+		<choice destination="meal1" text="swallow her up" />
+	</page>
+	<page ID="meal1">
+		<text> Her taste despite her standards of hygiene is delectible. Her
+			feathered form starting to disappear inside you as you greedily
+			swallow, groping her arse as you eat her alive. Your throat and then
+			belly bulging with the outline of her head as she becomes steadily a
+			filling meal for her better. As you engulf her rear end you cannot
+			help but savour that snatch of hers, the perpetually moist nethers
+			once a threat now a flavoursome compliment to the meal you're now
+			ingesting.</text>
+		<choice destination="meal2" text="all the way in" />
+	</page>
 
-<page ID="meal2">
-<text> Down down down, with each swallow you take her deeper. Her squirming flailing legs starting to disappear past your lips as your belly swells out under your hands. The harpy curling within you as with a final swallow you tuck her feet past your lips and gulp her down. Now all she can do is is squirm within your dome of a belly, pleasing you as you feel the harpy fill you so deliciously. </text>
-<choice destination="meal3" text="digest her"/>
-</page>
+	<page ID="meal2">
+		<text> Down down down, with each swallow you take her deeper. Her
+			squirming flailing legs starting to disappear past your lips as your
+			belly swells out under your hands. The harpy curling within you as
+			with a final swallow you tuck her feet past your lips and gulp her
+			down. Now all she can do is is squirm within your dome of a belly,
+			pleasing you as you feel the harpy fill you so deliciously. </text>
+		<choice destination="meal3" text="digest her" />
+	</page>
 
-<page ID="meal3">
-<text> You lean back, stroking your belly as it gets to work. She puts up a struggle for a time, but is no match. That churning dome writhing and struggling then slowly settling down, weakening as she's gurgled away inside you. her body turning soft and mushy as its rendered down to feed you. Soon your gut is round and smooth and shrinking as you've digested her utterly. With a final burble your middle flattens out,<conditional><assertion evaluate="slothasitem" slot="2"/>putting your clothes back on</conditional> you rise back to your feet to continue your day. Well sated by the harpy's body.</text>
-<effect type="feed" value="85"/>
-<special effect="removenpc"/>
-<choice destination="end" text="carry on"/>
-</page>
+	<page ID="meal3">
+		<text>
+			You lean back, stroking your belly as it gets to work. She puts up a
+			struggle for a time, but is no match. That churning dome writhing and
+			struggling then slowly settling down, weakening as she's gurgled away
+			inside you. her body turning soft and mushy as its rendered down to
+			feed you. Soon your gut is round and smooth and shrinking as you've
+			digested her utterly. With a final burble your middle flattens out,
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				putting your clothes back on
+			</conditional>
+			you rise back to your feet to continue your day. Well sated by the
+			harpy's body.
+		</text>
+		<effect type="feed" value="85" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
 
 </Conversation>

@@ -1,31 +1,33 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="SYSTEM"/>
-<text>
-S3cur1ty pr0t0c0ls 1n 3ff3ct: 3ng1n33r1ng l0ckd0wn 3n4bl3d  
-</text>
-<choice destination="lockdown" text="disable lockdown"/>
-<choice destination="end" text="exit"/>
-</page>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="SYSTEM" />
+		<text>
+			S3cur1ty pr0t0c0ls 1n 3ff3ct: 3ng1n33r1ng l0ckd0wn 3n4bl3d
+		</text>
+		<choice destination="lockdown" text="disable lockdown" />
+		<choice destination="end" text="exit" />
+	</page>
 
-<page ID="lockdown">
-<text>
-s3cur1ty pr0t0c0ls r3sc1nd3d, 3ng1n33r1ng l0ckd0wn d1s4bl3d
-</text>
-<effect type="setlocalflag" flag="SYSTEM" value="1"/>
-<special effect="opendoor" lock="engineering"/>
-<special effect="opendoor" lock="engineering"/>
-<choice destination="end" text="exit"/>
-</page>
+	<page ID="lockdown">
+		<text>
+			s3cur1ty pr0t0c0ls r3sc1nd3d, 3ng1n33r1ng l0ckd0wn d1s4bl3d
+		</text>
+		<effect type="setlocalflag" flag="SYSTEM" value="1" />
+		<special effect="opendoor" lock="engineering" />
+		<special effect="opendoor" lock="engineering" />
+		<choice destination="end" text="exit" />
+	</page>
 
-<page ID="start">
-<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="SYSTEM"/>
-<text>
-SYST3M N0RM4L 
-</text>
-<choice destination="lockdown" text="disable lockdown"/>
-<choice destination="end" text="exit"/>
-</page>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="SYSTEM" />
+		<text>
+			SYST3M N0RM4L
+		</text>
+		<choice destination="lockdown" text="disable lockdown" />
+		<choice destination="end" text="exit" />
+	</page>
 
 </Conversation>

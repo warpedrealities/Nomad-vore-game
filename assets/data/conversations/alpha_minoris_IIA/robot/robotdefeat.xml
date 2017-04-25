@@ -1,37 +1,47 @@
 <?xml version="1.0"?>
-	<Conversation>
-		<page ID="start">
-			<text>You have disabled the robot, it slumps into a heap of tangled robotic limbs and actuators
-				<conditional>
-					<condition evaluate="SCRIPT" src="robot/robotest"/> Hello world conditional evaluated from lua!
-				</conditional>
-			</text>
+<Conversation>
+	<page ID="start">
+		<text>
+			You have disabled the robot, it slumps into a heap of tangled robotic
+			limbs and actuators
+			<conditional>
+				<condition evaluate="SCRIPT" src="robot/robotest" />
+				Hello world conditional evaluated from lua!
+			</conditional>
+		</text>
 
-			<choice destination="end" text="do nothing" />
-			<choice destination="dissassemble" text="try to salvage parts" />
+		<choice destination="end" text="do nothing" />
+		<choice destination="dissassemble" text="try to salvage parts" />
 
-		</page>
-		<check ID="dissassemble">
-			<test what="REPAIR" DC="10" />
-			<outcome destination="success" />
-			<outcome destination="fail" />
-		</check>
-		<page ID="fail">
-			<text> You spend some time tearing the robot apart, however any truly valuable parts do not survive being yanked out of the robots innards. At least you got some scrap metal out of it but the robot is now truly out of commission.
-			</text>
-			<effect type="giveitem" value="2" item="scrap metal" />
-			<special effect="removenpc" />
-			<choice destination="end" text="ah well" />
-		</page>
+	</page>
+	<check ID="dissassemble">
+		<test what="REPAIR" DC="10" />
+		<outcome destination="success" />
+		<outcome destination="fail" />
+	</check>
+	<page ID="fail">
+		<text> You spend some time tearing the robot apart, however any truly
+			valuable parts do not survive being yanked out of the robots innards.
+			At least you got some scrap metal out of it but the robot is now
+			truly out of commission.
+		</text>
+		<effect type="giveitem" value="2" item="scrap metal" />
+		<special effect="removenpc" />
+		<choice destination="end" text="ah well" />
+	</page>
 
-		<page ID="success">
-			<text> You spend some time dismantling the robot, extricating a pair of electrical components from its mechanical mind. The two computation valves might be useful later, not to mention you scavenged some more scrap metal. Additionally you are now absolutely sure 
-				the robot is out of commission.
+	<page ID="success">
+		<text> You spend some time dismantling the robot, extricating a pair
+			of electrical components from its mechanical mind. The two
+			computation valves might be useful later, not to mention you
+			scavenged some more scrap metal. Additionally you are now absolutely
+			sure
+			the robot is out of commission.
 
-			</text>
-			<effect type="giveitem" value="2" item="computation valve" />
-			<effect type="giveitem" value="2" item="scrap metal" />
-			<special effect="removenpc" />
-			<choice destination="end" text="score" />
-		</page>
-	</Conversation>
+		</text>
+		<effect type="giveitem" value="2" item="computation valve" />
+		<effect type="giveitem" value="2" item="scrap metal" />
+		<special effect="removenpc" />
+		<choice destination="end" text="score" />
+	</page>
+</Conversation>

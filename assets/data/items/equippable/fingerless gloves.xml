@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
-<ItemEquip name="fingerless gloves" weight="0.5" slot="ACCESSORY" value="250">
-<description>
-fingerless black leather gloves. +1 to ranged.
-</description>
-<modifier>
-<ranged value="1"/>
+<ItemEquip name="fingerless gloves" weight="0.5" slot="ACCESSORY"
+	value="250">
+	<description>
+		fingerless black leather gloves. +1 to ranged.
+	</description>
+	<modifier>
+		<ranged value="1" />
 
-</modifier>
+	</modifier>
 </ItemEquip>

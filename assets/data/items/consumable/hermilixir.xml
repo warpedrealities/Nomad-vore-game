@@ -1,17 +1,20 @@
 <?xml version="1.0"?>
 <ItemConsumable name="hermilixir" weight="0.5" value="500">
-<description>A refined product in small glass vial that can help one achieve the best of both worlds</description>
-<effectmutator>
-<criteriaAssertion part="penis"/>
-<mutation part="penis" variable="length" modifier="3">
-your penis grows CHANGE inches, you are now in possession of a shaft VALUE inches in length
-</mutation>
-</effectmutator>
-<effectmutator>
-<criteriaAssertion part="penis" negative="true" />
-<mutation part="penis" bodychange="add" variable="length" set="6">
-You now have a penis.
-</mutation>
-</effectmutator>
+	<description>A refined product in small glass vial that can help one
+		achieve the best of both worlds</description>
+	<effectmutator>
+		<criteriaAssertion part="penis" />
+		<mutation part="penis" variable="length" modifier="3">
+			your penis grows CHANGE inches, you are now in possession of a shaft
+			VALUE inches in length
+		</mutation>
+	</effectmutator>
+	<effectmutator>
+		<criteriaAssertion part="penis" negative="true" />
+		<mutation part="penis" bodychange="add" variable="length"
+			set="6">
+			You now have a penis.
+		</mutation>
+	</effectmutator>
 
 </ItemConsumable>

@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <part name="penis">
-<variable name="length" value="6"/>
+	<variable name="length" value="6" />
 </part>

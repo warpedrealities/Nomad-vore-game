@@ -1,194 +1,371 @@
 <?xml version="1.0"?>
 <Conversation>
 
-<page ID="start">
-<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance" value="1"/>
-<text>
-Laurisse watches you approach with a friendly smile "You don't need to kneel my knight. Though you can if you want to." she remarks as you cross the point where customarily you'd pay your respects.
-</text>
-<choice destination="talk" text="don't kneel"/>
-<choice destination="respect0" text="kneel anyway"/>
-</page>
+	<page ID="start">
+		<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
+			value="1" />
+		<text>
+			Laurisse watches you approach with a friendly smile "You don't need to kneel
+			my knight. Though you can if you want to." she remarks as you cross
+			the point where customarily you'd pay your respects.
+		</text>
+		<choice destination="talk" text="don't kneel" />
+		<choice destination="respect0" text="kneel anyway" />
+	</page>
 
-<page ID="start">
-<text>
-Laurisse watches you approach with a small self confident smile. Once you stand before her regal presence she glances down meaningfully at the stone floor in front of her throne of pillows as if expecting something of you.
-</text>
-<choice destination="respect0" text="kneel"/>
-<choice destination="disrespect0" text="don't kneel"/>
-</page>
+	<page ID="start">
+		<text>
+			Laurisse watches you approach with a small self confident smile. Once you
+			stand before her regal presence she glances down meaningfully at the
+			stone floor in front of her throne of pillows as if expecting
+			something of you.
+		</text>
+		<choice destination="respect0" text="kneel" />
+		<choice destination="disrespect0" text="don't kneel" />
+	</page>
 
-<page ID="talk">
-<text>
-Her majesty smiles "Now, tell me, why do you seek an audience with me?"
-</text>
-<choice destination="history0" text="Can you tell me your people's history"/>
-<choice destination="knights" text="If you are a queen do you have knights?">
-<condition operator="equals" evaluate="LOCALFLAG" flag="knights" value="0"/>
-</choice>
-<choice destination="friendship" text="can i become a knight your majesty?">
-<condition operator="equals" evaluate="LOCALFLAG" flag="knights" value="1"/>
-<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance" value="0"/>
-</choice>
-<choice destination="end" text="I actually don't know"/>
-</page>
+	<page ID="talk">
+		<text>
+			Her majesty smiles "Now, tell me, why do you seek an audience with me?"
+		</text>
+		<choice destination="history0" text="Can you tell me your people's history" />
+		<choice destination="knights" text="If you are a queen do you have knights?">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="knights"
+				value="0" />
+		</choice>
+		<choice destination="friendship" text="can i become a knight your majesty?">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="knights"
+				value="1" />
+			<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
+				value="0" />
+		</choice>
+		<choice destination="end" text="I actually don't know" />
+	</page>
 
-<page ID="friendship">
-<condition operator="greaterthan" evaluate="FACTIONFLAG" flag="friendship" value="1"/>
-<text>
-"Your deeds are known to me. Surely you are worthy now of this honour I bestow. Are you sure this is your wish? that I proclaim you a knight of Dammath?"
-</text>
-<choice destination="allegiance" text="yes, i swear myself to you your majesty"/>
-<choice destination="end" text="I need to think about this"/>
-</page>
+	<page ID="friendship">
+		<condition operator="greaterthan" evaluate="FACTIONFLAG"
+			flag="friendship" value="1" />
+		<text>
+			"Your deeds are known to me. Surely you are worthy now of this honour I
+			bestow. Are you sure this is your wish? that I proclaim you a knight
+			of Dammath?"
+		</text>
+		<choice destination="allegiance" text="yes, i swear myself to you your majesty" />
+		<choice destination="end" text="I need to think about this" />
+	</page>
 
-<page ID="friendship">
-<condition operator="equals" evaluate="FACTIONFLAG" flag="friendship" value="0"/>
-<text>
-"I don't think I should hand out a knight hood to just anyone do you?" asks the queen rhetorically and gestures dismissively "Go show me you're worthy then come back."
-</text>
-<choice destination="end" text="farewell then your majesty"/>
-</page>
+	<page ID="friendship">
+		<condition operator="equals" evaluate="FACTIONFLAG" flag="friendship"
+			value="0" />
+		<text>
+			"I don't think I should hand out a knight hood to just anyone do you?"
+			asks the queen rhetorically and gestures dismissively "Go show me
+			you're worthy then come back."
+		</text>
+		<choice destination="end" text="farewell then your majesty" />
+	</page>
 
-<page ID="allegiance">
-<text>
-Her majesty queen laurisse calls for a sword and her chronicler, rising from her cushions at last to stand before you "kneel" she commands, and as you do so she unsheathes the blade "Let it be witnessed and proclaimed that the stranger who has come before me is stranger to our people no longer." she says and places the blade on your shoulder "I dub you a knight of Dammath, loyal to the crown, defender of my people, may your actions bring you honour for all of your days." she says and then removes the sword "rise ser, and know you will be forever welcome in dammath."
-</text>
-<effect type="setfactionflag" flag="allegiance" value="1"/>
-<effect type="manipulatefactionflag" faction="minyos" flag="allegiance" value="-1"/>
-<effect type="manipulateDisposition" faction="minyos" value="-25"/>
-<effect type="modfactiondisposition" value="25"/>
-<choice destination="end" text="i am yours your majesty"/>
-</page>
+	<page ID="allegiance">
+		<text>
+			Her majesty queen laurisse calls for a sword and her chronicler, rising
+			from her cushions at last to stand before you "kneel" she commands,
+			and as you do so she unsheathes the blade "Let it be witnessed and
+			proclaimed that the stranger who has come before me is stranger to
+			our people no longer." she says and places the blade on your shoulder
+			"I dub you a knight of Dammath, loyal to the crown, defender of my
+			people, may your actions bring you honour for all of your days." she
+			says and then removes the sword "rise ser, and know you will be
+			forever welcome in dammath."
+		</text>
+		<effect type="setfactionflag" flag="allegiance" value="1" />
+		<effect type="manipulatefactionflag" faction="minyos" flag="allegiance"
+			value="-1" />
+		<effect type="manipulateDisposition" faction="minyos" value="-25" />
+		<effect type="modfactiondisposition" value="25" />
+		<choice destination="end" text="i am yours your majesty" />
+	</page>
 
 
-<page ID="knights">
-<text>
-"Knights. hmm. and these are my favoured warriors you say? loyal and dutiful and capable?" the queen seems to find this idea very appealing "I will have to see if our lore contains any mention of such things. But regardless whether they will or wont, I think I will have knights..but I must think some more on this subject, go, I need some time."
-</text>
-<effect type="setlocalflag" flag="knights" value="1"/>
-<choice destination="end" text="very well, farewell"/>
-</page>
+	<page ID="knights">
+		<text>
+			"Knights. hmm. and these are my favoured warriors you say? loyal and dutiful
+			and capable?" the queen seems to find this idea very appealing "I
+			will have to see if our lore contains any mention of such things. But
+			regardless whether they will or wont, I think I will have
+			knights..but I must think some more on this subject, go, I need some
+			time."
+		</text>
+		<effect type="setlocalflag" flag="knights" value="1" />
+		<choice destination="end" text="very well, farewell" />
+	</page>
 
-<page ID="history0">
-<text>
-"The tale of our people is a tale of determination and resolve in the face of malice, deceit and coveteousness. For many generations we called this world our home. Here we tilled the fertile field and raised the fatted beast, but we were not a simple people. We traded with the people of other worlds, and we had the secrets of Technology and Industry. And then the green ones came, with ears as pointy as knives and hearts as black as sin. We trusted them at first, fools that we had become in our complacency from peace and plenty. It was world enough for both our peoples we thought, and while I confess being first to make it our home the choicest parts were ours we did not see the greed that festered in their hearts. They lured our greatest to a feast celebrating their arrival, and there began with treachery and daggers the war that would see us driven to this harsh and unforgiving corner of our world. We have lost so much of what we once had, our Industry and Technology were lost, left behind when we were forced to flee. And no doubt you have seen how little our enemies have made of them. They are not a people who can build, only take and destroy."
-</text>
-<choice destination="history1" text="what will you do now?"/>
-<choice destination="end" text="that was all i wanted to know"/>
-</page>
+	<page ID="history0">
+		<text>
+			"The tale of our people is a tale of determination and resolve in the
+			face of malice, deceit and coveteousness. For many generations we
+			called this world our home. Here we tilled the fertile field and
+			raised the fatted beast, but we were not a simple people. We traded
+			with the people of other worlds, and we had the secrets of Technology
+			and Industry. And then the green ones came, with ears as pointy as
+			knives and hearts as black as sin. We trusted them at first, fools
+			that we had become in our complacency from peace and plenty. It was
+			world enough for both our peoples we thought, and while I confess
+			being first to make it our home the choicest parts were ours we did
+			not see the greed that festered in their hearts. They lured our
+			greatest to a feast celebrating their arrival, and there began with
+			treachery and daggers the war that would see us driven to this harsh
+			and unforgiving corner of our world. We have lost so much of what we
+			once had, our Industry and Technology were lost, left behind when we
+			were forced to flee. And no doubt you have seen how little our
+			enemies have made of them. They are not a people who can build, only
+			take and destroy."
+		</text>
+		<choice destination="history1" text="what will you do now?" />
+		<choice destination="end" text="that was all i wanted to know" />
+	</page>
 
-<page ID="history1">
-<text>
-"We will take what is ours. Our enemies will bend or they will break but we will make them yield and take our place that we had so long ago. I confess I did not believe this war would come upon us so soon, so much of our former Technology and Industry are still beyond our reckoning. When we were ready and able we would of blasted asunder the stone barrier and swept upon the greenskins like an inexorable tide."
-</text>
-<choice destination="end" text="thankyou for sharing this with me"/>
-</page>
+	<page ID="history1">
+		<text>
+			"We will take what is ours. Our enemies will bend or they will break but
+			we will make them yield and take our place that we had so long ago. I
+			confess I did not believe this war would come upon us so soon, so
+			much of our former Technology and Industry are still beyond our
+			reckoning. When we were ready and able we would of blasted asunder
+			the stone barrier and swept upon the greenskins like an inexorable
+			tide."
+		</text>
+		<choice destination="end" text="thankyou for sharing this with me" />
+	</page>
 
-<page ID="respect0">
-<text>
-You kneel before her. And hear her shift softly on the pillows, a glance up sees her smiling in soft approval. It's clear she gets off on submission like this, perhaps now she'll be willing to talk. Or maybe kneeling before her majesty has further potential.
-</text>
-<choice destination="talk" text="*stand*"/>
-<choice destination="respect1" text="*eye her bulge*"/>
-</page>
+	<page ID="respect0">
+		<text>
+			You kneel before her. And hear her shift softly on the pillows, a glance
+			up sees her smiling in soft approval. It's clear she gets off on
+			submission like this, perhaps now she'll be willing to talk. Or maybe
+			kneeling before her majesty has further potential.
+		</text>
+		<choice destination="talk" text="*stand*" />
+		<choice destination="respect1" text="*eye her bulge*" />
+	</page>
 
-<page ID="respect1">
-<text>
-Laurisse off on a pretty girl kneeling submissively to her turns out to be not that much of a metaphor but rather more literal. That robe of hers is bulging down between her legs, where her hermaphrodite arousal is stirring slightly. It must be a hefty tool to be visible in her loose robes while only slightly hard. But is it any wonder that her majesty would have a rod that befits the prominence of her office?
-</text>
-<choice destination="respect2" text="*get closer*"/>
-<choice destination="talk" text="*a look is enough, stand*"/>
-</page>
+	<page ID="respect1">
+		<text>
+			Laurisse off on a pretty girl kneeling submissively to her turns out to be
+			not that much of a metaphor but rather more literal. That robe of
+			hers is bulging down between her legs, where her hermaphrodite
+			arousal is stirring slightly. It must be a hefty tool to be visible
+			in her loose robes while only slightly hard. But is it any wonder
+			that her majesty would have a rod that befits the prominence of her
+			office?
+		</text>
+		<choice destination="respect2" text="*get closer*" />
+		<choice destination="talk" text="*a look is enough, stand*" />
+	</page>
 
-<page ID="respect2">
-<text>
-Laurisse smirks at where your gaze is resting, and as you approach she slides a hand down to undo the front of her robe "well now, if you wish to show me further honour, who am I to deny your excess of virtue." she says. That one free hand now taking the hem of her robe and parting it, revealing the smooth majesty of her belly and the inner curves of her breasts but also and perhaps more importantly the mostly flaccid girth of her royal cock. On your knees before her you reach out and, as she sips from her winebowl and mhmms to encourage you, take her cock in your hands. Stroking her to hardness as she drinks, only a soft throaty mhmm from her lips and the engorging of her cock work to show that your efforts are pleasing her majesty. Soon enough though you have her at full erection, and that queenly rod is truly magnificent to behold. you find yourself drinking in the sight of it for a moment, from broad glans to weighty balls. But it seems to be up to you what you should do now faced with such a magnificent organ.
-</text>
-<choice destination="blowjob0" text="worship it"/>
-<choice destination="cockvore0" text="feed it">
-<preference fetish="cockvore"/>
-</choice>
-</page>
+	<page ID="respect2">
+		<text>
+			Laurisse smirks at where your gaze is resting, and as you approach she slides
+			a hand down to undo the front of her robe "well now, if you wish to
+			show me further honour, who am I to deny your excess of virtue." she
+			says. That one free hand now taking the hem of her robe and parting
+			it, revealing the smooth majesty of her belly and the inner curves of
+			her breasts but also and perhaps more importantly the mostly flaccid
+			girth of her royal cock. On your knees before her you reach out and,
+			as she sips from her winebowl and mhmms to encourage you, take her
+			cock in your hands. Stroking her to hardness as she drinks, only a
+			soft throaty mhmm from her lips and the engorging of her cock work to
+			show that your efforts are pleasing her majesty. Soon enough though
+			you have her at full erection, and that queenly rod is truly
+			magnificent to behold. you find yourself drinking in the sight of it
+			for a moment, from broad glans to weighty balls. But it seems to be
+			up to you what you should do now faced with such a magnificent organ.
+		</text>
+		<choice destination="blowjob0" text="worship it" />
+		<choice destination="cockvore0" text="feed it">
+			<preference fetish="cockvore" />
+		</choice>
+	</page>
 
-<page ID="cockvore0">
-<text>
-Her cock is so magnificent, you find yourself wanting to give yourself to her royal cock. <conditional><assertion evaluate="slothasitem" slot="2"/> Laurisse quirks an eyebrow but doesn't do more than glance your way as she sips her wine and you undress, not wanting to trouble her cock with your clothes. </conditional> You stroke her cock with one hand while raising the up the other, a bit of a smile quirking her her majesty's lips as your fingers ply at her cocktip. You press on, wondering if her cock with accept you, if she will accept the offering of her body. With a chir from her lips and schlurp from her tip you find the answer is an emphatic yes, her cock stretching and schlurping around your hand. Her shaft sucking you in up to your wrist "oh, now this is. Few people are willing to go THIS far." remarks Laurisse with a mhmm, then glances your way and smiles "but by all means, do continue." she says at your expression, and with that you insert your other hand. The queen is willing for you to be a sacrifice to her cock, and such a thought fills you with warm and pleasant tingles as you start to slide your arms into her shaft.
-</text>
-<choice destination="cockvore1" text="feed yourself to her cock"/>
-</page>
+	<page ID="cockvore0">
+		<text>
+			Her cock is so magnificent, you find yourself wanting to give
+			yourself to her royal cock.
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				Laurisse quirks an eyebrow but doesn't do more than glance your way
+				as she sips her wine and you undress, not wanting to trouble her
+				cock with your clothes.
+			</conditional>
+			You stroke her cock with one hand while raising the up the other, a
+			bit of a smile quirking her her majesty's lips as your fingers ply at
+			her cocktip. You press on, wondering if her cock with accept you, if
+			she will accept the offering of her body. With a chir from her lips
+			and schlurp from her tip you find the answer is an emphatic yes, her
+			cock stretching and schlurping around your hand. Her shaft sucking
+			you in up to your wrist "oh, now this is. Few people are willing to
+			go THIS far." remarks Laurisse with a mhmm, then glances your way and
+			smiles "but by all means, do continue." she says at your expression,
+			and with that you insert your other hand. The queen is willing for
+			you to be a sacrifice to her cock, and such a thought fills you with
+			warm and pleasant tingles as you start to slide your arms into her
+			shaft.
+		</text>
+		<choice destination="cockvore1" text="feed yourself to her cock" />
+	</page>
 
-<page ID="cockvore1">
-<text>
-As you plunge your arms inside Laurisse's welcoming cock you hear a gasp from her majesty, one of the guards having to take the bowl of wine from her lest it spill during her loss of composure. Your last sight of the outside world her pleasantly shocked expression afore you plunge your head down between your arms and into that stretched out cocktip. The queen's member rippling around you, starting to take charge of your body and pull you deeper inside. That dominant organ tugging on your shoulders, claiming your chest even as it snugly and muskily presses around every inch of you that has so far been offered. Her gasping moans of pleasure music to your ears, muffled as they are by pre and cockflesh, driving home her enjoyment of the sheer depraved depths of your deference to her.
-</text>
-<choice destination="cockvore2" text="give yourself entirely"/>
-</page>
+	<page ID="cockvore1">
+		<text>
+			As you plunge your arms inside Laurisse's welcoming cock you hear a
+			gasp from her majesty, one of the guards having to take the bowl of
+			wine from her lest it spill during her loss of composure. Your last
+			sight of the outside world her pleasantly shocked expression afore
+			you plunge your head down between your arms and into that stretched
+			out cocktip. The queen's member rippling around you, starting to take
+			charge of your body and pull you deeper inside. That dominant organ
+			tugging on your shoulders, claiming your chest even as it snugly and
+			muskily presses around every inch of you that has so far been
+			offered. Her gasping moans of pleasure music to your ears, muffled as
+			they are by pre and cockflesh, driving home her enjoyment of the
+			sheer depraved depths of your deference to her.
+		</text>
+		<choice destination="cockvore2" text="give yourself entirely" />
+	</page>
 
-<page ID="cockvore2">
-<text>
-Deeper and deeper you slide into her cock. You're no longer really able to push yourself in as the power of her royal member lifts your feet up off the floor. Laurisse's hungry cock angling up a few degrees with each lewd schlurp that draws you deeper inside, your ass and thighs sliding out of view into that yellow orange member, your body piling into her sack as your legs are consumed. You feel the softness of the pillows beneath you and the warm pressure of her thighs to either side as you start to curl but perhaps what is most important is the warm stickyness engulfing you as her cock finishes its meal. Her cocktip sealing shut behind your feet as the last of you is schlurped inside and slips down to become a massive bulge in her balls "mhmm, oh if all my subjects were as devoted as you. But then I suppose I'd run out." Laurisse says chirring and reaching down to fondle herself "now, what to do with you I wonder?"
-</text>
-<choice destination="cockvoredigest0" text="I wish to be your seed your majesty"/>
-</page>
+	<page ID="cockvore2">
+		<text>
+			Deeper and deeper you slide into her cock. You're no longer really able to
+			push yourself in as the power of her royal member lifts your feet up
+			off the floor. Laurisse's hungry cock angling up a few degrees with
+			each lewd schlurp that draws you deeper inside, your ass and thighs
+			sliding out of view into that yellow orange member, your body piling
+			into her sack as your legs are consumed. You feel the softness of the
+			pillows beneath you and the warm pressure of her thighs to either
+			side as you start to curl but perhaps what is most important is the
+			warm stickyness engulfing you as her cock finishes its meal. Her
+			cocktip sealing shut behind your feet as the last of you is schlurped
+			inside and slips down to become a massive bulge in her balls "mhmm,
+			oh if all my subjects were as devoted as you. But then I suppose I'd
+			run out." Laurisse says chirring and reaching down to fondle herself
+			"now, what to do with you I wonder?"
+		</text>
+		<choice destination="cockvoredigest0" text="I wish to be your seed your majesty" />
+	</page>
 
-<page ID="cockvoredigest0">
-<text>
-"Well who am I to deny such a request. Besides, it does seem like it would be a rather a bother to have to squirt you back out whole." Laurisse says with an amused smile and takes her wine bowl back from the guard, sipping as inside her balls you get your wish. Her sack churning and burbling softly around your form, slowly softening and melting your body as she chirrs and fondles herself with her free hand. The royal reptile languidly luxuriating as her balls churn you blissfully away. It takes what feels like a small eternity as your body spreads out, marinating in her cum and steadily merging into it until you're an indistinguishable mass of royal spunk sloshing around in her majesty's balls.
-</text>
-<choice destination="cockvoredigest1" text="gurgle"/>
-</page>
+	<page ID="cockvoredigest0">
+		<text>
+			"Well who am I to deny such a request. Besides, it does seem like it would
+			be a rather a bother to have to squirt you back out whole." Laurisse
+			says with an amused smile and takes her wine bowl back from the
+			guard, sipping as inside her balls you get your wish. Her sack
+			churning and burbling softly around your form, slowly softening and
+			melting your body as she chirrs and fondles herself with her free
+			hand. The royal reptile languidly luxuriating as her balls churn you
+			blissfully away. It takes what feels like a small eternity as your
+			body spreads out, marinating in her cum and steadily merging into it
+			until you're an indistinguishable mass of royal spunk sloshing around
+			in her majesty's balls.
+		</text>
+		<choice destination="cockvoredigest1" text="gurgle" />
+	</page>
 
-<gameover ID="cockvoredigest1">
-<text>
-Laurisse smiles a little at feeling you slosh away, her self gratifying fondling becoming a bit more vigorous as you form a hefty needy weight bloating out her sack. The lizard queen starting to moan in delight as she jacks off and hears the insistent burble and glorp of all the cum in her sack that you have now become. Her cry of delightful bliss heralds the return of your steaming remains to the outside world as she climaxes. Your gooey remains erupting out of your cock in a series of mighty spurts, splattering against the cool stone floor to puddle and cool there in front of Laurisse's cushion throne. Her majesty's orgasm trailing off gradually leaving only a languid and wonderful sensation permeating the royal reptilie as she surveys her handiwork with a smile "Do have someone clean up our guest won't you?" she remarks to one of the warriors, who though slightly flushed at the debauched display hurries to obey without outward signs of grumbling.
-</text>
-</gameover>
+	<gameover ID="cockvoredigest1">
+		<text>
+			Laurisse smiles a little at feeling you slosh away, her self gratifying
+			fondling becoming a bit more vigorous as you form a hefty needy
+			weight bloating out her sack. The lizard queen starting to moan in
+			delight as she jacks off and hears the insistent burble and glorp of
+			all the cum in her sack that you have now become. Her cry of
+			delightful bliss heralds the return of your steaming remains to the
+			outside world as she climaxes. Your gooey remains erupting out of
+			your cock in a series of mighty spurts, splattering against the cool
+			stone floor to puddle and cool there in front of Laurisse's cushion
+			throne. Her majesty's orgasm trailing off gradually leaving only a
+			languid and wonderful sensation permeating the royal reptilie as she
+			surveys her handiwork with a smile "Do have someone clean up our
+			guest won't you?" she remarks to one of the warriors, who though
+			slightly flushed at the debauched display hurries to obey without
+			outward signs of grumbling.
+		</text>
+	</gameover>
 
-<page ID="blowjob0">
-<text>
-You lean in closer, laurisse mhmming a little as your warm breath washes over the tip of her cock before letting out a delighted chir as you wrap your lips around it. "Mhmm yes, serve your majesty." she says pausing to refill her winebowl, presumptive confidence oozing out with every word along with a steady murr of pleasure. Your desire to serve drawing your attention down from her face back down to her cock where it belongs. Her majesty's eyes half lidding slightly as you work your lips further down her cock, easing that magnificent thickness into your throat and coaxing a well earned and well received gasp of delight from her lips.
-</text>
-<choice destination="blowjob1" text="suck harder"/>
-</page>
+	<page ID="blowjob0">
+		<text>
+			You lean in closer, laurisse mhmming a little as your warm breath washes
+			over the tip of her cock before letting out a delighted chir as you
+			wrap your lips around it. "Mhmm yes, serve your majesty." she says
+			pausing to refill her winebowl, presumptive confidence oozing out
+			with every word along with a steady murr of pleasure. Your desire to
+			serve drawing your attention down from her face back down to her cock
+			where it belongs. Her majesty's eyes half lidding slightly as you
+			work your lips further down her cock, easing that magnificent
+			thickness into your throat and coaxing a well earned and well
+			received gasp of delight from her lips.
+		</text>
+		<choice destination="blowjob1" text="suck harder" />
+	</page>
 
-<page ID="blowjob1">
-<text>
-As you start to bob your head up and down upon her lusty royal rod queen Laurisse finds it a bit difficult to keep up her affectation of nonchalance. Chirring in delight she sets the bowl down to one side and spreads her thighs as her attention slides fully onto you. Her lust and pleasure visible in her eyes as she watches you lavish her cock with the most eager attentions you can muster. Her hands steadily clenching into claws grabbing handfuls of pillows as you hear her gasp in bliss and feel her shiver, cock twitching and balls tensing as she nears orgasm.
-</text>
-<choice destination="blowjob2" text="receive your reward"/>
-</page>
+	<page ID="blowjob1">
+		<text>
+			As you start to bob your head up and down upon her lusty royal rod
+			queen Laurisse finds it a bit difficult to keep up her affectation of
+			nonchalance. Chirring in delight she sets the bowl down to one side
+			and spreads her thighs as her attention slides fully onto you. Her
+			lust and pleasure visible in her eyes as she watches you lavish her
+			cock with the most eager attentions you can muster. Her hands
+			steadily clenching into claws grabbing handfuls of pillows as you
+			hear her gasp in bliss and feel her shiver, cock twitching and balls
+			tensing as she nears orgasm.
+		</text>
+		<choice destination="blowjob2" text="receive your reward" />
+	</page>
 
-<page ID="blowjob2">
-<text>
-"that's...it..." she manages, her only warning before her orgasm makes her lose poise entirely. Her hand coming down to grab your head and hold you down as she climaxes. Her cock spurting wad after wad of hot royal lizardcum down your throat as she pants and chirrs in pleasure. Her climax tapers off only gradually and with it her grip on your head loosens, until she lets you up. Panting and chirring she smiles and tucks her softening cock back into her robes as you wipe her cum off your lips. She seems quite contented by your show of deference now.
-</text>
-<choice destination="talk" text="time to talk"/>
-</page>
+	<page ID="blowjob2">
+		<text>
+			"that's...it..." she manages, her only warning before her orgasm makes her lose poise
+			entirely. Her hand coming down to grab your head and hold you down as
+			she climaxes. Her cock spurting wad after wad of hot royal lizardcum
+			down your throat as she pants and chirrs in pleasure. Her climax
+			tapers off only gradually and with it her grip on your head loosens,
+			until she lets you up. Panting and chirring she smiles and tucks her
+			softening cock back into her robes as you wipe her cum off your lips.
+			She seems quite contented by your show of deference now.
+		</text>
+		<choice destination="talk" text="time to talk" />
+	</page>
 
-<page ID="disrespect0">
-<text>
-You're not about to kneel to this so called queen. As she regards you her gaze turns ice at your inaction, then with a hmmph she dismisses you from her attention. Ignoring you pointedly as she drinks more from her bowl.
-</text>
-<choice destination="disrespect1" text="try to talk to her"/>
-<choice destination="end" text="maybe i'll try being more respectful next time"/>
+	<page ID="disrespect0">
+		<text>
+			You're not about to kneel to this so called queen. As she regards you her
+			gaze turns ice at your inaction, then with a hmmph she dismisses you
+			from her attention. Ignoring you pointedly as she drinks more from
+			her bowl.
+		</text>
+		<choice destination="disrespect1" text="try to talk to her" />
+		<choice destination="end"
+			text="maybe i'll try being more respectful next time" />
 
-</page>
+	</page>
 
-<page ID="disrespect1">
-<text>
-You attempt to talk but her majesty ignores your attempts to get her attention for several seconds before an irritated eyebrow quirks. at that point she gestures and her guards draw their weapons and step forwards.
-</text>
-<choice destination="disrespect2" text="no she will not ignore me!"/>
-<choice destination="end" text="backoff"/>
-</page>
+	<page ID="disrespect1">
+		<text>
+			You attempt to talk but her majesty ignores your attempts to get her
+			attention for several seconds before an irritated eyebrow quirks. at
+			that point she gestures and her guards draw their weapons and step
+			forwards.
+		</text>
+		<choice destination="disrespect2" text="no she will not ignore me!" />
+		<choice destination="end" text="backoff" />
+	</page>
 
-<page ID="disrespect2">
-<text>
-Her majesty glances up from her distraction "slay her" she commands. And with that it seems you have angered the ruler of the lizards to the point of pique, you'll be lucky to escape the village of Dammath with your life.
-</text>
-<effect type="manipulateDisposition" faction="saurian" value="-25"/>
-<choice destination="end" text="well crap"/>
-</page>
+	<page ID="disrespect2">
+		<text>
+			Her majesty glances up from her distraction "slay her" she commands. And
+			with that it seems you have angered the ruler of the lizards to the
+			point of pique, you'll be lucky to escape the village of Dammath with
+			your life.
+		</text>
+		<effect type="manipulateDisposition" faction="saurian" value="-25" />
+		<choice destination="end" text="well crap" />
+	</page>
 
 </Conversation>

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<text> there's no interaction to be had with a defeated arkosaur yet.
-</text>
-<choice destination="end" text="darn"/>
-</page>
+	<page ID="start">
+		<text> there's no interaction to be had with a defeated arkosaur yet.
+		</text>
+		<choice destination="end" text="darn" />
+	</page>
 
 </Conversation>

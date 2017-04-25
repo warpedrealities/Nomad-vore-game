@@ -1,83 +1,170 @@
 <?xml version="1.0"?>
 <Conversation>
-<!--written by cure-->
-<page ID="start">
-<text>Once it has become clear the lamia was victorious, the stare she gave you was an ominous one. Whatever her plans may be, it was only clear that if you did not think fast, it could only end badly. You are too weak to run, even if she seemed to be in no rush while circling around, with the length of her tail creating a gradually shrinking circle around you.</text>
-<choice destination="coiled" text="coiled"/>
-</page>
+	<!--written by cure -->
+	<page ID="start">
+		<text>Once it has become clear the lamia was victorious, the stare she
+			gave you was an ominous one. Whatever her plans may be, it was only
+			clear that if you did not think fast, it could only end badly. You
+			are too weak to run, even if she seemed to be in no rush while
+			circling around, with the length of her tail creating a gradually
+			shrinking circle around you.</text>
+		<choice destination="coiled" text="coiled" />
+	</page>
 
-<page ID="coiled">
-<text>
-By the time her torso was in front of you, her body had closed in with a single loop, pinning your arms firmly to your side. Her grip was sudden and strong, lifting you up in the air and giving a slight spin as she reeled you in closer, continuing to add more coils of her tail to make sure your body couldn't budge. The sensual hug from her arms would almost be comforting without that crazy, determined look in her eyes, and the increasing pressure around your chest making every breath harder than the last.
-</text>
-<choice destination="oralvore0" text="don't pass out, focus on trying to breath"/>
-</page>
+	<page ID="coiled">
+		<text>
+			By the time her torso was in front of you, her body had closed in with
+			a single loop, pinning your arms firmly to your side. Her grip was
+			sudden and strong, lifting you up in the air and giving a slight spin
+			as she reeled you in closer, continuing to add more coils of her tail
+			to make sure your body couldn't budge. The sensual hug from her arms
+			would almost be comforting without that crazy, determined look in her
+			eyes, and the increasing pressure around your chest making every
+			breath harder than the last.
+		</text>
+		<choice destination="oralvore0" text="don't pass out, focus on trying to breath" />
+	</page>
 
-<page ID="oralvore0">
-<text>
-With each exhale, those powerful coils tightened, making it even harder to take in precious air. Your only thought was to stay focused on not suffocating, and getting every precious breath you can force in. The lamia move in close to your face, delighted by your strained expression. Her long tongue slips out to give a wet lick over your face, leaving a trail of saliva behind, and moaning in delight from the flavors. With a lick of her lips, and slowly parting her jaws to move in, you finally realized that she had decided you were going to be her meal.
-</text>
-<effect type="removeStatus" value="20"/>
-<choice destination="oralvore1" text="into her mouth you go"/>
-</page>
+	<page ID="oralvore0">
+		<text>
+			With each exhale, those powerful coils tightened, making it even harder
+			to take in precious air. Your only thought was to stay focused on not
+			suffocating, and getting every precious breath you can force in. The
+			lamia move in close to your face, delighted by your strained
+			expression. Her long tongue slips out to give a wet lick over your
+			face, leaving a trail of saliva behind, and moaning in delight from
+			the flavors. With a lick of her lips, and slowly parting her jaws to
+			move in, you finally realized that she had decided you were going to
+			be her meal.
+		</text>
+		<effect type="removeStatus" value="20" />
+		<choice destination="oralvore1" text="into her mouth you go" />
+	</page>
 
-<page ID="oralvore1">
-<text>
-Her warm breath washes over your face, as she lowers over your head, squeezing it in past her lips. In the darkness, you only get a face-full of a long, wet tongue curiously rubbing over any inch of  your head it can reach. It was already difficult to breath, and your connection to fresh air was just removed by a pair of sealed lips around your neck. The fact that her coils had to loosen and lower over your body actually made you eagerly anticipate her first swallow, so that your chest could finally expand and fill your lungs with much needed air. With your head now trapped in her tight throat, you would be assaulted with wet squeezing muscles, and strained eager swallows as the lamia worked her delicious treat inside.
+	<page ID="oralvore1">
+		<text>
+			Her warm breath washes over your face, as she lowers over your head,
+			squeezing it in past her lips. In the darkness, you only get a
+			face-full of a long, wet tongue curiously rubbing over any inch of
+			your head it can reach. It was already difficult to breath, and your
+			connection to fresh air was just removed by a pair of sealed lips
+			around your neck. The fact that her coils had to loosen and lower
+			over your body actually made you eagerly anticipate her first
+			swallow, so that your chest could finally expand and fill your lungs
+			with much needed air. With your head now trapped in her tight throat,
+			you would be assaulted with wet squeezing muscles, and strained eager
+			swallows as the lamia worked her delicious treat inside.
 
-</text>
-<choice destination="oralvore2" text="down the throat"/>
-</page>
+		</text>
+		<choice destination="oralvore2" text="down the throat" />
+	</page>
 
-<page ID="oralvore2">
-<text>
-Swallowed up to your chest, and arms getting stuck more firmly to your sides by her advancing lips, the lamia finally let her tightly constricting coils fall free from your dangling body. Her hands grasp your hips, and starting feeding you upwards deeper into those continuous swallows. You do your best to kick and twist your body, but nothing seems to overpower those hauntingly strong throat muscles. By the time your squirming rump begins to be swallowed, the lamia had already lifted her head, and set to finish you off with gravity on her side. Gulp and gulp, your uselessly dangling legs sank deeper into the ravenous lamia.
-</text>
-<choice destination="oralvore3" text="trapped in the stomach"/>
-</page>
+	<page ID="oralvore2">
+		<text>
+			Swallowed up to your chest, and arms getting stuck more firmly to your sides
+			by her advancing lips, the lamia finally let her tightly constricting
+			coils fall free from your dangling body. Her hands grasp your hips,
+			and starting feeding you upwards deeper into those continuous
+			swallows. You do your best to kick and twist your body, but nothing
+			seems to overpower those hauntingly strong throat muscles. By the
+			time your squirming rump begins to be swallowed, the lamia had
+			already lifted her head, and set to finish you off with gravity on
+			her side. Gulp and gulp, your uselessly dangling legs sank deeper
+			into the ravenous lamia.
+		</text>
+		<choice destination="oralvore3" text="trapped in the stomach" />
+	</page>
 
-<page ID="oralvore3">
-<text>
-A steady coating of saliva helped lubricate your body to make the transition into the tight grasp of her throat an easy one. No amount of struggling was stopping those squeezing muscles from working your body deeper, and finally dragging your feet into her mouth. To the outside world, you were now nothing but a person-shaped bulge slowly sliding into the thick tail of the lamia that had bested you. An endless sea of muscles constantly squeezing and stretching over you to make sure you slid smoothly right into her long stomach. The inside was full of tauntingly stale, difficult to breathe air, and coated in hot sticky juices that weren't the least bit comforting to feel clinging to your body.
-</text>
-<choice destination="strugglecheck" text="Struggle to break free"/>
-<choice destination="submit" text="Let it happen"/>
-</page>
+	<page ID="oralvore3">
+		<text>
+			A steady coating of saliva helped lubricate your body to make the
+			transition into the tight grasp of her throat an easy one. No amount
+			of struggling was stopping those squeezing muscles from working your
+			body deeper, and finally dragging your feet into her mouth. To the
+			outside world, you were now nothing but a person-shaped bulge slowly
+			sliding into the thick tail of the lamia that had bested you. An
+			endless sea of muscles constantly squeezing and stretching over you
+			to make sure you slid smoothly right into her long stomach. The
+			inside was full of tauntingly stale, difficult to breathe air, and
+			coated in hot sticky juices that weren't the least bit comforting to
+			feel clinging to your body.
+		</text>
+		<choice destination="strugglecheck" text="Struggle to break free" />
+		<choice destination="submit" text="Let it happen" />
+	</page>
 
-<check ID="strugglecheck">
-<test what="STRUGGLE" DC="12"/>
-<outcome destination="struggleescape"/>
-<outcome destination="struggledigest"/>
-</check>
+	<check ID="strugglecheck">
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="struggleescape" />
+		<outcome destination="struggledigest" />
+	</check>
 
-<page ID="struggleescape">
-<text>
-The stinging feeling covering your body sparks off a desperate panic in you. You are so deep inside, but you can't just give in and let yourself be just another easy meal. As you shake and push as violently as you can, your only thought is that even if you can't force her to spit you up, you would at least give her an upset stomach. Hands and feet sinking into the soft malleable walls as you push as hard as you can, shifting your weight from side to side, never letting there be a dull moment, you feel a ray of hope. The walls clamp down, desperately trying to stop your agitation, but this only inspires you to try more. Frantically struggling, you manage to succeed in upsetting the lamia's digestive system. With a strained groan, she bends over, looking visibly ill as her body can take no more. The same squeezes that claimed you so eagerly now wanted nothing more than to get your pushing and kicking body out. In a continuous swift motion, you are spit up on the floor, drenched in saliva, and leaving the keeled over lamia panting for air as she recovers from the revolting feeling you left inside of her.
-</text>
-<effect type="heal" value="0.1"/>
-<effect type="stunnpc" value="10"/>
+	<page ID="struggleescape">
+		<text>
+			The stinging feeling covering your body sparks off a desperate panic in
+			you. You are so deep inside, but you can't just give in and let
+			yourself be just another easy meal. As you shake and push as
+			violently as you can, your only thought is that even if you can't
+			force her to spit you up, you would at least give her an upset
+			stomach. Hands and feet sinking into the soft malleable walls as you
+			push as hard as you can, shifting your weight from side to side,
+			never letting there be a dull moment, you feel a ray of hope. The
+			walls clamp down, desperately trying to stop your agitation, but this
+			only inspires you to try more. Frantically struggling, you manage to
+			succeed in upsetting the lamia's digestive system. With a strained
+			groan, she bends over, looking visibly ill as her body can take no
+			more. The same squeezes that claimed you so eagerly now wanted
+			nothing more than to get your pushing and kicking body out. In a
+			continuous swift motion, you are spit up on the floor, drenched in
+			saliva, and leaving the keeled over lamia panting for air as she
+			recovers from the revolting feeling you left inside of her.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
 
-<choice destination="end" text="get clear"/>
-</page>
+		<choice destination="end" text="get clear" />
+	</page>
 
-<page ID="struggledigest">
-<text>
-There is no way you can just let her have you, so you try to fight. You push one way, but the soft walls of the stomach squeeze back twice as hard. You kick, and the stomach churns and gurgles around you. You start to realize just how drained and weak your body is when you aren't even able to overcome to slightest of rippling all around you, massaging those gooey fluids all over you. Your mind starts to go fuzzy as you exert every last bit of your strength in what you think is a hard fought battle for freedom, when in reality, you were barely moving anymore. The tingling burning feeling spreads throughout your body, and those digestive fluids get to work.
-</text>
-<choice destination="gameover" text="digested"/>
-</page>
+	<page ID="struggledigest">
+		<text>
+			There is no way you can just let her have you, so you try to fight. You
+			push one way, but the soft walls of the stomach squeeze back twice as
+			hard. You kick, and the stomach churns and gurgles around you. You
+			start to realize just how drained and weak your body is when you
+			aren't even able to overcome to slightest of rippling all around you,
+			massaging those gooey fluids all over you. Your mind starts to go
+			fuzzy as you exert every last bit of your strength in what you think
+			is a hard fought battle for freedom, when in reality, you were barely
+			moving anymore. The tingling burning feeling spreads throughout your
+			body, and those digestive fluids get to work.
+		</text>
+		<choice destination="gameover" text="digested" />
+	</page>
 
-<page ID="submit">
-<text>
-The heat was building up, and the soft walls were squeezing tighter, churning and pressing up against every inch of your body to make sure those clingy fluids were nicely spread out over your body. You knew there was no way out, and accepted your defeat as just yet another meal to the lamia. The idle struggles you could supply from inside barely made that lump in her tail move while it molded so strongly to your form. The heat continued to build up to an uncomfortable level, and the supply of available breathable air quickly dwindled. Before her digestion was able to kick in, you were granted the sweet mercy of a fading consciousness, brought on by the low oxygen supply.
-</text>
-<choice destination="gameover" text="digested"/>
-</page>
+	<page ID="submit">
+		<text>
+			The heat was building up, and the soft walls were squeezing tighter,
+			churning and pressing up against every inch of your body to make sure
+			those clingy fluids were nicely spread out over your body. You knew
+			there was no way out, and accepted your defeat as just yet another
+			meal to the lamia. The idle struggles you could supply from inside
+			barely made that lump in her tail move while it molded so strongly to
+			your form. The heat continued to build up to an uncomfortable level,
+			and the supply of available breathable air quickly dwindled. Before
+			her digestion was able to kick in, you were granted the sweet mercy
+			of a fading consciousness, brought on by the low oxygen supply.
+		</text>
+		<choice destination="gameover" text="digested" />
+	</page>
 
-<gameover ID="gameover">
-<text>
-Your new identity as a lump was short lived, and in a few quick hours, your body digested away into nutrients for the lamia, and any sign of a meal in her tail was long gone. The lamia was free to fight another day, with you being nothing more than a pool of delicious nutrients, set to become a part of something much greater than you once were.
-</text>
-</gameover>
+	<gameover ID="gameover">
+		<text>
+			Your new identity as a lump was short lived, and in a few quick hours,
+			your body digested away into nutrients for the lamia, and any sign of
+			a meal in her tail was long gone. The lamia was free to fight another
+			day, with you being nothing more than a pool of delicious nutrients,
+			set to become a part of something much greater than you once were.
+		</text>
+	</gameover>
 
 </Conversation>

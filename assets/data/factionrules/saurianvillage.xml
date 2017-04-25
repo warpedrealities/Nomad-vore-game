@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <rules>
-<superRule subject="Arissa" level="2" violation="ATTACK">
-<factionRelationship faction="saurian" mod="-10"/>
-</superRule>
-<superRule subject="Suri" level="2" violation="ATTACK">
-<factionRelationship faction="saurian" mod="-10"/>
-</superRule>
-<superRule subject="peasant" level="2" violation="ATTACK">
-<factionRelationship faction="saurian" mod="-10"/>
-</superRule>
-<superRule subject="warrior" level="2" violation="ATTACK">
-<factionRelationship faction="saurian" mod="-10"/>
-</superRule>
-<superRule subject="Laurisse" level="4" violation="ATTACK">
-<factionRelationship faction="saurian" mod="-20"/>
-</superRule>
+	<superRule subject="Arissa" level="2" violation="ATTACK">
+		<factionRelationship faction="saurian" mod="-10" />
+	</superRule>
+	<superRule subject="Suri" level="2" violation="ATTACK">
+		<factionRelationship faction="saurian" mod="-10" />
+	</superRule>
+	<superRule subject="peasant" level="2" violation="ATTACK">
+		<factionRelationship faction="saurian" mod="-10" />
+	</superRule>
+	<superRule subject="warrior" level="2" violation="ATTACK">
+		<factionRelationship faction="saurian" mod="-10" />
+	</superRule>
+	<superRule subject="Laurisse" level="4" violation="ATTACK">
+		<factionRelationship faction="saurian" mod="-20" />
+	</superRule>
 
-<witness name="peasant"/>
-<witness name="warrior"/>
+	<witness name="peasant" />
+	<witness name="warrior" />
 </rules>

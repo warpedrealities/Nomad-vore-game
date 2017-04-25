@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
-<ItemEquip name="iron buckler" weight="2" slot="ACCESSORY" value="250">
-<description>
-A circular metal buckler worn on the arm as an accessory and defensive aid, +2 to parry and -1 shock protection.
-</description>
-<modifier>
-<parry value="2"/>
-<shock value="-1"/>
-</modifier>
+<ItemEquip name="iron buckler" weight="2" slot="ACCESSORY"
+	value="250">
+	<description>
+		A circular metal buckler worn on the arm as an accessory and defensive
+		aid, +2 to parry and -1 shock protection.
+	</description>
+	<modifier>
+		<parry value="2" />
+		<shock value="-1" />
+	</modifier>
 </ItemEquip>

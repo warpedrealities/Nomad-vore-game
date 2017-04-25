@@ -1,14 +1,46 @@
 <?xml version="1.0"?>
 <entry name="LF:raijin">
-<text>
-description: At less than 4 feet including horns this form is notably stunted in comparison to the other reptilio-humanoid xenoforms. The blue colouration also seems somewhat unusual. Physically the creature is probably little direct threat with stunted claws and a less than imposing physical build. However the creature is clearly capable of projecting electrical energy without mechanical aid. LBREAK
-biological findings: The lack of physical mass and thus strength however can be explained by the nutritional requirements of assembling the crystalline network inside its body. This web of crystalline threads stretches throughout its entire body and centralizes in the bones of the fingers, horns and a specialist organ within the torso. This organ seems to be nothing more than a sack grown around a single large gemstone of clearly biological origin, the gemstone seems to be the source of the projective electroshock power of the Raijin. It's intricacies indicate that artificial means such as genetic engineering may have been used to make this a part of the species biology. However you lack the tools to conclusively prove this hypothesis. It should be noted that while the biological matrices of the crystall node break down within hours of removal from the living host that you can duplicate them now with suitable raw materials, which may allow a mechanical means of duplicating their electrical projection ability. LBREAK
-Tactical assessment: The raijin's lack of physical threat but projective abilities make it more of a danger at range, alas the raijin appears to know this as well and will seek to open up the distance if forced into melee. Use of nets or other means of immobilizing or impeding the creature may be necessary if a melee approach is to be successfully utilized against it. 
- additionally the network of crystalline pathways throughout the creature's body is highly conductive. However this means that electrical attacks are significantly less effective rather than more as the crystalline threads will absorb the voltage and insulated channels will divert the flow harmlessly into its electrical organ, in effect giving the creature a charge up. Further notes, it hardly needs be stated but due to its attack metallic or highly conductive armour will prove less than effective against its lightning ability.
-</text>
-<requirement name="raijin" count="1"/>
-<recipe_reward recipe="thunderstone"/>
-<recipe_reward recipe="zapgun"/>
-<recipe_reward recipe="tesla_rifle"/>
+	<text>
+		description: At less than 4 feet including horns this form is notably stunted in
+		comparison to the other reptilio-humanoid xenoforms. The blue
+		colouration also seems somewhat unusual. Physically the creature is
+		probably little direct threat with stunted claws and a less than
+		imposing physical build. However the creature is clearly capable of
+		projecting electrical energy without mechanical aid. LBREAK
+		biological findings: The lack of physical mass and thus strength however can be
+		explained by the nutritional requirements of assembling the
+		crystalline network inside its body. This web of crystalline threads
+		stretches throughout its entire body and centralizes in the bones of
+		the fingers, horns and a specialist organ within the torso. This organ
+		seems to be nothing more than a sack grown around a single large
+		gemstone of clearly biological origin, the gemstone seems to be the
+		source of the projective electroshock power of the Raijin. It's
+		intricacies indicate that artificial means such as genetic engineering
+		may have been used to make this a part of the species biology. However
+		you lack the tools to conclusively prove this hypothesis. It should be
+		noted that while the biological matrices of the crystall node break
+		down within hours of removal from the living host that you can
+		duplicate them now with suitable raw materials, which may allow a
+		mechanical means of duplicating their electrical projection ability.
+		LBREAK
+		Tactical assessment: The raijin's lack of physical threat but projective
+		abilities make it more of a danger at range, alas the raijin appears
+		to know this as well and will seek to open up the distance if forced
+		into melee. Use of nets or other means of immobilizing or impeding the
+		creature may be necessary if a melee approach is to be successfully
+		utilized against it.
+		additionally the network of crystalline pathways throughout the creature's body is
+		highly conductive. However this means that electrical attacks are
+		significantly less effective rather than more as the crystalline
+		threads will absorb the voltage and insulated channels will divert the
+		flow harmlessly into its electrical organ, in effect giving the
+		creature a charge up. Further notes, it hardly needs be stated but due
+		to its attack metallic or highly conductive armour will prove less
+		than effective against its lightning ability.
+	</text>
+	<requirement name="raijin" count="1" />
+	<recipe_reward recipe="thunderstone" />
+	<recipe_reward recipe="zapgun" />
+	<recipe_reward recipe="tesla_rifle" />
 
 </entry>

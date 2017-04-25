@@ -33,21 +33,20 @@ Over halfway past her gaping jaws now you know it won't take her long to chug yo
 
 <page ID="submit">
 <text>
-
+You're entirely curled up inside her now and as you feel her soft innards all around you you settle down. It's really quite comfortable in here, even if she is intending to break you down becoming another layer of fat on her already amply padded form doesn't sound that bad at all. You hear the predator amphibian chuckle and shift her position, settling slowly into the water until she's floating on her back. The frog stroking her gut and croaking in delight as she hears her belly starting to gently but unmistakeably gurgle and churn around you.
 </text>
 <choice destination="submitGO" text="let it happen"/>
 </page>
 
 <gameover ID="submitGO">
 <text>
-
-
+Inside the comfy depths of the frog girl's gut you feel yourself stewing and digesting away. The sensation is surprisingly pleasant if you're not bothered by your pending dissolution, the steady rocking and gurgling of her gut softening you down to mush over an indulgently long time. But in the end all that's left is that slurry of goopy former space traveller, your form now a soft pliant mass in her tummy as she kneads her hands into her chub. The frog girl letting out delighted ribbits at feeling beyond her fat nothing more solid than a soup that her form steadily absorbs. Her tummy returning from its former distension to something more trim but still rounded as your nutrients are distributed to add to her fat softness.
 </text>
 </gameover>
 
 <page ID="struggle">
 <text>
-
+You feel her patting her gut and smacking her lips in satisfaction and renew your struggles. You're not about to sit here quietly and get churned into more pudge on this chubby amphibian. The patpats of the frog seem somewhat condescending as they patpat her gut now that you vigorously attempt to upset her ample gut and escape your curvaceous prison. One can only hope you're too unruly a meal to keep down.
 </text>
 <choice destination="strugglecheck" text="must escape"/>
 </page>
@@ -60,7 +59,7 @@ Over halfway past her gaping jaws now you know it won't take her long to chug yo
 
 <page ID="escape">
 <text>
-
+The frog girl is indulgent in her doting on her gut initially. But as you really get going in vigorously shoving and pushing at her insides she loses her condescending complacency and starts to urp and croak in distress, pressing her hands into her soft and distended belly to try and settle it. But even that is not enough to stop you as your stamina and energy proves too much for her. She lets out a sickening urp and doubles over in distress, retching as you take this moment to force your way back up her throat. You land in a heap amidst the mire waters, splashing into the dirty liquids as she horks you up and then collapses into a dismayed heap.
 </text>
 <effect type="heal" value="0.1"/>
 <effect type="stunnpc" value="10"/>
@@ -69,14 +68,14 @@ Over halfway past her gaping jaws now you know it won't take her long to chug yo
 
 <page ID="gurgle">
 <text>
-
+The frog girl dotes on her gut indulgently as you become unruly and uppity inside her belly. As you get a bit more vigorous the soft ribbiting and contentment of her resting form does give way somewhat to her giving you a squeeze with tummy muscles and both hands. But nothing more than that is garnered by your spirited attempt to escape. Your inevitable succumbing to fatigue makes the froggy give you a patpat through the walls of her chubby tummy, as if to go 'there there' about your stirling but ultimately futile effort to escape her innards. The gurgling digestive fluids are starting to get a bit more active around you as you realize there's nought you can do except turn into another layer of fat.
 </text>
 <choice destination="struggleGO" text="gurgle"/>
 </page>
 
 <gameover ID="struggleGO">
 <text>
-
+You can't escape, but that doesn't stop you squirming as she digests you. Your occasional resigned whimper and palm print pushing out doesn't get anything more than those condescending and doting pats from her though as you gurgle away. And in time nought is left inside her that would tell anyone that a spacetraveller had met her end inside the amphibian, her gut turning still softer under her hands as your mass turns liquid and compacts into a dense nutritious mass. Once that's done her gut trims out further, distributing the chub from your form all over to add to her thighs, ass, breasts and middle. What once was you is now a thin layer of well distributed softness covering the form of this dangerously curvaceous predator.
 </text>
 </gameover>
 

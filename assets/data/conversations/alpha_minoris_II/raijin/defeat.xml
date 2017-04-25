@@ -1,21 +1,23 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<text> there's no interaction to be had with a defeated raijin yet. but you can study them now!
-</text>
-<choice destination="study" text="study her">
-<assertnot evaluate="hasResearch" research="raijin"/>
-</choice>
-<choice destination="end" text="darn"/>
-</page>
+	<page ID="start">
+		<text> there's no interaction to be had with a defeated raijin yet.
+			but you can study them now!
+		</text>
+		<choice destination="study" text="study her">
+			<assertnot evaluate="hasResearch" research="raijin" />
+		</choice>
+		<choice destination="end" text="darn" />
+	</page>
 
-<page ID="study">
-<text>
-You study and probe the raijin in a thorough and probably rather disagreeable way, the data you've collected should be very valuable.
-</text>
-<special effect="removenpc"/>
-<special effect="research" DC="10" data="raijin"/>
-<choice destination="end" text="time to do some research"/>
-</page>
+	<page ID="study">
+		<text>
+			You study and probe the raijin in a thorough and probably rather
+			disagreeable way, the data you've collected should be very valuable.
+		</text>
+		<special effect="removenpc" />
+		<special effect="research" DC="10" data="raijin" />
+		<choice destination="end" text="time to do some research" />
+	</page>
 
 </Conversation>

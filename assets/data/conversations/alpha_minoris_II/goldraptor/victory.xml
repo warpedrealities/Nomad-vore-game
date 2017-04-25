@@ -1,251 +1,501 @@
 <?xml version="1.0"?>
 <Conversation>
 
-<page ID="start">
-<text>
-Filled with lust you find yourself approaching the naughty raptor as she strokes her cock to hardness. Moistening her lips and grinning at the sight of you, those lips and that dick both drawing your eyes as you gaze upon her.<conditional><assertion evaluate="slothasitem" slot="2"/>Your <readequipment slot="2"/> seems too constraining for the needs burning within you and even as you approach you undress, leaving your garments scattered by the time you're standing in front of the raptor.</conditional> 
-</text>
-<choice destination="oralvorestart" text="kiss her">
-<preference fetish="oralvore"/>
-</choice>
-<choice destination="cockvore0" text="kneel before her">
-<preference fetish="cockvore"/>
-</choice>
-</page>
+	<page ID="start">
+		<text>
+			Filled with lust you find yourself approaching the naughty raptor as
+			she strokes her cock to hardness. Moistening her lips and grinning at
+			the sight of you, those lips and that dick both drawing your eyes as
+			you gaze upon her.
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				Your
+				<readequipment slot="2" />
+				seems too constraining for the needs burning within you and even as
+				you approach you undress, leaving your garments scattered by the
+				time you're standing in front of the raptor.
+			</conditional>
+		</text>
+		<choice destination="oralvorestart" text="kiss her">
+			<preference fetish="oralvore" />
+		</choice>
+		<choice destination="cockvore0" text="kneel before her">
+			<preference fetish="cockvore" />
+		</choice>
+	</page>
 
-<page ID="oralvorestart">
-<text>
-The raptor chirrs as you kiss and slip into her embrace. Her arms slipping around you, her erect cock pressing up against your thigh. The lusty lizard returning your kiss, that long forked tongue invading your mouth and her amber eyes half lidding. She pulls back from the kiss to lavish your face with a few licks, tasteing, leaving your face covered in saliva, her belly letting out a hungry growl before she goes back to kissing you.
-</text>
-<choice destination="oralvoresplit" text="mhmmm"/>
-</page>
+	<page ID="oralvorestart">
+		<text>
+			The raptor chirrs as you kiss and slip into her embrace. Her arms
+			slipping around you, her erect cock pressing up against your thigh.
+			The lusty lizard returning your kiss, that long forked tongue
+			invading your mouth and her amber eyes half lidding. She pulls back
+			from the kiss to lavish your face with a few licks, tasteing, leaving
+			your face covered in saliva, her belly letting out a hungry growl
+			before she goes back to kissing you.
+		</text>
+		<choice destination="oralvoresplit" text="mhmmm" />
+	</page>
 
-<page ID="oralvoresplit">
-<preference fetish="sex"/>
-<assertion evaluate="haspart" part="vagina"/>
-<assertnot evaluate="haspart" part="cock"/>
-<text>
-Her licks indicates she has a need you'll sate for her. But as she grinds her erection against you and feels it brush up between your legs against your snatch her grin widens and she slides a hand down to make it clear she has another need that she wants to sate. Those fingers first plying over your sex and then sliding to cup your thigh and hitch your leg up as she leans back, lining her cock up with your netherlips.
-</text>
-<choice destination="sex0" text="hardly an unwelcome proposition"/>
+	<page ID="oralvoresplit">
+		<preference fetish="sex" />
+		<assertion evaluate="haspart" part="vagina" />
+		<assertnot evaluate="haspart" part="cock" />
+		<text>
+			Her licks indicates she has a need you'll sate for her. But as she
+			grinds her erection against you and feels it brush up between your
+			legs against your snatch her grin widens and she slides a hand down
+			to make it clear she has another need that she wants to sate. Those
+			fingers first plying over your sex and then sliding to cup your thigh
+			and hitch your leg up as she leans back, lining her cock up with your
+			netherlips.
+		</text>
+		<choice destination="sex0" text="hardly an unwelcome proposition" />
 
-</page>
-
-
-<page ID="oralvoresplit">
-<text>
-Make outs with a lusty lizard are quite pleasing, though as she keeps on kissing her belly growls again more insistently. The raptor chirring as she pulls back, running her over long forked tongue over her lips afore stretching them wide to engulf your face. Her desire for you as a meal taking precedence over other needs as she sets about swallowing you down, cramming your head into her throat. Her neck bulging as she claimed your shoulders and a hearty GLUCKing sound drowns out her pleased chirs as you slip deeper inside her.
-</text>
-<choice destination="oralvorealt0" text="raptor food"/>
-</page>
-
-<page ID="oralvorealt0">
-<text>
-You can feel her member brushing against you as she eats you alive. But beyond prodding warmly at your thighs as she lifts you up she does nothing more with her erection while using both hands to cram you inside. Your feet lifted up off the floor as she lifts and feeds you past her lips, chirring loudly as you slide into her belly headfirst and she engulfs your waist swiftly enough. Only your legs outside as your body fills out her belly pressing it down atop her erection.
-</text>
-<choice destination="oralvorealt1" text="continue"/>
-</page>
-
-<page ID="oralvorealt1">
-<text>
-The raptor's dusky yellow belly stretches steadily around you as you pile in. One of her hands slipping down to her erection down beneath you to stroke off and grind her cock against her swollen belly as she devours your legs. It doesn't take her much longer to polish you off entirely and pack you away, sealed in that now massively distended gut as she masturbates and bucks her hips to grind her cock against your shifting form within her.
-</text>
-<choice destination="altoralstrugglecheck" text="try to force your way out"/>
-</page>
-
-<check ID="altoralstrugglecheck">
-<test what="STRUGGLE" DC="10"/>
-<outcome destination="altoralstruggleescape"/>
-<outcome destination="altoralstruggledigest"/>
-</check>
-
-<page ID="altoralstrugglescape">
-<text>
-You're not about to simply rest here contently. You might have been beguiled into this belly but you're not going to stay beguiled into padding her thighs and so you start jostling and pushing around at her insides. The crafty raptor issuing a distressed series of noises as she finds herself subject to an unruly meal disturbing her post devourment masturbation session. Soon enough it turns out to be too much for her, and with a suddenly strangled cry she rolls over onto her front to messily hork you up, the poor lizard looking most put upon as the last of you trails free of her. Her erection still untended to and her belly undistended, you should probably back up a tad afore she tries to lure you in again.
-
-</text>
-<effect type="heal" value="0.1"/>
-<effect type="stunnpc" value="5"/>
-<choice destination="end" text="get up"/>
-</page>
-
-<page ID="altoralstruggledigest">
-<text>
-You're not about to simply rest here contently. You might have been beguiled into this belly but you're not going to stay beguiled into padding her thighs and so you start jostling and pushing around at her insides. The crafty raptor issuing a distressed series of noises as she finds herself subject to an unruly meal disturbing her post devourment masturbation session. But as you shove at her insides she rolls over onto her front, pinning you between her body and the dirt so that your struggles only succeed in rubbing against her erection where it butts up against the bottom of her belly. Judging by the moans she 's uttering now you're doing less well, her gurgling gut working you over as you expend your strength against her insides. 
-</text>
-<choice destination="altoraldigest" text="digest"/>
-</page>
-
-<gameover ID="altoraldigest">
-<text>
-It's no use, you hear her gasping as you diminish inside her. Your struggles weakening forcing her to reach down past her softening belly and take over stimulating herself. In not too much longer you fade away, her chirrs and gasps the last you hear before she liquidates you entirely. Her gut rounding out as she cries out and climaxes, tailwhipping as she stains the ground beneath her with her seed and feels your remains compact with a glorp. All that's left as she rolls over onto her front is for her greedy guts to absorb your gloopy remains, that belly shrinking and flattening out as she chirs contently. Soon enough there is not a trace of you that remains.
-</text>
-
-</gameover>
-
-<page ID="sex0">
-<text>
-Seeing your expression she wastes no more time, one hand sliding down to clutch your derriere as she lowers you down onto her cock. The raptor letting out a delighted chirr as her thickness slides up inside of you. Her lips pressed back against your own in a kiss as your hips come down against her crotch, hilting and spearing you through with lust impeccably. Her thrusting hips starting their work as she adjusts her supportive grasp on your leg and ass, easily able it seems to fuck you standing up like this.
-
-</text>
-<choice destination="sex1" text="a capable lover"/>
-</page>
-
-<page ID="sex1">
-<text>
-You feel her hips rocking up and down beneath you as you hold onto her shoulders. The raptor vigorously fucking you, perhaps using her tail for balance as she remains leaned back and bouncing you upon her cock. Through it all her lips remain locked to yours, the kiss passionate, that long forked tongue invasive and lewd as it probes your mouth, truly none french like a reptile.
-</text>
-<choice destination="sex2" text="nearly there"/>
-</page>
-
-<page ID="sex2">
-<text>
-You feel your own pleasure building and you can tell from the rumbling chirring delight of your lover that her own is equally is equally close to boiling over. Her hip thrusts becoming faster, pistoning up with hip slapping lust as she breaks her kiss with you. Looking into your eyes, chirring, and then licking her lips. When the dam breaks its with a cry from the both of you as she orgasms and sends spurts of her seed up inside you. Cries that are swiftly muffled, with you by the mouth encompassing your face and with her by the faceful of lover now in her mouth as she sets about eating you alive.
-
-</text>
-<choice destination="oralvore0" text="from lover to food"/>
-</page>
-
-<page ID="oralvore0">
-<text>
-You feel her cock still spurting within you even as she sets about eating you alive. Her body starting to curl forwards as she swallows your head down her throat, licking over your chest as it and your shoulders are encompassed by her mouth. The predatory raptor only pulling her shaft free as she reaches the bottom of your ribs. Cum dribbling out between your legs as her cock slips free slickly and she straightens up, hands still supporting your rear and feeding you down her throat.
-</text>
-<choice destination="oralvore1" text="continue"/>
-</page>
-
-<page ID="oralvore1">
-<text>
-Your middle slowly disappears as the raptor girl swallows you up, cramming you inside of herself. The lizard's middle stretching out, yellow skin bulging as your head, then shoulders and chest pile into her belly. Your hips and cum leaking snatch slipping past her lips next. Her hands slipping from your ass to rest one on her gut and cock to rub them both as she works to make your legs disappear the same way the rest of you has. Your body curling up as she runs her tongue and lips along your thighs, then calves, then feet. 
-</text>
-<choice destination="oralvore2" text="eaten completely"/>
-</page>
-
-<page ID="oralvore2">
-<text>
-With a final chugging swallow you disappear entirely within her. A most filling post sex meal as the bulges you make settle into her belly, your form curling up as she shifts to get comfortable seated on the ground. One hand still busily jerking off to the sensation of you moving about in that distended dome of a gut the raptor is sporting now.
-</text>
-<choice destination="oralstrugglecheck" text="sex isn't worth this (Struggle)"/>
-<choice destination="oralsubmit" text="let her digest you"/>
-</page>
-
-<check ID="oralstrugglecheck">
-<test what="STRUGGLE" DC="10"/>
-<outcome destination="oralstruggleescape"/>
-<outcome destination="oralstruggledigest"/>
-</check>
-
-<page ID="oralstruggleescape">
-<text>
-With your lust starting to fade you come to your senses. Even a good screw isn't worth getting digested for. The raptor's chirring skips a beat as your squirms taken on a distinctly more vigorous aspect. Vigorously pushing at the now gurgling innards of the raptor you feel her shift and glurk as you make your attempt. the lizard rolling onto all fours with a hiss of dismay she tries to settle atop her belly and squeeze you into submission with her own weight. But to no avail, with a final hurgh she loses her lunch, body convulsing as she disgorges the meal that had disagreed with her. She looks dazed and slumps into a heap gasping as the last of you exits her lips. You get a little time to salvage your clothes and put them back on but soon after that the raptor will be back to trying to beguile you.
-</text>
-<effect type="heal" value="0.1"/>
-<effect type="stunnpc" value="5"/>
-<choice destination="end" text="get up"/>
-</page>
-
-<page ID="oralstruggledigest">
-<text>
-With your lust starting to fade you come to your senses. Even a good screw isn't worth getting digested for. The raptor's chirring skips a beat as your squirms taken on a distinctly more vigorous aspect. You vigorously shove at her insides, and you feel her place a hand against the bulge you make in her as her gut gurgles and churns around you. But for all your efforts her stomach seems more resilient than you are, her other hand working her slick cock as she feels her gut squeezing and pressing over you. The grinding process steadily overcoming your resistance, making your struggles more squirms and only pleasant for her. You hear her gasp, unable to see her cock spasm and stain her belly with cum as she sprawls backwards in delight..and settles in to absorb your body.
-</text>
-<choice destination="oralstruggleGO" text="digest"/>
-</page>
-
-<gameover ID="oralstruggleGO">
-<text>
-Your body succumbs steadily to the digestive process. The lewd raptor's belly turning round and softening, shrinking. Your form reduced to a mushy soup of nourishment, in very little time her belly is as flat as before though maybe a little softer. All that you were now reduced to a pleasing fuck and satisfying meal.
-</text>
-</gameover>
-
-<page ID="oralsubmit">
-<text>
-Well it was a good fuck. The tingles of pleasure and satisfaction from your nethers testify to her lustful talents. Maybe she deserves her meal, as you hear her chirring and jerking off you get comfortable. Letting her stomach take you as it gurgles and churns, pressing in from all sides and working you over. Your only movements to grind down playfully, hearing a gratified chirp of delight from the raptor as you press the bulge of her belly down on her cock. Soon after you hear her gasp, climaxing and staining her belly with cum, it's good she's enjoying digesting you as much as earlier. But you're not in much of a state to do more now, not much more than be food for her.
-</text>
-<choice destination="oralsubmitGO" text="digest"/>
-
-</page>
-
-<gameover ID="oralsubmitGO">
-<text>
-The digestive process is easy and satisfying for all involved. The raptor chirring and licking your flavour off her lips as her belly works you over and then works you down. The bulges you make rounding out and softening until she's left with a fluid dome of a belly. A belly that shrinks down as she sprawls there, utterly absorbing your form into her own and giving her a slightly more alluring ensemble of T and A.
-</text>
-</gameover>
-
-<page ID="cockvore0">
-<text>
-You kneel and she chuckles, rubbing her cocktip against your face..smearing you with pre as you reach up to stroke and caress that long, thick...hungry, cock of hers. She reaches a hand down and uses two clawtips to part her cumslit in front of you, letting you know her desire before she sets about satisfying it. The raptor wants you in her balls, as her cum. She wastes no more time. The raptor shifting her posture and fondling herself to place her cocktip against your forehead, then thrusting forwards with a moan of pleasure. Her cock engulfing the crown of your head before stretching down over your face. That voracious cumslit soon resting against your shoulders.
-</text>
-<choice destination="cockvore1" text="raptor cockfood"/>
-</page>
-
-<page ID="cockvore1">
-<text>
-you feel her thrusting her hips leisurely, slowly driving her cock down inch by inch over your shoulders and chest. Possibly putting on a show with how drawn out she's making your consumption. Or maybe it's for your benefit, letting you feel the slick cummy insides of her cock sliding against your naked body as she pulls more and more of you in. Working towards your hips, the pull of her rippling cock now more working to draw you in rather than her earlier hip movements. Her bulging cock lewdly slurping as she passes your waist and starts on your legs.
-</text>
-<choice destination="cockvore2" text="into her balls"/>
-</page>
-
-<page ID="cockvore2">
-<text>
-Only now do you feel her tracing the bulges in her cock that you make. The raptor leaning back as you begin to slide into her balls, piling into their cummy confines and stretching them, bulging and swelling them out with the meal that will sate them if the raptor has her way. Your own legs easily schlurped in now, that powerful cock rippling and pulling your legs up and in. Soon enough your feet disappear into her tip and course down her length, making you slow motion tumble and curl up as the last of you piles into her sack, the hot cummy walls stretchy yet snug around you. The raptor fondling her cock and no doubt having some fun plans for you, at least once you're her seed. 
-</text>
-<choice destination="cockpleasurecheck" text="try to change her mind"/>
-<choice destination="cocksubmit" text="let her spunk you"/>
-</page>
-
-<check ID="cockpleasurecheck">
-<test what="PLEASURE" DC="10"/>
-<outcome destination="cockescape"/>
-<outcome destination="cockdigest"/>
-</check>
-
-<page ID="cockescape">
-<text>
-As much as the trip down was fun, you're not onboard with the next part of her plan. and the only way out is to coerce her into cumming you out unmelted. Your hands dexterously rub at the insides of the sack, the slick cumsoaked fleshy embrace yielding to your digits as you hear her gasp. The Raptor now stroking herself and chirring in delight as you caress her from within her sensitive loins. Her plans derailed as she cannot help but give in to lust, jerking off as you writhe within her. Your efforts continuing until with a cry and gooey eruption you emerge victorious. Victorious and very sticky, landing in a splatter of cum in front of her after sliding up her cock, her shaft spurting other blasts of seed to land atop you. Probably best grab your clothes and do your best to get clear of the thwarted but perhaps satisfied lizard.
-</text>
-<effect type="heal" value="0.1"/>
-<effect type="stunnpc" value="10"/>
-<choice destination="end" text="get clear"/>
-</page>
-
-<page ID="cockdigest">
-<text>
-As much as you enjoyed slipping inside that cock you're not on board with being melted down into seed. Only way out is to pleasure her into spurting you out, as you stroke and caress the inside of her sack you hear her chirr and moan in delight at the sensations. The churning sack around you getting stimulated by your dexterous fingers, you hear her giggle and then feel a shifting around. Wait, was that even her voice giggling? As you feel a pressure from above and hear stereo gasps you realize what's happening, your devourer has found a playmate. A playmate who currently has the cock that ate you balls deep in her nethers, you can feel the pressure of her butt against the top of the sack containing you lift up, then lower down again.
-</text>
-<choice destination="raptorsexstruggle" text="be the fuel of lust"/>
-</page>
-
-<page ID="raptorsexstruggle">
-<text>
-Thwarted. Escape now would only lead you up into the womb of the raptor who is riding that cock above you. You continue pushing around for a time, blushing at the sound of the two going at it. the raptor bouncing up and down above you, helped by the hands of her playmate on her ass. The two making an uninhibited racket with their moans, chirs, chirps and gasps as they fuck with abandon. And as they do you can feel yourself getting softer, the sack around you stirred by their lust to melt you down faster.
-</text>
-<choice destination="cockvoreGO" text="orgasmic ending"/>
-</page>
-
-<gameover ID="cockvoreGO">
-<text>
-You hear them going at it, but gradually that sound fades, drowned out by the goopy churn of oozing cum around you. And steadily you become one with it, the two raptors getting closer and closer as steadily you melt down into the orgasm that's about to happen. The last of you desolidifying in a burbling clench as the sack squeezes around you and the raptor orgasms, sending gallons and gallons of hot seed up into her playmate. The brown femme moaning as she's distended and bulged out with all the cum, inevitably leaking a hefty amount as the golden raptor licks her face affectionately before easing her up and off. A sploosh of your remains splattering out as that cock pops free, all that you were now amounting into giving these two a really good time..and maybe some baby raptors somewhere along the line.
-</text>
-</gameover>
-
-<page ID="cocksubmit">
-<text>
-You shudder in delight, blushing as you settle in her balls. She must have plans, plans that require you to churn into a load of cum for her to use...plans you're either too perverse or too lusty to object to. You feel her fondling herself, murring and rubbing her sack with a free hand and chuckling at hearing you moan. And then as you resolve to be good cockfood in her burbling balls she gets to her feet, you can feel her walking, your form swaying against her thighs and knees with every step.
-</text>
-<choice destination="raptorsexsubmit" text="wonder where she's taking me"/>
-</page>
-
-<page ID="raptorsexsubmit">
-<text>
-You feel her balls sway to a stop as she comes to a halt, feel another pair of thighs against the sagging bulge you make in her balls. Hear sloppy kisses, chirrs, another giggle..then a long gasping moan. The raptor who cockvored you has found a playmate, the other looking back past her raised tail at the gold as she sticks it in eliciting that pleasured moan. The gold raptor groping that rear a moment before falling into motion, thrusting into the femme raptor's nethers and making the sack you're inside sway back and forth with each thrust, rocking against one set of thighs then the other as that dick is pumped in and out above you. And through it all you feel yourself diminishing with a smile on your face, a part of their lovemaking as you steady churn down. That sack growing rounder and sloshier as you relax into your role in their play.
-</text>
-<choice destination="cockvoresubmitGO" text="orgasmic ending"/>
-</page>
+	</page>
 
 
-<gameover ID="cockvoresubmitGO">
-<text>
-The last thing you hear is their lustful fun as you're boiled down into cum. Your form sloshing apart entirely in the swaying balls of the raptor as she fucks her playmate, pressing in close to bite her chin and gasp out a moaning orgasm as she reaches climax soon after the last bits of you slosh away. The two moaning and writhing as blast after blast of hot cum are sent rocketing into the femme raptor's nethers, filling her womb, distending her middle and towards the end resulting in splatters of cum leaking out around that thick dick to stain the ground beneath them. The two slumping into a cuddling heap as they finish, and by and large that's where your story ended. Though the three raptor children the femmy raptor had a few months later might count as a continuation of a sorts, maybe one or two had your eyes?
-</text>
-</gameover>
+	<page ID="oralvoresplit">
+		<text>
+			Make outs with a lusty lizard are quite pleasing, though as she keeps on
+			kissing her belly growls again more insistently. The raptor chirring
+			as she pulls back, running her over long forked tongue over her lips
+			afore stretching them wide to engulf your face. Her desire for you as
+			a meal taking precedence over other needs as she sets about
+			swallowing you down, cramming your head into her throat. Her neck
+			bulging as she claimed your shoulders and a hearty GLUCKing sound
+			drowns out her pleased chirs as you slip deeper inside her.
+		</text>
+		<choice destination="oralvorealt0" text="raptor food" />
+	</page>
+
+	<page ID="oralvorealt0">
+		<text>
+			You can feel her member brushing against you as she eats you alive. But
+			beyond prodding warmly at your thighs as she lifts you up she does
+			nothing more with her erection while using both hands to cram you
+			inside. Your feet lifted up off the floor as she lifts and feeds you
+			past her lips, chirring loudly as you slide into her belly headfirst
+			and she engulfs your waist swiftly enough. Only your legs outside as
+			your body fills out her belly pressing it down atop her erection.
+		</text>
+		<choice destination="oralvorealt1" text="continue" />
+	</page>
+
+	<page ID="oralvorealt1">
+		<text>
+			The raptor's dusky yellow belly stretches steadily around you as you
+			pile in. One of her hands slipping down to her erection down beneath
+			you to stroke off and grind her cock against her swollen belly as she
+			devours your legs. It doesn't take her much longer to polish you off
+			entirely and pack you away, sealed in that now massively distended
+			gut as she masturbates and bucks her hips to grind her cock against
+			your shifting form within her.
+		</text>
+		<choice destination="altoralstrugglecheck" text="try to force your way out" />
+	</page>
+
+	<check ID="altoralstrugglecheck">
+		<test what="STRUGGLE" DC="10" />
+		<outcome destination="altoralstruggleescape" />
+		<outcome destination="altoralstruggledigest" />
+	</check>
+
+	<page ID="altoralstrugglescape">
+		<text>
+			You're not about to simply rest here contently. You might have been
+			beguiled into this belly but you're not going to stay beguiled into
+			padding her thighs and so you start jostling and pushing around at
+			her insides. The crafty raptor issuing a distressed series of noises
+			as she finds herself subject to an unruly meal disturbing her post
+			devourment masturbation session. Soon enough it turns out to be too
+			much for her, and with a suddenly strangled cry she rolls over onto
+			her front to messily hork you up, the poor lizard looking most put
+			upon as the last of you trails free of her. Her erection still
+			untended to and her belly undistended, you should probably back up a
+			tad afore she tries to lure you in again.
+
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="5" />
+		<choice destination="end" text="get up" />
+	</page>
+
+	<page ID="altoralstruggledigest">
+		<text>
+			You're not about to simply rest here contently. You might have been
+			beguiled into this belly but you're not going to stay beguiled into
+			padding her thighs and so you start jostling and pushing around at
+			her insides. The crafty raptor issuing a distressed series of noises
+			as she finds herself subject to an unruly meal disturbing her post
+			devourment masturbation session. But as you shove at her insides she
+			rolls over onto her front, pinning you between her body and the dirt
+			so that your struggles only succeed in rubbing against her erection
+			where it butts up against the bottom of her belly. Judging by the
+			moans she 's uttering now you're doing less well, her gurgling gut
+			working you over as you expend your strength against her insides.
+		</text>
+		<choice destination="altoraldigest" text="digest" />
+	</page>
+
+	<gameover ID="altoraldigest">
+		<text>
+			It's no use, you hear her gasping as you diminish inside her. Your
+			struggles weakening forcing her to reach down past her softening
+			belly and take over stimulating herself. In not too much longer you
+			fade away, her chirrs and gasps the last you hear before she
+			liquidates you entirely. Her gut rounding out as she cries out and
+			climaxes, tailwhipping as she stains the ground beneath her with her
+			seed and feels your remains compact with a glorp. All that's left as
+			she rolls over onto her front is for her greedy guts to absorb your
+			gloopy remains, that belly shrinking and flattening out as she chirs
+			contently. Soon enough there is not a trace of you that remains.
+		</text>
+
+	</gameover>
+
+	<page ID="sex0">
+		<text>
+			Seeing your expression she wastes no more time, one hand sliding down to
+			clutch your derriere as she lowers you down onto her cock. The raptor
+			letting out a delighted chirr as her thickness slides up inside of
+			you. Her lips pressed back against your own in a kiss as your hips
+			come down against her crotch, hilting and spearing you through with
+			lust impeccably. Her thrusting hips starting their work as she
+			adjusts her supportive grasp on your leg and ass, easily able it
+			seems to fuck you standing up like this.
+
+		</text>
+		<choice destination="sex1" text="a capable lover" />
+	</page>
+
+	<page ID="sex1">
+		<text>
+			You feel her hips rocking up and down beneath you as you hold onto her
+			shoulders. The raptor vigorously fucking you, perhaps using her tail
+			for balance as she remains leaned back and bouncing you upon her
+			cock. Through it all her lips remain locked to yours, the kiss
+			passionate, that long forked tongue invasive and lewd as it probes
+			your mouth, truly none french like a reptile.
+		</text>
+		<choice destination="sex2" text="nearly there" />
+	</page>
+
+	<page ID="sex2">
+		<text>
+			You feel your own pleasure building and you can tell from the rumbling
+			chirring delight of your lover that her own is equally is equally
+			close to boiling over. Her hip thrusts becoming faster, pistoning up
+			with hip slapping lust as she breaks her kiss with you. Looking into
+			your eyes, chirring, and then licking her lips. When the dam breaks
+			its with a cry from the both of you as she orgasms and sends spurts
+			of her seed up inside you. Cries that are swiftly muffled, with you
+			by the mouth encompassing your face and with her by the faceful of
+			lover now in her mouth as she sets about eating you alive.
+
+		</text>
+		<choice destination="oralvore0" text="from lover to food" />
+	</page>
+
+	<page ID="oralvore0">
+		<text>
+			You feel her cock still spurting within you even as she sets about
+			eating you alive. Her body starting to curl forwards as she swallows
+			your head down her throat, licking over your chest as it and your
+			shoulders are encompassed by her mouth. The predatory raptor only
+			pulling her shaft free as she reaches the bottom of your ribs. Cum
+			dribbling out between your legs as her cock slips free slickly and
+			she straightens up, hands still supporting your rear and feeding you
+			down her throat.
+		</text>
+		<choice destination="oralvore1" text="continue" />
+	</page>
+
+	<page ID="oralvore1">
+		<text>
+			Your middle slowly disappears as the raptor girl swallows you up,
+			cramming you inside of herself. The lizard's middle stretching out,
+			yellow skin bulging as your head, then shoulders and chest pile into
+			her belly. Your hips and cum leaking snatch slipping past her lips
+			next. Her hands slipping from your ass to rest one on her gut and
+			cock to rub them both as she works to make your legs disappear the
+			same way the rest of you has. Your body curling up as she runs her
+			tongue and lips along your thighs, then calves, then feet.
+		</text>
+		<choice destination="oralvore2" text="eaten completely" />
+	</page>
+
+	<page ID="oralvore2">
+		<text>
+			With a final chugging swallow you disappear entirely within her. A most
+			filling post sex meal as the bulges you make settle into her belly,
+			your form curling up as she shifts to get comfortable seated on the
+			ground. One hand still busily jerking off to the sensation of you
+			moving about in that distended dome of a gut the raptor is sporting
+			now.
+		</text>
+		<choice destination="oralstrugglecheck" text="sex isn't worth this (Struggle)" />
+		<choice destination="oralsubmit" text="let her digest you" />
+	</page>
+
+	<check ID="oralstrugglecheck">
+		<test what="STRUGGLE" DC="10" />
+		<outcome destination="oralstruggleescape" />
+		<outcome destination="oralstruggledigest" />
+	</check>
+
+	<page ID="oralstruggleescape">
+		<text>
+			With your lust starting to fade you come to your senses. Even a good
+			screw isn't worth getting digested for. The raptor's chirring skips a
+			beat as your squirms taken on a distinctly more vigorous aspect.
+			Vigorously pushing at the now gurgling innards of the raptor you feel
+			her shift and glurk as you make your attempt. the lizard rolling onto
+			all fours with a hiss of dismay she tries to settle atop her belly
+			and squeeze you into submission with her own weight. But to no avail,
+			with a final hurgh she loses her lunch, body convulsing as she
+			disgorges the meal that had disagreed with her. She looks dazed and
+			slumps into a heap gasping as the last of you exits her lips. You get
+			a little time to salvage your clothes and put them back on but soon
+			after that the raptor will be back to trying to beguile you.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="5" />
+		<choice destination="end" text="get up" />
+	</page>
+
+	<page ID="oralstruggledigest">
+		<text>
+			With your lust starting to fade you come to your senses. Even a good
+			screw isn't worth getting digested for. The raptor's chirring skips a
+			beat as your squirms taken on a distinctly more vigorous aspect. You
+			vigorously shove at her insides, and you feel her place a hand
+			against the bulge you make in her as her gut gurgles and churns
+			around you. But for all your efforts her stomach seems more resilient
+			than you are, her other hand working her slick cock as she feels her
+			gut squeezing and pressing over you. The grinding process steadily
+			overcoming your resistance, making your struggles more squirms and
+			only pleasant for her. You hear her gasp, unable to see her cock
+			spasm and stain her belly with cum as she sprawls backwards in
+			delight..and settles in to absorb your body.
+		</text>
+		<choice destination="oralstruggleGO" text="digest" />
+	</page>
+
+	<gameover ID="oralstruggleGO">
+		<text>
+			Your body succumbs steadily to the digestive process. The lewd raptor's
+			belly turning round and softening, shrinking. Your form reduced to a
+			mushy soup of nourishment, in very little time her belly is as flat
+			as before though maybe a little softer. All that you were now reduced
+			to a pleasing fuck and satisfying meal.
+		</text>
+	</gameover>
+
+	<page ID="oralsubmit">
+		<text>
+			Well it was a good fuck. The tingles of pleasure and satisfaction from
+			your nethers testify to her lustful talents. Maybe she deserves her
+			meal, as you hear her chirring and jerking off you get comfortable.
+			Letting her stomach take you as it gurgles and churns, pressing in
+			from all sides and working you over. Your only movements to grind
+			down playfully, hearing a gratified chirp of delight from the raptor
+			as you press the bulge of her belly down on her cock. Soon after you
+			hear her gasp, climaxing and staining her belly with cum, it's good
+			she's enjoying digesting you as much as earlier. But you're not in
+			much of a state to do more now, not much more than be food for her.
+		</text>
+		<choice destination="oralsubmitGO" text="digest" />
+
+	</page>
+
+	<gameover ID="oralsubmitGO">
+		<text>
+			The digestive process is easy and satisfying for all involved. The
+			raptor chirring and licking your flavour off her lips as her belly
+			works you over and then works you down. The bulges you make rounding
+			out and softening until she's left with a fluid dome of a belly. A
+			belly that shrinks down as she sprawls there, utterly absorbing your
+			form into her own and giving her a slightly more alluring ensemble of
+			T and A.
+		</text>
+	</gameover>
+
+	<page ID="cockvore0">
+		<text>
+			You kneel and she chuckles, rubbing her cocktip against your
+			face..smearing you with pre as you reach up to stroke and caress that
+			long, thick...hungry, cock of hers. She reaches a hand down and uses
+			two clawtips to part her cumslit in front of you, letting you know
+			her desire before she sets about satisfying it. The raptor wants you
+			in her balls, as her cum. She wastes no more time. The raptor
+			shifting her posture and fondling herself to place her cocktip
+			against your forehead, then thrusting forwards with a moan of
+			pleasure. Her cock engulfing the crown of your head before stretching
+			down over your face. That voracious cumslit soon resting against your
+			shoulders.
+		</text>
+		<choice destination="cockvore1" text="raptor cockfood" />
+	</page>
+
+	<page ID="cockvore1">
+		<text>
+			you feel her thrusting her hips leisurely, slowly driving her cock down
+			inch by inch over your shoulders and chest. Possibly putting on a
+			show with how drawn out she's making your consumption. Or maybe it's
+			for your benefit, letting you feel the slick cummy insides of her
+			cock sliding against your naked body as she pulls more and more of
+			you in. Working towards your hips, the pull of her rippling cock now
+			more working to draw you in rather than her earlier hip movements.
+			Her bulging cock lewdly slurping as she passes your waist and starts
+			on your legs.
+		</text>
+		<choice destination="cockvore2" text="into her balls" />
+	</page>
+
+	<page ID="cockvore2">
+		<text>
+			Only now do you feel her tracing the bulges in her cock that you make.
+			The raptor leaning back as you begin to slide into her balls, piling
+			into their cummy confines and stretching them, bulging and swelling
+			them out with the meal that will sate them if the raptor has her way.
+			Your own legs easily schlurped in now, that powerful cock rippling
+			and pulling your legs up and in. Soon enough your feet disappear into
+			her tip and course down her length, making you slow motion tumble and
+			curl up as the last of you piles into her sack, the hot cummy walls
+			stretchy yet snug around you. The raptor fondling her cock and no
+			doubt having some fun plans for you, at least once you're her seed.
+		</text>
+		<choice destination="cockpleasurecheck" text="try to change her mind" />
+		<choice destination="cocksubmit" text="let her spunk you" />
+	</page>
+
+	<check ID="cockpleasurecheck">
+		<test what="PLEASURE" DC="10" />
+		<outcome destination="cockescape" />
+		<outcome destination="cockdigest" />
+	</check>
+
+	<page ID="cockescape">
+		<text>
+			As much as the trip down was fun, you're not onboard with the next part
+			of her plan. and the only way out is to coerce her into cumming you
+			out unmelted. Your hands dexterously rub at the insides of the sack,
+			the slick cumsoaked fleshy embrace yielding to your digits as you
+			hear her gasp. The Raptor now stroking herself and chirring in
+			delight as you caress her from within her sensitive loins. Her plans
+			derailed as she cannot help but give in to lust, jerking off as you
+			writhe within her. Your efforts continuing until with a cry and gooey
+			eruption you emerge victorious. Victorious and very sticky, landing
+			in a splatter of cum in front of her after sliding up her cock, her
+			shaft spurting other blasts of seed to land atop you. Probably best
+			grab your clothes and do your best to get clear of the thwarted but
+			perhaps satisfied lizard.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
+
+	<page ID="cockdigest">
+		<text>
+			As much as you enjoyed slipping inside that cock you're not on board
+			with being melted down into seed. Only way out is to pleasure her
+			into spurting you out, as you stroke and caress the inside of her
+			sack you hear her chirr and moan in delight at the sensations. The
+			churning sack around you getting stimulated by your dexterous
+			fingers, you hear her giggle and then feel a shifting around. Wait,
+			was that even her voice giggling? As you feel a pressure from above
+			and hear stereo gasps you realize what's happening, your devourer has
+			found a playmate. A playmate who currently has the cock that ate you
+			balls deep in her nethers, you can feel the pressure of her butt
+			against the top of the sack containing you lift up, then lower down
+			again.
+		</text>
+		<choice destination="raptorsexstruggle" text="be the fuel of lust" />
+	</page>
+
+	<page ID="raptorsexstruggle">
+		<text>
+			Thwarted. Escape now would only lead you up into the womb of the raptor who is
+			riding that cock above you. You continue pushing around for a time,
+			blushing at the sound of the two going at it. the raptor bouncing up
+			and down above you, helped by the hands of her playmate on her ass.
+			The two making an uninhibited racket with their moans, chirs, chirps
+			and gasps as they fuck with abandon. And as they do you can feel
+			yourself getting softer, the sack around you stirred by their lust to
+			melt you down faster.
+		</text>
+		<choice destination="cockvoreGO" text="orgasmic ending" />
+	</page>
+
+	<gameover ID="cockvoreGO">
+		<text>
+			You hear them going at it, but gradually that sound fades, drowned out
+			by the goopy churn of oozing cum around you. And steadily you become
+			one with it, the two raptors getting closer and closer as steadily
+			you melt down into the orgasm that's about to happen. The last of you
+			desolidifying in a burbling clench as the sack squeezes around you
+			and the raptor orgasms, sending gallons and gallons of hot seed up
+			into her playmate. The brown femme moaning as she's distended and
+			bulged out with all the cum, inevitably leaking a hefty amount as the
+			golden raptor licks her face affectionately before easing her up and
+			off. A sploosh of your remains splattering out as that cock pops
+			free, all that you were now amounting into giving these two a really
+			good time..and maybe some baby raptors somewhere along the line.
+		</text>
+	</gameover>
+
+	<page ID="cocksubmit">
+		<text>
+			You shudder in delight, blushing as you settle in her balls. She must
+			have plans, plans that require you to churn into a load of cum for
+			her to use...plans you're either too perverse or too lusty to object
+			to. You feel her fondling herself, murring and rubbing her sack with
+			a free hand and chuckling at hearing you moan. And then as you
+			resolve to be good cockfood in her burbling balls she gets to her
+			feet, you can feel her walking, your form swaying against her thighs
+			and knees with every step.
+		</text>
+		<choice destination="raptorsexsubmit" text="wonder where she's taking me" />
+	</page>
+
+	<page ID="raptorsexsubmit">
+		<text>
+			You feel her balls sway to a stop as she comes to a halt, feel another
+			pair of thighs against the sagging bulge you make in her balls. Hear
+			sloppy kisses, chirrs, another giggle..then a long gasping moan. The
+			raptor who cockvored you has found a playmate, the other looking back
+			past her raised tail at the gold as she sticks it in eliciting that
+			pleasured moan. The gold raptor groping that rear a moment before
+			falling into motion, thrusting into the femme raptor's nethers and
+			making the sack you're inside sway back and forth with each thrust,
+			rocking against one set of thighs then the other as that dick is
+			pumped in and out above you. And through it all you feel yourself
+			diminishing with a smile on your face, a part of their lovemaking as
+			you steady churn down. That sack growing rounder and sloshier as you
+			relax into your role in their play.
+		</text>
+		<choice destination="cockvoresubmitGO" text="orgasmic ending" />
+	</page>
+
+
+	<gameover ID="cockvoresubmitGO">
+		<text>
+			The last thing you hear is their lustful fun as you're boiled down into
+			cum. Your form sloshing apart entirely in the swaying balls of the
+			raptor as she fucks her playmate, pressing in close to bite her chin
+			and gasp out a moaning orgasm as she reaches climax soon after the
+			last bits of you slosh away. The two moaning and writhing as blast
+			after blast of hot cum are sent rocketing into the femme raptor's
+			nethers, filling her womb, distending her middle and towards the end
+			resulting in splatters of cum leaking out around that thick dick to
+			stain the ground beneath them. The two slumping into a cuddling heap
+			as they finish, and by and large that's where your story ended.
+			Though the three raptor children the femmy raptor had a few months
+			later might count as a continuation of a sorts, maybe one or two had
+			your eyes?
+		</text>
+	</gameover>
 
 </Conversation>

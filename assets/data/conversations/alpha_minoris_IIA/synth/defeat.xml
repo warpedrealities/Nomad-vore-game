@@ -1,103 +1,200 @@
 <?xml version="1.0"?>
 <Conversation>
-<!--written by sideromelane-->
-<page ID="start">
-<text> The Synth appears stunned, as if its programming was not designed to handle its current prediciment!
-</text>
-<choice destination="oralvore0" text="Hungry for Metal">
-<assertion evaluate="hasperk" perk="oralvore"/>
-</choice>
-<choice destination="cockvore0" text="You wonder what sounding with her would feel like...">
-<assertion evaluate="hasperk" perk="cockvore"/>
-</choice>
-<choice destination="Unbirth0" text="A life-size dildo in girl shape? Yes please...">
-<assertion evaluate="hasperk" perk="unbirthing"/>
-</choice>
-<choice destination="end" text="Leave it alone."/>
-</page>
+	<!--written by sideromelane -->
+	<page ID="start">
+		<text> The Synth appears stunned, as if its programming was not
+			designed to handle its current prediciment!
+		</text>
+		<choice destination="oralvore0" text="Hungry for Metal">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="cockvore0"
+			text="You wonder what sounding with her would feel like...">
+			<assertion evaluate="hasperk" perk="cockvore" />
+		</choice>
+		<choice destination="Unbirth0"
+			text="A life-size dildo in girl shape? Yes please...">
+			<assertion evaluate="hasperk" perk="unbirthing" />
+		</choice>
+		<choice destination="end" text="Leave it alone." />
+	</page>
 
-<page ID="cockvore0">
-<text>
-Sounding always seemed like an interesting fetish. The smooth synthflesh and curvacious body-shape tells you this could be the best cock-feeding experience you've ever had. The synth twitches its head slightly, fingers wiggling as it begins to reboot, but your hardening cock has other plans. The softly glowing eyes focus on your erection, not giving away any emotion, but the faintest hint of desire is kindled there. You reach out and press down on her shoulders, forcing the as-yet unresting machine onto its knees with a soft whirr of gears, and your cock slaps her in the face. The synthflesh is cool to the touch, but smooth and soft, and her mouth opens, a pre-programmed trigger telling the jaw servos to unfold. Her lips wrap around your cockhead, and suck it in, a vibrating massage surrounding the sensitive meat, heat and oily lubricant combining to imbue the experience with the sensation of using possibly the best sex toy ever made. Your balls twitch, as within moments you are climaxing in her mouth. As your cock, still rock hard, slides from her mouth, cum dribbles from her lower lip, nourishment unessesary to the hardware. It still seems largely inactive, just those glowing eyes and mouth moving as it licks your cock clean for you. 
-</text>
-<choice destination="cockvore1" text="Slip her in."/>
-</page>
+	<page ID="cockvore0">
+		<text>
+			Sounding always seemed like an interesting fetish. The smooth synthflesh and
+			curvacious body-shape tells you this could be the best cock-feeding
+			experience you've ever had. The synth twitches its head slightly,
+			fingers wiggling as it begins to reboot, but your hardening cock has
+			other plans. The softly glowing eyes focus on your erection, not
+			giving away any emotion, but the faintest hint of desire is kindled
+			there. You reach out and press down on her shoulders, forcing the
+			as-yet unresting machine onto its knees with a soft whirr of gears,
+			and your cock slaps her in the face. The synthflesh is cool to the
+			touch, but smooth and soft, and her mouth opens, a pre-programmed
+			trigger telling the jaw servos to unfold. Her lips wrap around your
+			cockhead, and suck it in, a vibrating massage surrounding the
+			sensitive meat, heat and oily lubricant combining to imbue the
+			experience with the sensation of using possibly the best sex toy ever
+			made. Your balls twitch, as within moments you are climaxing in her
+			mouth. As your cock, still rock hard, slides from her mouth, cum
+			dribbles from her lower lip, nourishment unessesary to the hardware.
+			It still seems largely inactive, just those glowing eyes and mouth
+			moving as it licks your cock clean for you.
+		</text>
+		<choice destination="cockvore1" text="Slip her in." />
+	</page>
 
-<page ID="cockvore1">
-<text>
-You wrap a hand around your cock, and the other goes to the back of the synthetic head. Gently, with another whirr of punmished gears, you guide the helpess machine face-first to your cock-slit. Your cock opens slowly, stretching greedily around the emotionless face, cum and precum oozing onto her features. The glowing eyes vanish inwards, but you can still feel a warmth, and leaning to one side, you can see a dim glow matching the colour of her eyes in the stretched bulge her head makes in the underside of your shaft. With a moan, you lean forward, pushing your cock over and around the unresisting synth, slurping more of her into your shaft each buck of your hips. A cool hand touches your inner thigh, still too weak to fight you but stroking up to your cock to feel around, working out where it's own head is. A weak push against you restults in her gently grasping your balls, her soon-to-be home. Your cock engulfs her shoulders, and begins oozing around her artifical breasts, swallowing her chest with ease, and trapping her arms. Both her hands writhe now, her feet starting to kick, but her efforts to stand up merely result in her pushing herself into your cock in a huge surge! Your balls expand rapidly, as her upper body is slurped into them in a rush, and you stagger slightly, you feel like that fleshy sack is ready to burst but there's still much more to go!
-</text>
-<choice destination="cockvore2" text="Lose your toy!"/>
-</page>
+	<page ID="cockvore1">
+		<text>
+			You wrap a hand around your cock, and the other goes to the back of the
+			synthetic head. Gently, with another whirr of punmished gears, you
+			guide the helpess machine face-first to your cock-slit. Your cock
+			opens slowly, stretching greedily around the emotionless face, cum
+			and precum oozing onto her features. The glowing eyes vanish inwards,
+			but you can still feel a warmth, and leaning to one side, you can see
+			a dim glow matching the colour of her eyes in the stretched bulge her
+			head makes in the underside of your shaft. With a moan, you lean
+			forward, pushing your cock over and around the unresisting synth,
+			slurping more of her into your shaft each buck of your hips. A cool
+			hand touches your inner thigh, still too weak to fight you but
+			stroking up to your cock to feel around, working out where it's own
+			head is. A weak push against you restults in her gently grasping your
+			balls, her soon-to-be home. Your cock engulfs her shoulders, and
+			begins oozing around her artifical breasts, swallowing her chest with
+			ease, and trapping her arms. Both her hands writhe now, her feet
+			starting to kick, but her efforts to stand up merely result in her
+			pushing herself into your cock in a huge surge! Your balls expand
+			rapidly, as her upper body is slurped into them in a rush, and you
+			stagger slightly, you feel like that fleshy sack is ready to burst
+			but there's still much more to go!
+		</text>
+		<choice destination="cockvore2" text="Lose your toy!" />
+	</page>
 
-<page ID="cockvore2">
-<text>
-You grab the Synths feet, and lift, straining your back and belly to hoist the machine up, and down again, slithering rapidly down your stretched-out cock and entirely into your balls. Her hips get stuck, for a few moments, but in passing you give her snatch a stroke, and plunge your fist into her, fucking her with your entire arm, ramming her down your hungry cock in short order. With a protest of unhappy whirrs and repeated threats that you would void her warranty, she is deposited entirely into your balls, her feet making a soft *slurp* as they vanish into your cock-slit, the flesh returning to it's normal erect proportions as her bulk is removed from within it's girth.
-</text>
-<choice destination="cockvore3" text="Break your toy."/>
-</page>
+	<page ID="cockvore2">
+		<text>
+			You grab the Synths feet, and lift, straining your back and belly to
+			hoist the machine up, and down again, slithering rapidly down your
+			stretched-out cock and entirely into your balls. Her hips get stuck,
+			for a few moments, but in passing you give her snatch a stroke, and
+			plunge your fist into her, fucking her with your entire arm, ramming
+			her down your hungry cock in short order. With a protest of unhappy
+			whirrs and repeated threats that you would void her warranty, she is
+			deposited entirely into your balls, her feet making a soft *slurp* as
+			they vanish into your cock-slit, the flesh returning to it's normal
+			erect proportions as her bulk is removed from within it's girth.
+		</text>
+		<choice destination="cockvore3" text="Break your toy." />
+	</page>
 
-<page ID="cockvore3">
-<text>
-The Synth puts up a fight in your balls, nearly her entire system rebooted and resisting your body. But these machines were, it seems, designed for pleasure, not war, and her fight is short-lived, your balls secreting fluids that first short out her circuits, resulting in a series of pleasant, tingling shocks that send you into paroxysms of pleasure, dropping you to your knees and squashing the squirming mass in your ballsack. Eventually though, even the synthetic materials of her artifial body succumb to the ultimatly superior organic form, and her body softens, and collapses, crumbling into a techno-organic slurry, and that final squishing, collapse drives you over the edge once more, and you shoot the robo-cum all over the floor, and the nearest wall in a torrent of released lust and pleasure.
-</text>
-<effect type="feed" value="25"/>
-<special effect="removenpc"/>
-<choice destination="end" text="Short loading times, needs more replayability."/>
-</page>
+	<page ID="cockvore3">
+		<text>
+			The Synth puts up a fight in your balls, nearly her entire system
+			rebooted and resisting your body. But these machines were, it seems,
+			designed for pleasure, not war, and her fight is short-lived, your
+			balls secreting fluids that first short out her circuits, resulting
+			in a series of pleasant, tingling shocks that send you into paroxysms
+			of pleasure, dropping you to your knees and squashing the squirming
+			mass in your ballsack. Eventually though, even the synthetic
+			materials of her artifial body succumb to the ultimatly superior
+			organic form, and her body softens, and collapses, crumbling into a
+			techno-organic slurry, and that final squishing, collapse drives you
+			over the edge once more, and you shoot the robo-cum all over the
+			floor, and the nearest wall in a torrent of released lust and
+			pleasure.
+		</text>
+		<effect type="feed" value="25" />
+		<special effect="removenpc" />
+		<choice destination="end"
+			text="Short loading times, needs more replayability." />
+	</page>
 
-<page ID="oralvore0">
-<text>
-No mercy for the machine! You take her unresisting hands, and guide them to your lips. You slip them in, and swallow, working the cool, smooth synth flesh down your throat, followed by her head. She remains unresisting, her program most certainly frozen in shock.
-</text>
-<choice destination="oralvore1" text="Interesting Flavour"/>
-</page>
+	<page ID="oralvore0">
+		<text>
+			No mercy for the machine! You take her unresisting hands, and guide
+			them to your lips. You slip them in, and swallow, working the cool,
+			smooth synth flesh down your throat, followed by her head. She
+			remains unresisting, her program most certainly frozen in shock.
+		</text>
+		<choice destination="oralvore1" text="Interesting Flavour" />
+	</page>
 
-<page ID="oralvore1">
-<text>
-The Synth vibrates slightly as you swallow her shoulders and chest, adding an extra thrill to the meal, but you don't pause, gulping more and more, working your lips over the soft firm mounds of her artifical breasts, your tongue soaking up the bland, plastic flavour. 
-</text>
-<choice destination="oralvore2" text="Finish her"/>
-</page>
+	<page ID="oralvore1">
+		<text>
+			The Synth vibrates slightly as you swallow her shoulders and chest,
+			adding an extra thrill to the meal, but you don't pause, gulping more
+			and more, working your lips over the soft firm mounds of her
+			artifical breasts, your tongue soaking up the bland, plastic flavour.
+		</text>
+		<choice destination="oralvore2" text="Finish her" />
+	</page>
 
-<page ID="oralvore2">
-<text>
-The synth wriggles it's legs as they are lifted upwards, aiding your ingestion as your lips glide over her wide hips, tongue sampling the slick, oily entrance of her sex, and finally, those thighs are sliding down your greedy gullet. Your lips close over her feet, and she's gone, a whirring, pleasantly vibrating weight in your gut.
-</text>
-<choice destination="oralvore3" text="Absorb the machine"/>
-</page>
+	<page ID="oralvore2">
+		<text>
+			The synth wriggles it's legs as they are lifted upwards, aiding your
+			ingestion as your lips glide over her wide hips, tongue sampling the
+			slick, oily entrance of her sex, and finally, those thighs are
+			sliding down your greedy gullet. Your lips close over her feet, and
+			she's gone, a whirring, pleasantly vibrating weight in your gut.
+		</text>
+		<choice destination="oralvore3" text="Absorb the machine" />
+	</page>
 
-<page ID="oralvore3">
-<text>
-The Synth is made of durable plastic and light steel, and takes an age to digest, but seems resigned to her fate, allowing you all the time you need without struggling unpleasantly. How your stomach handled the artifial flesh is a mystery but eventually, she's all gone.
-</text>
-<effect type="feed" value="25"/>
-<special effect="removenpc"/>
-<choice destination="end" text="Nice, but you could go another..."/>
-</page>
+	<page ID="oralvore3">
+		<text>
+			The Synth is made of durable plastic and light steel, and takes an age
+			to digest, but seems resigned to her fate, allowing you all the time
+			you need without struggling unpleasantly. How your stomach handled
+			the artifial flesh is a mystery but eventually, she's all gone.
+		</text>
+		<effect type="feed" value="25" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Nice, but you could go another..." />
+	</page>
 
-<page ID="Unbirth0">
-<text>
-You decide to treat the machine the way she had planned to treat you - to a pussy bath! You grab her shoulders, and force her to kneel. Perhaps sensing your intentions, she complies, and begins vibrating softly, tongue already darting out to run across your pussy lips, with electrifying sensations. You moan, and grab its head, pressing it tigher against your spasming body, already nearly at climax just from the oral sensations! As your body bucks in helpless orgasm, the Synth pushes her face in, sliding her head smoothly up your pussy with a slurp of juices and whirr of electronics. 
-</text>
-<choice destination="Unbirth1" text="Pleasant sensations"/>
-</page>
+	<page ID="Unbirth0">
+		<text>
+			You decide to treat the machine the way she had planned to treat you -
+			to a pussy bath! You grab her shoulders, and force her to kneel.
+			Perhaps sensing your intentions, she complies, and begins vibrating
+			softly, tongue already darting out to run across your pussy lips,
+			with electrifying sensations. You moan, and grab its head, pressing
+			it tigher against your spasming body, already nearly at climax just
+			from the oral sensations! As your body bucks in helpless orgasm, the
+			Synth pushes her face in, sliding her head smoothly up your pussy
+			with a slurp of juices and whirr of electronics.
+		</text>
+		<choice destination="Unbirth1" text="Pleasant sensations" />
+	</page>
 
-<page ID="Unbirth1">
-<text>
-Her shoulders present a small barrier, but the machine does something, and you gasp in a second orgasm as her shoulders and tits are squeezed smoothly up your snatch and her head pops into your womb. You sink to your knees, settling over your womb-meal with a long, contented sigh of delight, her hips sending your thoughts tumbling again as they pass into you. Your buttocks hit the floor with a smack, and you groan, rubbing your clit with one hand while grasping the cool plastic feet with your other, sliding them in. She vanishes, leaving just a wet patch on the floor and a huge bulge in your belly.
-</text>
-<choice destination="Unbirth2" text="Absorb her"/>
-</page>
+	<page ID="Unbirth1">
+		<text>
+			Her shoulders present a small barrier, but the machine does something,
+			and you gasp in a second orgasm as her shoulders and tits are
+			squeezed smoothly up your snatch and her head pops into your womb.
+			You sink to your knees, settling over your womb-meal with a long,
+			contented sigh of delight, her hips sending your thoughts tumbling
+			again as they pass into you. Your buttocks hit the floor with a
+			smack, and you groan, rubbing your clit with one hand while grasping
+			the cool plastic feet with your other, sliding them in. She vanishes,
+			leaving just a wet patch on the floor and a huge bulge in your belly.
+		</text>
+		<choice destination="Unbirth2" text="Absorb her" />
+	</page>
 
-<page ID="Unbirth2">
-<text>
-The Synth curls tightly inside your womb, still vibrating and making small rocking motions that have you crashing flat to the floor in another wracking orgasm. Your belly clenches, your juices working overtime on it's inorganic occupant, and the synth is reduced to a gushing flood of oil and female cum within a matter of moments. Or was it hours? You're not sure, but it felt GREAT.
-</text>
+	<page ID="Unbirth2">
+		<text>
+			The Synth curls tightly inside your womb, still vibrating and making
+			small rocking motions that have you crashing flat to the floor in
+			another wracking orgasm. Your belly clenches, your juices working
+			overtime on it's inorganic occupant, and the synth is reduced to a
+			gushing flood of oil and female cum within a matter of moments. Or
+			was it hours? You're not sure, but it felt GREAT.
+		</text>
 
-<effect type="feed" value="25"/>
-<special effect="removenpc"/>
-<choice destination="end" text="What time is it...?"/>
-</page>
+		<effect type="feed" value="25" />
+		<special effect="removenpc" />
+		<choice destination="end" text="What time is it...?" />
+	</page>
 
 </Conversation>

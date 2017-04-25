@@ -1,101 +1,127 @@
 <?xml version="1.0"?>
 <Conversation>
 
-<page ID="start">
-<condition operator="equals" evaluate="LOCALFLAG" flag="talked" value="1"/>
-<text>
-"Greetings again, I hope my wares please you."
-</text>
-<choice destination="shop" text="I would like to discuss your wares"/>
-<choice destination="quest0" text="what's stopping you stock metal goods?">
-<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0" value="0"/>
-</choice>
-<choice destination="quest1" text="about the mine">
-<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="dammathquest0" value="1"/>
-</choice>
-<choice destination="end" text="I will come back later"/>
-</page>
-<page ID="start">
-<text>
-"Greetings, I am Arissa welcome to my shop, I hope my wares please you. Though I beg your apologies, I cannot sell my metal goods due to lack of stock."
-</text>
-<effect type="setlocalflag" flag="talked" value="1"/>
-<choice destination="shop" text="I would like to discuss your wares"/>
-<choice destination="quest0" text="what's stopping you stock metal goods?">
-<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0" value="0"/>
-</choice>
-<choice destination="quest1" text="about the mine">
-<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="dammathquest0" value="1"/>
-</choice>
-<choice destination="end" text="I will come back later"/>
-</page>
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
+			value="1" />
+		<text>
+			"Greetings again, I hope my wares please you."
+		</text>
+		<choice destination="shop" text="I would like to discuss your wares" />
+		<choice destination="quest0" text="what's stopping you stock metal goods?">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
+				value="0" />
+		</choice>
+		<choice destination="quest1" text="about the mine">
+			<condition operator="greaterthan" evaluate="GLOBALFLAG"
+				flag="dammathquest0" value="1" />
+		</choice>
+		<choice destination="end" text="I will come back later" />
+	</page>
+	<page ID="start">
+		<text>
+			"Greetings, I am Arissa welcome to my shop, I hope my wares please you. Though I
+			beg your apologies, I cannot sell my metal goods due to lack of
+			stock."
+		</text>
+		<effect type="setlocalflag" flag="talked" value="1" />
+		<choice destination="shop" text="I would like to discuss your wares" />
+		<choice destination="quest0" text="what's stopping you stock metal goods?">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
+				value="0" />
+		</choice>
+		<choice destination="quest1" text="about the mine">
+			<condition operator="greaterthan" evaluate="GLOBALFLAG"
+				flag="dammathquest0" value="1" />
+		</choice>
+		<choice destination="end" text="I will come back later" />
+	</page>
 
-<page ID="quest0">
-<!--start quest -->
-<text>
-"It's a terrible thing really. All our metal goods are made with ore brought up from the mine just north east of our town of Dammath. However, some time ago a beast made the mine its home. Since then all my stock has been bought up and without ore more cannot be made."
-</text>
-<choice destination="beast" text="tell me about this beast"/>
-<choice destination="acceptquest" text="Is there a reward for killing it"/>
-</page>
+	<page ID="quest0">
+		<!--start quest -->
+		<text>
+			"It's a terrible thing really. All our metal goods are made with ore
+			brought up from the mine just north east of our town of Dammath.
+			However, some time ago a beast made the mine its home. Since then all
+			my stock has been bought up and without ore more cannot be made."
+		</text>
+		<choice destination="beast" text="tell me about this beast" />
+		<choice destination="acceptquest" text="Is there a reward for killing it" />
+	</page>
 
-<page ID="acceptquest">
-<text>
-"There is a reward yes, but you are not the first to try claiming it. However, if you believe your resolve is up to the task I wish you luck. May your ancestors watch over you in this endeavour."
-</text>
-<effect type="setglobalflag" flag="dammathquest0" value="1"/>
-<choice destination="end" text="then i will slay this creature"/>
-</page>
+	<page ID="acceptquest">
+		<text>
+			"There is a reward yes, but you are not the first to try claiming it.
+			However, if you believe your resolve is up to the task I wish you
+			luck. May your ancestors watch over you in this endeavour."
+		</text>
+		<effect type="setglobalflag" flag="dammathquest0" value="1" />
+		<choice destination="end" text="then i will slay this creature" />
+	</page>
 
-<page ID="quest1">
-<!--quest concluded -->
-<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0" value="3"/>
-<text>
-"The miners have returned to their work. All is well, you have our gratitude."
-</text>
-<choice destination="shop" text="I would like to discuss your wares"/>
-<choice destination="end" text="that is good to hear, farewell"/>
-</page>
+	<page ID="quest1">
+		<!--quest concluded -->
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
+			value="3" />
+		<text>
+			"The miners have returned to their work. All is well, you have our
+			gratitude."
+		</text>
+		<choice destination="shop" text="I would like to discuss your wares" />
+		<choice destination="end" text="that is good to hear, farewell" />
+	</page>
 
-<page ID="quest1">
-<!--quest completion -->
-<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0" value="2"/>
-<text>
-"You have rid of us of this beast? truly? you have succeeded where many champions of our people have fallen. We will be honoured to call you friend as you have done us a great service. And here as promised is your reward." says the smiling Arissa as she hands over a small pouch of gold and bestows the thanks and friendship of her people upon you.
-</text>
+	<page ID="quest1">
+		<!--quest completion -->
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
+			value="2" />
+		<text>
+			"You have rid of us of this beast? truly? you have succeeded where many
+			champions of our people have fallen. We will be honoured to call you
+			friend as you have done us a great service. And here as promised is
+			your reward." says the smiling Arissa as she hands over a small pouch
+			of gold and bestows the thanks and friendship of her people upon you.
+		</text>
 
-<effect type="setglobalflag" flag="dammathquest0" value="3"/>
-<effect type="givegold" value="100"/>
-<effect type="experience" value="50"/>
-<effect type="setfactionflag" flag="friendship" value="1"/>
-<special effect="restockshop" ID="dammathstore"/>
-<choice destination="end" text="my thanks."/>
-</page>
+		<effect type="setglobalflag" flag="dammathquest0" value="3" />
+		<effect type="givegold" value="100" />
+		<effect type="experience" value="50" />
+		<effect type="setfactionflag" flag="friendship" value="1" />
+		<special effect="restockshop" ID="dammathstore" />
+		<choice destination="end" text="my thanks." />
+	</page>
 
-<page ID="quest1">
-<!--quest running -->
-<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0" value="1"/>
-<text>
-"The beast still plagues the mine, no work can be done there while this serpent exists to lure the miners into its gullet."
-</text>
-<choice destination="beast" text="tell me about this beast"/>
-<choice destination="end" text="I'll get around to killing it"/>
-</page>
+	<page ID="quest1">
+		<!--quest running -->
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
+			value="1" />
+		<text>
+			"The beast still plagues the mine, no work can be done there while this
+			serpent exists to lure the miners into its gullet."
+		</text>
+		<choice destination="beast" text="tell me about this beast" />
+		<choice destination="end" text="I'll get around to killing it" />
+	</page>
 
-<page ID="beast">
-<text>
-"It's a great serpent, black as the stars and beguiling in its gaze. It's why we've not rid ourselves of the beast already, it is cunning. If we send a great war party it hides in the deep until we leave, great champions are beguiled by its gaze..lost in desire until they give themselves unto it."
-</text>
-<choice destination="acceptquest" text="Is there a reward for killing it?">
-<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0" value="0"/>
-</choice>
-<choice destination="end" text="Thanks for the information"/>
-</page>
+	<page ID="beast">
+		<text>
+			"It's a great serpent, black as the stars and beguiling in its gaze. It's
+			why we've not rid ourselves of the beast already, it is cunning. If
+			we send a great war party it hides in the deep until we leave, great
+			champions are beguiled by its gaze..lost in desire until they give
+			themselves unto it."
+		</text>
+		<choice destination="acceptquest" text="Is there a reward for killing it?">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
+				value="0" />
+		</choice>
+		<choice destination="end" text="Thanks for the information" />
+	</page>
 
 
-<page ID="shop">
-<text>"I hope you find something that pleases you traveller"
-</text>
-<special effect="shop" ID="dammathstore"/>
-</page>
+	<page ID="shop">
+		<text>"I hope you find something that pleases you traveller"
+		</text>
+		<special effect="shop" ID="dammathstore" />
+	</page>
 </Conversation>

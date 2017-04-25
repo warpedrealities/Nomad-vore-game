@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<condition evaluate="FACTIONFLAG" value="1" operator="equals" flag="allegiance"/>
-<text>
-"greetings friend, be wary, there may be elves about"
-</text>
+	<page ID="start">
+		<condition evaluate="FACTIONFLAG" value="1" operator="equals"
+			flag="allegiance" />
+		<text>
+			"greetings friend, be wary, there may be elves about"
+		</text>
 
-<choice destination="end" text="*nod and carry on*"/>
-</page>
+		<choice destination="end" text="*nod and carry on*" />
+	</page>
 
-<page ID="start">
-<text>
-"keep your distance stranger"
-</text>
-<choice destination="end" text="*keep your distance*"/>
-</page>
+	<page ID="start">
+		<text>
+			"keep your distance stranger"
+		</text>
+		<choice destination="end" text="*keep your distance*" />
+	</page>
 
 </Conversation>

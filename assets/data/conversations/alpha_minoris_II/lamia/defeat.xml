@@ -1,108 +1,240 @@
 ﻿<?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<text>The lamia is slumped in defeat, a heap of muscular coils and a dazed and panting feminine upper half lying before you. She watches your approach uncertainly, but certainly cannot resist if you were to take advantage of her in this state.</text>
-<choice destination="tailsex0" text="stick that tailtip somewhere">
-<assertion evaluate="haspart" part="vagina"/>
-</choice>
-<choice destination="cockvore0" text="cockvore her">
-<assertion evaluate="hasperk" perk="cockvore"/>
-</choice>
-<choice destination="end" text="not interested right now"/>
-</page>
+	<page ID="start">
+		<text>The lamia is slumped in defeat, a heap of muscular coils and a
+			dazed and panting feminine upper half lying before you. She watches
+			your approach uncertainly, but certainly cannot resist if you were to
+			take advantage of her in this state.</text>
+		<choice destination="tailsex0" text="stick that tailtip somewhere">
+			<assertion evaluate="haspart" part="vagina" />
+		</choice>
+		<choice destination="cockvore0" text="cockvore her">
+			<assertion evaluate="hasperk" perk="cockvore" />
+		</choice>
+		<choice destination="end" text="not interested right now" />
+	</page>
 
-<page ID="cockvore0">
-<text>
-You can't help but think that long snakey tail would feel good sliding into a particularly...intimate, part of you. And so you approach her <conditional><assertion evaluate="slothasitem" slot="2"/>, baring yourself from the waist down as you do so </conditional> and fondling that special part of yours. The lamia watching your stroking hand and the <macro ID="penis_size_desc"/> length it holds with curiousity, unsure of your plans. 
-</text>
-<choice destination="cockvore1" text="time for your dick to taste her, tailfirst"/>
-</page>
+	<page ID="cockvore0">
+		<text>
+			You can't help but think that long snakey tail would feel good
+			sliding into a particularly...intimate, part of you. And so you
+			approach her
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				, baring yourself from the waist down as you do so
+			</conditional>
+			and fondling that special part of yours. The lamia watching your
+			stroking hand and the
+			<macro ID="penis_size_desc" />
+			length it holds with curiousity, unsure of your plans.
+		</text>
+		<choice destination="cockvore1"
+			text="time for your dick to taste her, tailfirst" />
+	</page>
 
-<page ID="cockvore1">
-<text>
-You bend forwards to scoop up her tailtip and feel her shift and coil uneasily. Then it's a simple matter to stick that tailtip in and the lamia's eyes widen and she writhes in resistance, but you seize firm her muscular tail a few feet above the tip and stop her from pulling away. Your shaft rippling and schlurping its way up the taper of her tail as you groan and look into her fearful gaze with a smirk. Your grip on her tail only helps to pull her deeper into you, working your hands up over her tail length and then pulling her deeper in with the help of your ravenous shaft.
-</text>
-<choice destination="cockvore2" text="her struggles are for naught, show her her place"/>
-</page>
+	<page ID="cockvore1">
+		<text>
+			You bend forwards to scoop up her tailtip and feel her shift and coil
+			uneasily. Then it's a simple matter to stick that tailtip in and the
+			lamia's eyes widen and she writhes in resistance, but you seize firm
+			her muscular tail a few feet above the tip and stop her from pulling
+			away. Your shaft rippling and schlurping its way up the taper of her
+			tail as you groan and look into her fearful gaze with a smirk. Your
+			grip on her tail only helps to pull her deeper into you, working your
+			hands up over her tail length and then pulling her deeper in with the
+			help of your ravenous shaft.
+		</text>
+		<choice destination="cockvore2"
+			text="her struggles are for naught, show her her place" />
+	</page>
 
-<page ID="cockvore2">
-<text>
-The lamia struggles against your ravenous shaft, uncoiling to try and knock you off your feet but alas for her you see the move coming in time to step over those muscular coils. Your response of sucking in a few inches of her tail with no hands to show your superiority over her doesn't cow her though does get a hissing whine out of her as you feel her tail starting to pile and coil in your balls wonderfully. You can feel more and more of her wriggling serpentine body sliding down your shaft and as it does so the lamia's forced to straighten, having less tail to work with in her futile attempts to stop you she grabs ahold of the ground in desperation.
-</text>
-<choice destination="cockvore3" text="conquer her with your cock"/>
-</page>
+	<page ID="cockvore2">
+		<text>
+			The lamia struggles against your ravenous shaft, uncoiling to try and
+			knock you off your feet but alas for her you see the move coming in
+			time to step over those muscular coils. Your response of sucking in a
+			few inches of her tail with no hands to show your superiority over
+			her doesn't cow her though does get a hissing whine out of her as you
+			feel her tail starting to pile and coil in your balls wonderfully.
+			You can feel more and more of her wriggling serpentine body sliding
+			down your shaft and as it does so the lamia's forced to straighten,
+			having less tail to work with in her futile attempts to stop you she
+			grabs ahold of the ground in desperation.
+		</text>
+		<choice destination="cockvore3" text="conquer her with your cock" />
+	</page>
 
-<page ID="cockvore3">
-<text>
-But to no avail as you lean back and with a moan on your lips and squeelches from your tip you draw her in. Your rippling cock working up towards where her girlsome part begins, all of her tail writhing now in your balls and length as you draw her in. Your nuts sagging low and shifting with the movements of her tail even as she glances back at your expression and redoubles her effort to pull away, pulling chunks of plant detritus in her hands she lets out a despairing cry and feels her breasts and shoulders are pulled into your tip. The lamia unable to reach behind herself for purchase on your shaft and soon unable to reach the ground either as your mighty cock lifts her up and pulls her in. Her hands twitching and flailing about uselessly as soon they're all thats left outside of the snake lady. 
-</text>
-<choice destination="cockvore4" text="finish her!"/>
-</page>
+	<page ID="cockvore3">
+		<text>
+			But to no avail as you lean back and with a moan on your lips and
+			squeelches from your tip you draw her in. Your rippling cock working
+			up towards where her girlsome part begins, all of her tail writhing
+			now in your balls and length as you draw her in. Your nuts sagging
+			low and shifting with the movements of her tail even as she glances
+			back at your expression and redoubles her effort to pull away,
+			pulling chunks of plant detritus in her hands she lets out a
+			despairing cry and feels her breasts and shoulders are pulled into
+			your tip. The lamia unable to reach behind herself for purchase on
+			your shaft and soon unable to reach the ground either as your mighty
+			cock lifts her up and pulls her in. Her hands twitching and flailing
+			about uselessly as soon they're all thats left outside of the snake
+			lady.
+		</text>
+		<choice destination="cockvore4" text="finish her!" />
+	</page>
 
-<page ID="cockvore4">
-<text>
-You look down at those flailing fingers and clench, pulling them inside. Your shaft bulging for only a little longer with her arms as they slither down to join the rest of her underneath the stroking of your hands. Your sack is massive now, hanging low past your knees and bloated with the mass of roiling lamia hissing and whining as she seeks to try and escape the cummy confines to which you have banished her. But there's no escape, not whole anyway, is there?
-</text>
-<choice destination="cockvore5" text="melt her!"/>
-</page>
+	<page ID="cockvore4">
+		<text>
+			You look down at those flailing fingers and clench, pulling them inside.
+			Your shaft bulging for only a little longer with her arms as they
+			slither down to join the rest of her underneath the stroking of your
+			hands. Your sack is massive now, hanging low past your knees and
+			bloated with the mass of roiling lamia hissing and whining as she
+			seeks to try and escape the cummy confines to which you have banished
+			her. But there's no escape, not whole anyway, is there?
+		</text>
+		<choice destination="cockvore5" text="melt her!" />
+	</page>
 
-<page ID="cockvore5">
-<text>
-There isn't, and you set about making that so. As you stroke your cock you feel your sack churn and hear the lamia squirm and hiss anew as she realizes what you're doing to her, turning all of that tail length and indeed the rest of her into a heaping load. The lamia's hands shoving out and her tail trying to uncoil and stretch your sack makes you groan but does nothing to help her escape. Instead the churning burbles of your balls only grow more pronounced as her struggles weaken and she begins to soften and succum. Her hissing whimpers overwhelmed by your gurgling balls now you feel her slow to stop and her motions taken over by the slosh of cum as she loses definition, spreading out into an immense load of jizz and giving you an incredible desire to let her loose. The lamia's form dissipating completely as you redouble your stroking and feel the pleasures and desires building...and then, unleashing.. the sensation of cumming out this load shuddering through you, going on and on as that mass of lamia turned cum erupts from your shaft to splatter on the ground. You can feel yourself starting to become faint as the orgasm roils through you, extended by each rocketing eruption of cum out of your shaft as your balls deflate steadily from their massive cum filled swollenness. The lamia forming an immense pool of jizz on the jungle floor as your climax prolongs yet longer before finally trailing off leaving you barely able to stand. You somehow manage to avoid faceplanting into the massive lamia puddle soaking into the leaflitter and take time to recover, and with that you should compose yourself and carry on leaving the reeking spunk pool to cool under the canopy.
-</text>
-<choice destination="end" text="carry on"/>
-<effect type="feed" value="110"/>
-<special effect="removenpc"/>
-</page>
+	<page ID="cockvore5">
+		<text>
+			There isn't, and you set about making that so. As you stroke your cock you
+			feel your sack churn and hear the lamia squirm and hiss anew as she
+			realizes what you're doing to her, turning all of that tail length
+			and indeed the rest of her into a heaping load. The lamia's hands
+			shoving out and her tail trying to uncoil and stretch your sack makes
+			you groan but does nothing to help her escape. Instead the churning
+			burbles of your balls only grow more pronounced as her struggles
+			weaken and she begins to soften and succum. Her hissing whimpers
+			overwhelmed by your gurgling balls now you feel her slow to stop and
+			her motions taken over by the slosh of cum as she loses definition,
+			spreading out into an immense load of jizz and giving you an
+			incredible desire to let her loose. The lamia's form dissipating
+			completely as you redouble your stroking and feel the pleasures and
+			desires building...and then, unleashing.. the sensation of cumming
+			out this load shuddering through you, going on and on as that mass of
+			lamia turned cum erupts from your shaft to splatter on the ground.
+			You can feel yourself starting to become faint as the orgasm roils
+			through you, extended by each rocketing eruption of cum out of your
+			shaft as your balls deflate steadily from their massive cum filled
+			swollenness. The lamia forming an immense pool of jizz on the jungle
+			floor as your climax prolongs yet longer before finally trailing off
+			leaving you barely able to stand. You somehow manage to avoid
+			faceplanting into the massive lamia puddle soaking into the
+			leaflitter and take time to recover, and with that you should compose
+			yourself and carry on leaving the reeking spunk pool to cool under
+			the canopy.
+		</text>
+		<choice destination="end" text="carry on" />
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+	</page>
 
-<!--written by mac tavish-->
-<page ID="tailsex0">
-<text>
-With a haughty smirk, <conditional><assertion evaluate="slothasitem" slot="2"/>you undo your belt and drop trow, </conditional>then clamber atop the scaley pile, grabbing the end of her tail along the way, until you’re face-to-face with her. Your free hand goes to her chin, covering it with your palm as your fingers squeeze her cheeks and force her gaze downward, forcing her to watch as you thread her tail between your legs from behind and start grinding on it. This also serves, after a moment, to hide the silly expression on your face and your hunched neck and shoulders as you finagle the still-protesting appendage between your slickened labia.
+	<!--written by mac tavish -->
+	<page ID="tailsex0">
+		<text>
+			With a haughty smirk,
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				you undo your belt and drop trow,
+			</conditional>
+			then clamber atop the scaley pile, grabbing the end of her tail along
+			the way, until you’re face-to-face with her. Your free hand goes to
+			her chin, covering it with your palm as your fingers squeeze her
+			cheeks and force her gaze downward, forcing her to watch as you
+			thread her tail between your legs from behind and start grinding on
+			it. This also serves, after a moment, to hide the silly expression on
+			your face and your hunched neck and shoulders as you finagle the
+			still-protesting appendage between your slickened labia.
 
-</text>
-<choice destination="tailsex1" text="ride the snake"/>
-<choice destination="unbirth0" text="you want more than just the tip inside">
-<assertion evaluate="hasperk" perk="unbirthing"/>
-</choice>
-</page>
+		</text>
+		<choice destination="tailsex1" text="ride the snake" />
+		<choice destination="unbirth0" text="you want more than just the tip inside">
+			<assertion evaluate="hasperk" perk="unbirthing" />
+		</choice>
+	</page>
 
-<page ID="tailsex1">
-<text>
-Once you’ve fed a good, sturdy amount of that smooth-scaled tail into your sopping sex, both of your hands are free to grab her by the shoulders, and you press your weight into her, making a rape-bed of her coils. Once some of the latter few inches are pinned under your crossed ankles behind you, you make sure you’re straddling her hips, then start moving yours, riding that length of squirming tail like so much cock.
-</text>
-<choice destination="tailsex2" text="proceed"/>
-</page>
+	<page ID="tailsex1">
+		<text>
+			Once you’ve fed a good, sturdy amount of that smooth-scaled tail into
+			your sopping sex, both of your hands are free to grab her by the
+			shoulders, and you press your weight into her, making a rape-bed of
+			her coils. Once some of the latter few inches are pinned under your
+			crossed ankles behind you, you make sure you’re straddling her hips,
+			then start moving yours, riding that length of squirming tail like so
+			much cock.
+		</text>
+		<choice destination="tailsex2" text="proceed" />
+	</page>
 
-<page ID="tailsex2">
-<text>
-Once you’re comfortable with the rhythm and certain of her submission, those tits of hers start looking like much more pleasant handholds, and your fingertips deeply dimple the supple flesh as you squeeze one roughly, her nipple grinding against your palm. The other hand moves between your legs to stimulate your clit, her own sex left ungraced by friction aside from the occasional brush of her own tail. When your orgasm finally comes, hers is still rising and, as cruelly as she surely would have treated you, had the tables been turned, you don’t even grant her that much, slipping up and off of her to re-gird your loins, leaving her desperate and mewling.
-</text>
-<choice destination="end" text="who cares, you've had your fun"/>
-<special effect="removenpc"/>
-</page>
+	<page ID="tailsex2">
+		<text>
+			Once you’re comfortable with the rhythm and certain of her submission,
+			those tits of hers start looking like much more pleasant handholds,
+			and your fingertips deeply dimple the supple flesh as you squeeze one
+			roughly, her nipple grinding against your palm. The other hand moves
+			between your legs to stimulate your clit, her own sex left ungraced
+			by friction aside from the occasional brush of her own tail. When
+			your orgasm finally comes, hers is still rising and, as cruelly as
+			she surely would have treated you, had the tables been turned, you
+			don’t even grant her that much, slipping up and off of her to re-gird
+			your loins, leaving her desperate and mewling.
+		</text>
+		<choice destination="end" text="who cares, you've had your fun" />
+		<special effect="removenpc" />
+	</page>
 
-<page ID="unbirth0">
-<text>
-After a few moments of enjoying the lamia’s wriggling struggles, the thought crosses your mind that you’d like a bit more than a few paltry inches of tail inside of you and, after eyeing the massive length of the girleater, you decide that there would be some poetic justice in indulging your perverse impulse. Rising slightly, you turn around and lie down on your victim’s body, a hand at the back of her head keeping it by yours so that she can stare down your body as you begin to draw hers in. Your vaginal walls pulse and ripple around her tail, which stretches them out the further up its taper you travel. Her eyes widen in horror, and her weak squirms under and in you only serve to stimulate you, drawing out moans from deep within your chest as you get your feet involved, gripping the tail between them and dragging it in, to feed the ever-growing, undulating bulge.
-</text>
-<choice destination="unbirth1" text="suck her in"/>
-</page>
+	<page ID="unbirth0">
+		<text>
+			After a few moments of enjoying the lamia’s wriggling struggles, the
+			thought crosses your mind that you’d like a bit more than a few
+			paltry inches of tail inside of you and, after eyeing the massive
+			length of the girleater, you decide that there would be some poetic
+			justice in indulging your perverse impulse. Rising slightly, you turn
+			around and lie down on your victim’s body, a hand at the back of her
+			head keeping it by yours so that she can stare down your body as you
+			begin to draw hers in. Your vaginal walls pulse and ripple around her
+			tail, which stretches them out the further up its taper you travel.
+			Her eyes widen in horror, and her weak squirms under and in you only
+			serve to stimulate you, drawing out moans from deep within your chest
+			as you get your feet involved, gripping the tail between them and
+			dragging it in, to feed the ever-growing, undulating bulge.
+		</text>
+		<choice destination="unbirth1" text="suck her in" />
+	</page>
 
-<page ID="unbirth1">
-<text>
-Eventually, you run out of tail, and must lean forward. Thankfully, at this point, her upper body is close enough that you can hook your insteps over her shoulders. In that time, however, she manages to twist around onto her belly, the motion subsequently rolling the rest of her muscular coils around inside your loins as she starts clawing at the ground in a last-ditch effort to escape. But it’s too late, and there’s too much of her already trapped, at the mercy of your reverse contractions, and your folds are soon hugging at her waist, then her shoulders.
-</text>
-<choice destination="unbirth2" text="snake makes the best pussy food"/>
-</page>
+	<page ID="unbirth1">
+		<text>
+			Eventually, you run out of tail, and must lean forward. Thankfully, at this
+			point, her upper body is close enough that you can hook your insteps
+			over her shoulders. In that time, however, she manages to twist
+			around onto her belly, the motion subsequently rolling the rest of
+			her muscular coils around inside your loins as she starts clawing at
+			the ground in a last-ditch effort to escape. But it’s too late, and
+			there’s too much of her already trapped, at the mercy of your reverse
+			contractions, and your folds are soon hugging at her waist, then her
+			shoulders.
+		</text>
+		<choice destination="unbirth2" text="snake makes the best pussy food" />
+	</page>
 
-<page ID="unbirth2">
-<text>
- The last the world ever properly sees of her, as the light shrinks in her sight, are her weakly-scrabbling fingers. After that, you’re free to nap where you are, folding your arms under your chin to elevate it above your bulging bed of flesh, which begins to squirm less and less as its occupant slowly loses oxygen. Then, stillness and quiet, as the walls of your womb squeeze mercilessly at the massive form, compacting it down and juicing it into sweet, feminine fluids. The final disappearance of the bump is preceded by your busy fingers finally being able to easily reach down there to get to work and is accompanied by your shrill cry and a clear, sticky spray that would make most firehoses jealous of its intensity.
-</text>
-<choice destination="end" text="done making a mess of a snake"/>
-<effect type="feed" value="110"/>
-<special effect="removenpc"/>
-</page>
+	<page ID="unbirth2">
+		<text>
+			The last the world ever properly sees of her, as the light shrinks in
+			her sight, are her weakly-scrabbling fingers. After that, you’re free
+			to nap where you are, folding your arms under your chin to elevate it
+			above your bulging bed of flesh, which begins to squirm less and less
+			as its occupant slowly loses oxygen. Then, stillness and quiet, as
+			the walls of your womb squeeze mercilessly at the massive form,
+			compacting it down and juicing it into sweet, feminine fluids. The
+			final disappearance of the bump is preceded by your busy fingers
+			finally being able to easily reach down there to get to work and is
+			accompanied by your shrill cry and a clear, sticky spray that would
+			make most firehoses jealous of its intensity.
+		</text>
+		<choice destination="end" text="done making a mess of a snake" />
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+	</page>
 
 </Conversation>

@@ -1,68 +1,137 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<text> The raptor girl pants and whines in defeat as you approach. It's clear you've bested her, she's at your mercy and she knows it.
-</text>
-<choice destination="sex0" text="fuck her">
-<assertion evaluate="haspart" part="penis"/>
-</choice>
-<choice destination="meal0" text="and she looks delicious">
-<assertion evaluate="hasperk" perk="oralvore"/>
-</choice>
-<choice destination="end" text="leave her be"/>
-</page>
+	<page ID="start">
+		<text> The raptor girl pants and whines in defeat as you approach.
+			It's clear you've bested her, she's at your mercy and she knows it.
+		</text>
+		<choice destination="sex0" text="fuck her">
+			<assertion evaluate="haspart" part="penis" />
+		</choice>
+		<choice destination="meal0" text="and she looks delicious">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="end" text="leave her be" />
+	</page>
 
-<page ID="sex0">
-<text>
-The raptor lets out a startled hiss and struggles as you press down over her, seizing her wrists and guiding them together you yank her hands up over her head with one hand to keep her claws at bay. With the other you 
-<conditional><assertion evaluate="slothasitem" slot="2"/> lower your pants and </conditional> stroke your <macro ID="penis_size_desc"/> cock to hardness. She feels it brush against her thigh and redoubles her struggles again, but by pinning one leg with your own and grasping her thigh with your hand you spread her legs before your needy prick. The hissing and snarling raptor no match for your lust as you push forwards into her, penetrating her folds, making her yield to you.<conditional><condition operator="greaterthan" evaluate="BODYVALUE" bodypart="penis" partvalue="length" value="12"/>Her tightness stretching around your shaft.</conditional>
-</text>
-<choice destination="sex1" text="start thrusting"/>
-</page>
+	<page ID="sex0">
+		<text>
+			The raptor lets out a startled hiss and struggles as you press down
+			over her, seizing her wrists and guiding them together you yank her
+			hands up over her head with one hand to keep her claws at bay. With
+			the other you
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				lower your pants and
+			</conditional>
+			stroke your
+			<macro ID="penis_size_desc" />
+			cock to hardness. She feels it brush against her thigh and redoubles
+			her struggles again, but by pinning one leg with your own and
+			grasping her thigh with your hand you spread her legs before your
+			needy prick. The hissing and snarling raptor no match for your lust
+			as you push forwards into her, penetrating her folds, making her
+			yield to you.
+			<conditional>
+				<condition operator="greaterthan" evaluate="BODYVALUE"
+					bodypart="penis" partvalue="length" value="12" />
+				Her tightness stretching around your shaft.
+			</conditional>
+		</text>
+		<choice destination="sex1" text="start thrusting" />
+	</page>
 
-<page ID="sex1">
-<text>
-The raptor gasps as you shove your length fully inside her <conditional><condition operator="greaterthan" evaluate="BODYVALUE" bodypart="penis" partvalue="length" value="18"/>, her belly bulging with the outline of your cock</conditional> . Used, violated she tries without success to free her hands and thus her claws. But she's no match for your domination and so you set to work, thrusting in and out of her tender sex. A moan issuing forth from your throat as hisses come from her own and you fall into a lusty rthythm, taking away her will to resist one thrust at a time as she's helpless to stop you.
-</text>
-<choice destination="sex2" text="fill her"/>
-</page>
+	<page ID="sex1">
+		<text>
+			The raptor gasps as you shove your length fully inside her
+			<conditional>
+				<condition operator="greaterthan" evaluate="BODYVALUE"
+					bodypart="penis" partvalue="length" value="18" />
+				, her belly bulging with the outline of your cock
+			</conditional>
+			. Used, violated she tries without success to free her hands and thus
+			her claws. But she's no match for your domination and so you set to
+			work, thrusting in and out of her tender sex. A moan issuing forth
+			from your throat as hisses come from her own and you fall into a
+			lusty rthythm, taking away her will to resist one thrust at a time as
+			she's helpless to stop you.
+		</text>
+		<choice destination="sex2" text="fill her" />
+	</page>
 
-<page ID="sex2">
-<text>
-The raptor is nice and tight, you pace yourself until you feel her stop struggling..until you feel her submit, and only then go to town and really start pounding her. The raptor gal shuddering as you thrust in and out her, hips working overtime as your pleasure builds. You use the reptile for your pleasure, and as she lets out a whimper you reach your climax, pumping your hot seed deep within her. You pull out and pull swiftly back, staining her chest and belly with spurts of your cum after filling her womb, marking her with your satisfied lust. As you trail off and stand up again you see her slink off, humiliated but unable to do anything about it. 
-</text>
-<special effect="removenpc"/>
-<choice destination="end" text="job done"/>
-</page>
+	<page ID="sex2">
+		<text>
+			The raptor is nice and tight, you pace yourself until you feel her stop
+			struggling..until you feel her submit, and only then go to town and
+			really start pounding her. The raptor gal shuddering as you thrust in
+			and out her, hips working overtime as your pleasure builds. You use
+			the reptile for your pleasure, and as she lets out a whimper you
+			reach your climax, pumping your hot seed deep within her. You pull
+			out and pull swiftly back, staining her chest and belly with spurts
+			of your cum after filling her womb, marking her with your satisfied
+			lust. As you trail off and stand up again you see her slink off,
+			humiliated but unable to do anything about it.
+		</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="job done" />
+	</page>
 
-<page ID="meal0">
-<text>
-That athletic raptor body really would look better as a bulge in your belly. And besides, scales have a flavour of all of their own. She seems to sense the intent behind your reward and lets out a whimper, but cannot resist in any meaningful way as you grab ahold of her hands and guide them into your lips. A swallow safely keeping those claws pressed together and starting to lift the raptor up into a seated position. Her whimpers and attempts to pull back all for naught as you reach down to seize her shoulders and pull her up and in.
-</text>
-<choice destination="meal1" text="tastey lizards belong in bellies"/>
-</page>
+	<page ID="meal0">
+		<text>
+			That athletic raptor body really would look better as a bulge in your
+			belly. And besides, scales have a flavour of all of their own. She
+			seems to sense the intent behind your reward and lets out a whimper,
+			but cannot resist in any meaningful way as you grab ahold of her
+			hands and guide them into your lips. A swallow safely keeping those
+			claws pressed together and starting to lift the raptor up into a
+			seated position. Her whimpers and attempts to pull back all for
+			naught as you reach down to seize her shoulders and pull her up and
+			in.
+		</text>
+		<choice destination="meal1" text="tastey lizards belong in bellies" />
+	</page>
 
-<page ID="meal1">
-<text>
-Her body is slender, easily consumed. Despite her protesting sounds as you engulf her head she cannot pull away, despite her squirms all she can do is pleasingly rub at the inside of your throat and mouth as her hands plunge down into your belly. She's going down, the mighty hunter turned prey as your belly begins to swell out around her arms and she's drawn helplessly down. Those petite breasts of hers were quite tastey though passing over your tongue, but the need to utterly conquer this predator and feel her bulging you out is too strong for you to linger overmuch.
-</text>
-<choice destination="meal2" text="eat her all the way up"/>
-</page>
+	<page ID="meal1">
+		<text>
+			Her body is slender, easily consumed. Despite her protesting sounds as
+			you engulf her head she cannot pull away, despite her squirms all she
+			can do is pleasingly rub at the inside of your throat and mouth as
+			her hands plunge down into your belly. She's going down, the mighty
+			hunter turned prey as your belly begins to swell out around her arms
+			and she's drawn helplessly down. Those petite breasts of hers were
+			quite tastey though passing over your tongue, but the need to utterly
+			conquer this predator and feel her bulging you out is too strong for
+			you to linger overmuch.
+		</text>
+		<choice destination="meal2" text="eat her all the way up" />
+	</page>
 
-<page ID="meal2">
-<text>
-Down down down the raptor goes. Her long reptilian tail and tastey firm legs sliding down your throat as you get comfortable and stroke over the growing bulge she's making, already a pleasing swell in your middle just like you predicted. And soon enough she's entirely trapped within you, her tail and toes vanishing past your lips as she's forced to curl up within the digestive embrace of your stomach. You hear her helplessly whimper and push out at your insides, earning a condescending pat for her from you her conqueror.
-</text>
-<choice destination="meal3" text="she's a meal, and meals get digested"/>
-</page>
+	<page ID="meal2">
+		<text>
+			Down down down the raptor goes. Her long reptilian tail and tastey firm
+			legs sliding down your throat as you get comfortable and stroke over
+			the growing bulge she's making, already a pleasing swell in your
+			middle just like you predicted. And soon enough she's entirely
+			trapped within you, her tail and toes vanishing past your lips as
+			she's forced to curl up within the digestive embrace of your stomach.
+			You hear her helplessly whimper and push out at your insides, earning
+			a condescending pat for her from you her conqueror.
+		</text>
+		<choice destination="meal3" text="she's a meal, and meals get digested" />
+	</page>
 
-<page ID="meal3">
-<text>
-The raptor's noisome protests at being made a part of a superior predator amount to naught as they did when she was being consumed. And gradually those fade until the only noise from your middle is the gurgles, churns and glurps of a stomach busily digesting a large meal. All her strength now going to fuel your future exploits as your belly softens, rounds out and then slowly shrunk down to nothing. Every sign of the raptor erased or secreted in your veins now.
-</text>
-<effect type="feed" value="85"/>
-<special effect="removenpc"/>
-<choice destination="end" text="carry on"/>
-</page>
+	<page ID="meal3">
+		<text>
+			The raptor's noisome protests at being made a part of a superior
+			predator amount to naught as they did when she was being consumed.
+			And gradually those fade until the only noise from your middle is the
+			gurgles, churns and glurps of a stomach busily digesting a large
+			meal. All her strength now going to fuel your future exploits as your
+			belly softens, rounds out and then slowly shrunk down to nothing.
+			Every sign of the raptor erased or secreted in your veins now.
+		</text>
+		<effect type="feed" value="85" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
 
 </Conversation>

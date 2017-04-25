@@ -1,43 +1,98 @@
 <?xml version="1.0"?>
 <Conversation>
-<page ID="start">
-<text>
-The elf is defeated and lies at your mercy, looking up at you warily as you loom over her. Her heaving chest and rounded ass providing much to appreciate in the view. Though as she feels your gaze weigh heavily upon her she squirms and asks much afeared "what are you going to do to me?"
-</text>
-<choice destination="oralvore0" text="$All that fighting has helped me work up an appetite">
-<assertion evaluate="hasperk" perk="oralvore"/>
-</choice>
-<choice destination="end" text="$nothing, this time."/>
-</page>
+	<page ID="start">
+		<text>
+			The elf is defeated and lies at your mercy, looking up at you warily as
+			you loom over her. Her heaving chest and rounded ass providing much
+			to appreciate in the view. Though as she feels your gaze weigh
+			heavily upon her she squirms and asks much afeared "what are you
+			going to do to me?"
+		</text>
+		<choice destination="oralvore0"
+			text="$All that fighting has helped me work up an appetite">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="end" text="$nothing, this time." />
+	</page>
 
-<page ID="oralvore0">
-<text>
-The elf's eyes widen and she starts to struggle as you position her, settling close in front of her as you slide one hand down to grope her round ass and with the other twine your fingers into her hair. She shudders as you lick over her face "no ple-" she pleads before being cut off as you yawn wide and cram her head into your mouth. The elf's hands sliding down to try and shove at your face and forth you away as the delectible taste of her soft emerald skin floods your tastebuds. But for all her efforts you're the one in charge here, and to the victor go the spoils as your eyes slip closed and your lips slide down to engulf her shoulders. And with her head slipping into your throat you just know that the curves of her delectible breasts are just beyond your lips. And far beyond that the mouthwatering deliciousness of her bootilicious arse.
-</text>
-<choice destination="oralvore1" text="devour her"/>
-</page>
+	<page ID="oralvore0">
+		<text>
+			The elf's eyes widen and she starts to struggle as you position her,
+			settling close in front of her as you slide one hand down to grope
+			her round ass and with the other twine your fingers into her hair.
+			She shudders as you lick over her face "no ple-" she pleads before
+			being cut off as you yawn wide and cram her head into your mouth. The
+			elf's hands sliding down to try and shove at your face and forth you
+			away as the delectible taste of her soft emerald skin floods your
+			tastebuds. But for all her efforts you're the one in charge here, and
+			to the victor go the spoils as your eyes slip closed and your lips
+			slide down to engulf her shoulders. And with her head slipping into
+			your throat you just know that the curves of her delectible breasts
+			are just beyond your lips. And far beyond that the mouthwatering
+			deliciousness of her bootilicious arse.
+		</text>
+		<choice destination="oralvore1" text="devour her" />
+	</page>
 
-<page ID="oralvore1">
-<text>
-Your hands slide down as do your lips, the former coming to rest on her ass while the latter makes short work of devouring her breasts. The elf whimpering, her pleas muffled as you eat her whole and alive, stuffing the soft delciousness of her breasts past your jaws, over your tongue and down your throat as you cram her inside. Your hands on her ass serving as a good way to cram her in as her protests at being your food break out anew from inside your gut as her head slides in. The elf is truly delicious, and her athletic warrior body feels wonderful sliding down your throat. Especially as that body while firm in places still has enough softness to go around, and with that thought you're squeezing that ass as you cram that broad rump up against your lips, slowing down as you try to get down the widest part of her.
-</text>
-<choice destination="oralvore2" text="eat dat ass"/>
-</page>
+	<page ID="oralvore1">
+		<text>
+			Your hands slide down as do your lips, the former coming to rest on her
+			ass while the latter makes short work of devouring her breasts. The
+			elf whimpering, her pleas muffled as you eat her whole and alive,
+			stuffing the soft delciousness of her breasts past your jaws, over
+			your tongue and down your throat as you cram her inside. Your hands
+			on her ass serving as a good way to cram her in as her protests at
+			being your food break out anew from inside your gut as her head
+			slides in. The elf is truly delicious, and her athletic warrior body
+			feels wonderful sliding down your throat. Especially as that body
+			while firm in places still has enough softness to go around, and with
+			that thought you're squeezing that ass as you cram that broad rump up
+			against your lips, slowing down as you try to get down the widest
+			part of her.
+		</text>
+		<choice destination="oralvore2" text="eat dat ass" />
+	</page>
 
-<page ID="oralvore2">
-<text>
-You continue kneading at her arse even as you begin to cram it into your stretched jaws in earnest. The bootilicious meal presenting quite a bit of difficulty but ever increasing satisfaction as inch by inch you cram her hips past your hips, then her rump, and finally you're on the home stretch down her thighs. The elf shoving out at your insides "please, please dont digest." she pleads as you cram her in. Her legs gradually sliding out of sight past your lips as you polish her off, wiping the mouthwatering flavour off your lips and resting a hand on your gut with a satisfied sigh. The elf trying to shove at your insides as she's helplessly curled up in your hungry gut, entirely at your mercy.
-</text>
-<choice destination="oralvoreDigest" text="$not going to let you out, its not personal though."/>
-</page>
+	<page ID="oralvore2">
+		<text>
+			You continue kneading at her arse even as you begin to cram it into your
+			stretched jaws in earnest. The bootilicious meal presenting quite a
+			bit of difficulty but ever increasing satisfaction as inch by inch
+			you cram her hips past your hips, then her rump, and finally you're
+			on the home stretch down her thighs. The elf shoving out at your
+			insides "please, please dont digest." she pleads as you cram her in.
+			Her legs gradually sliding out of sight past your lips as you polish
+			her off, wiping the mouthwatering flavour off your lips and resting a
+			hand on your gut with a satisfied sigh. The elf trying to shove at
+			your insides as she's helplessly curled up in your hungry gut,
+			entirely at your mercy.
+		</text>
+		<choice destination="oralvoreDigest"
+			text="$not going to let you out, its not personal though." />
+	</page>
 
-<page ID="oralvoreDigest">
-<text>
-you answer the pleading elf, giving your gut a pat as she redoubles her squirms. But there's no escape for her and besides, she'll add nicely to your ass. Her own rump will provide ample fuel for you as you feel her writhe in your gurgling belly, slowly being worked over by your enzymes. Inside your triumphant gut she is conquered all over again, and this second time far more thoroughly as you press down and hear her gasp and plead even as you feel her weaken and soften within you. Slowly and with exquisite inevitability she diminishes, her form softening and your gut rounding out until she gurgles away entirely into a fleshly stew of nourishment for your form. Your gut letting out a burble and forcing up a burp of air from your lips as the elf's body conforms utterly to her confines as a fluid mass without any gaps or spaces left behind. With that done you steadily feel your gut diminish beneath your rubbing palms, the elf proving rather satisfying. The elf was a sub par warrior, but a most satisfying meal.
-</text>
-<effect type="feed" value="100"/>
-<special effect="removenpc"/>
-<choice destination="end" text="carry on"/>
-</page>
+	<page ID="oralvoreDigest">
+		<text>
+			you answer the pleading elf, giving your gut a pat as she redoubles her
+			squirms. But there's no escape for her and besides, she'll add nicely
+			to your ass. Her own rump will provide ample fuel for you as you feel
+			her writhe in your gurgling belly, slowly being worked over by your
+			enzymes. Inside your triumphant gut she is conquered all over again,
+			and this second time far more thoroughly as you press down and hear
+			her gasp and plead even as you feel her weaken and soften within you.
+			Slowly and with exquisite inevitability she diminishes, her form
+			softening and your gut rounding out until she gurgles away entirely
+			into a fleshly stew of nourishment for your form. Your gut letting
+			out a burble and forcing up a burp of air from your lips as the elf's
+			body conforms utterly to her confines as a fluid mass without any
+			gaps or spaces left behind. With that done you steadily feel your gut
+			diminish beneath your rubbing palms, the elf proving rather
+			satisfying. The elf was a sub par warrior, but a most satisfying
+			meal.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
 
 </Conversation>
