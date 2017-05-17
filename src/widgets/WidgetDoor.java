@@ -99,13 +99,13 @@ public class WidgetDoor extends WidgetBreakable {
 				return true;
 			}
 		}
-		else
+		else if (lockStrength==0)
 		{
 			ViewScene.m_interface.DrawText("you open the door");
 			ViewScene.m_interface.RemoveWidget(this);
 			return true;
 		}
-
+		return false;
 	}
 	
 	@Override

@@ -19,7 +19,7 @@
 <combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
 <missText count="2">
 <text>The lixi misses TARGET</text>
-<text>The swings at TARGET but doesn't hit</text>
+<text>The lixi swings at TARGET but doesn't hit</text>
 </missText>
 <hitText count="2">
 <text>The lixi pummels TARGET for VALUE damage</text>

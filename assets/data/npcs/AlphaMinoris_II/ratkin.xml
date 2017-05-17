@@ -5,7 +5,7 @@
 <name>ratgirl</name>
 <description>A naked three foot high demi alien of a wild and feral bent. Some 4 feet of furless tail protrudes from above her ass and atop her head round furred radar like ears perch. She eyes you with a mischevious and hungry look, her slender little body clearly having subsisted on scavenging perhaps she hopes for a more filling meal.</description>
 <rpg>
-<experiencevalue value="10"/>
+<experiencevalue value="15"/>
 <ability ability="STRENGTH" value="5" />
 <ability ability="AGILITY" value="5" />
 <ability ability="DEXTERITY" value="5" />
@@ -25,7 +25,7 @@
 </combatMove>
 </rpg>
 
-<respawn delay="100"/>
+<respawn delay="1000"/>
 
 <defeated conversation="alpha_minoris_II/rat/defeat" />
 <seduced conversation="alpha_minoris_II/rat/defeat" />

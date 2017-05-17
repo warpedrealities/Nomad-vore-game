@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public abstract class ShipAbility {
 
-	public enum AbilityType{SA_RESOURCE,SA_MODIFIER,SA_CONVERTER};
+	public enum AbilityType{SA_RESOURCE,SA_MODIFIER,SA_CONVERTER,SA_DISPENSER};
 	
 	protected AbilityType abilityType;
 

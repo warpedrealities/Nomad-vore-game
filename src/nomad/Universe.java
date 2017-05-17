@@ -315,9 +315,7 @@ public class Universe extends GameManager
 				
 				//copy all files from savename folder
 				//and copy them to the filename folder
-	
-				FileUtils.copyDirectory(oldSave,newSave);
-				
+				FileTools.copyFolder(oldSave, newSave);
 			}		
 		}
 	}
@@ -329,13 +327,16 @@ public class Universe extends GameManager
 	
 	public void autoSave() throws IOException
 	{
-		File file=new File("saves/autosave");
-		if (!file.exists())
+		if (!Game.sceneManager.getConfig().isDisableAutosave())
 		{
-			
-			file.mkdir();
+			File file=new File("saves/autosave");
+			if (!file.exists())
+			{
+				
+				file.mkdir();
+			}
+			save("autosave");		
 		}
-		save("autosave");
 	}
 	
 	public void save(String filename) throws IOException
@@ -368,6 +369,7 @@ public class Universe extends GameManager
 
 		//save config
 		dstream.writeBoolean(Game.sceneManager.getConfig().isVerboseCombat());
+		dstream.writeBoolean(Game.sceneManager.getConfig().isDisableAutosave());
 		//save faction library
 		FactionLibrary.getInstance().save(dstream);		
 		//save current system name
@@ -504,6 +506,7 @@ public class Universe extends GameManager
 
 		//load uid
 		Game.sceneManager.getConfig().setVerboseCombat(dstream.readBoolean());
+		Game.sceneManager.getConfig().setDisableAutosave(dstream.readBoolean());
 		//load factions
 		FactionLibrary.getInstance().load(dstream);	
 		//load current system name

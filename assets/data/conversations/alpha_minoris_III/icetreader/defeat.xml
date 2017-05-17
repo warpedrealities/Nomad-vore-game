@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<text>
+			The icetreader pants softly, sprawled on her side after you bested her the hefty tauric gal watches you carefully. She tries to get back to her feet as you approach, but stumbles and slumps back down with a yelp and thump of her furry weight smacking into the snow and ice again. It's clear you could take advantage of her now.
+		</text>
+		<choice destination="meal0" text="lets find out if you can eat this taur">
+		<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>	
+		<choice destination="warm0" text="it's cold, she looks warm, maybe she could help you warm up?"/>
+		<choice destination="end" text="leave her be for now"/>
+	</page>
+	
+	<page ID="meal0">
+	<text>
+	There's no way you can eat something this big is there? of course there is! and the icetreader sees the look in your eyes and shies back away from you. Though much like her attempt to keep you away with a foreleg it amounts to nothing in the end as you get up in front of her and moisten your lips afore grabbing her head and shoulders. The feline letting out a threatening growl and trying to push you away with both hands even as you haul her towards you and lunge forwards, engulfing her head in your mouth. The first swallow unleashing a cascade of struggles in your ample meal as she tries to pull back from your lips. 
+	</text>
+	<choice destination="meal1" text="plenty to go, get gulping"/>
+	</page>
+	
+	<page ID="meal1">
+	<text>
+	Despite her struggles and her size and the power of her body you're making progress, cramming her chest and upper body steadily past your jaws. Your hands grabbing up thick bundles of fur on her lower half to restrain her and haul her closer and down your throat as you feel her hands pushing out the inside of your belly in protest. But your hunger will not be denied and your ravenous hunger carries your lips swiftly down to her waistline. The broader taur body with its long and thick fur almost instantly slows your progress as you begin to try and encompass it. The taur squirms and shifts about trying to wriggle back out of your throat. Perhaps she thinks you won't be able to get her lower half in so she'll eventually escape, how cute. 
+	</text>
+	<choice destination="meal2" text="prove her wrong, devour her lower half"/>
+	</page>
+	
+	<page ID="meal2">
+	<text>
+	Cute but futile, you swallow harshly and hear her utter a whimpering rowl from deep within your belly as your powerful throat starts to drag those broad furred tauric shoulders past your lips. The stretching is incredible, but the expectation of satiation from such a prodigious meal makes you all the more willing to endure it as you stretch your arms out to grasp another two bundles of fur and haul her further inside of yourself. Working your lips steadily over her, pinning her forelegs against her belly as your belly stretches with all of her humanoid half and you work to cram her tauric half in there with her. Her rear legs flail helplessly as they're lifted up off the ground and you settle into a seated position, feeling her paws and hands shoving at your insides in an attempt to force herself back out of your throat. But to no avail it seems, gravity and your desire to devour all of this tauric meal more than a match for her resistance. And gradually despite her struggles she finds her hindquarters going the way of the rest of her, down down down your throat.
+	</text>
+	<choice destination="meal3" text="finish her off"/>
+	</page>
+	
+	<page ID="meal3">
+	<text>
+	The taur whimpers and shoves at your insides in protest and a wordless request for clemency as she feels the end approaching. Your jaws wrapped around her tail and the lower half of her rear legs now. But you've come too far to turn back now and you want her inside you, and so you swallow a last handful of times feeling those broadpawed hinglegs slide down your throat. As you see that long thick furred tail slip past your lips it coaxes a profound mhmm of satisfaction from you. Your gut stretched out and distended massively with your unruly meal, her paw and handprints pushing at the inside of your gut as she attempts to make you hork her back up. But you've worked too much to get this whimpering and filling meal down to let her back out again surely.
+	</text>
+	<choice destination="meal4" text="in these cold lands you need the protein, digest her"/>
+	</page>
+	
+	<page ID="meal4">
+	<text>	
+	The icetreader gets to feel your hands pressing and squeezing down on the immense bulge she makes in your belly as you savour her and set about making her yours. Those whimpers and pliantive pushings at your insides redoubling as you start to gurgle and churn her over. It takes a while for the ice treader to digest, that big body of hers taking a lot of breaking down. The whimpers fade first under the sound of your gurgling gut, followed after a while by her squirmings as her form weakens and comes apart inside you. and eventually she stills entirely, a hefty mass of meat forming a lump in your belly that slowly rounds out and softens into a sloshing fluid for your body to absorb. In the end naught remains of the snow cat but your satisfaction, your belly flattened out to nothing as the taur is completely and utterly digested and rendered into fuel for you. A satisfying meal.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	
+	<page ID="warm0">
+	<text>
+	The icetreader looks surprised and uneasy as you decide to settle in snug against its warm belly after all this. Though it does seem she makes a remarkably good warmer and blanket, the warmth and thick fur of her underside contrasting pleasingly with the snow and ice you've had to experience otherwise. You wriggle a bit closer to her and feel her shift one foreleg to curl herself over you a tad but as she does so you feel something nudging up against you, something that isn't fur or one of her legs.
+	</text>
+	<choice destination="cock0" text="investigate the prodding">
+		<preference fetish="cockvore" />
+	</choice>
+	<choice destination="warm1" text="not interested, just snuggle in under the ice treader"/>
+	</page>
+
+	<page ID="cock0">
+	<text>
+	You grope around behind you and feel something warm that stiffens and engorges under your hand. You turn around so you can get a better look down between the two of you you can finally get a good look at what she's packing down there and well, wow. She's big for her size even considering her tauric body and that cock is starting to arouse in earnest as you stroke along it with a thoughtful expression on your face. It's really an even warmer spot as you can tell from feeling that throbbing girth grow before you towards a length best measured in feet and fills the furry nook you're in with the musky scent of it. The taur bending her upper half down to look at you in curiousity, face flushed as you caress that organ of hers that she probably can't get at easily with anything but her forepaws. You give her a smile and she goes back to a more comfortable position seemingly willing to leave you to it.
+	</text>
+	<choice destination="cockvore0" text="it'll be an even warmer place to snuggle into"/>
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	You spend a little longer lewdly stroking along that prodigiously enormous cock as you make up your mind, hearing her growling a soft rumble of delight above you as you work her to full hardness. Finally though you're sure about this, plying a hand over that cocktip and feeling the delicious sticky pre oozing from it you smile 			<conditional><assertion evaluate="slothasitem" slot="2" /> and strip down wanting to experience this against your naked skin despite the momentary discomfort</conditional>.
+	You wriggle up further to give the taur a smile and position yourself, the snowcat giving you a confused and vaguely disappointed look as you've stopped stroking her hardness and nudges you meaningfully with a hand. But her expression of needyness turns to surprise as you slip back down yes, but do so by pressing your feet into her cocktip. That thick shaft of hers easily able to accept your feet and her delighted and startled mrowl of pleasure is as much music to your ears as the sticky shlurp of her pre oozing around your ankles.
+	</text>
+	<choice destination="cockvore1" text="like a naughty sleeping bag"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	Feeling that wonderful sticky warmth throbbing around your feet makes you eager to proceed with this plan. As she rumbles in delight you start feeding your legs in out of the cold, that hotness snugly encompassing your legs and then ass as you worm your way deeper into her enormous schlong. That shaft seems to have no trouble accepting you as she shudders and shifts about, paws twitching at the pleasure as you slide your ass in. A confused gasp punctuating the rumble as you slip yourself into that enormous cock of hers and soon you're easing your upper body inside as well, feeling hot cum delightfully squishing between your toes as you work your feet all the way down her length and through into her sack. It's delightfully comfy nestled nearly neck deep in the shaft and balls of the virile taur. The snow cat looking down at you with a flush and purring rumbling as she sees you getting comfortable there with your legs half curled and your upper body contained in her shaft.
+	</text>
+	<choice destination="cockhold0" text="relax and stay where you are"/>
+	<choice destination="cockvore2" text="actually those balls feel even comfier"/>
+	</page>
+	
+	<page ID="cockhold0">
+	<text>
+	You get comfortable inside her warm shaft, well shielded from the cold as you feel her engorged length throb around you and hear her rumble in moderate arousal. The taur apparently confused but rolling with it as you stay there encased in her loins and shift around now and then to keep her hard. After a bit of doze like this you feel the tauric snow cat doze off as well, probably to have some very naughty dreams.
+	</text>
+	<effect type="imprison" value="100" />
+	<choice destination="cockhold1" text="uneventful rest"/>
+	</page>
+	
+	<page ID="cockhold1">
+	<text>
+	You rouse sometime later and feel the tauric cat still sleeping above you, though her dreams must be delightful for her shaft to still be firm around your body. You start going about slowly extricating yourself, worming and pulling yourself free of the feline's shaft inch by inch as she mumbles and shifts occasionally from the stimulation, paws flexing and twitching against the snows. The ice treader doesn't rouse though even when you pull the last of yourself out of her cock, it's a nice sleeping bag, but you have other things to do.
+	</text>
+	<special effect="nonhostile" />
+	<effect type="heal" value="0.1" />
+	<special effect="healnpc" />
+	<choice destination="end" text="good way to keep warm, bit sticky though"/>	
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	This is nice and all, but you find yourself preferring to be even stickier, warmer and more curled up than this. The perfect place to do that is inside the taur's balls, they're certainly roomy enough. With your mind made up you start to squirm down and the taur shudders, then gasps and smiles and you feel her cock clench and ripple tugging on you gently. The shaft giving you a wonderful massage as it presses around you and assists you in squirming your way entirely down into the balls of the taur, the tip schlurping as it seals shut over the top of your head. The shaft jostling and swaying and bulging as you pull yourself down with your legs until with a schlorp you pop entirely into the cummy confines of the cat's balls, hot cum slopping around every inch of you. Course now you're here..
+	</text>
+	<choice destination="cockvoreChurn" text="those balls start to churn around you"/>
+	<choice destination="cockvoreEndo0" text="those balls contently hold you"/>
+	</page>
+	
+	<page ID="cockvoreChurn">
+	<text>
+	You feel the hot cum tingle pleasurably, soaking into you as her balls start to roil softly around you. Well, it is only fair seen as you were given such a wonderful warm place. You get comfortable in her full and dangling balls as they start slowly churning you down into gallons of nutbatter. The rumbling purr of the taur audible over the glorping sounds all around you as you soften up in there and feel yourself melting with exquisite slowness. All of you is being turned into that wonderful liquid warmth you came down here to experience. Your extremities are the first to melt away, rubbing your hands against the inside of her sack you feel your fingers moosh away, then limbs are next to lose form as your body becomes a soft and weak mass of living cockcream. Finally your body subsides into the rising cum, head slipping under and into wonderful sticky oblivion as all of you melts away contently into a huge load of cum for the taur.
+	</text>
+	<choice destination="cockvoreGO" text="churned into spunk"/>
+	</page>
+	
+	<gameover ID="cockvoreGO">
+	<text>
+	The taur feels you melt away and growls in delight, curling her upper half down to tend to her still rigid erection. The icetreader's balls compacting your fluid remains into two nice round orbs as she starts to fondle and stroke over her cock, using her hands to rub the the tip and end of her length and a forepaw to rub further down the shaft. Her growl becoming more aroused and needy as she feels that hot churning cum you've become as an insistent bloated pressure wanting to be let out as she masturbates. The taur bucking her hindquarters to work her cock up vigorously against her stroking limbs until with a bellow of delight she reaches her much needed orgasm. Your form blasting up out of her tip voluminously, splattering hot cream all over the snow. The steaming hot cummy remnants of your body melting away the snow as you're pumped out of her sack. The tauric feline panting and rumbling in the aftermath as she surveys the sticky puddle of jizz that remains of you, that was certainly a fun way to get warm. Though you might end up cold again once her load cools.
+	</text>
+	</gameover>
+	
+	<page ID="cockvoreEndo0">
+	<text>
+	Your host seems to understand your desire for a warm place to rest and so your confines are less churny and more simply snug. Though it certainly is a very sticky and gooey kind of snug, your every movement squelches hot jizz around your form with oozing sounds. Still it seems the rumbling kitty is quite happy for you to use her balls as a resting place, awfully accomodating of her. You rub against the inside of her balls appreciatively then settle in curled up comfortably to doze in her sack. And so you pass your time contently in the loins of the taur.
+	</text>
+	<choice destination="cockvoreEndo1" text="sometime later, time to leave"/>
+	</page>
+	
+	<page ID="cockvoreEndo1">
+	<text>
+	You feel you're done stewing around contently in her balls and start to work on wriggling and stroking the inside of her sack. You can feel her shaft had softened during your long stay and you know you're going to need to get her hard again in order to get back up it, still you feel her rumble and feel her shift at your stimulating motions inside her. The taur realizing what you're doing as she rubs a forepaw against her shaft and stiffens up, the way clear now as she's not really trying to keep you down there. So you set about worming your way out, the sticky tube throbbing semi hard around you as you work up her arousal towards the open air. The tip disgorging you with a schlurp as you wriggle free. You look back at the flushed taur and marvel at your ingenuity, that was truly an interesting way to protect yourself from the elements. Time to get going now.
+	</text>
+	<effect type="imprison" value="100" />
+	<special effect="nonhostile" />
+	<effect type="heal" value="0.1" />	
+			<special effect="healnpc" />
+	<choice destination="end" text="she seemed to take this well, get going"/>
+	</page>
+	
+	<page ID="warm1">
+	<text>
+	You're perfectly fine where you are, and decide to wriggle to get companionably close and snuggly with the big furry cat taur. After a while it seems she becomes more agreeable to your presence and settles in with a pleased rumble resting atop you, and like that you rested for a while safe from the cold. When you parted giving the taur a pat on the head you even got a soft wet lick from her that shows she's apparently made her peace with you. For now at least she's not going to be hunting you down.
+	</text>
+	<effect type="imprison" value="100" />
+	<special effect="nonhostile" />
+	<effect type="heal" value="0.1" />
+			<special effect="healnpc" />
+	<page ID="end" text="who'd of thought a snuggle was all you needed to make friends here"/>
+	</page>
+	
+</Conversation>

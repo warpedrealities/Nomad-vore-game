@@ -109,7 +109,7 @@
 
 	<page ID="UBStruggleEscape">
 		<text>
-
+		Despite her statement of finality you set yourself to attempting to squirm your way back out of her clenching womb. The intimate insides of the reptilian pressing snugly all around you and starting to rthythmically knead on your form and you shove back harshly against her inner flesh, your probing hands searching around for the way back out in a way the warrior starts to find rather disagreeable. The saurian warrior shifting around and then letting out a hiss as you find your way, flushing as she presses her legs together. But she finds herself no match for you as your hands shove first out from betwixt her netherlips then finds you shoving her legs apart forcing her to fall disagreeably backwards as you worm your way out of her. The saurian giving you a heated glare as you slip entirely free from her flushed and panting form, it won't take her long to recover and have her revenge for this.
 		</text>
 		<effect type="heal" value="0.1" />
 		<effect type="stunnpc" value="10" />
@@ -118,14 +118,14 @@
 
 	<page ID="UBStruggleDigest">
 		<text>
-
+		Despite her statement of finality you set yourself to attempting to squirm your way back out of her clenching womb. The intimate insides of the reptilian pressing snugly all around you and starting to rthythmically knead on your form and you shove back harshly against her inner flesh, your probing hands searching around for the way back out in a way the warrior starts to find rather disagreeable. The saurian warrior shifting around and then letting out a hiss as you find your way, flushing as she presses her legs together. You shove your hands into her birthcanal and try to force her muscular passage apart so you can escape, worming further towards her netherlips and freedom. But her legs are together and as you worm your hands out you feel only her thighs squeezing them and making it impossible to escape. You strain and struggle, but tire as she clenches and ripples, tugging you back inside "you fought well, now...melt" the saurian says as you're sealed back inside, worn out and exhausted from your struggles you feel her tingling fluids kneading into you and know the end is coming. 
 		</text>
-		<choice destination="UBSTRUGGLEGO" text="*slosh*" />
+		<choice destination="UBSTRUGGLEGO" text="liquidate" />
 	</page>
 
 	<gameover ID="UBSTRUGGLEGO">
 		<text>
-
+		You writhe and plead weakly inside the saurian, but all you get for your troubles is the chiding scold of "Die with dignity." from your predator even as she sets about rubbing you out, which some might say is hypocritical. But you have bigger problems as you start to soften and liquidate in her, hearing her chirr and moan as she pleasures herself and you are compressed into an ever tighter mass of liquidated lust "no-" you manage to start to say only to end in a burble as you're scrunched and sloshed away by her voracious womb. The saurian letting out a cry that drowns out your final plea as she orgasms, splattering your remnants all over the ground beneath her as a wet puddle. The saurian warrior has truly bested you now, all that's left is a stain beneath her as she gets up and recovers her composure.
 		</text>
 	</gameover>
 
@@ -137,7 +137,7 @@
 
 	<page ID="UBPleasureEscape">
 		<text>
-
+		You hear her definitive statement, oddly dignified for someone who has just shoved a defeated foe up her snatch. And well, that can't stand, also flustering her into submission from within MIGHT just be enough to stop you ending up her next orgasm. Not ending up an orgasm might of weighed heavier on your thinking as you start rubbing at her insides, tracing your expert hands along her the inside of her womb and probing at the entrance of her birth canal. You hear her gasp and chirr, the saurian flushing heavily and shivering "what are you? ooh, keep on...yes" she moans as her better judgement is derailed by your hands and of her own hands one traces down to finger herself vigorously. The saurian letting out a cry as she soon peaks and in her rapturous state of orgasm and afterglow barely registers your escape until you worm your way entirely out. Though she'll probably come down from that high in a bit, might be trouble in the offing when that happens.
 		</text>
 		<effect type="heal" value="0.1" />
 		<effect type="stunnpc" value="10" />
@@ -146,26 +146,31 @@
 
 	<page ID="UBPleasureDigest">
 		<text>
-
+		You hear her definitive statement, oddly dignified for someone who has just shoved a defeated foe up her snatch. And well, that can't stand, also flustering her into submission from within MIGHT just be enough to stop you ending up her next orgasm. Not ending up an orgasm might of weighed heavier on your thinking as you start rubbing at her insides, tracing your hands along her the inside of her womb and probing at the entrance of her birth canal. You hear her gasp and chirr, the saurian flushing heavily and shivering "what are you? ooh, keep on...wait" she manages, keeping her wits about you despite your apparently less than magic fingers. The saurian clenching herself around you to impede your motions and chuckling "nice try, but i orgasm once you're a bit sloshier and not before."
 		</text>
-		<choice destination="UBPleasureGO" text="*slosh*" />
+		<choice destination="UBPleasureGO" text="nothing to do but get sloshed" />
 	</page>
 
-	<gameover ID="UBSTRUGGLEGO">
+	<gameover ID="UBPleasureGO">
 		<text>
-
+		The saurian chuckles and mhmms as you try despite her fore-warned and thus fore-armed state to attempt to pleasure her. Your predator flushing as she feels you squirming and softening simultaneously in her voracious womb. Her hand only now going to rub her nethers now you're too soft to survive much longer, her womb steadily grinding away your solidity and resistance. "mhmm, nearly...nearly...mhmm" she utters as she feels her orgasm building in strength and your own weakening. Your last sensation that of experiencing her orgasm from within her as she climaxes with a cry and her womb squishes you down into a sopping wet expulsion of her juices, sticky glops of former space adventure splattering all over the floor under her as the saurian moans and gasps in delight. She doesn't even try to mop you up, just leaving you a mess out in the open for others to see as she rises back to her feet and adjusts the lay of her clothing. What an end.
 		</text>
 	</gameover>
 
 
 	<page ID="UBSubmit">
 		<text>
-
+		You feel her womb pressing possessively around you as she declares your fate and settles contently. Though you surprise her as she hears your mhmm at those words "My you're an eager one? well..." she chuckles and leans back, stroking one womb over her distended middle and the other one sets to work leisurely between her legs. You find yourself following suit in masturbating as you let yourself get sloshed and juiced by her ravenous womb. The clenching snug confines rubbing her sexual fluids into you as you moan and hear her chirr around you, each clench making you feel even more wonderful and yet softer and more pliant.. you feel your orgasm nearing as things get wetter and wetter in every sense of the word. Nearly there, nearly, nearly...
 		</text>
 		<choice destination="UBSUBMITGO" text="*slosh*" />
 	</page>
 
-
+	<gameover ID="UBSUBMITGO">
+	<text>
+	The saurian hears your final blissed cry muffled inside her and swiftly silenced with a burbling glorp as her own orgasm follows on the heels of your own and mashes your semi solid form entirely down into delightful liquids. The saurian bucking on the ground and splattering hot fluids out of her womb as she squeezes you into femmecum and discharges you out all over the ground. As her orgasm subsides the saurian gasps, but still chirrs in delight as she basks in afterglow and the erotic scents steaming off your heated remains. Always good when a defeated enemy knows how to be a satisfying orgasm, and that's all you've amounted to now.
+	</gameover>
+	
+	</page>
 
 	<page ID="genderH">
 		<text>

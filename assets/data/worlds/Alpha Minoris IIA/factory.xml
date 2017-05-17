@@ -38,6 +38,7 @@ The halls are gloomy and twist about, guttering light fixtures the only illumina
 	<loot item="computation valve" chance="0.4" unique="3" />
 	<loot item="computation valve" chance="0.4" unique="3" />
 	<loot item="computation valve" chance="0.4" unique="3" />
+	<loot item="blueprint" chance="0.4" unique="3" addendum="cultivator"/>
 	<lootSubTable chance="1" file="resource_tier_1"/>
 	<lootSubTable chance="0.5" file="resource_tier_1"/>
 	<lootSubTable chance="0.5" file="consumable_tier_1"/>

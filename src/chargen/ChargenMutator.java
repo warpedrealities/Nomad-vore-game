@@ -2,6 +2,9 @@ package chargen;
 
 import mutation.Effect_Mutator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
@@ -11,15 +14,18 @@ public class ChargenMutator {
 
 	private String name;
 	private String description;
-	private Effect_Mutator effect;
+	private List <Effect_Mutator> effects;
 	
 	public ChargenMutator(Element node)
 	{
 		name=node.getAttribute("name");
 		description=node.getAttribute("descriptor");
 		NodeList nlist=node.getElementsByTagName("effect");
-		effect=new Effect_Mutator((Element)nlist.item(0));
-		
+		effects=new ArrayList<Effect_Mutator>();
+		for (int i=0;i<nlist.getLength();i++)
+		{
+			effects.add(new Effect_Mutator((Element)nlist.item(i)));		
+		}	
 	}
 
 	public String getName() {
@@ -30,8 +36,12 @@ public class ChargenMutator {
 		return description;
 	}
 
-	public Effect_Mutator getEffect() {
-		return effect;
+	public int getEffectCount()
+	{
+		return effects.size();
+	}
+	public Effect_Mutator getEffect(int i) {
+		return effects.get(i);
 	}
 	
 	

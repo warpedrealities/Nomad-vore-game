@@ -18,6 +18,8 @@ function ranged(controllable,sense,pos,hostile)
 	if pos:getDistance(hostile:getPosition())<4 then
 		if pos:getDistance(hostile:getPosition())<2 then
 			--if in melee range attack
+			controllable:setAttack(0);
+			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 			else
 			--if in flame range attack
 			controllable:setAttack(1);

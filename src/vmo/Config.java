@@ -11,7 +11,8 @@ public class Config {
 	float m_scale;
 	float m_textscale;
 	boolean verboseCombat;
-	public static final int VERSION=22;
+	boolean disableAutosave;
+	public static final int VERSION=23;
 	
 	public Config()
 	{
@@ -81,6 +82,14 @@ public class Config {
 
 	public void setVerboseCombat(boolean verboseCombat) {
 		this.verboseCombat = verboseCombat;
+	}
+
+	public boolean isDisableAutosave() {
+		return disableAutosave;
+	}
+
+	public void setDisableAutosave(boolean disableAutosave) {
+		this.disableAutosave = disableAutosave;
 	}
 	
 }

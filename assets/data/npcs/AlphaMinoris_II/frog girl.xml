@@ -26,6 +26,7 @@
 <text>The frog girl kicks TARGET for VALUE damage</text>
 </hitText>
 </combatMove>
+
 <combatMove name="lick" pattern="MELEE" bonusAttribute="SEDUCTION" timeCost="2" bonusToHit="0">
 <effectDamage type="TEASE" minValue="1" maxValue="6" modifier="STRENGTH"/>
 <missText count="1">
@@ -35,8 +36,8 @@
 <text>TARGET loses VALUE resolve to the teasing licks of the frog girl</text>
 </hitText>
 </combatMove>
-</rpg>
-<combatmove name="tongue" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" pattern="RANGED" moveType="MOVEMENT"> 
+
+<combatMove name="tongue" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" pattern="RANGED" moveType="MOVEMENT"> 
 <missText count="2">
 <text>the frog girl lashes out her tongue at TARGET who dodges the attack.</text>
 <text>the frog girl's amazingly long tail snaps out and flicks harmlessly past TARGET before reeling back in.</text>
@@ -45,10 +46,8 @@
 <text>the frog girl lashes out her tongue at TARGET and wraps it around her briefly, tugging her closer</text>
 <text>the frog girl snags TARGET with her tongue and hauls them closer</text>
 </hitText>
-<effectMovement moveType="TARGET_TOWARDS" distance="3" abilityMod="STRENGTH"/>
-</combatmove>
-
-
+<effectMovement moveType="TARGET_TOWARDS" distance="2" abilityMod="STRENGTH"/>
+</combatMove>
 </rpg>
 <defeated conversation="alpha_minoris_II/frog/defeat" />
 <seduced conversation="alpha_minoris_II/frog/seduced" />

@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 
 import nomad.FlagField;
+import nomad.GameOver;
 import nomad.Universe;
 
 
@@ -32,16 +33,19 @@ import actorRPG.RPGActionHandler;
 
 
 import shared.ParserHelper;
+import shared.SceneBase;
 import shared.Vec2f;
 import view.ViewScene;
 import view.ModelController_Int;
 import view.ZoneInteractionHandler;
+import vmo.Game;
 import zone.Tile;
 
 import org.lwjgl.glfw.GLFWKeyCallback;
 
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
+import combat.CombatMove.MoveType;
 import combat.ThrownWeaponHandler;
 import combat.effect.Effect;
 import combat.effect.Effect_Damage;
@@ -434,13 +438,14 @@ public class Player extends Actor
 			}
 
 		}
-	
+
 		Item r_item=playerInventory.m_slots[slot];
 		playerInventory.m_slots[slot]=null;	
 		playerInventory.m_weight-=item.getWeight();
 		if (slot!=Inventory.QUICK)
 		{
 			Player_RPG rpg=(Player_RPG)actorRPG;
+			rpg.removeEquipStatus(5+slot);
 			rpg.genMoveList();
 		}
 		return r_item;
@@ -709,6 +714,10 @@ public class Player extends Actor
 		{
 			ViewScene.m_interface.PlayerBeaten((NPC)victor, resolve);		
 		}
+		else if (Player.class.isInstance(victor))
+		{
+			Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have managed to slay yourself somehow"));
+		}
 	}
 
 	@Override
@@ -734,12 +743,19 @@ public class Player extends Actor
 	}
 
 	public boolean useMove(int number, Attackable attackable) {
-		// TODO Auto-generated method stub
-		
+		if (!attackable.getAttackable())
+		{
+			return false;
+		}
 		CombatMove move=((Player_RPG)actorRPG).getCombatMove(number);
 		if (((Player_RPG)actorRPG).getCooldownHandler().moveIsUnusable(move.getMoveName()))
 		{
 			ViewScene.m_interface.DrawText("move "+move.getMoveName()+ " isn't usable right now");
+			return false;
+		}
+		if (move.getMoveType()==MoveType.MOVEMENT && actorRPG.getBindState()!=-1)
+		{
+			ViewScene.m_interface.DrawText("move "+move.getMoveName()+ " can't be used in your current position");	
 			return false;
 		}
 		//check energy

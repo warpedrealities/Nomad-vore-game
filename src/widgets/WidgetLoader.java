@@ -11,6 +11,7 @@ import shared.ParserHelper;
 import shipsystem.WidgetDamage;
 import shipsystem.WidgetNavConsole;
 import shipsystem.WidgetSystem;
+import widgets.scriptedEvents.WidgetScriptedEvent;
 import widgets.spawner.WidgetSpawner;
 import widgets.traps.Widget_Trap;
 import worldgentools.LootTable;
@@ -65,6 +66,8 @@ public class WidgetLoader {
 			return new WidgetSpawner(dstream);
 		case 19:
 			return new Widget_Trap(dstream);
+		case 20:
+			return new WidgetScriptedEvent(dstream);
 		}
 		return null;
 	}
@@ -115,6 +118,7 @@ public class WidgetLoader {
 		{
 			widget=new WidgetAccomodation(n);
 		}
+		
 	
 	if (root.getTagName().contains("navconsole"))
 	{

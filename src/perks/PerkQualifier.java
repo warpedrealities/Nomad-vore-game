@@ -96,6 +96,18 @@ public class PerkQualifier {
 					{
 						return false;
 					}		
+					if (str[i].contains("FLAG"))
+					{
+						String find=str[i].replace("FLAG","");
+						if (Universe.getInstance().getPlayer().getFlags().readFlag(find)!=0)
+						{
+							return true;
+						}
+						else
+						{
+							return false;	
+						}						
+					}
 					if (str[i].contains("LEVEL"))
 					{
 						String nstring=str[i].replace("LEVEL", ""); nstring=nstring.replace(" ", "");

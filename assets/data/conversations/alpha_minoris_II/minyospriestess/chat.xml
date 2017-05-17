@@ -7,23 +7,24 @@
 		<text>
 			"Greetings again star traveller."
 		</text>
-		<choice destination="history" text="I would like to know your history" />
-		<choice destination="statue0" text="you misplaced something?">
+		<choice destination="history" text="$I would like to know your history" />
+		<choice destination="statue0" text="$you misplaced something?">
 			<condition operator="equals" evaluate="LOCALFLAG" flag="quest"
 				value="0" />
 		</choice>
-		<choice destination="statue1" text="about that statue">
+		<choice destination="statue1" text="$about that statue">
 			<condition operator="equals" evaluate="LOCALFLAG" flag="quest"
 				value="1" />
 		</choice>
 		<choice destination="friends"
-			text="I wish to be more than a stranger to your people">
+			text="$I wish to be more than a stranger to your people">
 			<condition operator="equals" evaluate="GLOBALFLAG" flag="rockscleared"
 				value="1" />
 			<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
 				value="0" />
 		</choice>
-		<choice destination="end" text="farewell" />
+		<choice destination="area" text="$can you tell me more about the surrounding area?"/>
+		<choice destination="end" text="$farewell" />
 	</page>
 
 	<page ID="start">
@@ -37,14 +38,49 @@
 			this village."
 		</text>
 		<effect type="setlocalflag" flag="talked" value="1" />
-		<choice destination="history" text="I would like to know your history" />
-		<choice destination="statue0" text="you misplaced something?">
+		<choice destination="history" text="$I would like to know your history" />
+		<choice destination="statue0" text="$you misplaced something?">
 			<condition operator="equals" evaluate="LOCALFLAG" flag="quest"
 				value="0" />
 		</choice>
-		<choice destination="end" text="nice to meet you but farewell" />
+		<choice destination="area" text="$can you tell me more about the surrounding area?"/>
+		<choice destination="end" text="$nice to meet you but farewell" />
 	</page>
 
+	<page ID="area">
+	<text>
+		"Very well, I suppose it is not unreasonable that you benefit from my wisdom rather than stray on your own and stumble into somewhere tight and digestive. I know much of the lands to the south and the west."
+	</text>
+	<choice destination="west" text="$What lies to the west?"/>
+	<choice destination="south" text="$What lies to the south?"/>
+	<choice destination="end" text="$On second thoughts I'll not take up more of your time"/>
+	</page>
+
+	<page ID="west">
+	<text>
+	"To the west lies a fertile yet perilous jungle. You can brave its winding paths if you wish, and many do to forage for fruits. But I should warn you the area is beset with voracious lamia, their coils are strong as the trees that surround them and should they entrap you your submission will be swift in coming. As will you ending up a melting bulge in their tail." she pauses a moment and then continues "If you should somehow survive the jungle though there are open lands beyond them. The creatures there are strong when roused to anger, so keep your distance."
+	</text>
+	<choice destination="south" text="$and what about the south?"/>
+	<choice destination="end" text="$my thanks, that is all i require for now, farewell."/>
+	</page>
+	
+	<page ID="south">
+	<text>
+	"To the south is a valley which is the only land upon which the tastey Deku nut tree will grow. Which is a shame as it is beset by raptors, these lizard folk cannot be bargained with and will devour you with a surety once they have laid you low with their claws. The only saving grace is they lack courage when alone. We think perhaps they make their nest in the ancient ruins. You should avoid the ruins if you can, they are dangerous as the last person to travel there did not return."
+	</text>
+	<choice destination="person" text="$Who was the last person to travel to those ruins?"/>
+	<choice destination="west" text="$and what about the west?"/>
+	<choice destination="end" text="$my thanks, that is all i require for now, farewell."/>	
+	</page>
+	
+	<page ID="person">
+	<text>
+	"Her name was Zhan, she was a scholar whose wisdom almost matched my own. She sought to re-connect us with our stolen past. She went to the ruins to search for answers in the relics of our foremothers. She was well armed, skilled and had friends of valour at her side, but none returned from her expedition. So I tell you now, avoid the ruins in the valley."
+	</text>
+	<choice destination="end" text="$an unfortunate fate, but perhaps there's something to discover, farewell"/>
+	<choice destination="end" text="$thank you for the warning, i'll make sure to keep clear of the ruins"/>
+	</page>
+	
 	<page ID="friends">
 		<condition operator="greaterthan" evaluate="FACTIONFLAG"
 			flag="friendship" value="1" />

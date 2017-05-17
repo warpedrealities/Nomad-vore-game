@@ -86,4 +86,34 @@
 			</effect>
 		</mutation>
 	</phaseMutation>
+	<phaseMutation name="unexplained mutation">
+
+	<mutation name="none" descriptor="you have remained normal and have not mutated">
+	<effect>
+	<mutation part="penis" bodychange="remove"/>
+	</effect>
+	<effect>
+	<mutation part="vagina" bodychange="add"/>
+	</effect>
+	</mutation>
+	
+	<mutation name="shemale" descriptor="you wake up with your vagina replaced with a penis">
+	<effect>
+	<mutation part="penis" bodychange="add" variable="length" set="6"/>
+	</effect>
+	<effect>
+	<mutation part="vagina" bodychange="remove"/>
+	</effect>
+	</mutation>
+	
+	<mutation name="herm" descriptor="you wake up with a penis in addition to your vagina">
+	<effect>
+	<mutation part="penis" bodychange="add" variable="length" set="6"/>
+	</effect>
+	<effect>
+	<mutation part="vagina" bodychange="add"/>
+	</effect>
+	</mutation>	
+	
+	</phaseMutation>
 </chargen>

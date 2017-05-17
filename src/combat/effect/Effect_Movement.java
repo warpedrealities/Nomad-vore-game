@@ -61,6 +61,10 @@ public class Effect_Movement extends Effect {
 		{
 			CombatMovementHandler.MoveAway(origin, target,localDistance);
 		}
+		if (movementType==MovementType.self_towards)
+		{
+			CombatMovementHandler.MoveTowards(origin,target,localDistance);
+		}
 		return 0;
 	}
 	

@@ -9,6 +9,7 @@ import item.Item;
 import item.ItemDepletableInstance;
 import item.ItemEnergy;
 import item.ItemHasEnergy;
+import item.ItemLibrary;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ import shared.Screen;
 import shared.Vec2f;
 import shipsystem.ShipAbility.AbilityType;
 import shipsystem.ShipConverter;
+import shipsystem.ShipDispenser;
 import shipsystem.ShipResource;
 import shipsystem.WidgetSystem;
 import widgets.WidgetContainer;
@@ -33,6 +35,7 @@ public class SystemScreen extends Screen implements Callback {
 	WidgetSystem system;
 	ShipResource resourceObj;
 	ShipConverter converterObj;
+	ShipDispenser dispenserObj;
 	Window window;
 	List itemList;
 	Text weightValue;
@@ -42,6 +45,7 @@ public class SystemScreen extends Screen implements Callback {
 	Button toggleButton;
 	int equipThreshold;
 	int equipCount;
+	Text dispenserText;
 	
 	public SystemScreen(WidgetSystem widgetSystem) {
 		// TODO Auto-generated constructor stub
@@ -94,9 +98,23 @@ public class SystemScreen extends Screen implements Callback {
 		case 3:
 			toggleConverter();
 			break;
+		case 4:
+			dispenseItem();
+			break;
 		}
 	}
 	
+	private void dispenseItem() {
+		
+		if (getNumDispensable()>0)
+		{
+			
+			player.getInventory().AddItem(Universe.getInstance().getLibrary().getItem(dispenserObj.getOutputItem()));
+			resourceObj.setAmountContained(resourceObj.getAmountContained()-dispenserObj.getCost());
+			resetList();
+		}
+	}
+
 	private void toggleConverter()
 	{
 		if (converterObj!=null)
@@ -314,7 +332,6 @@ public class SystemScreen extends Screen implements Callback {
 	
 	@Override
 	public void initialize(int[] textures, Callback callback) {
-		// TODO Auto-generated method stub
 		//0 is bar
 		//1 is frame 
 		//2 button
@@ -350,7 +367,7 @@ public class SystemScreen extends Screen implements Callback {
 		weightValue=new Text(new Vec2f(14,0.2F),"encumbrance",0.7F,textures[4]);
 		window.add(weightValue);
 
-		toggleButton=new Button(new Vec2f(5.0F,2.5F),new Vec2f(6,1.8F),textures[2],this,"on/off",3,1);
+		toggleButton=new Button(new Vec2f(5.0F,6.5F),new Vec2f(6,1.8F),textures[2],this,"on/off",3,1);
 		window.add(toggleButton);
 		
 		resource=new Text(new Vec2f(2.0F,5.5F),"resource text",1.0F,textures[4]);
@@ -359,14 +376,34 @@ public class SystemScreen extends Screen implements Callback {
 		resourceBar=new ProportionBar(new Vec2f(8.5F,12),new Vec2f(16,2), 40, 40, 5, textures[0]);
 		window.add(resourceBar);
 
-		Text conversionLabel=new Text(new Vec2f(2.0F,3.0F),"converter text",1.0F,textures[4]);
+		Text conversionLabel=new Text(new Vec2f(2.0F,4.5F),"converter text",1.0F,textures[4]);
 		window.add(conversionLabel);
 		resetList();
 		buildResource();
 		buildConverter(conversionLabel);
-		
+		buildDispenser(textures);
 	}
 	
+	private void buildDispenser(int textures[]) {
+		if (dispenserObj!=null)
+		{
+			dispenserText=new Text(new Vec2f(2.0F,1.5F),dispenserObj.getOutputItem()+":"+Integer.toString(getNumDispensable()),1.0F,textures[4]);
+			window.add(dispenserText);
+			
+			Button button=new Button(new Vec2f(4.0F,0.5F),new Vec2f(8,1.8F),textures[2],this,"dispense item",4,0.8F);
+			window.add(button);
+		}
+	}
+	
+	private int getNumDispensable()
+	{
+		if (resourceObj!=null && resourceObj.getContainsWhat().equals(dispenserObj.getInput()))
+		{
+			return resourceObj.getContainedCapacity()/dispenserObj.getCost();
+		}
+		return 0;
+	}
+
 	private void buildConverter(Text label)
 	{
 		if (converterObj!=null)
@@ -404,6 +441,10 @@ public class SystemScreen extends Screen implements Callback {
 			{
 				converterObj=(ShipConverter)system.getShipAbilities().get(i);
 				converterObj.runConversion();
+			}
+			if (system.getShipAbilities().get(i).getAbilityType()==AbilityType.SA_DISPENSER)
+			{
+				dispenserObj=(ShipDispenser)system.getShipAbilities().get(i);
 			}
 		}
 		if (resourceObj!=null)

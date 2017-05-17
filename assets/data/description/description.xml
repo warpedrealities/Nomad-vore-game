@@ -1,49 +1,49 @@
 <?xml version="1.0"?>
 <description>
 	<block bodypart="body">
-		you are
+		you are 
 		<value ID="height" div="12" />
-		feet
+		 feet 
 		<value ID="height" rem="12" />
-		inches tall, your build is
+		 inches tall, your build is 
 		<macro ID="body_weight_desc" />
 		.
 	</block>
 
 	<block bodypart="hair">
-		your hair is
+		your hair is 
 		<macro ID="hair_colour_desc" />
-		in a
+		 in a 
 		<macro ID="hair_style_desc" />
-		style.
+		 style.
 	</block>
 	<block bodypart="skin">
-		your skin colour is
+		your skin colour is 
 		<macro ID="skin_colour_desc" />
 		.
 	</block>
 	<block bodypart="scales">
-		You have
+		You have 
 		<macro ID="scale_type_desc" />
 		<macro ID="scale_colour_desc" />
-		scales covering your
+		 scales covering your 
 		<macro ID="scale_covering_desc_long" />
 		.
 	</block>
 	<block bodypart="tail">
-		. You also possess a
+		. You also possess a 
 		<macro ID="tail_type_desc" />
-		tail.
+		 tail.
 	</block>
 	<pbreak />
 	<block bodypart="vagina">
 		downstairs you currently have a vagina.
 	</block>
 	<block bodypart="penis">
-		you are in possession of a
+		you are in possession of a 
 		<macro ID="penis_size_desc" />
-		penis,
+		 penis,
 		<value ID="length" div="1" />
-		inches long
+		 inches long,
 	</block>
 </description>

@@ -93,7 +93,6 @@ public class List extends GUIBase implements Callback {
 	
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
 		if (m_delay<=0 && m_strings!=null)
 		{
 			if (input.Keyboard.isKeyDown(GLFW.GLFW_KEY_PAGE_DOWN ))

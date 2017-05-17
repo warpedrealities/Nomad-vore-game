@@ -5,6 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -209,7 +210,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=0;
+		playerExperience=00;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -348,7 +349,8 @@ public class Player_RPG implements Actor_RPG {
 			{
 				if ( stats[SATIATION]>statMax[SATIATION]*subAbilities[REGENTHRESHOLD])
 				{
-					stats[HEALTH]+=subAbilities[REGENERATION]; stats[SATIATION]-=subAbilities[REGENERATION];		
+					float bonus=((float)statMax[HEALTH])/30;
+					stats[HEALTH]+=subAbilities[REGENERATION]*bonus; stats[SATIATION]-=subAbilities[REGENERATION];		
 				}			
 			}		
 		}
@@ -356,7 +358,8 @@ public class Player_RPG implements Actor_RPG {
 
 		if (stats[RESOLVE]<statMax[RESOLVE])
 		{
-			stats[RESOLVE]+=0.05F;	
+			float bonus=((float)statMax[RESOLVE])/30;
+			stats[RESOLVE]+=0.05F*bonus;	
 		}
 		statusEffectHandler.update(1, this);
 		
@@ -1051,6 +1054,19 @@ public class Player_RPG implements Actor_RPG {
 		
 		quickAction=null;
 		return false;
+	}
+
+	public void removeEquipStatus(int slot) {
+	
+		List<StatusEffect>statusEffects=statusEffectHandler.getStatusEffects();
+		for (int i=0;i<statusEffects.size();i++)
+		{
+			if (statusEffects.get(i).getUID()%10==slot)
+			{
+				statusEffects.remove(i);
+				break;
+			}
+		}
 	}
 	
 

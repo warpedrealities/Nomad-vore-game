@@ -1,6 +1,7 @@
 package actor;
 
 import item.Item;
+import item.ItemBlueprintInstance;
 import item.ItemExpositionInstance;
 import item.ItemHasEnergy;
 import item.ItemKeyInstance;
@@ -78,6 +79,10 @@ public class Inventory {
 			return false;
 		}
 		if (ItemKeyInstance.class.isInstance(item))
+		{
+			return false;
+		}
+		if (ItemBlueprintInstance.class.isInstance(item))
 		{
 			return false;
 		}
@@ -261,7 +266,13 @@ public class Inventory {
 	{
 		for (int i=m_items.size()-1;i>=0;i--)
 		{
-			
+			if (ItemKeyInstance.class.isInstance(m_items.get(i)) && m_items.get(i).getName().equals(id))
+			{
+				count--;
+				m_weight-=m_items.get(i).getWeight();
+				m_items.remove(i);
+				break;
+			}
 			if (m_items.get(i).getItem().getName().equals(id))
 			{
 				if (ItemStack.class.isInstance(m_items.get(i)))
@@ -329,10 +340,14 @@ public class Inventory {
 	}
 	
 	public int countItem(String item) {
-		// TODO Auto-generated method stub
 		int count=0;
 		for (int i=0;i<m_items.size();i++)
 		{
+			if (ItemKeyInstance.class.isInstance(m_items.get(i)) &&
+				m_items.get(i).getName().equals(item))
+			{
+				count++;
+			}
 			if (m_items.get(i).getItem().getName().equals(item))
 			{
 				if (ItemStack.class.isInstance(m_items.get(i)))

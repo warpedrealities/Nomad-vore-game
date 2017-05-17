@@ -162,7 +162,7 @@ public class ComputerPedia implements Callback, MyListener{
 		
 		case 5:
 			//forwards
-			if (index<entryIndexes.length-1)
+			if (entryIndexes!=null && index<entryIndexes.length-1)
 			{
 				index++;
 				entryList.setSelect(index);

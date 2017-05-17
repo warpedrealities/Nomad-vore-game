@@ -62,7 +62,11 @@ public class Phase_Mutator implements Phase {
 
 	@Override
 	public void performChoice(int index, Player player) {
-		player.ApplyEffect(mutatorList.get(index).getEffect());
+		for (int i=0;i<mutatorList.get(index).getEffectCount();i++)
+		{
+			player.ApplyEffect(mutatorList.get(index).getEffect(i));	
+		}
+
 	}
 
 	@Override

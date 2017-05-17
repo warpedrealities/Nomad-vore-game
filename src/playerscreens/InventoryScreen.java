@@ -15,6 +15,7 @@ import input.Keyboard;
 import input.MouseHook;
 import item.Item;
 import item.ItemAmmo;
+import item.ItemBlueprintInstance;
 import item.ItemConsumable;
 import item.ItemDepletableInstance;
 
@@ -317,7 +318,14 @@ public class InventoryScreen extends Screen implements Callback {
 		}
 		item=m_player.getInventory().RemoveItem(item);
 		//apply item
-		
+		if (ItemBlueprintInstance.class.isInstance(item))
+		{
+			ItemBlueprintInstance ibi=(ItemBlueprintInstance)item;
+			m_player.getCraftingLibrary().unlockRecipe(ibi.getRecipe());
+			ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "+ibi.getRecipe());
+			m_player.setBusy(2);
+			m_dropdown.setVisible(false);			
+		}
 		if (item.getClass().getName().contains("Consumable"))
 		{
 			ItemConsumable consumable=(ItemConsumable)item;

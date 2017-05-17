@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<preference fetish="oralvore"/>
+	<text>
+	The creature lungs towards you, its ire piqued by your impudent attacks. And you are too weak now to evade as its lashing tentacles grab ahold of you and haul you roughly off your feet. the impact of your head on the floor stunning you briefly afore you're yanked upside down into the air above the eldritch monster. Those tentacles having a firm grip despite the slime, their impossible strength grasping your legs roughly as you see an undulating circular maw flex open beneath you. It's clear it intends to break its long fast with your flesh, and there is nought you can do to resist it.
+	</text>
+	<choice destination="oralvore0" text="unwillingly sacrificed to the elder god"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	The elder thing watches you with cruel and multitudinous eyes as you dangle and squirm above it, perhaps after so long starved taking a moment to enjoy the anticipation of things. But even that is short lived as it shoves you into its mouth, tentacles curling inwards then releasing leaving you hip deep in that voracious maw. The flexing undulating tunnel gripping around your thighs firmly and then hauling you inwards and down with a schlurp, your hands scrabbling for purchase against the sides of the creature's mouth but finding the lip slick and slimy.
+	</text>
+	<choice destination="oralvore1" text="no escape"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Nonetheless for a moment it feels like you're momentarily able to make some purchase, gripping the rim of that rippling tube and holding yourself against its pull. But even that proves fleeting as a rippling tug yanks you down and you lose your grip, realizing the ancient monster is toying with you as you try to grasp the rim anew. That rim rising up around your chest, then over your shoulders despite your futile attempts to resist that deceptive and powerful throat, helplessly you find yourself drawn down inside where so many more had vanished before you.
+	</text>
+	<choice destination="oralvore2" text="devoured completely"/>
+	</page>
+
+	<page ID="oralvore2">
+	<text>
+	The last glimpse you get out of the elder thing's maw is circled with curling tentacles that block off much of your view of that stone ceiling, and then you are pulled in entirely. Your body plunging down the ancient monster's throat and sealed into a clenching digestive sack, caustic fluids soaking your flesh as you attempt a misguidedly futile effort at escaping the eldritch deity even now.
+	</text>
+	<page ID="oralvoreGO" text="doomed"/>
+	</page>
+	
+	<gameover ID="oralvoreGO">
+	<text>
+	You feel the creature in motion around you, no more attention paid to you as you struggle against the digestive fluids and gurgling confines of your imprisonment. The elder god seemingly already cast you from its mind, your service as a long overdue meal and releasing it from its imprisonment apparently already merits no further consideration. The caustic stomach breaking you down like so many others until naught but a stew of liquidated gloop dwells within and seeps into the monster's time ravaged form. You were no match for the might and will of the elder thing, and now you are no more.
+	</text>
+	</gameover>
+</Conversation>

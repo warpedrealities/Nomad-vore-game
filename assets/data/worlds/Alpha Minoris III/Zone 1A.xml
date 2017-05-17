@@ -43,6 +43,7 @@
 </perlin>
 <noise tile="3" scarcity="10"/>
 <floodfill tile="2"/>
+<SeedNPCs min="8" max="12" name="AlphaMinoris_III/icetreader"> </SeedNPCs>
 <walloff wall="4" sides="northwest"/>
 </mapgen>
 

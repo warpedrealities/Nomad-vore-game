@@ -63,6 +63,7 @@
 <noise tile="6" scarcity="12"/>
 <floodfill tile="2">
 <SeedNPCs min="8" max="16" name="AlphaMinoris_II/gator"/>
+<SeedNPCs min="6" max="12" name="AlphaMinoris_II/frog girl"/>
 <Seedwidgets min="16" max="32" name="herb bush" />
 </floodfill>
 <degrade chance="10" degradethis="7" replacewith="4"/>

@@ -11,6 +11,7 @@
 <zone x="0" y="2" surface="0">Cave zone</zone>
 <zone x="0" y="2" surface="0">Deep Cave zone</zone>
 <zone x="2" y="1" surface="0">zorr</zone>
+<zone x="2" y="1" surface="0">zorrSanctum</zone>
 <zone x="0" y="0" surface="1">saurian village</zone>
 <zone x="0" y="0" surface="0">Mine zone</zone>
 </world>

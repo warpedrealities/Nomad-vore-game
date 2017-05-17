@@ -149,7 +149,10 @@ public class ItemLibrary {
 	    {
 	    	return new ItemKey(Enode,id);
 	    }
-
+	    if (Enode.getTagName()=="ItemBlueprint")
+	    {
+	    	return new ItemBlueprint(Enode,id);
+	    }
 		return null;
 		
 	}
@@ -195,6 +198,12 @@ public class ItemLibrary {
 		{
 			ItemCoin item=new ItemCoin();
 			item.setCount(dstream.readInt());
+			return item;
+		}
+		if (c==6)
+		{
+			ItemBlueprintInstance item=new ItemBlueprintInstance(findItem(ParserHelper.LoadString(dstream)));
+			item.setRecipe(ParserHelper.LoadString(dstream));
 			return item;
 		}
 		return null;

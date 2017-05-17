@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<zone width="16" height="16" spriteset="dungeon.png">
+<tileset count-x="8" count-y="4">
+<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
+<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
+<tile sprite="18" vision="0" movement="1"> liquid water</tile>
+<tile sprite="19" vision="1" movement="2"> a strange statue</tile>
+</tileset>
+<description></description>
+<mapgen>
+<prefab positionX="0" positionY="0" width="16">
+<row>2222222222000000</row>
+<row>2111111112000000</row>
+<row>2222222112222222</row>
+<row>2111111111111112</row>
+<row>2141414114141412</row>
+<row>2111111111111112</row>
+<row>2141133333311412</row>
+<row>2111133333311112</row>
+<row>2111133333311112</row>
+<row>2141133333311412</row>
+<row>2111111111111112</row>
+<row>2141414114141412</row>
+<row>2111111111111112</row>
+<row>2222222222222222</row>
+</prefab>
+<pairedportal sprite="3" destination="zorr" x="1" y="1" ID="22" facing="2">tunnel up</pairedportal>
+<placeWidget x="6" y="1" name="SCRIPTEDEVENT">zorrSanctum</placeWidget>
+<placeNPC name="AlphaMinoris_II/elder thing" x="8" y="10"/>
+
+</mapgen>
+
+</zone>

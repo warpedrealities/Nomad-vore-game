@@ -27,6 +27,9 @@
 <row>899999998</row>
 <row>888999888</row>
 <pairedportal sprite="3" destination="zorr" x="4" y="4" ID="11" facing="0">a dungeon entrance</pairedportal>
+<placeWidget x="4" y="7" name="DESCRIBER">
+The ruined outer courts stones are split and jumbled by the acts of roots and water over countless ages yet the central structure seems intact, a stairway descending into the blackness from which strange sounds can be heard echoing. The decorative flourishes on the walls of this place are still suggested at beneath the patina of grime and vines. Those decorative carvings hinting at a significance ancient and somehow strangely foreboding.
+</placeWidget>
 </randprefab>
 
 <randprefab width="3" height="3">

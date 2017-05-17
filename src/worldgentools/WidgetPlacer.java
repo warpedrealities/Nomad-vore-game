@@ -35,6 +35,7 @@ import widgets.WidgetPortal;
 import widgets.WidgetScriptPortal;
 import widgets.WidgetSlot;
 import widgets.WidgetSprite;
+import widgets.scriptedEvents.WidgetScriptedEvent;
 import widgets.spawner.WidgetSpawner;
 import zone.Tile;
 import zone.Zone;
@@ -217,6 +218,12 @@ public class WidgetPlacer {
 		return widget;
 	}
 
+	private Widget genScriptedEvent(Element enode) {
+
+		WidgetScriptedEvent widget=new WidgetScriptedEvent(enode.getTextContent());
+		return widget;
+	}	
+	
 	private Widget genSpawner(Element enode)
 	{
 		WidgetSpawner widget=new WidgetSpawner(enode);
@@ -237,6 +244,10 @@ public class WidgetPlacer {
 		if (name.equals("DESCRIBER"))
 		{
 			return genDescriber(Enode);
+		}
+		if (name.equals("SCRIPTEDEVENT"))
+		{
+			return genScriptedEvent(Enode);
 		}
 		LootTable lootTable=null;
 		Document doc=ParserHelper.LoadXML("assets/data/widgets/"+name+".xml");

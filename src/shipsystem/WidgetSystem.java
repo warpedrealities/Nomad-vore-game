@@ -51,6 +51,10 @@ public class WidgetSystem extends WidgetBreakable {
 				{
 					systemAbilities.add(new ShipConverter(Enode,m_name));
 				}
+				if (Enode.getTagName()=="shipDispenser")
+				{
+					systemAbilities.add(new ShipDispenser(Enode,m_name));
+				}
 			}
 		}
 	}
@@ -102,6 +106,9 @@ public class WidgetSystem extends WidgetBreakable {
 				break;
 				case SA_CONVERTER:
 				systemAbilities.add(new ShipConverter(dstream,m_name));
+				break;
+				case SA_DISPENSER:
+				systemAbilities.add(new ShipDispenser(dstream,m_name));
 				break;
 			}
 			

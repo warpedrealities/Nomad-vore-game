@@ -1,6 +1,7 @@
 package worldgentools;
 
 import item.Item;
+import item.ItemBlueprintInstance;
 import item.ItemCoin;
 import item.ItemDepletableInstance;
 import item.ItemExpositionInstance;
@@ -71,6 +72,11 @@ public class LootEntry {
 		{
 			ItemKeyInstance iki=(ItemKeyInstance)item;
 			iki.setLock(addendum);
+		}
+		if (ItemBlueprintInstance.class.isInstance(item))
+		{
+			ItemBlueprintInstance ibi=(ItemBlueprintInstance)item;
+			ibi.setRecipe(addendum);
 		}
 		if (ItemCoin.class.isInstance(item))
 		{
