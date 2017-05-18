@@ -9,8 +9,7 @@
 <item value="jumpsuit"/>
 <item value="medkit"/>
 <item value="space meal"/>
-<item value="plasma pistol"/>
-<item value="plasma canister"/>
+
 <appearance>
 <bodypart partname="body">
 <partvalue variablename="height" value="60"/>

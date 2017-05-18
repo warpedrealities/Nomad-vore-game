@@ -246,6 +246,7 @@ public class CombatMove {
 		move.moveName=moveName;
 		move.ammoCost=ammoCost;
 		move.timeCost=timeCost;
+		move.actionCost=actionCost;
 		move.moveCooldown=moveCooldown;
 		move.attackBonus=attackBonus;
 		move.bonusAttribute=bonusAttribute;

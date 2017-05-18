@@ -14,8 +14,7 @@
 <ability ability="INTELLIGENCE" value="5" />
 <stat stat="HEALTH" value="40"/>
 <stat stat="RESOLVE" value="40"/>
-<attribute attribute="TEASE" value="6"/>
-<attribute attribute="KINETIC" value="4"/>
+<attribute attribute="KINETIC" value="2"/>
 <combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
 <missText count="2">
 <text>The ice treader misses TARGET</text>

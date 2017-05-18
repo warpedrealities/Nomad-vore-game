@@ -76,7 +76,11 @@ public class Move_Modifier {
 		{
 			move.setTimeCost(move.getTimeCost()*timeModifier);		
 		}
-		move.setActionCost(move.getActionCost()*actionCost);
+		if (actionCost>0)
+		{
+			move.setActionCost(move.getActionCost()*actionCost);		
+		}
+
 		move.setAttackPattern(attackPattern);
 		
 		int index=0;

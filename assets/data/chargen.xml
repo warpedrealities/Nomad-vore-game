@@ -97,7 +97,7 @@
 	</effect>
 	</mutation>
 	
-	<mutation name="shemale" descriptor="you wake up with your vagina replaced with a penis">
+	<mutation name="dickgirl" descriptor="you wake up with your vagina replaced with a penis">
 	<effect>
 	<mutation part="penis" bodychange="add" variable="length" set="6"/>
 	</effect>
