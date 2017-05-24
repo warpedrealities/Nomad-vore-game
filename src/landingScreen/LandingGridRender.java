@@ -57,7 +57,7 @@ public class LandingGridRender {
 	public void generate(LandingElement[][] gridElements) {
 		// TODO Auto-generated method stub
 		images=new SpriteImage[gridElements.length][];
-		Vec2f p=new Vec2f(gridElements.length*-2,gridElements[0].length*-2);
+		Vec2f p=new Vec2f(gridElements.length*-2,gridElements[0].length*-2+1);
 		for (int i=0;i<images.length;i++)
 		{
 			images[i]=new SpriteImage[gridElements[i].length];

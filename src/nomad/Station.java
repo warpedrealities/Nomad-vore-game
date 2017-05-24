@@ -23,6 +23,7 @@ import widgets.WidgetPortal;
 import zone.Landing;
 import zone.Tile;
 import zone.Zone;
+import zone.Zone.zoneType;
 
 public class Station extends Entity {
 
@@ -139,7 +140,7 @@ public class Station extends Entity {
 						stationZones.add(new Zone(node.getTextContent(),
 								Integer.parseInt(Enode.getAttribute("x")),
 								Integer.parseInt(Enode.getAttribute("y")),
-								surface,this));
+								zoneType.CLOSED,this));
 					}
 					if (Enode.getTagName()=="ship")
 					{
@@ -183,7 +184,7 @@ public class Station extends Entity {
 						stationZones.add(new Zone(node.getTextContent(),
 								Integer.parseInt(Enode.getAttribute("x")),
 								Integer.parseInt(Enode.getAttribute("y")),
-								surface,this));
+								zoneType.CLOSED,this));
 					}
 				}
 
@@ -440,6 +441,12 @@ public class Station extends Entity {
 				dockedShips[i]=null;
 			}
 		}
+	}
+
+	@Override
+	public Zone getZone(int x, int y) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

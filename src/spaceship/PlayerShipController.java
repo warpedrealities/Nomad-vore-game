@@ -10,6 +10,7 @@ import static org.lwjgl.glfw.GLFW.GLFW_KEY_UP;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_W;
 import nomad.Entity;
 import nomad.StarSystem;
+import nomad.Universe;
 
 import org.lwjgl.glfw.GLFW;
 
@@ -24,6 +25,7 @@ public class PlayerShipController implements ShipController {
 
 	private StarSystem currentSystem;
 	private float controlClock;
+	private int busy;
 	
 	public PlayerShipController(StarSystem system)
 	{
@@ -32,8 +34,12 @@ public class PlayerShipController implements ShipController {
 	
 	@Override
 	public void update(Spaceship Ship) {
-		// TODO Auto-generated method stub
-		
+
+		if (busy>0)
+		{
+			Universe.getInstance().getPlayer().Update();
+			busy--;
+		}
 	}
 	
 	private Entity collisionCheck(int x, int y,Spaceship ship)
@@ -83,6 +89,7 @@ public class PlayerShipController implements ShipController {
 			useFuel(ship);
 			ship.setPosition(p);
 			((SpriteRotatable)ship.getSpriteObj()).setFacing(v);
+			busy+=ship.getShipStats().getMoveCost();
 			return true;
 		}
 		return false;
@@ -208,6 +215,15 @@ public class PlayerShipController implements ShipController {
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5))
 		{
 			
+		}
+		return false;
+	}
+
+	@Override
+	public boolean canAct() {
+		if (busy==0)
+		{
+			return true;
 		}
 		return false;
 	}

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<perk name="metabolic reserves" >
+<requirement count="1">
+<req>LEVEL10</req>
+</requirement>
+<description> You've gained the ability to go longer without food at the price of needing more food to fully satiate, your metabolic reserves are deeper. +100 max satiation </description>
+<modifier affects="SATIATION" value="100"  type="STAT"/>
+<maxrank value="3"/>
+
+</perk>

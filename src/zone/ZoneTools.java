@@ -1,10 +1,39 @@
 package zone;
 
 import shared.Vec2f;
+import zone.Zone.zoneType;
 
 public class ZoneTools {
 
-	
+	public static Zone.zoneType zoneTypeFromString(String string)
+	{
+		if (string.equals("CLOSED"))
+		{
+			return zoneType.CLOSED;
+		}
+		if (string.equals("SURFACE"))
+		{
+			return zoneType.SURFACE;
+		}
+		if (string.equals("LIMITED"))
+		{
+			return zoneType.LIMITED;
+		}
+		return null;
+	}
+	public static Zone.zoneType zoneTypeFromInt(int v)
+	{
+		switch (v)
+		{
+		case 0:
+			return zoneType.SURFACE;
+		case 1:
+			return zoneType.LIMITED;
+		case 2:
+			return zoneType.CLOSED;
+		}
+		return null;
+	}	
 	static boolean LandingLocationSizeCheck(int width ,int height, int x, int y, Zone zone)
 	{
 		for (int i=x;i<x+width;i++)

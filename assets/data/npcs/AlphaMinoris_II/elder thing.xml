@@ -11,13 +11,13 @@
 <ability ability="ENDURANCE" value="5" />
 <ability ability="CHARM" value="5" />
 <ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="100"/>
-<stat stat="RESOLVE" value="100"/>
+<stat stat="HEALTH" value="120"/>
+<stat stat="RESOLVE" value="120"/>
 <attribute attribute="TEASE" value="10"/>
 <attribute attribute="PHEREMONE" value="10"/>
-<attribute attribute="DODGE" value="4"/>
-<attribute attribute="PARRY" value="4"/>
-<combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0">
+<attribute attribute="DODGE" value="6"/>
+<attribute attribute="PARRY" value="6"/>
+<combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
 <effectDamage type="KINETIC" minValue="3" maxValue="8" modifier="STRENGTH"/>
 <missText count="2">
 <text>The elder thing flails its tentacles at TARGET</text>
@@ -28,7 +28,7 @@
 </hitText>
 </combatMove>
 
-<combatMove name="psionic blast" pattern="RANGED" bonusAttribute="SEDUCTION" timeCost="2" bonusToHit="0">
+<combatMove name="psionic blast" pattern="RANGED" bonusAttribute="SEDUCTION" timeCost="2" bonusToHit="2">
 <effectDamage type="PSYCHIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
 <missText count="1">
 <text>The elder thing attempts to assail the mind of TARGET</text>
@@ -39,6 +39,9 @@
 </combatMove>
 
 </rpg>
+<flying />
+<defeated conversation="alpha_minoris_II//elder thing/chat" />
+<seduced conversation="alpha_minoris_II//elder thing/chat" />
 <victory conversation="alpha_minoris_II/elder thing/devour" />
 <seducer conversation="alpha_minoris_II/elder thing/dominate" />
 <talk conversation="alpha_minoris_II/elder thing/chat" />

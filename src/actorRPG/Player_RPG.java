@@ -61,9 +61,7 @@ public class Player_RPG implements Actor_RPG {
 	int moveChoice;
 	
 	StatusEffectHandler statusEffectHandler;
-//	ArrayList<StatusEffect> statusEffects;
-//	int bindState;
-	
+
 	int busy;
 	float karmaMeter;
 	boolean regenAction;
@@ -986,7 +984,11 @@ public class Player_RPG implements Actor_RPG {
 
 		if (stats[ACTION]<statMax[ACTION])
 		{
-			stats[ACTION]+=getActionRegen()*2;
+			stats[ACTION]+=getActionRegen()*2*i;
+			if (stats[ACTION]>statMax[ACTION])
+			{
+				stats[ACTION]=statMax[ACTION];
+			}
 		}	
 		regenAction=false;
 	}

@@ -822,6 +822,11 @@ public class Player extends Actor
 					}
 					ViewScene.m_interface.UpdateInfo();
 				}
+				else
+				{
+					UnEquip(0);
+					ViewScene.m_interface.UpdateInfo();			
+				}
 			}
 			if (energy!=null)
 			{

@@ -144,9 +144,9 @@ public class WorldView {
 				spriteManager.addSprite(sprite, actors.get(i).getSpriteName());		
 		}
 		
-		for (int i=0;i<m_width*16;i++)
+		for (int i=(m_width*16)-1;i>=0;i--)
 		{
-			for (int j=0;j<m_height*16;j++)
+			for (int j=(m_height*16)-1;j>=0;j--)
 			{
 				//detect sprites
 				if (zone.getTiles()[i][j]!=null)

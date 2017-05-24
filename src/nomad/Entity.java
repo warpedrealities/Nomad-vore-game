@@ -49,6 +49,8 @@ abstract public class Entity implements Entity_Int{
 	
 	abstract public Zone getZone(String name);
 	
+	abstract public Zone getZone(int x, int y);
+	
 	abstract public Element LoadZone(Zone zone);
 
 	abstract public void Save(String filename) throws IOException;

@@ -43,13 +43,27 @@ import zonePreload.ZonePreloadController;
 
 public class Zone implements ILosBoard, Zone_int{
 
+	public enum zoneType{SURFACE(0),LIMITED(1),CLOSED(2);
+		
+		int v=0;
+		zoneType(int v)
+		{
+			this.v=v;
+		}
+		
+		public int getV()
+		{
+			return v;
+		}
+		
+	};
 	public String zoneName;
 	public String zoneDescription;
 	private String zoneRules;
 	public TileDefLibrary zoneTileLibrary;
 	public String tilesetName;
 	public Vec2f zonePosition;
-	public boolean isSurfaceZone;
+	public zoneType type;
 	private boolean isVisited;
 	public Tile [][]zoneTileGrid;
 	public ZonePreloadController preload;
@@ -95,11 +109,11 @@ public class Zone implements ILosBoard, Zone_int{
 
 
 
-	public Zone (String filename,int x, int y,boolean surface,Entity_Int entityint)
+	public Zone (String filename,int x, int y,zoneType type,Entity_Int entityint)
 	{
 		adjacentZoneNames=new String[4];
 		zoneName=filename;
-		isSurfaceZone=surface;
+		this.type=type;
 		zonePosition=new Vec2f(x,y);
 		zoneActors=new ArrayList<Actor>();
 		zoneEntity=entityint;
@@ -354,7 +368,7 @@ public class Zone implements ILosBoard, Zone_int{
 					if (Enode.getTagName()=="mapgen")
 					{
 						ZoneBuildTools buildtools=new ZoneBuildTools(zoneName,this);
-						if (zoneEntity.getLandings()!=null && isSurfaceZone )
+						if (zoneEntity.getLandings()!=null)
 						{
 							buildtools.BuildShips(zoneEntity.getLandings(), zonePosition);					
 						}
@@ -861,11 +875,11 @@ public class Zone implements ILosBoard, Zone_int{
 		return zoneEntity;
 	}
 
-	public boolean isSurfaceZone() {
-
-		return isSurfaceZone;
-	}
 	
+	public zoneType getType() {
+		return type;
+	}
+
 	public Vec2f getWidgetPosition(Widget widget)
 	{
 		for (int i=0;i<zoneWidth;i++)

@@ -162,7 +162,7 @@ public class ShipConverter extends ShipAbility {
 		{
 			return;
 		}		
-		int time=10;
+		int time=1;
 		SpaceshipResource from=stats.getResource(convertFrom);
 		SpaceshipResource to=stats.getResource(convertTo);
 		float intakeUse=time*conversionRate;

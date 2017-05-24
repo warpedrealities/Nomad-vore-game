@@ -147,7 +147,7 @@
 	<special effect="nonhostile" />
 	<effect type="heal" value="0.1" />
 			<special effect="healnpc" />
-	<page ID="end" text="who'd of thought a snuggle was all you needed to make friends here"/>
+	<choice destination="end" text="who'd of thought a snuggle was all you needed to make friends here"/>
 	</page>
 	
 </Conversation>

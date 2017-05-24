@@ -31,13 +31,15 @@ public class SpaceshipAnalyzer {
 		ArrayList<Integer> uids=new ArrayList<Integer>();
 		
 		SpaceshipStats stats=new SpaceshipStats();
-		if (ship.getThrustCost()==0)
+		if (ship.getBaseStats().getThrustCost()==0)
 		{
 			ship.generateStats();
 		}
-		stats.setFuelEfficiency(ship.getThrustCost());
-		
-		stats.addResource("HULL", ship.getMaxHullPoints(), ship.getMaxHullPoints());
+		stats.setFuelEfficiency(ship.getBaseStats().getThrustCost());
+		stats.setArmour(ship.getBaseStats().getArmour());
+		stats.setEvasion(ship.getBaseStats().getEvasion());
+		stats.setMoveCost(ship.getBaseStats().getMoveCost());
+		stats.addResource("HULL", ship.getBaseStats().getMaxHullPoints(), ship.getBaseStats().getMaxHullPoints());
 		for (int i=0;i<ship.getZone(0).getWidth();i++)
 		{
 			for (int j=0;j<ship.getZone(0).getHeight();j++)

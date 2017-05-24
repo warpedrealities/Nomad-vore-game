@@ -33,6 +33,7 @@ public class NavScreen extends Screen implements Callback {
 	SpaceshipStats shipStats;
 	Callback callback;
 	Window window;
+	Window statWindow;
 	boolean canLaunch;
 	String statustext;
 	
@@ -50,7 +51,8 @@ public class NavScreen extends Screen implements Callback {
 		if (spaceship.isWrecked()==true)
 		{
 			canLaunch=false;
-			statustext="drive system destroyed, thrust impossible, repair impossible";
+			String str=spaceship.getUnusableState();
+			statustext="flight impossible: "+str;
 			return;
 		}
 		if (shipStats.isLooseItems())
@@ -71,7 +73,7 @@ public class NavScreen extends Screen implements Callback {
 			canLaunch=false;
 			return;
 		}
-		if (shipStats.getResource("FUEL").getResourceAmount()<=spaceship.getThrustCost() && spaceship.getShipState()==ShipState.LAND)
+		if (shipStats.getResource("FUEL").getResourceAmount()<=spaceship.getBaseStats().getThrustCost() && spaceship.getShipState()==ShipState.LAND)
 		{
 			canLaunch=false;
 			statustext="insufficient fuel for launch, more fuel required";
@@ -114,6 +116,7 @@ public class NavScreen extends Screen implements Callback {
 	public void draw(FloatBuffer buffer, int matrixloc) {
 		
 		window.Draw(buffer, matrixloc);
+		statWindow.Draw(buffer, matrixloc);
 	}
 
 	@Override
@@ -121,6 +124,7 @@ public class NavScreen extends Screen implements Callback {
 
 		mouse.Remove(window);
 		window.discard();
+		statWindow.discard();
 	}
 
 	@Override
@@ -264,6 +268,32 @@ public class NavScreen extends Screen implements Callback {
 		
 		Text status=new Text(new Vec2f(10.5F,7.0F),statustext,0.7F,textures[4]);
 		window.add(status);
+		
+		statWindow=new Window(new Vec2f(3,-1),new Vec2f(17,17),textures[1],true);
+		texts=new Text[4];
+		for (int i=0;i<4;i++)
+		{
+			texts[i]=new Text(new Vec2f(0.5F,8.0F-(0.7F*i)),"texts",0.7F,textures[4]);
+			switch (i)
+			{
+			case 0:
+				texts[i].setString("fuel efficiency:"+shipStats.getFuelEfficiency());
+				break;
+			case 1:
+				float speed=((10.0F/((float)shipStats.getMoveCost()))*100);
+				speed-=(speed)%1;
+				texts[i].setString("speed:"+speed);
+				break;	
+			case 2:
+				texts[i].setString("evasion:"+shipStats.getEvasion());
+				break;
+			case 3:
+				texts[i].setString("armour:"+shipStats.getArmour());
+				break;
+			}
+			statWindow.add(texts[i]);
+		}
+		
 	}
 
 }

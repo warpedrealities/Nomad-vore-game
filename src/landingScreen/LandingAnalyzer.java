@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import landingScreen.LandingElement.LandingClass;
 import nomad.World;
 import zone.Zone;
+import zone.Zone.zoneType;
 
 public class LandingAnalyzer {
 
@@ -17,7 +18,7 @@ public class LandingAnalyzer {
 		for (int i=0;i<world.getNumZones();i++)
 		{
 			Zone zone=world.getZone(i);
-			if (zone.isSurfaceZone())
+			if (zone.getType()!=zoneType.CLOSED)
 			{
 				if (zone.getPosition().x+1>width)
 				{

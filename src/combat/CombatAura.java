@@ -145,6 +145,10 @@ public class CombatAura {
 	
 	static private void explodeTile(Zone zone, int x, int y, CombatMove move, Actor origin)
 	{
+		if (!zone.contains(x, y))
+		{
+			return;
+		}
 		if (zone.zoneTileGrid[x][y]==null)
 		{
 			return;
@@ -173,15 +177,18 @@ public class CombatAura {
 		if (zone.zoneTileGrid[x][y]!=null && zone.zoneTileGrid[x][y].getActorInTile()!=null)
 		{
 			Attackable attackable=(Attackable)zone.zoneTileGrid[x][y].getActorInTile();
-			if (move.isNonViolent())
+			if (attackable.getAttackable())
 			{
-				ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Seduce);
+				if (move.isNonViolent())
+				{
+					ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Seduce);
+				}
+				else
+				{
+					ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Attack);	
+				}
+				attack(origin,move,attackable);		
 			}
-			else
-			{
-				ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),new Vec2f(x,y),ViolationType.Attack);	
-			}
-			attack(origin,move,attackable);
 		}
 	
 	}

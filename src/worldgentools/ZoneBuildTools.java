@@ -36,6 +36,7 @@ import zone.Tile;
 import zone.TileDefLibrary;
 import zone.Zone;
 import zone.TileDef.TileMovement;
+import zone.Zone.zoneType;
 import zonePreload.ZonePreloadVector;
 
 public class ZoneBuildTools {
@@ -96,7 +97,7 @@ public class ZoneBuildTools {
 					Landing ship=ships.get(i);
 					if (ship.landingZoneX==(int)position.x 
 							&&
-						ship.landingZoneY==(int)position.y)
+						ship.landingZoneY==(int)position.y && m_zone.getType()!=zoneType.CLOSED)
 					{
 						AddShip(ships.get(i));
 					}			
@@ -394,7 +395,7 @@ public class ZoneBuildTools {
 		
 		
 		//then use the regular prefab code		
-		Prefab(Pnode,grid,x,y);
+		Prefab(Pnode,grid,x,y,false);
 		
 	}
 	
@@ -407,7 +408,7 @@ public class ZoneBuildTools {
 		if (m_zone.preload!=null && ZonePreloadVector.class.isInstance(m_zone.preload.getPreload(id)))
 		{
 			ZonePreloadVector zpv=(ZonePreloadVector)m_zone.preload.getPreload(id);
-			Prefab(pnode, grid, zpv.getPosition().x-(width/2),zpv.getPosition().y-(height/2));
+			Prefab(pnode, grid, zpv.getPosition().x-(width/2),zpv.getPosition().y-(height/2),false);
 				
 			return;	
 		}
@@ -421,7 +422,7 @@ public class ZoneBuildTools {
 		int height=Integer.parseInt(enode.getAttribute("height"));
 		int x=p.x-(width/2);
 		int y=p.y-(height/2);
-		Prefab(enode,grid,x,y);
+		Prefab(enode,grid,x,y,false);
 	}
 	
 	boolean Check(int x, int y,int width, int height, boolean [][]grid)
@@ -446,7 +447,7 @@ public class ZoneBuildTools {
 		return true;
 	}
 	
-	void Prefab(Element Pnode,boolean[][] grid, int xoffset, int yoffset)
+	void Prefab(Element Pnode,boolean[][] grid, int xoffset, int yoffset,boolean override)
 	{
 		int width=Integer.parseInt(Pnode.getAttribute("width"));
 		int x=xoffset;
@@ -474,7 +475,7 @@ public class ZoneBuildTools {
 					//load each value
 					for (int j=0;j<width;j++)
 					{
-						if (grid[x+j][yindex]==true && m_tiles[x+j][yindex]==null)
+						if (grid[x+j][yindex]==true && (m_tiles[x+j][yindex]==null||override))
 						{
 							int value=Integer.parseInt(row.substring(j,j+1));
 							if (value>0)
@@ -866,7 +867,7 @@ public class ZoneBuildTools {
 				if (Enode.getTagName()=="prefab")
 				{
 					grid=GenOverlay();
-					Prefab(Enode,grid,0,0);
+					Prefab(Enode,grid,0,0,true);
 				}
 				if (Enode.getTagName()=="randprefab")
 				{

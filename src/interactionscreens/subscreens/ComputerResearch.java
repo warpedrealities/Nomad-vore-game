@@ -124,11 +124,11 @@ public class ComputerResearch implements Callback, MyListener {
 		Research r=e.getResearchList().get(research);
 		if (r!=null)
 		{
-			for (int i=0;i<100;i++)
+			for (int i=0;i<200;i++)
 			{
 				((Player_RPG)Universe.getInstance().getPlayer().getRPG()).update();
 			}
-			Universe.AddClock(100);
+			Universe.AddClock(200);
 			callback.Callback();
 			
 			int diceroll=Universe.m_random.nextInt(20)+Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.SCIENCE);

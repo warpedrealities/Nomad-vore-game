@@ -22,6 +22,7 @@ import shared.Vec2f;
 import widgets.WidgetPortal;
 import zone.Landing;
 import zone.Zone;
+import zone.Zone.zoneType;
 
 
 
@@ -29,12 +30,10 @@ import zone.Zone;
 public class Spaceship extends Entity{
 
 	private int UID;
-	private int maxHullPoints; 
-	private float thrustCost;
-	private float moveCost;
+	private SpaceshipBaseStats baseStats;
 	public enum ShipState { SPACE , LAND , DOCK, ADRIFT }
 	Zone interiorZone;
-	boolean isWrecked;
+	private String unusableState;
 	String exteriorSprite;
 	Vec2f shipSize;
 
@@ -49,7 +48,7 @@ public class Spaceship extends Entity{
 
 		entityPosition=new Vec2f(x,y);
 		entityName=name;
-		interiorZone=new Zone(name+UID,0,0,false,this);
+		interiorZone=new Zone(name+UID,0,0,zoneType.CLOSED,this);
 		entityVisibility=true;
 		Document doc=ParserHelper.LoadXML("assets/data/ships/"+entityName+".xml");
 		
@@ -59,12 +58,10 @@ public class Spaceship extends Entity{
 
 	    shipSize=new Vec2f((float)Integer.parseInt(n.getAttribute("width")),(float)Integer.parseInt(n.getAttribute("height")));
 	    exteriorSprite=n.getAttribute("sprite");
-	    if (n.getAttribute("wrecked")!=null)
+	    if (n.getAttribute("unusable").length()>0)
 	    {
-	    	if (Integer.parseInt(n.getAttribute("wrecked"))>0)
-	    	{
-		    	isWrecked=true;  		
-	    	}
+	    	unusableState=n.getAttribute("unusable");
+
 	    }
 		NodeList children=n.getChildNodes();
 		
@@ -96,9 +93,9 @@ public class Spaceship extends Entity{
 				{
 					interiorZone.LoadZone(Enode);
 				}	
-				if (Enode.getTagName().contains("shipstats"))
+				if (baseStats==null && Enode.getTagName().contains("shipstats"))
 				{
-					loadStats(Enode);
+					baseStats=new SpaceshipBaseStats(Enode);
 				}
 			}
 			
@@ -131,27 +128,7 @@ public class Spaceship extends Entity{
 	}
 	private void loadStats(Element n) {
 
-		NodeList children=n.getChildNodes();
-		for (int i=0;i<children.getLength();i++)
-		{
-			Node node=children.item(i);
-			if (node.getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element Enode=(Element)node;
-				if (Enode.getTagName().contains("hullpoints"))
-				{		
-					maxHullPoints=Integer.parseInt(Enode.getAttribute("value"));
-				}
-				if (Enode.getTagName().contains("movecost"))
-				{	
-					moveCost=Float.parseFloat(Enode.getAttribute("value"));
-				}
-				if (Enode.getTagName().contains("thrustcost"))
-				{		
-					thrustCost=Float.parseFloat(Enode.getAttribute("value"));
-				}
-			}
-		}		
+	
 	}
 
 	@Override
@@ -194,7 +171,7 @@ public class Spaceship extends Entity{
 		//read through the top level nodes
 		Element root=doc.getDocumentElement();
 	    Element n=(Element)doc.getFirstChild();
-		NodeList children=n.getElementsByTagName("layout");
+		NodeList children=n.getChildNodes();
 		
 		for (int i=0;i<children.getLength();i++)
 		{
@@ -205,6 +182,10 @@ public class Spaceship extends Entity{
 				if (Enode.getTagName().contains("layout"))
 				{
 					return Enode;
+				}
+				if (baseStats==null && Enode.getTagName().contains("shipstats"))
+				{
+					baseStats=new SpaceshipBaseStats(Enode);
 				}
 			}
 		}
@@ -248,6 +229,14 @@ public class Spaceship extends Entity{
 		return shipState;
 	}
 
+	public String getUnusableState() {
+		return unusableState;
+	}
+
+	public void setUnusableState(String unusableState) {
+		this.unusableState = unusableState;
+	}
+
 	public void save(DataOutputStream dstream) throws IOException 
 	{
 		
@@ -261,7 +250,16 @@ public class Spaceship extends Entity{
 		//save position
 		entityPosition.Save(dstream);
 		//save wrecked
-		dstream.writeBoolean(isWrecked);
+		if (unusableState!=null)
+		{
+			dstream.writeBoolean(true);	
+			ParserHelper.SaveString(dstream, unusableState);
+		}
+		else
+		{
+			dstream.writeBoolean(false);
+		}
+
 		//save sprite
 		ParserHelper.SaveString(dstream, exteriorSprite);
 		//save size
@@ -269,10 +267,17 @@ public class Spaceship extends Entity{
 		//save zones
 		interiorZone.Save(dstream);
 		
+		if (baseStats!=null)
+		{
+			dstream.writeBoolean(true);
+			baseStats.save(dstream);		
+		}
+		else
+		{
+			dstream.writeBoolean(false);
+		}
 
-		dstream.writeInt(maxHullPoints);
-		dstream.writeFloat(thrustCost);
-		dstream.writeFloat(moveCost);
+
 	}
 
 	public void load(DataInputStream dstream) throws IOException
@@ -283,17 +288,21 @@ public class Spaceship extends Entity{
 		shipState=ShipState.valueOf(str);
 		entityName=ParserHelper.LoadString(dstream);
 		entityPosition=new Vec2f(dstream);
-		isWrecked=dstream.readBoolean();
+		boolean b=dstream.readBoolean();
+		if (b)
+		{
+			unusableState=ParserHelper.LoadString(dstream);
+		}
 		exteriorSprite=ParserHelper.LoadString(dstream);
 		shipSize=new Vec2f(dstream);
-		interiorZone=new Zone(entityName+UID,0,0,false,this);
+		interiorZone=new Zone(entityName+UID,0,0,zoneType.CLOSED,this);
 		ParserHelper.LoadString(dstream);
 		interiorZone.load(dstream);
 		
-
-		maxHullPoints=dstream.readInt();
-		thrustCost=dstream.readFloat();
-		moveCost=dstream.readFloat();
+		if (dstream.readBoolean())
+		{
+			baseStats=new SpaceshipBaseStats(dstream);			
+		}
 	}
 	
 	public Spaceship()
@@ -326,19 +335,18 @@ public class Spaceship extends Entity{
 		return null;
 	}
 
-
-	public int getMaxHullPoints() {
-		return maxHullPoints;
+	
+	public SpaceshipBaseStats getBaseStats() {
+		return baseStats;
 	}
 
-
-
-	public float getThrustCost() {
-		return thrustCost;
-	}
 
 	public boolean isWrecked() {
-		return isWrecked;
+		if (unusableState!=null)
+		{
+			return true;
+		}
+		return false;
 	}
 
 	public ShipState getShipState() {
@@ -385,6 +393,11 @@ public class Spaceship extends Entity{
 		{
 			shipStats.run();
 		}
+		if (shipController!=null)
+		{
+			shipController.update(this);
+		}
+		
 	}
 
 	public ShipController getShipController() {
@@ -407,7 +420,6 @@ public class Spaceship extends Entity{
 
 	@Override
 	public void postLoad(Zone zone) {
-		// TODO Auto-generated method stub
 		if (shipState==ShipState.LAND)
 		{
 			ArrayList<WidgetPortal> portals=zone.getPortalWidgets();
@@ -423,7 +435,8 @@ public class Spaceship extends Entity{
 					break;
 				}
 			}
-			Zone destination=world.getLandableZone(landing.getX(), landing.getY());
+			
+			Zone destination=world.getZone(landing.getX(), landing.getY());
 			for (int i=0;i<portals.size();i++)
 			{
 				portals.get(i).setDestination(destination.getName(),portals.get(i).getID());
@@ -447,6 +460,12 @@ public class Spaceship extends Entity{
 
 	@Override
 	public Zone getLandableZone(int x, int y) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Zone getZone(int x, int y) {
 		// TODO Auto-generated method stub
 		return null;
 	}

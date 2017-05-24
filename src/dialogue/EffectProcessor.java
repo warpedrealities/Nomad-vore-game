@@ -20,6 +20,8 @@ import actor.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.NPC_RPG;
 import actorRPG.Player_RPG;
+import dialogue.worldscript.WorldScript;
+import dialogue.worldscript.WorldScript_Imp;
 import faction.FactionLibrary;
 
 public class EffectProcessor {
@@ -128,6 +130,12 @@ public class EffectProcessor {
 		{
 			String shopID=node.getAttribute("ID");
 			ShopList.getInstance().getShop(shopID).refreshStore();
+		}
+		if (str.equals("worldScript"))
+		{
+			WorldScript world=new WorldScript_Imp(Universe.getInstance().getCurrentEntity());
+			world.initialize(node.getAttribute("script"));
+			world.run();
 		}
 	}
 	

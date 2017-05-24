@@ -89,4 +89,10 @@ public class Star extends Entity
 		return null;
 	}
 
+	@Override
+	public Zone getZone(int x, int y) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

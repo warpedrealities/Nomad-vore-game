@@ -29,7 +29,7 @@
 </cavegen>
 
 <walloff wall="5" sides="westnortheastsouth"/>
-<auditpaths carve="0" replace="1"/>
+<auditpaths carve="5" replace="1"/>
 </mapgen>
 
 </zone>

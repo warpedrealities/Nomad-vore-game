@@ -24,6 +24,7 @@ import worldgentools.ZoneBuildTools;
 import zone.Landing;
 import zone.Zone;
 import zone.ZoneTools;
+import zone.Zone.zoneType;
 
 public class World extends Entity {
 
@@ -99,25 +100,26 @@ public class World extends Entity {
 					if (Enode.getTagName()=="zone")
 					{
 						//add this world
-						boolean surface=false;
-						if (Enode.getAttribute("surface")!=null)
+						zoneType z=zoneType.SURFACE;
+						if (Enode.getAttribute("type").length()>0)
 						{
-							if (Integer.parseInt(Enode.getAttribute("surface"))>0)
-							{
-								surface=true;
-							}
+							z=ZoneTools.zoneTypeFromString(Enode.getAttribute("type"));
+
 						}
 						m_zones.add(new Zone(node.getTextContent(),
 								Integer.parseInt(Enode.getAttribute("x")),
 								Integer.parseInt(Enode.getAttribute("y")),
-								surface,this));
+								z,this));
 					}
 					if (Enode.getTagName()=="ship")
 					{
-						Land(new Spaceship(Enode.getAttribute("name"),
-								(int)entityPosition.x,(int)entityPosition.y, ShipState.LAND),
-								Integer.parseInt(Enode.getAttribute("posX")),
-								Integer.parseInt(Enode.getAttribute("posY")));
+						Spaceship ship=new Spaceship(Enode.getAttribute("name"),
+								(int)entityPosition.x,(int)entityPosition.y, ShipState.LAND);
+						if (Enode.getAttribute("unusableState").length()>0)
+						{
+							ship.setUnusableState(Enode.getAttribute("unusableState"));
+						}								
+						forceLand(ship,Integer.parseInt(Enode.getAttribute("posX")),Integer.parseInt(Enode.getAttribute("posY")));
 					}
 				}
 
@@ -143,18 +145,16 @@ public class World extends Entity {
 					if (Enode.getTagName()=="zone")
 					{
 						//add this world
-						boolean surface=false;
-						if (Enode.getAttribute("surface")!=null)
+						zoneType z=zoneType.SURFACE;
+						if (Enode.getAttribute("type").length()>0)
 						{
-							if (Integer.parseInt(Enode.getAttribute("surface"))>0)
-							{
-								surface=true;
-							}
+							z=ZoneTools.zoneTypeFromString(Enode.getAttribute("type"));
+
 						}
 						m_zones.add(new Zone(node.getTextContent(),
 								Integer.parseInt(Enode.getAttribute("x")),
 								Integer.parseInt(Enode.getAttribute("y")),
-								surface,this));
+								z,this));
 					}
 				}
 
@@ -253,7 +253,7 @@ public class World extends Entity {
 		
 		for (int i=0;i<m_zones.size();i++)
 		{
-			if (m_zones.get(i).isSurfaceZone==true)
+			if (m_zones.get(i).getType()==zoneType.SURFACE)
 			{
 				if (Land(ship,m_zones.get(i))==true)
 				{
@@ -285,7 +285,11 @@ public class World extends Entity {
 		if (zone.getTiles()==null)
 		{
 			
-			int x=Universe.m_random.nextInt(zone.getWidth()-16)+8;
+			int x=8;
+			if (zone.getWidth()>16)
+			{
+				x=Universe.m_random.nextInt(zone.getWidth()-16)+8;
+			}
 			int y=Universe.m_random.nextInt(zone.getHeight()-16)+8;
 			if (zone.getLandingSite()!=null)
 			{
@@ -330,14 +334,31 @@ public class World extends Entity {
 
 	}
 	
+	public boolean forceLand(Spaceship ship, int x, int y)
+	{
 
+		for (int i=0;i<m_zones.size();i++)
+		{
+			if (m_zones.get(i).getType()!=zoneType.CLOSED)
+			{
+				int x0=(int)m_zones.get(i).zonePosition.x;
+				int y0=(int)m_zones.get(i).zonePosition.y;
+				if (x==x0 && y==y0)
+				{
+					return Land(ship,m_zones.get(i));
+				}		
+			}
+
+		}		
+		return false;
+	}
 	
 	public boolean Land(Spaceship ship, int x, int y)
 	{
 
 		for (int i=0;i<m_zones.size();i++)
 		{
-			if (m_zones.get(i).isSurfaceZone==true)
+			if (m_zones.get(i).getType()==zoneType.SURFACE)
 			{
 				int x0=(int)m_zones.get(i).zonePosition.x;
 				int y0=(int)m_zones.get(i).zonePosition.y;
@@ -507,7 +528,20 @@ public class World extends Entity {
 		for (int i=0;i<m_zones.size();i++)
 		{
 			if (m_zones.get(i).getPosition().x==x && m_zones.get(i).getPosition().y==y
-					&& m_zones.get(i).isSurfaceZone()==true)
+					&& m_zones.get(i).getType()==zoneType.SURFACE)
+			{
+				return m_zones.get(i);
+			}
+			
+		}
+		return null;
+	}
+
+	@Override
+	public Zone getZone(int x, int y) {
+		for (int i=0;i<m_zones.size();i++)
+		{
+			if (m_zones.get(i).getPosition().x==x && m_zones.get(i).getPosition().y==y)
 			{
 				return m_zones.get(i);
 			}

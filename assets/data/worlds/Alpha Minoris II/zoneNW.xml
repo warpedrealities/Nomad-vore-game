@@ -7,7 +7,9 @@
 <tile sprite="3" vision="1" movement="2"> rock</tile>
 <tile sprite="4" vision="0" movement="1"> water</tile>
 <tile sprite="5" vision="1" movement="2"> rock wall</tile>
+<tile sprite="6" vision="0" movement="0"> dirt</tile>
 </tileset>
+<transition direction="north">crash site</transition>
 <transition direction="east">zoneN</transition>
 <description>The wide open spaces of this plain provide little in the way of places to hide. But at least that means that anything wishing you ill won't be able to sneak up on you.</description>
 
@@ -28,9 +30,9 @@
 </randprefab>
 <randprefab width="5" height="6">
 <row>22222</row>
-<row>26262</row>
-<row>66266</row>
-<row>66266</row>
+<row>26762</row>
+<row>66766</row>
+<row>66766</row>
 <row>66666</row>
 <row>26662</row>
 <pairedportal sprite="3" destination="Cave zone" x="2" y="3" ID="11" facing="4">A cavern entrance</pairedportal>
@@ -62,6 +64,7 @@
 <floodfill tile="1"/>	
 <SeedNPCs min="12" max="24" name="AlphaMinoris_II/arkosaur"/>
 <walloff wall="5" sides="northwestsouth"/>
+
 <prefab positionX="32" positionY="32" width="1" height="1">
 <row>3</row>
 </prefab>
@@ -73,6 +76,15 @@
 <data npc="AlphaMinoris_II/draconian" min="1" max="1" chance="25"/>
 </spawns>
 </placeWidget>
+<prefab positionX="6" positionY="61" width="5">
+<row>77777</row>
+<row>77777</row>
+<row>77777</row>
+<placeWidget x="2" y="0" name="DESCRIBER">
+The steep sided bluff here has been broken apart into a ragged ravine. The lack of water at the bottom hints this is not a natural formation and distantly you can hear strange distorted voices emanating from further in.
+</placeWidget>
+</prefab>
+
 </mapgen>
 
 </zone>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<zone width="16" height="32" spriteset="plains.png">
+<landingsite x="8" y="28"/>
+<tileset count-x="4" count-y="4">
+<tile sprite="6" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="6" vision="0" movement="0"> dirt </tile>
+<tile sprite="2" vision="1" movement="2"> tree</tile>
+<tile sprite="3" vision="1" movement="2"> rock</tile>
+<tile sprite="4" vision="0" movement="1"> water</tile>
+<tile sprite="5" vision="1" movement="2"> rock wall</tile>
+</tileset>
+<transition direction="south">zoneNW</transition>
+<description>This valley is all bared rock and churned dirt, a torn wound in the earth that terminates in the presence of a partially buried metal bulk. It would seem you have stumbled upon a crash site.</description>
+
+<mapgen>
+<prefab positionX="0" positionY="0" width="16">
+<row>6666662222226666</row>
+<row>6666662222226666</row>
+<row>6666622222222666</row>
+<row>6666624222222666</row>
+<row>6666222266222266</row>
+<row>6666222266242266</row>
+<row>6662222222222226</row>
+<row>6662226624222226</row>
+<row>6662226622222226</row>
+<row>6662222222266226</row>
+<row>6662224222266226</row>
+<row>6662222222422226</row>
+<row>6666662222266666</row>
+<row>6666666242222666</row>
+<row>6666666622222266</row>
+<row>6666666222422266</row>
+</prefab>
+<prefab positionX="0" positionY="16" width="16">
+<row>6666662222226666</row>
+<row>6666624222266666</row>
+<row>6666622222266666</row>
+<row>6666222242666666</row>
+<row>6666222222666666</row>
+<row>6666624222266666</row>
+<row>6666622224266666</row>
+<row>6666662222226666</row>
+<row>6666662222226666</row>
+<row>6660000000000666</row>
+<row>6660000000000666</row>
+<row>6660000000000666</row>
+<row>6660000000000666</row>
+<row>6660000000000666</row>
+<row>6666000000006666</row>
+<row>6666666666666666</row>
+</prefab>
+<floodfill tile="1"/>
+<placeWidget x="3" y="25" name="SPRITE" width="10" height="5" file="rubble"/>
+<SeedNPCs min="3" max="3" name="AlphaMinoris_II/robosphere">
+<script death="hauntedValleyBotDeath"/>
+</SeedNPCs> 
+<SeedNPCs min="3" max="3" name="AlphaMinoris_II/minoris2_elves/worker">
+<script spawn="hauntedValleyElves"/>
+</SeedNPCs> 
+<SeedNPCs min="3" max="3" name="AlphaMinoris_II/minoris2_saurian/saurianworker_shovel">
+<script spawn="hauntedValleySaurians"/>
+</SeedNPCs> 
+
+</mapgen>
+
+</zone>

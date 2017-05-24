@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<Ship width="5" height="5" wrecked="0" sprite="shuttle">
+<Ship width="5" height="5" sprite="shuttle">
 
 <shipstats>
-<movecost value="10"/>
+<movecost value="12"/>
 <hullpoints value="40"/>
 <systemcapacity value="5"/>
 <hardpoints value="1"/>

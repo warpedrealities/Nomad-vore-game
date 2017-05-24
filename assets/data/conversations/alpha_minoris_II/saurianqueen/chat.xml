@@ -28,6 +28,20 @@
 		<text>
 			Her majesty smiles "Now, tell me, why do you seek an audience with me?"
 		</text>
+		<choice destination="valley0" text="$I would like to talk to you about something I found in a valley far to the north">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="valley" value="0" />	
+		</choice>
+				<choice destination="crashRecovery0" text="$I would like to talk to you about digging up the ship">
+						<condition operator="equals" evaluate="LOCALFLAG" flag="valley"
+				value="1" />	
+						<condition operator="lessthan" evaluate="GLOBALFLAG" flag="hauntedValley"
+				value="5" />	
+		</choice>
+		<choice destination="crashRecovery1" text="$I would like to talk about how the excavation is going">
+				<condition operator="equals" evaluate="LOCALFLAG" flag="valley"
+				value="1" />	
+				<condition operator="equals" evaluate="GLOBALFLAG" flag="hauntedValley" value="6" />	
+		</choice>
 		<choice destination="history0" text="Can you tell me your people's history" />
 		<choice destination="knights" text="If you are a queen do you have knights?">
 			<condition operator="equals" evaluate="LOCALFLAG" flag="knights"
@@ -42,6 +56,75 @@
 		<choice destination="end" text="I actually don't know" />
 	</page>
 
+	<page ID="valley0">
+	<effect type="setlocalflag" flag="valley" value="1"/>
+	<text>
+	"Oh and it is so significant you bring it to my attention? we know only a little of those lands and that only from long ago when they belonged to our people." the saurian queen leans forwards "So tell me please, what is it you found far to the north?"
+	</text>
+	<choice destination="valley1" text="I found a spaceship, it's crashed and partially buried but looks like it could be recovered."/>
+	</page>
+	
+	<page ID="valley1">
+	<text>
+	"Recovered you say? now i am intrigued. Sadly my people have lost knowledge of how to operate space vessels, it's of no use to use. But I am great appreciative of this news. Though if the vessel is buried then surely it cannot fly." she observes.	
+	</text>
+	<choice destination="valley2" text="I was hoping that I could have the help of the noble people of dammath to dig it out as it happens"/>
+	</page>
+	
+	<page ID="valley2">
+	<text>
+	"And we could certainly do so, though my people. It would be wrong to ask them to work for free. Lets see it should take.." Laurisse looks thoughtful and glances off to mentally check into her calculation space "1000 gold to pay for sufficient laborers to excavate the ship." she says coming back with what she obviously feels is a fair price for her people's efforts.
+	</text>
+	<choice destination="end" text="$I will come back when I have the gold to pay for your laborers your majesty"/>
+	</page>
+	
+	<page ID="crashRecovery0">
+	<text>
+	"Do you have the gold required now traveller? my terms remain fair and unmoving. My people will not labour for free, but if you have the gold, well, we can begin."
+	</text>
+	<choice destination="crashRecoveryStarted" text="$I have the gold to pay the diggers">
+	<condition evaluate="GOLD" operator="greaterthan" value="1000" />
+	<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="4" />	
+	</choice>
+	<choice destination="end" text="$I can't afford that much gold">
+	<condition evaluate="GOLD" operator="lessthan" value="1000" />
+			<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="4" />	
+	</choice>
+	<choice destination="end" text="$It's actually not safe for you to start digging while there's still robots there">
+				<condition operator="lessthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="4" />
+	</choice>
+	<choice destination="end" text="$actually nevermind"/>
+	</page>
+	
+	<page ID="crashRecoveryStarted">
+	<effect type="givegold" value="-1000" />
+	<effect type="setglobalflag" flag="hauntedValley" value="5"/>
+	<special effect="marktime" />
+	<effect type="setglobalflag" flag="hauntedValley" value="6"/>
+	<text>
+	"Excellent, our people will begin digging shortly. It has been a pleasure to come to a satisfying agreement on this matter." she says and has a guard receive the gold from you on her behalf.
+	</text>	
+	<choice destination="end" text=" "/>
+	</page>
+	
+	<page ID="crashRecovery1">
+	<condition evaluate="TIMEPASSED" operator="lessthan" value="10" />
+	<text>
+	"My representative at the digging site last reported that while they are making good progress the work is not yet complete. We'll need more time."
+	</text>
+	<choice destination="end" text="$I see, I will check back later then."/>
+	</page>
+
+	<page ID="crashRecovery1">
+	<condition evaluate="TIMEPASSED" operator="greaterthan" value="10" />
+	<text>
+	Laurisse smiles "I have received reports that the digging has completed, your ship has been unearthed."
+	</text>
+	<effect type="setglobalflag" flag="hauntedValley" value="7"/>	
+	<special effect="worldScript" script="restoreShip"/>
+	<choice destination="end" text="Thankyou your majesty, I think I'll go admire their work now."/>
+	</page>
+	
 	<page ID="friendship">
 		<condition operator="greaterthan" evaluate="FACTIONFLAG"
 			flag="friendship" value="1" />

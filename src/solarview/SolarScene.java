@@ -71,22 +71,28 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 			shipController.controlUpdate(dt);
 			if (clock<=0)
 			{
-				if (shipController.control(playerShip))
+				if (shipController.canAct())
+				{
+					if (shipController.control(playerShip))
+					{
+						GUI.update();
+						renderer.setCurrentPosition(playerShip.getPosition());
+						starscape.setCurrentPosition(playerShip.getPosition());
+						clock+=0.05F;
+					}
+					//clicking control
+					if (mouseHook.buttonDown())
+					{
+						handleClick();
+						clock+=0.25F;
+						
+					}		
+				}
+				else
 				{
 					controller.update();
-					GUI.update();
-					renderer.setCurrentPosition(playerShip.getPosition());
-					starscape.setCurrentPosition(playerShip.getPosition());
-					clock+=0.5F;
+					clock+=0.05F;
 				}
-				//clicking control
-				if (mouseHook.buttonDown())
-				{
-					handleClick();
-					clock+=0.50F;
-					
-				}
-	
 				
 			}
 			else

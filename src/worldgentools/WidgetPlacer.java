@@ -14,6 +14,7 @@ import org.w3c.dom.NodeList;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
+import shipsystem.WidgetDamage;
 import shipsystem.WidgetNavConsole;
 import shipsystem.WidgetSystem;
 
@@ -229,13 +230,21 @@ public class WidgetPlacer {
 		WidgetSpawner widget=new WidgetSpawner(enode);
 		return widget;
 	}
-	
+	private Widget genHullDamage(Element enode)
+	{
+		WidgetDamage widget=new WidgetDamage(Integer.parseInt(enode.getAttribute("value")));
+		return widget;
+	}
 	public Widget genWidget(Element Enode)
 	{
 		String name=Enode.getAttribute("name");
 		if (name.equals("SPAWNER"))
 		{
 			return genSpawner(Enode);
+		}
+		if (name.equals("DAMAGE"))
+		{
+			return genHullDamage(Enode);
 		}
 		if (name.equals("SPRITE"))
 		{

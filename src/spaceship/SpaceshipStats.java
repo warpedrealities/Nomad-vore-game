@@ -20,6 +20,9 @@ public class SpaceshipStats {
 	Map<String,SpaceshipResource> resources;
 	ArrayList<ShipConverter> converters;
 	float fuelEfficiency;
+	float moveCost;
+	float evasion;
+	float armour;
 	boolean looseItems;
 	
 	public SpaceshipStats()
@@ -153,6 +156,30 @@ public class SpaceshipStats {
 	public SpaceshipResource getResource(String type)
 	{
 		return resources.get(type);
+	}
+
+	public int getMoveCost() {
+		return (int) moveCost;
+	}
+
+	public void setMoveCost(float moveCost) {
+		this.moveCost = moveCost;
+	}
+
+	public float getEvasion() {
+		return evasion;
+	}
+
+	public void setEvasion(float evasion) {
+		this.evasion = evasion;
+	}
+
+	public float getArmour() {
+		return armour;
+	}
+
+	public void setArmour(float armour) {
+		this.armour = armour;
 	}
 	
 

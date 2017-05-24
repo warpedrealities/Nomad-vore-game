@@ -28,10 +28,21 @@ function combat(controllable,sense,pos,hostile)
 	if b<20 then
 		controllable:startConversation()
 	end
-	if b<60 then
+	if b<70 then
 		melee(controllable,sense,pos,hostile);
 	else
 		ranged(controllable,sense,pos,hostile);
+	end
+end
+
+function path(controllable,sense,pos,hostile)
+	if controllable:HasPath() then
+		controllable:FollowPath()
+	else
+		if (controllable:getvalue(0)==1) then
+			hostile=sense:getHostile(controllable,10,false)
+			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,12)
+		end
 	end
 end
 
@@ -41,10 +52,8 @@ function main(controllable, sense, script)
 	if not (hostile == nil ) and not controllable:isPeace() then
 	--combat ai here
 	combat(controllable,sense,pos,hostile)
-
+	controllable:setValue(0,1)
 	else
-		if controllable:HasPath() then
-		controllable:FollowPath()
-		end
+		path(controllable,sense,pos,hostile)
 	end
 end  

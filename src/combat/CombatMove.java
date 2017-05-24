@@ -265,6 +265,7 @@ public class CombatMove {
 		move.toggleAbility=toggleAbility;
 		move.throwWeapon=throwWeapon;
 		move.energySource=energySource;
+		move.basicAction=basicAction;
 		return move;
 	}
 	

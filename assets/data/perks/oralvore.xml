@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <perk name="oralvore" >
 <description> a strange hunger, that no mundane food can sate, your lips moisten at the sight of girlsome flesh. unlocks oralvore. </description>
-<modifier affects="SATIATION" value="50"  type="STAT"/>
 
 <maxrank value="1"/>
 

@@ -18,7 +18,7 @@ public class WidgetDamage extends Widget {
 		isWalkable=true;
 		isVisionBlocking=false;
 		widgetSpriteNumber=24;
-		widgetDescription="A rent in the interior caused by hull damage to the ship. represents"+damageValue+" hull damage";	
+		widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";	
 		
 	}
 	

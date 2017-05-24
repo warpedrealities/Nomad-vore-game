@@ -34,10 +34,14 @@ public class CombatMovementHandler {
 				last=new Vec2f(x,y);
 			}	
 		}
-		Universe.getInstance().getCurrentZone().getTile((int)actor.getPosition().x, (int)actor.getPosition().y).setActorInTile(null);
-		actor.setPosition(last);
-		Universe.getInstance().getCurrentZone().getTile((int)actor.getPosition().x, (int)actor.getPosition().y).setActorInTile(actor);
-		ViewScene.m_interface.redraw();
+		if (Universe.getInstance().getCurrentZone().contains((int)last.x, (int)last.y))
+		{
+			Universe.getInstance().getCurrentZone().getTile((int)actor.getPosition().x, (int)actor.getPosition().y).setActorInTile(null);
+			actor.setPosition(last);
+			Universe.getInstance().getCurrentZone().getTile((int)actor.getPosition().x, (int)actor.getPosition().y).setActorInTile(actor);
+			ViewScene.m_interface.redraw();		
+		}
+
 	}
 
 	public static void MoveTowards(Actor actor, Actor to, int distance) {

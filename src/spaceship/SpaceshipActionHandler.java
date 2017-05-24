@@ -10,6 +10,7 @@ import widgets.WidgetPortal;
 import worldgentools.ZoneBuildTools;
 import zone.Landing;
 import zone.Zone;
+import zone.Zone.zoneType;
 import landingScreen.LandingScreen;
 import nomad.Station;
 import nomad.Universe;
@@ -34,7 +35,7 @@ public class SpaceshipActionHandler {
 		Zone zone=null;
 		for (int i=0;i<world.getNumZones();i++)
 		{
-			if (world.getZone(i).isSurfaceZone() && world.getZone(i).getPosition().x==landing.getX() && world.getZone(i).getPosition().y==landing.getY())
+			if (world.getZone(i).getType()!=zoneType.CLOSED && world.getZone(i).getPosition().x==landing.getX() && world.getZone(i).getPosition().y==landing.getY())
 			{
 				zone=world.getZone(i);
 				break;
@@ -121,7 +122,7 @@ public class SpaceshipActionHandler {
 				if (world.getZone(i)!=null)
 				{
 					Zone zone=world.getZone(i);
-					if (zone.isSurfaceZone() && zone.getTiles()!=null)
+					if (zone.getType()==zoneType.SURFACE && zone.getTiles()!=null)
 					{
 						visitedCount++;
 					}

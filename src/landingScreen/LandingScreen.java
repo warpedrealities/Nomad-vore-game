@@ -46,6 +46,7 @@ public class LandingScreen extends Screen implements Callback{
 	@Override
 	public void discard(MouseHook mouse) {
 	
+		mouse.Remove(grid);
 		mouse.Remove(window);
 		window.discard();
 		grid.discard();

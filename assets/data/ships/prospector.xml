@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Ship width="6" height="7" wrecked="0" sprite="prospector">
+<Ship width="6" height="7" sprite="prospector">
 
 <shipstats>
 <movecost value="10"/>

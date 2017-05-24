@@ -5,28 +5,28 @@
 	<text>
 	The one time ruler of the world, the ancient god of might and mind that had devoured entire populations, seemingly lies beaten before you. It's myriad hateful eyes glaring at you as you consider the choices before you. Perhaps this being of callous intellect could be reasonable now you have it in your power. or perhaps.
 	</text>
-	<page ID="assault0" text="but then suddenly"/>
+	<choice destination="assault1" text="but then suddenly"/>
 	</page>
 	
 	<page ID="assault1">
 	<text>
 	I AM IN NO ONES POWER!- the raging presence beating against your mind comes without warning, reading your thoughts and hating them with every fibre of its being. After the betrayal and imprisonment visited upon it by the impudent and rebellious slaves it had had before it seems unwilling to tolerate anything from you except subjugation. You feel it battering against your mind, violating your memories and ripping at your psyche. The assault drives you to your knees and you sense the god approaching, its mental pressure only increasing as it does so. You can feel your sense of self starting to buckle, you can't hold out much longer.
 	</text>
-	<page ID="assault2" text="must resist"/>
+	<choice destination="assault2" text="must resist"/>
 	</page>
 	
 	<page ID="assault2">
 	<text>
 	GIVE IN, YOU ARE NOTHING, INSIGNIFICANT, SUBMIT! The voice demands, a deafening bellow that sends your thoughts scurrying into disorder. You attempt to martial a new defense only to feel it contemptously brush it aside, you try another, and it waits before battering through it leaving your mind littered with the debris and detritus of your attempted shielding. But the seeming temptation to toy with you might distract the god, for just long enough...
 	</text>
-	<page ID="end" text="only one chance"/>
+	<choice destination="assault3" text="only one chance"/>
 	</page>
 
-	<page ID="end">
+	<page ID="assault3">
 	<text>
 	You come to from the blackout to find yourself standing over the so called god, its body so much cooling meat now that oozes nauseating ichor from its wounds. You do not recall the final blow, only the thought leading up to it. Its mind was unconquerable, but its body was already weak from its hunger and the abuse you'd heaped upon it. And it was the body you targeted in the final conflict. Your head throbs, and you can feel the psychic wounds the encounter left like missing teeth inside the landscape of your mind. One can only hope you will recover, but after deicide can anything truly be the same again?
 	</text>
-		<effect type="experience" value="150" />	
+		<effect type="experience" value="250" />	
 		<effect type="setglobalflag" flag="psychic_potential" value="1" />
 		<special effect="removenpc" />
 		<special effect="opendoor" lock="elderdead" />
