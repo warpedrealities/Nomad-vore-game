@@ -70,6 +70,7 @@ public class NPC extends Actor implements Controllable {
 	static public final int CONVERSATIONVICTORY=2;
 	static public final int CONVERSATIONSEDUCER=3;
 	static public final int CONVERSATIONTALK=4;
+	static public final int CONVERSATIONCAPTIVE=5;
 	
 	ScriptPackage scripts;
 	
@@ -96,8 +97,8 @@ public class NPC extends Actor implements Controllable {
 		actorPosition=p;
 		actorVisibility=false;
 		attackIndex=0;
-		conversations=new String[5];
-		for (int i=0;i<5;i++)
+		conversations=new String[6];
+		for (int i=0;i<6;i++)
 		{
 			conversations[i]=npc.conversations[i];
 		}
@@ -148,7 +149,7 @@ public class NPC extends Actor implements Controllable {
 		actorVisibility=false;
 		attackIndex=0;
 		String spritename=null;
-		conversations=new String[5];
+		conversations=new String[6];
 		moveCost=2;
 		//sprite
 	
@@ -203,6 +204,10 @@ public class NPC extends Actor implements Controllable {
 				if (Enode.getTagName()=="talk")
 				{
 					conversations[CONVERSATIONTALK]=Enode.getAttribute("conversation");
+				}
+				if (Enode.getTagName()=="captive")
+				{
+					conversations[CONVERSATIONCAPTIVE]=Enode.getAttribute("conversation");
 				}
 				if (Enode.getTagName()=="respawn")
 				{
@@ -630,8 +635,8 @@ public class NPC extends Actor implements Controllable {
 		//load attack index
 		attackIndex=dstream.readInt();
 		//load conversations
-		conversations=new String[5];
-		for (int i=0;i<5;i++)
+		conversations=new String[6];
+		for (int i=0;i<6;i++)
 		{
 			boolean b=dstream.readBoolean();
 			if (b==true)

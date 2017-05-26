@@ -5,6 +5,7 @@
 			but you can study them now!
 		</text>
 		<choice destination="study" text="study her">
+			<assertnot evaluate="hasEntry" entry="lifeforms/raijin.xml" />		
 			<assertnot evaluate="hasResearch" research="raijin" />
 		</choice>
 		<choice destination="end" text="darn" />

@@ -18,6 +18,7 @@
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="study" text="study her">
+			<assertnot evaluate="hasEntry" entry="lifeforms/mushroomfolk.xml" />	
 			<assertnot evaluate="hasResearch" research="mushroomfolk" />
 		</choice>
 	</page>

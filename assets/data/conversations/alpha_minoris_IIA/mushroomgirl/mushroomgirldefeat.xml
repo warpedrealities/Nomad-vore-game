@@ -5,6 +5,7 @@
 			before you</text>
 		<choice destination="end" text="do nothing" />
 		<choice destination="study" text="study her">
+				<assertnot evaluate="hasEntry" entry="lifeforms/mushroomfolk.xml" />	
 			<assertnot evaluate="hasResearch" research="mushroomfolk" />
 		</choice>
 	</page>

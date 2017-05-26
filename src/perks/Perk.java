@@ -12,7 +12,8 @@ public class Perk {
 
 	
 	private String name;
-
+	private String alias;
+	
 	private String [] requires;
 	private int maxrank;
 	private String description;
@@ -21,7 +22,10 @@ public class Perk {
 	public Perk(Element enode) {
 		elements=new ArrayList<PerkElement>();
 		name=enode.getAttribute("name");
-		
+		if (enode.getAttribute("alias").length()>0)
+		{
+			alias=enode.getAttribute("alias");
+		}
 		maxrank=1;
 		NodeList children=enode.getChildNodes();
 		for (int i=0;i<children.getLength();i++)
@@ -87,6 +91,10 @@ public class Perk {
 
 	public String getName() {
 		return name;
+	}
+
+	public String getAlias() {
+		return alias;
 	}
 
 	public String [] getRequires() {

@@ -21,12 +21,13 @@ import perks.PerkQualifier;
 import view.SceneController;
 import view.ViewScene;
 import vmo.GameManager;
+import widgets.Widget;
 import widgets.WidgetConversation;
 
 public class OutEvaluator {
 
 	NPC m_npc;
-	WidgetConversation widget;
+	Widget widget;
 	Player m_player;
 	PerkQualifier qualifier;
 	SceneController controller;
@@ -224,9 +225,9 @@ public class OutEvaluator {
 						return false;
 					}			
 				}
-				if (widget!=null)
+				else if (widget!=null)
 				{
-					if (ConditionCheck(value,operator,widget.getFlags().readFlag(E.getAttribute("flag")))==false)
+					if (ConditionCheck(value,operator,((WidgetConversation)widget).getFlags().readFlag(E.getAttribute("flag")))==false)
 					{
 						return false;
 					}	
@@ -351,7 +352,7 @@ public class OutEvaluator {
 	}
 
 
-	public void setWidget(WidgetConversation widget) {
+	public void setWidget(Widget widget) {
 		this.widget = widget;
 	}
 	

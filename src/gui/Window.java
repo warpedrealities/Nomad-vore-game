@@ -23,8 +23,11 @@ public class Window extends GUIBase{
 	
 	public void add(GUIBase element)
 	{
-		m_contents.add(element);
-		element.AdjustPos(m_pos);
+		if (element!=null)
+		{
+			m_contents.add(element);
+			element.AdjustPos(m_pos);		
+		}
 	}
 	
 	public void Remove(GUIBase element)

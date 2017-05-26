@@ -23,6 +23,7 @@ import actorRPG.RPG_Helper;
 import widgets.Widget;
 import widgets.WidgetAccomodation;
 import widgets.WidgetBreakable;
+import widgets.WidgetCapture;
 import widgets.WidgetComputer;
 import widgets.WidgetConditionalPortal;
 import widgets.WidgetContainer;
@@ -340,7 +341,10 @@ public class WidgetPlacer {
 		}
 	
 	}			
-	
+	if (root.getTagName().contains("capture"))
+	{
+		widget=new WidgetCapture(root);		
+	}
 		NodeList descOverride=Enode.getElementsByTagName("description");
 		if (widget!=null && descOverride.getLength()>0)
 		{
@@ -358,35 +362,6 @@ public class WidgetPlacer {
 		zone.getTiles()[x+xoffset][y+yoffset].setWidget(widget);			
 		
 	}
-	
-	/*
-	 * 	WidgetPortal PairedPortal(Element portalnode, int offsetx,int offsety)
-	{
-		int x=Integer.parseInt(portalnode.getAttribute("x"))+offsetx;
-		int y=Integer.parseInt(portalnode.getAttribute("y"))+offsety;
-		
-		String string=null;
-		int id=0;
-		if (portalnode.getAttribute("destination").length()>0)
-		{
-			string=portalnode.getAttribute("destination");
-		}
-		if (portalnode.getAttribute("ID")!=null)
-		{
-			id=Integer.parseInt(portalnode.getAttribute("ID"));
-		}	
-		WidgetPortal portal=new WidgetPortal(Integer.parseInt(portalnode.getAttribute("sprite")),portalnode.getTextContent().replace("\n", ""),id);
-		portal.setDestination(string, id);
-		if (portalnode.getAttribute("facing").length()>0)
-		{
-			portal.setFacing(Integer.parseInt(portalnode.getAttribute("facing")));
-		}
-		m_tiles[x][y].setWidget(portal);
-		return portal;		
-	}
-	
-	 * 
-	 */
 	
 	void placeConditionalPortal(Element enode, int offsetx, int offsety)
 	{

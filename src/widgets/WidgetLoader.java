@@ -68,6 +68,8 @@ public class WidgetLoader {
 			return new Widget_Trap(dstream);
 		case 20:
 			return new WidgetScriptedEvent(dstream);
+		case 21:
+			return new WidgetCapture(dstream);	
 		}
 		return null;
 	}
@@ -117,6 +119,10 @@ public class WidgetLoader {
 		if (root.getTagName().contains("accomodation"))
 		{
 			widget=new WidgetAccomodation(n);
+		}
+		if (root.getTagName().contains("capture"))
+		{
+			widget=new WidgetCapture(n);
 		}
 		
 	

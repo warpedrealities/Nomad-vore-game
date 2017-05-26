@@ -5,6 +5,7 @@ import shared.Screen;
 import shared.Vec2f;
 import shop.ShopScreen;
 import widgets.Widget;
+import widgets.WidgetCapture;
 import widgets.WidgetConversation;
 import actor.NPC;
 
@@ -38,6 +39,8 @@ public interface ModelController_Int {
 	public void UpdateInfo();
 
 	void StartConversation(String conversation, NPC npc, boolean BadEnd);
+
+	public void StartConversation(String conversation, NPC npc, Widget widget, boolean badEnd);
 	
 	void setScreen(Screen screen);
 	
@@ -54,6 +57,7 @@ public interface ModelController_Int {
 	void StartConversation(String conversation, WidgetConversation widget);
 	
 	void screenFade(float duration);
+
 	
 
 	

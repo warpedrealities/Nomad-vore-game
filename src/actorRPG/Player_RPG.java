@@ -718,7 +718,8 @@ public class Player_RPG implements Actor_RPG {
 	public PerkInstance getPerkInstance(String name) {
 		for (int i=0;i<playerPerks.size();i++)
 		{
-			if (playerPerks.get(i).getPerk().getName().equals(name))
+			if (playerPerks.get(i).getPerk().getName().equals(name) ||
+				name.equals(playerPerks.get(i).getPerk().getAlias()))
 			{
 				return playerPerks.get(i);
 			}

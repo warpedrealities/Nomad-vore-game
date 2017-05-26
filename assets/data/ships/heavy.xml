@@ -35,10 +35,7 @@
 <placeWidget x="3" y="4" name="slot"/>
 <placeWidget x="11" y="1" name="slot"/>
 <placeWidget x="11" y="2" name="slot"/>
-<placeWidget x="2" y="3" name="DAMAGE" value="15"/>
-<placeWidget x="10" y="3" name="DAMAGE" value="15"/>
-<placeWidget x="3" y="3" name="DAMAGE" value="15"/>
-<placeWidget x="9" y="3" name="DAMAGE" value="15"/>
+
 <placeWidget x="5" y="3" name="DAMAGE" value="20"/>
 </mapgen>
 </layout>

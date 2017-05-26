@@ -38,6 +38,7 @@ import view.ViewScene;
 import view.ModelController_Int;
 import vmo.Game;
 import vmo.GameManager;
+import widgets.Widget;
 import widgets.WidgetConversation;
 
 public class DialogueScreen extends Screen implements Callback {
@@ -73,8 +74,6 @@ public class DialogueScreen extends Screen implements Callback {
 		
 		return -1;
 	}
-	
-	
 	
 	public DialogueScreen( int frame, int button, int buttonalt, int tint,Player player, TextView textview,ModelController_Int callback)
 	{
@@ -129,7 +128,7 @@ public class DialogueScreen extends Screen implements Callback {
 
 	}
 	
-	public void setWidget(WidgetConversation widget)
+	public void setWidget(Widget widget)
 	{
 		m_processor.setWidget(widget);
 		m_evaluator.setWidget(widget);

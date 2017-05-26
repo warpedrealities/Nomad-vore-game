@@ -11,6 +11,8 @@ import shop.ShopList;
 import shop.ShopScreen;
 import view.SceneController;
 import view.ViewScene;
+import widgets.Widget;
+import widgets.WidgetCapture;
 import widgets.WidgetConversation;
 
 
@@ -26,7 +28,7 @@ import faction.FactionLibrary;
 
 public class EffectProcessor {
 	
-	WidgetConversation widget;
+	Widget widget;
 	NPC m_npc;
 	Player m_player;
 	SceneController controller;
@@ -37,7 +39,7 @@ public class EffectProcessor {
 		this.controller=controller;
 	}
 
-	public void setWidget(WidgetConversation widget) {
+	public void setWidget(Widget widget) {
 		this.widget = widget;
 	}
 
@@ -137,6 +139,26 @@ public class EffectProcessor {
 			world.initialize(node.getAttribute("script"));
 			world.run();
 		}
+		if (str.equals("removeCaptive"))
+		{
+			if (WidgetCapture.class.isInstance(widget))
+			{
+				WidgetCapture wc=(WidgetCapture)widget;
+				for (int i=0;i<wc.getCapacity();i++)
+				{
+					if (wc.getNPC(i)==m_npc)
+					{
+						wc.setNPC(null, i);
+						break;
+					}
+				}
+			}
+		}
+		if (str.equals("captureNPC"))
+		{
+			CaptureHandler handler=new CaptureHandler(Universe.getInstance().getCurrentEntity(),m_player);
+			handler.capture(m_npc);
+		}
 	}
 	
 	public void ProcessEffect(Element node)
@@ -199,9 +221,9 @@ public class EffectProcessor {
 			{
 				m_npc.getFlags().setFlag(node.getAttribute("flag"), (int)value);			
 			}
-			if (widget!=null)
+			else if (widget!=null)
 			{
-				widget.getFlags().setFlag(node.getAttribute("flag"), (int)value);
+				((WidgetConversation)widget).getFlags().setFlag(node.getAttribute("flag"), (int)value);
 			}
 
 		}
@@ -223,9 +245,9 @@ public class EffectProcessor {
 			{
 				m_npc.getFlags().setFlag(node.getAttribute("flag"), m_npc.getFlags().readFlag(node.getAttribute("flag"))+(int)value);
 			}
-			if (widget!=null)
+			else if (widget!=null)
 			{
-				widget.getFlags().setFlag(node.getAttribute("flag"), m_npc.getFlags().readFlag(node.getAttribute("flag"))+(int)value);
+				((WidgetConversation)widget).getFlags().setFlag(node.getAttribute("flag"), ((WidgetConversation)widget).getFlags().readFlag(node.getAttribute("flag"))+(int)value);
 			}
 		}
 		if (str.equals("incrementglobalflag"))

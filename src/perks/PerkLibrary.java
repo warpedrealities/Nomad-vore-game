@@ -61,7 +61,8 @@ public class PerkLibrary {
 	{
 		for (int i=0;i<perkList.size();i++)
 		{
-			if (perkList.get(i).getName().equals(name))
+			if (perkList.get(i).getName().equals(name) ||
+				name.equals(perkList.get(i).getAlias()))
 			{
 				return perkList.get(i);
 			}

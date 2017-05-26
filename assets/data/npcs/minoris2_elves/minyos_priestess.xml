@@ -26,8 +26,6 @@
 
 <respawn delay="1000"/>
 <disposition value="55"/>
-<defeated conversation="alpha_minoris_II/minyospriestess/defeat" />
-<seduced conversation="alpha_minoris_II/minyospriestess/seduced" />
 <victory conversation="alpha_minoris_II/minyospriestess/victory" />
 <seducer conversation="alpha_minoris_II/minyospriestess/victory" />
 <talk conversation="alpha_minoris_II/minyospriestess/chat" />

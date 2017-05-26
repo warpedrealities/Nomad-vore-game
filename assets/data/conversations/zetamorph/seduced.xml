@@ -25,6 +25,7 @@
 			<assertion evaluate="hasperk" perk="cockmerging" />
 		</choice>
 		<choice destination="study" text="study her">
+			<assertnot evaluate="hasEntry" entry="lifeforms/zetamorph.xml" />
 			<assertnot evaluate="hasResearch" research="zetamorph" />
 		</choice>
 		<choice destination="end" text="not interested right now" />

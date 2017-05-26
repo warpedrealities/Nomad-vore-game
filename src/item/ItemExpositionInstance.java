@@ -64,8 +64,7 @@ public class ItemExpositionInstance extends Item {
 
 	public void save(DataOutputStream dstream) throws IOException
 	{
-
-		dstream.write(3);
+		dstream.write(7);
 		ParserHelper.SaveString(dstream, hostItem.getName());
 		ParserHelper.SaveString(dstream, exposition);
 		

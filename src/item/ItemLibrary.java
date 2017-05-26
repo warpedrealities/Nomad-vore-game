@@ -99,6 +99,10 @@ public class ItemLibrary {
 				{
 					return new ItemExpositionInstance((ItemExposition)item);
 				}
+				if (ItemBlueprint.class.isInstance(item))
+				{
+					return new ItemBlueprintInstance((ItemBlueprint)item);
+				}
 				if (ItemKey.class.isInstance(item))
 				{
 					return new ItemKeyInstance((ItemKey)item);
@@ -153,6 +157,10 @@ public class ItemLibrary {
 	    {
 	    	return new ItemBlueprint(Enode,id);
 	    }
+	    if (Enode.getTagName()=="ItemCapture")
+	    {
+	    	return new ItemCapture(Enode,id);
+	    }
 		return null;
 		
 	}
@@ -204,6 +212,15 @@ public class ItemLibrary {
 		{
 			ItemBlueprintInstance item=new ItemBlueprintInstance(findItem(ParserHelper.LoadString(dstream)));
 			item.setRecipe(ParserHelper.LoadString(dstream));
+			return item;
+		}
+		if (c==7)
+		{
+			ItemCaptureInstance item=new ItemCaptureInstance(findItem(ParserHelper.LoadString(dstream)));
+			if (dstream.readBoolean())
+			{
+				item.setShip(ParserHelper.LoadString(dstream));				
+			}
 			return item;
 		}
 		return null;

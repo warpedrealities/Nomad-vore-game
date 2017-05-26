@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemCapture name="capture device" weight="1" value="250">
+	<description>A teleportation device for specimen collection. Requires synchronizing with specimen containment before it can be utilized. The device can only be used on subdued specimens and resembles a bifurcated sphere decorated with vivid primary colours.</description>
+
+</ItemCapture>
