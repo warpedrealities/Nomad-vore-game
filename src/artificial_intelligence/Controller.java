@@ -1,6 +1,6 @@
 package artificial_intelligence;
 
-import actor.NPC;
+import actor.npc.NPC;
 
 public interface Controller {
 

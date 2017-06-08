@@ -29,19 +29,19 @@ import zone.Zone_int;
 
 public abstract class Actor implements Attackable {
 
-	Vec2f actorPosition;
-	String actorName;
-	boolean actorVisibility;
+	protected Vec2f actorPosition;
+	protected String actorName;
+	protected boolean actorVisibility;
 
-	Zone_int collisionInterface;
-	Square_Int spriteInterface;
-	Actor_RPG actorRPG;
-	RPGActionHandler RPGHandler;
-	String actorDescription;
-	Faction actorFaction;
+	protected Zone_int collisionInterface;
+	protected Square_Int spriteInterface;
+	protected Actor_RPG actorRPG;
+	protected RPGActionHandler RPGHandler;
+	protected String actorDescription;
+	protected Faction actorFaction;
 	
-	int moveCost=2;
-	boolean isFlying;
+	protected int moveCost=2;
+	protected boolean isFlying;
 
 	
 	public RPGActionHandler getRPGHandler()
@@ -141,7 +141,7 @@ public abstract class Actor implements Attackable {
 		}
 	}
 	
-	abstract boolean visible(Tile tile);
+	abstract protected boolean visible(Tile tile);
 	
 	
 	public Square_Int getSpriteInterface()
@@ -352,6 +352,6 @@ public abstract class Actor implements Attackable {
 
 	abstract public boolean isBlocking();
 	
-	abstract void checkSpawnable();
+	abstract protected void checkSpawnable();
 	
 }

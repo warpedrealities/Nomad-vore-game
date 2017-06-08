@@ -9,7 +9,9 @@
 		</text>
 		<choice destination="who" text="who are you?" />
 		<choice destination="tableprelude"
-			text="I think you dropped something under the table" />
+			text="I think you dropped something under the table">
+							<assertion evaluate="haspart" part="vagina" />
+		</choice>
 		<choice destination="shop" text="what can you sell me?" />
 		<choice destination="end" text="later." />
 	</page>
@@ -61,7 +63,9 @@
 			<preference fetish="sex" />
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>
-		<choice destination="lick0" text="it's her tongue" />
+		<choice destination="lick0" text="it's her tongue" >
+
+		</choice>
 	</page>
 
 	<page ID="sex0">
@@ -258,7 +262,9 @@
 		<effect type="setfactionflag" flag="friendship" value="1" />
 		<effect type="givegold" value="100" />
 		<effect type="experience" value="50" />
-		<choice destination="table" text="let me go look then" />
+		<choice destination="table" text="let me go look then">
+			<assertion evaluate="haspart" part="vagina" />
+		</choice>
 		<choice destination="end" text="your thanks is all i need" />
 	</page>
 

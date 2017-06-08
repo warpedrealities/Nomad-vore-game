@@ -66,7 +66,7 @@ public class ItemCaptureInstance extends Item {
 
 	public void save(DataOutputStream dstream) throws IOException
 	{
-		dstream.write(3);
+		dstream.write(7);
 		ParserHelper.SaveString(dstream, hostItem.getName());
 		if (ship!=null)
 		{

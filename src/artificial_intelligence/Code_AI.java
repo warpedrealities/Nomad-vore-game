@@ -1,7 +1,7 @@
 package artificial_intelligence;
 
 import actor.Actor;
-import actor.NPC;
+import actor.npc.NPC;
 import nomad.Universe;
 
 public class Code_AI implements Controller {

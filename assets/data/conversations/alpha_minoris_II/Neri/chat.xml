@@ -17,7 +17,127 @@
 		<effect type="setlocalflag" flag="talked" value="1" />
 		<choice destination="agree" text="agree" />
 		<choice destination="refuse" text="disagree" />
+		<choice destination="question0" text="I don't believe you"/>
 	</page>
+	
+	<page ID="start">
+		<preference fetish="cockvore" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="talked" />
+		<text>
+			"Oh hi, it's you again. You ready to be welcomed to the village yet? I'm
+			not doing very good at my job if I don't welcome every visitor the
+			village has. Especially ones as delightful as you."
+		</text>
+		<choice destination="agree" text="yes" />
+		<choice destination="end" text="no, bye" />
+		<choice destination="question0" text="I dont think that's how you welcome someone"/>
+	</page>
+
+
+	<page ID="start">
+		<preference fetish="cockvore" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="2"
+			flag="talked" />
+		<text>
+			"Oh hi again, nice to see you. Hope you've been enjoying yourself here.
+			Anything I can do to help you?" asks Neri fondling herself through
+			her skirt lightly.
+		</text>
+		<choice destination="agree" text="I need another welcome" />
+		<choice destination="question0" text="I'm not sure that's the official greeting"/>
+		<choice destination="end" text="well bye" />
+	</page>
+	
+	<page ID="question0">
+	<text>
+	"I am totally the official greeter of the village, and it is totally the official welcome to the village that I put you in my sack. you're an outsider, who are you to question our ways?" Neri huffs, getting defensive at being called on this.
+	</text>
+	<choice destination="cockvore0" text="you're right, who am i to question, maybe i need another welcome to really get it"/>
+	<choice destination="question2" text="Well it's not the only type of greeting right? what else can you do with that thing"/>
+	<choic destination="question1" text="I think you're just trying to trick me so you can turn me into your cum"/>
+	<choice destination="insult" text="I think you're just lying to get me as your cum, and i'm not falling for it"/>
+	</page>
+	
+	<page ID="question1">
+	<text>
+	"No i'm not tricking you, i mean I'm the official greeter. and even if i was tricking ya what of it, so what if i might want to churn ya?" she says, apparently not that good at this whole deception thing as she immediately falls back to a negotiating position instead.
+	</text>
+	<choice destination="insult" text="I think it's deplorable of you, and I'm not falling for it."/>
+	<choice destination="cockvore0Alt" text="actually, i think the idea of getting churned into cum by you is pretty hot"/>
+	</page>
+		
+	<page ID="cockvore0Alt">
+	<text>
+	"...geeze if i knew you'd of been okay with it I'd of just come out and said I wanted to make you my next load." says Neri giggling and rubbing the back of her head thoughtfully as she realizes her deception had been unnecessary. She realizes quickly though that she's wasting time and instead starts rubbing her cock, hand slid inside her skirt as she strokes herself to hardness then strikes her best smile "So, want to be my next load?"
+	</text>
+	<choice destination="cockvore1Alt" text="absolutely, schlurp me up and churn me away"/>
+	<choice destination="cockvore1AltRefuse" text="actually, i'm kinda just teasing ya, so no"/>
+	</page>
+	
+	<page ID="cockvore1Alt">
+	<!--headfirst-->
+	<text>
+	"You're an eager one." she says with a grin and drops her skirt, unveiling that thick greenskinned elf cock of hers. <conditional>Neri waiting patiently for her willing cockfood to undress before proceeding now you're nice and naked and ready to get creamy.<assertion evaluate="slothasitem" slot="2" /></conditional> She looks at your expression for a few moments then giggles again "Ready? cause I am" she asks rhetorically as she doesn't wait for a reply before reaching out to place a hand around your head and ease you down in front of her.
+	</text>
+	<choice destination="cockvore2Alt" text="more than ready, why aren't ya shoving me in yet"/>
+	</page>
+	
+	<page ID="cockvore2Alt">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="cockvore1AltRefuse">
+	<text>
+	Neri facefaults, she seems to take a few moments to collect "hyah! you! ngh!" and now the spasms of incoherence in place of a retort, and finally she huffs "You have a cruel sense of humour, you know that right?"
+	</text>
+	<choice destination="end" text="Yeah, but your reaction was comedy gold, bye"/>
+	</page>
+	
+	<page ID="question2">
+	<text>
+	"I dunno why you think you know more than I do about our tribe and all...but what exactly are you proposing?" asks Neri, frowning but looking at you askance in an expectant fashion as she wonders where you're going with this.
+	</text>
+	<page destination="CTF0" text="well, I'm looking to become a ,Member, in the tribe. If you catch my meaning">
+	<preference fetish="cocktransformation" />
+	</page>
+	<page destination="end" text="think on it a bit, i'll come back another time"/>
+	</page>
+	
+	<page ID="CTF0">
+	<condition operator="lessthan" evaluate="GLOBALFLAG" flag="ratquest" value="5" />	
+	<text>
+	Neri blinks "What do you...oooh" Neri gasps as you grab her crotch and suggestively stroke over her shaft, she glances in the direction of the alchemist's hut questioningly. Then meets your eyes, she clearly didn't expect you to be this perverted and submissive. She blushes all the heavier as she realizes you're serious, but then looks apologetic "I dunno where you heard we could do that, but we can only do that with some stuff the alchemist whips up, and she doesn't have any right now."
+	</text>
+	<choice destination="end" text="really? damn, i was looking forward to swaying between your legs"/>
+	</page>
+	
+	<page ID="CTF0">
+	<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="ratquest" value="5" />	
+	<text>
+	Neri blinks "What do you...oooh" Neri gasps as you grab her crotch and suggestively stroke over her shaft, she glances in the direction of the alchemist's hut questioningly. Then meets your eyes, she clearly didn't expect you to be this perverted and submissive. She blushes all the heavier as she realizes you're serious "ooh, you're...well, as the greeter I think I have just the thing to make you into a very firm and dependable part of the tribe." she says and then giggles "You're such a naughty traveller, I've never actually cock'd someone before."
+	</text>
+	<choice destination="CTF1" text="first time for everything"/>
+	</page>
+	
+	<page ID="CTF1">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="insult">
+	<text>
+	"Why you...that's mean, you're a meanie. I am too the greeter and you should totally go in my sack, but now you're not gonna cause you're mean." She says and crosses her arms afore turning away from you and stamping her foot in a tantrumish fashion...seems you struck a nerve.
+	</text>
+	<effect type="setlocalflag" flag="insult" value="1" />	
+	<choice destination="end" text="...yeah not dealing with this"/>
+	</page>
+	
 
 	<page ID="agree">
 		<text>
@@ -222,33 +342,40 @@
 		<choice destination="end" text="sure, if that happens" />
 	</page>
 
-	<page ID="start">
-		<preference fetish="cockvore" />
-		<condition evaluate="LOCALFLAG" operator="equals" value="1"
-			flag="talked" />
-		<text>
-			"Oh hi, it's you again. You ready to be welcomed to the village yet? I'm
-			not doing very good at my job if I don't welcome every visitor the
-			village has. Especially ones as delightful as you."
-		</text>
-		<choice destination="agree" text="yes" />
-		<choice destination="end" text="no, bye" />
-	</page>
-
 
 	<page ID="start">
 		<preference fetish="cockvore" />
-		<condition evaluate="LOCALFLAG" operator="equals" value="2"
-			flag="talked" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="insulted" />
 		<text>
-			"Oh hi again, nice to see you. Hope you've been enjoying yourself here.
-			Anything I can do to help you?" asks Neri fondling herself through
-			her skirt lightly.
+		"I don't want to talk to you anymore." ah the joys of dealing with the sulky and immature. Maybe leave her be?
 		</text>
-		<choice destination="agree" text="I need another welcome" />
-		<choice destination="end" text="well bye" />
+		<choice destination="apologize0" text="actually, i kinda want to apologize for what I said."/>
+		<choice destination="end" text="yeah, dunno why I'm bothering you" />
 	</page>
-
+	
+	<page ID="apologize0">
+	<text>
+	"you want to apologize? really, well uh." Neri is taken by surprise but apparently bounces back with mercurial speed from her sulk "Does that mean you want me to wellcum you to the village now?"
+	</text>
+	<choice destination="apologize1" text="ah, yes Neri. I think that'd be a good idea"/>
+	<choice destination="apologize2" text="no. i just wanted to apologize not go in you"/>
+	</page>
+	
+	<page ID="apologize1">
+	<text>
+	"Mhmm, thanks traveller. You won't regret this, i'll make sure you're thoroughly wellcummed don't you worry." she says brightly, bounding up to give you a hug and rub the firming bulge of her package against you before disentangling and getting ready.
+	</text>
+	<effect type="setlocalflag" flag="insult" value="0" />
+	<choice destination="cockvore0" text="*the things you do to see a smile*"/>
+	</page>
+	
+	<page ID="apologize2">
+	<text>
+	"Then what kinda apology is it if you still don't want to be in my balls?" she says and crosses her arms huffily, seems she has a bit of a onetrack mind and won't be budged from it.
+	</text>
+	<choice destination="end" text="stubborn girl, goodbye"/>
+	</page>
+	
 	<page ID="start">
 		<text>
 			"Oh uh, nope nothing to see here." she adjusts her clothing and frowns

@@ -107,7 +107,10 @@ public class ItemLibrary {
 				{
 					return new ItemKeyInstance((ItemKey)item);
 				}
-				
+				if (ItemCapture.class.isInstance(item))
+				{
+					return new ItemCaptureInstance((ItemCapture)item);
+				}
 					return item;
 				
 	

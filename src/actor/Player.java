@@ -43,6 +43,7 @@ import zone.Tile;
 
 import org.lwjgl.glfw.GLFWKeyCallback;
 
+import actor.npc.NPC;
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
 import combat.CombatMove.MoveType;
@@ -868,13 +869,13 @@ public class Player extends Actor
 	}
 
 	@Override
-	void checkSpawnable() {
+	protected void checkSpawnable() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	boolean visible(Tile tile) {
+	protected boolean visible(Tile tile) {
 
 		return true;
 	}

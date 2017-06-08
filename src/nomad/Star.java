@@ -95,4 +95,8 @@ public class Star extends Entity
 		return null;
 	}
 
+	public int getIntensity() {
+		return intensity;
+	}
+
 }

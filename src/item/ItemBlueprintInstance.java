@@ -54,7 +54,7 @@ public class ItemBlueprintInstance extends Item {
 
 	public void save(DataOutputStream dstream) throws IOException
 	{
-		dstream.write(5);
+		dstream.write(6);
 		ParserHelper.SaveString(dstream, item.getName());
 		ParserHelper.SaveString(dstream, recipe);	
 	}

@@ -448,5 +448,12 @@ public class Station extends Entity {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	public boolean isLoaded()
+	{
+		if (stationZones==null)
+		{
+			return false;
+		}
+		return true;
+	}
 }

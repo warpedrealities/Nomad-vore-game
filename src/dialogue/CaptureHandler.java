@@ -1,8 +1,8 @@
 package dialogue;
 
 import actor.Inventory;
-import actor.NPC;
 import actor.Player;
+import actor.npc.NPC;
 import item.ItemCaptureInstance;
 import nomad.Entity;
 import nomad.Universe;
@@ -60,7 +60,7 @@ public class CaptureHandler {
 					if (WidgetSlot.class.isInstance(zone.getTile(i, j).getWidgetObject()))
 					{
 						WidgetSlot slot=(WidgetSlot)zone.getTile(i, j).getWidgetObject();
-						if (WidgetCapture.class.isInstance(slot.getWidget()!=null))
+						if (WidgetCapture.class.isInstance(slot.getWidget()))
 						{
 							WidgetCapture capture=(WidgetCapture)slot.getWidget();
 							for (int k=0;k<capture.getCapacity();k++)
@@ -85,17 +85,20 @@ public class CaptureHandler {
 		{
 			if (item.getShip()==null)
 			{
-				ViewScene.m_interface.DrawText("capture device not synchronized");			
+				ViewScene.m_interface.DrawText("capture device not synchronized");		
+				return false;
 			}
 			Zone zone=getZone(item);
 			if (zone==null)
 			{
 				ViewScene.m_interface.DrawText("specimen containment out of range");	
+				return false;
 			}
 			WidgetCapture capture=getCaptureWidget(zone);
 			if (capture==null)
 			{
-				ViewScene.m_interface.DrawText("no specimen containment available");			
+				ViewScene.m_interface.DrawText("no specimen containment available");		
+				return false;
 			}
 			for (int k=0;k<capture.getCapacity();k++)
 			{

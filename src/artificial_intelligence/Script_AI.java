@@ -8,7 +8,7 @@ import javax.script.CompiledScript;
 import org.luaj.vm2.*;
 import org.luaj.vm2.lib.jse.*;
 
-import actor.NPC;
+import actor.npc.NPC;
 
 
 public class Script_AI implements Controller 

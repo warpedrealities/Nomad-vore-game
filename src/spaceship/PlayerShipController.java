@@ -9,6 +9,7 @@ import static org.lwjgl.glfw.GLFW.GLFW_KEY_S;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_UP;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_W;
 import nomad.Entity;
+import nomad.Star;
 import nomad.StarSystem;
 import nomad.Universe;
 
@@ -90,10 +91,12 @@ public class PlayerShipController implements ShipController {
 			ship.setPosition(p);
 			((SpriteRotatable)ship.getSpriteObj()).setFacing(v);
 			busy+=ship.getShipStats().getMoveCost();
+			calcSolar(Universe.getInstance().getcurrentSystem(),ship);
 			return true;
 		}
 		return false;
 	}
+	
 	public boolean altControl(Spaceship ship)
 	{
 		
@@ -122,6 +125,14 @@ public class PlayerShipController implements ShipController {
 		return false;
 	}
 	
+	private void calcSolar(StarSystem system,Spaceship ship)
+	{
+		Star star=(Star)system.getEntities().get(0);
+		float v=star.getIntensity();
+		v=(float) (v/Math.sqrt(ship.getPosition().getDistance(star.getPosition())));
+		ship.getShipStats().setSolar(v);
+	}
+
 	private boolean altControlFinal(Spaceship ship)
 	{
 		boolean up=(Keyboard.isKeyDown(GLFW_KEY_UP) || Keyboard.isKeyDown(GLFW_KEY_W));

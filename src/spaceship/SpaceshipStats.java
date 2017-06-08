@@ -7,8 +7,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import actor.NPC;
-
+import actor.npc.NPC;
 import nomad.Universe;
 
 import shipsystem.ShipConverter;
@@ -23,6 +22,7 @@ public class SpaceshipStats {
 	float moveCost;
 	float evasion;
 	float armour;
+	float solar;
 	boolean looseItems;
 	
 	public SpaceshipStats()
@@ -180,6 +180,18 @@ public class SpaceshipStats {
 
 	public void setArmour(float armour) {
 		this.armour = armour;
+	}	
+	
+	public float getSolar() {
+		return solar;
+	}
+
+	public void setSolar(float solar) {
+		this.solar = solar;
+	}
+
+	public ArrayList<ShipConverter> getConverters() {
+		return converters;
 	}
 	
 

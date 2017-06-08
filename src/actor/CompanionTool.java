@@ -2,6 +2,7 @@ package actor;
 
 import java.util.ArrayList;
 
+import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 
 import nomad.Universe;

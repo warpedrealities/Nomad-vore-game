@@ -14,7 +14,7 @@
 <ability ability="INTELLIGENCE" value="5" />
 <stat stat="HEALTH" value="40"/>
 <stat stat="RESOLVE" value="40"/>
-<attribute attribute="KINETIC" value="2"/>
+
 <combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
 <missText count="2">
 <text>The ice treader misses TARGET</text>
@@ -61,7 +61,6 @@
 </rpg>
 
 <respawn delay="1000"/>
-<flying />
 <defeated conversation="alpha_minoris_III/icetreader/defeat" />
 <seduced conversation="alpha_minoris_III/icetreader/seduced" />
 <victory conversation="alpha_minoris_III/icetreader/victory" />

@@ -17,8 +17,8 @@ import widgets.WidgetConversation;
 
 
 import actor.CompanionTool;
-import actor.NPC;
 import actor.Player;
+import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 import actorRPG.NPC_RPG;
 import actorRPG.Player_RPG;
@@ -157,7 +157,15 @@ public class EffectProcessor {
 		if (str.equals("captureNPC"))
 		{
 			CaptureHandler handler=new CaptureHandler(Universe.getInstance().getCurrentEntity(),m_player);
-			handler.capture(m_npc);
+			if (handler.capture(m_npc))
+			{
+				m_npc.Remove();	
+			}
+		}
+		if (str.equals("createNPC"))
+		{
+			String filename=node.getAttribute("file");
+			ViewScene.m_interface.createNPC(filename, m_player.getPosition());
 		}
 	}
 	

@@ -17,8 +17,8 @@ import org.w3c.dom.Element;
 
 import actor.Actor;
 import actor.ActorLoader;
-import actor.NPC;
 import actor.Player;
+import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 import artificial_intelligence.pathfinding.Path;
 import artificial_intelligence.pathfinding.Pathfinder;
@@ -897,6 +897,21 @@ public class Zone implements ILosBoard, Zone_int{
 		}
 		
 		
+		return null;
+	}
+
+	public Vec2f getEmptyTileNearP(Vec2f position) {
+		// TODO Auto-generated method stub
+		for (int i=0;i<8;i++)
+		{
+			Vec2f p=ZoneInteractionHandler.getPos(i, position);
+			Tile t=getTile((int)p.x,(int)p.y);
+			if (t!=null && t.getDefinition().getMovement()==TileMovement.WALK 
+					&& t.getWidgetObject()==null && t.getActorInTile()==null)
+			{
+				return p;
+			}
+		}
 		return null;
 	}
 }

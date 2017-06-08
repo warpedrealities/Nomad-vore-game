@@ -6,8 +6,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 import actor.Actor;
-import actor.NPC;
-
+import actor.npc.NPC;
 import nomad.Universe;
 
 import shipsystem.ShipAbility;
@@ -138,8 +137,12 @@ public class SpaceshipAnalyzer {
 			case ShipModifier.FUEL_EFFICIENCY:
 			stats.setFuelEfficiency(stats.getFuelEfficiency()*mod.getModification());
 			break;
-		
-		
+			case ShipModifier.EVASION:
+			stats.setEvasion(stats.getEvasion()+mod.getModification());
+			break;	
+			case ShipModifier.ARMOUR:
+				stats.setArmour(stats.getArmour()+mod.getModification());
+				break;	
 		
 		}
 	}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="eve.png"/>
+<name>Eve</name>
+<description>Eve stands 7 feet tall, eight and a half if you include her antlers. The tanned humanoid beauty is rather sexy to look at though, far from slender with a nice set of tits and full thighs that work all the better to support her impressive cock and ample sack. Her body built for sin contrasts with her slight air of innocence from her short life so far.</description>
+<rpg>
+
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+
+<stat stat="HEALTH" value="50"/>
+<stat stat="RESOLVE" value="50"/>
+<attribute attribute="DODGE" value="2"/>
+<attribute attribute="PARRY" value="2"/>
+</rpg>
+<defeated conversation="alpha_minoris_IIA/stagHerm/defeat" />
+<seduced conversation="alpha_minoris_IIA/stagHerm/defeat" />
+<talk conversation="alpha_minoris_IIA/stagHerm/chat" />
+<controller AI="companionEve"/>
+<faction value="player"/>
+</NPC>

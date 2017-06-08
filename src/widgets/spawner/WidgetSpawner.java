@@ -17,7 +17,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actor.Actor;
-import actor.NPC;
+import actor.npc.NPC;
 import faction.FactionLibrary;
 import nomad.Universe;
 import shared.ParserHelper;

@@ -147,7 +147,7 @@
 			such is the price one must pay for SCIENCE.
 		</text>
 		<special effect="removenpc" />
-		<special effect="research" DC="10" data="zetamorph" />
+		<special effect="research" DC="10" data="zetamorph" group="liforms0"/>
 		<choice destination="end" text="time to do some research" />
 	</page>
 

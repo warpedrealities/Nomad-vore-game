@@ -2,7 +2,7 @@ package worldgentools.blockdungeon;
 
 import java.util.ArrayList;
 
-import actor.NPC;
+import actor.npc.NPC;
 import zone.Tile;
 import zone.Zone;
 

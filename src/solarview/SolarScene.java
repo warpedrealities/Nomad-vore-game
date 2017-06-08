@@ -14,6 +14,7 @@ import shared.SceneBase;
 import shared.Screen;
 import shared.Vec2f;
 import solarBackdrop.StarScape;
+import solarview.systemScreen.SystemScreen;
 import spaceship.PlayerShipController;
 import spaceship.Spaceship;
 import spaceship.SpaceshipAnalyzer;
@@ -195,6 +196,9 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 				renderer.setScale(renderer.getScale()*2);
 				starscape.setScale(renderer.getScale()*2);
 			}
+			break;
+		case 3:
+			setScreen(new SystemScreen(playerShip,this));
 			break;
 		}
 	}

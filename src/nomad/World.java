@@ -209,7 +209,7 @@ public class World extends Entity {
 		{
 			for (int i=0;i<m_landings.size();i++)
 			{
-				if (m_landings.get(i).getShip().getZone(0).getName().contains(name))
+				if (m_landings.get(i).getShip().getZone(0).getName().equals(name))
 				{
 					return m_landings.get(i).getShip().getZone(0);
 				}
@@ -550,5 +550,12 @@ public class World extends Entity {
 		return null;
 	}
 
-
+	public boolean isLoaded()
+	{
+		if (m_zones==null)
+		{
+			return false;
+		}
+		return true;
+	}
 }

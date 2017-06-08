@@ -17,7 +17,7 @@ import view.ViewScene;
 
 import actor.Actor;
 import actor.Modifier;
-import actor.NPC;
+import actor.npc.NPC;
 
 public class NPC_RPG implements Actor_RPG{
 

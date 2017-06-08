@@ -17,7 +17,7 @@
 			disagreeable way, the data you've collected should be very valuable.
 		</text>
 		<special effect="removenpc" />
-		<special effect="research" DC="10" data="raijin" />
+		<special effect="research" DC="10" data="raijin" group="liforms0"/>
 		<choice destination="end" text="time to do some research" />
 	</page>
 

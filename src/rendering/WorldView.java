@@ -177,6 +177,19 @@ public class WorldView {
 		}
 	}
 	
+	public void addActor(Actor actor)
+	{
+		if (actor.getSpriteInterface()!=null)
+		{
+			Sprite sprite=(Sprite)actor.getSpriteInterface();
+			sprite.discard();
+		}
+			Sprite_Rectangle sprite=new Sprite_Rectangle(actor.getPosition(),4);
+			sprite.setVisible(actor.getVisible());
+			actor.setSpriteInterface(sprite);
+			spriteManager.addSprite(sprite, actor.getSpriteName());				
+	}
+	
 	public void End()
 	{
 		for (int i=0;i<m_width;i++)

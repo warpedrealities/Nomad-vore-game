@@ -3,6 +3,8 @@ package actor;
 import java.io.DataInputStream;
 import java.io.IOException;
 
+import actor.npc.NPC;
+
 public class ActorLoader {
 
 	public static Actor loadActor(DataInputStream dstream) throws IOException

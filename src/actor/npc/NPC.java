@@ -1,4 +1,4 @@
-package actor;
+package actor.npc;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -19,6 +19,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.Actor;
+import actor.Attackable;
+import actor.Player;
 import combat.CombatMove;
 import combat.effect.Effect;
 import combat.statusEffects.StatusEffect;
@@ -73,6 +76,7 @@ public class NPC extends Actor implements Controllable {
 	static public final int CONVERSATIONCAPTIVE=5;
 	
 	ScriptPackage scripts;
+	Crew crewSkill;
 	
 	public boolean isCompanion() {
 		return isCompanion;
@@ -616,6 +620,15 @@ public class NPC extends Actor implements Controllable {
 		{
 			dstream.writeBoolean(false);
 		}
+		if (crewSkill!=null)
+		{
+			dstream.writeBoolean(true);
+			crewSkill.save(dstream);
+		}
+		else
+		{
+			dstream.writeBoolean(false);
+		}
 	}
 
 
@@ -680,6 +693,10 @@ public class NPC extends Actor implements Controllable {
 		if (dstream.readBoolean())
 		{
 			scripts=new ScriptPackage(dstream);
+		}
+		if (dstream.readBoolean())
+		{
+			crewSkill=new Crew(dstream);
 		}
 	}
 
@@ -828,7 +845,7 @@ public class NPC extends Actor implements Controllable {
 
 
 	@Override
-	void checkSpawnable() {
+	protected void checkSpawnable() {
 		
 		if (scripts!=null && scripts.getIsSpawnable()!=null)
 		{
@@ -887,7 +904,7 @@ public class NPC extends Actor implements Controllable {
 
 
 	@Override
-	boolean visible(Tile tile) {
+	protected boolean visible(Tile tile) {
 
 		if (actorVisibility==false  && tile.getVisible()==true)
 		{

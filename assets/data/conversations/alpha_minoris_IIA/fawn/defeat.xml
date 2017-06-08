@@ -12,9 +12,35 @@
 			text="you feel your balls ache at the sight of her">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
+		<choice destination="capture" text="use capture device">
+		<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="capture device" />
+		</choice>			
+				<choice destination="study" text="study her">
+			<assertnot evaluate="hasEntry" entry="lifeforms/fawn.xml" />
+			<assertnot evaluate="hasResearch" research="fawn" />
+		</choice>
 		<choice destination="end" text="feeling merciful" />
 	</page>
 
+	<page ID="capture">
+	<effect type="setlocalflag" flag="seduced" value="0" />	
+	<special effect="captureNPC"/>	
+	<text></text>
+	
+	<choice destination="end" text="carry on" />
+	</page>
+	
+	<page ID="study">
+		<text>
+			you study the fawn extensively, observing and taking samples.
+		</text>
+		<special effect="removenpc" />
+		<special effect="research" DC="10" data="fawn" />
+		<choice destination="end" text="time to do some research" />
+	</page>
+	
+	
 	<page ID="cockvore0">
 		<text>
 			She's truly a delectible little doe and you find your balls acheing
@@ -95,7 +121,7 @@
 			created. She was adorable, but it's hard not to think she's better
 			this way.
 		</text>
-		<effect type="feed" value="60" />
+		<effect type="feed" value="70" />
 		<special effect="removenpc" />
 		<choice destination="end" text="she was a wonderful load" />
 	</page>
@@ -154,7 +180,7 @@
 			rightful place as your food. The fawn's nutrients flowing into you
 			with ease.
 		</text>
-		<effect type="feed" value="60" />
+		<effect type="feed" value="70" />
 		<special effect="removenpc" />
 		<choice destination="end" text="she was a delicious snack" />
 	</page>

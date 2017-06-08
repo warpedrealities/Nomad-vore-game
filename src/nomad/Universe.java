@@ -2,6 +2,7 @@ package nomad;
 
 
 import item.ItemLibrary;
+import nomad.integrityChecking.SaveIntegrityCheck;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -325,7 +326,7 @@ public class Universe extends GameManager
 		return saveName;
 	}
 	
-	public void autoSave() throws IOException
+	public char autoSave() throws IOException
 	{
 		if (!Game.sceneManager.getConfig().isDisableAutosave())
 		{
@@ -335,11 +336,20 @@ public class Universe extends GameManager
 				
 				file.mkdir();
 			}
-			save("autosave");		
+			if (save("autosave"))
+			{
+				return 2;
+			}
+			else
+			{
+				return 1;
+			}
+	
 		}
+		return 0;
 	}
 	
-	public void save(String filename) throws IOException
+	private void saveRoutine(String filename) throws IOException
 	{
 		if (!filename.equals(saveName) && filename.length()>0)
 		{
@@ -392,9 +402,31 @@ public class Universe extends GameManager
 		//save ship uid
 		uidGenerator.save(dstream);
 		
-		dstream.close();
-
-
+		dstream.close();	
+	}
+	
+	public boolean save(String filename) throws IOException
+	{
+		String saveRetain=saveName;
+		saveRoutine(filename);
+		SaveIntegrityCheck check=new SaveIntegrityCheck(filename,this);
+		if (check.isOkay())
+		{
+			return true;
+		}
+		else
+		{
+			saveName=saveRetain;		
+			saveRoutine(filename);
+			if (check.isOkay())
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}	
+		}
 	}
 	
 	private boolean versionCheck(int version)

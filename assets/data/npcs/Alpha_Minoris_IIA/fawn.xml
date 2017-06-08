@@ -20,6 +20,7 @@
 <disposition value="25"/>
 <defeated conversation="alpha_minoris_IIA/fawn/defeat" />
 <seduced conversation="alpha_minoris_IIA/fawn/seduced" />
+<captive conversation="alpha_minoris_IIA/fawn/captive" />
 <controller AI="fawn"/>
 <respawn delay="2000"/>
 <faction value="monster"/>

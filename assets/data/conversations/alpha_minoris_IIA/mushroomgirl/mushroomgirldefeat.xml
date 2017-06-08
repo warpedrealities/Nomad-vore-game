@@ -17,7 +17,7 @@
 			now you're done probing her.
 		</text>
 		<special effect="removenpc" />
-		<special effect="research" DC="10" data="mushroomfolk" />
+		<special effect="research" DC="10" data="mushroomfolk" group="liforms0"/>
 		<choice destination="end" text="time to do some research" />
 	</page>
 

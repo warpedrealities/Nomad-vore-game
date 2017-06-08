@@ -27,6 +27,8 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import dialogue.DialogueScreen;
 import combat.CombatMove;
@@ -36,6 +38,7 @@ import playerscreens.InventoryScreen;
 import rendering.WorldView;
 import shared.Callback;
 import shared.MyListener;
+import shared.ParserHelper;
 import shared.SceneBase;
 import shared.Screen;
 import shared.Tools;
@@ -50,7 +53,7 @@ import zone.TileDef.TileMovement;
 import zone.Zone;
 import actor.Actor;
 import actor.CompanionTool;
-import actor.NPC;
+import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 import actorRPG.Player_RPG;
 import artificial_intelligence.BrainBank;
@@ -610,10 +613,13 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 		LinkSenses();
 
 		try {
-			sceneController.getUniverse().autoSave();
+			char result=sceneController.getUniverse().autoSave();
+			if (result==1)
+			{
+				m_text.AddText("AUTOSAVE INTEGRITY CHECK FAILED");			
+			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			m_text.AddText("IOEXCEPTION IN AUTOSAVE");
 		}
 
 	
@@ -1614,6 +1620,20 @@ public class ViewScene extends SceneBase implements ModelController_Int,MyListen
 	public void screenFade(float duration) {
 	
 		screenFade.run(duration);
+	}
+
+
+	@Override
+	public void createNPC(String file, Vec2f position) {
+		Document doc=ParserHelper.LoadXML("assets/data/npcs/"+file+".xml");
+	    Element n=(Element)doc.getFirstChild();
+	    Vec2f p=Universe.getInstance().getCurrentZone().getEmptyTileNearP(position);
+		NPC npc=new NPC(n,p,file);	
+		npc.setCollisioninterface(Universe.getInstance().getCurrentZone());
+		Universe.getInstance().getCurrentZone().getActors().add(npc);
+		m_view.addActor(npc);
+		m_view.vision(sceneController.getActiveZone(), sceneController.getActiveZone().zoneActors,sceneController.getUniverse().player.getPosition());
+		
 	}
 
 

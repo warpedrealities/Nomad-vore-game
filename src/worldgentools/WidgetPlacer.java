@@ -11,14 +11,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.npc.NPC;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
 import shipsystem.WidgetDamage;
 import shipsystem.WidgetNavConsole;
 import shipsystem.WidgetSystem;
-
-import actor.NPC;
 import actorRPG.RPG_Helper;
 import widgets.Widget;
 import widgets.WidgetAccomodation;

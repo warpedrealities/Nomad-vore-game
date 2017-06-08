@@ -7,7 +7,7 @@ import nomad.Universe;
 import zone.Tile;
 import zone.Zone_int;
 import zone.TileDef.TileMovement;
-import actor.NPC;
+import actor.npc.NPC;
 import artificial_intelligence.pathfinding.Pathfinder_Flee;
 
 public class SpecialCommandHandler {

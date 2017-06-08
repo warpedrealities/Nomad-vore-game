@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="capture device" requiredskill="0" startunlocked="false">
+<description>
+A teleportation device for specimen collection. Requires synchronizing with specimen containment before it can be utilized. The device can only be used on subdued specimens
+</description>
+<ingredient item="battery" quantity="1"/>
+<ingredient item="computation valve" quantity="1"/>
+<ingredient item="scrap metal" quantity="1"/>
+<ingredient item="flux capacitor" quantity="1"/>
+<result item="capture device"/>
+</recipe>

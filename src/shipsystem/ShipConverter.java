@@ -111,6 +111,7 @@ public class ShipConverter extends ShipAbility {
 		lastAccessTimestamp=dstream.readLong();
 		spaceOnly=dstream.readBoolean();
 		active=dstream.readBoolean();
+		widgetName=ParserHelper.LoadString(dstream);
 	}
 
 	@Override
@@ -123,6 +124,7 @@ public class ShipConverter extends ShipAbility {
 		dstream.writeLong(lastAccessTimestamp);
 		dstream.writeBoolean(spaceOnly);
 		dstream.writeBoolean(active);
+		ParserHelper.SaveString(dstream, widgetName);
 	}
 	
 	public long getLastAccessTimestamp() {
@@ -156,8 +158,27 @@ public class ShipConverter extends ShipAbility {
 		return (int)interim;
 	}
 
+	private void runSolar(SpaceshipStats stats)
+	{
+		int time=1;
+		SpaceshipResource to=stats.getResource(convertTo);
+		float max=stats.getSolar();
+		if (max>conversionEfficiency)
+		{
+			max=conversionEfficiency;
+		}
+		double outputProduced=time*conversionRate*max;
+//		outputProduced=Math.round(outputProduced * 100d) / 100d;
+		to.setResourceAmount((float) (to.getResourceAmount()+outputProduced));		
+	}
+	
 	public void run(SpaceshipStats stats)
 	{
+		if ("SOLAR".equals(convertFrom))
+		{
+			runSolar(stats);
+			return;
+		}
 		if (stats.getResource(convertFrom)==null || stats.getResource(convertTo)==null)
 		{
 			return;
@@ -167,7 +188,7 @@ public class ShipConverter extends ShipAbility {
 		SpaceshipResource to=stats.getResource(convertTo);
 		float intakeUse=time*conversionRate;
 		double outputProduced=time*conversionRate*conversionEfficiency;
-		outputProduced=Math.round(outputProduced * 100d) / 100d;
+//		outputProduced=Math.round(outputProduced * 100d) / 100d;
 		if (from.getResourceAmount()<intakeUse || to.getResourceCap()-to.getResourceAmount()<outputProduced)
 		{
 			return;

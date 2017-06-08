@@ -1,5 +1,6 @@
 package view;
 
+import actor.npc.NPC;
 import item.Item;
 import shared.Screen;
 import shared.Vec2f;
@@ -7,7 +8,6 @@ import shop.ShopScreen;
 import widgets.Widget;
 import widgets.WidgetCapture;
 import widgets.WidgetConversation;
-import actor.NPC;
 
 public interface ModelController_Int {
 
@@ -58,7 +58,7 @@ public interface ModelController_Int {
 	
 	void screenFade(float duration);
 
-	
+	void createNPC(String file,Vec2f position);
 
 	
 }

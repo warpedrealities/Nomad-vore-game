@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <lootTable>
-<loot item="computation valve" chance="1"/>
-<loot item="scrap metal" chance="3"/>
-<loot item="heavy plate" chance="2"/>
-<loot item="battery" chance="1"/>
+<loot item="computation valve" chance="4"/>
+<loot item="scrap metal" chance="12"/>
+<loot item="heavy plate" chance="8"/>
+<loot item="battery" chance="4"/>
+<loot item="flux capacitor" chance="1"/>
 </lootTable>

@@ -43,7 +43,7 @@
 <noise tile="3" scarcity="10"/>
 <floodfill tile="2"/>
 <walloff wall="4" sides="southwesteast"/>
-
+<SeedNPCs min="12" max="24" name="AlphaMinoris_III/drake"> </SeedNPCs>
 </mapgen>
 
 </zone>

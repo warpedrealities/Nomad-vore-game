@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<entry name="LF:fawn">
+	<text>
+		description:
+		Fawn are diminutive humanoids with cervine attributes such as stubby horns, deer ears and a short tail. Older specimens retain similar short, slender and youthful appearances. No specimens have been observed to show what would in the case of humans be the signs of a fully mature adult body. Additionally no specimen has been observed to demonstrate higher intellectual faculties such as articulate speech.
+		LBREAK
+		biological findings: It's unclear how fawn reproduce as they are seemingly monogendered, biological analysis however indicates a complicated sequence of latent instructions in an inactive sexual chromosome. This sequence would appear to cause a metamorphic cascade in the fawn. it's unclear at this point what natural event or substance would activate this DNA however that does not that mean you cannot synthesize the necessary trigger proteins and inject them into a contained specimen. It should be noted that you cannot predict at this juncture what the result of this experiment would be.
+		
+		LBREAK
+		Tactical assessment: Fawn's lack of musculature except in their legs coupled with their natural disposition makes them no physical threat. They lack the forward nature to be assertively seductive due to the aforementioned disposition and so are no psychological threat either. As they will flee confrontation use of ranged abilities or mobility restricting abilities/terrain is recommended to deal with them.
+		
+	</text>
+	<requirement name="fawn" count="1" />
+
+</entry>

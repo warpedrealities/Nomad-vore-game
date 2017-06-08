@@ -9,9 +9,10 @@ import shared.ParserHelper;
 public class MoveCooldown {
 
 	int cooldown;
-	int coolmax;
+	int coolMax;
 	int icon;
 	String moveName;
+	boolean visible;
 	
 	public MoveCooldown()
 	{
@@ -23,7 +24,8 @@ public class MoveCooldown {
 		cooldown=0;
 		moveName=name;
 		this.icon=icon;
-		coolmax=max;
+		coolMax=max;
+		visible=true;
 	}
 	
 	public void save (DataOutputStream dstream) throws IOException
@@ -31,7 +33,8 @@ public class MoveCooldown {
 		ParserHelper.SaveString(dstream, moveName);
 		dstream.writeInt(cooldown);
 		dstream.writeInt(icon);
-		dstream.writeInt(coolmax);
+		dstream.writeInt(coolMax);
+		dstream.writeBoolean(visible);
 	}
 	
 	public void load(DataInputStream dstream) throws IOException
@@ -39,7 +42,8 @@ public class MoveCooldown {
 		moveName=ParserHelper.LoadString(dstream);
 		cooldown=dstream.readInt();
 		icon=dstream.readInt();
-		coolmax=dstream.readInt();
+		coolMax=dstream.readInt();
+		visible=dstream.readBoolean();
 	}
 	
 	public void update(int time)
@@ -67,11 +71,21 @@ public class MoveCooldown {
 	}
 
 	public int getCoolmax() {
-		return coolmax;
+		return coolMax;
 	}
 
 	public void use()
 	{
-		cooldown=coolmax;
+		cooldown=coolMax;
 	}
+
+	public boolean isVisible() {
+		return visible;
+	}
+
+	public void setVisible(boolean visible) {
+		this.visible = visible;
+	}
+	
+	
 }

@@ -252,7 +252,7 @@ public class Player_RPG implements Actor_RPG {
 	
 	public int getNextLevel()
 	{
-		return (playerLevel*33)+100;
+		return (playerLevel*45+(playerLevel*5))+100;
 	}
 	
 	

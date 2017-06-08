@@ -2,4 +2,5 @@
 <lootTable>
 <loot item="power gauntlet" chance="1" addendum="0"/>
 <loot item="autopistol" chance="1" addendum="0"/>
+<loot item="flux capacitor" chance="1"/>
 </lootTable>

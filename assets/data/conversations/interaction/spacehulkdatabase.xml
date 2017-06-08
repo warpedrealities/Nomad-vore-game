@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			This database stores hundreds of thousands of bytes on the finest in magnetic reel to reel data storage technologies. You might be able to access the databank and 
+		</text>
+		<choice destination="databank" text="access databanks" />
+		<choice destination="end" text="exit" />
+	</page>
+	
+	<page ID="databank">
+	<text>
+	DIRECTORY: LBREAK
+	SOLAR POWER PLANT LBREAK
+	SPECIMEN CONTAINMENT SYSTEM LBREAK
+	CAPTURE DEVICE LBREAK
+	SELECT FILE
+	</text>
+	<choice destination="solar" text="access file, solar power plant"/>
+	<choice destination="containment" text="access file, specimen containment system"/>
+	<choice destination="capture" text="access file, capture device"/>
+	<choice destination="end" text="logout" />
+	</page>
+	
+	<page ID="solar">
+	<text>
+	The data flashes up screen by screen as you analyze it. The solar plant seems to use a series of mirrors to focus sunlight on a central element, heating it up to a formidable temperature in order to create electrical energy. It's an unconventional but effective way of generating power so long as you can deploy the mirror.
+	</text>
+	<special effect="blueprint" ID="solar plant" />
+	<choice destination="databank" text="back"/>
+	<choice destination="end" text="logout"/>
+	</page>
+
+	<page ID="containment">
+	<text>
+	The data scrolls by steadily. Blueprints for a device that's perhaps euphemistically named specimen containment. It uses a form of suspended animation to sustain and contain alien lifeforms inside a suspension capsule. It also comes with a form of teleportation relay link that may be utilized to transfer a lifeform to the capsule without inconvenience.
+	</text>
+	<special effect="blueprint" ID="specimen containment" />	
+	<choice destination="databank" text="back"/>
+	<choice destination="end" text="logout"/>	
+	</page>
+	
+	<page ID="capture">
+	<text>
+	The images linked to this design seem to briefly make you worried you've found the death star plans. But no this device is much smaller, handheld, and apparently a teleportation device used to teleport the target to a linked teleportation relay. It probably takes quite a while to lock on so you wouldn't be able to use it as a weapon in combat. It's also useless without a teleportation relay to act as its target, but with it you can probably get some good use out of this.
+	</text>
+	<special effect="blueprint" ID="capture device" />	
+	<choice destination="databank" text="back"/>
+	<choice destination="end" text="logout"/>	
+	</page>
+</Conversation>

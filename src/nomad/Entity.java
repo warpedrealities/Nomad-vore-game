@@ -63,6 +63,11 @@ abstract public class Entity implements Entity_Int{
 	
 	abstract public float getSpriteSize();
 	
+	public boolean isLoaded()
+	{
+		return false;
+	}
+	
 	@Override
 	public ArrayList<Landing> getLandings() {
 		// TODO Auto-generated method stub

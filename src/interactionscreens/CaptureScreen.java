@@ -3,7 +3,7 @@ package interactionscreens;
 import java.nio.FloatBuffer;
 
 import actor.Inventory;
-import actor.NPC;
+import actor.npc.NPC;
 import gui.Button;
 import gui.List;
 import gui.MultiLineText;
@@ -155,11 +155,12 @@ public class CaptureScreen extends Screen implements Callback {
 		Button []buttons=new Button[4];
 		
 		buttons[0]=new Button(new Vec2f(34.0F,0.0F),new Vec2f(6,1.8F),textures[2],this,"Exit",0,1);
+
+		buttons[2]=new Button(new Vec2f(34.0F,4.0F),new Vec2f(6,1.8F),textures[2],this,"interact",1,1);
 		if (getCanFlush())
 		{
-			buttons[1]=new Button(new Vec2f(34.0F,2.0F),new Vec2f(6,1.8F),textures[2],this,"Flush",1,1);			
+			buttons[1]=new Button(new Vec2f(34.0F,2.0F),new Vec2f(6,1.8F),textures[2],this,"Flush",2,1);			
 		}
-		buttons[2]=new Button(new Vec2f(34.0F,4.0F),new Vec2f(6,1.8F),textures[2],this,"decant",2,1);
 		buttons[3]=new Button(new Vec2f(34.0F,6.0F),new Vec2f(6,1.8F),textures[2],this,"synch",3,1);
 		
 		for (int i=0;i<4;i++)

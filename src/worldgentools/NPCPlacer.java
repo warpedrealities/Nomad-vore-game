@@ -6,11 +6,11 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import actor.npc.NPC;
+import actor.npc.ScriptPackage;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
-import actor.NPC;
-import actor.ScriptPackage;
 import zone.Tile;
 import zone.Zone;
 import zone.TileDef.TileMovement;

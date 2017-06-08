@@ -57,13 +57,13 @@
 <resource type="ENERGY" value="1000"/>
 </placeWidget>
 </randprefab>
-<randprefab width="5" height="6">
-<row>99999</row>
-<row>99299</row>
-<row>92229</row>
-<row>92229</row>
-<row>99299</row>
-<row>33233</row>
+<randprefab width="6" height="6">
+<row>999993</row>
+<row>992993</row>
+<row>922293</row>
+<row>922293</row>
+<row>992993</row>
+<row>332333</row>
 <placeWidget x="2" y="2" name="DESCRIBER">
 a sign is barely legible above the empty door frame, beyond the frame concrete stairs plunge into darkness. Upon the sign is a stylized logo and the words 'omni consumer co synth manufactory, authorized personnel only'
 </placeWidget>

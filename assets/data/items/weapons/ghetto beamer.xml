@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ItemWeapon name="Ghetto Beamer" weight="8" value="500">
+
+<description>
+An improvised beam weapon to project an intense ray of heat. Feel the burn. 3AP 4-8 thermal damage. 
+</description>
+<modifier>
+</modifier>
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="0" actionCost="3" basicAction="true" moveType="FIGHT">
+<effectDamage type="THERMAL" minValue="4" maxValue="8" modifier="NONE"/>
+<missText count="2">
+<text>you fail to fry TARGET </text>
+<text>you fail to scorch TARGET </text>
+</missText>
+<hitText count="2">
+<text>you fry TARGET for VALUE heat damage</text>
+<text>you scorch TARGET for VALUE heat damage</text>
+</hitText>
+</combatMove>
+<energy refill="ENERGY E-cell power-cell" efficiency="2" capacity="30"/>
+</ItemWeapon>

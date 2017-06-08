@@ -3,45 +3,59 @@
 	<page ID="start">
 		<text>
 			You have disabled the robot, it slumps into a heap of tangled robotic
-			limbs and actuators
-			<conditional>
-				<condition evaluate="SCRIPT" src="robot/robotest" />
-				Hello world conditional evaluated from lua!
-			</conditional>
+			limbs and actuators.
 		</text>
-
+		<choice destination="extractComputer" text="try to remove its computational components" />
+		<choice destination="extractOptics" text="try to remove its weapon system" />
 		<choice destination="end" text="do nothing" />
-		<choice destination="dissassemble" text="try to salvage parts" />
-
 	</page>
-	<check ID="dissassemble">
+	
+	<check ID="extractComputer">
 		<test what="REPAIR" DC="10" />
-		<outcome destination="success" />
-		<outcome destination="fail" />
+		<outcome destination="computerSuccess" />
+		<outcome destination="computerFail" />
 	</check>
-	<page ID="fail">
-		<text> You spend some time tearing the robot apart, however any truly
-			valuable parts do not survive being yanked out of the robots innards.
-			At least you got some scrap metal out of it but the robot is now
-			truly out of commission.
-		</text>
-		<effect type="giveitem" value="2" item="scrap metal" />
+	
+	<page ID="computerFail">
+	<text>
+	You attempt to extract the computational parts of the robot intact. But your lack of skill leads to you breaking them in your inept attempt to rip them out. They're useless now, but at least you have a few wires and chunks of the robot's casing as souvenirs. Or maybe as paperweights or raw material for future use.
+	</text>
+	<effect type="giveitem" value="2" item="scrap metal" />
+	<special effect="removenpc" />
+	<choice destination="end" text="ah well" />	
+	</page>
+	
+	<page ID="computerSuccess">
+	<text>
+	You attempt to extract the delicate computation valves. The devices take a careful touch to extra from the surrounding systems but you manage it. You've managed to successfully extract two computation valves from the robots 'brain' and to celebrate you dismantle some of its wiring and casing to get some additional raw materials.
+	</text>
+	<effect type="giveitem" value="2" item="computation valve" />
+	<effect type="giveitem" value="2" item="scrap metal" />
+	<special effect="removenpc" />
+	<choice destination="end" text="excellent" />	
+	</page>	
+	
+	<check ID="extractOptics">
+		<test what="REPAIR" DC="12" />
+		<outcome destination="opticsSuccess" />
+		<outcome destination="opticsFail" />
+	</check>
+	
+	<page ID="opticsFail">
+	<text>
+	You think you can extract the robot's weapon system, cause everything is better with lasers. Alas you're not as clever as you think you are and the robot's combined sensor and laser focusing optics are reduced to uselessness by your fumbling. 
+	</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="damnit!" />
+	</page>
+	
+	<page ID="opticsSuccess">
+	<text>
+	You look at the robot's head consideringly, it's probably too much to attempt to extract the laser system whole cloth but some elements may be valuable. You set about dismounting the optical lenses and mirrors from inside the robot's otherwise empty head. Soon enough you have some relatively intact optical components for future use. 
+	</text>
+		<effect type="giveitem" value="1" item="optics" />
 		<special effect="removenpc" />
 		<choice destination="end" text="ah well" />
 	</page>
-
-	<page ID="success">
-		<text> You spend some time dismantling the robot, extricating a pair
-			of electrical components from its mechanical mind. The two
-			computation valves might be useful later, not to mention you
-			scavenged some more scrap metal. Additionally you are now absolutely
-			sure
-			the robot is out of commission.
-
-		</text>
-		<effect type="giveitem" value="2" item="computation valve" />
-		<effect type="giveitem" value="2" item="scrap metal" />
-		<special effect="removenpc" />
-		<choice destination="end" text="score" />
-	</page>
+	
 </Conversation>

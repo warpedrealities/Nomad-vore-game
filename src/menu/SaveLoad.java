@@ -2,6 +2,8 @@ package menu;
 
 import gui.Button;
 import gui.List;
+import gui.Text;
+import gui.TextColoured;
 import gui.Textwindow;
 import gui.Window;
 import input.MouseHook;
@@ -33,6 +35,7 @@ public class SaveLoad extends Screen implements Callback{
 	Button textButton;
 	boolean textEntry;
 	float clock;
+	TextColoured text;
 	
 	public SaveLoad(int font, int frame, int button,int tint,boolean save,Callback callback)
 	{
@@ -63,6 +66,11 @@ public class SaveLoad extends Screen implements Callback{
 		m_window.add(exit);
 		m_text=new Textwindow(button, new Vec2f(-6.5F,1), new Vec2f(10,2),tint, "enter save name");
 		textButton=new Button(new Vec2f(3.5F,1),new Vec2f(3.0F,2),button,this,"ok",3);
+		
+		text=new TextColoured(new Vec2f(-6,-0.5F),"",2.0F,tint);
+		text.setTint(1, 0, 0);
+
+		m_window.add(text);
 	}
 	
 	void GenSaveList()
@@ -252,7 +260,10 @@ public class SaveLoad extends Screen implements Callback{
 	void Save(String filename)
 	{
 		try {
-			Universe.getInstance().save(filename);
+			if (Universe.getInstance().save(filename))
+			{
+				text.setString("SAVE FAILED! re-attempt saving");
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,4 +1,4 @@
-package actor;
+package actor.npc;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

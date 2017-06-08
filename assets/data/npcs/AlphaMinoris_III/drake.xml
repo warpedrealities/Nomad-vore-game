@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="drake.png"/>
+<name>drake</name>
+<description>
+A four legged dog sized reptile covered in pale blue scales. It watches you with inquisitive and predatory eyes set in a slender long jawed lizardlike head, long tail flicking around as it adjusts its posture and flares its wings out in preparation to fly at you.
+</description>
+<rpg>
+<experiencevalue value="20"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<stat stat="HEALTH" value="25"/>
+<stat stat="RESOLVE" value="25"/>
+<attribute attribute="TEASE" value="8"/>
+<combatMove name="firebolt" pattern="RANGED" bonusAttribute="RANGED" timeCost="3" bonusToHit="0">
+<missText count="2">
+<text>a drake spits a bolt of fire at TARGET but misses</text>
+<text>a drake fire blast narrowly misses TARGET</text>
+</missText>
+<hitText count="2">
+<text>a drake scorches TARGET for VALUE points of thermal damage using a fire bolt</text>
+<text>a drake singes TARGET with a firebolt for VALUE points of thermal damage</text>
+</hitText>
+<effectDamage type="THERMAL" minValue="2" maxValue="8" modifier="STRENGTH"/>
+</combatMove>
+</rpg>
+<respawn delay="1000"/>
+<flying />
+<defeated conversation="alpha_minoris_III/drake/defeat" />
+<seduced conversation="alpha_minoris_III/drake/defeat" />
+<victory conversation="alpha_minoris_III/drake/victory" />
+<seducer conversation="alpha_minoris_III/drake/victory" />
+<controller AI="drake"/>
+<faction value="monster"/>
+</NPC>

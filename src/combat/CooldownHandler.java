@@ -18,6 +18,24 @@ public class CooldownHandler {
 		cooldownMap=new HashMap<String,MoveCooldown>();
 	}
 	
+	private MoveCooldown [] getRetainedCooldowns(MoveCooldown [] newMoves)
+	{
+		cooldowns.remove(newMoves);
+		MoveCooldown []list=new MoveCooldown[cooldowns.size()];
+		int index=0;
+		for (int i=0;i<list.length;i++)
+		{
+			if (cooldowns.get(i).getCooldown()>0)
+			{
+				list[index]=cooldowns.get(i);
+				list[index].setVisible(false);
+				index++;
+			}
+		}
+		
+		return list;
+	}
+	
 	public void updateList(CombatMove [] moves)
 	{
 		MoveCooldown [] newlist=new MoveCooldown[moves.length];
@@ -30,6 +48,7 @@ public class CooldownHandler {
 				if (moves[i].getMoveName().equals(cooldowns.get(j).getMoveName()))
 				{
 					newlist[index]=cooldowns.get(j);
+					newlist[index].setVisible(true);
 					index++;
 					moves[i]=null;
 					
@@ -48,12 +67,18 @@ public class CooldownHandler {
 				}
 			}
 		}
+		
+		MoveCooldown []retain=getRetainedCooldowns(newlist);
 		cooldownMap.clear();
 		cooldowns.clear();
 		for (int i=0;i<newlist.length;i++)
 		{
 			cooldowns.add(newlist[i]);
 			cooldownMap.put(newlist[i].getMoveName(), newlist[i]);
+		}
+		for (int i=0;i<retain.length;i++)
+		{
+			cooldowns.add(retain[i]);
 		}
 	}
 	

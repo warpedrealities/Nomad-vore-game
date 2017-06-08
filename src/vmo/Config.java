@@ -12,7 +12,7 @@ public class Config {
 	float m_textscale;
 	boolean verboseCombat;
 	boolean disableAutosave;
-	public static final int VERSION=23;
+	public static final int VERSION=24;
 	
 	public Config()
 	{

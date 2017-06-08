@@ -34,7 +34,7 @@ public class SolarGUI {
 	
 	Text globalPosition;
 	
-
+	
 	
 	public SolarGUI()
 	{
@@ -91,13 +91,14 @@ public class SolarGUI {
 		window.add(globalPosition);
 		
 		//add buttons
-		Button [] buttons=new Button[3];
+		Button [] buttons=new Button[4];
 		
 		buttons[0]=new Button(new Vec2f(0.1F,0.1F), new Vec2f(8.8F,2), textureIds[1], listener, "exit", 0);
 		buttons[1]=new Button(new Vec2f(4.6F,2.1F), new Vec2f(4.4F,2), textureIds[1], listener, "+", 1);
 		buttons[2]=new Button(new Vec2f(0.1F,2.1F), new Vec2f(4.4F,2), textureIds[1], listener, "-", 2);
+		buttons[3]=new Button(new Vec2f(0.1F,4.1F), new Vec2f(8.8F,2), textureIds[1], listener, "system", 3);
 		
-		for (int i=0;i<3;i++)
+		for (int i=0;i<4;i++)
 		{
 			window.add(buttons[i]);
 		}
@@ -124,7 +125,7 @@ public class SolarGUI {
 			}
 			else
 			{
-				resourceTexts[i].setString(resourceStrings[i]+":"+playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount()+
+				resourceTexts[i].setString(resourceStrings[i]+":"+(int)playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount()+
 						"/"+playerShip.getShipStats().getResource(resourceStrings[i]).getResourceCap());			
 			}
 		

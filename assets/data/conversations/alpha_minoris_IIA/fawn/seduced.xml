@@ -12,9 +12,34 @@
 		<choice destination="cockvore0" text="she'd make good cockfood">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
+			<choice destination="capture" text="use capture device">
+		<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="capture device" />
+		</choice>	
+				<choice destination="study" text="study her">
+			<assertnot evaluate="hasEntry" entry="lifeforms/fawn.xml" />
+			<assertnot evaluate="hasResearch" research="fawn" />
+		</choice>
 		<choice destination="end" text="leave her be" />
 	</page>
 
+		<page ID="study">
+		<text>
+			you study the fawn extensively, observing and taking samples.
+		</text>
+		<special effect="removenpc" />
+		<special effect="research" DC="10" data="fawn" />
+		<choice destination="end" text="time to do some research" />
+	</page>
+	
+	<page ID="capture">
+	<effect type="setlocalflag" flag="seduced" value="1" />	
+	<special effect="captureNPC"/>	
+	<text></text>
+	
+	<choice destination="end" text="carry on" />
+	</page>	
+	
 	<page ID="cockvore0">
 		<text>
 			Such a lusty and cute critter, she'd make great cockfood.
@@ -111,7 +136,7 @@
 			into ending themselves inside your balls. And so its time to move on
 			and leave the fawn's sticky remains to cool and be forgotten.
 		</text>
-		<effect type="feed" value="60" />
+		<effect type="feed" value="70" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>
@@ -182,7 +207,7 @@
 			belly turns soft, round and then steadily shrinks down. Soon you're
 			back to normal, the fawn now no more than a meal for you.
 		</text>
-		<effect type="feed" value="60" />
+		<effect type="feed" value="70" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

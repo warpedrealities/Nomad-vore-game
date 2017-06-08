@@ -25,8 +25,8 @@ import dialogue.choiceHandler.ChoiceHandler;
 import dialogue.choiceHandler.ChoiceLoader;
 import dialogue.choiceHandler.ChoiceText;
 import dialogue.random.Randomizer_Library;
-import actor.NPC;
 import actor.Player;
+import actor.npc.NPC;
 import actorRPG.RPG_Helper;
 
 import shared.Callback;
@@ -331,11 +331,23 @@ public class DialogueScreen extends Screen implements Callback {
 		return false;
 	}
 	
+	private String additionalTextProcessing(String text)
+	{
+		if (text.contains("PNAME"))
+		{
+			text=text.replace("PNAME", m_player.getName());
+		}
+		
+		return text;
+	}
+	
 	void ProcessChoice(Element node) throws MalformedDialogException
 	{
 		if (m_evaluator.EvalConditional(node)==true)
 		{
-			choiceLoader.addString(node.getAttribute("text"));
+			String text=node.getAttribute("text");
+
+			choiceLoader.addString(additionalTextProcessing(text));
 			m_choices[m_numchoices]=node.getAttribute("destination");
 			m_numchoices++;
 		}
@@ -412,8 +424,8 @@ public class DialogueScreen extends Screen implements Callback {
 	void ProcessText(Element node) throws MalformedDialogException
 	{
 		String str=ParseText(node);
-		m_Debug=str;
-		m_text.AddText(str);
+		m_Debug=str;	
+		m_text.AddText(additionalTextProcessing(str));
 		m_text.BuildStrings();
 	}
 	

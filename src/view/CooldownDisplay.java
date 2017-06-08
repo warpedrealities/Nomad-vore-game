@@ -44,31 +44,32 @@ public class CooldownDisplay extends GUIBase {
 		int interval=60;
 		for (int i=0;i<handler.getCount();i++)
 		{
-			if (handler.getCooldown(i).getCooldown()>0 && handler.getCooldown(i).getCoolmax()/16<interval)
+			if (handler.getCooldown(i).isVisible())
 			{
-				interval=handler.getCooldown(i).getCoolmax()/16;
-			}
-			if (handler.getCooldown(i).getCooldown()>0)
-			{
-				int proportion=calcProportion(((float)handler.getCooldown(i).getCooldown())/((float)handler.getCooldown(i).getCoolmax()));
-				proportion=8-proportion;
-				if (proportion>7)
+				if (handler.getCooldown(i).getCooldown()>0 && handler.getCooldown(i).getCoolmax()/16<interval)
 				{
-					proportion=7;
+					interval=handler.getCooldown(i).getCoolmax()/16;
 				}
-				sprites[index].setVisible(true);
-				sprites[index].setImage(proportion);
-				if (sprites[index+8].getVisible()==false)
+				if (handler.getCooldown(i).getCooldown()>0)
 				{
-					//calculate icon
-					int sprite=handler.getCooldown(i).getIcon()+8;
-					sprites[index+8].setImage(sprite);
-					sprites[index+8].setVisible(true);
-				}
-				
-				index++;
+					int proportion=calcProportion(((float)handler.getCooldown(i).getCooldown())/((float)handler.getCooldown(i).getCoolmax()));
+					proportion=8-proportion;
+					if (proportion>7)
+					{
+						proportion=7;
+					}
+					sprites[index].setVisible(true);
+					sprites[index].setImage(proportion);
+					if (sprites[index+8].getVisible()==false)
+					{
+						//calculate icon
+						int sprite=handler.getCooldown(i).getIcon()+8;
+						sprites[index+8].setImage(sprite);
+						sprites[index+8].setVisible(true);
+					}				
+					index++;
+				}			
 			}
-			
 		}
 		
 		if (index<8)

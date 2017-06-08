@@ -87,7 +87,7 @@ This rock formation juts up above the rocks surrounding it. It's discoloured sto
 </band>
 
 </perlin>
-<auditpaths carve="2"/>
+<auditpaths carve="4" replace="2"/>
 <walloff wall="3" sides="northwest"/>
 </mapgen>
 

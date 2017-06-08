@@ -1,8 +1,6 @@
 package view;
 
 import actor.Actor;
-import actor.NPC;
-
 import input.Keyboard;
 
 import java.nio.FloatBuffer;
@@ -20,6 +18,7 @@ import shared.Tools;
 import shared.Vec2f;
 import zone.Zone;
 import actor.Player;
+import actor.npc.NPC;
 
 public class Targeting {
 

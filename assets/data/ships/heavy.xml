@@ -5,7 +5,7 @@
 <movecost value="12"/>
 <hullpoints value="80"/>
 <thrustcost value="1.2"/>
-<armour value="1"/>
+<armour value="2"/>
 </shipstats>
 
 <layout width="16" height="16" spriteset="ship.png">

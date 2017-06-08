@@ -58,11 +58,13 @@ public class ShopList {
 	
 	public void load (DataInputStream dstream) throws IOException
 	{
+		shopsRetained.clear();
 		int s=dstream.readInt();
 		for (int i=0;i<s;i++)
 		{
 			String str=ParserHelper.LoadString(dstream);
 			ShopData data=new ShopData(str,dstream);
+			shopsRetained.put(str, data);
 		}
 	}
 	
