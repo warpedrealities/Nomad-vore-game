@@ -85,10 +85,39 @@
 	
 	<page ID="cockvore2Alt">
 	<text>
+	Neri giggles a bit "alright alright, i get it, ya impatient." she says and does as you say, shoving your eager head into the tip of her voracious cock. Neri lets out a gasp as her shaft bulges and stretches around your noggin and clenches to tug and schlurp you in "mhmm, i dunno if this'd be hotter if you thought I weren't gonna melt ya but...oh who cares." she puts deeds to her words and thrusts her hips, schlorping your shoulders into her tip as well now as she sets about humping your kneeling form into her cock in earnest.
+	</text>
+	<choice destination="cockvore3Alt" text="*get schlurped up*"/>
+	</page>
 	
+	<page ID="cockvore3Alt">
+	<text>
+	Neri moans as she works over your upper body, thrusting your head deep into her shaft with her steady hip movements. You can feel hot pre and the clenching throbbing heat of her shaft press around your form all the way down to your waist. The intoxicating heady musk flooding your nose as you get closer and closer to the base of her cock and below that her awaiting sack. The thought is enough to make you squirm and push forwards eagerly, wanting in so you can enjoy being melted and churned by the elf.
+	</text>
+	<choice destination="cockvore4Alt" text="rest of the way"/>
+	</page>
+	
+	<page ID="cockvore4Alt">
+	<text>
+	Neri's balls let out a little burble as you start to slide headfirst into them and displace her cum. the thick gooey cream covering every inch of your face	<conditional>
+	<assertion evaluate="haspart" part="hair" /> and matting your <macro id="hair_desc_short" /> hair </conditional> as you dunk slowly into it and start to stretch and bulge out her sack "mhmm. You feel good in me traveller." she teases with a mhmm as she strokes her hands along her girl swollen shaft and steadily pulls your legs into her shaft. More of you steadily piles into her sack, starting to curl in those wonderfully lewd confines that will soon churn you down into a wonderful load of cum for the elf. Neri watches your feet through half lidded eyes as they wave around slowly in the air and approach her tip. Her balls sagging low and swelling out massively with your shape, becoming all the more well defined and exquisite as she finishes devouring you with her cock. Neri fondling her shaft as she feels your legs slide down into her sack to join the rest of you "Mhmm, you were wise to come to me you know. You make excellent cockfood." Neri teases and grins as she slides one hand down between her thighs to rub over the huge bulge you're making in her balls. The sensation all the better for how it rubs hot cum into your already jizz coated form.
+	</text>
+	<choice destination="cockvore5Alt" text="yes, yes i am, now...churn me, i want to be made into..nutbutter"/>
+	</page>
+	
+	<page ID="cockvore5Alt">
+	<text>
+	Neri hears your lust addled plea and smiles "mhmm that's the plan." she says and giggles as she gets comfortable sat down with her legs spread around the bulge you make in her loins. Neri steadily rubbing over her sack as her balls begin to burble and churn to start working you down "there we go, here we go. You'll be good cum" she says and just luxuriates in the sensation, soon in a half sprawled out position as time passes. The elf apparently enjoying your moaning squirms as you marinate in a hot cumbath deep in her balls. You're inside her, and you're melting, your hands rubbing against the inside of her sack find her flesh yielding less as you weaken and soften until you find that your hands are wonderfully liquidating and melting away. Your fingers mooshing against the inside of her sack until they melt away, wonderful, imagining how her balls must look starting to round out as you relax and feel your form starting to lose definition and spread out into the surrounding cum. It feels, wonderful...
+	</text>
+	<choice destination="cockvoreAltGO" text="..burble"/>
+	</page>
+	
+	<gameover ID="cockvoreAltGO">
+	<text>
+	Under her teasing hand you have your final moments, the exquisite dissolution the last sensation you experience as you entirely melt away into thick and sloshing cum in Neri's balls. Neri smiles and rubs her thighs against her sack, feeling the contents slosh and displace fluidly "We both got what we wanted traveller...mmhmm" she exclaims in delight and her hands slide to her satiated cock. She starts to jerk off, slowly at first as she enjoys the full feeling but then faster when the massive load you've made starts to assert a needy pressure. The elf jacking off all the more with a moan as the need to cum and waste your goopy remains on the ground becomes all consuming. And finally, both of you accomplished your goals. Neri letting out a shuddering moan as she climaxes, eyes rolling back in her head as she starts spurting and splattering out her load. And you get ejaculated out of her to form a hot steaming puddle of pleasure fluid in front of her.
 	</text>
 	
-	</page>
+	</gameover>
 	
 	<page ID="cockvore1AltRefuse">
 	<text>
@@ -118,17 +147,61 @@
 	<page ID="CTF0">
 	<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="ratquest" value="5" />	
 	<text>
-	Neri blinks "What do you...oooh" Neri gasps as you grab her crotch and suggestively stroke over her shaft, she glances in the direction of the alchemist's hut questioningly. Then meets your eyes, she clearly didn't expect you to be this perverted and submissive. She blushes all the heavier as she realizes you're serious "ooh, you're...well, as the greeter I think I have just the thing to make you into a very firm and dependable part of the tribe." she says and then giggles "You're such a naughty traveller, I've never actually cock'd someone before."
+	Neri blinks "What do you...oooh" Neri gasps as you grab her crotch and suggestively stroke over her shaft, she glances in the direction of the alchemist's hut questioningly. Then meets your eyes, she clearly didn't expect you to be this perverted and submissive. She blushes all the heavier as she realizes you're serious "ooh, you're...well, as the greeter I think I know the thing to make you into a very firm and dependable part of the tribe." she says and then giggles "You're such a naughty traveller, I've never actually cock'd someone before."
 	</text>
 	<choice destination="CTF1" text="first time for everything"/>
 	</page>
 	
 	<page ID="CTF1">
 	<text>
-	
+	"Mhmm, I'll be right back, don't go anywhere or you won't go under my skirt." she says and gives you a mischevious smooch afore dashing off, probably to ask the alchemist if she can have something that'll let her integrate you into the tribe. It takes a few minutes but she comes back in remarkably little time all told. Her erection bobbing and swaying visibly as she seems to have a bit of a stiffy at the thought of what's to come "Guess you didn't have any second thoughts." she says and motions you over with her as she takes a seat on a log, baring her cock with one hand then deftly flicking the cap off the jar she'd come back from the alchemist with. That done she sets about lubing her cock up with the goop from the jar "all you gotta do is plant yourself on it and...mhmm, well you can guess what happens next right."<conditional><assertion evaluate="slothasitem" slot="2" />
+	she explained as you undressed so you can adopt your new look.		
+	</conditional>	
 	</text>
-	
+	<choice destination="CTF2" text="*sit on her cock*"/>
 	</page>
+	
+	<page ID="CTF2">
+	<assertion evaluate="haspart" part="vagina" />
+	<text>
+	Neri lets out a moan as you plant yourself on her cock without hesitation. Your nethers stretching around the shaft you're wanting to become as you sheathe her within your warmth and feel her arms wrapping around you from behind. She seems entirely at ease with cocking you right here out in the open and you can't help but become rather blaise to the prospect of anyone watching. The elf smiling as she wriggles a bit underneath you, then lets out a mmhmm and patpats "it's starting." she teases, as if you don't know. A gasp coaxed from your lips as her veins start to take root in soft nethers, anchoring your pussy to her shaft and starting the process of changing you into more pipe for her to swing.
+	</text>
+	<choice destination="CTF3" text="yes, cock me Neri, make me a part of you"/>
+	</page>
+	
+	<page ID="CTF2">
+	<text>
+	Neri lets out a moan as you plant yourself on her cock without hesitation. Your tight ass stretching around the shaft you're wanting to become as you sheathe her within your warm rear end and feel her arms wrapping around you from behind. She seems entirely at ease with cocking you right here out in the open and you can't help but become rather blaise to the prospect of anyone watching. The elf smiling as she wriggles a bit underneath you, then lets out a mmhmm and patpats "it's starting." she teases, as if you don't know. A gasp coaxed from your lips as her veins start to take root in your bowels, anchoring your rump to her shaft and starting the process of changing you into more pipe for her to swing.	
+	</text>
+	<choice destination="CTF3" text="yes, cock me Neri, make me a part of you"/>
+	</page>
+	
+	<page ID="CTF3">
+	<text>
+	"Mhmm yes, you'll be a wonderful cock." she agrees and strokes her hands over you. Neri feeling you get veiny and more sensitive under her palms as she cockifies you right out in the open. Your legs starting to feel warm, limp and soft as they begin to change and simplify. Your legs destined to become a nice pair of plump and virile balls for the elf. Your feet clump together and you curl your legs upwards to let them stick together then turn boneless and round. Neri lets out a gasp and giggle as she feels that, stroking approvingly over her new sack as the transitions finish "so fertile, i'm gonna fill so many holes with you."
+	</text>
+	<choice destination="CTF4" text="something to look forward to, use me lots as your fuckstick"/>
+	</page>
+	
+	<page ID="CTF4">
+	<text>
+	"Mhmm, shame you won't be able to talk dirty when you're my dick." says Neri with a chuckle and smooches the nape of your neck, gasping at how that feels as the sensitivity and shared sensations of your transformation has made it that far. You start to answer but then feel hot precum pulse up your throat and drool out from your lips, silencing your witty banter. But then dicks aren't known for their witty banter, so you stop trying to talk. Instead you press your arms against your flanks helpfully to let the simplification of your upper body claim them, merging them into your flanks as your innards simplify and turn into cumtube and throbbing cockflesh. The sensations are wonderful "Won't be long now my new cock, any last words?" asks Neri teasingly.
+	</text>
+	<choice destination="CTF5" text="SPLGH!"/>
+	</page>
+	
+	<page ID="CTF5">
+	<text>
+	Neri giggles "I agree completely" she says as the changes reach your head and shoulders. Your neck puffing out into folds of foreskin as your eyes and nose shrink away. Your face simplifying into the bell of her glans while continuing to splutter and drool hot precum. Her hands energetically stroking over her new cock as the last of you transforms, your <macro id="skin_colour_desc" /> skin is utterly overtaken by her own emerald hues.
+	</text>
+	<choice destination="CTFGO" text="*twitch, throb*"/>
+	</page>
+	
+	<gameover ID="CTFGO">
+	<text>
+	Neri groans in delight as she strokes over her new cock, admiring the heft and length you've given her. It feels wonderful though and you probably think the trade of all you were for what you are now was worth it. your new form throbbing in her hands as she masturbates, pulsating with lusty sensations as she works herself to climax. Neri gasping and spasming her hips as her newly sensitive shaft erupts, pumping hot cum out through you to stain the ground with ropes of thick jizz. The orgasm serving to make you a bit more of a manageable third leg for the naughty elf, who looks at her handiwork then down at her crotch and giggles "well, welcome to the tribe traveller. I think you fit in just perfectly." she says and watches as you soften, adding "I guess we have a place for all outsiders."
+	</text>
+	</gameover>
 	
 	<page ID="insult">
 	<text>

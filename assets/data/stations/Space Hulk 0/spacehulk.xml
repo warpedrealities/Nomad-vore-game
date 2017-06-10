@@ -58,8 +58,8 @@
 <row>22111122</row>
 <row>02211220</row>
 <row>00211200</row>
-<edge value="SOUTH"/>
-<widget x="2" y="2" name="cargocontainer" info="specialchest" />
+<edge value="NORTH"/>
+<widget x="2" y="6" name="cargocontainer" info="specialchest" />
 <widget x="4" y="4" name="console" info="interaction/spacehulkdatabase" variable="27"/>
 </keyBlock>
 

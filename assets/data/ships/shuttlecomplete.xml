@@ -2,7 +2,7 @@
 <Ship width="5" height="5" sprite="shuttle">
 
 <shipstats>
-<movecost value="12"/>
+<movecost value="10"/>
 <hullpoints value="40"/>
 <systemcapacity value="5"/>
 <hardpoints value="1"/>

@@ -31,7 +31,7 @@ public class Spaceship extends Entity{
 
 	private int UID;
 	private SpaceshipBaseStats baseStats;
-	public enum ShipState { SPACE , LAND , DOCK, ADRIFT }
+	public enum ShipState { SPACE , LAND , DOCK, ADRIFT, SHIPDOCK }
 	Zone interiorZone;
 	private String unusableState;
 	String exteriorSprite;
@@ -40,6 +40,7 @@ public class Spaceship extends Entity{
 	ShipState shipState;
 	SpaceshipStats shipStats;
 	ShipController shipController;
+	Spaceship dockedShip;
 	
 	public Spaceship(String name, int x, int y,ShipState state)
 	{
@@ -277,6 +278,16 @@ public class Spaceship extends Entity{
 			dstream.writeBoolean(false);
 		}
 
+		if (dockedShip!=null)
+		{
+			dstream.writeBoolean(true);		
+			dockedShip.save(dstream);
+		}
+		else
+		{
+			dstream.writeBoolean(false);			
+		}
+
 
 	}
 
@@ -302,6 +313,11 @@ public class Spaceship extends Entity{
 		if (dstream.readBoolean())
 		{
 			baseStats=new SpaceshipBaseStats(dstream);			
+		}
+		if (dstream.readBoolean())
+		{
+			dockedShip=new Spaceship();
+			dockedShip.load(dstream);
 		}
 	}
 	
@@ -375,7 +391,6 @@ public class Spaceship extends Entity{
 
 	@Override
 	public float getSpriteSize() {
-		// TODO Auto-generated method stub
 		if (shipSize.x>shipSize.y)
 		{
 			return shipSize.x/16;
@@ -468,6 +483,14 @@ public class Spaceship extends Entity{
 	public Zone getZone(int x, int y) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public Spaceship getDockedShip() {
+		return dockedShip;
+	}
+
+	public void setDockedShip(Spaceship dockedShip) {
+		this.dockedShip = dockedShip;
 	}
 	
 	

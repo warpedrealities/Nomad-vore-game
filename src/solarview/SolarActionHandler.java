@@ -27,7 +27,19 @@ public class SolarActionHandler {
 		{
 			new SpaceshipActionHandler().dockStation(ship, (Station)target);
 		}
-		
+		if (target.getClass().getName().contains("Spaceship"))
+		{
+			Spaceship ship2=(Spaceship)target;
+			if (ship2.getShipController()==null)
+			{
+				new SpaceshipActionHandler().join(ship, ship2);				
+			}
+			else
+			{
+				
+			}
+	
+		}
 	}
 	
 }

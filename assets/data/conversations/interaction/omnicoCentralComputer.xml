@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			$%/SYNTH CONTROL LBREAK 
+			$%/SELECT MODE LBREAK 
+			<conditional>
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="0"/>			
+			$%/CURRENT MODE ORALVORE LBREAK 
+			</conditional>
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>			
+			$%/CURRENT MODE UNBIRTH LBREAK 
+			</conditional>	
+		</text>
+		<choice destination="oralvore" text="set mode: oralvore"/>
+		<choice destination="unbirth" text="set mode: unbirth"/>
+		<choice destination="end" text="logout" />
+	</page>
+	
+	<page ID="oralvore">
+	<text>
+	$%/SYNTH CONTROL LBREAK 
+	$%/SYNTH SET TO ORALVORE MODE LBREAK 
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA" value="0" />	
+	<choice destination="end" text="logout" />	
+	</page>
+	
+	<page ID="unbirth">
+	<text>
+	$%/SYNTH CONTROL LBREAK 
+	$%/SYNTH SET TO UNBIRTHING MODE LBREAK 
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA" value="1" />	
+	<choice destination="end" text="logout" />	
+	</page>
+</Conversation>

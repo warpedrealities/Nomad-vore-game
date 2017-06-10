@@ -2,9 +2,68 @@
 <Conversation>
 	<page ID="start">
 		<text> 
+		The drake hisses high pitched and impotent as you approach. Beaten and defeated it can't get away from you now. It flaps its wings weakly without accomplishing flight. Poor thing, though it's somewhat cute if you discount it's earlier fire breathing fury.
 		</text>
+		<choice destination="watch" text="keep watching"/>
 		<choice destination="end" text="leave it be" />
 	</page>
 
+	<page ID="watch">
+	<text>
+	The critter attempts to take flight again as you keep on watching it close in, but its frantic fluttering of leathery wings only succeeds in tipping it over onto its back as it runs out of strength and crashes back to earth. These antics do reveal something possibly of interest though, for as the reptile splays out and hisses at you you can see nestled between its legs a surprising package. That shaft and balls surprising both for their mammalian qualities and their sheer size, no wonder the drake seems to want to fly everywhere walking with that must be awkward.
+	</text>
+	<choice destination="cockvore0" text="I wonder if that shaft is hungry">
+	<preference fetish="cockvore" />
+	</choice>
+	<choice destination="end" text="leave it be" />	
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	It's an odd thought, wondering if you could fit in the lil lizard's sack. But...you find yourself wanting to find out. Now to see if the lizard is agreeable, you wrap one hand around its shaft and start stroking while with the other you rub over its prodigious balls. Before your eyes you see that shaft harden and expand, growing longer, thicker and firmer in your hand as the lizard chirrs and looks at you with a confused and yet aroused air of inquisitiveness. The lizard definitely did not expect you to do this after beating it, but it's in no state to stop you working your naughty will upon it.
+	</text>
+	<choice destination="cockvore1" text="thrust your hand into the tip"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	The drake lets out a meep as you make good on your curiousity, thrusting your hand into the tip of that cock and finding it pliant and more than accepting of your lewd hand all the way to the wrist. The reptile squirming about a little but seemingly going with it, even if your actions are confusing it seems to not be resisting or objecting to your actions. The lil lizard's shaft ripples and squeezes tightly around your hand as you prepare to investigate just how much it can take.
+	</text>
+	<choice destination="cockvore2" text="those balls could make a good pool, time to dive in"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	You raise up your other hand and thrust it in before the lizard's very eyes, a startled mip coming from the lil reptile as your both hands stretch out that tight cock it's sporting. The bulge your hands make makes you smile to behold, but it's not just your hands you want inside those dragon loins but all of you. So you duck your head down and thrust your arms into that shaft, working your hands all the way down that length until you can feel around the inside of the creature's balls. The hot cum feels wonderful to run your fingers around inside and the pre feels excellent soaking into your hair now that you're shoulders deep in a lil dragon's dick. No point in wasting time though even if it's worth savouring, you lean forwards and wriggle to worm your shoulders and chest into the drake's cock making it chirr out loud in pleasure. Though now you probably will need a bit of help to get yourself all the way inside.
+	</text>
+	<choice destination="cockvore3" text="comeon lil buddy, claim your cockfood"/>
+	</page>
 
+	<page ID="cockvore3">
+	<text>
+	You wriggle yourself about while lodged halfway down the drake's cock, but you're unable to work yourself deeper into the lil lizard's loins as it is. You'll just have to hope the drake wants you inside its balls as much as you want to be inside them, you try to somehow make it take the hint with buttwriggles before realizing that probably only succeeds in making you look foolish. Or maybe not as you feel that shaft ripple and schlorp over your midriff, squeezing your body deeper inside as the lizard takes charge of its cockfood and sets about dragging you inside on its own. Your ass next to be sucked inside.
+	</text>
+	<choice destination="cockvore4" text="you can do it lil buddy, schlurp me up"/>
+	</page>
+	
+	<page ID="cockvore4">
+	<text>
+	Only your legs are left outside, angling upwards as the sprawled drake schlurps them into its cock. The rest of you meanwhile begins to curl up inside its sack in earnest, stretching out the lil lizard's balls to massively proportions. Your body's contours visible tightly contained by the cummy sack skin as you disappear entirely from the outside world now. Your feet slipping into the drake's tip and bulging out its shaft until they join you in the steamy hot confines of the midget dragon's sack. That sack which is now easily bigger than the reptile's entire body, a massive weight of curled up space traveller resting on its rear legs and tail as it chirrs and fondles its now well fed cock. It probably didn't expect this to come of you bringing it down, but few see someone as pervy as you coming until you're inside them. Inside them and impatiently squirming in the hopes of being churned down into ball batter.
+	</text>
+	<choice destination="cockvore5" text="why isn't the lizard melting me yet?"/>
+	</page>
+	
+	<page ID="cockvore5">
+	<text>
+	You can feel the li lizard wriggling to rub its hindlegs against the shape you make as it strokes along its shaft with its forelimbs and chirrs. It seems content to sprawl there with a massive sack full of you pinning it firmly in place. But gradually as time passes and you stew in the reptile's thick fluids, marinating in hot cum you find yourself possessed of an increasing torpor. Your squirms fading away as your body weakens and softens. That massively over burdened lizardsack having its work cut out for it melting all of you down into creamy goo it takes a seeming eternity to do the job. But eventually even as big a cockmeal as you will fade away to sloshy goodness.
+	</text>
+	<choice destination="cockvoreGO" text="burble"/>
+	</page>
+	
+	<gameover ID="cockvoreGO">
+	<text>
+	The sack resting on the drake goes from lumpy to round and starts to sag out into a more globular oval now. All of you now just cum forming an immense and satisfying load for the naughty fapping reptile as it continues jerking off there on the ground, chirring and hissing in delight as it works its shaft with both forelimbs. The small dragon does find a way of relieving the pressure of all that compactly pressurized cum though as it strokes its shaft to eruption. The drake letting out a snarling hiss of delight as his length erupts splattering hot cum onto the ground, an orgasm that lasts minutes in which it can do naught but shudder in delight and pump you out into a growing puddle. Your form now that of an immense puddle when the drake's climax finally tapers off and it's done ejaculating you out. Those previously inflated and movement crippling balls now much more manageable and back to their normal size. Only memories and a small lake of cum remain of your encounter.
+	</text>
+	</gameover>
+	
 </Conversation>

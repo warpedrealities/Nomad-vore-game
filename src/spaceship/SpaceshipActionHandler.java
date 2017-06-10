@@ -43,20 +43,7 @@ public class SpaceshipActionHandler {
 		}
 		
 		//disconnect ship
-		for (int i=0;i<ship.getZone(0).getWidth();i++)
-		{
-			for (int j=0;j<ship.getZone(0).getHeight();j++)
-			{
-				if (ship.getZone(0).getTile(i, j)!=null && ship.getZone(0).getTile(i, j).getWidgetObject()!=null)
-				{
-					if (ship.getZone(0).getTile(i, j).getWidgetObject().getClass().getName().contains("WidgetPortal"))
-					{
-						WidgetPortal portal=(WidgetPortal)ship.getZone(0).getTile(i, j).getWidgetObject();
-						portal.setDestination(null,null);
-					}
-				}
-			}
-		}
+		removePortalLinks(ship);
 		//write ship out of zone
 		if (zone.getTiles()!=null)
 		{
@@ -85,20 +72,7 @@ public class SpaceshipActionHandler {
 		station.unDock(ship);
 		
 		//disconnect ship
-		for (int i=0;i<ship.getZone(0).getWidth();i++)
-		{
-			for (int j=0;j<ship.getZone(0).getHeight();j++)
-			{
-				if (ship.getZone(0).getTile(i, j)!=null && ship.getZone(0).getTile(i, j).getWidgetObject()!=null)
-				{
-					if (ship.getZone(0).getTile(i, j).getWidgetObject().getClass().getName().contains("WidgetPortal"))
-					{
-						WidgetPortal portal=(WidgetPortal)ship.getZone(0).getTile(i, j).getWidgetObject();
-						portal.setDestination(null,null);
-					}
-				}
-			}
-		}
+		removePortalLinks(ship);
 		
 		
 		//move ship one tile
@@ -194,4 +168,68 @@ public class SpaceshipActionHandler {
 		}	
 	}
 
+
+	public void join(Spaceship ship, Spaceship ship2) {
+		if (ship2.getDockedShip()==null)
+		{
+			Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+			ship.setShipState(ShipState.SHIPDOCK);
+			ship2.setShipState(ShipState.SHIPDOCK);
+			ship.setPosition(new Vec2f(ship2.getPosition().x,ship2.getPosition().y));
+			ship2.setDockedShip(ship);
+			Universe.getInstance().setCurrentEntity(ship2);		
+			//connect hatches
+			WidgetPortal portal=ship.getZone(0).getPortalWidget(-101);
+			portal.setDestination(ship2.getZone(0).getName(),-101);
+			Game.sceneManager.SwapScene(new ViewScene());
+			portal=ship2.getZone(0).getPortalWidget(-101);
+			portal.setDestination(ship.getZone(0).getName(), -101);
+		}
+	}
+
+
+	public int separate(Spaceship spaceship, Spaceship systemEntity) {
+		
+		if (spaceship.equals(systemEntity))
+		{
+			separateSub(spaceship.getDockedShip(),spaceship);
+		}
+		else
+		{
+			separateSub(spaceship,systemEntity);
+		}
+		
+		Universe.getInstance().setCurrentWorld(spaceship);	
+		return 0;
+	}
+
+	private void removePortalLinks(Spaceship ship)
+	{
+		for (int i=0;i<ship.getZone(0).getWidth();i++)
+		{
+			for (int j=0;j<ship.getZone(0).getHeight();j++)
+			{
+				if (ship.getZone(0).getTile(i, j)!=null && ship.getZone(0).getTile(i, j).getWidgetObject()!=null)
+				{
+					if (ship.getZone(0).getTile(i, j).getWidgetObject().getClass().getName().contains("WidgetPortal"))
+					{
+						WidgetPortal portal=(WidgetPortal)ship.getZone(0).getTile(i, j).getWidgetObject();
+						portal.setDestination(null,null);
+					}
+				}
+			}
+		}
+	}
+	
+	private void separateSub(Spaceship ship, Spaceship host)
+	{
+		//move ship one tile
+		Universe.getInstance().getcurrentSystem().getEntities().add(ship);
+		int r=Universe.m_random.nextInt(8);
+		ship.setPosition(ZoneInteractionHandler.getPos(r, ship.getPosition()));
+		removePortalLinks(ship);
+		removePortalLinks(host);
+		host.setDockedShip(null);
+	}
+	
 }

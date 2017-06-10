@@ -16,7 +16,7 @@ A four legged dog sized reptile covered in pale blue scales. It watches you with
 <stat stat="HEALTH" value="25"/>
 <stat stat="RESOLVE" value="25"/>
 <attribute attribute="TEASE" value="8"/>
-<combatMove name="firebolt" pattern="RANGED" bonusAttribute="RANGED" timeCost="3" bonusToHit="0">
+<combatMove name="firebolt" pattern="RANGED" bonusAttribute="RANGED" timeCost="4" bonusToHit="0">
 <missText count="2">
 <text>a drake spits a bolt of fire at TARGET but misses</text>
 <text>a drake fire blast narrowly misses TARGET</text>

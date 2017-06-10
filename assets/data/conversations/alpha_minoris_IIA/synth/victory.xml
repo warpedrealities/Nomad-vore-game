@@ -1,6 +1,74 @@
 <?xml version="1.0"?>
 <Conversation>
+
 	<page ID="start">
+	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>	
+	<preference fetish="unbirthing" />	
+	<text>
+	"Prepare for containment valued customer." the synth commands as she reaches down to grasp your head firmly with both hands and guides it willing or not towards her netherlips. Those emulated sex lips realistic, moist and as it happens fully function as the gynoid forces you facefirst into her snatch. Lewd squeelches audible as her juices soak your head and she wedges you in down to your neck in one movement "As you can tell Omnico has put a lot of work into emulating the experience of being taken and forced into a womb." the synth comments and continues handling you to feed in your shoulders, her insides are hot and welcoming. And she's right, that womb of hers is remarkably soft and accomodating, definitely realistic.
+	</text>
+	<choice destination="unbirth0" text="a realistic womb domination experience"/>
+	</page>
+	
+	<page ID="unbirth0">
+	<text>
+	The synth continues cramming you inside. Her hands methodically moving down your flanks and each time they grasp you they haul you deeper inside, cramming your upper body up between her legs. Her womb stretching easily to accomodate you, her midriff distending as you're curled and crammed into that fleshy prison. Once she reaches your thighs though she straightens up, and draws you inside using nothing more than her clenching and potent pussy wrapped around your legs "Submit to my womb valued customer, your satisfaction is our greatest concern."
+	</text>
+	<choice destination="unbirth1" text="satisfied or not this customer is getting enwombed"/>
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	You're not sure how being trapped in a womb is supposed to make you a satisfied customer but you doubt the Synth is paying much attention to your protests as she reaches one hand down to fondle her snatch just above where it stretches around your disappearing legs. Your feet kicking about as they get closer and closer to her domed out middle. Most of you is already confined in the snuggley warm prison of her womb. And soon all of you is imprisoned within the synth's body as your feet are slurped between her netherlips "Valued customer, please take the time to experience thoroughly the synthoid womb product before providing feedback." the synth continues, her voice as ever normal and untroubled even after shoving you bodily into her drooling snatch.
+	</text>
+	<choice destination="unbirthStruggle" text="take time nothing, i'm getting out of here"/>
+	<choice destination="unbirthSubmit" text="well she has a point, it is rather comfortable"/>
+	</page>
+	
+	<check ID="unbirthStruggle">
+	<test what="STRUGGLE" DC="12" />
+	<outcome destination="struggleUBescape" />
+	<outcome destination="struggleUBtrapped0" />
+	</check>
+	
+	<page ID="struggleUBescape">
+	<text>
+	Yeah no your customer experience has not been satisfactory and you push off against her insides to try and force your way back out of this deranged gynoid. The synth's womb proving soft, yielding and slick which makes your efforts a little tricky. But you're not to be deterred by a comfy prison and some marketspeak and persist, tipping yourself upside down in order to push off against the inside of the womb and thrust yourself back out through her nethers into the open air "error, customer is attempting escape before trial period is concluded." she utters robotically as she clenches to try and force you back inside, but to no avail as you're well beyond the point of being easily subdued. Instead of going back inside you wriggle the rest of the way out leaving the synth looking confused in that blank eyed mechanized way of any machine with no quick answer to what just happened. Still you should probably get clear before she resets and shoves you back inside, you might not be so lucky next time.
+	</text>
+	<effect type="heal" value="0.1" />
+	<effect type="stunnpc" value="10" />
+	<choice destination="end" text="get clear" />
+	</page>
+	
+	<page ID="struggleUBtrapped0">
+	<text>
+	You want out of here so you can write a scathing yelp review or something and so you shove at the insides of the womb in search of the way out, it's the way you came in so it shouldn't be too hard to find. You press your fingers against the entrance of her synthoid birth canal and shove off against the inside of the womb. Only to find yourself slipping, tumbling unruly inside her. You don't give up though and continue your efforts to escape despite the difficulty. The synth resting a hand against the dome of her middle as you tire yourself out inside of her "error, customer actions do not complete...error" she hesitates a moment with a stutter of resetting relays then smiles "thankyou for selecting extended stay as your chosen option, we hope you have a pleasant entrapment." she announces, and you groan. Great you're tired and now set for a long stay as you somehow triggered a different protocol...
+	</text>
+	<choice destination="struggleUBtrapped1" text="damnit, trapped"/>
+	</page>
+	
+	<page ID="struggleUBtrapped1">
+	<text>
+	The synth walks around unmindful of the burden she's carrying. You're forced to endure this prolonged stay as her prisoner, tightly smuggled away in her distended middle as the gynoid seems to go around doing nothing in particular. She'll walk around purely to walk around and then pat and rub now and then against where you're confined, but mostly she seems to be reinforcing your powerlessness to act by doing things. Eventually after a seemingly endless period of torpor inside her you feel her come to a halt and announce "we hope you have enjoyed this prolonged stay within the womb of an Omnico synthetic predator gynoid version 42." she rattles off and settles down into a seated position, spreading her thighs as she clenches down and sets about rebirthing you into the world. slick gynoid juices coating your form as you emerge inch by inch from between her legs until with a final schlorp your feet pop free and you lie there free once more "please fill out a customer feedback questionaire at the information office." she says placing a towel next to you afore stepping away seemingly done with you.
+	</text>
+	<effect type="imprison" value="400" />
+	<special effect="nonhostile" />
+	<effect type="heal" value="0.1" />
+	<choice destination="end" text="get up" />	
+	</page>
+	
+	<page ID="unbirthSubmit">
+	<text>
+	The synth smiles "We hope you enjoy this enwombing experience." the gynoid reiterates as she sets about wandering around, demonstrating her ability to handle the weight of your body inside her womb. Your form is nicely cradled by the fleshy confines of her soft womb as she goes about her business and dotes upon her bulge now and then with pats and rubs. When the time comes though your stay comes to an end as she settles down into a seated position and starts to ease you out of herself. slick gynoid juices coating your form as you emerge inch by inch from between her legs until with a final schlorp your feet pop free and you lie there free once more "please fill out a customer feedback questionaire at the information office." she says placing a towel next to you afore stepping away seemingly done with you.
+	</text>
+	<effect type="imprison" value="100" />
+	<special effect="nonhostile" />
+	<effect type="heal" value="0.1" />
+	<choice destination="end" text="get up" />
+	</page>
+	
+	<page ID="start">
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="0"/>	
 		<preference fetish="oralvore" />
 		<text>"now ma'am, please relax and enjoy your experience." the synth
 			remarks as she stutters to a halt looming over you and smiles. She
@@ -45,17 +113,17 @@
 			now you're curled up within the tightness of her belly, trapped
 			inside the synth's containing gut.
 		</text>
-		<choice destination="struggle" text="try to get out of here" />
-		<choice destination="submit" text="relax, it's cosy" />
+		<choice destination="struggleOV" text="try to get out of here" />
+		<choice destination="submitOV" text="relax, it's cosy" />
 	</page>
 
-	<check ID="struggle">
+	<check ID="struggleOV">
 		<test what="STRUGGLE" DC="12" />
-		<outcome destination="struggleescape" />
-		<outcome destination="struggletrapped0" />
+		<outcome destination="struggleOVescape" />
+		<outcome destination="struggleOVtrapped0" />
 	</check>
 
-	<page ID="struggleescape">
+	<page ID="struggleOVescape">
 		<text>
 			You're not about to stay around being carried around as a belly pet by a
 			walking talking sex doll. And you set about trying to shove your way
@@ -77,7 +145,7 @@
 		<choice destination="end" text="get clear" />
 	</page>
 
-	<page ID="struggletrapped0">
+	<page ID="struggleOVtrapped0">
 		<text>
 			You're not about to stay around being carried around as a belly pet by a
 			walking talking sex doll. And you set about trying to shove your way
@@ -94,10 +162,10 @@
 			about in her gut as she goes about the tunnels. It would seem you
 			might be here for a while.
 		</text>
-		<choice destination="struggletrapped1" text="in for the long haul" />
+		<choice destination="struggleOVtrapped1" text="in for the long haul" />
 	</page>
 
-	<page ID="struggletrapped1">
+	<page ID="struggleOVtrapped1">
 		<text>
 			After a timeless period of jostling and swaying without references for how
 			long has passed you feel the gynoid come to a halt "we hope you have
@@ -118,7 +186,7 @@
 		<choice destination="end" text="get up" />
 	</page>
 
-	<page ID="submit">
+	<page ID="submitOV">
 		<text>
 			"Enjoy yourself customer, we hope you find your experience to your liking."
 			says the synth as you decide its fairly warm and comfortable inside

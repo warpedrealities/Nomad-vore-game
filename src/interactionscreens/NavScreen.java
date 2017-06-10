@@ -147,7 +147,6 @@ public class NavScreen extends Screen implements Callback {
 	
 	
 	private void launch() {
-		// TODO Auto-generated method stub
 		if (canLaunch==true)
 		{
 			if (spaceship.getState()==ShipState.LAND)
@@ -181,6 +180,14 @@ public class NavScreen extends Screen implements Callback {
 				spaceship.setShipState(ShipState.SPACE);
 				int r=new SpaceshipActionHandler().undock(spaceship,(Station)Universe.getInstance().getCurrentWorld(spaceship));
 					
+				Game.sceneManager.SwapScene(new SolarScene(r,spaceship));	
+				return;
+			}
+			if (spaceship.getState()==ShipState.SHIPDOCK)
+			{
+				int r=new SpaceshipActionHandler().separate(spaceship,(Spaceship)Universe.getInstance().getCurrentWorld(spaceship));
+				spaceship.setShipStats(shipStats);
+				spaceship.setShipState(ShipState.SPACE);				
 				Game.sceneManager.SwapScene(new SolarScene(r,spaceship));	
 				return;
 			}
@@ -226,9 +233,11 @@ public class NavScreen extends Screen implements Callback {
 			break;
 			
 		case DOCK:
-			buttons[1]=new Button(new Vec2f(34.0F,2.0F),new Vec2f(6,1.8F),textures[2],this,"undock",1,1);
+	
 			break;
-			
+		case SHIPDOCK:
+			buttons[1]=new Button(new Vec2f(34.0F,2.0F),new Vec2f(6,1.8F),textures[2],this,"undock",1,1);	
+			break;
 		case SPACE:
 			buttons[1]=new Button(new Vec2f(34.0F,2.0F),new Vec2f(6,1.8F),textures[2],this,"control",1,1);
 			break;

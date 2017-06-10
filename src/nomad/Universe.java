@@ -236,7 +236,7 @@ public class Universe extends GameManager
 					}
 					if (currentStarSystem.entitiesInSystem.get(i).getClass().getName().contains("Spaceship"))
 					{
-						return (World)currentStarSystem.entitiesInSystem.get(i);			
+						return currentStarSystem.entitiesInSystem.get(i);			
 					}
 					if (currentStarSystem.entitiesInSystem.get(i).getClass().getName().contains("Station"))
 					{

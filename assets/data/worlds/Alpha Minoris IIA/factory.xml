@@ -31,6 +31,22 @@ The halls are gloomy and twist about, guttering light fixtures the only illumina
 <widget x="4" y="6" name="entrance" variable="11" info="Zone 2A"/>
 </keyBlock>
 
+<keyBlock heat="2">
+<row>11111111</row>
+<row>11111111</row>
+<row>11221122</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11211112</row>
+<row>11222222</row>
+<edge value="SOUTH"/>
+<edge value="NORTH"/>
+<edge value="WEST"/>
+<edge value="EAST"/>
+<widget x="4" y="6" name="console" info="interaction/omnicoCentralComputer" variable="31"/>
+</keyBlock>
+
 <clean value="2"/>
 <lootTable identity="normalchest">
 	<loot item="computation valve" chance="0.4" unique="3" />
