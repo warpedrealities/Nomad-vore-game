@@ -78,7 +78,10 @@ public class CooldownHandler {
 		}
 		for (int i=0;i<retain.length;i++)
 		{
-			cooldowns.add(retain[i]);
+			if (retain[i]!=null)
+			{
+				cooldowns.add(retain[i]);				
+			}
 		}
 	}
 	
@@ -106,7 +109,10 @@ public class CooldownHandler {
 	{
 		for (int i=0;i<cooldowns.size();i++)
 		{
-			cooldowns.get(i).update(time);
+			if (cooldowns.get(i)!=null)
+			{
+				cooldowns.get(i).update(time);
+			}	
 		}
 	}
 	

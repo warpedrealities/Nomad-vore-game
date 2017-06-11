@@ -44,7 +44,7 @@ public class CooldownDisplay extends GUIBase {
 		int interval=60;
 		for (int i=0;i<handler.getCount();i++)
 		{
-			if (handler.getCooldown(i).isVisible())
+			if (handler.getCooldown(i)!=null && handler.getCooldown(i).isVisible())
 			{
 				if (handler.getCooldown(i).getCooldown()>0 && handler.getCooldown(i).getCoolmax()/16<interval)
 				{
