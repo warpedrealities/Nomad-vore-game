@@ -20,7 +20,7 @@ public class SpaceshipStats {
 	ArrayList<ShipConverter> converters;
 	float fuelEfficiency;
 	float moveCost;
-	float evasion;
+	float manouverability;
 	float armour;
 	float solar;
 	boolean looseItems;
@@ -166,12 +166,12 @@ public class SpaceshipStats {
 		this.moveCost = moveCost;
 	}
 
-	public float getEvasion() {
-		return evasion;
+	public float getManouverability() {
+		return manouverability;
 	}
 
-	public void setEvasion(float evasion) {
-		this.evasion = evasion;
+	public void setManouverability(float evasion) {
+		this.manouverability = evasion;
 	}
 
 	public float getArmour() {

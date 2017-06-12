@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<shipsystem sprite="71" name="engine tuner" health="30">
+<contains minimum="1" maximum="2">scrap metal</contains>
+<description>A device that fine tunes your engines to allow for greater speed.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+<shipModifier uid="3" modifies="ARMOUR" modification="0.9"/>
+</shipsystem>

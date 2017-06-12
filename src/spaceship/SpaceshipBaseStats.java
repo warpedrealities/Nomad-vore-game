@@ -13,7 +13,7 @@ public class SpaceshipBaseStats {
 	private int maxHullPoints; 
 	private float thrustCost;
 	private float moveCost;
-	private int evasion;
+	private int manouverability;
 	private int armour;
 	
 	public SpaceshipBaseStats(Element n) {
@@ -42,7 +42,7 @@ public class SpaceshipBaseStats {
 				}
 				if (Enode.getTagName().contains("evasion"))
 				{		
-					evasion=Integer.parseInt(Enode.getAttribute("value"));
+					manouverability=Integer.parseInt(Enode.getAttribute("value"));
 				}
 			}
 		}	
@@ -54,7 +54,7 @@ public class SpaceshipBaseStats {
 		thrustCost=dstream.readFloat();
 		moveCost=dstream.readFloat();
 		armour=dstream.readInt();
-		evasion=dstream.readInt();
+		manouverability=dstream.readInt();
 	}
 
 	public void save(DataOutputStream dstream) throws IOException {
@@ -62,7 +62,7 @@ public class SpaceshipBaseStats {
 		dstream.writeFloat(thrustCost);
 		dstream.writeFloat(moveCost);
 		dstream.writeInt(armour);
-		dstream.writeInt(evasion);
+		dstream.writeInt(manouverability);
 	}
 
 	public int getMaxHullPoints() {
@@ -77,8 +77,8 @@ public class SpaceshipBaseStats {
 		return moveCost;
 	}
 
-	public int getEvasion() {
-		return evasion;
+	public int getManouverability() {
+		return manouverability;
 	}
 
 	public int getArmour() {

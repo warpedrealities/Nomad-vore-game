@@ -54,10 +54,10 @@
 <SeedNPCs min="3" max="3" name="AlphaMinoris_II/robosphere">
 <script death="hauntedValleyBotDeath"/>
 </SeedNPCs> 
-<SeedNPCs min="3" max="3" name="AlphaMinoris_II/minoris2_elves/worker">
+<SeedNPCs min="3" max="3" name="minoris2_elves/worker">
 <script spawn="hauntedValleyElves"/>
 </SeedNPCs> 
-<SeedNPCs min="3" max="3" name="AlphaMinoris_II/minoris2_saurian/saurianworker_shovel">
+<SeedNPCs min="3" max="3" name="minoris2_saurian/saurianworker_shovel">
 <script spawn="hauntedValleySaurians"/>
 </SeedNPCs> 
 

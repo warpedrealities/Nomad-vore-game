@@ -4,7 +4,7 @@
 <description>a fuel consuming generator that produces energy.</description>
 <resistance resists="KINETIC" strength="2"></resistance>
 <shipResource capacity="25" resource="ENERGY"/>
-<shipConverter>
+<shipConverter boostable="true">
 <convertFrom value="FUEL"/>
 <convertTo value="ENERGY"/>
 <conversionEfficiency value="10"/>

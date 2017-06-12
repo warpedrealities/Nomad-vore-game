@@ -79,7 +79,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 						GUI.update();
 						renderer.setCurrentPosition(playerShip.getPosition());
 						starscape.setCurrentPosition(playerShip.getPosition());
-						clock+=0.05F;
+						clock+=0.025F;
 					}
 					//clicking control
 					if (mouseHook.buttonDown())
@@ -92,7 +92,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 				else
 				{
 					controller.update();
-					clock+=0.05F;
+					clock+=0.025F;
 				}
 				
 			}

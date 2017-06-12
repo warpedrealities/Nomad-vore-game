@@ -11,8 +11,9 @@ import shipsystem.ShipAbility.AbilityType;
 public class ShipModifier extends ShipAbility{
 
 	static public final int FUEL_EFFICIENCY=0;
-	static public final int EVASION=1;
+	static public final int MANOUVERABILITY=1;
 	static public final int ARMOUR=2;
+	static public final int SPEED=3;
 	
 	
 	private float modification;
@@ -26,9 +27,9 @@ public class ShipModifier extends ShipAbility{
 		{
 			return FUEL_EFFICIENCY;
 		}
-		if (str.equals("EVASION"))
+		if (str.equals("MANOUVERABILITY"))
 		{
-			return EVASION;
+			return MANOUVERABILITY;
 		}	
 		if (str.equals("ARMOUR"))
 		{

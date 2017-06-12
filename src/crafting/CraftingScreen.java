@@ -135,7 +135,7 @@ public class CraftingScreen extends Screen implements Callback {
 						recipe.getIngredients().get(i).getItemName(), recipe.getIngredients().get(i).getItemQuantity());
 			}
 			//add new item
-				Item item=Universe.getInstance().getLibrary().getItem(recipe.getResult().getName());
+				Item item=Universe.getInstance().getLibrary().getItem(recipe.getResult().getItem().getName());
 				chargeCheck(item);
 				player.getInventory().AddItem(item);
 				player.calcMove();

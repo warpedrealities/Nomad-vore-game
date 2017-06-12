@@ -19,7 +19,7 @@ import spaceship.SpaceshipStats;
 
 public class ShipConverter extends ShipAbility {
 
-	private boolean spaceOnly;
+	private boolean boostable;
 	private String convertFrom;
 	private String convertTo;
 	private float conversionRate;
@@ -32,12 +32,12 @@ public class ShipConverter extends ShipAbility {
 		abilityType=AbilityType.SA_CONVERTER;
 		widgetName=name;
 		NodeList children=node.getChildNodes();
-		
-		if (node.getAttribute("spaceOnly").equals("true"))
+
+		if (node.getAttribute("boostable").equals("true"))
 		{
-			spaceOnly=true;
+			boostable=true;
 		}
-		
+			
 		for (int i=0;i<children.getLength();i++)
 		{
 			Node N=children.item(i);
@@ -109,7 +109,7 @@ public class ShipConverter extends ShipAbility {
 		conversionRate=dstream.readFloat();
 		conversionEfficiency=dstream.readFloat();
 		lastAccessTimestamp=dstream.readLong();
-		spaceOnly=dstream.readBoolean();
+		boostable=dstream.readBoolean();
 		active=dstream.readBoolean();
 		widgetName=ParserHelper.LoadString(dstream);
 	}
@@ -122,7 +122,8 @@ public class ShipConverter extends ShipAbility {
 		dstream.writeFloat(conversionRate);
 		dstream.writeFloat(conversionEfficiency);
 		dstream.writeLong(lastAccessTimestamp);
-		dstream.writeBoolean(spaceOnly);
+
+		dstream.writeBoolean(boostable);
 		dstream.writeBoolean(active);
 		ParserHelper.SaveString(dstream, widgetName);
 	}

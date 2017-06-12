@@ -3,5 +3,5 @@
 <contains minimum="1" maximum="2">scrap metal</contains>
 <description>A device that energizes and reinforces the hull to make it stronger.</description>
 <resistance resists="KINETIC" strength="2"></resistance>
-<shipModifier uid="2" modifies="ARMOUR" modification="2"/>
+<shipModifier uid="0" modifies="ARMOUR" modification="2"/>
 </shipsystem>

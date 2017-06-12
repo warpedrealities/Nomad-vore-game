@@ -2,7 +2,7 @@
 <Ship width="8" height="5" sprite="heavy">
 
 <shipstats>
-<movecost value="12"/>
+<movecost value="24"/>
 <hullpoints value="80"/>
 <thrustcost value="1.2"/>
 <armour value="2"/>

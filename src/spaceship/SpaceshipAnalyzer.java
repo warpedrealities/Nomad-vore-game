@@ -36,7 +36,7 @@ public class SpaceshipAnalyzer {
 		}
 		stats.setFuelEfficiency(ship.getBaseStats().getThrustCost());
 		stats.setArmour(ship.getBaseStats().getArmour());
-		stats.setEvasion(ship.getBaseStats().getEvasion());
+		stats.setManouverability(ship.getBaseStats().getManouverability());
 		stats.setMoveCost(ship.getBaseStats().getMoveCost());
 		stats.addResource("HULL", ship.getBaseStats().getMaxHullPoints(), ship.getBaseStats().getMaxHullPoints());
 		for (int i=0;i<ship.getZone(0).getWidth();i++)
@@ -137,13 +137,15 @@ public class SpaceshipAnalyzer {
 			case ShipModifier.FUEL_EFFICIENCY:
 			stats.setFuelEfficiency(stats.getFuelEfficiency()*mod.getModification());
 			break;
-			case ShipModifier.EVASION:
-			stats.setEvasion(stats.getEvasion()+mod.getModification());
+			case ShipModifier.MANOUVERABILITY:
+			stats.setManouverability(stats.getManouverability()+mod.getModification());
 			break;	
 			case ShipModifier.ARMOUR:
 				stats.setArmour(stats.getArmour()+mod.getModification());
 				break;	
-		
+			case ShipModifier.SPEED:
+				stats.setMoveCost(stats.getMoveCost()*mod.getModification());
+				break;
 		}
 	}
 	

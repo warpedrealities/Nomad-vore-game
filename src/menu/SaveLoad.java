@@ -260,17 +260,19 @@ public class SaveLoad extends Screen implements Callback{
 	void Save(String filename)
 	{
 		try {
-			if (Universe.getInstance().save(filename))
+			if (!Universe.getInstance().save(filename))
 			{
 				text.setString("SAVE FAILED! re-attempt saving");
+			}
+			else
+			{
+				m_callback.Callback();			
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-	
-		m_callback.Callback();
 	}
 	
 	void Load(String filename)

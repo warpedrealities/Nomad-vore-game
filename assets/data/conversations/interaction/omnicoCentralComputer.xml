@@ -8,6 +8,7 @@
 			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="0"/>			
 			$%/CURRENT MODE ORALVORE LBREAK 
 			</conditional>
+			<conditional>
 			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>			
 			$%/CURRENT MODE UNBIRTH LBREAK 
 			</conditional>	

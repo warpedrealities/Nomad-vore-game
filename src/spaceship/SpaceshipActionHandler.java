@@ -122,6 +122,8 @@ public class SpaceshipActionHandler {
 			{
 				//remove ship from starsystem
 				Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+				ship.getSpriteObj().discard();
+				ship.setSpriteObj(null);	
 				//move ship to colocate with world
 				ship.setPosition(new Vec2f(world.getPosition().x,world.getPosition().y));
 				//write ship into zone
@@ -151,6 +153,8 @@ public class SpaceshipActionHandler {
 		{
 			//remove ship from starsystem
 			Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+			ship.getSpriteObj().discard();
+			ship.setSpriteObj(null);
 			//move ship to colocate with world
 			ship.setPosition(new Vec2f(station.getPosition().x,station.getPosition().y));
 			//write ship into zone
@@ -173,6 +177,8 @@ public class SpaceshipActionHandler {
 		if (ship2.getDockedShip()==null)
 		{
 			Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+			ship.getSpriteObj().discard();
+			ship.setSpriteObj(null);
 			ship.setShipState(ShipState.SHIPDOCK);
 			ship2.setShipState(ShipState.SHIPDOCK);
 			ship.setPosition(new Vec2f(ship2.getPosition().x,ship2.getPosition().y));
