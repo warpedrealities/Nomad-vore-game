@@ -13,9 +13,9 @@ import org.w3c.dom.NodeList;
 import shared.ParserHelper;
 import shipsystem.ShipAbility.AbilityType;
 import spaceship.Spaceship;
-import spaceship.SpaceshipAnalyzer;
 import spaceship.SpaceshipResource;
-import spaceship.SpaceshipStats;
+import spaceship.stats.SpaceshipAnalyzer;
+import spaceship.stats.SpaceshipStats;
 
 public class ShipConverter extends ShipAbility {
 

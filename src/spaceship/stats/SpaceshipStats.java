@@ -1,4 +1,4 @@
-package spaceship;
+package spaceship.stats;
 
 
 import java.util.ArrayList;
@@ -11,6 +11,7 @@ import actor.npc.NPC;
 import nomad.Universe;
 
 import shipsystem.ShipConverter;
+import spaceship.SpaceshipResource;
 
 public class SpaceshipStats {
 

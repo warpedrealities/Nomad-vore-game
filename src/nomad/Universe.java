@@ -223,8 +223,6 @@ public class Universe extends GameManager
 	{
 		for (int i=0;i<currentStarSystem.entitiesInSystem.size();i++)
 		{
-			if (ship!=currentStarSystem.entitiesInSystem.get(i))
-			{
 				if (currentStarSystem.entitiesInSystem.get(i).entityPosition.x==ship.entityPosition.x
 						&&
 						currentStarSystem.entitiesInSystem.get(i).entityPosition.y==ship.entityPosition.y
@@ -243,10 +241,6 @@ public class Universe extends GameManager
 						return currentStarSystem.entitiesInSystem.get(i);
 					}
 				}
-					
-					
-					
-			}
 		}
 		return null;
 		
@@ -444,11 +438,13 @@ public class Universe extends GameManager
 		{
 			uidGenerator=new UIDGenerator();
 		}
+
 		uidGenerator.reset();
 		//load player
 		//load player
 		player=new Player();
 		player.Load(filename);
+		
 		//remove flags from player
 		player.getFlags().clear();
 		//move player to the first area.

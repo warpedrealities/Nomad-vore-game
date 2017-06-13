@@ -18,7 +18,8 @@ import org.w3c.dom.NodeList;
 
 import shared.ParserHelper;
 import shared.Vec2f;
-
+import spaceship.stats.SpaceshipBaseStats;
+import spaceship.stats.SpaceshipStats;
 import widgets.WidgetPortal;
 import zone.Landing;
 import zone.Zone;

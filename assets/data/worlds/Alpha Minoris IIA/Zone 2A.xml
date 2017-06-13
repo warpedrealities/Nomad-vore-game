@@ -115,6 +115,7 @@ a sign is barely legible above the empty door frame, beyond the frame concrete s
 </floodfill>
 <degrade chance="25" degradethis="3" replacewith="5"/>
 <walloff wall="4" sides="northeast"/>
+<auditpaths carve="3" replace="5" />
 </mapgen>
 
 </zone>

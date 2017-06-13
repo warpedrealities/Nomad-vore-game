@@ -17,7 +17,7 @@ import solarBackdrop.StarScape;
 import solarview.systemScreen.SystemScreen;
 import spaceship.PlayerShipController;
 import spaceship.Spaceship;
-import spaceship.SpaceshipAnalyzer;
+import spaceship.stats.SpaceshipAnalyzer;
 import view.ViewScene;
 import vmo.Game;
 

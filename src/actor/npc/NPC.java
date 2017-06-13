@@ -23,6 +23,7 @@ import actor.Actor;
 import actor.Attackable;
 import actor.Player;
 import combat.CombatMove;
+import combat.CombatMove.AttackPattern;
 import combat.effect.Effect;
 import combat.statusEffects.StatusEffect;
 import faction.FactionLibrary;
@@ -743,7 +744,10 @@ public class NPC extends Actor implements Controllable {
 	@Override
 	public boolean Attack(int x, int y) {
 
-	
+		if (actorRPG.getCombatMove(attackIndex).getAttackPattern()==AttackPattern.P_SELF)
+		{
+			return useMove(attackIndex,this);
+		}
 		for (int i=0;i<Universe.getInstance().getCurrentZone().zoneActors.size();i++)
 		{
 			if (Universe.getInstance().getCurrentZone().zoneActors.get(i)!=

@@ -17,7 +17,9 @@ public class CombatLookup {
 		case Actor_RPG.MELEE:
 			return Actor_RPG.PARRY;
 
-		
+		case Actor_RPG.WILLPOWER:
+			return Actor_RPG.WILLPOWER;
+			
 		case Actor_RPG.SEDUCTION:
 			return Actor_RPG.WILLPOWER;
 		}

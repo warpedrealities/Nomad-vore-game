@@ -62,8 +62,9 @@ import shared.Scene;
 import shared.SceneBase;
 import shared.SceneManager;
 import solarview.SolarScene;
+import solarview.spaceEncounter.SpaceEncounter;
 import spaceship.Spaceship;
-import spaceship.SpaceshipAnalyzer;
+import spaceship.stats.SpaceshipAnalyzer;
 import view.ViewScene;
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
@@ -104,13 +105,13 @@ public class Game implements SceneManager {
 		sceneManager=this;
 		graphicsConfiguration=new Config();
 		
-		
+		/*
 		  try {
 		       System.setErr(new PrintStream(new FileOutputStream(System.getProperty("user.dir")+"/error.log")));
 		   } catch (FileNotFoundException ex) {
 		        ex.printStackTrace();
 		   }
-		
+		*/
 		
         // Initialize GLFW. Most GLFW functions will not work before doing this.
         if (! glfwInit() )
@@ -169,20 +170,20 @@ public class Game implements SceneManager {
 		
 		m_gman=new Universe();
 		Universe universe=(Universe)m_gman;
-//		universe.Newgame();
+
 		int []var=new int[5];
 		var[0]=m_tintvar0; var[1]=m_viewvar0; var[2]=m_objvar0;
 		var[3]=m_viewvar1; var[4]=m_objvar1;
 
-	//	m_currentscene=new GameOver(var,null);
-	//	m_currentscene=new ViewScene(var,(Universe)m_gman);
-	//	m_currentscene=new TestScene(var);
-		m_currentscene=new Menu(var);
+		//m_currentscene=new Menu(var);
 		SceneBase.setVariables(var);
 		
-//		Spaceship ship=(Spaceship)universe.getCurrentEntity();
-//		ship.setShipStats(new SpaceshipAnalyzer().generateStats(ship));
-//		m_currentscene=new SolarScene(0,ship);
+		universe.Newgame();
+		Spaceship ship=(Spaceship)universe.getCurrentEntity();
+		ship.setShipStats(new SpaceshipAnalyzer().generateStats(ship));
+		
+		m_currentscene=new SpaceEncounter(ship,null);
+		
 		mouseInput=new MouseHook(openGLWindow);
 		glfwSetCursorPosCallback(openGLWindow, mouseInput);
 		GL11.glDepthFunc(GL_LEQUAL);

@@ -18,6 +18,7 @@ import org.lwjgl.glfw.GLFW;
 import shared.Vec2f;
 import solarview.SolarActionHandler;
 import solarview.SpriteRotatable;
+import solarview.spaceEncounter.CombatController;
 import view.ZoneInteractionHandler;
 
 import input.Keyboard;
@@ -237,6 +238,12 @@ public class PlayerShipController implements ShipController {
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public CombatController getCombat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -68,5 +68,10 @@ public class ShopList {
 		}
 	}
 	
+	public void clear()
+	{
+		shopsRetained.clear();
+	}
+	
 	
 }

@@ -1,4 +1,4 @@
-package spaceship;
+package spaceship.stats;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,6 +11,8 @@ import nomad.Universe;
 
 import shipsystem.ShipAbility;
 import shipsystem.ShipAbility.AbilityType;
+import spaceship.Spaceship;
+import spaceship.SpaceshipResource;
 import shipsystem.ShipConverter;
 import shipsystem.ShipModifier;
 import shipsystem.ShipResource;

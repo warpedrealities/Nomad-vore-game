@@ -31,7 +31,7 @@
 <tag>seduction</tag>
 </statusTags>
 </rpg>
-
+<respawn delay="4000"/>
 <defeated conversation="alpha_minoris_IIA/synth/defeat" />
 <seduced conversation="alpha_minoris_IIA/synth/defeat" />
 <victory conversation="alpha_minoris_IIA/synth/victory" />

@@ -130,10 +130,10 @@
 	<text>
 	"I dunno why you think you know more than I do about our tribe and all...but what exactly are you proposing?" asks Neri, frowning but looking at you askance in an expectant fashion as she wonders where you're going with this.
 	</text>
-	<page destination="CTF0" text="well, I'm looking to become a ,Member, in the tribe. If you catch my meaning">
+	<choice destination="CTF0" text="well, I'm looking to become a ,Member, in the tribe. If you catch my meaning">
 	<preference fetish="cocktransformation" />
-	</page>
-	<page destination="end" text="think on it a bit, i'll come back another time"/>
+	</choice>
+	<choice destination="end" text="think on it a bit, i'll come back another time"/>
 	</page>
 	
 	<page ID="CTF0">

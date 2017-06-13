@@ -20,10 +20,10 @@ import shared.Vec2f;
 import solarview.SolarScene;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
+import spaceship.stats.SpaceshipAnalyzer;
+import spaceship.stats.SpaceshipStats;
 import spaceship.SpaceshipActionHandler;
-import spaceship.SpaceshipAnalyzer;
 import spaceship.SpaceshipResource;
-import spaceship.SpaceshipStats;
 import vmo.Game;
 import vmo.GameManager;
 
@@ -294,7 +294,7 @@ public class NavScreen extends Screen implements Callback {
 				texts[i].setString("speed:"+speed);
 				break;	
 			case 2:
-				texts[i].setString("evasion:"+shipStats.getEvasion());
+				texts[i].setString("manouver:"+shipStats.getManouverability());
 				break;
 			case 3:
 				texts[i].setString("armour:"+shipStats.getArmour());

@@ -55,6 +55,14 @@ public class WidgetSystem extends WidgetBreakable {
 				{
 					systemAbilities.add(new ShipDispenser(Enode,m_name));
 				}
+				if (Enode.getTagName()=="shipWeapon")
+				{
+					systemAbilities.add(new ShipWeapon(Enode,m_name));
+				}
+				if (Enode.getTagName()=="shipShield")
+				{
+					systemAbilities.add(new ShipShield(Enode,m_name));
+				}
 			}
 		}
 	}
@@ -109,6 +117,12 @@ public class WidgetSystem extends WidgetBreakable {
 				break;
 				case SA_DISPENSER:
 				systemAbilities.add(new ShipDispenser(dstream,m_name));
+				break;
+				case SA_WEAPON:
+				systemAbilities.add(new ShipWeapon(dstream,m_name));
+				break;
+				case SA_SHIELD:
+				systemAbilities.add(new ShipShield(dstream,m_name));
 				break;
 			}
 			

@@ -29,10 +29,11 @@ public class Choice {
 	{
 		tint=tintID;
 		lineCount=2;
-		lines=new NuFont[2];
+		lines=new NuFont[3];
 		
 		lines[0]=new NuFont(new Vec2f(0,0),64,0.6F*Game.sceneManager.getConfig().getTextscale());
 		lines[1]=new NuFont(new Vec2f(0,0),64,0.6F*Game.sceneManager.getConfig().getTextscale());	
+		lines[2]=new NuFont(new Vec2f(0,0),64,0.6F*Game.sceneManager.getConfig().getTextscale());	
 	}
 	
 	public int getLineCount()
@@ -104,7 +105,7 @@ public class Choice {
 		while (scanner.hasNext())
 		{
 			String str=scanner.next();
-			if (str.length()+length>40)
+			if (str.length()+length>37)
 			{
 				length=0;
 				if (list.size()>0)

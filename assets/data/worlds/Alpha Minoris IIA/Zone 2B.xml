@@ -14,6 +14,7 @@
 <transition direction="west">Zone 1B</transition>
 <transition direction="north">Zone 2A</transition>
 <mapgen>
+<partition xmin="8" xmax="56" ymin="8" ymax="56">
 <randprefab width="3" height="3">
 <row>222</row>
 <row>222</row>
@@ -45,6 +46,7 @@
 </placeWidget>
 <placeWidget x="3" y="3" name="single bed"/>
 </randprefab>
+</partition>
 <clumps lowerlimit="0" upperlimit="35">
 <floodfill tile="3"></floodfill>
 </clumps>

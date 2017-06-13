@@ -1,4 +1,4 @@
-package spaceship;
+package spaceship.stats;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

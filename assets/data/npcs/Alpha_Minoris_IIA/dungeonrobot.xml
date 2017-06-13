@@ -29,9 +29,7 @@
 <tag>radio</tag>
 </statusTags>
 </rpg>
-
-<flying />
-<disposition value="25"/>
+<respawn delay="4000"/>
 <defeated conversation="alpha_minoris_IIA/robot/robotdefeat" />
 <controller AI="robot_roamer"/>
 <faction value="omnicofactory_robot"/>

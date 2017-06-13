@@ -33,8 +33,7 @@
 <tag>seduction</tag>
 </statusTags>
 </rpg>
-
-<flying />
+<respawn delay="4000"/>
 <disposition value="25"/>
 <defeated conversation="alpha_minoris_IIA/robot/robotdefeat" />
 <controller AI="robot"/>

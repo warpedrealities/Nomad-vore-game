@@ -146,7 +146,7 @@ public class ShopData {
 	
 	public void save(DataOutputStream dstream) throws IOException
 	{
-		// TODO Auto-generated method stub
+		ParserHelper.SaveString(dstream, shopName);
 		Set<String> keyset=sellInventory.keySet();
 		Iterator<String>it=keyset.iterator();
 		dstream.writeInt(keyset.size());
@@ -169,9 +169,9 @@ public class ShopData {
 	}
 	
 	public ShopData(String str, DataInputStream dstream) throws IOException {
-		// TODO Auto-generated constructor stub
 		commonConstruct();
 		
+		shopName=ParserHelper.LoadString(dstream);
 		int s=dstream.readInt();
 		for (int i=0;i<s;i++)
 		{
