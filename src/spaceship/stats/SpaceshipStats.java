@@ -25,6 +25,7 @@ public class SpaceshipStats {
 	float armour;
 	float solar;
 	boolean looseItems;
+	SpaceshipShield shield;
 	
 	public SpaceshipStats()
 	{
@@ -193,6 +194,14 @@ public class SpaceshipStats {
 
 	public ArrayList<ShipConverter> getConverters() {
 		return converters;
+	}
+
+	public SpaceshipShield getShield() {
+		return shield;
+	}
+
+	public void setShield(SpaceshipShield shield) {
+		this.shield = shield;
 	}
 	
 

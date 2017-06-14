@@ -175,7 +175,7 @@ public class Game implements SceneManager {
 		var[0]=m_tintvar0; var[1]=m_viewvar0; var[2]=m_objvar0;
 		var[3]=m_viewvar1; var[4]=m_objvar1;
 
-		//m_currentscene=new Menu(var);
+	//	m_currentscene=new Menu(var);
 		SceneBase.setVariables(var);
 		
 		universe.Newgame();

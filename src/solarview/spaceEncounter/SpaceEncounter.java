@@ -6,10 +6,13 @@ import org.lwjgl.opengl.GL20;
 
 import input.MouseHook;
 import shared.SceneBase;
+import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.animation.Animator;
+import solarview.spaceEncounter.rendering.EncounterRenderer;
 import spaceship.Spaceship;
 import vmo.Game;
+import vmo.GameManager;
 
 public class SpaceEncounter extends SceneBase {
 
@@ -26,10 +29,10 @@ public class SpaceEncounter extends SceneBase {
 		}
 		
 		EncounterShip []list=new EncounterShip[c];
-		list[0]=new EncounterShip(playerShip);
+		list[0]=new EncounterShip(playerShip,new Vec2f(0,0));
 		for (int i=1;i<c;i++)
 		{
-			list[i]=new EncounterShip(alienShips[i-1]);
+			list[i]=new EncounterShip(alienShips[i-1],new Vec2f(-6+(GameManager.m_random.nextInt(12)),10+GameManager.m_random.nextInt(10)));
 		}
 		return list;
 		

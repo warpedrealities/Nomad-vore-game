@@ -13,7 +13,7 @@ public class EncounterShip {
 	private float heading;
 	private Square_Rotatable_Int sprite;
 	
-	public EncounterShip(Spaceship ship)
+	public EncounterShip(Spaceship ship, Vec2f position)
 	{
 		this.ship=ship;
 		if (this.ship.getShipController()!=null)
@@ -21,7 +21,7 @@ public class EncounterShip {
 			this.controller=this.ship.getShipController().getCombat();			
 		}
 
-		this.position=new Vec2f(0,0);
+		this.position=new Vec2f(position.x,position.y);
 	}
 
 	public Spaceship getShip() {

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<shipsystem sprite="72" name="force barrier" health="30">
+<contains minimum="1" maximum="2">scrap metal</contains>
+<description>A basic spaceship defensive field. takes 0.1 energy per tick. 40HP,7DEF,100 tick restart.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+<shipShield>
+<hitpoints value="40"/>
+<absorption value="7"/>
+<energyCost value="0.1"/>
+<regeneration value="0"/>
+<restartTime value="100"/>
+</shipShield>
+
+</shipsystem>

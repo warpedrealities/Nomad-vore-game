@@ -53,7 +53,7 @@
 </placeWidget>
 
 <placeWidget x="3" y="1" name="slot">
-<contains name="craftingtable"/>
+<contains name="force barrier"/>
 </placeWidget>
 </mapgen>
 </layout>

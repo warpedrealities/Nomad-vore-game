@@ -277,9 +277,14 @@ public class NavScreen extends Screen implements Callback {
 		
 		Text status=new Text(new Vec2f(10.5F,7.0F),statustext,0.7F,textures[4]);
 		window.add(status);
+		buildStatWindow(textures);
+	}
+	
+	private void buildStatWindow(int []textures)
+	{
 		
 		statWindow=new Window(new Vec2f(3,-1),new Vec2f(17,17),textures[1],true);
-		texts=new Text[4];
+		Text []texts=new Text[4];
 		for (int i=0;i<4;i++)
 		{
 			texts[i]=new Text(new Vec2f(0.5F,8.0F-(0.7F*i)),"texts",0.7F,textures[4]);
@@ -303,6 +308,33 @@ public class NavScreen extends Screen implements Callback {
 			statWindow.add(texts[i]);
 		}
 		
+		if (shipStats.getShield()!=null)
+		{
+			texts=new Text[5];
+			for (int i=0;i<5;i++)
+			{
+				texts[i]=new Text(new Vec2f(5.5F,8.0F-(0.7F*i)),"texts",0.7F,textures[4]);
+				switch (i)
+				{
+				case 0:
+					texts[i].setString("hitpoints:"+shipStats.getShield().getHitpoints());
+					break;
+				case 1:
+					texts[i].setString("absorption:"+shipStats.getShield().getAbsorption());
+					break;	
+				case 2:
+					texts[i].setString("regeneration:"+shipStats.getShield().getRegeneration());
+					break;
+				case 3:
+					texts[i].setString("restartTime:"+shipStats.getShield().getRestartTime());
+					break;
+				case 4:
+					texts[i].setString("energyCost:"+shipStats.getShield().getEnergyCost());
+					break;
+				}
+				statWindow.add(texts[i]);
+			}
+		}
 	}
 
 }

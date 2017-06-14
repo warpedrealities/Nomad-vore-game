@@ -3,6 +3,7 @@ package spaceship.stats;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import actor.Actor;
@@ -16,6 +17,7 @@ import spaceship.SpaceshipResource;
 import shipsystem.ShipConverter;
 import shipsystem.ShipModifier;
 import shipsystem.ShipResource;
+import shipsystem.ShipShield;
 import shipsystem.WidgetDamage;
 import shipsystem.WidgetSystem;
 import widgets.WidgetAccomodation;
@@ -28,7 +30,7 @@ public class SpaceshipAnalyzer {
 	
 	public SpaceshipStats generateStats(Spaceship ship)
 	{
-		
+		List<ShipShield> shields=new ArrayList<ShipShield>();
 		ArrayList<Integer> uids=new ArrayList<Integer>();
 		
 		SpaceshipStats stats=new SpaceshipStats();
@@ -92,6 +94,9 @@ public class SpaceshipAnalyzer {
 										ShipModifier mod=(ShipModifier)system.getShipAbilities().get(k);
 										useShipMod(stats,mod,uids);
 										break;		
+									case SA_SHIELD:
+										shields.add((ShipShield)system.getShipAbilities().get(k));
+										break;
 									}
 									
 								}
@@ -116,8 +121,10 @@ public class SpaceshipAnalyzer {
 				stats.addCrew((NPC)actor);
 			}
 		}
-		
-		
+		if (shields.size()>0)
+		{
+			stats.setShield(new SpaceshipShield(shields));	
+		}	
 		return stats;
 	}
 	
