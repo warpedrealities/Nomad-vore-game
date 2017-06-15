@@ -9,6 +9,10 @@
 <thrustcost value="0.5"/>
 </shipstats>
 
+<emitters>
+
+</emitters>
+
 <layout width="16" height="16" spriteset="ship.png">
 <tileset>
 <tile sprite="1" vision="1" movement="2">a metal wall</tile>

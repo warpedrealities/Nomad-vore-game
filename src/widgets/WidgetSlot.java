@@ -16,9 +16,9 @@ import actor.Player;
 
 public class WidgetSlot extends Widget {
 
-	WidgetBreakable widget;
-	
-	boolean hardpoint;
+	private WidgetBreakable widget;
+	private int facing;
+	private boolean hardpoint;
 	
 	public WidgetSlot(Element root) {
 
@@ -27,6 +27,11 @@ public class WidgetSlot extends Widget {
 		if (root.getAttribute("hardpoint").equals("true"))
 		{
 			hardpoint=true;
+			
+		}
+		if (root.getAttribute("facing").length()>0)
+		{
+			facing=Integer.parseInt(root.getAttribute("facing"));
 		}
 			setDescSprite();
 		
@@ -40,7 +45,7 @@ public class WidgetSlot extends Widget {
 			if (hardpoint==true)
 			{
 				widgetSpriteNumber=6;
-				widgetDescription="a hardpoint, anything here can extend outside the ship";
+				widgetDescription="a hardpoint for weapon systems or other devices that require access to the outside of the ship";
 			}
 			else
 			{
@@ -54,6 +59,7 @@ public class WidgetSlot extends Widget {
 		dstream.write(12);
 		commonSave(dstream);
 		dstream.writeBoolean(hardpoint);
+		dstream.writeInt(facing);
 		//save widget
 		if (widget!=null)
 		{
@@ -70,6 +76,9 @@ public class WidgetSlot extends Widget {
 		commonLoad(dstream);
 		
 		hardpoint=dstream.readBoolean();
+		
+		facing=dstream.readInt();
+		
 		//load widget
 		boolean b=dstream.readBoolean();
 		if (b==true)
@@ -180,6 +189,18 @@ public class WidgetSlot extends Widget {
 				ViewScene.m_interface.redraw();
 			}			
 		}
+	}
+
+	public int getFacing() {
+		return facing;
+	}
+
+	public void setFacing(int facing) {
+		this.facing = facing;
+	}
+
+	public boolean isHardpoint() {
+		return hardpoint;
 	}
 	
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<shipsystem sprite="85" name="seeking missile" health="30">
+<contains minimum="1" maximum="2">scrap metal</contains>
+<description>starship missile launcher for dev test.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+<shipResource capacity="8" resource="S10MISSILE">
+<resourceConversion itemName="s-10 space missile" value="1.0"/>
+</shipResource>
+<shipWeapon>
+<damage min="12" max="16" falloff="0"/>
+<special tracking="4"/>
+<cooldown value="1"/>
+<effects script="seeker" sheet="missileGrey"/>
+<range arc="4" range="10" />
+<weaponCost resource="S10MISSILE" cost="1"/>
+<description>
+
+</description>
+</shipWeapon>
+
+</shipsystem>

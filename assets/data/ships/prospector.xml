@@ -7,6 +7,10 @@
 <thrustcost value="1.0"/>
 </shipstats>
 
+<emitters>
+
+</emitters>
+
 <layout width="16" height="16" spriteset="ship.png">
 <tileset>
 <tile sprite="1" vision="1" movement="2">a metal wall</tile>
@@ -34,12 +38,14 @@
 </placeWidget>
 <placeWidget x="4" y="8" name="slot"/>
 
-<placeWidget x="3" y="5" name="hardpoint"/>
-
+<placeWidget x="3" y="5" name="hardpoint">
+<facing value="0"/>
+</placeWidget>
 <placeWidget x="1" y="1" name="slot"/>
 <placeWidget x="3" y="1" name="slot">
 </placeWidget>
-<placeWidget x="5" y="1" name="slot"/>
+<placeWidget x="5" y="1" name="slot">
+</placeWidget>
 <placeWidget x="1" y="2" name="slot"/>
 <placeWidget x="5" y="2" name="slot"/>
 </mapgen>

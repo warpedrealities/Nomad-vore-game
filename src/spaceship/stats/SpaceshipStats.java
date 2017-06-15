@@ -4,6 +4,7 @@ package spaceship.stats;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -26,6 +27,7 @@ public class SpaceshipStats {
 	float solar;
 	boolean looseItems;
 	SpaceshipShield shield;
+	List<SpaceshipWeapon> weapons;
 	
 	public SpaceshipStats()
 	{
@@ -202,6 +204,14 @@ public class SpaceshipStats {
 
 	public void setShield(SpaceshipShield shield) {
 		this.shield = shield;
+	}
+
+	public List<SpaceshipWeapon> getWeapons() {
+		return weapons;
+	}
+
+	public void setWeapons(List<SpaceshipWeapon> weapons) {
+		this.weapons = weapons;
 	}
 	
 

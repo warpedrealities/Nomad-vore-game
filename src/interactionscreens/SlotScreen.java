@@ -143,6 +143,31 @@ public class SlotScreen extends Screen implements Callback {
 	
 	}
 	
+	private String facingToStr(int i)
+	{
+		switch (i)
+		{
+		case 0:
+			return "forward";
+
+		case 1:
+			return "forward right";
+		case 2:
+			return "right";
+		case 3:
+			return "backwards right";
+		case 4:
+			return "back";
+		case 5:
+			return "backwards left";
+		case 6:
+			return "left";
+		case 7:
+			return "forward left";
+		}
+		return "";
+	}
+	
 	@Override
 	public void initialize(int[] textures, Callback callback) {
 		// TODO Auto-generated method stub
@@ -182,8 +207,15 @@ public class SlotScreen extends Screen implements Callback {
 		window.add(weightValue);
 
 
-		
-		resource=new Text(new Vec2f(1.0F,5.5F),"system slot ready, please put in a module",1.0F,textures[4]);
+		if (slot.isHardpoint())
+		{
+			resource=new Text(new Vec2f(1.0F,5.5F),"hardpoint facing "+facingToStr(slot.getFacing()),1.0F,textures[4]);	
+		}
+		else
+		{
+			resource=new Text(new Vec2f(1.0F,5.5F),"system slot ready, please put in a module",1.0F,textures[4]);			
+		}
+
 		
 		window.add(resource);
 		resetList();

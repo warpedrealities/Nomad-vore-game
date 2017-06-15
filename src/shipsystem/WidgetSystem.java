@@ -17,7 +17,7 @@ import org.w3c.dom.NodeList;
 
 import shared.ParserHelper;
 import shipsystem.ShipAbility.AbilityType;
-
+import shipsystem.weapon.ShipWeapon;
 import actor.Player;
 import view.ViewScene;
 import widgets.WidgetBreakable;

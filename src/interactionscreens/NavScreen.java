@@ -22,6 +22,7 @@ import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
 import spaceship.stats.SpaceshipAnalyzer;
 import spaceship.stats.SpaceshipStats;
+import spaceship.stats.SpaceshipWeapon;
 import spaceship.SpaceshipActionHandler;
 import spaceship.SpaceshipResource;
 import vmo.Game;
@@ -36,6 +37,8 @@ public class NavScreen extends Screen implements Callback {
 	Window statWindow;
 	boolean canLaunch;
 	String statustext;
+	private int weaponIndex;
+	private Text []weaponTexts;
 	
 	public NavScreen(Spaceship ship)
 	{
@@ -123,13 +126,13 @@ public class NavScreen extends Screen implements Callback {
 	public void discard(MouseHook mouse) {
 
 		mouse.Remove(window);
+		mouse.Remove(statWindow);
 		window.discard();
 		statWindow.discard();
 	}
 
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-		// TODO Auto-generated method stub
 		switch (ID)
 		{
 		case 0:
@@ -140,11 +143,87 @@ public class NavScreen extends Screen implements Callback {
 			launch();
 			break;
 		
+		case 2:
+			nextWeapon();
+			break;
 		
+		case 3:
+			previousWeapon();
+			break;
 		}
 	}
 
+	private void nextWeapon()
+	{
+		if (weaponIndex<shipStats.getWeapons().size()-1)
+		{
+			weaponIndex++;
+			showWeapon();
+		}
+
+	}
 	
+	private void previousWeapon()
+	{
+		if (weaponIndex>0)
+		{
+			weaponIndex--;
+			showWeapon();			
+		}
+
+	}
+	
+	private String facingToStr(int i)
+	{
+		switch (i)
+		{
+		case 0:
+			return "forward";
+
+		case 1:
+			return "forward right";
+		case 2:
+			return "right";
+		case 3:
+			return "backwards right";
+		case 4:
+			return "back";
+		case 5:
+			return "backwards left";
+		case 6:
+			return "left";
+		case 7:
+			return "forward left";
+		}
+		return "";
+	}
+	
+	private void showWeapon()
+	{
+		SpaceshipWeapon weapon=shipStats.getWeapons().get(weaponIndex);
+		weaponTexts[0].setString(weapon.getWeapon().getName());
+		
+		String str="mindmg:"+weapon.getWeapon().getMinDamage()+" maxdmg:"+weapon.getWeapon().getMaxDamage()+
+				" pen:"+weapon.getWeapon().getPenetration()+" dis:"+weapon.getWeapon().getDisruption()+
+				" trac:"+weapon.getWeapon().getTracking();
+		weaponTexts[1].setString(str);
+
+		str="facing:"+facingToStr(weapon.getFacing())+" rof:"+weapon.getWeapon().getVolley()+" arc:"+
+		weapon.getWeapon().getFiringArc()+" cooldown:"+weapon.getWeapon().getCooldown()+" range:"+weapon.getWeapon().getMaxRange();
+		weaponTexts[2].setString(str);
+		
+		weaponTexts[3].setString(weapon.getWeapon().getDescription());
+		
+		StringBuilder builder=new StringBuilder();
+		builder.append("firecost:");
+		for (int i=0;i<weapon.getWeapon().getWeaponCosts().size();i++)
+		{
+			builder.append(weapon.getWeapon().getWeaponCosts().get(i).toString());
+		}
+		weaponTexts[4].setString(builder.toString());
+		
+		weaponTexts[5].setString((weaponIndex+1)+"/"+shipStats.getWeapons().size());
+	}
 	
 	private void launch() {
 		if (canLaunch==true)
@@ -207,6 +286,7 @@ public class NavScreen extends Screen implements Callback {
 	public void start(MouseHook hook) {
 
 		hook.Register(window);
+		hook.Register(statWindow);
 	}
 	
 	@Override
@@ -334,6 +414,27 @@ public class NavScreen extends Screen implements Callback {
 				}
 				statWindow.add(texts[i]);
 			}
+		}
+		
+		if (!shipStats.getWeapons().isEmpty())
+		{
+			weaponTexts=new Text[6];
+			for (int i=0;i<5;i++)
+			{
+				weaponTexts[i]=new Text(new Vec2f(0.2F,4.0F-(0.7F*i)),"texts",0.6F,textures[4]);			
+				statWindow.add(weaponTexts[i]);
+			}
+			weaponTexts[5]=new Text(new Vec2f(3.3F,0.5F),"texts",0.6F,textures[4]);	
+			statWindow.add(weaponTexts[5]);
+			Button []buttons=new Button[2];
+			
+			buttons[0]=new Button(new Vec2f(0.1F,0.1F),new Vec2f(6,1.8F),textures[2],this,"back",3,1);
+			buttons[1]=new Button(new Vec2f(11.1F,0.1F),new Vec2f(6,1.8F),textures[2],this,"forward",2,1);
+			for (int i=0;i<2;i++)
+			{
+				statWindow.add(buttons[i]);
+			}
+			showWeapon();
 		}
 	}
 

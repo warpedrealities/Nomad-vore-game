@@ -338,7 +338,12 @@ public class WidgetPlacer {
 		{
 			ws.setWidget((WidgetBreakable)genWidget((Element)children.item(0)));
 		}
-	
+		children=Enode.getElementsByTagName("facing");
+		if (children.getLength()>0)
+		{
+			Element e=(Element)children.item(0);
+			ws.setFacing(Integer.parseInt(e.getAttribute("value")));
+		}	
 	}			
 	if (root.getTagName().contains("capture"))
 	{

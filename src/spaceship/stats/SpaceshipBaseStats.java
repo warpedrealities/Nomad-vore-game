@@ -40,7 +40,7 @@ public class SpaceshipBaseStats {
 				{		
 					armour=Integer.parseInt(Enode.getAttribute("value"));
 				}
-				if (Enode.getTagName().contains("evasion"))
+				if (Enode.getTagName().contains("manouver"))
 				{		
 					manouverability=Integer.parseInt(Enode.getAttribute("value"));
 				}

@@ -12,6 +12,7 @@ import nomad.Universe;
 
 import shipsystem.ShipAbility;
 import shipsystem.ShipAbility.AbilityType;
+import shipsystem.weapon.ShipWeapon;
 import spaceship.Spaceship;
 import spaceship.SpaceshipResource;
 import shipsystem.ShipConverter;
@@ -31,6 +32,7 @@ public class SpaceshipAnalyzer {
 	public SpaceshipStats generateStats(Spaceship ship)
 	{
 		List<ShipShield> shields=new ArrayList<ShipShield>();
+		List<SpaceshipWeapon> weapons=new ArrayList<SpaceshipWeapon>();
 		ArrayList<Integer> uids=new ArrayList<Integer>();
 		
 		SpaceshipStats stats=new SpaceshipStats();
@@ -43,6 +45,9 @@ public class SpaceshipAnalyzer {
 		stats.setManouverability(ship.getBaseStats().getManouverability());
 		stats.setMoveCost(ship.getBaseStats().getMoveCost());
 		stats.addResource("HULL", ship.getBaseStats().getMaxHullPoints(), ship.getBaseStats().getMaxHullPoints());
+		
+		int emitterIndex=0;
+		
 		for (int i=0;i<ship.getZone(0).getWidth();i++)
 		{
 			for (int j=0;j<ship.getZone(0).getHeight();j++)
@@ -63,6 +68,7 @@ public class SpaceshipAnalyzer {
 					if (t.getWidgetObject().getClass().getName().contains("WidgetSlot"))
 					{
 						WidgetSlot ws=(WidgetSlot)t.getWidgetObject();
+						
 						if (ws.getWidget()!=null)
 						{
 							if (ws.getWidget().getClass().getName().contains("WidgetAccomodation"))
@@ -97,10 +103,17 @@ public class SpaceshipAnalyzer {
 									case SA_SHIELD:
 										shields.add((ShipShield)system.getShipAbilities().get(k));
 										break;
+									case SA_WEAPON:
+										weapons.add(new SpaceshipWeapon((ShipWeapon)system.getShipAbilities().get(k),emitterIndex,ws.getFacing()));
+										break;
 									}
 									
 								}
-							}		
+							}	
+							if (ws.isHardpoint())
+							{
+								emitterIndex++;
+							}
 						}
 					}	
 					if (t.getWidgetObject().getClass().getName().contains("WidgetDamage"))
@@ -125,6 +138,7 @@ public class SpaceshipAnalyzer {
 		{
 			stats.setShield(new SpaceshipShield(shields));	
 		}	
+		stats.setWeapons(weapons);
 		return stats;
 	}
 	

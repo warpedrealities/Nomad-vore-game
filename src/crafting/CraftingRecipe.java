@@ -29,6 +29,8 @@ public class CraftingRecipe {
 	
 	private Item result;
 	
+	private int resultCount=1;
+	
 	private String description;
 	
 	public CraftingRecipe(String name) {
@@ -59,6 +61,10 @@ public class CraftingRecipe {
 				if (Enode.getTagName()=="result")
 				{	
 					result=Universe.getInstance().getLibrary().getItem(Enode.getAttribute("item"));
+					if (Enode.getAttribute("count").length()>0)
+					{
+						resultCount=Integer.parseInt(Enode.getAttribute("count"));
+					}
 				}
 				if (Enode.getTagName()=="ingredient")
 				{	
@@ -96,6 +102,10 @@ public class CraftingRecipe {
 
 	public String getDescription() {
 		return description;
+	}
+
+	public int getResultCount() {
+		return resultCount;
 	}
 	
 	
