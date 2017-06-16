@@ -8,8 +8,7 @@
 			"Greetings again star traveller."
 		</text>
 		<choice destination="hauntedValley0" text="$I would like to talk to you about something I found in a valley by the plains">
-				<condition operator="equals" evaluate="LOCALFLAG" flag="hauntedValley"
-				value="0" />	
+						<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="1" />
 		</choice>
 		<choice destination="crashRecovery0" text="$I would like to talk to you about digging up the ship">
 						<condition operator="equals" evaluate="LOCALFLAG" flag="hauntedValleyL"

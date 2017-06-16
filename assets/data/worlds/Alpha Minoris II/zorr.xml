@@ -141,11 +141,11 @@
 </lootTable>
 
 </blockDungeon>
-<!--
+
 <SeedNPCs min="8" max="16" name="AlphaMinoris_II/indoor raptor"/>
 <SeedNPCs min="4" max="8" name="AlphaMinoris_II/gold raptor"/>
 <SeedNPCs min="6" max="10" name="AlphaMinoris_II/raijin"/>
--->
+
 </mapgen>
 
 </zone>
