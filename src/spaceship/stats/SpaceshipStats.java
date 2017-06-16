@@ -156,7 +156,17 @@ public class SpaceshipStats {
 		strings[keys.size()]="FOOD";
 		return  strings;
 	}
-	
+	public String[] getCombatResourceKeys()
+	{
+		Set<String> keys=resources.keySet();
+		String []strings=new String[keys.size()];
+		Iterator <String> it=keys.iterator();
+		for (int i=0;i<keys.size();i++)
+		{
+			strings[i]=it.next();
+		}
+		return  strings;
+	}
 	public SpaceshipResource getResource(String type)
 	{
 		return resources.get(type);

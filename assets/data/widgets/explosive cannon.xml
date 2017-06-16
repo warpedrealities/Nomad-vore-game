@@ -7,7 +7,7 @@
 <damage min="4" max="12" falloff="0"/>
 <cooldown value="1"/>
 <effects script="cannon" sheet="shell"/>
-<range arc="2" range="10" />
+<range arc="2" range="5" />
 <weaponCost resource="explosive shell" cost="1"/>
 <description>
 

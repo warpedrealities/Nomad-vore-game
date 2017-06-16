@@ -53,25 +53,25 @@ public class NinePatch {
 		Vertex vertices[]=new Vertex[16];
 		FloatBuffer verticesBuffer = BufferUtils.createFloatBuffer(16 * 6);
 		//build using a lawn mower style, left to right, top to bottom row by row
-		vertices[0]=new Vertex(0, 0, 0, 0, 0);
-		vertices[1]=new Vertex(0.4F,0,0,borderx,0);
-		vertices[2]=new Vertex(width-0.4F,0,0,1-borderx,0);
-		vertices[3]=new Vertex(width,0,0,1,0);
+		vertices[0]=new Vertex(0, 0, 0, 0, 1);
+		vertices[1]=new Vertex(0.4F,0,0,borderx,1);
+		vertices[2]=new Vertex(width-0.4F,0,0,1-borderx,1);
+		vertices[3]=new Vertex(width,0,0,1,1);
 		//row 2
-		vertices[4]=new Vertex(0, 0.4F, 0, 0, bordery);
-		vertices[5]=new Vertex(0.4F,0.4F,0,borderx,bordery);
-		vertices[6]=new Vertex(width-0.4F,0.4F,0,1-borderx,bordery);
-		vertices[7]=new Vertex(width,0.4F,0,1,bordery);		
+		vertices[4]=new Vertex(0, 0.4F, 0, 0, 1-bordery);
+		vertices[5]=new Vertex(0.4F,0.4F,0,borderx,1-bordery);
+		vertices[6]=new Vertex(width-0.4F,0.4F,0,1-borderx,1-bordery);
+		vertices[7]=new Vertex(width,0.4F,0,1,1-bordery);		
 		//row 3
-		vertices[8]=new Vertex(0, height-0.4F, 0, 0, 1-bordery);
-		vertices[9]=new Vertex(0.4F,height-0.4F,0,borderx,1-bordery);
-		vertices[10]=new Vertex(width-0.4F,height-0.4F,0,1-borderx,1-bordery);
-		vertices[11]=new Vertex(width,height-0.4F,0,1,1-bordery);
+		vertices[8]=new Vertex(0, height-0.4F, 0, 0, bordery);
+		vertices[9]=new Vertex(0.4F,height-0.4F,0,borderx,bordery);
+		vertices[10]=new Vertex(width-0.4F,height-0.4F,0,1-borderx,bordery);
+		vertices[11]=new Vertex(width,height-0.4F,0,1,bordery);
 		//row 4
-		vertices[12]=new Vertex(0, height, 0, 0, 1);
-		vertices[13]=new Vertex(0.4F,height,0, borderx,1);
-		vertices[14]=new Vertex(width-0.4F, height ,0,1-borderx,1);
-		vertices[15]=new Vertex(width, height ,0,1,1);
+		vertices[12]=new Vertex(0, height, 0, 0, 0);
+		vertices[13]=new Vertex(0.4F,height,0, borderx,0);
+		vertices[14]=new Vertex(width-0.4F, height ,0,1-borderx,0);
+		vertices[15]=new Vertex(width, height ,0,1,0);
 		for (int i=0;i<16;i++)
 		{
 			verticesBuffer.put(vertices[i].pos);
@@ -110,25 +110,25 @@ public class NinePatch {
 		IntBuffer indiceBuffer= BufferUtils.createIntBuffer(54);		
 		
 		//build using a lawn mower style, left to right, top to bottom row by row
-		vertices[0]=new Vertex(0, 0, 0, 0, 0);
-		vertices[1]=new Vertex(0.4F,0,0,borderx,0);
-		vertices[2]=new Vertex(width-0.4F,0,0,1-borderx,0);
-		vertices[3]=new Vertex(width,0,0,1,0);
+		vertices[0]=new Vertex(0, 0, 0, 0, 1);
+		vertices[1]=new Vertex(0.4F,0,0,borderx,1);
+		vertices[2]=new Vertex(width-0.4F,0,0,1-borderx,1);
+		vertices[3]=new Vertex(width,0,0,1,1);
 		//row 2
-		vertices[4]=new Vertex(0, 0.4F, 0, 0, bordery);
-		vertices[5]=new Vertex(0.4F,0.4F,0,borderx,bordery);
-		vertices[6]=new Vertex(width-0.4F,0.4F,0,1-borderx,bordery);
-		vertices[7]=new Vertex(width,0.4F,0,1,bordery);		
+		vertices[4]=new Vertex(0, 0.4F, 0, 0, 1-bordery);
+		vertices[5]=new Vertex(0.4F,0.4F,0,borderx,1-bordery);
+		vertices[6]=new Vertex(width-0.4F,0.4F,0,1-borderx,1-bordery);
+		vertices[7]=new Vertex(width,0.4F,0,1,1-bordery);		
 		//row 3
-		vertices[8]=new Vertex(0, height-0.4F, 0, 0, 1-bordery);
-		vertices[9]=new Vertex(0.4F,height-0.4F,0,borderx,1-bordery);
-		vertices[10]=new Vertex(width-0.4F,height-0.4F,0,1-borderx,1-bordery);
-		vertices[11]=new Vertex(width,height-0.4F,0,1,1-bordery);
+		vertices[8]=new Vertex(0, height-0.4F, 0, 0, bordery);
+		vertices[9]=new Vertex(0.4F,height-0.4F,0,borderx,bordery);
+		vertices[10]=new Vertex(width-0.4F,height-0.4F,0,1-borderx,bordery);
+		vertices[11]=new Vertex(width,height-0.4F,0,1,bordery);
 		//row 4
-		vertices[12]=new Vertex(0, height, 0, 0, 1);
-		vertices[13]=new Vertex(0.4F,height,0, borderx,1);
-		vertices[14]=new Vertex(width-0.4F, height ,0,1-borderx,1);
-		vertices[15]=new Vertex(width, height ,0,1,1);
+		vertices[12]=new Vertex(0, height, 0, 0, 0);
+		vertices[13]=new Vertex(0.4F,height,0, borderx,0);
+		vertices[14]=new Vertex(width-0.4F, height ,0,1-borderx,0);
+		vertices[15]=new Vertex(width, height ,0,1,0);
 		for (int i=0;i<16;i++)
 		{
 			verticesBuffer.put(vertices[i].pos);

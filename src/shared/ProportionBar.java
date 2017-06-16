@@ -22,12 +22,12 @@ public class ProportionBar extends GUIBase{
 	int m_texture;
 	Vec2f m_position;
 	boolean visibility;
+	float height=0.125F;
 	
 	int m_max,m_value,m_offset;
 	
-	public ProportionBar(Vec2f position,Vec2f size, int value, int max, int Toffset, int texture)
+	private void commonConstruct(Vec2f position,Vec2f size, int value, int max, int Toffset, int texture)
 	{
-		m_position=position;
 		m_texture=texture;
 		m_matrix=new Matrix4f();
 		m_matrix.scale(new Vector3f(size.x,size.y,1));
@@ -58,7 +58,7 @@ public class ProportionBar extends GUIBase{
 		//precalc UV based on value
 //		int V=d/8;
 //		int U=d%8;
-		float Vf=0.125F*m_offset;
+		float Vf=height*m_offset;
 		float Uf=0.0F;
 		float h=value;
 		float proportion=h/m_max;
@@ -66,13 +66,13 @@ public class ProportionBar extends GUIBase{
 		Vertex v[]=new Vertex[8];
 	
 		
-		v[0]=new Vertex(-0.5F, 0, 0, 0, Vf+0.125f);
-		v[1]=new Vertex(-0.5F+(proportion), 0, 0, proportion, Vf+0.125f);
+		v[0]=new Vertex(-0.5F, 0, 0, 0, Vf+height);
+		v[1]=new Vertex(-0.5F+(proportion), 0, 0, proportion, Vf+height);
 		v[2]=new Vertex(-0.5F+(proportion), 1, 0, proportion, Vf);
 		v[3]=new Vertex(-0.5F, 1, 0, Uf, Vf);		
 
-		v[4]=new Vertex(-0.5F+proportion, 0, 0, proportion,0+0.125f);
-		v[5]=new Vertex(0.5F, -0, 0, 1, 0+0.125f);
+		v[4]=new Vertex(-0.5F+proportion, 0, 0, proportion,0);
+		v[5]=new Vertex(0.5F, -0, 0, 1, 0);
 		v[6]=new Vertex(0.5F, 1, 0,1, 0);
 		v[7]=new Vertex(-0.5F+proportion, 1, 0, proportion, 0);	
 
@@ -109,7 +109,19 @@ public class ProportionBar extends GUIBase{
 		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, m_VIO);
 		GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indiceBuffer, GL15.GL_STATIC_DRAW);
 		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);				
-		
+			
+	}
+	
+	public ProportionBar(Vec2f position,Vec2f size, int value, int max, int Toffset, int texture,float height)
+	{
+		this.height=height;
+		commonConstruct(position,size,value,max,Toffset,texture);
+	
+	}
+	public ProportionBar(Vec2f position,Vec2f size, int value, int max, int Toffset, int texture)
+	{
+		m_position=position;
+		commonConstruct(position,size,value,max,Toffset,texture);
 		
 	}
 	
@@ -133,13 +145,13 @@ public class ProportionBar extends GUIBase{
 		Vertex v[]=new Vertex[8];
 	
 		
-		v[0]=new Vertex(-0.5F, 0, 0, 0, Vf+0.125f);
-		v[1]=new Vertex(-0.5F+(proportion), 0, 0, proportion, Vf+0.125f);
+		v[0]=new Vertex(-0.5F, 0, 0, 0, Vf+height);
+		v[1]=new Vertex(-0.5F+(proportion), 0, 0, proportion, Vf+height);
 		v[2]=new Vertex(-0.5F+(proportion), 1, 0, proportion, Vf);
 		v[3]=new Vertex(-0.5F, 1, 0, Uf, Vf);		
 
-		v[4]=new Vertex(-0.5F+proportion, 0, 0, proportion,0+0.125f);
-		v[5]=new Vertex(0.5F, -0, 0, 1, 0+0.125f);
+		v[4]=new Vertex(-0.5F+proportion, 0, 0, proportion,0+height);
+		v[5]=new Vertex(0.5F, -0, 0, 1, 0+height);
 		v[6]=new Vertex(0.5F, 1, 0,1, 0);
 		v[7]=new Vertex(-0.5F+proportion, 1, 0, proportion, 0);	
 		

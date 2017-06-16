@@ -42,13 +42,13 @@ public class SpaceEncounter extends SceneBase {
 	{		
 		logic=new EncounterLogic(buildShips(playerShip,alienShips));
 		renderer=new EncounterRenderer(logic.getShipList());
-		gui=new EncounterGUI(playerShip);
+		gui=new EncounterGUI(logic.getShipList()[0]);
 	}
 	
 	@Override
 	public void Update(float dt) {
 		// TODO Auto-generated method stub
-
+		gui.update(dt);
 	}
 
 	@Override
@@ -62,18 +62,21 @@ public class SpaceEncounter extends SceneBase {
 		matrix44Buffer.flip();
 		GL20.glUniformMatrix4fv(m_variables[1], false, matrix44Buffer);
 		renderer.draw(m_variables[1],m_variables[2],m_variables[0], matrix44Buffer);
+		
+		gui.draw(m_variables[1],m_variables[2],m_variables[0], matrix44Buffer);
 	}
 
 	@Override
 	public void start(MouseHook mouse) {
-		// TODO Auto-generated method stub
-
+	
+		gui.start(mouse);
 	}
 
 	@Override
 	public void end() {
-		// TODO Auto-generated method stub
 
+		renderer.discard();
+		gui.discard();
 	}
 
 }

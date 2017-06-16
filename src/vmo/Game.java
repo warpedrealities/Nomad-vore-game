@@ -177,7 +177,7 @@ public class Game implements SceneManager {
 
 	//	m_currentscene=new Menu(var);
 		SceneBase.setVariables(var);
-		
+	
 		universe.Newgame();
 		Spaceship ship=(Spaceship)universe.getCurrentEntity();
 		ship.setShipStats(new SpaceshipAnalyzer().generateStats(ship));
