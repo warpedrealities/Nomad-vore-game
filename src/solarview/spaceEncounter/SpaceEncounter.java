@@ -5,6 +5,7 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 
 import input.MouseHook;
+import nomad.Universe;
 import shared.SceneBase;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
@@ -29,10 +30,12 @@ public class SpaceEncounter extends SceneBase {
 		}
 		
 		EncounterShip []list=new EncounterShip[c];
-		list[0]=new EncounterShip(playerShip,new Vec2f(0,0));
+		list[0]=new EncounterShip(playerShip,new Vec2f(0,0),0);
 		for (int i=1;i<c;i++)
 		{
-			list[i]=new EncounterShip(alienShips[i-1],new Vec2f(-6+(GameManager.m_random.nextInt(12)),10+GameManager.m_random.nextInt(10)));
+			list[i]=new EncounterShip(alienShips[i-1],
+					new Vec2f(-6+(GameManager.m_random.nextInt(12)),
+							10+GameManager.m_random.nextInt(10)),GameManager.m_random.nextInt(8));
 		}
 		return list;
 		
@@ -42,13 +45,27 @@ public class SpaceEncounter extends SceneBase {
 	{		
 		logic=new EncounterLogic(buildShips(playerShip,alienShips));
 		renderer=new EncounterRenderer(logic.getShipList());
-		gui=new EncounterGUI(logic.getShipList()[0]);
+		gui=new EncounterGUI(logic.getShipList()[0],logic);
 	}
 	
 	@Override
 	public void Update(float dt) {
-		// TODO Auto-generated method stub
-		gui.update(dt);
+		if (logic.isRunning())
+		{
+			logic.update(dt);
+			if (!logic.isRunning())
+			{
+				Universe.getInstance().getPlayer().addBusy(1);
+				Universe.AddClock(1);
+				gui.updateUI();
+			}
+			renderer.position(logic.getShipList()[0].getPosition(), logic.getShipList()[0].getHeading());
+		}
+		else
+		{
+			gui.update(dt);		
+		}
+
 	}
 
 	@Override

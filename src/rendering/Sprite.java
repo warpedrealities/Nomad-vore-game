@@ -226,7 +226,15 @@ public class Sprite implements Square_Int{
 		m_matrix.m30=spritePosition.x+0.5F;
 		m_matrix.m31=spritePosition.y+0.5F;		
 	}
+	public void repositionF(Vec2f p)
+	{
+		spritePosition.x=p.x; spritePosition.y=p.y;
+		m_matrix.m00=spriteSize;	m_matrix.m11=spriteSize; m_matrix.m22=1; m_matrix.m33=1;
+		m_matrix.m30=0; m_matrix.m31=0; m_matrix.m32=0;
 	
+		m_matrix.m30=spritePosition.x+0.5F;
+		m_matrix.m31=spritePosition.y+0.5F;		
+	}
 	public void setSpriteSize(float spriteSize) {
 		this.spriteSize = spriteSize;
 		

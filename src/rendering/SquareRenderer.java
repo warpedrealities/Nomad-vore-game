@@ -331,6 +331,11 @@ public class SquareRenderer implements Square_Int{
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public void repositionF(Vec2f p) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }

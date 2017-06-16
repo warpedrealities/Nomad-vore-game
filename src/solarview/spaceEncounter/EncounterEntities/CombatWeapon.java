@@ -21,6 +21,10 @@ public class CombatWeapon {
 		}
 	}
 	
+	public SpaceshipWeapon getWeapon() {
+		return weapon;
+	}
+
 	public void useWeapon()
 	{
 		cooldown=this.weapon.getWeapon().getCooldown();

@@ -8,6 +8,7 @@ import org.lwjgl.util.vector.Matrix4f;
 import nomad.Universe;
 import input.MouseHook;
 import rendering.SpriteBatch;
+import rendering.SpriteRotatable;
 import shared.Callback;
 import shared.MyListener;
 import shared.SceneBase;

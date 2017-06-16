@@ -17,21 +17,15 @@ public class EncounterShip {
 
 	private Spaceship ship;
 	private CombatController controller;
-	private Vec2f position;
-	private float heading;
+
+	private CombatManouver manouver;
 	private Square_Rotatable_Int sprite;
 	private ShipEmitters emitters;
 	private CombatShield shield;
 	private List<CombatWeapon> weapons;
-	private char course;
+
 	
-	public final char stop=0;
-	public final char left=1;
-	public final char right=2;
-	public final char half=4;
-	public final char full=8;
-	
-	public EncounterShip(Spaceship ship, Vec2f position)
+	public EncounterShip(Spaceship ship, Vec2f position,int heading)
 	{
 		this.ship=ship;
 		if (ship.getShipStats().getShield()!=null)
@@ -52,7 +46,8 @@ public class EncounterShip {
 			}
 		}
 		buildEmitters();
-		this.position=new Vec2f(position.x,position.y);
+		manouver=new CombatManouver(this,position,heading);
+	
 	}
 
 	private void buildEmitters()
@@ -80,29 +75,48 @@ public class EncounterShip {
 	}
 
 	public Vec2f getPosition() {
-		return position;
+		return manouver.getPosition();
 	}
 
 	public float getHeading() {
-		return heading;
+		return manouver.getHeading();
 	}
 
 	public CombatShield getShield() {
 		return shield;
 	}
 
-	public char getCourse() {
-		return course;
+	public int getCourse() {
+		return manouver.getCourse();
 	}
 
 	public void setCourse(char course) {
-		this.course = course;
+		manouver.setCourse(course);
 	}
 
 	public List<CombatWeapon> getWeapons() {
 		return weapons;
 	}
+
+	public void update(float dt) {
+		
+		manouver.update(dt);
+	}
 	
-	
+	public void updateResources()
+	{
+		ship.getShipStats().run();
+		if (shield!=null)
+		{
+			shield.update();
+		}
+		if (weapons!=null && weapons.size()>0)
+		{
+			for (int i=0;i<weapons.size();i++)
+			{
+				weapons.get(i).decrementCooldown();
+			}
+		}
+	}
 	
 }

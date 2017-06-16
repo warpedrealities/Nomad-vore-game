@@ -12,6 +12,7 @@ import nomad.StarSystem;
 import rendering.Sprite;
 import rendering.SpriteBatch;
 import rendering.SpriteManager;
+import rendering.SpriteRotatable;
 import shared.Vec2f;
 
 public class SolarRenderer extends SpriteManager {

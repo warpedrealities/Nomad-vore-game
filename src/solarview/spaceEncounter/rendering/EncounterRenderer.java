@@ -7,9 +7,9 @@ import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 
 import rendering.SpriteManager;
+import rendering.SpriteRotatable;
 import shared.Vec2f;
 import solarBackdrop.StarScape;
-import solarview.SpriteRotatable;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 
 
@@ -19,6 +19,7 @@ public class EncounterRenderer {
 	private Matrix4f m_viewMatrix;
 	private Background background;
 	private StarScape stars;
+
 	public EncounterRenderer(EncounterShip[] ships) {
 		spriteManager = new SpriteManager("assets/art/solar/");
 		m_viewMatrix = new Matrix4f();
@@ -61,9 +62,9 @@ public class EncounterRenderer {
 
 	public void position(Vec2f position,float angle)
 	{
-		Matrix4f.rotate(((float)angle)*0.785398F, new Vector3f(0,0,1), m_viewMatrix, m_viewMatrix);
-		m_viewMatrix.m30=position.x;
-		m_viewMatrix.m31=position.y;
+
+		m_viewMatrix.m30=position.x*-0.05F;
+		m_viewMatrix.m31=position.y*-0.0625F;
 		stars.setCurrentPosition(position);
 		background.update(position);
 	}

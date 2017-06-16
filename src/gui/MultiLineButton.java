@@ -41,8 +41,8 @@ public class MultiLineButton extends GUIBase{
 		Vec2f p=new Vec2f(pos.x,pos.y);
 		float sy=(size.y)*0.65F;
 		m_fonts=new NuFont[2];
-		m_fonts[0]=new NuFont(new Vec2f(pos.x+(0.4F*size.y),pos.y+sy+0.6F), 64,0.6F);	
-		m_fonts[1]=new NuFont(new Vec2f(pos.x+(0.4F*size.y),pos.y+sy-0.1F), 64,0.6F);	
+		m_fonts[0]=new NuFont(new Vec2f(pos.x+(0.4F*size.y),pos.y+sy+0.5F), 64,0.6F);	
+		m_fonts[1]=new NuFont(new Vec2f(pos.x+(0.4F*size.y),pos.y+sy-0.2F), 64,0.6F);	
 		buildStrings(string);
 
 		

@@ -1,10 +1,8 @@
-package solarview;
+package rendering;
 
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 
-import rendering.Sprite;
-import rendering.Square_Rotatable_Int;
 import shared.Vec2f;
 
 public class SpriteRotatable extends Sprite implements Square_Rotatable_Int {

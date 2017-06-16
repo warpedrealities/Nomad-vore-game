@@ -10,7 +10,6 @@ import org.lwjgl.util.vector.Matrix4f;
 import actorRPG.Actor_RPG;
 import gui.Button;
 import gui.Button2;
-import gui.ButtonProp;
 import gui.MultiLineButton;
 import gui.Text;
 import gui.Window;
@@ -34,10 +33,12 @@ public class EncounterGUI implements MyListener {
 	private Button2 []buttons;
 	private Text []shieldTexts;
 	private MultiLineButton []weaponButtons;
+	private EncounterLogic logic;
 	
-	public EncounterGUI(EncounterShip ship) {
+	public EncounterGUI(EncounterShip ship,EncounterLogic logic) {
 		this.encounterShip=ship;
 		this.playerShip=ship.getShip();
+		this.logic=logic;
 		setMatrix();
 		setupTextures();
 		buildUI();
@@ -58,6 +59,7 @@ public class EncounterGUI implements MyListener {
 						,this,playerShip.getShipStats().getWeapons().get(i).getWeapon().getName(),20+i,textureIds[16]);
 		
 				windows[0].add(weaponButtons[i]);
+				weaponButtons[i].setAlt(true);
 			}
 		}
 		
@@ -204,6 +206,22 @@ public class EncounterGUI implements MyListener {
 		{
 			writeShieldStatus();
 		}
+		if (weaponButtons!=null)
+		{
+			for (int i=0;i<weaponButtons.length;i++)
+			{
+				if (encounterShip.getWeapons().get(i).getCooldown()==0)
+				{
+					weaponButtons[i].setAlt(true);
+				}
+				else
+				{
+					weaponButtons[i].setAlt(false);
+					weaponButtons[i].setString(encounterShip.getWeapons().get(i).getWeapon().getWeapon().getName()+
+							" "+encounterShip.getWeapons().get(i).getCooldown());
+				}
+			}
+		}
 	}	
 	
 	private void writeShieldStatus()
@@ -264,7 +282,7 @@ public class EncounterGUI implements MyListener {
 		{
 			buttons[i].setAlt(false);
 		}
-		char course=encounterShip.getCourse();
+		int course=encounterShip.getCourse();
 		switch(course)
 		{
 		case 0:
@@ -305,6 +323,13 @@ public class EncounterGUI implements MyListener {
 			encounterShip.getShield().toggleStatus();
 			writeShieldStatus();
 			break;
+		case 14:
+			logic.startTurn();
+			break;
+		}
+		if (ID>=20)
+		{
+			
 		}
 	}
 }

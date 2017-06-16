@@ -12,12 +12,12 @@ import nomad.Entity;
 import nomad.Star;
 import nomad.StarSystem;
 import nomad.Universe;
+import rendering.SpriteRotatable;
 
 import org.lwjgl.glfw.GLFW;
 
 import shared.Vec2f;
 import solarview.SolarActionHandler;
-import solarview.SpriteRotatable;
 import solarview.spaceEncounter.CombatController;
 import view.ZoneInteractionHandler;
 

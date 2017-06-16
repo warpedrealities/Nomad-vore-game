@@ -69,4 +69,11 @@ public class Vec2f {
 		y=y*ratio;
 	}	
 
+	public void rotate(float r)
+	{
+		double x0 = (x * Math.cos(r))+(y*Math.sin(r));
+		double y0= (x * -Math.sin(r))+(y*Math.cos(r));
+		x=(float) x0;
+		y=(float) y0;
+	}
 }
