@@ -3,8 +3,10 @@
 
 	<page ID="start">
 		<preference fetish="tailvore" />
+		<preference fetish="demi" />
+		<preference fetish="female" />
 		<text>
-			scene not written
+			
 		</text>
 		<choice destination="GO" text="scene not ready" />
 	</page>

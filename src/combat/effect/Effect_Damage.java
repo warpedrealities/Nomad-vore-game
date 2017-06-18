@@ -42,6 +42,7 @@ public class Effect_Damage extends Effect {
 
 	private int applyCritical(Actor target, int strength,int bonus)
 	{
+
 		switch (damageType)
 		{
 		case Actor_RPG.THERMAL:
@@ -84,10 +85,14 @@ public class Effect_Damage extends Effect {
 		}
 		//roll damage
 		int damage=Universe.m_random.nextInt(maxValue-minValue)+minValue;
+		if (damage<2 && critical && damage<=target.getRPG().getAttribute(damageType)+bonus)
+		{
+			damage=2;
+		}
 		damage=target.getRPG().getStatusEffectHandler().runDefenceStack(damage, damageType);
 		//reduce damage by damage resistance
 		damage-=target.getRPG().getAttribute(damageType)+bonus;
-		
+
 		if (rangeDecay>0)
 		{
 			float d=target.getPosition().getDistance(origin.getPosition());
