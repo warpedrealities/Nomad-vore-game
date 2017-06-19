@@ -29,7 +29,7 @@
 			Her majesty smiles "Now, tell me, why do you seek an audience with me?"
 		</text>
 		<choice destination="valley0" text="$I would like to talk to you about something I found in a valley far to the north">
-		<condition operator="equals" evaluate="LOCALFLAG" flag="valley" value="0" />	
+						<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="1" />	
 		</choice>
 				<choice destination="crashRecovery0" text="$I would like to talk to you about digging up the ship">
 						<condition operator="equals" evaluate="LOCALFLAG" flag="valley"

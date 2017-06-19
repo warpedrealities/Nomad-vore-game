@@ -134,7 +134,7 @@ public class Universe extends GameManager
 		Element root=doc.getDocumentElement();
 		Element n=(Element)doc.getFirstChild();	
 		NodeList children=n.getChildNodes();
-		
+		FactionLibrary.getInstance().clean();
 		for (int i=0;i<children.getLength();i++)
 		{
 			Node N=children.item(i);
