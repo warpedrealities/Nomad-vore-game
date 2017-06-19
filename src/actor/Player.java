@@ -764,7 +764,7 @@ public class Player extends Actor
 		int slot=move.getEnergySource();
 		if (move.getAmmoCost()>0)
 		{
-			if (slot!=-2)
+			if (slot==-2)
 			{	
 				actorRPG.setStat(Actor_RPG.SATIATION, actorRPG.getStat(Actor_RPG.SATIATION)-move.getAmmoCost());
 			}

@@ -727,6 +727,10 @@ public class InventoryScreen extends Screen implements Callback {
 			if (item.getItem().getUse()==Item.ItemUse.NONE)
 			{
 				m_dropdownstrings[0]="";
+				if (ItemAmmo.class.isInstance(item.getItem()))
+				{
+					m_dropdownstrings[4]="quick";
+				}
 			}
 			else
 			{

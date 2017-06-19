@@ -43,7 +43,6 @@ public class Inventory {
 		
 		m_slots=new Item[5];
 		
-		playerGold=250;
 	}
 
 

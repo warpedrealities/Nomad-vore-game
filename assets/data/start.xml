@@ -9,6 +9,8 @@
 <item value="jumpsuit"/>
 <item value="medkit"/>
 <item value="space meal"/>
+<item value="shooting iron"/>
+<item value="bullets"/>
 <appearance>
 <bodypart partname="body">
 <partvalue variablename="height" value="60"/>
