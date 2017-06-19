@@ -10,8 +10,8 @@ import item.ItemWeapon;
 import java.nio.FloatBuffer;
 
 import shared.Vec2f;
-import actor.Inventory;
-import actor.Player;
+import actor.player.Inventory;
+import actor.player.Player;
 
 public class HandReader extends GUIBase {
 

@@ -10,10 +10,8 @@ import org.w3c.dom.NodeList;
 
 import combat.CombatMove;
 import combat.effect.Effect_Recover;
-
-
-import actor.Inventory;
 import actor.Modifier;
+import actor.player.Inventory;
 
 public class ItemEquip extends Item implements ItemHasEnergy {
 

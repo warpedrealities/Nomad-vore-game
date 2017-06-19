@@ -1,6 +1,6 @@
 package description;
 
-import actor.Player_LOOK;
+import actor.player.Player_LOOK;
 
 public abstract class Macro {
 

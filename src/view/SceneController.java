@@ -6,7 +6,7 @@ import vmo.GameManager;
 import zone.TileDef;
 import zone.Zone;
 import actor.Actor;
-import actor.Inventory;
+import actor.player.Inventory;
 import actorRPG.Actor_RPG;
 import actorRPG.Player_RPG;
 import artificial_intelligence.Sense;

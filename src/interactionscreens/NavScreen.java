@@ -8,8 +8,7 @@ import input.MouseHook;
 import java.nio.FloatBuffer;
 import java.util.Iterator;
 
-import actor.CompanionTool;
-
+import actor.player.CompanionTool;
 import nomad.Station;
 import nomad.Universe;
 import nomad.World;

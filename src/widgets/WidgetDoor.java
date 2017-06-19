@@ -11,9 +11,8 @@ import org.w3c.dom.Element;
 import shared.ParserHelper;
 import view.ViewScene;
 import vmo.GameManager;
-
-import actor.Inventory;
-import actor.Player;
+import actor.player.Inventory;
+import actor.player.Player;
 import actorRPG.Actor_RPG;
 
 public class WidgetDoor extends WidgetBreakable {

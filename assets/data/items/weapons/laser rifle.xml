@@ -2,18 +2,29 @@
 <ItemWeapon name="Laser rifle" weight="4" value="500">
 <tagSet value="A"/>
 <description>
-A rugged laser rifle, its long barrel makes it unwieldy in close quarters. 4AP 3-6 thermal damage. (A)
+A rugged laser rifle, its long barrel makes it unwieldy in close quarters. 2AP 3-6 thermal damage per shot. (A)
 </description>
 <modifier>
 
 </modifier>
-<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-2" actionCost="4" basicAction="true" moveType="FIGHT">
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-2" actionCost="2" basicAction="true" moveType="FIGHT">
 <effectDamage type="THERMAL" minValue="3" maxValue="6" modifier="NONE"/>
 <missText count="1">
 <text>you fail to shoot TARGET </text>
 </missText>
 <hitText count="1">
 <text>you shoot TARGET for VALUE heat damage</text>
+</hitText>
+</combatMove>
+<combatMove name="burstfire" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-2" actionCost="2" moveType="FIGHT">
+<effectDamage type="THERMAL" minValue="3" maxValue="6" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="3" maxValue="6" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="3" maxValue="6" modifier="NONE"/>
+<missText count="1">
+<text>you fire 3 shots without managing to hit TARGET </text>
+</missText>
+<hitText count="1">
+<text>you blast TARGET repeatedly for VALUE heat damage</text>
 </hitText>
 </combatMove>
 <energy refill="ENERGY E-cell power-cell" efficiency="5" capacity="50"/>

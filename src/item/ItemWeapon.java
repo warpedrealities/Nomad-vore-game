@@ -9,9 +9,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import combat.CombatMove;
-
-import actor.Inventory;
 import actor.Modifier;
+import actor.player.Inventory;
 
 
 public class ItemWeapon extends ItemEquip {

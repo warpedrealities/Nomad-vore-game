@@ -9,10 +9,9 @@ import java.io.IOException;
 
 import org.w3c.dom.Element;
 
+import actor.player.Player;
 import shared.Vec2f;
 import view.ViewScene;
-
-import actor.Player;
 
 public class WidgetSlot extends Widget {
 

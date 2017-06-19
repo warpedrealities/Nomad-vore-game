@@ -1,7 +1,7 @@
 package view;
 
-import actor.Inventory;
-import actor.Player;
+import actor.player.Inventory;
+import actor.player.Player;
 import item.Item;
 import item.ItemConsumable;
 import item.ItemStack;

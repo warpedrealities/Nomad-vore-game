@@ -2,7 +2,7 @@ package combat;
 
 import actor.Actor;
 import actor.Attackable;
-import actor.Player;
+import actor.player.Player;
 import actorRPG.Actor_RPG;
 import nomad.Universe;
 import rlforj.los.ILosBoard;

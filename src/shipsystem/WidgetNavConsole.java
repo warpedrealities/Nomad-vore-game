@@ -12,10 +12,9 @@ import nomad.Universe;
 
 import org.w3c.dom.Element;
 
+import actor.player.Player;
 import shared.ParserHelper;
 import spaceship.Spaceship;
-
-import actor.Player;
 import view.ViewScene;
 import widgets.WidgetBreakable;
 

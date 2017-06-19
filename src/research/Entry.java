@@ -10,7 +10,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import actor.Player;
+import actor.player.Player;
 import shared.ParserHelper;
 
 public class Entry implements Comparable<Entry> {

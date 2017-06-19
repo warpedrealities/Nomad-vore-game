@@ -14,10 +14,8 @@ import item.ItemWidget;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
+import actor.player.Player;
 import nomad.Universe;
-
-import actor.Player;
-
 import shared.Callback;
 import shared.ProportionBar;
 import shared.Screen;

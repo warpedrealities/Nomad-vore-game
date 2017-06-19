@@ -6,9 +6,8 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import actor.player.Player_LOOK;
 import shared.ParserHelper;
-
-import actor.Player_LOOK;
 
 public class MacroLibrary {
 

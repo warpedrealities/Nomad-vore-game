@@ -140,7 +140,7 @@
 			the stains on her tunic she might be exposing you to with her
 			exuberant celebration.
 		</text>
-		<effect type="experience" value="50" />
+		<effect type="experience" value="100" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
 		<effect type="setglobalflag" flag="dammathquest1" value="3" />
 		<choice destination="end"

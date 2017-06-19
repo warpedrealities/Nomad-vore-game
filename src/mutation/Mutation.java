@@ -8,10 +8,9 @@ import java.util.Scanner;
 
 import org.w3c.dom.Element;
 
+import actor.player.Player_LOOK;
 import description.BodyPart;
 import description.MacroLibrary;
-
-import actor.Player_LOOK;
 
 public class Mutation {
 

@@ -22,7 +22,7 @@ import vmo.GameManager;
 import zone.Tile;
 import actor.Actor;
 import actor.Attackable;
-import actor.Player;
+import actor.player.Player;
 import actorRPG.RPG_Helper;
 
 public class CombatMove {

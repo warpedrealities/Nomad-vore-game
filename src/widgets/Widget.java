@@ -4,10 +4,10 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import actor.player.Player;
 import shared.ParserHelper;
 import view.ModelController_Int;
 import zone.Zone;
-import actor.Player;
 
 abstract public class Widget {
 

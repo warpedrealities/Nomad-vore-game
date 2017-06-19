@@ -331,7 +331,7 @@
 		<effect type="removeitem" item="elf statue" value="1" />
 		<effect type="setlocalflag" flag="quest" value="2" />
 		<effect type="givegold" value="50" />
-		<effect type="experience" value="25" />
+		<effect type="experience" value="100" />
 		<choice destination="end" text="you're welcome" />
 	</page>
 

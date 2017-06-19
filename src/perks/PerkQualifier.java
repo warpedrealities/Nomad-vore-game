@@ -2,7 +2,7 @@ package perks;
 
 import java.util.ArrayList;
 
-import actor.Player_LOOK;
+import actor.player.Player_LOOK;
 import actorRPG.Player_RPG;
 import nomad.Universe;
 

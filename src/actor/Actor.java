@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import org.lwjgl.util.vector.Vector4f;
 
+import actor.player.Player;
 import combat.CombatMove;
 import combat.statusEffects.StatusEffect;
 import faction.Faction;
@@ -259,7 +260,7 @@ public abstract class Actor implements Attackable {
 		return false;
 	}
 	
-	int getMoveCost()
+	protected int getMoveCost()
 	{
 		if (actorRPG.getStarving())
 		{
@@ -353,5 +354,13 @@ public abstract class Actor implements Attackable {
 	abstract public boolean isBlocking();
 	
 	abstract protected void checkSpawnable();
+
+	public boolean isActorVisibility() {
+		return actorVisibility;
+	}
+
+	public void setActorVisibility(boolean actorVisibility) {
+		this.actorVisibility = actorVisibility;
+	}
 	
 }

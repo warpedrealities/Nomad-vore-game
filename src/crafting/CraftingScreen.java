@@ -18,9 +18,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
+import actor.player.Player;
 import nomad.Universe;
-
-import actor.Player;
 import actorRPG.Actor_RPG;
 
 import shared.Callback;

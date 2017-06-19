@@ -1,4 +1,4 @@
-package actor;
+package actor.player;
 
 import faction.FactionLibrary;
 import input.Keyboard;
@@ -43,6 +43,8 @@ import zone.Tile;
 
 import org.lwjgl.glfw.GLFWKeyCallback;
 
+import actor.Actor;
+import actor.Attackable;
 import actor.npc.NPC;
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
@@ -112,7 +114,7 @@ public class Player extends Actor
 		return false;
 	}
 	
-	int getMoveCost()
+	protected int getMoveCost()
 	{
 		if (actorRPG.getStarving())
 		{
@@ -533,8 +535,7 @@ public class Player extends Actor
 	}
 	
 	private void SavePlayer(DataOutputStream dstream) throws IOException {
-		// TODO Auto-generated method stub
-		
+	
 		//save position
 		actorPosition.Save(dstream);
 		//save name
@@ -723,7 +724,6 @@ public class Player extends Actor
 
 	@Override
 	public boolean Respawn(long time) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -858,20 +858,18 @@ public class Player extends Actor
 
 	@Override
 	public boolean canSave() {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
 	@Override
 	public boolean isBlocking() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	protected void checkSpawnable() {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

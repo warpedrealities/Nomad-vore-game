@@ -6,9 +6,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.player.Player;
 import view.ViewScene;
-
-import actor.Player;
 
 public class Effect_Mutator extends Effect {
 

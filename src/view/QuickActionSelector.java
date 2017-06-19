@@ -4,7 +4,7 @@ import java.nio.FloatBuffer;
 
 import org.lwjgl.glfw.GLFW;
 
-import actor.Player;
+import actor.player.Player;
 import actorRPG.Player_RPG;
 import gui.List;
 import input.Keyboard;

@@ -1,4 +1,4 @@
-package actor;
+package actor.player;
 
 import item.Item;
 import item.ItemBlueprintInstance;

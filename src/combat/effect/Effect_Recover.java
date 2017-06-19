@@ -5,7 +5,7 @@ import org.w3c.dom.Element;
 import view.ViewScene;
 
 import actor.Actor;
-import actor.Player;
+import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
 import actorRPG.Player_RPG;

@@ -8,8 +8,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import actor.Player;
 import actor.npc.NPC;
+import actor.player.Player;
 import interactionscreens.CaptureScreen;
 import interactionscreens.SystemScreen;
 import view.ViewScene;

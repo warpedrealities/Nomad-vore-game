@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ItemWeapon name="arming sword" weight="5" value="800">
+<tagSet value="SM"/>
+<description>
+A long one and two handed metal sword. Good for parrying +2 2AP Does 4-8 kinetic damage. (S)
+</description>
+<modifier>
+<parry value="2"/>
+</modifier>
+<combatMove name="strike" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="4" maxValue="8" modifier="STRENGTH"/>
+<missText count="1">
+<text>you fail to strike the TARGET .</text>
+</missText>
+<hitText count="2">
+<text>you strike TARGET for VALUE kinetic damage</text>
+</hitText>
+</combatMove>
+</ItemWeapon>

@@ -17,10 +17,8 @@ import item.ItemStack;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
+import actor.player.Player;
 import nomad.Universe;
-
-import actor.Player;
-
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

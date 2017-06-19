@@ -6,10 +6,9 @@ import java.io.IOException;
 
 import org.w3c.dom.Element;
 
+import actor.player.Player;
 import shared.ParserHelper;
 import view.ViewScene;
-
-import actor.Player;
 import nomad.FlagField;
 
 public class WidgetConversation extends WidgetBreakable {

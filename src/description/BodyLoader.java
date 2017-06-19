@@ -4,7 +4,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import actor.Player;
+import actor.player.Player;
 
 public class BodyLoader {
 

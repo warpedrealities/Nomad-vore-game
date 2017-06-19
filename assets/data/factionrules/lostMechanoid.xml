@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<rules>
+
+	<superRule subject="mechanoid" level="1" violation="ATTACK">
+		<factionRelationship faction="lostMechanoid" mod="-100" />
+	</superRule>
+	<witness name="mechanoid" />
+</rules>

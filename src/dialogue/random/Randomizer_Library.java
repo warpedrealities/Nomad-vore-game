@@ -6,7 +6,7 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import actor.Player_LOOK;
+import actor.player.Player_LOOK;
 import description.Macro;
 import description.MacroLibrary;
 import description.Macro_Range;

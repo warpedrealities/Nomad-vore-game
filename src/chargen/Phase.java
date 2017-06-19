@@ -2,7 +2,7 @@ package chargen;
 
 import java.util.ArrayList;
 
-import actor.Player;
+import actor.player.Player;
 
 public interface Phase {
 	

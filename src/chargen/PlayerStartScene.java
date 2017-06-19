@@ -13,7 +13,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import actor.Player;
+import actor.player.Player;
 import gui.Button;
 import gui.List;
 import gui.MultiLineText;

@@ -25,8 +25,8 @@ import dialogue.choiceHandler.ChoiceHandler;
 import dialogue.choiceHandler.ChoiceLoader;
 import dialogue.choiceHandler.ChoiceText;
 import dialogue.random.Randomizer_Library;
-import actor.Player;
 import actor.npc.NPC;
+import actor.player.Player;
 import actorRPG.RPG_Helper;
 
 import shared.Callback;

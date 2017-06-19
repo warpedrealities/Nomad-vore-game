@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import org.w3c.dom.Element;
 
-import actor.Player;
+import actor.player.Player;
 import interactionscreens.BedScreen;
 import interactionscreens.ComputerScreen;
 import view.ViewScene;

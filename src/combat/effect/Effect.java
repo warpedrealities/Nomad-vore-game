@@ -1,7 +1,7 @@
 package combat.effect;
 
 import actor.Actor;
-import actor.Player;
+import actor.player.Player;
 
 public abstract class Effect {
 

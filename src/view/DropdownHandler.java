@@ -1,8 +1,8 @@
 package view;
 
-import actor.Player;
 import gui.Button2;
 import gui.DropDown;
+import actor.player.Player;
 import actorRPG.Player_RPG;;
 
 public class DropdownHandler {

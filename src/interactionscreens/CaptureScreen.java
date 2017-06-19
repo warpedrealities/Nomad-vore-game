@@ -2,8 +2,8 @@ package interactionscreens;
 
 import java.nio.FloatBuffer;
 
-import actor.Inventory;
 import actor.npc.NPC;
+import actor.player.Inventory;
 import gui.Button;
 import gui.List;
 import gui.MultiLineText;

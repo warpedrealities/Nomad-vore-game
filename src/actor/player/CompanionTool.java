@@ -1,7 +1,8 @@
-package actor;
+package actor.player;
 
 import java.util.ArrayList;
 
+import actor.Actor;
 import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 
@@ -80,8 +81,8 @@ public class CompanionTool {
 	{
 		companion.getRPG().IncreaseStat(Actor_RPG.RESOLVE, 5);
 		companion.getRPG().IncreaseStat(Actor_RPG.HEALTH, 5);
-		companion.actorVisibility=true;
-		companion.spriteInterface.setVisible(true);
+		companion.setActorVisibility(true);
+		companion.getSpriteInterface().setVisible(true);
 		companion.setCollisioninterface(zone);
 		
 		int r=Universe.m_random.nextInt(8);

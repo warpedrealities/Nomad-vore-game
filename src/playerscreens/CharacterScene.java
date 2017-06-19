@@ -15,7 +15,7 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
-import actor.Player;
+import actor.player.Player;
 import actorRPG.Actor_RPG;
 
 import nomad.Universe;

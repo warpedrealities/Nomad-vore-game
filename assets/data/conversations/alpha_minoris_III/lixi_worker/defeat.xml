@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text> scene with this one not ready yet
+		<text> The strong and armoured insectoid hisses as you approach. But it's all she can do to keep herself upright with the help of a hand on the ground, kneeling as she tries to recover her strength and deal with the triumphant interloper before her. It looks like that might take a while and there's no sense wasting the opportunity right?
 		</text>
-		<choice destination="devour0" text="eat her">
+		<choice destination="devour0" text="a big meal of bug girl would be a fitting reward for your victory">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="end" text="leave her be" />
@@ -11,11 +11,39 @@
 
 	<page ID="devour0">
 		<text>
-			not written yet
+		The big bug keeps on glaring as you come to a halt, she sees you lick your lips and chitterclaks in scoffing laughter. She seems disbelieving you could handle one such as her. Well, time to prove her wrong. You snag her antenna making her wince as you pull her forwards, keeping her from pulling away her head as you bring her to meet your lips. The armoured bug letting out a hiss of dismay as you start your attempt, engulfing her face with your lips. You waste no time from there in shifting your hands down to grab her arms and pull her forwards so you can swallow and start to devour more of her.
 		</text>
-		<effect type="feed" value="85" />
-		<special effect="removenpc" />
-		<choice destination="end" text="carry on" />
+		<choice destination="devour1" text="eat the armoured bug girl"/>
+	</page>
+	
+	<page ID="devour1">
+	<text>
+	The chitinous armour of the lixi tastes interesting with unusual mixes of bitter and sweet from different segments as they cross your tongue. Though the bug girl's resilient form yields little to the pressure of her mouth and throat as you swallow up more of her, gulping over her shoulders and plated breasts. You can feel her powerful muscles working against you in futile resistance, pushing her armoured arms against the inside of your throat but unable to escape your hunger. That shapely chitin clad ass of hers gets closer and closer to your mouth now as you cram her form inside of yourself more and more. You can hear her hissing from within your gut as she's squeezed inside.
+	</text>
+	<choice destination="devour2" text="swallow her up"/>
+	</page>
+	
+	<page ID="devour2">
+	<text>
+	The big bug's armoured glutes flex as her tail thrashes around. But she can't escape you as you tip your head back and swallow up her kicking legs and writhing tail. The lixi worker letting out distressed hissing whine as she's squeezed and packed away in a tightly confined mass inside your belly. The insectoid's chitin clad limbs hardly able to move as you rub over the well defined bulges of your belly. Her chitin seems to protect her from the squeezing of your belly and might resist your acids for a time though right?
+	</text>
+	<choice destination="devour3" text="prove your belly is mightier than her shell"/>
+	</page>
+	
+	<page ID="devour3">
+	<text>
+	You get comfortable as best you can with the hard lumpy shape distending your belly. The bug is going to be tricky to digest, but it'll make her dissolution all the sweeter. She tries to struggle against your insides but can barely move as your belly gurgles around her, pressing tightly against her unyielding chitin as she hisses in protest. She can't get out now though, forced to bath in your stomach fluids that for the moment is kept at bay by her resilient chitin. but you can only imagine how her shell is softening as you soak her with your enzymes.
+	</text>
+	<choice destination="devour4" text="and soon, she will yield"/>
+	</page>
+	
+	<page ID="devour4">
+	<text>
+	
+	</text>
+	<effect type="feed" value="85" />
+	<special effect="removenpc" />
+	<choice destination="end" text="carry on" />
 	</page>
 
 </Conversation>

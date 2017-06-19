@@ -8,7 +8,7 @@ import perks.PerkWeaponMove;
 
 import java.util.ArrayList;
 
-import actor.Player;
+import actor.player.Player;
 import combat.CombatMove;
 import item.ItemWeapon;
 

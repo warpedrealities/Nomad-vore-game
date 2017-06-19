@@ -7,9 +7,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.player.Player_LOOK;
 import shared.ParserHelper;
-
-import actor.Player_LOOK;
 
 public class AppearanceParser {
 

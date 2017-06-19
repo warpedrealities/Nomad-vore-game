@@ -61,7 +61,7 @@
 		</text>
 		<choice destination="sex0" text="it's a cock">
 			<preference fetish="sex" />
-			<assertion evaluate="haspart" part="vagina" />
+
 		</choice>
 		<choice destination="lick0" text="it's her tongue" >
 
@@ -69,6 +69,15 @@
 	</page>
 
 	<page ID="sex0">
+		<assertnot evaluate="haspart" part="vagina" />	
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="sex0">
+		<assertion evaluate="haspart" part="vagina" />
 		<text>
 			You feel her grasp your hip with one hand and use the other to rub her
 			tip up and down your netherlips teasingly "see, told you you'd find
@@ -261,7 +270,7 @@
 		<effect type="setglobalflag" flag="ratquest" value="5" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
 		<effect type="givegold" value="100" />
-		<effect type="experience" value="50" />
+		<effect type="experience" value="100" />
 		<choice destination="table" text="let me go look then">
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>

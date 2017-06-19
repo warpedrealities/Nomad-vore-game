@@ -33,6 +33,7 @@ import widgets.WidgetDoor;
 import widgets.WidgetHarvestable;
 import widgets.WidgetItemPile;
 import widgets.WidgetPortal;
+import widgets.WidgetReformer;
 import widgets.WidgetScriptPortal;
 import widgets.WidgetSlot;
 import widgets.WidgetSprite;
@@ -344,7 +345,11 @@ public class WidgetPlacer {
 			Element e=(Element)children.item(0);
 			ws.setFacing(Integer.parseInt(e.getAttribute("value")));
 		}	
-	}			
+	}	
+	if (root.getTagName().contains("reformer"))
+	{
+		widget=new WidgetReformer(root);
+	}
 	if (root.getTagName().contains("capture"))
 	{
 		widget=new WidgetCapture(root);		

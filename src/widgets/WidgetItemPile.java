@@ -4,12 +4,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import actor.player.Player;
 import nomad.Universe;
-
-import actor.Player;
-
-
-
 import view.ViewScene;
 
 

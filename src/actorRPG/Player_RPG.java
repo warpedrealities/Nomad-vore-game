@@ -35,9 +35,9 @@ import item.ItemEquip;
 import item.ItemStack;
 import item.ItemWeapon;
 import actor.Actor;
-import actor.Inventory;
 import actor.Modifier;
-import actor.Player;
+import actor.player.Inventory;
+import actor.player.Player;
 
 public class Player_RPG implements Actor_RPG {
 

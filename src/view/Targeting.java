@@ -17,8 +17,8 @@ import rendering.Sprite;
 import shared.Tools;
 import shared.Vec2f;
 import zone.Zone;
-import actor.Player;
 import actor.npc.NPC;
+import actor.player.Player;
 
 public class Targeting {
 

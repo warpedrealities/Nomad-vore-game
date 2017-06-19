@@ -17,8 +17,8 @@ import org.w3c.dom.Element;
 
 import actor.Actor;
 import actor.ActorLoader;
-import actor.Player;
 import actor.npc.NPC;
+import actor.player.Player;
 import actorRPG.Actor_RPG;
 import artificial_intelligence.pathfinding.Path;
 import artificial_intelligence.pathfinding.Pathfinder;

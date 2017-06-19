@@ -6,10 +6,8 @@ import java.io.IOException;
 
 import org.w3c.dom.Element;
 
+import actor.player.Player;
 import crafting.CraftingScreen;
-
-import actor.Player;
-
 import nomad.Universe;
 import shared.ParserHelper;
 import view.ViewScene;

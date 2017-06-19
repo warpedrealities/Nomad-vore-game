@@ -14,11 +14,9 @@ import view.ViewScene;
 import widgets.Widget;
 import widgets.WidgetCapture;
 import widgets.WidgetConversation;
-
-
-import actor.CompanionTool;
-import actor.Player;
 import actor.npc.NPC;
+import actor.player.CompanionTool;
+import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.NPC_RPG;
 import actorRPG.Player_RPG;

@@ -1,6 +1,6 @@
 package combat;
 
-import actor.Player;
+import actor.player.Player;
 import item.Item;
 import nomad.Universe;
 import shared.Vec2f;

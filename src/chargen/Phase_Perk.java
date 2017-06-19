@@ -6,11 +6,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.player.Player;
 import perks.Perk;
 import perks.PerkInstance;
 import perks.PerkLibrary;
-
-import actor.Player;
 import actorRPG.Player_RPG;
 
 public class Phase_Perk implements Phase {

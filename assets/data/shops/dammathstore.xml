@@ -20,6 +20,9 @@
 <conditionalitem name="iron mace" probability="100" quantity="3">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>
+<conditionalitem name="arming sword" probability="100" quantity="1">
+<conditional operator="equals" value="3" flag="dammathquest0"/>
+</conditionalitem>
 <conditionalitem name="warhammer" probability="100" quantity="1">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>

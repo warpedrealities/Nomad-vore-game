@@ -21,7 +21,7 @@ import org.w3c.dom.NodeList;
 
 import actor.Actor;
 import actor.Attackable;
-import actor.Player;
+import actor.player.Player;
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
 import combat.effect.Effect;

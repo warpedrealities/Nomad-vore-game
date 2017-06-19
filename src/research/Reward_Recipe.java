@@ -2,7 +2,7 @@ package research;
 
 import org.w3c.dom.Element;
 
-import actor.Player;
+import actor.player.Player;
 
 public class Reward_Recipe implements Entry_Reward {
 

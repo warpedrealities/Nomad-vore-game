@@ -15,10 +15,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.player.Player;
 import shared.ParserHelper;
 import shipsystem.ShipAbility.AbilityType;
 import shipsystem.weapon.ShipWeapon;
-import actor.Player;
 import view.ViewScene;
 import widgets.WidgetBreakable;
 

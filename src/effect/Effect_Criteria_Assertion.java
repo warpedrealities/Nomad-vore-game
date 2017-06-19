@@ -2,7 +2,7 @@ package effect;
 
 import org.w3c.dom.Element;
 
-import actor.Player_LOOK;
+import actor.player.Player_LOOK;
 
 public class Effect_Criteria_Assertion extends Effect_Criteria {
 

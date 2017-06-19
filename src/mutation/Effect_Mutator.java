@@ -14,7 +14,7 @@ import combat.effect.Effect_Criteria_Value;
 import view.ViewScene;
 
 import actor.Actor;
-import actor.Player;
+import actor.player.Player;
 
 public class Effect_Mutator extends Effect {
 

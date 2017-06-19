@@ -124,7 +124,10 @@ public class WidgetLoader {
 		{
 			widget=new WidgetCapture(n);
 		}
-		
+		if (root.getTagName().contains("reformer"))
+		{
+			widget=new WidgetReformer(n);
+		}	
 	
 	if (root.getTagName().contains("navconsole"))
 	{

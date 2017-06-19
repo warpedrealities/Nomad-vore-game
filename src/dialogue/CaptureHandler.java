@@ -1,8 +1,8 @@
 package dialogue;
 
-import actor.Inventory;
-import actor.Player;
 import actor.npc.NPC;
+import actor.player.Inventory;
+import actor.player.Player;
 import item.ItemCaptureInstance;
 import nomad.Entity;
 import nomad.Universe;

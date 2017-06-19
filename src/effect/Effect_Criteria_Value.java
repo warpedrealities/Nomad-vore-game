@@ -2,9 +2,8 @@ package effect;
 
 import org.w3c.dom.Element;
 
+import actor.player.Player_LOOK;
 import description.BodyPart;
-
-import actor.Player_LOOK;
 
 public class Effect_Criteria_Value extends Effect_Criteria {
 
