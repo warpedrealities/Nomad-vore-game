@@ -12,21 +12,16 @@ import zone.TileDef.TileMovement;
 
 public class ThrownWeaponHandler {
 
-	
-	public static void throwWeapon(Vec2f position, Item weapon)
-	{
-		Zone zone=Universe.getInstance().getCurrentZone();
-		Tile t=zone.getTile((int)position.x, (int)position.y);
-		if (t.getWidgetObject()!=null && WidgetItemPile.class.isInstance(t.getWidgetObject()))
-		{
-			WidgetItemPile pile=(WidgetItemPile)t.getWidgetObject();
+	public static void throwWeapon(Vec2f position, Item weapon) {
+		Zone zone = Universe.getInstance().getCurrentZone();
+		Tile t = zone.getTile((int) position.x, (int) position.y);
+		if (t.getWidgetObject() != null && WidgetItemPile.class.isInstance(t.getWidgetObject())) {
+			WidgetItemPile pile = (WidgetItemPile) t.getWidgetObject();
 			pile.AddItem(weapon);
-		}
-		else if (t.getDefinition().getMovement()==TileMovement.WALK)
-		{
-			WidgetItemPile pile=new WidgetItemPile(2,"a pile of items containing ",weapon);
-			ViewScene.m_interface.placeWidget(pile, (int)position.x, (int)position.y, false);
+		} else if (t.getDefinition().getMovement() == TileMovement.WALK) {
+			WidgetItemPile pile = new WidgetItemPile(2, "a pile of items containing ", weapon);
+			ViewScene.m_interface.placeWidget(pile, (int) position.x, (int) position.y, false);
 		}
 	}
-	
+
 }

@@ -21,134 +21,110 @@ public class Status_Bind extends Status_AttribMod {
 	Actor origin;
 	boolean originDependent;
 	int strength;
-	String [] struggleTexts;
+	String[] struggleTexts;
 	int accumulation;
-	
+
 	public Status_Bind(Element e) {
 		super(e);
-		
-		
-		NodeList children=e.getChildNodes();
-		for (int i=0;i<children.getLength();i++)
-		{			
-			Node node=children.item(i);
-			if (node.getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element Enode=(Element)node;
-				if (Enode.getTagName()=="bind")
-				{
-					if (Enode.getAttribute("originDependent").length()>0)
-					{
-						if (Enode.getAttribute("originDependent").equals("true"))
-						{
-							originDependent=true;
+
+		NodeList children = e.getChildNodes();
+		for (int i = 0; i < children.getLength(); i++) {
+			Node node = children.item(i);
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element Enode = (Element) node;
+				if (Enode.getTagName() == "bind") {
+					if (Enode.getAttribute("originDependent").length() > 0) {
+						if (Enode.getAttribute("originDependent").equals("true")) {
+							originDependent = true;
 						}
 					}
-					strength=Integer.parseInt(Enode.getAttribute("strength"));
+					strength = Integer.parseInt(Enode.getAttribute("strength"));
 				}
-				if (Enode.getTagName()=="struggle")
-				{
+				if (Enode.getTagName() == "struggle") {
 					genStruggles(Enode);
 				}
 			}
 		}
-		
+
 	}
-	
-	private void genStruggles(Element enode)
-	{
-		struggleTexts=new String[Integer.parseInt(enode.getAttribute("count"))];
-		int index=0;
-		NodeList children=enode.getChildNodes();
-		for (int i=0;i<children.getLength();i++)
-		{			
-			Node node=children.item(i);
-			if (node.getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element Enode=(Element)node;
-				if (Enode.getTagName()=="text")
-				{
-					struggleTexts[index]=Enode.getTextContent();
+
+	private void genStruggles(Element enode) {
+		struggleTexts = new String[Integer.parseInt(enode.getAttribute("count"))];
+		int index = 0;
+		NodeList children = enode.getChildNodes();
+		for (int i = 0; i < children.getLength(); i++) {
+			Node node = children.item(i);
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element Enode = (Element) node;
+				if (Enode.getTagName() == "text") {
+					struggleTexts[index] = Enode.getTextContent();
 					index++;
 				}
 			}
 		}
 	}
-	
+
 	public Actor getOrigin() {
 		return origin;
 	}
-
-
 
 	public void setOrigin(Actor origin) {
 		this.origin = origin;
 	}
 
-
-
 	public boolean isOriginDependent() {
 		return originDependent;
 	}
-
-
 
 	public void setOriginDependent(boolean originDependent) {
 		this.originDependent = originDependent;
 	}
 
-
-
 	public Status_Bind() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
-	public StatusEffect cloneEffect()
-	{
-		Status_Bind status=new Status_Bind();
-		status.duration=this.duration;
-		status.removeText=this.removeText;
-		status.spriteIcon=this.spriteIcon;
-		status.uid=this.uid;
-		status.modifiers=new AttribMod[modifiers.length];
-		for (int i=0;i<modifiers.length;i++)
-		{
-			status.modifiers[i]=modifiers[i];
+	public StatusEffect cloneEffect() {
+		Status_Bind status = new Status_Bind();
+		status.duration = this.duration;
+		status.removeText = this.removeText;
+		status.spriteIcon = this.spriteIcon;
+		status.uid = this.uid;
+		status.modifiers = new AttribMod[modifiers.length];
+		for (int i = 0; i < modifiers.length; i++) {
+			status.modifiers[i] = modifiers[i];
 		}
-		status.strength=this.strength;
-		status.originDependent=this.originDependent;
-		status.struggleTexts=this.struggleTexts;
+		status.strength = this.strength;
+		status.originDependent = this.originDependent;
+		status.struggleTexts = this.struggleTexts;
 
 		return status;
 
 	}
-	
+
 	@Override
 	public void load(DataInputStream dstream) throws IOException {
-		uid=dstream.readInt();
-		spriteIcon=dstream.readInt();
-		duration=dstream.readInt();
-		int c=dstream.readInt();
-		modifiers=new AttribMod[c];
-		for (int i=0;i<c;i++)
-		{
-			modifiers[i]=new AttribMod();
+		uid = dstream.readInt();
+		spriteIcon = dstream.readInt();
+		duration = dstream.readInt();
+		int c = dstream.readInt();
+		modifiers = new AttribMod[c];
+		for (int i = 0; i < c; i++) {
+			modifiers[i] = new AttribMod();
 			modifiers[i].load(dstream);
 		}
-		removeText=ParserHelper.LoadString(dstream);
-		originDependent=dstream.readBoolean();
-		strength=dstream.readInt();
-		boolean b=dstream.readBoolean();
-		if (b==true)
-		{
-			String originName=ParserHelper.LoadString(dstream);
-			int x=dstream.readInt();
-			int y=dstream.readInt();
-			Actor actor=Universe.getInstance().getCurrentZone().getActor(x, y);
-			if (actor!=null && actor.getName().equals(originName))
-			{
-				origin=actor;
+		removeText = ParserHelper.LoadString(dstream);
+		originDependent = dstream.readBoolean();
+		strength = dstream.readInt();
+		boolean b = dstream.readBoolean();
+		if (b == true) {
+			String originName = ParserHelper.LoadString(dstream);
+			int x = dstream.readInt();
+			int y = dstream.readInt();
+			Actor actor = Universe.getInstance().getCurrentZone().getActor(x, y);
+			if (actor != null && actor.getName().equals(originName)) {
+				origin = actor;
 			}
 		}
 	}
@@ -160,25 +136,21 @@ public class Status_Bind extends Status_AttribMod {
 		dstream.writeInt(spriteIcon);
 		dstream.writeInt(duration);
 		dstream.writeInt(modifiers.length);
-		for (int i=0;i<modifiers.length;i++)
-		{
+		for (int i = 0; i < modifiers.length; i++) {
 			modifiers[i].save(dstream);
 		}
-		ParserHelper.SaveString(dstream,removeText);
+		ParserHelper.SaveString(dstream, removeText);
 		dstream.writeBoolean(originDependent);
 		dstream.writeInt(strength);
-		
-		if (origin!=null)
-		{
+
+		if (origin != null) {
 			dstream.writeBoolean(true);
-			ParserHelper.SaveString(dstream,origin.getName());
-			int x=(int)origin.getPosition().x;
-			int y=(int)origin.getPosition().y;
+			ParserHelper.SaveString(dstream, origin.getName());
+			int x = (int) origin.getPosition().x;
+			int y = (int) origin.getPosition().y;
 			dstream.writeInt(x);
 			dstream.writeInt(y);
-		}
-		else
-		{
+		} else {
 			dstream.writeBoolean(false);
 		}
 	}
@@ -186,26 +158,24 @@ public class Status_Bind extends Status_AttribMod {
 	@Override
 	public void apply(Actor_RPG subject) {
 
-		for (int i=0;i<modifiers.length;i++)
-		{
-			subject.modAttribute(modifiers[i].attribute,modifiers[i].modifier);		
+		for (int i = 0; i < modifiers.length; i++) {
+			subject.modAttribute(modifiers[i].attribute, modifiers[i].modifier);
 		}
 	}
 
 	@Override
 	public void update(Actor_RPG subject) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void remove(Actor_RPG subject) {
 		// TODO Auto-generated method stub
-		for (int i=0;i<modifiers.length;i++)
-		{
-			subject.modAttribute(modifiers[i].attribute,modifiers[i].modifier*-1);		
+		for (int i = 0; i < modifiers.length; i++) {
+			subject.modAttribute(modifiers[i].attribute, modifiers[i].modifier * -1);
 		}
-		ViewScene.m_interface.DrawText(removeText.replace("TARGET",subject.getName()));
+		ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		subject.setBindState(-1);
 	}
 
@@ -215,39 +185,28 @@ public class Status_Bind extends Status_AttribMod {
 		return false;
 	}
 
-	public boolean struggle(int roll,String name) {
+	public boolean struggle(int roll, String name) {
 
-		if (originDependent)
-		{
-			if (origin!=null)
-			{
-				if (origin.getRPG().getStat(Actor_RPG.HEALTH)<=0|| origin.getRPG().getStat(Actor_RPG.RESOLVE)<=0)
-				{
+		if (originDependent) {
+			if (origin != null) {
+				if (origin.getRPG().getStat(Actor_RPG.HEALTH) <= 0 || origin.getRPG().getStat(Actor_RPG.RESOLVE) <= 0) {
 					return true;
 				}
-			}
-			else
-			{
+			} else {
 				return true;
 			}
 		}
-		if (roll+accumulation>strength)
-		{
+		if (roll + accumulation > strength) {
 			return true;
-		}
-		else
-		{
+		} else {
 			accumulation++;
-			int r=0;
-			if (struggleTexts.length>1)
-				{
-				r=Universe.m_random.nextInt(struggleTexts.length);
-				}
-			ViewScene.m_interface.DrawText(struggleTexts[r].replace("TARGET",name));
+			int r = 0;
+			if (struggleTexts.length > 1) {
+				r = Universe.m_random.nextInt(struggleTexts.length);
+			}
+			ViewScene.m_interface.DrawText(struggleTexts[r].replace("TARGET", name));
 		}
 		return false;
 	}
-	
-	
 
 }

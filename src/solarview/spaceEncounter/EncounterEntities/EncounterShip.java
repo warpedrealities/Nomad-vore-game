@@ -12,6 +12,7 @@ import shared.ParserHelper;
 import shared.Vec2f;
 import solarview.spaceEncounter.CombatController;
 import spaceship.Spaceship;
+import particlesystem.ParticleConeEmitter;
 
 public class EncounterShip {
 
@@ -24,44 +25,36 @@ public class EncounterShip {
 	private CombatShield shield;
 	private List<CombatWeapon> weapons;
 
-	
-	public EncounterShip(Spaceship ship, Vec2f position,int heading)
-	{
-		this.ship=ship;
-		if (ship.getShipStats().getShield()!=null)
-		{
-			shield=new CombatShield(ship,ship.getShipStats().getShield());
+	public EncounterShip(Spaceship ship, Vec2f position, int heading) {
+		this.ship = ship;
+		if (ship.getShipStats().getShield() != null) {
+			shield = new CombatShield(ship, ship.getShipStats().getShield());
 		}
-		if (this.ship.getShipController()!=null)
-		{
-			this.controller=this.ship.getShipController().getCombat();			
+		if (this.ship.getShipController() != null) {
+			this.controller = this.ship.getShipController().getCombat();
 		}
-		if (this.ship.getShipStats().getWeapons()!=null &&
-			this.ship.getShipStats().getWeapons().size()>0)
-		{
-			weapons=new ArrayList<CombatWeapon>();
-			for (int i=0;i<this.getShip().getShipStats().getWeapons().size();i++)
-			{
+		if (this.ship.getShipStats().getWeapons() != null && this.ship.getShipStats().getWeapons().size() > 0) {
+			weapons = new ArrayList<CombatWeapon>();
+			for (int i = 0; i < this.getShip().getShipStats().getWeapons().size(); i++) {
 				weapons.add(new CombatWeapon(this.getShip().getShipStats().getWeapons().get(i)));
 			}
 		}
 		buildEmitters();
-		manouver=new CombatManouver(this,position,heading);
-	
+		manouver = new CombatManouver(this, position, heading);
+
 	}
 
-	private void buildEmitters()
-	{
-		Document doc=ParserHelper.LoadXML("assets/data/ships/"+ship.getName()+".xml");
-		
-		//read through the top level nodes
-		Element root=doc.getDocumentElement();
-	    Element n=(Element)doc.getFirstChild();
-		NodeList children=n.getElementsByTagName("emitters");
-		emitters=new ShipEmitters((Element)children.item(0));
-		
+	private void buildEmitters() {
+		Document doc = ParserHelper.LoadXML("assets/data/ships/" + ship.getName() + ".xml");
+
+		// read through the top level nodes
+		Element root = doc.getDocumentElement();
+		Element n = (Element) doc.getFirstChild();
+		NodeList children = n.getElementsByTagName("emitters");
+		emitters = new ShipEmitters((Element) children.item(0));
+
 	}
-	
+
 	public Spaceship getShip() {
 		return ship;
 	}
@@ -99,24 +92,25 @@ public class EncounterShip {
 	}
 
 	public void update(float dt) {
-		
+
 		manouver.update(dt);
 	}
-	
-	public void updateResources()
-	{
+
+	public void updateResources() {
 		ship.getShipStats().run();
-		if (shield!=null)
-		{
+		if (shield != null) {
 			shield.update();
 		}
-		if (weapons!=null && weapons.size()>0)
-		{
-			for (int i=0;i<weapons.size();i++)
-			{
+		if (weapons != null && weapons.size() > 0) {
+			for (int i = 0; i < weapons.size(); i++) {
 				weapons.get(i).decrementCooldown();
 			}
 		}
 	}
-	
+
+	public ShipEmitters getEmitters() {
+		return emitters;
+	}
+
+
 }

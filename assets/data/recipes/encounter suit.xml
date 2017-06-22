@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<recipe name="encounter suit" requiredskill="0" startunlocked="false">
+<description>
+A full body outfit of alien design. While it contains defensive technologies and armoured inserts it's clear that aesthetics have not been neglected with the outfit form fitting to emphasize the shape of the wearer.
+</description>
+<ingredient item="fabric" quantity="4"/>
+<ingredient item="scrap metal" quantity="4"/>
+<ingredient item="flux capacitor" quantity="1"/>
+<ingredient item="computation valve" quantity="1"/>
+<ingredient item="battery" quantity="1"/>
+<ingredient item="zymonite" quantity="1"/>
+<result item="encounter suit"/>
+</recipe>

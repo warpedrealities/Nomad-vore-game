@@ -4,7 +4,7 @@
 	<description>
 		So shiny! this armour is made of segmented and highly reflective metal
 		plates linked together by gleaming mirror scales. It's a little like
-		wearing a disco ball. +2 kinetic, +1 thermal, -2 shock.
+		wearing a disco ball. +2 kinetic, +4 thermal, -1 shock.
 	</description>
 	<modifier>
 		<kinetic value="2" />

@@ -13,5 +13,8 @@
 <inventoryitem name="claw necklace" probability="100" quantity="1"/>
 <inventoryitem name="mysterious bottle" probability="100" quantity="1"/>
 <inventoryitem name="war axe" probability="100" quantity="1"/>
+<inventoryitem name="zymonite" probability="100" quantity="1" cost="400" />
+<inventoryitem name="zymonite" probability="50" quantity="1" cost="400" />
+<inventoryitem name="blueprint" tag="encounter suit" probability="100" quantity="1" cost="200"/>
 <buymodifier name="deku nut" cost="100"/>
 </shop>

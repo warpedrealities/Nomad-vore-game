@@ -10,20 +10,17 @@ public class WidgetDefinition {
 	String widgetName;
 	String widgetInfo;
 	String widgetVariable;
-	
-	public WidgetDefinition(Element element)
-	{
-		position=new Vec2i(Integer.parseInt(element.getAttribute("x")),Integer.parseInt(element.getAttribute("y")));
-		widgetName=element.getAttribute("name");
-		if (element.getAttribute("info").length()>0)
-		{
-			widgetInfo=element.getAttribute("info");
+
+	public WidgetDefinition(Element element) {
+		position = new Vec2i(Integer.parseInt(element.getAttribute("x")), Integer.parseInt(element.getAttribute("y")));
+		widgetName = element.getAttribute("name");
+		if (element.getAttribute("info").length() > 0) {
+			widgetInfo = element.getAttribute("info");
 		}
-		if (element.getAttribute("variable").length()>0)
-		{
-			widgetVariable=element.getAttribute("variable");
+		if (element.getAttribute("variable").length() > 0) {
+			widgetVariable = element.getAttribute("variable");
 		}
-		
+
 	}
 
 	public String getWidgetName() {
@@ -41,5 +38,5 @@ public class WidgetDefinition {
 	public Vec2i getPosition() {
 		return position;
 	}
-	
+
 }

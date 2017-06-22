@@ -8,17 +8,15 @@ public class LootStub {
 
 	String item;
 	float chance;
-	
-	public LootStub(Element enode)
-	{
-		item=enode.getAttribute("item");
-		chance=Float.parseFloat(enode.getAttribute("chance"));
+
+	public LootStub(Element enode) {
+		item = enode.getAttribute("item");
+		chance = Float.parseFloat(enode.getAttribute("chance"));
 	}
-	
-	public LootStub(String item, int chance)
-	{
-		this.item=item;
-		this.chance=chance;
+
+	public LootStub(String item, int chance) {
+		this.item = item;
+		this.chance = chance;
 	}
 
 	public String getItem() {
@@ -36,7 +34,5 @@ public class LootStub {
 	public void setChance(float chance) {
 		this.chance = chance;
 	}
-	
-	
-	
+
 }

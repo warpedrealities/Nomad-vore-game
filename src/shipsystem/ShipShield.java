@@ -12,49 +12,41 @@ import shipsystem.ShipAbility.AbilityType;
 
 public class ShipShield extends ShipAbility {
 
-	private int hitpoints,absorption,regeneration,restartTime;
+	private int hitpoints, absorption, regeneration, restartTime;
 	private float energyCost;
-	
-	public ShipShield(Element node, String name)
-	{
-		abilityType=AbilityType.SA_SHIELD;
-		NodeList children=node.getChildNodes();
-		for (int i=0;i<children.getLength();i++)
-		{
-			if (children.item(i).getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element e=(Element)children.item(i);
-				if (e.getTagName().equals("hitpoints"))
-				{
-					hitpoints=Integer.parseInt(e.getAttribute("value"));
+
+	public ShipShield(Element node, String name) {
+		abilityType = AbilityType.SA_SHIELD;
+		NodeList children = node.getChildNodes();
+		for (int i = 0; i < children.getLength(); i++) {
+			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
+				Element e = (Element) children.item(i);
+				if (e.getTagName().equals("hitpoints")) {
+					hitpoints = Integer.parseInt(e.getAttribute("value"));
 				}
-				if (e.getTagName().equals("absorption"))
-				{
-					absorption=Integer.parseInt(e.getAttribute("value"));
+				if (e.getTagName().equals("absorption")) {
+					absorption = Integer.parseInt(e.getAttribute("value"));
 				}
-				if (e.getTagName().equals("regeneration"))
-				{
-					regeneration=Integer.parseInt(e.getAttribute("value"));	
+				if (e.getTagName().equals("regeneration")) {
+					regeneration = Integer.parseInt(e.getAttribute("value"));
 				}
-				if (e.getTagName().equals("restartTime"))
-				{
-					restartTime=Integer.parseInt(e.getAttribute("value"));
+				if (e.getTagName().equals("restartTime")) {
+					restartTime = Integer.parseInt(e.getAttribute("value"));
 				}
-				if (e.getTagName().equals("energyCost"))
-				{
-					energyCost=Float.parseFloat(e.getAttribute("value"));
+				if (e.getTagName().equals("energyCost")) {
+					energyCost = Float.parseFloat(e.getAttribute("value"));
 				}
 			}
 		}
 	}
 
 	public ShipShield(DataInputStream dstream, String m_name) throws IOException {
-		abilityType=AbilityType.SA_SHIELD;
-		hitpoints=dstream.readInt();
-		absorption=dstream.readInt();
-		regeneration=dstream.readInt();
-		restartTime=dstream.readInt();
-		energyCost=dstream.readFloat();
+		abilityType = AbilityType.SA_SHIELD;
+		hitpoints = dstream.readInt();
+		absorption = dstream.readInt();
+		regeneration = dstream.readInt();
+		restartTime = dstream.readInt();
+		energyCost = dstream.readFloat();
 	}
 
 	@Override
@@ -87,5 +79,4 @@ public class ShipShield extends ShipAbility {
 		return energyCost;
 	}
 
-	
 }

@@ -8,31 +8,24 @@ public class Effect_Criteria_Assertion extends Effect_Criteria {
 
 	boolean negativeAssertion;
 	String bodyPart;
-	
-	public Effect_Criteria_Assertion(Element node)
-	{
-		if (node.getAttribute("negative").length()>0)
-		{
-			negativeAssertion=true;
+
+	public Effect_Criteria_Assertion(Element node) {
+		if (node.getAttribute("negative").length() > 0) {
+			negativeAssertion = true;
 		}
-		bodyPart=node.getAttribute("part");
+		bodyPart = node.getAttribute("part");
 	}
-	
+
 	@Override
 	public boolean checkCriteria(Player_LOOK look) {
-		if (negativeAssertion==true)
-		{
-			if (look.getPart(bodyPart)==null)
-			{
+		if (negativeAssertion == true) {
+			if (look.getPart(bodyPart) == null) {
 				return true;
 			}
-		}
-		else
-		{
-			if (look.getPart(bodyPart)!=null)
-			{
+		} else {
+			if (look.getPart(bodyPart) != null) {
 				return true;
-			}			
+			}
 		}
 		return false;
 	}

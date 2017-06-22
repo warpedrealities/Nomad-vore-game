@@ -18,22 +18,20 @@ import worldgentools.LootTable;
 
 public class WidgetLoader {
 
-	public static Widget loadWidget(DataInputStream dstream) throws IOException
-	{
-		int s=dstream.read();
-		switch (s)
-		{
+	public static Widget loadWidget(DataInputStream dstream) throws IOException {
+		int s = dstream.read();
+		switch (s) {
 		case 0:
 			return new WidgetSprite(dstream);
-		
+
 		case 1:
 			return new WidgetPortal(dstream);
-		
+
 		case 2:
 			return new WidgetItemPile(dstream);
 		case 3:
 			return new WidgetHarvestable(dstream);
-			
+
 		case 4:
 			return new WidgetDescription(dstream);
 		case 5:
@@ -53,7 +51,7 @@ public class WidgetLoader {
 		case 12:
 			return new WidgetSlot(dstream);
 		case 13:
-			return new WidgetConversation(dstream);		
+			return new WidgetConversation(dstream);
 		case 14:
 			return new WidgetAccomodation(dstream);
 		case 15:
@@ -69,78 +67,64 @@ public class WidgetLoader {
 		case 20:
 			return new WidgetScriptedEvent(dstream);
 		case 21:
-			return new WidgetCapture(dstream);	
+			return new WidgetCapture(dstream);
 		}
 		return null;
 	}
-	
-	static public Widget genWidget(String widgetName)
-	{
-		String name= widgetName;
-	
-		Document doc=ParserHelper.LoadXML("assets/data/widgets/"+name+".xml");
-		Element root=doc.getDocumentElement();
-	    Element n=(Element)doc.getFirstChild();	
-		Widget widget=null;
-		if (root.getTagName().contains("harvestable"))
-		{
-			widget=new WidgetHarvestable(n);	
-		}
-		if (root.getTagName().contains("breakable"))
-		{
-			widget=new WidgetBreakable(n);
-		}
-		if (root.getTagName().contains("craftingtable"))
-		{
-			widget=new WidgetCraftingTable(n);
-		}
-		if (root.getTagName().contains("container"))
-		{
-			WidgetContainer container=new WidgetContainer(n);
 
-			widget=container;
+	static public Widget genWidget(String widgetName) {
+		String name = widgetName;
+
+		Document doc = ParserHelper.LoadXML("assets/data/widgets/" + name + ".xml");
+		Element root = doc.getDocumentElement();
+		Element n = (Element) doc.getFirstChild();
+		Widget widget = null;
+		if (root.getTagName().contains("harvestable")) {
+			widget = new WidgetHarvestable(n);
 		}
-		if (root.getTagName().contains("shipsystem"))
-		{
-			WidgetSystem system=new WidgetSystem(root);
-			
-			widget=system;
+		if (root.getTagName().contains("breakable")) {
+			widget = new WidgetBreakable(n);
 		}
-		if (root.getTagName().contains("door"))
-		{
-			WidgetDoor door=new WidgetDoor(n);
-		
-			widget=door;
+		if (root.getTagName().contains("craftingtable")) {
+			widget = new WidgetCraftingTable(n);
 		}
-		if (root.getTagName().contains("computer"))
-		{
-			widget=new WidgetComputer(n);
+		if (root.getTagName().contains("container")) {
+			WidgetContainer container = new WidgetContainer(n);
+
+			widget = container;
 		}
-		if (root.getTagName().contains("accomodation"))
-		{
-			widget=new WidgetAccomodation(n);
+		if (root.getTagName().contains("shipsystem")) {
+			WidgetSystem system = new WidgetSystem(root);
+
+			widget = system;
 		}
-		if (root.getTagName().contains("capture"))
-		{
-			widget=new WidgetCapture(n);
+		if (root.getTagName().contains("door")) {
+			WidgetDoor door = new WidgetDoor(n);
+
+			widget = door;
 		}
-		if (root.getTagName().contains("reformer"))
-		{
-			widget=new WidgetReformer(n);
-		}	
-	
-	if (root.getTagName().contains("navconsole"))
-	{
-		widget=new WidgetNavConsole(root);
-		
-	
-	}	
-	if (root.getTagName().contains("systemSlot"))
-	{
-		widget=new WidgetSlot(root);
-		WidgetSlot ws=(WidgetSlot)widget;
-	
-	}				
+		if (root.getTagName().contains("computer")) {
+			widget = new WidgetComputer(n);
+		}
+		if (root.getTagName().contains("accomodation")) {
+			widget = new WidgetAccomodation(n);
+		}
+		if (root.getTagName().contains("capture")) {
+			widget = new WidgetCapture(n);
+		}
+		if (root.getTagName().contains("reformer")) {
+			widget = new WidgetReformer(n);
+		}
+
+		if (root.getTagName().contains("navconsole")) {
+			widget = new WidgetNavConsole(root);
+
+		}
+		if (root.getTagName().contains("systemSlot")) {
+			widget = new WidgetSlot(root);
+			WidgetSlot ws = (WidgetSlot) widget;
+
+		}
 		return widget;
 	}
 }

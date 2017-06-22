@@ -13,36 +13,34 @@ public class WeaponCost {
 
 	private String resourceName;
 	private float cost;
-	
-	public WeaponCost(Element element)
-	{
-		resourceName=element.getAttribute("resource");
-		cost=Float.parseFloat(element.getAttribute("cost"));
+
+	public WeaponCost(Element element) {
+		resourceName = element.getAttribute("resource");
+		cost = Float.parseFloat(element.getAttribute("cost"));
 	}
-	
 
 	public WeaponCost(DataInputStream dstream) throws IOException {
-		resourceName=ParserHelper.LoadString(dstream);
-		cost=dstream.readFloat();
+		resourceName = ParserHelper.LoadString(dstream);
+		cost = dstream.readFloat();
 	}
 
 	public void save(DataOutputStream dstream) throws IOException {
 		ParserHelper.SaveString(dstream, resourceName);
 		dstream.writeFloat(cost);
 	}
-	
+
 	public String getResourceName() {
 		return resourceName;
 	}
+
 	public float getCost() {
 		return cost;
 	}
-	
+
 	@Override
-	public String toString()
-	{
-		return resourceName+":"+cost;
-		
+	public String toString() {
+		return resourceName + ":" + cost;
+
 	}
-	
+
 }

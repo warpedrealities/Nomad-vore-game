@@ -20,30 +20,29 @@ import widgets.WidgetBreakable;
 
 public class WidgetNavConsole extends WidgetBreakable {
 
-	public WidgetNavConsole(Element node)
-	{
+	public WidgetNavConsole(Element node) {
 		super(node);
 	}
-	
+
 	public WidgetNavConsole(DataInputStream dstream) throws IOException {
 		commonLoad(dstream);
 		load(dstream);
-		
+
 	}
 
 	@Override
-	public boolean Interact(Player player)
-	{
-		ViewScene.m_interface.setScreen(new NavScreen((Spaceship)Universe.getInstance().getCurrentZone().getZoneEntity()));
+	public boolean Interact(Player player) {
+		ViewScene.m_interface
+				.setScreen(new NavScreen((Spaceship) Universe.getInstance().getCurrentZone().getZoneEntity()));
 		return true;
-		
+
 	}
+
 	@Override
-	public
-	void save(DataOutputStream dstream) throws IOException {
+	public void save(DataOutputStream dstream) throws IOException {
 		dstream.write(9);
 		commonSave(dstream);
 		super.saveBreakable(dstream);
-		
+
 	}
 }

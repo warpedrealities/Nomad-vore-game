@@ -11,8 +11,8 @@
 <ability ability="ENDURANCE" value="8" />
 <ability ability="CHARM" value="10" />
 <ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="50"/>
-<stat stat="RESOLVE" value="50"/>
+<stat stat="HEALTH" value="80"/>
+<stat stat="RESOLVE" value="80"/>
 <combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
 <effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
 <missText count="1">
@@ -26,8 +26,7 @@
 
 <respawn delay="1000"/>
 <disposition value="55"/>
-<victory conversation="alpha_minoris_II/minyospriestess/victory" />
-<seducer conversation="alpha_minoris_II/minyospriestess/victory" />
+
 <talk conversation="alpha_minoris_II/minyospriestess/chat" />
 <controller AI="staystill"/>
 <faction value="minyos"/>

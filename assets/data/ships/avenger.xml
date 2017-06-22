@@ -10,6 +10,7 @@
 
 <emitters>
 
+<engine x="0" y="-0.5"/>
 </emitters>
 
 <layout width="16" height="16" spriteset="ship.png">
@@ -72,7 +73,7 @@
 </placeWidget>
 
 <placeWidget x="6" y="3" name="slot">
-<contains name="force barrier"/>
+<contains name="defensive barrier"/>
 </placeWidget>
 
 <placeWidget x="3" y="1" name="slot">
@@ -80,7 +81,7 @@
 </placeWidget>
 
 <placeWidget x="5" y="1" name="slot">
-<contains name="datacomputer"/>
+<contains name="reformer"/>
 </placeWidget>
 
 <placeWidget x="1" y="1" name="slot">

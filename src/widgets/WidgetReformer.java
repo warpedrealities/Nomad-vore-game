@@ -13,37 +13,34 @@ import view.ViewScene;
 
 public class WidgetReformer extends WidgetBreakable {
 
-	private boolean active,suppressed;
+	private boolean active, suppressed;
 	private long uid;
-	
-	public WidgetReformer(Element element)
-	{
+
+	public WidgetReformer(Element element) {
 		super(element);
-		
+
 	}
-	
+
 	@Override
-	public
-	void save(DataOutputStream dstream) throws IOException {
+	public void save(DataOutputStream dstream) throws IOException {
 		dstream.write(22);
 		commonSave(dstream);
 		saveBreakable(dstream);
 		dstream.writeBoolean(active);
 		dstream.writeBoolean(suppressed);
 	}
-	
+
 	public WidgetReformer(DataInputStream dstream) throws IOException {
 		// TODO Auto-generated constructor stub
 		commonLoad(dstream);
 		load(dstream);
-		active=dstream.readBoolean();
-		suppressed=dstream.readBoolean();
+		active = dstream.readBoolean();
+		suppressed = dstream.readBoolean();
 	}
-	
+
 	@Override
-	public boolean Interact(Player player)
-	{
-		ViewScene.m_interface.setScreen(new ReformerScreen(this));	
+	public boolean Interact(Player player) {
+		ViewScene.m_interface.setScreen(new ReformerScreen(this));
 		return true;
 	}
 
@@ -70,6 +67,5 @@ public class WidgetReformer extends WidgetBreakable {
 	public void setUid(long uid) {
 		this.uid = uid;
 	}
-	
-	
+
 }

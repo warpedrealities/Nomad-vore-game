@@ -8,16 +8,15 @@ import shared.ParserHelper;
 public class ItemCoin extends Item {
 
 	int count;
-	
+
 	public ItemCoin() {
 		super(0);
 		// TODO Auto-generated constructor stub
-		m_use=ItemUse.COIN;
-		m_name="gold";
+		m_use = ItemUse.COIN;
+		m_name = "gold";
 	}
 
-	public void save(DataOutputStream dstream) throws IOException
-	{
+	public void save(DataOutputStream dstream) throws IOException {
 
 		dstream.write(5);
 		dstream.writeInt(count);
@@ -31,5 +30,4 @@ public class ItemCoin extends Item {
 		this.count = count;
 	}
 
-	
 }

@@ -10,33 +10,29 @@ public class CombatManouver {
 	private float speed;
 	private float turn;
 	private Vec2f position;
-	private float heading;	
+	private float heading;
 	private char course;
 
-	
-	public final char stop=0;
-	public final char left=1;
-	public final char right=2;
-	public final char half=4;
-	public final char full=8;
-	
-	public CombatManouver(EncounterShip ship, Vec2f position,int heading)
-	{
-		this.heading=heading;
-		this.ship=ship;
-		this.position=new Vec2f(position.x,position.y);
+	public final static char stop = 0;
+	public final static char left = 1;
+	public final static char right = 2;
+	public final static char half = 4;
+	public final static char full = 8;
+
+	public CombatManouver(EncounterShip ship, Vec2f position, int heading) {
+		this.heading = heading;
+		this.ship = ship;
+		this.position = new Vec2f(position.x, position.y);
 		genStats();
 	}
-	
-	private void genStats()
-	{
-		speed=100/((float)ship.getShip().getShipStats().getMoveCost());
-		turn=4+ship.getShip().getShipStats().getManouverability();
-		if (turn<1)
-		{
-			turn=1;
+
+	private void genStats() {
+		speed = 100 / ((float) ship.getShip().getShipStats().getMoveCost());
+		turn = 4 + ship.getShip().getShipStats().getManouverability();
+		if (turn < 1) {
+			turn = 1;
 		}
-		turn=turn/16;
+		turn = turn / 16;
 	}
 
 	public float getSpeed() {
@@ -58,84 +54,67 @@ public class CombatManouver {
 	public char getCourse() {
 		return course;
 	}
-	
-	public void setCourse(char course)
-	{
-		this.course=course;
+
+	public void setCourse(char course) {
+		this.course = course;
 	}
-	
-	public void update(float dt)
-	{
+
+	public void update(float dt) {
 		doMove(dt);
 		doTurn(dt);
 		ship.getSprite().setFacing(heading);
 		useFuel(dt);
 	}
-	
-	private void doMove(float dt)
-	{
-		Vec2f vector=new Vec2f(0,0);
-		if ((course & half)!=0)
-		{
-			vector.y=(speed/2)*dt;
+
+	private void doMove(float dt) {
+		Vec2f vector = new Vec2f(0, 0);
+		if ((course & half) != 0) {
+			vector.y = (speed / 2) * dt;
 		}
-		if ((course & full)!=0)
-		{
-			vector.y=speed*dt;
+		if ((course & full) != 0) {
+			vector.y = speed * dt;
 		}
-		vector.rotate(((float)heading)*0.785398F);
-		position.x+=vector.x;
-		position.y+=vector.y;
+		vector.rotate(((float) heading) * 0.785398F);
+		position.x += vector.x;
+		position.y += vector.y;
 		ship.getSprite().repositionF(position);
 	}
-	
-	private void doTurn(float dt)
-	{
-		boolean full=false;
-		float r=turn*dt;
-		if ((course & half)>0)
-		{
-			r+=turn*dt;
+
+	private void doTurn(float dt) {
+		boolean full = false;
+		float r = turn * dt;
+		if ((course & half) > 0) {
+			r += turn * dt;
 		}
-		if ((course & left)>0)
-		{
-			heading-=r;
-		
+		if ((course & left) > 0) {
+			heading -= r;
+
 		}
-		if ((course & right)>0)
-		{
-			heading+=r;
+		if ((course & right) > 0) {
+			heading += r;
 
 		}
 	}
-	
-	private void useFuel(float dt)
-	{
-		float fUse=0;
-		float f=ship.getShip().getShipStats().getFuelEfficiency()/20;
-		if ((course & half) !=0)
-		{
-			fUse=dt*f/2;
+
+	private void useFuel(float dt) {
+		float fUse = 0;
+		float f = ship.getShip().getShipStats().getFuelEfficiency() / 20;
+		if ((course & half) != 0) {
+			fUse = dt * f / 2;
 		}
-		if ((course & full) !=0)
-		{
-			fUse=dt*f;
+		if ((course & full) != 0) {
+			fUse = dt * f;
 		}
-		if (fUse>0)
-		{
-			SpaceshipResource fuel=ship.getShip().getShipStats().getResource("FUEL");
-			if (fuel.getResourceAmount()<fUse)
-			{
-				if ((course & half) !=0)
-				{
-					course-=half;
+		if (fUse > 0) {
+			SpaceshipResource fuel = ship.getShip().getShipStats().getResource("FUEL");
+			if (fuel.getResourceAmount() < fUse) {
+				if ((course & half) != 0) {
+					course -= half;
+				} else {
+					course -= full;
 				}
-				else
-				{
-					course-=full;
-				}
-			}		
-			fuel.setResourceAmount(fuel.getResourceAmount()-fUse);
+			}
+			fuel.setResourceAmount(fuel.getResourceAmount() - fUse);
 		}
 
 	}

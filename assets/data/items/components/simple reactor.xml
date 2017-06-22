@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="simple reactor" weight="10" value="1000">
+<description>A power generator that uses a series of increasingly energetic reactions to convert fuel into energy at a steady pace.</description>
+<placeditem widget="simple reactor"/>
+</ItemWidget>

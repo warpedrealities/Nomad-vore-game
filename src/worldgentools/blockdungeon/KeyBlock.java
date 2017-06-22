@@ -11,11 +11,10 @@ public class KeyBlock extends StandardBlock {
 	KeyBlock(Element element) {
 		super(element);
 		// TODO Auto-generated constructor stub
-		if (element.getAttribute("heat").length()>0)
-		{
-			keyHeat=Integer.parseInt(element.getAttribute("heat"));
+		if (element.getAttribute("heat").length() > 0) {
+			keyHeat = Integer.parseInt(element.getAttribute("heat"));
 		}
-		
+
 	}
 
 	@Override
@@ -23,5 +22,4 @@ public class KeyBlock extends StandardBlock {
 		return keyHeat;
 	}
 
-	
 }

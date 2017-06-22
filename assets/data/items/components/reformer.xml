@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="reformation tube" weight="10" value="1000">
+	<description>a reformation tube required to reproduce the body and retrieve consciousness of synchronized individuals. This allows one to cheat death, a useful thing to have in this dangerous galaxy.</description>
+	<placeditem widget="reformer" />
+</ItemWidget>

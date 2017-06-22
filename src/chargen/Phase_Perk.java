@@ -16,36 +16,31 @@ public class Phase_Perk implements Phase {
 
 	ArrayList<Perk> perkList;
 	String phaseName;
-	
-	public Phase_Perk(Element n)
-	{
-		perkList=new ArrayList<Perk>();
-		//populate perklist
-		NodeList children=n.getChildNodes();
-		phaseName=n.getAttribute("name");
-		for (int i=0;i<children.getLength();i++)
-		{
-			Node node=children.item(i);
-			if (node.getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element Enode=(Element)node;
-				//run each step successively
-				if (Enode.getTagName()=="perk")
-				{
+
+	public Phase_Perk(Element n) {
+		perkList = new ArrayList<Perk>();
+		// populate perklist
+		NodeList children = n.getChildNodes();
+		phaseName = n.getAttribute("name");
+		for (int i = 0; i < children.getLength(); i++) {
+			Node node = children.item(i);
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element Enode = (Element) node;
+				// run each step successively
+				if (Enode.getTagName() == "perk") {
 					perkList.add(PerkLibrary.getInstance().findPerk(Enode.getAttribute("name")));
 				}
 			}
 		}
 	}
-	
+
 	@Override
 	public String[] getChoices() {
-		
-		String [] l=new String[perkList.size()];
 
-		for (int i=0;i<perkList.size();i++)
-		{
-			l[i]=perkList.get(i).getName();
+		String[] l = new String[perkList.size()];
+
+		for (int i = 0; i < perkList.size(); i++) {
+			l[i] = perkList.get(i).getName();
 		}
 		return l;
 	}
@@ -62,7 +57,7 @@ public class Phase_Perk implements Phase {
 
 	@Override
 	public void performChoice(int index, Player player) {
-		Player_RPG rpg=(Player_RPG)player.getRPG();
+		Player_RPG rpg = (Player_RPG) player.getRPG();
 		rpg.addPerk(perkList.get(index));
 	}
 
@@ -74,10 +69,10 @@ public class Phase_Perk implements Phase {
 
 	@Override
 	public void rollback(Player player) {
-		
-		ArrayList<PerkInstance> playerPerkList=((Player_RPG)player.getRPG()).getPlayerPerks();
-		playerPerkList.remove(playerPerkList.size()-1);
-		
+
+		ArrayList<PerkInstance> playerPerkList = ((Player_RPG) player.getRPG()).getPlayerPerks();
+		playerPerkList.remove(playerPerkList.size() - 1);
+
 	}
 
 }

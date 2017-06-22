@@ -17,13 +17,13 @@ public class ShipDispenser extends ShipAbility {
 	int cost;
 	String outputItem;
 	String input;
-	
+
 	public ShipDispenser(DataInputStream dstream, String m_name) throws IOException {
-		abilityType=AbilityType.SA_DISPENSER;
-		this.widgetName=m_name;
-		cost=dstream.readInt();
-		outputItem=ParserHelper.LoadString(dstream);
-		input=ParserHelper.LoadString(dstream);
+		abilityType = AbilityType.SA_DISPENSER;
+		this.widgetName = m_name;
+		cost = dstream.readInt();
+		outputItem = ParserHelper.LoadString(dstream);
+		input = ParserHelper.LoadString(dstream);
 	}
 
 	@Override
@@ -32,33 +32,29 @@ public class ShipDispenser extends ShipAbility {
 		ParserHelper.SaveString(dstream, outputItem);
 		ParserHelper.SaveString(dstream, input);
 	}
+
 	public ShipDispenser(Element enode, String m_name) {
-		abilityType=AbilityType.SA_DISPENSER;
-		this.widgetName=m_name;
-		NodeList children=enode.getChildNodes();
-		
-		for (int i=0;i<children.getLength();i++)
-		{
-			Node N=children.item(i);
-			if (N.getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element Enode=(Element)N;
-				
-				if (Enode.getTagName()=="input")
-				{
-					input=Enode.getAttribute("value");
+		abilityType = AbilityType.SA_DISPENSER;
+		this.widgetName = m_name;
+		NodeList children = enode.getChildNodes();
+
+		for (int i = 0; i < children.getLength(); i++) {
+			Node N = children.item(i);
+			if (N.getNodeType() == Node.ELEMENT_NODE) {
+				Element Enode = (Element) N;
+
+				if (Enode.getTagName() == "input") {
+					input = Enode.getAttribute("value");
 				}
-				if (Enode.getTagName()=="cost")
-				{
-					cost=Integer.parseInt(Enode.getAttribute("value"));
+				if (Enode.getTagName() == "cost") {
+					cost = Integer.parseInt(Enode.getAttribute("value"));
 				}
-				if (Enode.getTagName()=="output")
-				{
-					outputItem=Enode.getAttribute("value");
+				if (Enode.getTagName() == "output") {
+					outputItem = Enode.getAttribute("value");
 				}
 			}
 		}
-		
+
 	}
 
 	public int getCost() {
@@ -72,6 +68,5 @@ public class ShipDispenser extends ShipAbility {
 	public String getInput() {
 		return input;
 	}
-
 
 }

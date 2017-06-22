@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="battery bank" requiredskill="0" startunlocked="true">
+<description>
+A bank of batteries to provide a reserve of energy for the ship.
+</description>
+<ingredient item="battery" quantity="10"/>
+<ingredient item="scrap metal" quantity="5"/>
+<result item="battery bank"/>
+</recipe>

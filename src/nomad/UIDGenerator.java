@@ -8,38 +8,34 @@ public class UIDGenerator {
 
 	int shipUID;
 	int npcUID;
-	public UIDGenerator()
-	{
-		shipUID=0;
-		npcUID=0;
+
+	public UIDGenerator() {
+		shipUID = 0;
+		npcUID = 0;
 	}
-	
-	public int getShipUID()
-	{
+
+	public int getShipUID() {
 		shipUID++;
-		return shipUID-1;
+		return shipUID - 1;
 	}
-	
-	public int getnpcUID()
-	{
+
+	public int getnpcUID() {
 		return npcUID++;
 	}
-	public void reset()
-	{
-		shipUID=0;
-		npcUID=0;
+
+	public void reset() {
+		shipUID = 0;
+		npcUID = 0;
 	}
-	
-	public void save(DataOutputStream dstream) throws IOException
-	{
+
+	public void save(DataOutputStream dstream) throws IOException {
 		dstream.writeInt(shipUID);
 		dstream.writeInt(npcUID);
 	}
-	
-	public void load(DataInputStream dstream) throws IOException
-	{
-		shipUID=dstream.readInt();
-		npcUID=dstream.readInt();
+
+	public void load(DataInputStream dstream) throws IOException {
+		shipUID = dstream.readInt();
+		npcUID = dstream.readInt();
 	}
-	
+
 }

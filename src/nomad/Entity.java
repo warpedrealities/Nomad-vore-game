@@ -11,63 +11,57 @@ import shared.Vec2f;
 import zone.Landing;
 import zone.Zone;
 
-abstract public class Entity implements Entity_Int{
+abstract public class Entity implements Entity_Int {
 
 	protected String entityName;
 	protected Vec2f entityPosition;
 	protected boolean entityVisibility;
 	protected Sprite spriteObj;
-	
+
 	abstract public void Generate();
-	
-	public Vec2f getPosition()
-	{
+
+	public Vec2f getPosition() {
 		return entityPosition;
 	}
-	
-	public Zone getZone(int index)
-	{
+
+	public Zone getZone(int index) {
 		return null;
 	}
-	
-	public int getNumZones()
-	{
+
+	public int getNumZones() {
 		return 0;
 	}
-	
-	public String getName()
-	{
+
+	public String getName() {
 		return entityName;
 	}
-	
-	public boolean getVisible()
-	{
+
+	public boolean getVisible() {
 		return entityVisibility;
 	}
-	
+
 	abstract public Zone getZone(String name, int x, int y);
-	
+
 	abstract public Zone getZone(String name);
-	
+
 	abstract public Zone getZone(int x, int y);
-	
+
 	abstract public Element LoadZone(Zone zone);
 
 	abstract public void Save(String filename) throws IOException;
-	
+
 	abstract public boolean isStatic();
-	
+
 	abstract public void save(DataOutputStream dstream) throws IOException;
-	
+
 	abstract public String getSprite();
-	
+
 	abstract public float getSpriteSize();
-	
-	public boolean isLoaded()
-	{
+
+	public boolean isLoaded() {
 		return false;
 	}
-	
+
 	@Override
 	public ArrayList<Landing> getLandings() {
 		// TODO Auto-generated method stub
@@ -81,12 +75,12 @@ abstract public class Entity implements Entity_Int{
 
 	public void setSpriteObj(Sprite object) {
 
-		spriteObj=object;
+		spriteObj = object;
 	}
 
 	public void update() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	abstract public Zone getLandableZone(int x, int y);

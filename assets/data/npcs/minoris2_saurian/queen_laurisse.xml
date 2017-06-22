@@ -11,8 +11,8 @@
 <ability ability="ENDURANCE" value="8" />
 <ability ability="CHARM" value="10" />
 <ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
+<stat stat="HEALTH" value="80"/>
+<stat stat="RESOLVE" value="80"/>
 <attribute attribute="KINETIC" value="2"/>
 <combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
 <effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
@@ -38,10 +38,7 @@
 
 <respawn delay="300"/>
 <disposition value="55"/>
-<defeated conversation="alpha_minoris_II/saurianqueen/defeat" />
-<seduced conversation="alpha_minoris_II/saurianqueen/seduced" />
-<victory conversation="alpha_minoris_II/saurianqueen/victory" />
-<seducer conversation="alpha_minoris_II/saurianqueen/victory" />
+
 <talk conversation="alpha_minoris_II/saurianqueen/chat" />
 <controller AI="staystill"/>
 <faction value="saurian"/>

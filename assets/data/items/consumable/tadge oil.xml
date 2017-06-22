@@ -7,7 +7,7 @@
 		<criteriaValue lessthan="true" part="penis" variable="length"
 			value="5" />
 		<!--if penis smaller than 5 inches -->
-		<mutation part="vagina" bodychange="remove">
+		<mutation part="penis" bodychange="remove">
 			you no longer have a penis.
 		</mutation>
 	</effectmutator>

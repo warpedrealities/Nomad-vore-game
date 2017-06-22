@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<shipsystem sprite="85" name="seeking missile" health="30">
+<shipsystem sprite="85" name="seeking missile" health="30" hardpoint="true">
 <contains minimum="1" maximum="2">scrap metal</contains>
 <description>starship missile launcher for dev test.</description>
 <resistance resists="KINETIC" strength="2"></resistance>

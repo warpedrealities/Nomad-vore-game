@@ -7,28 +7,23 @@ public class ItemEnergy {
 	String m_refill;
 	float m_refillrate;
 
-	public ItemEnergy(Element element)
-	{
-		if (element.getAttribute("refill")!="")
-		{
-			m_refillrate=Float.parseFloat(element.getAttribute("efficiency"));
-			m_refill=element.getAttribute("refill");
+	public ItemEnergy(Element element) {
+		if (element.getAttribute("refill") != "") {
+			m_refillrate = Float.parseFloat(element.getAttribute("efficiency"));
+			m_refill = element.getAttribute("refill");
 		}
-		m_maxenergy=Integer.parseInt(element.getAttribute("capacity"));
+		m_maxenergy = Integer.parseInt(element.getAttribute("capacity"));
 	}
-	
-	public int getMaxEnergy()
-	{
+
+	public int getMaxEnergy() {
 		return m_maxenergy;
 	}
-	
-	public String getRefill()
-	{
+
+	public String getRefill() {
 		return m_refill;
 	}
-	
-	public float getrefillrate()
-	{
+
+	public float getrefillrate() {
 		return m_refillrate;
 	}
 }

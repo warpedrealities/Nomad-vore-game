@@ -4,15 +4,14 @@ import shipsystem.weapon.ShipWeapon;
 
 public class SpaceshipWeapon {
 
-
 	private int emitterNumber;
 	private int facing;
 	private ShipWeapon weapon;
-	
+
 	public SpaceshipWeapon(ShipWeapon shipWeapon, int emitterIndex, int facing) {
-		this.weapon=shipWeapon;
-		this.emitterNumber=emitterIndex;
-		this.facing=facing;
+		this.weapon = shipWeapon;
+		this.emitterNumber = emitterIndex;
+		this.facing = facing;
 	}
 
 	public int getEmitterNumber() {
@@ -25,6 +24,6 @@ public class SpaceshipWeapon {
 
 	public ShipWeapon getWeapon() {
 		return weapon;
-	}	
-	
+	}
+
 }

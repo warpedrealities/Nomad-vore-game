@@ -23,37 +23,31 @@ public class SolarRenderer extends SpriteManager {
 	Vec2f currentPosition;
 	StarSystem currentSystem;
 
-	public SolarRenderer(StarSystem system)
-	{
+	public SolarRenderer(StarSystem system) {
 		super("assets/art/solar/");
-		currentSystem=system;
-	
+		currentSystem = system;
+
 		generate();
-		scale=4;
-		currentPosition=new Vec2f(0,0);
-			m_viewMatrix=new Matrix4f();
+		scale = 4;
+		currentPosition = new Vec2f(0, 0);
+		m_viewMatrix = new Matrix4f();
 		setMatrix();
-		
 
-		
 	}
-	
 
-	
-	private void setMatrix()
-	{
+	private void setMatrix() {
 		Matrix4f.setIdentity(m_viewMatrix);
-		m_viewMatrix.m00=0.025F*scale;
-		m_viewMatrix.m11=0.03125F*scale;
-		m_viewMatrix.m22=1.0F;
-		m_viewMatrix.m33=1.0F;	
-		float xscale=1/(0.025F*scale);
-		float yscale=1/(0.03125F*scale);
-		m_viewMatrix.m30=((currentPosition.x*-1)/xscale)-0.32F;
-		m_viewMatrix.m31=((currentPosition.y*-1)/yscale)+0.125F;
-		
-	}	
-	
+		m_viewMatrix.m00 = 0.025F * scale;
+		m_viewMatrix.m11 = 0.03125F * scale;
+		m_viewMatrix.m22 = 1.0F;
+		m_viewMatrix.m33 = 1.0F;
+		float xscale = 1 / (0.025F * scale);
+		float yscale = 1 / (0.03125F * scale);
+		m_viewMatrix.m30 = ((currentPosition.x * -1) / xscale) - 0.32F;
+		m_viewMatrix.m31 = ((currentPosition.y * -1) / yscale) + 0.125F;
+
+	}
+
 	public float getScale() {
 		return scale;
 	}
@@ -72,59 +66,47 @@ public class SolarRenderer extends SpriteManager {
 		setMatrix();
 	}
 
-	private void generate()
-	{
-		for (int i=0;i<currentSystem.getEntities().size();i++)
-		{
-			//build sprite
-			
-			Sprite sprite=null;
-			if (currentSystem.getEntities().get(i).getClass().getName().contains("Spaceship"))
-			{
-				sprite=new SpriteRotatable(currentSystem.getEntities().get(i).getPosition(),1);	
+	private void generate() {
+		for (int i = 0; i < currentSystem.getEntities().size(); i++) {
+			// build sprite
+
+			Sprite sprite = null;
+			if (currentSystem.getEntities().get(i).getClass().getName().contains("Spaceship")) {
+				sprite = new SpriteRotatable(currentSystem.getEntities().get(i).getPosition(), 1);
 				sprite.setSpriteSize(currentSystem.getEntities().get(i).getSpriteSize());
+			} else {
+				sprite = new Sprite(currentSystem.getEntities().get(i).getPosition(),
+						currentSystem.getEntities().get(i).getSpriteSize(), 1);
 			}
-			else
-			{
-				sprite=new Sprite(
-						currentSystem.getEntities().get(i).getPosition(),currentSystem.getEntities().get(i).getSpriteSize(),1);
-			}
-			//sprite visible
+			// sprite visible
 			sprite.setVisible(true);
-			
-			//add to batch
-			addSprite(sprite,currentSystem.getEntities().get(i).getSprite()+".png");
-			//attach to entity
+
+			// add to batch
+			addSprite(sprite, currentSystem.getEntities().get(i).getSprite() + ".png");
+			// attach to entity
 			currentSystem.getEntities().get(i).setSpriteObj(sprite);
-			
-			
+
 		}
-	}	
-	
-	public void solarDraw(int viewMatrix,int objmatrix, int tintvar, FloatBuffer matrix44Buffer)
-	{
-		
-		m_viewMatrix.store(matrix44Buffer); matrix44Buffer.flip();
-		GL20.glUniformMatrix4fv(viewMatrix, false, matrix44Buffer);		
-		
-		draw(objmatrix,tintvar,matrix44Buffer);
-		
-		
-		
 	}
-	
-	public void end()
-	{
+
+	public void solarDraw(int viewMatrix, int objmatrix, int tintvar, FloatBuffer matrix44Buffer) {
+
+		m_viewMatrix.store(matrix44Buffer);
+		matrix44Buffer.flip();
+		GL20.glUniformMatrix4fv(viewMatrix, false, matrix44Buffer);
+
+		draw(objmatrix, tintvar, matrix44Buffer);
+
+	}
+
+	public void end() {
 		discard();
-		for (int i=0;i<currentSystem.getEntities().size();i++)
-		{
-			if (currentSystem.getEntities().get(i).getSpriteObj()!=null)
-			{
+		for (int i = 0; i < currentSystem.getEntities().size(); i++) {
+			if (currentSystem.getEntities().get(i).getSpriteObj() != null) {
 				currentSystem.getEntities().get(i).getSpriteObj().discard();
-				currentSystem.getEntities().get(i).setSpriteObj(null);				
+				currentSystem.getEntities().get(i).setSpriteObj(null);
 			}
 		}
 	}
-	
-	
+
 }

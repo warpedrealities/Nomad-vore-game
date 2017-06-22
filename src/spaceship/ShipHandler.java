@@ -10,9 +10,7 @@ import zone.Zone;
 
 public class ShipHandler {
 
-
-	public static boolean buildWidget(ItemWidget item, Vec2f position)
-	{
+	public static boolean buildWidget(ItemWidget item, Vec2f position) {
 
 		return true;
 	}

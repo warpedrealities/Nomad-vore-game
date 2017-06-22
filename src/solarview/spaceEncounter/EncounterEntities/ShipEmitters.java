@@ -11,33 +11,28 @@ import org.w3c.dom.NodeList;
 
 public class ShipEmitters {
 
-	private List <Vec2f> engineEmitters;
-	private List <Vec2f> weaponEmitters;
-	
-	public ShipEmitters(Element node)
-	{
-		engineEmitters=new ArrayList<Vec2f>();
-		weaponEmitters=new ArrayList<Vec2f>();
-		
-		NodeList list=node.getChildNodes();
-		
-		for (int i=0;i<list.getLength();i++)
-		{
-			if (list.item(i).getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element e=(Element)list.item(i);
-				if (e.getTagName().equals("weapon"))
-				{
-					
+	private List<Vec2f> engineEmitters;
+	private List<Vec2f> weaponEmitters;
+
+	public ShipEmitters(Element node) {
+		engineEmitters = new ArrayList<Vec2f>();
+		weaponEmitters = new ArrayList<Vec2f>();
+
+		NodeList list = node.getChildNodes();
+
+		for (int i = 0; i < list.getLength(); i++) {
+			if (list.item(i).getNodeType() == Node.ELEMENT_NODE) {
+				Element e = (Element) list.item(i);
+				if (e.getTagName().equals("weapon")) {
+					weaponEmitters.add(new Vec2f(Float.parseFloat(e.getAttribute("x")),Float.parseFloat(e.getAttribute("y"))));
 				}
-				if (e.getTagName().equals("engine"))
-				{
-					
+				if (e.getTagName().equals("engine")) {
+					engineEmitters.add(new Vec2f(Float.parseFloat(e.getAttribute("x")),Float.parseFloat(e.getAttribute("y"))));
 				}
-				
+
 			}
 		}
-		
+
 	}
 
 	public List<Vec2f> getEngineEmitters() {
@@ -47,6 +42,5 @@ public class ShipEmitters {
 	public List<Vec2f> getWeaponEmitters() {
 		return weaponEmitters;
 	}
-	
-	
+
 }

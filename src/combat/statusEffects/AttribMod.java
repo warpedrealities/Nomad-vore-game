@@ -8,15 +8,15 @@ public class AttribMod {
 
 	public int attribute;
 	public int modifier;
-	
-	public void save(DataOutputStream dstream) throws IOException {	
-		
+
+	public void save(DataOutputStream dstream) throws IOException {
+
 		dstream.writeInt(attribute);
 		dstream.writeInt(modifier);
 	}
-	
+
 	public void load(DataInputStream dstream) throws IOException {
-		attribute=dstream.readInt();
-		modifier=dstream.readInt();
+		attribute = dstream.readInt();
+		modifier = dstream.readInt();
 	}
 }

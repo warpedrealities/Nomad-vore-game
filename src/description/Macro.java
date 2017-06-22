@@ -4,8 +4,8 @@ import actor.player.Player_LOOK;
 
 public abstract class Macro {
 
-	String macroName,partName,variableName;
-	
+	String macroName, partName, variableName;
+
 	public String getMacroName() {
 		return macroName;
 	}
@@ -19,5 +19,5 @@ public abstract class Macro {
 	}
 
 	public abstract String readMacro(Player_LOOK look);
-	
+
 }

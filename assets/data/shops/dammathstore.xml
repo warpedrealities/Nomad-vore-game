@@ -38,6 +38,7 @@
 <conditionalitem name="bolts" probability="50" quantity="10">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>
-
+<inventoryitem name="zymonite" probability="100" quantity="1" cost="400" />
+<inventoryitem name="zymonite" probability="50" quantity="1" cost="400" />
 <buymodifier name="herb" cost="25"/>
 </shop>

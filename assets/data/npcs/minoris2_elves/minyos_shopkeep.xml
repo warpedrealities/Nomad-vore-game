@@ -26,8 +26,7 @@
 
 <respawn delay="1000"/>
 <disposition value="55"/>
-<victory conversation="alpha_minoris_II/minyosshop/victory" />
-<seducer conversation="alpha_minoris_II/minyosshop/victory" />
+
 <talk conversation="alpha_minoris_II/minyosshop/chat" />
 <controller AI="staystill"/>
 <faction value="minyos"/>

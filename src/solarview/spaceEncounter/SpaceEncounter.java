@@ -20,50 +20,43 @@ public class SpaceEncounter extends SceneBase {
 	private EncounterLogic logic;
 	private EncounterRenderer renderer;
 	private EncounterGUI gui;
-	
-	private EncounterShip[] buildShips(Spaceship playerShip,Spaceship [] alienShips)
-	{
-		int c=1;
-		if (alienShips!=null)
-		{
-			c+=alienShips.length;
+
+	private EncounterShip[] buildShips(Spaceship playerShip, Spaceship[] alienShips) {
+		int c = 1;
+		if (alienShips != null) {
+			c += alienShips.length;
 		}
-		
-		EncounterShip []list=new EncounterShip[c];
-		list[0]=new EncounterShip(playerShip,new Vec2f(0,0),0);
-		for (int i=1;i<c;i++)
-		{
-			list[i]=new EncounterShip(alienShips[i-1],
-					new Vec2f(-6+(GameManager.m_random.nextInt(12)),
-							10+GameManager.m_random.nextInt(10)),GameManager.m_random.nextInt(8));
+
+		EncounterShip[] list = new EncounterShip[c];
+		list[0] = new EncounterShip(playerShip, new Vec2f(0, 0), 0);
+		for (int i = 1; i < c; i++) {
+			list[i] = new EncounterShip(alienShips[i - 1],
+					new Vec2f(-6 + (GameManager.m_random.nextInt(12)), 10 + GameManager.m_random.nextInt(10)),
+					GameManager.m_random.nextInt(8));
 		}
 		return list;
-		
+
 	}
-	
-	public SpaceEncounter(Spaceship playerShip,Spaceship [] alienShips)
-	{		
-		logic=new EncounterLogic(buildShips(playerShip,alienShips));
-		renderer=new EncounterRenderer(logic.getShipList());
-		gui=new EncounterGUI(logic.getShipList()[0],logic);
+
+	public SpaceEncounter(Spaceship playerShip, Spaceship[] alienShips) {
+		logic = new EncounterLogic(buildShips(playerShip, alienShips));
+		renderer = new EncounterRenderer(logic.getShipList());
+		logic.setTrailControl(renderer.getTrailControl());
+		gui = new EncounterGUI(logic.getShipList()[0], logic);
 	}
-	
+
 	@Override
 	public void Update(float dt) {
-		if (logic.isRunning())
-		{
+		if (logic.isRunning()) {
 			logic.update(dt);
-			if (!logic.isRunning())
-			{
+			if (!logic.isRunning()) {
 				Universe.getInstance().getPlayer().addBusy(1);
 				Universe.AddClock(1);
 				gui.updateUI();
 			}
 			renderer.position(logic.getShipList()[0].getPosition(), logic.getShipList()[0].getHeading());
-		}
-		else
-		{
-			gui.update(dt);		
+		} else {
+			gui.update(dt);
 		}
 
 	}
@@ -78,14 +71,14 @@ public class SpaceEncounter extends SceneBase {
 		m_viewmatrix.store(matrix44Buffer);
 		matrix44Buffer.flip();
 		GL20.glUniformMatrix4fv(m_variables[1], false, matrix44Buffer);
-		renderer.draw(m_variables[1],m_variables[2],m_variables[0], matrix44Buffer);
-		
-		gui.draw(m_variables[1],m_variables[2],m_variables[0], matrix44Buffer);
+		renderer.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
+
+		gui.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
 	}
 
 	@Override
 	public void start(MouseHook mouse) {
-	
+
 		gui.start(mouse);
 	}
 

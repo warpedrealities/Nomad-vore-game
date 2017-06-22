@@ -12,28 +12,22 @@ public class DecoratorWidgetPlacer implements DecoratorPlacer {
 
 	Element widget;
 	WidgetPlacer widgetPlacer;
-	
-	public DecoratorWidgetPlacer(Element element)
-	{
-		widgetPlacer=new WidgetPlacer();
 
-		widget=element;
+	public DecoratorWidgetPlacer(Element element) {
+		widgetPlacer = new WidgetPlacer();
+
+		widget = element;
 		/*
-		 * 		NodeList children=element.getChildNodes();
-		for (int i=0;i<children.getLength();i++)
-		{
-			if (children.item(i).getNodeType()==Node.ELEMENT_NODE)
-			{
-				widget=(Element)children.item(i);
-				break;
-			}
-		}
-		*/
+		 * NodeList children=element.getChildNodes(); for (int
+		 * i=0;i<children.getLength();i++) { if
+		 * (children.item(i).getNodeType()==Node.ELEMENT_NODE) {
+		 * widget=(Element)children.item(i); break; } }
+		 */
 	}
-	
+
 	@Override
 	public void place(int x, int y, Zone zone) {
-		Widget placeable=widgetPlacer.genWidget(widget);
+		Widget placeable = widgetPlacer.genWidget(widget);
 		zone.getTile(x, y).setWidget(placeable);
 	}
 

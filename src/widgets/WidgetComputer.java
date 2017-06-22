@@ -13,36 +13,31 @@ import view.ViewScene;
 
 public class WidgetComputer extends WidgetBreakable {
 
-	
-	
-	public WidgetComputer(Element element)
-	{
+	public WidgetComputer(Element element) {
 		super(element);
-		
+
 	}
-	
+
 	@Override
-	public
-	void save(DataOutputStream dstream) throws IOException {
+	public void save(DataOutputStream dstream) throws IOException {
 		// TODO Auto-generated method stub
 		dstream.write(17);
 		commonSave(dstream);
 		saveBreakable(dstream);
-		
+
 	}
-	
+
 	public WidgetComputer(DataInputStream dstream) throws IOException {
 		// TODO Auto-generated constructor stub
 		commonLoad(dstream);
 		load(dstream);
-		
+
 	}
-	
+
 	@Override
-	public boolean Interact(Player player)
-	{
+	public boolean Interact(Player player) {
 		ViewScene.m_interface.setScreen(new ComputerScreen());
-		
+
 		return true;
 	}
 }

@@ -16,45 +16,40 @@ import item.Item;
 
 public class WidgetCraftingTable extends WidgetBreakable {
 
-	public WidgetCraftingTable(int sprite, String description, String name,
-			Item[] contains, int hp, int[] resistances) {
+	public WidgetCraftingTable(int sprite, String description, String name, Item[] contains, int hp,
+			int[] resistances) {
 		super(sprite, description, name, contains, hp, resistances);
-		isVisionBlocking=false;
+		isVisionBlocking = false;
 	}
-	
+
 	public WidgetCraftingTable(Element n) {
-		
+
 		super(n);
 	}
 
-
 	@Override
-	public
-	void save(DataOutputStream dstream) throws IOException {
+	public void save(DataOutputStream dstream) throws IOException {
 		// TODO Auto-generated method stub
 		dstream.write(6);
 		commonSave(dstream);
 		super.saveBreakable(dstream);
 	}
-	
+
 	public WidgetCraftingTable(DataInputStream dstream) throws IOException {
 		// TODO Auto-generated constructor stub
 		super(dstream);
-		
+
 	}
-	
-	
+
 	@Override
-	public boolean safeOnly()
-	{
+	public boolean safeOnly() {
 		return true;
 	}
-	
+
 	@Override
-	public boolean Interact(Player player)
-	{
+	public boolean Interact(Player player) {
 		ViewScene.m_interface.setScreen(new CraftingScreen());
-		
+
 		return true;
 	}
 }

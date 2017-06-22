@@ -20,48 +20,42 @@ import gui.GUIBase;
 public class IconBox extends GUIBase {
 
 	int textureId;
-	Sprite [] sprites;
+	Sprite[] sprites;
 	Vec2f position;
-	public IconBox(Vec2f p)
-	{
-		//load texture
-		textureId=Tools.loadPNGTexture("assets/art/statusEffects.png", GL13.GL_TEXTURE0);
-		//load sprites
-		sprites=new Sprite[8];
-		for (int i=0;i<8;i++)
-		{
-			sprites[i]=new Sprite (new Vec2f(0,0), 2,256);
+
+	public IconBox(Vec2f p) {
+		// load texture
+		textureId = Tools.loadPNGTexture("assets/art/statusEffects.png", GL13.GL_TEXTURE0);
+		// load sprites
+		sprites = new Sprite[8];
+		for (int i = 0; i < 8; i++) {
+			sprites[i] = new Sprite(new Vec2f(0, 0), 2, 256);
 			sprites[i].setVisible(true);
 			sprites[i].setImage(0);
 		}
-		position=p;
+		position = p;
 	}
-	
+
 	@Override
 	public void update(float DT) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	public void redraw()
-	{
-		Player_RPG rpg=(Player_RPG)Universe.getInstance().getPlayer().getRPG();
-		ArrayList<StatusEffect> statusEffects=rpg.getStatusEffects();
-		
-		for (int i=0;i<8;i++)
-		{
-			if (i>=statusEffects.size())
-			{
-				sprites[i].setVisible(false);			
-			}
-			else
-			{
+	public void redraw() {
+		Player_RPG rpg = (Player_RPG) Universe.getInstance().getPlayer().getRPG();
+		ArrayList<StatusEffect> statusEffects = rpg.getStatusEffects();
+
+		for (int i = 0; i < 8; i++) {
+			if (i >= statusEffects.size()) {
+				sprites[i].setVisible(false);
+			} else {
 				sprites[i].setVisible(true);
 				sprites[i].setImage(statusEffects.get(i).getStatusIcon());
 			}
 		}
 	}
-	
+
 	@Override
 	public boolean ClickEvent(Vec2f pos) {
 		// TODO Auto-generated method stub
@@ -70,13 +64,11 @@ public class IconBox extends GUIBase {
 
 	@Override
 	public void Draw(FloatBuffer buffer, int matrixloc) {
-	
+
 		GL11.glBindTexture(GL11.GL_TEXTURE_2D, textureId);
-		for (int i=0;i<8;i++)
-		{
-			if (sprites[i].getVisible())
-			{
-				sprites[i].draw(matrixloc,0 , buffer);			
+		for (int i = 0; i < 8; i++) {
+			if (sprites[i].getVisible()) {
+				sprites[i].draw(matrixloc, 0, buffer);
 			}
 
 		}
@@ -84,19 +76,17 @@ public class IconBox extends GUIBase {
 
 	@Override
 	public void discard() {
-		
+
 		GL11.glDeleteTextures(textureId);
-		for (int i=0;i<8;i++)
-		{
+		for (int i = 0; i < 8; i++) {
 			sprites[i].discard();
 		}
 	}
 
 	@Override
 	public void AdjustPos(Vec2f p) {
-		for (int i=0;i<8;i++)
-		{
-			sprites[i].reposition(new Vec2f(position.x+p.x+(i*2),position.y+p.y));
+		for (int i = 0; i < 8; i++) {
+			sprites[i].reposition(new Vec2f(position.x + p.x + (i * 2), position.y + p.y));
 		}
 	}
 

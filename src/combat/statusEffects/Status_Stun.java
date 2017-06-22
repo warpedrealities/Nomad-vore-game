@@ -16,38 +16,34 @@ public class Status_Stun implements StatusEffect {
 	int uid;
 	int duration;
 	String removeText;
-	
-	public Status_Stun()
-	{
-		
+
+	public Status_Stun() {
+
 	}
 
-	
-	public Status_Stun(Element element)
-	{
-		duration=Integer.parseInt(element.getAttribute("duration"));
-		uid=Integer.parseInt(element.getAttribute("uid"));
-		removeText=element.getTextContent();
+	public Status_Stun(Element element) {
+		duration = Integer.parseInt(element.getAttribute("duration"));
+		uid = Integer.parseInt(element.getAttribute("uid"));
+		removeText = element.getTextContent();
 	}
-	
-	public StatusEffect cloneEffect()
-	{
-		Status_Stun status=new Status_Stun();
 
-		status.duration=this.duration;
+	public StatusEffect cloneEffect() {
+		Status_Stun status = new Status_Stun();
 
-		status.removeText=this.removeText;
+		status.duration = this.duration;
 
-		status.uid=this.uid;
+		status.removeText = this.removeText;
+
+		status.uid = this.uid;
 		return status;
 	}
-	
+
 	@Override
 	public void load(DataInputStream dstream) throws IOException {
 		// TODO Auto-generated method stub
-		uid=dstream.readInt();
-		duration=dstream.readInt();
-		removeText=ParserHelper.LoadString(dstream);
+		uid = dstream.readInt();
+		duration = dstream.readInt();
+		removeText = ParserHelper.LoadString(dstream);
 	}
 
 	@Override
@@ -57,7 +53,7 @@ public class Status_Stun implements StatusEffect {
 		dstream.writeInt(uid);
 		dstream.writeInt(duration);
 
-		ParserHelper.SaveString(dstream,removeText);
+		ParserHelper.SaveString(dstream, removeText);
 	}
 
 	@Override
@@ -69,19 +65,18 @@ public class Status_Stun implements StatusEffect {
 	@Override
 	public void update(Actor_RPG subject) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void remove(Actor_RPG subject) {
-		ViewScene.m_interface.DrawText(removeText.replace("TARGET",subject.getName()));
+		ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 	}
 
 	@Override
 	public boolean maintain() {
 		duration--;
-		if (duration<1)
-		{
+		if (duration < 1) {
 			return true;
 		}
 		return false;
@@ -92,6 +87,7 @@ public class Status_Stun implements StatusEffect {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -113,7 +109,6 @@ public class Status_Stun implements StatusEffect {
 			return false;
 		return true;
 	}
-
 
 	@Override
 	public int getUID() {

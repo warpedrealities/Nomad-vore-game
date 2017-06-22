@@ -15,18 +15,18 @@ public class WorldScript_Imp implements WorldScript {
 	private WorldManipulator entity;
 	private LuaValue script;
 	private Globals globals;
-	
-	public WorldScript_Imp(Entity entity)
-	{
-		this.entity=new WorldManipulator_Imp(entity);
+
+	public WorldScript_Imp(Entity entity) {
+		this.entity = new WorldManipulator_Imp(entity);
 	}
-	
+
 	@Override
 	public void initialize(String scriptName) {
 		// TODO Auto-generated method stub
-		globals= JsePlatform.standardGlobals();
+		globals = JsePlatform.standardGlobals();
 		try {
-			LuaValue script = globals.load(new FileReader("assets/data/conversations/worldScripts/" +scriptName + ".lua"), "main.lua");
+			LuaValue script = globals
+					.load(new FileReader("assets/data/conversations/worldScripts/" + scriptName + ".lua"), "main.lua");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -37,8 +37,8 @@ public class WorldScript_Imp implements WorldScript {
 	public void run() {
 		// TODO Auto-generated method stub
 		LuaValue mainFunc = globals.get("main");
-		LuaValue luaEntity=CoerceJavaToLua.coerce(entity);
-		mainFunc.call(luaEntity);		
+		LuaValue luaEntity = CoerceJavaToLua.coerce(entity);
+		mainFunc.call(luaEntity);
 	}
 
 }

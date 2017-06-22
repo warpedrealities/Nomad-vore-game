@@ -10,17 +10,16 @@ public class PerkInstance {
 
 	Perk perkDefinition;
 	int perkRank;
-	
-	public PerkInstance(Perk definition)
-	{
-		perkDefinition=definition;
-		perkRank=1;
+
+	public PerkInstance(Perk definition) {
+		perkDefinition = definition;
+		perkRank = 1;
 	}
-	
+
 	public PerkInstance(Perk definition, int rank) {
 
-		perkDefinition=definition;
-		perkRank=rank;
+		perkDefinition = definition;
+		perkRank = rank;
 	}
 
 	public int getPerkRank() {
@@ -30,8 +29,6 @@ public class PerkInstance {
 	public void setPerkRank(int perkRank) {
 		this.perkRank = perkRank;
 	}
-
-
 
 	public Perk getPerk() {
 		return perkDefinition;

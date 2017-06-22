@@ -23,100 +23,81 @@ public class WidgetScriptPortal extends WidgetPortal {
 	Globals luaGlobals;
 	String filename;
 	LuaValue script;
-	
-	public WidgetScriptPortal(int sprite, String desc,int id)
-	{
-		super(sprite,desc,id);
+
+	public WidgetScriptPortal(int sprite, String desc, int id) {
+		super(sprite, desc, id);
 		luaGlobals = JsePlatform.standardGlobals();
 	}
-	
-	public WidgetScriptPortal(Element element)
-	{
+
+	public WidgetScriptPortal(Element element) {
 		super(element);
 		luaGlobals = JsePlatform.standardGlobals();
-		
+
 	}
-		
+
 	public void setFilename(String filename) {
 		this.filename = filename;
 		loadScript();
 	}
 
 	@Override
-	public
-	void save(DataOutputStream dstream) throws IOException {
+	public void save(DataOutputStream dstream) throws IOException {
 		// TODO Auto-generated method stub
 		dstream.write(16);
 		commonSave(dstream);
 		dstream.writeByte(portalFacing);
-		dstream.writeInt(portalID);		
-		if (targetZone!=null)
-		{
+		dstream.writeInt(portalID);
+		if (targetZone != null) {
 			dstream.writeBoolean(true);
 			ParserHelper.SaveString(dstream, targetZone);
-		}
-		else
-		{
+		} else {
 			dstream.writeBoolean(false);
 		}
-		if (targetPosInZone!=null)
-		{
+		if (targetPosInZone != null) {
 			dstream.writeBoolean(true);
 			targetPosInZone.Save(dstream);
-		}
-		else
-		{
+		} else {
 			dstream.writeBoolean(false);
 		}
-		
+
 		ParserHelper.SaveString(dstream, filename);
-		
+
 	}
-	public WidgetScriptPortal(DataInputStream dstream) throws IOException
-	{
+
+	public WidgetScriptPortal(DataInputStream dstream) throws IOException {
 		super(dstream);
 		luaGlobals = JsePlatform.standardGlobals();
-		filename=ParserHelper.LoadString(dstream);
+		filename = ParserHelper.LoadString(dstream);
 		loadScript();
 	}
-	
-	private void loadScript()
-	{
+
+	private void loadScript() {
 		try {
-			script = luaGlobals.load(new FileReader("assets/data/scripts/"+filename+".lua"), "main.lua");
-				
+			script = luaGlobals.load(new FileReader("assets/data/scripts/" + filename + ".lua"), "main.lua");
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (LuaError e) {
+			e.printStackTrace();
 		}
-		catch (LuaError e)
-		{  
-	        e.printStackTrace();  
-		}			
 	}
-	
-	public boolean Step()
-	{
-		try 
-		{ 	
+
+	public boolean Step() {
+		try {
 			script.call();
 			LuaValue luaflags = CoerceJavaToLua.coerce(Universe.getInstance().getPlayer().getFlags());
-	        LuaValue luacontrol = luaGlobals.get("main");  
-	        LuaValue luascreen= CoerceJavaToLua.coerce(ViewScene.m_interface);
-	        if (!luacontrol.isnil()) 
-	        {
-	    		luacontrol.call(luaflags,luascreen);
-	        }
-	        else
-	        {
-	            System.out.println("Lua function not found");  	
-	        }
-		 } 
-			catch (LuaError e)
-		 {  
-	           e.printStackTrace();  
-		 }
-			return super.Step();
+			LuaValue luacontrol = luaGlobals.get("main");
+			LuaValue luascreen = CoerceJavaToLua.coerce(ViewScene.m_interface);
+			if (!luacontrol.isnil()) {
+				luacontrol.call(luaflags, luascreen);
+			} else {
+				System.out.println("Lua function not found");
+			}
+		} catch (LuaError e) {
+			e.printStackTrace();
+		}
+		return super.Step();
 
 	}
 }

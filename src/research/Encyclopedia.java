@@ -17,156 +17,123 @@ import shared.ParserHelper;
 
 public class Encyclopedia {
 
-	Map<String,Data> dataList;
-	Map<String,Research> researchList;
+	Map<String, Data> dataList;
+	Map<String, Research> researchList;
 	List<Entry> entryList;
-	
-	
-	public Encyclopedia()
-	{
-		dataList=new HashMap<String,Data>();
-		researchList=new HashMap<String,Research>();
-		entryList=new ArrayList<Entry>();
-		
-		
+
+	public Encyclopedia() {
+		dataList = new HashMap<String, Data>();
+		researchList = new HashMap<String, Research>();
+		entryList = new ArrayList<Entry>();
+
 	}
-	
-	
-	public void save(DataOutputStream dstream) throws IOException
-	{
-		Set <String>keySet=dataList.keySet();
-		
-		Iterator <String> it=keySet.iterator();
-		
+
+	public void save(DataOutputStream dstream) throws IOException {
+		Set<String> keySet = dataList.keySet();
+
+		Iterator<String> it = keySet.iterator();
+
 		dstream.writeInt(keySet.size());
-		while (it.hasNext())
-		{
-			String str=it.next();
+		while (it.hasNext()) {
+			String str = it.next();
 			ParserHelper.SaveString(dstream, str);
-			Data d=dataList.get(str);
+			Data d = dataList.get(str);
 			d.save(dstream);
 		}
-		
-		keySet=researchList.keySet();
-		it=keySet.iterator();
-		
+
+		keySet = researchList.keySet();
+		it = keySet.iterator();
+
 		dstream.writeInt(keySet.size());
-		while (it.hasNext())
-		{
-			String str=it.next();
+		while (it.hasNext()) {
+			String str = it.next();
 			ParserHelper.SaveString(dstream, str);
-			Research r=researchList.get(str);
+			Research r = researchList.get(str);
 			r.save(dstream);
 		}
-		
-		
+
 	}
-	
-	public void load(DataInputStream dstream) throws IOException
-	{
-		int count=dstream.readInt();
-		
-		for (int i=0;i<count;i++)
-		{
-			String str=ParserHelper.LoadString(dstream);
-			Data d=new Data();
+
+	public void load(DataInputStream dstream) throws IOException {
+		int count = dstream.readInt();
+
+		for (int i = 0; i < count; i++) {
+			String str = ParserHelper.LoadString(dstream);
+			Data d = new Data();
 			d.load(dstream);
 			dataList.put(str, d);
 		}
-		
-		count=dstream.readInt();
-		
-		for (int i=0;i<count;i++)
-		{
-			String str=ParserHelper.LoadString(dstream);
-			Research r=new Research();
+
+		count = dstream.readInt();
+
+		for (int i = 0; i < count; i++) {
+			String str = ParserHelper.LoadString(dstream);
+			Research r = new Research();
 			r.load(dstream);
 			researchList.put(str, r);
 		}
-		
+
 		generateEntries();
 	}
-	
-	public boolean addData(String name,String group)
-	{
-		Data d=dataList.get(name);
-		if (d!=null)
-		{
+
+	public boolean addData(String name, String group) {
+		Data d = dataList.get(name);
+		if (d != null) {
 			d.incrementCount();
-		}
-		else
-		{
-			if (group!=null)
-			{
+		} else {
+			if (group != null) {
 				dataList.put(group, new Data(group));
 			}
 			dataList.put(name, new Data(name));
 		}
-		
-		int count=0;
-		for (int i=0;i<entryList.size();i++)
-		{
-			if (entryList.get(i).isUnlocked()==false)
-			{
-				if (entryList.get(i).checkUnlock(dataList))
-				{
-					entryList.get(i).runRewards(Universe.getInstance().getPlayer());			
+
+		int count = 0;
+		for (int i = 0; i < entryList.size(); i++) {
+			if (entryList.get(i).isUnlocked() == false) {
+				if (entryList.get(i).checkUnlock(dataList)) {
+					entryList.get(i).runRewards(Universe.getInstance().getPlayer());
 				}
 				count++;
 			}
 		}
-		if (count>0)
-		{
+		if (count > 0) {
 			return true;
 		}
 		return false;
 	}
-	
-	public void generateEntries()
-	{
-	File file=new File("assets/data/encyclopedia");
-		
-		//find the names of all files in the item folder
-		File[] files=file.listFiles();
-		//use reader to generate items
 
-		for (int i=0;i<files.length;i++)
-		{
-			if (files[i].getName().contains(".svn")==false)
-			{
-				if (files[i].isDirectory()==true)
-				{
+	public void generateEntries() {
+		File file = new File("assets/data/encyclopedia");
+
+		// find the names of all files in the item folder
+		File[] files = file.listFiles();
+		// use reader to generate items
+
+		for (int i = 0; i < files.length; i++) {
+			if (files[i].getName().contains(".svn") == false) {
+				if (files[i].isDirectory() == true) {
 					subLoad(files[i].getName());
-				}
-				else
-				{
-					Entry entry=new Entry(files[i].getName());
-					entryList.add(entry);	
+				} else {
+					Entry entry = new Entry(files[i].getName());
+					entryList.add(entry);
 					entry.checkUnlock(dataList);
 				}
 			}
 		}
-		
+
 		Collections.sort(entryList);
 	}
 
-	
-	private void subLoad(String filename)
-	{
-		File file=new File("assets/data/encyclopedia"+"/"+filename);
-		File[] files=file.listFiles();
-		for (int i=0;i<files.length;i++)
-		{
-			if (files[i].getName().contains(".svn")==false)
-			{
-				if (files[i].isDirectory()==true)
-				{
-					subLoad(filename+"/"+files[i].getName());
-				}
-				else
-				{
-					Entry entry=new Entry(filename+"/"+files[i].getName());
-					entryList.add(entry);	
+	private void subLoad(String filename) {
+		File file = new File("assets/data/encyclopedia" + "/" + filename);
+		File[] files = file.listFiles();
+		for (int i = 0; i < files.length; i++) {
+			if (files[i].getName().contains(".svn") == false) {
+				if (files[i].isDirectory() == true) {
+					subLoad(filename + "/" + files[i].getName());
+				} else {
+					Entry entry = new Entry(filename + "/" + files[i].getName());
+					entryList.add(entry);
 					entry.checkUnlock(dataList);
 				}
 
@@ -175,14 +142,10 @@ public class Encyclopedia {
 
 	}
 
-
 	public boolean hasEntry(String find) {
-	
-		for (int i=0;i<entryList.size();i++)
-		{
-			if (entryList.get(i).getFilename().equals(find) &&
-					entryList.get(i).isUnlocked()	)
-			{
+
+		for (int i = 0; i < entryList.size(); i++) {
+			if (entryList.get(i).getFilename().equals(find) && entryList.get(i).isUnlocked()) {
 				return true;
 
 			}
@@ -190,30 +153,24 @@ public class Encyclopedia {
 		return false;
 	}
 
-
 	public Map<String, Data> getDataList() {
 		return dataList;
 	}
-
 
 	public Map<String, Research> getResearchList() {
 		return researchList;
 	}
 
-
 	public List<Entry> getEntryList() {
 		return entryList;
 	}
-	
-	public void addResearch(String data, int DC, int roll,String group)
-	{
-		if (researchList.get(data)==null)
-		{
-			Research d=new Research(DC,roll,data);
+
+	public void addResearch(String data, int DC, int roll, String group) {
+		if (researchList.get(data) == null) {
+			Research d = new Research(DC, roll, data);
 			d.setGroup(group);
-			researchList.put(data,d );
+			researchList.put(data, d);
 		}
 	}
 
-	
 }

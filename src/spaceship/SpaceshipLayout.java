@@ -6,8 +6,6 @@ public class SpaceshipLayout {
 	int height;
 	int cornerX;
 	int cornerY;
-	int [][] grid;
-	
-	
-	
+	int[][] grid;
+
 }

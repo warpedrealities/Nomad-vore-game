@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="simple reactor" requiredskill="0" startunlocked="true">
+<description>
+A simple reactor based on earth technology and built using alien materials.
+</description>
+<ingredient item="battery" quantity="5"/>
+<ingredient item="heavy plate" quantity="4"/>
+<ingredient item="computation valve" quantity="5"/>
+<ingredient item="flux capacitor" quantity="1"/>
+<result item="simple reactor"/>
+</recipe>
