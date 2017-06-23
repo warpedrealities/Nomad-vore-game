@@ -18,7 +18,7 @@
 <tile sprite="1" vision="1" movement="2">a metal wall</tile>
 <tile sprite="2" vision="0" movement="0">a metal floor</tile>
 </tileset>
-<description>This ship is shiny.</description>
+<description>The design of this ship feels at times familiar and unfamiliar, its origins are mysterious except for a badly worn inscription that seems to say 'x-cum Avengcr' or some such on one of the metal plates</description>
 <mapgen>
 <prefab positionX="0" positionY="0" width="9">
 <row>111111111</row>

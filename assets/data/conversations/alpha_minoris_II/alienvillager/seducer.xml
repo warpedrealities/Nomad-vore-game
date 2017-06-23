@@ -2,10 +2,50 @@
 <Conversation>
 	<page ID="start">
 		<text>
-		
+		The elf meets your approach eagerly with her own. Her arms twining about you as her lips lock to yours in a lusty kiss for a good twenty seconds afore coming up for air to talk "mhmm, you like me..dont me..especially." she guides your hands down her sides to rest on the curves of her ample ass. She smiles as you rub your hands along those soft cheeks and dig your fingers in with a mhmm of agreement "Well then, I think you should appreciate it properly don't you?" she says playfully and places her hands on your shoulders, guiding you downwards afore turning around tantalizing to present her ass towards you. 
 		</text>
-
+		<choice destination="ass0" text="$mhmm it's so sexy, it's an amazing ass"/>
+	</page>
+	
+	<page ID="ass0">
+	<text>
+	"Of course it is." she says with a small laugh as you knead at her bountiful ass curves and part them so as to lick between at her tantalizing pucker. The green elf letting out a little gasp and mhmm as you do so. Your tonguing bountiful ass worship makes her moan and lean forwards, glancing over her shoulder back at you coyly "compliment my ass more." 
+	</text>
+	<choice destination="analvore0" text="$you have an ass to die for">
+	<preference fetish="analvore" />	
+	</choice>
+	<choice destination="ass1" text="$you have the most perfect ass I've ever seen"/>
 	</page>
 
-	<preference fetish="analvore" />
+	<page ID="ass1">
+	<text>
+	"Mhmm, yes...keep going" she mumbles and encourages you as you probe her ass with your tongue. The deft intrusions further stimulating her as you have your fill of her rump, fingers digging into the ample curves as you feel her shudder and smell her moistening. Won't be long now afore your expert ass ministrations push her over the edge. The elf asking for but a few compliments to accompany the lavished attentions upon her derriere to be pushed over into shuddering climax. She straightens up flushed and panting, reaching one hand down between her legs to negligently clean off afore turning around towards you and smiling "..thanks, you know how to show my butt proper respect." she says and chuckles.
+	</text>
+	<special effect="healnpc" />	
+	<effect type="heal" value="0.1" />
+	<choice destination="end" text="$I'd molest that ass of yours anytime"/>
+	</page>
+	
+	<page ID="analvore0">
+	<text>
+	"to die for? well then..do it...do it..slide yourself into my ass." she demands lustfully, chuckling as she reaches her hand back to grasp your head and urge you between her rumpcheeks. Though the angle is enough she can't quite push you in, but the hot flesh of her derriere tantalizes your face as they press against your cheeks. It feels so inviting, the urge to dive into her rear end rising up within you as you nuzzle at her pucker.
+	</text>
+	<choice destination="analvore1" text="$yes, let me in"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	"that's the spirit" the elf exclaims and mhmms, shifting her hands out in front to grab ahold of something to support herself as you prepare to work yourself into her ass. The elf letting out a gasp as you slide your hands up her soft emerald rump cheeks and then press your fingers against her pucker.Her tight bowels clenching, then relaxing to let you ease your hands into the heat of her ass. You feel the elf letting out a gasping moan and her sphincter clench anew sucking your hands deeper in "oh...yes." you hear her exclaim, and find you cannot help but agree as you begin to be dragged inside of her.
+	</text>
+	<choice destination="analvore2" text="$is your backside always this hungry cause...mhmm"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	"Yes..but I seldom get someone so willing to slide inside of me." she replied with a delighted mhmm. The elf's derriere clenching and relaxing alternately to slide your arms deeper and deeper into her ass. Your ability to trade vorish banter with her cut short now as you have to duck your head down and plunge into her rear end.
+
+	</text>
+	
+	</page>
+
 </Conversation>
