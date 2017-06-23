@@ -36,6 +36,7 @@
 <loot item="plasma canister" chance="1.0"/>
 <loot item="plasma canister" chance="1.0"/>
 <loot item="capture device" chance="1.0"/>
+<loot item="blueprint" chance="1.0" addendum="cultivator"/>
 </lootTable>
 </contains>
 </placeWidget>

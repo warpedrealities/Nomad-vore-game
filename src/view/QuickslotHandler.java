@@ -107,9 +107,9 @@ public class QuickslotHandler {
 	}
 	
 	private void handleConsumable(Item item) {
-		if (item.getClass().getName().contains("Consumable"))
+		if (item.getItem().getClass().getName().contains("Consumable"))
 		{
-			ItemConsumable consumable=(ItemConsumable)item;
+			ItemConsumable consumable=(ItemConsumable)item.getItem();
 			for (int i=0;i<consumable.getNumEffects();i++)
 			{
 				player.ApplyEffect(consumable.getEffect(i));	
@@ -120,7 +120,7 @@ public class QuickslotHandler {
 			if (ItemStack.class.isInstance(item))
 			{
 				ItemStack stack=(ItemStack)item;
-				stack.getItem();
+				stack.takeItem();
 				if (stack.getCount()<=0)
 				{
 					player.getInventory().setSlot(null, Inventory.QUICK);

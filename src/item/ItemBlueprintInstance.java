@@ -36,6 +36,12 @@ public class ItemBlueprintInstance extends Item {
 	}
 	
 	@Override
+	public String getDescription()
+	{
+		return item.getDescription();
+	}
+	
+	@Override
 	public Item getItem()
 	{
 		return item;

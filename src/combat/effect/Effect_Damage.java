@@ -84,6 +84,10 @@ public class Effect_Damage extends Effect {
 		}
 		//roll damage
 		int damage=Universe.m_random.nextInt(maxValue-minValue)+minValue;
+		if (critical)
+		{
+			damage++;
+		}
 		damage=target.getRPG().getStatusEffectHandler().runDefenceStack(damage, damageType);
 		//reduce damage by damage resistance
 		damage-=target.getRPG().getAttribute(damageType)+bonus;
@@ -93,7 +97,7 @@ public class Effect_Damage extends Effect {
 			float d=target.getPosition().getDistance(origin.getPosition());
 			if (d>2)
 			{
-				float rd=d*rangeDecay;
+				float rd=(d-1)*rangeDecay;
 				damage=damage-(int)rd;		
 			}
 		}

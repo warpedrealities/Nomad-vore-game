@@ -309,43 +309,43 @@ public class InventoryScreen extends Screen implements Callback {
 	{
 		if (m_control>0)
 		{
-		//check slot
-		Item item=m_player.getInventory().getItem(m_control-1);
-		if (item.getUse()!=ItemUse.USE)
-		{
-			m_dropdown.setVisible(false);
-			return;
-		}
-		item=m_player.getInventory().RemoveItem(item);
-		//apply item
-		if (ItemBlueprintInstance.class.isInstance(item))
-		{
-			ItemBlueprintInstance ibi=(ItemBlueprintInstance)item;
-			m_player.getCraftingLibrary().unlockRecipe(ibi.getRecipe());
-			ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "+ibi.getRecipe());
-			m_player.setBusy(2);
-			m_dropdown.setVisible(false);			
-		}
-		if (item.getClass().getName().contains("Consumable"))
-		{
-			ItemConsumable consumable=(ItemConsumable)item;
-			for (int i=0;i<consumable.getNumEffects();i++)
-			{
-				m_player.ApplyEffect(consumable.getEffect(i));	
-				popup.setClock(10);
-				if (ViewScene.m_interface.getLastMessage()!=null)
-				{
-					popup.setText(ViewScene.m_interface.getLastMessage());
-				}			
-			}
-			
-			m_player.setBusy(2);
-			if (m_player.getInventory().getItem(m_control-1)==null)
+			//check slot
+			Item item=m_player.getInventory().getItem(m_control-1);
+			if (item.getUse()!=ItemUse.USE)
 			{
 				m_dropdown.setVisible(false);
+				return;
 			}
-			calculateWarning();
-		}
+			item=m_player.getInventory().RemoveItem(item);
+			//apply item
+			if (ItemBlueprintInstance.class.isInstance(item))
+			{
+				ItemBlueprintInstance ibi=(ItemBlueprintInstance)item;
+				m_player.getCraftingLibrary().unlockRecipe(ibi.getRecipe());
+				ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "+ibi.getRecipe());
+				m_player.setBusy(2);
+				m_dropdown.setVisible(false);			
+			}
+			if (item.getClass().getName().contains("Consumable"))
+			{
+				ItemConsumable consumable=(ItemConsumable)item;
+				for (int i=0;i<consumable.getNumEffects();i++)
+				{
+					m_player.ApplyEffect(consumable.getEffect(i));	
+					popup.setClock(10);
+					if (ViewScene.m_interface.getLastMessage()!=null)
+					{
+						popup.setText(ViewScene.m_interface.getLastMessage());
+					}			
+				}
+				
+				m_player.setBusy(2);
+				if (m_player.getInventory().getItem(m_control-1)==null)
+				{
+					m_dropdown.setVisible(false);
+				}
+				calculateWarning();
+			}
 	
 				//reset list				
 				ResetList();				
@@ -518,7 +518,19 @@ public class InventoryScreen extends Screen implements Callback {
 	{
 		if (m_dropdownstrings[0].equals("use"))
 		{
-			UseItem();
+			if (m_control==-5)
+			{
+				ViewScene.m_interface.getSceneController().useQuickslot();
+				m_control=0;
+				ResetList();
+				m_dropdown.setVisible(false);
+				m_callback.UpdateInfo();
+			}
+			else
+			{
+				UseItem();	
+			}
+	
 		}
 		if (m_dropdownstrings[0].equals("equip"))
 		{
@@ -682,10 +694,18 @@ public class InventoryScreen extends Screen implements Callback {
 				}
 				Reload(instance);
 			}
-			if (m_dropdownstrings[1].equals("split") && ItemStack.class.isInstance(m_player.getInventory().getItem(m_control-1)))
+			if (m_dropdownstrings[1].equals("split"))
 			{
-				split((ItemStack)m_player.getInventory().getItem(m_control-1));
+				if (m_control>0 && ItemStack.class.isInstance(m_player.getInventory().getItem(m_control-1)))
+				{
+					split((ItemStack)m_player.getInventory().getItem(m_control-1));
+				}
+				if (m_control<0 && ItemStack.class.isInstance(m_player.getInventory().getSlot((m_control*-1)-1)))
+				{
+					split((ItemStack)m_player.getInventory().getSlot((m_control*-1)-1));
+				}		
 			}
+	
 			break;
 		
 		case 2:

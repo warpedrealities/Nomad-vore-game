@@ -8,7 +8,7 @@ you can more easily project your raw seductive charms towards individuals at a d
 </description>
 <moveModifier name="seduce">
 <change type="MOD" >
-<effectDamage type="TEASE" minValue="0" maxValue="0" modifier="CHARM" rangedDecay="-0.5"/>
+<effectDamage type="TEASE" minValue="0" maxValue="0" modifier="CHARM" rangeDecay="-0.5"/>
 </change>
 </moveModifier>
 <maxrank value="1"/>

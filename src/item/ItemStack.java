@@ -36,6 +36,12 @@ public class ItemStack extends Item {
 		return m_item;
 	}
 	
+	public Item takeItem()
+	{
+		m_count--;
+		return m_item;
+	}
+	
 	public void setCount(int count)
 	{
 		m_count=count;
