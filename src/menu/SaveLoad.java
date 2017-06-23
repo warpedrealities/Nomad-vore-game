@@ -228,7 +228,7 @@ public class SaveLoad extends Screen implements Callback {
 				m_callback.Callback();
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			text.setString("SAVE FAILED! re-attempt saving");
 			e.printStackTrace();
 		}
 
@@ -241,8 +241,7 @@ public class SaveLoad extends Screen implements Callback {
 				Game.sceneManager.SwapScene(new ViewScene(SceneBase.getVariables(), Universe.getInstance()));
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			text.setString("load failure");
 		}
 	}
 
