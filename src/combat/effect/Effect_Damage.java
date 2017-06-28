@@ -175,13 +175,16 @@ public class Effect_Damage extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect) {
+	public void applyChange(Effect effect, int rank) {
 		if (this.getClass().isInstance(effect))
 		{
 			Effect_Damage ed=(Effect_Damage)effect;
-			this.minValue+=ed.minValue;
-			this.maxValue+=ed.maxValue;
-			this.rangeDecay+=ed.rangeDecay;
+			this.minValue+=ed.minValue*rank;
+			this.maxValue+=ed.maxValue*rank;
+			if (ed.rangeDecay!=0)
+			{
+				this.rangeDecay*=Math.pow(ed.rangeDecay, rank);	
+			}
 		}
 	}
 	

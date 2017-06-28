@@ -125,5 +125,9 @@ public class CombatShield {
 				status = ShieldStatus.OFF;
 			}
 		}
+		else if (status==ShieldStatus.STARTUP)
+		{
+			status=ShieldStatus.FASTCHARGE;
+		}
 	}
 }

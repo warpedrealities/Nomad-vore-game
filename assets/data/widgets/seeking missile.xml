@@ -11,7 +11,7 @@
 <special tracking="4"/>
 <cooldown value="1"/>
 <effects script="seeker" sheet="missileGrey"/>
-<range arc="4" range="10" />
+<range arc="4" range="20" />
 <weaponCost resource="S10MISSILE" cost="1"/>
 <description>
 

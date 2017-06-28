@@ -53,6 +53,7 @@ import zone.TileDef;
 import zone.TileDef.TileMovement;
 import zone.Zone;
 import actor.Actor;
+import actor.player.Player;
 import actor.npc.NPC;
 import actor.player.CompanionTool;
 import actorRPG.Actor_RPG;

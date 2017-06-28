@@ -34,7 +34,8 @@
 		the list panels can also be manipulated with page up and page down or by
 		grabbing the scrollbar with click and hold and moving it up and down
 		LBREAK
-
+		page 3 (d or right to move to next page, a or left to move to the prior
+		page)
 	</text>
 	<text>
 		To act on the world around you you can click the mouse on that tile.
@@ -45,7 +46,7 @@
 		mouse is to activate the retro targeter with the O key. this will
 		toggle on a mode which lets you browse through targets in a list and
 		attack by pressing space or enter LBREAK
-		page 3 (d or right to move to next page, a or left to move to the prior
+		page 4 (d or right to move to next page, a or left to move to the prior
 		page)
 	</text>
 	<text>
@@ -62,6 +63,6 @@
 		use the item in the quickslot or swap with the equipped weapon LBREAK
 		You can set your quick action which will appear on the dropdown by
 		pressing F2 LBREAK
-		page 4 (end of file, a or left to move to the prior page)
+		page 5 (end of file, a or left to move to the prior page)
 	</text>
 </intro>

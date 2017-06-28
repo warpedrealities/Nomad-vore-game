@@ -64,6 +64,7 @@ import shared.SceneManager;
 import solarview.SolarScene;
 import solarview.spaceEncounter.SpaceEncounter;
 import spaceship.Spaceship;
+import spaceship.Spaceship.ShipState;
 import spaceship.stats.SpaceshipAnalyzer;
 import view.ViewScene;
 import static org.lwjgl.glfw.Callbacks.*;
@@ -179,7 +180,12 @@ public class Game implements SceneManager {
 		 ship=(Spaceship)universe.getCurrentEntity(); ship.setShipStats(new
 		 SpaceshipAnalyzer().generateStats(ship));
 		  
-		 m_currentscene=new SpaceEncounter(ship,null);
+		 Spaceship [] alienShip=new Spaceship[1];
+		 alienShip[0]=new Spaceship("fighter",0,0,ShipState.SPACE);
+		 alienShip[0].Generate();
+		 alienShip[0].setShipStats(new
+				 SpaceshipAnalyzer().generateStats(alienShip[0]));
+		 m_currentscene=new SpaceEncounter(ship,alienShip);
 		 
 		mouseInput = new MouseHook(openGLWindow);
 		glfwSetCursorPosCallback(openGLWindow, mouseInput);

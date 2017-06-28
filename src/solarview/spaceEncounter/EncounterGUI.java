@@ -2,6 +2,7 @@ package solarview.spaceEncounter;
 
 import java.nio.FloatBuffer;
 
+import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
@@ -12,13 +13,16 @@ import gui.Button;
 import gui.Button2;
 import gui.MultiLineButton;
 import gui.Text;
+import gui.TextColoured;
 import gui.Window;
+import input.Keyboard;
 import input.MouseHook;
 import nomad.Universe;
 import shared.MyListener;
 import shared.Tools;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.rendering.CircleHandler;
 import spaceship.Spaceship;
 
 public class EncounterGUI implements MyListener {
@@ -34,7 +38,12 @@ public class EncounterGUI implements MyListener {
 	private Text[] shieldTexts;
 	private MultiLineButton[] weaponButtons;
 	private EncounterLogic logic;
-
+	private CircleHandler circle;
+	private int weaponIndex;
+	private TextColoured rangeText;
+	private EncounterWeaponController weaponController;
+	private float clock;
+	
 	public EncounterGUI(EncounterShip ship, EncounterLogic logic) {
 		this.encounterShip = ship;
 		this.playerShip = ship.getShip();
@@ -84,6 +93,10 @@ public class EncounterGUI implements MyListener {
 			windows[1].add(button);
 		}
 
+		rangeText = new TextColoured(new Vec2f(3.2F, 0.7F), "text", 1.6F, 0);	
+		rangeText.setTint(1,0,0);
+		windows[0].add(rangeText);
+		
 		buildManouver();
 	}
 
@@ -167,11 +180,37 @@ public class EncounterGUI implements MyListener {
 	}
 
 	public void update(float dt) {
+		if (clock>0)
+		{
+			clock-=dt;
+		}
+		boolean v=false;
 		if (weaponButtons != null) {
 			for (int i = 0; i < weaponButtons.length; i++) {
 				weaponButtons[i].update(dt);
+				if (weaponButtons[i].isMouseOver())
+				{
+					if (weaponIndex!=i)
+					{
+						weaponIndex=i;
+						v=true;
+						circle.setRotation(encounterShip.getWeapons().get(i).getWeapon().getFacing()+encounterShip.getHeading());
+						circle.setWidth(encounterShip.getWeapons().get(i).getWeapon().getWeapon().getFiringArc());
+						circle.setPosition(encounterShip.getPosition());
+						break;				
+					}
+					v=true;
+
+				}
 			}
 		}
+		if (v==false)
+		{
+			weaponIndex=-1;
+		}
+		circle.setVisible(v);
+		
+		buttons();
 	}
 
 	public void updateUI() {
@@ -280,7 +319,89 @@ public class EncounterGUI implements MyListener {
 		}
 
 	}
-
+	
+	private void triggerWeapon(int index)
+	{
+		if (index>=encounterShip.getWeapons().size())
+		{
+			return;
+		}
+		int result=weaponController.triggerWeapon(index);
+		switch (result)
+		{
+		case 0:
+			
+			break;
+		case 1:
+			weaponButtons[index].setString("FIRING");
+			break;
+		case 2:
+			weaponButtons[index].setString(encounterShip.getWeapons().get(index).getWeapon().getWeapon().getName() + " "
+					+ encounterShip.getWeapons().get(index).getCooldown());
+			break;
+		
+		}	
+	}
+	
+	private void buttons()
+	{
+		if (clock<=0)
+		{
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_1))
+			{
+				triggerWeapon(0);
+				clock=1;
+			}
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_2))
+			{
+				triggerWeapon(1);
+				clock=1;		
+			}			
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_3))
+			{
+				triggerWeapon(2);
+				clock=1;	
+			}		
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_4))
+			{
+				triggerWeapon(3);
+				clock=1;
+			}
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_5))
+			{
+				triggerWeapon(4);
+				clock=1;
+			}			
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_6))
+			{
+				triggerWeapon(5);
+				clock=1;
+			}		
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_7))
+			{
+				triggerWeapon(6);
+				clock=1;
+			}
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_8))
+			{
+				triggerWeapon(7);
+				clock=1;
+			}			
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_9))
+			{
+				triggerWeapon(8);
+				clock=1;
+			}		
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_0))
+			{
+				triggerWeapon(9);
+				clock=1;
+			}				
+					
+		}
+		
+	}
+	
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
 		if (ID < 9) {
@@ -297,7 +418,21 @@ public class EncounterGUI implements MyListener {
 			break;
 		}
 		if (ID >= 20) {
-
+			triggerWeapon(ID-20);
 		}
 	}
+
+	public void setCircle(CircleHandler circle) {
+		this.circle=circle;
+	}
+
+	public TextColoured getRangeText() {
+		return rangeText;
+	}
+
+	public void setWeaponController(EncounterWeaponController weaponController) {
+		this.weaponController = weaponController;
+	}
+	
+	
 }

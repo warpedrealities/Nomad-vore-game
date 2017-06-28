@@ -62,8 +62,17 @@ public class MultiLineButton extends GUIBase {
 
 	public void buildStrings(String str) {
 		int index = str.indexOf(' ', str.length() / 2);
-		m_fonts[0].setString(str.substring(0, index));
-		m_fonts[1].setString(str.substring(index, str.length()));
+		if (index!=-1)
+		{
+			m_fonts[0].setString(str.substring(0, index));
+			m_fonts[1].setString(str.substring(index, str.length()));			
+		}
+		else
+		{
+			m_fonts[0].setString(str);
+			m_fonts[1].setString("");
+		}
+
 	}
 
 	public void setString(String string) {

@@ -12,6 +12,7 @@ import view.ZoneInteractionHandler;
 import widgets.Widget;
 import widgets.WidgetItemPile;
 import widgets.WidgetReformer;
+import widgets.WidgetSlot;
 import zone.Tile;
 import zone.Zone;
 
@@ -38,6 +39,11 @@ public class ReformationTool {
 			for (int j=0;j<z.getHeight();j++)
 			{
 				Widget w=z.getWidget(i, j);
+				if (w!=null && WidgetSlot.class.isInstance(w))
+				{
+					WidgetSlot ws=(WidgetSlot)w;
+					w=ws.getWidget();
+				}
 				if (w!=null && WidgetReformer.class.isInstance(w))
 				{
 					WidgetReformer reformer=(WidgetReformer)w;

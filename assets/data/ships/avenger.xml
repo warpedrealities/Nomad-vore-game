@@ -9,8 +9,9 @@
 </shipstats>
 
 <emitters>
-
-<engine x="0" y="-0.5"/>
+<engine x="-0.1" y="-0.4"/>
+<engine x="0" y="-0.4"/>
+<engine x="0.1" y="-0.4"/>
 </emitters>
 
 <layout width="16" height="16" spriteset="ship.png">

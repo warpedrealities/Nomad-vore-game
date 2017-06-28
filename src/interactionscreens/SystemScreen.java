@@ -60,8 +60,7 @@ public class SystemScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
-
+		itemList.update(DT);
 	}
 
 	@Override

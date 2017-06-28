@@ -274,18 +274,12 @@ public class Universe extends GameManager {
 	}
 
 	private void saveRoutine(String filename) throws IOException {
-		if (!filename.equals(saveName) && filename.length() > 0) {
-			File file = new File("saves/" + filename);
-			FileTools.deleteFolder(file);
-			if (!file.mkdir()) {
-
-				throw new IOException("failed to create new save directory");
-			}
-		}
-		saveCopy(filename);
+		
+		String temp="temp";
+	
 		saveName = filename;
 
-		File file = new File("saves/" + filename + "/" + "verse.sav");
+		File file = new File("saves/" + temp + "/" + "verse.sav");
 		if (file.exists() == false) {
 			file.createNewFile();
 		}
@@ -312,22 +306,45 @@ public class Universe extends GameManager {
 		ShopList.getInstance().save(dstream);
 
 		// save player
-		player.Save(filename);
+		player.Save(temp);
 		// save systems
 		dstream.writeInt(starSystems.size());
 		for (int i = 0; i < starSystems.size(); i++) {
-			starSystems.get(i).Save(filename);
+			starSystems.get(i).Save(temp);
 		}
 		// save ship uid
 		uidGenerator.save(dstream);
-
 		dstream.close();
+		
+		if (!filename.equals(saveName) && filename.length() > 0) {
+			file = new File("saves/" + filename);
+			FileTools.deleteFolder(file);
+			if (!file.mkdir()) {
+
+				throw new IOException("failed to create new save directory");
+			}
+		}
+		saveCopy(filename);	
+		moveSave(filename);
+		
 	}
 
+	void moveSave(String filename) throws IOException {
+
+				File oldSave = new File("saves/" + "temp");
+				File newSave = new File("saves/" + filename);
+				
+				// copy all files from savename folder
+				// and copy them to the filename folder
+				FileTools.copyFolderOverwrite(oldSave, newSave);
+				
+	}	
+	
 	public boolean save(String filename) throws IOException {
 		String saveRetain = saveName;
+		
 		saveRoutine(filename);
-		SaveIntegrityCheck check = new SaveIntegrityCheck(filename, this);
+		SaveIntegrityCheck check = new SaveIntegrityCheck("temp", this);
 		if (check.isOkay()) {
 			return true;
 		} else {

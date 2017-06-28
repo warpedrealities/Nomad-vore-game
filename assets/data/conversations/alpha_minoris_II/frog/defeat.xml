@@ -3,9 +3,19 @@
 
 <page ID="start">
 <text>
-no interactions with a defeated frog girl yet.
+The amphibian girl's ample chest heaves as she looks up at you, clearly uncertain as worried now you've beaten her. Her curvaceous form is at your mercy now, and quite appealing with her half sprawled before you. The curves of her ass and breasts on full display in all their emerald and cream hued glory.
 </text>
-<choice destination="end" text="darn"/>
+<choice destination="oralvore0" text="she'll make an ample meal">
+	<assertion evaluate="hasperk" perk="oralvore" />
+</choice>
+<choice destination="end" text="mhmm, time to be merciful this time"/>
+</page>
+
+<page ID="oralvore0">
+<text>
+
+</text>
+
 </page>
 
 </Conversation>

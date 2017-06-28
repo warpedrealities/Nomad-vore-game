@@ -60,10 +60,27 @@ public class Help_Scene extends SceneBase implements MyListener {
 		refreshText();
 	}
 
+	
+	private boolean noKeyDown()
+	{
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_A) || Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_4)
+		|| Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT))
+		{
+			return false;
+		}
+		
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_D) || Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_6)
+				|| Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT))
+		{
+			return false;
+		}
+		return true;
+	}
+	
 	@Override
 	public void Update(float dt) {
 		// TODO Auto-generated method stub
-		if (clock > 0) {
+		if (clock > 0 && noKeyDown()) {
 			clock -= dt;
 		}
 		if ((Keyboard.isKeyDown(GLFW.GLFW_KEY_ESCAPE) || Keyboard.isKeyDown(GLFW.GLFW_KEY_F1)) && clock <= 0) {
@@ -73,12 +90,12 @@ public class Help_Scene extends SceneBase implements MyListener {
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_A) || Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_4)
 				|| Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT) && clock <= 0) {
 			back();
-			clock = 2;
+			clock = 1;
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_D) || Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_6)
 				|| Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT) && clock <= 0) {
 			forward();
-			clock = 2;
+			clock = 1;
 		}
 	}
 

@@ -11,6 +11,7 @@ import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.animation.Animator;
 import solarview.spaceEncounter.rendering.EncounterRenderer;
+import solarview.spaceEncounter.rendering.Targeting;
 import spaceship.Spaceship;
 import vmo.Game;
 import vmo.GameManager;
@@ -20,7 +21,8 @@ public class SpaceEncounter extends SceneBase {
 	private EncounterLogic logic;
 	private EncounterRenderer renderer;
 	private EncounterGUI gui;
-
+	private Targeting targeting;
+	private TargetingControls targetingControl;
 	private EncounterShip[] buildShips(Spaceship playerShip, Spaceship[] alienShips) {
 		int c = 1;
 		if (alienShips != null) {
@@ -43,6 +45,13 @@ public class SpaceEncounter extends SceneBase {
 		renderer = new EncounterRenderer(logic.getShipList());
 		logic.setTrailControl(renderer.getTrailControl());
 		gui = new EncounterGUI(logic.getShipList()[0], logic);
+		renderer.position(new Vec2f(0.0F,0.0F), logic.getShipList()[0].getHeading());
+		gui.setCircle(renderer.getCircle());
+		targeting=new Targeting();
+		targeting.setVisible(true);
+		targetingControl=new TargetingControls(gui.getRangeText(),logic.getShipList()[0],targeting,logic.getShipList());
+		targetingControl.Recalc(targetingControl.getIndex());
+		gui.setWeaponController(new EncounterWeaponController(logic.getShipList()[0],logic.getShipList(),targetingControl));
 	}
 
 	@Override
@@ -53,12 +62,15 @@ public class SpaceEncounter extends SceneBase {
 				Universe.getInstance().getPlayer().addBusy(1);
 				Universe.AddClock(1);
 				gui.updateUI();
+				targetingControl.Recalc(targetingControl.getIndex());
 			}
 			renderer.position(logic.getShipList()[0].getPosition(), logic.getShipList()[0].getHeading());
 		} else {
 			gui.update(dt);
+			targeting.update(dt);
+			targetingControl.update(dt);
 		}
-
+		
 	}
 
 	@Override
@@ -72,7 +84,10 @@ public class SpaceEncounter extends SceneBase {
 		matrix44Buffer.flip();
 		GL20.glUniformMatrix4fv(m_variables[1], false, matrix44Buffer);
 		renderer.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
-
+		if (!logic.isRunning())
+		{
+			targeting.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
+		}
 		gui.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
 	}
 
@@ -87,6 +102,7 @@ public class SpaceEncounter extends SceneBase {
 
 		renderer.discard();
 		gui.discard();
+		targeting.discard();
 	}
 
 }

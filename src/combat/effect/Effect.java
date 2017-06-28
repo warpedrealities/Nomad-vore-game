@@ -9,5 +9,5 @@ public abstract class Effect {
 
 	public abstract Effect clone();
 
-	public abstract void applyChange(Effect effect);
+	public abstract void applyChange(Effect effect, int rank);
 }

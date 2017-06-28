@@ -67,6 +67,18 @@ public class SaveLoad extends Screen implements Callback {
 		text.setTint(1, 0, 0);
 
 		m_window.add(text);
+		
+		buildTemp();
+	}
+	
+	void buildTemp()
+	{
+		File file = new File("saves/temp");
+		if (file.exists()) {
+			FileTools.deleteFolder(file);
+		} else {
+			file.mkdir();
+		}
 	}
 
 	void GenSaveList() {

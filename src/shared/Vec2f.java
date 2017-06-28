@@ -9,6 +9,7 @@ public class Vec2f {
 	public float x;
 	public float y;
 
+
 	public Vec2f(float xin, float yin) {
 		x = xin;
 		y = yin;
@@ -24,6 +25,11 @@ public class Vec2f {
 			e.printStackTrace();
 		}
 
+	}
+
+	public Vec2f(Vec2f vec2f) {
+		x = vec2f.x;
+		y = vec2f.y;
 	}
 
 	public void Save(DataOutputStream stream) throws IOException {
@@ -69,4 +75,23 @@ public class Vec2f {
 		x = (float) x0;
 		y = (float) y0;
 	}
+
+	public Vec2f add(Vec2f a) {
+		x+=a.x;
+		y+=a.y;
+		return this;
+	}
+
+	public Vec2f replicate() 
+	{
+		return new Vec2f(x,y);
+	}
+
+	public Vec2f subtract(Vec2f p) {
+		x-=p.x;
+		y-=p.y;
+		return this;
+	}
+	
+	
 }

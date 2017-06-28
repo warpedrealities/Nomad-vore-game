@@ -34,8 +34,8 @@ import java.util.Collections;
 import org.lwjgl.glfw.GLFW;
 
 
-import actor.Inventory;
-import actor.Player;
+import actor.player.Inventory;
+import actor.player.Player;
 import actorRPG.Player_RPG;
 
 import shared.Callback;

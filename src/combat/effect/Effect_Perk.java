@@ -39,7 +39,7 @@ public class Effect_Perk extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect) {
+	public void applyChange(Effect effect,int rank) {
 		// TODO Auto-generated method stub
 
 	}

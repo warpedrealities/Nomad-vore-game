@@ -41,7 +41,7 @@
 </contains>
 </placeWidget>
 <placeWidget x="2" y="1" name="slot">
-<contains name="force barrier"/>
+<contains name="defensive barrier"/>
 </placeWidget>
 <placeWidget x="3" y="1" name="slot">
 <contains name="generator"/>

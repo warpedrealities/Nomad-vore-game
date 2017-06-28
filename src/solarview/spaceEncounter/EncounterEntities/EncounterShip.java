@@ -24,7 +24,8 @@ public class EncounterShip {
 	private ShipEmitters emitters;
 	private CombatShield shield;
 	private List<CombatWeapon> weapons;
-
+	private List<CombatAction> actions;
+	
 	public EncounterShip(Spaceship ship, Vec2f position, int heading) {
 		this.ship = ship;
 		if (ship.getShipStats().getShield() != null) {
@@ -41,6 +42,8 @@ public class EncounterShip {
 		}
 		buildEmitters();
 		manouver = new CombatManouver(this, position, heading);
+		
+		actions=new ArrayList<CombatAction>();
 
 	}
 
@@ -110,6 +113,10 @@ public class EncounterShip {
 
 	public ShipEmitters getEmitters() {
 		return emitters;
+	}
+
+	public List<CombatAction> getActions() {
+		return actions;
 	}
 
 

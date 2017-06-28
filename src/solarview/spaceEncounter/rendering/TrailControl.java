@@ -7,9 +7,11 @@ import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.CombatManouver;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.EncounterEntities.ShipEmitters;
+import vmo.GameManager;
 
 public class TrailControl {
 
+	private float clock;
 	private ParticleConeEmitter [][] emitters;
 	private ShipEmitters [] shipEmitters;
 	private EncounterShip [] ships;
@@ -34,7 +36,7 @@ public class TrailControl {
 				
 				for (int j=0;j<ships[i].getEmitters().getEngineEmitters().size();j++)
 				{
-					emitters[i][j]=new ParticleConeEmitter(128,sprite,new Vec2f(0,0),2,0.2F);;
+					emitters[i][j]=new ParticleConeEmitter(256,sprite,new Vec2f(0,0),2,0.1F);;
 				}	
 			}
 	
@@ -44,23 +46,35 @@ public class TrailControl {
 	
 	public void update(float dt)
 	{
+		clock+=dt;
+		boolean spawn=false;
+		if (clock>0.025F)
+		{
+
+			spawn=true;
+	
+			clock=0;
+		}
 		for (int i=0;i<emitters.length;i++)
 		{
 			if (emitters[i]!=null && emitters[i].length>0)
 			{
 				int thrust=0;
-				if ((ships[i].getCourse() & CombatManouver.half) >0)
+				if (spawn==true && (ships[i].getCourse() & CombatManouver.half) >0)
 				{
 					thrust=1;
 				}
-				else if ((ships[i].getCourse() & CombatManouver.full) >0)
+				else if (spawn==true && (ships[i].getCourse() & CombatManouver.full) >0)
 				{
 					thrust=2;
 				}
 				for (int j=0;j<emitters[i].length;j++)
 				{
 					emitters[i][j].Update(dt);
-					emitters[i][j].SpawnParticles(thrust);
+					if (thrust>0)
+					{
+						emitters[i][j].spawnCone(thrust,ships[i].getHeading(),0.01F);		
+					}
 				}			
 			}
 		}
@@ -74,7 +88,9 @@ public class TrailControl {
 			{
 				for (int j=0;j<emitters[i].length;j++)
 				{
-					emitters[i][j].setPosition(ships[i].getPosition());
+					Vec2f p=new Vec2f(shipEmitters[i].getEngineEmitters().get(j));
+					p.rotate(ships[i].getHeading()* 0.785398F);
+					emitters[i][j].setPosition(p.add(ships[i].getPosition()));
 				}		
 			}
 		}

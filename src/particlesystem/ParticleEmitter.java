@@ -18,11 +18,11 @@ import vmo.GameManager;
 
 public class ParticleEmitter {
 
-	Matrix4f m_matrix;
-	Particle[] m_particles;
-	Vec2f position;
-	float m_maxspeed;
-	int m_VBO, m_VAO, m_VIO, m_indicecount, m_texture;
+	protected Matrix4f m_matrix;
+	protected Particle[] m_particles;
+	protected Vec2f position;
+	protected float m_maxspeed;
+	protected int m_VBO, m_VAO, m_VIO, m_indicecount, m_texture;
 
 	public ParticleEmitter(int topcount, String sprite, Vec2f position, float maxspeed, float scale) {
 		m_texture = Tools.loadPNGTexture("assets/art/" + sprite + ".png", GL13.GL_TEXTURE0);

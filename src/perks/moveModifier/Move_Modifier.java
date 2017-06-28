@@ -77,14 +77,14 @@ public class Move_Modifier {
 				move.getEffects().add(modifiers.get(i).getEffect());
 			} else if (modifiers.get(i).getEffect().getClass().isInstance(move.getEffects().get(index))) {
 
-				applyChange(move.getEffects().get(index), modifiers.get(i).getEffect());
+				applyChange(move.getEffects().get(index), modifiers.get(i).getEffect(),rank);
 				index++;
 			}
 		}
 	}
 
-	private void applyChange(Effect effect, Effect modifier) {
-		effect.applyChange(modifier);
+	private void applyChange(Effect effect, Effect modifier,int rank) {
+		effect.applyChange(modifier,rank);
 	}
 
 }
