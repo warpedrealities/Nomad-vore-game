@@ -1,6 +1,7 @@
 package solarview.spaceEncounter;
 
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.rendering.TrailControl;
 
 public class EncounterLogic {
@@ -8,6 +9,7 @@ public class EncounterLogic {
 	private EncounterShip[] shipList;
 	private float turn;
 	private TrailControl trailControl;
+	private EffectHandler effectHandler;
 	
 	public EncounterLogic(EncounterShip[] ships) {
 		shipList = ships;
@@ -23,7 +25,7 @@ public class EncounterLogic {
 
 	public void update(float dt) {
 		for (int i = 0; i < shipList.length; i++) {
-			shipList[i].update(dt);
+			shipList[i].update(dt,effectHandler);
 		}
 		turn -= dt;
 		if (turn <= 0) {
@@ -47,6 +49,10 @@ public class EncounterLogic {
 
 	public void setTrailControl(TrailControl trailControl) {
 		this.trailControl = trailControl;
+	}
+
+	public EffectHandler getEffectHandler() {
+		return effectHandler;
 	}
 
 }

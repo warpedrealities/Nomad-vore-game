@@ -11,6 +11,7 @@ import rendering.SpriteRotatable;
 import shared.Vec2f;
 import solarBackdrop.StarScape;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.effectHandling.EffectHandler;
 
 public class EncounterRenderer {
 
@@ -21,6 +22,8 @@ public class EncounterRenderer {
 	private TrailControl trailControl;
 	
 	private CircleHandler circle;
+	
+	private EffectHandler effectHandler;
 	
 	public EncounterRenderer(EncounterShip[] ships) {
 		spriteManager = new SpriteManager("assets/art/solar/");
@@ -68,6 +71,8 @@ public class EncounterRenderer {
 		
 		trailControl.draw(matrix44Buffer,objmatrix,tintvar);
 		
+		effectHandler.draw(matrix44Buffer,objmatrix,tintvar);
+		
 		circle.draw(objmatrix, tintvar, matrix44Buffer);
 	}
 
@@ -86,6 +91,7 @@ public class EncounterRenderer {
 		background.discard();
 		trailControl.discard();
 		circle.discard();
+		effectHandler.discard();
 	}
 
 	public TrailControl getTrailControl() {
@@ -95,6 +101,11 @@ public class EncounterRenderer {
 	public CircleHandler getCircle() {
 		return circle;
 	}
+
+	public void setEffectHandler(EffectHandler effectHandler) {
+		this.effectHandler = effectHandler;
+	}
+	
 	
 	
 }

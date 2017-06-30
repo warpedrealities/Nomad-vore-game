@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			The omnico reformation tube is an impressive piece of technology. It does you almost no good stuck as it is in the depths of a dangerous Omnico facility though so you might want to remove it to take it with you. This'll also give you a chance to analyze the design for later reproduction.
+		</text>
+		<choice destination="remove" text="do it" />
+		<choice destination="end" text="not now" />
+	</page>
+	<page ID="remove">
+		<text>
+			You take the time to analyse the device so you can reproduce the reactor
+			later then, levered it out of its mountings and can now take it with
+			you
+		</text>
+		<special effect="blueprint" ID="reformer" />
+		<effect type="giveitem" value="1" item="reformation tube" />
+		<special effect="destroywidget" />
+		<choice destination="end" text="got what i came for" />
+	</page>
+</Conversation>

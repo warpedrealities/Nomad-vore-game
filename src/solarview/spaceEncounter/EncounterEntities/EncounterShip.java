@@ -11,6 +11,7 @@ import rendering.Square_Rotatable_Int;
 import shared.ParserHelper;
 import shared.Vec2f;
 import solarview.spaceEncounter.CombatController;
+import solarview.spaceEncounter.effectHandling.EffectHandler;
 import spaceship.Spaceship;
 import particlesystem.ParticleConeEmitter;
 
@@ -24,7 +25,7 @@ public class EncounterShip {
 	private ShipEmitters emitters;
 	private CombatShield shield;
 	private List<CombatWeapon> weapons;
-	private List<CombatAction> actions;
+	private CombatActionHandler actionHandler;
 	
 	public EncounterShip(Spaceship ship, Vec2f position, int heading) {
 		this.ship = ship;
@@ -43,8 +44,8 @@ public class EncounterShip {
 		buildEmitters();
 		manouver = new CombatManouver(this, position, heading);
 		
-		actions=new ArrayList<CombatAction>();
-
+		actionHandler=new CombatActionHandler(this);
+		
 	}
 
 	private void buildEmitters() {
@@ -94,9 +95,10 @@ public class EncounterShip {
 		return weapons;
 	}
 
-	public void update(float dt) {
+	public void update(float dt,EffectHandler handler) {
 
 		manouver.update(dt);
+		actionHandler.update(dt, handler);
 	}
 
 	public void updateResources() {
@@ -116,7 +118,7 @@ public class EncounterShip {
 	}
 
 	public List<CombatAction> getActions() {
-		return actions;
+		return actionHandler.getList();
 	}
 
 

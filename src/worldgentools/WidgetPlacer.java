@@ -35,6 +35,7 @@ import widgets.WidgetItemPile;
 import widgets.WidgetPortal;
 import widgets.WidgetReformer;
 import widgets.WidgetScriptPortal;
+import widgets.WidgetScripted;
 import widgets.WidgetSlot;
 import widgets.WidgetSprite;
 import widgets.scriptedEvents.WidgetScriptedEvent;
@@ -299,6 +300,15 @@ public class WidgetPlacer {
 		if (root.getTagName().contains("capture")) {
 			widget = new WidgetCapture(root);
 		}
+		if (root.getTagName().contains("scripted")) {
+			WidgetScripted scripted = new WidgetScripted(n);
+			NodeList subnodes = Enode.getElementsByTagName("script");
+			if (subnodes != null) {
+				Element e = (Element) subnodes.item(0);
+				scripted.setScript(e.getAttribute("value"));
+			}
+			widget=scripted;
+		}
 		NodeList descOverride = Enode.getElementsByTagName("description");
 		if (widget != null && descOverride.getLength() > 0) {
 			Element e = (Element) descOverride.item(0);
@@ -433,6 +443,14 @@ public class WidgetPlacer {
 					}
 					if (root.getTagName().contains("breakable")) {
 						widget = new WidgetBreakable(n);
+					}
+					if (root.getTagName().contains("conversation")) {
+						WidgetConversation wc = new WidgetConversation(n);
+						Element e=(Element)Enode.getElementsByTagName("conversation").item(0);
+						wc.setConversationFileName(e.getAttribute("value"));
+						e=(Element)Enode.getElementsByTagName("sprite").item(0);
+						wc.setSprite(Integer.parseInt(e.getAttribute("value")));
+						widget=wc;
 					}
 					if (root.getTagName().contains("container")) {
 						WidgetContainer container = new WidgetContainer(n);

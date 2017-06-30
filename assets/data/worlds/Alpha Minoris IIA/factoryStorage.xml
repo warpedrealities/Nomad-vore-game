@@ -6,6 +6,7 @@
 <tile sprite="18" vision="1" movement="2"> immense machinery</tile>
 <tile sprite="19" vision="1" movement="2"> panel</tile>
 <tile sprite="20" vision="1" movement="2"> panel</tile>
+<tile sprite="21" vision="1" movement="2"> a large and useless storage crate</tile>
 </tileset>
 <description>
 The halls are gloomy and twist about, guttering light fixtures the only illumination. Barely legible safety, corporate and advertisement notices dot the walls. In the distance the whir of servos, garbled PA announcements and synthesized voices provide an ominous and impersonal sense of menace. You are trespasser in this domain, dare you tread deeper into these halls?
@@ -14,68 +15,44 @@ The halls are gloomy and twist about, guttering light fixtures the only illumina
 <mapgen>
 <partition xmin="8" xmax="8" ymin="56" ymax="56">
 <blockDungeon extent="28">
-<loadBlocks file="slanted"/>
+<loadBlocks file="warehouse"/>
 <keyBlock x="4" y="4">
-<row>11111111</row>
-<row>11111111</row>
-<row>11221122</row>
-<row>11211112</row>
-<row>11211112</row>
-<row>11211112</row>
-<row>11221222</row>
-<row>11222200</row>
+<row>22222222</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22211222</row>
+<row>00211200</row>
 <edge value="SOUTH"/>
-<edge value="NORTH"/>
-<edge value="WEST"/>
-<edge value="EAST"/>
-<widget x="4" y="6" name="entrance" variable="11" info="Zone 2A"/>
+<widget x="4" y="1" name="entrance" variable="15" info="factory"/>
 </keyBlock>
 
 <keyBlock heat="2">
-<row>11111111</row>
-<row>11111111</row>
-<row>11221122</row>
-<row>11211112</row>
-<row>11211112</row>
-<row>11211112</row>
-<row>11211112</row>
-<row>11222222</row>
-<edge value="SOUTH"/>
-<edge value="NORTH"/>
-<edge value="WEST"/>
+<row>22222222</row>
+<row>21112111</row>
+<row>21112111</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21112111</row>
+<row>21112111</row>
+<row>22222222</row>
 <edge value="EAST"/>
-<widget x="4" y="6" name="console" info="interaction/omnicoCentralComputer" variable="31"/>
-</keyBlock>
-
-<keyBlock heat="2">
-<row>11111111</row>
-<row>11111111</row>
-<row>11221122</row>
-<row>11211112</row>
-<row>11211112</row>
-<row>11211112</row>
-<row>11221222</row>
-<row>11222200</row>
-<edge value="SOUTH"/>
-<edge value="NORTH"/>
-<edge value="WEST"/>
-<edge value="EAST"/>
-<widget x="4" y="6" name="entrance" variable="15" info="factoryStorage"/>
+<widget x="4" y="4" name="script_door" info="omnico/reformerRoom"/>
+<widget x="4" y="5" name="script_door" info="omnico/reformerRoom"/>
+<widget x="1" y="4" name="mechanism" info="interaction/omnico/reformer" variable="51"/>
 </keyBlock>
 
 <clean value="2"/>
 <lootTable identity="normalchest">
-	<loot item="computation valve" chance="0.4" unique="3" />
-	<loot item="computation valve" chance="0.4" unique="3" />
-	<loot item="computation valve" chance="0.4" unique="3" />
-	<loot item="computation valve" chance="0.4" unique="3" />
-	<loot item="computation valve" chance="0.4" unique="3" />
-	<loot item="blueprint" chance="0.4" unique="3" addendum="cultivator"/>
+	<loot item="protein synthesizer" chance="0.4" unique="3" />
 	<lootSubTable chance="1" file="resource_tier_1"/>
 	<lootSubTable chance="0.5" file="resource_tier_1"/>
 	<lootSubTable chance="0.5" file="consumable_tier_1"/>
 	<lootSubTable chance="0.25" file="moon_ruins_special"/>
 	<lootSubTable chance="0.25" file="mutators_tier_1"/>
+	<loot item="protein synthesizer" chance="0.1"/>	
 </lootTable>
 <npcType value="Alpha_Minoris_IIA/synth"/>
 </blockDungeon>

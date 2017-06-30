@@ -43,6 +43,7 @@ public class SpaceEncounter extends SceneBase {
 	public SpaceEncounter(Spaceship playerShip, Spaceship[] alienShips) {
 		logic = new EncounterLogic(buildShips(playerShip, alienShips));
 		renderer = new EncounterRenderer(logic.getShipList());
+		renderer.setEffectHandler(logic.getEffectHandler());
 		logic.setTrailControl(renderer.getTrailControl());
 		gui = new EncounterGUI(logic.getShipList()[0], logic);
 		renderer.position(new Vec2f(0.0F,0.0F), logic.getShipList()[0].getHeading());
@@ -52,6 +53,8 @@ public class SpaceEncounter extends SceneBase {
 		targetingControl=new TargetingControls(gui.getRangeText(),logic.getShipList()[0],targeting,logic.getShipList());
 		targetingControl.Recalc(targetingControl.getIndex());
 		gui.setWeaponController(new EncounterWeaponController(logic.getShipList()[0],logic.getShipList(),targetingControl));
+
+		
 	}
 
 	@Override

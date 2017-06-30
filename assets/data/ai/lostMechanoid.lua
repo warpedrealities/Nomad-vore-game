@@ -72,7 +72,9 @@ function main(controllable, sense, script)
 	--combat ai here
 	combat(controllable,sense,script,hostile)
 	else
-	robot(controllable,sense)
-	voice(controllable)
+		robot(controllable,sense)
+		if controllable:isActorVisibility() then
+			voice(controllable)
+		end
 	end
 end  

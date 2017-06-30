@@ -18,6 +18,7 @@ import widgets.WidgetDoor;
 import widgets.WidgetHarvestable;
 import widgets.WidgetItemPile;
 import widgets.WidgetPortal;
+import widgets.WidgetScripted;
 import widgets.traps.Widget_Trap;
 import worldgentools.LootTable;
 
@@ -72,6 +73,13 @@ public class DungeonWidgetLoader {
 			}
 			if (definition.getWidgetInfo() != null) {
 				wd.setLockKey(definition.getWidgetInfo());
+			}
+		}
+		if (root.getTagName().contains("scripted")) {
+			widget = new WidgetScripted(root);
+			WidgetScripted ws = (WidgetScripted) widget;
+			if (definition.getWidgetInfo() != null) {
+				ws.setScript(definition.getWidgetInfo());
 			}
 		}
 		if (root.getTagName().contains("container")) {

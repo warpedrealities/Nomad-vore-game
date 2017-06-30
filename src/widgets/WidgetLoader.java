@@ -68,6 +68,8 @@ public class WidgetLoader {
 			return new WidgetScriptedEvent(dstream);
 		case 21:
 			return new WidgetCapture(dstream);
+		case 22: 
+			return new WidgetScripted(dstream);
 		}
 		return null;
 	}

@@ -9,6 +9,8 @@
 </shipstats>
 
 <emitters>
+<weapon x="-0.1" y="0.2"/>
+<weapon x="0.1" y="0.2"/>
 <engine x="-0.1" y="-0.4"/>
 <engine x="0" y="-0.4"/>
 <engine x="0.1" y="-0.4"/>

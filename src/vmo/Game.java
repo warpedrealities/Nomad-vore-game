@@ -172,7 +172,8 @@ public class Game implements SceneManager {
 		var[3] = m_viewvar1;
 		var[4] = m_objvar1;
 
-		//m_currentscene = new Menu(var);
+
+	//	m_currentscene = new Menu(var);
 		SceneBase.setVariables(var);
 
 		

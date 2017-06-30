@@ -21,7 +21,7 @@ end
 function melee(controllable,sense,pos,script,hostile)
 	a=controllable:getValue(0)
 	if (a == 0) then
-		a=1
+		a=math.random(0,1)+1
 		controllable:setValue(0,a)
 	else
 		if (a == 1) then

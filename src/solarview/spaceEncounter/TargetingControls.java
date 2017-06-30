@@ -30,7 +30,7 @@ public class TargetingControls {
 			targeting.setPosition(ships[i].getPosition());	
 			float x=ships[i].getPosition().getDistance(playerShip.getPosition());
 			x=x-(x%0.1F);
-			text.setString(x+" gigameters");		
+			text.setString(x+" megameters");		
 		}
 		else
 		{
