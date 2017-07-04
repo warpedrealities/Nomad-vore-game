@@ -15,7 +15,6 @@
 <stat stat="HEALTH" value="20"/>
 <stat stat="RESOLVE" value="20"/>
 <attribute attribute="DODGE" value="2"/>
-<attribute attribute="DODGE" value="2"/>
 <combatMove name="display" pattern="RANGED" bonusAttribute="RANGED" timeCost="4" bonusToHit="0">
 <effectDamage type="SHOCK" minValue="1" maxValue="6" modifier="STRENGTH"/>
 <missText count="1">

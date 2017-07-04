@@ -19,7 +19,7 @@
 <tile sprite="1" vision="1" movement="2">a metal wall</tile>
 <tile sprite="2" vision="0" movement="0">a metal floor</tile>
 </tileset>
-<description>this ship is in remarkably good condition considering the force with which it hit the ground</description>
+<description>this ship is in remarkably good condition considering the force with which it hit the ground, you're going to need help in order to dig it out though</description>
 <mapgen>
 <prefab positionX="0" positionY="0" width="13">
 <row>0121000011210</row>

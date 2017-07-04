@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import actor.Actor;
 import combat.statusEffects.StatusEffect;
+import combat.statusEffects.StatusFaction;
 import combat.statusEffects.StatusLoader;
 import combat.statusEffects.Status_Bind;
 import combat.statusEffects.Status_Defence;
@@ -16,14 +17,16 @@ import view.ViewScene;
 
 public class StatusEffectHandler {
 
-	ArrayList<StatusEffect> statusEffects;
-	ArrayList<Status_Defence> statusDefences;
-	int bindState;
-	int stealthState;
-
+	private ArrayList<StatusEffect> statusEffects;
+	private ArrayList<Status_Defence> statusDefences;
+	private int bindState;
+	private int stealthState;
+	private int factionState;
+	
 	public StatusEffectHandler() {
 		bindState = -1;
 		stealthState = -1;
+		factionState = -1;
 		statusEffects = new ArrayList<StatusEffect>();
 		statusDefences = new ArrayList<Status_Defence>();
 	}
@@ -35,7 +38,9 @@ public class StatusEffectHandler {
 				if (statusEffects.get(i).maintain() == true) {
 					statusDefences.remove(statusEffects.get(i));
 					statusEffects.get(i).remove(actor);
+
 					statusEffects.remove(i);
+
 				}
 			}
 		}
@@ -46,20 +51,27 @@ public class StatusEffectHandler {
 		for (int i = 0; i < statusEffects.size(); i++) {
 			statusEffects.get(i).save(dstream);
 		}
-		dstream.writeInt(bindState);
 		stealthState = -1;
+		bindState=-1;
+		factionState=-1;
 		for (int i = 0; i < statusEffects.size(); i++) {
-			if (Status_Stealth.class.isInstance(statusEffects.get(i))) {
+			if (stealthState==-1 && Status_Stealth.class.isInstance(statusEffects.get(i))) {
 				stealthState = i;
-				break;
+			}
+			if (bindState==-1 && Status_Bind.class.isInstance(statusEffects.get(i))) {
+				bindState = i;
+			}
+			if (factionState==-1 && StatusFaction.class.isInstance(statusEffects.get(i))) {
+				factionState = i;
 			}
 		}
+		dstream.writeInt(bindState);	
 		dstream.writeInt(stealthState);
+		dstream.writeInt(factionState);
 	}
 
 	public void load(DataInputStream dstream) throws IOException {
 		statusEffects = new ArrayList<StatusEffect>();
-
 		// load status effects
 		int c = dstream.readInt();
 		if (c > 0) {
@@ -73,6 +85,7 @@ public class StatusEffectHandler {
 		}
 		bindState = dstream.readInt();
 		stealthState = dstream.readInt();
+		factionState=dstream.readInt();
 	}
 
 	public ArrayList<StatusEffect> getStatusEffects() {
@@ -181,6 +194,24 @@ public class StatusEffectHandler {
 		return stealthState;
 	}
 
+	public int getFactionState() {
+		if (factionState>-1)
+		{
+			if (factionState>=statusEffects.size()|| !StatusFaction.class.isInstance(statusEffects.get(factionState)))
+			{
+				factionState=-1;
+				for (int i = 0; i < statusEffects.size(); i++) {
+					if (StatusFaction.class.isInstance(statusEffects.get(i))) {
+						factionState = i;
+						break;
+					}
+				}		
+			}		
+		}
+
+		return factionState;
+	}
+	
 	public void setStealthState(int stealthState) {
 		this.stealthState = stealthState;
 	}

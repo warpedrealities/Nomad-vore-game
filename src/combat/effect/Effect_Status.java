@@ -9,6 +9,7 @@ import org.w3c.dom.NodeList;
 import view.ViewScene;
 
 import combat.statusEffects.StatusEffect;
+import combat.statusEffects.StatusFaction;
 import combat.statusEffects.Status_AttribMod;
 import combat.statusEffects.Status_Bind;
 import combat.statusEffects.Status_Defence;
@@ -101,6 +102,9 @@ public class Effect_Status extends Effect {
 				}
 				if (e.getTagName().equals("statusDoT")) {
 					effect = new Status_DoT(e);
+				}
+				if (e.getTagName().equals("statusFaction")) {
+					effect = new StatusFaction(e);
 				}
 			}
 		}

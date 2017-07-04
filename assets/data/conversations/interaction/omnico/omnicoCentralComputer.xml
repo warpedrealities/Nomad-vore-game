@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			$%/SYNTH CONTROL LBREAK 
+			$%/SELECT MODE LBREAK 
+			<conditional>
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="0"/>			
+			$%/CURRENT MODE ORALVORE LBREAK 
+			</conditional>
+			<conditional>
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>			
+			$%/CURRENT MODE UNBIRTH LBREAK 
+			</conditional>	
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="1"/>			
+			$%/SAFEGUARDS OPERATIONAL LBREAK 
+			</conditional>	
+				<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>			
+			$%/SAFEGUARDS OFFLINE LBREAK 
+			</conditional>			
+		</text>
+		<choice destination="oralvore" text="set mode: oralvore"/>
+		<choice destination="unbirth" text="set mode: unbirth"/>
+		<choice destination="disable" text="disable digestion prevention safeguard">
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>			
+		</choice>
+		<choice destination="enable" text="re-enable digestion prevention safeguard">
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="1"/>			
+		</choice>
+		<choice destination="end" text="logout" />
+	</page>
+	
+	<page ID="disable">
+	<text>
+	$%/SAFEGUARD DISABLED LBREAK
+	$%/ENZYME SETTINGS CALIBRATED LBREAK
+	$%/EMOTIONAL MATRIX ADJUSTED LBREAK
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_SAFETY" value="1" />		
+	<choice destination="end" text="logout" />
+	</page>
+	
+	<page ID="enable">
+	<text>
+	$%/SAFEGUARD ENABLED LBREAK 
+	$%/ENZYME SYSTEM SHUTDOWN COMMAND TRANSMITTED LBREAK 
+	$%/EMOTIONAL MATRIX ADJUSTED LBREAK 
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_SAFETY" value="0" />		
+	<choice destination="end" text="logout" />
+	</page>	
+	
+	<page ID="oralvore">
+	<text>
+	$%/SYNTH CONTROL LBREAK 
+	$%/SYNTH SET TO ORALVORE MODE LBREAK 
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA" value="0" />	
+	<choice destination="end" text="logout" />	
+	</page>
+	
+	<page ID="unbirth">
+	<text>
+	$%/SYNTH CONTROL LBREAK 
+	$%/SYNTH SET TO UNBIRTHING MODE LBREAK 
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA" value="1" />	
+	<choice destination="end" text="logout" />	
+	</page>
+</Conversation>

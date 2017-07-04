@@ -3,6 +3,7 @@
 
 	<page ID="start">
 	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>	
+	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>	
 	<preference fetish="unbirthing" />	
 	<text>
 	"Prepare for containment valued customer." the synth commands as she reaches down to grasp your head firmly with both hands and guides it willing or not towards her netherlips. Those emulated sex lips realistic, moist and as it happens fully function as the gynoid forces you facefirst into her snatch. Lewd squeelches audible as her juices soak your head and she wedges you in down to your neck in one movement "As you can tell Omnico has put a lot of work into emulating the experience of being taken and forced into a womb." the synth comments and continues handling you to feed in your shoulders, her insides are hot and welcoming. And she's right, that womb of hers is remarkably soft and accomodating, definitely realistic.
@@ -69,6 +70,7 @@
 	
 	<page ID="start">
 		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="0"/>	
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>		
 		<preference fetish="oralvore" />
 		<text>"now ma'am, please relax and enjoy your experience." the synth
 			remarks as she stutters to a halt looming over you and smiles. She

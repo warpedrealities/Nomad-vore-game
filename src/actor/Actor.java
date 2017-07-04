@@ -10,6 +10,7 @@ import org.lwjgl.util.vector.Vector4f;
 import actor.player.Player;
 import combat.CombatMove;
 import combat.statusEffects.StatusEffect;
+import combat.statusEffects.StatusFaction;
 import faction.Faction;
 
 import nomad.Universe;
@@ -90,7 +91,7 @@ public abstract class Actor implements Attackable {
 
 	public boolean isHostile(String faction) {
 
-		int factionRelation = actorFaction.getRelationship(faction);
+		int factionRelation = getActorFaction().getRelationship(faction);
 		if (factionRelation < 50) {
 			if (getPeace()) {
 				return false;
@@ -290,6 +291,11 @@ public abstract class Actor implements Attackable {
 	abstract public void Load(DataInputStream dstream) throws IOException;
 
 	public Faction getActorFaction() {
+		int fstate=actorRPG.getStatusEffectHandler().getFactionState();
+		if (fstate!=-1)
+		{
+			return ((StatusFaction)actorRPG.getStatusEffectHandler().getStatusEffects().get(fstate)).getFaction();
+		}
 		return actorFaction;
 	}
 

@@ -39,6 +39,10 @@ public class StatusLoader {
 			e = new Status_DoT();
 			e.load(dstream);
 			return e;
+		case 7:
+			e= new StatusFaction();
+			e.load(dstream);
+			return e;
 		}
 		return null;
 	}

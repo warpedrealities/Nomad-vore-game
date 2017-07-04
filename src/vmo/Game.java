@@ -173,10 +173,10 @@ public class Game implements SceneManager {
 		var[4] = m_objvar1;
 
 
-	//	m_currentscene = new Menu(var);
+		m_currentscene = new Menu(var);
 		SceneBase.setVariables(var);
 
-		
+		/*
 		 universe.Newgame(); Spaceship
 		 ship=(Spaceship)universe.getCurrentEntity(); ship.setShipStats(new
 		 SpaceshipAnalyzer().generateStats(ship));
@@ -187,7 +187,7 @@ public class Game implements SceneManager {
 		 alienShip[0].setShipStats(new
 				 SpaceshipAnalyzer().generateStats(alienShip[0]));
 		 m_currentscene=new SpaceEncounter(ship,alienShip);
-		 
+		 */
 		mouseInput = new MouseHook(openGLWindow);
 		glfwSetCursorPosCallback(openGLWindow, mouseInput);
 		GL11.glDepthFunc(GL_LEQUAL);

@@ -7,12 +7,38 @@
 		<choice destination="sex0" text="fuck her">
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
+		<choice destination="cockvore0" text="she looks like she'd make great cockfood">
+		<assertion evaluate="hasperk" perk="cockvore"/>
+		</choice>
 		<choice destination="meal0" text="and she looks delicious">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="cockvore0">
+	<text>
+	The incapacitated raptor looks up at you in horror as you pull out your <macro ID="penis_size_desc" /> cock and stroke to stir it to a suitable size. She tries to crawl away from you, but there’s little she can do to escape you now. You take her head in your hand and bring her face up to the head of your now enormous and hungry shaft. She tries to resist you as you push her up against your cock slit. She whimpers wordlessly and you push. Hard. Her head pops right inside. You can’t hold back a groan as you feel your cock expand to slurp around the raptor girl’s head. Her cries are muffled by your cock flesh.
+	</text>
+	<choice destination="cockvore1" text="schlurp her up"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	You force her shoulders inside. She weakly puts her clawed hands on your shaft and tries to pull her head out, but it’s far too late. You grab her wrists and pin her arms to her sides as your cock slurps in her breasts and elbows. Her cries grow louder. She begins to wriggle and squirm with renewed strength, but this only serves to aid her slide in deeper. Before long only her legs and tail are dangling out of your cock slit. You tilt your member up, and with the aid of gravity, she descends into your cock the rest of the way. Your sack expands and dangles heavy with her curled up form.
+	</text>
+	<choice destination="cockvore2" text="Turn her into cum"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	The raptor girl is kicking and squirming with all the might left in her, but she can’t manage to force her way back out. Her wriggling motions, however, are really starting to work you up. You pump your shaft. Your balls begin to fill with bubbly, frothy cum. The raptor girl cries out as she begins to melt into the boiling substance. You jack yourself eagerly, speeding up the process. The raptor girl’s cries begin to gurgle as she’s submerged in the digestive cream. She kicks and bucks a few more times, her struggles growing weaker, until at last she falls still. You jack yourself faster until, at last, you burst, spraying her out all over the ground. All that’s left of her is a large, spoogy stain.
+	</text>
+	<effect type="feed" value="85" />
+	<special effect="removenpc" />
+	<choice destination="end" text="she's better this way, moving on"/>
+	</page>
+	
 	<page ID="sex0">
 		<text>
 			The raptor lets out a startled hiss and struggles as you press down

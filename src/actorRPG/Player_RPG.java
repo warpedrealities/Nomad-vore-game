@@ -30,6 +30,7 @@ import shared.ParserHelper;
 import shared.SceneBase;
 import view.ViewScene;
 import vmo.Game;
+import item.Item;
 import item.ItemDepletableInstance;
 import item.ItemEquip;
 import item.ItemStack;
@@ -355,7 +356,21 @@ public class Player_RPG implements Actor_RPG {
 		statusEffectHandler.applyStatusEffects(this);
 		if (playerInventory != null) {
 			playerInventory.setCapacity(abilities[STRENGTH] * 8);
+			for (int i=0;i<4;i++)
+			{
+				if (playerInventory.getSlot(i)!=null)
+				{
+					Item item=playerInventory.getSlot(i);
+					if (ItemEquip.class.isInstance(item)) {
+						ItemEquip equip = (ItemEquip) item.getItem();
+						if (equip.getModifier() != null) {
+							actor.getRPG().AddModifier(equip.getModifier());
+						}
+					}
+				}
+			}		
 		}
+		
 
 		((Player) actor).reCalc();
 	}

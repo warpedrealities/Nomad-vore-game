@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<text>
+	The wyvern darts in to finish you off with a tail lash, scoring your wobbly legs harshly and hastening your collapse to the ground. The Wyvern hissing and flicking his tongue out, stretching wings and crest in triumph and satisfaction. You make an attempt to maybe get away from it during its distraction revelling in its pride as a small predator having brought down someone your size. You move to try and push yourself to your feet only to let out a yelp, needly teeth digging into your hand as the wyvern snaps at you to exert dominance. It hisses and leaps forwards to exert its dominance...
+	</text>
+		<choice destination="oralvore0" text="landing atop you">
+			<preference fetish="oralvore" />
+		</choice>
+		<choice destination="cockvore0" text="landing at your feet">
+			<preference fetish="cockvore" />
+		</choice>
+		<choice destination="gameover" text="a fate too terrible to contemplate">
+			<notpreference fetish="cockvore" />
+			<notpreference fetish="oralvore" />
+		</choice>
+	</page>
+	
+	<page ID="oralvore0">
+	<!-- eat hand first, not hands first, hand first-->
+	<text>
+	The reptile leapt atop you. The wyvern's claws digging into you uncomfortably as you shift to try and dislodge it off of you, your mistake was taking a swing at it with your other hand as it hissed at you. The critter's jaws snapping out to engulf your head to the wrist, curved inward teeth making the prospect of pulling your hand out a matter for careful consideration. Before you can work on extricating your hand though the bastard reptile is already gulping and chuggging your hand deeper into its slender neck, lashing out threateningly at your other hand. You wonder for a moment if the vicious winged lizard is serious, but as it works its jaws towards your head and your hand down into its belly you realize swiftly that the small predator has the audacity to try and eat you.
+	</text>
+	<choice destination="oralvore1" text="curse the lizard"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You swear at the lizard vigorously, but it pays no attention to your vitriol. Besides that vitriol is soon muffled as it stretches its slender jaws around your head and shoulders, its ability to engulf a meal your size is quite impressive in a way. Though it'd be better to not be appreciating it while being the meal in question! You struggle only to yelp as its its teeth dig in. the critter starts writhing around to reposition itself off of you so it can make more headway on your chest.
+	</text>
+	
+	</page>
+	
+</Conversation>
