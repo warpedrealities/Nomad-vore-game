@@ -36,9 +36,11 @@ import item.ItemEquip;
 import item.ItemStack;
 import item.ItemWeapon;
 import actor.Actor;
-import actor.Inventory;
+
 import actor.Modifier;
-import actor.Player;
+import actor.player.Inventory;
+import actor.player.Player;
+
 
 public class Player_RPG implements Actor_RPG {
 
@@ -282,7 +284,7 @@ public class Player_RPG implements Actor_RPG {
 			stats[HEALTH]-=0.25F*duration;
 			if (stats[Actor_RPG.HEALTH]<0)
 			{
-				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation"));
+				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, false));
 			}
 		}
 		
@@ -335,7 +337,7 @@ public class Player_RPG implements Actor_RPG {
 			stats[HEALTH]-=0.25F;
 			if (stats[Actor_RPG.HEALTH]<0)
 			{
-				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation"));
+				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, false));
 			}
 		}
 		if (regenDelay>0)

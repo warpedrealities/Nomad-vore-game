@@ -8,18 +8,12 @@
 <armour value="2"/>
 </shipstats>
 
-<emitters>
-<weapon x="0" y="0.2"/>
-<engine x="-0.2" y="-0.4"/>
-<engine x="0.2" y="-0.4"/>
-</emitters>
-
 <layout width="16" height="16" spriteset="ship.png">
 <tileset>
 <tile sprite="1" vision="1" movement="2">a metal wall</tile>
 <tile sprite="2" vision="0" movement="0">a metal floor</tile>
 </tileset>
-<description>this ship is in remarkably good condition considering the force with which it hit the ground, you're going to need help in order to dig it out though</description>
+<description>this ship is in remarkably good condition considering the force with which it hit the ground</description>
 <mapgen>
 <prefab positionX="0" positionY="0" width="13">
 <row>0121000011210</row>
@@ -36,14 +30,14 @@
 <placeWidget x="1" y="2" name="slot"/>
 <placeWidget x="9" y="4" name="slot"/>
 <placeWidget x="7" y="4" name="slot"/>
-<placeWidget x="6" y="4" name="hardpoint">
-<facing value="0"/>
-</placeWidget>
+<placeWidget x="6" y="4" name="hardpoint"/>
 <placeWidget x="5" y="4" name="slot"/>
 <placeWidget x="3" y="4" name="slot"/>
 <placeWidget x="11" y="1" name="slot"/>
 <placeWidget x="11" y="2" name="slot"/>
-
+<SeedNPCs min="1" max="1" name="AlphaMinoris_II/robosphere">
+<script death="hauntedValleyBotDeath"/>
+</SeedNPCs> 
 <placeWidget x="5" y="3" name="DAMAGE" value="20"/>
 </mapgen>
 </layout>
@@ -55,8 +49,6 @@
 <row>00000000</row>
 <pairedportal x="2" y="1" sprite="1" ID="-101" destination="heavy" facing="4"> ship hatch </pairedportal>
 <pairedportal x="5" y="1" sprite="1" ID="-102" destination="heavy" facing="4"> ship hatch </pairedportal>
-<SeedNPCs min="1" max="1" name="AlphaMinoris_II/robosphere">
-<script death="hauntedValleyBotDeath"/>
-</SeedNPCs> 
+
 </exterior>
 </Ship>
