@@ -407,6 +407,15 @@ public class Player extends Actor
 		Item slotitem=playerInventory.m_slots[slot];
 		if (slotitem!=null)
 		{
+			if (ItemEquip.class.isInstance(slotitem))
+			{
+				ItemEquip Eitem=(ItemEquip)playerInventory.m_slots[slot].getItem();
+				if (Eitem.getModifier()!=null)
+				{
+					actorRPG.RemoveModifier(Eitem.getModifier());			
+				}
+
+			}
 			playerInventory.m_weight-=slotitem.getWeight();
 		}
 		if (ItemEquip.class.isInstance(item))
@@ -439,7 +448,7 @@ public class Player extends Actor
 			}
 
 		}
-
+		
 		Item r_item=playerInventory.m_slots[slot];
 		playerInventory.m_slots[slot]=null;	
 		playerInventory.m_weight-=item.getWeight();
