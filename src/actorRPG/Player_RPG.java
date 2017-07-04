@@ -440,6 +440,7 @@ public class Player_RPG implements Actor_RPG {
 			}	
 		}
 
+		statusEffectHandler.reApplyStatuses(this);
 		((Player)actor).reCalc();
 	}
 	public void addEXP(int value)

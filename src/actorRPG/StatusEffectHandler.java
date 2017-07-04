@@ -94,6 +94,14 @@ public class StatusEffectHandler {
 		return statusEffects;
 	}
 	
+	public void reApplyStatuses(Actor_RPG subject)
+	{
+		for (int i=0;i<statusEffects.size();i++)
+		{
+			statusEffects.get(i).apply(subject);
+		}
+	}
+	
 	public boolean applyStatus(StatusEffect effect, boolean replace,Actor_RPG subject)
 	{
 		boolean r=false;
