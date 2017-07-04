@@ -334,6 +334,15 @@ public class Player extends Actor {
 	public Item Equip(int slot, Item item) {
 		Item slotitem = playerInventory.m_slots[slot];
 		if (slotitem != null) {
+			if (ItemEquip.class.isInstance(slotitem))
+			{
+				ItemEquip Eitem=(ItemEquip)playerInventory.m_slots[slot].getItem();
+				if (Eitem.getModifier()!=null)
+				{
+					actorRPG.RemoveModifier(Eitem.getModifier());			
+				}
+
+			}
 			playerInventory.m_weight -= slotitem.getWeight();
 		}
 		if (ItemEquip.class.isInstance(item)) {
