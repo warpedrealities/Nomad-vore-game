@@ -27,7 +27,7 @@
 <text>the robosphere sears TARGET with its laser for VALUE damage</text>
 </hitText>
 </combatMove>
-	<combatMove name="forcefield" timeCost="2" icon="2" pattern="SELF">
+<combatMove name="forcefield" timeCost="2" bonusAttribute="RANGED" icon="2" pattern="SELF">
 		<hitText count="1">
 			<text></text>
 		</hitText>
@@ -41,7 +41,7 @@
 			</statusDefence>
 		</effectStatus>
 		<energySource value="accessory" />
-	</combatMove>
+</combatMove>
 <statusTags count="2">
 <tag>radio</tag>
 <tag>seduction</tag>

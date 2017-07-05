@@ -211,7 +211,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=0;
+		playerExperience=00;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -277,7 +277,7 @@ public class Player_RPG implements Actor_RPG {
 	
 	public void sleep(int duration)
 	{
-		stats[SATIATION]-=subAbilities[METABOLISM];
+		stats[SATIATION]-=subAbilities[METABOLISM]*duration;
 		
 		if (stats[SATIATION]<=0)
 		{
