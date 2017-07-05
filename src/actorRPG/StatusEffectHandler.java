@@ -180,6 +180,10 @@ public class StatusEffectHandler {
 			Status_Bind sb=(Status_Bind)statusEffects.get(bindState);
 			if (sb.struggle(roll,actor.getName()))
 			{
+				if (sb.isOriginDependent() && sb.getOrigin()!=null)
+				{
+					sb.getOrigin().addBusy(2);
+				}
 				sb.remove(rpg);
 				statusEffects.remove(sb);
 			}		

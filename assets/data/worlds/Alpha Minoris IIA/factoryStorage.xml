@@ -57,8 +57,8 @@ The halls are gloomy and twist about, guttering light fixtures the only illumina
 <npcType value="Alpha_Minoris_IIA/synth"/>
 </blockDungeon>
 </partition>
-<SeedNPCs min="4" max="8" name="Alpha_Minoris_IIA/dungeonrobot"> </SeedNPCs>
-<SeedNPCs min="4" max="8" name="Alpha_Minoris_IIA/synth"> </SeedNPCs>
+<SeedNPCs min="6" max="12" name="Alpha_Minoris_IIA/dungeonrobot"> </SeedNPCs>
+<SeedNPCs min="6" max="12" name="Alpha_Minoris_IIA/synth"> </SeedNPCs>
 </mapgen>
 
 </zone>

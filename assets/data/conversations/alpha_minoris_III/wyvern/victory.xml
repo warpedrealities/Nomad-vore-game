@@ -34,9 +34,38 @@
 	
 	<page ID="oralvore2">
 	<text>
+	You can't believe your predicament as you're squeezed steadily into the wyvern's tight belly, the critter steadily becoming immobilized as it packs you away in its belly. But it probably isn't in a hurry to go anywhere, you on the other hand seem set to plunge entirely down the lizard's throat as the slender critter rocks its head back and forth and chugs down your legs. Your outline showing tightly defined in the stretched flesh of the lizard's gut, its scales and skin thinning enough to show shadows of your shape as you're squeezed and packed away inside until finally the lizard snaps its jaws shut past your feet. The lizard's hiss giving way to a delighted trill as the winged reptile rests atop the immobilizing beachball sized bulging mass you make in its gut.
+	</text>
+	<choice destination="oralvoreSubmit" text="i hate to think what it'd do to me if i tried to get out, being digested doesn't seem that bad"/>
+	<choice destination="oralvoreStruggle" text="like hell am i sticking around to let this impudent winged beasty gurgle me away"/>
+	</page>
+	
+	<check ID="oralvoreStruggle">
+	<test what="STRUGGLE" DC="15" />
+	<outcome destination="oralvoreStruggleEscape" />
+	<outcome destination="oralvoreStruggleDigest" />
+	</check>
+	
+	<page ID="oralvoreStruggleEscape">
+	<text>
+	You don't stick around to be savoured and digested by the lizard and start shoving your hands back up the creature's tight throat.
 	
 	</text>
 	
+	</page>
+	
+	<page ID="oralvoreStruggleDigest">
+	<text>
+	
+	
+	</text>
+	
+	</page>
+	
+	<page Id="oralvoreSubmit">
+	<text>
+	
+	</text>
 	</page>
 	
 </Conversation>
