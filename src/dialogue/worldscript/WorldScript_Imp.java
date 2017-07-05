@@ -23,10 +23,9 @@ public class WorldScript_Imp implements WorldScript {
 	
 	@Override
 	public void initialize(String scriptName) {
-		// TODO Auto-generated method stub
 		globals= JsePlatform.standardGlobals();
 		try {
-			LuaValue script = globals.load(new FileReader("assets/data/conversations/worldScripts/" +scriptName + ".lua"), "main.lua");
+			script = globals.load(new FileReader("assets/data/conversations/worldScripts/" +scriptName + ".lua"), "main.lua");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -36,6 +35,7 @@ public class WorldScript_Imp implements WorldScript {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
+		script.call();
 		LuaValue mainFunc = globals.get("main");
 		LuaValue luaEntity=CoerceJavaToLua.coerce(entity);
 		mainFunc.call(luaEntity);		

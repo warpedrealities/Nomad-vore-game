@@ -40,7 +40,6 @@ public class Inventory {
 		m_items=new ArrayList<Item>();
 		m_weight=0;
 		m_capacity=capacity;
-		
 		m_slots=new Item[5];
 		
 	}

@@ -28,6 +28,10 @@ public class FlagField {
 	
 	public void incrementFlag(String flagname)
 	{
+		if (flagMap.get(flagname)==null)
+		{
+			flagMap.put(flagname, 0);
+		}
 		flagMap.put(flagname, flagMap.get(flagname)+1);
 	}
 	

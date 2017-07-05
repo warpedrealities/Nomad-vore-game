@@ -24,7 +24,6 @@ public class WidgetDamage extends Widget {
 	
 	public WidgetDamage(DataInputStream dstream) throws IOException
 	{
-		damageValue=dstream.readInt();
 		isWalkable=true;
 		isVisionBlocking=false;
 		widgetSpriteNumber=24;

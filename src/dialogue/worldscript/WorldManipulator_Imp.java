@@ -36,8 +36,8 @@ public class WorldManipulator_Imp implements WorldManipulator {
 		for (int i=0;i<landings.size();i++)
 		{
 			if (landings.get(i).getShip().getName().equals(shipName) && 
-				landings.get(i).getPosition().x==x && 
-				landings.get(i).getPosition().y==y)
+				landings.get(i).getX()==x && 
+				landings.get(i).getY()==y)
 			{
 				landings.get(i).getShip().setUnusableState(null);
 				break;

@@ -52,7 +52,7 @@
 <floodfill tile="1"/>
 <placeWidget x="3" y="25" name="SPRITE" width="10" height="5" file="rubble"/>
 <SeedNPCs min="3" max="3" name="AlphaMinoris_II/robosphere">
-<script death="hauntedValleyBotDeath"/>
+<script death="robotdefeat"/>
 </SeedNPCs> 
 <SeedNPCs min="3" max="3" name="minoris2_elves/worker">
 <script spawn="hauntedValleyElves"/>
