@@ -55,7 +55,7 @@
 	</text>
 	<choice destination="cockvore0" text="you're right, who am i to question, maybe i need another welcome to really get it"/>
 	<choice destination="question2" text="Well it's not the only type of greeting right? what else can you do with that thing"/>
-	<choic destination="question1" text="I think you're just trying to trick me so you can turn me into your cum"/>
+	<choice destination="question1" text="I think you're just trying to trick me so you can turn me into your cum"/>
 	<choice destination="insult" text="I think you're just lying to get me as your cum, and i'm not falling for it"/>
 	</page>
 	

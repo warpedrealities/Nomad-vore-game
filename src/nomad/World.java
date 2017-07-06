@@ -467,6 +467,8 @@ public class World extends Entity {
 		}
 		count=count+1;
 	
+		dstream.close();
+		fstream.close();
 	}
 
 	@Override

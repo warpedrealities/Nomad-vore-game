@@ -177,5 +177,7 @@ public class StarSystem {
 				}
 			}
 		}
+		dstream.close();
+		fstream.close();
 	}
 }

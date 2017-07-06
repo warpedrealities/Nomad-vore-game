@@ -331,6 +331,9 @@ public class Station extends Entity {
 				dockedShips[i].load(dstream);
 			}
 		}
+		
+		dstream.close();
+		fstream.close();
 
 	}
 	@Override

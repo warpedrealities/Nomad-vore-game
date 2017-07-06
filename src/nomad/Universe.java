@@ -434,6 +434,7 @@ public class Universe extends GameManager
 	
 	private void versionShift(String filename) throws IOException
 	{
+		saveName=null;
 		if (uidGenerator==null)
 		{
 			uidGenerator=new UIDGenerator();
@@ -526,7 +527,8 @@ public class Universe extends GameManager
 		int version=dstream.readInt();
 		if (versionCheck(version))
 		{
-			versionShift(filename);			
+			versionShift(filename);	
+			dstream.close();
 			return;
 		}
 		//now load time
@@ -583,7 +585,8 @@ public class Universe extends GameManager
 		
 		CompanionTool.loadCompanions(player, currentZone);
 		
-		
+		dstream.close();
+		fstream.close();
 	}
 
 	public Zone getCurrentZone() {
