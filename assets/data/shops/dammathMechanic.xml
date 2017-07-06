@@ -9,6 +9,6 @@
 <inventoryitem name="battery" probability="50" quantity="1" cost="200"/>
 <inventoryitem name="heavy plate" probability="50" quantity="1" cost="200"/>
 <inventoryitem name="computation valve" probability="50" quantity="1" cost="200"/>
-<inventoryitem name="optics probability="50" quantity="1" cost="400"/>
-<inventoryitem name="optics probability="25" quantity="2" cost="400"/>
+<inventoryitem name="optics probability" probability="50" quantity="1" cost="400"/>
+<inventoryitem name="optics probability" probability="25" quantity="2" cost="400"/>
 </shop>
