@@ -83,7 +83,7 @@ public class Widget_Trap extends Widget {
 	public boolean Interact(Player player) {
 		if (discovered) {
 			int r = Universe.m_random.nextInt(20)
-					+ Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.SECURITY);
+					+ Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.TECH);
 			if (r > DC) {
 				ViewScene.m_interface.DrawText("you have disarmed a trap");
 				ViewScene.m_interface.RemoveWidget(this);

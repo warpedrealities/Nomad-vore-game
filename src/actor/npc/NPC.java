@@ -694,7 +694,7 @@ public class NPC extends Actor implements Controllable {
 	@Override
 	public boolean isBlocking() {
 
-		if (isCompanion == true) {
+		if (isCompanion == true||RPGHandler.getActive()) {
 			return false;
 		}
 		return true;

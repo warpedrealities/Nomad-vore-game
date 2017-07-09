@@ -17,6 +17,77 @@
 		</choice>
 	</page>
 	
+	<page ID="cockvore0">
+	<text>
+	The creature lands in a flurry of wings over your feet, covering them with those broad leathery expanses. With them hidden from view you can't see what depraved dominance rituals its performing upon your feet, but you can feel the rubbing of warm flesh against your feet and calves. The creature clearly lost in animalistic lust as it rubs its firming and remarkably large shaft against your feet and presses the stretchy shape of its sack against your toes. But despite its foolish perversions the lizard reacts harshly when you attempt to squirm your legs out and away, snapping at your legs with its sharp teeth warningly..then seems to chirp as an idea occurs to it and it hops backwards, afore thrusting forwards. And now its depravity sinks to a deeper depth as its hot and musky prick engulfs your toes and slides up around your feet. This expression of dominance and lust seems to be taking a far stickier and worrysome path.
+	</text>
+	<choice destination="cockvore1" text="damnable lizard"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	The little wyvern continues to exert its depravity and dominance over you. Its thrusting hips shoving its stretchy shaft up around your calves, tightly binding your legs together in the tightness of that throbbing musky tunnel. Your efforts to maybe pull back only resulting in further snapping, hissing and general all around disagreeable harshness from the wyvern. Despite the difference in size it seems to be having little trouble sliding more of your legs into its length and swelling its sack with the shape of your feet feeding on inside there. The hot cum squishing around your toes as your legs are steadily being consumed in this perverse fashion by the little wyvern.
+	</text>
+	<choice destination="cockvore2" text="why is it even things this small can eat me in lewd ways? groan"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	The wyvern chirrs as it ignores your protests, shoving its perverse length steadily up over your body to claim your thighs and ass. The wyvern's hindquarters rising up off the ground as your legs are forced to curl packed away in the depths of its sack. The gooey cum oozing over your lower half as it stretches out that sack remarkably, the shape of your legs rather visible down there. Despite the lack of leverage the wyvern seems to not be having trouble, unable to scrabble forwards it chirrs and rubs its length with its stubby wingclaws. That shaft proving adept at schlorping in that immense cockmeal you seem to be now, slowly creeping up over your upper body towards your head and chest. More of you getting crammed inside that sack every few seconds. 
+	</text>
+	<choice destination="cockvore3" text="why is its cock so powerful"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	The wyvern topples backwards on the pivot point of its sack as your upper body steadily vanishes into its loins. Your arms and head the last to disappear into the reptile's cock with a schlurp. You can hear the lizard chirring over the sound of the squelching cum as you're packed away in its loins. That sack now stretched tight and form fitting around your curled up form, shadows of your shape visible through the taut skin of its scrotum as it chirrs blissfully and settles in proudly atop the mass.
+	</text>
+	<choice destination="cockvoreStruggle" text="maybe if i pleasure it it'll let me go?"/>
+	<choice destination="cockvoreSubmit" text="it's so sticky and creamy in here, sticking around to get stickier and creamier sounds fun"/>
+	</page>
+	
+	<check ID="cockvoreStruggle">
+	<test what="PLEASURE" DC="15" />
+	<outcome destination="cockvoreStruggleEscape" />
+	<outcome destination="cockvoreStruggleDigest" />
+	</check>
+	
+	<page ID="cockvoreStruggleEscape">
+	<text>
+	You set about rubbing the inside of the wyvern's stretched sack, doing the best you can in the tight confines to get the lizard off without it needing to turn  you into nutbutter. Your efforts starting to take effect as the critter chirrs and kneads at the bulges of your shape under its feet. The wyvern's cum soaks every inch of you, tingling in a stimulating fashion as you arouse the reptile and feel it shift to stroke at its erection vigorously. It seems to be working as you hear the convulsive chirps of the lizard until finally...finally it cums, the wyvern shuddering in bliss and ejaculating. The lizard's sack snugging around you, in the aftermath it seems the wyvern is willing to let you out. It doesn't resist as you push up through its shaft out into the open air, sticky and being licked by the wyvern. Well that worked. 
+	</text>
+		<special effect="nonhostile" />
+		<effect type="heal" value="0.1" />	
+		<special effect="healnpc" />
+		<choice destination="end" text="carry on"/>
+	</page>
+	
+	<page ID="cockvoreStruggleDigest">
+	<text>
+	You set about rubbing the inside of the wyvern's stretched sack, doing the best you can in the tight confines to get the lizard off without it needing to turn  you into nutbutter. Your efforts starting to take effect as the critter chirrs and kneads at the bulges of your shape under its feet. The wyvern's cum soaks every inch of you, tingling in a stimulating fashion that makes you shudder and moan. It feels pretty awesome and seemingly momentarily distracts you from your efforts inside the glorping and burbling sack of the wyvern. But you redouble your efforts after only a short spell of convulsive delight, feeling the wyvern stroking itself as you pleasure it from within..
+	</text>
+	<choice destination="cockvoreStruggleDigest" text="wait how long have i been in here?"/>
+	</page>
+	
+	<gameover ID="cockvoreStruggleGO">
+	<text>
+	You stroke against the inside of the wyvern's sack, moving with the rthythmic pressures of the lizard's balls to further and further stimulate it. Won't be long now now, you can feel the wyvern's orgasm coming soon. You can feel it, a hot liquid pressure running through you. Any moment..now... the wyvern lets out a shuddering squeel of delight and thrashes around, its now roundened balls contracting and its cock spasming to splatter hot jizz across the ground. Your soft and sloshy form no match for the lizard's arousal, squished down into thick goo inside the naughty reptile's sack. In gushing pulses of reptilian seed you are ejaculated out all over the ground. The wyvern indeed was pleasured enough to let you back out, but you stayed in there a smidge too long it seems.
+	</text>
+	</gameover>
+	
+	<page Id="cockvoreSubmit">
+	<text>
+	You hear the wyvern chirring in triumph and satisfaction somewhere above you. Your tightly bound form stretching out the lizard's sack massively so that the wyvern's hindquarters are resting lifted high up off of the ground. The indignity is real, but..the confines are sensually sticky and warm and attempting to get back seems like an awful lot of work and the wyvern might bite you again..and in here it's hardly painful, far from painful.`You let the hot cum soak into your flesh as you stew inside the shapely sack and tensing pressure of the sack walls around you.
+	</text>
+	<choice destination="cockvoreSubmitGO" text="time to melt"/>
+	</page>
+	
+	<gameover ID="cockvoreSubmitGO">
+	<text>
+	The wyvern chirrs feeling its cockfood submit, stroking its shaft idly with its wingclaws and letting out little chirps when a particularly exquisite gurgle rocks through its sack. The shape in its balls starts off well defined, every contour and bulge and curve of your form visible in the tautly stretched sack skin. But as time passes so do does this state of affairs, your contours and outline softening, yielding, rounding out. The wyvern's blorping sack having to work over time to melt such a big and satisfying meal down into gallons of nutbutters. As you melt more and more the wyvern's decadent masturbation becomes more vigorous, then more vigorous still. The lizard jacking off and chirping and hissing with need as you become a heavy needy mass of cum inside its sack. The creature working desperately to reach the climax your insistent pressure urges it towards..until finally, release. The wyvern letting out blissful noises as it climaxes a continous stream of cum onto the ground beneath it. Your remnants forming a hot sticky puddle into which the dazed and satisfied wyvern collapses when its orgasm is spent.
+	</text>
+	</gameover>
+	
 	<page ID="oralvore0">
 	<!-- eat hand first, not hands first, hand first-->
 	<text>
@@ -48,24 +119,32 @@
 	
 	<page ID="oralvoreStruggleEscape">
 	<text>
-	You don't stick around to be savoured and digested by the lizard and start shoving your hands back up the creature's tight throat.
-	
+	You don't stick around to be savoured and digested by the lizard and start shoving your hands back up the creature's tight throat. The vicious lizard now in much distress as you force your way out of the squeezing slenderness of its flight adapted form. The wyvern thrashing and squirming around hissing as you force your hands up its neck and grasp its jaws. Your hands prying them back in a way that's painful for the wyvern but very useful for you not being lacerated by those vicious teeth. The wyvern letting out whimpering gagging noises now as you worm up and out, keeping its jaws clear until you wriggle entirely out of it. The wyvern looking profoundly sorry for itself behind you, sprawled and whimpering. All parts of the lizard hard used.
 	</text>
-	
+	<effect type="heal" value="0.1" />
+	<effect type="stunnpc" value="10" />
+	<choice destination="end" text="get clear" />
 	</page>
 	
 	<page ID="oralvoreStruggleDigest">
 	<text>
-	
-	
+	You don't plan to stick around to be savoured and digested by the lizard and start shoving your hands back up the creature's tight throat. The vicious lizard now in much distress as you force your way out of the squeezing slenderness of its flight adapted form. The wyvern thrashing and squirming around hissing as you force your hands up its neck and grasp its jaws.Those jaws snapping down harshly making you yelp and flinch as its teeth dig into your palms. The wyvern taking a swallow as you flinch your arms back from its teeth, your progress out of the creature's throat thwarted. You try several more times, but never make it as far as you did before. The wyvern becoming wise to your antics and your body tiring. Inevitably you are back where you were before you started trying to escape, curled up in the belly of the wyvern and feeling it prod angrily at its gut with its nose to try and chide you for being an unruly meal. There's no getting out now.
 	</text>
-	
+	<choice destination="oralvoreGO" text="no escape..."/>
 	</page>
-	
+		
 	<page Id="oralvoreSubmit">
 	<text>
-	
+	A good prey knows when they're beaten. and besides, there's no way you could get back out of this tight belly. It was hard enough for you to end up down here with the wyvern doing the work, you doubt from your current predicament you can make much headway. The wyvern chirrs triumphantly, resting immobilized atop the lumpy beanbag of sharply contoured bulges that is its gut. The creature's stomach starting to gurgle you away. 
 	</text>
+	<choice destination="oralvoreGO" text="naught to do but digest now"/>
 	</page>
+	
+	<gameover ID="oralvoreGO">
+	<text>
+	The wyvern chirrs and chirps in delight as it settles atop its belly and your weakly squirming form begins to digest away. The enzymes and vigorous internal processes of the reptile working you over steadily despite your bulk in comparison to the size of the predator. The distinct bulges in that massively stretched and distended gut slowly fading away as you're gurgled into a softening indistinct mass. The lizard's gut round now, and slowly it diminishes and shrinks away as your fluid form is absorbed. That gut turning compact then finally vanishing away leaving naught but chirring satisfaction as you're utterly digested.
+	</text>
+	</gameover>
+
 	
 </Conversation>

@@ -17,9 +17,9 @@ public class ThrownWeaponHandler {
 		Tile t = zone.getTile((int) position.x, (int) position.y);
 		if (t.getWidgetObject() != null && WidgetItemPile.class.isInstance(t.getWidgetObject())) {
 			WidgetItemPile pile = (WidgetItemPile) t.getWidgetObject();
-			pile.AddItem(weapon);
+			pile.AddItem(weapon.getItem());
 		} else if (t.getDefinition().getMovement() == TileMovement.WALK) {
-			WidgetItemPile pile = new WidgetItemPile(2, "a pile of items containing ", weapon);
+			WidgetItemPile pile = new WidgetItemPile(2, "a pile of items containing ", weapon.getItem());
 			ViewScene.m_interface.placeWidget(pile, (int) position.x, (int) position.y, false);
 		}
 	}

@@ -5,5 +5,6 @@
 <World x="10" y="10">Alpha Minoris II</World>
 <World x="-8" y="18">Alpha Minoris III</World>
 <Station x="13" y="11">Space Hulk 0</Station>
-<Spaceship x="2" y="2" file="avenger"/>
+<Spaceship x="2" y="2" file="shuttlecomplete"/>
+<Spaceship x="3" y="3" file="avenger"/>
 </System>

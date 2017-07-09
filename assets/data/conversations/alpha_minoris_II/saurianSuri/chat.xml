@@ -343,9 +343,6 @@
 			<mutation part="scales" variable="covering" set="3" />
 
 		</special>
-		<effect type="setfactionflag" flag="allegiance" value="1" />
-		<effect type="manipulatefactionflag" faction="minyos" flag="allegiance"
-			value="-1" />
 		<effect type="manipulateDisposition" faction="minyos" value="-25" />
 		<effect type="modfactiondisposition" value="25" />
 		<!--all but face and back scales, also grows tail -->

@@ -223,7 +223,9 @@ public class Player extends Actor {
 		if (actor != null && NPC.class.isInstance(actor)) {
 			if (actor.isBlocking() == false) {
 				actor.setPosition(new Vec2f(actorPosition.x, actorPosition.y));
+				collisionInterface.getTile((int) p.x, (int) p.y).setActorInTile(null);	
 				b = super.move(direction);
+				collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(actor);
 			} else {
 				NPC npc = (NPC) actor;
 				if (npc.isHostile(actorFaction.getFilename()) && npc.getAttackable()) {
@@ -433,6 +435,7 @@ public class Player extends Actor {
 		DataOutputStream dstream = new DataOutputStream(fstream);
 		SavePlayer(dstream);
 		dstream.close();
+		fstream.close();
 
 	}
 
@@ -540,6 +543,9 @@ public class Player extends Actor {
 		DataInputStream dstream = new DataInputStream(fstream);
 		Load(dstream);
 		actorDescription = "This, is you.";
+		
+		dstream.close();
+		fstream.close();
 
 	}
 

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<widgetcontainer sprite="19" name="cargo container" health="20" capacity="200">
+<contains minimum="2" maximum="4">scrap metal</contains>
+<description>metal cargo box. used for securing loose items on board a ship.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+</widgetcontainer>

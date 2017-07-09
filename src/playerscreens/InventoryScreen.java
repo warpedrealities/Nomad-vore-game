@@ -36,6 +36,7 @@ import org.lwjgl.glfw.GLFW;
 
 import actor.player.Inventory;
 import actor.player.Player;
+import actorRPG.Actor_RPG;
 import actorRPG.Player_RPG;
 
 import shared.Callback;
@@ -322,7 +323,16 @@ public class InventoryScreen extends Screen implements Callback {
 			{
 				ItemBlueprintInstance ibi=(ItemBlueprintInstance)item;
 				m_player.getCraftingLibrary().unlockRecipe(ibi.getRecipe());
-				ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "+ibi.getRecipe());
+				if (m_player.getCraftingLibrary().getRecipe(ibi.getRecipe()).getRequiredSkill()>m_player.getRPG().getAttribute(Actor_RPG.TECH))
+				{
+					ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "
+							+ibi.getRecipe()+" but you lack the skill to craft this currently");		
+				}
+				else
+				{
+					ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "+ibi.getRecipe());
+				}
+
 				m_player.setBusy(2);
 				m_dropdown.setVisible(false);			
 			}

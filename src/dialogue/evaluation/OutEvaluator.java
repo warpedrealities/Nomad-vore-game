@@ -1,4 +1,4 @@
-package dialogue;
+package dialogue.evaluation;
 
 import java.io.FileReader;
 
@@ -15,6 +15,7 @@ import actor.npc.NPC;
 import actor.player.Player;
 import actorRPG.Player_RPG;
 import actorRPG.RPG_Helper;
+import dialogue.MalformedDialogException;
 import nomad.Universe;
 import perks.PerkInstance;
 import perks.PerkQualifier;
@@ -48,6 +49,18 @@ public class OutEvaluator {
 				return false;
 			}
 
+		}
+		if (eval.equals("looksLike"))
+		{
+			AppearanceEvaluator evaluator=new AppearanceEvaluator(m_player.getLook());
+			if (evaluator.check(E.getAttribute("likeness")))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		if (eval.equals("companionSlotFree")) {
 			if (m_player.isFreeCompanion()) {

@@ -83,7 +83,11 @@ public class Effect_Damage extends Effect {
 			bonus=origin.getRPG().getAbilityMod(modifierAbility);
 		}
 		//roll damage
-		int damage=Universe.m_random.nextInt(maxValue-minValue)+minValue;
+		int damage=minValue;
+		if (maxValue>minValue)
+		{
+			damage+=Universe.m_random.nextInt(maxValue-minValue);
+		}
 		if (critical)
 		{
 			damage++;

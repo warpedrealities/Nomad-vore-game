@@ -8,10 +8,13 @@
 		<choice destination="remove" text="do it" />
 		<choice destination="end" text="not now" />
 	</page>
+	
 	<page ID="remove">
+		<condition evaluate="PLAYERATTRIBUTE" operator="lessthan"
+			value="4" attribute="TECH" />	
 		<text>
 			You take the time to analyse the device so you can reproduce the reactor
-			later then, levered it out of its mountings and can now take it with
+			later on. But you realize you lack the skill to reproduce it currently. Nonetheless you lever the reactor you do have out of its mountings and can now take it with
 			you
 		</text>
 		<special effect="blueprint" ID="interplanetary reactor" />
@@ -19,4 +22,17 @@
 		<special effect="destroywidget" />
 		<choice destination="end" text="got what i came for" />
 	</page>
+	
+	<page ID="remove">
+		<text>
+			You take the time to analyse the device so you can reproduce the reactor
+			later on, levered it out of its mountings and can now take it with
+			you
+		</text>
+		<special effect="blueprint" ID="interplanetary reactor" />
+		<effect type="giveitem" value="1" item="interplanetary reactor" />
+		<special effect="destroywidget" />
+		<choice destination="end" text="got what i came for" />
+	</page>	
+	
 </Conversation>

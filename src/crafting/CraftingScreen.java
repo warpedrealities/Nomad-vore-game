@@ -267,7 +267,7 @@ public class CraftingScreen extends Screen implements Callback {
 	}
 
 	private void generate() {
-		int skill = player.getRPG().getAttribute(Actor_RPG.CRAFTS);
+		int skill = player.getRPG().getAttribute(Actor_RPG.TECH);
 		// select all craftables that are unlocked and the player has crafting
 		// skill for
 		Collection<CraftingRecipe> list = craftingLibrary.getCraftables();

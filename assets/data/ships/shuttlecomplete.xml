@@ -58,7 +58,7 @@
 </placeWidget>
 
 <placeWidget x="3" y="1" name="slot">
-<contains name="specimenContainment"/>
+<contains name="craftingtable"/>
 </placeWidget>
 </mapgen>
 </layout>

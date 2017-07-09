@@ -67,7 +67,7 @@ public class WidgetDoor extends WidgetBreakable {
 			}
 
 			// attempt to pick the lock
-			int roll = GameManager.m_random.nextInt(20) + player.getRPG().getAttribute(Actor_RPG.SECURITY);
+			int roll = GameManager.m_random.nextInt(20) + player.getRPG().getAttribute(Actor_RPG.TECH);
 			player.addBusy(10);
 			ViewScene.m_interface.DrawText("you attempt to pick the lock");
 			if (roll >= lockStrength) {

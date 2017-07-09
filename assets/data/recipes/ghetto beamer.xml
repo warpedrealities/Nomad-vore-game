@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="ghetto beamer" requiredskill="1" startunlocked="true">
+<recipe name="ghetto beamer" requiredskill="4" startunlocked="true">
 <description>
 An improvised heavy beam weapon built out of suitable components found in the field
 </description>

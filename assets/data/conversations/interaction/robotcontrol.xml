@@ -34,7 +34,7 @@
 
 	<page ID="hack">
 		<condition evaluate="PLAYERATTRIBUTE" operator="greaterthan"
-			value="1" attribute="SCIENCE" />
+			value="1" attribute="TECH" />
 		<text>
 			$%4W4171NG C0MM4ND%$ LBREAK
 			You manage to decipher the rudiments of the interface and can attempt to
@@ -46,7 +46,7 @@
 	</page>
 
 	<check ID="check">
-		<test what="SCIENCE" DC="12" />
+		<test what="TECH" DC="12" />
 		<outcome destination="checksucceed" />
 		<outcome destination="checkfail" />
 	</check>
@@ -75,7 +75,7 @@
 
 	<page ID="hack">
 		<condition evaluate="PLAYERATTRIBUTE" operator="lessthan"
-			value="1" attribute="SCIENCE" />
+			value="1" attribute="TECH" />
 		<text>
 			$%UNW4NT3D F1L3 3RR0R%$ LBREAK
 			Your knowledge is inadequate for the task and you cannot make sense of

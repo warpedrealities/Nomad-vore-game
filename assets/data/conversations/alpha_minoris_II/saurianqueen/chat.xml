@@ -129,7 +129,7 @@
 		<condition operator="greaterthan" evaluate="FACTIONFLAG"
 			flag="friendship" value="1" />
 		<text>
-			"Your deeds are known to me. Surely you are worthy now of this honour I
+			"Your deeds are known to me. <conditional><assertion evaluate="looksLike" likeness="saurian"/>And your appearance akin to one of us pleases me.</conditional>  Surely you are worthy now of this honour I
 			bestow. Are you sure this is your wish? that I proclaim you a knight
 			of Dammath?"
 		</text>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="cargocontainer" requiredskill="0" startunlocked="true">
+<description>
+A versatile crafting table containing the tools required to convert many useless things into useful things
+</description>
+<ingredient item="scrap metal" quantity="12"/>
+<result item="crafting table"/>
+</recipe>

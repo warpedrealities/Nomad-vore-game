@@ -50,6 +50,26 @@
 </placeWidget>
 <placeWidget x="1" y="2" name="slot"/>
 <placeWidget x="5" y="2" name="slot"/>
+<placeItem x="2" y="2">
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+</placeItem>
+<placeItem x="4" y="4">
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+</placeItem>
+<placeItem x="2" y="6">
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+</placeItem>
+<placeItem x="3" y="1">
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+</placeItem>
 </mapgen>
 </layout>
 <exterior width="6">

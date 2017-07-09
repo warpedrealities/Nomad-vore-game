@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="simple reactor" requiredskill="0" startunlocked="true">
+<recipe name="simple reactor" requiredskill="2" startunlocked="true">
 <description>
 A simple reactor based on earth technology and built using alien materials.
 </description>

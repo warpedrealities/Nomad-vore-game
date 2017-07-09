@@ -69,6 +69,11 @@ public class CraftingLibrary {
 
 	}
 
+	public CraftingRecipe getRecipe(String name)
+	{
+		return craftables.get(name);
+	}
+	
 	public Collection<CraftingRecipe> getCraftables() {
 		return craftables.values();
 	}

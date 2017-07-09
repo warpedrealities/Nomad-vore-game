@@ -25,9 +25,9 @@ import actorRPG.RPG_Helper;
 
 public class WidgetContainer extends WidgetBreakable {
 
-	public final static int MAXWEIGHT = 100;
-	ArrayList<Item> containedItems;
-	float containedWeight;
+	private int maxWeight = 100;
+	private ArrayList<Item> containedItems;
+	private float containedWeight;
 
 	public WidgetContainer(int sprite, String description, String name, Item[] contains, int hp, int[] resistances) {
 		super(sprite, description, name, contains, hp, resistances);
@@ -80,7 +80,7 @@ public class WidgetContainer extends WidgetBreakable {
 				return true;
 			}
 		}
-		if (item.getWeight() + containedWeight > MAXWEIGHT) {
+		if (item.getWeight() + containedWeight > maxWeight) {
 			return false;
 		} else {
 			if (stack(item) == false) {
@@ -206,7 +206,7 @@ public class WidgetContainer extends WidgetBreakable {
 		} else {
 			dstream.writeInt(0);
 		}
-
+		dstream.writeInt(maxWeight);
 	}
 
 	public WidgetContainer(DataInputStream dstream) throws IOException {
@@ -220,12 +220,17 @@ public class WidgetContainer extends WidgetBreakable {
 				containedItems.add(Universe.getInstance().getLibrary().getItem(dstream));
 			}
 		}
+		maxWeight=dstream.readInt();
 		CalcWeight();
 
 	}
 
 	public WidgetContainer(Element node) {
 		super(node);
+		if (node.getAttribute("capacity").length()>0)
+		{
+			maxWeight=Integer.parseInt(node.getAttribute("capacity"));
+		}
 	}
 
 	public void addItems(ArrayList<Item> generateLoot) {

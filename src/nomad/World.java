@@ -433,6 +433,7 @@ public class World extends Entity {
 				dstream.writeInt(0);
 			}
 			dstream.close();
+			fstream.close();
 			
 		}
 	}

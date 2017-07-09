@@ -13,8 +13,6 @@
 			text="$I think victory is worth celebrating with a good cockmeal">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
-
-	</choice>
 		<choice destination="end"
 			text="$actually, it isn't. I don't intend to do anything to you" />
 	</page>

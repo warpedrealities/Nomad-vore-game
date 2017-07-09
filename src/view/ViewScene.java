@@ -545,13 +545,13 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 
 		sceneController.getActiveZone().viewInterface = this;
 		Vec2f v = sceneController.getActiveZone().getPortal(id);
-		// m_zone.ShipLink();
+		sceneController.getUniverse().player.setPosition(new Vec2f(v.x, v.y));
 		// add player if player isnt already added
 		sceneController.getActiveZone().AddPlayer(sceneController.getUniverse().player);
 		// place player at coordinates
 		// m_handler.setZone(sceneController.getActiveZone());
 
-		sceneController.getUniverse().player.setPosition(new Vec2f(v.x, v.y));
+
 		// run vision algorithm
 		sceneController.getActiveZone().RegenZone();
 		CompanionTool.moveCompanions(sceneController.getUniverse().getPlayer(), sceneController.getActiveZone());

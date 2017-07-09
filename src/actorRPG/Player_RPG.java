@@ -194,9 +194,9 @@ public class Player_RPG implements Actor_RPG {
 		abilities=new int[6];
 		stats=new float[4];
 		statMax=new int[4];
-		attributes=new int[23];
-		subAbilities=new float[5];
-		for (int i=0;i<22;i++)
+		attributes=new int[21];
+		subAbilities=new float[6];
+		for (int i=0;i<21;i++)
 		{
 			attributes[i]=0;
 		}
@@ -220,12 +220,12 @@ public class Player_RPG implements Actor_RPG {
 		Calcstats();
 		SetInitialValues();
 		karmaMeter=50.0F;
-		subAbilities[MOVEAPCOST]=0;
+
 	}
 	
 	private void defaultStats()
 	{
-		for (int i=0;i<22;i++)
+		for (int i=0;i<21;i++)
 		{
 			attributes[i]=0;
 		}
@@ -239,7 +239,8 @@ public class Player_RPG implements Actor_RPG {
 		subAbilities[REGENERATION]=0.05F;
 		subAbilities[REGENTHRESHOLD]=0.5F;
 		subAbilities[MOVECOST]=1.0F;
-		
+		subAbilities[MOVEAPCOST]=0;	
+		subAbilities[CARRY]=8.0F;
 		quickAction=null;
 	}
 	
@@ -411,9 +412,7 @@ public class Player_RPG implements Actor_RPG {
 		attributes[WILLPOWER]=getAbilityMod(INTELLIGENCE);
 		attributes[SCIENCE]=getAbilityMod(INTELLIGENCE);
 		attributes[WILLPOWER]=getAbilityMod(INTELLIGENCE);
-		attributes[REPAIR]=getAbilityMod(INTELLIGENCE);
-		attributes[CRAFTS]=getAbilityMod(INTELLIGENCE);
-		attributes[SECURITY]=getAbilityMod(DEXTERITY);
+		attributes[TECH]=getAbilityMod(INTELLIGENCE);
 		attributes[LEADERSHIP]=1;
 		attributes[PERCEPTION]=getAbilityMod(INTELLIGENCE);
 		
@@ -425,7 +424,7 @@ public class Player_RPG implements Actor_RPG {
 		statusEffectHandler.applyStatusEffects(this);
 		if (playerInventory!=null)
 		{
-			playerInventory.setCapacity(abilities[STRENGTH]*8);	
+			playerInventory.setCapacity((int) (abilities[STRENGTH]*subAbilities[CARRY]));	
 			
 			for (int i=0;i<4;i++)
 			{
@@ -656,8 +655,8 @@ public class Player_RPG implements Actor_RPG {
 		abilities=new int[6];
 		stats=new float[4];
 		statMax=new int[4];
-		subAbilities=new float[5];
-		attributes=new int[23];
+		subAbilities=new float[6];
+		attributes=new int[21];
 		for (int i=0;i<14;i++)
 		{
 			attributes[i]=0;

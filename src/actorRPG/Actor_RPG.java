@@ -38,20 +38,19 @@ public interface Actor_RPG {
 	public static final int STRUGGLE = 12;
 	public static final int PLEASURE = 13;
 	public static final int PERSUADE = 14;
-	public static final int CRAFTS = 15;
+	public static final int TECH = 15;
 	public static final int SCIENCE = 16;
-	public static final int SECURITY = 17;
-	public static final int REPAIR = 18;
-	public static final int NAVIGATION = 19;
-	public static final int GUNNERY = 20;
-	public static final int PERCEPTION = 21;
-	public static final int LEADERSHIP = 22;
+	public static final int NAVIGATION = 17;
+	public static final int GUNNERY = 18;
+	public static final int PERCEPTION = 19;
+	public static final int LEADERSHIP = 20;
 
 	public static final int REGENERATION = 0;
 	public static final int REGENTHRESHOLD = 1;
 	public static final int METABOLISM = 2;
 	public static final int MOVECOST = 3;
 	public static final int MOVEAPCOST = 4;
+	public static final int CARRY=5;
 
 	public CombatMove getCombatMove(int index);
 

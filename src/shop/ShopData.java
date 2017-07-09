@@ -16,7 +16,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import dialogue.OutEvaluator;
+import dialogue.evaluation.OutEvaluator;
 import shared.ParserHelper;
 import vmo.GameManager;
 

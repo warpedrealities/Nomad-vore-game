@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="E-cell" requiredskill="1" startunlocked="true">
+<recipe name="E-cell" requiredskill="2" startunlocked="true">
 <description>
 A battery combined with a connection to charge and discharge it makes this primitive energy cell.
 </description>

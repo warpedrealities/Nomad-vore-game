@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<likeness>
+<hasPart part="tail"/>
+<hasPart part="scales"/>
+<hasValue part="scales" variable="covering" greaterthan="3"/>
+<hasValue part="tail" variable="type" equals="0"/>
+</likeness>

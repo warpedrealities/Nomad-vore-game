@@ -8,7 +8,7 @@ function aggressive(controllable,sense,pos,hostile)
 		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 	
 		else
-		--if not move towards player
+		
 			if not controllable:HasPath() then
 			controllable:specialCommand("flee")
 			end
@@ -21,7 +21,9 @@ function move(controllable,sense,pos)
 		controllable:FollowPath()
 	else
 		if not (controllable:getValue(0) == 0) then
-			controllable:Pathto(controllable:getValue(0),controllable:getvalue(1),4)
+			x=controllable:getValue(0)
+			y=controllable:getValue(1)
+			controllable:Pathto(x,y,4)
 		else
 			a=math.random(0,8)
 			controllable:move(a);	

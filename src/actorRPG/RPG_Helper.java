@@ -87,10 +87,10 @@ public class RPG_Helper {
 			return Actor_RPG.STRUGGLE;
 		}
 		if (str.contains("REPAIR")) {
-			return Actor_RPG.REPAIR;
+			return Actor_RPG.TECH;
 		}
 		if (str.contains("CRAFTING")) {
-			return Actor_RPG.CRAFTS;
+			return Actor_RPG.TECH;
 		}
 		if (str.contains("WILLPOWER")) {
 			return Actor_RPG.WILLPOWER;
@@ -105,7 +105,10 @@ public class RPG_Helper {
 			return Actor_RPG.SCIENCE;
 		}
 		if (str.contains("SECURITY")) {
-			return Actor_RPG.SECURITY;
+			return Actor_RPG.TECH;
+		}
+		if (str.contains("TECH")) {
+			return Actor_RPG.TECH;
 		}
 		if (str.contains("LEADERSHIP")) {
 			return Actor_RPG.LEADERSHIP;
@@ -126,6 +129,9 @@ public class RPG_Helper {
 		}
 		if (string.equals("REGENERATION")) {
 			return Actor_RPG.REGENERATION;
+		}
+		if (string.equals("CARRY")) {
+			return Actor_RPG.CARRY;
 		}
 		if (string.equals("MOVECOST")) {
 			return Actor_RPG.MOVECOST;

@@ -285,9 +285,9 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		subWindows[2] = new Window(new Vec2f(0, 0), new Vec2f(20, 24), frame, true);
 		window.add(subWindows[2]);
 
-		Text[] text = new Text[11];
+		Text[] text = new Text[9];
 		// generate texts
-		for (int i = 0; i < 11; i++) {
+		for (int i = 0; i < 9; i++) {
 			text[i] = new Text(new Vec2f(0.5F, 10.5F - (0.9F * (float) i)), "", 0.8F, tint);
 
 			subWindows[2].add(text[i]);
@@ -298,13 +298,11 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		text[1].setString("pleasure:" + playerRPG.getAttribute(Actor_RPG.PLEASURE));
 		text[2].setString("persuade:" + playerRPG.getAttribute(Actor_RPG.PERSUADE));
 		text[3].setString("willpower:" + playerRPG.getAttribute(Actor_RPG.WILLPOWER));
-		text[4].setString("crafts:" + playerRPG.getAttribute(Actor_RPG.CRAFTS));
+		text[4].setString("tech:" + playerRPG.getAttribute(Actor_RPG.TECH));
 		text[5].setString("science:" + playerRPG.getAttribute(Actor_RPG.SCIENCE));
-		text[6].setString("security:" + playerRPG.getAttribute(Actor_RPG.SECURITY));
-		text[7].setString("repair:" + playerRPG.getAttribute(Actor_RPG.REPAIR));
-		text[8].setString("navigation:" + playerRPG.getAttribute(Actor_RPG.NAVIGATION));
-		text[9].setString("gunnery:" + playerRPG.getAttribute(Actor_RPG.GUNNERY));
-		text[10].setString("perception:" + playerRPG.getAttribute(Actor_RPG.PERCEPTION));
+		text[6].setString("navigation:" + playerRPG.getAttribute(Actor_RPG.NAVIGATION));
+		text[7].setString("gunnery:" + playerRPG.getAttribute(Actor_RPG.GUNNERY));
+		text[8].setString("perception:" + playerRPG.getAttribute(Actor_RPG.PERCEPTION));
 		Text header = new Text(new Vec2f(3.2F, 11.3F), "skills", 0.8F, tint);
 		subWindows[2].add(header);
 	}

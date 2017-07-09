@@ -92,7 +92,7 @@ public class SaveLoad extends Screen implements Callback {
 		if (files != null) {
 			// use reader to generate items
 			for (int i = 0; i < files.length; i++) {
-				if (files[i].getName().contains(".svn") == false && files[i].isDirectory() == true) {
+				if (!files[i].getName().contains("temp") && !files[i].getName().contains(".svn") && files[i].isDirectory() == true) {
 					count++;
 				}
 			}
@@ -101,7 +101,7 @@ public class SaveLoad extends Screen implements Callback {
 
 				int index = 0;
 				for (int i = 0; i < files.length; i++) {
-					if (files[i].getName().contains(".svn") == false && files[i].isDirectory() == true) {
+					if (!files[i].getName().contains("temp") && !files[i].getName().contains(".svn") && files[i].isDirectory() == true) {
 						m_slots[index] = files[i].getName();
 						index++;
 					}
@@ -192,7 +192,10 @@ public class SaveLoad extends Screen implements Callback {
 				// load
 				if (m_slots != null) {
 					if (m_list.getSelect() < m_slots.length) {
-						Load(m_slots[m_list.getSelect()]);
+						if (!m_slots[m_list.getSelect()].equals("temp"))
+						{
+							Load(m_slots[m_list.getSelect()]);				
+						}
 					}
 				}
 				break;
