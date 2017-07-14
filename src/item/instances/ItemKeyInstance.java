@@ -1,5 +1,7 @@
-package item;
+package item.instances;
 
+import item.Item;
+import item.ItemKey;
 import item.Item.ItemUse;
 
 import java.io.DataOutputStream;
@@ -25,23 +27,23 @@ public class ItemKeyInstance extends Item {
 
 	@Override
 	public ItemUse getUse() {
-		return hostItem.m_use;
+		return hostItem.getUse();
 	}
 
 	@Override
 	public String getName() {
-		return lock + " " + hostItem.m_name;
+		return lock + " " + hostItem.getName();
 	}
 
 	@Override
 	public String getDescription() {
 
-		return hostItem.m_description;
+		return hostItem.getDescription();
 	}
 
 	@Override
 	public float getWeight() {
-		return hostItem.m_weight;
+		return hostItem.getWeight();
 	}
 
 	@Override

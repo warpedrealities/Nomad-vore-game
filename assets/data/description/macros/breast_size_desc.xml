@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<macrovalue part="breasts" variable="size">
+	<translate value="0" string="AAA cup" />
+	<translate value="1" string="AA cup" />
+	<translate value="2" string="A cup" />
+	<translate value="3" string="B cup" />
+	<translate value="4" string="C cup" />
+	<translate value="5" string="D cup" />
+	<translate value="6" string="E cup" />
+	<translate value="7" string="F cup" />
+	<translate value="8" string="G cup" />
+	<translate value="9" string="H cup" />
+	<translate value="10" string="I cup" />
+	<translate value="11" string="J cup" />
+	<translate value="12" string="K cup" />
+	<translate value="13" string="L cup" />
+	<translate value="14" string="M cup" />
+	<translate value="15" string="N cup" />
+	<translate value="16" string="O cup" />
+	<translate value="17" string="P cup" />
+	<translate value="18" string="Q cup" />
+	<translate value="19" string="R cup" />
+	<translate value="20" string="S cup" />
+	<translate value="21" string="T cup" />
+	<translate value="22" string="U cup" />
+	<translate value="23" string="V cup" />
+	<translate value="24" string="W cup" />
+	<translate value="25" string="X cup" />
+	<translate value="26" string="Y cup" />
+	<translate value="27" string="Z cup" />
+	<translate value="28" string="ZZ cup" />
+	<translate value="29" string="ZZZ cup" />
+	<translate value="-1" string="preposterously enormous" />
+</macrovalue>
+	

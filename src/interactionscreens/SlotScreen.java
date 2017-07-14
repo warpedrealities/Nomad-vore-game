@@ -1,15 +1,16 @@
 package interactionscreens;
 
 import gui.Button;
-import gui.List;
 import gui.Text;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 import item.Item;
-import item.ItemDepletableInstance;
 import item.ItemEnergy;
 import item.ItemHasEnergy;
 import item.ItemWidget;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemStack;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
@@ -94,6 +95,19 @@ public class SlotScreen extends Screen implements Callback {
 		int v = itemList.getSelect();
 		if (v >= 0 && v < player.getInventory().getNumItems()) {
 			if (trythis(player.getInventory().getItem(v))) {
+				if (ItemStack.class.isInstance(player.getInventory().getItem(v)))
+				{
+					ItemStack is=(ItemStack)player.getInventory().getItem(v);
+					is.setCount(is.getCount()-1);
+					if (is.getCount()<=0)
+					{
+						player.getInventory().RemoveItem(player.getInventory().getItem(v));	
+					}
+				}
+				else
+				{
+					player.getInventory().RemoveItem(player.getInventory().getItem(v));
+				}
 				callback.Callback();
 			}
 		}
@@ -101,8 +115,19 @@ public class SlotScreen extends Screen implements Callback {
 
 	private boolean trythis(Item item) {
 		// check is module
-		if (ItemWidget.class.isInstance(item)) {
-			ItemWidget iw = (ItemWidget) item;
+		ItemWidget iw=null;
+		if (ItemWidget.class.isInstance(item.getItem()))
+		{
+			if (ItemStack.class.isInstance(item))
+			{
+				iw=(ItemWidget)item.getItem();
+			}
+			else
+			{
+				iw=(ItemWidget) item;				
+			}
+		}
+		if (iw!=null) {
 			String name = iw.getWidgetName();
 			Widget widget = WidgetLoader.genWidget(name);
 			if (!slot.isHardpoint() && WidgetSystem.class.isInstance(widget))
@@ -114,7 +139,8 @@ public class SlotScreen extends Screen implements Callback {
 				}
 			}
 			slot.setWidget((WidgetBreakable) widget);
-			player.getInventory().RemoveItem(item);
+
+
 			return true;
 		}
 		return false;

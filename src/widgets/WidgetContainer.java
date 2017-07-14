@@ -5,7 +5,7 @@ import item.Item;
 import item.ItemCoin;
 import item.ItemConsumable;
 import item.ItemResource;
-import item.ItemStack;
+import item.instances.ItemStack;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -240,6 +240,10 @@ public class WidgetContainer extends WidgetBreakable {
 		for (int i = 0; i < generateLoot.size(); i++) {
 			addItem(generateLoot.get(i));
 		}
+	}
+
+	public int getMaxWeight() {
+		return maxWeight;
 	}
 
 }

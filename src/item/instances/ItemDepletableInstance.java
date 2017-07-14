@@ -1,10 +1,11 @@
-package item;
+package item.instances;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
 
 import shared.ParserHelper;
-
+import item.Item;
+import item.ItemHasEnergy;
 import item.Item.ItemUse;
 
 public class ItemDepletableInstance extends Item {
@@ -24,26 +25,26 @@ public class ItemDepletableInstance extends Item {
 
 	@Override
 	public ItemUse getUse() {
-		return m_item.m_use;
+		return m_item.getUse();
 	}
 
 	@Override
 	public String getName() {
-		return m_item.m_name;
+		return m_item.getName();
 	}
 
 	@Override
 	public String getDescription() {
 		if (m_itemenergy.getEnergy() != null) {
-			return m_item.m_description + " " + Integer.toString((int) m_energy) + "/"
+			return m_item.getDescription() + " " + Integer.toString((int) m_energy) + "/"
 					+ m_itemenergy.getEnergy().getMaxEnergy();
 		}
-		return m_item.m_description;
+		return m_item.getDescription();
 	}
 
 	@Override
 	public float getWeight() {
-		return m_item.m_weight;
+		return m_item.getWeight();
 	}
 
 	public int getEnergy() {

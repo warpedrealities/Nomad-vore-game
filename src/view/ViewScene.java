@@ -131,7 +131,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 9);
+				(int) sceneController.getUniverse().player.getPosition().y, 10);
 		m_view = new WorldView();
 		m_view.generate(sceneController.getActiveZone());
 		m_time = 0;
@@ -246,7 +246,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 9);
+				(int) sceneController.getUniverse().player.getPosition().y, 10);
 		m_view = new WorldView();
 		m_view.generate(sceneController.getActiveZone());
 		m_time = 0;
@@ -433,7 +433,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 								sceneController.getActiveZone().ClearVisibleTiles();
 								GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 										(int) sceneController.getUniverse().player.getPosition().x,
-										(int) sceneController.getUniverse().player.getPosition().y, 9);
+										(int) sceneController.getUniverse().player.getPosition().y, 10);
 								m_view.vision(sceneController.getActiveZone(),
 										sceneController.getActiveZone().zoneActors,
 										sceneController.getUniverse().player.getPosition());
@@ -560,7 +560,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 9);
+				(int) sceneController.getUniverse().player.getPosition().y, 10);
 		m_view.End();
 		// reset the view
 
@@ -646,7 +646,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 		sceneController.getActiveZone().ClearVisibleTiles();
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 9);
+				(int) sceneController.getUniverse().player.getPosition().y, 10);
 		m_view.End();
 		// reset the view
 
@@ -741,7 +741,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 		sceneController.getActiveZone().ClearVisibleTiles();
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 9);
+				(int) sceneController.getUniverse().player.getPosition().y, 10);
 		m_view.End();
 		// reset the view
 

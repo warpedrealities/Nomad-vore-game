@@ -17,7 +17,7 @@ import shared.ParserHelper;
 
 import item.Item;
 
-public class CraftingRecipe {
+public class CraftingRecipe implements Comparable {
 
 	private String name;
 
@@ -99,6 +99,12 @@ public class CraftingRecipe {
 
 	public int getResultCount() {
 		return resultCount;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		CraftingRecipe r=(CraftingRecipe)o;
+		return requiredSkill-r.getRequiredSkill();
 	}
 
 }

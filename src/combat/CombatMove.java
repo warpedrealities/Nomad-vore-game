@@ -415,7 +415,11 @@ public class CombatMove {
 						if (critical) {
 							ViewScene.m_interface.DrawText(str + " (CRITICAL!)");
 						} else {
-							ViewScene.m_interface.DrawText(str);
+							if (ViewScene.m_interface!=null)
+							{
+								ViewScene.m_interface.DrawText(str);
+							}
+				
 						}
 					}
 				}
@@ -428,7 +432,11 @@ public class CombatMove {
 						if (isNonViolent()) {
 							ViewScene.m_interface.Flash(target.getPosition(), 1);
 						} else {
-							ViewScene.m_interface.Flash(target.getPosition(), 0);
+							if (ViewScene.m_interface!=null)
+							{
+								ViewScene.m_interface.Flash(target.getPosition(), 0);			
+							}
+				
 						}
 
 					}

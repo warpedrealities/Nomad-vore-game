@@ -4,9 +4,9 @@ import java.nio.FloatBuffer;
 import java.util.Iterator;
 
 import gui.Button;
-import gui.List;
 import gui.MultiLineText;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 import nomad.Universe;
 import research.Encyclopedia;

@@ -6,7 +6,7 @@ import org.lwjgl.glfw.GLFW;
 
 import actor.player.Player;
 import actorRPG.Player_RPG;
-import gui.List;
+import gui.lists.List;
 import input.Keyboard;
 import input.MouseHook;
 import shared.Callback;

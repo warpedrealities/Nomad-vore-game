@@ -8,9 +8,10 @@ import shared.ParserHelper;
 public class Item implements Comparable {
 
 	private int UID;
-	String m_name, m_description;
-	float m_weight, itemValue;
-
+	protected String m_name, m_description;
+	protected float m_weight, itemValue;
+	protected int tag;
+	
 	public Item(int UID) {
 		this.UID = UID;
 	}
@@ -20,10 +21,10 @@ public class Item implements Comparable {
 	}
 
 	public enum ItemUse {
-		USE, EQUIP, NONE, COIN
+		USE, EQUIP, NONE, COIN,OPEN
 	};
 
-	ItemUse m_use;
+	protected ItemUse m_use;
 
 	public ItemUse getUse() {
 		return m_use;
@@ -59,6 +60,10 @@ public class Item implements Comparable {
 	public int compareTo(Object arg0) {
 		Item item = (Item) arg0;
 		return getItem().getName().compareTo(item.getItem().getName());
+	}
+
+	public int getTag() {
+		return tag;
 	}
 
 }

@@ -12,9 +12,11 @@
 			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>			
 			$%/CURRENT MODE UNBIRTH LBREAK 
 			</conditional>	
+			<conditional>
 			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="1"/>			
 			$%/SAFEGUARDS OPERATIONAL LBREAK 
 			</conditional>	
+			<conditional>
 				<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>			
 			$%/SAFEGUARDS OFFLINE LBREAK 
 			</conditional>			

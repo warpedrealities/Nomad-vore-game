@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <ItemWeapon name="Atom smasher" weight="10" value="1500">
 <description>
-A man portable nuclear weapon, the atom smasher initiates the fission of a small isotope pellet. The resultant energy is funneled outwards in the general direction of a target both to cause damage and so as not to inflict radiation damage on the wielder. 6-12 thermal damage.
+A man portable nuclear weapon, the atom smasher initiates the fission of a small isotope pellet. The resultant energy is funneled outwards in the general direction of a target both to cause damage and so as not to inflict radiation damage on the wielder. 8-16 thermal damage.
 </description>
 <modifier>
 
 </modifier>
 <combatMove name="blast" ammoCost="1" pattern="CONE" bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectDamage type="THERMAL" minValue="6" maxValue="12" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="8" maxValue="16" modifier="NONE"/>
 <missText count="1">
 <text>TARGET manages to avoid the irradiative blast </text>
 </missText>

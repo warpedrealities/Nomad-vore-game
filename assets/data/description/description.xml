@@ -30,6 +30,11 @@
 		<macro ID="scale_covering_desc_long" />
 		.
 	</block>
+		<block bodypart="breasts">
+		Your  
+		<macro ID="breast_size_desc" /> breasts stick 
+		<value ID="size" div="1" /> inches away from your chest.
+	</block>
 	<block bodypart="tail">
 		. You also possess a 
 		<macro ID="tail_type_desc" />

@@ -30,6 +30,18 @@ public class PerkQualifier {
 				}
 				return false;
 			}
+			if (str[i].contains("PARTVAR")) {
+				String []split=str[i].split(" ");
+				if (split[2].equals("morethan") && 
+					playerAppearance.getPart(split[0]).getValue(split[1])>=Integer.parseInt(split[3])) {
+					return true;
+				}
+				if (split[2].equals("lestthan") && 
+						playerAppearance.getPart(split[0]).getValue(split[1])<Integer.parseInt(split[3])) {
+						return true;
+					}
+				return false;
+			}
 		}
 
 		return true;

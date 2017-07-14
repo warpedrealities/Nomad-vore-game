@@ -1,10 +1,10 @@
-package item;
+package item.instances;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
 
 import shared.ParserHelper;
-
+import item.Item;
 import item.Item.ItemUse;
 
 public class ItemStack extends Item {
@@ -60,10 +60,12 @@ public class ItemStack extends Item {
 	}
 	@Override
 	public float getItemValue() {
-		return m_item.itemValue;
+		return m_item.getItemValue();
 	}
 
-	
+	public int getTag() {
+		return m_item.getTag();
+	}
 	@Override
 	public String getDescription()
 	{

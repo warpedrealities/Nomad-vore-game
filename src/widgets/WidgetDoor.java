@@ -1,7 +1,5 @@
 package widgets;
 
-import item.ItemKeyInstance;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -14,6 +12,7 @@ import vmo.GameManager;
 import actor.player.Inventory;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
+import item.instances.ItemKeyInstance;
 
 public class WidgetDoor extends WidgetBreakable {
 

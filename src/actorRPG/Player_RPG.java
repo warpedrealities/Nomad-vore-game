@@ -31,10 +31,10 @@ import shared.SceneBase;
 import view.ViewScene;
 import vmo.Game;
 import item.Item;
-import item.ItemDepletableInstance;
 import item.ItemEquip;
-import item.ItemStack;
 import item.ItemWeapon;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemStack;
 import actor.Actor;
 
 import actor.Modifier;
@@ -211,7 +211,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=00;
+		playerExperience=2000;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -424,7 +424,7 @@ public class Player_RPG implements Actor_RPG {
 		statusEffectHandler.applyStatusEffects(this);
 		if (playerInventory!=null)
 		{
-			playerInventory.setCapacity((int) (abilities[STRENGTH]*subAbilities[CARRY]));	
+			playerInventory.setCapacity((int) (10+(abilities[STRENGTH]*subAbilities[CARRY])));	
 			
 			for (int i=0;i<4;i++)
 			{
@@ -867,7 +867,7 @@ public class Player_RPG implements Actor_RPG {
 	private void feedPred(float amount)
 	{
 		float modifier=karmaMeter/100;
-		float change=amount/10;
+		float change=amount/20;
 		amount=amount*modifier;
 		if (amount<1)
 		{
@@ -889,7 +889,7 @@ public class Player_RPG implements Actor_RPG {
 	private void feedPrey(float amount)
 	{
 		float modifier=1-(karmaMeter/100);
-		float change=amount/10;		
+		float change=amount/20;		
 		amount=amount*modifier;	
 		if (amount<1)
 		{

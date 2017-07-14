@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemConsumable name="ration" weight="1" value="40">
+<ItemConsumable name="ration" weight="1" value="40" tag="1">
 	<description>Dried alien ration bar. Amazingly its still preserved
 		after all this time, though this makes one wonder how edible it really
 		is. </description>

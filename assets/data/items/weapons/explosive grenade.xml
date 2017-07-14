@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ItemWeapon name="explosive grenade" weight="1" value="50">
 <description>
-A chemical explosive grenade. Be at least 3 meters away from it 3 seconds after the pin is pulled. 2AP Does 2-12 thermokinetic damage.
+A chemical explosive grenade. Be at least 3 meters away from it 3 seconds after the pin is pulled. 2AP Does 8-16 thermokinetic damage.
 </description>
-<combatMove name="boom" ammoCost="1" pattern="BOMB" bonusAttribute="RANGED" timeCost="2" bonusToHit="2" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="DEXTERITY"/>
-<effectDamage type="THERMAL" minValue="3" maxValue="6" modifier="DEXTERITY"/>
+<combatMove name="boom" ammoCost="1" pattern="BOMB" bonusAttribute="RANGED" timeCost="2" bonusToHit="4" actionCost="2" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="4" maxValue="8" modifier="DEXTERITY"/>
+<effectDamage type="THERMAL" minValue="4" maxValue="8" modifier="DEXTERITY"/>
 <missText count="1">
 
 <text>TARGET is unscathed </text>

@@ -23,7 +23,7 @@
 <text>The synth fails to electrocute TARGET</text>
 </missText>
 <hitText count="1">
-<text>The synth delivers a shocking tough to TARGET for VALUE damage</text>
+<text>The synth delivers a shocking touch to TARGET for VALUE damage</text>
 </hitText>
 </combatMove>
 <statusTags count="2">

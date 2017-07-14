@@ -1,9 +1,9 @@
 package interactionscreens;
 
 import gui.Button;
-import gui.List;
 import gui.Text;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 import item.Item;
 import item.ItemCoin;
@@ -146,7 +146,7 @@ public class ContainerScreen extends Screen implements Callback {
 		} else {
 			itemLists[1].GenList(null);
 		}
-		weightValues[0].setString("weight:" + container.getContainedWeight());
+		weightValues[0].setString("weight:" + container.getContainedWeight()+"/"+container.getMaxWeight());
 		weightValues[1].setString("weight:" + player.getInventory().getWeight());
 	}
 

@@ -1,15 +1,15 @@
 package interactionscreens;
 
 import gui.Button;
-import gui.List;
 import gui.Text;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 import item.Item;
-import item.ItemDepletableInstance;
 import item.ItemEnergy;
 import item.ItemHasEnergy;
 import item.ItemLibrary;
+import item.instances.ItemDepletableInstance;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;

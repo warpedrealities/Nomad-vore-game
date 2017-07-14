@@ -15,11 +15,11 @@ import org.w3c.dom.NodeList;
 
 import actor.player.Player;
 import gui.Button;
-import gui.List;
 import gui.MultiLineText;
 import gui.Text;
 import gui.Textwindow;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 import shared.Callback;
 import shared.MyListener;
@@ -83,7 +83,7 @@ public class PlayerStartScene extends SceneBase implements MyListener, Callback 
 		phaseNameLabel = new Text(new Vec2f(8, 10), "phase:" + phaseList.get(phaseIndex).getName(), m_variables[0]);
 		window.add(phaseNameLabel);
 		// build choicelist
-		choiceList = new List(new Vec2f(-14.0F, -9.0F), 17, m_textureIds[1], m_textureIds[0], m_variables[0], this, 10);
+		choiceList = new List(new Vec2f(-14.0F, -9.0F), 17, m_textureIds[0], m_variables[0], this, 10);
 		// build description
 		description = new MultiLineText(new Vec2f(10.5F, 17.5F), 32, 56, 0.8F);
 		// description.addText(debugtext());

@@ -1,6 +1,5 @@
 package dialogue;
 
-import item.ItemStack;
 import mutation.Effect_Mutator;
 import nomad.Universe;
 
@@ -23,6 +22,7 @@ import actorRPG.Player_RPG;
 import dialogue.worldscript.WorldScript;
 import dialogue.worldscript.WorldScript_Imp;
 import faction.FactionLibrary;
+import item.instances.ItemStack;
 
 public class EffectProcessor {
 

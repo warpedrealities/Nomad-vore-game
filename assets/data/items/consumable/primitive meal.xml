@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemConsumable name="primitive meal" weight="2" value="60">
+<ItemConsumable name="primitive meal" weight="2" value="60" tag="1">
 	<description>An alien salad? at least you hope it's a salad. it looks
 		like a salad at least so...bon apetit?</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"

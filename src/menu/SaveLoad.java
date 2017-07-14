@@ -1,11 +1,11 @@
 package menu;
 
 import gui.Button;
-import gui.List;
 import gui.Text;
 import gui.TextColoured;
 import gui.Textwindow;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 
 import java.io.File;
@@ -45,7 +45,7 @@ public class SaveLoad extends Screen implements Callback {
 		// generate window
 		m_window = new Window(new Vec2f(-6.5F, -12), new Vec2f(13, 10), frame, true);
 		// generate list of saves
-		m_list = new List(new Vec2f(-6.5F, -10.0F), 12, font, frame, tint, this, 13);
+		m_list = new List(new Vec2f(-6.5F, -10.0F), 12, frame, tint, this, 13);
 		// m_window.Add(m_list);
 		GenSaveList();
 		// if in save mode add a button to make a new save

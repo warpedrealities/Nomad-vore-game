@@ -1,19 +1,19 @@
 package shop;
 
 import gui.Button;
-import gui.List;
 import gui.MultiLineText;
 import gui.Text;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 import item.Item;
 import item.ItemAmmo;
-import item.ItemBlueprintInstance;
-import item.ItemDepletableInstance;
 import item.ItemEnergy;
-import item.ItemExpositionInstance;
-import item.ItemKeyInstance;
-import item.ItemStack;
+import item.instances.ItemBlueprintInstance;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemExpositionInstance;
+import item.instances.ItemKeyInstance;
+import item.instances.ItemStack;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;

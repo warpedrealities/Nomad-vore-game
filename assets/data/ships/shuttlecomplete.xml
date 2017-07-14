@@ -31,7 +31,7 @@
 </prefab>
 <pairedportal x="2" y="0" sprite="1" ID="-101" facing="0"> Exterior hatch </pairedportal>
 <placeWidget x="1" y="1" name="slot">
-<contains name="cargocontainer">
+<contains name="cargocontainer_ship">
 <lootTable>
 <loot item="phalifungi" chance="1.0"/>
 <loot item="explosive grenade" chance="1.0"/>
@@ -40,13 +40,23 @@
 <loot item="plasma canister" chance="1.0"/>
 <loot item="plasma canister" chance="1.0"/>
 <loot item="capture device" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
+<loot item="cargo container" chance="1.0"/>
 <loot item="blueprint" chance="1.0" addendum="cultivator"/>
 </lootTable>
 </contains>
 </placeWidget>
 
 <placeWidget x="1" y="4" name="slot">
-<contains name="generator"/>
 </placeWidget>
 <placeWidget x="2" y="4" name="slot">
 <contains name="navconsole"/>

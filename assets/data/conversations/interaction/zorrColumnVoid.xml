@@ -49,7 +49,7 @@
 		You insert the amulet and it makes a clicking sound as it settles into the slot snugly. As it does so you hear a grinding sound as the barrier blocking off the inner sanctum grinds open.
 		</text>
 		<effect type="setlocalflag" flag="USED" value="1" />	
-		<effect type="removeitem" item="stars amulet" value="1"/>
+		<effect type="removeitem" item="void amulet" value="1"/>
 		<special effect="opendoor" lock="zorrSanctum" />
 		<choice destination="end" text="exit" />
 	</page>

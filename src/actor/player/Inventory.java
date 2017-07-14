@@ -1,11 +1,11 @@
 package actor.player;
 
 import item.Item;
-import item.ItemBlueprintInstance;
-import item.ItemExpositionInstance;
 import item.ItemHasEnergy;
-import item.ItemKeyInstance;
-import item.ItemStack;
+import item.instances.ItemBlueprintInstance;
+import item.instances.ItemExpositionInstance;
+import item.instances.ItemKeyInstance;
+import item.instances.ItemStack;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

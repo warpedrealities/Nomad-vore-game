@@ -10,7 +10,12 @@
 				or your own hunger...
 			</conditional>
 		</text>
-		<choice destination="receiveoral" text="Force her to lick you" />
+		<choice destination="receiveoral" text="Force her to lick you">
+		<assertion evaluate="haspart" part="vagina" />	
+		</choice>
+		<choice destination="receiveblowjob" text="make her suck it">
+		<assertion evaluate="haspart" part="penis" />	
+		</choice>
 		<choice destination="giveoral" text="Lick her folds" />
 		<choice destination="meal0" text="she'd make a great meal">
 			<assertion evaluate="hasperk" perk="oralvore" />
@@ -45,7 +50,6 @@
 	</page>
 
 	<page ID="receiveoral">
-		<assertion evaluate="haspart" part="vagina" />
 		<text>
 			You climb over the harpy's defeated form,
 			<conditional>
@@ -74,8 +78,7 @@
 		<special effect="removenpc" />
 	</page>
 
-	<page ID="receiveoral">
-		<assertion evaluate="haspart" part="penis" />
+	<page ID="receiveblowjob">
 		<text>
 			You climb over the harpy's defeated form,
 			<conditional>

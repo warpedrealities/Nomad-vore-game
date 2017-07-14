@@ -1,7 +1,7 @@
 
 function robot(controllable,sense)
 	a=controllable:getValue(0)
-	if not controllable:move(a)
+	if not controllable:move(a) then
 	a=math.random(0,8)
 	controllable:setValue(0,a)
 	end
@@ -59,7 +59,7 @@ end
 function voice(controllable,sense)
 	a=controllable:getValue(2)
 	a=a+1
-	if (a > 20 ) then
+	if (a > 10 ) then
 		speak(controllable,sense)
 		a=0
 	end
@@ -74,7 +74,7 @@ function main(controllable, sense, script)
 	else
 		robot(controllable,sense)
 		if controllable:isActorVisibility() then
-			voice(controllable)
+			voice(controllable,sense)
 		end
 	end
 end  

@@ -1,10 +1,10 @@
 package playerscreens;
 
 import gui.Button;
-import gui.List;
 import gui.MultiLineText;
 import gui.Text;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 
 import java.nio.FloatBuffer;

@@ -2,10 +2,10 @@ package view;
 
 import font.NuFont;
 import gui.GUIBase;
-import item.ItemDepletableInstance;
 import item.ItemHasEnergy;
-import item.ItemStack;
 import item.ItemWeapon;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemStack;
 
 import java.nio.FloatBuffer;
 

@@ -2,10 +2,10 @@ package playerscreens;
 
 import gui.Button;
 import gui.Button2;
-import gui.List;
 import gui.MultiLineText;
 import gui.Text;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 
 import java.nio.FloatBuffer;
@@ -116,7 +116,7 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 
 		case 3:
 			// start level up process
-			if (playerRPG.getPlayerExperience() >= playerRPG.getNextLevel()) {
+			if (m_screen==null && playerRPG.getPlayerExperience() >= playerRPG.getNextLevel()) {
 				levelUp();
 			}
 			break;

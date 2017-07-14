@@ -39,7 +39,12 @@ public class Macro_Value extends Macro {
 		BodyPart part = look.getPart(partName);
 		if (part != null) {
 			int v = part.getValue(variableName);
-			return valueToString.get(v);
+			String r=valueToString.get(v);
+			if (r==null)
+			{
+				r=valueToString.get(-1);
+			}
+			return r;
 		}
 		return null;
 	}

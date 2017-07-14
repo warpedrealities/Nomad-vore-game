@@ -5,27 +5,28 @@ import gui.Button;
 import gui.Button2;
 import gui.DropDown;
 import gui.GUIBase;
-import gui.List;
 import gui.MultiLineText;
 import gui.Text;
 import gui.TextColoured;
 import gui.UI_Popup;
 import gui.Window;
+import gui.lists.List;
 import input.Keyboard;
 import input.MouseHook;
 import item.Item;
 import item.ItemAmmo;
-import item.ItemBlueprintInstance;
 import item.ItemConsumable;
-import item.ItemDepletableInstance;
-
 import item.ItemEquip;
-import item.ItemExpositionInstance;
 import item.ItemHasEnergy;
-import item.ItemStack;
 import item.ItemWeapon;
 import item.ItemWidget;
 import item.Item.ItemUse;
+import item.instances.ItemBlueprintInstance;
+import item.instances.ItemContainerInstance;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemExpositionInstance;
+import item.instances.ItemStack;
+import playerscreens.subscreens.ItemContainerScreen;
 
 import java.io.IOException;
 import java.nio.FloatBuffer;
@@ -38,7 +39,7 @@ import actor.player.Inventory;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.Player_RPG;
-
+import crafting.CraftingRecipe;
 import shared.Callback;
 import shared.LogWindow;
 import shared.ParserHelper;
@@ -323,7 +324,8 @@ public class InventoryScreen extends Screen implements Callback {
 			{
 				ItemBlueprintInstance ibi=(ItemBlueprintInstance)item;
 				m_player.getCraftingLibrary().unlockRecipe(ibi.getRecipe());
-				if (m_player.getCraftingLibrary().getRecipe(ibi.getRecipe()).getRequiredSkill()>m_player.getRPG().getAttribute(Actor_RPG.TECH))
+				CraftingRecipe r=m_player.getCraftingLibrary().getRecipe(ibi.getRecipe()+".xml");
+				if (r.getRequiredSkill()>m_player.getRPG().getAttribute(Actor_RPG.TECH))
 				{
 					ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "
 							+ibi.getRecipe()+" but you lack the skill to craft this currently");		
@@ -332,7 +334,11 @@ public class InventoryScreen extends Screen implements Callback {
 				{
 					ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "+ibi.getRecipe());
 				}
-
+				popup.setClock(10);
+				if (ViewScene.m_interface.getLastMessage()!=null)
+				{
+					popup.setText(ViewScene.m_interface.getLastMessage());
+				}		
 				m_player.setBusy(2);
 				m_dropdown.setVisible(false);			
 			}
@@ -526,6 +532,15 @@ public class InventoryScreen extends Screen implements Callback {
 	
 	void UnequipEquiporUse()
 	{
+		if (m_dropdownstrings[0].equals("open"))
+		{
+			Item it=m_player.getInventory().getItem(m_control-1);
+			if (ItemContainerInstance.class.isInstance(it))
+			{
+				ViewScene.m_interface.replaceScreen(new ItemContainerScreen((ItemContainerInstance)it));		
+			}
+
+		}
 		if (m_dropdownstrings[0].equals("use"))
 		{
 			if (m_control==-5)
@@ -730,6 +745,10 @@ public class InventoryScreen extends Screen implements Callback {
 			{
 				quickslot();
 			}
+			if (m_dropdownstrings[4].equals("unequip"))
+			{
+				UnEquip();
+			}
 	
 			break;
 		
@@ -759,7 +778,15 @@ public class InventoryScreen extends Screen implements Callback {
 				m_dropdownstrings[0]="";
 				if (ItemAmmo.class.isInstance(item.getItem()))
 				{
-					m_dropdownstrings[4]="quick";
+					if (m_control<0)
+					{
+						m_dropdownstrings[4]="unequip";		
+					}
+					else
+					{
+						m_dropdownstrings[4]="quick";		
+					}
+	
 				}
 			}
 			else
@@ -783,7 +810,19 @@ public class InventoryScreen extends Screen implements Callback {
 				if (item.getItem().getUse()==Item.ItemUse.USE)
 				{
 					m_dropdownstrings[0]="use";	
-					m_dropdownstrings[4]="quick";
+					if (m_control<0)
+					{
+						m_dropdownstrings[4]="unequip";		
+					}
+					else
+					{
+						m_dropdownstrings[4]="quick";			
+					}
+		
+				}
+				if (item.getItem().getUse()==Item.ItemUse.OPEN)
+				{
+					m_dropdownstrings[0]="open";		
 				}
 			}
 			if (ItemDepletableInstance.class.isInstance(item))

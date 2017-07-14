@@ -3,11 +3,11 @@ package actor.player;
 import faction.FactionLibrary;
 import input.Keyboard;
 import item.Item;
-import item.ItemDepletableInstance;
 import item.ItemEquip;
 import item.ItemHasEnergy;
-import item.ItemStack;
 import item.ItemWeapon;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemStack;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -615,6 +615,11 @@ public class Player extends Actor {
 		} else if (Player.class.isInstance(victor)) {
 			Game.sceneManager
 					.SwapScene(new GameOver(SceneBase.getVariables(), "you have managed to slay yourself somehow",null,false));
+		}
+		if (victor==null)
+		{
+			Game.sceneManager
+			.SwapScene(new GameOver(SceneBase.getVariables(), "you have died under mysterious circumstances",null,true));			
 		}
 	}
 

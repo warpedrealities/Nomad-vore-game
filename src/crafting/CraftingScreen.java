@@ -1,17 +1,17 @@
 package crafting;
 
 import gui.Button;
-import gui.List;
 import gui.MultiLineText;
 import gui.Text;
 import gui.TextColoured;
 import gui.Window;
-
+import gui.lists.ColouredList;
+import gui.lists.List;
 import input.MouseHook;
 import item.Item;
 import item.ItemAmmo;
-import item.ItemDepletableInstance;
-import item.ItemStack;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemStack;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class CraftingScreen extends Screen implements Callback {
 	private CraftingLibrary craftingLibrary;
 
 	private Window root;
-	private List possibleCrafts;
+	private ColouredList possibleCrafts;
 	private ArrayList<CraftingRecipe> craftables;
 
 	private MultiLineText description;
@@ -52,7 +52,6 @@ public class CraftingScreen extends Screen implements Callback {
 
 	@Override
 	public void Callback() {
-		// TODO Auto-generated method stub
 		selection = possibleCrafts.getSelect();
 		if (selection < craftables.size()) {
 			buildRequirements();
@@ -62,7 +61,6 @@ public class CraftingScreen extends Screen implements Callback {
 	}
 
 	private void buildEmpty() {
-		// TODO Auto-generated method stub
 		description.addText("");
 		for (int i = 0; i < 8; i++) {
 			requirements[i].setString("");
@@ -200,7 +198,8 @@ public class CraftingScreen extends Screen implements Callback {
 		}
 
 		// built list of craftables
-		possibleCrafts = new List(new Vec2f(-20, -16.0F), 18, textures[1], textures[4], this);
+		float [][] colours={{1,1,1},{1,0,0}};
+		possibleCrafts = new ColouredList(new Vec2f(-20, -16.0F), 18, textures[1], textures[4], this,17,colours);
 
 		craftables = new ArrayList<CraftingRecipe>();
 
@@ -221,22 +220,37 @@ public class CraftingScreen extends Screen implements Callback {
 			CraftingRecipe recipe = craftables.get(selection);
 			description.addText(recipe.getDescription());
 
-			for (int i = 0; i < 8; i++) {
-				if (recipe.getIngredients().size() <= i) {
-					requirements[i].setString("");
-				} else {
-					requirements[i].setString(recipe.getIngredients().get(i).getItemName() + " x"
-							+ recipe.getIngredients().get(i).getItemQuantity());
-
-					if (hasIngredient(recipe.getIngredients().get(i))) {
-						requirements[i].setTint(1, 1, 1);
-					} else {
-						canMake = false;
-						requirements[i].setTint(1, 0, 0);
-					}
+			if (recipe.getRequiredSkill()>player.getRPG().getAttribute(Actor_RPG.TECH))
+			{
+				canMake = false;
+				requirements[0].setTint(1, 0, 0);	
+				requirements[0].setString("requires skill of "+recipe.getRequiredSkill());	
+				for (int i=1;i<8;i++)
+				{
+					requirements[i].setString("");		
 				}
 
 			}
+			else
+			{
+				for (int i=0; i < 8; i++) {
+					if (recipe.getIngredients().size() <= i) {
+						requirements[i].setString("");
+					} else {
+						requirements[i].setString(recipe.getIngredients().get(i).getItemName() + " x"
+								+ recipe.getIngredients().get(i).getItemQuantity());
+
+						if (hasIngredient(recipe.getIngredients().get(i))) {
+							requirements[i].setTint(1, 1, 1);
+						} else {
+							canMake = false;
+							requirements[i].setTint(1, 0, 0);
+						}
+					}
+
+				}			
+			}
+
 		} else {
 			buildEmpty();
 		}
@@ -270,20 +284,30 @@ public class CraftingScreen extends Screen implements Callback {
 		int skill = player.getRPG().getAttribute(Actor_RPG.TECH);
 		// select all craftables that are unlocked and the player has crafting
 		// skill for
-		Collection<CraftingRecipe> list = craftingLibrary.getCraftables();
-		Iterator<CraftingRecipe> it = list.iterator();
-		while (it.hasNext()) {
-			CraftingRecipe recipe = it.next();
-			if (recipe.getUnlocked() == true && recipe.getRequiredSkill() <= skill) {
+		java.util.List<CraftingRecipe> list=craftingLibrary.getSortedCraftables();
+		for (int i=0;i<list.size();i++)
+		{
+			CraftingRecipe recipe=list.get(i);
+			if (recipe.getUnlocked() == true && recipe.getRequiredSkill() <= skill+2) {
 				craftables.add(recipe);
-			}
+			}			
 		}
-
 		// generate list
 		String[] names = new String[craftables.size()];
+		int []colours=new int[craftables.size()];
 		for (int i = 0; i < names.length; i++) {
-			names[i] = craftables.get(i).getName();
+			CraftingRecipe r=craftables.get(i);
+			if (r.getRequiredSkill()<=skill)
+			{
+				colours[i]=0;
+			}
+			else
+			{
+				colours[i]=1;
+			}
+			names[i] = r.getName();
 		}
+		possibleCrafts.setStringColour(colours);
 		possibleCrafts.GenList(names);
 	}
 

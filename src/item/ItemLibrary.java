@@ -10,6 +10,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import item.instances.ItemBlueprintInstance;
+import item.instances.ItemCaptureInstance;
+import item.instances.ItemContainerInstance;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemExpositionInstance;
+import item.instances.ItemKeyInstance;
+import item.instances.ItemStack;
 import shared.ParserHelper;
 
 public class ItemLibrary {
@@ -87,6 +94,9 @@ public class ItemLibrary {
 			if (ItemCapture.class.isInstance(item)) {
 				return new ItemCaptureInstance((ItemCapture) item);
 			}
+			if (ItemContainer.class.isInstance(item)) {
+				return new ItemContainerInstance(item);
+			}
 			return item;
 
 		}
@@ -127,6 +137,9 @@ public class ItemLibrary {
 		}
 		if (Enode.getTagName() == "ItemCapture") {
 			return new ItemCapture(Enode, id);
+		}
+		if (Enode.getTagName() == "ItemContainer") {
+			return new ItemContainer(Enode, id);
 		}
 		return null;
 
@@ -179,6 +192,11 @@ public class ItemLibrary {
 			if (dstream.readBoolean()) {
 				item.setShip(ParserHelper.LoadString(dstream));
 			}
+			return item;
+		}
+		if (c == 8) {
+			ItemContainerInstance item = new ItemContainerInstance(findItem(ParserHelper.LoadString(dstream)));
+			item.load(dstream);
 			return item;
 		}
 		return null;

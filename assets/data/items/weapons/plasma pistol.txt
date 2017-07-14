@@ -8,8 +8,8 @@ The bulky storage torus and magnetic coils give this weapon an outline vaguely r
 
 </modifier>
 <combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="NONE"/>
-<effectDamage type="THERMAL" minValue="1" maxValue="4" modifier="NONE"/>
+<effectDamage type="KINETIC" minValue="2" maxValue="6" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="2" maxValue="6" modifier="NONE"/>
 <missText count="1">
 <text>you fail to blast TARGET</text>
 </missText>
@@ -18,8 +18,8 @@ The bulky storage torus and magnetic coils give this weapon an outline vaguely r
 </hitText>
 </combatMove>
 <combatMove name="overcharge" ammoCost="2" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="NONE"/>
-<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
+<effectDamage type="KINETIC" minValue="2" maxValue="8" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="2" maxValue="8" modifier="NONE"/>
 <missText count="1">
 <text>you fail to blast TARGET</text>
 </missText>

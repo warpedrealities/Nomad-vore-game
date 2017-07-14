@@ -110,7 +110,11 @@ public class Effect_Damage extends Effect {
 		{
 			damage=0;
 		}
-		
+		if (damage>=999)
+		{
+			origin.Defeat(null, false);
+			return 0;
+		}
 		if (critical)
 		{
 			damage=applyCritical(target,damage, bonus);

@@ -3,10 +3,10 @@ package menu;
 import java.nio.FloatBuffer;
 
 import gui.Button;
-import gui.List;
 import gui.Text;
 import gui.Textwindow;
 import gui.Window;
+import gui.lists.List;
 import input.MouseHook;
 import shared.Callback;
 import shared.SceneManager;

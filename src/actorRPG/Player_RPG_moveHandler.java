@@ -143,7 +143,9 @@ public class Player_RPG_moveHandler {
 		case 3:
 
 			return 1 + moveLists[0] + moveLists[1] + moveLists[2];
+		case 4:
 
+			return 1 + moveLists[0] + moveLists[1] + moveLists[2]+moveLists[3];
 		}
 		return 0;
 	}

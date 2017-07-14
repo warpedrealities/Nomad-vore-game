@@ -18,12 +18,12 @@ The flying reptile is clad in pale blue and purple scales from head to tailtip. 
 <attribute attribute="TEASE" value="8"/>
 <combatMove name="firebolt" pattern="RANGED" bonusAttribute="RANGED" timeCost="4" bonusToHit="0">
 <missText count="2">
-<text>a drake spits a bolt of fire at TARGET but misses</text>
-<text>a drake fire blast narrowly misses TARGET</text>
+<text>the wyvern unleashes an arc of lightning at TARGET but misses</text>
+<text>the wyvern unleashes a thunderbolt at TARGET but it grounds before reaching them</text>
 </missText>
 <hitText count="2">
-<text>a drake scorches TARGET for VALUE points of thermal damage using a fire bolt</text>
-<text>a drake singes TARGET with a firebolt for VALUE points of thermal damage</text>
+<text>the wyvern zaps TARGET for VALUE points of shock damage</text>
+<text>the wyvern blasts TARGET with a lightning bolt for VALUE points of shock damage</text>
 </hitText>
 <effectDamage type="SHOCK" minValue="2" maxValue="12" modifier="STRENGTH"/>
 </combatMove>
@@ -33,8 +33,8 @@ The flying reptile is clad in pale blue and purple scales from head to tailtip. 
 <text>The wyvern lashes out at TARGET without effect</text>
 </missText>
 <hitText count="2">
-<text>The ice treader claws TARGET for VALUE damage</text>
-<text>The ice treader claws TARGET for VALUE damage</text>
+<text>The wyvern bites TARGET for VALUE damage</text>
+<text>The wyvern lashes out at TARGET for VALUE damage</text>
 </hitText>
 <effectDamage type="KINETIC" minValue="2" maxValue="12" modifier="STRENGTH"/>
 </combatMove>

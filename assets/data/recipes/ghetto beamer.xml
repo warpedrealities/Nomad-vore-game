@@ -6,5 +6,5 @@ An improvised heavy beam weapon built out of suitable components found in the fi
 <ingredient item="optics" quantity="6"/>
 <ingredient item="computation valve" quantity="3"/>
 <ingredient item="flux capacitor" quantity="1"/>
-<result item="ghetto beamer"/>
+<result item="Ghetto Beamer"/>
 </recipe>

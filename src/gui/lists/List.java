@@ -1,6 +1,7 @@
-package gui;
+package gui.lists;
 
 import font.NuFont;
+import gui.GUIBase;
 import gui.subelements.Slider;
 import input.Keyboard;
 
@@ -47,7 +48,7 @@ public class List extends GUIBase implements Callback {
 				this);
 	}
 
-	public List(Vec2f position, int slots, int font, int texture, int tint, Callback callback, float width) {
+	public List(Vec2f position, int slots, int texture, int tint, Callback callback, float width) {
 		m_callback = callback;
 		m_tint = tint;
 		m_offset = 0;

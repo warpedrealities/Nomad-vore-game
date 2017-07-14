@@ -1,9 +1,9 @@
 package worldgentools;
 
 import item.Item;
-import item.ItemDepletableInstance;
-import item.ItemExpositionInstance;
-import item.ItemKeyInstance;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemExpositionInstance;
+import item.instances.ItemKeyInstance;
 import nomad.Universe;
 
 import org.w3c.dom.Document;

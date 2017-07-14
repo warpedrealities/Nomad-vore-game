@@ -1,8 +1,10 @@
-package item;
+package item.instances;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import item.Item;
+import item.ItemCapture;
 import item.Item.ItemUse;
 import shared.ParserHelper;
 
@@ -26,15 +28,15 @@ public class ItemCaptureInstance extends Item {
 
 	@Override
 	public ItemUse getUse() {
-		return hostItem.m_use;
+		return hostItem.getUse();
 	}
 
 	@Override
 	public String getName() {
 		if (ship != null) {
-			return hostItem.m_name + ":" + ship;
+			return hostItem.getName() + ":" + ship;
 		} else {
-			return hostItem.m_name + ":" + "unset";
+			return hostItem.getName() + ":" + "unset";
 		}
 
 	}
@@ -42,12 +44,12 @@ public class ItemCaptureInstance extends Item {
 	@Override
 	public String getDescription() {
 
-		return hostItem.m_description;
+		return hostItem.getDescription();
 	}
 
 	@Override
 	public float getWeight() {
-		return hostItem.m_weight;
+		return hostItem.getWeight();
 	}
 
 	@Override

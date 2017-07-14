@@ -10,5 +10,5 @@
 <zone x="1" y="1" type="CLOSED">Cave 1B</zone>
 <zone x="0" y="0" type="CLOSED">Cave 2A</zone>
 <zone x="1" y="0" type="CLOSED">Cave 2B</zone>
-<ship name="prospector" posX="1" posY="0"></ship>
+<ship name="prospector" posX="1" posY="1"></ship>
 </world>

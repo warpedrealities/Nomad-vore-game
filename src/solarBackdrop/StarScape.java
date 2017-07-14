@@ -9,7 +9,7 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
-import gui.List;
+import gui.lists.List;
 import nomad.Universe;
 import rendering.Sprite;
 import rendering.SpriteManager;

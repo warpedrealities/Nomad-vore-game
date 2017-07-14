@@ -230,6 +230,11 @@ public class WidgetBreakable extends Widget implements Attackable {
 			if (damage < 0) {
 				damage = 0;
 			}
+			if (damage>999)
+			{
+				origin.Defeat(null, false);
+				return 0;
+			}
 			// check if physical harm
 			if (dmg.getDamageType() <= Actor_RPG.SHOCK) {
 				// if so apply to hp

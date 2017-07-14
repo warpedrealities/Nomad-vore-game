@@ -75,10 +75,10 @@ public class AppearanceParser {
 
 	private static String parseValue(Element enode, Player_LOOK look, String part) {
 		int v = look.getPart(part).getValue(enode.getAttribute("ID"));
-		if (!enode.getAttribute("rem").equals("")) {
+		if (enode.getAttribute("rem").length()>0) {
 			v = v % Integer.parseInt(enode.getAttribute("rem"));
 		}
-		if (!enode.getAttribute("div").equals("")) {
+		if (enode.getAttribute("div").length()>0) {
 			v = v / Integer.parseInt(enode.getAttribute("div"));
 		}
 		return Integer.toString(v);

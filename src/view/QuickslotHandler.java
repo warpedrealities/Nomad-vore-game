@@ -6,10 +6,10 @@ import actor.player.Player;
 import item.Item;
 import item.ItemAmmo;
 import item.ItemConsumable;
-import item.ItemDepletableInstance;
 import item.ItemHasEnergy;
-import item.ItemStack;
 import item.ItemWeapon;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemStack;
 import nomad.Universe;
 
 public class QuickslotHandler {

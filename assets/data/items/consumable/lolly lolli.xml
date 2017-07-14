@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemConsumable name="lolli lolly" weight="1" value="250">
+	<description>A wrapped bio engineered candy, not a topical ointment, consume as directed</description>
+	<effectmutator>
+		<criteriaValue part="breasts" variable="size" value="1" />
+		<mutation part="body" variable="size" modifier="-1">
+			you suck the lolly for a while and after a time feel it taking its effect. Your form becomes more slender and markedly less stacked
+			your cupsize is now breast_size_desc
+		</mutation>
+	</effectmutator>
+
+</ItemConsumable>

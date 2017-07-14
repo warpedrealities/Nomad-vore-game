@@ -46,6 +46,7 @@
 <lootSubTable chance="0.25" file="consumable_tier_1"/>
 </lootTable>
 </placeWidget>
+</randprefab>
 <perlin>
 <band low="-1.0" high="-0.8">
 <floodfill tile="4"/>

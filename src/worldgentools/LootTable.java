@@ -2,8 +2,8 @@ package worldgentools;
 
 import item.Item;
 import item.ItemCoin;
-import item.ItemExpositionInstance;
-import item.ItemKeyInstance;
+import item.instances.ItemExpositionInstance;
+import item.instances.ItemKeyInstance;
 
 import java.util.ArrayList;
 

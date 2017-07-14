@@ -158,7 +158,7 @@ public class NPC_RPG_statblock {
 			return false;
 		}
 		for (int i = 0; i < statusTags.length; i++) {
-			if (statusTags[i].equals(tag)) {
+			if (tag.equals(statusTags[i])) {
 				return true;
 			}
 		}

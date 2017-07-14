@@ -322,7 +322,7 @@ public class Universe extends GameManager
 				
 				//copy all files from savename folder
 				//and copy them to the filename folder
-				FileTools.copyFolder(oldSave, newSave);
+				FileTools.copyFolderOverwrite(oldSave, newSave);
 			}		
 		}
 	}
@@ -355,6 +355,17 @@ public class Universe extends GameManager
 		return 0;
 	}
 	
+	void buildTemp()
+	{
+		File file = new File("saves/temp");
+		if (file.exists()) {
+			FileTools.deleteFolder(file);
+			file.mkdir();
+		} else {
+			file.mkdir();
+		}
+	}
+
 	private void saveRoutine(String filename) throws IOException
 	{
 	
@@ -403,6 +414,7 @@ public class Universe extends GameManager
 	
 	public boolean save(String filename) throws IOException
 	{
+		buildTemp();
 //		String saveRetain=saveName;
 		saveRoutine("temp");
 		SaveIntegrityCheck check=new SaveIntegrityCheck("temp",this);

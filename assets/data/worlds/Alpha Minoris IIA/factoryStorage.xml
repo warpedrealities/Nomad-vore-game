@@ -17,16 +17,16 @@ The halls are gloomy and twist about, guttering light fixtures the only illumina
 <blockDungeon extent="28">
 <loadBlocks file="warehouse"/>
 <keyBlock x="4" y="4">
-<row>22222222</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>22211222</row>
 <row>00211200</row>
+<row>22211222</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22222220</row>
 <edge value="SOUTH"/>
-<widget x="4" y="1" name="entrance" variable="15" info="factory"/>
+<widget x="4" y="6" name="entrance" variable="15" info="factory"/>
 </keyBlock>
 
 <keyBlock heat="2">
@@ -40,7 +40,7 @@ The halls are gloomy and twist about, guttering light fixtures the only illumina
 <row>22222222</row>
 <edge value="EAST"/>
 <widget x="4" y="4" name="script_door" info="omnico/reformerRoom"/>
-<widget x="4" y="5" name="script_door" info="omnico/reformerRoom"/>
+<widget x="4" y="3" name="script_door" info="omnico/reformerRoom"/>
 <widget x="1" y="4" name="mechanism" info="interaction/omnico/reformer" variable="51"/>
 </keyBlock>
 

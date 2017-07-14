@@ -30,6 +30,10 @@ public class ItemConsumable extends Item {
 		m_name = Inode.getAttribute("name");
 		m_weight = Float.parseFloat(Inode.getAttribute("weight"));
 		itemValue = Float.parseFloat(Inode.getAttribute("value"));
+		if (Inode.getAttribute("tag").length()>0)
+		{
+			tag=Integer.parseInt(Inode.getAttribute("tag"));
+		}
 		;
 		for (int i = 0; i < children.getLength(); i++) {
 			Node node = children.item(i);

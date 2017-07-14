@@ -1,8 +1,9 @@
-package item;
+package item.instances;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import item.Item;
 import item.Item.ItemUse;
 import shared.ParserHelper;
 
@@ -19,13 +20,13 @@ public class ItemBlueprintInstance extends Item {
 	@Override
 	public ItemUse getUse()
 	{
-		return item.m_use;
+		return item.getUse();
 	}
 	
 	@Override
 	public String getName()
 	{
-		return  item.m_name+"("+recipe+")";
+		return  item.getName()+"("+recipe+")";
 	}
 	@Override
 	public float getItemValue() {
@@ -50,7 +51,7 @@ public class ItemBlueprintInstance extends Item {
 	@Override
 	public float getWeight()
 	{
-		return  item.m_weight;
+		return  item.getWeight();
 	}
 
 	public String getRecipe() {

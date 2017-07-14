@@ -13,7 +13,7 @@
 			later then, levered it out of its mountings and can now take it with
 			you
 		</text>
-		<special effect="blueprint" ID="reformer" />
+		<special effect="blueprint" ID="reformation tube" />
 		<effect type="giveitem" value="1" item="reformation tube" />
 		<special effect="destroywidget" />
 		<choice destination="end" text="got what i came for" />

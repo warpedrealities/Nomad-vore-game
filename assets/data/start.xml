@@ -1,17 +1,18 @@
 <?xml version="1.0"?>
 <start>
 <system value="Alpha Minoris"/>
-<world value="Alpha Minoris III"/>
-<zone value="prospector2"/>
+<world value="Alpha Minoris II"/>
+<zone value="zoneS"/>
 <position x="2" y="2"/>
 <item value="laser pistol"/>
 <item value="Knife"/>
 <item value="jumpsuit"/>
 <item value="medkit"/>
 <item value="space meal"/>
-<item value="Ghetto Beamer"/>
-<item value="high explosive"/>
-<item value="power-cell"/>
+<item value="plasma pistol"/>
+<item value="plasma canister"/>
+<item value="plasma canister"/>
+<item value="cargo container"/>
 <appearance>
 <bodypart partname="body">
 <partvalue variablename="height" value="60"/>
@@ -24,6 +25,8 @@
 </bodypart>
 <bodypart partname="vagina">
 </bodypart>
-
+<bodypart partname="breasts">
+<partvalue variablename="size" value="4"/>
+</bodypart>
 </appearance>
 </start>

@@ -164,6 +164,10 @@ public class SpaceshipActionHandler {
 			WidgetPortal portal = ship.getZone(0).getPortalWidget(-101);
 			portal.setDestination(ship2.getZone(0).getName(), -101);
 			Game.sceneManager.SwapScene(new ViewScene());
+			if (ship2.getZone(0).getTiles()==null)
+			{
+				ship2.getZone(0).LoadZone();
+			}
 			portal = ship2.getZone(0).getPortalWidget(-101);
 			portal.setDestination(ship.getZone(0).getName(), -101);
 		}
