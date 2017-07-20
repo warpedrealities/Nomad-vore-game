@@ -7,6 +7,7 @@ import shipsystem.ShipResource;
 import shipsystem.weapon.WeaponCost;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import spaceship.SpaceshipResource;
+import vmo.GameManager;
 
 public class CombatActionHandler {
 
@@ -66,8 +67,23 @@ public class CombatActionHandler {
 		//subtract resources
 		subtractResources(action);
 		
-		//create effect
-		effectHandler.addEffect(action);
+		//roll dice for attack
+		int roll=GameManager.m_random.nextInt(20)+ship.getShip().getShipStats().getCrewStats().getGunnery()+
+				action.getWeapon().getWeapon().getWeapon().getTracking();
+		int rPenalty=0;
+		if (action.getWeapon().getWeapon().getWeapon().getFalloff()>0)
+		{
+			rPenalty=(int) (action.getWeapon().getWeapon().getWeapon().getRangePenalty()*action.getTarget().getPosition().getDistance(ship.getPosition()));
+		}
+		int defence=(int) (8+action.getTarget().getShip().getShipStats().getManouverability())+
+				action.getTarget().getShip().getShipStats().getCrewStats().getNavigation();
+		boolean miss=false;
+		if (roll-rPenalty<defence)
+		{
+			miss=true;
+		}
+		//create effect and pass hit or miss
+		effectHandler.addScript(ship,action,miss);
 		action.getWeapon().useWeapon();
 	}
 	

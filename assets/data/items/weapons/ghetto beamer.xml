@@ -2,12 +2,12 @@
 <ItemWeapon name="Ghetto Beamer" weight="8" value="500">
 
 <description>
-An improvised beam weapon to project an intense ray of heat. Feel the burn. 3AP 4-8 thermal damage. 
+An improvised beam weapon to project an intense ray of heat. Feel the burn. 3AP 4-10 thermal damage. alternate modes primary beam 12-30(uses 5 ammo), beam sweep 4-10 cone (uses 5 ammo)
 </description>
 <modifier>
 </modifier>
 <combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="0" actionCost="3" basicAction="true" moveType="FIGHT">
-<effectDamage type="THERMAL" minValue="3" maxValue="9" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="4" maxValue="10" modifier="NONE"/>
 <missText count="2">
 <text>you fail to fry TARGET </text>
 <text>you fail to scorch TARGET </text>
@@ -18,7 +18,18 @@ An improvised beam weapon to project an intense ray of heat. Feel the burn. 3AP 
 </hitText>
 </combatMove>
 <combatMove name="primary beam" ammoCost="5" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="0" cooldown="20" icon="7" actionCost="3" moveType="FIGHT">
-<effectDamage type="THERMAL" minValue="9" maxValue="27" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="12" maxValue="27" modifier="NONE"/>
+<missText count="2">
+<text>you fail to annihilate TARGET </text>
+<text>you fail to incinerate TARGET </text>
+</missText>
+<hitText count="2">
+<text>you blast TARGET with a devastating beam for VALUE heat damage</text>
+<text>you blast TARGET with an intense beam for VALUE heat damage</text>
+</hitText>
+</combatMove>
+<combatMove name="beam sweep" ammoCost="5" pattern="CONE" bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="0" cooldown="20" icon="8" actionCost="3" moveType="FIGHT">
+<effectDamage type="THERMAL" minValue="4" maxValue="10" modifier="NONE"/>
 <missText count="2">
 <text>you fail to annihilate TARGET </text>
 <text>you fail to incinerate TARGET </text>

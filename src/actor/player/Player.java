@@ -364,24 +364,29 @@ public class Player extends Actor {
 	}
 
 	public Item UnEquip(int slot) {
-		Item item = playerInventory.m_slots[slot].getItem();
-		if (ItemEquip.class.isInstance(item)) {
-			ItemEquip Eitem = (ItemEquip) playerInventory.m_slots[slot].getItem();
-			if (Eitem.getModifier() != null) {
-				actorRPG.RemoveModifier(Eitem.getModifier());
+		if (playerInventory.m_slots[slot]!=null)
+		{
+			Item item = playerInventory.m_slots[slot].getItem();
+			if (ItemEquip.class.isInstance(item)) {
+				ItemEquip Eitem = (ItemEquip) playerInventory.m_slots[slot].getItem();
+				if (Eitem.getModifier() != null) {
+					actorRPG.RemoveModifier(Eitem.getModifier());
+				}
+
 			}
 
+			Item r_item = playerInventory.m_slots[slot];
+			playerInventory.m_slots[slot] = null;
+			playerInventory.m_weight -= item.getWeight();
+			if (slot != Inventory.QUICK) {
+				Player_RPG rpg = (Player_RPG) actorRPG;
+				rpg.removeEquipStatus(5 + slot);
+				rpg.genMoveList();
+			}		
+			return r_item;
 		}
+		return null;
 
-		Item r_item = playerInventory.m_slots[slot];
-		playerInventory.m_slots[slot] = null;
-		playerInventory.m_weight -= item.getWeight();
-		if (slot != Inventory.QUICK) {
-			Player_RPG rpg = (Player_RPG) actorRPG;
-			rpg.removeEquipStatus(5 + slot);
-			rpg.genMoveList();
-		}
-		return r_item;
 	}
 
 	@Override

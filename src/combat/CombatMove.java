@@ -14,6 +14,7 @@ import combat.effect.Effect_Movement;
 import combat.effect.Effect_Status;
 import combat.statusEffects.StatusEffect;
 import combat.effect.Effect_Recover;
+import combat.effect.Effect_Spawn;
 import shared.Vec2f;
 import view.ViewScene;
 import view.ZoneInteractionHandler;
@@ -160,6 +161,9 @@ public class CombatMove {
 
 				if (e.getTagName().equals("effectMovement")) {
 					effects.add(new Effect_Movement(e));
+				}
+				if (e.getTagName().equals("effectSpawn")) {
+					effects.add(new Effect_Spawn(e));
 				}
 				if (e.getTagName().equals("missText")) {
 					genMiss(e);
@@ -366,7 +370,7 @@ public class CombatMove {
 			int def = CombatLookup.getBaseDefence(distance, defAttribute) + target.getAttribute(defAttribute);
 			// get attack bonus
 			int bonus = attackBonus + origin.getRPG().getAttribute(bonusAttribute);
-			if (distance >= 2 && attackPattern != AttackPattern.P_CONE) {
+			if (distance >= 2 && attackPattern != AttackPattern.P_CONE && moveType!=MoveType.MOVEMENT) {
 				ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
 						new Vec2f(origin.getPosition().x, origin.getPosition().y), 0);
 				def -= rangedBias;
@@ -375,19 +379,19 @@ public class CombatMove {
 			}
 			// roll attack
 			int r = GameManager.m_random.nextInt(20) + bonus;
-			if (attackPattern == attackPattern.P_SELF) {
+			if (attackPattern == AttackPattern.P_SELF) {
 				r = 999;
 			}
-			if (attackPattern == attackPattern.P_SWEEP) {
+			if (attackPattern == AttackPattern.P_SWEEP) {
 				return CombatAura.doSweep(this, origin, target);
 			}
-			if (attackPattern == attackPattern.P_CIRCLE) {
+			if (attackPattern == AttackPattern.P_CIRCLE) {
 				return CombatAura.doCircle(this, origin, target);
 			}
-			if (attackPattern == attackPattern.P_BOMB) {
+			if (attackPattern == AttackPattern.P_BOMB) {
 				return CombatAura.doExplosion(this, origin, target, true);
 			}
-			if (attackPattern == attackPattern.P_CONE) {
+			if (attackPattern == AttackPattern.P_CONE) {
 				return CombatAura.doCone(this, origin, target);
 			}
 

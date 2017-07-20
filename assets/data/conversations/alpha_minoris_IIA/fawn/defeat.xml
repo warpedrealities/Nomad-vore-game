@@ -121,7 +121,7 @@
 			created. She was adorable, but it's hard not to think she's better
 			this way.
 		</text>
-		<effect type="feed" value="70" />
+		<effect type="feed" value="80" />
 		<special effect="removenpc" />
 		<choice destination="end" text="she was a wonderful load" />
 	</page>
@@ -180,7 +180,7 @@
 			rightful place as your food. The fawn's nutrients flowing into you
 			with ease.
 		</text>
-		<effect type="feed" value="70" />
+		<effect type="feed" value="80" />
 		<special effect="removenpc" />
 		<choice destination="end" text="she was a delicious snack" />
 	</page>

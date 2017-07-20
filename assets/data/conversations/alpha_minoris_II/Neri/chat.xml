@@ -2,6 +2,46 @@
 <Conversation>
 
 	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="digestion" />
+	<text>
+	The green elfin girl packing extra looks at you approach and then doubletakes, glances down. Then back to you and takes a step back "but..."
+	</text>
+	<choice destination="explaination0" text="surprised? I come back"/>
+	</page>
+	
+	<page ID="explaination0">
+	<text>
+	"YES! I turned you into cum! and now you're in front of me, of course I'm surprised." Neri says throwing her arms up to try and exaggerate her shock even further.
+	</text>
+	<choice destination="explaination1" text="calm down, i'm not holding any hard feelings"/>
+	</page>
+	
+	<page ID="explaination1">
+	<text>
+	"You're not mad?..well, i suppose that's good...was it fun?" she asks with a headtilt and a smile, pondering this revelation of reforming cockfood.
+	</text>
+	<effect type="setlocalflag" flag="digestion" value="2" />	
+	<choice destination="explaination2" text="yes actually, I enjoyed it a lot"/>
+	<choice destination="altStart" text="Let's just put it behind us and act like everything is normal"/>
+	</page>
+
+	<page ID="explaination2">
+	<text>
+	"ooh, well then. anytime you want to be cum just tell me and i'll happily melt ya down again."
+	</text>
+	<effect type="setlocalflag" flag="sackslut" value="1" />
+	<choice destination="end" text="mhmm, i'll have to take you up on that sometime."/>
+	</page>
+	
+	<page ID="altStart">
+	<text>
+	"alright so, what do you want?" 
+	</text>
+	<choice destination="agree" text="I need another thorough wellcum" />
+	<choice destination="end" text="nothing right now" />
+	</page>
+	
+	<page ID="start">
 		<preference fetish="cockvore" />
 		<condition evaluate="LOCALFLAG" operator="equals" value="0"
 			flag="talked" />
@@ -109,6 +149,7 @@
 	<text>
 	Neri hears your lust addled plea and smiles "mhmm that's the plan." she says and giggles as she gets comfortable sat down with her legs spread around the bulge you make in her loins. Neri steadily rubbing over her sack as her balls begin to burble and churn to start working you down "there we go, here we go. You'll be good cum" she says and just luxuriates in the sensation, soon in a half sprawled out position as time passes. The elf apparently enjoying your moaning squirms as you marinate in a hot cumbath deep in her balls. You're inside her, and you're melting, your hands rubbing against the inside of her sack find her flesh yielding less as you weaken and soften until you find that your hands are wonderfully liquidating and melting away. Your fingers mooshing against the inside of her sack until they melt away, wonderful, imagining how her balls must look starting to round out as you relax and feel your form starting to lose definition and spread out into the surrounding cum. It feels, wonderful...
 	</text>
+	<effect type="incrementlocalflag" flag="digestion" value="1" />		
 	<choice destination="cockvoreAltGO" text="..burble"/>
 	</page>
 	
@@ -197,7 +238,7 @@
 	<choice destination="CTFGO" text="*twitch, throb*"/>
 	</page>
 	
-	<gameover ID="CTFGO">
+	<gameover ID="CTFGO" noReform="true">
 	<text>
 	Neri groans in delight as she strokes over her new cock, admiring the heft and length you've given her. It feels wonderful though and you probably think the trade of all you were for what you are now was worth it. your new form throbbing in her hands as she masturbates, pulsating with lusty sensations as she works herself to climax. Neri gasping and spasming her hips as her newly sensitive shaft erupts, pumping hot cum out through you to stain the ground with ropes of thick jizz. The orgasm serving to make you a bit more of a manageable third leg for the naughty elf, who looks at her handiwork then down at her crotch and giggles "well, welcome to the tribe traveller. I think you fit in just perfectly." she says and watches as you soften, adding "I guess we have a place for all outsiders."
 	</text>
@@ -360,6 +401,7 @@
 			to try and push out just spreading your form out into the surrounding
 			cum.
 		</text>
+			<effect type="incrementlocalflag" flag="digestion" value="1" />	
 		<choice destination="digestGO" text="melt away" />
 	</page>
 
@@ -404,6 +446,7 @@
 			round and starting to shift into two orbs anew as your oozing form
 			loses definition and conforms more and more to your surroundings.
 		</text>
+		<effect type="incrementlocalflag" flag="digestion" value="1" />		
 		<choice destination="digestGO" text="melt away" />
 	</page>
 

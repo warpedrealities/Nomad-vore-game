@@ -77,6 +77,10 @@ public class NPC extends Actor implements Controllable {
 	ScriptPackage scripts;
 	Crew crewSkill;
 
+	public Crew getCrewSkill() {
+		return crewSkill;
+	}
+
 	public boolean isCompanion() {
 		return isCompanion;
 	}
@@ -458,7 +462,10 @@ public class NPC extends Actor implements Controllable {
 	@Override
 	public void Save(DataOutputStream dstream) throws IOException {
 		dstream.write(1);
-
+		saveRoutine(dstream);
+	}
+	protected void saveRoutine(DataOutputStream dstream) throws IOException
+	{
 		// save position
 		actorPosition.Save(dstream);
 		// save visibility

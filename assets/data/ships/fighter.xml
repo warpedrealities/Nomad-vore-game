@@ -30,7 +30,7 @@
 </prefab>
 <pairedportal x="0" y="3" sprite="1" ID="-101" facing="2"> Exterior hatch </pairedportal>
 <placeWidget x="2" y="5" name="hardpoint">
-<contains name="explosive cannon">
+<contains name="shipweapons/explosive cannon">
 <resource type="explosive shell" value="40"/>
 </contains>
 </placeWidget>

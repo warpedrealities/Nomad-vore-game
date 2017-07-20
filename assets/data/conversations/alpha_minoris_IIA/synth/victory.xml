@@ -44,7 +44,7 @@
 	
 	<page ID="unbirthingBEscape">
 	<text>
-	
+	You decide that being turned into the ingredient for a debauched beverage doesn't sound like a good idea. Even if it'd feel amazing. Not wanting to waste your blandishments on an uncaring gynoid you start shoving and pushing to try and force your way out "valued customer, the liquidation is not yet underway. I'll have a chance to let you out as a gush between my thighs later just be patient." the synth teases with a giggle as she presses her thighs together to try keeping you inside. But apparently to no avail as you work against her powerful nether muscles and force your hands out, shoving at her inner thighs and toppling her over. The impact jolting her enough that you manage to work your way out while she's 'stunned'. Though it won't be long before she's after you again.
 	</text>
 	<effect type="heal" value="0.1" />
 	<effect type="stunnpc" value="10" />
@@ -53,14 +53,30 @@
 	
 	<page ID="unbirthingBTrapped">
 	<text>
-	
+	You decide that being turned into the ingredient for a debauched beverage doesn't sound like a good idea. Even if it'd feel amazing. Not wanting to waste your blandishments on an uncaring gynoid you start shoving and pushing to try and force your way out "valued customer, the liquidation is not yet underway. I'll have a chance to let you out as a gush between my thighs later just be patient." the synth teases with a giggle as she presses her thighs together to try keeping you inside. You shove your hands down through her sexual channel, fingers sliding into the open air only for her sex to clench and ripple and suck your back inside "Valued customer, be patient.." she chides you with a giggle as her womb starts to clench and ooze around you. Her soft flesh marinating you in sensual fluids that make you shudder in delight, distracting you further and further from your efforts to escape. Your strength and resolve waning as you give yourself over to the pleasure of being worked over.
 	</text>
-	
+	<choice destination="unbirthingBTrappedGO" text="too good..can't resist"/>
 	</page>
+	
+	<gameover ID="unbirthingBTrappedGO">
+	<text>
+	Her soft womb walls knead over you, rthythmically contracting as you writhe in helpless bliss. Your hands busy in self gratification rather than escape now as the pleasurable fluids overwhelm you and work you down. The synth remarks "we are pleased you are enjoying your liquidation valued customer, it will not be longer until you are reduced to my fluids." but you barely hear or register her words as you orgasm, then orgasm again..then..gush. The Synth's hand stroking over her nethers as she emits a moan and splatters you out in a gushing series of bursts of sticky fluids. When she's done reducing you to an orgasm she steps away, unmindful of the fluids saturating the inside of her legs and snatch as she returns to her activities.
+	</text>
+	</gameover>
 	
 	<page ID="unbirthingBSubmit">
-	
+	<text>
+	You decide to comply and settle in to enjoy this liquidation. You can hear the synth's finger messily shlick shlicking into her sex as she emits a murr "we hope you enjoy your conversion valued customer." the synth commends at your submission. Her womb kneading over you soaking you in blissful juices, making it harder and harder to focus on anything outside your little world of pleasure and lust. Your moans emanating from within her as you attend to your depraved kneads and, gradually, begin to soften..
+	</text>
+	<choice destination="unbirthingBSubmitGO" text="oh yes"/>
 	</page>
+	
+	<gameover ID="unbirthingBSubmitGO">
+	<text>
+	The gynoid seems to pace herself, stimulating her sex as your pleasure builds as you soften into a blissful blushing mass within her. Your pleasure finally cresting into a series of rolling orgasms. Your body shuddering, spasming as you literally slosh yourself away into a mass of femmecum inside her. The Gynoid smiling and moaning as she strokes her nethers more vigorously upon feeling your liquidation. Her own climax sending you gushing out to splatter on the ground, a sticky mass of fragrant girljuice forming a puddle underneath her as she pleasantly discharges you. All that remains of you staining her legs and the ground beneath. You can say one thing for sure though, it really did feel amazing.
+	
+	</text>
+	</gameover>
 	
 	<page ID="start">
 	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>	

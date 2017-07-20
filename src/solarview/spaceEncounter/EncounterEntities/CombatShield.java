@@ -1,5 +1,9 @@
 package solarview.spaceEncounter.EncounterEntities;
 
+import shared.Vec2f;
+import solarview.spaceEncounter.effectHandling.EffectHandler;
+import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
+import solarview.spaceEncounter.effectHandling.effects.EffectSprite;
 import spaceship.Spaceship;
 import spaceship.stats.SpaceshipShield;
 
@@ -61,18 +65,30 @@ public class CombatShield {
 		return damage;
 	}
 
-	public int applyDefence(int damage, int disruption) {
+	public int applyDefence(int damage, int disruption,EffectHandler_Interface effectHandler,EncounterShip ship) {
 		if (status == ShieldStatus.FASTCHARGE) {
 			status = ShieldStatus.ON;
 		}
+		int h=hitpoints;
 		damage = weakenShield(damage);
 		hitpoints -= disruption;
 		if (damage < 0) {
 			damage = 0;
 		}
 		if (hitpoints <= 0) {
+			EffectSprite e=new EffectSprite(ship.getPosition(),"shield.png",8,4,false);
+			e.setSize(2);
+			effectHandler.addEffect(e);
 			shutdown();
 		}
+		else
+		{
+			EffectSprite e=new EffectSprite(ship.getPosition(),"shield.png",4,4,false);
+			e.setSize(2);
+			effectHandler.addEffect(e);		
+		}
+		String s=Integer.toString(h-hitpoints);
+		effectHandler.drawText(ship.getPosition().replicate(),s, 1);
 		return damage;
 	}
 
@@ -97,11 +113,9 @@ public class CombatShield {
 		return false;
 	}
 
-	public void update() {
+	public void update(EffectHandler effectHandler, Vec2f p) {
 		if (isActive()) {
-			if (status == ShieldStatus.STARTUP) {
-				status = ShieldStatus.FASTCHARGE;
-			}
+
 			if (status == ShieldStatus.FASTCHARGE) {
 				hitpoints += 10;
 				if (hitpoints > shield.getHitpoints()) {
@@ -127,6 +141,9 @@ public class CombatShield {
 		}
 		else if (status==ShieldStatus.STARTUP)
 		{
+			EffectSprite e=new EffectSprite(p,"shield.png",0,4,false);
+			e.setSize(2);
+			effectHandler.addEffect(e);	
 			status=ShieldStatus.FASTCHARGE;
 		}
 	}

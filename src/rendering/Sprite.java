@@ -16,7 +16,7 @@ import shared.Vec2f;
 import shared.Vec2i;
 import shared.Vertex;
 
-public class Sprite implements Square_Int {
+public class Sprite implements Square_Int,Renderable {
 
 	protected int m_VBO;
 	protected int m_VAO;
@@ -28,7 +28,8 @@ public class Sprite implements Square_Int {
 	protected float spriteSize = 1;
 	protected float spriteDepth = 0.4F;
 	boolean m_visible;
-
+	protected SpriteBatch batch;
+	
 	public Sprite() {
 
 	}
@@ -200,6 +201,7 @@ public class Sprite implements Square_Int {
 
 	}
 
+	
 	public float getSpriteSize() {
 		return spriteSize;
 	}
@@ -247,5 +249,15 @@ public class Sprite implements Square_Int {
 
 		m_matrix.m30 = spritePosition.x + 0.5F;
 		m_matrix.m31 = spritePosition.y + 0.5F;
+	}
+
+	@Override
+	public void setSpriteBatch(SpriteBatch batch) {
+		this.batch=batch;
+	}
+	
+	public SpriteBatch getBatch()
+	{
+		return this.batch;
 	}
 }

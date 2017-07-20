@@ -68,11 +68,12 @@ public class EncounterRenderer {
 		background.draw(viewMatrix, objmatrix, tintvar, matrix44Buffer);
 		GL20.glUniform4f(tintvar, 1, 1, 1, 1);
 		spriteManager.draw(objmatrix, tintvar, matrix44Buffer);
-		
+		GL20.glUniform4f(tintvar, 1, 1, 1, 1);
+		effectHandler.draw(matrix44Buffer,objmatrix,tintvar);
+				
 		trailControl.draw(matrix44Buffer,objmatrix,tintvar);
 		
-		effectHandler.draw(matrix44Buffer,objmatrix,tintvar);
-		
+		GL20.glUniform4f(tintvar, 1, 1, 1, 1);
 		circle.draw(objmatrix, tintvar, matrix44Buffer);
 	}
 

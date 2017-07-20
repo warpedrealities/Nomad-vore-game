@@ -35,12 +35,16 @@
 		<macro ID="breast_size_desc" /> breasts stick 
 		<value ID="size" div="1" /> inches away from your chest.
 	</block>
+	<block bodypart="butt">
+	You possess a
+	<macro ID="butt_size_desc" /> ass.
+	</block>
 	<block bodypart="tail">
 		. You also possess a 
 		<macro ID="tail_type_desc" />
 		 tail.
 	</block>
-	<pbreak />
+	<pbreak/>
 	<block bodypart="vagina">
 		downstairs you currently have a vagina.
 	</block>

@@ -92,7 +92,7 @@ public class GameOver extends SceneBase implements MyListener {
 		m_window.add(buttons[0]);
 		if (!suppressReform && tool.getCanReform())
 		{
-			buttons[1]=new Button(new Vec2f(11.5F, 0.0F), new Vec2f(11, 2), m_textureIds[2], this, "reform", 0);
+			buttons[1]=new Button(new Vec2f(11.5F, 0.0F), new Vec2f(11, 2), m_textureIds[2], this, "reform", 1);
 			m_window.add(buttons[1]);			
 		}
 	}

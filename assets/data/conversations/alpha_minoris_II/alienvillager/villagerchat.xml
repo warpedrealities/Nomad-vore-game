@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Conversation>
 
+
 	<page ID="start">
 		<condition evaluate="FACTIONFLAG" value="1" operator="equals"
 			flag="allegiance" />
@@ -21,6 +22,23 @@
 	</page>
 
 
+	<page ID="start">
+	<condition evaluate="LIKENESS" operator="greaterthan" likeness="saurian" value="2" />
+		<text>
+			The pointy-eared humanoid is similar in most regards to humans but for
+			her pale, green skin. She stands around five feet tall and more than
+			fills out her form, especially viewed from behind. She wears a skirt
+			that does little to hide her wondrous, shapely ass-- in fact, it
+			seems to highlight it-- and no top, her breasts swaying free on her
+			chest, small and pert. She eyes you distrustfully as you approach, something about your appearance engendering distrust "speak your piece stranger."
+		</text>
+		<choice destination="seduction" text="Attempt to seduce." />
+		<choice destination="info" text="Ask some questions." />
+		<choice destination="earth"
+			text="-Can you, by any chance, give me directions to Earth?-" />
+		<choice destination="end" text="-Well, bye.-" />
+	</page>
+	
 	<page ID="start">
 		<text>
 			The pointy-eared humanoid is similar in most regards to humans but for
@@ -401,7 +419,7 @@
 			the earth, with a primitive skirt that so doesn't fit you floating on
 			top.
 		</text>
-		<effect value="85" type="feed" />
+		<effect value="95" type="feed" />
 		<special effect="removenpc" />
 		<choice destination="end" text="-Someone else can clean that up.-" />
 	</page>
@@ -549,7 +567,7 @@
 			too good.
 		</text>
 		<choice destination="end" text="-Hope you enjoy your new form.-" />
-		<effect value="85" type="feed" />
+		<effect value="95" type="feed" />
 		<special effect="removenpc" />
 	</page>
 

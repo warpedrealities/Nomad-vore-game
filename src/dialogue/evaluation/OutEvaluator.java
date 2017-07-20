@@ -50,18 +50,6 @@ public class OutEvaluator {
 			}
 
 		}
-		if (eval.equals("looksLike"))
-		{
-			AppearanceEvaluator evaluator=new AppearanceEvaluator(m_player.getLook());
-			if (evaluator.check(E.getAttribute("likeness")))
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
 		if (eval.equals("companionSlotFree")) {
 			if (m_player.isFreeCompanion()) {
 				return true;
@@ -243,6 +231,16 @@ public class OutEvaluator {
 					return false;
 				}
 			}
+			if (eval.equals("LIKENESS")) {
+				String operator = E.getAttribute("operator");
+				int value = Integer.parseInt(E.getAttribute("value"));
+				AppearanceEvaluator evaluator=new AppearanceEvaluator(m_player.getLook());
+				String likeness=E.getAttribute("likeness");
+				if (ConditionCheck(value, operator, evaluator.check(likeness)) == false) {
+					return false;
+				}
+			}
+			
 		}
 
 		if (E.getTagName().equals("assertion")) {

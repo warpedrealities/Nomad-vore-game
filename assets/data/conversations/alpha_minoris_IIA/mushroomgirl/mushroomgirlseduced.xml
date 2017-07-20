@@ -190,7 +190,7 @@
 			Hopefully, all encounters with the mushroom folk will end as pleasant as this.
 
 		</text>
-		<effect type="feed" value="100" />
+		<effect type="feed" value="110" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

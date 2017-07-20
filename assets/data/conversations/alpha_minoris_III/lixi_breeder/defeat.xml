@@ -91,7 +91,7 @@
 			utterly by a sexual appetite of your voracious snatch. An appetite
 			far more encompassing and capable in getting what it wanted.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

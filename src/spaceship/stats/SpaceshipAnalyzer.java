@@ -94,6 +94,8 @@ public class SpaceshipAnalyzer {
 										weapons.add(new SpaceshipWeapon((ShipWeapon) system.getShipAbilities().get(k),
 												emitterIndex, ws.getFacing()));
 										break;
+									default:
+										break;
 									}
 
 								}

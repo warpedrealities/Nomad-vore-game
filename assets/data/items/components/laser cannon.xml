@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ItemWidget name="laser cannon" weight="10" value="1500">
 <description>AA ship mounted laser cannon based on earth technology. 4-24 damage, cooldown 10, 4 energy to fire.</description>
-<placeditem widget="laser cannon"/>
+<placeditem widget="shipweapons/laser cannon"/>
 </ItemWidget>

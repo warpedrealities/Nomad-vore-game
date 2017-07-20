@@ -268,7 +268,7 @@
 		<choice destination="struggleCTFGO" text="aftermath" />
 	</page>
 
-	<gameover ID="struggleCTFGO">
+	<gameover ID="struggleCTFGO" noReform="true">
 		<text>
 			The lixi's orgasm tapers off steadily, last spurts jetting forth from
 			her new cock and you're dimly aware even as she stands up and you

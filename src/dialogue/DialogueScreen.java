@@ -194,7 +194,7 @@ public class DialogueScreen extends Screen implements Callback {
 			}
 		}
 		boolean b=false;
-		if ("true".equals(node.getAttribute("noReform").length()))
+		if ("true".equals(node.getAttribute("noReform")))
 		{
 			b=true;
 		}

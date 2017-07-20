@@ -34,7 +34,7 @@
 	<text>
 	The raptor girl is kicking and squirming with all the might left in her, but she can’t manage to force her way back out. Her wriggling motions, however, are really starting to work you up. You pump your shaft. Your balls begin to fill with bubbly, frothy cum. The raptor girl cries out as she begins to melt into the boiling substance. You jack yourself eagerly, speeding up the process. The raptor girl’s cries begin to gurgle as she’s submerged in the digestive cream. She kicks and bucks a few more times, her struggles growing weaker, until at last she falls still. You jack yourself faster until, at last, you burst, spraying her out all over the ground. All that’s left of her is a large, spoogy stain.
 	</text>
-	<effect type="feed" value="85" />
+	<effect type="feed" value="95" />
 	<special effect="removenpc" />
 	<choice destination="end" text="she's better this way, moving on"/>
 	</page>
@@ -155,7 +155,7 @@
 			belly softens, rounds out and then slowly shrunk down to nothing.
 			Every sign of the raptor erased or secreted in your veins now.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

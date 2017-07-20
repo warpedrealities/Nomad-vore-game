@@ -1,18 +1,15 @@
 <?xml version="1.0"?>
 <start>
 <system value="Alpha Minoris"/>
-<world value="Alpha Minoris II"/>
-<zone value="zoneS"/>
+<world value="avenger"/>
+<zone value="avenger1"/>
 <position x="2" y="2"/>
 <item value="laser pistol"/>
 <item value="Knife"/>
 <item value="jumpsuit"/>
 <item value="medkit"/>
 <item value="space meal"/>
-<item value="plasma pistol"/>
-<item value="plasma canister"/>
-<item value="plasma canister"/>
-<item value="cargo container"/>
+
 <appearance>
 <bodypart partname="body">
 <partvalue variablename="height" value="60"/>
@@ -27,6 +24,9 @@
 </bodypart>
 <bodypart partname="breasts">
 <partvalue variablename="size" value="4"/>
+</bodypart>
+<bodypart partname="butt">
+<partvalue variablename="size" value="6"/>
 </bodypart>
 </appearance>
 </start>

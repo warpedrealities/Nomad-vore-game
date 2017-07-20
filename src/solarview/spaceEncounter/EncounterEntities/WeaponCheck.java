@@ -28,11 +28,11 @@ public class WeaponCheck {
 		return p;
 	}
 	
-	static double angle(float x, float y)
+	static double angle(float x0, float y0,float x1,float y1)
 	{
-		double d=Math.atan2(x,y);
-		
-		return d;
+		double d=Math.atan2(x0,y0);
+		double a=Math.atan2(x1, y1);
+		return d-a;
 	}
 	
 	static public boolean checkArc(EncounterShip ship, EncounterShip target, CombatWeapon weapon)
@@ -45,12 +45,13 @@ public class WeaponCheck {
 		//find if the difference in angles is smaller than the arc
 		v.normalize();
 		w.normalize();
+		v.x=v.x*-1;
 		
 		double width=0.785398F*weapon.getWeapon().getWeapon().getFiringArc()/2;
 		
-		double r=angle(v.x-w.x,v.y-w.y);
+		double r=angle(v.x,v.y,w.x,w.y);
 		
-		if (r<=width)
+		if (r<=width && r>=width*-1)
 		{
 			return true;
 		}

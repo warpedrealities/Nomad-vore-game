@@ -15,6 +15,7 @@ import landingScreen.LandingScreen;
 import nomad.Station;
 import nomad.Universe;
 import nomad.World;
+import rendering.SpriteManager;
 
 public class SpaceshipActionHandler {
 
@@ -103,6 +104,10 @@ public class SpaceshipActionHandler {
 			if (world.Land(ship)) {
 				// remove ship from starsystem
 				Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+				if (ship.getSpriteObj().getBatch()!=null)
+				{
+					ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
+				}	
 				ship.getSpriteObj().discard();
 				ship.setSpriteObj(null);
 				// move ship to colocate with world
@@ -131,6 +136,10 @@ public class SpaceshipActionHandler {
 		if (station.dock(ship)) {
 			// remove ship from starsystem
 			Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+			if (ship.getSpriteObj().getBatch()!=null)
+			{
+				ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
+			}
 			ship.getSpriteObj().discard();
 			ship.setSpriteObj(null);
 			// move ship to colocate with world
@@ -153,6 +162,10 @@ public class SpaceshipActionHandler {
 	public void join(Spaceship ship, Spaceship ship2) {
 		if (ship2.getDockedShip() == null) {
 			Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+			if (ship.getSpriteObj().getBatch()!=null)
+			{
+				ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
+			}	
 			ship.getSpriteObj().discard();
 			ship.setSpriteObj(null);
 			ship.setShipState(ShipState.SHIPDOCK);

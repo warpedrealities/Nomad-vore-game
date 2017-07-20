@@ -10,7 +10,8 @@
 </shipstats>
 
 <emitters>
-
+<engine x="-0.1" y="-0.4"/>
+<engine x="0.1" y="-0.4"/>
 </emitters>
 
 <layout width="16" height="16" spriteset="ship.png">
@@ -40,23 +41,13 @@
 <loot item="plasma canister" chance="1.0"/>
 <loot item="plasma canister" chance="1.0"/>
 <loot item="capture device" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
-<loot item="cargo container" chance="1.0"/>
 <loot item="blueprint" chance="1.0" addendum="cultivator"/>
 </lootTable>
 </contains>
 </placeWidget>
 
 <placeWidget x="1" y="4" name="slot">
+<contains name="datacomputer"/>
 </placeWidget>
 <placeWidget x="2" y="4" name="slot">
 <contains name="navconsole"/>

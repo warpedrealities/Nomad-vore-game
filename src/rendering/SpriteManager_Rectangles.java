@@ -2,7 +2,7 @@ package rendering;
 
 public class SpriteManager_Rectangles extends SpriteManager {
 
-	private void buildSprite(Sprite sprite, SpriteBatch batch) {
+	private void buildSprite(Renderable sprite, SpriteBatch batch) {
 		if (Sprite_Rectangle.class.isInstance(sprite)) {
 			float x = batch.getTextureWidth() / 64;
 			float y = batch.getTextureHeight() / 64;
@@ -16,7 +16,7 @@ public class SpriteManager_Rectangles extends SpriteManager {
 	}
 
 	@Override
-	public void addSprite(Sprite sprite, String textureName) {
+	public void addSprite(Renderable sprite, String textureName) {
 
 		if (!addExisting(sprite, textureName)) {
 			SpriteBatch batch = new SpriteBatch(textureName);
@@ -28,7 +28,7 @@ public class SpriteManager_Rectangles extends SpriteManager {
 		}
 	}
 
-	private boolean addExisting(Sprite sprite, String textureName) {
+	private boolean addExisting(Renderable sprite, String textureName) {
 		for (int i = 0; i < spriteBatches.size(); i++) {
 			if (spriteBatches.get(i).getSpriteTexture().equals(textureName)) {
 				buildSprite(sprite, spriteBatches.get(i));

@@ -5,9 +5,8 @@ A full body outfit of alien design. While it contains defensive technologies and
 </description>
 <ingredient item="fabric" quantity="4"/>
 <ingredient item="scrap metal" quantity="4"/>
-<ingredient item="flux capacitor" quantity="1"/>
-<ingredient item="computation valve" quantity="1"/>
+<ingredient item="computation valve" quantity="2"/>
 <ingredient item="battery" quantity="1"/>
-<ingredient item="zymonite" quantity="1"/>
+<ingredient item="zymonite" quantity="4"/>
 <result item="encounter suit"/>
 </recipe>

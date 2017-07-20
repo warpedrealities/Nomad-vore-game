@@ -219,7 +219,7 @@
 			now utterly converted into your orgasm, a few errant feathers in the
 			stain is tall that's left to show who she was.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="well that was fun" />
 	</page>
@@ -326,7 +326,7 @@
 			few errant feathers in the stain is all that's left to show who she
 			was.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="well that was fun" />
 	</page>

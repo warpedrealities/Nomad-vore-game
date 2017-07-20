@@ -111,7 +111,7 @@
 			fluids puddling on the ground and a hot flush on your face remaining
 			of the lizard.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

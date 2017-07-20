@@ -55,6 +55,7 @@
 
 		I'm going to prevent the recent glitches involving the synth safeties are down to maintenance or defects rather than actual foul play for the time being. However it has become clear I need a contingency in place unless I want to explain to head office how I'm down half the staff due to the synths getting gurgle happy. As such I've pulled some strings to get us a reformation tube. It'll be locked in the back of the storage level unless the main computer detects synth's without their safeties. This is to stop you lot using it recreationally which I know you would do, and probably still will do despite my best efforts. Just remember I can blank patterns and I have a space on my shelf.
 	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_EMAIL" value="1" />	
 	<choice destination="mailbox" text="return to mailbox"/>
 	<choice destination="end" text="exit"/>
 	</page>	

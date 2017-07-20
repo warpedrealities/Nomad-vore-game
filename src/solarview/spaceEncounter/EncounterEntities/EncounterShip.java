@@ -10,9 +10,13 @@ import org.w3c.dom.NodeList;
 import rendering.Square_Rotatable_Int;
 import shared.ParserHelper;
 import shared.Vec2f;
+import shipsystem.weapon.ShipWeapon;
 import solarview.spaceEncounter.CombatController;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
+import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 import spaceship.Spaceship;
+import vmo.Game;
+import vmo.GameManager;
 import particlesystem.ParticleConeEmitter;
 
 public class EncounterShip {
@@ -101,10 +105,10 @@ public class EncounterShip {
 		actionHandler.update(dt, handler);
 	}
 
-	public void updateResources() {
+	public void updateResources(EffectHandler handler) {
 		ship.getShipStats().run();
 		if (shield != null) {
-			shield.update();
+			shield.update(handler,manouver.getPosition());
 		}
 		if (weapons != null && weapons.size() > 0) {
 			for (int i = 0; i < weapons.size(); i++) {
@@ -116,9 +120,51 @@ public class EncounterShip {
 	public ShipEmitters getEmitters() {
 		return emitters;
 	}
+	
+	public Vec2f getEmitter(int i)
+	{
+		Vec2f p=emitters.getWeaponEmitters().get(i).replicate();
+		
+		p.rotate(manouver.getHeading()* 0.785398F);
+		p.add(manouver.getPosition());
+		return p;
+	}
 
 	public List<CombatAction> getActions() {
 		return actionHandler.getList();
+	}
+
+	public Vec2f getLeading(float v) {
+		return manouver.lead(v);
+	}
+
+	public void attack(float distance,CombatAction action, EffectHandler_Interface effectHandler) {
+		ShipWeapon weapon=action.getWeapon().getWeapon().getWeapon();
+		int damage=weapon.getMinDamage();
+		if (weapon.getMaxDamage()>weapon.getMinDamage())
+		{
+			damage+=GameManager.m_random.nextInt(weapon.getMaxDamage()-weapon.getMinDamage());
+		}
+		if (weapon.getFalloff()>0)
+		{
+			damage-=weapon.getFalloff()*distance;
+		}
+		//apply shield and get amount of shield resistance
+		if (shield!=null && shield.isActive())
+		{
+			damage=shield.applyDefence(damage, weapon.getDisruption(),effectHandler,this);		
+		}
+
+		//apply armour
+		damage-=ship.getShipStats().getArmour();
+		if (damage<0)
+		{
+			damage=0;
+		}
+		effectHandler.drawText(manouver.getPosition().replicate(),Integer.toString(damage), 0);
+		
+		ship.getShipStats().getResource("HULL").subtractResourceAmount(damage);
+		
 	}
 
 

@@ -23,7 +23,7 @@ public class WidgetReformer extends WidgetBreakable {
 
 	@Override
 	public void save(DataOutputStream dstream) throws IOException {
-		dstream.write(22);
+		dstream.write(23);
 		commonSave(dstream);
 		saveBreakable(dstream);
 		dstream.writeBoolean(active);

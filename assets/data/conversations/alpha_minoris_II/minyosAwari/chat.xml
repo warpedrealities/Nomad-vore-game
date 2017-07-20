@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
+			value="2" />
+		<!--digested once-->
+		<text>
+
+		</text>
+	</page>
+
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
+			value="1" />
+		<!--eaten once-->
+		<text>
+		"Greetings warrior, what can I do for you today?" she says pausing her exercises to turn and face you once more.
+		</text>
+		<choice destination="end" text="nothing, but I just wanted to say hi"/>
+	</page>
+
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
+			value="1" />
+		<!--subsequent meeting-->
+		<text>
+		"Before me again are you? Very well, speak your piece." she says pausing her exercises to turn and face you once more.
+		</text>
+		<choice destination="tone" text="you have quite a dismissive tone">
+				<condition operator="equals" evaluate="LOCALFLAG" flag="challenge"
+			value="0" />
+		</choice>
+		<choice destination="end" text="I'll quit bothering you"/>		
+	</page>
+
+	<page ID="start">
+		<!--first meeting-->
+		<text>
+		The elf warrior idly swings her staff through a series of stances then turns to you and looks you up and down as if sizing you up, it has a worrisome aspect of being as more than a potential opponent to it "You are the stranger from the stars? I am Awari, and I thought you'd be taller." she remarks somewhat ungraciously and plants the staff butt resting it against the floor mats.
+		</text>
+		<effect type="setlocalflag" flag="talked" value="1" />
+		<choice destination="tone" text="you have quite a dismissive tone"/>
+		<choice destination="end" text="well, i'm sorry to disappoint, fair well"/>
+	</page>
+	
+	<page ID="tone">
+	<text>
+	"You are a traveller, and yet I can see that you would not last against the dangers that lie in the wilderness beyond our village. It takes a warrior to brave the jungles of our world."
+	</text>
+	<choice destination="warrior" text="And what does it take to be a warrior in your eyes?"/>
+	<choice destination="end" text="I don't need validation from you, i will survive"/>
+	</page>
+	
+	<page ID="warrior">
+	<text>
+	"It takes many things to survive in our jungles. Guile, cunning, alertness, willpower. But sooner or later you will find yourself in direst circumstances, when a lamia devours you will you have the toughness to resist her enzymes and the strength and techniques to escape her insides?"
+	</text>
+	<choice destination="teach0" text="Can you teach me to be a warrior?"/>
+	<choice destination="end" text="...Well thank you for sharing I guess"/>
+	</page>
+	
+	<page ID="teach0">
+	<text>
+	"In a day? hardly. But we'll see if you have what it takes to survive if you are willing to prove your worth."	
+	</text>
+	<choice destination="teach1" text="And what do you propose?"/>
+	</page>
+	
+	<page ID="teach1">
+	<text>
+	"Simple, I will swallow you. And you will prove your worth by managing to force your way back out of my belly." says Awari with a lick of her lips, something about the way she'd looked at you had clued you in this might be coming.
+	</text>
+	<choice destination="teach2" text="And if I don't?"/>
+	</page>
+
+	<page ID="teach2">
+	<text>
+	"Then you were never warrior material to begin with. The choice of course is yours. But either way I'll have helped you meet your destiny." she says.
+	</text>
+	<effect type="setlocalflag" flag="challenge" value="1" />	
+	<choice destination="challenge" text="I guess that's reasonable."/>	
+	<choice destination="teach3" text="this...is absurd"/>
+	</page>
+	
+	<page ID="teach3">
+	<text>
+	"Hardly, come back if you change your mind. Unless you run afoul of a hungry pred before then, in which case I guess it was nice meeting you." she says going back to her training.
+	</text>
+	<choice destination="end" text="I'm not entirely sure the feeling is mutual.."/>
+	</page>
+	
+	<page ID="challenge">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+</Conversation>

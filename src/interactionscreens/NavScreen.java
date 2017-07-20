@@ -34,6 +34,7 @@ public class NavScreen extends Screen implements Callback {
 	Callback callback;
 	Window window;
 	Window statWindow;
+	Window crewWindow;
 	boolean canLaunch;
 	String statustext;
 	private int weaponIndex;
@@ -109,6 +110,7 @@ public class NavScreen extends Screen implements Callback {
 
 		window.Draw(buffer, matrixloc);
 		statWindow.Draw(buffer, matrixloc);
+		crewWindow.Draw(buffer, matrixloc);
 	}
 
 	@Override
@@ -116,8 +118,10 @@ public class NavScreen extends Screen implements Callback {
 
 		mouse.Remove(window);
 		mouse.Remove(statWindow);
+		mouse.Remove(crewWindow);
 		window.discard();
 		statWindow.discard();
+		crewWindow.discard();
 	}
 
 	@Override
@@ -325,8 +329,33 @@ public class NavScreen extends Screen implements Callback {
 		Text status = new Text(new Vec2f(10.5F, 7.0F), statustext, 0.7F, textures[4]);
 		window.add(status);
 		buildStatWindow(textures);
+		buildCrewWindow(textures);
 	}
 
+	private void buildCrewWindow(int[] textures) {
+		crewWindow=new Window(new Vec2f(-1, -1), new Vec2f(4, 6), textures[1], true);
+		Text[] texts = new Text[4];
+		for (int i = 0; i < 4; i++) {
+			texts[i] = new Text(new Vec2f(0.5F, 2.5F - (0.7F * i)), "texts", 0.7F, textures[4]);
+			switch (i) {
+			case 0:	
+				texts[i].setString("nav:" + shipStats.getCrewStats().getNavigation());		
+			break;
+			case 1:	
+				texts[i].setString("gun:" + shipStats.getCrewStats().getGunnery());		
+			break;
+			case 2:	
+				texts[i].setString("eng:" + shipStats.getCrewStats().getEngineer());		
+			break;
+			case 3:	
+				texts[i].setString("tec:" + shipStats.getCrewStats().getTechnician());		
+			break;	
+			}
+			crewWindow.add(texts[i]);
+		}
+		
+	}
+	
 	private void buildStatWindow(int[] textures) {
 
 		statWindow = new Window(new Vec2f(3, -1), new Vec2f(17, 17), textures[1], true);

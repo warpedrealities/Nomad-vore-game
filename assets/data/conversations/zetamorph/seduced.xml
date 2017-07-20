@@ -124,7 +124,7 @@
 			stain the floor with a testament to the superiority and supremacy of
 			your shaft over her and perhaps over her entire kind.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="120" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>
@@ -401,7 +401,7 @@
 		<choice destination="CTFGO" text="cocked" />
 	</page>
 
-	<gameover ID="CTFGO">
+	<gameover ID="CTFGO" noReform="true">
 		<text>
 			The last features that distinguish you as anything but a fat alien cock
 			fade away as the zeta groans and masturbates with her new Dick. Your

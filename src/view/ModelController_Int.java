@@ -57,6 +57,6 @@ public interface ModelController_Int {
 
 	void screenFade(float duration);
 
-	void createNPC(String file, Vec2f position);
+	void createNPC(String file, Vec2f position, boolean temp);
 
 }

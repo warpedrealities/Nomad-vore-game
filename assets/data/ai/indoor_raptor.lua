@@ -9,7 +9,8 @@ function combat(controllable,sense,pos,hostile)
 		if controllable:HasPath() then
 		controllable:FollowPath()
 		else
-		controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+		controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,2)
+		controllable:FollowPath()	
 		end
 	end
 

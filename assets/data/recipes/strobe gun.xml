@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="strobe gun" requiredskill="3" startunlocked="true">
+<description>
+A device that uses a series of intense and rapid flashes of multispectrum emissions to attempt to overwhelm sensory organs or systems and impair their vision.
+</description>
+<ingredient item="scrap metal" quantity="2"/>
+<ingredient item="computation valve" quantity="1"/>
+<ingredient item="battery" quantity="1"/>
+<ingredient item="optics" quantity="2"/>
+<result item="strobe gun"/>
+</recipe>

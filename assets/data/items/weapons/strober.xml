@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ItemWeapon name="strobe gun" weight="2" value="100">
+<description>
+A device that uses a series of intense and rapid flashes of multispectrum emissions to attempt to overwhelm sensory organs or systems and impair their vision.
+</description>
+<modifier>
+
+</modifier>
+<combatMove name="shoot" ammoCost="1" pattern="CONE" bonusAttribute="RANGED" cooldown="20" icon="10" timeCost="2" rangedbias="2" bonusToHit="6" actionCost="2" basicAction="true" moveType="FIGHT">
+<effectDamage type="THERMAL" minValue="0" maxValue="1" modifier="NONE"/>
+<effectStatus probability="50">
+<probabilityModifier value="INTELLIGENCE"/>
+<statusTag tag="strobe"/>
+<applyText>TARGET has been blinded by science!</applyText>
+<statusAttribMod uid="10" icon="0" duration="20" numModifiers="2">
+<removeText> TARGET has recovered from the strobe.</removeText>
+<effect attribute="RANGED" modifier="-8"/>
+<effect attribute="MELEE" modifier="-8"/>
+</statusAttribMod>
+</effectStatus>
+<missText count="1">
+<text>you fail to catch TARGET with your strobe effect </text>
+</missText>
+<hitText count="1">
+<text>you catch TARGET in your strobe's blast for VALUE thermal damage</text>
+</hitText>
+</combatMove>
+<energy refill="ENERGY E-cell power-cell" efficiency="5" capacity="25"/>
+</ItemWeapon>

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0"?>
 <Conversation>
+
 	<page ID="start">
 		<!-- post quest meeting -->
 		<condition operator="greaterthan" evaluate="GLOBALFLAG"
@@ -248,7 +249,7 @@
 		<choice destination="cocktfGO" text="life as a dick" />
 	</page>
 
-	<gameover ID="cocktfGO">
+	<gameover ID="cocktfGO" noReform="true">
 		<text>
 			You feel the last traces of your former self and identity as an
 			independent being slip away as she moans and strokes your form. As

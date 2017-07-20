@@ -135,7 +135,7 @@ public class EffectProcessor {
 		}
 		if (str.equals("createNPC")) {
 			String filename = node.getAttribute("file");
-			ViewScene.m_interface.createNPC(filename, m_player.getPosition());
+			ViewScene.m_interface.createNPC(filename, m_player.getPosition(),false);
 		}
 	}
 

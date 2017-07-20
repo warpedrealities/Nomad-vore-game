@@ -87,7 +87,9 @@ public class SpriteRotatable extends Sprite implements Square_Rotatable_Int {
 	public void setCentered(boolean centered) {
 		this.centered = centered;
 	}
-
+	public void setFacingF(float facing) {
+		setFacing(facing);
+	}
 	@Override
 	public void setFacing(float facing) {
 

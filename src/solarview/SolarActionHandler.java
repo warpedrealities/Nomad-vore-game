@@ -3,17 +3,18 @@ package solarview;
 import nomad.Entity;
 import nomad.Station;
 import nomad.World;
+import rendering.SpriteManager;
 import spaceship.Spaceship;
 import spaceship.SpaceshipActionHandler;
 
 public class SolarActionHandler {
 
-	Spaceship ship;
-	Entity target;
-
+	private Spaceship ship;
+	private Entity target;
 	public SolarActionHandler(Spaceship ship, Entity target) {
 		this.ship = ship;
 		this.target = target;
+
 	}
 
 	public void doAction() {

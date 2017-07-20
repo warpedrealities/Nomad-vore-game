@@ -9,8 +9,8 @@
 </shipstats>
 
 <emitters>
-<weapon x="-0.1" y="0.2"/>
-<weapon x="0.1" y="0.2"/>
+<weapon x="-0.2" y="0.2"/>
+<weapon x="0.2" y="0.2"/>
 <engine x="-0.1" y="-0.4"/>
 <engine x="0" y="-0.4"/>
 <engine x="0.1" y="-0.4"/>
@@ -49,13 +49,15 @@
 </placeWidget>
 <placeWidget x="2" y="8" name="hardpoint">
 <facing value="7"/>
-<contains name="combat beam"/>
+<contains name="shipweapons/explosive cannon">
+<resource type="explosive shell" value="40"/>
+</contains>
 </placeWidget>
 
 <placeWidget x="6" y="8" name="hardpoint">
 <facing value="1"/>
-<contains name="seeking missile">
-<resource type="S10MISSILE" value="8"/>
+<contains name="shipweapons/explosive cannon">
+<resource type="explosive shell" value="40"/>
 </contains>
 </placeWidget>
 

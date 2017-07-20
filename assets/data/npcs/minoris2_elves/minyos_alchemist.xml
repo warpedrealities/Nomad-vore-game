@@ -23,10 +23,6 @@
 </hitText>
 </combatMove>
 </rpg>
-
-<respawn delay="1000"/>
-<disposition value="55"/>
-
 <talk conversation="alpha_minoris_II/minyosalchemist/chat" />
 <controller AI="staystill"/>
 <faction value="minyos"/>

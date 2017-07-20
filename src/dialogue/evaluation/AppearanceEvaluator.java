@@ -51,12 +51,13 @@ public class AppearanceEvaluator {
 		return false;
 	}
 	
-	public boolean check(String file) {
+	public int check(String file) {
 		Document doc = ParserHelper.LoadXML("assets/data/conversations/likeness/" + file + ".xml");
 		Element root = doc.getDocumentElement();
 		Element n = (Element) doc.getFirstChild();
 		NodeList nodes=n.getChildNodes();
 		
+		int score=0;
 		for (int i=0;i<nodes.getLength();i++)
 		{
 			if (nodes.item(i).getNodeType()==Node.ELEMENT_NODE)
@@ -64,21 +65,21 @@ public class AppearanceEvaluator {
 				Element e=(Element)nodes.item(i);
 				if (e.getTagName().equals("hasPart"))
 				{
-					if (!checkPart(e))
+					if (checkPart(e))
 					{
-						return false;
+						score+=Integer.parseInt(e.getAttribute("score"));
 					}
 				}
 				if (e.getTagName().equals("hasValues"))
 				{
-					if (!checkValue(e))
+					if (checkValue(e))
 					{
-						return false;
+						score+=Integer.parseInt(e.getAttribute("score"));
 					}
 				}
 			}
 		}
-		return true;
+		return score;
 	}
 
 }

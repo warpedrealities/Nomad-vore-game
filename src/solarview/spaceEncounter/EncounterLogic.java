@@ -13,6 +13,7 @@ public class EncounterLogic {
 	
 	public EncounterLogic(EncounterShip[] ships) {
 		shipList = ships;
+		effectHandler=new EffectHandler();
 	}
 
 	public EncounterShip[] getShipList() {
@@ -27,16 +28,20 @@ public class EncounterLogic {
 		for (int i = 0; i < shipList.length; i++) {
 			shipList[i].update(dt,effectHandler);
 		}
+		
+		effectHandler.update(dt);
+		trailControl.update(dt);
+		
 		turn -= dt;
 		if (turn <= 0) {
 			turnEnd();
 		}
-		trailControl.update(dt);
+
 	}
 
 	private void turnEnd() {
 		for (int i = 0; i < shipList.length; i++) {
-			shipList[i].updateResources();
+			shipList[i].updateResources(effectHandler);
 		}
 	}
 

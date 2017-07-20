@@ -41,7 +41,7 @@
 	<text>
 	The insectoid's squirms provide pleasing pressure pushing out against the relentless pressure of your belly. She seems to be trying to find a way of pushing back out thinking that you're unable to digest her and impatient to be let out. But then her armour began to crack, her weakening armour dissolving and splitting leaving her defenceless in a pool of frothing enzymes that break her down with furious vigour. Your innards seemingly in over drive from having to break her armour down her softer parts do not survive for very long, her despairing hiss swiftly fading to nothing and being replaced with vigorous gurgles and churns. The mighty insect warrior's shape soon turning soft and round within you, digesting away and diminishing. In time naught remains but your feeling of satisfaction and your belly at its normal proportions, armour, muscles and all she was no match your stomach.
 	</text>
-	<effect type="feed" value="85" />
+	<effect type="feed" value="95" />
 	<special effect="removenpc" />
 	<choice destination="end" text="carry on" />
 	</page>

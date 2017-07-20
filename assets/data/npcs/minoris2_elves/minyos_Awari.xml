@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="greenLowercaseA.png"/>
+<name>Awari</name>
+<description>This long haired and redheaded emerald elf is clad in a skirt like the others but assesses you with a more confident smirk than most others. And such may be justified as she carries with her a wooden fighting staff and her bared breasts are adorned with a fierce looking necklace of teeth or possibly claws.</description>
+<rpg>
+<experiencevalue value="10"/>
+<ability ability="STRENGTH" value="8" />
+<ability ability="AGILITY" value="10" />
+<ability ability="DEXTERITY" value="10" />
+<ability ability="ENDURANCE" value="8" />
+<ability ability="CHARM" value="10" />
+<ability ability="INTELLIGENCE" value="10" />
+<stat stat="HEALTH" value="50"/>
+<stat stat="RESOLVE" value="50"/>
+<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
+<missText count="1">
+<text>Awari's strike fails to connect with TARGET</text>
+</missText>
+<hitText count="1">
+<text>Awari strikes TARGET for VALUE points of damage</text>
+</hitText>
+</combatMove>
+</rpg>
+
+<respawn delay="1000"/>
+<disposition value="55"/>
+
+<talk conversation="alpha_minoris_II/minyosAwari/chat" />
+<controller AI="village_sentry"/>
+<faction value="minyos"/>
+</NPC>

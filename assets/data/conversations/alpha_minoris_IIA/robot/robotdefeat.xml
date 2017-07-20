@@ -11,7 +11,7 @@
 	</page>
 	
 	<check ID="extractComputer">
-		<test what="REPAIR" DC="10" />
+		<test what="TECH" DC="10" />
 		<outcome destination="computerSuccess" />
 		<outcome destination="computerFail" />
 	</check>
@@ -22,7 +22,7 @@
 	</text>
 	<effect type="giveitem" value="2" item="scrap metal" />
 	<special effect="removenpc" />
-	<choice destination="end" text="ah well" />	
+	<choice destination="end" text="ah well, better luck next time" />	
 	</page>
 	
 	<page ID="computerSuccess">
@@ -36,7 +36,7 @@
 	</page>	
 	
 	<check ID="extractOptics">
-		<test what="REPAIR" DC="12" />
+		<test what="TECH" DC="12" />
 		<outcome destination="opticsSuccess" />
 		<outcome destination="opticsFail" />
 	</check>
@@ -55,7 +55,7 @@
 	</text>
 		<effect type="giveitem" value="1" item="optics" />
 		<special effect="removenpc" />
-		<choice destination="end" text="ah well" />
+		<choice destination="end" text="ah well, least these might come in handy" />
 	</page>
 	
 </Conversation>

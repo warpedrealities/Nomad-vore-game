@@ -112,7 +112,7 @@ public class WorldView {
 		for (int i = 0; i < actors.size(); i++) {
 			if (actors.get(i).getSpriteInterface() != null) {
 				Sprite sprite = (Sprite) actors.get(i).getSpriteInterface();
-				sprite.discard();
+				spriteManager.removeSprite(sprite, actors.get(i).getSpriteName());
 			}
 			Sprite_Rectangle sprite = new Sprite_Rectangle(actors.get(i).getPosition(), 4);
 			sprite.setVisible(actors.get(i).getVisible());
@@ -152,7 +152,7 @@ public class WorldView {
 	public void addActor(Actor actor) {
 		if (actor.getSpriteInterface() != null) {
 			Sprite sprite = (Sprite) actor.getSpriteInterface();
-			sprite.discard();
+			spriteManager.removeSprite(sprite, actor.getSpriteName());
 		}
 		Sprite_Rectangle sprite = new Sprite_Rectangle(actor.getPosition(), 4);
 		sprite.setVisible(actor.getVisible());

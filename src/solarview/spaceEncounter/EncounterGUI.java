@@ -75,8 +75,8 @@ public class EncounterGUI implements MyListener {
 		for (int i = 0; i < resourceStrings.length; i++) {
 			resourceTexts[i * 2] = new Text(new Vec2f(0.2F, 15.5F - i), resourceStrings[i], 0.6F, 0);
 			resourceTexts[(i * 2) + 1] = new Text(new Vec2f(0.2F, 15.1F - i),
-					playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount() + "/"
-							+ playerShip.getShipStats().getResource(resourceStrings[i]).getResourceCap(),
+					(int)playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount() + "/"
+							+ (int)playerShip.getShipStats().getResource(resourceStrings[i]).getResourceCap(),
 					0.6F, 0);
 			windows[1].add(resourceTexts[i * 2]);
 			windows[1].add(resourceTexts[(i * 2) + 1]);
@@ -220,9 +220,9 @@ public class EncounterGUI implements MyListener {
 						.setString("FOOD:" + Universe.getInstance().getPlayer().getRPG().getStat(Actor_RPG.SATIATION)
 								+ "/" + +Universe.getInstance().getPlayer().getRPG().getStatMax(Actor_RPG.SATIATION));
 			} else {
-				resourceTexts[i].setString(resourceStrings[i] + ":"
-						+ (int) playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount() + "/"
-						+ playerShip.getShipStats().getResource(resourceStrings[i]).getResourceCap());
+				resourceTexts[(i*2)].setString(resourceStrings[i] + ":");
+				resourceTexts[((i*2)+1)].setString((int) playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount() + "/"
+						+ (int)playerShip.getShipStats().getResource(resourceStrings[i]).getResourceCap());
 			}
 
 		}
@@ -232,6 +232,7 @@ public class EncounterGUI implements MyListener {
 		if (weaponButtons != null) {
 			for (int i = 0; i < weaponButtons.length; i++) {
 				if (encounterShip.getWeapons().get(i).getCooldown() == 0) {
+					weaponButtons[i].setString(playerShip.getShipStats().getWeapons().get(i).getWeapon().getName());
 					weaponButtons[i].setAlt(true);
 				} else {
 					weaponButtons[i].setAlt(false);

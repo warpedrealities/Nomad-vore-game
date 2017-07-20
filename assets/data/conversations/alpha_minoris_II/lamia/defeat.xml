@@ -126,7 +126,7 @@
 			the canopy.
 		</text>
 		<choice destination="end" text="carry on" />
-		<effect type="feed" value="110" />
+		<effect type="feed" value="120" />
 		<special effect="removenpc" />
 	</page>
 
@@ -233,7 +233,7 @@
 			make most firehoses jealous of its intensity.
 		</text>
 		<choice destination="end" text="done making a mess of a snake" />
-		<effect type="feed" value="110" />
+		<effect type="feed" value="120" />
 		<special effect="removenpc" />
 	</page>
 

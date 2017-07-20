@@ -2,39 +2,51 @@ package rendering;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SpriteManager {
 
 	protected ArrayList<SpriteBatch> spriteBatches;
+	protected Map<String,SpriteBatch> batchMap;
 	protected String fileprefix;
 
 	public SpriteManager() {
 		fileprefix = "assets/art/sprites/";
 		spriteBatches = new ArrayList<SpriteBatch>();
+		batchMap=new HashMap<String,SpriteBatch>();
 	}
 
 	public SpriteManager(String fileprefix) {
 		this.fileprefix = fileprefix;
 		spriteBatches = new ArrayList<SpriteBatch>();
+		batchMap=new HashMap<String,SpriteBatch>();	
 	}
 
-	public void addSprite(Sprite sprite, String textureName) {
+	public void addSprite(Renderable sprite, String textureName) {
 
 		if (!addExisting(sprite, textureName)) {
 			SpriteBatch batch = new SpriteBatch(textureName);
 			batch.genSprite(fileprefix);
 			batch.addSprite(sprite);
 			spriteBatches.add(batch);
+			batchMap.put(textureName, batch);
 		}
 	}
+	
+	public void removeSprite(Renderable sprite, String textureName)
+	{
+		batchMap.get(textureName).removeSprite(sprite);
+	}
 
-	private boolean addExisting(Sprite sprite, String textureName) {
-		for (int i = 0; i < spriteBatches.size(); i++) {
-			if (spriteBatches.get(i).getSpriteTexture().equals(textureName)) {
-				spriteBatches.get(i).addSprite(sprite);
-				return true;
-			}
+	private boolean addExisting(Renderable sprite, String textureName) {
+		SpriteBatch batch=batchMap.get(textureName);
+		if (batch!=null)
+		{
+			batch.addSprite(sprite);	
+			return true;
 		}
+		
 		return false;
 	}
 

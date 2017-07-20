@@ -134,7 +134,7 @@
 			of what you've just experienced.
 		</text>
 		<choice destination="end" text="carry on" />
-		<effect type="feed" value="110" />
+		<effect type="feed" value="120" />
 		<special effect="removenpc" />
 	</page>
 
@@ -198,9 +198,10 @@
 			hand as you look down at the softening cock of the gasping and
 			panting zetamorph.
 		</text>
+			<special effect="healnpc" />
+		<special effect="nonhostile" />	
 		<choice destination="end" text="tastey" />
-		<special effect="healnpc" />
-		<special effect="nonhostile" />
+
 	</page>
 
 	<page ID="blowjob2spray">
@@ -219,9 +220,9 @@
 			now staining your front as she looks down in lustful satisfaction at
 			your state.
 		</text>
+			<special effect="healnpc" />
+		<special effect="nonhostile" />	
 		<choice destination="end" text="the mess was worth it" />
-		<special effect="healnpc" />
-		<special effect="nonhostile" />
 	</page>
 
 	<page ID="cockvore0">
@@ -420,7 +421,7 @@
 		<choice destination="acceptTFGO" text="your new life as an alien cock" />
 	</page>
 
-	<gameover ID="acceptTFGO">
+	<gameover ID="acceptTFGO" noReform="true">
 		<text>
 			The zetamorph moans and gasps as she peels the foreskin of her new cock
 			back to reveal the dark purple of her glans. Shuddering in bliss as
@@ -490,7 +491,7 @@
 		<choice destination="resistTFGO" text="claimed as cock" />
 	</page>
 
-	<gameover ID="resistTFGO">
+	<gameover ID="resistTFGO" noReform="true">
 		<text>
 			You feel her get to her feet and put her hands on you, treating you just
 			like what you are now as her pleasure builds making you shudder and
@@ -575,7 +576,7 @@
 			Certainly not enough to impair your adventures.
 		</text>
 		<choice destination="end" text="carry on" />
-		<effect type="feed" value="110" />
+		<effect type="feed" value="120" />
 		<special effect="removenpc" />
 	</page>
 
@@ -664,7 +665,7 @@
 			blueish tinge to your fluids.
 		</text>
 		<choice destination="end" text="carry on" />
-		<effect type="feed" value="110" />
+		<effect type="feed" value="120" />
 		<special effect="removenpc" />
 	</page>
 

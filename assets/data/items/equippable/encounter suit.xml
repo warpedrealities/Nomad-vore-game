@@ -17,7 +17,7 @@
 			<applyText>TARGET actives their encounter suit shield </applyText>
 			<statusDefence uid="17" icon="1" duration="60"
 				numModifiers="2">
-				<strength value="40" />
+				<strength value="50" />
 				<effect attribute="THERMAL" modifier="4" />
 				<effect attribute="KINETIC" modifier="4" />
 				<removeText> TARGET suit shield powers down fades away</removeText>

@@ -232,7 +232,7 @@
 		<row>22211222</row>
 		<row>00211200</row>
 		<row>00211200</row>
-		<widget x="5" y="4" name="cargocontainer" info="normalchest" />
+		<widget x="3" y="2" name="cargocontainer" info="normalchest" />
 	</block>
 	<block name="treasurechamber">
 		<edge value="EAST" />

@@ -103,7 +103,7 @@ public class SolarRenderer extends SpriteManager {
 		discard();
 		for (int i = 0; i < currentSystem.getEntities().size(); i++) {
 			if (currentSystem.getEntities().get(i).getSpriteObj() != null) {
-				currentSystem.getEntities().get(i).getSpriteObj().discard();
+				removeSprite(currentSystem.getEntities().get(i).getSpriteObj(),currentSystem.getEntities().get(i).getSprite());
 				currentSystem.getEntities().get(i).setSpriteObj(null);
 			}
 		}

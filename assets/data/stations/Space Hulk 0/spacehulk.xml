@@ -100,10 +100,10 @@
 
 <clean value="2"/>
 <lootTable identity="normalchest">
-<lootSubTable chance="0.5" file="spacehulk_resources"/>
-<lootSubTable chance="0.5" file="spacehulk_consumables"/>
-<lootSubTable chance="0.5" file="spacehulk_resources"/>
-<lootSubTable chance="0.5" file="spacehulk_consumables"/>
+<lootSubTable chance="0.75" file="spacehulk_resources"/>
+<lootSubTable chance="0.75" file="spacehulk_consumables"/>
+<lootSubTable chance="0.75" file="spacehulk_resources"/>
+<lootSubTable chance="0.75" file="spacehulk_consumables"/>
 </lootTable>
 <lootTable identity="specialchest">
 <loot item="flux capacitor" chance="1"/>

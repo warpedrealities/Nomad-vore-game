@@ -19,55 +19,60 @@ public class SpriteBatch {
 
 	private String spriteTexture;
 	private int textureID;
-	private ArrayList<Sprite> sprites;
+	private ArrayList<Renderable> sprites;
 	private String filename;
 	private int textureWidth, textureHeight;
 
 	public SpriteBatch(String textureName) {
-		sprites = new ArrayList<Sprite>();
+		sprites = new ArrayList<Renderable>();
 		filename = textureName;
-
+		textureID=-1;
 		spriteTexture = textureName;
 	}
 
 	public void genSprite(String fileprefix) {
-		textureID = Tools.loadPNGTexture(fileprefix + filename, GL13.GL_TEXTURE0);
-		// Open the PNG file as an InputStream
-		InputStream in;
-		try {
-			in = new FileInputStream(fileprefix + filename);
-			PNGDecoder decoder = new PNGDecoder(in);
-			textureWidth = decoder.getWidth();
-			textureHeight = decoder.getHeight();
+		if (filename!=null)
+		{
+			textureID = Tools.loadPNGTexture(fileprefix + filename, GL13.GL_TEXTURE0);
+			// Open the PNG file as an InputStream
+			InputStream in;
+			try {
+				in = new FileInputStream(fileprefix + filename);
+				PNGDecoder decoder = new PNGDecoder(in);
+				textureWidth = decoder.getWidth();
+				textureHeight = decoder.getHeight();
 
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			} catch (FileNotFoundException e) {
+			
+				e.printStackTrace();
+			}
+
+			catch (IOException e) {
+
+				e.printStackTrace();
+			}		
 		}
-
-		catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		// Get the width and height of the texture
-
-		// textureWidth=ARBDirectStateAccess.glGetTextureLevelParameteri(textureID,0,
-		// GL11.GL_TEXTURE_WIDTH);
-		// textureHeight=ARBDirectStateAccess.glGetTextureLevelParameteri(textureID,0,
-		// GL11.GL_TEXTURE_HEIGHT);
 	}
 
-	public ArrayList<Sprite> getSprites() {
+	public ArrayList<Renderable> getSprites() {
 		return sprites;
 	}
 
-	public void addSprite(Sprite sprite) {
+	public void addSprite(Renderable sprite) {
 		sprites.add(sprite);
+		sprite.setSpriteBatch(this);
 	}
+	
+	public void removeSprite(Renderable sprite) {
+		sprite.discard();
+		sprites.remove(sprite);
+	}	
 
 	public void draw(int objmatrix, int tintvar, FloatBuffer matrix44fbuffer) {
-		GL11.glBindTexture(GL11.GL_TEXTURE_2D, textureID);
+		if (textureID!=-1)
+		{
+			GL11.glBindTexture(GL11.GL_TEXTURE_2D, textureID);			
+		}
 		for (int i = 0; i < sprites.size(); i++) {
 			if (sprites.get(i).getVisible()) {
 				sprites.get(i).draw(objmatrix, tintvar, matrix44fbuffer);
@@ -78,7 +83,17 @@ public class SpriteBatch {
 	}
 
 	public void discard() {
-		GL11.glDeleteTextures(textureID);
+		if (textureID!=-1)
+		{
+			GL11.glDeleteTextures(textureID);		
+		}
+
+		
+		for (int i=0;i<sprites.size();i++)
+		{
+			sprites.get(i).discard();
+		}
+		
 	}
 
 	public int getTextureID() {
@@ -96,5 +111,7 @@ public class SpriteBatch {
 	public int getTextureHeight() {
 		return textureHeight;
 	}
+
+
 
 }

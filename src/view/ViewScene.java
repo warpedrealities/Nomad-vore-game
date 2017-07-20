@@ -55,6 +55,7 @@ import zone.Zone;
 import actor.Actor;
 import actor.player.Player;
 import actor.npc.NPC;
+import actor.npc.Temp_NPC;
 import actor.player.CompanionTool;
 import actorRPG.Actor_RPG;
 import actorRPG.Player_RPG;
@@ -1457,11 +1458,19 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 	}
 
 	@Override
-	public void createNPC(String file, Vec2f position) {
+	public void createNPC(String file, Vec2f position, boolean temp) {
 		Document doc = ParserHelper.LoadXML("assets/data/npcs/" + file + ".xml");
 		Element n = (Element) doc.getFirstChild();
 		Vec2f p = Universe.getInstance().getCurrentZone().getEmptyTileNearP(position);
-		NPC npc = new NPC(n, p, file);
+		NPC npc = null;
+		if (temp)
+		{
+			npc=new Temp_NPC(n, p, file);
+		}
+		else
+		{
+			npc=new NPC(n, p, file);
+		}
 		npc.setCollisioninterface(Universe.getInstance().getCurrentZone());
 		Universe.getInstance().getCurrentZone().getActors().add(npc);
 		m_view.addActor(npc);

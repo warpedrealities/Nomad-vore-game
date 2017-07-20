@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import actor.npc.NPC;
+import actorRPG.Actor_RPG;
 import nomad.Universe;
 
 import shipsystem.ShipConverter;
@@ -17,6 +18,7 @@ public class SpaceshipStats {
 
 	ArrayList<NPC> crewList;
 	int crewCapacity;
+	private CrewStats crewStats;
 	Map<String, SpaceshipResource> resources;
 	ArrayList<ShipConverter> converters;
 	float fuelEfficiency;
@@ -33,6 +35,16 @@ public class SpaceshipStats {
 		converters = new ArrayList<ShipConverter>();
 		crewList = new ArrayList<NPC>();
 		crewCapacity = 0;
+		crewStats=new CrewStats();
+		setInitialCrewStats();
+	}
+	
+	private void setInitialCrewStats()
+	{
+		int piloting=Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.NAVIGATION);
+		int gunnery=Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.GUNNERY);
+		crewStats.setGunnery(gunnery);
+		crewStats.setNavigation(piloting);
 	}
 
 	public ArrayList<NPC> getCrewList() {
@@ -60,6 +72,11 @@ public class SpaceshipStats {
 	}
 
 	public void addCrew(NPC npc) {
+		
+		if (npc.getCrewSkill()!=null && npc.getActorFaction().getFilename().equals("player"))
+		{
+			crewStats.addCrewSkill(npc.getCrewSkill());
+		}
 		crewList.add(npc);
 	}
 
@@ -198,6 +215,14 @@ public class SpaceshipStats {
 
 	public void setWeapons(List<SpaceshipWeapon> weapons) {
 		this.weapons = weapons;
+	}
+
+	public CrewStats getCrewStats() {
+		return crewStats;
+	}
+
+	public void setCrewStats(CrewStats crewStats) {
+		this.crewStats = crewStats;
 	}
 
 }

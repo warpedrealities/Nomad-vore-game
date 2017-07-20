@@ -2,6 +2,38 @@
 <Conversation>
 
 	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="digestion" />
+		<text>
+			Laurisse sees you return, and in light of how you'd left her presence last time her eyes widen softly. She seems willing to forgo any form of respect this time as she leans forwards and then finally addresses with a carefully feigned and indifferent "Well, I suspect you have something you wish to explain to me."
+		</text>
+		<choice destination="explaination0" text="I can come back"/>
+	</page>
+	
+	<page ID="explaination0">
+	<text>
+	"You can come back? is it that simple...still, I suppose you must keep your secrets. And if it is not something you intend to offer to my people it matters little to me."
+	</text>
+	<effect type="setlocalflag" flag="digestion" value="2" />	
+	<choice destination="explaination1" text="I cannot offer it to your people"/>
+	</page>
+	
+	<page ID="explaination1">
+	<text>
+	"A pity, still, if it is not of immediate use to my people tis better to focus on the war with the deceitful elf folk."
+	</text>
+	<choice destination="end" text="yes, though for now I will let you restore your composure"/>
+	<choice destination="explaination2" text="I can't offer your people the ability to come back, but i can offer myself"/>
+	</page>
+
+	<page ID="explaination2">
+	<text>
+	Laurisse smiles "And you bring it up of your own volition, i can only assume that you gained a deep satisfaction in serving me in that fashion. Very well then...I will await your offer with anticipation."
+	</text>
+	<effect type="setlocalflag" flag="sackslut" value="1" />
+	<choice destination="end" text="Mhmm, I look forward to filling your balls again soon your majesty"/>
+	</page>
+
+	<page ID="start">
 		<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
 			value="1" />
 		<text>
@@ -129,7 +161,7 @@
 		<condition operator="greaterthan" evaluate="FACTIONFLAG"
 			flag="friendship" value="1" />
 		<text>
-			"Your deeds are known to me. <conditional><assertion evaluate="looksLike" likeness="saurian"/>And your appearance akin to one of us pleases me.</conditional>  Surely you are worthy now of this honour I
+			"Your deeds are known to me. <conditional><condition evaluate="LIKENESS" operator="greaterthan" likeness="saurian" value="6" />And your appearance akin to one of us pleases me.</conditional>  Surely you are worthy now of this honour I
 			bestow. Are you sure this is your wish? that I proclaim you a knight
 			of Dammath?"
 		</text>
@@ -370,6 +402,7 @@
 			until you're an indistinguishable mass of royal spunk sloshing around
 			in her majesty's balls.
 		</text>
+		<effect type="incrementlocalflag" flag="digestion" value="1" />		
 		<choice destination="cockvoredigest1" text="gurgle" />
 	</page>
 

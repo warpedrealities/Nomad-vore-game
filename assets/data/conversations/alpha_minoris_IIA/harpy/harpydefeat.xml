@@ -45,8 +45,7 @@
 		</text>
 		<effect type="incrementlocalflag" flag="disposition" value="2" />
 		<choice destination="end" text="get up" />
-		<special effect="healnpc" />
-		<special effect="nonhostile" />
+
 	</page>
 
 	<page ID="receiveoral">
@@ -209,7 +208,7 @@
 			you rise back to your feet to continue your day. Well sated by the
 			harpy's body.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

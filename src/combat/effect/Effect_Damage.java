@@ -121,13 +121,16 @@ public class Effect_Damage extends Effect {
 		}
 		
 		//check if physical harm
-		if (damageType<=Actor_RPG.SHOCK && target.getRPG().getStat(Actor_RPG.HEALTH)>0)
+		if (damageType<=Actor_RPG.SHOCK)
 		{
-			//if so apply to hp
-			target.getRPG().ReduceStat(Actor_RPG.HEALTH, damage);
-			if (target.getRPG().getStat(Actor_RPG.HEALTH)<=0)
+			if (target.getRPG().getStat(Actor_RPG.HEALTH)>0)
 			{
-				target.Defeat(origin, false);
+				//if so apply to hp
+				target.getRPG().ReduceStat(Actor_RPG.HEALTH, damage);
+				if (target.getRPG().getStat(Actor_RPG.HEALTH)<=0)
+				{
+					target.Defeat(origin, false);
+				}
 			}
 		}
 		else if (target.getRPG().getStat(Actor_RPG.RESOLVE)>0)

@@ -90,7 +90,7 @@
 			satisfying. The elf was a sub par warrior, but a most satisfying
 			meal.
 		</text>
-		<effect type="feed" value="100" />
+		<effect type="feed" value="110" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

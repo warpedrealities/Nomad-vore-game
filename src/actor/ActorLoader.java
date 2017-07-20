@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.IOException;
 
 import actor.npc.NPC;
+import actor.npc.Temp_NPC;
 
 public class ActorLoader {
 
@@ -14,7 +15,10 @@ public class ActorLoader {
 			NPC npc = new NPC();
 			npc.Load(dstream);
 			return npc;
-
+		case 2:
+			Temp_NPC temp=new Temp_NPC();
+			temp.Load(dstream);
+			return temp;
 		}
 
 		return null;
