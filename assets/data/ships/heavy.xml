@@ -8,6 +8,11 @@
 <armour value="2"/>
 </shipstats>
 
+<emitters>
+<weapon x="0.0" y="0.2"/>
+<engine x="0.0" y="-0.2"/>
+</emitters>
+
 <layout width="16" height="16" spriteset="ship.png">
 <tileset>
 <tile sprite="1" vision="1" movement="2">a metal wall</tile>

@@ -17,8 +17,7 @@ public class CombatMovementHandler {
 		Vec2f last = p;
 		for (int i = 0; i < distance; i++) {
 
-			p.x += direction.x;
-			p.y += direction.y;
+			p.add(direction);
 			int x = (int) p.x;
 			int y = (int) p.y;
 			Tile t = Universe.getInstance().getCurrentZone().getTile(x, y);
@@ -44,11 +43,10 @@ public class CombatMovementHandler {
 	}
 
 	public static void MoveTowards(Actor actor, Actor to, int distance) {
-		// TODO Auto-generated method stub
 		Vec2f direction = new Vec2f(to.getPosition().x - actor.getPosition().x,
 				to.getPosition().y - actor.getPosition().y);
 		direction.normalize();
-		Vec2f p = new Vec2f(actor.getPosition().x, actor.getPosition().y);
+		Vec2f p = actor.getPosition().replicate();
 		Vec2f last = p;
 		float d = to.getPosition().getDistance(actor.getPosition());
 		if (d < distance) {
@@ -56,8 +54,7 @@ public class CombatMovementHandler {
 		}
 		for (int i = 0; i < distance; i++) {
 
-			p.x += direction.x;
-			p.y += direction.y;
+			p.add(direction);
 			int x = (int) p.x;
 			int y = (int) p.y;
 			Tile t = Universe.getInstance().getCurrentZone().getTile(x, y);

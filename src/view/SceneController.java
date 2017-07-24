@@ -91,7 +91,6 @@ public class SceneController implements Sense {
 
 	@Override
 	public Actor getHostile(Actor origin, int maxRange, boolean visibleOnly) {
-		// TODO Auto-generated method stub
 		Actor hostile = null;
 		float distance = 99;
 		for (int i = 0; i < activeZone.getActors().size(); i++) {

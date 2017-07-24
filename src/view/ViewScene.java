@@ -1458,7 +1458,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 	}
 
 	@Override
-	public void createNPC(String file, Vec2f position, boolean temp) {
+	public NPC createNPC(String file, Vec2f position, boolean temp) {
 		Document doc = ParserHelper.LoadXML("assets/data/npcs/" + file + ".xml");
 		Element n = (Element) doc.getFirstChild();
 		Vec2f p = Universe.getInstance().getCurrentZone().getEmptyTileNearP(position);
@@ -1472,11 +1472,12 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 			npc=new NPC(n, p, file);
 		}
 		npc.setCollisioninterface(Universe.getInstance().getCurrentZone());
+		npc.setSense(sceneController);
 		Universe.getInstance().getCurrentZone().getActors().add(npc);
 		m_view.addActor(npc);
 		m_view.vision(sceneController.getActiveZone(), sceneController.getActiveZone().zoneActors,
 				sceneController.getUniverse().player.getPosition());
-
+		return npc;
 	}
 
 }

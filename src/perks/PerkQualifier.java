@@ -86,7 +86,7 @@ public class PerkQualifier {
 						}
 						return false;
 					}
-					if (str[i].contains("CHARGEN")) {
+					if (str[i].contains("CHARGEN")||str[i].contains("PLOT")) {
 						return false;
 					}
 					if (str[i].contains("FLAG")) {

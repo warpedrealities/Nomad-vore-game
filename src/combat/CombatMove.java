@@ -14,6 +14,7 @@ import combat.effect.Effect_Movement;
 import combat.effect.Effect_Status;
 import combat.statusEffects.StatusEffect;
 import combat.effect.Effect_Recover;
+import combat.effect.Effect_Reinforce;
 import combat.effect.Effect_Spawn;
 import shared.Vec2f;
 import view.ViewScene;
@@ -164,6 +165,9 @@ public class CombatMove {
 				}
 				if (e.getTagName().equals("effectSpawn")) {
 					effects.add(new Effect_Spawn(e));
+				}
+				if (e.getTagName().equals("effectReinforce")) {
+					effects.add(new Effect_Reinforce(e));
 				}
 				if (e.getTagName().equals("missText")) {
 					genMiss(e);

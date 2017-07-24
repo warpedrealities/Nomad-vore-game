@@ -11,26 +11,54 @@
 	
 	<page ID="explaination0">
 	<text>
-	"You can come back? is it that simple...still, I suppose you must keep your secrets. And if it is not something you intend to offer to my people it matters little to me."
+	"You can come back? surely you do not expect me to accept such a paltry explaination as to how you stand before me now?"
 	</text>
 	<effect type="setlocalflag" flag="digestion" value="2" />	
-	<choice destination="explaination1" text="I cannot offer it to your people"/>
+	<choice destination="explaination1A" text="I have a device, it allows me to return from digestion and death"/>
+	<choice destination="explaination1B" text="Some secrets I reserve the right to keep, besides, I cannot share the ability"/>
 	</page>
 	
-	<page ID="explaination1">
+	<page ID="explaination1A">
 	<text>
-	"A pity, still, if it is not of immediate use to my people tis better to focus on the war with the deceitful elf folk."
+	"Such a power. With it my soldiers would be invincible. The elves could be laid low in the span of a day...I beseech thee grant us this power." the queen seems greatly interested in the ability to bring back digested or slain people..and for a remarkably more practical reason than to be able to enjoy churning them over and over.
 	</text>
-	<choice destination="end" text="yes, though for now I will let you restore your composure"/>
-	<choice destination="explaination2" text="I can't offer your people the ability to come back, but i can offer myself"/>
+	<choice destination="explaination2A" text="I cannot share this ability, duplicating it is only attainable with great difficulty and you could not sustain it should it be shared."/>
+	</page>
+	
+	<page ID="explaination2A">
+	<text>
+	"...that is unfortunate. But true, we have lost much of our science...but enough of that melancholic muse. One day we will ask that you offer this to us again, and on that day we will have the arts to recreate and sustain this miracle."
+	</text>
+	<choice destination="end" text="Such a goal is commendable, but I will leave you now."/>
+	<choice destination="talk" text="Such a goal is commendable, but we have other things to discuss."/>	
+	<choice destination="explaination3" text="I can't offer your people the ability to come back, but i can offer myself"/>	
+	</page>
+	
+	<page ID="explaination1B">
+	<text>
+	"I care ill for being thwarted. But, if you cannot share it with my people then it is of only carnal interest to me..." says queen Laurisse with a smirk.
+	</text>
+	<choice destination="talk" text="I cannot, but we have more to discuss"/>
+	<choice destination="end" text="alas, i cannot. But I think that's all we have to discuss at the moment"/> 
+	<choice destination="explaination2B" text="Alas I cannot. But I can satisfy your carnal interest"/>
 	</page>
 
-	<page ID="explaination2">
+	<page ID="explaination2B">
+	<text>
+	Queen Laurisse chuckles and her smirk broadens into a smile "Well now, I admit having someone i can convert to royal seed repeatedly is of interest to me. And I think being that someone is of interest to you... I will await your request with anticipation."
+	</text>
+	<effect type="setlocalflag" flag="sackslut" value="1" />
+	<choice destination="end" text="I enjoyed last time, I think I'll enjoy the next time as well. But until then I will bid you farewell."/>
+	<choice destination="talk" text="I enjoyed last time, I think I'll enjoy the next time as well, but we have things to discuss"/>		
+	</page>
+	
+	<page ID="explaination3">
 	<text>
 	Laurisse smiles "And you bring it up of your own volition, i can only assume that you gained a deep satisfaction in serving me in that fashion. Very well then...I will await your offer with anticipation."
 	</text>
 	<effect type="setlocalflag" flag="sackslut" value="1" />
-	<choice destination="end" text="Mhmm, I look forward to filling your balls again soon your majesty"/>
+	<choice destination="end" text="Mhmm, I look forward to filling your balls again soon your majesty, for now farewell"/>
+	<choice destination="talk" text="Mhmm, I look forward to filling your balls again soon your majesty, but we have things to discuss"/>	
 	</page>
 
 	<page ID="start">

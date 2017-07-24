@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<text>
+		The decayed seraphic like girl looks weary now, the will that kept her going far beyond what one would think would be her limits. She seems satisfied, but lost...it's clear her only purpose has been fulfilled and the weight of years can be seen upon her shoulders. She is content, and gives you a look of gratitude but nothing else as she waits for the end.
+		</text>
+		<choice destination="end" text="...such a melancholic victory."/>
+	</page>
+
+
+	
+</Conversation>

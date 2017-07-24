@@ -36,7 +36,11 @@ public class SpriteManager {
 	
 	public void removeSprite(Renderable sprite, String textureName)
 	{
-		batchMap.get(textureName).removeSprite(sprite);
+		if (batchMap.get(textureName)!=null)
+		{
+			batchMap.get(textureName).removeSprite(sprite);		
+		}
+	
 	}
 
 	private boolean addExisting(Renderable sprite, String textureName) {

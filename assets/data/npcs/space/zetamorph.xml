@@ -2,7 +2,7 @@
 <NPC>
 <sprite value="zetamorph.png"/>
 <name>Zetamorph</name>
-<description>An imposing dark blue skinned figure standing seven feet tall, with her secondary set of arms adding another 2-3 feet atop that. Every limb of hers from her segmented tail to her four arms ends in sharp claws or blades. while clad in not a shred of clothing her smooth skin gives way in places to dark blueblack chitinous armour that hugs her curves tightly.</description>
+<description>An imposing yet sexy humanoid dark blue skinned figure standing seven feet tall, with her secondary set of arms adding another 2-3 feet atop that. Every limb of hers from her segmented tail to her four arms ends in sharp claws or blades. Her feminine build and lethality makes her a special kind of deadly sexy. While clad in not a shred of clothing her smooth skin gives way in places to dark blueblack chitinous armour that hugs her curves tightly.</description>
 <rpg>
 <experiencevalue value="35"/>
 <ability ability="STRENGTH" value="5" />
@@ -11,7 +11,7 @@
 <ability ability="ENDURANCE" value="5" />
 <ability ability="CHARM" value="5" />
 <ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="4"/>
+<stat stat="HEALTH" value="40"/>
 <stat stat="RESOLVE" value="20"/>
 <attribute attribute="MELEE" value="2"/>
 <attribute attribute="PARRY" value="2"/>
@@ -34,10 +34,10 @@
 </rpg>
 <respawn delay="2000"/>
 
-<defeated conversation="zetamorph/defeat" />
-<seduced conversation="zetamorph/seduced" />
-<victory conversation="zetamorph/victory" />
-<seducer conversation="zetamorph/victory" />
+<defeated conversation="space/zetamorph/defeat" />
+<seduced conversation="space/zetamorph/seduced" />
+<victory conversation="space/zetamorph/victory" />
+<seducer conversation="space/zetamorph/victory" />
 <controller AI="zetamorph_AI"/>
 <faction value="monster"/>
 </NPC>

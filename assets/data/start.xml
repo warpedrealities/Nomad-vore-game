@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <start>
 <system value="Alpha Minoris"/>
-<world value="avenger"/>
-<zone value="avenger1"/>
+<world value="Alpha Minoris II"/>
+<zone value="saurian village"/>
 <position x="2" y="2"/>
 <item value="laser pistol"/>
 <item value="Knife"/>

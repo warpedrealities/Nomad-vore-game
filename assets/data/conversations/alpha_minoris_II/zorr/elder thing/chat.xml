@@ -27,6 +27,7 @@
 	You come to from the blackout to find yourself standing over the so called god, its body so much cooling meat now that oozes nauseating ichor from its wounds. You do not recall the final blow, only the thought leading up to it. Its mind was unconquerable, but its body was already weak from its hunger and the abuse you'd heaped upon it. And it was the body you targeted in the final conflict. Your head throbs, and you can feel the psychic wounds the encounter left like missing teeth inside the landscape of your mind. One can only hope you will recover, but after deicide can anything truly be the same again?
 	</text>
 		<effect type="experience" value="250" />	
+		<effect type="setglobalflag" flag="elderThing" value="3" />	
 		<effect type="setglobalflag" flag="psychic_potential" value="1" />
 		<special effect="removenpc" />
 		<special effect="opendoor" lock="elderdead" />

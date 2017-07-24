@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<Ship width="7" height="7" sprite="talharan_trader">
+
+<shipstats>
+<movecost value="20"/>
+<hullpoints value="70"/>
+<thrustcost value="1.5"/>
+<manouver value="-2"/>
+</shipstats>
+
+<emitters>
+<weapon x="0.0" y="0.4"/>
+<engine x="-0.3" y="-0.4"/>
+<engine x="0.3" y="-0.4"/>
+</emitters>
+
+<layout width="16" height="16" spriteset="talharan.png">
+<tileset>
+<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+</tileset>
+<description></description>
+<mapgen>
+<prefab positionX="0" positionY="0" width="13">
+<row>1110111110111</row>
+<row>1221222221221</row>
+<row>2221222221221</row>
+<row>1122222222211</row>
+<row>0111222221110</row>
+<row>0001222221000</row>
+<row>0000112110000</row>
+<row>0001222221000</row>
+<row>0000122210000</row>
+<row>0000111110000</row>
+</prefab>
+<pairedportal x="0" y="2" sprite="1" ID="-101" facing="0"> Exterior hatch </pairedportal>
+
+<placeWidget x="1" y="1" name="slot">
+</placeWidget>
+<placeWidget x="2" y="1" name="slot">
+</placeWidget>
+<placeWidget x="10" y="1" name="slot">
+</placeWidget>
+<placeWidget x="11" y="1" name="slot">
+</placeWidget>
+<placeWidget x="4" y="7" name="slot">
+</placeWidget>
+<placeWidget x="8" y="7" name="slot">
+</placeWidget>
+<placeWidget x="5" y="8" name="slot">
+</placeWidget>
+<placeWidget x="7" y="8" name="hardpoint">
+</placeWidget>
+
+<placeWidget x="5" y="2" name="cargocontainer">
+<lootTable>
+</lootTable>
+</placeWidget>
+
+<placeWidget x="7" y="2" name="cargocontainer">
+<lootTable>
+</lootTable>
+</placeWidget>
+
+<placeWidget x="5" y="5" name="cargocontainer">
+<lootTable>
+</lootTable>
+</placeWidget>
+
+<placeWidget x="7" y="5" name="cargocontainer">
+<lootTable>
+</lootTable>
+</placeWidget>
+
+</mapgen>
+</layout>
+<exterior width="7">
+<row>0000000</row>
+<row>0111110</row>
+<row>0011110</row>
+<row>0011100</row>
+<row>0001000</row>
+<pairedportal x="1" y="2" sprite="1" ID="-101" destination="talharan_trader" facing="4"> ship exterior hatch </pairedportal>
+</exterior>
+</Ship>

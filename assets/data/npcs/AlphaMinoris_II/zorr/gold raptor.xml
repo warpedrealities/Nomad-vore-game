@@ -29,10 +29,10 @@
 </combatMove>
 </rpg>
 <respawn delay="2000"/>
-<defeated conversation="alpha_minoris_II/goldraptor/defeat" />
-<seduced conversation="alpha_minoris_II/goldraptor/seduced" />
-<victory conversation="alpha_minoris_II/goldraptor/victory" />
-<seducer conversation="alpha_minoris_II/goldraptor/victory" />
+<defeated conversation="alpha_minoris_II/zorr/goldraptor/defeat" />
+<seduced conversation="alpha_minoris_II/zorr/goldraptor/seduced" />
+<victory conversation="alpha_minoris_II/zorr/goldraptor/victory" />
+<seducer conversation="alpha_minoris_II/zorr/goldraptor/victory" />
 <controller AI="gold_raptor"/>
 <faction value="monster"/>
 </NPC>

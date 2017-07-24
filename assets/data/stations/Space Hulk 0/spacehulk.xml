@@ -46,6 +46,7 @@
 <row>02141220</row>
 <row>02222200</row>
 <edge value="WEST"/>
+<spawn x="4" y="4" tag="1"/>
 <widget x="6" y="4" name="console" info="interaction/spacehulkcomputer" variable="31"/>
 </keyBlock>
 
@@ -117,10 +118,11 @@
 <loot item="note" chance="1.0" addendum="zer03"/>
 
 </lootTable>
-<npcType value="zetamorph"/>
+<npcType value="space/zetamorph"/>
+<npcType value="space/black_zetamorph"/>
 </blockDungeon>
 <partition xmin="24" xmax="48" ymin="0" ymax="12" inverse="true">
-<SeedNPCs min="8" max="16" name="zetamorph"> </SeedNPCs>
+<SeedNPCs min="8" max="16" name="space/zetamorph"> </SeedNPCs>
 </partition>
 <placeItem x="34" y="6">
 <item itemname="Laser rifle" energy="0"/>

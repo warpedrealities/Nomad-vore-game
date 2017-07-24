@@ -25,10 +25,10 @@ end
 function combat(controllable,sense,pos,hostile)
 	a=controllable:getRPG():getStatMax(0);
 	b=controllable:getRPG():getStat(0);
-	if b<20 then
+	if b<25 then
 		controllable:startConversation()
 	end
-	if b<70 then
+	if b<100 then
 		melee(controllable,sense,pos,hostile);
 	else
 		ranged(controllable,sense,pos,hostile);
@@ -39,7 +39,7 @@ function path(controllable,sense,pos,hostile)
 	if controllable:HasPath() then
 		controllable:FollowPath()
 	else
-		if (controllable:getvalue(0)==1) then
+		if controllable:getValue(0) == 1 then
 			hostile=sense:getHostile(controllable,10,false)
 			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,12)
 		end

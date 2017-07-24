@@ -4,6 +4,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import shared.ParserHelper;
+import shared.Vec2f;
+import view.ViewScene;
 import widgets.Widget;
 import widgets.WidgetDoor;
 import zone.Zone;
@@ -30,5 +32,10 @@ public class ScriptedTools {
 			widget = door;
 		}
 		zone.getTile(x, y).setWidget(widget);
+	}
+	
+	public void placeNPC(int x, int y, String filename,boolean temp)
+	{
+		ViewScene.m_interface.createNPC(filename, new Vec2f(x,y), temp);
 	}
 }

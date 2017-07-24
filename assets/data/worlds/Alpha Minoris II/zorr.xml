@@ -40,9 +40,9 @@
 <row>02222220</row>
 <edge value="WEST"/>
 <widget x="5" y="4" name="invincible_door" info="zorrSanctum" variable="99"/>
-<widget x="6" y="4" name="entrance" variable="22" info="zorrSanctum"/>
-<widget x="4" y="6" name="mechanism" info="interaction/zorrColumnStars" variable="32"/>
-<widget x="4" y="2" name="mechanism" info="interaction/zorrColumnVoid" variable="32"/>
+<widget x="6" y="4" name="entranceW" variable="22" info="zorrSanctum"/>
+<widget x="4" y="6" name="mechanism" info="interaction/zorr/zorrColumnStars" variable="32"/>
+<widget x="4" y="2" name="mechanism" info="interaction/zorr/zorrColumnVoid" variable="32"/>
 <widget x="4" y="4" name="itempile" info="note3"/>
 </keyBlock>
 
@@ -142,9 +142,9 @@
 
 </blockDungeon>
 
-<SeedNPCs min="8" max="16" name="AlphaMinoris_II/indoor raptor"/>
-<SeedNPCs min="4" max="8" name="AlphaMinoris_II/gold raptor"/>
-<SeedNPCs min="6" max="10" name="AlphaMinoris_II/raijin"/>
+<SeedNPCs min="8" max="16" name="AlphaMinoris_II/zorr/indoor raptor"/>
+<SeedNPCs min="4" max="8" name="AlphaMinoris_II/zorr/gold raptor"/>
+<SeedNPCs min="6" max="10" name="AlphaMinoris_II/zorr/raijin"/>
 
 </mapgen>
 

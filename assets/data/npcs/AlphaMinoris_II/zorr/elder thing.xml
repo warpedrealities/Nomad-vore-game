@@ -11,12 +11,12 @@
 <ability ability="ENDURANCE" value="5" />
 <ability ability="CHARM" value="5" />
 <ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="120"/>
-<stat stat="RESOLVE" value="120"/>
+<stat stat="HEALTH" value="175"/>
+<stat stat="RESOLVE" value="175"/>
 <attribute attribute="TEASE" value="10"/>
 <attribute attribute="PHEREMONE" value="10"/>
-<attribute attribute="DODGE" value="6"/>
-<attribute attribute="PARRY" value="6"/>
+<attribute attribute="DODGE" value="4"/>
+<attribute attribute="PARRY" value="4"/>
 <combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
 <effectDamage type="KINETIC" minValue="3" maxValue="8" modifier="STRENGTH"/>
 <missText count="2">
@@ -40,11 +40,11 @@
 
 </rpg>
 <flying />
-<defeated conversation="alpha_minoris_II//elder thing/chat" />
-<seduced conversation="alpha_minoris_II//elder thing/chat" />
-<victory conversation="alpha_minoris_II/elder thing/devour" />
-<seducer conversation="alpha_minoris_II/elder thing/dominate" />
-<talk conversation="alpha_minoris_II/elder thing/chat" />
+<defeated conversation="alpha_minoris_II/zorr/elder thing/chat" />
+<seduced conversation="alpha_minoris_II/zorr/elder thing/chat" />
+<victory conversation="alpha_minoris_II/zorr/elder thing/devour" />
+<seducer conversation="alpha_minoris_II/zorr/elder thing/dominate" />
+<talk conversation="alpha_minoris_II/zorr/elder thing/chat" />
 <controller AI="elder thing"/>
 <faction value="monster"/>
 </NPC>
