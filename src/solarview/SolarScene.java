@@ -43,11 +43,13 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 
 	public SolarScene(int r, Spaceship spaceship) {
 
+
 		incrementCounter = 1.0F;
 		solarInt = this;
 		playerShip = spaceship;
 		shipController = new PlayerShipController(Universe.getInstance().getSystem());
 		playerShip.setShipController(shipController);
+		Universe.getInstance().getcurrentSystem().systemEntry();
 		renderer = new SolarRenderer(Universe.getInstance().getSystem());
 		controller = new SolarController(Universe.getInstance().getSystem());
 		GUI = new SolarGUI();

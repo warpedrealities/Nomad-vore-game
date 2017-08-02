@@ -17,6 +17,8 @@ import org.w3c.dom.NodeList;
 
 import shared.ParserHelper;
 import shared.Vec2f;
+import spaceship.ShipController.scriptEvents;
+import spaceship.npcShips.NpcShipController;
 import spaceship.stats.SpaceshipBaseStats;
 import spaceship.stats.SpaceshipStats;
 import widgets.WidgetPortal;
@@ -247,7 +249,15 @@ public class Spaceship extends Entity {
 		} else {
 			dstream.writeBoolean(false);
 		}
-
+		if (shipController!=null)
+		{
+			dstream.writeBoolean(true);
+			shipController.save(dstream);
+		}
+		else
+		{
+			dstream.writeBoolean(false);
+		}
 	}
 
 	public void load(DataInputStream dstream) throws IOException {
@@ -273,6 +283,11 @@ public class Spaceship extends Entity {
 		if (dstream.readBoolean()) {
 			dockedShip = new Spaceship();
 			dockedShip.load(dstream);
+		}
+		if (dstream.readBoolean())
+		{
+			shipController=new NpcShipController();
+			shipController.load(dstream);
 		}
 	}
 
@@ -428,4 +443,11 @@ public class Spaceship extends Entity {
 		this.dockedShip = dockedShip;
 	}
 
+	@Override
+	public void systemEntry() {
+		if (shipController!=null)
+		{
+			shipController.event(scriptEvents.systemEntry);
+		}
+	}
 }

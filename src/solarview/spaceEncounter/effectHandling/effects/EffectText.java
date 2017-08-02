@@ -14,7 +14,7 @@ public class EffectText implements Effect {
 	private float clock;
 	private float velocity;
 	private float r,g,b;
-	
+	private float speed;
 	
 	private void setType(int type)
 	{
@@ -82,6 +82,17 @@ public class EffectText implements Effect {
 	@Override
 	public float getRotation() {
 		return 0;
+	}
+
+	@Override
+	public void setAnimationSpeed(float speed) {
+		this.velocity*=speed;
+	}
+
+	@Override
+	public Vec2f getVelocity() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

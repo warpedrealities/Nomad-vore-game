@@ -112,10 +112,7 @@ public class ReformationTool {
 	{
 		Player player=Universe.getInstance().getPlayer();
 		//drop all equipment at location
-		for (int i=0;i<5;i++)
-		{
-			player.UnEquip(i);	
-		}
+
 		List <Item> items=player.getInventory().getItems();
 		
 		WidgetItemPile pile=new WidgetItemPile(2, "a pile of items containing ", items.get(0));
@@ -130,10 +127,19 @@ public class ReformationTool {
 			player.getInventory().setPlayerGold(0);
 			pile.AddItem(coins);
 		}
+		for (int i=0;i<5;i++)
+		{
+			if (player.getInventory().getSlot(i)!=null)
+			{
+				pile.AddItem(player.UnEquip(i));		
+			}
+		}
+		player.getInventory().setWeight(0);
+		player.getInventory().getItems().clear();
 		//place pile
 		placePile(pile);
 		//pass time
-		Universe.getInstance().AddClock(250);
+		Universe.AddClock(250);
 		//move player to reformation system
 		Universe.getInstance().getPlayer().setPosition(new Vec2f(destination.x,destination.y));
 		Universe.getInstance().setZone(zone);

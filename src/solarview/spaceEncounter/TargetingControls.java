@@ -3,6 +3,7 @@ package solarview.spaceEncounter;
 import gui.Text;
 import gui.TextColoured;
 import input.MouseHook;
+import rendering.SpriteBeam;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.rendering.Targeting;
@@ -14,6 +15,9 @@ public class TargetingControls {
 	private EncounterShip playerShip;
 	private EncounterShip []ships;
 	private int index;
+	private SpriteBeam beam;
+	
+	
 	public TargetingControls(TextColoured text, EncounterShip player, Targeting targeting,EncounterShip []ships)
 	{
 		this.text=text;
@@ -44,6 +48,8 @@ public class TargetingControls {
 		return index;
 	}
 	
+
+	
 	public void update (float dt)
 	{
 		if (MouseHook.getInstance().click())
@@ -58,6 +64,7 @@ public class TargetingControls {
 				p.x+=playerShip.getPosition().x;
 				p.y+=playerShip.getPosition().y;		
 				//move targeter there
+				
 				for (int i=1;i<ships.length;i++)
 				{
 					if (p.getDistance(ships[i].getPosition())<1)
@@ -70,6 +77,7 @@ public class TargetingControls {
 						break;
 					}
 				}
+
 			}
 		}
 		if (index!=-1)
@@ -81,5 +89,11 @@ public class TargetingControls {
 		{
 			targeting.setVisible(false);
 		}
+		
+		
+	}
+
+	public void setBeam(SpriteBeam beam) {
+		this.beam = beam;
 	}
 }

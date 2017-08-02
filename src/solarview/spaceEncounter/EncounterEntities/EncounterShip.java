@@ -103,10 +103,11 @@ public class EncounterShip {
 
 		manouver.update(dt);
 		actionHandler.update(dt, handler);
+		emitters.update(manouver.getPosition(),manouver.getHeading());
 	}
 
 	public void updateResources(EffectHandler handler) {
-		ship.getShipStats().run();
+		ship.getShipStats().battleRrun();
 		if (shield != null) {
 			shield.update(handler,manouver.getPosition());
 		}
@@ -123,11 +124,7 @@ public class EncounterShip {
 	
 	public Vec2f getEmitter(int i)
 	{
-		Vec2f p=emitters.getWeaponEmitters().get(i).replicate();
-		
-		p.rotate(manouver.getHeading()* 0.785398F);
-		p.add(manouver.getPosition());
-		return p;
+		return emitters.getOffsetWeaponEmitters().get(i);
 	}
 
 	public List<CombatAction> getActions() {

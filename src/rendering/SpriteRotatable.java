@@ -93,6 +93,7 @@ public class SpriteRotatable extends Sprite implements Square_Rotatable_Int {
 	@Override
 	public void setFacing(float facing) {
 
+
 		currentFacing = facing;
 		Matrix4f.setIdentity(m_matrix);
 		m_matrix.m00 = spriteSize;

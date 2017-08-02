@@ -1,15 +1,24 @@
 package dialogue;
 
 import mutation.Effect_Mutator;
+import nomad.FlagField;
 import nomad.Universe;
 
+import javax.xml.soap.Node;
+
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import perks.PerkLibrary;
 import shop.ShopList;
 import shop.ShopScreen;
+import solarview.spaceEncounter.SpaceCombatInitializer;
+import spaceship.Spaceship;
+import spaceship.SpaceshipActionHandler;
+import spaceship.boarding.BoardingHelper;
 import view.SceneController;
 import view.ViewScene;
+import vmo.Game;
 import widgets.Widget;
 import widgets.WidgetCapture;
 import widgets.WidgetConversation;
@@ -21,6 +30,7 @@ import actorRPG.NPC_RPG;
 import actorRPG.Player_RPG;
 import dialogue.worldscript.WorldScript;
 import dialogue.worldscript.WorldScript_Imp;
+import faction.Faction;
 import faction.FactionLibrary;
 import item.instances.ItemStack;
 
@@ -28,23 +38,41 @@ public class EffectProcessor {
 
 	Widget widget;
 	NPC m_npc;
+	Spaceship ship;
+	FlagField flags;
+	Faction faction;
+	
 	Player m_player;
+	
 	SceneController controller;
 
-	public EffectProcessor(NPC npc, Player player, SceneController controller) {
+	public EffectProcessor(Player player, SceneController controller) {
 		m_player = player;
-		m_npc = npc;
 		this.controller = controller;
+	}
+	
+	public void setNPC(NPC npc)
+	{
+		this.m_npc=npc;
+		flags=npc.getFlags();
+		faction=npc.getActorFaction();
 	}
 
 	public void setWidget(Widget widget) {
 		this.widget = widget;
+		if (m_npc==null && WidgetConversation.class.isInstance(widget))
+		{
+			flags=((WidgetConversation)widget).getFlags();
+		}
 	}
 
 	public void ProcessSpecial(Element node) {
 		String str = node.getAttribute("effect");
 		if (str.equals("nonhostile")) {
 			m_npc.setPeace(true);
+		}
+		if (str.equals("makehostile")) {
+			m_npc.setPeace(false);
 		}
 		if (str.equals("opendoor")) {
 			DialogueHelper.openDoor(node.getAttribute("lock"));
@@ -137,6 +165,38 @@ public class EffectProcessor {
 			String filename = node.getAttribute("file");
 			ViewScene.m_interface.createNPC(filename, m_player.getPosition(),false);
 		}
+		
+		if (str.equals("spaceCombat"))
+		{
+			new SpaceCombatInitializer((Spaceship)Universe.getInstance().getCurrentEntity(),ship).run();
+		}
+		if (str.equals("dock"))
+		{
+			new SpaceshipActionHandler().join((Spaceship)Universe.getInstance().getCurrentEntity(),ship);
+		}
+		if (str.equals("toView"))
+		{
+			Game.sceneManager.SwapScene(new ViewScene());
+		}
+		if (str.equals("boarders"))
+		{
+			String []strings=new String[Integer.parseInt(node.getAttribute("count"))];
+			NodeList n=node.getChildNodes(); int index=0;
+			for (int i=0;i<n.getLength();i++)
+			{
+				if (n.item(i).getNodeType()==Node.ELEMENT_NODE)
+				{
+					Element e=(Element)n.item(i);
+					if (e.getTagName().equals("filename"))
+					{
+						strings[index]=e.getTextContent();
+						index++;
+					}
+
+				}
+			}
+			new BoardingHelper((Spaceship)Universe.getInstance().getCurrentEntity()).addNPCs(strings);;
+		}
 	}
 
 	public void ProcessEffect(Element node) {
@@ -174,46 +234,37 @@ public class EffectProcessor {
 					m_player.getInventory()
 							.AddItem(Universe.getInstance().getLibrary().getItem(node.getAttribute("item")));
 				}
-				// m_player.getInventory().AddItem(
-				// new
-				// ItemStack(Universe.getInstance().getLibrary().getItem(node.getAttribute("item")),(int)value));
 			} else {
 				m_player.getInventory().AddItem(Universe.getInstance().getLibrary().getItem(node.getAttribute("item")));
 			}
 		}
 		if (str.equals("setlocalflag")) {
-			if (m_npc != null) {
-				m_npc.getFlags().setFlag(node.getAttribute("flag"), (int) value);
-			} else if (widget != null) {
-				((WidgetConversation) widget).getFlags().setFlag(node.getAttribute("flag"), (int) value);
-			}
+
+			flags.setFlag(node.getAttribute("flag"), (int) value);
 
 		}
 		if (str.equals("setglobalflag")) {
 			m_player.getFlags().setFlag(node.getAttribute("flag"), (int) value);
 		}
 		if (str.equals("setfactionflag")) {
-			m_npc.getActorFaction().getFactionFlags().setFlag(node.getAttribute("flag"), (int) value);
+			faction.getFactionFlags().setFlag(node.getAttribute("flag"), (int) value);
 		}
 		if (str.equals("manipulatefactionflag")) {
 			FactionLibrary.getInstance().getFaction(node.getAttribute("faction")).getFactionFlags()
 					.setFlag(node.getAttribute("flag"), Integer.parseInt(node.getAttribute("value")));
 		}
 		if (str.equals("incrementlocalflag")) {
-			if (m_npc != null) {
-				m_npc.getFlags().setFlag(node.getAttribute("flag"),
-						m_npc.getFlags().readFlag(node.getAttribute("flag")) + (int) value);
-			} else if (widget != null) {
-				((WidgetConversation) widget).getFlags().setFlag(node.getAttribute("flag"),
-						((WidgetConversation) widget).getFlags().readFlag(node.getAttribute("flag")) + (int) value);
-			}
+
+			flags.setFlag(node.getAttribute("flag"),
+			m_npc.getFlags().readFlag(node.getAttribute("flag")) + (int) value);
+
 		}
 		if (str.equals("incrementglobalflag")) {
 			m_player.getFlags().setFlag(node.getAttribute("flag"),
 					m_player.getFlags().readFlag(node.getAttribute("flag")) + (int) value);
 		}
 		if (str.equals("incrementfactionflag")) {
-			m_npc.getActorFaction().getFactionFlags().setFlag(node.getAttribute("flag"),
+			faction.getFactionFlags().setFlag(node.getAttribute("flag"),
 					m_player.getFlags().readFlag(node.getAttribute("flag")) + (int) value);
 		}
 		if (str.equals("setviolation")) {
@@ -221,8 +272,8 @@ public class EffectProcessor {
 					m_player.getPosition());
 		}
 		if (str.equals("modfactiondisposition")) {
-			Integer existing = m_npc.getActorFaction().getRelationship("player");
-			m_npc.getActorFaction().modDisposition("player", existing + Integer.parseInt(node.getAttribute("value")));
+			Integer existing = faction.getRelationship("player");
+			faction.modDisposition("player", existing + Integer.parseInt(node.getAttribute("value")));
 		}
 		if (str.equals("manipulatedisposition")) {
 			FactionLibrary.getInstance().getFaction(node.getAttribute("faction")).modDisposition("player",
@@ -237,9 +288,15 @@ public class EffectProcessor {
 			for (int i = 0; i < value; i++) {
 				m_player.Update();
 			}
-			Universe.getInstance().AddClock((int) value);
+			Universe.AddClock((int) value);
 		}
 
+	}
+
+	public void setSpaceship(Spaceship ship) {
+		this.ship=ship;
+		this.flags=ship.getShipController().getflags();
+		this.faction=ship.getShipController().getFaction();
 	}
 
 }

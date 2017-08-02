@@ -35,6 +35,7 @@ import shared.ParserHelper;
 import shared.SceneBase;
 import shared.Screen;
 import shared.Vec2f;
+import spaceship.Spaceship;
 import view.ViewScene;
 import view.ModelController_Int;
 import vmo.Game;
@@ -60,20 +61,13 @@ public class DialogueScreen extends Screen implements Callback {
 	String m_Debug;
 	OutEvaluator m_evaluator;
 	EffectProcessor m_processor;
-
+	Callback callback;
 	float m_stagnation;
 	static public final int DISPOSITION = 0;
 
-	static int StringtoCondition(String str) {
-		if (str.equals("disposition")) {
-			return DISPOSITION;
-		}
-
-		return -1;
-	}
-
 	public DialogueScreen(int frame, int button, int buttonalt, int tint, Player player, TextView textview,
-			ModelController_Int callback) {
+			Callback callback) {
+		this.callback=callback;
 		m_player = player;
 		m_text = textview;
 		m_window = new Window(new Vec2f(3, -1), new Vec2f(17, 17), frame, true);
@@ -103,7 +97,8 @@ public class DialogueScreen extends Screen implements Callback {
 		m_root = (Element) n;
 		m_children = m_root.getChildNodes();
 		m_evaluator = new OutEvaluator(npc, m_player, ViewScene.m_interface.getSceneController());
-		m_processor = new EffectProcessor(npc, m_player, ViewScene.m_interface.getSceneController());
+		m_processor = new EffectProcessor(m_player, ViewScene.m_interface.getSceneController());
+		m_processor.setNPC(npc);
 		if (npc != null) {
 			try {
 				return FindNode("start");
@@ -116,6 +111,8 @@ public class DialogueScreen extends Screen implements Callback {
 
 	}
 
+	
+	
 	public void setWidget(Widget widget) {
 		m_processor.setWidget(widget);
 		m_evaluator.setWidget(widget);
@@ -129,6 +126,13 @@ public class DialogueScreen extends Screen implements Callback {
 		}
 	}
 
+	public void setSpaceship(Spaceship ship)
+	{
+		m_evaluator.setSpaceship(ship);
+		m_processor.setSpaceship(ship);
+		
+	}
+	
 	@Override
 	public void start(MouseHook hook) {
 
@@ -175,7 +179,7 @@ public class DialogueScreen extends Screen implements Callback {
 	}
 
 	void EndConversation() {
-		ViewScene.m_interface.Remove();
+		
 	}
 
 	void GameOver(Element node) throws MalformedDialogException {

@@ -4,6 +4,7 @@ import nomad.Entity;
 import nomad.Station;
 import nomad.World;
 import rendering.SpriteManager;
+import spaceship.ShipController.scriptEvents;
 import spaceship.Spaceship;
 import spaceship.SpaceshipActionHandler;
 
@@ -29,7 +30,7 @@ public class SolarActionHandler {
 			if (ship2.getShipController() == null) {
 				new SpaceshipActionHandler().join(ship, ship2);
 			} else {
-
+				ship2.getShipController().event(scriptEvents.contact);
 			}
 
 		}

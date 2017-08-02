@@ -6,6 +6,7 @@ import org.lwjgl.opengl.GL20;
 
 import input.MouseHook;
 import nomad.Universe;
+import rendering.SpriteBeam;
 import shared.SceneBase;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
@@ -13,6 +14,7 @@ import solarview.spaceEncounter.animation.Animator;
 import solarview.spaceEncounter.rendering.EncounterRenderer;
 import solarview.spaceEncounter.rendering.Targeting;
 import spaceship.Spaceship;
+import spaceship.stats.SpaceshipAnalyzer;
 import vmo.Game;
 import vmo.GameManager;
 
@@ -24,6 +26,10 @@ public class SpaceEncounter extends SceneBase {
 	private Targeting targeting;
 	private TargetingControls targetingControl;
 	private EncounterShip[] buildShips(Spaceship playerShip, Spaceship[] alienShips) {
+		if (playerShip.getShipStats()==null)
+		{
+			playerShip.setShipStats(new SpaceshipAnalyzer().generateStats(playerShip));
+		}
 		int c = 1;
 		if (alienShips != null) {
 			c += alienShips.length;
@@ -54,7 +60,6 @@ public class SpaceEncounter extends SceneBase {
 		targetingControl.Recalc(targetingControl.getIndex());
 		gui.setWeaponController(new EncounterWeaponController(logic.getShipList()[0],logic.getShipList(),targetingControl));
 
-		
 	}
 
 	@Override

@@ -19,6 +19,7 @@ import shared.ParserHelper;
 import shared.Vec2f;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
+import spaceship.npcShips.NpcShipController;
 
 public class StarSystem {
 
@@ -62,6 +63,13 @@ public class StarSystem {
 						Spaceship ship = new Spaceship(Enode.getAttribute("file"),
 								Integer.parseInt(Enode.getAttribute("x")), Integer.parseInt(Enode.getAttribute("y")),
 								ShipState.SPACE);
+						if (Enode.getAttribute("controller").length()>0)
+						{
+							Document doc0 = ParserHelper.LoadXML("assets/data/shipControllers/" + Enode.getAttribute("controller") + ".xml");
+							Element root0 = doc0.getDocumentElement();
+							Element n0 = (Element) doc.getFirstChild();
+							ship.setShipController(new NpcShipController(n0));
+						}
 
 						entitiesInSystem.add(ship);
 					}
@@ -126,7 +134,6 @@ public class StarSystem {
 	}
 
 	public void load(String filename) throws IOException {
-		// TODO Auto-generated method stub
 		File file = new File("saves/" + filename + "/" + systemName + ".sav");
 		FileInputStream fstream = new FileInputStream(file);
 		DataInputStream dstream = new DataInputStream(fstream);
@@ -148,5 +155,12 @@ public class StarSystem {
 		}
 		dstream.close();
 		fstream.close();
+	}
+
+	public void systemEntry() {
+		for (int i=0;i<entitiesInSystem.size();i++)
+		{
+			entitiesInSystem.get(i).systemEntry();
+		}
 	}
 }

@@ -16,6 +16,7 @@ import shipsystem.weapon.ShipWeapon;
 import spaceship.Spaceship;
 import spaceship.SpaceshipResource;
 import shipsystem.ShipConverter;
+import shipsystem.ShipFTL;
 import shipsystem.ShipModifier;
 import shipsystem.ShipResource;
 import shipsystem.ShipShield;
@@ -44,7 +45,10 @@ public class SpaceshipAnalyzer {
 		stats.addResource("HULL", ship.getBaseStats().getMaxHullPoints(), ship.getBaseStats().getMaxHullPoints());
 
 		int emitterIndex = 0;
-
+		
+		int driveCount=0;
+		int ftl=0;
+		
 		for (int i = 0; i < ship.getZone(0).getWidth(); i++) {
 			for (int j = 0; j < ship.getZone(0).getHeight(); j++) {
 				// check tile
@@ -94,6 +98,17 @@ public class SpaceshipAnalyzer {
 										weapons.add(new SpaceshipWeapon((ShipWeapon) system.getShipAbilities().get(k),
 												emitterIndex, ws.getFacing()));
 										break;
+									case SA_FTL:
+										ShipFTL drive=(ShipFTL)system.getShipAbilities().get(k);
+
+										int f=drive.getFTL()-driveCount;
+										if (f<0)
+										{
+											f=0;			
+										}
+										ftl+=f;
+										driveCount++;
+										break;
 									default:
 										break;
 									}
@@ -124,6 +139,9 @@ public class SpaceshipAnalyzer {
 			stats.setShield(new SpaceshipShield(shields));
 		}
 		stats.setWeapons(weapons);
+		
+		stats.setFTL(ftl-driveCount);
+		
 		return stats;
 	}
 

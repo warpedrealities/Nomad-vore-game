@@ -16,6 +16,8 @@ import rendering.SpriteRotatable;
 
 import org.lwjgl.glfw.GLFW;
 
+import faction.Faction;
+import faction.FactionLibrary;
 import shared.Vec2f;
 import solarview.SolarActionHandler;
 import solarview.spaceEncounter.CombatController;
@@ -28,8 +30,10 @@ public class PlayerShipController implements ShipController {
 	private StarSystem currentSystem;
 	private float controlClock;
 	private int busy;
-
+	private Faction faction;
+	
 	public PlayerShipController(StarSystem system) {
+		faction=FactionLibrary.getInstance().getFaction("player");
 		currentSystem = system;
 	}
 
@@ -202,6 +206,11 @@ public class PlayerShipController implements ShipController {
 	public CombatController getCombat() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Faction getFaction() {
+		return faction;
 	}
 
 }

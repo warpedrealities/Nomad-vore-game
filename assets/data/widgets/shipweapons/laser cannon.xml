@@ -4,10 +4,10 @@
 <description>A laser cannon based on earth technology.</description>
 <resistance resists="KINETIC" strength="2"></resistance>
 <shipWeapon>
-<damage min="4" max="24" falloff="1"/>
-<cooldown value="10"/>
-<effects script="laser" sheet="redbeam"/>
-<range arc="2" range="10" />
+<damage min="6" max="12" falloff="0.5"/>
+<cooldown value="5"/>
+<effects script="laser" sheet="laser"/>
+<range arc="2" range="20" />
 <weaponCost resource="ENERGY" cost="4"/>
 <description>
 

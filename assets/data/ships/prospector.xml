@@ -3,7 +3,7 @@
 
 <shipstats>
 <movecost value="20"/>
-<hullpoints value="70"/>
+<hullpoints value="35"/>
 <thrustcost value="1.0"/>
 </shipstats>
 
@@ -36,7 +36,7 @@
 <pairedportal x="6" y="4" sprite="1" ID="-102" facing="6"> Exterior hatch </pairedportal>
 <placeWidget x="2" y="8" name="slot"/>
 <placeWidget x="3" y="8" name="slot">
-<contains name="navconsole"/>
+<contains name="modules/navconsole"/>
 </placeWidget>
 <placeWidget x="4" y="8" name="slot"/>
 

@@ -3,7 +3,7 @@
 
 <shipstats>
 <movecost value="20"/>
-<hullpoints value="40"/>
+<hullpoints value="20"/>
 <systemcapacity value="5"/>
 <hardpoints value="1"/>
 <thrustcost value="0.5"/>
@@ -32,7 +32,7 @@
 </prefab>
 <pairedportal x="2" y="0" sprite="1" ID="-101" facing="0"> Exterior hatch </pairedportal>
 <placeWidget x="1" y="1" name="slot">
-<contains name="cargocontainer_ship">
+<contains name="modules/cargocontainer_ship">
 <lootTable>
 <loot item="phalifungi" chance="1.0"/>
 <loot item="explosive grenade" chance="1.0"/>
@@ -47,13 +47,13 @@
 </placeWidget>
 
 <placeWidget x="1" y="4" name="slot">
-<contains name="datacomputer"/>
+<contains name="modules/datacomputer"/>
 </placeWidget>
 <placeWidget x="2" y="4" name="slot">
-<contains name="navconsole"/>
+<contains name="modules/navconsole"/>
 </placeWidget>
 <placeWidget x="3" y="4" name="slot">
-<contains name="fueltank">
+<contains name="modules/fueltank">
 <resource type="FUEL" value="20"/>
 </contains>
 </placeWidget>

@@ -84,4 +84,9 @@ abstract public class Entity implements Entity_Int {
 	}
 
 	abstract public Zone getLandableZone(int x, int y);
+
+	public void systemEntry() {
+		// TODO Auto-generated method stub
+		
+	}
 }

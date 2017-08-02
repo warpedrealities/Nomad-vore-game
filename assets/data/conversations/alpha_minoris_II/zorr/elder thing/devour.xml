@@ -30,7 +30,7 @@
 	<page ID="oralvoreGO" text="doomed"/>
 	</page>
 	
-	<gameover ID="oralvoreGO">
+	<gameover ID="oralvoreGO" noReform="true">
 	<text>
 	You feel the creature in motion around you, no more attention paid to you as you struggle against the digestive fluids and gurgling confines of your imprisonment. The elder god seemingly already cast you from its mind, your service as a long overdue meal and releasing it from its imprisonment apparently already merits no further consideration. The caustic stomach breaking you down like so many others until naught but a stew of liquidated gloop dwells within and seeps into the monster's time ravaged form. You were no match for the might and will of the elder thing, and now you are no more.
 	</text>

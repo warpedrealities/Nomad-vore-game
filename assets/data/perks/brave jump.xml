@@ -4,15 +4,15 @@
 A leap that carries you with foolhardy courage towards your foes, a reckless jump of 4 or so tiles of distance.
 </description>
 <move count="1">
-<combatMove name="brave jump" bonusAttribute="MELEE" timeCost="2" bonusToHit="8" cooldown="100" icon="11" pattern="RANGED"  actionCost="2" moveType="MOVEMENT"> 
+<combatmove name="brave jump" bonusAttribute="MELEE" timeCost="2" bonusToHit="8" cooldown="100" icon="11" pattern="RANGED"  actionCost="4" moveType="MOVEMENT"> 
 <effectMovement moveType="SELF_TOWARDS" distance="4" abilityMod="AGILITY"/>
 <missText count="1">
-<text>ice treader fails to leap towards TARGET</text>
+<text>you fail to leap towards TARGET</text>
 </missText>
 <hitText count="1">
-<text>ice treader leaps towards TARGET</text>
+<text>you leap towards TARGET</text>
 </hitText>
-</combatMove>
+</combatmove>
 </move>
 <maxrank value="1"/>
 

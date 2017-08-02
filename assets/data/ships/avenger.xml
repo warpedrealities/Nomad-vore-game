@@ -3,7 +3,7 @@
 
 <shipstats>
 <movecost value="20"/>
-<hullpoints value="100"/>
+<hullpoints value="50"/>
 <thrustcost value="1.5"/>
 <manouver value="2"/>
 </shipstats>
@@ -39,36 +39,35 @@
 </prefab>
 <pairedportal x="0" y="4" sprite="1" ID="-101" facing="2"> Exterior hatch </pairedportal>
 <placeWidget x="3" y="10" name="slot">
-<contains name="thrust booster"/>
+<contains name="modules/thrust booster"/>
 </placeWidget>
 <placeWidget x="4" y="10" name="slot">
-<contains name="navconsole"/>
+<contains name="modules/navconsole"/>
 </placeWidget>
 <placeWidget x="5" y="10" name="slot">
-<contains name="specimenContainment"/>
+<contains name="modules/specimenContainment"/>
 </placeWidget>
 <placeWidget x="2" y="8" name="hardpoint">
 <facing value="7"/>
-<contains name="shipweapons/explosive cannon">
-<resource type="explosive shell" value="40"/>
+<contains name="shipweapons/laser cannon">
+
 </contains>
 </placeWidget>
 
 <placeWidget x="6" y="8" name="hardpoint">
 <facing value="1"/>
-<contains name="shipweapons/explosive cannon">
-<resource type="explosive shell" value="40"/>
+<contains name="shipweapons/laser cannon">
 </contains>
 </placeWidget>
 
 <placeWidget x="3" y="5" name="slot">
-<contains name="generator">
+<contains name="modules/generator">
 <resource type="ENERGY" value="25"/>
 </contains>
 </placeWidget>
 
 <placeWidget x="5" y="5" name="slot">
-<contains name="generator">
+<contains name="modules/generator">
 <resource type="ENERGY" value="25"/>
 </contains>
 </placeWidget>
@@ -78,25 +77,25 @@
 </placeWidget>
 
 <placeWidget x="6" y="3" name="slot">
-<contains name="defensive barrier"/>
+<contains name="modules/defensive barrier"/>
 </placeWidget>
 
 <placeWidget x="3" y="1" name="slot">
-<contains name="single bed"/>
+<contains name="modules/single bed"/>
 </placeWidget>
 
 <placeWidget x="5" y="1" name="slot">
-<contains name="reformer"/>
+<contains name="modules/reformer"/>
 </placeWidget>
 
 <placeWidget x="1" y="1" name="slot">
-<contains name="interplanetary reactor">
+<contains name="modules/interplanetary reactor">
 <resource type="FUEL" value="40"/>
 </contains>
 </placeWidget>
 
 <placeWidget x="7" y="1" name="slot">
-<contains name="structural integrity field"/>
+<contains name="modules/structural integrity field"/>
 </placeWidget>
 
 </mapgen>

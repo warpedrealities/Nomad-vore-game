@@ -82,6 +82,15 @@ public class NavScreen extends Screen implements Callback {
 			statustext = "fuel pressure low, more fuel required";
 			return;
 		}
+		for (int i=0;i<shipStats.getCrewCount();i++)
+		{
+			if (shipStats.getCrewList().get(i).getActorFaction().getRelationship("player")<=50)
+			{
+				canLaunch = false;
+				statustext = "not safe to take the controls with hostiles aboard";
+				break;
+			}
+		}
 
 		if (canLaunch == true) {
 			if (shipStats.getCrewCapacity() < shipStats.getCrewCount()) {
@@ -359,8 +368,8 @@ public class NavScreen extends Screen implements Callback {
 	private void buildStatWindow(int[] textures) {
 
 		statWindow = new Window(new Vec2f(3, -1), new Vec2f(17, 17), textures[1], true);
-		Text[] texts = new Text[4];
-		for (int i = 0; i < 4; i++) {
+		Text[] texts = new Text[5];
+		for (int i = 0; i < 5; i++) {
 			texts[i] = new Text(new Vec2f(0.5F, 8.0F - (0.7F * i)), "texts", 0.7F, textures[4]);
 			switch (i) {
 			case 0:
@@ -377,6 +386,9 @@ public class NavScreen extends Screen implements Callback {
 			case 3:
 				texts[i].setString("armour:" + shipStats.getArmour());
 				break;
+			case 4:
+				texts[i].setString("FTL:" + shipStats.getFTL());
+				break;	
 			}
 			statWindow.add(texts[i]);
 		}

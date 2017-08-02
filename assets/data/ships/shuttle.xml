@@ -3,7 +3,7 @@
 
 <shipstats>
 <movecost value="20"/>
-<hullpoints value="40"/>
+<hullpoints value="20"/>
 <thrustcost value="0.5"/>
 </shipstats>
 

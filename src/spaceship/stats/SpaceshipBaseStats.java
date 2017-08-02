@@ -16,6 +16,7 @@ public class SpaceshipBaseStats {
 	private int manouverability;
 	private int armour;
 
+
 	public SpaceshipBaseStats(Element n) {
 		NodeList children = n.getChildNodes();
 		for (int i = 0; i < children.getLength(); i++) {
@@ -77,5 +78,6 @@ public class SpaceshipBaseStats {
 	public int getArmour() {
 		return armour;
 	}
+
 
 }

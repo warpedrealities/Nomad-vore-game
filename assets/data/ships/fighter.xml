@@ -3,7 +3,7 @@
 
 <shipstats>
 <movecost value="20"/>
-<hullpoints value="40"/>
+<hullpoints value="20"/>
 <thrustcost value="0.5"/>
 </shipstats>
 
@@ -36,18 +36,18 @@
 </placeWidget>
 
 <placeWidget x="1" y="1" name="slot">
-<contains name="fueltank">
-<resource type="FUEL" value="40"/>
+<contains name="modules/fueltank">
+<resource type="modules/FUEL" value="40"/>
 </contains>
 </placeWidget>
 <placeWidget x="2" y="1" name="slot">
-<contains name="defensive barrier"/>
+<contains name="modules/defensive barrier"/>
 </placeWidget>
 <placeWidget x="3" y="1" name="slot">
-<contains name="generator"/>
+<contains name="modules/generator"/>
 </placeWidget>
 <placeWidget x="2" y="3" name="slot">
-<contains name="navconsole"/>
+<contains name="modules/navconsole"/>
 </placeWidget>
 
 </mapgen>

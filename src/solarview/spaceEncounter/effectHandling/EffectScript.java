@@ -14,6 +14,7 @@ import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.CombatAction;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.effectHandling.effects.Effect;
+import solarview.spaceEncounter.effectHandling.effects.EffectBeam;
 import solarview.spaceEncounter.effectHandling.effects.EffectSprite;
 
 public class EffectScript {
@@ -28,7 +29,7 @@ public class EffectScript {
 	private LuaValue script,function;
 	private boolean complete;
 	private EncounterShip origin;
-	
+	private float dt;
 	public EffectScript(EncounterShip origin, CombatAction action, EffectHandler_Interface effectHandler, boolean miss) {
 		this.origin=origin;
 		this.miss=miss;
@@ -51,6 +52,7 @@ public class EffectScript {
 
 	public void update(float dt)
 	{
+		this.dt=dt;
 		clock+=dt;
 		script.call();
 		function= globals.get("main");
@@ -59,9 +61,13 @@ public class EffectScript {
 		LuaValue lClock=CoerceJavaToLua.coerce(clock);	
 		LuaValue returnVal;
 		LuaValue lBoolean=CoerceJavaToLua.coerce(miss);	
-
 		returnVal= function.call(lThis,lClock,lBoolean);
 		complete = (boolean) CoerceLuaToJava.coerce(returnVal, Boolean.class);	
+	}
+	
+	public float getDT()
+	{
+		return dt;
 	}
 	
 	public Effect getEffect(int i)
@@ -83,6 +89,14 @@ public class EffectScript {
 		return effects[index];
 	}
 
+	public Effect makeBeam(int index,Vec2f p,int startFrame,int numFrames,boolean loop,float size,float length)
+	{
+		EffectBeam effect=new EffectBeam(p,sheet+".png",1,startFrame,numFrames,length,loop);
+		effect.setSize(size);
+		effectHandler.addEffect(effect);
+		effects[index]=effect;
+		return effects[index];
+	}
 
 	public void resolve()
 	{
@@ -102,10 +116,18 @@ public class EffectScript {
 		
 	}
 	
-	public double getAngle(float x, float y)
+	public double getAngle(float x0, float y0, float x1, float y1)
 	{	
-		double angle = Math.toDegrees(Math.atan2(y, x))-90;
-		return angle/45;
+		Vec2f p=new Vec2f(y1-y0,x0-x1);
+		p.normalize();
+		double angle = Math.atan2(p.y,p.x);
+		if (angle<0)
+		{
+			angle=(Math.PI*2)+angle;
+		}
+		angle=angle/0.785398F;
+
+		return angle;
 	}
 	
 	public Vec2f getOrigin()

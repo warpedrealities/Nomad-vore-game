@@ -16,9 +16,12 @@ import actor.player.Player;
 import actorRPG.Player_RPG;
 import actorRPG.RPG_Helper;
 import dialogue.MalformedDialogException;
+import faction.Faction;
+import nomad.FlagField;
 import nomad.Universe;
 import perks.PerkInstance;
 import perks.PerkQualifier;
+import spaceship.Spaceship;
 import view.SceneController;
 import view.ViewScene;
 import vmo.GameManager;
@@ -29,12 +32,22 @@ public class OutEvaluator {
 
 	NPC m_npc;
 	Widget widget;
+	Spaceship ship;
+	
+	FlagField flags;
+	Faction faction;
+	
 	Player m_player;
 	PerkQualifier qualifier;
 	SceneController controller;
 
 	public OutEvaluator(NPC npc, Player player, SceneController controller) {
 		m_npc = npc;
+		if (m_npc!=null)
+		{
+			flags=m_npc.getFlags();
+			faction=m_npc.getActorFaction();
+		}
 		m_player = player;
 		this.controller = controller;
 		qualifier = new PerkQualifier();
@@ -159,7 +172,7 @@ public class OutEvaluator {
 			if (eval.equals("FACTIONSTANDING")) {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));
-				if (ConditionCheck(value, operator, m_npc.getActorFaction().getRelationship("player")) == false) {
+				if (ConditionCheck(value, operator, faction.getRelationship("player")) == false) {
 					return false;
 				}
 			}
@@ -174,15 +187,9 @@ public class OutEvaluator {
 			if (eval.equals("LOCALFLAG")) {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));
-				if (m_npc != null) {
-					if (ConditionCheck(value, operator, m_npc.getFlags().readFlag(E.getAttribute("flag"))) == false) {
-						return false;
-					}
-				} else if (widget != null) {
-					if (ConditionCheck(value, operator,
-							((WidgetConversation) widget).getFlags().readFlag(E.getAttribute("flag"))) == false) {
-						return false;
-					}
+				if (ConditionCheck(value, operator, flags.readFlag(E.getAttribute("flag"))) == false)
+				{
+					return false;
 				}
 			}
 			if (eval.equals("GLOBALFLAG")) {
@@ -196,7 +203,7 @@ public class OutEvaluator {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));
 				if (ConditionCheck(value, operator,
-						m_npc.getActorFaction().getFactionFlags().readFlag(E.getAttribute("flag"))) == false) {
+						faction.getFactionFlags().readFlag(E.getAttribute("flag"))) == false) {
 					return false;
 				}
 			}
@@ -288,6 +295,16 @@ public class OutEvaluator {
 
 	public void setWidget(Widget widget) {
 		this.widget = widget;
+		if (m_npc==null && WidgetConversation.class.isInstance(widget))
+		{
+			flags=((WidgetConversation)widget).getFlags();		
+		}
+	}
+
+	public void setSpaceship(Spaceship ship) {
+		this.ship=ship;
+		this.flags=ship.getShipController().getflags();
+		this.faction=ship.getShipController().getFaction();
 	}
 
 }

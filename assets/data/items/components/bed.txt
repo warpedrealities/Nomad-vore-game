@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ItemWidget name="single bed" weight="10" value="750.0">
 <description>A bed. Furniture that provides a good place for one person to sleep.</description>
-<placeditem widget="single bed"/>
+<placeditem widget="modules/single bed"/>
 </ItemWidget>

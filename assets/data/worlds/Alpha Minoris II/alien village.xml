@@ -74,7 +74,7 @@
 </POICornerDecorate>
 <POINPC name="minoris2_elves/companionVala"/>
 <POICornerDecorate floor="7">
-<widgetplacer name="single bed"/>
+<widgetplacer name="modules/single bed"/>
 </POICornerDecorate>
 <POINPC name="minoris2_elves/minyos_Awari"/>
 <POICornerDecorate floor="7">

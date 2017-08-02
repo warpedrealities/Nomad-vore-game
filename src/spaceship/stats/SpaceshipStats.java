@@ -26,6 +26,7 @@ public class SpaceshipStats {
 	float manouverability;
 	float armour;
 	float solar;
+	private int FTL;	
 	boolean looseItems;
 	SpaceshipShield shield;
 	List<SpaceshipWeapon> weapons;
@@ -54,11 +55,17 @@ public class SpaceshipStats {
 	public void run() {
 		for (int i = 0; i < converters.size(); i++) {
 			if (converters.get(i).isActive()) {
-				converters.get(i).run(this);
+				converters.get(i).run(this,false);
 			}
 		}
 	}
-
+	public void battleRrun() {
+		for (int i = 0; i < converters.size(); i++) {
+			if (converters.get(i).isActive()) {
+				converters.get(i).run(this,true);
+			}
+		}
+	}
 	public int getCrewCapacity() {
 		return crewCapacity;
 	}
@@ -225,4 +232,11 @@ public class SpaceshipStats {
 		this.crewStats = crewStats;
 	}
 
+	public int getFTL() {
+		return FTL;
+	}
+
+	public void setFTL(int fTL) {
+		FTL = fTL;
+	}
 }

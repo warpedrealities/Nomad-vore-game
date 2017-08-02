@@ -2,8 +2,7 @@
 <Conversation>
 
 	<page ID="start">
-		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
-			value="3" />
+		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten" value="3" />
 		<!--digested once and talked about it-->
 		<text>
 		"Greetings immortal, what can I do for you today?" she says pausing her exercises to turn and face you once more
@@ -36,6 +35,7 @@
 	<text>
 	"Greetings warrior, what can I do for you today?" she says pausing her exercises to turn and face you once more.
 	</text>
+	<choice destination="offer0" text="Well I have a confession"/>	
 	<choice destination="end" text="nothing, but I just wanted to say hi"/>
 	</page>
 
@@ -46,9 +46,49 @@
 		<text>
 		"Greetings warrior, what can I do for you today?" she says pausing her exercises to turn and face you once more.
 		</text>
+		<choice destination="offer0" text="Well I have a confession"/>
 		<choice destination="end" text="nothing, but I just wanted to say hi"/>
 	</page>
+	
+	<page ID="offer0">
+	<text>
+	"I am hardly the sort who can provide council on such matters...unless this confession pertains to me in particular." Says Awari with a headtilt, but she listens expectantly. Though your expression clearly intrigues her as to what you're about to admit.	
+	</text>
+	<choice destination="offer1" text="Well, i dont think I'm warrior material"/>
+	<choice destination="end" text="actually you're right, nevermind"/>
+	</page>
 
+	<page ID="offer1">
+	<text>
+	"Really? you have changed your mind." she asks and then tenses as you unexpectedly step close to her "what manner of 'material' do you now believe yourself to be?"
+	</text>
+	<choice destination="offer2" text="why, ass padding material of course *grope"/>
+	<choice destination="end" text="you're right it was foolish of me to doubt myself"/>
+	</page>
+	
+	<page ID="offer2">
+	<text>
+	Awari's eyes widen in slight surprise, but she clearly expected this from your teasing. She doesn't push you away when you put your hands on her ass and grope her rump meaningfully "mhmm, I see. well. I am here to help people meet their full potential...do you want my, help?" she says moistening her lips faintly.
+	</text>
+	<choice destination="offerOral0" text="mhmm yes,i'll look great on you"/>
+	<choice destination="end" text="Not yet, it's a big step for me to be fat on your ass after all"/>
+	</page>
+	
+	<page ID="offerOral0">
+	<text>
+	"You're a hopeless prey deviant. and you were destined to end up nourishing someone...it's really best for all concerned that it's me" says Awari
+	<conditional><assertion evaluate="slothasitem" slot="2" /> as you get undressed, your clothing wouldn't make good assfat after all</conditional>. Her attitude is more teasing than rebuking as she categorizes you. Besides, being called a prey deviant by Awari is thrilling in its own way. You can see her openly sizing you up as a meal, licking her lips, stepping close to let her hands stray over your shape to take stock of your sexy digestable body.
+	</text>
+	<choice destination="offerOral1" text="i'm ready when you are Awari"/>
+	</page>
+	
+	<page ID="offerOral1">
+	<text>
+	
+	</text>
+	
+	</page>
+	
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
 			value="1" />

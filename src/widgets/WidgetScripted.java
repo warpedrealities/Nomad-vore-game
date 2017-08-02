@@ -61,13 +61,15 @@ public class WidgetScripted extends WidgetBreakable {
 	public void Regen(long clock, Zone zone) {
 		if (check())
 		{
-			isWalkable=false;
+			isWalkable=true;
 			isVisionBlocking=false;
 			widgetSpriteNumber=10;
+			visible=false;
 		}
 		else
 		{
-			isWalkable=true;
+			visible=true;
+			isWalkable=false;
 			isVisionBlocking=true;		
 			widgetSpriteNumber=tile;
 		}

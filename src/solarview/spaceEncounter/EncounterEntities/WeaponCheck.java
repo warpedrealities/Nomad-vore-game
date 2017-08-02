@@ -30,9 +30,19 @@ public class WeaponCheck {
 	
 	static double angle(float x0, float y0,float x1,float y1)
 	{
-		double d=Math.atan2(x0,y0);
-		double a=Math.atan2(x1, y1);
-		return d-a;
+		double a=Math.atan2(x0,y0);
+		double b=Math.atan2(x1, y1);
+		
+		double angle=a-b;
+		if (angle>Math.PI)
+		{
+			angle=(Math.PI*-2)+angle;
+		}
+		if (angle<-Math.PI)
+		{
+			angle=(Math.PI*2)+angle;
+		}
+		return angle;
 	}
 	
 	static public boolean checkArc(EncounterShip ship, EncounterShip target, CombatWeapon weapon)

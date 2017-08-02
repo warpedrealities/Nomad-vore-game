@@ -14,6 +14,7 @@ public class EffectSprite implements Effect {
 	private boolean loop;
 	private float clock,angle;
 	private Vec2f velocity;
+	private float speed=1;
 	
 	public EffectSprite(Vec2f position, String sheet, int startFrame, int numFrames, boolean loop) {
 		sprite=new SpriteRotatable(position, 16);
@@ -56,17 +57,20 @@ public class EffectSprite implements Effect {
 			position.y+=velocity.y*dt;
 		}
 		sprite.repositionF(position);
-		clock+=dt*8;
-		if ((int)clock!=currentFrame-startFrame)
+		if (numFrames>1)
 		{
-			currentFrame=(int)clock+startFrame;
-			if (currentFrame>=startFrame+numFrames && loop)
+			clock+=dt*8*speed;
+			if ((int)clock!=currentFrame-startFrame)
 			{
-				clock=0;
-				currentFrame=startFrame;
-			}
-			sprite.setImage(currentFrame);			
-		}	
+				currentFrame=(int)clock+startFrame;
+				if (currentFrame>=startFrame+numFrames && loop)
+				{
+					clock=0;
+					currentFrame=startFrame;
+				}
+				sprite.setImage(currentFrame);			
+			}				
+		}
 	}
 
 	
@@ -86,6 +90,14 @@ public class EffectSprite implements Effect {
 
 	@Override
 	public void setRotation(float angle) {
+		if (angle<0)
+		{
+			angle=8+angle;
+		}
+		if (angle>8)
+		{
+			angle=angle-8;
+		}	
 		this.angle=angle;
 		sprite.setFacingF(angle);
 	}
@@ -93,6 +105,17 @@ public class EffectSprite implements Effect {
 	@Override
 	public float getRotation() {
 		return angle;
+	}
+
+	@Override
+	public void setAnimationSpeed(float speed) {
+		this.speed=speed;
+	}
+
+	@Override
+	public Vec2f getVelocity() {
+
+		return velocity;
 	}
 
 }

@@ -30,7 +30,7 @@ import actorRPG.RPG_Helper;
 public class CombatMove {
 
 	public enum AttackPattern {
-		P_MELEE(0), P_SWEEP(1), P_CIRCLE(2), P_SHORT(3), P_RANGED(4), P_CONE(5), P_BOMB(6), P_SELF(-1);
+		P_MELEE(0), P_SWEEP(1), P_CIRCLE(2), P_SHORT(3), P_RANGED(4), P_CONE(5), P_BOMB(6), P_REACH(7), P_SELF(-1);
 
 		int value;
 
@@ -311,7 +311,10 @@ public class CombatMove {
 			return AttackPattern.P_SELF;
 		}
 		if (string.equals("BOMB")) {
-			return AttackPattern.P_BOMB;
+			return AttackPattern.P_BOMB;			
+		}
+		if (string.equals("REACH")) {
+			return AttackPattern.P_REACH;
 		}
 		return AttackPattern.P_MELEE;
 	}
@@ -363,6 +366,9 @@ public class CombatMove {
 				return false;
 			}
 			if (attackPattern == attackPattern.P_SHORT && distance >= 4) {
+				return false;
+			}
+			if (attackPattern == attackPattern.P_REACH && distance >= 3) {
 				return false;
 			}
 			if ((attackPattern == attackPattern.P_MELEE || attackPattern == attackPattern.P_CIRCLE
@@ -436,7 +442,7 @@ public class CombatMove {
 				if (visible) {
 
 					if (attackPattern == AttackPattern.P_MELEE || attackPattern == AttackPattern.P_RANGED
-							|| attackPattern == AttackPattern.P_SHORT) {
+							|| attackPattern == AttackPattern.P_SHORT||attackPattern == AttackPattern.P_REACH) {
 						if (isNonViolent()) {
 							ViewScene.m_interface.Flash(target.getPosition(), 1);
 						} else {

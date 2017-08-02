@@ -96,7 +96,7 @@ public class EncounterGUI implements MyListener {
 		rangeText = new TextColoured(new Vec2f(3.2F, 0.7F), "text", 1.6F, 0);	
 		rangeText.setTint(1,0,0);
 		windows[0].add(rangeText);
-		
+
 		buildManouver();
 	}
 

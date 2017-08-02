@@ -64,6 +64,7 @@
 		<preference fetish="cockvore" />
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
 			flag="talked" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="insulted" />	
 		<text>
 			"Oh hi, it's you again. You ready to be welcomed to the village yet? I'm
 			not doing very good at my job if I don't welcome every visitor the
@@ -752,7 +753,6 @@
 		Trying to also get off before time is up, you drift off with your hand still moving up and down.
 		Bea lays uncomfortably on the jizz soaked bed, not really sad about the events of the past hour anymore. Although she'll miss her friend,
 		the feeling of fullness as her stomach happily digests it's contents almost makes it worth it.
-		In fact, by coincidence, the official town greeter position has just opened up and Bea feels she's well up to the task.
 		</text>
 
 	</gameover>	

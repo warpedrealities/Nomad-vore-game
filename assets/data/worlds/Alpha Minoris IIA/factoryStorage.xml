@@ -59,7 +59,7 @@ The halls are gloomy and twist about, guttering light fixtures the only illumina
 </partition>
 <SeedNPCs min="6" max="12" name="Alpha_Minoris_IIA/dungeonrobot"> </SeedNPCs>
 <SeedNPCs min="6" max="12" name="Alpha_Minoris_IIA/synth"> </SeedNPCs>
-<SeedNPCs min="6" max="8" name="AlphaMinoris_IIA/securitybot">
+<SeedNPCs min="6" max="8" name="Alpha_Minoris_IIA/securitybot_omnico">
 <script spawn="ratspawn" death="omnico/securitySpawn"/>
 </SeedNPCs> 
 </mapgen>

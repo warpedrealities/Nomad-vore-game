@@ -44,7 +44,7 @@
 	<choice destination="doombringer" text="rise to serve your new master"/>
 	</page>
 	
-	<gameover ID="doombringer">
+	<gameover ID="doombringer" noReform="true">
 	<text>
 	As you rise you sense the creature's thoughts as it considers the future and the way you will serve as the handmaiden of its new dominion. When the two of you emerged none could of seen coming the tyranny which you brought about, as a tool of the elder thing's will you subdued the inhabitants of this world that they may serve their god once again. Sacrifices by the thousand were offered up to the hunger of your magnificent master, and in time you offered your beloved deity new worlds to dominate and devour. Through the centuries of your extended life in thrall to this eldritch god you brought doom to countless millions without hesitation or remorse.	
 	</text>	

@@ -211,7 +211,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=000;
+		playerExperience=1000;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();

@@ -41,10 +41,7 @@ public class Sprite implements Square_Int,Renderable {
 		m_matrix.m11 = spriteSize;
 		m_matrix.m22 = 1;
 		m_matrix.m33 = 1;
-		Vector3f vec = new Vector3f();
-		vec.x = vec2f.x + 0.5F;
-		vec.y = vec2f.y + 0.5F;
-		vec.z = -spriteDepth;
+
 		m_matrix.m30 = spritePosition.x + 0.5F;
 		m_matrix.m31 = spritePosition.y + 0.5F;
 		this.numFrames = numFrames;

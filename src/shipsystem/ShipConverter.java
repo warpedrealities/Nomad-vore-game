@@ -31,6 +31,7 @@ public class ShipConverter extends ShipAbility {
 	public ShipConverter(Element node, String name) {
 		abilityType = AbilityType.SA_CONVERTER;
 		widgetName = name;
+		//active=true;
 		NodeList children = node.getChildNodes();
 
 		if (node.getAttribute("boostable").equals("true")) {
@@ -146,7 +147,7 @@ public class ShipConverter extends ShipAbility {
 		to.setResourceAmount((float) (to.getResourceAmount() + outputProduced));
 	}
 
-	public void run(SpaceshipStats stats) {
+	public void run(SpaceshipStats stats,boolean battle) {
 		if ("SOLAR".equals(convertFrom)) {
 			runSolar(stats);
 			return;
@@ -155,6 +156,10 @@ public class ShipConverter extends ShipAbility {
 			return;
 		}
 		int time = 1;
+		if (boostable && battle)
+		{
+			time=2;
+		}
 		SpaceshipResource from = stats.getResource(convertFrom);
 		SpaceshipResource to = stats.getResource(convertTo);
 		float intakeUse = time * conversionRate;

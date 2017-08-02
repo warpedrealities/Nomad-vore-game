@@ -59,6 +59,9 @@ public class WidgetSystem extends WidgetBreakable {
 				if (Enode.getTagName() == "shipShield") {
 					systemAbilities.add(new ShipShield(Enode, m_name));
 				}
+				if (Enode.getTagName() == "shipFTL") {
+					systemAbilities.add(new ShipFTL(Enode, m_name));
+				}
 			}
 		}
 	}
@@ -115,6 +118,8 @@ public class WidgetSystem extends WidgetBreakable {
 			case SA_SHIELD:
 				systemAbilities.add(new ShipShield(dstream, m_name));
 				break;
+			case SA_FTL:
+				systemAbilities.add(new ShipFTL(dstream, m_name));		
 			}
 
 		}
