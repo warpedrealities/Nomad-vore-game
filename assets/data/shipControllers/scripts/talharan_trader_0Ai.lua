@@ -1,4 +1,5 @@
-
 function main(script,sense)  
-	script:wait(100)
+	print("running ai script")
+	script:doNothing(100)
+	
 end  

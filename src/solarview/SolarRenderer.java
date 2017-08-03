@@ -8,7 +8,7 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
 import nomad.StarSystem;
-
+import particlesystem.ParticleEmitterAdvanced;
 import rendering.Sprite;
 import rendering.SpriteBatch;
 import rendering.SpriteManager;
@@ -17,12 +17,14 @@ import shared.Vec2f;
 
 public class SolarRenderer extends SpriteManager {
 
-	Matrix4f m_viewMatrix;
+	private Matrix4f m_viewMatrix;
 
-	float scale;
-	Vec2f currentPosition;
-	StarSystem currentSystem;
-
+	private float scale;
+	private Vec2f currentPosition;
+	private StarSystem currentSystem;
+	private ParticleEmitterAdvanced particleEmitter;
+	
+	
 	public SolarRenderer(StarSystem system) {
 		super("assets/art/solar/");
 		currentSystem = system;
@@ -33,6 +35,11 @@ public class SolarRenderer extends SpriteManager {
 		m_viewMatrix = new Matrix4f();
 		setMatrix();
 
+		particleEmitter=new ParticleEmitterAdvanced(256, "particles/white", currentPosition, 1, 1, 0.1F, true);
+		float []start={0.5F,0.5F,1.0F};
+		float []end={1.0F,0.0F,0.0F};
+		
+		particleEmitter.setColours(start,end);
 	}
 
 	private void setMatrix() {
@@ -63,6 +70,7 @@ public class SolarRenderer extends SpriteManager {
 
 	public void setCurrentPosition(Vec2f currentPosition) {
 		this.currentPosition = currentPosition;
+		particleEmitter.setPosition(currentPosition);
 		setMatrix();
 	}
 
@@ -90,13 +98,16 @@ public class SolarRenderer extends SpriteManager {
 	}
 
 	public void solarDraw(int viewMatrix, int objmatrix, int tintvar, FloatBuffer matrix44Buffer) {
-
+		
 		m_viewMatrix.store(matrix44Buffer);
 		matrix44Buffer.flip();
 		GL20.glUniformMatrix4fv(viewMatrix, false, matrix44Buffer);
-
+		particleEmitter.draw(matrix44Buffer, objmatrix, tintvar);
+		GL20.glUniform4f(tintvar, 1, 1,
+				1, 1);	
 		draw(objmatrix, tintvar, matrix44Buffer);
 
+	
 	}
 
 	public void end() {
@@ -107,6 +118,12 @@ public class SolarRenderer extends SpriteManager {
 				currentSystem.getEntities().get(i).setSpriteObj(null);
 			}
 		}
+		particleEmitter.Discard();
 	}
 
+	public ParticleEmitterAdvanced getParticleEmitter() {
+		return particleEmitter;
+	}
+
+	
 }

@@ -11,7 +11,7 @@ import rendering.Square_Rotatable_Int;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shipsystem.weapon.ShipWeapon;
-import solarview.spaceEncounter.CombatController;
+import solarview.spaceEncounter.EncounterEntities.combatControllers.CombatController;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 import spaceship.Spaceship;
@@ -91,7 +91,7 @@ public class EncounterShip {
 		return manouver.getCourse();
 	}
 
-	public void setCourse(char course) {
+	public void setCourse(byte course) {
 		manouver.setCourse(course);
 	}
 
@@ -100,12 +100,19 @@ public class EncounterShip {
 	}
 
 	public void update(float dt,EffectHandler handler) {
-
 		manouver.update(dt);
 		actionHandler.update(dt, handler);
 		emitters.update(manouver.getPosition(),manouver.getHeading());
 	}
 
+	public void runAi(EncounterShip [] allShips,EffectHandler effectHandler)
+	{
+		if (controller!=null)
+		{
+			controller.run(this,allShips,effectHandler);
+		}
+	}
+	
 	public void updateResources(EffectHandler handler) {
 		ship.getShipStats().battleRrun();
 		if (shield != null) {

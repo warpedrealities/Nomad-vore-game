@@ -2,6 +2,7 @@ package shipsystem;
 
 import interactionscreens.NavScreen;
 import interactionscreens.SystemScreen;
+import interactionscreens.WarpScreen;
 import item.Item;
 
 import java.io.DataInputStream;
@@ -32,8 +33,28 @@ public class WidgetNavConsole extends WidgetBreakable {
 
 	@Override
 	public boolean Interact(Player player) {
-		ViewScene.m_interface
-				.setScreen(new NavScreen((Spaceship) Universe.getInstance().getCurrentZone().getZoneEntity()));
+		Spaceship ship=(Spaceship) Universe.getInstance().getCurrentZone().getZoneEntity();
+		if (ship.getWarpHandler()!=null && ship.getWarpHandler().getCharge()>=100)
+		{
+			if (ship.getWarpHandler().flightElapsed())
+			{
+				ViewScene.m_interface
+				.setScreen(new NavScreen(ship));			
+			}
+			else
+			{
+				ViewScene.m_interface
+				.setScreen(new WarpScreen(ship));			
+			}
+
+		}
+		else
+		{
+			ViewScene.m_interface
+			.setScreen(new NavScreen(ship));		
+		}
+
+		
 		return true;
 
 	}

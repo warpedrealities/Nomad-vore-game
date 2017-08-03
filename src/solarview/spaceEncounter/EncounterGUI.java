@@ -406,7 +406,7 @@ public class EncounterGUI implements MyListener {
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
 		if (ID < 9) {
-			encounterShip.setCourse((char) ID);
+			encounterShip.setCourse((byte) ID);
 			updateButtons();
 		}
 		switch (ID) {

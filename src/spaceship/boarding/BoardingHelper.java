@@ -4,6 +4,7 @@ import spaceship.Spaceship;
 import view.ZoneInteractionHandler;
 import vmo.GameManager;
 import widgets.WidgetPortal;
+import widgets.WidgetReformer;
 import zone.TileDef.TileMovement;
 import zone.Zone;
 
@@ -38,6 +39,12 @@ public class BoardingHelper {
 						WidgetPortal.class.isInstance(z.getTile(i, j).getWidgetObject()))
 				{
 					entries.add(new Vec2i(i,j));
+				}
+				if (z.getTile(i, j)!=null && 
+						WidgetReformer.class.isInstance(z.getTile(i, j).getWidgetObject()))
+				{
+					WidgetReformer r=(WidgetReformer)z.getTile(i, j).getWidgetObject();
+					r.setSuppressed(true);
 				}
 			}
 			
@@ -98,4 +105,5 @@ public class BoardingHelper {
 			Universe.getInstance().getCurrentZone().getActors().add(npc);
 		}
 	}
+
 }

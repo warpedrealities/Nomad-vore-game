@@ -47,7 +47,9 @@ public class ReformationTool {
 				if (w!=null && WidgetReformer.class.isInstance(w))
 				{
 					WidgetReformer reformer=(WidgetReformer)w;
-					if (reformer.getUid()==l)
+					if (reformer.getUid()==l && 
+							reformer.isActive() && 
+							!reformer.isSuppressed())
 					{	
 						return new Vec2f(i,j);
 					}

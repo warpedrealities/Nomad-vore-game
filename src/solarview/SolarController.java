@@ -16,7 +16,6 @@ public class SolarController {
 		for (int i = 0; i < currentSystem.getEntities().size(); i++) {
 			currentSystem.getEntities().get(i).update();
 		}
-
 	}
 
 }

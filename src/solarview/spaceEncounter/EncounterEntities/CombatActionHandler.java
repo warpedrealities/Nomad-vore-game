@@ -75,7 +75,7 @@ public class CombatActionHandler {
 		{
 			rPenalty=(int) (action.getWeapon().getWeapon().getWeapon().getRangePenalty()*action.getTarget().getPosition().getDistance(ship.getPosition()));
 		}
-		int defence=(int) (8+action.getTarget().getShip().getShipStats().getManouverability())+
+		int defence=(int) (6+action.getTarget().getShip().getShipStats().getManouverability())+
 				action.getTarget().getShip().getShipStats().getCrewStats().getNavigation();
 		boolean miss=false;
 		if (roll-rPenalty<defence)

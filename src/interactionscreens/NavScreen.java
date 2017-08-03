@@ -118,19 +118,33 @@ public class NavScreen extends Screen implements Callback {
 	public void draw(FloatBuffer buffer, int matrixloc) {
 
 		window.Draw(buffer, matrixloc);
-		statWindow.Draw(buffer, matrixloc);
-		crewWindow.Draw(buffer, matrixloc);
+		if (statWindow!=null)
+		{
+			statWindow.Draw(buffer, matrixloc);	
+		}
+		if (crewWindow!=null)
+		{
+			crewWindow.Draw(buffer, matrixloc);	
+		}
+
 	}
 
 	@Override
 	public void discard(MouseHook mouse) {
 
 		mouse.Remove(window);
-		mouse.Remove(statWindow);
-		mouse.Remove(crewWindow);
 		window.discard();
-		statWindow.discard();
-		crewWindow.discard();
+		if (statWindow!=null)
+		{
+			mouse.Remove(statWindow);	
+			statWindow.discard();
+		}
+		if (crewWindow!=null)
+		{
+			mouse.Remove(crewWindow);
+			crewWindow.discard();			
+		}
+
 	}
 
 	@Override
@@ -275,19 +289,14 @@ public class NavScreen extends Screen implements Callback {
 	public void start(MouseHook hook) {
 
 		hook.Register(window);
-		hook.Register(statWindow);
+		if (statWindow!=null)
+		{
+			hook.Register(statWindow);
+		}
 	}
 
-	@Override
-	public void initialize(int[] textures, Callback callback) {
-		this.callback = callback;
-		// 0 is bar
-		// 1 is frame
-		// 2 button
-		// 3 is button alt
-		// 4 tint
-
-		// build window
+	private void initNav(int[] textures)
+	{
 		window = new Window(new Vec2f(-20, -16), new Vec2f(40, 15), textures[1], true);
 
 		// build buttons
@@ -338,7 +347,21 @@ public class NavScreen extends Screen implements Callback {
 		Text status = new Text(new Vec2f(10.5F, 7.0F), statustext, 0.7F, textures[4]);
 		window.add(status);
 		buildStatWindow(textures);
-		buildCrewWindow(textures);
+		buildCrewWindow(textures);		
+	}
+
+	@Override
+	public void initialize(int[] textures, Callback callback) {
+		this.callback = callback;
+		// 0 is bar
+		// 1 is frame
+		// 2 button
+		// 3 is button alt
+		// 4 tint
+
+		// build window
+
+		initNav(textures);	
 	}
 
 	private void buildCrewWindow(int[] textures) {
@@ -362,7 +385,7 @@ public class NavScreen extends Screen implements Callback {
 			}
 			crewWindow.add(texts[i]);
 		}
-		
+	
 	}
 	
 	private void buildStatWindow(int[] textures) {

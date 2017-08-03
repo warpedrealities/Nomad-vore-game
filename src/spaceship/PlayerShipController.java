@@ -20,7 +20,7 @@ import faction.Faction;
 import faction.FactionLibrary;
 import shared.Vec2f;
 import solarview.SolarActionHandler;
-import solarview.spaceEncounter.CombatController;
+import solarview.spaceEncounter.EncounterEntities.combatControllers.CombatController;
 import view.ZoneInteractionHandler;
 
 import input.Keyboard;
@@ -44,6 +44,11 @@ public class PlayerShipController implements ShipController {
 			Universe.getInstance().getPlayer().Update();
 			busy--;
 		}
+	}
+	
+	public void setBusy(int i)
+	{
+		busy=i;
 	}
 
 	private Entity collisionCheck(int x, int y, Spaceship ship) {
@@ -87,6 +92,10 @@ public class PlayerShipController implements ShipController {
 			((SpriteRotatable) ship.getSpriteObj()).setFacing(v);
 			busy += ship.getShipStats().getMoveCost();
 			calcSolar(Universe.getInstance().getcurrentSystem(), ship);
+			if (ship.getWarpHandler()!=null)
+			{
+				ship.setWarpHandler(null);
+			}
 			return true;
 		}
 		return false;
@@ -99,6 +108,10 @@ public class PlayerShipController implements ShipController {
 				&& !Keyboard.isKeyDown(GLFW_KEY_A) && !Keyboard.isKeyDown(GLFW_KEY_RIGHT)
 				&& !Keyboard.isKeyDown(GLFW_KEY_D)) {
 			controlClock = 0;
+	 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5)||Keyboard.isKeyDown(GLFW.GLFW_KEY_SPACE)) {
+				busy+=10;
+				return true;
+			}	
 			return false;
 		} else {
 			if (controlClock <= 0) {
@@ -188,8 +201,8 @@ public class PlayerShipController implements ShipController {
 			}
 			return altControl(ship);
 		}
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5)) {
-
+ 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5)||Keyboard.isKeyDown(GLFW.GLFW_KEY_SPACE)) {
+			busy+=10;
 		}
 		return false;
 	}
@@ -211,6 +224,12 @@ public class PlayerShipController implements ShipController {
 	@Override
 	public Faction getFaction() {
 		return faction;
+	}
+
+	@Override
+	public void setShip(Spaceship spaceship) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

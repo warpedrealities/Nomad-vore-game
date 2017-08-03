@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import faction.Faction;
 import nomad.FlagField;
-import solarview.spaceEncounter.CombatController;
+import solarview.spaceEncounter.EncounterEntities.combatControllers.CombatController;
 
 public interface ShipController {
 
@@ -46,5 +46,9 @@ public interface ShipController {
 		return null;
 	}
 
-	public default void event(scriptEvents event){};
+	public default void event(scriptEvents event){}
+
+	public default void setBusy(int i){}
+
+	public void setShip(Spaceship spaceship);;
 }

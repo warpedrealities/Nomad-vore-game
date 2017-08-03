@@ -10,6 +10,7 @@ import org.luaj.vm2.Globals;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JsePlatform;
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -18,7 +19,8 @@ import faction.Faction;
 import faction.FactionLibrary;
 import nomad.FlagField;
 import shared.ParserHelper;
-import solarview.spaceEncounter.CombatController;
+import solarview.spaceEncounter.EncounterEntities.combatControllers.CombatController;
+import solarview.spaceEncounter.EncounterEntities.combatControllers.NpcCombatController;
 import spaceship.ShipController;
 import spaceship.Spaceship;
 import spaceship.ShipController.scriptEvents;
@@ -30,8 +32,9 @@ public class NpcShipController implements ShipController {
 	private FlagField flags;
 	private NpcShipSpaceAI ai;
 	
-	public NpcShipController(Element element)
+	private void commonConstruction(Element element)
 	{
+		flags=new FlagField();		
 		NodeList children=element.getChildNodes();
 		scripts=new String[6];
 		for (int i=0;i<children.getLength();i++)
@@ -71,7 +74,12 @@ public class NpcShipController implements ShipController {
 				}
 			}
 		}
-		flags=new FlagField();
+
+	}
+	
+	public NpcShipController(Element element)
+	{
+		commonConstruction(element);
 	}
 	
 	public NpcShipController()
@@ -79,6 +87,18 @@ public class NpcShipController implements ShipController {
 		
 	}
 	
+	public void setShip(Spaceship ship)
+	{
+		ai.setShip(ship);
+	}
+	
+	public NpcShipController(String filename) {
+		Document doc0 = ParserHelper.LoadXML("assets/data/shipControllers/" + filename + ".xml");
+		Element root0 = doc0.getDocumentElement();
+		Element n0 = (Element) doc0.getFirstChild();
+		commonConstruction(n0);
+	}
+
 	@Override
 	public void save(DataOutputStream dstream) throws IOException
 	{
@@ -145,8 +165,7 @@ public class NpcShipController implements ShipController {
 
 	@Override
 	public CombatController getCombat() {
-		// TODO Auto-generated method stub
-		return null;
+		return new NpcCombatController(scripts[scriptEvents.combat.getValue()]);
 	}
 
 	@Override
@@ -168,7 +187,8 @@ public class NpcShipController implements ShipController {
 
 				LuaValue script=globals.load(
 						new FileReader("assets/data/shipControllers/scripts/" + 
-								scripts[scriptEvents.systemEntry.getValue()] + ".lua"), "main.lua");
+								scripts[event.getValue()] + ".lua"), "main.lua");
+				script.call();
 				LuaValue luaScript = CoerceJavaToLua.coerce(ai);
 				LuaValue luaSense = CoerceJavaToLua.coerce(ai.getSense());
 				LuaValue luacontrol = globals.get("main");

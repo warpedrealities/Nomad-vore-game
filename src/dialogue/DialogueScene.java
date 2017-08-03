@@ -26,6 +26,8 @@ public class DialogueScene extends SceneBase implements Callback {
 	MouseHook m_hook;
 	TextView m_text;
 	
+	Spaceship ship;
+	
 	public DialogueScene(String filename,dialogueOrigin origin)
 	{
 		this.origin=origin;
@@ -68,7 +70,8 @@ public class DialogueScene extends SceneBase implements Callback {
 		DialogueScreen scr = new DialogueScreen(m_textureIds[0], m_textureIds[7], m_textureIds[8],
 				SceneBase.getVariables()[0], Universe.getInstance().getPlayer(), m_text,this);
 		scr.Load(filename, null);
-		
+		screen=scr;
+		scr.setSpaceship(ship);
 	}
 
 	@Override
@@ -93,7 +96,7 @@ public class DialogueScene extends SceneBase implements Callback {
 		}
 	}
 	public void setShip(Spaceship ship) {
-		screen.setSpaceship(ship);
+		this.ship=ship;
 	}
 
 }

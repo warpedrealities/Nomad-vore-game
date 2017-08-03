@@ -21,12 +21,17 @@ public class ParticleEmitter {
 	protected Matrix4f m_matrix;
 	protected Particle[] m_particles;
 	protected Vec2f position;
-	protected float m_maxspeed;
+	protected float maxSpeed;
 	protected int m_VBO, m_VAO, m_VIO, m_indicecount, m_texture;
 
+	protected ParticleEmitter()
+	{
+		
+	}
+	
 	public ParticleEmitter(int topcount, String sprite, Vec2f position, float maxspeed, float scale) {
 		m_texture = Tools.loadPNGTexture("assets/art/" + sprite + ".png", GL13.GL_TEXTURE0);
-		m_maxspeed = maxspeed;
+		maxSpeed = maxspeed;
 
 		m_particles = new Particle[topcount];
 		for (int i = 0; i < m_particles.length; i++) {
@@ -101,15 +106,21 @@ public class ParticleEmitter {
 		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
 	}
 
+	protected Vec2f getVelocity()
+	{
+		float v = GameManager.m_random.nextFloat() * (maxSpeed * 0.5F);
+		v = v + maxSpeed / 2;
+		float r = GameManager.m_random.nextFloat() * 3.14159265359F;
+		Vec2f vel = new Vec2f((float) (v * Math.cos(r)), (float) (v * Math.sin(v) * -1));
+		return vel;
+	}
+	
 	public void SpawnParticles(int count) {
 
 		for (int i = 0; i < m_particles.length; i++) {
 			if (m_particles[i].m_alive == false) {
 				// generate random velocity
-				float v = GameManager.m_random.nextFloat() * (m_maxspeed * 0.5F);
-				v = v + m_maxspeed / 2;
-				float r = GameManager.m_random.nextFloat() * 3.14159265359F;
-				Vec2f vel = new Vec2f((float) (v * Math.cos(r)), (float) (v * Math.sin(v) * -1));
+				Vec2f vel=getVelocity();
 				m_particles[i].Spawn(position, vel, 4);
 				count--;
 			}
@@ -127,6 +138,12 @@ public class ParticleEmitter {
 		}
 	}
 
+	protected void setColour(int tint, float lSpan)
+	{
+		GL20.glUniform4f(tint, lSpan, lSpan,
+				lSpan, 1);	
+	}
+	
 	public void draw(FloatBuffer matrix44fbuffer, int objmatrix, int tint) {
 
 		GL11.glBindTexture(GL11.GL_TEXTURE_2D, m_texture);
@@ -145,8 +162,7 @@ public class ParticleEmitter {
 					m_matrix.m30 = m_particles[i].m_position.x;
 					m_matrix.m31 = m_particles[i].m_position.y;
 					// set tint
-					GL20.glUniform4f(tint, m_particles[i].m_lifespan / 4, m_particles[i].m_lifespan / 4,
-							m_particles[i].m_lifespan / 4, 1);
+					setColour(tint,m_particles[i].m_lifespan/4);
 					// set objmatrix
 					m_matrix.store(matrix44fbuffer);
 					matrix44fbuffer.flip();

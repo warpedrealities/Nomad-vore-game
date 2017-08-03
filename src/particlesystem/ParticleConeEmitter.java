@@ -14,8 +14,8 @@ public class ParticleConeEmitter extends ParticleEmitter {
 		for (int i = 0; i < m_particles.length; i++) {
 			if (m_particles[i].m_alive == false) {
 				// generate random velocity
-				float v = GameManager.m_random.nextFloat() * (m_maxspeed * 0.5F);
-				v = v + m_maxspeed / 2;
+				float v = GameManager.m_random.nextFloat() * (maxSpeed * 0.5F);
+				v = v + maxSpeed / 2;
 				float angle = facing-(width/2);
 				angle+=GameManager.m_random.nextFloat()*width;
 				Vec2f vel = new Vec2f(0,-v);

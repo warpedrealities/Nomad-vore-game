@@ -9,26 +9,26 @@ end
 
 function moveAway(script,sense)
 	local pos=script:getPosition()
-	if (pos.x<200)
-	{
+	if (pos.x<200) then
+
 		script:reposition(pos.x+1000,pos.y+1000)
-	}
+	end
 end
 
 function moveBack(script,sense)
-	script:getFlags():setFlag("boarding",0)
+	sense:getFlags():setFlag("boarding",0)
 	local pos=script:getPosition()
-	if (pos.x>200)
-	{
+	if (pos.x>200) then
+
 		script:reposition(pos.x-1000,pos.y-1000)
-	}
+	end
 
 end
 
 function checkBoarding(script,sense)
-	boarding=script:getFlags():readFlag("boarding")
+	boarding=sense:getFlags():readFlag("boarding")
 	if (boarding>0) then
-		markTime=script:getFlags():readFlag("CLOCK")
+		markTime=sense:getFlags():readFlag("CLOCK")
 		actualTime=marktTime*100
 		worldTime=sense:getTime();
 		if (worldTime-actualTime<1000) then
@@ -43,14 +43,15 @@ function checkBoarding(script,sense)
 end
 
 function checkBoarded(script,sense)
-	boarded=script:getFlags():readFlag("boarded")
-	if (boarding>0)then
+	boarded=sense:getFlags():readFlag("boarded")
+	if (boarded>0)then
 		script:removeShip()
 	end
 
 end
 
 function main(script,sense)  
+	print("running entry script")
 	checkBoarding(script,sense)
 	checkFTL(script,sense)
 	checkBoarded(script,sense)

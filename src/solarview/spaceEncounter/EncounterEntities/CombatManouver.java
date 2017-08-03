@@ -11,7 +11,7 @@ public class CombatManouver {
 	private float turn;
 	private Vec2f position;
 	private float heading;
-	private char course;
+	private byte course;
 
 	public final static char stop = 0;
 	public final static char left = 1;
@@ -28,7 +28,7 @@ public class CombatManouver {
 
 	private void genStats() {
 		speed = 100 / ((float) ship.getShip().getShipStats().getMoveCost());
-		turn = 4 + ship.getShip().getShipStats().getManouverability();
+		turn = 8 + ship.getShip().getShipStats().getManouverability();
 		if (turn < 1) {
 			turn = 1;
 		}
@@ -51,11 +51,11 @@ public class CombatManouver {
 		return heading;
 	}
 
-	public char getCourse() {
+	public byte getCourse() {
 		return course;
 	}
 
-	public void setCourse(char course) {
+	public void setCourse(byte course) {
 		this.course = course;
 	}
 

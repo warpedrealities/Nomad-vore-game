@@ -65,6 +65,7 @@ import solarview.SolarScene;
 import solarview.spaceEncounter.SpaceEncounter;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
+import spaceship.npcShips.NpcShipController;
 import spaceship.stats.SpaceshipAnalyzer;
 import view.ViewScene;
 import static org.lwjgl.glfw.Callbacks.*;
@@ -173,21 +174,23 @@ public class Game implements SceneManager {
 		var[4] = m_objvar1;
 
 
-	//m_currentscene = new Menu(var);
+		m_currentscene = new Menu(var);
 		SceneBase.setVariables(var);
 
-		
+		/*
 		 universe.Newgame(); Spaceship
 		 ship=(Spaceship)universe.getCurrentEntity(); ship.setShipStats(new
 		 SpaceshipAnalyzer().generateStats(ship));
 		  
 		 Spaceship [] alienShip=new Spaceship[1];
-		 alienShip[0]=new Spaceship("fighter",0,0,ShipState.SPACE);
+		 alienShip[0]=new Spaceship("talharan_trader",0,0,ShipState.SPACE);
 		 alienShip[0].Generate();
 		 alienShip[0].setShipStats(new
 				 SpaceshipAnalyzer().generateStats(alienShip[0]));
-		 m_currentscene=new SpaceEncounter(ship,alienShip);
+		 alienShip[0].setShipController(new NpcShipController("talharan_trader0"));
 		 
+		 m_currentscene=new SpaceEncounter(ship,alienShip);
+		*/ 
 		mouseInput = new MouseHook(openGLWindow);
 		glfwSetCursorPosCallback(openGLWindow, mouseInput);
 		GL11.glDepthFunc(GL_LEQUAL);

@@ -20,6 +20,16 @@ public class Particle {
 		m_alive = true;
 	}
 
+	public void setVelocity(Vec2f velocity)
+	{
+		this.m_velocity=velocity;
+	}
+	
+	public Vec2f getPosition()
+	{
+		return m_position;
+	}
+	
 	public void Update(float DT) {
 		if (m_alive == true) {
 			m_position.x += m_velocity.x * DT;

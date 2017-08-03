@@ -55,6 +55,11 @@ public class NpcShipSpaceAI {
 		ship.setPosition(new Vec2f(x,y));
 	}
 	
+	public void setShip(Spaceship ship)
+	{
+		this.ship=ship;
+	}
+	
 	public void removeShip()
 	{
 		Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
@@ -86,7 +91,7 @@ public class NpcShipSpaceAI {
 		}
 	}
 
-	public void wait(int time)
+	public void doNothing(int time)
 	{
 		busy=time;
 	}
@@ -100,8 +105,7 @@ public class NpcShipSpaceAI {
 	{
 		DialogueScene scene=new DialogueScene(filename,dialogueOrigin.Space);
 		scene.setShip(ship);
-		Game.sceneManager
-		.SwapScene(scene);
+		Game.sceneManager.SwapScene(scene);
 	}
 	
 	public void dock()

@@ -39,7 +39,7 @@ public class SpaceEncounter extends SceneBase {
 		list[0] = new EncounterShip(playerShip, new Vec2f(0, 0), 0);
 		for (int i = 1; i < c; i++) {
 			list[i] = new EncounterShip(alienShips[i - 1],
-					new Vec2f(-6 + (GameManager.m_random.nextInt(12)), 10 + GameManager.m_random.nextInt(10)),
+					new Vec2f(-6 + (GameManager.m_random.nextInt(12)), 15 + GameManager.m_random.nextInt(10)),
 					GameManager.m_random.nextInt(8));
 		}
 		return list;

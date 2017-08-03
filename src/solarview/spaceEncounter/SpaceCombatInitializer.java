@@ -18,7 +18,7 @@ public class SpaceCombatInitializer {
 	
 	public void run()
 	{
-		List <ShipConverter> list=enemy.getShipStats().getConverters();
+		List <ShipConverter> list=player.getShipStats().getConverters();
 		for (int i=0;i<list.size();i++)
 		{
 			if (list.get(i).getConvertTo().equals("ENERGY"))
@@ -26,6 +26,7 @@ public class SpaceCombatInitializer {
 				list.get(i).setActive(true);			
 			}
 		}
+		player.setWarpHandler(null);
 		enemy.setShipStats(new
 				 SpaceshipAnalyzer().generateStats(enemy));
 		list=enemy.getShipStats().getConverters();

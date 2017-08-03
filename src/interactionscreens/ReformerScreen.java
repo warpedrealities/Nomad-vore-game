@@ -10,6 +10,7 @@ import nomad.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
+import view.ViewScene;
 import widgets.WidgetReformer;
 
 public class ReformerScreen extends Screen {
@@ -56,7 +57,16 @@ public class ReformerScreen extends Screen {
 				callback.Callback();		
 			break;
 			case 1:
-				registerMachine();
+				if (reformer.isSuppressed())
+				{
+					reformer.setSuppressed(false);
+					ViewScene.m_interface.DrawText("reformer now operational");
+				}
+				else
+				{
+					registerMachine();
+					ViewScene.m_interface.DrawText("you've synchronized with this reformer");
+				}	
 				callback.Callback();
 			break;
 		}
@@ -80,22 +90,39 @@ public class ReformerScreen extends Screen {
 		
 		Button []buttons=new Button[2];
 		buttons[0] = new Button(new Vec2f(17.5F, 0.5F), new Vec2f(6, 1.8F), textures[2], this, "Exit", 0, 1);
-		buttons[1] = new Button(new Vec2f(17.5F, 2.5F), new Vec2f(6, 1.8F), textures[2], this, "link", 1, 1);
+		if (reformer.isSuppressed())
+		{
+			buttons[1] = new Button(new Vec2f(17.5F, 2.5F), new Vec2f(6, 1.8F), textures[2], this, "restore", 1, 1);
+	
+		}
+		else
+		{
+			buttons[1] = new Button(new Vec2f(17.5F, 2.5F), new Vec2f(6, 1.8F), textures[2], this, "link", 1, 1);
+		
+		}
 		// add buttons to move things to and from the container
 		for (int i = 0; i < 2; i++) {
 			window.add(buttons[i]);
 		}	
 		Text text=new Text(new Vec2f(0.6F, 4.5F), "converter text", 1.0F, textures[4]);
 		
-		if (reformer.isActive())
+		if (reformer.isSuppressed())
 		{
-			buttons[1].setActive(false);
-			text.setString("reformation system synchronized with pattern");
+			text.setString("reformation system suppressed");			
 		}
 		else
 		{
-			text.setString("reformation system inactive, link pattern");	
+			if (reformer.isActive())
+			{
+				buttons[1].setActive(false);
+				text.setString("reformation system synchronized with pattern");
+			}
+			else
+			{
+				text.setString("reformation system inactive, link pattern");	
+			}		
 		}
+
 	
 		window.add(text);
 	}

@@ -46,7 +46,7 @@ public class SpaceshipAnalyzer {
 
 		int emitterIndex = 0;
 		
-		int driveCount=0;
+		int driveCount=-1;
 		int ftl=0;
 		
 		for (int i = 0; i < ship.getZone(0).getWidth(); i++) {
@@ -139,8 +139,11 @@ public class SpaceshipAnalyzer {
 			stats.setShield(new SpaceshipShield(shields));
 		}
 		stats.setWeapons(weapons);
-		
-		stats.setFTL(ftl-driveCount);
+		if (ftl>0)
+		{
+			stats.setFTL(ftl-driveCount);		
+		}
+
 		
 		return stats;
 	}

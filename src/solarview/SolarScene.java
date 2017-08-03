@@ -5,7 +5,9 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
+import nomad.StarSystem;
 import nomad.Universe;
+import particlesystem.particleEffectors.ParticleDraw;
 import input.MouseHook;
 import rendering.SpriteBatch;
 import rendering.SpriteRotatable;
@@ -14,6 +16,7 @@ import shared.MyListener;
 import shared.SceneBase;
 import shared.Screen;
 import shared.Vec2f;
+import shared.Vec2i;
 import solarBackdrop.StarScape;
 import solarview.systemScreen.SystemScreen;
 import spaceship.PlayerShipController;
@@ -35,15 +38,46 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 	SolarRenderer renderer;
 	SolarGUI GUI;
 	SolarController controller;
+	private WarpController warpRenderer;
 	PlayerShipController shipController;
 	float clock;
 	Screen screen;
 	StarScape starscape;
 	float incrementCounter;
-
+	
+	private boolean warpCheck(Spaceship spaceship)
+	{
+		if (spaceship.getWarpHandler()!=null)
+		{
+			if (spaceship.getWarpHandler().getCharge()>=100 && spaceship.getWarpHandler().flightElapsed())
+			{
+				Vec2i origin=Universe.getInstance().getcurrentSystem().getPosition();
+				Universe.getInstance().getSystem().getEntities().remove(spaceship);
+				StarSystem system=Universe.getInstance().getSystem(spaceship.getWarpHandler().getDestination().x, spaceship.getWarpHandler().getDestination().y);
+				system.arrival();
+				Universe.getInstance().setSystem(system);
+				
+				Universe.getInstance().getSystem().getEntities().add(spaceship);
+			
+				Vec2i destination=Universe.getInstance().getcurrentSystem().getPosition();
+				
+				int x=(origin.x-destination.x)*32;
+				int y=(origin.y-destination.y)*32;
+				Vec2f v=new Vec2f(x,y); v.normalize();
+				v.x*=32;
+				v.y*=32;
+				spaceship.setPosition(v);
+				spaceship.setWarpHandler(null);
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public SolarScene(int r, Spaceship spaceship) {
 
 
+		boolean warp=warpCheck(spaceship);
 		incrementCounter = 1.0F;
 		solarInt = this;
 		playerShip = spaceship;
@@ -58,12 +92,21 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		renderer.setCurrentPosition(playerShip.getPosition());
 		starscape.setCurrentPosition(playerShip.getPosition());
 		((SpriteRotatable) (playerShip.getSpriteObj())).setFacing(r);
-
+		warpRenderer=new WarpController(renderer.getParticleEmitter(),playerShip);
+		if (warp)
+		{
+			Vec2f p=new Vec2f(playerShip.getPosition().x+0.5F,playerShip.getPosition().y);
+			renderer.getParticleEmitter().setPosition(p);
+			renderer.getParticleEmitter().SpawnParticles(128);
+			renderer.getParticleEmitter().Update(0.1F);
+			renderer.getParticleEmitter().runEffector(new ParticleDraw(p,-8));
+		}
 	}
 
 	@Override
 	public void Update(float dt) {
 
+		warpRenderer.update(dt);
 		if (screen != null) {
 			screen.update(dt);
 		} else {
@@ -158,7 +201,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		switch (ID) {
 		case 0:
 			// exit to view screen
-
+			playerShip.setWarpHandler(null);
 			Game.sceneManager.SwapScene(new ViewScene());
 			break;
 

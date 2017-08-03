@@ -23,6 +23,10 @@ public class EncounterLogic {
 	}
 
 	public void startTurn() {
+		for (int i=0;i<shipList.length;i++)
+		{
+			shipList[i].runAi(shipList,effectHandler);
+		}
 		turn = 1;
 	}
 

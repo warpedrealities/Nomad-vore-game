@@ -17,6 +17,7 @@ import org.w3c.dom.NodeList;
 import rendering.SpriteBatch;
 import shared.ParserHelper;
 import shared.Vec2f;
+import shared.Vec2i;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
 import spaceship.npcShips.NpcShipController;
@@ -25,11 +26,11 @@ public class StarSystem {
 
 	ArrayList<Entity> entitiesInSystem;
 	String systemName;
-	Vec2f systemPosition;
+	Vec2i systemPosition;
 
 	public StarSystem(String name, int x, int y) {
 		systemName = name;
-		systemPosition = new Vec2f(x, y);
+		systemPosition = new Vec2i(x, y);
 	}
 
 	public void GenerateSystem(boolean firstload) {
@@ -66,8 +67,7 @@ public class StarSystem {
 						if (Enode.getAttribute("controller").length()>0)
 						{
 							Document doc0 = ParserHelper.LoadXML("assets/data/shipControllers/" + Enode.getAttribute("controller") + ".xml");
-							Element root0 = doc0.getDocumentElement();
-							Element n0 = (Element) doc.getFirstChild();
+							Element n0 = (Element) doc0.getFirstChild();
 							ship.setShipController(new NpcShipController(n0));
 						}
 
@@ -132,7 +132,41 @@ public class StarSystem {
 	public ArrayList<Entity> getEntities() {
 		return entitiesInSystem;
 	}
-
+	
+	public void arrival()
+	{
+		if (entitiesInSystem==null)
+		{
+			try {
+				if (fileExists(Universe.getInstance().getSaveName()))
+				{
+					GenerateSystem(false);
+					load(Universe.getInstance().getSaveName());
+				}
+				else
+				{
+					GenerateSystem(true);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+	}
+	
+	public boolean fileExists(String filename) throws IOException
+	{
+		File file = new File("saves/" + filename + "/" + systemName + ".sav");	
+		if (file.exists())
+		{
+			return true;
+		}
+		return false;
+	}
+	
 	public void load(String filename) throws IOException {
 		File file = new File("saves/" + filename + "/" + systemName + ".sav");
 		FileInputStream fstream = new FileInputStream(file);
@@ -163,4 +197,10 @@ public class StarSystem {
 			entitiesInSystem.get(i).systemEntry();
 		}
 	}
+
+	public Vec2i getPosition() {
+		return systemPosition;
+	}
+	
+	
 }

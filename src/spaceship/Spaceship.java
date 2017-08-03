@@ -25,6 +25,7 @@ import widgets.WidgetPortal;
 import zone.Landing;
 import zone.Zone;
 import zone.Zone.zoneType;
+import spaceship.stats.WarpHandler;
 
 public class Spaceship extends Entity {
 
@@ -35,16 +36,18 @@ public class Spaceship extends Entity {
 		SPACE, LAND, DOCK, ADRIFT, SHIPDOCK
 	}
 
-	Zone interiorZone;
+	private Zone interiorZone;
 	private String unusableState;
-	String exteriorSprite;
-	Vec2f shipSize;
+	private String exteriorSprite;
+	private Vec2f shipSize;
 
-	ShipState shipState;
-	SpaceshipStats shipStats;
-	ShipController shipController;
-	Spaceship dockedShip;
-
+	private ShipState shipState;
+	private SpaceshipStats shipStats;
+	private ShipController shipController;
+	private Spaceship dockedShip;
+	
+	private WarpHandler warpHandler;
+	
 	public Spaceship(String name, int x, int y, ShipState state) {
 		UID = Universe.getInstance().getUIDGenerator().getShipUID();
 		shipState = state;
@@ -258,6 +261,15 @@ public class Spaceship extends Entity {
 		{
 			dstream.writeBoolean(false);
 		}
+		if (warpHandler!=null)
+		{
+			dstream.writeBoolean(true);
+			warpHandler.save(dstream);
+		}
+		else
+		{
+			dstream.writeBoolean(false);	
+		}
 	}
 
 	public void load(DataInputStream dstream) throws IOException {
@@ -289,6 +301,13 @@ public class Spaceship extends Entity {
 			shipController=new NpcShipController();
 			shipController.load(dstream);
 		}
+		if (dstream.readBoolean())
+		{
+			warpHandler=new WarpHandler();
+			warpHandler.load(dstream);
+		}
+		
+		
 	}
 
 	public Spaceship() {
@@ -363,7 +382,15 @@ public class Spaceship extends Entity {
 
 	@Override
 	public void update() {
-
+		
+		if (warpHandler!=null)
+		{
+			if (!warpHandler.update(this))
+			{
+				warpHandler=null;
+			}
+		}
+		
 		if (shipStats != null) {
 			shipStats.run();
 		}
@@ -379,6 +406,10 @@ public class Spaceship extends Entity {
 
 	public void setShipController(ShipController shipController) {
 		this.shipController = shipController;
+		if (shipController!=null)
+		{
+			shipController.setShip(this);			
+		}
 	}
 
 	public boolean canThrust() {
@@ -449,5 +480,14 @@ public class Spaceship extends Entity {
 		{
 			shipController.event(scriptEvents.systemEntry);
 		}
+	}
+
+	
+	public WarpHandler getWarpHandler() {
+		return warpHandler;
+	}
+
+	public void setWarpHandler(WarpHandler warpHandler) {
+		this.warpHandler=warpHandler;
 	}
 }

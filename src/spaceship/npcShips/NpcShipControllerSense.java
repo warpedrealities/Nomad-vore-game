@@ -20,12 +20,10 @@ public class NpcShipControllerSense {
 		this.faction=faction;
 	}
 
-	
 	public Spaceship getPlayer()
 	{
 		return (Spaceship)Universe.getInstance().getCurrentEntity();
 	}
-
 
 	public FlagField getFlags() {
 		return flags;

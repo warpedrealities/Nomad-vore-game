@@ -275,7 +275,42 @@ public class Player_RPG implements Actor_RPG {
 			stats[i]=statMax[i]*1.0F;
 		}	
 	}
-	
+
+	public void rest(int duration) {
+
+		stats[SATIATION]-=subAbilities[METABOLISM]*duration;
+		if (stats[SATIATION]<=0)
+		{
+			stats[HEALTH]-=0.25F*duration;
+			if (stats[Actor_RPG.HEALTH]<0)
+			{
+				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, false));
+			}
+		}
+		
+		if (stats[HEALTH]<statMax[HEALTH])
+		{
+			stats[HEALTH]+=subAbilities[REGENERATION]*duration; stats[SATIATION]-=subAbilities[REGENERATION]*2*duration;				
+		}
+
+		if (stats[RESOLVE]<statMax[RESOLVE])
+		{
+			stats[RESOLVE]+=0.1F*duration;	
+		}
+		if (stats[ACTION]<statMax[ACTION])
+		{
+			stats[ACTION]+=statMax[ACTION];	
+		}	
+		statusEffectHandler.clearStatusEffects(actor, this);
+		for (int i=0;i<stats.length;i++)
+		{
+			if (stats[i]>statMax[i])
+			{
+				stats[i]=statMax[i];
+			}
+		}
+		cooldownHandler.update(duration);
+	}
 	public void sleep(int duration)
 	{
 		stats[SATIATION]-=subAbilities[METABOLISM]*duration;
@@ -303,17 +338,6 @@ public class Player_RPG implements Actor_RPG {
 			stats[ACTION]+=statMax[ACTION];	
 		}
 		statusEffectHandler.clearStatusEffects(actor, this);
-		/*
-		if (statusEffects.size()>0)
-		{
-			for (int i=statusEffects.size()-1;i>=0;i--)
-			{
-					statusEffects.get(i).remove(this);
-					statusEffects.remove(i);
-					ViewScene.m_interface.UpdateInfo();
-			}
-		}	
-		*/
 		for (int i=0;i<stats.length;i++)
 		{
 			if (stats[i]>statMax[i])
@@ -1088,6 +1112,7 @@ public class Player_RPG implements Actor_RPG {
 			}
 		}
 	}
+
 	
 
 }

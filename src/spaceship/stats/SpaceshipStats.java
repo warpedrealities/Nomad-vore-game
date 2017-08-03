@@ -31,6 +31,7 @@ public class SpaceshipStats {
 	SpaceshipShield shield;
 	List<SpaceshipWeapon> weapons;
 
+	
 	public SpaceshipStats() {
 		resources = new HashMap<String, SpaceshipResource>();
 		converters = new ArrayList<ShipConverter>();
@@ -239,4 +240,5 @@ public class SpaceshipStats {
 	public void setFTL(int fTL) {
 		FTL = fTL;
 	}
+
 }

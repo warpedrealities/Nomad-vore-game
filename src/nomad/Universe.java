@@ -115,9 +115,7 @@ public class Universe extends GameManager
 							));
 				}
 								
-			}
-
-			
+			}	
 		}
 	}
 	
@@ -298,8 +296,22 @@ public class Universe extends GameManager
 	{
 		return currentStarSystem;
 	}
+	public void setSystem(StarSystem system)
+	{
+		currentStarSystem=system;
+	}
 
-	
+	public StarSystem getSystem(int x, int y)
+	{
+		for (int i=0;i<starSystems.size();i++)
+		{
+			if (starSystems.get(i).getPosition().x==x && starSystems.get(i).getPosition().y==y)
+			{
+				return starSystems.get(i);
+			}
+		}
+		return null;
+	}
 	void copyTemp(String filename) throws IOException
 	{
 		File temp=new File("saves/temp");
