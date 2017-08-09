@@ -44,7 +44,14 @@ public class Vec2f {
 
 		return (float) Math.sqrt(sum);
 	}
-
+	public float getDistance(float x0, float y0) {
+		float xe = Math.abs(this.x -x0);
+		float ye = Math.abs(this.y - y0);
+		xe = xe * xe;
+		ye = ye * ye;
+		float sqrt = (float) Math.sqrt(xe + ye);
+		return sqrt;
+	}
 	public float getDistance(Vec2f p) {
 		float xe = Math.abs(x - p.x);
 		float ye = Math.abs(y - p.y);

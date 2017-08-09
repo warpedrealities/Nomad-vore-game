@@ -3,7 +3,7 @@
 <contains minimum="2" maximum="4">scrap metal</contains>
 <description>A starship fuel tank.</description>
 <resistance resists="KINETIC" strength="2"></resistance>
-<shipResource capacity="40" resource="FUEL">
+<shipResource capacity="50" resource="FUEL">
 <resourceConversion itemName="blue crystal" value="1.0"/>
 <resourceConversion itemName="azure crystal" value="2.0"/>
 <resourceConversion itemName="fuel cell(poor)" value="3.0"/>

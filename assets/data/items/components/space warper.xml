@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="space warper" weight="10" value="5000">
+<description>A basic FTL engine capable of creating a strength 3 warp field</description>
+<placeditem widget="modules/space warper"/>
+</ItemWidget>

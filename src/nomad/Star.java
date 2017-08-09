@@ -72,7 +72,6 @@ public class Star extends Entity {
 
 	@Override
 	public float getSpriteSize() {
-		// TODO Auto-generated method stub
 		return 5;
 	}
 

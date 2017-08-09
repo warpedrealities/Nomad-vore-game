@@ -54,7 +54,7 @@ public class WarpNavigator {
 	public float calculateStress(Vec2f position)
 	{
 		float distance=position.getDistance(new Vec2f(0,0));
-		double s=Math.sqrt((double)(100-distance));
+		double s=Math.sqrt((double)(40-distance));
 		if (s<1)
 		{
 			s=1;

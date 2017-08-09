@@ -84,10 +84,38 @@
 	
 	<page ID="offerOral1">
 	<text>
-	
+	Awari chuckles "Long before I suspect." she says and then rests her hands on your ass as she presses her lips to your head. The green elf letting out a mhmm as her jaws begin to part and stretch over your scalp and slide down over your face. The predatory warrior's tongue roving shamelessly over your cheeks, chin and then neck as she takes the first swallow and begins gobbling you down whole and alive. Her hands on your ass helping to lift and angle you into her wonderfully warm and inviting mouth.
 	</text>
-	
+	<choice destination="offerOral2" text="such a sexy predator you've given yourself to"/>
 	</page>
+	
+	<page ID="offerOral2">
+	<text>
+	Awari is certainly appreciative of your flavour judging by the sounds rumbling around your head as you slide down her throat. The elf kneading and lifting up your ass without difficulty, your toes barely touching the floor as she gobbles up more of you. Her tongue lapping over your chest, pausing to savour your softness and flavours as your head gets acquainted with the inside of her belly. Her trim middle bulging out with the shape of your face as you stretch her tummy and hear it let out a welcoming eager gurgle that can only make you thrilled at how happy her belly is to accept you.
+	</text>
+	<choice destination="offerOral3" text="$hurry up and eat all of me Awari"/>
+	</page>
+	
+	<page ID="offerOral3">
+	<text>
+	Awari seems to hmm disapprovingly at the eager preyslutty demands from her food and slows up her swallows, as if showing you that even if you offered prey has no place bossing predators around. Her lingering savouring gentle swallows slow and drawn out as she works over your belly, her hands kneading into your ass as she gets closer and closer to your hips. You wave your legs around playfully as she lifts them into the air and finally swallows your ass, packing more of you away to curl up in her now nicely stretching and distending belly. Won't be long until she's made a meal of you.
+	</text>
+	<choice destination="offerOral4" text="wait for her to polish you off"/>
+	</page>
+	
+	<page ID="offerOral4">
+	<text>
+	Her throat ripples around your thighs as she reaches up to grasp your feet, placing her palms flat against your soles as she engulfs your calves. A final push and swallow sends your feet sliding past her lips and then down her throat as she snaps them closed. Awari looking down at her domed out and bulgey green belly and letting out a mhmm, licking your flavour off her lips contemplatively and then using both hands to support her gut as you curl up within her. The elf's innards already gurgling around you in a way that speaks of impending digestion "well, you were certainly a delicious preyslut"
+	</text>
+	<effect type="setlocalflag" flag="eaten" value="2" />
+	<choice destination="offerOralGO" text="$preyslut?"/>
+	</page>
+	
+	<gameover ID="offerOralGO">
+	<text>
+	"Shush, food doesn't get to have opinions, should of thought of that before you decided to be mine." she says at your query about her moniker for you. As you wriggle about to get into a good position for digestion she hmmphs "Now, good food should be quiet." she says somewhat dismissively and gets comfortable. The elf chiding any noises you make except inarticulate moans as she digests you away, time passing and her gut softening as you're melted away by your sexy, if somewhat demeaning predator. In an hour there's nothing solid remaining of you, in another 1 or 2 even that is gone. Your form utterly converted into padding for her curves and fuel for her vigorous exercise regimen.
+	</text>
+	</gameover>
 	
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"

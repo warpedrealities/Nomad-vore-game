@@ -71,24 +71,46 @@
 
 <placeWidget x="5" y="2" name="cargocontainer">
 <lootTable>
+<loot item="plasma pistol" chance="1.0"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
 </lootTable>
 </placeWidget>
 
 <placeWidget x="7" y="2" name="cargocontainer">
 <lootTable>
+<loot item="Aplas carapace" chance="1.0"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
 </lootTable>
 </placeWidget>
 
 <placeWidget x="5" y="5" name="cargocontainer">
 <lootTable>
+<loot item="space warper" chance="1.0"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
 </lootTable>
 </placeWidget>
 
 <placeWidget x="7" y="5" name="cargocontainer">
 <lootTable>
+<loot item="blueprint" chance="1.0" addendum="space warper"/> 
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
+<lootSubTable chance="1" file="talharan_tier_1"/>
 </lootTable>
 </placeWidget>
-
+<placeNPC name="space/talharan/talharan_grey" x="11" y="3"/>
+<placeNPC name="space/talharan/talharan_grey" x="6" y="7"/>
+<placeNPC name="space/talharan/talharan_grey" x="7" y="7"/>
 </mapgen>
 </layout>
 <exterior width="7">

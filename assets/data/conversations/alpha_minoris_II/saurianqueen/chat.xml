@@ -107,6 +107,9 @@
 			<condition operator="equals" evaluate="LOCALFLAG" flag="knights"
 				value="0" />
 		</choice>
+		<choice destination="offerCockvore0" text="$To feed your royal cock of course your majesty">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="sackslut" value="1" />
+		</choice>
 		<choice destination="friendship" text="can i become a knight your majesty?">
 			<condition operator="equals" evaluate="LOCALFLAG" flag="knights"
 				value="1" />
@@ -115,6 +118,54 @@
 		</choice>
 		<choice destination="end" text="I actually don't know" />
 	</page>
+	
+	<page ID="offerCockvore0">
+	<text>
+	Queen Laurisse shows the first faintest hints of surprise then smiles "Well now, I did say you may offer. And It's not like there's any finality to you giving me this service." she says and then uses one hand to almost absentmindedly undo the belt of her robes then lift up a piece of hem, guiding it to the side and parting her robes to reveal her firming member <conditional><assertion evaluate="slothasitem" slot="2" /> as you undress so you can slide down her cock naked</conditional>. Queen laurisse's shaft growing erect and large, ready to schlurp you up. She mhmms and her smile broadens faintly as she looks to you "very well, you may feed yourself to my cock now, I am ready"
+	</text>
+	<choice destination="offerCockvore1" text="feetfirst, feed yourself to her royal member"/>
+	</page>
+	
+	<page ID="offerCockvore1">
+	<text>
+	You step up onto the dais, and her majesty watches you carefully. But mhmms and smirks as you grab ahold of a decorative fixture and raise one foot over her cocktip "I'll permit you to look down on me." she grants magnanimously then chirrs as you point your toes and begin to feed your foot into her cock, sliding it down her length and watching her pleasured expression, something you didn't get to see as much of going down headfirst. And her trying to remain dignified while you feed your foot down into her sack is quite entertaining, her composure wavering and weakening as you wriggle your toes playfully around in her cum and then get a firmer grip on the fixture and raise your other foot up and place it into her tip getting a delighted gasp and shiver of pleasure out of the queen.
+	</text>
+	<choice destination="offerCockvore2" text="enough teasing you have a cock to feed"/>
+	</page>
+	
+	<page ID="offerCockvore2">
+	<text>
+	Her comportment is fracturing as you slide your other foot in, working your leg down beside the first and feeling her tight shaft clench and ripple wonderfully and hungrily around your calves and midway up your thighs as she shudders in bliss "mhmm oh, get in me.. feed my cock..I want to melt you" she utters and then snaps her lips shut, seemingly unwilling to fully give in to the hedonism after that lapse. Though the way her balls burble and hot cum soak your feet make you believe it's only a thin facade over her voracious needs, gradually you ease yourself down, sliding your ass into her cocktip and seeing her suppress her moan. Her eyes drifting in bliss at the wonderful sensations from her cock as you feed yourself to her lust.
+	</text>
+	<choice destination="offerCockvore3" text="wriggle a bit, she can't keep this up"/>
+	</page>
+	
+	<page ID="offerCockvore3">
+	<text>
+	You wriggle your legs and ass around in her shaft and see her eyes widen...but she bites her lip and groans in delight and that's it..so you wriggle again as you start to feed your midriff into her schlurping cocktip and then that does it..a full throated moan coming from her lips and she reaches down with her hands to stroke her cock "Get in me! you're here to serve as my royal cum.. and that's where you belong." she insists as her cock ripples and schlurps in your chest, her wonderfully lustful possessive loss of composure a sight to behold as she slides her hands up to your head "get IN me!" she reiterates, before giving the top of your head a shove, plunging it into her cock. The queen's eyes slipping half lidded as she leans back and schlurps your trailing arms into her cock.
+	</text>
+	<choice destination="offerCockvore4" text="worth it, got to love a predator who knows how to treat her cockfood"/>
+	</page>
+	
+	<page ID="offerCockvore4">
+	<text>
+	Your hands disappear into her tip with a schlurp and Laurisse continues to chirr as she strokes your arms down to join the rest of you inside her balls "mhmm, maybe I should make this a position in my court...it's a shame only you would be able to occupy it for any length of time..." she says, flushed and leaning back as she takes deep breath and tries to regain her composure. Not helped any by your delighted wriggles and squirms in her sack as hot cum soaks every inch of you...the hot cream feeling wonderful against your skin and the knowledge it'll melt you down into her next load of royal seed just makes it all decadently erotic.
+	</text>
+	<choice destination="offerCockvore5" text="$I can't take it on a longterm basis..but i agree, for now...i'm your majesty's royal cockfood"/>
+	</page>
+	
+	<page ID="offerCockvore5">
+	<text>
+	"Of course...for now, you're cockfood..my cockfood." she says and then adjusts her robes, somewhat hiding the bulge of her semi erect cock and utterly failing to hide her immense bulging sack as affairs of court intrude "your majesty, i bring news..if this is a good time..." the visitor began, eyes drifting to the mhmming, moaning and occasionally glorping, gurgling and squirming sack of the queen "pay my royal cockfood no mind, report." commands Laurisse and a little thrill goes through you at how she's treating you so casually, holding court and addressing other matters as she slowly and exquisitely starts to soften and melt your form. Various affairs of royalty and court occuring as time passes, but you find it harder and harder to hear and pay attention to them...your world contracting to her wondrous sack as noises from beyond seem to get quieter and the squeelches and burbles of her hot cum become all you can pay attention to.
+	</text>
+	<choice destination="offerCockvoreGO" text="so good..melt away"/>
+	</page>
+	
+	<gameover ID="offerCockvoreGO">
+	<text>
+	A few hours pass and you gradually become one with the cum around you, expiring in pleasure as you're melted away. Where once was a nice and full sack all lumpy and bulging with your shape now only smooth orbs and a sense of needyness that begs for release remains. Laurisse rising to her feet...then smirking, motioning over one of her servants..the lizard maiden looking unsure until Laurisse gestures down at her length "I require relief, pleasure me.. it would not do for me to disgorge myself on the floor." she says. The castle servant blushing but obeying as she sucks off Laurisse, clearly it's good to be her majesty. The queen mhmming but remaining a passive receiver of her ministrations until she reaches her peak, grasping the saurian girl's head and holding her face down over her cock with a moan as she cums into her "swallow ever drop, it is a royal decree." she says simply, her servant's eyes widening as she does her best to obey, even as her belly swells with gallons of hot saurian cum made from your form. when the queen finally lets her up the lizard's middle is stretched and domed to contain the queen's load, but she seems to have taken it in stride and indeed Laurisse dismisses her somewhat perfunctorily.
+	</text>
+	</gameover>
 
 	<page ID="valley0">
 	<effect type="setlocalflag" flag="valley" value="1"/>

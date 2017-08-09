@@ -286,7 +286,7 @@ public class WidgetPlacer {
 			WidgetSlot ws = (WidgetSlot) widget;
 			NodeList children = Enode.getElementsByTagName("contains");
 			if (children.getLength() > 0) {
-				ws.setWidget((WidgetBreakable) genWidget((Element) children.item(0)));
+				ws.setWidget((WidgetBreakable) genWidget((Element) children.item(0)),null);
 			}
 			children = Enode.getElementsByTagName("facing");
 			if (children.getLength() > 0) {

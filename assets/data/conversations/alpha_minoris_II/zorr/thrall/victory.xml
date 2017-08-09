@@ -2,11 +2,75 @@
 <Conversation>
 
 	<page ID="start">
+		<preference fetish="oralvore"/>	
 		<text>
-
+		The slender seraph looks down at your defeated body and then sets her blade aside "I must devour you" she states, as if it's not her idea. She squats down at your feet and lifts them up, not really tasteing over them or lingering to savour your flavours. She shoves your feet into her mouth without pre-amble, slurping them into your warm mouth and swallowing to start working your feet into her throat.
 		</text>
+		<choice destination="oralvore0" text="compelled or not she's eating you whole"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	Your predator seems to take no pleasure in devouring you, perhaps something to take as a slight against your flavour, instead gulping you up in a perfunctory fashion. Her swallows working her way up your legs, engulfing your calves, then thighs as your feet enter the tightness of her famished belly. You hear her gut let out a loud and ominous gurgle as its exposed to food for what's probably the first time in a great many years. Her hands help ease your ass up off the floor as her lips start to work over your hips.
+	</text>
+	<choice destination="oralvore1" text="continue"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Your legs curl up inside her as she swallows swiftly over your upper body. The seraph taking no time to savour as she lifts your upper body up and gobbles you down, settled onto her haunches with wings spread behind her as a balance of sorts as more of your weight settles into her stretching belly. That once unhealthily slender middle doming out and bulging with the contours of your feet and ass as you're packed away within her by the Seraph, her lips coming up around your chest now.
+	</text>
+	<choice destination="oralvore2" text="devoured completely"/>
 	</page>
 
-
+	<page ID="oralvore2">
+	<text>
+	Your slender predators belly continues to engorge and grow in size as you're packed away inside her, her lips forcing your arms over your head as they work over your shoulders, all going dark as your head plunges down her throat. Your body steadily piling into her belly as she brings her hands down to pat consolingly on her gut and swallows your hands down, utterly consuming you. "I'm sorry" she says softly, a simple statement that does little for your current predicament as either way you're trapped in her belly now. The long unused organ providing a tight pressure all about you as you it gurgles more energeticly and enzymes start to ooze in over you.
+	</text>
+	<choice destination="oralvoreStruggle" text="try to escape"/>
+	<choice destination="oralvoreSubmit" text="let your body feed the famished seraph"/>
+	</page>
+	
+	<check ID="oralvoreStruggle">
+		<test what="STRUGGLE" DC="10" />
+		<outcome destination="oralvoreEscape" />
+		<outcome destination="oralvoreDigest" />
+	</check>	
+	
+	<page ID="oralvoreEscape">
+	<text>
+	Her apology does nothing to make you want to submit to digestion inside her and you take a moment to situate your feet properly against the underside of her belly and push yourself onwards and upwards. Shoving your hands into the entrance to her throat you feel her swallow against your efforts, but seemingly only as a token rather than with all due force and coveteousness with regards to her escaping meal. Your hands and arms cresting out of her throat and grabbing ahold of her to pull the rest of yourself free of her throat. The seraph slumping forwards as your ass slides free of her lips and you wriggle entirely clear, she looks at you conflicted, seemingly fighting an inner conflict between resting and rejoining the fight that might give you the chance you need to get away.
+	</text>
+	<effect type="heal" value="0.1" />
+	<effect type="stunnpc" value="10" />
+	<choice destination="end" text="get clear"/>
+	</page>
+	
+	<page ID="oralvoreDigest">
+	<text>
+	Her apology does nothing to make you want to submit to digestion inside her and you take a moment to situate your feet properly against the underside of her belly and push yourself onwards and upwards. Shoving your hands into the entrance to her throat you feel her swallow against your efforts, but seemingly only as a token rather than with all due force and coveteousness with regards to her escaping meal. Despite that though your feet slip on her insides and her stomach clenches with a hungry gurgle and you lose your leverage to force yourself back up against her throat. Even despite her not putting in a full effort you find yourself sliding back down to be sealed back up in her belly. 
+	</text>
+	<choice destination="oralvoreDigestGO" text="digestion"/>
+	</page>
+	
+	<page ID="oralvoreDigestGO">
+	<text>
+	"It was a good effort.." says the seraph as you tire yourself out trying to escape her and she gives her gut a consoling pat. Though now digestion is setting in in earnest. Her stomach might be out of practice in digesting meals such as you, but it's proving remarkably adept as your defeated and defenceless form is worked over in the tight confines of her belly. And gradually, you're worked down into mush inside of her. The gut of the seraph turning soft and round and then shrinking away as you're utterly digested and absorbed, going to nourish her deprived and slender form and perhaps going some way to restoring her to her former glory. Though one suspects that she will not appreciate your sacrifice in this.
+	</text>
+	
+	</page>
+	
+	<page ID="oralvoreSubmit">
+	<text>
+	The seraph's apology makes you smile a little. It's really not her fault she was made to devour you. Maybe were your circumstances different you could of been, well..something other than predator and meal..but you're content with that sort of relationship, besides...she really does look like she could do with a good meal. She seems puzzled by your lack of resistance, patting over the bulge as you get wriggle around to get comfortable but gently so as not to seem to struggle. Her digestive process becoming all the more vigorous around you as her gut gurgles and clenches on your body, starting to process and grind you down into nourishment and she remains unmoving as if held to it.
+	</text>
+	<choice destination="oralvoreSubmitGO" text="get digested">
+	</page>
+	
+	<gameover ID="oralvoreSubmitGO">
+	<text>
+	You feel her stomach working over you with increasing vigour, its gurgles loud in your ears. But over it all you hear her asking a simple question "why?" it's all she manages and you barely hear her, but it seems she had to work herself up to be able to fight the compulsion to just sit there and digest so it must be important..alas you're in no fit state to answer, your squirms and utterances sound like gurgles to her as your body comes apart within  her. The seraph watching her gut round out with her question unanswered as you give yourself bodily to her form, in but a short time more her belly would shrink down and flatten out, your nourishment going to fuel her body.
+	</text>
+	</gameover>
 	
 </Conversation>

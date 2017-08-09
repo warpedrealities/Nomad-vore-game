@@ -2,6 +2,8 @@ package widgets;
 
 import interactionscreens.SlotScreen;
 import item.Item;
+import item.ItemLibrary;
+import nomad.Universe;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -10,12 +12,17 @@ import java.io.IOException;
 import org.w3c.dom.Element;
 
 import actor.player.Player;
+import combat.CombatMove;
+import combat.effect.Effect_Dismantle;
+import shared.ParserHelper;
 import shared.Vec2f;
 import view.ViewScene;
 
 public class WidgetSlot extends Widget {
 
 	private WidgetBreakable widget;
+	private String widgetItem;
+	
 	private int facing;
 	private boolean hardpoint;
 
@@ -55,7 +62,17 @@ public class WidgetSlot extends Widget {
 		if (widget != null) {
 			dstream.writeBoolean(true);
 			widget.save(dstream);
+
 		} else {
+			dstream.writeBoolean(false);
+		}
+		if (widgetItem!=null)
+		{
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, widgetItem);
+		}
+		else
+		{
 			dstream.writeBoolean(false);
 		}
 	}
@@ -68,11 +85,14 @@ public class WidgetSlot extends Widget {
 		facing = dstream.readInt();
 
 		// load widget
-		boolean b = dstream.readBoolean();
-		if (b == true) {
+		if (dstream.readBoolean()) {
 			widget = (WidgetBreakable) WidgetLoader.loadWidget(dstream);
+			
 		}
-
+		if (dstream.readBoolean())
+		{
+			widgetItem=ParserHelper.LoadString(dstream);
+		}
 		if (hardpoint == true) {
 			widgetSpriteNumber = 6;
 			widgetDescription = "a hardpoint, anything here can extend outside the ship";
@@ -86,12 +106,13 @@ public class WidgetSlot extends Widget {
 		return widget;
 	}
 
-	public void setWidget(WidgetBreakable widget) {
+	public void setWidget(WidgetBreakable widget,String widgetItem) {
 		this.widget = widget;
 		// trigger global redraw to show changes
 		if (ViewScene.m_interface != null) {
 			ViewScene.m_interface.redraw();
 		}
+		this.widgetItem=widgetItem;
 	}
 
 	public String getDescription() {
@@ -137,8 +158,24 @@ public class WidgetSlot extends Widget {
 		return true;
 	}
 
-	public void handleAttack() {
+	public void handleAttack(CombatMove combatMove) {
 		if (widget != null) {
+			
+			if (widgetItem!=null)
+			{
+				for (int i=0;i<combatMove.getEffects().size();i++)
+				{
+					WidgetItemPile Pile = new WidgetItemPile(2, "a pile of items containing ", Universe.getInstance().getLibrary().getItem(widgetItem));
+					if (Effect_Dismantle.class.isInstance(combatMove.getEffects().get(i)))
+					{
+						Vec2f p = ViewScene.m_interface.getSceneController().getActiveZone().getWidgetPosition(this);
+						ViewScene.m_interface.placeWidget(Pile, (int) p.x, (int) p.y, true);
+						widget = null;
+						widgetItem=null;
+						ViewScene.m_interface.redraw();					
+					}
+				}			
+			}
 			if (widget.getHitpoints() <= 0) {
 				Item[] stack = widget.getContained();
 
@@ -151,6 +188,7 @@ public class WidgetSlot extends Widget {
 				Vec2f p = ViewScene.m_interface.getSceneController().getActiveZone().getWidgetPosition(this);
 				ViewScene.m_interface.placeWidget(Pile, (int) p.x, (int) p.y, true);
 				widget = null;
+				widgetItem=null;
 				ViewScene.m_interface.redraw();
 			}
 		}

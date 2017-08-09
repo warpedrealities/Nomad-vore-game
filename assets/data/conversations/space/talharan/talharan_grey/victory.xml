@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="analvore" />
+		<text>
+		The spacesuit clad dame looms ominously over you, her expression hidden behind the metal helm but her body language seems satified "You should of thought twice before picking a fight with the league." she says and then undoes the back of her spacesuit, a gap opening up over her rump as she positions herself over you "cause you were a potential customer, now you're potential fat." she says and then lowers her ass down over your face, soft ample blue buttcheeks visible to you afore everything goes dark. A lewd schlorp heard as her sphincter slips down around your ears.
+		</text>
+		<choice destination="analvore0" text="re-categorized as unprocessed padding and fed to an alien ass"/>
+	</page>
+
+	<page ID="analvore0">
+	<text>
+	You couldn't see her face even if your face wasn't sliding up her ass, but by the sound of it she's enjoying herself. Her moans audible as her hungry back passage squelches and ripples around your head and shoulders drawing you deeper inside of her. You hear a few strain and stretching noises as her suit begins to accomodate the bulge of your body sliding into her own. A lump in her belly showing your head as she squats down over your defenceless body to shove you further in, soon you're squeezed inside her all the way down to your waist. Her asscheeks sliding over your rump as you're compressed in the heated depths of her body and pressed doubly so by the combined constraints of her gut and surrounding suit, you can already tell it'll be hard to get out of here and as if reading your mind you can hear her murmur "there's no escape, only place you're going is my curves." she says as she leans forwards, angling your helplessly scissoring legs into the air.
+	</text>
+	<choice destination="analvore1" text="swallowed entirely by alien ass"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	The spacesuited alien rests her hands on her knees as she clenches and schlorps your legs steadily into her rear end. Her moans sounding around you along with the schlorps and blorps of her insides pressing around your head as she pulls you into herself. Your feet wriggling around protruding from her ass for a few moments more as your legs disappear before they vanish inside her rump as well. Her innards squeezing hotly all around you as you're clenched inside her and feel her straighten up. You can hardly move, and what's worse you know if she gets a chance to do up the rump slot of her spacesuit there'll be nowhere for you to escape to. 
+	</text>
+	<choice destination="analvoreStruggle" text="try to escape before that happens!"/>
+	<choice destination="analvoreSubmit" text="...there's no escape"/>
+	</page>
+	
+	<check ID="analvoreStruggle">
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="analvoreEscape" />
+		<outcome destination="analvoreDigest" />
+	</check>	
+	
+	<page ID="analvoreEscape">
+	<text>
+	You immediately set about wriggling back out, working your arms up above you to push against the tightly confining innards around you to shove yourself back down out of her ass. The alien lurching and stumbling as your hands shove out the stretched belly of her suit "stop that you..." she reaches behind herself, your efforts so sudden she goes to cover her ass with her hands rather than seal her suit. She grabs ahold of your feet as they emerge but seems she lacks a good angle to shove you back in so lets out a frustrated litany of protests as you worm your way free. The spacesuited girl dropping into a heap as the last of your form wriggles free of her ass.
+	</text>
+	<effect type="heal" value="0.1" />
+	<effect type="stunnpc" value="10" />
+	<choice destination="end" text="get clear"/>
+	</page>
+	
+	<page ID="analvoreDigest">
+	<text>
+	You immediately set about wriggling back out, working your arms up above you to push against the tightly confining innards around you to shove yourself back down out of her ass. The alien lurching and stumbling as your hands shove out the stretched belly of her suit "stop that you..." she protests and then reaches around behind herself to go about stopping you if you won't stop trying to get out. But your attempt, to escape her butt, is thwarted abruptly as you shove your feet back out from between her ass cheeks only to encounter an unyielding fabric surface. She's sealed up the suit before you could squirm out, and hear her giggle as you futilely push against it "naughty...good try, but not good enough." says the alien and clenches, working to pull your legs back inside. You resist for a time despite the futility of it all, but when you tire she has her way, pulling your feet back into her ass and pulling your body deeper into her own.
+	</text>
+	<choice destination="analvoreDigestGO" text="doomed now"/>
+	</page>
+	
+	<gameover ID="analvoreDigestGO">
+	<text>
+	Helplessly you're drawn into the deepest depths of the alien, her hands drumming idly on her middle as her belly swells out massively with your curled up form. Trapped inside her you can hardly even squirm with how tightly her suit and belly presses about you, and it's here she gurgles you away. Your form softening and mooshing to conform to the shape you're being squished into, softening and goopifying until the steady relentless pressure on you reduces you to a compact and formless mass that's easy to absorb. It doesn't seem to take long after that for her belly to flatten out again, the spacesuit trim there despite its earlier stretching in a testament to the naughty ends to which their finest environment suit technology had been put.
+	</text>
+	</gameover>
+	
+	<page ID="analvoreSubmit">
+	<text>
+	You can hardly move in the confines of her innards, and decide that compared to the immense struggle it'd be to force your way back out of her submitting to being digested by this alien has some appeal. You don't resist as you're squeezed up through her innards, working deeper into her as you leave her bowels and intestines behind for cosier confines in her belly. Your lack of even an attempt at struggling seems to have caught her attention and she runs a hand over her belly bulge "given up have we?"
+	</text>
+	<choice destination="analvoreSubmitGO" text="mhmmm!"/>
+	</page>
+	
+	<gameover ID="analvoreSubmitGO">
+	<text>
+	The talharan laughs at your affirmation "Well if you're a gutslut I'm not gonna complain." she says and gets comfortable resting her hands on her belly as she starts to gurgle you away. Your form softening and mooshing to conform to the shape you're being squished into, softening and goopifying until the steady relentless pressure on you reduces you to a compact and formless mass that's easy to absorb. It doesn't seem to take long after that for her belly to flatten out again, the spacesuit trim there despite its earlier stretching in a testament to the naughty ends to which their finest environment suit technology had been put.
+	</text>
+	</gameover>
+	
+</Conversation>

@@ -30,7 +30,7 @@ public class SystemScreen extends Screen implements MyListener {
 	private MouseHook hook;
 	private Button warpButton;
 	private WarpData data;
-	
+	private float clock;
 	
 	public SystemScreen(Spaceship ship, Callback callback) {
 		this.callback = callback;
@@ -39,8 +39,10 @@ public class SystemScreen extends Screen implements MyListener {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
-
+		if (clock>0)
+		{
+			clock-=DT;
+		}
 	}
 
 	@Override
@@ -78,6 +80,7 @@ public class SystemScreen extends Screen implements MyListener {
 			window.setActive(false);
 			navWindow.setActive(true);
 			navMode=true;
+			clock=0.1F;
 			return true;
 		}
 		return false;
@@ -85,28 +88,34 @@ public class SystemScreen extends Screen implements MyListener {
 	
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-		if (!navMode)
+		if (clock<=0)
 		{
-			if (!handleButtons(ID)) {
-				toggleConverter(ID - 1);
-			}		
-		}
-		else
-		{
-			switch (ID)
+			if (!navMode)
 			{
-			case 22:
-				ship.setWarpHandler(new WarpHandler(data.destination,data.stress));
-				((SpriteRotatable)ship.getSpriteObj()).setFacing(data.facing);
-				callback.Callback();	
-				break;
-			case 21:
-				window.setActive(true);
-				navWindow.setActive(false);
-				navMode=false;
-				break;
+				if (!handleButtons(ID)) {
+					toggleConverter(ID - 1);
+					clock=0.1F;
+				}		
 			}
+			else
+			{
+				switch (ID)
+				{
+				case 22:
+					ship.setWarpHandler(new WarpHandler(data.destination,data.stress));
+					((SpriteRotatable)ship.getSpriteObj()).setFacing(data.facing);
+					callback.Callback();	
+					break;
+				case 21:
+					window.setActive(true);
+					navWindow.setActive(false);
+					navMode=false;
+					clock=0.1F;
+					break;
+				}
+			}			
 		}
+
 
 	}
 

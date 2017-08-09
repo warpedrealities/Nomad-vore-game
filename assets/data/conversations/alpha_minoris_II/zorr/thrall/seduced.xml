@@ -3,10 +3,80 @@
 
 	<page ID="start">
 		<text>
-
+		Your blandishments, wiles and other means have gotten her so aroused that it seems whatever other forces having a hold over her have temporarily been quietened. A flush can be seen on her pale grey cheeks, a mark of colour to contrast with the dark green stains as she looks your way but with green still in her irises. Whatever controls her can't bring her to attack you.
 		</text>
+		<choice destination="sex0" text="exorcise her with hard dickings">
+		<assertion evaluate="haspart" part="penis" />
+		</choice>
+		<choice destination="oralsex0" text="pleasure her in the hopes of freeing her from this control"/>
+		<choice destination="end" text="probably best keep your distance just in case"/>
 	</page>
 
-
+	<page ID="sex0">
+	<text>
+	You decide that if your seductive wiles can weaken the hold of the compulsion on the enthralled seraph then surely fucking her hard would free her completely, this is the best plan you've ever had. Besides, it's not the craziest thing you've seen and furthermore...you're horny and feel like getting your dick wet, so even if you fail you'll have achieved something. You 	<conditional><assertion evaluate="slothasitem" slot="2" />free and </conditional> stroke your <macro ID="penis_size_desc" /> shaft as you approach her. Placing a hand on her shoulder you urge her down towards the floor beneath her, her gaze drifting down to your length as she seems to realize what you're intending. Despite that something compels her to resist as you grasp her thighs and part them, her stained nethers exposed to you now as you take your place between her legs. 
+	</text>
+	<choice destination="sex1" text="start fucking her"/>
+	</page>
+	
+	<page ID="sex1">
+	<text>
+	You look into her face as you enter her, seeing her expression, the green wavering in her eyes as you thrust your length into her and she lets out a gasp, legs arcing up against your thighs as she seems to urge you to continue. Her tightness squeezing around your member as you begin to thrust in and out rutting her right here on the temple floor. The Seraph wonderfully eager and hot as you seek to fuck the evil out of her, picking up your pace as you hold her down and plant your lips firmly against her own as if to let her know this isn't just for your benefit that you're ploughing her delightful hole.
+	</text>
+	<choice destination="sex2" text="fuck her harder!"/>
+	</page>
+	
+	<page ID="sex2">
+	<text>
+	With your tongue probing her mouth to twine with her own you redouble your efforts. The seraph writhing in delight underneath you as her long sexual drought is brought to an end in the most wonderful way possible as you hilt yourself within her repeatedly. Your thrusts frequently eliciting muffled gasps from her lips as you keep her locked into that french kiss in almost possessive fashion as your pleasure builds and you feel her own ardour rising within her.
+	</text>
+	<choice destination="sex3" text="climax"/>
+	</page>
+	
+	<page ID="sex3">
+	<text>
+	You feel her tense under you and take your lips from her to hear her cry of pleasure as her orgasm hits, her nethers spasming to squeeze around your dick as her orgasm rocks through her and fluids spill from her nethers. Her orgasm letting you have your own, adding to the mess stirring within her as you fill her with your hot seed. You press close and stay hilted in her until you're done, the last spurt delivered afore you pull out of her. The seraph gasping and panting underneath you, clearly she enjoyed the fuck as much as you enjoyed giving it. but what's even more surprising is that it worked, her eyes have lost their greenish hue.
+	</text>
+	<choice destination="sex4" text="and now"/>
+	</page>
+	
+	<page ID="sex4">
+	<text>
+	The seraph's breathing slowly comes back under control as you get up off of her and look at her uncertainly. But as she recovers she seems to realize something and her eyes widen, she looks to you "thankyou" she murmurs and then takes up her sword and uses it to lever herself back to her feet..pausing as your seed pours out of her nethers and reaching down to run her fingers through it, looking at the stain and blushing as your seed helps to dilute the control on her before turning her attention to you and talking in a soft but insistent whisper "I may have only a little time and energy left that is truly mine...if you seek its end as I do I will come to your aid...I have waited long to do this." she says and then without waiting for an answer stalks away into the darkness of the temple, perhaps to lie in wait for when you are ready to face the dreadful deity of this domain.
+	</text>
+	<effect type="incrementglobalflag" flag="elderThing" value="1" />		
+	<special effect="removenpc" />
+	<choice destination="end" text="well that's one way to make friends"/>
+	</page>
+	
+	<page ID="oralsex0">
+	<text>
+	You figure if seduction weakened whatever force controls her then surely bringing her to orgasm would break it entirely. And if it doesn't...you want to see if you can make her squeel anyway, so win win. You put a hand on her shoulder and guide her down to the floor. The seraph looking at you in aroused confusion up until you part her thighs and bring your face down towards her nethers, her eyes widening and a little smile appearing on her lips. She lays back and lets you work, letting out a small gasp as you lick over her nethers. the green doesn't taste that bad, but you suspect it'd be a bad idea to swallow any of it.
+	</text>
+	<choice destination="oralsex1" text="no reason to stop"/>
+	</page>
+	
+	<page ID="oralsex1">
+	<text>
+	With an ear for her sounds you delve in, lapping at her nethers as you clutch firmly about her thighs, fingers resting on her ass as you explore her sex and cleanse her of that green tinge using your tongue. It only takes short if frequent mouthclearing pauses to let you continue as you hear her gasp and moan, her own wetness flooding through and diffusing the fluids as you continue your ministrations. By the sound of her delight you can tell you're getting better at probing her sensitive spots, licking deeper into her sex to discover more and feeling her start to shiver and tense.
+	</text>
+	<choice destination="oralsex2" text="impending climax"/>
+	</page>
+	
+	<page ID="oralsex2">
+	<text>
+	You have her spasming in bliss pretty frequently now, working over her continously now as her juices run clear and safe and lustful over your tongue. you grasp her hips more firmly to keep her steady as she shudders in delight and you work her sex over thoroughly...delving deep and pleasurably into her until you hear her spasms, gasps and moans change into a full body twitch and a loud cry. The seraph's nethers coating your face with bliss and lusty girl juices as her orgasm rolls through her.
+	</text>
+	<choice destination="oralsex3" text="lets see if it worked"/>
+	</page>
+	
+	<page ID="oralsex3">
+	<text>
+		The seraph's breathing slowly comes back under control as you get up off of her and look at her uncertainly. But as she recovers she seems to realize something and her eyes widen, she looks to you "thankyou" she murmurs and then takes up her sword and uses it to lever herself back to her feet before turning her attention to you and talking in a soft but insistent whisper "I may have only a little time and energy left that is truly mine...if you seek its end as I do I will come to your aid...I have waited long to do this." she says and then without waiting for an answer stalks away into the darkness of the temple, perhaps to lie in wait for when you are ready to face the dreadful deity of this domain.
+	</text>
+	<effect type="incrementglobalflag" flag="elderThing" value="1" />		
+	<special effect="removenpc" />
+	<choice destination="end" text="well that's one way to make friends"/>	
+	</page>
 	
 </Conversation>

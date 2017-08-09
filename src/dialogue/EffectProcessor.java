@@ -10,6 +10,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import perks.PerkLibrary;
+import shared.Scene_Int;
 import shop.ShopList;
 import shop.ShopScreen;
 import solarview.spaceEncounter.SpaceCombatInitializer;
@@ -45,17 +46,22 @@ public class EffectProcessor {
 	Player m_player;
 	
 	SceneController controller;
-
-	public EffectProcessor(Player player, SceneController controller) {
+	Scene_Int scene;
+	
+	public EffectProcessor(Player player, SceneController controller, Scene_Int scene) {
 		m_player = player;
 		this.controller = controller;
+		this.scene=scene;
 	}
 	
 	public void setNPC(NPC npc)
 	{
 		this.m_npc=npc;
-		flags=npc.getFlags();
-		faction=npc.getActorFaction();
+		if (this.m_npc!=null)
+		{
+			flags=npc.getFlags();
+			faction=npc.getActorFaction();			
+		}
 	}
 
 	public void setWidget(Widget widget) {
@@ -96,7 +102,7 @@ public class EffectProcessor {
 			controller.getHandler().getFactionListener().setViolation(0, null);
 		}
 		if (str.equals("shop")) {
-			ViewScene.m_interface.replaceScreen(new ShopScreen(node.getAttribute("ID")));
+			scene.replaceScreen(new ShopScreen(node.getAttribute("ID")));
 		}
 		if (str.equals("blueprint")) {
 			m_player.getCraftingLibrary().unlockRecipe(node.getAttribute("ID"));
@@ -297,6 +303,10 @@ public class EffectProcessor {
 		this.ship=ship;
 		this.flags=ship.getShipController().getflags();
 		this.faction=ship.getShipController().getFaction();
+	}
+
+	public void endConversation() {
+		scene.replaceScreen(null);
 	}
 
 }

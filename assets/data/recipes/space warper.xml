@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="space warper" requiredskill="2" startunlocked="false">
+<description>
+A space warping coil that creates and sustains a bubble of altered spacetime around the ship enabling FTL travel.
+</description>
+<ingredient item="zymonite" quantity="4"/>
+<ingredient item="computation valve" quantity="4"/>
+<ingredient item="optics" quantity="4"/>
+<ingredient item="flux capacitor" quantity="1"/>
+<result item="space warper"/>
+</recipe>

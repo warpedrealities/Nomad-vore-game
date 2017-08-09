@@ -335,13 +335,9 @@ public class ZoneInteractionHandler {
 					WidgetSlot ws = (WidgetSlot) m_zone.zoneTileGrid[x][y].getWidgetObject();
 					if (ws.getWidget() != null) {
 						Attackable attackable = (Attackable) ws.getWidget();
-
-						// attack this
-						// m_view.Flash(new Vec2f(xt,yt),0);
-						// attackable.Harm(player.getAttack().getDamage(0),
-						// player,0);
+						
 						if (player.useMove(number, attackable)) {
-							ws.handleAttack();
+							ws.handleAttack(player.getMove(number));
 						} else {
 							return false;
 						}

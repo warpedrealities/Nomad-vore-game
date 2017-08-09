@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ItemEquip name="encounter suit" weight="8" slot="BODY"
-	value="1500">
+	value="1250">
 	<description>
 		A form fitting full body outfit of alien design. Technological components grant it enhanced active protection abilities. It's made of protective fabrics and metallic armour plated inserts meaning even without the shield active it provides +2 kinetic, +2 thermal defence.
 	</description>

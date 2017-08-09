@@ -138,7 +138,7 @@ public class SlotScreen extends Screen implements Callback {
 					return false;
 				}
 			}
-			slot.setWidget((WidgetBreakable) widget);
+			slot.setWidget((WidgetBreakable) widget,iw.getItem().getName());
 
 
 			return true;

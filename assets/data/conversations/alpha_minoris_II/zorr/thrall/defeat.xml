@@ -3,8 +3,9 @@
 
 	<page ID="start">
 		<text>
-		
+		The thrall looks at you in pain, her body trying to rise as if compelled and each time it hurts her...the will behind her actions is strong but her body is beaten and cannot act upon its ichoreous compulsion. You have triumphed by force of arms over her.
 		</text>
+		<choice destination="end" text="nothing to be done with her"/>
 	</page>
 
 

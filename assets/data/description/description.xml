@@ -36,7 +36,7 @@
 		<value ID="size" div="1" /> inches away from your chest.
 	</block>
 	<block bodypart="butt">
-	You possess a
+	You possess a 
 	<macro ID="butt_size_desc" /> ass.
 	</block>
 	<block bodypart="tail">

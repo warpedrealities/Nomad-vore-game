@@ -33,6 +33,7 @@ import actorRPG.RPG_Helper;
 import shared.Callback;
 import shared.ParserHelper;
 import shared.SceneBase;
+import shared.Scene_Int;
 import shared.Screen;
 import shared.Vec2f;
 import spaceship.Spaceship;
@@ -63,6 +64,8 @@ public class DialogueScreen extends Screen implements Callback {
 	EffectProcessor m_processor;
 	Callback callback;
 	float m_stagnation;
+
+	
 	static public final int DISPOSITION = 0;
 
 	public DialogueScreen(int frame, int button, int buttonalt, int tint, Player player, TextView textview,
@@ -90,14 +93,23 @@ public class DialogueScreen extends Screen implements Callback {
 		this.talkingNpc = npc;
 	}
 
-	public boolean Load(String Conversation, NPC npc) {
+	public boolean Load(String Conversation, NPC npc,Scene_Int scene) {
 		Document doc = ParserHelper.LoadXML("assets/data/conversations/" + Conversation + ".xml");
-		Element root = doc.getDocumentElement();
 		Element n = (Element) doc.getFirstChild();
 		m_root = (Element) n;
 		m_children = m_root.getChildNodes();
-		m_evaluator = new OutEvaluator(npc, m_player, ViewScene.m_interface.getSceneController());
-		m_processor = new EffectProcessor(m_player, ViewScene.m_interface.getSceneController());
+		
+		if (ViewScene.m_interface!=null)
+		{
+			m_evaluator = new OutEvaluator(npc, m_player, ViewScene.m_interface.getSceneController());		
+			m_processor = new EffectProcessor(m_player, ViewScene.m_interface.getSceneController(),scene);
+		}
+		else
+		{
+			m_evaluator = new OutEvaluator(npc, m_player, null);		
+			m_processor = new EffectProcessor(m_player,null,scene);		
+		}
+		
 		m_processor.setNPC(npc);
 		if (npc != null) {
 			try {
@@ -130,7 +142,15 @@ public class DialogueScreen extends Screen implements Callback {
 	{
 		m_evaluator.setSpaceship(ship);
 		m_processor.setSpaceship(ship);
-		
+		if (talkingNpc==null)
+		{
+			try {
+				FindNode("start");
+			} catch (MalformedDialogException e) {
+				e.printStackTrace();
+
+			}
+		}
 	}
 	
 	@Override
@@ -179,7 +199,7 @@ public class DialogueScreen extends Screen implements Callback {
 	}
 
 	void EndConversation() {
-		
+		m_processor.endConversation();
 	}
 
 	void GameOver(Element node) throws MalformedDialogException {

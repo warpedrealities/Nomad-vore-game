@@ -10,6 +10,7 @@ import org.w3c.dom.NodeList;
 
 import combat.effect.Effect;
 import combat.effect.Effect_Damage;
+import combat.effect.Effect_Dismantle;
 import combat.effect.Effect_Movement;
 import combat.effect.Effect_Status;
 import combat.statusEffects.StatusEffect;
@@ -168,6 +169,9 @@ public class CombatMove {
 				}
 				if (e.getTagName().equals("effectReinforce")) {
 					effects.add(new Effect_Reinforce(e));
+				}
+				if (e.getTagName().equals("effectDismantle")) {
+					effects.add(new Effect_Dismantle());
 				}
 				if (e.getTagName().equals("missText")) {
 					genMiss(e);

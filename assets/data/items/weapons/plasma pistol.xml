@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<ItemWeapon name="plasma pistol" weight="3" value="450">
+<ItemWeapon name="plasma pistol" weight="3" value="1000">
 <tagSet value="A"/>
 <description>
-The bulky storage torus and magnetic coils give this weapon an outline vaguely reminiscent of a hair dryer. Does 2-8 thermokinetic damage or 2-12 if overcharged. (A)
+The bulky storage torus and magnetic coils of this alien weapon give it an outline vaguely reminiscent of a hair dryer. Does 2-8 thermokinetic damage or 2-12 if overcharged. (A)
 </description>
 <modifier>
 

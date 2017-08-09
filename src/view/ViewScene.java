@@ -41,6 +41,7 @@ import shared.Callback;
 import shared.MyListener;
 import shared.ParserHelper;
 import shared.SceneBase;
+import shared.Scene_Int;
 import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
@@ -62,7 +63,7 @@ import actorRPG.Player_RPG;
 import artificial_intelligence.BrainBank;
 import artificial_intelligence.Sense;
 
-public class ViewScene extends SceneBase implements ModelController_Int, MyListener, Callback {
+public class ViewScene extends SceneBase implements ModelController_Int, Scene_Int, MyListener, Callback {
 
 	public static ModelController_Int m_interface;
 
@@ -887,7 +888,6 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 
 	@Override
 	public void end() {
-		// TODO Auto-generated method stub
 		sceneController.shutdown();
 		CleanTextures();
 		m_view.End();
@@ -1246,16 +1246,19 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 			m_reader.UpdateHand();
 			m_screen = null;
 		}
-		int values[] = new int[5];
-		values[0] = m_textureIds[6];
-		values[1] = m_textureIds[0];
-		values[2] = m_textureIds[7];
-		values[3] = m_textureIds[8];
-		values[4] = m_variables[0];
-		screen.initialize(values, this);
-		m_screen = screen;
-		m_disabled = true;
-		m_screen.start(m_hook);
+		if (screen!=null)
+		{
+			int values[] = new int[5];
+			values[0] = m_textureIds[6];
+			values[1] = m_textureIds[0];
+			values[2] = m_textureIds[7];
+			values[3] = m_textureIds[8];
+			values[4] = m_variables[0];
+			screen.initialize(values, this);
+			m_screen = screen;
+			m_disabled = true;
+			m_screen.start(m_hook);
+		}
 	}
 
 	@Override
@@ -1269,7 +1272,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 
 		DialogueScreen scr = new DialogueScreen(m_textureIds[0], m_textureIds[7], m_textureIds[8],
 				SceneBase.getVariables()[0], sceneController.getUniverse().player, m_text, this);
-		if (scr.Load(conversation, npc) == false && badEnd) {
+		if (scr.Load(conversation, npc,this) == false && badEnd) {
 			if (badEnd) {
 				Game.sceneManager
 						.SwapScene(new GameOver(SceneBase.getVariables(), "It seems you've met a terrible fate",npc,true));
@@ -1294,7 +1297,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 
 		DialogueScreen scr = new DialogueScreen(m_textureIds[0], m_textureIds[7], m_textureIds[8],
 				SceneBase.getVariables()[0], sceneController.getUniverse().player, m_text, this);
-		if (scr.Load(conversation, npc) == false && badEnd) {
+		if (scr.Load(conversation, npc,this) == false && badEnd) {
 			if (badEnd) {
 				Game.sceneManager
 						.SwapScene(new GameOver(SceneBase.getVariables(), "It seems you've met a terrible fate",npc,true));
@@ -1319,7 +1322,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, MyListe
 		}
 		DialogueScreen scr = new DialogueScreen(m_textureIds[0], m_textureIds[7], m_textureIds[8],
 				SceneBase.getVariables()[0], sceneController.getUniverse().player, m_text, this);
-		if (scr.Load(conversation, null) == false) {
+		if (scr.Load(conversation, null,this) == false) {
 
 		} else {
 			scr.setWidget(widget);

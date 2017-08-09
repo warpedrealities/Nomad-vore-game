@@ -12,6 +12,7 @@ import input.MouseHook;
 import rendering.SpriteBatch;
 import rendering.SpriteRotatable;
 import shared.Callback;
+import shared.Geometry;
 import shared.MyListener;
 import shared.SceneBase;
 import shared.Screen;
@@ -76,7 +77,10 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 	
 	public SolarScene(int r, Spaceship spaceship) {
 
-
+		if (spaceship.getShipStats()==null)
+		{
+			spaceship.setShipStats(new SpaceshipAnalyzer().generateStats(spaceship));
+		}
 		boolean warp=warpCheck(spaceship);
 		incrementCounter = 1.0F;
 		solarInt = this;
@@ -93,13 +97,19 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		starscape.setCurrentPosition(playerShip.getPosition());
 		((SpriteRotatable) (playerShip.getSpriteObj())).setFacing(r);
 		warpRenderer=new WarpController(renderer.getParticleEmitter(),playerShip);
+	
 		if (warp)
 		{
-			Vec2f p=new Vec2f(playerShip.getPosition().x+0.5F,playerShip.getPosition().y);
-			renderer.getParticleEmitter().setPosition(p);
-			renderer.getParticleEmitter().SpawnParticles(128);
-			renderer.getParticleEmitter().Update(0.1F);
-			renderer.getParticleEmitter().runEffector(new ParticleDraw(p,-8));
+
+		//	Vec2f p=new Vec2f(playerShip.getPosition().x+0.5F,playerShip.getPosition().y+0.5F);
+		//	renderer.getParticleEmitter().setPosition(p);
+		//	renderer.getParticleEmitter().SpawnParticles(128);
+		//	renderer.getParticleEmitter().Update(0.1F);
+		//	renderer.getParticleEmitter().runEffector(new ParticleDraw(p,-8));
+			int dir=(int) Geometry.getAngle(0, 0, playerShip.getPosition().x,playerShip.getPosition().y);
+			if (dir>7){dir=dir-8;}
+			((SpriteRotatable) (playerShip.getSpriteObj())).setFacing(dir);
+			warpRenderer.warpIn();
 		}
 	}
 

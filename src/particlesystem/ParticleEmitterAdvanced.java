@@ -47,6 +47,23 @@ public class ParticleEmitterAdvanced extends ParticleEmitter {
 		colourTransition[2]=colourEnd[2]-colourStart[2];
 	}
 
+	public void SpawnParticles(int count,Vec2f v) {
+
+		for (int i = 0; i < m_particles.length; i++) {
+			if (m_particles[i].m_alive == false) {
+				// generate random velocity
+				Vec2f vel=v.replicate();
+				m_particles[i].Spawn(position, vel, 4);
+				count--;
+			}
+
+			if (count == 0) {
+				break;
+			}
+		}
+
+	}	
+	
 	public void runEffector(ParticleEffector effector)
 	{
 		for (int i=0;i<m_particles.length;i++)

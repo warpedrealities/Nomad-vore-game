@@ -2,7 +2,7 @@
 <NPC>
 <sprite value="goldL.png"/>
 <name>Laurisse</name>
-<description>Her Majesty Laurisse reclines upon aa sprawl of cushions. Her tall lizard demi form is clad in a vivid red kimono like robe of embroidered fine cloth and crowned with a slender golden band atop her head. The gleaming red covering all but her face and front of her torso are all immaculately clean and her dusky gold skin is smooth and unmarred. Even in such leisurely langour though she radiates a subtle aura of confidence and power, this is one used to command.</description>
+<description>Her Majesty Laurisse reclines upon aa sprawl of cushions. Her tall lizard demi form is clad in a vivid red kimono like robe of embroidered fine cloth and crowned with a slender golden band atop her head. The gleaming red scales covering all but her face and front of her torso are all immaculately clean and her dusky gold skin is smooth and unmarred. Even in such leisurely langour though she radiates a subtle aura of confidence and power, this is one used to command.</description>
 <rpg>
 <experiencevalue value="10"/>
 <ability ability="STRENGTH" value="8" />

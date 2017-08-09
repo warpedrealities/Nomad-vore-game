@@ -86,9 +86,54 @@
 			her skirt lightly.
 		</text>
 		<choice destination="agree" text="I need another welcome" />
+		<choice destination="offerCockvore0" text="$turn me into cum please Neri">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="sackslut" />
+		</choice>
 		<choice destination="question0" text="I'm not sure that's the official greeting"/>
 		<choice destination="end" text="well bye" />
 	</page>
+	
+	<page ID="offerCockvore0">
+	<text>
+	Neri blushes and giggles at your brazen request "Ancestors you're such a slut for melting...but I suppose ya can afford to be can't ya. Ya want to do it right out in the open?" says Neri and then mhmms as she looks around and then smiles "You know, everyone is gonna be able to tell you're a slut for melting. I'm not the only girl here with a hungry dick." she says as a playful warning as she frees her cock from her skirt and starts to stroke it.
+	</text>
+	<choice destination="offerCockvore1" text="$Well, I dont think I'll mind"/>
+	</page>
+	
+	<page ID="offerCockvore1">
+	<text>
+	"I kinda figured. S'why i was teasing" says Neri and giggles "everyone is gonna know there's a re-churnable melt slut and you're it." she says and then finishes her preparation, her cock hard and large and ready for feasting now.<conditional><assertion evaluate="slothasitem" slot="2" /> You'd gotten undressed while she'd been getting ready and teasing you so</conditional> you lean forwards and use your hands to tease her cumslit then slide your fingers inside the warm cummy embrace. Neri seems patient and willing to savour the slutty and lusty look on your face as you ease your hands into her tip, turned on by your clear desire for that sticky fate written large on your face. Steadily though you slide your hands deeper in and feel her cock clench and throb sucking on your hands hungrily as Neri moans in delight and thrusting her hips a little to engulf more of you.
+	</text>
+	<choice destination="offerCockvore2" text="not the only one eager to have me inside"/>
+	</page>
+	
+	<page ID="offerCockvore2">
+	<text>
+	"Gawds the look on your face" exclaims Neri, sliding one hand into your hair, then stuffing your head into her cock and moaning "feeling it in my dick is still hotter though" she manages as she starts to vigorously hump more of you into her cock. That schlurping length working up over you as you slow motion dive into her member. Pushing your hands into her wonderfully hungry sack and moaning in delight at the sensation of hot cum around your fingers. Neri letting out a little delighted squeel and shudder as your handprints push out her balls and more of you starts to pile inside. The sensation of balls ready to churn you into cum welcoming you so nicely makes you squirm in delight and gets Neri to giggle at your impatience.
+	</text>
+	<choice destination="offerCockvore3" text="she's gonna have to do the work to get you the rest of the way in though"/>
+	</page>
+	
+	<page ID="offerCockvore3">
+	<text>
+	But Neri is quite willing to do the work. The eager elf grabbing your thighs and lifting them up, feeding your ass into her voracious green cock and letting out a delighted series of moans as her hands and thrusting hips do their work of putting more of you in her balls "eager cockfood...is the best kind of cockfood." she says in delight as her balls sag heavily with your form and your legs disappear into her tip, more and more vanishing away until your feet finally pop past her cumslit and her hands vigorously stroke over the bulges to feed you entirely to her balls. Neri smiling in delight as she feels the last part of you curl up inside her "mhmm, gawds I hope I get to do this a lot..I could really get used to having cockfood that comes back"
+	</text>
+	<choice destination="offerCockvore4" text="$You just might, it's wonderful in here"/>
+	</page>
+	
+	<page ID="offerCockvore4">
+	<text>
+	"yeah that's why you went in again to get melted up, and seen as you seem to love that part I guess I won't keep ya in suspense" says Neri and giggles as her balls begin to burble and churn around you. The elf going to get herself comfortable, fapping shamelessly but leisurely to keep her dick hard and her balls vigorous. She still maintains a remarkably blaise attitude to people seeing her engaged in such debauched fun, but then the quendi are just so danged liberal about this. Neri keeps on fondling herself as you squirm blissfully in her balls, starting to soften and turn nice and creamy. The blissfull experience of the cute elf melting you into cum soaking into every ounce of your body along with its gooey effects.
+	</text>
+	<choice destination="offerCockvoreGO" text="melt away"/>
+	</page>
+	
+	<gameover ID="offerCockvoreGO">
+	<text>
+	"So slutty about it, hope you're...still having fun in there.." Neri says between mhmms as her balls soften and get rounder, hearing only a gurgling blorp from inside she giggles "guess you're all funn'd out." she says and presses her thighs against her sack, moaning as she feels your softened remnants squish and deform. The last remnants of your consciousness fading into the surrounding jizz as your wonderfully melty stay in her balls comes to an inevitable result. Your form spreading out into an ample load of thick cum which makes Neri start to jerk off more earnestly "S'my time to have fun..more fun that's." she says and moans in delight, stroking over her cock as your remnants blorp and compact needily, evening out into a wonderful consistency...before being wasted on the ground, Neri gasping and moaning as she pumps you out into the dirt with a pleased moan...resting in bliss at the origin point of the cumsplatter, and no doubt freely willing to answer any requests from her fellow tribespeople to talk about just how much of a melt slut you are.
+	</text>
+	
+	</gameover>
 	
 	<page ID="question0">
 	<text>

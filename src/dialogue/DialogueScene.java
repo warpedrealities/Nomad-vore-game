@@ -9,6 +9,7 @@ import input.MouseHook;
 import nomad.Universe;
 import shared.Callback;
 import shared.SceneBase;
+import shared.Scene_Int;
 import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
@@ -17,11 +18,11 @@ import spaceship.Spaceship;
 import view.ViewScene;
 import vmo.Game;
 
-public class DialogueScene extends SceneBase implements Callback {
+public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 
 	public enum dialogueOrigin{View,Space};
 	String filename;
-	DialogueScreen screen;
+	Screen screen;
 	dialogueOrigin origin;
 	MouseHook m_hook;
 	TextView m_text;
@@ -51,10 +52,25 @@ public class DialogueScene extends SceneBase implements Callback {
 	}
 	@Override
 	public void Update(float dt) {
-		// TODO Auto-generated method stub
-		screen.update(dt);
+		if (screen!=null)
+		{
+			screen.update(dt);	
+		}
+		else
+		{
+			switch (origin)
+			{
+			case Space:
+				Game.sceneManager.SwapScene(new SolarScene(0,(Spaceship)Universe.getInstance().getCurrentEntity()));
+				break;
+			case View:
+				Game.sceneManager.SwapScene(new ViewScene());
+				break;
+			}			
+		}
 	}
 
+	
 	@Override
 	public void Draw() {
 		GL20.glUseProgram(Game.m_pshader);
@@ -69,9 +85,10 @@ public class DialogueScene extends SceneBase implements Callback {
 		m_hook=mouse;
 		DialogueScreen scr = new DialogueScreen(m_textureIds[0], m_textureIds[7], m_textureIds[8],
 				SceneBase.getVariables()[0], Universe.getInstance().getPlayer(), m_text,this);
-		scr.Load(filename, null);
+		scr.Load(filename, null,this);
 		screen=scr;
 		scr.setSpaceship(ship);
+		scr.start(mouse);
 	}
 
 	@Override
@@ -92,11 +109,27 @@ public class DialogueScene extends SceneBase implements Callback {
 		case View:
 			Game.sceneManager.SwapScene(new ViewScene());
 			break;
-		
 		}
 	}
 	public void setShip(Spaceship ship) {
 		this.ship=ship;
+	}
+	@Override
+	public void replaceScreen(Screen screen) {
+		if (this.screen != null) {
+			this.screen.discard(m_hook);
+			this.screen = null;
+		}
+		int values[] = new int[5];
+		values[0] = m_textureIds[6];
+		values[1] = m_textureIds[0];
+		values[2] = m_textureIds[7];
+		values[3] = m_textureIds[8];
+		values[4] = m_variables[0];
+		screen.initialize(values, this);
+		this.screen = screen;
+
+		this.screen.start(m_hook);	
 	}
 
 }

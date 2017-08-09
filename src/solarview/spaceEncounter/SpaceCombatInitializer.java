@@ -18,6 +18,10 @@ public class SpaceCombatInitializer {
 	
 	public void run()
 	{
+		if (player.getShipStats()==null)
+		{
+			player.setShipStats(new SpaceshipAnalyzer().generateStats(player));
+		}
 		List <ShipConverter> list=player.getShipStats().getConverters();
 		for (int i=0;i<list.size();i++)
 		{
@@ -27,6 +31,8 @@ public class SpaceCombatInitializer {
 			}
 		}
 		player.setWarpHandler(null);
+		enemy.Generate();
+		enemy.generateStats();
 		enemy.setShipStats(new
 				 SpaceshipAnalyzer().generateStats(enemy));
 		list=enemy.getShipStats().getConverters();

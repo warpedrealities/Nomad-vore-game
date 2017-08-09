@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<perk name="cleavagevore" >
-<requirement count="1">
-<req>BODYbreasts</req>
-</requirement>
-<description> The ability to convert living beings into titflesh and add them to your breasts. </description>
-<maxrank value="1"/>
-
-</perk>

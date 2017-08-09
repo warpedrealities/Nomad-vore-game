@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemAmmo name="plasma canister" weight="1" value="250">
+<ItemAmmo name="plasma canister" weight="1" value="150">
 <description>
 A canister of carefully mixed gases under pressure suitable for conversion into an energetic plasma.
 </description>
