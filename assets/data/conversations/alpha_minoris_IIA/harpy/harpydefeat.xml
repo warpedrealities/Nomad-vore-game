@@ -10,7 +10,12 @@
 				or your own hunger...
 			</conditional>
 		</text>
-		<choice destination="receiveoral" text="Force her to lick you" />
+		<choice destination="receiveoral" text="Force her to lick you">
+		<assertion evaluate="haspart" part="vagina" />	
+		</choice>
+		<choice destination="receiveblowjob" text="make her suck it">
+		<assertion evaluate="haspart" part="penis" />	
+		</choice>
 		<choice destination="giveoral" text="Lick her folds" />
 		<choice destination="meal0" text="she'd make a great meal">
 			<assertion evaluate="hasperk" perk="oralvore" />
@@ -40,12 +45,10 @@
 		</text>
 		<effect type="incrementlocalflag" flag="disposition" value="2" />
 		<choice destination="end" text="get up" />
-		<special effect="healnpc" />
-		<special effect="nonhostile" />
+
 	</page>
 
 	<page ID="receiveoral">
-		<assertion evaluate="haspart" part="vagina" />
 		<text>
 			You climb over the harpy's defeated form,
 			<conditional>
@@ -74,8 +77,7 @@
 		<special effect="removenpc" />
 	</page>
 
-	<page ID="receiveoral">
-		<assertion evaluate="haspart" part="penis" />
+	<page ID="receiveblowjob">
 		<text>
 			You climb over the harpy's defeated form,
 			<conditional>
@@ -206,7 +208,7 @@
 			you rise back to your feet to continue your day. Well sated by the
 			harpy's body.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

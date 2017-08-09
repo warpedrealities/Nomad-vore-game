@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		"...you are more resourceful than we had anticipated captain. Perhaps we can reach a more equitable arrangement, we are willing to give you a space warper coil free of charge if you will honour a cessation of hostilities."
+		</text>
+		<choice destination="give" text="that would be nice, it's what i wanted in the first place"/>
+		<choice destination="boarding" text="no deal, i'm gonna come onto your ship and take everything"/>
+	</page>
+	<page ID="give">
+		<text>
+		"very well, we are relieved that you have chosen to see reason on this matter. We are transferring the FTL device over to you now."
+		</text>
+		<effect type="giveitem" value="1" item="space warper" />
+		<choice destinatio="end" text="finally"/>
+	</page>
+	
+	<page ID="boarding">
+	<text>
+	</text>
+	<effect type="setlocalflag" flag="boarded" value="1" />		
+	<special effect="dock" />
+	<special effect="toView" />
+	</page>
+	
+</Conversation>

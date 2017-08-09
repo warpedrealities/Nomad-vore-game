@@ -6,23 +6,21 @@ import java.io.IOException;
 public class ZonePreloadLoader {
 
 	public static ZonePreload load(DataInputStream dstream) throws IOException {
-		
-		int type=dstream.readInt();
+
+		int type = dstream.readInt();
 		ZonePreload zp;
-		switch (type)
-		{
+		switch (type) {
 		case ZonePreload.PRELOADVECTOR:
-		zp=new ZonePreloadVector();
-		zp.load(dstream);
-		return zp;
-	
-		
+			zp = new ZonePreloadVector();
+			zp.load(dstream);
+			return zp;
+
 		case ZonePreload.PRELOADARRAY:
-		zp=new ZonePreloadArray();
-		zp.load(dstream);
-		return zp;
+			zp = new ZonePreloadArray();
+			zp.load(dstream);
+			return zp;
 		}
-		
+
 		return null;
 	}
 

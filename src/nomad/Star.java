@@ -9,24 +9,23 @@ import shared.Vec2f;
 
 import zone.Zone;
 
-public class Star extends Entity
-{
+public class Star extends Entity {
 	String filename;
 	int intensity;
 
-	public Star(int intensity, int x, int y,String filename) {
+	public Star(int intensity, int x, int y, String filename) {
 		// TODO Auto-generated constructor stub
-		this.filename=filename;
-		this.intensity=intensity;
-		entityPosition=new Vec2f(x,y);
-		entityVisibility=true;
-		entityName="star";
+		this.filename = filename;
+		this.intensity = intensity;
+		entityPosition = new Vec2f(x, y);
+		entityVisibility = true;
+		entityName = "star";
 	}
 
 	@Override
 	public void Generate() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -50,7 +49,7 @@ public class Star extends Entity
 	@Override
 	public void Save(String filename) throws IOException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -62,7 +61,7 @@ public class Star extends Entity
 	@Override
 	public void save(DataOutputStream dstream) throws IOException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -73,14 +72,13 @@ public class Star extends Entity
 
 	@Override
 	public float getSpriteSize() {
-		// TODO Auto-generated method stub
 		return 5;
 	}
 
 	@Override
 	public void postLoad(Zone zone) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

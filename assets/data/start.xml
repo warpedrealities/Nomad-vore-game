@@ -9,6 +9,7 @@
 <item value="jumpsuit"/>
 <item value="medkit"/>
 <item value="space meal"/>
+
 <appearance>
 <bodypart partname="body">
 <partvalue variablename="height" value="60"/>
@@ -21,6 +22,11 @@
 </bodypart>
 <bodypart partname="vagina">
 </bodypart>
-
+<bodypart partname="breasts">
+<partvalue variablename="size" value="4"/>
+</bodypart>
+<bodypart partname="butt">
+<partvalue variablename="size" value="6"/>
+</bodypart>
 </appearance>
 </start>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ItemWidget name="algae cultivator" weight="10" value="500">
 <description>A regulated hydroponic environment where algae is grown on a series of illuminated beds. Comes with an integrated packaging system to compress and dispense algae food bricks. </description>
-<placeditem widget="algae cultivator"/>
+<placeditem widget="modules/algae cultivator"/>
 </ItemWidget>

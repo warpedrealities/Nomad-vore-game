@@ -11,7 +11,6 @@
 <transition direction="north">Zone 1A</transition>
 <description>The wind howls between the rocky prominences above you. Below those jagged peaks the valleys and canyons are deeply filled with snow.</description>
 <mapgen>
-
 <preloadprefab width="7" height="7" preloadID="4">
 <row>3333333</row>
 <row>3355533</row>
@@ -23,6 +22,31 @@
 <recordVector x="3" y="3" ID="4" zone="Cave 2A"/>
 <pairedportal sprite="3" destination="Cave 2A" x="3" y="3" ID="11">a tunnel into the depths</pairedportal>
 </preloadprefab>
+<prefab positionX="0" positionY="0" width="5">
+<row>55555</row>
+<row>52222</row>
+<row>52222</row>
+<row>52222</row>
+<row>55555</row>
+<pairedportal sprite="11" destination="clifftop" x="2" y="2" ID="22">an elevator, for going up things</pairedportal>
+</prefab>
+<randprefab width="5" height="5">
+<row>44444</row>
+<row>42224</row>
+<row>42222</row>
+<row>42224</row>
+<row>44244</row>
+<placeWidget x="2" y="2" name="chest">
+<lootTable>
+<loot item="note" chance="1.0" addendum="mar7"/>
+<lootSubTable chance="1" file="consumable_tier_1"/>
+<lootSubTable chance="0.5" file="resource_tier_1"/>
+<lootSubTable chance="0.5" file="consumable_tier_1"/>
+<lootSubTable chance="0.15" file="mutators_tier_1"/>
+<lootSubTable chance="0.25" file="consumable_tier_1"/>
+</lootTable>
+</placeWidget>
+</randprefab>
 <perlin>
 <band low="-1.0" high="-0.8">
 <floodfill tile="4"/>

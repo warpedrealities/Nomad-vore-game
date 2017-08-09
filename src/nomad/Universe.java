@@ -19,11 +19,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.player.CompanionTool;
+import actor.player.Player;
 import description.BodyLoader;
 import faction.FactionLibrary;
 
-import actor.CompanionTool;
-import actor.Player;
+
 import actorRPG.NPCStatblockLibrary;
 
 
@@ -114,9 +115,7 @@ public class Universe extends GameManager
 							));
 				}
 								
-			}
-
-			
+			}	
 		}
 	}
 	
@@ -297,7 +296,32 @@ public class Universe extends GameManager
 	{
 		return currentStarSystem;
 	}
+	public void setSystem(StarSystem system)
+	{
+		currentStarSystem=system;
+	}
 
+	public StarSystem getSystem(int x, int y)
+	{
+		for (int i=0;i<starSystems.size();i++)
+		{
+			if (starSystems.get(i).getPosition().x==x && starSystems.get(i).getPosition().y==y)
+			{
+				return starSystems.get(i);
+			}
+		}
+		return null;
+	}
+	void copyTemp(String filename) throws IOException
+	{
+		File temp=new File("saves/temp");
+		File newSave=new File("saves/"+filename);
+		
+		//copy all files from savename folder
+		//and copy them to the filename folder
+		FileTools.copyFolder(temp, newSave);		
+	}
+	
 	
 	void saveCopy(String filename) throws IOException
 	{
@@ -310,7 +334,7 @@ public class Universe extends GameManager
 				
 				//copy all files from savename folder
 				//and copy them to the filename folder
-				FileTools.copyFolder(oldSave, newSave);
+				FileTools.copyFolderOverwrite(oldSave, newSave);
 			}		
 		}
 	}
@@ -343,22 +367,22 @@ public class Universe extends GameManager
 		return 0;
 	}
 	
+	void buildTemp()
+	{
+		File file = new File("saves/temp");
+		if (file.exists()) {
+			FileTools.deleteFolder(file);
+			file.mkdir();
+		} else {
+			file.mkdir();
+		}
+	}
+
 	private void saveRoutine(String filename) throws IOException
 	{
-		if (!filename.equals(saveName) && filename.length()>0)
-		{
-			File file=new File("saves/"+filename);
-			FileTools.deleteFolder(file);
-			if (!file.mkdir())
-			{
-				
-				throw new IOException("failed to create new save directory");
-			}
-		}
-		saveCopy(filename);
-		saveName=filename;
+	
 		
-		File file=new File("saves/"+filename+"/"+"verse.sav");
+		File file=new File("saves/"+filename+"/verse.sav");
 		if (file.exists()==false)
 		{
 			file.createNewFile();
@@ -396,30 +420,36 @@ public class Universe extends GameManager
 		//save ship uid
 		uidGenerator.save(dstream);
 		
-		dstream.close();	
+		dstream.close();
+		fstream.close();
 	}
 	
 	public boolean save(String filename) throws IOException
 	{
-		String saveRetain=saveName;
-		saveRoutine(filename);
-		SaveIntegrityCheck check=new SaveIntegrityCheck(filename,this);
+		buildTemp();
+//		String saveRetain=saveName;
+		saveRoutine("temp");
+		SaveIntegrityCheck check=new SaveIntegrityCheck("temp",this);
 		if (check.isOkay())
 		{
+			if (!filename.equals(saveName) && filename.length()>0)
+			{
+				File file=new File("saves/"+filename);
+				FileTools.deleteFolder(file);
+				if (!file.mkdir())
+				{
+					
+					throw new IOException("failed to create new save directory");
+				}
+			}
+			saveCopy(filename);
+			copyTemp(filename);
+			saveName=filename;		
 			return true;
 		}
 		else
 		{
-			saveName=saveRetain;		
-			saveRoutine(filename);
-			if (check.isOkay())
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}	
+			return false;
 		}
 	}
 	

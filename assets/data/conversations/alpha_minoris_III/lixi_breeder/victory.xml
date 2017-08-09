@@ -3,6 +3,8 @@
 
 	<page ID="start">
 		<preference fetish="cocktransformation" />
+		<preference fetish="demi" />
+		<preference fetish="herm" />
 		<text>
 			Weakened by poison you've fallen before your diminutive opponent,
 			ending up in an undignified sprawl on your front. The horny bug girl
@@ -266,7 +268,7 @@
 		<choice destination="struggleCTFGO" text="aftermath" />
 	</page>
 
-	<gameover ID="struggleCTFGO">
+	<gameover ID="struggleCTFGO" noReform="true">
 		<text>
 			The lixi's orgasm tapers off steadily, last spurts jetting forth from
 			her new cock and you're dimly aware even as she stands up and you

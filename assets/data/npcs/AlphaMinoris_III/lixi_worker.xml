@@ -2,7 +2,7 @@
 <NPC>
 <sprite value="lixiW.png"/>
 <name>Lixi Worker</name>
-<description> six and a half feet tall this girl is clad from head to toe in white chitinous exoskeletal plates. Her head is adorned with a long pair of antenna and her back with long insectile wings that flick about now and then. Finally looking further down her ass is adorned with a long and clearly flexible insectile tail like a segmented dragonfly tail of sorts.
+<description> six and a half feet tall this girl is clad from head to toe in white chitinous exoskeletal plates. This makes her look like she's wearing a form of natural and shapely full plate armour. Her head is adorned with a long pair of antenna and her back with long insectile wings that flick about now and then. Finally looking further down her ass is adorned with a long and clearly flexible insectile tail like a segmented dragonfly tail of sorts extending longer than her body.
 </description>
 <rpg>
 <experiencevalue value="35"/>
@@ -14,7 +14,6 @@
 <ability ability="INTELLIGENCE" value="5" />
 <stat stat="HEALTH" value="40"/>
 <stat stat="RESOLVE" value="40"/>
-<attribute attribute="TEASE" value="6"/>
 <attribute attribute="KINETIC" value="4"/>
 <combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
 <missText count="2">
@@ -31,7 +30,6 @@
 </rpg>
 
 <respawn delay="1000"/>
-<flying />
 <defeated conversation="alpha_minoris_III/lixi_worker/defeat" />
 <seduced conversation="alpha_minoris_III/lixi_worker/defeat" />
 <victory conversation="alpha_minoris_III/lixi_worker/victory" />

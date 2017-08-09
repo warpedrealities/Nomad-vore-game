@@ -3,15 +3,74 @@
 
 	<page ID="start">
 		<preference fetish="tailvore" />
+		<preference fetish="demi" />
+		<preference fetish="female" />
 		<text>
-			scene not written
+		The worker glares down at you and lets out a threatening hiss afore hauling you easily up in front of her. Your feet dangle in the air as she hisses and scrutinizes you. Her antenna flicking forwards to brush against your head and shoulders as she completes her assessment. But she doesn't seem to have much trouble thinking of a way of dealing with this particular intruder into their tunnels. You feel something glomming around your feet and glance down to find that flexible tail of hers curled up beside her thigh, the tip parting into a segmented maw to wrap firmly around your ankles. It would seem that her tail is capable of gobbling you up, will wonders never cease.
 		</text>
-		<choice destination="GO" text="scene not ready" />
+		<choice destination="tailvore0" text="being eaten by a tail" />
 	</page>
 
-	<gameover ID="GO">
+	<page ID="tailvore1">
+	<text>
+	The big armoured bug girl follows your gaze and grin wickedly, chittering in clicking laughter a bit as you squirm and attempt to pull your feet out without success. You can see her tail flexing and working up towards your hips despite your efforts. Its segmented plates parting from eachother as your legs bulge and stretch it out. The mighty bug's tail seems strong enough to support you without any help as she gloms up your thighs and lets go of you. The lixi swaying you away ass deep in her tail before you can strike at her. Your hands trailing loosely back and forth across the dirty cavern floor as she sways her swelling tail around behind herself. The bug girl mmhmming and planting her hands on her legs as she leans forwards and feels you bulging more and more of her tail.
+	</text>
+	<choice destination="tailvore2" text="swallowed up the rest of the way by a hungry tail"/>
+	</page>
+	
+	<page ID="tailvore2">
+	<text>
+	In desperation to avoid being gobbled up by that flexing tail you grab ahold of the edge of her tailmaw and hold it down. The flexing tail powerfully sucks on your legs but can make no headway. But apparently your predator is untroubled and the insectoid worker just chitterclacks in amusement and starts waving her tail around rapidly, disorientating and discombobulating you until your grip loosens and her tail gobbles you up all the way to your armpits. You can't get a good grip now to stop her but despite it all you press your arms down against the rippling tug of her tail wrapped around your body. And this as well stops her for a time, the mighty bug girl looking at your stubborn resistance and angling her tail up over her head so she can look into your face upside down..then smirk as she reaches up and yanks your arms outwards with a powerful grip, it makes you wince but more importantly lets her tail get around your shoulders, your arms and head disappearing into her tailtip soon after this as she lets out a hissing moan of delight. Your form entirely incased in her tail, a series of nice bulges showing visibly in the stretched skin between her chitinous exoskeletal plates.
+	</text>
+	<choice destination="struggle" text="try to get out of here before you get pulled down into her belly"/>
+	<choice destination="submit" text="submit to the predatory insectoid and let her turn you into a belly bulge"/>
+	</page>
+	
+	<check ID="struggle">
+	<test what="STRUGGLE" DC="10" />
+	<outcome destination="struggleEscape" />
+	<outcome destination="struggleBelly" />
+	</check>
+	
+	<page ID="struggleEscape">
+	<text>
+	You won't have a chance to escape if you're tugged any deeper. The voracious tail rippling around you is massaging firmly against your flesh and working you further in even as you marshal your resolve. With no time to waste you begin furiously wriggling and pushing your way back up the tail, feeling the bug attempting to stop you by turning and bending her tail and thus you uncomfortably. But despite her efforts you manage to get a grip to pull yourself further up and then gradually out into the open air. Your hands emerging first to grab ahold of the tailmaw against its flexing and then gradually you use them to haul yourself entirely out into the open air. The bug girl looks down at you and her tail rears back in irritation, flexing its loosened jaws closed. It's clear this isn't over, maybe you should flee.
+	</text>
+	<effect type="heal" value="0.1" />
+	<effect type="stunnpc" value="10" />
+	<choice destination="end" text="get clear" />	
+	</page>
+	
+	<page ID="struggleBelly">
+	<text>
+	You won't have a chance to escape if you're tugged any deeper. The voracious tail rippling around you is massaging firmly against your flesh and working you further in even as you marshal your resolve. You start fighting against against the pulling rippling hunger of her tail. The lixi curling her tail tightly to constrain and constrict your movements as you try to make headway up her tail and towards her tailmaw and freedom. But your hand finds no grasp on the slick flesh of the tailthroat and in time you tire out, finding her tail dragging you down. The bulge of your form steadily slips lower down the tail until you start to squeeze feetfirst past her tailbase and into her belly. In mere minutes you are fed entirely into her middle, parting her chitin around the immense bulge of her belly as it stretches to contain you.
+	</text>
+	<choice destination="struggleDigest" text="trapped inside her"/>
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+	The bug hisses softly in pleasure as she reaches down to rub her hands over the bulge you make. You're trapped inside her now, squeezed and clenched behind her chitin and skin as she starts to gurgle you away. The lixi worker stretching and shifting before getting comfortable resting against the cavern walls and with both hands tracing between her bellyplates to feel your contours. The insect has you now, your intrusion into their caverns ending somewhat predictably as her belly works you over with ever increasing vigour.
+	</text>
+	<choice destination="struggleGO" text="digested"/>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	Within the bug you find yourself suffering a gurgling and gooey fate. The insectoid chittering and hissing in pleasure as you soften and melt away until you're utterly sloshed to soup within her, the bug's chitinous armour squeezing down your now liquid and compact form as they get closer and closer together as the bulge you make diminishes. Soon enough your remains are utterly gone, the bug looking down at her smooth armoured belly and feeling you coursing through her body. Your invasion of the lixi tunnels has ended with exploration of her circulatory system, as is to only be expected.  	
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	The powerful bug has you contained entirely in her tail, and upon reflection on your chances you decide to simply relax and let her have you. Struggling against her seems futile and letting her pull you into her belly seems preferable and certainly sexier. The bug seems puzzled by your lack of resistance, but chitters and stretches, flexing her tail to schlorp you down into her belly inch by inch. The insect worker soon enough sporting a round belly that stretches her skin and parts her armour once you're packed away entirely within her.
+	</text>
+	<choice destination="submitGO" text="get digested"/>
+	</page>
+	
+	<gameover ID="submitGO">
 		<text>
-			you've met a terrible fate
+		Within the bug you accept your gurgling and gooey fate. The insectoid chittering and hissing in pleasure as you soften and melt away until you're utterly sloshed to soup within her, the bug's chitinous armour squeezing down your soupy remains as they get closer and closer together as the bulge you make diminishes. Soon enough your remains are utterly gone, the bug looking down at her smooth armoured belly and feeling you coursing through her body. Your invasion of the lixi tunnels has ended with exploration of her circulatory system, as is to only be expected. 
 		</text>
 	</gameover>
 

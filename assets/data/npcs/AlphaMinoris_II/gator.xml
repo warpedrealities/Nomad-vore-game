@@ -2,7 +2,7 @@
 <NPC>
 <sprite value="gatorG.png"/>
 <name>gator</name>
-<description> It's bulk moves with terrible speed and dreadful purpose. The thrashing of its tail stirs the muck and smashes aside the reeds, across its back run scales like a raiment of interlocking shields. At the prow its malevolent eyes gaze from atop a great and mighty maw that menaces with a legion of teeth martial'd into uneven rows. This thing is a primeval terror, and no doubt you now have its attention.
+<description> Its bulk moves with terrible speed and dreadful purpose. The thrashing of its tail stirs the muck and smashes aside the reeds, across its back run scales like a raiment of interlocking shields. At the prow its malevolent eyes gaze from atop a great and mighty maw that menaces with a legion of teeth martial'd into uneven rows. This thing is a primeval terror, and no doubt you now have its attention.
 </description>
 <rpg>
 <experiencevalue value="35"/>
@@ -27,7 +27,7 @@
 </hitText>
 <effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="STRENGTH"/>
 </combatMove>
-<statusTags count="2">
+<statusTags count="1">
 <tag>seduction</tag>
 </statusTags>
 </rpg>

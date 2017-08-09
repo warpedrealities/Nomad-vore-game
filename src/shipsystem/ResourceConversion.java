@@ -12,17 +12,17 @@ public class ResourceConversion {
 
 	String itemName;
 	float itemValue;
-	
+
 	public ResourceConversion(Element enode) {
-	
-		itemName=enode.getAttribute("itemName");
-		itemValue=Float.parseFloat(enode.getAttribute("value"));
+
+		itemName = enode.getAttribute("itemName");
+		itemValue = Float.parseFloat(enode.getAttribute("value"));
 	}
 
 	public ResourceConversion(DataInputStream dstream) throws IOException {
 
-		itemName=ParserHelper.LoadString(dstream);
-		itemValue=dstream.readFloat();
+		itemName = ParserHelper.LoadString(dstream);
+		itemValue = dstream.readFloat();
 	}
 
 	public void save(DataOutputStream dstream) throws IOException {
@@ -39,5 +39,4 @@ public class ResourceConversion {
 		return itemValue;
 	}
 
-	
 }

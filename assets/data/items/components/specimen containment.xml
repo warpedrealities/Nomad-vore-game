@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ItemWidget name="specimen containment" weight="10" value="750">
 <description>A device that contains alien lifeforms in a form of reduced activity for longterm storage and later experimentation. This device comes with three containment chambers accessible with the wonders of 'carousel' technology. </description>
-<placeditem widget="specimenContainment"/>
+<placeditem widget="modules/specimenContainment"/>
 </ItemWidget>

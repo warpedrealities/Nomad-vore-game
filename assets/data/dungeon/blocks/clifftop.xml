@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<blocks>
+	<block name="NS pod0">
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<row>00211200</row>
+		<row>02211220</row>
+		<row>03111130</row>
+		<row>02111120</row>
+		<row>02111120</row>
+		<row>03111130</row>
+		<row>02211220</row>
+		<row>00211200</row>
+	</block>
+	<block name="WE pod0">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>00000000</row>
+		<row>02322320</row>
+		<row>22111122</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>22111122</row>
+		<row>02322320</row>
+		<row>00000000</row>
+	</block>
+	<block name="junction pod0">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<edge value="NORTH" />
+		<edge value="SOUTH" />		
+		<row>00211200</row>
+		<row>02211220</row>
+		<row>22111122</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>22111122</row>
+		<row>02211220</row>
+		<row>00211200</row>
+	</block>
+	<block name="NS pod1">
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<row>00211200</row>
+		<row>02211220</row>
+		<row>02111120</row>
+		<row>03111130</row>
+		<row>03111130</row>
+		<row>02111120</row>
+		<row>02211220</row>
+		<row>00211200</row>
+		<widget x="2" y="2" name="chest" info="normalchest" />	
+	</block>
+	<block name="WE pod1">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>00000000</row>
+		<row>02233220</row>
+		<row>22111122</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>22111122</row>
+		<row>02233220</row>
+		<row>00000000</row>
+		<widget x="2" y="2" name="chest" info="normalchest" />		
+	</block>
+	<block name="junction pod1">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<edge value="NORTH" />
+		<edge value="SOUTH" />		
+		<row>00211200</row>
+		<row>02211220</row>
+		<row>22111122</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>22111122</row>
+		<row>02211220</row>
+		<row>00211200</row>
+		<widget x="2" y="2" name="chest" info="normalchest" />		
+	</block>	
+	
+	<block name="NS tube">
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<row>00211200</row>
+		<row>00311300</row>
+		<row>00211200</row>
+		<row>00311300</row>
+		<row>00311300</row>
+		<row>00211200</row>
+		<row>00311300</row>
+		<row>00211200</row>
+	</block>
+	<block name="WE tube">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>00000000</row>
+		<row>00000000</row>
+		<row>23233232</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>23233232</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+</blocks>

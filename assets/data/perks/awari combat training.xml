@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<perk name="Awari combat training" >
+<requirement count="1">
+<req>PLOT</req>
+</requirement>
+<description> You've been trained by the quendi warrior Awari in the arts of combat. +2 to parry.</description>
+<modifier affects="PARRY" value="2" type="ATTRIBUTE"/>
+<maxrank value="1"/>
+
+</perk>

@@ -17,167 +17,190 @@ import org.w3c.dom.NodeList;
 import rendering.SpriteBatch;
 import shared.ParserHelper;
 import shared.Vec2f;
+import shared.Vec2i;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
+import spaceship.npcShips.NpcShipController;
 
 public class StarSystem {
-	
-	ArrayList <Entity> entitiesInSystem;
+
+	ArrayList<Entity> entitiesInSystem;
 	String systemName;
-	Vec2f systemPosition;
-	public StarSystem (String name, int x, int y)
-	{
-		systemName=name;
-		systemPosition=new Vec2f(x,y);
+	Vec2i systemPosition;
+
+	public StarSystem(String name, int x, int y) {
+		systemName = name;
+		systemPosition = new Vec2i(x, y);
 	}
-	
-	public void GenerateSystem(boolean firstload)
-	{
-		if (entitiesInSystem==null)
-		{
-			//generate the system
-			entitiesInSystem=new ArrayList<Entity>();
-			Document doc=ParserHelper.LoadXML("assets/data/systems/"+systemName+".xml");
-			Element root=doc.getDocumentElement();
-		    Element n=(Element)doc.getFirstChild();
-			NodeList children=n.getChildNodes();
-			for (int i=0;i<children.getLength();i++)
-			{
-				Node node=children.item(i);
-				if (node.getNodeType()==Node.ELEMENT_NODE)
-				{
-					Element Enode=(Element)node;
-					if (Enode.getTagName()=="World")
-					{
-						//add this world
-						entitiesInSystem.add(new World(node.getTextContent(),
-								Integer.parseInt(Enode.getAttribute("x")),
+
+	public void GenerateSystem(boolean firstload) {
+		if (entitiesInSystem == null) {
+			// generate the system
+			entitiesInSystem = new ArrayList<Entity>();
+			Document doc = ParserHelper.LoadXML("assets/data/systems/" + systemName + ".xml");
+			Element root = doc.getDocumentElement();
+			Element n = (Element) doc.getFirstChild();
+			NodeList children = n.getChildNodes();
+			for (int i = 0; i < children.getLength(); i++) {
+				Node node = children.item(i);
+				if (node.getNodeType() == Node.ELEMENT_NODE) {
+					Element Enode = (Element) node;
+					if (Enode.getTagName() == "World") {
+						// add this world
+						entitiesInSystem.add(new World(node.getTextContent(), Integer.parseInt(Enode.getAttribute("x")),
 								Integer.parseInt(Enode.getAttribute("y"))));
 					}
-					if (Enode.getTagName()=="Station")
-					{
-						//add this world
+					if (Enode.getTagName() == "Station") {
+						// add this world
 						entitiesInSystem.add(new Station(node.getTextContent(),
-								Integer.parseInt(Enode.getAttribute("x")),
-								Integer.parseInt(Enode.getAttribute("y"))));
+								Integer.parseInt(Enode.getAttribute("x")), Integer.parseInt(Enode.getAttribute("y"))));
 					}
-					if (Enode.getTagName()=="Star")
-					{
+					if (Enode.getTagName() == "Star") {
 						entitiesInSystem.add(new Star(Integer.parseInt(Enode.getAttribute("intensity")),
-								Integer.parseInt(Enode.getAttribute("x")),Integer.parseInt(Enode.getAttribute("y")),
+								Integer.parseInt(Enode.getAttribute("x")), Integer.parseInt(Enode.getAttribute("y")),
 								Enode.getAttribute("sprite")));
 					}
-					if (Enode.getTagName()=="Spaceship" && firstload==true)
-					{
-						Spaceship ship=new Spaceship(Enode.getAttribute("file"), 
-								Integer.parseInt(Enode.getAttribute("x")), 
-								Integer.parseInt(Enode.getAttribute("y")),
-										ShipState.SPACE);
-						
+					if (Enode.getTagName() == "Spaceship" && firstload == true) {
+						Spaceship ship = new Spaceship(Enode.getAttribute("file"),
+								Integer.parseInt(Enode.getAttribute("x")), Integer.parseInt(Enode.getAttribute("y")),
+								ShipState.SPACE);
+						if (Enode.getAttribute("controller").length()>0)
+						{
+							Document doc0 = ParserHelper.LoadXML("assets/data/shipControllers/" + Enode.getAttribute("controller") + ".xml");
+							Element n0 = (Element) doc0.getFirstChild();
+							ship.setShipController(new NpcShipController(n0));
+						}
+
 						entitiesInSystem.add(ship);
 					}
 				}
 
-				
 			}
-			
-			
+
 		}
 	}
-	
-	public String getName()
-	{
+
+	public String getName() {
 		return systemName;
 	}
-	
-	public World getWorld(int x, int y)
-	{
-		for (int i=0;i<entitiesInSystem.size();i++)
-		{
-			Vec2f p=entitiesInSystem.get(i).getPosition();
-			int xcomp=(int)p.x;
-			int ycomp=(int)p.y;
-			if (xcomp==x && ycomp==y)
-			{
-				if (entitiesInSystem.get(i).getClass().getName().contains("World"))
-				{
-					return (World)entitiesInSystem.get(i);
+
+	public World getWorld(int x, int y) {
+		for (int i = 0; i < entitiesInSystem.size(); i++) {
+			Vec2f p = entitiesInSystem.get(i).getPosition();
+			int xcomp = (int) p.x;
+			int ycomp = (int) p.y;
+			if (xcomp == x && ycomp == y) {
+				if (entitiesInSystem.get(i).getClass().getName().contains("World")) {
+					return (World) entitiesInSystem.get(i);
 				}
 			}
-			
+
 		}
 		return null;
 	}
-	
-	public void Save(String filename) throws IOException
-	{
-		//save file as filename
-		File file=new File("saves/"+filename+"/"+systemName+".sav");
-		if (file.exists()==false)
-		{
+
+	public void Save(String filename) throws IOException {
+		// save file as filename
+		File file = new File("saves/" + filename + "/" + systemName + ".sav");
+		if (file.exists() == false) {
 			file.createNewFile();
 		}
 
-		FileOutputStream fstream=new FileOutputStream(file);
-		DataOutputStream dstream=new DataOutputStream(fstream);
+		FileOutputStream fstream = new FileOutputStream(file);
+		DataOutputStream dstream = new DataOutputStream(fstream);
 
-		//save entities
-		if (entitiesInSystem!=null)
-		{
+		// save entities
+		if (entitiesInSystem != null) {
 			dstream.writeInt(entitiesInSystem.size());
-			for (int i=0;i<entitiesInSystem.size();i++)
-			{
-				if (entitiesInSystem.get(i).isStatic())
-				{
+			for (int i = 0; i < entitiesInSystem.size(); i++) {
+				if (entitiesInSystem.get(i).isStatic()) {
 					dstream.writeBoolean(false);
 					entitiesInSystem.get(i).Save(filename);
-				}
-				else
-				{
+				} else {
 					dstream.writeBoolean(true);
 					entitiesInSystem.get(i).save(dstream);
 				}
-		
+
 			}
-		}
-		else
-		{
+		} else {
 			dstream.writeInt(0);
 		}
 		dstream.close();
-		
+
 	}
 
 	public ArrayList<Entity> getEntities() {
 		return entitiesInSystem;
 	}
-
-	public void load(String filename)  throws IOException {
-		// TODO Auto-generated method stub
-		File file=new File("saves/"+filename+"/"+systemName+".sav");
-		FileInputStream fstream=new FileInputStream(file);
-		DataInputStream dstream=new DataInputStream(fstream);
-		
-		int count=dstream.readInt();
-		for (int i=0;i<count;i++)
+	
+	public void arrival()
+	{
+		if (entitiesInSystem==null)
 		{
-			boolean b=dstream.readBoolean();
-			if (b==true)
-			{
-				int t=dstream.readInt();
-				switch (t)
+			try {
+				if (fileExists(Universe.getInstance().getSaveName()))
 				{
+					GenerateSystem(false);
+					load(Universe.getInstance().getSaveName());
+				}
+				else
+				{
+					GenerateSystem(true);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+	}
+	
+	public boolean fileExists(String filename) throws IOException
+	{
+		File file = new File("saves/" + filename + "/" + systemName + ".sav");	
+		if (file.exists())
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public void load(String filename) throws IOException {
+		File file = new File("saves/" + filename + "/" + systemName + ".sav");
+		FileInputStream fstream = new FileInputStream(file);
+		DataInputStream dstream = new DataInputStream(fstream);
+
+		int count = dstream.readInt();
+		for (int i = 0; i < count; i++) {
+			boolean b = dstream.readBoolean();
+			if (b == true) {
+				int t = dstream.readInt();
+				switch (t) {
 				case 1:
-					Spaceship ship=new Spaceship();
+					Spaceship ship = new Spaceship();
 					ship.load(dstream);
 					entitiesInSystem.add(ship);
 					break;
 
-					
 				}
 			}
 		}
 		dstream.close();
 		fstream.close();
 	}
+
+	public void systemEntry() {
+		for (int i=0;i<entitiesInSystem.size();i++)
+		{
+			entitiesInSystem.get(i).systemEntry();
+		}
+	}
+
+	public Vec2i getPosition() {
+		return systemPosition;
+	}
+	
+	
 }

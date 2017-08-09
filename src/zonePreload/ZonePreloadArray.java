@@ -8,20 +8,18 @@ import java.util.ArrayList;
 public class ZonePreloadArray extends ZonePreload {
 
 	private ArrayList<Integer> preloadArray;
-	
-	public ZonePreloadArray()
-	{
-		preloadType=PRELOADARRAY;
-		preloadArray=new ArrayList<Integer>();
-	}	
-	
-	public ZonePreloadArray(int id)
-	{
-		preloadID=id;
-		preloadType=PRELOADARRAY;
-		preloadArray=new ArrayList<Integer>();
+
+	public ZonePreloadArray() {
+		preloadType = PRELOADARRAY;
+		preloadArray = new ArrayList<Integer>();
 	}
-	
+
+	public ZonePreloadArray(int id) {
+		preloadID = id;
+		preloadType = PRELOADARRAY;
+		preloadArray = new ArrayList<Integer>();
+	}
+
 	public ArrayList<Integer> getPreloadArray() {
 		return preloadArray;
 	}
@@ -32,8 +30,7 @@ public class ZonePreloadArray extends ZonePreload {
 		dstream.writeInt(preloadType);
 		dstream.writeInt(preloadID);
 		dstream.writeInt(preloadArray.size());
-		for (int i=0;i<preloadArray.size();i++)
-		{
+		for (int i = 0; i < preloadArray.size(); i++) {
 			dstream.writeInt(preloadArray.get(i));
 		}
 	}
@@ -41,10 +38,9 @@ public class ZonePreloadArray extends ZonePreload {
 	@Override
 	public void load(DataInputStream dstream) throws IOException {
 
-		preloadID=dstream.readInt();
-		int c=dstream.readInt();
-		for (int i=0;i<c;i++)
-		{
+		preloadID = dstream.readInt();
+		int c = dstream.readInt();
+		for (int i = 0; i < c; i++) {
 			preloadArray.add(dstream.readInt());
 		}
 	}

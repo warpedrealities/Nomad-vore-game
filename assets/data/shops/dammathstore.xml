@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <shop profitratio="1.25">
 <inventoryitem name="primitive meal" probability="100" quantity="20"/>
-<inventoryitem name="primitive meal" probability="100" quantity="20"/>
+<inventoryitem name="primitive meal" probability="50" quantity="20"/>
+<inventoryitem name="fighting spirits" probability="100" quantity="10"/>
+<inventoryitem name="fighting spirits" probability="50" quantity="10"/>
 <inventoryitem name="medicine" probability="100" quantity="5" />
 <inventoryitem name="medicine" probability="50" quantity="5" />
 <inventoryitem name="blue crystal" probability="100" quantity="20" />
@@ -16,6 +18,9 @@
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>
 <conditionalitem name="iron mace" probability="100" quantity="3">
+<conditional operator="equals" value="3" flag="dammathquest0"/>
+</conditionalitem>
+<conditionalitem name="arming sword" probability="100" quantity="1">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>
 <conditionalitem name="warhammer" probability="100" quantity="1">
@@ -33,6 +38,8 @@
 <conditionalitem name="bolts" probability="50" quantity="10">
 <conditional operator="equals" value="3" flag="dammathquest0"/>
 </conditionalitem>
-
+<inventoryitem name="zymonite" probability="100" quantity="1" cost="400" />
+<inventoryitem name="zymonite" probability="50" quantity="1" cost="400" />
+<inventoryitem name="tucksack" probability="100" quantity="1"/>
 <buymodifier name="herb" cost="25"/>
 </shop>

@@ -18,6 +18,7 @@ function aggressive(controllable,sense,pos,hostile)
 		controllable:FollowPath()
 	else
 		controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y)
+			controllable:FollowPath()	
 	end
 	end
 

@@ -20,123 +20,102 @@ import nomad.FlagField;
 public class Faction {
 
 	String filename;
-	Map<String,Integer> factionRelationships;
+	Map<String, Integer> factionRelationships;
 	int defaultRelationship;
 
 	private FlagField factionFlags;
 
-	
-	public Faction()
-	{
-		factionRelationships=new HashMap<String,Integer>();
+	public Faction() {
+		factionRelationships = new HashMap<String, Integer>();
 	}
-	
+
 	public Faction(String filename) {
-		this.filename=filename;
-		factionRelationships=new HashMap<String,Integer>();
-		Document doc=ParserHelper.LoadXML("assets/data/factions/"+filename+".xml");
-		
-		Element root=(Element) doc.getFirstChild();
-		NodeList children=root.getChildNodes();
-		
-		for (int i=0;i<children.getLength();i++)
-		{
-			if (children.item(i).getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element element=(Element)children.item(i);
-				
-				if (element.getTagName().equals("factionRelationship"))
-				{
-					factionRelationships.put(element.getAttribute("ID"), Integer.parseInt(element.getAttribute("value")));
+		this.filename = filename;
+		factionRelationships = new HashMap<String, Integer>();
+		Document doc = ParserHelper.LoadXML("assets/data/factions/" + filename + ".xml");
+
+		Element root = (Element) doc.getFirstChild();
+		NodeList children = root.getChildNodes();
+
+		for (int i = 0; i < children.getLength(); i++) {
+			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) children.item(i);
+
+				if (element.getTagName().equals("factionRelationship")) {
+					factionRelationships.put(element.getAttribute("ID"),
+							Integer.parseInt(element.getAttribute("value")));
 				}
-				if (element.getTagName().equals("defaultRelationship"))
-				{
-					defaultRelationship=Integer.parseInt(element.getAttribute("value"));
+				if (element.getTagName().equals("defaultRelationship")) {
+					defaultRelationship = Integer.parseInt(element.getAttribute("value"));
 				}
-				
+
 			}
 		}
 	}
 
-	public int getRelationship(String factionName)
-	{
-		if (factionName.equals(filename))
-		{
+	public int getRelationship(String factionName) {
+		if (factionName.equals(filename)) {
 			return 100;
 		}
-		
-		Integer value=factionRelationships.get(factionName);
-		if (value!=null)
-		{
+
+		Integer value = factionRelationships.get(factionName);
+		if (value != null) {
 			return value;
 		}
-		Faction faction=FactionLibrary.getInstance().getFaction(factionName);
-		
-		value=faction.factionRelationships.get(filename);
-		if (value!=null)
-		{
+		Faction faction = FactionLibrary.getInstance().getFaction(factionName);
+
+		value = faction.factionRelationships.get(filename);
+		if (value != null) {
 			factionRelationships.put(factionName, value);
 			return value;
 		}
-		
-		if (faction.defaultRelationship<=defaultRelationship)
-		{
+
+		if (faction.defaultRelationship <= defaultRelationship) {
 			factionRelationships.put(factionName, faction.defaultRelationship);
 			return faction.defaultRelationship;
-		}
-		else
-		{
-			factionRelationships.put(factionName, defaultRelationship);		
+		} else {
+			factionRelationships.put(factionName, defaultRelationship);
 			return defaultRelationship;
 		}
 	}
-	
-	public void save(DataOutputStream dstream) throws IOException
-	{
-		
+
+	public void save(DataOutputStream dstream) throws IOException {
+
 		ParserHelper.SaveString(dstream, filename);
 		dstream.writeInt(defaultRelationship);
-		Set<String> keyset=factionRelationships.keySet();
+		Set<String> keyset = factionRelationships.keySet();
 		dstream.writeInt(keyset.size());
-		Iterator<String> it=keyset.iterator();
-		
-		while (it.hasNext())
-		{
-			String faction=it.next();
+		Iterator<String> it = keyset.iterator();
+
+		while (it.hasNext()) {
+			String faction = it.next();
 			ParserHelper.SaveString(dstream, faction);
 			dstream.writeInt(factionRelationships.get(faction));
 		}
-		if (factionFlags!=null)
-		{
+		if (factionFlags != null) {
 			dstream.writeBoolean(true);
 			factionFlags.save(dstream);
-		}
-		else
-		{
+		} else {
 			dstream.writeBoolean(false);
 		}
 	}
-	
-	public void load(DataInputStream dstream) throws IOException
-	{
-		filename=ParserHelper.LoadString(dstream);
-		defaultRelationship=dstream.readInt();
-		int c=dstream.readInt();
-		
-		for (int i=0;i<c;i++)
-		{
-			String faction=ParserHelper.LoadString(dstream);
-			int value=dstream.readInt();
+
+	public void load(DataInputStream dstream) throws IOException {
+		filename = ParserHelper.LoadString(dstream);
+		defaultRelationship = dstream.readInt();
+		int c = dstream.readInt();
+
+		for (int i = 0; i < c; i++) {
+			String faction = ParserHelper.LoadString(dstream);
+			int value = dstream.readInt();
 			factionRelationships.put(faction, value);
 		}
-		
-		if (dstream.readBoolean()==true)
-		{
-			factionFlags=new FlagField();
+
+		if (dstream.readBoolean() == true) {
+			factionFlags = new FlagField();
 			factionFlags.load(dstream);
 		}
-		
-		
+
 	}
 
 	public String getFilename() {
@@ -144,36 +123,30 @@ public class Faction {
 	}
 
 	public FlagField getFactionFlags() {
-		if (factionFlags==null)
-		{
-			factionFlags=new FlagField();
+		if (factionFlags == null) {
+			factionFlags = new FlagField();
 		}
 		return factionFlags;
 	}
 
 	public void modDisposition(String name, int dispositionModifier) {
-	
-		Integer value=factionRelationships.get(name);
-		if (value==null)
-		{
-			value=defaultRelationship;
+
+		Integer value = factionRelationships.get(name);
+		if (value == null) {
+			value = defaultRelationship;
 		}
-		int v=value+dispositionModifier;
-		if (v<0)
-		{
-			v=0;
+		int v = value + dispositionModifier;
+		if (v < 0) {
+			v = 0;
 		}
-		if (v>100)
-		{
-			v=100;
+		if (v > 100) {
+			v = 100;
 		}
-		
+
 		factionRelationships.put(name, v);
-		Faction alt=FactionLibrary.getInstance().getFaction(name);
-		alt.factionRelationships.put(filename,v);
-		
+		Faction alt = FactionLibrary.getInstance().getFaction(name);
+		alt.factionRelationships.put(filename, v);
+
 	}
-	
-	
-	
+
 }

@@ -24,8 +24,8 @@
 			with her soft wings. The closeness feels good! So very private,
 			thanks to the wings ‘curtain’
 		</text>
-		<!-- <choice destination="sex0" text="may as well screw her"> <assertion 
-			evaluate="haspart" part="penis"/> </choice> -->
+		 <choice destination="sex0" text="may as well screw her"> <assertion 
+			evaluate="haspart" part="penis"/> </choice>
 		<choice destination="willcheck" text="maybe not so safe" />
 	</page>
 
@@ -98,9 +98,43 @@
 
 	<page ID="cocker0">
 		<text>
-		
+		The batgirl snuggles close to you and looks puzzled at how you smile back at her. Your cock merging into her sex, your bodies joining together as one is destined to become part of the other. It feels wonderful, the batgirl crooning triumphantly and stroking her wing arms around you possessively. She doesn't even seem to mind as you stroke over her legs, and she doesn't notice as they start to sensitive, soft and round.
 		</text>
-
+	<choice destination="cocker1" text="turnabout"/>
+	</page>
+	
+	<page ID="cocker1">
+	<text>
+	The batgirl lets out a confused chirp as she tries to wriggle her legs, and finds she cannot. It's then she realizes that her plan to absorb you has gone wrong and her squirms to get a look back down at what has become of her legs makes you smile all the broader. Your hands continuing to massage your new sack as it gradually loses the outlines and contours of the batgirl's knees and feet, the last shapes of her lower half converting into roundness now. The batgirl gives you a look of comical betrayal as you turn the tables on her as to who is absorbing who and starts trying to push herself away and wriggle free. But to no avail, she's firmly rooted to your crotch now.
+	</text>
+	<choice destination="cocker2" text="pin those arms"/>
+	</page>
+	
+	<page ID="cocker2">
+	<text>
+	You distract the batgirl from her plight with a kiss, tasting pre on her lips as her insides simplify and you shove her arms down at her sides. The batgirl letting out a whine as she finds she can't move them back away, looking into your face with a look of dismay. She still doesn't seem happy that you're making her your cock and she isn't making you her curves. Her arms and wings merging into her flanks steadily.
+	</text>
+	<choice destination="cocker3" text="change her mind"/>
+	</page>
+	
+	<page Id="cocker3">
+	<text>
+	The changes are mostly done but you still see a look of disapproval on her pre cum oozing face as she becomes increasingly veiny. Perhaps she just needs to learn to appreciate the possibilities of being your cock. With that in mind you place both hands firmly on her veiny and sensitive body and start to jerk off, letting out a groan of delight as you masturbate with your new cock. The batgirl writhing as if to protest this at first, but then uttering breathless gasps and hums of delight as her oh so sensitive body becomes awash with pleasure. Her lust visible in her eyes as you stimulate your new cock and feel her arms sinking and merging away entirely. Your last look at her face before her eyes seal over lets you see her lost in pleasure, all restraint and regret gone as her face bells out gushing precum. It's enough to push you the rest of the way over it really is.
+	</text>
+	<special effect="mutation">
+		<mutation part="penis" variable="length" modifier="3">
+		</mutation>
+	</special>
+	<choice destination="cocker4" text="cum through her"/>
+	</page>
+	
+	<page ID="cocker4">
+	<text>
+	Your shaft erupts, the last traces of the batgirl it once was fading away as you climax away her individuality and splatter the cavern floor with jizz. Your newly enhanced cock pumping your load and shrinking down, softening and settling nicely against your sack as you revel in afterglow. Well that was certainly a fun way of being 'defeated' by one of these bat femmes, you reach down to fondle your shaft and feel it twitch in response. Perhaps she doesn't mind your turnabout either...either way you're now packing a good <measurement part="penis" variable="length" /> inches of dick between your legs with the addition of the batgirl.
+	</text>
+	<effect type="heal" value="0.1" />
+	<special effect="removenpc" />
+	<choice destination="end" text="wonderfully delicious turnabout, but i should carry on"/>
 	</page>
 
 	<check ID="willcheck">

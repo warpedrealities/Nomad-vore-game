@@ -7,8 +7,8 @@
 	<effectstatus probability="100">
 		<statusDefence uid="10" icon="0" duration="150"
 			numModifiers="1">
-			<strength value="20" />
-			<effect attribute="KINETIC" modifier="4" />
+			<strength value="30" />
+			<effect attribute="KINETIC" modifier="5" />
 			<removeText> with a dying fizzle, series of popping sounds and a
 				scent of burning electronics the repulsor band is reduced to a piece
 				of unsightly useless jewelry.</removeText>

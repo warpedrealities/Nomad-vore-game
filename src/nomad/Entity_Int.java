@@ -9,7 +9,6 @@ import zone.Zone;
 
 public interface Entity_Int {
 
-	
 	public Element LoadZone(Zone zone);
 
 	public ArrayList<Landing> getLandings();
@@ -17,5 +16,5 @@ public interface Entity_Int {
 	public void postLoad(Zone zone);
 
 	Zone getLandableZone(int x, int y);
-	
+
 }

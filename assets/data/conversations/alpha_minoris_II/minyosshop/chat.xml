@@ -47,7 +47,7 @@
 			your troubles.
 		</text>
 		<effect type="givegold" value="100" />
-		<effect type="experience" value="50" />
+		<effect type="experience" value="200" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
 
 		<effect type="setlocalflag" flag="swordquest" value="2" />

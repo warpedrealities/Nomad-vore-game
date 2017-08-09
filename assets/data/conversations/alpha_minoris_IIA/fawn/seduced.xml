@@ -136,7 +136,7 @@
 			into ending themselves inside your balls. And so its time to move on
 			and leave the fawn's sticky remains to cool and be forgotten.
 		</text>
-		<effect type="feed" value="70" />
+		<effect type="feed" value="80" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>
@@ -207,7 +207,7 @@
 			belly turns soft, round and then steadily shrinks down. Soon you're
 			back to normal, the fawn now no more than a meal for you.
 		</text>
-		<effect type="feed" value="70" />
+		<effect type="feed" value="80" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

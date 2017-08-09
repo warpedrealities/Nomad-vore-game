@@ -1,13 +1,91 @@
 <?xml version="1.0"?>
 <Conversation>
+
 	<page ID="start">
 		<text>You have defeated the mushroom girl, her little body slumped
 			before you</text>
+		<choice destination="oralvore1" text="You could use a snack" />
 		<choice destination="end" text="do nothing" />
 		<choice destination="study" text="study her">
 				<assertnot evaluate="hasEntry" entry="lifeforms/mushroomfolk.xml" />	
 			<assertnot evaluate="hasResearch" research="mushroomfolk" />
 		</choice>
+	</page>
+
+	<page ID="oralvore1">
+	<!--written by chardos-->
+		<text>
+
+			Smiling, you approach the defeated mushroom girl, your growling stomach
+			signalling its intent. Battered and momentarily unconscious, the petite mushroom
+			girl is completely unaware of you
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				licking your lips while disrobing, before
+			</conditional>
+			taking her feet in both hands and gently placing them in your mouth for an experimental taste.
+			A moment of confusion passes as you try to detect her flavor before it slowly begins seeping into
+			your mouth and across your tongue. A contented moan escapes from you as her earthy richness
+			begins to permeate your mouth, strengthening the longer you hold her there. While it is tempting
+			to simply savor the moment, a more insistent growl from your stomach reminds you that you have
+			only begun.
+			LBREAK
+			The mushrooms girl's legs begin effortlessly sliding down your throat as you blissfully push forward, hardly
+			having to swallow as her prone figure is briefly lifted from the ground before descending down your throat. You realize
+			she must be waking up as you barely notice a weary frown cross her face and her legs begin to twitch
+			in your throat. Such movement serves only to spread her gradually intensifying flavor across your tongue and
+			you begin to notice a nutty aftertaste as you work closer to her waist. You smile to yourself as you
+			continue forward, sealing the mushroom girl's fate without her even knowing.
+
+		</text>
+		<choice destination="oralvore2" text="delicious" />
+	</page>
+
+	<page ID="oralvore2">
+		<text>
+
+			You grab her hands and put them in your mouth as well, now even if she awakens you can enjoy her
+			with no worry. Her arms and legs now secured, you grin as you clutch her firm butt, lifting her waist
+			towards your eager tongue. A strand of saliva escape your maw as the mushroom girl's flavor takes on a sweeter
+			note...perhaps like nectar? Your eyes widen as a trickle of feminine fluid touches your tongue. No,
+			not nectar...you've come upon a honeypot. Grinning devilishly, you forcefully swallow to bring this new flavor
+			within reach, you give a firm lick across it and plunge your tongue into this unexpected treat...just as
+			her feet finally plunge into your stomach.
+			LBREAK
+			The mushroom girl awakens with a startled cry, confusedly moaning as she struggles to look around. Seeing
+			your grinning face around her waist and gleefully probing her sparks an expression of fear, but she can do
+			nothing but helplessly squirm with both legs and arms locked in your mouth and still battered as she is
+			from your battle. Any sense of stealth lost at this point you stand up, lifting her torso with you, and
+			resume swallowing, easily sending her hips and slender waist down as the rest of her drawn near.
+
+
+		</text>
+		<choice destination="oralvoreend" text="going down" />
+	</page>
+
+	<page ID="oralvoreend">
+		<text>
+			Still enjoying yourself, you chomp on her pert breasts a bit as they enter your mouth, eliciting more
+			confused moans from the mushroom girl. Despite her initial reaction, she seems to be almost enjoying this.
+			Or at the very least she understands she's not getting out of it. With now only her head and mushroom
+			cap outside your mouth, You reach up to her and run a hand across a flushed cheek, momentarily calming her
+			confused whimpers and moans. Slightly teary eyed, she gazes at you as you try your best to smile at her,
+			before grabbing her mushroom cap with both hands and closing it over her head like an umbrella. You forcefully
+			swallow a few more times and finally send her on her way to your stomach.
+			LBREAK
+			Her mushroom cap flares out in your throat, almost causing you to choke, and definitely forcing you to
+			take a few large gulps. It proves no problem though, eventually it slowly slides down and the mushroom
+			girl is forced to curl up in your stomach. You give a contented sigh as your snack squirms inside you,
+			still not fully ready to accept her place within your stomach, though your stomach is fully accepting of her.
+			You smile and rub your belly as the gurgles and groans begin to overpower the squirms and struggles. The
+			shapes and bulges in your belly soften out and form a single curve before even that gradually shrinks away.
+			You lick your lips in a final attempt to get the last of the mushroom girl's flavor before continuing on your
+			journey.
+
+		</text>
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="study">

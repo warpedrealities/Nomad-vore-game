@@ -7,9 +7,10 @@ function combat(controllable,sense,pos,hostile)
 	else
 	--if not move towards player
 		if controllable:HasPath() then
-		controllable:FollowPath()
+			controllable:FollowPath()
 		else
-		controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,2)
+			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,2)
+			controllable:FollowPath()	
 		end
 	end
 

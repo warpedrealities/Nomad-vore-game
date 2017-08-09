@@ -5,13 +5,12 @@ public class SpaceshipResource {
 	private String resourceName;
 	private float resourceAmount;
 	private float resourceCap;
-	
-	public SpaceshipResource(String name, float amount, float cap)
-	{
-		resourceAmount=amount;
-		resourceCap=cap;
-		resourceName=name;
-		
+
+	public SpaceshipResource(String name, float amount, float cap) {
+		resourceAmount = amount;
+		resourceCap = cap;
+		resourceName = name;
+
 	}
 
 	public float getResourceAmount() {
@@ -22,8 +21,6 @@ public class SpaceshipResource {
 		this.resourceAmount = resourceAmount;
 	}
 
-	
-	
 	public float getResourceCap() {
 		return resourceCap;
 	}
@@ -35,10 +32,9 @@ public class SpaceshipResource {
 	public String getResourceName() {
 		return resourceName;
 	}
-	
-	public void subtractResourceAmount(float resourceMod)
-	{
-		this.resourceAmount-=resourceMod;
+
+	public void subtractResourceAmount(float resourceMod) {
+		this.resourceAmount -= resourceMod;
 	}
-	
+
 }

@@ -12,67 +12,55 @@ public class Config {
 	float m_textscale;
 	boolean verboseCombat;
 	boolean disableAutosave;
-	public static final int VERSION=243;
-	
-	public Config()
-	{
-		//open config file
-		//read
+	public static final int VERSION = 250;
+
+	public Config() {
+		// open config file
+		// read
 		FileReader FR;
 		BufferedReader BR;
 		try {
-			FR=new FileReader("assets/config.txt");
-			BR=new BufferedReader(FR);
+			FR = new FileReader("assets/config.txt");
+			BR = new BufferedReader(FR);
 			String str;
-			try 
-			{
-				while (true)
-				{
-						str = BR.readLine();
-		
-					if (str!=null)
-					{
-						if (str.contains("screenscale"))
-						{
-							String input=BR.readLine();
-							m_scale=Float.parseFloat(input);
+			try {
+				while (true) {
+					str = BR.readLine();
+
+					if (str != null) {
+						if (str.contains("screenscale")) {
+							String input = BR.readLine();
+							m_scale = Float.parseFloat(input);
 						}
-						if (str.contains("textscale"))
-						{
-							String input=BR.readLine();
-							m_textscale=Float.parseFloat(input);
+						if (str.contains("textscale")) {
+							String input = BR.readLine();
+							m_textscale = Float.parseFloat(input);
 						}
-					}
-					else
-					{
+					} else {
 						break;
 					}
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}	
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
-		
-		float px=Toolkit.getDefaultToolkit().getScreenSize().height;
-		if (px-40<(1024F*m_scale))
-		{
-			m_scale=((px-40)/1024);
 		}
-		
-		
+
+		float px = Toolkit.getDefaultToolkit().getScreenSize().height;
+		if (px - 40 < (1024F * m_scale)) {
+			m_scale = ((px - 40) / 1024);
+		}
+
 	}
-	
-	public float getScale()
-	{
+
+	public float getScale() {
 		return m_scale;
 	}
-	
-	public float getTextscale()
-	{
+
+	public float getTextscale() {
 		return m_textscale;
 	}
 
@@ -91,5 +79,5 @@ public class Config {
 	public void setDisableAutosave(boolean disableAutosave) {
 		this.disableAutosave = disableAutosave;
 	}
-	
+
 }

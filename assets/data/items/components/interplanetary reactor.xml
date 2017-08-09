@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="interplanetary reactor" weight="30" value="1500">
+<description>Spaceship interplanetary reactor. Doesn't provide energy, but increases fuel efficiency of the ship engines. </description>
+<placeditem widget="modules/interplanetary reactor"/>
+</ItemWidget>

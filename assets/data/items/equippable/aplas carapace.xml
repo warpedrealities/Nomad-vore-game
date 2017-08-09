@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="Aplas carapace" weight="6" slot="BODY"
+	value="1500">
+	<description>
+		Armour made out of hardened alien plastics. Its form fitting plates wrap snugly around your body and are remarkably protective all things considered. +3 omnidefence, 
+	</description>
+	<modifier>
+		<kinetic value="3" />
+		<thermal value="3" />
+		<shock value="3" />
+	</modifier>
+</ItemEquip>

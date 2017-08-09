@@ -186,6 +186,14 @@
 	</page>
 	
 	<page ID="friends">
+	<condition evaluate="LIKENESS" operator="greaterthan" likeness="saurian" value="6" />
+		<text>
+			"Traveller, you bear similarities to our ancient enemy. While I have wisdom to look past this others are not so accepting. I am afraid to force them to hold you fast to their bosom when you are so marked would be for me to over step my bounds as their priestess and instead become their tyrant."
+		</text>
+		<choice destination="end" text="A pity" />
+	</page>	
+
+	<page ID="friends">
 		<condition operator="greaterthan" evaluate="FACTIONFLAG"
 			flag="friendship" value="1" />
 		<text>
@@ -330,7 +338,7 @@
 		<effect type="removeitem" item="elf statue" value="1" />
 		<effect type="setlocalflag" flag="quest" value="2" />
 		<effect type="givegold" value="50" />
-		<effect type="experience" value="25" />
+		<effect type="experience" value="100" />
 		<choice destination="end" text="you're welcome" />
 	</page>
 

@@ -12,15 +12,15 @@ public class ShopLineItem {
 	private String tag;
 	private int quantity;
 	private float cost;
-	
+
 	public ShopLineItem(String itemName, int quantity2, float cost2) {
-		name=itemName;
-		quantity=quantity2;
-		cost=cost2;
+		name = itemName;
+		quantity = quantity2;
+		cost = cost2;
 	}
 
 	public int getQuantity() {
-	
+
 		return quantity;
 	}
 
@@ -35,7 +35,7 @@ public class ShopLineItem {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
+
 	public String getTag() {
 		return tag;
 	}
@@ -44,34 +44,27 @@ public class ShopLineItem {
 		this.tag = tag;
 	}
 
-	public void save(DataOutputStream dstream) throws IOException
-	{
-		
+	public void save(DataOutputStream dstream) throws IOException {
+
 		dstream.writeInt(quantity);
 		dstream.writeFloat(cost);
-		if (tag!=null)
-		{
+		if (tag != null) {
 			dstream.writeBoolean(true);
 			ParserHelper.SaveString(dstream, tag);
-		}
-		else
-		{
+		} else {
 			dstream.writeBoolean(false);
 		}
 
 	}
 
-	public ShopLineItem(String name, DataInputStream dstream) throws IOException
-	{
-		this.name=name;
-		quantity=dstream.readInt();
-		cost=dstream.readFloat();
-		boolean b=dstream.readBoolean();
-		if (b)
-		{
-			tag=ParserHelper.LoadString(dstream);
+	public ShopLineItem(String name, DataInputStream dstream) throws IOException {
+		this.name = name;
+		quantity = dstream.readInt();
+		cost = dstream.readFloat();
+		boolean b = dstream.readBoolean();
+		if (b) {
+			tag = ParserHelper.LoadString(dstream);
 		}
 	}
-	
 
 }

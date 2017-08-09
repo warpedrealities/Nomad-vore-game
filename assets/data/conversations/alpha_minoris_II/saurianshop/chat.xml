@@ -85,7 +85,7 @@
 
 		<effect type="setglobalflag" flag="dammathquest0" value="3" />
 		<effect type="givegold" value="100" />
-		<effect type="experience" value="50" />
+		<effect type="experience" value="200" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
 		<special effect="restockshop" ID="dammathstore" />
 		<choice destination="end" text="my thanks." />

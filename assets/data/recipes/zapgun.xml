@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="Zap gun" requiredskill="0" startunlocked="false">
+<recipe name="Zap gun" requiredskill="2" startunlocked="false">
 <description>
 A gun built to fire zaps of electrical energy at foes.
 </description>

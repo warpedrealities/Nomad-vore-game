@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			workstation online. LBREAK 
+			warning data corruption detected. LBREAK 
+		</text>
+		<choice destination="mailbox" text="access mailbox"/>
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="mailbox">
+		<text>
+			partial mailbox contents recovered LBREAK 
+			select message LBREAK 
+		</text>
+		<choice destination="email5" text="access 1051"/>	
+		<choice destination="email6" text="access 1199"/>
+		<choice destination="email7" text="access 1622"/>	
+		<choice destination="end" text="exit" />
+	</page>
+	
+
+	<page ID="email5">
+	<text>
+		From: mgr. Ansbel LBREAK 
+		to: all LBREAK 
+		subject: missing ship LBREAK 
+
+		As you all know the ship from head office is now overdue. I'm keeping the comm open to try and flag down passing traffic to pass on a message of inquiry to head office but so far interstellar traffic appears to have taken a nose dive. It is however nothing to worry about, our stock and supplies will last a considerable amount of time. Especially with the lack of passing customers.
+		
+	</text>
+	<choice destination="mailbox" text="return to mailbox"/>
+	<choice destination="end" text="exit"/>
+	</page>	
+	
+	<page ID="email6">
+	<text>
+		From: T. Velas LBREAK 
+		To: all LBREAK 
+		subject: help! LBREAK 
+
+		Someone locked me into testing with one and it's not stopping. I'm starting to get really sore..this isn't funny.
+		
+	</text>
+	<choice destination="mailbox" text="return to mailbox"/>
+	<choice destination="end" text="exit"/>
+	</page>	
+		
+	<page ID="email7">
+	<text>
+		From: mgr. Asbel LBREAK 
+		to: all LBREAK 
+		RE: preventing accidents LBREAK 
+
+		I'm going to prevent the recent glitches involving the synth safeties are down to maintenance or defects rather than actual foul play for the time being. However it has become clear I need a contingency in place unless I want to explain to head office how I'm down half the staff due to the synths getting gurgle happy. As such I've pulled some strings to get us a reformation tube. It'll be locked in the back of the storage level unless the main computer detects synth's without their safeties. This is to stop you lot using it recreationally which I know you would do, and probably still will do despite my best efforts. Just remember I can blank patterns and I have a space on my shelf.
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_EMAIL" value="1" />	
+	<choice destination="mailbox" text="return to mailbox"/>
+	<choice destination="end" text="exit"/>
+	</page>	
+
+</Conversation>

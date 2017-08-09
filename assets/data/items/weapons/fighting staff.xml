@@ -5,7 +5,6 @@
 A sturdy staff to be wielded in both hands. A flexible weapon for strikes, sweeps and blows. 2AP does 2-8 damage. (PS)
 </description>
 <modifier>
-<parry value="1"/>
 </modifier>
 <combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
 <effectDamage type="KINETIC" minValue="2" maxValue="8" modifier="STRENGTH"/>

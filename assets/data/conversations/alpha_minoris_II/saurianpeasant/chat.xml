@@ -7,7 +7,8 @@
 		<text>
 			"Greetings to you friend"
 		</text>
-		<choice destination="about" text="Dammath?" />
+		<choice destination="about" text="can you tell me about Dammath?" />
+		<choice destination="job" text="does anyone in Dammath need my help?"/>
 		<choice destination="end" text="*nod and carry on*" />
 	</page>
 
@@ -16,9 +17,29 @@
 			"Greetings stranger, and welcome to Dammath"
 		</text>
 		<choice destination="about" text="Dammath?" />
+		<choice destination="job" text="does anyone in Dammath need my help?"/>
 		<choice destination="end" text="greetings and farewell" />
 	</page>
 
+	<page ID="job">
+	<text>
+	<conditional>
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0" value="0" />
+	"A terrible monster has taken up residence in the mines, Arissa who keeps the store in dammath can tell you more but already mighty saurian warriors have tried and failed to slay it."
+	</conditional>
+	<conditional>
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest1" value="0" />
+	"Nissa can't fix the well pump, if she can't do it soon we'll have to take it apart and bring the water up by hand."
+	</conditional>	
+	<conditional>
+	<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="dammathquest0" value="1" />
+	<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="dammathquest1" value="1" />
+	"I don't think anyone needs your help anymore, but word of your deeds has passed from mouth to ear"
+	</conditional>
+	</text>
+	<choice destination="end" text="thankyou for this information"/>
+	</page>
+	
 	<page ID="about">
 		<condition evaluate="FACTIONFLAG" value="1" operator="equals"
 			flag="allegiance" />

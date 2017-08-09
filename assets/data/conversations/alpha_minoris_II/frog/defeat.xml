@@ -3,9 +3,54 @@
 
 <page ID="start">
 <text>
-no interactions with a defeated frog girl yet.
+The amphibian girl's ample chest heaves as she looks up at you, clearly uncertain as worried now you've beaten her. Her curvaceous form is at your mercy now, and quite appealing with her half sprawled before you. The curves of her ass and breasts on full display in all their emerald and cream hued glory.
 </text>
-<choice destination="end" text="darn"/>
+<choice destination="oralvore0" text="she'll make an ample meal">
+	<assertion evaluate="hasperk" perk="oralvore" />
+</choice>
+<choice destination="end" text="mhmm, time to be merciful this time"/>
+</page>
+
+<page ID="oralvore0">
+<text>
+She looks sexily curvaceous sprawled out like that. But a big gal like this'll make an even more satisfying meal than she would anything else. 
+<conditional><assertion evaluate="slothasitem" slot="2" />
+Though there's no way your <readequipment slot="2"/> will stretch over such the belly you're about to have so you undress before continuing.
+</conditional>
+With thoughts of your impending satisfaction in mind you situate yourself in front of the amphibian, uncertainly she flicks her tongue out to taste you. But she's not the one getting a meal today and you flick her tail admonishingly, which confuses her until you lunged forwards. The frog girl letting out a startled ribbit as she sees your mouth stretching wide to encompass her head. Her soft body squirming and jiggling about in surprise as you take your first swallow and swell your throat and neck out pleasingly with her skull. She's trying to pull back away from you already, but to no avail with you already past her shoulders and pinning her arms from stopping your hunger.
+</text>
+<choice destination="oralvore1" text="now for those delicious tits"/>
+</page>
+
+<page ID="oralvore1">
+<text>
+The froggy's mmhmphs and croaks of protest are muffled nicely, uttered into the depths of your throat as they are. And these complaints dont distract you from your wonderful quest to cram her frame past your lips, both hands going to her tits now. Those pillowy breasts soft and spilling out past your palms, your fingers dig in as you begin to squeeze her wondrous cushions past your lips. Gradually though you conquer these wonderfully gropable obstacles, feeling them swelling your neck afore they slide down to seemingly disappear behind your collarbone as you cram the froggy deeper. And now you have the soft padded expanse of her tummy to devour as you start to pack her away into your own. Her equally ample rump getting closer to your lips as her gut padding squishes past your jaws and down your throat.
+</text>
+<choice destination="oralvore2" text="and now to gobble up dat ass"/>
+</page>
+
+<page ID="oralvore2">
+<text>
+Your gut starts to really stretch and swell out around her, the bulges made by her head and breasts clearly visible on your front as you grope her ass and prepare to swallow that part of her up as well. This feels just as good as you thought it would! with a mhmm from you and a protesting croak from your big meal you start to work her ass inside. Her webbed hands push out at your insides to try and stop her descent. But she's no match for your hunger and your throat tugs her down, forcing her arms against her as she's packed away and her thighs start to slide past your lips.
+</text>
+<choice destination="oralvore3" text="polish her off"/>
+</page>
+
+<page ID="oralvore3">
+<text>
+You're settled comfortably on your ass now as your gut distends out massively into your lap. The frog girl's weight resting on your thighs as you swallow up her legs steadily, curvy hips and meaty calves vanishing past your lips as she's forced to curl up inside of you. The big froggy finally vanishing entirely into you filling you with lip smacking satisfaction. Her unhappy croaks and pushes against your groaning and stretched belly serve only to increase your satisfaction. That satisfaction far outweighing any discomfort from how much you've stretched your gut to contain the frog girl..now, time for the final act of your enjoyment of her curvy body.
+</text>
+<choice destination="oralvore4" text="digest her"/>
+</page>
+
+
+<page ID="oralvore4">
+<text>
+You feel her squirm around inside you and let out a startled sound as you start to gurgle her away. That ample soft form provides little resistance to your enzymes, but her sheer bulk means it takes time to digest her. She struggles and squirms and shoves at your insides making your belly rock around, but despite it all she's gradually softening..you can feel her gurgling inside you and see it in how her curvy bulges weaken and get rounder. The ending was never in doubt and when it does it comes with a toe curlingly satisfying gurgle and glorp of her form being squished into slurry as the last of her resilience fades away. All of her fat and figure now just a soup of goopy nourishment in your belly. The bulge of your tummy now nice and round compacts and shrinks down steadily, absorbing her nutrients to sustain you until nothing remains but your overwhelming sense of satisfaction at a meal well claimed.
+</text>
+	<effect type="feed" value="120" />
+	<special effect="removenpc" />
+	<choice destination="end" text="carry on" />
 </page>
 
 </Conversation>

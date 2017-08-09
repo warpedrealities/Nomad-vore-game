@@ -23,13 +23,6 @@
 </hitText>
 </combatMove>
 </rpg>
-
-<respawn delay="1000"/>
-<disposition value="55"/>
-<defeated conversation="alpha_minoris_II/minyosalchemist/defeat" />
-<seduced conversation="alpha_minoris_II/minyosalchemist/seduced" />
-<victory conversation="alpha_minoris_II/minyosalchemist/victory" />
-<seducer conversation="alpha_minoris_II/minyosalchemist/victory" />
 <talk conversation="alpha_minoris_II/minyosalchemist/chat" />
 <controller AI="staystill"/>
 <faction value="minyos"/>

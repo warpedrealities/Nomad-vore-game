@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ItemWidget name="nav console" weight="10" value="1000">
-<description>All the necessary computers, switches and indicators to build a starship navigation console.</description>
-<placeditem widget="navconsole"/>
-</ItemWidget>

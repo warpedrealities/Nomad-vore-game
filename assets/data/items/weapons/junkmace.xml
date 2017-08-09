@@ -2,7 +2,7 @@
 <ItemWeapon name="Junkmace" weight="4" value="200">
 <tagSet value="PM"/>
 <description>
-An improvised cudgel lashed together from scrap and junk. It has a weighty heft to it and will probably be good for smacking folk around. 3AP Does 3-6 kinetic damage. (P)
+An improvised cudgel lashed together from scrap and junk. It has a weighty heft to it and will probably be good for smacking folk around. 3AP Does 4-7 kinetic damage. (P)
 </description>
 <modifier>
 <parry value="1"/>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<macrorange part="butt" variable="size">
+	<range lowerbound="0" upperbound="2" string="flat" />
+	<range lowerbound="2" upperbound="4" string="petite" />
+	<range lowerbound="4" upperbound="6" string="small" />
+	<range lowerbound="6" upperbound="8" string="modest" />
+	<range lowerbound="8" upperbound="10" string="rounded" />
+	<range lowerbound="10" upperbound="12" string="curvy" />
+	<range lowerbound="12" upperbound="14" string="large" />
+	<range lowerbound="14" upperbound="16" string="ample" />	
+	<range lowerbound="16" upperbound="18" string="enormous" />	
+	<range lowerbound="18" upperbound="999" string="unbelievable" />		
+</macrorange>

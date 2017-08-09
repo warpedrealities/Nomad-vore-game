@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="net" requiredskill="0" startunlocked="true">
+<recipe name="net" requiredskill="1" startunlocked="true">
 <description>
 A net woven out of fabric strips and suitably weighted. Good for temporarily immobilizing an assailant, but can only be thrown a comparatively short distance.
 </description>

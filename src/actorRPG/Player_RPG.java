@@ -31,14 +31,16 @@ import shared.SceneBase;
 import view.ViewScene;
 import vmo.Game;
 import item.Item;
-import item.ItemDepletableInstance;
 import item.ItemEquip;
-import item.ItemStack;
 import item.ItemWeapon;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemStack;
 import actor.Actor;
-import actor.Inventory;
+
 import actor.Modifier;
-import actor.Player;
+import actor.player.Inventory;
+import actor.player.Player;
+
 
 public class Player_RPG implements Actor_RPG {
 
@@ -192,9 +194,9 @@ public class Player_RPG implements Actor_RPG {
 		abilities=new int[6];
 		stats=new float[4];
 		statMax=new int[4];
-		attributes=new int[23];
-		subAbilities=new float[5];
-		for (int i=0;i<22;i++)
+		attributes=new int[21];
+		subAbilities=new float[6];
+		for (int i=0;i<21;i++)
 		{
 			attributes[i]=0;
 		}
@@ -218,12 +220,12 @@ public class Player_RPG implements Actor_RPG {
 		Calcstats();
 		SetInitialValues();
 		karmaMeter=50.0F;
-		subAbilities[MOVEAPCOST]=0;
+
 	}
 	
 	private void defaultStats()
 	{
-		for (int i=0;i<22;i++)
+		for (int i=0;i<21;i++)
 		{
 			attributes[i]=0;
 		}
@@ -237,7 +239,8 @@ public class Player_RPG implements Actor_RPG {
 		subAbilities[REGENERATION]=0.05F;
 		subAbilities[REGENTHRESHOLD]=0.5F;
 		subAbilities[MOVECOST]=1.0F;
-		
+		subAbilities[MOVEAPCOST]=0;	
+		subAbilities[CARRY]=8.0F;
 		quickAction=null;
 	}
 	
@@ -272,7 +275,42 @@ public class Player_RPG implements Actor_RPG {
 			stats[i]=statMax[i]*1.0F;
 		}	
 	}
-	
+
+	public void rest(int duration) {
+
+		stats[SATIATION]-=subAbilities[METABOLISM]*duration;
+		if (stats[SATIATION]<=0)
+		{
+			stats[HEALTH]-=0.25F*duration;
+			if (stats[Actor_RPG.HEALTH]<0)
+			{
+				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, false));
+			}
+		}
+		
+		if (stats[HEALTH]<statMax[HEALTH])
+		{
+			stats[HEALTH]+=subAbilities[REGENERATION]*duration; stats[SATIATION]-=subAbilities[REGENERATION]*2*duration;				
+		}
+
+		if (stats[RESOLVE]<statMax[RESOLVE])
+		{
+			stats[RESOLVE]+=0.1F*duration;	
+		}
+		if (stats[ACTION]<statMax[ACTION])
+		{
+			stats[ACTION]+=statMax[ACTION];	
+		}	
+		statusEffectHandler.clearStatusEffects(actor, this);
+		for (int i=0;i<stats.length;i++)
+		{
+			if (stats[i]>statMax[i])
+			{
+				stats[i]=statMax[i];
+			}
+		}
+		cooldownHandler.update(duration);
+	}
 	public void sleep(int duration)
 	{
 		stats[SATIATION]-=subAbilities[METABOLISM]*duration;
@@ -282,7 +320,7 @@ public class Player_RPG implements Actor_RPG {
 			stats[HEALTH]-=0.25F*duration;
 			if (stats[Actor_RPG.HEALTH]<0)
 			{
-				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation"));
+				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, false));
 			}
 		}
 		
@@ -300,17 +338,6 @@ public class Player_RPG implements Actor_RPG {
 			stats[ACTION]+=statMax[ACTION];	
 		}
 		statusEffectHandler.clearStatusEffects(actor, this);
-		/*
-		if (statusEffects.size()>0)
-		{
-			for (int i=statusEffects.size()-1;i>=0;i--)
-			{
-					statusEffects.get(i).remove(this);
-					statusEffects.remove(i);
-					ViewScene.m_interface.UpdateInfo();
-			}
-		}	
-		*/
 		for (int i=0;i<stats.length;i++)
 		{
 			if (stats[i]>statMax[i])
@@ -335,7 +362,7 @@ public class Player_RPG implements Actor_RPG {
 			stats[HEALTH]-=0.25F;
 			if (stats[Actor_RPG.HEALTH]<0)
 			{
-				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation"));
+				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, false));
 			}
 		}
 		if (regenDelay>0)
@@ -409,9 +436,7 @@ public class Player_RPG implements Actor_RPG {
 		attributes[WILLPOWER]=getAbilityMod(INTELLIGENCE);
 		attributes[SCIENCE]=getAbilityMod(INTELLIGENCE);
 		attributes[WILLPOWER]=getAbilityMod(INTELLIGENCE);
-		attributes[REPAIR]=getAbilityMod(INTELLIGENCE);
-		attributes[CRAFTS]=getAbilityMod(INTELLIGENCE);
-		attributes[SECURITY]=getAbilityMod(DEXTERITY);
+		attributes[TECH]=getAbilityMod(INTELLIGENCE);
 		attributes[LEADERSHIP]=1;
 		attributes[PERCEPTION]=getAbilityMod(INTELLIGENCE);
 		
@@ -423,7 +448,7 @@ public class Player_RPG implements Actor_RPG {
 		statusEffectHandler.applyStatusEffects(this);
 		if (playerInventory!=null)
 		{
-			playerInventory.setCapacity(abilities[STRENGTH]*8);	
+			playerInventory.setCapacity((int) (10+(abilities[STRENGTH]*subAbilities[CARRY])));	
 			
 			for (int i=0;i<4;i++)
 			{
@@ -654,8 +679,8 @@ public class Player_RPG implements Actor_RPG {
 		abilities=new int[6];
 		stats=new float[4];
 		statMax=new int[4];
-		subAbilities=new float[5];
-		attributes=new int[23];
+		subAbilities=new float[6];
+		attributes=new int[21];
 		for (int i=0;i<14;i++)
 		{
 			attributes[i]=0;
@@ -866,7 +891,7 @@ public class Player_RPG implements Actor_RPG {
 	private void feedPred(float amount)
 	{
 		float modifier=karmaMeter/100;
-		float change=amount/10;
+		float change=amount/20;
 		amount=amount*modifier;
 		if (amount<1)
 		{
@@ -888,7 +913,7 @@ public class Player_RPG implements Actor_RPG {
 	private void feedPrey(float amount)
 	{
 		float modifier=1-(karmaMeter/100);
-		float change=amount/10;		
+		float change=amount/20;		
 		amount=amount*modifier;	
 		if (amount<1)
 		{
@@ -1087,6 +1112,7 @@ public class Player_RPG implements Actor_RPG {
 			}
 		}
 	}
+
 	
 
 }

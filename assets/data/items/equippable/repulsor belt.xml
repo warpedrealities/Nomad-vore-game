@@ -16,8 +16,8 @@
 			<applyText>TARGET is now surrounded by a field of repulsive force</applyText>
 			<statusDefence uid="16" icon="1" duration="60"
 				numModifiers="1">
-				<strength value="10" />
-				<effect attribute="KINETIC" modifier="2" />
+				<strength value="30" />
+				<effect attribute="KINETIC" modifier="5" />
 				<removeText> TARGET forcefield fades away</removeText>
 			</statusDefence>
 		</effectStatus>

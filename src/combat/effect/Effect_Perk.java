@@ -12,27 +12,23 @@ public class Effect_Perk extends Effect {
 
 	String perkName;
 	int experienceValue;
-	
-	public Effect_Perk(Element node)
-	{
-		perkName=node.getAttribute("perk");
-		experienceValue=Integer.parseInt(node.getAttribute("experiencevalue"));
+
+	public Effect_Perk(Element node) {
+		perkName = node.getAttribute("perk");
+		experienceValue = Integer.parseInt(node.getAttribute("experiencevalue"));
 	}
-	
+
 	@Override
 	public int applyEffect(Actor origin, Actor target, boolean critical) {
-		
-		Player_RPG rpg=(Player_RPG)target.getRPG();
-		if (rpg.getPerkInstance(perkName)==null)
-		{
+
+		Player_RPG rpg = (Player_RPG) target.getRPG();
+		if (rpg.getPerkInstance(perkName) == null) {
 			rpg.addPerk(PerkLibrary.getInstance().findPerk(perkName));
-			ViewScene.m_interface.DrawText("you gained perk "+perkName);
-		}
-		else
-		{
+			ViewScene.m_interface.DrawText("you gained perk " + perkName);
+		} else {
 			rpg.addEXP(experienceValue);
 		}
-		
+
 		return 0;
 	}
 
@@ -43,9 +39,9 @@ public class Effect_Perk extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect) {
+	public void applyChange(Effect effect,int rank) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

@@ -86,6 +86,58 @@
 			</effect>
 		</mutation>
 	</phaseMutation>
+	<phaseMutation name="physique">
+
+	<mutation name="slender" descriptor="your physique is slender">
+			<effect>
+				<mutation part="butt" variable="size" set="4">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="body" variable="weight" set="35">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="breasts" variable="size" set="4">
+				</mutation>
+			</effect>
+	<effect>
+	<mutation part="vagina" bodychange="add"/>
+	</effect>
+	</mutation>
+	
+	<mutation name="average" descriptor="your body type is average">
+			<effect>
+				<mutation part="butt" variable="size" set="6">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="body" variable="weight" set="55">
+				</mutation>
+			</effect>	
+			<effect>
+				<mutation part="breasts" variable="size" set="4">
+				</mutation>
+			</effect>
+	</mutation>
+	
+	<mutation name="curvy" descriptor="you possess a curvier form than average">
+			<effect>
+				<mutation part="butt" variable="size" set="8">
+				</mutation>
+			</effect>
+			<effect>
+			<mutation part="body" variable="weight" set="70">
+			</mutation>
+			</effect>
+			<effect>
+				<mutation part="breasts" variable="size" set="5">
+				</mutation>
+			</effect>
+	</mutation>	
+	
+	</phaseMutation>	
+	
 	<phaseMutation name="unexplained mutation">
 
 	<mutation name="none" descriptor="you have remained normal and have not mutated">

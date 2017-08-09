@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<shipsystem sprite="74" name="explosive cannon" health="30">
+<contains minimum="1" maximum="2">scrap metal</contains>
+<description>starship cannon for dev test.</description>
+<resistance resists="KINETIC" strength="2"></resistance>
+<shipResource capacity="40" resource="explosive shell">
+<resourceConversion itemName="explosive shell" value="1.0"/>
+</shipResource>
+<shipWeapon>
+<damage min="4" max="12" falloff="0"/>
+<cooldown value="1"/>
+<effects script="cannon" sheet="cannon"/>
+<range arc="2" range="20" />
+<weaponCost resource="explosive shell" cost="1"/>
+<description>
+
+</description>
+</shipWeapon>
+</shipsystem>

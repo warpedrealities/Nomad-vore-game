@@ -6,7 +6,12 @@
 		<text>The harpy leans up at your approach, nuzzling against you and
 			looking up at you with clear desire both for your delightful company
 			and your pleasurable ministrations.</text>
-		<choice destination="receiveoral" text="get her to pleasure you" />
+		<choice destination="receiveoral" text="get her to pleasure you">
+			<assertion evaluate="haspart" part="vagina" />		
+		</choice>
+		<choice destination="receiveblowjob" text="give her something to suck">
+			<assertnot evaluate="haspart" part="penis" />			
+		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
 		<choice destination="end" text="do nothing" />
 	</page>
@@ -16,7 +21,12 @@
 		<text>The harpy coos and watches your approach with arousal and
 			fondness. Her soaked inner thighs show how clearly happy she is to
 			fall into submission to you once again.</text>
-		<choice destination="receiveoral" text="get her to pleasure you" />
+		<choice destination="receiveoral" text="get her to pleasure you">
+			<assertion evaluate="haspart" part="vagina" />		
+		</choice>
+		<choice destination="receiveblowjob" text="give her something to suck">
+			<assertnot evaluate="haspart" part="penis" />			
+		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
 		<choice destination="end" text="do nothing" />
 	</page>
@@ -25,7 +35,12 @@
 			wing against the sopping cleft between her thighs. Aroused and
 			enthralled she pants submissively at your approach, it's clear what
 			she wants.</text>
-		<choice destination="receiveoral" text="get her to pleasure you" />
+		<choice destination="receiveoral" text="get her to pleasure you">
+			<assertion evaluate="haspart" part="vagina" />		
+		</choice>
+		<choice destination="receiveblowjob" text="give her something to suck">
+			<assertnot evaluate="haspart" part="penis" />			
+		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
 		<choice destination="end" text="do nothing" />
 	</page>
@@ -87,8 +102,7 @@
 		<special effect="healnpc" />
 	</page>
 
-	<page ID="receiveoral">
-		<assertion evaluate="haspart" part="penis" />
+	<page ID="receiveblowjob">
 		<text>
 			You stand before the harpy, your firm
 			<macro ID="penis_size_desc" />
@@ -205,7 +219,7 @@
 			now utterly converted into your orgasm, a few errant feathers in the
 			stain is tall that's left to show who she was.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="well that was fun" />
 	</page>
@@ -312,7 +326,7 @@
 			few errant feathers in the stain is all that's left to show who she
 			was.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="well that was fun" />
 	</page>

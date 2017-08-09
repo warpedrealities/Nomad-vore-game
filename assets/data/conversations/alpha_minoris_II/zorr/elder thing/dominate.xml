@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<preference fetish="tentacles"/>
+	<text>
+	Enthralled you walk towards the ancient being. It's myriad eyes regarding you with anticipation, a look you return with glassy eyed adoration as you stumble into its thrall. Ichor slathered tentacles stretch out to encompass you and you find yourself welcoming their embrace as they pull you fully into the elder thing's power.			<conditional><assertion evaluate="slothasitem" slot="2" />Those dexterous psuedopodia pulling your clothes off, baring you before the glory of the creature.</conditional>With your body ready and your mind under the creature's control those tentacles begin to touch you more intrusively, seemingly it wishes to have its way with you in your current state.
+	</text>
+	<choice destination="rape0" text="tentacle rape? to what purpose?"/>
+	</page>
+	
+	<page ID="rape0">
+	<text>
+	The creature's tentacles explore your body, possessively investigating your crevices and curves both. One of those oozing tentacles presses and butts against your lips, coaxing them apart before it probes inside. The phallic tentacle rubs over your tongue and butting against the back of your throat, forcing you to gag and swallow, drawing the indescribable fluids of the elder thing into your body.
+	</text>
+	<choice destination="rape1" text="but not just there"/>
+	</page>
+	
+	<page ID="rape1">
+	<!--penetration-->
+	<text>
+	<!--assfuck-->
+	As the tentacle violates your mouth you feel other flexing limbs sliding towards your other orifices. A slick psuedopod probing at your asshole even as the one in your mouth continues to probe at your cheeks, gum and the back of your throat. The probing tentacle wastes little time to start worming into your ass while secreting its own unnatural lubrication as it penetrates your bowels.<conditional><assertion evaluate="haspart" part="vagina" />Yet another tentacle serves to delve deep into the secrets of your nethers, probing through your snatch up into your worm to leave no part of your body that does not feel the elder thing's touch.</conditional>
+	<conditional><assertion evaluate="haspart" part="penis" />
+	As you're penetrated and violated in your orifices though still more tentacles violate your member, twining around it rthythmically while a slender tendril probes the tip of your shaft, sounding you out as you're jerked off.
+	</conditional>
+	</text>
+	<choice destination="rape2" text="thoroughly violated"/>
+	</page>
+	
+	<page ID="rape2">
+	<!--thrusting-->
+	<text>
+	The creature watches you enigmaticly as it violates your body, its tentacles writhing in your every hole and rubbing at your every sensitive part in a way that erodes steadily the last bastions of your will. The pleasure letting the elder thing's domination work even deeper into your mind as you squirm blissfully in the embrace of those tentacles.
+	</text>
+	<choice destination="rape3" text="from violation to rebirth"/>
+	</page>
+	
+	<page ID="rape3">
+	<!--climax-->
+	<text>
+	You feel the presence of the ancient monster within your mind as your orgasm rises up and washes away your rationality in a wave of bliss, your holes clenching down hard on those tentacles as your fluids erupt and mingle with the simultaneous excretion of eldritch fluids from the tips of all those tentacles plunged deep inside you. Your own fluids unable to escape, mingling with those strange secretions until with a sticky series of schlurks the creature unceremoniously withdraws its tentacles and lets you fall to the ground. Your form leaking and covered in a mixture of your own fluids and the fluids of the ancient one. As those fluids begin to permeate your body you feel your mind and flesh changing, you are reborn with new purpose and a fitting shape to match.
+	</text>
+	<choice destination="doombringer" text="rise to serve your new master"/>
+	</page>
+	
+	<gameover ID="doombringer" noReform="true">
+	<text>
+	As you rise you sense the creature's thoughts as it considers the future and the way you will serve as the handmaiden of its new dominion. When the two of you emerged none could of seen coming the tyranny which you brought about, as a tool of the elder thing's will you subdued the inhabitants of this world that they may serve their god once again. Sacrifices by the thousand were offered up to the hunger of your magnificent master, and in time you offered your beloved deity new worlds to dominate and devour. Through the centuries of your extended life in thrall to this eldritch god you brought doom to countless millions without hesitation or remorse.	
+	</text>	
+	</gameover>
+	
+</Conversation>

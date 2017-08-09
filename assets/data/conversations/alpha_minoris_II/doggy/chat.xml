@@ -274,7 +274,7 @@
 		<choice destination="ctf3A" text="time passes" />
 	</page>
 
-	<gameover ID="ctf3A">
+	<gameover ID="ctf3A" noReform="true">
 		<text>
 			The day passes rather quickly as you are forced to stay as a new
 			bodypart of the cute girl. She’s been running around the village a
@@ -299,7 +299,7 @@
 		<choice destination="ctf3B" text="and then" />
 	</page>
 
-	<gameover ID="ctf3B">
+	<gameover ID="ctf3B" noReform="true">
 		<text>
 			You try to groan out, but instead your open mouth leaks a new amount of
 			the warm, viscous goo. The strange feeling makes you wake up more,

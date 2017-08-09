@@ -7,27 +7,23 @@ import combat.CombatMove;
 
 public class PerkMove extends PerkElement {
 
-	CombatMove [] moves;
+	CombatMove[] moves;
 
-	PerkMove(Element node)
-	{
-		moves=new CombatMove[Integer.parseInt(node.getAttribute("count"))];
-		NodeList children=node.getElementsByTagName("combatmove");
-		
-		for (int i=0;i<children.getLength();i++)
-		{
-			Element e=(Element)children.item(i);
-			moves[i]=new CombatMove(e);
+	PerkMove(Element node) {
+		moves = new CombatMove[Integer.parseInt(node.getAttribute("count"))];
+		NodeList children = node.getElementsByTagName("combatmove");
+
+		for (int i = 0; i < children.getLength(); i++) {
+			Element e = (Element) children.item(i);
+			moves[i] = new CombatMove(e);
 		}
 	}
 
-	public int getCount()
-	{
+	public int getCount() {
 		return moves.length;
 	}
-	
-	public CombatMove getMove(int index)
-	{
-		return moves[index-1];
+
+	public CombatMove getMove(int index) {
+		return moves[index - 1];
 	}
 }

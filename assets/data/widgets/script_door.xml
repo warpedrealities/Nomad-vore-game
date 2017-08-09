@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgetscripted sprite="4" name="reinforced door" health="999">
+<description>a formidable locked door, it looks impervious enough to resist all your attacks</description>
+<resistance resists="KINETIC" strength="999"></resistance>
+<resistance resists="THERMAL" strength="999"></resistance>
+<resistance resists="SHOCK" strength="999"></resistance>
+</widgetscripted>

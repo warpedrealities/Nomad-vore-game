@@ -142,7 +142,7 @@
 	</page>
 
 	<page ID="unbirthBcheck">
-		<condition evaluate="TIMEPASSED" operator="lessthan" value="3" />
+		<condition evaluate="TIMEPASSED" operator="lessthan" value="5" />
 		<text>
 			"Eh, already? eager one aren't you. It's not that I didn't enjoy having
 			you in there, it's just can we do it a bit later?" she smiles
@@ -152,7 +152,7 @@
 	</page>
 	<page ID="unbirthBcheck">
 		<condition evaluate="TIMEPASSED" operator="greaterthan"
-			value="3" />
+			value="5" />
 		<text>
 			"...mhmm, eager to get all tucked away inside my womb again hmm? Sure. Though
 			I think this practice is starting to be more for your benefit than
@@ -343,11 +343,7 @@
 			<mutation part="scales" variable="covering" set="3" />
 
 		</special>
-		<effect type="setfactionflag" flag="allegiance" value="1" />
-		<effect type="manipulatefactionflag" faction="minyos" flag="allegiance"
-			value="-1" />
-		<effect type="manipulateDisposition" faction="minyos" value="-25" />
-		<effect type="modfactiondisposition" value="25" />
+		
 		<!--all but face and back scales, also grows tail -->
 		<text>
 			You're familiar by now with the sensation of waking up to changes

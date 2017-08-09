@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="defensive barrier" weight="10" value="1500">
+<description>A duplicate of one of the Heinlein's shielding units built with alien materials. It might be useful to provide a basic shield to your spaceship.</description>
+<placeditem widget="modules/defensive barrier"/>
+</ItemWidget>

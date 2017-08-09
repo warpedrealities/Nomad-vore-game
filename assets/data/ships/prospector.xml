@@ -3,9 +3,15 @@
 
 <shipstats>
 <movecost value="20"/>
-<hullpoints value="70"/>
+<hullpoints value="35"/>
 <thrustcost value="1.0"/>
 </shipstats>
+
+<emitters>
+<weapon x="0" y="0.0"/>
+<engine x="-0.1" y="-0.4"/>
+<engine x="0.1" y="-0.4"/>
+</emitters>
 
 <layout width="16" height="16" spriteset="ship.png">
 <tileset>
@@ -30,18 +36,40 @@
 <pairedportal x="6" y="4" sprite="1" ID="-102" facing="6"> Exterior hatch </pairedportal>
 <placeWidget x="2" y="8" name="slot"/>
 <placeWidget x="3" y="8" name="slot">
-<contains name="navconsole"/>
+<contains name="modules/navconsole"/>
 </placeWidget>
 <placeWidget x="4" y="8" name="slot"/>
 
-<placeWidget x="3" y="5" name="hardpoint"/>
-
+<placeWidget x="3" y="5" name="hardpoint">
+<facing value="0"/>
+</placeWidget>
 <placeWidget x="1" y="1" name="slot"/>
 <placeWidget x="3" y="1" name="slot">
 </placeWidget>
-<placeWidget x="5" y="1" name="slot"/>
+<placeWidget x="5" y="1" name="slot">
+</placeWidget>
 <placeWidget x="1" y="2" name="slot"/>
 <placeWidget x="5" y="2" name="slot"/>
+<placeItem x="2" y="2">
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+</placeItem>
+<placeItem x="4" y="4">
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+</placeItem>
+<placeItem x="2" y="6">
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+</placeItem>
+<placeItem x="3" y="1">
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+<item itemname="scrap metal"/>
+</placeItem>
 </mapgen>
 </layout>
 <exterior width="6">

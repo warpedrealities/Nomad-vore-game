@@ -89,6 +89,18 @@ a sign is barely legible above the empty door frame, beyond the frame concrete s
 			<loot item="key" chance="1.0" unique="2" addendum="rusty generator"/>
 			</lootTable>
 			</Seedwidgets>
+			<Seedwidgets min="1" max="1" name="computer">
+			<sprite value="31"/>
+			<conversation value="interaction/omnico/omnico0"/>
+			</Seedwidgets>
+			<Seedwidgets min="1" max="1" name="computer">
+			<sprite value="31"/>
+			<conversation value="interaction/omnico/omnico1"/>
+			</Seedwidgets>
+			<Seedwidgets min="1" max="1" name="computer">
+			<sprite value="31"/>
+			<conversation value="interaction/omnico/omnico2"/>
+			</Seedwidgets>
 		</floodfill>
 
 </town>

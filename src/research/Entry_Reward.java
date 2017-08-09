@@ -1,6 +1,6 @@
 package research;
 
-import actor.Player;
+import actor.player.Player;
 
 public interface Entry_Reward {
 

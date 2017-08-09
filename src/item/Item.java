@@ -5,46 +5,44 @@ import java.io.IOException;
 
 import shared.ParserHelper;
 
-public class Item implements Comparable{
+public class Item implements Comparable {
 
 	private int UID;
-	String m_name,m_description;
-	float m_weight,itemValue;
+	protected String m_name, m_description;
+	protected float m_weight, itemValue;
+	protected int tag;
 	
-	public Item(int UID)
-	{
-		this.UID=UID;
+	public Item(int UID) {
+		this.UID = UID;
 	}
-	
-	public int getUID()
-	{
+
+	public int getUID() {
 		return UID;
 	}
-	
-	public enum ItemUse{USE,EQUIP,NONE,COIN};
-	ItemUse m_use;
-	
-	public ItemUse getUse()
-	{
+
+	public enum ItemUse {
+		USE, EQUIP, NONE, COIN,OPEN
+	};
+
+	protected ItemUse m_use;
+
+	public ItemUse getUse() {
 		return m_use;
 	}
-	
-	public String getName()
-	{
+
+	public String getName() {
 		return m_name;
 	}
-	
-	public String getDescription()
-	{
+
+	public String getDescription() {
 		return m_description;
 	}
-	
-	public float getWeight()
-	{
+
+	public float getWeight() {
 		return m_weight;
 	}
-	public Item getItem()
-	{
+
+	public Item getItem() {
 		return this;
 	}
 
@@ -52,9 +50,7 @@ public class Item implements Comparable{
 		return itemValue;
 	}
 
-
-	public void save(DataOutputStream dstream) throws IOException
-	{
+	public void save(DataOutputStream dstream) throws IOException {
 
 		dstream.write(0);
 		ParserHelper.SaveString(dstream, m_name);
@@ -62,8 +58,12 @@ public class Item implements Comparable{
 
 	@Override
 	public int compareTo(Object arg0) {
-		Item item=(Item)arg0;
+		Item item = (Item) arg0;
 		return getItem().getName().compareTo(item.getItem().getName());
 	}
-	
+
+	public int getTag() {
+		return tag;
+	}
+
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		The spacesuited alien seems to have fallen and is unable rise to continue the fight. You kick her plasma pistol away so she can't use it and consider what best to use her for.
+		<text>
+		<choice destination="cockvore0" text="put her in your balls, then put 'her' back in the suit">
+		<assertion evaluate="hasperk" perk="cockvore" />	
+		</choice>
+		<choice destination="end" text="nothing, just good to see her defeated"/>
+		</text>
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	You <conditional><assertion evaluate="slothasitem" slot="2" /> free your shaft from its confines and </conditional> ready your <macro ID="penis_size_desc" /> cock for its coming meal. The inscrutable helmed head of the talharan seeming to shift to look in your direction. But you're not interested in anything she has to say and lunge with both hands to undo that helmet from the rest of the suit, a brief struggle ensues, her impending fate in your enlargening shaft seems less important a danger to the alien than you uncovering her face. Even when you manage to yank the metal space helmet off of her she raises her arms to hide her face rather than fend you off as you shove one hand through her hair and then use the other to guide your cock to the top of her head "give it back-mphhh!" she protests, muffled as your cocktip slides down over the top of her head concealing her down to the neck where she's hidden by the suit. Your voracious length rippling around her head to tug on her hungrily, but the collar of the suit seems to be stopping you from pulling her shoulders out.
+	</text>
+	<choice destination="cockvore1" text="must be a way of loosening it surely"/>
+	</page>
+
+	<page ID="cockvore1">
+	<text>
+	You are frustrated for only a few moments as your cock futilely suckles and schlurps on her head. The alien reaching up to try and shove your cock off but having trouble getting a good grip, at least she's not worried about being seen now. But that doesn't solve your problem and you lean forwards to reach behind her head engulfed in your cocktip and search around until you find a clamp, undoing it so the metal band hinges open. And with that you thrust forwards and your tip slips past the collar to slam against her shoulders. Her arms up and out to her sides stopping you for now, but you bet on your cock and hump forwards groaning as you press your cocktip against her shoulders repeatedly until finally they yield to the hunger of your dick. Her arms going down against her sides and her suit's gloved fingers going limp as you start to schlurp and suck the girl out of her spacesuit with the power of your mighty member.
+	</text>
+	<choice destination="cockvore2" text="schlurp her out, leave the suit empty, for now"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	You set about enacting your debauched desires on the alien girl in earnest now that the suit can't stop you, her limbs constrained by the suit are gradually constrained instead by your shaft as you draw her out of the suit. The spacesuits gloves and boots going limp and deflating, followed by forearms and calves as you draw more of her into your voracious shaft. Her struggles seem to do nothing to help her, unable to stay in the protection of her suit her naked body is exposed more and more to the throbbing heat of your length and the hot sticky coating of your precum. You hear her muffledly protest as she slides through the base of your shaft, her words unintelligible as she slides down to enter your balls and fill them out with your form, only her legs are left in the suit as your cumslit slides down around her ass.
+	</text>
+	<choice destination="cockvore3" text="just a bit more to go"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	You draw in her legs before fully decanting her from the suit, you catch a good look at blue well shaped feet protruding from your cocktip as you slide it free of the spacesuit collar and mhmm. Your hands sliding up and down your length as you feel her squirms and well muffled protests as your helpless cockfood is drawn down and piled into your sack steadily. The Talharan becoming a pleasing weight in your balls as she's fed down into them to curl up as a nice bulgey mass sagging your sack out against your thighs.
+	</text>
+	<choice destination="cockvore4" text="$don't worry, i'll soon squirt you back into your suit"/>
+	</page>
+	
+	<page ID="cockvore4">
+	<text>
+	She seems to not take your teasing reassurance you'll put her back in the suit with good grace and her squirms redouble. The sensation making you groan in delight and fondle yourself as your balls begin churning her into your next load. Your lumpy sack jostling and swaying with her motions in a way that's just exquisite but does nothing but rub hot cum into her soft blue flesh, making it softer and creamier by the moment..In time her struggles give way to sloshes and the bumps and bulges in your sack give way to a wondrous full roundness as her form is liquidated and compacted. You take a moment to position her empty forlorn spacesuit in a seated position and take aim before jacking off, stroking along your shaft until you let the Talharan back out into her precious suit. Hot gushes of thick and goopy seed erupting from your cock and pumped back into the suit, re-inflating the limbs and filling the torso up until your excess ballbatter exceeds its capacity and spills from the empty suit collar. The suit rendered a goopy mess now you've returned the alien to it, a most satisfying result for all concerned you feel.
+	</text>
+	<effect type="feed" value="100" />
+	<special effect="removenpc" />
+	<choice destination="end" text="she looks good in white, but moving on"/>
+	</page>
+	
+</Conversation>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ItemWidget name="solar plant" weight="10" value="750">
 <description>A ship board device that collects solar energy using a series of unfolding focusing mirrors to create power while in space.</description>
-<placeditem widget="solar plant"/>
+<placeditem widget="modules/solar plant"/>
 </ItemWidget>

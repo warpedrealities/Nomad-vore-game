@@ -5,7 +5,7 @@
 You can lash out at a distance with your mind, using a blast of mental domination to diminish the target's resolve.
 </description>
 <move count="3">
-<combatmove name="mind bolt" timeCost="2" pattern="RANGED" bonusAttribute="WILLPOWER" actionCost="4" moveType="DOMINATE"> 
+<combatmove name="mind bolt" timeCost="2" pattern="RANGED" bonusToHit="2" bonusAttribute="WILLPOWER" actionCost="4" moveType="DOMINATE"> 
 <effectDamage type="PSYCHIC" minValue="1" maxValue="6" modifier="INTELLIGENCE"/>
 <missText count="2">
 <text>You attempt to overwhelm TARGET 's will but fail</text>

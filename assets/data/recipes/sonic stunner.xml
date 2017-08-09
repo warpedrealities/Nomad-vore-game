@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="sonic stunner" requiredskill="3" startunlocked="true">
+<description>
+A device that attempts to overwhelm a target with subsonic and ultrasonic waves rendering them insensate through pain and disorientation.
+</description>
+<ingredient item="scrap metal" quantity="5"/>
+<ingredient item="computation valve" quantity="1"/>
+<ingredient item="battery" quantity="1"/>
+<result item="sonic stunner"/>
+</recipe>

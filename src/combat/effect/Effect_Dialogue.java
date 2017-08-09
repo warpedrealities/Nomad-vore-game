@@ -8,8 +8,9 @@ import combat.effect.Effect;
 public class Effect_Dialogue extends Effect {
 
 	String dialogue;
+
 	public Effect_Dialogue(Element enode) {
-		dialogue=enode.getTextContent().replace("\n", "");
+		dialogue = enode.getTextContent().replace("\n", "");
 	}
 
 	@Override
@@ -24,7 +25,7 @@ public class Effect_Dialogue extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect) {
+	public void applyChange(Effect effect,int rank) {
 		// TODO Auto-generated method stub
 
 	}

@@ -11,24 +11,26 @@
 <ability ability="ENDURANCE" value="8" />
 <ability ability="CHARM" value="10" />
 <ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="50"/>
-<stat stat="RESOLVE" value="50"/>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
-<missText count="1">
-<text>the villager's punch fails to connect with TARGET</text>
-</missText>
-<hitText count="1">
-<text>the villager hits TARGET for VALUE points of damage</text>
+<stat stat="HEALTH" value="80"/>
+<stat stat="RESOLVE" value="80"/>
+<combatMove name="reinforce" pattern="SELF" bonusAttribute="MELEE" timeCost="2">
+<effectReinforce npc="minoris2_elves\elfReinforcement" min="2" max="4">
+<direction distance="16">
+NORTHSOUTHEASTWEST
+</direction>
+</effectReinforce>
+<hitText count="2">
+<text>the priestess calls for warriors to aid her</text>
+<text>the priestess calls out for aid!</text>
 </hitText>
+
 </combatMove>
 </rpg>
 
 <respawn delay="1000"/>
 <disposition value="55"/>
-<victory conversation="alpha_minoris_II/minyospriestess/victory" />
-<seducer conversation="alpha_minoris_II/minyospriestess/victory" />
+
 <talk conversation="alpha_minoris_II/minyospriestess/chat" />
-<controller AI="staystill"/>
+<controller AI="leader"/>
 <faction value="minyos"/>
 </NPC>

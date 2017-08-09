@@ -9,4 +9,5 @@
 <loot item="isotope" chance="1"/>
 <loot item="sublime" chance="1"/>
 <loot item="meek" chance="1"/>
+<loot item="spacebar" chance="1"/>
 </lootTable>

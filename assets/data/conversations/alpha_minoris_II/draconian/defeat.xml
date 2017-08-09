@@ -15,10 +15,69 @@
 			text="$But you have, and now, now I want a celebratory feast">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+		<choice destination="cockvore0" text="$Oh your indignity won't stop with that">
+		<assertion evaluate="hasperk" perk="cockvore"/>
+		</choice>
 		<choice destination="end"
 			text="$And yet it happened, think on that for a while" />
 	</page>
 
+	<page ID="cockvore0">
+	<text>
+	The draconian appears confused by what you mean, at least until <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				you shuck your pants and 
+			</conditional> fondle your firming <macro ID="penis_size_desc" /> shaft meaningfully.
+	The draconian growls "if you think I'm about to submit to your impudent lusts and let you rut me worm" 
+	she says defiantly. Glaring, all sound and fury despite how little she could resist in her beaten state.
+	</text>
+	<choice destination="cockvore1" text="$Good thing I'm going to feed you to it and waste you on the ground then"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	"You wouldn't dare. I am too magnificent a creature to suffer such a fate." she says, though a note of uncertainty is just beginning to creep into her proud bluster. She growls as you approach and snag her foot with one hand and guide your tip towards it with the other as your cock grows larger and hungrier "I won't let you" she threatens as she tries to tug her feet away, then snarls as despite that you manage to shove her foot into your tip and snag the other. The draconian squirming to try and tug free as one foot sinks deeper into the musky grasp of your tip and you feed the other inside.
+	</text>
+	<choice destination="cockvore2" text="$Feel free to try and stop me, your struggles will make it feel better for me"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	"You!" she seems momentarily speechless in shock as you taunt her that way. But then she redoubles her struggles, but all she does is force you to restrain her thrashing tail and feed it in as you schlurp her calves into your shaft.Her smooth limb scales providing extra stimulation as they slide slickly against the inside of your shaft "un-unhand me" she demands as you draw her deeper, her feet pushing through the base of your shaft and into the cummy depths of your balls. Her knees disappearing past your cumslit. After that you make quick work over her thighs, squeezing her hips into your tip and forcing her knees to bend as she starts to get stuffed into your sack.
+	</text>
+	<choice destination="cockvore3" text="$not my hand you should be worried about cockfood"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	"don't call me that" she protests, seemingly still in denial about what's happening to her as you schlurp her draconian form up with your cock. But her disbelief won't stop her from ending up your next load. And you intend to make that point by pulling her deeper into your shaft. Her upper body steadily disappearing into your loins despite her struggles.Her arms forced above her head as her wings are uncomfortably pinned as you reach her chest, engulfing her breasts and squeezing her shapely orbs along with most of the rest of her.
+	</text>
+	<choice destination="cockvore4" text="$why not? draconians do make the best cockfood"/>
+	</page>
+	
+	<page ID="cockvore4">
+	<text>
+	"no we're not cockfood! i'm not cockf-SMPH!" she protests, cut off as your tip schlorps over the top of her head leaving only her squirming arms protruding from your cock. The draconian futilely attempting to stop her plunge the rest of her way into your balls. But her hands cannot get a grip on your slick cumslit as they disappear down into it. The sensation of the once proud and mighty draconian being reduced to a bulge in your shaft and sack making you moan out and drawing your hands irresistably to fondle the shape of her protesting form as she sinks deeper. The draconian attempting to push out the inside of your sack as she's forced to curl up as a massive and satisfying weight sagging out your balls now.
+	</text>
+	<choice destination="cockvore5" text="$not so mighty now are we dragon? somehow I think you'll melt into cum same as anyone else"/>
+	</page>
+	
+	<page ID="cockvore5">
+	<text>
+	"no, no please it can't end this way. I can't end this way." she exclaims, still protesting this fate even now as your balls begin to blorp and burble around her. The draconian struggling around making your sack jostle and sway around. But her protests and squirming avail her little as you work her over inside your balls. She's softening despite all the bluster about her supremacy and might, like any other cockfood she's going to melt away into cum. You can feel her shape yielding to your hands as you reach down to fondle and rub over your sack.
+	</text>
+	<choic destination="cockvore6" text="$nearly there..nearly..cum"/>
+	</page>
+	
+	<page ID="cockvore6">
+	<text>
+	"no-gahslph-" the draconian's final protest fades into splattering gushing gurgling noises as she comes apart in your balls at long last. The draconian's mighty form now sloshing fluidly in your sack, naught but gallons of thick glorping cum for you to waste on the ground. And you set about inflicting the final indignity on that once proud creature. Your hands both going to your cock as you feels your smoothly rounded sack churn. The pent up cum as an insistent pressure at the base of your shaft stirring you on in your decadent masturbation. Your pleasure rising as you hear her remnants glorp around under your moans and fapping. Rising and then finally cresting, your cock erupting to splatter the ground with former draconian. The mighty dragon now naught but a mighty load, pooling on the ground in front of you as you pour her out in spurting bursts until you're spent. The final indignity, the draconian's much vaunted superiority amounting to a forgotten and transitory orgasm for your own pleasure.
+	</text>
+	<effect type="feed" value="130" />
+	<special effect="removenpc" />
+	<choice destination="end" text="carry on" />
+	</page>
+	
 	<page ID="oralvore0">
 		<text>
 			"Surely you jest, it cannot end this way." the draconian scoffs, apparently
@@ -120,7 +179,7 @@
 			Gradually even the round softness of your belly fades and shrinks
 			down to nothing as she's absorbed into your form.
 		</text>
-		<effect type="feed" value="120" />
+		<effect type="feed" value="130" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

@@ -46,6 +46,7 @@
 <row>02141220</row>
 <row>02222200</row>
 <edge value="WEST"/>
+<spawn x="4" y="4" tag="1"/>
 <widget x="6" y="4" name="console" info="interaction/spacehulkcomputer" variable="31"/>
 </keyBlock>
 
@@ -60,9 +61,23 @@
 <row>00211200</row>
 <edge value="NORTH"/>
 <widget x="2" y="6" name="cargocontainer" info="specialchest" />
-<widget x="4" y="4" name="console" info="interaction/spacehulkdatabase" variable="27"/>
+<widget x="4" y="4" name="console" info="interaction/spacehulk/spacehulkdatabase" variable="27"/>
 </keyBlock>
-
+<keyBlock heat="2">
+<row>21111112</row>
+<row>21222212</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>21111112</row>
+<row>22222222</row>
+<edge value="SOUTH"/>
+<spawn x="2" y="5" tag="0"/>
+<spawn x="3" y="5" tag="0"/>
+<widget x="4" y="5" name="mechanism" info="interaction/spacehulk/missileLauncher" variable="85"/>
+<widget x="4" y="4" name="cargocontainer" info="ammochest" />
+</keyBlock>
 
 <prefabBlock heat="2" width="2" height="1" blockCount="2">
 <edge value="EAST"/>
@@ -78,7 +93,7 @@
 <spawn x="1" y="6" tag="0"/>
 <spawn x="1" y="1" tag="0"/>
 <widget x="1" y="3" name="cargocontainer" info="specialchest" />
-<widget x="1" y="4" name="mechanism" info="interaction/interplanetary reactor" variable="26"/>
+<widget x="1" y="4" name="mechanism" info="interaction/spacehulk/interplanetary reactor" variable="26"/>
 </block>
 <block>
 <row>22211222</row>
@@ -100,10 +115,12 @@
 
 <clean value="2"/>
 <lootTable identity="normalchest">
-<lootSubTable chance="0.5" file="spacehulk_resources"/>
-<lootSubTable chance="0.5" file="spacehulk_consumables"/>
-<lootSubTable chance="0.5" file="spacehulk_resources"/>
-<lootSubTable chance="0.5" file="spacehulk_consumables"/>
+<lootSubTable chance="0.75" file="spacehulk_resources"/>
+<lootSubTable chance="0.75" file="spacehulk_consumables"/>
+<lootSubTable chance="0.75" file="spacehulk_resources"/>
+<lootSubTable chance="0.75" file="spacehulk_consumables"/>
+<lootSubTable chance="0.50" file="spacehulk_resources"/>
+<lootSubTable chance="0.50" file="spacehulk_consumables"/>
 </lootTable>
 <lootTable identity="specialchest">
 <loot item="flux capacitor" chance="1"/>
@@ -113,14 +130,29 @@
 <loot item="computation valve" chance="0.5"/>
 <lootSubTable chance="1.0" file="spacehulk_special"/>
 </lootTable>
+<lootTable identity="ammochest">
+<lootSubTable chance="1.0" file="dagger missile"/>
+<lootSubTable chance="1.0" file="dagger missile"/>
+<lootSubTable chance="1.0" file="dagger missile"/>
+<lootSubTable chance="1.0" file="dagger missile"/>
+<lootSubTable chance="0.5" file="dagger missile"/>
+<lootSubTable chance="0.5" file="dagger missile"/>
+<lootSubTable chance="0.5" file="dagger missile"/>
+<lootSubTable chance="0.5" file="dagger missile"/>
+<lootSubTable chance="0.5" file="dagger missile"/>
+<lootSubTable chance="0.5" file="dagger missile"/>
+<lootSubTable chance="0.5" file="dagger missile"/>
+<lootSubTable chance="0.5" file="dagger missile"/>
+</lootTable>
 <lootTable identity="spacehulk_note">
 <loot item="note" chance="1.0" addendum="zer03"/>
 
 </lootTable>
-<npcType value="zetamorph"/>
+<npcType value="space/zetamorph"/>
+<npcType value="space/black_zetamorph"/>
 </blockDungeon>
 <partition xmin="24" xmax="48" ymin="0" ymax="12" inverse="true">
-<SeedNPCs min="8" max="16" name="zetamorph"> </SeedNPCs>
+<SeedNPCs min="8" max="16" name="space/zetamorph"> </SeedNPCs>
 </partition>
 <placeItem x="34" y="6">
 <item itemname="Laser rifle" energy="0"/>

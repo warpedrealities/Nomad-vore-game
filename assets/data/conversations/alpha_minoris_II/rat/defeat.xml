@@ -69,7 +69,7 @@
 			your womb starts working and melting the rat into a warm puddle for
 			your pussy to leak later.
 		</text>
-		<effect type="feed" value="50" />
+		<effect type="feed" value="60" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>

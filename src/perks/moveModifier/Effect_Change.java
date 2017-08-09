@@ -10,42 +10,36 @@ import combat.effect.Effect_Status;
 
 public class Effect_Change {
 
-	public enum modifierType{ERROR,ADD,MOD};
-	
+	public enum modifierType {
+		ERROR, ADD, MOD
+	};
+
 	modifierType type;
-	
+
 	Effect effect;
-	
-	public Effect_Change(Element node)
-	{
-		type=strToType(node.getAttribute("type"));
-		
-		NodeList children=node.getChildNodes();
-		for (int i=0;i<children.getLength();i++)
-		{
-			if (children.item(i).getNodeType()==Node.ELEMENT_NODE)
-			{
-				Element enode=(Element)children.item(i);
-				if (enode.getTagName().equals("effectDamage"))
-				{
-					effect=new Effect_Damage(enode);
+
+	public Effect_Change(Element node) {
+		type = strToType(node.getAttribute("type"));
+
+		NodeList children = node.getChildNodes();
+		for (int i = 0; i < children.getLength(); i++) {
+			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
+				Element enode = (Element) children.item(i);
+				if (enode.getTagName().equals("effectDamage")) {
+					effect = new Effect_Damage(enode);
 				}
-				if (enode.getTagName().equals("effectStatus"))
-				{
-					effect=new Effect_Status(enode);
-				}		
+				if (enode.getTagName().equals("effectStatus")) {
+					effect = new Effect_Status(enode);
+				}
 			}
 		}
 	}
-	
-	public static modifierType strToType(String type)
-	{
-		if (type.equals("ADD"))
-		{
+
+	public static modifierType strToType(String type) {
+		if (type.equals("ADD")) {
 			return modifierType.ADD;
 		}
-		if (type.equals("MOD"))
-		{
+		if (type.equals("MOD")) {
 			return modifierType.MOD;
 		}
 		return modifierType.ERROR;
@@ -58,6 +52,5 @@ public class Effect_Change {
 	public Effect getEffect() {
 		return effect;
 	}
-	
-	
+
 }

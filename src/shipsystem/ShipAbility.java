@@ -6,15 +6,16 @@ import java.io.IOException;
 
 public abstract class ShipAbility {
 
-	public enum AbilityType{SA_RESOURCE,SA_MODIFIER,SA_CONVERTER,SA_DISPENSER,SA_SHIELD,SA_WEAPON};
-	
+	public enum AbilityType {
+		SA_RESOURCE, SA_MODIFIER, SA_CONVERTER, SA_DISPENSER, SA_SHIELD, SA_WEAPON,SA_FTL
+	};
+
 	protected AbilityType abilityType;
 
 	public AbilityType getAbilityType() {
 		return abilityType;
 	}
-	
-	public abstract void save(DataOutputStream dstream) throws IOException ;
 
+	public abstract void save(DataOutputStream dstream) throws IOException;
 
 }

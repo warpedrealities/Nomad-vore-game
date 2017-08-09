@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<perk name="packrat">
+<description> It's not how much you carry that affects your ability to move the most, it's how you carry it. And distributing the weight better can let you carry more without issue. STR*2 extra weight capacity. </description>
+<modifier affects="CARRY" value="200"  type="SUBABILITY"/>
+<maxrank value="4"/>
+
+</perk>

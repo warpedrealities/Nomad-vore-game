@@ -102,7 +102,7 @@
 			floor, until it flops, and collapses into a huge, gooey puddle with a
 			few scattered bones.
 		</text>
-		<effect type="feed" value="85" />
+		<effect type="feed" value="250" />
 		<special effect="removenpc" />
 		<choice destination="end" text="So much mess" />
 	</page>
@@ -252,7 +252,7 @@
 
 
 
-		<effect type="feed" value="150" />
+		<effect type="feed" value="160" />
 		<special effect="removenpc" />
 		<choice destination="end" text="You finished the whole thing!" />
 	</page>

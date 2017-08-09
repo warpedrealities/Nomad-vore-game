@@ -83,7 +83,11 @@ public class Effect_Damage extends Effect {
 			bonus=origin.getRPG().getAbilityMod(modifierAbility);
 		}
 		//roll damage
-		int damage=Universe.m_random.nextInt(maxValue-minValue)+minValue;
+		int damage=minValue;
+		if (maxValue>minValue)
+		{
+			damage+=Universe.m_random.nextInt(maxValue-minValue);
+		}
 		if (critical)
 		{
 			damage++;
@@ -106,20 +110,27 @@ public class Effect_Damage extends Effect {
 		{
 			damage=0;
 		}
-		
+		if (damage>=999)
+		{
+			origin.Defeat(null, false);
+			return 0;
+		}
 		if (critical)
 		{
 			damage=applyCritical(target,damage, bonus);
 		}
 		
 		//check if physical harm
-		if (damageType<=Actor_RPG.SHOCK && target.getRPG().getStat(Actor_RPG.HEALTH)>0)
+		if (damageType<=Actor_RPG.SHOCK)
 		{
-			//if so apply to hp
-			target.getRPG().ReduceStat(Actor_RPG.HEALTH, damage);
-			if (target.getRPG().getStat(Actor_RPG.HEALTH)<=0)
+			if (target.getRPG().getStat(Actor_RPG.HEALTH)>0)
 			{
-				target.Defeat(origin, false);
+				//if so apply to hp
+				target.getRPG().ReduceStat(Actor_RPG.HEALTH, damage);
+				if (target.getRPG().getStat(Actor_RPG.HEALTH)<=0)
+				{
+					target.Defeat(origin, false);
+				}
 			}
 		}
 		else if (target.getRPG().getStat(Actor_RPG.RESOLVE)>0)
@@ -175,13 +186,16 @@ public class Effect_Damage extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect) {
+	public void applyChange(Effect effect, int rank) {
 		if (this.getClass().isInstance(effect))
 		{
 			Effect_Damage ed=(Effect_Damage)effect;
-			this.minValue+=ed.minValue;
-			this.maxValue+=ed.maxValue;
-			this.rangeDecay+=ed.rangeDecay;
+			this.minValue+=ed.minValue*rank;
+			this.maxValue+=ed.maxValue*rank;
+			if (ed.rangeDecay!=0)
+			{
+				this.rangeDecay*=Math.pow(ed.rangeDecay, rank);	
+			}
 		}
 	}
 	

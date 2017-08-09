@@ -4,8 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import actor.Player;
-
+import actor.player.Player;
 import widgets.Widget;
 
 public class WidgetDamage extends Widget {

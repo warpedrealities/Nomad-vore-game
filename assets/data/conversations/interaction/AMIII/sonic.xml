@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			this device is clearly intended to project a sonic barrier around a large area, possibly to keep wildlife away. It's been badly damaged due to the destruction of the emitter array. But a flux capacitor can be extracted from the wrecked machinery intact if you want to do that.
+		</text>
+		<choice destination="remove" text="do it" />
+		<choice destination="end" text="not now" />
+	</page>
+	
+	<page ID="remove">
+		<text>
+			You extract the flux capacitor, in doing so you're forced to dismantle much of the remaining machinery to safely extract it.
+		</text>
+		<effect type="giveitem" value="2" item="scrap metal" />
+		<effect type="giveitem" value="1" item="flux capacitor" />
+		<special effect="destroywidget" />
+		<choice destination="end" text="got what i came for" />
+	</page>	
+	
+</Conversation>

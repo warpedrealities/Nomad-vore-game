@@ -35,7 +35,7 @@
 <text>ice treader leaps towards TARGET</text>
 </hitText>
 </combatMove>
-<combatMove name="pounce" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" pattern="MELEE"  actionCost="2" moveType="MOVEMENT"> 
+<combatMove name="pounce" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" pattern="MELEE"  actionCost="2"> 
 <missText count="1">
 <text>ice treader attempts to pounce TARGET</text>
 </missText>

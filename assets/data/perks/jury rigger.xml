@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="jury rigger">
-<description> Improvised repairs might not be good repairs, but they are repairs. +1 to repair </description>
-<modifier affects="CRAFTING" value="1"  type="ATTRIBUTE"/>
-<maxrank value="3"/>
+<description> a make do attitude can let you repair things or create things that the manual says you shouldn't be able to, +1 to tech </description>
+<modifier affects="TECH" value="1"  type="ATTRIBUTE"/>
+<maxrank value="6"/>
 
 </perk>

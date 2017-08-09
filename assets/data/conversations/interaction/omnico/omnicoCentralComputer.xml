@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			$%/SYNTH CONTROL LBREAK 
+			$%/SELECT MODE LBREAK 
+			<conditional>
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="0"/>			
+			$%/CURRENT MODE ORALVORE LBREAK 
+			</conditional>
+			<conditional>
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>			
+			$%/CURRENT MODE UNBIRTH LBREAK 
+			</conditional>	
+			<conditional>
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="1"/>			
+			$%/SAFEGUARDS OPERATIONAL LBREAK 
+			</conditional>	
+			<conditional>
+				<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>			
+			$%/SAFEGUARDS OFFLINE LBREAK 
+			</conditional>			
+		</text>
+		<choice destination="oralvore" text="set mode: oralvore"/>
+		<choice destination="unbirth" text="set mode: unbirth"/>
+		<choice destination="disable" text="disable digestion prevention safeguard">
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>			
+		</choice>
+		<choice destination="enable" text="re-enable digestion prevention safeguard">
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="1"/>			
+		</choice>
+		<choice destination="hack" text="attempt to trick the computer into unlocking the reformer">
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_EMAIL" operator="equals" value="1"/>	
+		<condition evaluate="PLAYERATTRIBUTE" operator="greaterthan"
+			value="1" attribute="TECH" />		
+		</choice>
+		<choice destination="end" text="logout" />
+	</page>
+	
+	<page ID="hack">
+	<text>
+	You're aware the central computer will only open the doors to the room containing the reformation tube if it detects synth's with their safeties off. You could deactivate the safeties yourself, or you can try to hack the computer to open the door directly.
+	</text>
+	<choice destination="hackAttempt" text="commence hacking"/>
+	<choice destination="start" text="return"/>
+	<choice destination="end" text="logout"/>
+	</page>
+	
+		<check ID="hackAttempt">
+		<test what="TECH" DC="14" />
+		<outcome destination="hackSucceed" />
+		<outcome destination="hackFail" />
+	</check>
+
+	<page ID="hackSucceed">
+	<text>
+	You delve into the software running on the main computer and find the program monitoring the synth’s safeties. Then create a fictional synth input to the monitor program and tweak this synth to report its safeties disabled. This should convince the monitor to unlock the door without disabling the safeties.
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_OVERRIDE" value="1" />	
+	<choice destination="end" text="excellent, logout"/>
+	</page>
+	
+	<page ID="hackFail">
+	<text>
+	You delve into the software running on the main computer and find the monitoring program that keeps an eye on the safeties of all synths. You disable it and create a simple program to spoof its output to the door subsystem in the storage level, this should unlock the door without disabling the safeties	
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_OVERRIDE" value="1" />	
+	<effect type="setglobalflag" flag="OMNICO_IIA_ALERT" value="1" />		
+	<choice destination="end" text="excellent, logout"/>	
+	</page>
+	
+	<page ID="disable">
+	<text>
+	$%/SAFEGUARD DISABLED LBREAK
+	$%/ENZYME SETTINGS CALIBRATED LBREAK
+	$%/EMOTIONAL MATRIX ADJUSTED LBREAK
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_SAFETY" value="1" />		
+	<choice destination="end" text="logout" />
+	</page>
+	
+	<page ID="enable">
+	<text>
+	$%/SAFEGUARD ENABLED LBREAK 
+	$%/ENZYME SYSTEM SHUTDOWN COMMAND TRANSMITTED LBREAK 
+	$%/EMOTIONAL MATRIX ADJUSTED LBREAK 
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_SAFETY" value="0" />		
+	<choice destination="end" text="logout" />
+	</page>	
+	
+	<page ID="oralvore">
+	<text>
+	$%/SYNTH CONTROL LBREAK 
+	$%/SYNTH SET TO ORALVORE MODE LBREAK 
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA" value="0" />	
+	<choice destination="end" text="logout" />	
+	</page>
+	
+	<page ID="unbirth">
+	<text>
+	$%/SYNTH CONTROL LBREAK 
+	$%/SYNTH SET TO UNBIRTHING MODE LBREAK 
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA" value="1" />	
+	<choice destination="end" text="logout" />	
+	</page>
+</Conversation>

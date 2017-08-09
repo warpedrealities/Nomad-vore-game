@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<perk name="Awari endurance training" >
+<requirement count="1">
+<req>PLOT</req>
+</requirement>
+<description> You've survived the endurance 'training' from Awari. +1 to kinetic, +1 to struggle.</description>
+<modifier affects="KINETIC" value="1" type="ATTRIBUTE"/>
+<modifier affects="STRUGGLE" value="1" type="ATTRIBUTE"/>
+<maxrank value="1"/>
+
+</perk>

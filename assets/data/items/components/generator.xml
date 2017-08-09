@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="generator" weight="10" value="1000">
+<description>A fuel burning generator that produces energy.</description>
+<placeditem widget="modules/generator"/>
+</ItemWidget>

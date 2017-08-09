@@ -3,10 +3,15 @@
 
 <shipstats>
 <movecost value="24"/>
-<hullpoints value="80"/>
+<hullpoints value="40"/>
 <thrustcost value="1.2"/>
 <armour value="2"/>
 </shipstats>
+
+<emitters>
+<weapon x="0.0" y="0.2"/>
+<engine x="0.0" y="-0.2"/>
+</emitters>
 
 <layout width="16" height="16" spriteset="ship.png">
 <tileset>
