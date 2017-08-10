@@ -109,16 +109,21 @@ public class Player_RPG implements Actor_RPG {
 				if (moveList.get(0).getAmmoCost()>di.getEnergy())
 				{
 					moveList.remove(0);
-					moveList.add(0, defaultMoves[0]);
+					moveList.add(defaultMoves[0]);
 				}
 			}
 			else if (ItemWeapon.class.isInstance((playerInventory.getSlot(0))))
 			{
 				ItemWeapon weapon=(ItemWeapon)playerInventory.getSlot(0);
-				for (int i=0;i<weapon.getMoveCount();i++)
+				moveList.add(weapon.getMove(0));
+				if (weapon.getMoveCount()>1)
 				{
-					moveList.add(weapon.getMove(i));
+					for (int i=1;i<weapon.getMoveCount();i++)
+					{
+						addMove(weapon.getMove(i));
+					}	
 				}
+	
 	
 			}
 			else
@@ -141,7 +146,7 @@ public class Player_RPG implements Actor_RPG {
 					ItemEquip weapon=(ItemEquip)di.getItem();
 					for (int j=0;j<weapon.getMoveCount();j++)
 					{
-						moveList.add(weapon.getMove(j));
+						addMove(weapon.getMove(j));
 					}
 				}
 			}		
@@ -1062,7 +1067,10 @@ public class Player_RPG implements Actor_RPG {
 			case 3:
 				
 			return 1+moveLists[0]+moveLists[1]+moveLists[2];
-		
+			case 4:
+				
+			return 1+moveLists[0]+moveLists[1]+moveLists[2]+moveLists[3];
+				
 		}
 		return 0;
 	}

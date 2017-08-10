@@ -34,18 +34,31 @@
 <placeWidget x="1" y="1" name="slot"/>
 <placeWidget x="1" y="2" name="slot"/>
 <placeWidget x="9" y="4" name="slot"/>
-<placeWidget x="7" y="4" name="slot"/>
+<placeWidget x="7" y="4" name="slot">
+<contains name="modules/navconsole"/>
+</placeWidget>
+
 <placeWidget x="6" y="4" name="hardpoint"/>
-<placeWidget x="5" y="4" name="slot"/>
-<placeWidget x="3" y="4" name="slot"/>
-<placeWidget x="11" y="1" name="slot"/>
+
+<placeWidget x="5" y="4" name="slot">
+<contains name="modules/interplanetary reactor">
+<resource type="FUEL" value="40"/>
+</contains>
+</placeWidget>
+
+<placeWidget x="3" y="4" name="slot">
+<contains name="modules/generator">
+<resource type="ENERGY" value="25"/>
+</contains>
+</placeWidget>
+
+<placeWidget x="11" y="1" name="slot">
+<contains name="modules/algae cultivator">
+<resource type="ALGAE" value="25"/>
+</contains>
+</placeWidget>
+
 <placeWidget x="11" y="2" name="slot"/>
-
-<SeedNPCs min="1" max="1" name="AlphaMinoris_II/robosphere">
-<script death="robotdefeat"/>
-</SeedNPCs> 
-
-<placeWidget x="5" y="3" name="DAMAGE" value="20"/>
 </mapgen>
 </layout>
 <exterior width="8">
@@ -54,8 +67,8 @@
 <row>01111110</row>
 <row>00111100</row>
 <row>00000000</row>
-<pairedportal x="2" y="1" sprite="1" ID="-101" destination="heavy" facing="4"> ship hatch </pairedportal>
-<pairedportal x="5" y="1" sprite="1" ID="-102" destination="heavy" facing="4"> ship hatch </pairedportal>
+<pairedportal x="2" y="1" sprite="1" ID="-101" destination="heavyComplete" facing="4"> ship hatch </pairedportal>
+<pairedportal x="5" y="1" sprite="1" ID="-102" destination="heavyComplete" facing="4"> ship hatch </pairedportal>
 
 </exterior>
 </Ship>

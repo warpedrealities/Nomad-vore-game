@@ -73,7 +73,6 @@
 </placeWidget>
 
 <placeWidget x="2" y="3" name="slot">
-<contains name="cargocontainer"/>
 </placeWidget>
 
 <placeWidget x="6" y="3" name="slot">

@@ -28,6 +28,7 @@ public class WidgetReformer extends WidgetBreakable {
 		saveBreakable(dstream);
 		dstream.writeBoolean(active);
 		dstream.writeBoolean(suppressed);
+		dstream.writeLong(uid);
 	}
 
 	public WidgetReformer(DataInputStream dstream) throws IOException {
@@ -36,6 +37,7 @@ public class WidgetReformer extends WidgetBreakable {
 		load(dstream);
 		active = dstream.readBoolean();
 		suppressed = dstream.readBoolean();
+		uid=dstream.readLong();
 	}
 
 	@Override

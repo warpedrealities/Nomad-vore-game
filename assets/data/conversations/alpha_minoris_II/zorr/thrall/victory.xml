@@ -53,18 +53,18 @@
 	<choice destination="oralvoreDigestGO" text="digestion"/>
 	</page>
 	
-	<page ID="oralvoreDigestGO">
+	<gameover ID="oralvoreDigestGO">
 	<text>
 	"It was a good effort.." says the seraph as you tire yourself out trying to escape her and she gives her gut a consoling pat. Though now digestion is setting in in earnest. Her stomach might be out of practice in digesting meals such as you, but it's proving remarkably adept as your defeated and defenceless form is worked over in the tight confines of her belly. And gradually, you're worked down into mush inside of her. The gut of the seraph turning soft and round and then shrinking away as you're utterly digested and absorbed, going to nourish her deprived and slender form and perhaps going some way to restoring her to her former glory. Though one suspects that she will not appreciate your sacrifice in this.
 	</text>
 	
-	</page>
+	</gameover>
 	
 	<page ID="oralvoreSubmit">
 	<text>
 	The seraph's apology makes you smile a little. It's really not her fault she was made to devour you. Maybe were your circumstances different you could of been, well..something other than predator and meal..but you're content with that sort of relationship, besides...she really does look like she could do with a good meal. She seems puzzled by your lack of resistance, patting over the bulge as you get wriggle around to get comfortable but gently so as not to seem to struggle. Her digestive process becoming all the more vigorous around you as her gut gurgles and clenches on your body, starting to process and grind you down into nourishment and she remains unmoving as if held to it.
 	</text>
-	<choice destination="oralvoreSubmitGO" text="get digested">
+	<choice destination="oralvoreSubmitGO" text="get digested"/>
 	</page>
 	
 	<gameover ID="oralvoreSubmitGO">

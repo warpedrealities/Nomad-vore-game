@@ -11,7 +11,7 @@ A one handed iron war axe. 2AP Does 4-8 kinetic damage. (P)
 <missText count="1">
 <text>you fail to chop the TARGET .</text>
 </missText>
-<hitText count="2">
+<hitText count="1">
 <text>you chop TARGET for VALUE kinetic damage</text>
 </hitText>
 </combatMove>

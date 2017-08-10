@@ -64,7 +64,7 @@
 		<preference fetish="cockvore" />
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
 			flag="talked" />
-		<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="insulted" />	
+		<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="insult" />	
 		<text>
 			"Oh hi, it's you again. You ready to be welcomed to the village yet? I'm
 			not doing very good at my job if I don't welcome every visitor the
@@ -507,7 +507,7 @@
 
 	<page ID="start">
 		<preference fetish="cockvore" />
-		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="insulted" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="insult" />
 		<text>
 		"I don't want to talk to you anymore." ah the joys of dealing with the sulky and immature. Maybe leave her be?
 		</text>

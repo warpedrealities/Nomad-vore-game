@@ -335,12 +335,19 @@ public class ZoneInteractionHandler {
 					WidgetSlot ws = (WidgetSlot) m_zone.zoneTileGrid[x][y].getWidgetObject();
 					if (ws.getWidget() != null) {
 						Attackable attackable = (Attackable) ws.getWidget();
-						
-						if (player.useMove(number, attackable)) {
-							ws.handleAttack(player.getMove(number));
-						} else {
+						if (!ws.checkDismantle(player.getMove(number)))
+						{
+							if (player.useMove(number, attackable)) {
+								ws.handleAttack(player.getMove(number));
+							} else {
+								return false;
+							}	
+						}
+						else
+						{
 							return false;
 						}
+		
 					}
 				}
 			}

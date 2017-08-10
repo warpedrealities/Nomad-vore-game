@@ -203,6 +203,10 @@ public class Universe extends GameManager
 		isPlaying=false;
 	}
 	
+	public void setPlaying(boolean isPlaying) {
+		this.isPlaying = isPlaying;
+	}
+
 	public boolean getPlaying()
 	{
 		return isPlaying;

@@ -10,7 +10,7 @@
 			<assertion evaluate="haspart" part="vagina" />		
 		</choice>
 		<choice destination="receiveblowjob" text="give her something to suck">
-			<assertnot evaluate="haspart" part="penis" />			
+			<assertion evaluate="haspart" part="penis" />			
 		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
 		<choice destination="end" text="do nothing" />
@@ -25,7 +25,7 @@
 			<assertion evaluate="haspart" part="vagina" />		
 		</choice>
 		<choice destination="receiveblowjob" text="give her something to suck">
-			<assertnot evaluate="haspart" part="penis" />			
+			<assertion evaluate="haspart" part="penis" />			
 		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
 		<choice destination="end" text="do nothing" />
@@ -39,7 +39,7 @@
 			<assertion evaluate="haspart" part="vagina" />		
 		</choice>
 		<choice destination="receiveblowjob" text="give her something to suck">
-			<assertnot evaluate="haspart" part="penis" />			
+			<assertion evaluate="haspart" part="penis" />			
 		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
 		<choice destination="end" text="do nothing" />

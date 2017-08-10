@@ -9,7 +9,7 @@
 		<thermal value="2" />
 	</modifier>
 	<combatMove name="suit shield" ammoCost="1" timeCost="2"
-		cooldown="120" icon="2" pattern="SELF">
+		cooldown="120" icon="2" pattern="SELF" moveType="OTHER">
 		<hitText count="1">
 			<text></text>
 		</hitText>
@@ -18,8 +18,8 @@
 			<statusDefence uid="17" icon="1" duration="60"
 				numModifiers="2">
 				<strength value="50" />
-				<effect attribute="THERMAL" modifier="4" />
-				<effect attribute="KINETIC" modifier="4" />
+				<effect attribute="THERMAL" modifier="5" />
+				<effect attribute="KINETIC" modifier="5" />
 				<removeText> TARGET suit shield powers down fades away</removeText>
 			</statusDefence>
 		</effectStatus>

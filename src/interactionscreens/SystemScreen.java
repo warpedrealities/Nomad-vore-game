@@ -281,6 +281,9 @@ public class SystemScreen extends Screen implements Callback {
 					+ resourceObj.getContainedCapacity());
 
 		}
+		if (dispenserObj != null) {
+			dispenserText.setString(dispenserObj.getOutputItem() + ":" + Integer.toString(getNumDispensable()));			
+		}
 	}
 
 	@Override
@@ -348,7 +351,8 @@ public class SystemScreen extends Screen implements Callback {
 
 	private int getNumDispensable() {
 		if (resourceObj != null && resourceObj.getContainsWhat().equals(dispenserObj.getInput())) {
-			return resourceObj.getContainedCapacity() / dispenserObj.getCost();
+			int count=(int)resourceObj.getAmountContained() / dispenserObj.getCost();
+			return count;
 		}
 		return 0;
 	}

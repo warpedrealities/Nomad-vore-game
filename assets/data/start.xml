@@ -9,13 +9,11 @@
 <item value="jumpsuit"/>
 <item value="medkit"/>
 <item value="space meal"/>
-
 <appearance>
 <bodypart partname="body">
 <partvalue variablename="height" value="60"/>
 </bodypart>
 <bodypart partname="hair">
-
 </bodypart>
 <bodypart partname="skin">
 <partvalue variablename="colour" value="1"/>

@@ -44,9 +44,10 @@ public class CombatProjector implements ILosBoard {
 	@Override
 	public void visit(int x, int y) {
 
-		if (zone.getTile(x, y) != null && zone.getTile(x, y).getActorInTile() != null) {
-			if (zone.getTile(x, y).getActorInTile() != origin) {
-				attack(origin, move, zone.getTile(x, y).getActorInTile());
+		Tile t= zone.getTile(x, y);
+		if (zone.getTile(x, y) != null &&t.getActorInTile() != null) {
+			if (t.getActorInTile() != origin) {
+				attack(origin, move, t.getActorInTile());
 			}
 
 		}

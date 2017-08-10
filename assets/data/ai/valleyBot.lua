@@ -11,18 +11,19 @@ function combat(controllable,sense,pos,hostile)
 		controllable:Attack(pos.x,pos.y)	
 	else	
 		if a<6 then
-		controllable:setAttack(0);
-		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-		else if pos:getDistance(hostile:getPosition())>3 then
-		--if not move towards player
-			if controllable:HasPath() then
-			controllable:FollowPath()
-			else
-			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
-			end
-		else	
 			controllable:setAttack(0);
-			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
+			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+			else if pos:getDistance(hostile:getPosition())>3 then
+			--if not move towards player
+				if controllable:HasPath() then
+				controllable:FollowPath()
+				else
+				controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+				end
+			else	
+				controllable:setAttack(0);
+				controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
+			end
 		end
 	end
 

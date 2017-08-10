@@ -489,6 +489,9 @@ public class WidgetPlacer {
 		if (root.getTagName().contains("breakable")) {
 			widget = new WidgetBreakable(n);
 		}
+		if (root.getTagName().contains("reformer")) {
+			widget = new WidgetReformer(n);
+		}
 		if (root.getTagName().contains("container")) {
 			WidgetContainer container = new WidgetContainer(n);
 			if (lootTable == null) {

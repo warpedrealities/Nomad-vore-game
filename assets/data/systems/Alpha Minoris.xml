@@ -6,5 +6,5 @@
 <World x="-8" y="18">Alpha Minoris III</World>
 <Station x="13" y="11">Space Hulk 0</Station>
 <Spaceship x="2" y="2" file="talharan_trader" controller="talharan_trader0"/>
-<!--<Spaceship x="1" y="1" file="avenger"/>-->
+<Spaceship x="1" y="1" file="avenger"/>
 </System>

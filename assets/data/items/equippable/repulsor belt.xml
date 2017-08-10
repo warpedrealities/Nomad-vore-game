@@ -5,10 +5,10 @@
 		A belt made of interlocking metallic segments. Each segment seems
 		joined together by electrical wiring that all link to the central
 		control unit in the buckle. The belt creates a forcefield against
-		kinetic attack with strength 2, 10 hp and duration 60.
+		kinetic attack with strength 6, 30 hp and duration 60.
 	</description>
 	<combatMove name="forcefield" ammoCost="1" timeCost="2"
-		cooldown="120" icon="2" pattern="SELF">
+		cooldown="120" icon="2" pattern="SELF" moveType="OTHER">
 		<hitText count="1">
 			<text></text>
 		</hitText>
@@ -17,7 +17,7 @@
 			<statusDefence uid="16" icon="1" duration="60"
 				numModifiers="1">
 				<strength value="30" />
-				<effect attribute="KINETIC" modifier="5" />
+				<effect attribute="KINETIC" modifier="6" />
 				<removeText> TARGET forcefield fades away</removeText>
 			</statusDefence>
 		</effectStatus>

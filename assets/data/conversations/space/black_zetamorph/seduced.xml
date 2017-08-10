@@ -3,7 +3,7 @@
 	<page ID="start">
 		<text>
 		no interactions to be had with black zetamorphs yet.
-		</text
+		</text>
 		<choice destination="end" text="darn" />
 	</page>
 

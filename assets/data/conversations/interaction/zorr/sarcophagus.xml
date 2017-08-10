@@ -33,7 +33,7 @@
 	As you open the sarcophagus the figure's eyes snap open and she shoves the lid off the rest of the way. Each eye glinting a dull green hue as they dart around. The figure lurching upright as tattered feathery wings spread behind her and she turns to look at you. She seems confused for several moments, only for that to give away to confliction as she shudders and stops herself as she reaches for the blade scabbarded at her waist. But it seems her internal battle is swiftly lost as she pulls the blade free and her gaze locks onto you "stay away" she whispers almost pleadingly, even as she steps out of the sarcophagus and onto the attack.
 	</text>
 	<effect type="setlocalflag" flag="empty" value="1" />
-	<special effect="createNPC" file="Alpha_Minoris_II/zorr/thrall.xml"/>
+	<special effect="createNPC" file="AlphaMinoris_II/zorr/thrall"/>
 	<choice destination="end" text="oh, oh dear."/>
 	</page>
 </Conversation>

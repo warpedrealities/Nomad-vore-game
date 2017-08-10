@@ -149,7 +149,8 @@ public abstract class Actor implements Attackable {
 
 	boolean Move2() {
 		if (collisionInterface.passable((int) actorPosition.x + 1, (int) actorPosition.y, getFlying())) {
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			t.setActorInTile(null);
 			actorPosition.x += 1;
 			spriteInterface.reposition(actorPosition);
 			actorRPG.addBusy(getMoveCost());

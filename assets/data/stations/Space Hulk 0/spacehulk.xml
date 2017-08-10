@@ -47,7 +47,7 @@
 <row>02222200</row>
 <edge value="WEST"/>
 <spawn x="4" y="4" tag="1"/>
-<widget x="6" y="4" name="console" info="interaction/spacehulkcomputer" variable="31"/>
+<widget x="6" y="4" name="console" info="interaction/spacehulk/spacehulkcomputer" variable="31"/>
 </keyBlock>
 
 <keyBlock heat="2">
@@ -131,18 +131,18 @@
 <lootSubTable chance="1.0" file="spacehulk_special"/>
 </lootTable>
 <lootTable identity="ammochest">
-<lootSubTable chance="1.0" file="dagger missile"/>
-<lootSubTable chance="1.0" file="dagger missile"/>
-<lootSubTable chance="1.0" file="dagger missile"/>
-<lootSubTable chance="1.0" file="dagger missile"/>
-<lootSubTable chance="0.5" file="dagger missile"/>
-<lootSubTable chance="0.5" file="dagger missile"/>
-<lootSubTable chance="0.5" file="dagger missile"/>
-<lootSubTable chance="0.5" file="dagger missile"/>
-<lootSubTable chance="0.5" file="dagger missile"/>
-<lootSubTable chance="0.5" file="dagger missile"/>
-<lootSubTable chance="0.5" file="dagger missile"/>
-<lootSubTable chance="0.5" file="dagger missile"/>
+<loot chance="1.0" item="dagger missile"/>
+<loot chance="1.0" item="dagger missile"/>
+<loot chance="1.0" item="dagger missile"/>
+<loot chance="1.0" item="dagger missile"/>
+<loot chance="0.5" item="dagger missile"/>
+<loot chance="0.5" item="dagger missile"/>
+<loot chance="0.5" item="dagger missile"/>
+<loot chance="0.5" item="dagger missile"/>
+<loot chance="0.5" item="dagger missile"/>
+<loot chance="0.5" item="dagger missile"/>
+<loot chance="0.5" item="dagger missile"/>
+<loot chance="0.5" item="dagger missile"/>
 </lootTable>
 <lootTable identity="spacehulk_note">
 <loot item="note" chance="1.0" addendum="zer03"/>

@@ -160,22 +160,6 @@ public class WidgetSlot extends Widget {
 
 	public void handleAttack(CombatMove combatMove) {
 		if (widget != null) {
-			
-			if (widgetItem!=null)
-			{
-				for (int i=0;i<combatMove.getEffects().size();i++)
-				{
-					WidgetItemPile Pile = new WidgetItemPile(2, "a pile of items containing ", Universe.getInstance().getLibrary().getItem(widgetItem));
-					if (Effect_Dismantle.class.isInstance(combatMove.getEffects().get(i)))
-					{
-						Vec2f p = ViewScene.m_interface.getSceneController().getActiveZone().getWidgetPosition(this);
-						ViewScene.m_interface.placeWidget(Pile, (int) p.x, (int) p.y, true);
-						widget = null;
-						widgetItem=null;
-						ViewScene.m_interface.redraw();					
-					}
-				}			
-			}
 			if (widget.getHitpoints() <= 0) {
 				Item[] stack = widget.getContained();
 
@@ -204,6 +188,29 @@ public class WidgetSlot extends Widget {
 
 	public boolean isHardpoint() {
 		return hardpoint;
+	}
+
+	public boolean checkDismantle(CombatMove combatMove) {
+		if (widget != null) {
+			
+			if (widgetItem!=null)
+			{
+				for (int i=0;i<combatMove.getEffects().size();i++)
+				{
+				if (Effect_Dismantle.class.isInstance(combatMove.getEffects().get(i)))
+					{
+						WidgetItemPile Pile = new WidgetItemPile(2, "a pile of items containing ", Universe.getInstance().getLibrary().getItem(widgetItem));
+						Vec2f p = ViewScene.m_interface.getSceneController().getActiveZone().getWidgetPosition(this);
+						ViewScene.m_interface.placeWidget(Pile, (int) p.x, (int) p.y, true);
+						widget = null;
+						widgetItem=null;
+						ViewScene.m_interface.redraw();		
+						return true;
+					}
+				}			
+			}
+		}
+		return false;
 	}
 
 }

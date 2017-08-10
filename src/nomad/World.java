@@ -305,7 +305,11 @@ public class World extends Entity {
 			{
 				portal.setDestination(zone.getName(), -101);
 			}
-			
+			portal=ship.getZone(0).getPortalWidget(-102);
+			if (portal!=null)
+			{
+				portal.setDestination(zone.getName(), -102);
+			}
 			m_landings.add(l);
 			return true;
 
