@@ -69,6 +69,7 @@ public class Player_RPG implements Actor_RPG {
 	float karmaMeter;
 	boolean regenAction;
 
+	private static final float REGENCOST=0.05F;
 	
 	public void genMoveList()
 	{
@@ -261,7 +262,7 @@ public class Player_RPG implements Actor_RPG {
 	
 	public int getNextLevel()
 	{
-		return (playerLevel*45+(playerLevel*5))+100;
+		return (playerLevel*(45+(playerLevel*5)))+100;
 	}
 	
 	
@@ -331,7 +332,7 @@ public class Player_RPG implements Actor_RPG {
 		
 		if (stats[HEALTH]<statMax[HEALTH])
 		{
-			stats[HEALTH]+=subAbilities[REGENERATION]*duration*2; stats[SATIATION]-=subAbilities[REGENERATION]*2*duration;				
+			stats[HEALTH]+=subAbilities[REGENERATION]*duration*2; stats[SATIATION]-=REGENCOST*2*duration;				
 		}
 
 		if (stats[RESOLVE]<statMax[RESOLVE])
@@ -381,7 +382,8 @@ public class Player_RPG implements Actor_RPG {
 				if ( stats[SATIATION]>statMax[SATIATION]*subAbilities[REGENTHRESHOLD])
 				{
 					float bonus=((float)statMax[HEALTH])/30;
-					stats[HEALTH]+=subAbilities[REGENERATION]*bonus; stats[SATIATION]-=subAbilities[REGENERATION];		
+					stats[HEALTH]+=subAbilities[REGENERATION]*bonus; 
+					stats[SATIATION]-=REGENCOST;		
 				}			
 			}		
 		}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<perk name="Engineer">
+<requirement count="1">
+<req>CHARGEN</req>
+</requirement>
+<description> You were an engineer, tasked with the seemingly endless maintenance and repairs required to keep the Heinlein from falling apart around people's ears. +1 tech</description>
+<modifier affects="TECH" value="1" type="ATTRIBUTE"/>
+<maxrank value="1"/>
+</perk>

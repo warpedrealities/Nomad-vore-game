@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<perk name="Tactical officer">
+<requirement count="1">
+<req>CHARGEN</req>
+</requirement>
+<description> You were one of the few tactical officers meant to control the defensive weapons of the Heinlein in the event of an attack by aliens, or more likely, unexpected space debris. +2 gunnery</description>
+<modifier affects="GUNNERY" value="2" type="ATTRIBUTE"/>
+<maxrank value="1"/>
+</perk>

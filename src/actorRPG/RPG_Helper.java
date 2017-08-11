@@ -110,6 +110,9 @@ public class RPG_Helper {
 		if (str.contains("TECH")) {
 			return Actor_RPG.TECH;
 		}
+		if (str.contains("PERSUADE")) {
+			return Actor_RPG.PERSUADE;
+		}
 		if (str.contains("LEADERSHIP")) {
 			return Actor_RPG.LEADERSHIP;
 		}

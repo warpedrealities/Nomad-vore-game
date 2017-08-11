@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<perk name="dominant will">
+<requirement count="1"><req>PERKmind bolt</req></requirement>
+<description> 
+Your intellectual powers have been honed and can more easily dominant weaker minds. mind bolt does +2 max damage
+</description>
+<moveModifier name="mind bolt">
+<change type="MOD" >
+<effectDamage type="PSYCHIC" minValue="0" maxValue="2" modifier="INTELLIGENCE"/>
+</change>
+</moveModifier>
+<maxrank value="3"/>
+
+</perk>

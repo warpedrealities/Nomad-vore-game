@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<perk name="Science officer">
+<requirement count="1">
+<req>CHARGEN</req>
+</requirement>
+<description> The Heinlein was on a mission of discovery, you were one of the many scientists who inhabited its labs for this historic mission. +2 science</description>
+<modifier affects="SCIENCE" value="2" type="ATTRIBUTE"/>
+<maxrank value="1"/>
+</perk>

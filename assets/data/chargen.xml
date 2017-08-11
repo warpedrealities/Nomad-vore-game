@@ -86,6 +86,16 @@
 			</effect>
 		</mutation>
 	</phaseMutation>
+	
+	<phasePerk name="occupation on the Heinlein">
+		<perk name="Security guard" />
+		<perk name="Helm officer" />
+		<perk name="Tactical officer" />
+		<perk name="Engineer" />
+		<perk name="Science team" />
+		<perk name="Contact team" />
+	</phasePerk>
+	
 	<phaseMutation name="physique">
 
 	<mutation name="slender" descriptor="your physique is slender">

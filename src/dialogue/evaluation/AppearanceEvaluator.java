@@ -53,7 +53,6 @@ public class AppearanceEvaluator {
 	
 	public int check(String file) {
 		Document doc = ParserHelper.LoadXML("assets/data/conversations/likeness/" + file + ".xml");
-		Element root = doc.getDocumentElement();
 		Element n = (Element) doc.getFirstChild();
 		NodeList nodes=n.getChildNodes();
 		
