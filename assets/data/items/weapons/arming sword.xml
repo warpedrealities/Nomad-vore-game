@@ -12,7 +12,7 @@ A long one and two handed metal sword. Good for parrying +2 2AP Does 4-8 kinetic
 <missText count="1">
 <text>you fail to strike the TARGET .</text>
 </missText>
-<hitText count="2">
+<hitText count="1">
 <text>you strike TARGET for VALUE kinetic damage</text>
 </hitText>
 </combatMove>
