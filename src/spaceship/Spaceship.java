@@ -128,12 +128,24 @@ public class Spaceship extends Entity {
 
 	@Override
 	public Zone getZone(int index) {
+		switch (index)
+		{
+		case 0:
+			return interiorZone;
+			
+		case 1:
+			return dockedShip.interiorZone;
+		}
 		return interiorZone;
 
 	}
 
 	@Override
 	public int getNumZones() {
+		if (dockedShip!=null)
+		{
+			return 2;
+		}
 		return 1;
 	}
 
@@ -145,6 +157,13 @@ public class Spaceship extends Entity {
 			}
 		}
 
+		if (dockedShip!=null && dockedShip.getZone(0)!=null)
+		{
+			if (dockedShip.getZone(0).getName().contains(name))
+			{
+				return dockedShip.getZone(0);
+			}
+		}
 		return null;
 	}
 
@@ -294,6 +313,7 @@ public class Spaceship extends Entity {
 		}
 		if (dstream.readBoolean()) {
 			dockedShip = new Spaceship();
+			int v=dstream.readInt();
 			dockedShip.load(dstream);
 		}
 		if (dstream.readBoolean())
@@ -333,7 +353,16 @@ public class Spaceship extends Entity {
 				return interiorZone;
 			}
 		}
-
+		if (dockedShip!=null)
+		{
+			if (dockedShip.interiorZone!=null)
+			{
+				if (dockedShip.interiorZone.getName().contains(name))
+				{
+					return dockedShip.interiorZone;
+				}
+			}
+		}
 		return null;
 	}
 

@@ -13,8 +13,8 @@ import org.w3c.dom.NodeList;
 
 import actor.npc.NPC;
 import actor.player.Player;
-import actorRPG.Player_RPG;
 import actorRPG.RPG_Helper;
+import actorRPG.player.Player_RPG;
 import dialogue.MalformedDialogException;
 import faction.Faction;
 import nomad.FlagField;

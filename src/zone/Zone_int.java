@@ -23,4 +23,8 @@ public interface Zone_int {
 
 	public Tile getTile(int x, int y);
 
+	public void removeThreat(int x, int y, Actor npc);
+
+	public void addThreat(int x, int y, Actor npc);
+
 }

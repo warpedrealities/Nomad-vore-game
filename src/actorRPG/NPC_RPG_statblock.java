@@ -11,7 +11,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import combat.CombatMove;
-
+import faction.Faction;
 import shared.ParserHelper;
 
 public class NPC_RPG_statblock {
@@ -25,9 +25,11 @@ public class NPC_RPG_statblock {
 	private int expValue;
 	private NPCItemDrop itemDrop;
 
-	ArrayList<CombatMove> moveList;
-	String[] statusTags;
+	private ArrayList<CombatMove> moveList;
+	private String[] statusTags;
 
+	private int threatMove=-1;
+	
 	public String getNPCName() {
 		return NPCName;
 	}
@@ -165,8 +167,48 @@ public class NPC_RPG_statblock {
 		return false;
 	}
 
+	public void resetThreat()
+	{
+		threatMove=-1;
+	}
+	
 	public NPCItemDrop getItemDrop() {
 		return itemDrop;
 	}
 
+	public boolean isThreatening(Faction faction)
+	{
+		if (threatMove==-1)
+		{
+			if (faction.getRelationship("player")>50)
+			{
+				threatMove=-2;
+				return false;
+			}
+			for (int i=0;i<moveList.size();i++)
+			{
+				if (moveList.get(i).isThreatening())
+				{
+					threatMove=i;
+					return true;
+				}
+			}
+			if (threatMove==-1)
+			{
+				threatMove=-2;
+				return false;
+			}
+		}
+		if (threatMove>=0)
+		{
+			return true;
+		}
+		return false;
+		
+	}
+	
+	public int getThreatMove()
+	{
+		return threatMove;
+	}
 }

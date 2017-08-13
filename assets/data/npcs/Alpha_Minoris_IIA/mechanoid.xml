@@ -4,7 +4,7 @@
 <name>mechanoid</name>
 <description>An armour plated combat machine towering 8 feet tall. Its bulky shoulders mount multi barreled cannon and its hands end in heavy metal fists. Its single monocular sensor eye glows red as it surveys its surroundings.</description>
 <rpg>
-<experiencevalue value="100"/>
+<experiencevalue value="150"/>
 <ability ability="STRENGTH" value="5" />
 <ability ability="AGILITY" value="5" />
 <ability ability="DEXTERITY" value="5" />
@@ -16,11 +16,11 @@
 <attribute attribute="PSYCHIC" value="10"/>
 <attribute attribute="KINETIC" value="4"/>
 <attribute attribute="SHOCK" value="-2"/>
-<stat stat="HEALTH" value="60"/>
-<stat stat="RESOLVE" value="60"/>
+<stat stat="HEALTH" value="100"/>
+<stat stat="RESOLVE" value="100"/>
 <combatMove name="laser" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" bonusToHit="2" rangedbias="2">
-<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
-<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="3" maxValue="8" modifier="NONE"/>
+<effectDamage type="THERMAL" minValue="3" maxValue="8" modifier="NONE"/>
 <missText count="1">
 <text>the mechanoid's lasers fail to scorch TARGET</text>
 </missText>
@@ -29,7 +29,7 @@
 </hitText>
 </combatMove>
 <combatMove name="fist" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2" rangedbias="2">
-<effectDamage type="KINETIC" minValue="2" maxValue="12" modifier="NONE"/>
+<effectDamage type="KINETIC" minValue="5" maxValue="16" modifier="NONE"/>
 <missText count="1">
 <text>the mechanoid takes a swing at TARGET but doesn't connect</text>
 </missText>

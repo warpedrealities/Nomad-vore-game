@@ -16,7 +16,7 @@
 <stat stat="RESOLVE" value="25"/>
 <attribute attribute="DODGE" value="2"/>
 <attribute attribute="PARRY" value="2"/>
-<combatMove name="kick" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0">
+<combatMove name="kick" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0" threatening="true">
 <effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
 <missText count="2">
 <text>The froggy snaps out a powerful kick that does not connect with TARGET</text>

@@ -2,8 +2,8 @@
 <perk name="tough">
 <description> 
 Tougher than the mountain, 
-you eat a jar of nails and break a sword over your knee every morning just cause you can...or maybe not. +6 health. </description>
-<modifier affects="HEALTH" value="6" type="STAT"/>
+you eat a jar of nails and break a sword over your knee every morning just cause you can...or maybe not. +8 health. </description>
+<modifier affects="HEALTH" value="8" type="STAT"/>
 
 <maxrank value="3"/>
 

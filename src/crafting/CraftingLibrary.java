@@ -62,7 +62,9 @@ public class CraftingLibrary {
 				boolean b=dstream.readBoolean();
 				if (b && !craftables.get(str).getUnlocked())
 				{
+
 					sortedCraftables.add(craftables.get(str));
+		
 				}
 				craftables.get(str).setUnlocked(b);
 			}

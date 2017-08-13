@@ -13,6 +13,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actorRPG.NPCStatblockLibrary;
 import shared.ParserHelper;
 
 import nomad.FlagField;
@@ -147,6 +148,7 @@ public class Faction {
 		Faction alt = FactionLibrary.getInstance().getFaction(name);
 		alt.factionRelationships.put(filename, v);
 
+		NPCStatblockLibrary.getInstance().resetThreat();
 	}
 
 }

@@ -11,6 +11,7 @@ import combat.CombatMove;
 import combat.statusEffects.StatusEffect;
 import combat.statusEffects.StatusLoader;
 import combat.statusEffects.Status_Bind;
+import faction.Faction;
 import nomad.Universe;
 import shared.ParserHelper;
 import view.ViewScene;
@@ -306,5 +307,15 @@ public class NPC_RPG implements Actor_RPG {
 	@Override
 	public float getSubAbility(int i) {
 		return 0;
+	}
+	
+	@Override
+	public boolean isThreatening(Faction faction)
+	{
+		return statBlock.isThreatening(faction);
+	}
+	public int getThreatMove()
+	{
+		return statBlock.getThreatMove();
 	}
 }

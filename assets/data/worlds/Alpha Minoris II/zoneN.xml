@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="jungle.png">
 <tileset count-x="4" count-y="4">
-<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="2" vision="1" movement="2"> a metal wall</tile>
 <tile sprite="1" vision="0" movement="0"> a platform of crude masonry </tile>
 <tile sprite="2" vision="0" movement="0"> jungle vegetation</tile>
 <tile sprite="3" vision="0" movement="0"> jungle mud</tile>

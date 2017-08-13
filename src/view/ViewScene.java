@@ -59,7 +59,7 @@ import actor.npc.NPC;
 import actor.npc.Temp_NPC;
 import actor.player.CompanionTool;
 import actorRPG.Actor_RPG;
-import actorRPG.Player_RPG;
+import actorRPG.player.Player_RPG;
 import artificial_intelligence.BrainBank;
 import artificial_intelligence.Sense;
 

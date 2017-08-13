@@ -77,7 +77,12 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 		DrawSetup();
 		GL11.glDisable(GL11.GL_DEPTH_TEST);
 		GL13.glActiveTexture(GL13.GL_TEXTURE0);
-			screen.draw(matrix44Buffer, SceneBase.getVariables()[2]);
+		if (screen!=null)
+		{
+			
+			screen.draw(matrix44Buffer, SceneBase.getVariables()[2]);			
+		}
+
 	}
 
 	@Override
@@ -95,7 +100,10 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 	public void end() {
 		m_text.discard();
 		CleanTextures();
-		screen.discard(m_hook);
+		if (screen!=null)
+		{
+			screen.discard(m_hook);		
+		}
 		m_hook.Clean();
 	}
 	@Override
@@ -126,10 +134,12 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 		values[2] = m_textureIds[7];
 		values[3] = m_textureIds[8];
 		values[4] = m_variables[0];
-		screen.initialize(values, this);
-		this.screen = screen;
-
-		this.screen.start(m_hook);	
+		if (screen!=null)
+		{
+			screen.initialize(values, this);
+			this.screen = screen;
+			this.screen.start(m_hook);				
+		}
 	}
 
 }

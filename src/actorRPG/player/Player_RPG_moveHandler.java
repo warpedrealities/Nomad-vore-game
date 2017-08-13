@@ -1,4 +1,4 @@
-package actorRPG;
+package actorRPG.player;
 
 import perks.Perk;
 import perks.PerkElement;

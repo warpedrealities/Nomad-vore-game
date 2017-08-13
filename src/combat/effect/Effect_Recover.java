@@ -8,7 +8,7 @@ import actor.Actor;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
-import actorRPG.Player_RPG;
+import actorRPG.player.Player_RPG;
 
 public class Effect_Recover extends Effect {
 

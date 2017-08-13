@@ -25,8 +25,10 @@ import artificial_intelligence.pathfinding.Pathfinder;
 
 import rlforj.los.ILosBoard;
 import rlforj.util.BresenhamLine;
+import shared.Geometry;
 import shared.ParserHelper;
 import shared.Vec2f;
+import shared.Vec2i;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
 import view.ModelController_Int;
@@ -527,9 +529,12 @@ public class Zone implements ILosBoard, Zone_int {
 				if (zoneActors.get(i).Respawn(GameManager.getClock())) {
 					zoneActors.remove(i);
 				}
-				if (getTile((int) zoneActors.get(i).getPosition().x, (int) zoneActors.get(i).getPosition().y) != null) {
-					zoneTileGrid[(int) zoneActors.get(i).getPosition().x][(int) zoneActors.get(i).getPosition().y]
-							.setActorInTile(zoneActors.get(i));
+				else
+				{
+					if (getTile((int) zoneActors.get(i).getPosition().x, (int) zoneActors.get(i).getPosition().y) != null) {
+						zoneTileGrid[(int) zoneActors.get(i).getPosition().x][(int) zoneActors.get(i).getPosition().y]
+								.setActorInTile(zoneActors.get(i));
+					}
 				}
 			}
 
@@ -540,6 +545,10 @@ public class Zone implements ILosBoard, Zone_int {
 				if (zoneTileGrid[i][j] != null) {
 					if (zoneTileGrid[i][j].getWidgetObject() != null) {
 						zoneTileGrid[i][j].getWidgetObject().Regen(GameManager.getClock(), this);
+					}
+					if (zoneTileGrid[i][j].getThreat()!=null)
+					{
+						zoneTileGrid[i][j].setThreat(null);
 					}
 				}
 			}
@@ -725,5 +734,35 @@ public class Zone implements ILosBoard, Zone_int {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public void removeThreat(int x, int y, Actor npc) {
+		for (int i=0;i<8;i++)
+		{
+			Vec2i p=Geometry.getPos(i, x, y);
+			if (contains(p.x,p.y))
+			{
+				if (zoneTileGrid[p.x][p.y]!=null && zoneTileGrid[p.x][p.y].getThreat()==npc)
+				{
+					zoneTileGrid[p.x][p.y].setThreat(null);
+				}
+			}
+		}
+	}
+
+	@Override
+	public void addThreat(int x, int y, Actor npc) {
+		for (int i=0;i<8;i++)
+		{
+			Vec2i p=Geometry.getPos(i, x, y);
+			if (contains(p.x,p.y))
+			{
+				if (zoneTileGrid[p.x][p.y]!=null && zoneTileGrid[p.x][p.y].getThreat()==null)
+				{
+					zoneTileGrid[p.x][p.y].setThreat(npc);
+				}
+			}
+		}	
 	}
 }

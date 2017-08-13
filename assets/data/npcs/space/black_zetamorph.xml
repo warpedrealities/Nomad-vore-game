@@ -16,7 +16,7 @@
 
 <attribute attribute="PARRY" value="2"/>
 <attribute attribute="THERMAL" value="24"/>
-<combatMove name="cuisinart" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
+<combatMove name="cuisinart" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
 <effectDamage type="KINETIC" minValue="2" maxValue="9" modifier="STRENGTH"/>
 <missText count="3">
 <text>the lash of the black zetamorph's tail fails to connect with TARGET</text>
@@ -31,7 +31,7 @@
 <text>the black zetamorph manages to clutch TARGET and rake them with the claws of both arms on one side for VALUE damage</text>
 </hitText>
 </combatMove>
-<combatMove name="web" pattern="RANGED" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
+<combatMove name="web" pattern="RANGED" bonusAttribute="MELEE" timeCost="2" bonusToHit="4">
 <missText count="1">
 <text>The black zetamorph launches webbing at TARGET but fails to hit</text>
 </missText>

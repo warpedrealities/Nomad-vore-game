@@ -4,7 +4,7 @@ import java.nio.FloatBuffer;
 import java.util.Iterator;
 
 import actorRPG.Actor_RPG;
-import actorRPG.Player_RPG;
+import actorRPG.player.Player_RPG;
 import graphics.Screen_Fade;
 import gui.Button;
 import gui.Window;

@@ -48,4 +48,14 @@ public class NPCStatblockLibrary {
 		return block;
 	}
 
+	public void resetThreat()
+	{
+		Iterator it=statBlocks.values().iterator();
+		
+		while (it.hasNext())
+		{
+			NPC_RPG_statblock block=(NPC_RPG_statblock)it.next();
+			block.resetThreat();
+		}
+	}
 }

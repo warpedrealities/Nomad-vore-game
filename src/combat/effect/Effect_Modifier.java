@@ -1,9 +1,10 @@
 package combat.effect;
 
 import org.w3c.dom.Element;
-import actorRPG.Player_RPG;
+
 import view.ViewScene;
 import actor.Actor;
+import actorRPG.player.Player_RPG;
 
 public class Effect_Modifier extends Effect {
 

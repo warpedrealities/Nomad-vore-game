@@ -15,7 +15,7 @@
 <stat stat="HEALTH" value="40"/>
 <stat stat="RESOLVE" value="40"/>
 <attribute attribute="KINETIC" value="2"/>
-<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
+<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" threatening="true">
 <effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
 <missText count="2">
 <text>the warrior's mace doesn't connect with TARGET</text>

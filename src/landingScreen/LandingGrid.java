@@ -68,8 +68,11 @@ public class LandingGrid extends GUIBase {
 
 				if (gridElements[x][y] != null && gridElements[x][y].getLandingType() == LandingClass.LC_OPEN) {
 					gridElements[x][y].setLandingType(LandingClass.LC_SELECTED);
-					gridElements[xSelect][ySelect].setLandingType(LandingClass.LC_OPEN);
-					gridRender.setImage(xSelect, ySelect, LandingClass.LC_OPEN.ordinal());
+					if (xSelect>-1 && ySelect>-1)
+					{
+						gridElements[xSelect][ySelect].setLandingType(LandingClass.LC_OPEN);	
+						gridRender.setImage(xSelect, ySelect, LandingClass.LC_OPEN.ordinal());	
+					}
 					xSelect = x;
 					ySelect = y;
 					gridRender.setImage(xSelect, ySelect, LandingClass.LC_SELECTED.ordinal());

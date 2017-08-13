@@ -35,7 +35,10 @@
 <tag>radio</tag>
 <tag>seduction</tag>
 </statusTags>
+<itemDrop chance="50" item="scrap metal"/>
+<itemDrop chance="50" item="optics"/>
+<itemDrop chance="50" item="computation valve"/>
 </rpg>
-<controller AI="sentinel"/>
+<controller AI="laser_sentinel"/>
 <faction value="player"/>
 </NPC>

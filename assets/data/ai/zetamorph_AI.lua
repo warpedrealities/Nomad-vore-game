@@ -1,4 +1,11 @@
 
+function moveTo(controllable,sense,pos,hostile)
+	if pos:getDistance(hostile:getPosition())<2 then
+	--if in melee range attack
+	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+	end
+end
+
 function combat(controllable,sense,pos,hostile)
 
 	if pos:getDistance(hostile:getPosition())<2 then
@@ -8,9 +15,11 @@ function combat(controllable,sense,pos,hostile)
 	--if not move towards player
 		if controllable:HasPath() then
 			controllable:FollowPath()
+			moveTo(controllable,sense,pos,hostile)
 		else
 			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,2)
 			controllable:FollowPath()	
+			moveTo(controllable,sense,pos,hostile)
 		end
 	end
 

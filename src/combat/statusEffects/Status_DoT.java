@@ -161,7 +161,7 @@ public class Status_DoT implements StatusEffect {
 	public void update(Actor_RPG subject) {
 
 		clock++;
-		if (clock > 5) {
+		if (clock >= 10) {
 			clock = 0;
 
 			subject.ReduceStat(modifiers[0].attribute, modifiers[0].modifier);

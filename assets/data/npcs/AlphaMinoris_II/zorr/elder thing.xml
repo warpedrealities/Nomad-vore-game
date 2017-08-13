@@ -17,7 +17,7 @@
 <attribute attribute="PHEREMONE" value="10"/>
 <attribute attribute="DODGE" value="4"/>
 <attribute attribute="PARRY" value="4"/>
-<combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
+<combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2" threatening="true">
 <effectDamage type="KINETIC" minValue="3" maxValue="8" modifier="STRENGTH"/>
 <missText count="2">
 <text>The elder thing flails its tentacles at TARGET</text>

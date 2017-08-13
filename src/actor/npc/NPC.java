@@ -30,8 +30,8 @@ import faction.violation.FactionRule.ViolationType;
 
 import actorRPG.Actor_RPG;
 import actorRPG.NPC_RPG;
-import actorRPG.Player_RPG;
 import actorRPG.RPGActionHandler;
+import actorRPG.player.Player_RPG;
 import artificial_intelligence.BrainBank;
 import artificial_intelligence.Code_AI;
 import artificial_intelligence.Controllable;
@@ -47,6 +47,7 @@ import view.ViewScene;
 import view.ZoneInteractionHandler;
 import vmo.GameManager;
 import zone.Tile;
+import zone.Zone_int;
 
 public class NPC extends Actor implements Controllable {
 
@@ -259,6 +260,31 @@ public class NPC extends Actor implements Controllable {
 
 	}
 
+
+	@Override
+	public boolean move(int direction) {
+		if (actorRPG.getBindState() > -1) {
+			actorRPG.struggle();
+
+			return true;
+		}
+		boolean threat=actorRPG.isThreatening(actorFaction);
+		boolean b = false;
+		Vec2f p = ZoneInteractionHandler.getPos(direction, getPosition());
+		
+		int x=(int) actorPosition.x;
+		int y=(int) actorPosition.y;
+		
+		b=super.move(direction);
+		if (threat && b)
+		{
+			collisionInterface.removeThreat(x,y,this);
+			collisionInterface.addThreat((int)actorPosition.x,(int)actorPosition.y,this);
+					
+		}
+		return b;
+	}
+	
 	public void Remove() {
 
 		actorVisibility = false;
@@ -391,7 +417,7 @@ public class NPC extends Actor implements Controllable {
 		} else {
 			spriteInterface.setImage(2);
 		}
-
+		collisionInterface.removeThreat((int)actorPosition.x, (int)actorPosition.y, this);
 	}
 
 	@Override
@@ -534,6 +560,14 @@ public class NPC extends Actor implements Controllable {
 		} else {
 			dstream.writeBoolean(false);
 		}
+	}
+	
+	public void setCollisioninterface(Zone_int zinterface) {
+		if (actorRPG.isThreatening(actorFaction))
+		{
+			zinterface.addThreat((int)actorPosition.x, (int)actorPosition.y, this);
+		}
+		super.setCollisioninterface(zinterface);
 	}
 
 	@Override
@@ -780,6 +814,15 @@ public class NPC extends Actor implements Controllable {
 			}
 		}
 		return tile.getVisible();
+	}
+
+	public void attackOfOpportunity(Actor target) {
+		if (actorRPG.getBusy()<=getMoveCost())
+		{
+			senseInterface.drawText("attack of opportunity!");
+			int threat=((NPC_RPG)actorRPG).getThreatMove();
+			useMove(threat,target);			
+		}
 	}
 
 }

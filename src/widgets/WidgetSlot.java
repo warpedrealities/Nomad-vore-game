@@ -115,6 +115,10 @@ public class WidgetSlot extends Widget {
 		this.widgetItem=widgetItem;
 	}
 
+	public void setWidgetItem(String widgetItem) {
+		this.widgetItem = widgetItem;
+	}
+
 	public String getDescription() {
 		if (widget != null) {
 			return widget.getDescription();

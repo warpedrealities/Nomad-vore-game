@@ -171,9 +171,12 @@ public class Status_Bind extends Status_AttribMod {
 
 	@Override
 	public void remove(Actor_RPG subject) {
-		// TODO Auto-generated method stub
 		for (int i = 0; i < modifiers.length; i++) {
 			subject.modAttribute(modifiers[i].attribute, modifiers[i].modifier * -1);
+		}
+		if (origin!=null)
+		{
+			origin.addBusy(2);
 		}
 		ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		subject.setBindState(-1);

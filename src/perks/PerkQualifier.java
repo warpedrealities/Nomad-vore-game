@@ -3,7 +3,7 @@ package perks;
 import java.util.ArrayList;
 
 import actor.player.Player_LOOK;
-import actorRPG.Player_RPG;
+import actorRPG.player.Player_RPG;
 import nomad.Universe;
 
 public class PerkQualifier {

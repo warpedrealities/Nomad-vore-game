@@ -26,9 +26,8 @@ import perks.Perk;
 import perks.PerkLibrary;
 import research.Encyclopedia;
 import actorRPG.Actor_RPG;
-import actorRPG.Player_RPG;
 import actorRPG.RPGActionHandler;
-
+import actorRPG.player.Player_RPG;
 import shared.ParserHelper;
 import shared.SceneBase;
 import shared.Vec2f;
@@ -134,7 +133,7 @@ public class Player extends Actor {
 		actorVisibility = true;
 
 		craftingLibrary = new CraftingLibrary();
-		craftingLibrary.load();
+	//	craftingLibrary.load();
 
 		globalFlags = new FlagField();
 
@@ -234,8 +233,15 @@ public class Player extends Actor {
 			}
 
 		}
+		//check for threat	
+		Tile t=collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y);
+		if (t.getThreat()!=null)
+		{
+			((NPC)t.getThreat()).attackOfOpportunity(this);
+		}	
 		b = super.move(direction);
 		if (b == true) {
+		
 			if (actorRPG.getSubAbility(Actor_RPG.MOVEAPCOST) > 0) {
 				((Player_RPG) actorRPG).useAction((int) actorRPG.getSubAbility(Actor_RPG.MOVEAPCOST));
 				if (actorRPG.getStat(Actor_RPG.ACTION) <= 0) {

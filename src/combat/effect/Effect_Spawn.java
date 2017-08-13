@@ -9,7 +9,7 @@ import view.ViewScene;
 public class Effect_Spawn extends Effect {
 
 	private String filename;
-	
+	private String description;
 	public Effect_Spawn()
 	{
 		
@@ -17,21 +17,22 @@ public class Effect_Spawn extends Effect {
 	
 	public Effect_Spawn(Element e) {
 		filename=e.getAttribute("value");
+		description = e.getTextContent().replace("\n", "");
 	}
 
 	@Override
 	public int applyEffect(Actor origin, Actor target, boolean critical) {
 		//spawn temp npc
 		ViewScene.m_interface.createNPC(filename, Universe.getInstance().getPlayer().getPosition(),true);
-		
+		ViewScene.m_interface.DrawText(description);
 		return 1;
 	}
 
 	@Override
 	public Effect clone() {
-		// TODO Auto-generated method stub
 		Effect_Spawn spawn=new Effect_Spawn();
 		spawn.filename=filename;
+		spawn.description=description;
 		return spawn;
 	}
 

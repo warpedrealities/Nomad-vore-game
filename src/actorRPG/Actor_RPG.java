@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import combat.CombatMove;
 import combat.statusEffects.StatusEffect;
-
+import faction.Faction;
 import actor.Actor;
 import actor.Modifier;
 
@@ -121,4 +121,9 @@ public interface Actor_RPG {
 	public void recover(int i);
 
 	public float getSubAbility(int i);
+	
+	public default boolean isThreatening(Faction faction)
+	{
+		return false;
+	};	
 }

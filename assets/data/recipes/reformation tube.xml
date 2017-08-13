@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="reformation tube" requiredskill="0" startunlocked="false">
+<recipe name="reformation tube" requiredskill="1" startunlocked="false">
 <description>
 a reformation tube required to reproduce the body and retrieve consciousness of synchronized individuals. This allows one to cheat death, a useful thing to have in this dangerous galaxy.
 </description>

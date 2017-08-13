@@ -2,7 +2,7 @@ package interactionscreens;
 
 import java.nio.FloatBuffer;
 
-import actorRPG.Player_RPG;
+import actorRPG.player.Player_RPG;
 import graphics.Screen_Fade;
 import gui.Button;
 import gui.Text;

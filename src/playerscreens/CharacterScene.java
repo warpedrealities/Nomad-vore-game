@@ -17,7 +17,7 @@ import org.lwjgl.util.vector.Matrix4f;
 
 import actor.player.Player;
 import actorRPG.Actor_RPG;
-
+import actorRPG.player.Player_RPG;
 import nomad.Universe;
 
 import shared.Callback;
@@ -27,8 +27,7 @@ import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
 import view.ViewScene;
-import vmo.Game;
-import actorRPG.Player_RPG;;
+import vmo.Game;;
 
 public class CharacterScene extends SceneBase implements Callback, MyListener {
 

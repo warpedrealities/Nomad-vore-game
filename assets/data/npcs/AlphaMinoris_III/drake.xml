@@ -6,7 +6,7 @@
 A four legged dog sized reptile covered in pale blue scales. It watches you with inquisitive and predatory eyes set in a slender long jawed lizardlike head, long tail flicking around as it adjusts its posture and flares its wings out in preparation to fly at you.
 </description>
 <rpg>
-<experiencevalue value="20"/>
+<experiencevalue value="40"/>
 <ability ability="STRENGTH" value="5" />
 <ability ability="AGILITY" value="5" />
 <ability ability="DEXTERITY" value="5" />

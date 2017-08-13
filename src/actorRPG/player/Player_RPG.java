@@ -1,4 +1,4 @@
-package actorRPG;
+package actorRPG.player;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -40,6 +40,8 @@ import actor.Actor;
 import actor.Modifier;
 import actor.player.Inventory;
 import actor.player.Player;
+import actorRPG.Actor_RPG;
+import actorRPG.StatusEffectHandler;
 
 
 public class Player_RPG implements Actor_RPG {
@@ -217,7 +219,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=00;
+		playerExperience=500;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -262,7 +264,8 @@ public class Player_RPG implements Actor_RPG {
 	
 	public int getNextLevel()
 	{
-		return (playerLevel*(45+(playerLevel*5)))+100;
+		int pl=playerLevel+1;
+		return pl*(5*(pl*5));
 	}
 	
 	
@@ -421,7 +424,7 @@ public class Player_RPG implements Actor_RPG {
 		statMax[0]+=v;
 		v=(abilities[INTELLIGENCE]-3)*playerLevel;
 		statMax[1]+=v;
-		v=(abilities[INTELLIGENCE]-3)*playerLevel*2;
+		v=(abilities[ENDURANCE]-3)*playerLevel*2;
 		statMax[2]+=v;
 		v=playerLevel*2;
 		statMax[3]+=v;

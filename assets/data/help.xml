@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<intro count="5">
+<intro count="6">
 	<text>
 		Your health bar (red, topmost) is your resistance to being taken as
 		unwilling prey or otherwise meeting a terrible fate. Healing items are
@@ -63,6 +63,15 @@
 		use the item in the quickslot or swap with the equipped weapon LBREAK
 		You can set your quick action which will appear on the dropdown by
 		pressing F2 LBREAK
-		page 5 (end of file, a or left to move to the prior page)
+		page 5 (d or right to move to next page, a or left to move to the prior
+		page)
+	</text>
+		<text>
+		In space mode you can move using similar controls to on the ground with WASD, arrowkeys or the numpad LBREAK
+		You will need fuel to move LBREAK
+		You can wait (for solar power collection or to charge a warp drive) by pressing numpad 5 or the spacebar LBREAK
+		FTL travel is available from the system->nav panel when you're on a ship with an FTL score LBREAK
+		FTL travel requires stored energy and your destination is selected based on your position around the star LBREAK
+		page 6 (end of file, a or left to move to the prior page)
 	</text>
 </intro>

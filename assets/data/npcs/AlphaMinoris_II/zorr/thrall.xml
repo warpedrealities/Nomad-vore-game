@@ -16,7 +16,7 @@
 <stat stat="RESOLVE" value="30"/>
 <attribute attribute="DODGE" value="2"/>
 <attribute attribute="PARRY" value="4"/>
-<combatMove name="swipe" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4">
+<combatMove name="swipe" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
 <effectDamage type="KINETIC" minValue="1" maxValue="8" modifier="STRENGTH"/>
 <missText count="2">
 <text>The thrall swipes at TARGET without connecting</text>

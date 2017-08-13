@@ -4,7 +4,7 @@
 <name>RoboGuard</name>
 <description>A sturdy drum shaped robot, each segmented arm ends in a laser gun. Its head is devoid of features but for a scanning aperture which is a mere foreboding slit, an ominous red light tracking back and forth across it.</description>
 <rpg>
-<experiencevalue value="45"/>
+<experiencevalue value="55"/>
 <ability ability="STRENGTH" value="5" />
 <ability ability="AGILITY" value="5" />
 <ability ability="DEXTERITY" value="5" />

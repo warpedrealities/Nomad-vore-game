@@ -16,7 +16,7 @@ import actor.Attackable;
 import actor.npc.NPC;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
-import actorRPG.Player_RPG;
+import actorRPG.player.Player_RPG;
 import combat.CombatMove.AttackPattern;
 
 public class ZoneInteractionHandler {

@@ -5,7 +5,7 @@ import java.nio.FloatBuffer;
 import org.lwjgl.glfw.GLFW;
 
 import actor.player.Player;
-import actorRPG.Player_RPG;
+import actorRPG.player.Player_RPG;
 import gui.lists.List;
 import input.Keyboard;
 import input.MouseHook;

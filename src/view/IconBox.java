@@ -8,10 +8,8 @@ import nomad.Universe;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 
+import actorRPG.player.Player_RPG;
 import combat.statusEffects.StatusEffect;
-
-import actorRPG.Player_RPG;
-
 import rendering.Sprite;
 import shared.Tools;
 import shared.Vec2f;

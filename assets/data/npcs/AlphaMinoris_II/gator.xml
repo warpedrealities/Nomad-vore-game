@@ -16,7 +16,7 @@
 <stat stat="RESOLVE" value="40"/>
 <attribute attribute="TEASE" value="6"/>
 <attribute attribute="KINETIC" value="4"/>
-<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
+<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2" threatening="true">
 <missText count="2">
 <text>The gator tries to bite TARGET</text>
 <text>The gator attempts to bite TARGET</text>

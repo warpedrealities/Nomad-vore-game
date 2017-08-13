@@ -32,6 +32,11 @@ public class CombatMovementHandler {
 			}
 		}
 		if (Universe.getInstance().getCurrentZone().contains((int) last.x, (int) last.y)) {
+			if (actor.getRPG().isThreatening(actor.getActorFaction()))
+			{
+				Universe.getInstance().getCurrentZone().removeThreat
+				((int)actor.getPosition().x, (int)actor.getPosition().y, actor);
+			}
 			Universe.getInstance().getCurrentZone().getTile((int) actor.getPosition().x, (int) actor.getPosition().y)
 					.setActorInTile(null);
 			actor.setPosition(last);
@@ -67,6 +72,11 @@ public class CombatMovementHandler {
 			if (t.getDefinition().getMovement() == TileMovement.WALK && t.getActorInTile() == null) {
 				last = new Vec2f(x, y);
 			}
+		}
+		if (actor.getRPG().isThreatening(actor.getActorFaction()))
+		{
+			Universe.getInstance().getCurrentZone().removeThreat
+			((int)actor.getPosition().x, (int)actor.getPosition().y, actor);
 		}
 		Universe.getInstance().getCurrentZone().getTile((int) actor.getPosition().x, (int) actor.getPosition().y)
 				.setActorInTile(null);

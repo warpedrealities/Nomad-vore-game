@@ -6,7 +6,7 @@ import perks.PerkLibrary;
 import view.ViewScene;
 
 import actor.Actor;
-import actorRPG.Player_RPG;
+import actorRPG.player.Player_RPG;
 
 public class Effect_Perk extends Effect {
 

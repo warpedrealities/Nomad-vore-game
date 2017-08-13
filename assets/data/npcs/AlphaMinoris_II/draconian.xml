@@ -17,7 +17,7 @@
 <attribute attribute="DODGE" value="4"/>
 <attribute attribute="PARRY" value="4"/>
 <attribute attribute="WILLPOWER" value="4"/>
-<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4">
+<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
 <effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="STRENGTH"/>
 <missText count="2">
 <text>The draconian swipes at TARGET but misses</text>

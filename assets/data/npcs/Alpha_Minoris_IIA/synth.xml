@@ -17,7 +17,7 @@
 <attribute attribute="SHOCK" value="-2"/>
 <stat stat="HEALTH" value="30"/>
 <stat stat="RESOLVE" value="20"/>
-<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0">
+<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0" threatening="true">
 <effectDamage type="SHOCK" minValue="1" maxValue="6" modifier="STRENGTH"/>
 <missText count="1">
 <text>The synth fails to electrocute TARGET</text>

@@ -7,13 +7,13 @@ import input.MouseHook;
 
 import java.nio.FloatBuffer;
 
+import actorRPG.player.Player_RPG;
 import nomad.Universe;
 
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
 import view.ViewScene;
-import actorRPG.Player_RPG;
 
 public class BedScreen extends Screen implements Callback {
 

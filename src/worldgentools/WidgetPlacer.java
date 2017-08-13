@@ -288,6 +288,10 @@ public class WidgetPlacer {
 			if (children.getLength() > 0) {
 				ws.setWidget((WidgetBreakable) genWidget((Element) children.item(0)),null);
 			}
+			children = Enode.getElementsByTagName("widgetItem");
+			if (children.getLength() > 0) {
+				ws.setWidgetItem(((Element) children.item(0)).getTextContent());
+			}
 			children = Enode.getElementsByTagName("facing");
 			if (children.getLength() > 0) {
 				Element e = (Element) children.item(0);

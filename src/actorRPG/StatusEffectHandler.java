@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import actor.Actor;
+import actorRPG.player.Player_RPG;
 import combat.statusEffects.StatusEffect;
 import combat.statusEffects.StatusFaction;
 import combat.statusEffects.StatusLoader;
@@ -33,7 +34,7 @@ public class StatusEffectHandler {
 	}
 	
 		
-	void update(int time,Actor_RPG actor)
+	public void update(int time,Actor_RPG actor)
 	{
 		if (statusEffects.size()>0)
 		{

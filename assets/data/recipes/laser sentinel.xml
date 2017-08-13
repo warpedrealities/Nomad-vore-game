@@ -6,6 +6,6 @@ A computer controlled laser gun mounted on a self stabilizing tripod. Once deplo
 <ingredient item="scrap metal" quantity="2"/>
 <ingredient item="computation valve" quantity="2"/>
 <ingredient item="optics" quantity="2"/>
-<ingredient item="battery" quantity="2"/>
+<ingredient item="battery" quantity="1"/>
 <result item="laser sentinel"/>
 </recipe>

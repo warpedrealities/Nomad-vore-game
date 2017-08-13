@@ -1,8 +1,20 @@
 function checkFTL(script,sense)
 	player=sense:getPlayer()
-	ftl=player:getShipStats():getFTL()
+	local ftl=player:getShipStats():getFTL()
 	if (ftl>0) then
-		script:removeShip()
+		local playerFTL=sense:getFlags():readFlag("playerFTL")
+		if (playerFTL==0) then
+			local worldTime0=sense:getTime()/100;
+			sense:getFlags():setFlag("playerFTLTime",worldTime0)
+		else
+			local markTime0=sense:getFlags():readFlag("playerFTLTime")
+			local actualTime0=marktTime0*100
+			local worldTime0=sense:getTime();
+			if (worldTime0-actualTime0<2000) then
+				script:removeShip()
+			end
+		end
+
 	end
 
 end
@@ -28,9 +40,9 @@ end
 function checkBoarding(script,sense)
 	boarding=sense:getFlags():readFlag("boarding")
 	if (boarding>0) then
-		markTime=sense:getFlags():readFlag("CLOCK")
-		actualTime=marktTime*100
-		worldTime=sense:getTime();
+		local markTime=sense:getFlags():readFlag("CLOCK")
+		local actualTime=marktTime*100
+		local worldTime=sense:getTime();
 		if (worldTime-actualTime<1000) then
 			--move away
 			moveAway(script,sense)

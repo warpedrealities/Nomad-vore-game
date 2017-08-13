@@ -11,17 +11,18 @@ import widgets.WidgetLoader;
 
 public class Tile implements Tile_Int {
 
-	TileDefLibrary m_tileset;
-	TileDef m_definition;
-	boolean m_visible, m_explored;
-	Widget m_widget;
-	Zone m_zone;
-	int m_x;
-	int m_y;
-	int tileImage = -1;
-	int overlayImage = -1;
-	Actor actorInTile;
-
+	private TileDefLibrary m_tileset;
+	private TileDef m_definition;
+	private boolean m_visible, m_explored;
+	private Widget m_widget;
+	private Zone m_zone;
+	private int m_x;
+	private int m_y;
+	private int tileImage = -1;
+	private int overlayImage = -1;
+	private Actor actorInTile;
+	private Actor threat;
+	
 	public Tile(int x, int y, TileDef definition, Zone zone, TileDefLibrary tileset) {
 		m_visible = false;
 		m_explored = false;
@@ -146,13 +147,11 @@ public class Tile implements Tile_Int {
 
 	@Override
 	public int getX() {
-		// TODO Auto-generated method stub
 		return m_x;
 	}
 
 	@Override
 	public int getY() {
-		// TODO Auto-generated method stub
 		return m_y;
 	}
 
@@ -162,6 +161,14 @@ public class Tile implements Tile_Int {
 
 	public void setActorInTile(Actor actorInTile) {
 		this.actorInTile = actorInTile;
+	}
+
+	public Actor getThreat() {
+		return threat;
+	}
+
+	public void setThreat(Actor threat) {
+		this.threat = threat;
 	}
 
 }

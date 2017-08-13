@@ -74,7 +74,8 @@ public class CombatMove {
 	private int energySource = 0;
 	private int actionCost;
 	private boolean basicAction;
-
+	private boolean threatening;
+	
 	public CombatMove(Effect effect, AttackPattern pattern, String moveName, String hitText, String missText,
 			int attackBonus, int bonusAttribute) {
 		effects = new ArrayList<Effect>();
@@ -137,6 +138,11 @@ public class CombatMove {
 		}
 		if (Enode.getAttribute("bonusAttribute").length() > 0) {
 			bonusAttribute = RPG_Helper.AttributefromString(Enode.getAttribute("bonusAttribute"));
+		}
+		
+		if ("true".equals(Enode.getAttribute("threatening")))
+		{
+			threatening=true;
 		}
 
 		// load effects
@@ -590,6 +596,10 @@ public class CombatMove {
 
 	public MoveType getMoveType() {
 		return moveType;
+	}
+
+	public boolean isThreatening() {
+		return threatening;
 	}
 
 }
