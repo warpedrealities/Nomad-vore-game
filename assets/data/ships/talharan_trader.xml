@@ -54,10 +54,10 @@
 <contains name="modules/space warper"/>
 </placeWidget>
 <placeWidget x="4" y="7" name="slot">
-<contains name="modules/bunkbed"/>
+<contains name="modules/bunk bed"/>
 </placeWidget>
 <placeWidget x="8" y="7" name="slot">
-<contains name="modules/bunkbed"/>
+<contains name="modules/bunk bed"/>
 </placeWidget>
 <placeWidget x="5" y="8" name="slot">
 <contains name="modules/navconsole"/>

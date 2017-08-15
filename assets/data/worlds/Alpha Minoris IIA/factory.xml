@@ -77,6 +77,17 @@ The halls are gloomy and twist about, guttering light fixtures the only illumina
 	<lootSubTable chance="0.25" file="moon_ruins_special"/>
 	<lootSubTable chance="0.25" file="mutators_tier_1"/>
 </lootTable>
+<lootTable identity="doublechest">
+	<lootSubTable chance="1" file="resource_tier_1"/>
+	<lootSubTable chance="1" file="resource_tier_1"/>	
+	<lootSubTable chance="0.5" file="resource_tier_1"/>
+	<lootSubTable chance="0.5" file="resource_tier_1"/>	
+	<lootSubTable chance="0.5" file="consumable_tier_1"/>
+	<lootSubTable chance="0.5" file="consumable_tier_1"/>	
+	<lootSubTable chance="0.5" file="moon_ruins_special"/>
+	<lootSubTable chance="0.5" file="mutators_tier_1"/>
+</lootTable>
+
 <npcType value="Alpha_Minoris_IIA/synth"/>
 </blockDungeon>
 </partition>

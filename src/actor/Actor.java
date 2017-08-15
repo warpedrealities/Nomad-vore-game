@@ -26,6 +26,7 @@ import vmo.GameManager;
 import widgets.WidgetItemPile;
 import zone.Tile;
 import zone.Zone_int;
+import zone.TileDef.TileMovement;
 
 public abstract class Actor implements Attackable {
 
@@ -124,10 +125,18 @@ public abstract class Actor implements Attackable {
 
 	boolean Move0() {
 		if (collisionInterface.passable((int) actorPosition.x, (int) actorPosition.y + 1, getFlying())) {
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			t.setActorInTile(null);
 			actorPosition.y += 1;
 			spriteInterface.reposition(actorPosition);
-			actorRPG.addBusy(getMoveCost());
+			if (t.getDefinition().getMovement()==TileMovement.SLOW)
+			{
+				actorRPG.addBusy(getMoveCost()*4);		
+			}
+			else
+			{
+				actorRPG.addBusy(getMoveCost());			
+			}
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
 			return true;
 		}
@@ -136,11 +145,19 @@ public abstract class Actor implements Attackable {
 
 	boolean Move1() {
 		if (collisionInterface.passable((int) actorPosition.x + 1, (int) actorPosition.y + 1, getFlying())) {
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			t.setActorInTile(null);
 			actorPosition.y += 1;
 			actorPosition.x += 1;
 			spriteInterface.reposition(actorPosition);
-			actorRPG.addBusy(getMoveCost());
+			if (t.getDefinition().getMovement()==TileMovement.SLOW)
+			{
+				actorRPG.addBusy(getMoveCost()*4);		
+			}
+			else
+			{
+				actorRPG.addBusy(getMoveCost());			
+			}
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
 			return true;
 		}
@@ -153,7 +170,14 @@ public abstract class Actor implements Attackable {
 			t.setActorInTile(null);
 			actorPosition.x += 1;
 			spriteInterface.reposition(actorPosition);
-			actorRPG.addBusy(getMoveCost());
+			if (t.getDefinition().getMovement()==TileMovement.SLOW)
+			{
+				actorRPG.addBusy(getMoveCost()*4);		
+			}
+			else
+			{
+				actorRPG.addBusy(getMoveCost());			
+			}
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
 			return true;
 		}
@@ -162,11 +186,19 @@ public abstract class Actor implements Attackable {
 
 	boolean Move3() {
 		if (collisionInterface.passable((int) actorPosition.x + 1, (int) actorPosition.y - 1, getFlying())) {
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			t.setActorInTile(null);
 			actorPosition.y -= 1;
 			actorPosition.x += 1;
 			spriteInterface.reposition(actorPosition);
-			actorRPG.addBusy(getMoveCost());
+			if (t.getDefinition().getMovement()==TileMovement.SLOW)
+			{
+				actorRPG.addBusy(getMoveCost()*4);		
+			}
+			else
+			{
+				actorRPG.addBusy(getMoveCost());			
+			}
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
 			return true;
 		}
@@ -175,10 +207,18 @@ public abstract class Actor implements Attackable {
 
 	boolean Move4() {
 		if (collisionInterface.passable((int) actorPosition.x, (int) actorPosition.y - 1, getFlying())) {
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			t.setActorInTile(null);
 			actorPosition.y -= 1;
 			spriteInterface.reposition(actorPosition);
-			actorRPG.addBusy(getMoveCost());
+			if (t.getDefinition().getMovement()==TileMovement.SLOW)
+			{
+				actorRPG.addBusy(getMoveCost()*4);		
+			}
+			else
+			{
+				actorRPG.addBusy(getMoveCost());			
+			}
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
 			return true;
 		}
@@ -187,11 +227,19 @@ public abstract class Actor implements Attackable {
 
 	boolean Move5() {
 		if (collisionInterface.passable((int) actorPosition.x - 1, (int) actorPosition.y - 1, getFlying())) {
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			t.setActorInTile(null);
 			actorPosition.y -= 1;
 			actorPosition.x -= 1;
 			spriteInterface.reposition(actorPosition);
-			actorRPG.addBusy(getMoveCost());
+			if (t.getDefinition().getMovement()==TileMovement.SLOW)
+			{
+				actorRPG.addBusy(getMoveCost()*4);		
+			}
+			else
+			{
+				actorRPG.addBusy(getMoveCost());			
+			}
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
 			return true;
 		}
@@ -200,10 +248,18 @@ public abstract class Actor implements Attackable {
 
 	boolean Move6() {
 		if (collisionInterface.passable((int) actorPosition.x - 1, (int) actorPosition.y, getFlying())) {
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			t.setActorInTile(null);
 			actorPosition.x -= 1;
 			spriteInterface.reposition(actorPosition);
-			actorRPG.addBusy(getMoveCost());
+			if (t.getDefinition().getMovement()==TileMovement.SLOW)
+			{
+				actorRPG.addBusy(getMoveCost()*4);		
+			}
+			else
+			{
+				actorRPG.addBusy(getMoveCost());			
+			}
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
 			return true;
 		}
@@ -212,11 +268,19 @@ public abstract class Actor implements Attackable {
 
 	boolean Move7() {
 		if (collisionInterface.passable((int) actorPosition.x - 1, (int) actorPosition.y + 1, getFlying())) {
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			t.setActorInTile(null);
 			actorPosition.y += 1;
 			actorPosition.x -= 1;
 			spriteInterface.reposition(actorPosition);
-			actorRPG.addBusy(getMoveCost());
+			if (t.getDefinition().getMovement()==TileMovement.SLOW)
+			{
+				actorRPG.addBusy(getMoveCost()*4);		
+			}
+			else
+			{
+				actorRPG.addBusy(getMoveCost());			
+			}
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
 			return true;
 		}

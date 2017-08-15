@@ -485,7 +485,8 @@ public class Zone implements ILosBoard, Zone_int {
 
 		case WALK:
 			return true;
-
+		case SLOW:
+			return true;
 		}
 
 		return false;

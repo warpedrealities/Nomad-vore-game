@@ -4,7 +4,7 @@
 <name>Black Zetamorph</name>
 <description>An imposing yet sexy humanoid figure standing seven feet tall, with her secondary set of arms adding another 2-3 feet atop that. Her skin is coal or void black seeming to drink in the light. Her secondary arms are tipped in razor sharp claws while smaller but no less lethal claws adorn her fingers and toes. Behind her a segmented tail covered in gleaming black carapace shifts restlessly bearing a long blade at its tip. Her feminine curves are accentuated in places by additional segments of armoured carapace, as black as her skin but unlike that voidlike smooth softness her natural armour gleams and glints reflecting the light off its hard surfaces.</description>
 <rpg>
-<experiencevalue value="70"/>
+<experiencevalue value="100"/>
 <ability ability="STRENGTH" value="5" />
 <ability ability="AGILITY" value="5" />
 <ability ability="DEXTERITY" value="5" />

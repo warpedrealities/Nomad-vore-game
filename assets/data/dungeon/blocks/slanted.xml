@@ -112,23 +112,6 @@
 		<widget x="4" y="3" name="machinery" info="" />
 	</block>
 
-	<block name="horizontalTHRU">
-		<edge value="SOUTH" />
-		<edge value="WEST" />
-		<edge value="EAST" />
-		<row>11211211</row>
-		<row>11211211</row>
-		<row>21221212</row>
-		<row>21111112</row>
-		<row>21111112</row>
-		<row>21111112</row>
-		<row>21111112</row>
-		<row>22222222</row>
-		<widget x="6" y="6" name="chest" info="normalchest" />
-		<widget x="4" y="4" name="machinery" info="" />
-		<widget x="4" y="2" name="machinery" info="" />
-	</block>
-
 	<block name="verticalTHRU">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />
@@ -251,6 +234,41 @@
 		<widget x="4" y="3" name="shockfloor" info="" />
 	</block>
 
+	<block name="horizontalTHRUSURPRISE">
+		<edge value="SOUTH" />
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>11211211</row>
+		<row>11211211</row>
+		<row>21221212</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>22222222</row>
+		<widget x="6" y="6" name="chest" info="normalchest" />
+		<widget x="4" y="4" name="machinery" info="" />
+		<widget x="4" y="2" name="machinery" info="" />
+		<spawn x="4" y="1" tag="0" />	
+	</block>	
+	
+		<block name="horizontalTHRUREWARD">
+		<edge value="SOUTH" />
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>11211211</row>
+		<row>11211211</row>
+		<row>21221212</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>22222222</row>
+		<widget x="4" y="4" name="machinery" info="" />
+		<widget x="4" y="2" name="machinery" info="" />
+		<widget x="3" y="1" name="chest" info="doublechest" />
+	</block>
+	
 	<block name="verticalTHRUTrap">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />

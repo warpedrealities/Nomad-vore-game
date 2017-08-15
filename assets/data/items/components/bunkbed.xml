@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="bunk bed" weight="10" value="750.0">
+<description>A bed. Furniture that provides a good place for two people to sleep.</description>
+<placeditem widget="modules/bunkbed"/>
+</ItemWidget>

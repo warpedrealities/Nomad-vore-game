@@ -15,7 +15,7 @@ public class TileDef {
 	String m_description;
 
 	public enum TileMovement {
-		WALK, FLY, BLOCK
+		WALK, FLY, BLOCK,SLOW
 	};
 
 	int indexID;
@@ -48,6 +48,9 @@ public class TileDef {
 			case 2:
 				m_movement = TileMovement.BLOCK;
 				break;
+			case 3:
+				m_movement = TileMovement.SLOW;
+				break;	
 			}
 		}
 
@@ -88,7 +91,6 @@ public class TileDef {
 	}
 
 	public void save(DataOutputStream dstream) throws IOException {
-		// TODO Auto-generated method stub
 		dstream.writeInt(m_sprite);
 		dstream.writeBoolean(m_blockvision);
 		ParserHelper.SaveString(dstream, m_description);
@@ -98,7 +100,6 @@ public class TileDef {
 	}
 
 	public TileDef(DataInputStream dstream, int index) throws IOException {
-		// TODO Auto-generated constructor stub
 		m_sprite = dstream.readInt();
 		m_blockvision = dstream.readBoolean();
 		m_description = ParserHelper.LoadString(dstream);

@@ -5,7 +5,7 @@
 <description> Lithe and diminutive at less than five foot tall the mostly female form is clad to a great degree in bonewhite chitinous exoskeleton. She bounds furtively from spot to spot her whiplike antenna waving and tasting the air, her movements almost hyper active in appearance. Thin vestigial insect wings buzzing, squashed insectile tail wobbling back and forth at her rear. As her attention turns to you she flexes her claws, sensing an opportunity, flecks of venom oozing forth to coat those modest fingerblades.
 </description>
 <rpg>
-<experiencevalue value="45"/>
+<experiencevalue value="60"/>
 <ability ability="STRENGTH" value="5" />
 <ability ability="AGILITY" value="5" />
 <ability ability="DEXTERITY" value="5" />
@@ -33,7 +33,7 @@
 <removeText> TARGET is no longer poisoned.</removeText>
 <affectText> TARGET is poisoned and loses VALUE health</affectText>
 <resist strength="15" tag="poison" test="ENDURANCE"/>
-<effect stat="HEALTH" modifier="2"/>
+<effect stat="HEALTH" modifier="4"/>
 </statusDoT>
 </effectStatus>
 </combatMove>

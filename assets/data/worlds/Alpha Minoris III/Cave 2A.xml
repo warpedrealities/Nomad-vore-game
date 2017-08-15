@@ -36,8 +36,8 @@
 <noise tile="7" scarcity="32"/>
 <noise tile="8" scarcity="32"/>
 <floodfill tile="1">
-<Seedwidgets min="4" max="8" name="crystaldeposit" />
-<Seedwidgets min="3" max="6" name="zymonitedeposit" />
+<Seedwidgets min="6" max="12" name="crystaldeposit" />
+<Seedwidgets min="4" max="8" name="zymonitedeposit" />
 <SeedNPCs min="8" max="12" name="AlphaMinoris_III/lixi_breeder"> </SeedNPCs>
 <SeedNPCs min="8" max="12" name="AlphaMinoris_III/lixi_worker"> </SeedNPCs>
 </floodfill>

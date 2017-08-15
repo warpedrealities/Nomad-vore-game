@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<widgetaccomodation sprite="16" name="bunkbed" health="20">
+<widgetaccomodation sprite="16" name="bunk bed" health="20">
 <contains minimum="1" maximum="2">scrap metal</contains>
 <contains minimum="1" maximum="2">fabric</contains>
 <description>a bunkbed, for those wanting to pack in the people</description>

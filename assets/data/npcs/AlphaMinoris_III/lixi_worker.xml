@@ -5,15 +5,15 @@
 <description> six and a half feet tall this girl is clad from head to toe in white chitinous exoskeletal plates. This makes her look like she's wearing a form of natural and shapely full plate armour. Her head is adorned with a long pair of antenna and her back with long insectile wings that flick about now and then. Finally looking further down her ass is adorned with a long and clearly flexible insectile tail like a segmented dragonfly tail of sorts extending longer than her body.
 </description>
 <rpg>
-<experiencevalue value="45"/>
+<experiencevalue value="80"/>
 <ability ability="STRENGTH" value="5" />
 <ability ability="AGILITY" value="5" />
 <ability ability="DEXTERITY" value="5" />
 <ability ability="ENDURANCE" value="5" />
 <ability ability="CHARM" value="5" />
 <ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
+<stat stat="HEALTH" value="50"/>
+<stat stat="RESOLVE" value="50"/>
 <attribute attribute="KINETIC" value="4"/>
 <combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
 <missText count="2">

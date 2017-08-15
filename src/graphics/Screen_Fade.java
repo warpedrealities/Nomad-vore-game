@@ -92,10 +92,10 @@ public class Screen_Fade {
 		// build the four vertexes for the square
 		Vertex v[] = new Vertex[4];
 
-		v[0] = new Vertex(-20, -20, 0, 0, 1);
-		v[1] = new Vertex(20, -20, 0, 1, 1);
-		v[2] = new Vertex(20, 20, 0, 1, 0);
-		v[3] = new Vertex(-20, 20, 0, 0, 0);
+		v[0] = new Vertex(-21, -20, 0, 0, 1);
+		v[1] = new Vertex(21, -20, 0, 1, 1);
+		v[2] = new Vertex(21, 20, 0, 1, 0);
+		v[3] = new Vertex(-21, 20, 0, 0, 0);
 
 		for (int k = 0; k < 4; k++) {
 			v[k].pos[0] -= 0.5F;
