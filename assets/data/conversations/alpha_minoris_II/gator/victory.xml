@@ -5,32 +5,48 @@
 		<preference fetish="ferals" />
 		<preference fetish="oralvore" />
 		<text>
-			As you lie on your back, defeated, the Gator stomps over to you, hunger
+			As you lie on your back, defeated, the Gator stomps over to you,
+			hunger
 			in it's eyes.
-			It quickly seizes your feet in it's large jaws, taking a few quick
-			gulps to swallow your calves. You try and drag yourself out of the
+			It quickly seizes your feet in it's large jaws,
+			taking a few quick
+			gulps to swallow your calves. You try and drag
+			yourself out of the
 			Gator's hungry maw, but your hands
-			find no purchase in the boggy ground. The Gator licks over you, enjoying
-			your flavor, and it seems to stare straight into your eyes with a
-			primal hunger. The lukewarm, slimy flesh of the Gator's
-			maw can be easily felt, constricting your legs and feet.
+			find no purchase
+			in the boggy ground. The Gator licks over you, enjoying
+			your flavor,
+			and it seems to stare straight into your eyes with a
+			primal hunger.
+			The lukewarm, slimy flesh of the Gator's
+			maw can be easily felt,
+			constricting your legs and feet.
 		</text>
 		<choice destination="oralvore0" text="devoured" />
 	</page>
 
 	<page ID="oralvore0">
 		<text>
-			The gator moves quickly, using it's bulk to force you down it's gullet
-			as it walks forward. The walls of the esophagus are tight and slimy,
+			The gator moves quickly, using it's bulk to force you down it's
+			gullet
+			as it walks forward. The walls of the esophagus are tight and
+			slimy,
 			forcing your legs together in the
-			lukewarm tube. When the Gator reaches your hips, it tosses it's head back,
-			causing you to slip in up to your breasts. The Gator licks over your
-			flesh with it's long, reptilian tongue, letting out a hiss
-			of satisfaction. You pound on the Gator's head in an attempt to make it
-			let go, but as soon as it starts to bite down, you stop. You wimper
-			as more and moe of your body is claimed by the Gator, and escape
+			lukewarm tube. When the Gator
+			reaches your hips, it tosses it's head back,
+			causing you to slip in up
+			to your breasts. The Gator licks over your
+			flesh with it's long,
+			reptilian tongue, letting out a hiss
+			of satisfaction. You pound on the
+			Gator's head in an attempt to make it
+			let go, but as soon as it starts
+			to bite down, you stop. You wimper
+			as more and moe of your body is
+			claimed by the Gator, and escape
 			seems more and more hopeless.
-			Most of your body is now trapped in the crushing tube, and it is nearly
+			Most of
+			your body is now trapped in the crushing tube, and it is nearly
 			impossible to struggle. The Gator wastes no time in continuing it's
 			meal, intent on sending you down into it's stomach.
 		</text>
@@ -40,18 +56,28 @@
 
 	<page ID="oralvore1">
 		<text>
-			Your arms are forced above your head as the Gator starts to swallow your
-			shoulders. You can feel your feet enter the Gator's stomach as you
+			Your arms are forced above your head as the Gator starts to
+			swallow your
+			shoulders. You can feel your feet enter the Gator's
+			stomach as you
 			stare at the ridged roof of it's mouth.
-			Your view of the outside is framed by rows of razor sharp teeth, with
-			your hands grapsing uselessly at the air, trying to find purchase on
-			something. One more swallow is all it takes to seal you inside
-			completely, the teeth clacking shut.
-			Another swallow and you are forced to curl up in the acrid chamber, a slimy
-			liquid already pooling at your back. The walls start to churn and
+			Your view of the
+			outside is framed by rows of razor sharp teeth, with
+			your hands
+			grapsing uselessly at the air, trying to find purchase on
+			something.
+			One more swallow is all it takes to seal you inside
+			completely, the
+			teeth clacking shut.
+			Another swallow and you are forced to curl up in
+			the acrid chamber, a slimy
+			liquid already pooling at your back. The
+			walls start to churn and
 			squish more digestive fluids on your skin,
-			starting to break you don into nothing more than meat. You need to escape
-			soon, while you can still breathe and the stomach acids are low.
+			starting to break you don into nothing more than meat. You need to
+			escape
+			soon, while you can still breathe and the stomach acids are
+			low.
 			Otherwise, you may very well end up as the Gator's meal.
 		</text>
 		<choice destination="strugglecheck" text="struggle" />
@@ -60,22 +86,31 @@
 
 	<gameover ID="submit">
 		<text>
-			You sit in the Gator's gut quietly, accepting your place in the food
+			You sit in the Gator's gut quietly, accepting your place in the
+			food
 			chain. The Gator was better than you, so it ate you; you are it's
 			prey and nothing will change that.
-			You adjust your position to try and live your last moments in relative
-			comfort, as the muscular walls of the stomach squeeze around you,
+			You adjust your position to try and
+			live your last moments in relative
+			comfort, as the muscular walls of
+			the stomach squeeze around you,
 			coating your body in digestive juices.
 			It isn't long before the acids reach your chest, and your entire body
 			burns. You take one last breath of the acrid, malodorous air and then
 			breaht no more as your consciousness fades.
-			After your body is nothing more than meat in it's gut, it swims over to a
-			small patch of land and goes to sleep,
-			caressing it's bulging gut with it's tail. In a few hours, all that's left of
-			your body is a jumbled mess of bones and a meaty slurry, which is
+			After your body is nothing
+			more than meat in it's gut, it swims over to a
+			small patch of land and
+			goes to sleep,
+			caressing it's bulging gut with it's tail. In a few
+			hours, all that's left of
+			your body is a jumbled mess of bones and a
+			meaty slurry, which is
 			piped through the intestines where the Gator's
-			body absorbs your nutrients. By the next morning, you will be entirely
-			digested, giving the Gator strength to swim around and catch more
+			body absorbs your nutrients. By the next morning, you will be
+			entirely
+			digested, giving the Gator strength to swim around and catch
+			more
 			prey.
 
 		</text>
@@ -88,20 +123,31 @@
 
 	<page ID="struggleescape">
 		<text>
-			You thrash around as much as you are able, feeling your struggles press
-			against the reptile's spine. The discomfort is enough to upset the
-			Gator, and you force your hands into the esophagus. Pushing against
+			You thrash around as much as you are able, feeling your
+			struggles press
+			against the reptile's spine. The discomfort is enough
+			to upset the
+			Gator, and you force your hands into the esophagus.
+			Pushing against
 			the stomach walls
-			with your feet, you manage to get your forearms past the sphincter.
-			Feeling a squishing all around, you make another attempt to push
-			yourslf out, and manage to get your head and shoulders past. You
+			with your feet, you manage to get
+			your forearms past the sphincter.
+			Feeling a squishing all around, you
+			make another attempt to push
+			yourslf out, and manage to get your head
+			and shoulders past. You
 			squirm and crawl out as best you can,
-			trashing about to try and get the Gator to open it's mouth, evidently kicking
+			trashing
+			about to try and get the Gator to open it's mouth, evidently kicking
 			a nerve.
-			The Gator lets out a roar of pain and anger at it's meal escaping,
-			allowing you to squirm out of the mouth and pull yourself free. As
-			you struggle to stand, covered in slime, the Gator retreats into the
-			brackish water to recover it's senses. Now would be a good time to
+			The Gator lets out a roar of pain and anger at it's meal
+			escaping,
+			allowing you to squirm out of the mouth and pull yourself
+			free. As
+			you struggle to stand, covered in slime, the Gator retreats
+			into the
+			brackish water to recover it's senses. Now would be a good
+			time to
 			escape.
 		</text>
 		<choice destination="end" text="back away" />
@@ -111,21 +157,30 @@
 
 	<gameover ID="struggledigest">
 		<text>
-			The Gator swims lazily through the waters, enjoying the thrashing of
-			it's prey. Inside, you can hear and feel the sloshing of water
-			outside the Gator's stomach, making it even more frustrating to know
+			The Gator swims lazily through the waters, enjoying the
+			thrashing of
+			it's prey. Inside, you can hear and feel the sloshing of
+			water
+			outside the Gator's stomach, making it even more frustrating to
+			know
 			that you are so close, yet so far, from the outside.
-			The Gator rumbles deeply in satisfaction, having thoroughly enjoyed your
+			The Gator
+			rumbles deeply in satisfaction, having thoroughly enjoyed your
 			desperate squims. But now it sensed you were at your end, soon to be
 			nothing more than food. The Gator floats calmly, licking the last of
 			your flavor from it's mouth.
-			After your body is nothing more than meat in it's gut, it swims over to a
+			After your body is nothing more than meat
+			in it's gut, it swims over to a
 			small patch of land and goes to sleep,
-			caressing it's bulging gut with it's tail. In a few hours, all that's left of
-			your body is a jumbled mess of bones and a meaty slurry, which is
+			caressing it's bulging gut with it's tail. In a few hours, all that's
+			left of
+			your body is a jumbled mess of bones and a meaty slurry, which
+			is
 			piped through the intestines where the Gator's
-			body absorbs your nutrients. By the next morning, you will be entirely
-			digested, giving the Gator strength to swim around and catch more
+			body absorbs your
+			nutrients. By the next morning, you will be entirely
+			digested, giving
+			the Gator strength to swim around and catch more
 			prey.
 		</text>
 	</gameover>

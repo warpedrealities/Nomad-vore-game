@@ -1,39 +1,50 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-	<condition operator="equals" evaluate="LOCALFLAG"
-			flag="empty" value="1" />	
-	<!--empty-->
-	<text>
-.	The sarcophagus lies open and empty.
-	</text>
-	<choice destination="end" text="leave it be"/>
+		<condition operator="equals" evaluate="LOCALFLAG" flag="empty"
+			value="1" />
+		<!--empty -->
+		<text>
+			. The sarcophagus lies open and empty.
+		</text>
+		<choice destination="end" text="leave it be" />
 	</page>
 	<page ID="start">
-	<!--dissolved-->
-	<condition operator="equals" evaluate="GLOBALFLAG"
-			flag="elderThing" value="3" />	
-	<text>
-.	The sarcophagus contains naught but bones and an unsightly ichor.
-	</text>
-	<choice destination="end" text="leave it be"/>
+		<!--dissolved -->
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="elderThing"
+			value="3" />
+		<text>
+			. The sarcophagus contains naught but bones and an unsightly ichor.
+		</text>
+		<choice destination="end" text="leave it be" />
 	</page>
 
 	<page ID="start">
-	<!--full-->
-	<text>
-.	The sarcophagus contains a winged figure of corpselike stillness and complexion. Her pale grey skin is discoloured by greenish stains around her eyes, lips and nethers.
-	</text>
-	<choice destination="awaken" text="open the sarcophagus"/>
-	<choice destination="end" text="leave her be"/>
+		<!--full -->
+		<text>
+			. The sarcophagus contains a winged figure of corpselike stillness and
+			complexion. Her pale grey skin is discoloured by greenish stains
+			around her eyes, lips and nethers.
+		</text>
+		<choice destination="awaken" text="open the sarcophagus" />
+		<choice destination="end" text="leave her be" />
 	</page>
-	
+
 	<page ID="awaken">
-	<text>
-	As you open the sarcophagus the figure's eyes snap open and she shoves the lid off the rest of the way. Each eye glinting a dull green hue as they dart around. The figure lurching upright as tattered feathery wings spread behind her and she turns to look at you. She seems confused for several moments, only for that to give away to confliction as she shudders and stops herself as she reaches for the blade scabbarded at her waist. But it seems her internal battle is swiftly lost as she pulls the blade free and her gaze locks onto you "stay away" she whispers almost pleadingly, even as she steps out of the sarcophagus and onto the attack.
-	</text>
-	<effect type="setlocalflag" flag="empty" value="1" />
-	<special effect="createNPC" file="AlphaMinoris_II/zorr/thrall"/>
-	<choice destination="end" text="oh, oh dear."/>
+		<text>
+			As you open the sarcophagus the figure's eyes snap open and she shoves
+			the lid off the rest of the way. Each eye glinting a dull green hue
+			as they dart around. The figure lurching upright as tattered feathery
+			wings spread behind her and she turns to look at you. She seems
+			confused for several moments, only for that to give away to
+			confliction as she shudders and stops herself as she reaches for the
+			blade scabbarded at her waist. But it seems her internal battle is
+			swiftly lost as she pulls the blade free and her gaze locks onto you
+			"stay away" she whispers almost pleadingly, even as she steps out of
+			the sarcophagus and onto the attack.
+		</text>
+		<effect type="setlocalflag" flag="empty" value="1" />
+		<special effect="createNPC" file="AlphaMinoris_II/zorr/thrall" />
+		<choice destination="end" text="oh, oh dear." />
 	</page>
 </Conversation>

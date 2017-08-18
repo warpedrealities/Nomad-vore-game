@@ -3,10 +3,14 @@
 
 	<page ID="start">
 		<text>
-			You have fallen before the saurian warrior. Licking her lips she stands
-			over you and reaches down to loosen the bindings of her armoured
-			tunic with her free hand "Anything to say before you're lunch?" she
-			taunts, that hand now tracing over her belly under the metal weighted
+			You have fallen before the saurian warrior. Licking her lips she
+			stands
+			over you and reaches down to loosen the bindings of her
+			armoured
+			tunic with her free hand "Anything to say before you're
+			lunch?" she
+			taunts, that hand now tracing over her belly under the
+			metal weighted
 			jacket.
 		</text>
 		<choice destination="amends0" text="can't we just settle this with gold?">
@@ -18,9 +22,12 @@
 
 	<page ID="amends0">
 		<text>
-			"you realize when you're digested I can just take your money right?" says
-			the reptile with a smirk "But perhaps the symbolic nature of your
-			desire to appease the crown can let us forgo the whole eating and
+			"you realize when you're digested I can just take your money
+			right?" says
+			the reptile with a smirk "But perhaps the symbolic nature
+			of your
+			desire to appease the crown can let us forgo the whole eating
+			and
 			digesting you." she looks at you expectantly.
 		</text>
 		<choice destination="gold250" text="*appease with 250 gold*">
@@ -33,7 +40,8 @@
 		<effect type="givegold" value="-250" />
 		<effect type="manipulateDisposition" faction="saurian" value="25" />
 		<text>
-			You hand 250 gold to the saurian who looms over you, you can only hope
+			You hand 250 gold to the saurian who looms over you, you can
+			only hope
 			its enough.
 		</text>
 		<choice destination="appeasebranch" text="*await judgement*" />
@@ -43,7 +51,8 @@
 		<condition operator="greaterthan" evaluate="FACTIONSTANDING"
 			value="50" />
 		<text>
-			"Mhmm, I believe this will go some way to appease the crown. You can live,
+			"Mhmm, I believe this will go some way to appease the crown. You
+			can live,
 			for now."
 		</text>
 		<effect type="heal" value="0.1" />
@@ -51,9 +60,12 @@
 	</page>
 	<page ID="appeasebranch">
 		<text>
-			"Is that the best you could do? This won't do at all. You're still gonna
-			end up padding my thighs." she says apparently concluding the enmity
-			you have garnered with her people is too much to be wiped away by
+			"Is that the best you could do? This won't do at all. You're
+			still gonna
+			end up padding my thighs." she says apparently concluding
+			the enmity
+			you have garnered with her people is too much to be wiped
+			away by
 			these coins. Naturally she doesn't give them back.
 		</text>
 		<choice destination="oralvore0" text="ohcrap" />
@@ -67,23 +79,34 @@
 	</page>
 	<page ID="oralvore0">
 		<text>
-			The lizard warrior advances on you with a predatory look in her eyes,
-			lunging downwards to grasp your feet in her hands and haul them up to
-			where her long tongue can lap over them. Upended you can do little to
-			resist as she swiftly shoves your feet into her mouth and swallows,
-			starting to eat you alive. The warrior leaning forwards as she gets
-			to your knees, leaving you at an awkward angle yet still supported on
-			the ground as she swallows you up feetfirst. You can feel her belly
-			around your feet already, churning and eager to have all of you.
+			The lizard warrior advances on you with a predatory look in her
+			eyes,
+			lunging downwards to grasp your feet in her hands and haul them
+			up to
+			where her long tongue can lap over them. Upended you can do
+			little to
+			resist as she swiftly shoves your feet into her mouth and
+			swallows,
+			starting to eat you alive. The warrior leaning forwards as
+			she gets
+			to your knees, leaving you at an awkward angle yet still
+			supported on
+			the ground as she swallows you up feetfirst. You can feel
+			her belly
+			around your feet already, churning and eager to have all of
+			you.
 		</text>
 		<choice destination="oralvore1" text="what a way to go" />
 	</page>
 
 	<page ID="oralvore1">
 		<text>
-			Chugging away the reptilian warrior continued cramming you past her lips,
-			reaching your hips she's squatted down over you now. Her throat
-			rippling powerfully to draw you ever deeper as her belly begins to
+			Chugging away the reptilian warrior continued cramming you past
+			her lips,
+			reaching your hips she's squatted down over you now. Her
+			throat
+			rippling powerfully to draw you ever deeper as her belly begins
+			to
 			show, your legs starting to curl and push out the inside of her
 			stomach making her tunic part around the bulge. It won't be long now
 			and as you helplessly clutch at the ground you can do little to even
@@ -96,15 +119,24 @@
 
 	<page ID="oralvore2">
 		<text>
-			The warrior pauses once she's encompassed your chest, as if teasing you
-			with your last sight of the outside world and the possibility you
-			could struggle to avoid being fully consumed. But before you can grip
-			firmly against her shoulders, she swallows anew. Your body dragged
-			down past her lips inexorably, arms forced above your head they frame
-			your last view of the outside world through her jaws afore they
-			slither down her throat to join the rest of you. The reptile warrior
-			now running a hand over her distended and exposed gut as you're
-			forced to curl up within her, trapped within that gurgling cauldron
+			The warrior pauses once she's encompassed your chest, as if
+			teasing you
+			with your last sight of the outside world and the
+			possibility you
+			could struggle to avoid being fully consumed. But
+			before you can grip
+			firmly against her shoulders, she swallows anew.
+			Your body dragged
+			down past her lips inexorably, arms forced above
+			your head they frame
+			your last view of the outside world through her
+			jaws afore they
+			slither down her throat to join the rest of you. The
+			reptile warrior
+			now running a hand over her distended and exposed gut
+			as you're
+			forced to curl up within her, trapped within that gurgling
+			cauldron
 			you will be rendered down into a meal if you do not escape.
 		</text>
 		<choice destination="strugglecheck" text="struggle" />
@@ -119,16 +151,26 @@
 
 	<page ID="struggleescape">
 		<text>
-			The victorious lizard chirrs and rubs over her belly as she starts to
-			digest her vanquished foe. Her gurgling gut squeezing in around you,
-			but you're not planning on sticking around and she lets out an erf as
-			you jostle and shove around inside her. Your hands and feet shoving
-			at her insides, it eventually proves too much for her though. The
-			mighty warrior grunting in dismay and then doubling over horking ou
-			up with a blargh. Her gagging retching forcing you up and out in
-			front of her in a heap. While you're wet and maybe a bit gooey at the
-			edges the warrior reptile is in a far more dazed state, briefly wiped
-			out by the energy taken to shove you back up into the open air. Might
+			The victorious lizard chirrs and rubs over her belly as she
+			starts to
+			digest her vanquished foe. Her gurgling gut squeezing in
+			around you,
+			but you're not planning on sticking around and she lets
+			out an erf as
+			you jostle and shove around inside her. Your hands and
+			feet shoving
+			at her insides, it eventually proves too much for her
+			though. The
+			mighty warrior grunting in dismay and then doubling over
+			horking ou
+			up with a blargh. Her gagging retching forcing you up and
+			out in
+			front of her in a heap. While you're wet and maybe a bit gooey
+			at the
+			edges the warrior reptile is in a far more dazed state, briefly
+			wiped
+			out by the energy taken to shove you back up into the open air.
+			Might
 			be time to run.
 		</text>
 		<effect type="heal" value="0.1" />
@@ -138,14 +180,22 @@
 
 	<page ID="struggledigest">
 		<text>
-			The victorious lizard chirrs and rubs over her belly as she starts to
-			digest her vanquished foe. Her gurgling gut squeezing in around you,
-			but you're not planning on sticking around and she lets out an erf as
-			you jostle and shove around inside her. Her gut gurgling and grinding
-			around you as you push out at her insides, but a series of rthythmic
-			contractions shove you back into a submissive ball of curled up meat.
-			Your struggles unable to to upset her powerful stomach as it works
-			enzymes and digestive fluids into you, starting to process your flesh
+			The victorious lizard chirrs and rubs over her belly as she
+			starts to
+			digest her vanquished foe. Her gurgling gut squeezing in
+			around you,
+			but you're not planning on sticking around and she lets
+			out an erf as
+			you jostle and shove around inside her. Her gut gurgling
+			and grinding
+			around you as you push out at her insides, but a series
+			of rthythmic
+			contractions shove you back into a submissive ball of
+			curled up meat.
+			Your struggles unable to to upset her powerful stomach
+			as it works
+			enzymes and digestive fluids into you, starting to process
+			your flesh
 			as she chirrs and smiles in triumph. It won't be long now.
 		</text>
 		<choice destination="struggleGO" text="*GURGLE*" />
@@ -153,21 +203,30 @@
 
 	<gameover ID="struggleGO">
 		<text>
-			Despite your struggles your contest from inside the lizard is ending much
-			like your contest outside. Her gut grinding over you, mercilessly
-			gurgling you down. Her gut quietens your protests, stills your
-			struggles and then gradually eases out the bulges and contours made
-			by your body within her own. Her gut turning smooth and round as you
-			turn smooth and liquid within her, reduced to nought but a nutritious
-			meal as her gut slims and flattens you your remnants will go to make
+			Despite your struggles your contest from inside the lizard is
+			ending much
+			like your contest outside. Her gut grinding over you,
+			mercilessly
+			gurgling you down. Her gut quietens your protests, stills
+			your
+			struggles and then gradually eases out the bulges and contours
+			made
+			by your body within her own. Her gut turning smooth and round as
+			you
+			turn smooth and liquid within her, reduced to nought but a
+			nutritious
+			meal as her gut slims and flattens you your remnants will
+			go to make
 			her stronger, and perhaps more importantly, sexier.
 		</text>
 	</gameover>
 
 	<page ID="submit">
 		<text>
-			To the victor go the spoils and as she chirrs and rubs over her gut you
-			moan submissively within her as she gets to work on you. Her gut
+			To the victor go the spoils and as she chirrs and rubs over her
+			gut you
+			moan submissively within her as she gets to work on you. Her
+			gut
 			gurgling over your unresisting form as she smiles and gives you an
 			approving pat, satisfied by a foe who knows when they are beaten. Her
 			insides grinding over you, your form to find new purpose becoming one
@@ -178,10 +237,14 @@
 
 	<gameover ID="submitGO">
 		<text>
-			Gradually her gut turns round and smooth, softening the lumps made of you
-			until you're utterly digested away inside her. The syrupy gloop going
-			on a final adventure through her intestines as her middle starts to
-			compact and then flatten, your remnants going to good use in filling
+			Gradually her gut turns round and smooth, softening the lumps
+			made of you
+			until you're utterly digested away inside her. The syrupy
+			gloop going
+			on a final adventure through her intestines as her middle
+			starts to
+			compact and then flatten, your remnants going to good use in
+			filling
 			the curves of her ass, thighs and breasts.
 		</text>
 

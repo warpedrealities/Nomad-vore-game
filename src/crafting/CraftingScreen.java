@@ -1,6 +1,7 @@
 package crafting;
 
 import gui.Button;
+import gui.Button2;
 import gui.MultiLineText;
 import gui.Text;
 import gui.TextColoured;
@@ -21,7 +22,8 @@ import java.util.Iterator;
 import actor.player.Player;
 import nomad.Universe;
 import actorRPG.Actor_RPG;
-
+import actorRPG.player.Player_RPG;
+import crafting.helpers.CraftingTokenHandler;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
@@ -40,14 +42,19 @@ public class CraftingScreen extends Screen implements Callback {
 	private Callback myHost;
 	private int selection;
 	private boolean canMake;
+	private boolean filterMissingTokens,filterTech;
 
 	private int popupTimer;
 	private Window popup;
 	private Text popupText;
-
+	private Button2 []filterButtons;
+	
+	private CraftingTokenHandler tokenHandler;
+	
 	public CraftingScreen() {
 		player = Universe.getInstance().getPlayer();
 		craftingLibrary = player.getCraftingLibrary();
+		tokenHandler=new CraftingTokenHandler((Player_RPG) player.getRPG());
 	}
 
 	@Override
@@ -106,9 +113,26 @@ public class CraftingScreen extends Screen implements Callback {
 			buildItem();
 			break;
 
+		case 2:
+			filterMissingTokens=!filterMissingTokens;
+			filterButtons[0].setAlt(filterMissingTokens);
+			regen();
+			break;
+	
+		case 3:
+			filterTech=!filterTech;
+			filterButtons[1].setAlt(filterTech);
+			regen();
+			break;
 		}
 	}
 
+	private void regen()
+	{
+		craftables.clear();
+		generate(filterMissingTokens,filterTech);
+	}
+	
 	private void buildItem() {
 
 		// check item can be made
@@ -116,8 +140,8 @@ public class CraftingScreen extends Screen implements Callback {
 			CraftingRecipe recipe = craftables.get(selection);
 			// remove required items
 			for (int i = 0; i < recipe.getIngredients().size(); i++) {
-				player.getInventory().removeItems(recipe.getIngredients().get(i).getItemName(),
-						recipe.getIngredients().get(i).getItemQuantity());
+				player.getInventory().removeItems(recipe.getIngredients().get(i).getName(),
+						recipe.getIngredients().get(i).getQuantity());
 			}
 			// add new item
 			if (recipe.getResultCount() == 1) {
@@ -177,11 +201,18 @@ public class CraftingScreen extends Screen implements Callback {
 		root = new Window(new Vec2f(-20, -16), new Vec2f(40, 15), textures[1], true);
 
 		Button[] buttons = new Button[2];
-		buttons[0] = new Button(new Vec2f(34.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "Exit", 0, 1);
-		buttons[1] = new Button(new Vec2f(28.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "Make", 1, 1);
+		buttons[0] = new Button(new Vec2f(35.0F, 0.0F), new Vec2f(5, 1.8F), textures[2], this, "Exit", 0, 1);
+		buttons[1] = new Button(new Vec2f(30.0F, 0.0F), new Vec2f(5, 1.8F), textures[2], this, "Make", 1, 1);
 		for (int i = 0; i < buttons.length; i++) {
 			root.add(buttons[i]);
 		}
+		
+		filterButtons=new Button2[2];
+		filterButtons[0] = new Button2(new Vec2f(24.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "filter:tokens", 2,textures[3], 1);
+		filterButtons[1] = new Button2(new Vec2f(18.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "filter:tech", 3,textures[3], 1);
+		for (int i = 0; i < filterButtons.length; i++) {
+			root.add(filterButtons[i]);
+		}	
 
 		// build info panel
 		description = new MultiLineText(new Vec2f(17.5F, 14.5F), 10, 40, 0.8F);
@@ -203,7 +234,7 @@ public class CraftingScreen extends Screen implements Callback {
 
 		craftables = new ArrayList<CraftingRecipe>();
 
-		generate();
+		generate(filterMissingTokens,filterTech);
 
 		buildRequirements();
 
@@ -233,22 +264,34 @@ public class CraftingScreen extends Screen implements Callback {
 			}
 			else
 			{
-				for (int i=0; i < 8; i++) {
-					if (recipe.getIngredients().size() <= i) {
-						requirements[i].setString("");
-					} else {
-						requirements[i].setString(recipe.getIngredients().get(i).getItemName() + " x"
-								+ recipe.getIngredients().get(i).getItemQuantity());
-
-						if (hasIngredient(recipe.getIngredients().get(i))) {
-							requirements[i].setTint(1, 1, 1);
-						} else {
-							canMake = false;
-							requirements[i].setTint(1, 0, 0);
-						}
+				java.util.List <CraftingIngredient> l=recipe.getUnmetRequirements(tokenHandler.getMap());
+				if (l!=null)
+				{
+					for (int i=0;i<l.size();i++)
+					{
+						requirements[0].setTint(1, 0, 0);	
+						requirements[0].setString("requires "+l.get(i).getName()+" "+l.get(i).getQuantity());		
 					}
-
-				}			
+					canMake = false;
+				}
+				else
+				{					
+					for (int i=0; i < 8; i++) {
+						if (recipe.getIngredients().size() <= i) {
+							requirements[i].setString("");
+						} else {
+							requirements[i].setString(recipe.getIngredients().get(i).getName() + " x"
+									+ recipe.getIngredients().get(i).getQuantity());
+	
+							if (hasIngredient(recipe.getIngredients().get(i))) {
+								requirements[i].setTint(1, 1, 1);
+							} else {
+								canMake = false;
+								requirements[i].setTint(1, 0, 0);
+							}
+						}
+					}	
+				}
 			}
 
 		} else {
@@ -262,7 +305,7 @@ public class CraftingScreen extends Screen implements Callback {
 
 		java.util.List<Item> list = player.getInventory().getItems();
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getItem().getName().contains(craftingIngredient.getItemName())) {
+			if (list.get(i).getItem().getName().contains(craftingIngredient.getName())) {
 				if (ItemStack.class.isInstance(list.get(i))) {
 					ItemStack stack = (ItemStack) list.get(i);
 					count += stack.getCount();
@@ -274,13 +317,49 @@ public class CraftingScreen extends Screen implements Callback {
 			}
 		}
 
-		if (count >= craftingIngredient.getItemQuantity()) {
+		if (count >= craftingIngredient.getQuantity()) {
 			return true;
 		}
 		return false;
 	}
 
-	private void generate() {
+	private boolean canMake(CraftingRecipe recipe,int skill)
+	{
+		if (recipe.getRequiredSkill()<=skill)
+		{
+			if (recipe.getTokenRequirements().size()>0)
+			{
+				for (int i=0;i<recipe.getTokenRequirements().size();i++)
+				{
+					int token=tokenHandler.getToken(recipe.getTokenRequirements().get(i).getName());
+					if (recipe.getTokenRequirements().get(i).getQuantity()>token)
+					{
+						return false;
+					}
+				}
+			}
+			return true;			
+		}
+		return false;
+	}
+	
+	private void generateOne(boolean filterMissingTokens,CraftingRecipe recipe)
+	{
+		if (filterMissingTokens)
+		{
+			if (recipe.getUnmetRequirements(tokenHandler.getMap())==null)
+			{
+				craftables.add(recipe);	
+			}
+		}
+		else
+		{
+			craftables.add(recipe);			
+		}
+
+	}
+	
+	private void generate(boolean filterMissingTokens,boolean filterTech) {
 		int skill = player.getRPG().getAttribute(Actor_RPG.TECH);
 		// select all craftables that are unlocked and the player has crafting
 		// skill for
@@ -288,16 +367,26 @@ public class CraftingScreen extends Screen implements Callback {
 		for (int i=0;i<list.size();i++)
 		{
 			CraftingRecipe recipe=list.get(i);
-			if (recipe.getUnlocked() == true && recipe.getRequiredSkill() <= skill+2) {
-				craftables.add(recipe);
-			}			
+			if (filterTech)
+			{
+				if (recipe.getUnlocked() == true && recipe.getRequiredSkill() <= skill) {
+					generateOne(filterMissingTokens,recipe);
+				}			
+			}
+			else
+			{
+				if (recipe.getUnlocked() == true && recipe.getRequiredSkill() <= skill+2) {
+					generateOne(filterMissingTokens,recipe);
+				}				
+			}
+			
 		}
 		// generate list
 		String[] names = new String[craftables.size()];
 		int []colours=new int[craftables.size()];
 		for (int i = 0; i < names.length; i++) {
 			CraftingRecipe r=craftables.get(i);
-			if (r.getRequiredSkill()<=skill)
+			if (canMake(r,skill))
 			{
 				colours[i]=0;
 			}

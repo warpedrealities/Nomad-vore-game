@@ -1,36 +1,42 @@
 <?xml version="1.0"?>
 <Harpy>
-<sprite value="lowercaseredR.png"/>
+	<sprite value="lowercaseredR.png" />
 
-<name>ratgirl</name>
-<description>A naked three foot high demi alien of a wild and feral bent. Some 4 feet of furless tail protrudes from above her ass and atop her head round furred radar like ears perch. She eyes you with a mischevious and hungry look, her slender little body clearly having subsisted on scavenging perhaps she hopes for a more filling meal.</description>
-<rpg>
-<experiencevalue value="15"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="25"/>
-<stat stat="RESOLVE" value="20"/>
-<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="-2">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
-<missText count="1">
-<text>The rat fails to hit TARGET</text>
-</missText>
-<hitText count="1">
-<text>The ratgirl smacks TARGET for VALUE damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<name>ratgirl</name>
+	<description>A naked three foot high demi alien of a wild and feral
+		bent. Some 4 feet of furless tail protrudes from above her ass and
+		atop her head round furred radar like ears perch. She eyes you with a
+		mischevious and hungry look, her slender little body clearly having
+		subsisted on scavenging perhaps she hopes for a more filling meal.</description>
+	<rpg>
+		<experiencevalue value="15" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="25" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="-2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>The rat fails to hit TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>The ratgirl smacks TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<respawn delay="1000"/>
+	<respawn delay="1000" />
 
-<defeated conversation="alpha_minoris_II/rat/defeat" />
-<seduced conversation="alpha_minoris_II/rat/defeat" />
-<victory conversation="alpha_minoris_II/rat/victory" />
-<seducer conversation="alpha_minoris_II/rat/victory" />
-<controller AI="harpy_adv"/>
-<faction value="monster"/>
+	<defeated conversation="alpha_minoris_II/rat/defeat" />
+	<seduced conversation="alpha_minoris_II/rat/defeat" />
+	<victory conversation="alpha_minoris_II/rat/victory" />
+	<seducer conversation="alpha_minoris_II/rat/victory" />
+	<controller AI="harpy_adv" />
+	<faction value="monster" />
 </Harpy>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <ItemResource name="dagger missile" weight="2" value="200">
-	<description>A small and cheap space combat missile used to intercept fighters and damage small craft.
+	<description>A small and cheap space combat missile used to intercept
+		fighters and damage small craft.
 	</description>
 
 </ItemResource>

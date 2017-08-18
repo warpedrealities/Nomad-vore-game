@@ -1,23 +1,30 @@
 <?xml version="1.0"?>
 <perk name="mind bolt">
-<requirement count="1"><req>PERKpsychic</req></requirement>
-<description> 
-You can lash out at a distance with your mind, using a blast of mental domination to diminish the target's resolve.
-</description>
-<move count="3">
-<combatmove name="mind bolt" timeCost="2" pattern="RANGED" bonusToHit="2" bonusAttribute="WILLPOWER" actionCost="4" moveType="DOMINATE"> 
-<effectDamage type="PSYCHIC" minValue="1" maxValue="6" modifier="INTELLIGENCE"/>
-<missText count="2">
-<text>You attempt to overwhelm TARGET 's will but fail</text>
-<text>You attempt to weaken TARGET 's resolve but do not succeed</text>
-</missText>
-<hitText count="2">
-<text>TARGET finds their willpower reduced by VALUE points as you dominate their mind</text>
-<text>You suppress the mind of TARGET reducing their resolve by VALUE points</text>
-</hitText>
-</combatmove>
+	<requirement count="1">
+		<req>PERKpsychic</req>
+	</requirement>
+	<description>
+		You can lash out at a distance with your mind, using a blast of mental
+		domination to diminish the target's resolve.
+	</description>
+	<move count="3">
+		<combatmove name="mind bolt" timeCost="2" pattern="RANGED"
+			bonusToHit="2" bonusAttribute="WILLPOWER" actionCost="4" moveType="DOMINATE">
+			<effectDamage type="PSYCHIC" minValue="1" maxValue="6"
+				modifier="INTELLIGENCE" />
+			<missText count="2">
+				<text>You attempt to overwhelm TARGET 's will but fail</text>
+				<text>You attempt to weaken TARGET 's resolve but do not succeed</text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET finds their willpower reduced by VALUE points as you
+					dominate their mind</text>
+				<text>You suppress the mind of TARGET reducing their resolve by
+					VALUE points</text>
+			</hitText>
+		</combatmove>
 
-</move>
-<maxrank value="1"/>
+	</move>
+	<maxrank value="1" />
 
 </perk>

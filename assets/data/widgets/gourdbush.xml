@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <widgetharvestable sprite="39">
-<contains minimum="1" maximum="1">gourd</contains>
-<usedescription>You pick the gourd from the plant</usedescription>
-<description>A peculiar alien plant that grows a large bulb or gourd atop its stem, the gourd looks like it could be tastey</description>
-<regeneration regentime="4000"/>
+	<contains minimum="1" maximum="1">gourd</contains>
+	<usedescription>You pick the gourd from the plant</usedescription>
+	<description>A peculiar alien plant that grows a large bulb or gourd
+		atop its stem, the gourd looks like it could be tastey</description>
+	<regeneration regentime="4000" />
 </widgetharvestable>

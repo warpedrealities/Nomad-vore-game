@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
 <perk name="Contact team">
-<requirement count="1">
-<req>CHARGEN</req>
-</requirement>
-<description> It was not unreasonable to believe the Heinlein may encounter intelligent life. The contact team was trained in linguistics, diplomacy and persuasion so it would not erupt in violence. +2 persuasion</description>
-<modifier affects="PERSUADE" value="2" type="ATTRIBUTE"/>
-<maxrank value="1"/>
+	<requirement count="1">
+		<req>CHARGEN</req>
+	</requirement>
+	<description> It was not unreasonable to believe the Heinlein may
+		encounter intelligent life. The contact team was trained in
+		linguistics, diplomacy and persuasion so it would not erupt in
+		violence. +2 persuasion</description>
+	<modifier affects="PERSUADE" value="2" type="ATTRIBUTE" />
+	<maxrank value="1" />
 </perk>

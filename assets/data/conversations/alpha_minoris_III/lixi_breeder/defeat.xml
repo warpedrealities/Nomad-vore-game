@@ -9,7 +9,25 @@
 		<choice destination="unbirth0" text="she'd make a good orgasm">
 			<assertion evaluate="hasperk" perk="unbirthing" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="leave her be" />
+	</page>
+
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="unbirth0">
@@ -33,7 +51,8 @@
 
 	<page ID="unbirth1">
 		<text>
-			The lixi squirms helplessly as your lustful netherlips claim more of
+			The lixi squirms helplessly as your lustful netherlips claim
+			more of
 			her, sliding easily and smoothly over her slick chitinous
 			exoskeleton, forcing her into your clenching softness as you lower
 			yourself over her squeezing her between yourself and the floor
@@ -42,7 +61,7 @@
 			the petite insectdemi towards her waistline as she's forced to curl
 			up within you. Her exoskeleton for now unyielding against the
 			clenching massage of your womb around the upper half of her body,
-			trapping her little wings to wetly twitch against the graps of your
+			trapping her little wings to wetly twitch against the grasp of your
 			womb.
 		</text>
 		<choice destination="unbirth2" text="all the way" />
@@ -50,7 +69,8 @@
 
 	<page ID="unbirth2">
 		<text>
-			Halfway in it'd be easy to take her little body in the rest of the way.
+			Halfway in it'd be easy to take her little body in the rest of
+			the way.
 			Clenching, drawing her in more with your passage now than by
 			squeezing her against the floor. Her feet eventually sliding up off
 			of the floor and twitching and dangling about. The lixi squirming
@@ -59,36 +79,102 @@
 			clad little form as she squirms and squeeks helplessly within you.
 			She's at your mercy, and it'll be interesting to see how long it'll
 			take for her chitin to soften as you set about turning her to a
-			splash of cum.
+			splash of cum. Or you could just enjoy holding her like this and see
+			if she calms down.
 		</text>
 		<choice destination="unbirthEnd" text="gush her" />
+		<choice destination="unbirthEndo0" text="hold her" />
+	</page>
+
+	<page ID="unbirthEndo0">
+		<text>
+			You get comfortable sat down with her squirming in your gravid middle.
+			Her distressed squeeks and movements going on for a time as the lil
+			herm tires herself out.
+			You give your round tummy an almost doting pat as she slows down and
+			just pants, wrapped in your overpowering heat and all tuckered out.
+			Perhaps it's starting to dawn on her that you have no intention of
+			liquidating her, took her long enough, silly thing. Though now she
+			seems to have realized it you can feel her shifting. The bug girl
+			moving around though not to try and squirm out it seems but just to
+			get more comfortable. You wonder whether your fluids soaking her
+			exoskeleton'll do her some good, she seems content to bask in your
+			though as your soft womb walls snugly press all around her. This is
+			much nicer.
+		</text>
+		<choice destination="unbirthEndo1"
+			text="hold her for a bit longer, then let her out" />
+	</page>
+
+	<page ID="unbirthEndo1">
+		<text>
+			You fall into a sort of doze while holding the bug girl, feeling her
+			squirm now and then. But after a while you decide it's probably time
+			to let her out again and so you get up from where you were resting
+			and rub over the bulge to rouse her. Once she's good and ready you
+			squat down and part your legs, starting to birth the cute insect demi
+			back into the world gradually. Her body easing out from between your
+			legs inch by inch and slick and glossy with your juices, her carapace
+			gleaming when it catches the light. She seems reluctant to come out
+			at first but soon helps you by wriggling her way out of your snatch.
+			The bug soon a sticky heap in front of you, her antenna flicking to
+			dislodge the feminine juices covering them as she looks up at you and
+			flushes. Seems she enjoyed that, but it looks like she'll need
+			sometime to recover.
+		</text>
+		<special effect="nonhostile" />
+		<choice destination="end" text="such a cute thing makes a good womb pet" />
+		<special effect="healnpc" />
 	</page>
 
 	<page ID="unbirthEnd">
 		<text>
-			The bug girl's squirms as your womb begins to clench and rthythmically
-			work her over are delightful to feel and you settle down to enjoy
-			them. Seated on the ground one hand strays between your legs, to play
-			over your netherlips as you feel her futile struggles. On and on, she
-			struggles, you squeeze and her form endures allowing you to draw the
-			pleasure out. In fact as you reach your first climax with a gasping
-			cry you feel her movements within the crushing grip of your womb as
-			your nethers spasm and stain the stones with sexual fluids. You take
-			a moment to catch your breath, and again she endures as you orgasm a
-			second time and your womb squeezes down upon her, yet feel her soften
-			and yield slightly. The relentless squirms of your lusty little womb
-			fodder drawing you on as you work your fingers into your snatch again
-			and go to work for a third time, moaning..gasping, panting..and
-			finally as your third orgasm rocks through you you feel something
-			give, your spasming sex crushing inwards and you hear her squeek and
-			then abruptly dissolve. Her weakened chitin now as pliant as butter,
-			her form crushed into lusty liquids in a single rolling and blissful
-			contraction. Lixi remnants gushing out of your sex to splatter over
-			the floor forming a thick goopy puddle in which fragments of soft
-			chitin can be seen floating. As you contemplate your handiwork you
-			slide a finger along your soaked inner thighs and up to your lips.
-			The bug girl breeder for all her sexual appetite, has been consumed
-			utterly by a sexual appetite of your voracious snatch. An appetite
+			The bug girl's squirms as your womb begins to clench and
+			rthythmically
+			work her over are delightful to feel and you settle down
+			to enjoy
+			them. Seated on the ground one hand strays between your legs,
+			to play
+			over your netherlips as you feel her futile struggles. On and
+			on, she
+			struggles, you squeeze and her form endures allowing you to
+			draw the
+			pleasure out. In fact as you reach your first climax with a
+			gasping
+			cry you feel her movements within the crushing grip of your
+			womb as
+			your nethers spasm and stain the stones with sexual fluids.
+			You take
+			a moment to catch your breath, and again she endures as you
+			orgasm a
+			second time and your womb squeezes down upon her, yet feel
+			her soften
+			and yield slightly. The relentless squirms of your lusty
+			little womb
+			fodder drawing you on as you work your fingers into your
+			snatch again
+			and go to work for a third time, moaning..gasping,
+			panting..and
+			finally as your third orgasm rocks through you you feel
+			something
+			give, your spasming sex crushing inwards and you hear her
+			squeek and
+			then abruptly dissolve. Her weakened chitin now as pliant
+			as butter,
+			her form crushed into lusty liquids in a single rolling and
+			blissful
+			contraction. Lixi remnants gushing out of your sex to
+			splatter over
+			the floor forming a thick goopy puddle in which
+			fragments of soft
+			chitin can be seen floating. As you contemplate your
+			handiwork you
+			slide a finger along your soaked inner thighs and up to
+			your lips.
+			The bug girl breeder for all her sexual appetite, has been
+			consumed
+			utterly by a sexual appetite of your voracious snatch. An
+			appetite
 			far more encompassing and capable in getting what it wanted.
 		</text>
 		<effect type="feed" value="95" />

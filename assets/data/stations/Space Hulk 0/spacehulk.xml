@@ -1,167 +1,177 @@
 <?xml version="1.0"?>
 <zone width="64" height="32" spriteset="spacehulk.png">
 
-<tileset count-x="8" count-y="4">
-<tile sprite="17" vision="0" movement="0"> a metal floor</tile>
-<tile sprite="1" vision="1" movement="2" smart="true"> a metal wall</tile>
-<tile sprite="18" vision="0" movement="0"> a floor panel</tile>
-<tile sprite="19" vision="1" movement="2"> an absurdly sturdy console</tile>
-<tile sprite="20" vision="1" movement="2"> a near invincible bit of machinery</tile>
-<tile sprite="21" vision="0" movement="0"> a dried creamy stain</tile>
-</tileset>
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="0" movement="0"> a metal floor</tile>
+		<tile sprite="1" vision="1" movement="2" smart="true"> a metal wall</tile>
+		<tile sprite="18" vision="0" movement="0"> a floor panel</tile>
+		<tile sprite="19" vision="1" movement="2"> an absurdly sturdy console</tile>
+		<tile sprite="20" vision="1" movement="2"> a near invincible bit of
+			machinery</tile>
+		<tile sprite="21" vision="0" movement="0"> a dried creamy stain</tile>
+	</tileset>
 
-<description>The air is cold and stale, the halls dark. Broken wiring dangles from the overheads and broken machinery is interspersed with pitted steel.</description>
+	<description>The air is cold and stale, the halls dark. Broken wiring
+		dangles from the overheads and broken machinery is interspersed with
+		pitted steel.</description>
 
-<mapgen>
-
-
-<blockDungeon extent="20">
-<loadBlocks file="spacehulk"/>
-
-
-<keyBlock x="4" y="0">
-<row>00000000</row>
-<row>02221220</row>
-<row>22111122</row>
-<row>11111111</row>
-<row>11111111</row>
-<row>22111122</row>
-<row>02111120</row>
-<row>02211220</row>
-<edge value="EAST"/>
-<edge value="WEST"/>
-<edge value="NORTH"/>
-<widget x="4" y="1" name="airlockN" variable="-101"/>
-</keyBlock>
+	<mapgen>
 
 
+		<blockDungeon extent="20">
+			<loadBlocks file="spacehulk" />
 
-<keyBlock heat="2">
-<row>02222200</row>
-<row>02141220</row>
-<row>22114122</row>
-<row>11111112</row>
-<row>11111112</row>
-<row>22114122</row>
-<row>02141220</row>
-<row>02222200</row>
-<edge value="WEST"/>
-<spawn x="4" y="4" tag="1"/>
-<widget x="6" y="4" name="console" info="interaction/spacehulk/spacehulkcomputer" variable="31"/>
-</keyBlock>
 
-<keyBlock heat="2">
-<row>00222200</row>
-<row>02244220</row>
-<row>22111122</row>
-<row>24111142</row>
-<row>24111142</row>
-<row>22111122</row>
-<row>02211220</row>
-<row>00211200</row>
-<edge value="NORTH"/>
-<widget x="2" y="6" name="cargocontainer" info="specialchest" />
-<widget x="4" y="4" name="console" info="interaction/spacehulk/spacehulkdatabase" variable="27"/>
-</keyBlock>
-<keyBlock heat="2">
-<row>21111112</row>
-<row>21222212</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>22222222</row>
-<edge value="SOUTH"/>
-<spawn x="2" y="5" tag="0"/>
-<spawn x="3" y="5" tag="0"/>
-<widget x="4" y="5" name="mechanism" info="interaction/spacehulk/missileLauncher" variable="85"/>
-<widget x="4" y="4" name="cargocontainer" info="ammochest" />
-</keyBlock>
+			<keyBlock x="4" y="0">
+				<row>00000000</row>
+				<row>02221220</row>
+				<row>22111122</row>
+				<row>11111111</row>
+				<row>11111111</row>
+				<row>22111122</row>
+				<row>02111120</row>
+				<row>02211220</row>
+				<edge value="EAST" />
+				<edge value="WEST" />
+				<edge value="NORTH" />
+				<widget x="4" y="1" name="airlockN" variable="-101" />
+			</keyBlock>
 
-<prefabBlock heat="2" width="2" height="1" blockCount="2">
-<edge value="EAST"/>
-<block>
-<row>02222222</row>
-<row>02333332</row>
-<row>22353532</row>
-<row>21111111</row>
-<row>21111111</row>
-<row>22353532</row>
-<row>02333332</row>
-<row>02222222</row>
-<spawn x="1" y="6" tag="0"/>
-<spawn x="1" y="1" tag="0"/>
-<widget x="1" y="3" name="cargocontainer" info="specialchest" />
-<widget x="1" y="4" name="mechanism" info="interaction/spacehulk/interplanetary reactor" variable="26"/>
-</block>
-<block>
-<row>22211222</row>
-<row>23333332</row>
-<row>23533532</row>
-<row>11111111</row>
-<row>11111111</row>
-<row>23533532</row>
-<row>23333332</row>
-<row>22211222</row>
-<edge value="EAST"/>
-<edge value="SOUTH"/>
-<edge value="NORTH"/>
-<widget x="0" y="3" name="panelH_invincible" info="engineering" variable="20"/>
-<widget x="0" y="4" name="panelH_invincible" info="engineering" variable="20"/>
-<widget x="2" y="4" name="itempile" info="spacehulk_note"/>
-</block>
-</prefabBlock>
 
-<clean value="2"/>
-<lootTable identity="normalchest">
-<lootSubTable chance="0.75" file="spacehulk_resources"/>
-<lootSubTable chance="0.75" file="spacehulk_consumables"/>
-<lootSubTable chance="0.75" file="spacehulk_resources"/>
-<lootSubTable chance="0.75" file="spacehulk_consumables"/>
-<lootSubTable chance="0.50" file="spacehulk_resources"/>
-<lootSubTable chance="0.50" file="spacehulk_consumables"/>
-</lootTable>
-<lootTable identity="specialchest">
-<loot item="flux capacitor" chance="1"/>
-<loot item="battery" chance="0.5"/>
-<loot item="scrap metal" chance="0.5"/>
-<loot item="heavy plate" chance="0.5"/>
-<loot item="computation valve" chance="0.5"/>
-<lootSubTable chance="1.0" file="spacehulk_special"/>
-</lootTable>
-<lootTable identity="ammochest">
-<loot chance="1.0" item="dagger missile"/>
-<loot chance="1.0" item="dagger missile"/>
-<loot chance="1.0" item="dagger missile"/>
-<loot chance="1.0" item="dagger missile"/>
-<loot chance="0.5" item="dagger missile"/>
-<loot chance="0.5" item="dagger missile"/>
-<loot chance="0.5" item="dagger missile"/>
-<loot chance="0.5" item="dagger missile"/>
-<loot chance="0.5" item="dagger missile"/>
-<loot chance="0.5" item="dagger missile"/>
-<loot chance="0.5" item="dagger missile"/>
-<loot chance="0.5" item="dagger missile"/>
-</lootTable>
-<lootTable identity="spacehulk_note">
-<loot item="note" chance="1.0" addendum="zer03"/>
 
-</lootTable>
-<npcType value="space/zetamorph"/>
-<npcType value="space/black_zetamorph"/>
-</blockDungeon>
-<partition xmin="24" xmax="48" ymin="0" ymax="12" inverse="true">
-<SeedNPCs min="8" max="16" name="space/zetamorph"> </SeedNPCs>
-</partition>
-<placeItem x="34" y="6">
-<item itemname="Laser rifle" energy="0"/>
-<item itemname="power-cell" energy="0"/>
-<item itemname="note" exposition="nia05"/>
-</placeItem>
+			<keyBlock heat="2">
+				<row>02222200</row>
+				<row>02141220</row>
+				<row>22114122</row>
+				<row>11111112</row>
+				<row>11111112</row>
+				<row>22114122</row>
+				<row>02141220</row>
+				<row>02222200</row>
+				<edge value="WEST" />
+				<spawn x="4" y="4" tag="1" />
+				<widget x="6" y="4" name="console"
+					info="interaction/spacehulk/spacehulkcomputer" variable="31" />
+			</keyBlock>
 
-<degrade chance="4" degradethis="0" replacewith="5"/>
+			<keyBlock heat="2">
+				<row>00222200</row>
+				<row>02244220</row>
+				<row>22111122</row>
+				<row>24111142</row>
+				<row>24111142</row>
+				<row>22111122</row>
+				<row>02211220</row>
+				<row>00211200</row>
+				<edge value="NORTH" />
+				<widget x="2" y="6" name="cargocontainer" info="specialchest" />
+				<widget x="4" y="4" name="console"
+					info="interaction/spacehulk/spacehulkdatabase" variable="27" />
+			</keyBlock>
+			<keyBlock heat="2">
+				<row>21111112</row>
+				<row>21222212</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>22222222</row>
+				<edge value="SOUTH" />
+				<spawn x="2" y="5" tag="0" />
+				<spawn x="3" y="5" tag="0" />
+				<widget x="4" y="5" name="mechanism"
+					info="interaction/spacehulk/missileLauncher" variable="85" />
+				<widget x="4" y="4" name="cargocontainer" info="ammochest" />
+			</keyBlock>
 
-</mapgen>
+			<prefabBlock heat="2" width="2" height="1" blockCount="2">
+				<edge value="EAST" />
+				<block>
+					<row>02222222</row>
+					<row>02333332</row>
+					<row>22353532</row>
+					<row>21111111</row>
+					<row>21111111</row>
+					<row>22353532</row>
+					<row>02333332</row>
+					<row>02222222</row>
+					<spawn x="1" y="6" tag="0" />
+					<spawn x="1" y="1" tag="0" />
+					<widget x="1" y="3" name="cargocontainer" info="specialchest" />
+					<widget x="1" y="4" name="mechanism"
+						info="interaction/spacehulk/interplanetary reactor" variable="26" />
+				</block>
+				<block>
+					<row>22211222</row>
+					<row>23333332</row>
+					<row>23533532</row>
+					<row>11111111</row>
+					<row>11111111</row>
+					<row>23533532</row>
+					<row>23333332</row>
+					<row>22211222</row>
+					<edge value="EAST" />
+					<edge value="SOUTH" />
+					<edge value="NORTH" />
+					<widget x="0" y="3" name="panelH_invincible" info="engineering"
+						variable="20" />
+					<widget x="0" y="4" name="panelH_invincible" info="engineering"
+						variable="20" />
+					<widget x="2" y="4" name="itempile" info="spacehulk_note" />
+				</block>
+			</prefabBlock>
+
+			<clean value="2" />
+			<lootTable identity="normalchest">
+				<lootSubTable chance="0.75" file="spacehulk_resources" />
+				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.75" file="spacehulk_resources" />
+				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.50" file="spacehulk_resources" />
+				<lootSubTable chance="0.50" file="spacehulk_consumables" />
+			</lootTable>
+			<lootTable identity="specialchest">
+				<loot item="flux capacitor" chance="1" />
+				<loot item="battery" chance="0.5" />
+				<loot item="scrap metal" chance="0.5" />
+				<loot item="heavy plate" chance="0.5" />
+				<loot item="computation valve" chance="0.5" />
+				<lootSubTable chance="1.0" file="spacehulk_special" />
+			</lootTable>
+			<lootTable identity="ammochest">
+				<loot chance="1.0" item="dagger missile" />
+				<loot chance="1.0" item="dagger missile" />
+				<loot chance="1.0" item="dagger missile" />
+				<loot chance="1.0" item="dagger missile" />
+				<loot chance="0.5" item="dagger missile" />
+				<loot chance="0.5" item="dagger missile" />
+				<loot chance="0.5" item="dagger missile" />
+				<loot chance="0.5" item="dagger missile" />
+				<loot chance="0.5" item="dagger missile" />
+				<loot chance="0.5" item="dagger missile" />
+				<loot chance="0.5" item="dagger missile" />
+				<loot chance="0.5" item="dagger missile" />
+			</lootTable>
+			<lootTable identity="spacehulk_note">
+				<loot item="note" chance="1.0" addendum="zer03" />
+
+			</lootTable>
+			<npcType value="space/zetamorph" />
+			<npcType value="space/black_zetamorph" />
+		</blockDungeon>
+		<partition xmin="24" xmax="48" ymin="0" ymax="12" inverse="true">
+			<SeedNPCs min="8" max="16" name="space/zetamorph">
+			</SeedNPCs>
+		</partition>
+		<placeItem x="34" y="6">
+			<item itemname="Laser rifle" energy="0" />
+			<item itemname="power-cell" energy="0" />
+			<item itemname="note" exposition="nia05" />
+		</placeItem>
+
+		<degrade chance="4" degradethis="0" replacewith="5" />
+
+	</mapgen>
 
 </zone>

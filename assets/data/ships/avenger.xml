@@ -1,112 +1,117 @@
 <?xml version="1.0"?>
 <Ship width="7" height="7" sprite="avenger">
 
-<shipstats>
-<movecost value="20"/>
-<hullpoints value="50"/>
-<thrustcost value="1.5"/>
-<manouver value="2"/>
-</shipstats>
+	<shipstats>
+		<movecost value="20" />
+		<hullpoints value="50" />
+		<thrustcost value="1.5" />
+		<manouver value="2" />
+	</shipstats>
 
-<emitters>
-<weapon x="-0.2" y="0.2"/>
-<weapon x="0.2" y="0.2"/>
-<engine x="-0.1" y="-0.4"/>
-<engine x="0" y="-0.4"/>
-<engine x="0.1" y="-0.4"/>
-</emitters>
+	<emitters>
+		<weapon x="-0.2" y="0.2" />
+		<weapon x="0.2" y="0.2" />
+		<engine x="-0.1" y="-0.4" />
+		<engine x="0" y="-0.4" />
+		<engine x="0.1" y="-0.4" />
+	</emitters>
 
-<layout width="16" height="16" spriteset="ship.png">
-<tileset>
-<tile sprite="1" vision="1" movement="2">a metal wall</tile>
-<tile sprite="2" vision="0" movement="0">a metal floor</tile>
-</tileset>
-<description>The design of this ship feels at times familiar and unfamiliar, its origins are mysterious except for a badly worn inscription that seems to say 'x-cum Avengcr' or some such on one of the metal plates</description>
-<mapgen>
-<prefab positionX="0" positionY="0" width="9">
-<row>111111111</row>
-<row>122212221</row>
-<row>122222221</row>
-<row>122212221</row>
-<row>222212221</row>
-<row>122212221</row>
-<row>111111211</row>
-<row>012222210</row>
-<row>012222210</row>
-<row>011222110</row>
-<row>001222100</row>
-<row>001111100</row>
-</prefab>
-<pairedportal x="0" y="4" sprite="1" ID="-101" facing="2"> Exterior hatch </pairedportal>
-<placeWidget x="3" y="10" name="slot">
-<contains name="craftingtable"/>
-</placeWidget>
-<placeWidget x="4" y="10" name="slot">
-<contains name="modules/navconsole"/>
-</placeWidget>
-<placeWidget x="5" y="10" name="slot">
-<contains name="modules/specimenContainment"/>
-</placeWidget>
-<placeWidget x="2" y="8" name="hardpoint">
-<facing value="7"/>
-<contains name="shipweapons/laser cannon">
+	<layout width="16" height="16" spriteset="ship.png">
+		<tileset>
+			<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+			<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+		</tileset>
+		<description>The design of this ship feels at times familiar and
+			unfamiliar, its origins are mysterious except for a badly worn
+			inscription that seems to say 'x-cum Avengcr' or some such on one of
+			the metal plates</description>
+		<mapgen>
+			<prefab positionX="0" positionY="0" width="9">
+				<row>111111111</row>
+				<row>122212221</row>
+				<row>122222221</row>
+				<row>122212221</row>
+				<row>222212221</row>
+				<row>122212221</row>
+				<row>111111211</row>
+				<row>012222210</row>
+				<row>012222210</row>
+				<row>011222110</row>
+				<row>001222100</row>
+				<row>001111100</row>
+			</prefab>
+			<pairedportal x="0" y="4" sprite="1" ID="-101" facing="2">
+				Exterior hatch </pairedportal>
+			<placeWidget x="3" y="10" name="slot">
+				<contains name="craftingtable" />
+			</placeWidget>
+			<placeWidget x="4" y="10" name="slot">
+				<contains name="modules/navconsole" />
+			</placeWidget>
+			<placeWidget x="5" y="10" name="slot">
+				<contains name="modules/specimenContainment" />
+			</placeWidget>
+			<placeWidget x="2" y="8" name="hardpoint">
+				<facing value="7" />
+				<contains name="shipweapons/laser cannon">
 
-</contains>
-</placeWidget>
+				</contains>
+			</placeWidget>
 
-<placeWidget x="6" y="8" name="hardpoint">
-<facing value="1"/>
-<contains name="shipweapons/laser cannon">
-</contains>
-</placeWidget>
+			<placeWidget x="6" y="8" name="hardpoint">
+				<facing value="1" />
+				<contains name="shipweapons/laser cannon">
+				</contains>
+			</placeWidget>
 
-<placeWidget x="3" y="5" name="slot">
-<contains name="modules/generator">
-<resource type="ENERGY" value="25"/>
-</contains>
-</placeWidget>
+			<placeWidget x="3" y="5" name="slot">
+				<contains name="modules/generator">
+					<resource type="ENERGY" value="25" />
+				</contains>
+			</placeWidget>
 
-<placeWidget x="5" y="5" name="slot">
-<contains name="modules/generator">
-<resource type="ENERGY" value="25"/>
-</contains>
-</placeWidget>
+			<placeWidget x="5" y="5" name="slot">
+				<contains name="modules/generator">
+					<resource type="ENERGY" value="25" />
+				</contains>
+			</placeWidget>
 
-<placeWidget x="2" y="3" name="slot">
-</placeWidget>
+			<placeWidget x="2" y="3" name="slot">
+			</placeWidget>
 
-<placeWidget x="6" y="3" name="slot">
-<contains name="modules/defensive barrier"/>
-</placeWidget>
+			<placeWidget x="6" y="3" name="slot">
+				<contains name="modules/defensive barrier" />
+			</placeWidget>
 
-<placeWidget x="3" y="1" name="slot">
-<contains name="modules/single bed"/>
-</placeWidget>
+			<placeWidget x="3" y="1" name="slot">
+				<contains name="modules/single bed" />
+			</placeWidget>
 
-<placeWidget x="5" y="1" name="slot">
-<contains name="modules/reformer"/>
-</placeWidget>
+			<placeWidget x="5" y="1" name="slot">
+				<contains name="modules/reformer" />
+			</placeWidget>
 
-<placeWidget x="1" y="1" name="slot">
-<contains name="modules/interplanetary reactor">
-<resource type="FUEL" value="40"/>
-</contains>
-</placeWidget>
+			<placeWidget x="1" y="1" name="slot">
+				<contains name="modules/interplanetary reactor">
+					<resource type="FUEL" value="40" />
+				</contains>
+			</placeWidget>
 
-<placeWidget x="7" y="1" name="slot">
-<contains name="modules/space warper"/>
-</placeWidget>
+			<placeWidget x="7" y="1" name="slot">
+				<contains name="modules/space warper" />
+			</placeWidget>
 
-</mapgen>
-</layout>
-<exterior width="7">
-<row>0000000</row>
-<row>0111110</row>
-<row>0111110</row>
-<row>0011100</row>
-<row>0011100</row>
-<row>0011100</row>
-<row>0011100</row>
-<pairedportal x="1" y="3" sprite="10" ID="-101" destination="avenger" facing="6"> a ship hatch </pairedportal>
-</exterior>
+		</mapgen>
+	</layout>
+	<exterior width="7">
+		<row>0000000</row>
+		<row>0111110</row>
+		<row>0111110</row>
+		<row>0011100</row>
+		<row>0011100</row>
+		<row>0011100</row>
+		<row>0011100</row>
+		<pairedportal x="1" y="3" sprite="10" ID="-101"
+			destination="avenger" facing="6"> a ship hatch </pairedportal>
+	</exterior>
 </Ship>

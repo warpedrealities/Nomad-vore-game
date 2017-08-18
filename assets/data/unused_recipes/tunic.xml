@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <recipe name="primitive tunic" requiredskill="0" startunlocked="true">
-<description>
-A medieval tunic made of primitive cloth.
-</description>
-<ingredient item="fabric" quantity="6"/>
-<result item="primitive tunic"/>
+	<description>
+		A medieval tunic made of primitive cloth.
+	</description>
+	<ingredient item="fabric" quantity="6" />
+	<result item="primitive tunic" />
 </recipe>

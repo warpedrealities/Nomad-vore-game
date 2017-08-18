@@ -1,33 +1,45 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="greenshop.png"/>
-<name>Minyos shopkeeper</name>
-<description>A pair of long green ears emerge from the tousled mess of hair atop the head of this alien villager, decorated in all manner of gaudy earrings. Much like others of her kind she has a simply smashing ass, but whereas the others were all bottom this one seems to have a bust to match. Clearly dressed to show off these added assets, the front of her robe strains to contain her cleavage, you think she might have altered the front to be just a bit too small on purpose. Said robes are lined with several pockets and bound on sacks full of assorted items. Combined with the items in her immediate vicinity she has quite a stock and the air of someone who would trade parts of it to visitors for the right price. </description>
-<rpg>
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="50"/>
-<stat stat="RESOLVE" value="50"/>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
-<missText count="1">
-<text>the villager's punch fails to connect with TARGET</text>
-</missText>
-<hitText count="1">
-<text>the villager hits TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="greenshop.png" />
+	<name>Minyos shopkeeper</name>
+	<description>A pair of long green ears emerge from the tousled mess of
+		hair atop the head of this alien villager, decorated in all manner of
+		gaudy earrings. Much like others of her kind she has a simply smashing
+		ass, but whereas the others were all bottom this one seems to have a
+		bust to match. Clearly dressed to show off these added assets, the
+		front of her robe strains to contain her cleavage, you think she might
+		have altered the front to be just a bit too small on purpose. Said
+		robes are lined with several pockets and bound on sacks full of
+		assorted items. Combined with the items in her immediate vicinity she
+		has quite a stock and the air of someone who would trade parts of it
+		to visitors for the right price. </description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the villager's punch fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the villager hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<respawn delay="1000"/>
-<disposition value="55"/>
+	<respawn delay="1000" />
+	<disposition value="55" />
 
-<talk conversation="alpha_minoris_II/minyosshop/chat" />
-<controller AI="staystill"/>
-<faction value="minyos"/>
+	<talk conversation="alpha_minoris_II/minyosshop/chat" />
+	<controller AI="staystill" />
+	<faction value="minyos" />
 </NPC>

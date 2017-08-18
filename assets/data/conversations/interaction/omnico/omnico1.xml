@@ -2,134 +2,170 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			workstation online. LBREAK 
-			warning data corruption detected. LBREAK 
+			workstation online. LBREAK
+			warning data corruption detected. LBREAK
 		</text>
-		<choice destination="mailbox" text="access mailbox"/>
+		<choice destination="mailbox" text="access mailbox" />
 		<choice destination="end" text="exit" />
 	</page>
 
 	<page ID="mailbox">
 		<text>
-			partial mailbox contents recovered LBREAK 
-			select message LBREAK 
+			partial mailbox contents recovered LBREAK
+			select message LBREAK
 		</text>
-		<choice destination="email0" text="access 713"/>
-		<choice destination="email2" text="access 811"/>			
-		<choice destination="email4" text="access 1041"/>	
+		<choice destination="email0" text="access 713" />
+		<choice destination="email2" text="access 811" />
+		<choice destination="email4" text="access 1041" />
 		<choice destination="end" text="exit" />
 	</page>
-	
+
 	<page ID="email0">
-	<text>
-		From: mgr. Ansbel LBREAK 
-		To: all staff LBREAK 
-		subject: improper storage of synth accessories LBREAK 
+		<text>
+			From: mgr. Ansbel LBREAK
+			To: all staff LBREAK
+			subject: improper storage of synth accessories LBREAK
 
-		To the responsible parties, LBREAK 
+			To the responsible parties, LBREAK
 
-		Please note that when not attached to the Omnico synthetic predator gynoid the class II genital attachment is to be stored safely in sub-level 2 storage area B. Furthermore they're to be contained  in a type-7 cargo box compliant with the standards for the preservation of flexible synth material.  LBREAK 
+			Please note that when not attached to the Omnico synthetic predator gynoid
+			the class II genital attachment is to be stored safely in sub-level 2
+			storage area B. Furthermore they're to be contained in a type-7 cargo
+			box compliant with the standards for the preservation of flexible
+			synth material. LBREAK
 
-		It is not in fact appropriate to store them in an open topped plastic document tray perched precariously atop the door to Orrena's office. I should warn you that should you persist I will be forced to make some HR decisions. LBREAK 
-		 
-		I also should remind you that unlike our products I don't need an attachment for that, and I have space on my shelf for a 2 gallon jug. LBREAK 
+			It is not in fact appropriate to store them in an open topped plastic
+			document tray perched precariously atop the door to Orrena's office.
+			I should warn you that should you persist I will be forced to make
+			some HR decisions. LBREAK
 
-		-Ansbel. LBREAK 
+			I also should remind you that unlike our products I don't need an
+			attachment for that, and I have space on my shelf for a 2 gallon jug.
+			LBREAK
 
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
+			-Ansbel. LBREAK
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
 	</page>
 
-	
+
 	<page ID="email1">
-	<text>
-		From: Reshi LBREAK 
-		To: T. Velas LBREAK 
-		subject: dodgy units? LBREAK 
+		<text>
+			From: Reshi LBREAK
+			To: T. Velas LBREAK
+			subject: dodgy units? LBREAK
 
-		Is it just me or are the latest batch of synths from head office kinda off. I can't put my finger on it, but something about the way they talk and look at me is freaking me out. Reminds me a tad too much of my last girlfriend, or the boss for that matter.
-	
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
+			Is it just me or are the latest batch of synths from head office kinda
+			off. I can't put my finger on it, but something about the way they
+			talk and look at me is freaking me out. Reminds me a tad too much of
+			my last girlfriend, or the boss for that matter.
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
 	</page>
-	
+
 	<page ID="email2">
-	<text>
-		From: T. Velas LBREAK 
-		To: Reshi LBREAK 
-		subject: RE dodgy units LBREAK 
+		<text>
+			From: T. Velas LBREAK
+			To: Reshi LBREAK
+			subject: RE dodgy units LBREAK
 
-		It's probably just a new personality routine. Some gals like that kinda thing. Reset to the standard, though maybe you'd prefer some alone time with one if you're thinking too much of your last steady. Safer'n' asking the boss.	
-	
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
+			It's probably just a new personality routine. Some gals like that kinda
+			thing. Reset to the standard, though maybe you'd prefer some alone
+			time with one if you're thinking too much of your last steady.
+			Safer'n' asking the boss.
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
 	</page>
-	
+
 	<page ID="email3">
-	<text>
-		From: Reshi LBREAK 
-		To: T. Velas LBREAK 
-		subject: why build an omnico boutique out here? LBREAK 
+		<text>
+			From: Reshi LBREAK
+			To: T. Velas LBREAK
+			subject: why build an omnico boutique out here? LBREAK
 
-		I don't get it. We're setup in the ass end of nowhere. I mean, I get that we're technically on a trade route. But how many ships have passed by since I came here? And how many fewer bought any synths.	
-	
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
+			I don't get it. We're setup in the ass end of nowhere. I mean, I get
+			that we're technically on a trade route. But how many ships have
+			passed by since I came here? And how many fewer bought any synths.
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
 	</page>
-	
+
 	<page ID="email4">
-	<text>
-		From: T. Velas LBREAK 
-		To: Reshi LBREAK 
-		subject: RE why build an omnico boutique out here? LBREAK 
+		<text>
+			From: T. Velas LBREAK
+			To: Reshi LBREAK
+			subject: RE why build an omnico boutique out here? LBREAK
 
-		Passing trade is down. But you're right it was never really high to begin with. I think the computer at head office figured this was one of the few unexploited market areas. I don't pretend to understand how it works, but it beats the old board of directors, trust me on this.
-	
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
+			Passing trade is down. But you're right it was never really high to begin
+			with. I think the computer at head office figured this was one of the
+			few unexploited market areas. I don't pretend to understand how it
+			works, but it beats the old board of directors, trust me on this.
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
 	</page>
-	
+
 	<page ID="email5">
-	<text>
-		From: mgr. Ansbel LBREAK 
-		to: all LBREAK 
-		subject: missing ship LBREAK 
+		<text>
+			From: mgr. Ansbel LBREAK
+			to: all LBREAK
+			subject: missing ship LBREAK
 
-		As you all know the ship from head office is now overdue. I'm keeping the comm open to try and flag down passing traffic to pass on a message of inquiry to head office but so far interstellar traffic appears to have taken a nose dive. It is however nothing to worry about, our stock and supplies will last a considerable amount of time. Especially with the lack of passing customers.
-		
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
-	</page>	
-	
+			As you all know the ship from head office is now overdue. I'm keeping
+			the comm open to try and flag down passing traffic to pass on a
+			message of inquiry to head office but so far interstellar traffic
+			appears to have taken a nose dive. It is however nothing to worry
+			about, our stock and supplies will last a considerable amount of
+			time. Especially with the lack of passing customers.
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
+	</page>
+
 	<page ID="email6">
-	<text>
-		From: T. Velas LBREAK 
-		To: all LBREAK 
-		subject: help! LBREAK 
+		<text>
+			From: T. Velas LBREAK
+			To: all LBREAK
+			subject: help! LBREAK
 
-		Someone locked me into testing with one and it's not stopping. I'm starting to get really sore..this isn't funny.
-		
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
-	</page>	
-		
+			Someone locked me into testing with one and it's not stopping. I'm starting
+			to get really sore..this isn't funny.
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
+	</page>
+
 	<page ID="email7">
-	<text>
-		From: mgr. Asbel LBREAK 
-		to: all LBREAK 
-		RE: preventing accidents LBREAK 
+		<text>
+			From: mgr. Asbel LBREAK
+			to: all LBREAK
+			RE: preventing accidents LBREAK
 
-		I'm going to prevent the recent glitches involving the synth safeties are down to maintenance or defects rather than actual foul play for the time being. However it has become clear I need a contingency in place unless I want to explain to head office how I'm down half the staff due to the synths getting gurgle happy. As such I've pulled some strings to get us a reformation tube. It'll be locked in the back of the storage level unless the main computer detects synth's without their safeties. This is to stop you lot using it recreationally which I know you would do, and probably still will do despite my best efforts. Just remember I can blank patterns and I have a space on my shelf.
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
-	</page>	
+			I'm going to prevent the recent glitches involving the synth safeties
+			are down to maintenance or defects rather than actual foul play for
+			the time being. However it has become clear I need a contingency in
+			place unless I want to explain to head office how I'm down half the
+			staff due to the synths getting gurgle happy. As such I've pulled
+			some strings to get us a reformation tube. It'll be locked in the
+			back of the storage level unless the main computer detects synth's
+			without their safeties. This is to stop you lot using it
+			recreationally which I know you would do, and probably still will do
+			despite my best efforts. Just remember I can blank patterns and I
+			have a space on my shelf.
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
+	</page>
 
 </Conversation>

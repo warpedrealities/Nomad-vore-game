@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <ItemConsumable name="gourd" weight="1" value="40" tag="1">
-	<description> A fleshy globule of nutritious plant matter surrounded with a waxy almost luminously bright yellow skin</description>
+	<description> A fleshy globule of nutritious plant matter surrounded
+		with a waxy almost luminously bright yellow skin</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
 		modvalue="60" modifies="SATIATION">
-		You rip open the gourd and devour the moist fibrous innards, it tastes peculiar but certainly hit the spot.
+		You rip open the gourd and devour the moist
+		fibrous innards, it tastes peculiar but certainly hit the spot.
 	</effectrecover>
 </ItemConsumable>

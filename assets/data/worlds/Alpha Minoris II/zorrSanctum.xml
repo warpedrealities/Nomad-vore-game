@@ -1,61 +1,64 @@
 <?xml version="1.0"?>
 <zone width="32" height="32" spriteset="dungeon.png">
-<tileset count-x="8" count-y="4">
-<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
-<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
-<tile sprite="18" vision="0" movement="1"> liquid water</tile>
-<tile sprite="19" vision="1" movement="2"> a strange statue</tile>
-</tileset>
-<description></description>
-<mapgen>
-<prefab positionX="0" positionY="0" width="32">
-<row>00000000000000222200000000000000</row>
-<row>00000000000000211200000000000000</row>
-<row>00222222222222211222222222222200</row>
-<row>00211111111111211211111111111200</row>
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
+		<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
+		<tile sprite="18" vision="0" movement="1"> liquid water</tile>
+		<tile sprite="19" vision="1" movement="2"> a strange statue</tile>
+	</tileset>
+	<description></description>
+	<mapgen>
+		<prefab positionX="0" positionY="0" width="32">
+			<row>00000000000000222200000000000000</row>
+			<row>00000000000000211200000000000000</row>
+			<row>00222222222222211222222222222200</row>
+			<row>00211111111111211211111111111200</row>
 
-<row>00211111111111211211111111111200</row>
-<row>00211111111111211211111111111200</row>
-<row>00211133333111211211133333111200</row>
-<row>00211131113111211211131113111200</row>
+			<row>00211111111111211211111111111200</row>
+			<row>00211111111111211211111111111200</row>
+			<row>00211133333111211211133333111200</row>
+			<row>00211131113111211211131113111200</row>
 
-<row>00211111113111111111131111111200</row>
-<row>00211131113111211211131113111200</row>
-<row>00211133333111211211133333111200</row>
-<row>00211111111111211211111111111200</row>
+			<row>00211111113111111111131111111200</row>
+			<row>00211131113111211211131113111200</row>
+			<row>00211133333111211211133333111200</row>
+			<row>00211111111111211211111111111200</row>
 
-<row>00211111111111211211111111111200</row>
-<row>00211111111111211211111111111200</row>
-<row>00222222222222211222222222222200</row>
-<row>00000000211111111200000000000000</row>
-</prefab>
-<prefab positionX="8" positionY="16" width="16">
-<row>2122222222000000</row>
-<row>2111111112000000</row>
-<row>2222222112222222</row>
-<row>2111111111111112</row>
-<row>2141414114141412</row>
-<row>2111111111111112</row>
-<row>2141133333311412</row>
-<row>2111133333311112</row>
-<row>2111133333311112</row>
-<row>2141133333311412</row>
-<row>2111111111111112</row>
-<row>2141414114141412</row>
-<row>2111111111111112</row>
-<row>2222222222222222</row>
-</prefab>
+			<row>00211111111111211211111111111200</row>
+			<row>00211111111111211211111111111200</row>
+			<row>00222222222222211222222222222200</row>
+			<row>00000000211111111200000000000000</row>
+		</prefab>
+		<prefab positionX="8" positionY="16" width="16">
+			<row>2122222222000000</row>
+			<row>2111111112000000</row>
+			<row>2222222112222222</row>
+			<row>2111111111111112</row>
+			<row>2141414114141412</row>
+			<row>2111111111111112</row>
+			<row>2141133333311412</row>
+			<row>2111133333311112</row>
+			<row>2111133333311112</row>
+			<row>2141133333311412</row>
+			<row>2111111111111112</row>
+			<row>2141414114141412</row>
+			<row>2111111111111112</row>
+			<row>2222222222222222</row>
+		</prefab>
 
-<pairedportal sprite="3" destination="zorr" x="16" y="1" ID="22" facing="2">tunnel up</pairedportal>
-<placeWidget x="14" y="17" name="SCRIPTEDEVENT">zorrSanctum</placeWidget>
-<placeWidget x="8" y="8" name="mechanism" variable="97" info="interaction/zorr/sarcophagus">
-<description>An unearthly sacrophagus.</description>
-</placeWidget>
-<placeWidget x="23" y="8" name="mechanism" variable="97" info="interaction/zorr/sarcophagus">
-<description>An unearthly sacrophagus.</description>
-</placeWidget>
-<placeNPC name="AlphaMinoris_II/zorr/elder thing" x="16" y="26"/>
+		<pairedportal sprite="3" destination="zorr" x="16" y="1"
+			ID="22" facing="2">tunnel up</pairedportal>
+		<placeWidget x="14" y="17" name="SCRIPTEDEVENT">zorrSanctum</placeWidget>
+		<placeWidget x="8" y="8" name="mechanism" variable="97"
+			info="interaction/zorr/sarcophagus">
+			<description>An unearthly sacrophagus.</description>
+		</placeWidget>
+		<placeWidget x="23" y="8" name="mechanism" variable="97"
+			info="interaction/zorr/sarcophagus">
+			<description>An unearthly sacrophagus.</description>
+		</placeWidget>
+		<placeNPC name="AlphaMinoris_II/zorr/elder thing" x="16" y="26" />
 
-</mapgen>
+	</mapgen>
 
 </zone>

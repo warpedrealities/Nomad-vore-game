@@ -1,70 +1,75 @@
 <?xml version="1.0"?>
 <zone width="32" height="32" spriteset="arctic.png">
-<tileset count-x="8" count-y="8">
-<tile sprite="6" vision="0" movement="0"> snow covered tiles</tile>
-<tile sprite="7" vision="2" movement="2"> frozen wall</tile>
-<tile sprite="8" vision="0" movement="1"> broken window</tile>
-<tile sprite="1" vision="0" movement="0"> ice</tile>
-<tile sprite="2" vision="0" movement="0"> snow</tile>
-<tile sprite="3" vision="0" movement="2"> snowy boulder</tile>
-<tile sprite="4" vision="2" movement="2"> frozen stonework</tile>
-<tile sprite="5" vision="0" movement="1"> abyss</tile>
-</tileset>
-<description>This outpost has been abandoned though for how long is hard to say, the piled high snow and empty broken windows make any guess pure speculation.</description>
-<mapgen>
-<partition xmin="0" xmax="0" ymin="32" ymax="24">
+	<tileset count-x="8" count-y="8">
+		<tile sprite="6" vision="0" movement="0"> snow covered tiles</tile>
+		<tile sprite="7" vision="2" movement="2"> frozen wall</tile>
+		<tile sprite="8" vision="0" movement="1"> broken window</tile>
+		<tile sprite="1" vision="0" movement="0"> ice</tile>
+		<tile sprite="2" vision="0" movement="0"> snow</tile>
+		<tile sprite="3" vision="0" movement="2"> snowy boulder</tile>
+		<tile sprite="4" vision="2" movement="2"> frozen stonework</tile>
+		<tile sprite="5" vision="0" movement="1"> abyss</tile>
+	</tileset>
+	<description>This outpost has been abandoned though for how long is
+		hard to say, the piled high snow and empty broken windows make any
+		guess pure speculation.</description>
+	<mapgen>
+		<partition xmin="0" xmax="0" ymin="32" ymax="24">
 
-<blockDungeon extent="6">
-<loadBlocks file="clifftop"/>
-<keyBlock x="3" y="1">
-<row>22211220</row>
-<row>21111120</row>
-<row>21111120</row>
-<row>11111120</row>
-<row>11111110</row>
-<row>21111120</row>
-<row>21111120</row>
-<row>22211220</row>
-<edge value="SOUTH"/>
-<edge value="NORTH"/>
-<edge value="WEST"/>
-<widget x="6" y="4" name="elevatorW" info="Zone 2A" variable="22"/>
-</keyBlock>
-<keyBlock heat="2">
-<row>00211200</row>
-<row>02211220</row>
-<row>22111122</row>
-<row>11111111</row>
-<row>11111111</row>
-<row>22111122</row>
-<row>02211220</row>
-<row>00211200</row>
-<edge value="SOUTH"/>
-<edge value="NORTH"/>
-<edge value="WEST"/>
-<edge value="EAST"/>
-<widget x="4" y="4" name="mechanism" info="interaction/AMIII/sonic" variable="73"/>
-</keyBlock>
-<lootTable identity="normalchest">
-	<loot item="note" chance="1.0" addendum="mar1" unique="3"/>
-	<loot item="note" chance="1.0" addendum="mar3" unique="3"/>
-	<loot item="note" chance="1.0" addendum="mar5" unique="3"/>
-	<lootSubTable chance="1" file="resource_tier_1"/>
-	<lootSubTable chance="0.5" file="resource_tier_1"/>
-	<lootSubTable chance="0.5" file="consumable_tier_1"/>
-	<lootSubTable chance="0.25" file="moon_ruins_special"/>
-	<lootSubTable chance="0.15" file="mutators_tier_1"/>
-	<lootSubTable chance="0.25" file="consumable_tier_1"/>
-</lootTable>
-</blockDungeon>
-</partition>
-<noise tile="5" scarcity="10"/>
-<floodfill tile="4">
+			<blockDungeon extent="6">
+				<loadBlocks file="clifftop" />
+				<keyBlock x="3" y="1">
+					<row>22211220</row>
+					<row>21111120</row>
+					<row>21111120</row>
+					<row>11111120</row>
+					<row>11111110</row>
+					<row>21111120</row>
+					<row>21111120</row>
+					<row>22211220</row>
+					<edge value="SOUTH" />
+					<edge value="NORTH" />
+					<edge value="WEST" />
+					<widget x="6" y="4" name="elevatorW" info="Zone 2A"
+						variable="22" />
+				</keyBlock>
+				<keyBlock heat="2">
+					<row>00211200</row>
+					<row>02211220</row>
+					<row>22111122</row>
+					<row>11111111</row>
+					<row>11111111</row>
+					<row>22111122</row>
+					<row>02211220</row>
+					<row>00211200</row>
+					<edge value="SOUTH" />
+					<edge value="NORTH" />
+					<edge value="WEST" />
+					<edge value="EAST" />
+					<widget x="4" y="4" name="mechanism" info="interaction/AMIII/sonic"
+						variable="73" />
+				</keyBlock>
+				<lootTable identity="normalchest">
+					<loot item="note" chance="1.0" addendum="mar1" unique="3" />
+					<loot item="note" chance="1.0" addendum="mar3" unique="3" />
+					<loot item="note" chance="1.0" addendum="mar5" unique="3" />
+					<lootSubTable chance="1" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="consumable_tier_1" />
+					<lootSubTable chance="0.25" file="moon_ruins_special" />
+					<lootSubTable chance="0.15" file="mutators_tier_1" />
+					<lootSubTable chance="0.25" file="consumable_tier_1" />
+				</lootTable>
+			</blockDungeon>
+		</partition>
+		<noise tile="5" scarcity="10" />
+		<floodfill tile="4">
 
-</floodfill>
-<SeedNPCs min="8" max="12" name="AlphaMinoris_III/wyvern"> </SeedNPCs>
-<walloff wall="6" sides="northwestsouth"/>
-<walloff wall="7" sides="east"/>
-</mapgen>
+		</floodfill>
+		<SeedNPCs min="8" max="12" name="AlphaMinoris_III/wyvern">
+		</SeedNPCs>
+		<walloff wall="6" sides="northwestsouth" />
+		<walloff wall="7" sides="east" />
+	</mapgen>
 
 </zone>

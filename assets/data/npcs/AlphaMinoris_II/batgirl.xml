@@ -1,52 +1,59 @@
 <?xml version="1.0"?>
 <Harpy>
-<sprite value="lowercaseB.png"/>
+	<sprite value="lowercaseB.png" />
 
-<name>bat girl</name>
-<description>A softly curved demi. Her arms seemingly replaced with leathery wings. Her hair is a loosely knotted black mass that extends down her back and having been spotted she regards you with mischief in her eyes.</description>
-<rpg>
-<experiencevalue value="25"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="25"/>
-<stat stat="RESOLVE" value="20"/>
-<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2" threatening="true">
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<missText count="2">
-<text>The batgirl fails to claw TARGET</text>
-<text>The batgirl fails to wing buffet TARGET</text>
-</missText>
-<hitText count="2">
-<text>The batgirl claws TARGET for VALUE damage</text>
-<text>The batgirl buffets TARGET with her wings for VALUE damage</text>
-</hitText>
-</combatMove>
-<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
-<hitText count="1">
-<text></text>
-</hitText>
-<missText count="1">
-<text></text>
-</missText>
-<effectStatus probability="100">
-<applyText></applyText>
-<statusStealth uid="23" icon="5" duration="1000" numModifiers="2" strength="12" interval="60">
-</statusStealth>
-</effectStatus>
+	<name>bat girl</name>
+	<description>A softly curved demi. Her arms seemingly replaced with
+		leathery wings. Her hair is a loosely knotted black mass that extends
+		down her back and having been spotted she regards you with mischief in
+		her eyes.</description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="25" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>The batgirl fails to claw TARGET</text>
+				<text>The batgirl fails to wing buffet TARGET</text>
+			</missText>
+			<hitText count="2">
+				<text>The batgirl claws TARGET for VALUE damage</text>
+				<text>The batgirl buffets TARGET with her wings for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusStealth uid="23" icon="5" duration="1000"
+					numModifiers="2" strength="12" interval="60">
+				</statusStealth>
+			</effectStatus>
 
-</combatMove>
-</rpg>
+		</combatMove>
+	</rpg>
 
-<respawn delay="2000"/>
-<flying />
-<defeated conversation="alpha_minoris_II/batgirl/defeat" />
-<seduced conversation="alpha_minoris_II/batgirl/defeat" />
-<victory conversation="alpha_minoris_II/batgirl/victory" />
-<seducer conversation="alpha_minoris_II/batgirl/victory" />
-<controller AI="batgirl"/>
-<faction value="monster"/>
+	<respawn delay="2000" />
+	<flying />
+	<defeated conversation="alpha_minoris_II/batgirl/defeat" />
+	<seduced conversation="alpha_minoris_II/batgirl/defeat" />
+	<victory conversation="alpha_minoris_II/batgirl/victory" />
+	<seducer conversation="alpha_minoris_II/batgirl/victory" />
+	<controller AI="batgirl" />
+	<faction value="monster" />
 </Harpy>

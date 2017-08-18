@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
-<recipe name="specimen containment" requiredskill="0" startunlocked="false">
-<description>
-A device that contains alien lifeforms in a form of reduced activity for longterm storage and later experimentation. This device comes with three containment chambers accessible with the wonders of 'carousel' technology.
-</description>
-<ingredient item="computation valve" quantity="3"/>
-<ingredient item="scrap metal" quantity="9"/>
-<result item="specimen containment"/>
+<recipe name="specimen containment" requiredskill="0"
+	startunlocked="false">
+	<description>
+		A device that contains alien lifeforms in a form of reduced activity
+		for longterm storage and later experimentation. This device comes with
+		three containment chambers accessible with the wonders of 'carousel'
+		technology.
+	</description>
+	<ingredient item="computation valve" quantity="3" />
+	<ingredient item="scrap metal" quantity="9" />
+	<result item="specimen containment" />
 </recipe>

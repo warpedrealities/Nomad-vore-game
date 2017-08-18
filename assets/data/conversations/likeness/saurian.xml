@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <likeness>
-<hasPart part="scales" score="1" />
-<hasValue part="scales" variable="covering" greaterthan="3" score="1"/>
-<hasValue part="scales" variable="colour" equals="3" score="1"/>
-<hasValue part="scales" variable="colour" equals="5" score="1"/>
-<hasValue part="tail" variable="type" equals="0" score="2"/>
+	<hasPart part="scales" score="1" />
+	<hasValue part="scales" variable="covering" greaterthan="3"
+		score="1" />
+	<hasValue part="scales" variable="colour" equals="3" score="1" />
+	<hasValue part="scales" variable="colour" equals="5" score="1" />
+	<hasValue part="tail" variable="type" equals="0" score="2" />
 </likeness>

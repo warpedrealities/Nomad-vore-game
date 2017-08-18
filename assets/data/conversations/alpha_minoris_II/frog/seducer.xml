@@ -1,84 +1,240 @@
 <?xml version="1.0"?>
 <Conversation>
 
-<page ID="start">
-<preference fetish="unbirth"/>
-<!-- lick addled-->
-<text>
-You can't stand it anymore and <conditional><assertion evaluate="slothasitem" slot="2" />
-eagerly shuck your <readequipment slot="2"/> before </conditional> flinging yourself into the soft embrace of the ample amphibian. Hearing her chuckle and ribbit as you press your lusty self up against her cushioning rack. Her tongue and arms twining about you cosily as you flush and mhmm close in against her body. She licks the top of your head and chuckles a bit afore placing her hands on your shoulders.
-</text>
-<choice destination="oralsex0" text="and she pushes you down"/>
-</page>
+	<page ID="start">
+		<preference fetish="unbirth" />
+		<!-- lick addled -->
+		<text>
+			You can't stand it anymore and
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				eagerly shuck your
+				<readequipment slot="2" />
+				before
+			</conditional>
+			flinging yourself into the soft embrace of the ample amphibian.
+			Hearing her chuckle and ribbit as you press your lusty self up
+			against her cushioning rack. Her tongue and arms twining about you
+			cosily as you flush and mhmm close in against her body. She licks the
+			top of your head and chuckles a bit afore placing her hands on your
+			shoulders.
+		</text>
+		<choice destination="oralsex0" text="and she pushes you down" />
+	</page>
 
-<page ID="oralsex0">
-<text>
-The froggy nudges you down onto your knees, the softness of her belly brushing against your head as she leans forwards to plant your face squarely between her thick thighs. Seems with all the licking she's given you she wants you to return the favour, and maybe something more. Least she gave you a smaller area to cover in light of your less extraordinary tongue. You can work with that, you can totally work with that. You slip your eyes closed as you start to lick at her moist cleft eagerly, nuzzling and nestling in against her nethers as you eat her out and hear her croak and moan in delight from your attentions. One of her hands now grasps around the back of your hand, urging you on as you stain your face with her sexual juices.
-</text>
-<choice destination="unbirth0" text="she wants you to lick deeper"/>
-</page>
+	<page ID="oralsex0">
+		<text>
+			The froggy nudges you down onto your knees, the softness of her belly
+			brushing against your head as she leans forwards to plant your face
+			squarely between her thick thighs. Seems with all the licking she's
+			given you she wants you to return the favour, and maybe something
+			more. Least she gave you a smaller area to cover in light of your
+			less extraordinary tongue. You can work with that, you can totally
+			work with that. You slip your eyes closed as you start to lick at her
+			moist cleft eagerly, nuzzling and nestling in against her nethers as
+			you eat her out and hear her croak and moan in delight from your
+			attentions. One of her hands now grasps around the back of your hand,
+			urging you on as you stain your face with her sexual juices.
+		</text>
+		<choice destination="unbirth0" text="she wants you to lick deeper" />
+	</page>
 
-<page ID="unbirth0">
-<text>
-Her hand grasping your head becomes more insistent, mashing your face against her heated lower lips and grinding your nose past her lips. The froggy letting out a delighted ribbit as your face begins to disappear entirely into her sexy nethers. The amphibian crooning in delight and squeezing her thighs against your shoulders as your head vanishes into her sopping wet snatch with a schlorp. Seems the buxom amphibian has a special place in mind for your lusty self. 
-</text>
-<choice destination="unbirth1" text="too horny, wriggle in"/>
-</page>
+	<page ID="unbirth0">
+		<text>
+			Her hand grasping your head becomes more insistent, mashing your face
+			against her heated lower lips and grinding your nose past her lips.
+			The froggy letting out a delighted ribbit as your face begins to
+			disappear entirely into her sexy nethers. The amphibian crooning in
+			delight and squeezing her thighs against your shoulders as your head
+			vanishes into her sopping wet snatch with a schlorp. Seems the buxom
+			amphibian has a special place in mind for your lusty self.
+		</text>
+		<choice destination="unbirth1" text="too horny, wriggle in" />
+	</page>
 
-<page ID="unbirth1">
-<text>
-You can't help but feel her wanting to squeelched into her womb is a wonderful idea. The froggy croaking and moaning in delight as she parts her thighs and clenches, helping you squirm your shoulders into the tightness of her inner channel. Her body squeezing around you wonderfully as you shove your head bodily and eagerly into her womb, the sopping wet flesh ravenously snug about you. The soft flesh stretching yet squeezing possessively as you push off the ground and shove yourself deeper into her drooling snatch, wriggling your ass down between her legs as you scrabble for purchase to shove yourself deeper inside.
-</text>
-<choice destination="unbirth2" text="helped in"/>
-</page>
+	<page ID="unbirth1">
+		<text>
+			You can't help but feel her wanting to squeelched into her womb is a
+			wonderful idea. The froggy croaking and moaning in delight as she
+			parts her thighs and clenches, helping you squirm your shoulders into
+			the tightness of her inner channel. Her body squeezing around you
+			wonderfully as you shove your head bodily and eagerly into her womb,
+			the sopping wet flesh ravenously snug about you. The soft flesh
+			stretching yet squeezing possessively as you push off the ground and
+			shove yourself deeper into her drooling snatch, wriggling your ass
+			down between her legs as you scrabble for purchase to shove yourself
+			deeper inside.
+		</text>
+		<choice destination="unbirth2" text="helped in" />
+	</page>
 
-<page ID="unbirth2">
-<text>
-You're halfway curled into her snug womb now. But with her juices dribbling down your legs and your position you're finding it tricky to push yourself deeper inside her. Luckily the obligingly lusty frog reaches down to help you achieve your naughty goals, her webbed hands gripping your slick legs firmly and starting to coax them into her snatch with a squish. Your body being fed entirely into her womb now, engulfed by her body. Your toes vanish betwixt her drooling nether lips and every inch of you now curls up to bask in a saturation of her lewd fluids. All of you sealed inside, your naughtyness apparently pleasing her greatly as she croaks and starts to rub at her nethers eagerly. You feel the hot womb walls ooze against you, tingling sensually.
-</text>
-<choice destination="struggle" text="fun's over? time to go right"/>
-<choice destination="submit" text="wonderful, the best part is cumming right up"/>
-</page>
+	<page ID="unbirth2">
+		<text>
+			You're halfway curled into her snug womb now. But with her juices dribbling
+			down your legs and your position you're finding it tricky to push
+			yourself deeper inside her. Luckily the obligingly lusty frog reaches
+			down to help you achieve your naughty goals, her webbed hands
+			gripping your slick legs firmly and starting to coax them into her
+			snatch with a squish. Your body being fed entirely into her womb now,
+			engulfed by her body. Your toes vanish betwixt her drooling nether
+			lips and every inch of you now curls up to bask in a saturation of
+			her lewd fluids. All of you sealed inside, your naughtyness
+			apparently pleasing her greatly as she croaks and starts to rub at
+			her nethers eagerly. Every inch of you soaking in her increasingly lusty fluids as she masturbates.
+		</text>
+		<choice destination="struggle" text="fun's over? time to go right" />
+		<choice destination="pleasure" text="try and 'convince' her not to melt you"/>
+		<choice destination="submit"
+			text="wonderful, the best part is cumming right up" />
+	</page>
 
-<check ID="struggle">
-	<test what="WILLPOWER" DC="10" />
-	<outcome destination="escape" />
-	<outcome destination="noEscape" />
-</check>
+	<check ID="pleasure">
+	<test what="PLEASURE" DC="10" />
+	<outcome destination="keep0" />
+	<outcome destination="melt" />	
+	</check>
+	
+	<page ID="keep0">
+	<text>
+	You've loved things so far, but while not keen on melting you're very keen on being so intimately inside the frog girl and set about stroking at her inner walls. You hear her letting out a moan as she feels your delightful movements inside her. Your own moans adding muffledly to the cacophony of pleasure as her wondrous sexual juices soak your flesh and set it a tingle with pleasure. The froggy's womb pressing back against your stroking hands as you caress those insides in a rthythm with the motions you can feel around you of her own self stimulation.. her lust rising until you hear a resounding shuddering ribbit as her womb clenches around you and her lustful juices spill out from between her thighs. The froggy panting and rubbing a hand over the bulge you make in her middle as she comes down from her high.
+ 	</text>
+	<choice destination="keep1" text="You're still horny in there, take care of it"/>
+	</page>
+	
+	<page ID="keep1">
+	<assertion evaluate="haspart" part="penis" />
+	<text>
+	You feel the froggy get comfortable sprawled out and letting out soft contented ribbits as you get to work relieving your own pent up lust. Your hand straying down between your legs as you start to jerk off your raging and needy hardon. Your hand working along your length desperately as you tend to your own desires and hear the frog let out a little chuckle as she senses what you're doing deep within her. The froggy smiling contentedly as you pleasure yourself within her, a little ribbit of delight coming from her lips as she feels you spasm within her and spill your seed within her. You feel her patpat the bulge you make as you pant and get comfortable, starting to mhmm as the warmth seeps in and you can enjoy your surroundings. Your seed hardly troubling you at all.
+	</text>
+	<choice destination="keep2" text="wonder when she'll let me out"/>
+	</page>
 
-<page ID="escape">
-<text>
-You think maybe that getting sloshed away to orgasmic fluids in the froggy girl's womb is taking things a bit far. You attempt to push out against her soft inner flesh and try to shove at the entrance of her inner channel seeking a way out. You hear her ribbit and then her womb clenches around you, the full body massage making you moan as it rubs her hot sexual juices into your body. Gods that feels good, maybe you can stay a bit... no, no you can't. You shake your head desperately to clear the mixture of lust and feel good vibes from your mind and redouble your efforts to shove your way out of her increasingly heated and alluring womb. Part of you wants to stick around and get melted down to girl slag and dissolve into a gush of her delight but despite that you shove out at her nethers, forcing your arms out between her legs. The frog girl too overwhelmed to stop you as you shove out betwixt her thighs and drag yourself free of those inviting but oh so dangerous nether reaches. 
-</text>
-<effect type="heal" value="0.1" />
-<effect type="stunnpc" value="10" />
-<choice destination="end" text="get clear"/>
-</page>
+	<page ID="keep1">
+	<assertion evaluate="haspart" part="vagina" />
+	<text>
+	You feel the froggy get comfortable sprawled out and letting out soft contented ribbits as you get to work relieving your own pent up lust.	Your hand straying down between your legs and rubbing at your netherlips. Your hand working busily as you tend to your own desires and hear the frog let out a little chuckle as she senses what you're doing deep within her. The froggy smiling contentedly as you pleasure yourself within her, a little ribbit of delight coming from her lips as she feels you spasm within her, feminine juices adding to the broth of sexual fluids surrounding you. You feel her patpat the bulge you make as you pant and get comfortable, starting to mhmm as the warmth seeps in and you can enjoy your surroundings. 
+	</text>
+	<choice destination="keep2" text="wonder when she'll let me out"/>
+	</page>	
+	
+	<page ID="keep2">
+	<text>
+	The froggy settles comfortably into the water, half submerged and supported she seems rather content with your body nestled deep in her womb. Her hands now and then rubbing over the dome in her middle. Judging by the sounds of her breathing and heart rate she's starting to doze and you're in here for a while..not that you can find it in you to complain, feels wonderful in here and you close your eyes also and doze. In the end you're not sure how long you've been kept but you awaken to the sensation of the froggy squatting on dry land to ease you out of her with a series of croaks and groans from her part and slurps and clenches from her parts. The froggy blushing as she looks at your gasping wet form coated in her juices, then gives you a pat and a long lick with her tongue afore hopping off. Not only did you get a pleasing stay inside her but she seems less predatory towards you, at least for the moment.
+	</text>
+	<effect type="imprison" value="400" />
+	<special effect="nonhostile" />
+	<effect type="heal" value="0.1" />
+	<choice destination="end" text="good bonus"/>	
+	</page>
+	
+	<page ID="melt">
+	<text>
+	You've loved things so far, but while not keen on melting you're very keen on being so intimately inside the frog girl and set about stroking at her inner walls. You hear her letting out a moan as she feels your delightful movements inside her. Your own moans adding muffledly to the cacophony of pleasure as her wondrous sexual juices soak your flesh and set it a tingle with pleasure. You writhe around inside her, rubbing at her inner walls and rubbing up against them with shuddering moans as the sensations become all the more exquisite. Your pleasure, her pleasure, all is together and time loses all meaning in the wet liquidy realm that has become your whole world...
+	</text>
+	<choice destination="meltGO" text="..."/>
+	</page>
+	
+	<gameover ID="meltGO">
+	<text>
+	Pleasure is all consuming as you writhe in the masturbating frog girl's womb, literally. As you soften and turn sloshier in her womb you realize belatedly that you've stopped rubbing against her, your body failing to respond as your conversion into feminine fluids proceeds apace. Your efforts to rub against her insides apparently insufficiently persuasive to stop you from being liquidated. Your consciousness fades into wondrous and blissful pleasure as you lose definition within her...going into sexual oblivion a moment before her clenching womb mashes your form to juice. Her orgasm shuddering through her, dozens of delighted croaks issuing from her lips as she gushes you out as climax. The sexy juices staining her thighs and the ground beneath her as all you amount to is liquid lust. 
+	</text>
+	</gameover>
+	
+	<check ID="struggle">
+		<test what="WILLPOWER" DC="10" />
+		<outcome destination="escape" />
+		<outcome destination="noEscape" />
+	</check>
 
-<page ID="noEscape">
-<text>
-You think maybe that getting sloshed away to orgasmic fluids in the froggy girl's womb is taking things a bit far. You attempt to push out against her soft inner flesh and try to shove at the entrance of her inner channel seeking a way out. You hear her ribbit and then her womb clenches around you, the full body massage making you moan as it rubs her hot sexual juices into your body. Gods that feels good, maybe you can stay a bit longer, let it work you over so wonderfully...oh yes. You moan blissfully inside her rthythmically pressing womb, the snug squeezes massaging her lusty juices ever deeper into your body. It feels wonderful and you can hear her fingers noisily schlicking into her sex as she masturbates to what's happening...what were you trying to do again?
-</text>
-<choice destination="noEscapeGO" text="splorsh"/>
-</page>
+	<page ID="escape">
+		<text>
+			You think maybe that getting sloshed away to orgasmic fluids in the
+			froggy girl's womb is taking things a bit far. You attempt to push
+			out against her soft inner flesh and try to shove at the entrance of
+			her inner channel seeking a way out. You hear her ribbit and then her
+			womb clenches around you, the full body massage making you moan as it
+			rubs her hot sexual juices into your body. Gods that feels good,
+			maybe you can stay a bit... no, no you can't. You shake your head
+			desperately to clear the mixture of lust and feel good vibes from
+			your mind and redouble your efforts to shove your way out of her
+			increasingly heated and alluring womb. Part of you wants to stick
+			around and get melted down to girl slag and dissolve into a gush of
+			her delight but despite that you shove out at her nethers, forcing
+			your arms out between her legs. The frog girl too overwhelmed to stop
+			you as you shove out betwixt her thighs and drag yourself free of
+			those inviting but oh so dangerous nether reaches.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
 
-<gameover ID="noEscapeGO">
-<text>
-The frog girl moans, gasps and croaks as she frigs herself vigorously. One of her hands down between her thighs while the other massages and squeezes on her own breast lustfully. Her eyes shuddering as she hears you moaning and gasping and slopping inside her womb.. she can feel you're nearly done, softer and sloshier by the moment. Which is good, she's nearly done as well. The frog girl letting out a ribbiting cry as she feels her orgasm rock through her, your form dissolving in a burst of exctasy inside her as her womb squishes you away. All that you were gushing out from between her legs in a vigorous jetting burst as she shudders and shivers in bliss. When it's all over she's left in a messy puddle of her juices, your remnants soaking into the ground beneath her as she pants and flicks her tongue up to sample her flavourful fluids.
-</text>
-</gameover>
+	<page ID="noEscape">
+		<text>
+			You think maybe that getting sloshed away to orgasmic fluids in the
+			froggy girl's womb is taking things a bit far. You attempt to push
+			out against her soft inner flesh and try to shove at the entrance of
+			her inner channel seeking a way out. You hear her ribbit and then her
+			womb clenches around you, the full body massage making you moan as it
+			rubs her hot sexual juices into your body. Gods that feels good,
+			maybe you can stay a bit longer, let it work you over so
+			wonderfully...oh yes. You moan blissfully inside her rthythmically
+			pressing womb, the snug squeezes massaging her lusty juices ever
+			deeper into your body. It feels wonderful and you can hear her
+			fingers noisily schlicking into her sex as she masturbates to what's
+			happening...what were you trying to do again?
+		</text>
+		<choice destination="noEscapeGO" text="splorsh" />
+	</page>
 
-<page Id="submit">
-<text>
-You're so lost in your lusts and arousal you can't help but shiver and squirm in anticipation of your impending liquidation. The kneading insistence of her womb upon you feels heavenly as you soak, bathing in her copious lust juices. You feel your amphibious predator shifting around to pleasure herself as you writhe in her womb, rubbing yourself  up against the wondrous soft and soaked walls of her inner flesh. Sensual pleasure permeating your every being as you begin to soften within her squeezing womb. 
-</text>
-<choice destination="submitGO" text="orgasm'd"/>
-</page>
+	<gameover ID="noEscapeGO">
+		<text>
+			The frog girl moans, gasps and croaks as she frigs herself vigorously.
+			One of her hands down between her thighs while the other massages and
+			squeezes on her own breast lustfully. Her eyes shuddering as she
+			hears you moaning and gasping and slopping inside her womb.. she can
+			feel you're nearly done, softer and sloshier by the moment. Which is
+			good, she's nearly done as well. The frog girl letting out a
+			ribbiting cry as she feels her orgasm rock through her, your form
+			dissolving in a burst of exctasy inside her as her womb squishes you
+			away. All that you were gushing out from between her legs in a
+			vigorous jetting burst as she shudders and shivers in bliss. When
+			it's all over she's left in a messy puddle of her juices, your
+			remnants soaking into the ground beneath her as she pants and flicks
+			her tongue up to sample her flavourful fluids.
+		</text>
+	</gameover>
 
-<gameover ID="submitGO">
-<text>
-Her kneading womb and lusty fluids reduce you steadily into a moaning and pleasure addled wet mess inside her. You can hear her fingering herself vigorously, audible even over the numerous liquid sounds that surround you in her molten depths. Her breath catches in her throat and then it comes, or rather she cums. The amphibian letting out a shuddering gasp as she squishes you down to juices, your form coming apart in a burst of pure pleasure that is your final moment. Gushes of femmecum spurting from her nethers to splatter over the ground beneath her as she writhes and pants and rides out her orgasm. Your predator also left wet and panting in a more metaphorical hot mess after her climax, satisfaction on her face and your remains staining her inner thighs as she lays there sprawled out and savours the afterglow.
-</text>
-</gameover>
+	<page Id="submit">
+		<text>
+			You're so lost in your lusts and arousal you can't help but shiver and
+			squirm in anticipation of your impending liquidation. The kneading
+			insistence of her womb upon you feels heavenly as you soak, bathing
+			in her copious lust juices. You feel your amphibious predator
+			shifting around to pleasure herself as you writhe in her womb,
+			rubbing yourself up against the wondrous soft and soaked walls of her
+			inner flesh. Sensual pleasure permeating your every being as you
+			begin to soften within her squeezing womb.
+		</text>
+		<choice destination="submitGO" text="orgasm'd" />
+	</page>
+
+	<gameover ID="submitGO">
+		<text>
+			Her kneading womb and lusty fluids reduce you steadily into a moaning
+			and pleasure addled wet mess inside her. You can hear her fingering
+			herself vigorously, audible even over the numerous liquid sounds that
+			surround you in her molten depths. Her breath catches in her throat
+			and then it comes, or rather she cums. The amphibian letting out a
+			shuddering gasp as she squishes you down to juices, your form coming
+			apart in a burst of pure pleasure that is your final moment. Gushes
+			of femmecum spurting from her nethers to splatter over the ground
+			beneath her as she writhes and pants and rides out her orgasm. Your
+			predator also left wet and panting in a more metaphorical hot mess
+			after her climax, satisfaction on her face and your remains staining
+			her inner thighs as she lays there sprawled out and savours the
+			afterglow.
+		</text>
+	</gameover>
 
 </Conversation>

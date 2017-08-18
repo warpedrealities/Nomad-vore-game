@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <ItemWidget name="battery bank" weight="10" value="1000">
-<description>A bank of batteries to provide a reserve of energy for the ship. capacity for 50 energy.</description>
-<placeditem widget="modules/battery bank"/>
+	<description>A bank of batteries to provide a reserve of energy for the
+		ship. capacity for 50 energy.</description>
+	<placeditem widget="modules/battery bank" />
 </ItemWidget>

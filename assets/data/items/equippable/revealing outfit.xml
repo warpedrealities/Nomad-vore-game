@@ -2,9 +2,12 @@
 <ItemEquip name="revealing outfit" weight="3" slot="BODY"
 	value="200">
 	<description>
-		A more revealing and skimpy outfit that matches the sexually charged
-		atmosphere of these alien worlds. Still somewhat protective, but alas
-		still flammable. +2 kinetic defence, -1 thermal defence
+		A more revealing and skimpy outfit that matches the
+		sexually charged
+		atmosphere of these alien worlds. Still somewhat
+		protective, but alas
+		still flammable. +2 kinetic defence, -1 thermal
+		defence
 	</description>
 	<modifier>
 		<kinetic value="2" />

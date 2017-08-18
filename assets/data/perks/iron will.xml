@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <perk name="iron will">
-<description> 
-yours is a will that is undefeatable, or at least, harder to defeat now. +8 resolve. </description>
-<modifier affects="RESOLVE" value="8" type="STAT"/>
+	<description>
+		yours is a will that is undefeatable, or at least, harder to defeat now. +8
+		resolve.
+	</description>
+	<modifier affects="RESOLVE" value="8" type="STAT" />
 
-<maxrank value="3"/>
+	<maxrank value="3" />
 
 </perk>

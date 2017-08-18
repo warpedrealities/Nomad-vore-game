@@ -6,10 +6,14 @@
 		<condition evaluate="FACTIONFLAG" value="1" operator="equals"
 			flag="allegiance" />
 		<text>
-			The pointy-eared humanoid is similar in most regards to humans but for
-			her pale, green skin. She stands around five feet tall and more than
-			fills out her form, especially viewed from behind. She wears a skirt
-			that does little to hide her wondrous, shapely ass-- in fact, it
+			The pointy-eared humanoid is similar in most regards to humans
+			but for
+			her pale, green skin. She stands around five feet tall and
+			more than
+			fills out her form, especially viewed from behind. She wears
+			a skirt
+			that does little to hide her wondrous, shapely ass-- in fact,
+			it
 			seems to highlight it-- and no top, her breasts swaying free on her
 			chest, small and pert. "Greetings and well-met, friend," she says at
 			your approach.
@@ -23,14 +27,21 @@
 
 
 	<page ID="start">
-	<condition evaluate="LIKENESS" operator="greaterthan" likeness="saurian" value="2" />
+		<condition evaluate="LIKENESS" operator="greaterthan"
+			likeness="saurian" value="2" />
 		<text>
-			The pointy-eared humanoid is similar in most regards to humans but for
-			her pale, green skin. She stands around five feet tall and more than
-			fills out her form, especially viewed from behind. She wears a skirt
-			that does little to hide her wondrous, shapely ass-- in fact, it
+			The pointy-eared humanoid is similar in most regards to humans
+			but for
+			her pale, green skin. She stands around five feet tall and
+			more than
+			fills out her form, especially viewed from behind. She wears
+			a skirt
+			that does little to hide her wondrous, shapely ass-- in fact,
+			it
 			seems to highlight it-- and no top, her breasts swaying free on her
-			chest, small and pert. She eyes you distrustfully as you approach, something about your appearance engendering distrust "speak your piece stranger."
+			chest, small and pert. She eyes you distrustfully as you approach,
+			something about your appearance engendering distrust "speak your
+			piece stranger."
 		</text>
 		<choice destination="seduction" text="Attempt to seduce." />
 		<choice destination="info" text="Ask some questions." />
@@ -38,13 +49,17 @@
 			text="-Can you, by any chance, give me directions to Earth?-" />
 		<choice destination="end" text="-Well, bye.-" />
 	</page>
-	
+
 	<page ID="start">
 		<text>
-			The pointy-eared humanoid is similar in most regards to humans but for
-			her pale, green skin. She stands around five feet tall and more than
-			fills out her form, especially viewed from behind. She wears a skirt
-			that does little to hide her wondrous, shapely ass-- in fact, it
+			The pointy-eared humanoid is similar in most regards to humans
+			but for
+			her pale, green skin. She stands around five feet tall and
+			more than
+			fills out her form, especially viewed from behind. She wears
+			a skirt
+			that does little to hide her wondrous, shapely ass-- in fact,
+			it
 			seems to highlight it-- and no top, her breasts swaying free on her
 			chest, small and pert. "Greetings, stranger from the stars," she says
 			at your approach.
@@ -62,11 +77,16 @@
 		<condition evaluate="LOCALFLAG" value="0" operator="equals"
 			flag="attempt" />
 		<text>
-			Gears turn slowly in your head and you realize just how appealing this
-			alien villager looks. Sashaying your hips and fluttering your eyes at
-			the comely villager, you put on your best impression of a female
-			equivalent to the legendary Captain Kirk, always having freaky sex
-			with every alien life-form you meet. This is the best idea you've
+			Gears turn slowly in your head and you realize just how
+			appealing this
+			alien villager looks. Sashaying your hips and
+			fluttering your eyes at
+			the comely villager, you put on your best
+			impression of a female
+			equivalent to the legendary Captain Kirk,
+			always having freaky sex
+			with every alien life-form you meet. This is
+			the best idea you've
 			ever had.
 		</text>
 		<choice destination="seductioncheck" text="-To boldly go...~-" />
@@ -84,8 +104,10 @@
 		<condition evaluate="LOCALFLAG" value="1" operator="equals"
 			flag="attempt" />
 		<text>
-			The seduction attempt seems to be becoming less effective with time as
-			she frowns "Why do you keep doing this...? I'm not going to change my
+			The seduction attempt seems to be becoming less effective with
+			time as
+			she frowns "Why do you keep doing this...? I'm not going to
+			change my
 			mind just 'cause you stand funny."
 		</text>
 		<effect type="setlocalflag" flag="attempt" value="2" />
@@ -97,10 +119,14 @@
 		<condition evaluate="LOCALFLAG" value="2" operator="equals"
 			flag="attempt" />
 		<text>
-			Her scowl deepens as you attempt another come-on. “Is this some strange
-			habit of your people? An inability to accept no as an answer? It's a
-			wonder you haven't died off long ago. You would think that evolution
-			would have just turned your species directly into butt-fat by this
+			Her scowl deepens as you attempt another come-on. “Is this some
+			strange
+			habit of your people? An inability to accept no as an answer?
+			It's a
+			wonder you haven't died off long ago. You would think that
+			evolution
+			would have just turned your species directly into butt-fat
+			by this
 			point of time.”
 		</text>
 		<effect type="setlocalflag" flag="attempt" value="3" />
@@ -110,9 +136,12 @@
 
 	<page ID="seduction">
 		<text>
-			“Still? Still? You know what, fine, I am tired of having to deal with you.
-			But you need to prove that you're quite skilled at using that tongue
-			of yours for something other than bothering people.” With this, she
+			“Still? Still? You know what, fine, I am tired of having to deal
+			with you.
+			But you need to prove that you're quite skilled at using
+			that tongue
+			of yours for something other than bothering people.” With
+			this, she
 			lifts up her strange space-skirt, revealing her delectible,
 			green-framed cleft. She motions for you to kneel in front of her.
 		</text>
@@ -122,15 +151,24 @@
 
 	<page ID="seductionfail0">
 		<text>
-			You take your cue, kneeling down on both knees and leaning in to lap
-			gently at her exposed slit. She casually drapes one leg over top of
-			your shoulder and reaches down to spread her labia with her fingers.
-			Deciding that she must be pleased with your abilities, you dive in,
-			lapping and licking and swirling your tongue around. Unfortunately,
-			it quickly becomes apparent that she isn't too happy with you at all.
-			Her fingers move away as her free hand presses against the back of
-			your head and shoves you into her snatch. Before you even get the
-			chance to flail, she begins to work her way down your body.
+			You take your cue, kneeling down on both knees and leaning in to
+			lap
+			gently at her exposed slit. She casually drapes one leg over top
+			of
+			your shoulder and reaches down to spread her labia with her
+			fingers.
+			Deciding that she must be pleased with your abilities, you
+			dive in,
+			lapping and licking and swirling your tongue around.
+			Unfortunately,
+			it quickly becomes apparent that she isn't too happy
+			with you at all.
+			Her fingers move away as her free hand presses
+			against the back of
+			your head and shoves you into her snatch. Before
+			you even get the
+			chance to flail, she begins to work her way down your
+			body.
 		</text>
 		<choice destination="seductionfail1" text="-Ah, crap.-" />
 	</page>
@@ -138,12 +176,18 @@
 
 	<page ID="seductionfail1">
 		<text>
-			Unphased by your cries of protest, she moans in delight, her snatch eagerly
-			devouring your body. You feel your shoulders and chest slide into the
-			dripping folds as your head journeys deeper inside. From there she
-			squats lower and lower until she gets to your hips and then uses her
-			hands to straighten your legs into a more manageable position.
-			Gripping your feet, she pushes you up further still until you are
+			Unphased by your cries of protest, she moans in delight, her
+			snatch eagerly
+			devouring your body. You feel your shoulders and chest
+			slide into the
+			dripping folds as your head journeys deeper inside.
+			From there she
+			squats lower and lower until she gets to your hips and
+			then uses her
+			hands to straighten your legs into a more manageable
+			position.
+			Gripping your feet, she pushes you up further still until
+			you are
 			completely tucked away in her hot womb.
 		</text>
 		<choice destination="pleasurecheck" text="Last chance to prove her wrong." />
@@ -160,12 +204,18 @@
 
 	<page ID="pleasureescape">
 		<text>
-			Okay, okay, you can fix this. You can show her she was wrong about you and
-			continue to live your life still shaped like you. Summoning your
-			reserve of untapped strength, will, and agility, you play by ear. The
-			louder she moans, the sweeter the rise of her voice, the more you
-			know you need to minister to that part of her womb. And like a
-			space-DJ at her turntables, you run your hands and elbows (and to
+			Okay, okay, you can fix this. You can show her she was wrong
+			about you and
+			continue to live your life still shaped like you.
+			Summoning your
+			reserve of untapped strength, will, and agility, you
+			play by ear. The
+			louder she moans, the sweeter the rise of her voice,
+			the more you
+			know you need to minister to that part of her womb. And
+			like a
+			space-DJ at her turntables, you run your hands and elbows (and
+			to
 			break from the simile, your knees and feet) against the walls
 			confining you. Before long, her voice reaches fever-pitch, just about
 			screaming into the heavens, and these sweltering, dark, fleshy walls
@@ -185,11 +235,16 @@
 
 	<gameover ID="seductionfail2">
 		<text>
-			Her body clenches around you, almost completely locking your body up.
-			"Hmm, I knew you would make a terrible mate. Your entire body and
-			still it seems you're hard-pressed to satisfy me. Plus, you've ruined
-			my skirt. Well, at least you can still make me gush." A tingling
-			sensation creeps up and down your body and you feel your senses
+			Her body clenches around you, almost completely locking your
+			body up.
+			"Hmm, I knew you would make a terrible mate. Your entire body
+			and
+			still it seems you're hard-pressed to satisfy me. Plus, you've
+			ruined
+			my skirt. Well, at least you can still make me gush." A
+			tingling
+			sensation creeps up and down your body and you feel your
+			senses
 			slowly turning numb. You lift your hand up to try and work some
 			feeling back into it, only to find that it has liquidated. You would
 			be quite surprised by this odd turn of events, except it seems the
@@ -217,13 +272,20 @@
 
 	<page ID="seductionwin">
 		<text>
-			Fluttering your eyes and sashaying your hips, you whisper sweet nothings into
-			her comically-large ear. Soon she is putty in your hands; hot, green
-			putty. Your hands move to her bare breasts, groping and squeezing as
-			you nibble at her ear. She is quite responsive to your ear nibbles,
-			much more so than you'd expect. You make a note that these aliens'
-			ears may be an erogenous zone. You move on from ear nibbles to
-			kissing her and groping the ample curves of her ass, making out with
+			Fluttering your eyes and sashaying your hips, you whisper sweet
+			nothings into
+			her comically-large ear. Soon she is putty in your
+			hands; hot, green
+			putty. Your hands move to her bare breasts, groping
+			and squeezing as
+			you nibble at her ear. She is quite responsive to
+			your ear nibbles,
+			much more so than you'd expect. You make a note that
+			these aliens'
+			ears may be an erogenous zone. You move on from ear
+			nibbles to
+			kissing her and groping the ample curves of her ass, making
+			out with
 			her as a prelude to something more.
 		</text>
 		<choice destination="oralsex0" text="Urge her down." />
@@ -341,19 +403,32 @@
 
 	<page ID="cockvore1">
 		<text>
-			She drops her arms to her sides and tucks her shoulders in as your snake
-			advances past her neck, streamlining her form for ingestion. The
-			warmth of her skin on your cockhole is delightful and the friction
-			between the slight roughness of her skin and the rubbery smoothness
-			of your flesh feels phenomenal. With her help, you quickly work your
-			way down her body, her legs unfolding as your cock lifts her off the
-			ground. Passersby gawk at her exposed ass, just barely sticking out
-			of both her skirt and your glans. You give her plush posterior a
-			solid smack, sending her legs a-flailing, and push it through with
-			the rest. The widest, most shapely aspect of the space-elf out of the
-			way, it's nothing but easy-navigating from there. Her legs slip in
-			like the diver she is and a spurt of pre splashes out in their wake.
-			There she is, rocking in your balls, surrounded by your spunk.
+			She drops her arms to her sides and tucks her shoulders in as
+			your snake
+			advances past her neck, streamlining her form for
+			ingestion. The
+			warmth of her skin on your cockhole is delightful and
+			the friction
+			between the slight roughness of her skin and the rubbery
+			smoothness
+			of your flesh feels phenomenal. With her help, you quickly
+			work your
+			way down her body, her legs unfolding as your cock lifts her
+			off the
+			ground. Passersby gawk at her exposed ass, just barely
+			sticking out
+			of both her skirt and your glans. You give her plush
+			posterior a
+			solid smack, sending her legs a-flailing, and push it
+			through with
+			the rest. The widest, most shapely aspect of the
+			space-elf out of the
+			way, it's nothing but easy-navigating from there.
+			Her legs slip in
+			like the diver she is and a spurt of pre splashes out
+			in their wake.
+			There she is, rocking in your balls, surrounded by your
+			spunk.
 		</text>
 		<choice destination="jizzoutwhole0"
 			text="Relax a while and let her out. You've had your fun." />
@@ -363,13 +438,20 @@
 
 	<page ID="jizzoutwhole0">
 		<text>
-			Content to just sit back and savor the new weight hanging from your loins,
-			you recline on the ground and allow your sack to stretch out. You
-			take a moment to check your gear and count your money, making use of
-			your free-time. After a couple moments, the Quendi asks, "What now?,"
-			to which you reply, "Just relax. I'll let you out in a few, don't
-			worry. It's not often I get to do this with someone who wasn't trying
-			to kill me only moments ago." And the both of you sit there a while,
+			Content to just sit back and savor the new weight hanging from
+			your loins,
+			you recline on the ground and allow your sack to stretch
+			out. You
+			take a moment to check your gear and count your money, making
+			use of
+			your free-time. After a couple moments, the Quendi asks, "What
+			now?,"
+			to which you reply, "Just relax. I'll let you out in a few,
+			don't
+			worry. It's not often I get to do this with someone who wasn't
+			trying
+			to kill me only moments ago." And the both of you sit there a
+			while,
 			maybe fifteen minutes at most, making small talk and enjoying
 			yourselves, before she asks to be let out. An honest woman, you hold
 			up your end of the deal, aiming your cock away from your face and
@@ -386,11 +468,16 @@
 
 	<page ID="cummify0">
 		<text>
-			Kicking back, feeling oh-so-satisfied, you rest your head on a shored-up
-			pile of things. After a couple moments, the Quendi asks, "What now?"
-			You answer, "Well, seeing as you were so eager to climb on in, I was
-			thinking about churning up a creamy batch of alien-butter with you."
-			To that, she replies, "I don't know, I still got stuff to do."
+			Kicking back, feeling oh-so-satisfied, you rest your head on a
+			shored-up
+			pile of things. After a couple moments, the Quendi asks,
+			"What now?"
+			You answer, "Well, seeing as you were so eager to climb on
+			in, I was
+			thinking about churning up a creamy batch of alien-butter
+			with you."
+			To that, she replies, "I don't know, I still got stuff to
+			do."
 		</text>
 		<choice destination="cummifycheck"
 			text="-Come on, it'll be the best thing you ever feel.-" />
@@ -406,17 +493,28 @@
 
 	<page ID="cummifywin">
 		<text>
-			"...I didn't really want to do any of those chores anyways. The others can
-			pick up the slack. Go ahead, turn me into cum!" You chuckle and kick
-			back while your body's natural processes swing into gear. Before her
-			body breaks down and loses form, she reaches down between her thighs
-			and fits in one last schlicking, gushing a bit of her own juice into
-			the slurry with a moan. Not very long after that, your nads begin to
-			round out, settling into a person-sized beanbag of seed. You purr a
-			little, yourself, and climb back to your feet, taking a seat on your
-			jewels and finishing what the space-elf started. When all is said and
-			done, there's a neat little alabaster puddle of villager soaking into
-			the earth, with a primitive skirt that so doesn't fit you floating on
+			"...I didn't really want to do any of those chores anyways. The
+			others can
+			pick up the slack. Go ahead, turn me into cum!" You chuckle
+			and kick
+			back while your body's natural processes swing into gear.
+			Before her
+			body breaks down and loses form, she reaches down between
+			her thighs
+			and fits in one last schlicking, gushing a bit of her own
+			juice into
+			the slurry with a moan. Not very long after that, your nads
+			begin to
+			round out, settling into a person-sized beanbag of seed. You
+			purr a
+			little, yourself, and climb back to your feet, taking a seat on
+			your
+			jewels and finishing what the space-elf started. When all is said
+			and
+			done, there's a neat little alabaster puddle of villager soaking
+			into
+			the earth, with a primitive skirt that so doesn't fit you
+			floating on
 			top.
 		</text>
 		<effect value="95" type="feed" />
@@ -427,10 +525,14 @@
 
 	<page ID="cummifyloss">
 		<text>
-			"Well then why haven't you gotten turned to cum yet? I'm out of here."
-			Before you can protest, she forces her hands up your shaft, shooting
-			signals of pleasure up your spine. Finding anchors along its interior
-			until she breaches your glans, she pulls her shapely self out,
+			"Well then why haven't you gotten turned to cum yet? I'm out of
+			here."
+			Before you can protest, she forces her hands up your shaft,
+			shooting
+			signals of pleasure up your spine. Finding anchors along its
+			interior
+			until she breaches your glans, she pulls her shapely self
+			out,
 			flopping to the ground, walking off, and leaving a
 			derious-with-pleasure you lying dumb on your ass.
 		</text>
@@ -440,8 +542,10 @@
 
 	<page ID="unbirth0">
 		<text>
-			She gives your crotch a few sniffs and you suddenly realise you aren't
-			sure if these aliens have the same idea of sex as you do. Before
+			She gives your crotch a few sniffs and you suddenly realise you
+			aren't
+			sure if these aliens have the same idea of sex as you do.
+			Before
 			you're able to worry too much about possible silly sex rituals,
 			though, she buries her face in your snatch. She is terribly
 			enthusiastic about it, and you begin to worry that you did too good
@@ -455,8 +559,10 @@
 
 	<page ID="unbirth1">
 		<text>
-			The Quendi pulls back, licking her lips, and thrusts her warm, green
-			hands into your spread nether-lips. Her palms are rub up just roughly
+			The Quendi pulls back, licking her lips, and thrusts her warm,
+			green
+			hands into your spread nether-lips. Her palms are rub up just
+			roughly
 			enough against your flesh that, between this and her prior
 			ministrations, it takes just a little bit of resolve not to cum right
 			then and there. But you're stronger than that. Pretty soon, her
@@ -480,11 +586,16 @@
 
 	<page ID="catchandrelease0">
 		<text>
-			After a little while, exhausted by the efforts you just put forth and
-			hearing your little guest snoring, you check that your things are
-			secured and doze off yourself, slumped over your bulging midsection.
-			Near as you can tell, maybe thirty minutes have passed by the time
-			you wake up and the space-elf's still snoring. You at least need to
+			After a little while, exhausted by the efforts you just put
+			forth and
+			hearing your little guest snoring, you check that your
+			things are
+			secured and doze off yourself, slumped over your bulging
+			midsection.
+			Near as you can tell, maybe thirty minutes have passed by
+			the time
+			you wake up and the space-elf's still snoring. You at least
+			need to
 			stretch your legs, so you tap near her head and wake her up.
 		</text>
 		<choice destination="catchandrelease1" text="Wake her up and let her out." />
@@ -495,13 +606,20 @@
 
 	<page ID="catchandrelease1">
 		<text>
-			"Morning," you say to her, giving her some time to wake back up. "It's time to
-			let you out." She asks in response, "Really? So soon?" and you tell
-			her you're getting a leg cramp. "Well, thank you for your time all
-			the same. I just wish I could shirk my responsibilities just a bit
-			longer." Spreading your legs, you seize control of your abdomen's
-			muscles and push against the Quendi, who slides on out very easily,
-			coated in your cum. Fixing her skirt and hair, she gets back up
+			"Morning," you say to her, giving her some time to wake back up.
+			"It's time to
+			let you out." She asks in response, "Really? So soon?"
+			and you tell
+			her you're getting a leg cramp. "Well, thank you for your
+			time all
+			the same. I just wish I could shirk my responsibilities just
+			a bit
+			longer." Spreading your legs, you seize control of your
+			abdomen's
+			muscles and push against the Quendi, who slides on out very
+			easily,
+			coated in your cum. Fixing her skirt and hair, she gets back
+			up
 			strolls away, dripping-wet and energized by her nap.
 		</text>
 		<choice destination="end" text="-Seeya.-" />
@@ -511,14 +629,22 @@
 
 	<page ID="unbirthjoke0">
 		<text>
-			"Morning, sleepyhead," you say to her, trying not to giggle. "You've been
-			asleep in there for days. I didn't want to disturb you, so I just
-			brought you along with me on a trip to your moon. You ever been?" She
-			"eep"s in surprise and asks, just a little bit frantically, "What?
-			We're on the moon?! I have to get home! Please take me back!" She
-			fidgets a little bit before you pat your belly, stand up, and assure
-			her you're joking. Sounding more than a little bit flustered, she
-			asks you to let her out. Hands underneath your pussy to keep her from
+			"Morning, sleepyhead," you say to her, trying not to giggle.
+			"You've been
+			asleep in there for days. I didn't want to disturb you,
+			so I just
+			brought you along with me on a trip to your moon. You ever
+			been?" She
+			"eep"s in surprise and asks, just a little bit frantically,
+			"What?
+			We're on the moon?! I have to get home! Please take me back!"
+			She
+			fidgets a little bit before you pat your belly, stand up, and
+			assure
+			her you're joking. Sounding more than a little bit flustered,
+			she
+			asks you to let her out. Hands underneath your pussy to keep her
+			from
 			clonking her head against the ground, because that's how she's
 			oriented herself in there, you muster up your control over your womb
 			and push. Lubricated by your juices, she slides out nice and easily,
@@ -532,11 +658,16 @@
 
 	<page ID="gush0">
 		<text>
-			Before the pleasure of getting the space-elf up in your womb can fade, you
-			take the opportunity to slip your hand around your womb and finish
-			yourself off, confident your cervix will keep her in. Hearing you
-			voice your satisfaction as a stream of cum trickles out of you, she
-			asks, "What do you want to do now?" You answer, simply, that you had
+			Before the pleasure of getting the space-elf up in your womb can
+			fade, you
+			take the opportunity to slip your hand around your womb and
+			finish
+			yourself off, confident your cervix will keep her in. Hearing
+			you
+			voice your satisfaction as a stream of cum trickles out of you,
+			she
+			asks, "What do you want to do now?" You answer, simply, that you
+			had
 			plans on gushing her. Not sounding too enthused by your designs on
 			her, she says, "I've still got things to do."
 		</text>
@@ -553,17 +684,28 @@
 
 	<page ID="gushwin">
 		<text>
-			"...Well, I did climb inside to avoid work. And this will keep me from ever
-			having to do work again, so… Sure, do it. Gush me." Chuckling to
-			yourself, you tell her, "Alright. Don't forget to please yourself one
-			last time while you still can." And she does just that whilst your
-			womb contracts around her. Warm as she was before, her body
-			effervescing into cum fills your insides with wonderful heat. Were it
-			not for her little moan, you genuinely wouldn't be able to tell if
-			she hit climax or not. Then, before you know it, your belly sloshes
-			with ex-Quendi, waiting to be released. You're more than happy to
-			oblige (and to no longer need to work around your belly to get at her
-			pussy), spilling buckets of villager-juice onto the ground. That felt
+			"...Well, I did climb inside to avoid work. And this will keep
+			me from ever
+			having to do work again, so… Sure, do it. Gush me."
+			Chuckling to
+			yourself, you tell her, "Alright. Don't forget to please
+			yourself one
+			last time while you still can." And she does just that
+			whilst your
+			womb contracts around her. Warm as she was before, her
+			body
+			effervescing into cum fills your insides with wonderful heat.
+			Were it
+			not for her little moan, you genuinely wouldn't be able to
+			tell if
+			she hit climax or not. Then, before you know it, your belly
+			sloshes
+			with ex-Quendi, waiting to be released. You're more than happy
+			to
+			oblige (and to no longer need to work around your belly to get at
+			her
+			pussy), spilling buckets of villager-juice onto the ground. That
+			felt
 			too good.
 		</text>
 		<choice destination="end" text="-Hope you enjoy your new form.-" />
@@ -575,11 +717,16 @@
 
 	<page ID="gushloss">
 		<text>
-			"I think I should trust a puddle of juice before trusting someone who
-			turns others into juice. I'm out; I've got work to do." And before
-			you open your mouth to speak, she's prying at the gate and stunning
-			you with circles of pleasure. Soon she induces an orgams in you,
-			shooting her out feet-first and across the ground. She tidies herself
+			"I think I should trust a puddle of juice before trusting
+			someone who
+			turns others into juice. I'm out; I've got work to do."
+			And before
+			you open your mouth to speak, she's prying at the gate and
+			stunning
+			you with circles of pleasure. Soon she induces an orgams in
+			you,
+			shooting her out feet-first and across the ground. She tidies
+			herself
 			up before storming off.
 		</text>
 		<choice destination="end"
@@ -589,7 +736,8 @@
 
 	<page ID="sex0">
 		<text>
-			The space-elf grabs onto the nearest rock for support and presents her
+			The space-elf grabs onto the nearest rock for support and
+			presents her
 			rump to you with a giggle and a gentle sway.
 		</text>
 		<choice destination="anal0" text="Ream her brains out." />
@@ -599,9 +747,12 @@
 
 	<page ID="anal0">
 		<text>
-			You set your sights on her cute little green pucker, cock stiffening
-			between you. Planting your hands on that juicy posterior, you line
-			yourself up and thrust. Their asses, as you've been able to discern
+			You set your sights on her cute little green pucker, cock
+			stiffening
+			between you. Planting your hands on that juicy posterior,
+			you line
+			yourself up and thrust. Their asses, as you've been able to
+			discern
 			thus far, are very well-acquainted with receiving large loads.
 			Burying yourself up to hilt comes easy and it doesn't take long for
 			you to build up a steady, rhythmic pace slamming your hips against
@@ -648,10 +799,14 @@
 
 	<page ID="cockmerge0">
 		<text>
-			Your fingers grip her ass like a vice as your entire body seizes up in
-			the ecstasy of orgasm. You paint the space-elf's colon white with
-			your seed and take a moment to catch your breath. The villager tries
-			to pull off, but you come with, firmly affixed to her posterior. She
+			Your fingers grip her ass like a vice as your entire body seizes
+			up in
+			the ecstasy of orgasm. You paint the space-elf's colon white
+			with
+			your seed and take a moment to catch your breath. The villager
+			tries
+			to pull off, but you come with, firmly affixed to her posterior.
+			She
 			stares at you in utter confusion until it clicks in her head. She
 			looks in the direction of the apothecary for a moment, seeming to
 			think that's how you're able to do this, before looking at you and
@@ -721,10 +876,14 @@
 
 	<page ID="danger">
 		<text>
-			"There is plenty to look out for beyond the safety of our community,
-			between the lamia huntresses to the west, prowling the underbrush for
-			live prey, and the raptors to the south. There is very little more
-			terrifying than a pack of those raptor-girls chasing you back to the
+			"There is plenty to look out for beyond the safety of our
+			community,
+			between the lamia huntresses to the west, prowling the
+			underbrush for
+			live prey, and the raptors to the south. There is very
+			little more
+			terrifying than a pack of those raptor-girls chasing you
+			back to the
 			safety of our humble village."
 		</text>
 		<choice destination="info" text="-I would like to ask another question.-" />
@@ -733,9 +892,12 @@
 
 	<page ID="pad0">
 		<text>
-			"Isn't it true that these landing pads are used by star-craft bearing cargo
-			to perch upon the surface of worlds? we have built this pad of stone,
-			that vessels from the stars will come to our village bearing cargo."
+			"Isn't it true that these landing pads are used by star-craft
+			bearing cargo
+			to perch upon the surface of worlds? we have built this
+			pad of stone,
+			that vessels from the stars will come to our village
+			bearing cargo."
 		</text>
 		<choice destination="pad1"
 			text="-I'm fairly sure that's not how it usually works but... I guess it worked on me.-" />
@@ -745,9 +907,12 @@
 
 	<page ID="pad1">
 		<text>
-			"And we have long waited for your arrival. But with it, you have surely
-			proved the merits of our work. I have no doubt that now many vessels
-			will come to our village bearing cargo in future. Yours is but the
+			"And we have long waited for your arrival. But with it, you have
+			surely
+			proved the merits of our work. I have no doubt that now many
+			vessels
+			will come to our village bearing cargo in future. Yours is but
+			the
 			first."
 		</text>
 		<choice destination="info" text="-I would like to ask another question.-" />
@@ -756,8 +921,10 @@
 
 	<page ID="supplies">
 		<text>
-			"Ask for the storekeeper. She is eager to trade with star-travellers for
-			any cargo they might have and will certainly show you what we can
+			"Ask for the storekeeper. She is eager to trade with
+			star-travellers for
+			any cargo they might have and will certainly show
+			you what we can
 			offer you."
 		</text>
 		<choice destination="info" text="-I would like to ask another question.-" />

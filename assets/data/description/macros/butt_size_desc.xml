@@ -7,7 +7,7 @@
 	<range lowerbound="8" upperbound="10" string="rounded" />
 	<range lowerbound="10" upperbound="12" string="curvy" />
 	<range lowerbound="12" upperbound="14" string="large" />
-	<range lowerbound="14" upperbound="16" string="ample" />	
-	<range lowerbound="16" upperbound="18" string="enormous" />	
-	<range lowerbound="18" upperbound="999" string="unbelievable" />		
+	<range lowerbound="14" upperbound="16" string="ample" />
+	<range lowerbound="16" upperbound="18" string="enormous" />
+	<range lowerbound="18" upperbound="999" string="unbelievable" />
 </macrorange>

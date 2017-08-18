@@ -5,10 +5,28 @@
 			but you can study them now!
 		</text>
 		<choice destination="study" text="study her">
-			<assertnot evaluate="hasEntry" entry="lifeforms/raijin.xml" />		
+			<assertnot evaluate="hasEntry" entry="lifeforms/raijin.xml" />
 			<assertnot evaluate="hasResearch" research="raijin" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="darn" />
+	</page>
+
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="study">
@@ -17,7 +35,7 @@
 			disagreeable way, the data you've collected should be very valuable.
 		</text>
 		<special effect="removenpc" />
-		<special effect="research" DC="10" data="raijin" group="liforms0"/>
+		<special effect="research" DC="10" data="raijin" group="liforms0" />
 		<choice destination="end" text="time to do some research" />
 	</page>
 

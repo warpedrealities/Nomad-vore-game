@@ -2,8 +2,10 @@
 <ItemEquip name="glittergirl armour" weight="12" slot="BODY"
 	value="1000">
 	<description>
-		So shiny! this armour is made of segmented and highly reflective metal
-		plates linked together by gleaming mirror scales. It's a little like
+		So shiny! this armour is made of segmented and highly
+		reflective metal
+		plates linked together by gleaming mirror scales. It's
+		a little like
 		wearing a disco ball. +2 kinetic, +4 thermal, -1 shock.
 	</description>
 	<modifier>

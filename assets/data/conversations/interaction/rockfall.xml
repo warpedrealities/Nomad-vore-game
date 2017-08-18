@@ -15,10 +15,14 @@
 
 	<page ID="bomb">
 		<text>
-			You lodge the bomb at the base of the rock fall, lit the fuse and then
-			ran well clear. The blast was deafening, pulverizing the rock to
-			powder and clearing the pass. Though the sound of it will surely have
-			been heard for many miles, the newly accessable path will not remain
+			You lodge the bomb at the base of the rock fall, lit the fuse
+			and then
+			ran well clear. The blast was deafening, pulverizing the rock
+			to
+			powder and clearing the pass. Though the sound of it will surely
+			have
+			been heard for many miles, the newly accessable path will not
+			remain
 			secret for any time at all.
 		</text>
 		<effect type="removeitem" item="high explosive" value="1" />

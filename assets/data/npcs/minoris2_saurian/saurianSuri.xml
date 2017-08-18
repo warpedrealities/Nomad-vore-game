@@ -1,32 +1,38 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="ochreS.png"/>
-<name>Suri</name>
-<description>This ochre scaled and tann skinned lizardgirl looks notably younger and shorter than the others coming in a shade under 5 feet in height. She looks to be in whatever the lizard equivalent of the teenage years is with a bright smile and a pair of loose wraps around hips and chest instead of the usual tunic. </description>
-<rpg >
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="30"/>
-<stat stat="RESOLVE" value="20"/>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
-<missText count="1">
-<text>Suri's punch fails to connect with TARGET</text>
-</missText>
-<hitText count="1">
-<text>Suri hits TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="ochreS.png" />
+	<name>Suri</name>
+	<description>This ochre scaled and tann skinned lizardgirl looks
+		notably younger and shorter than the others coming in a shade under 5
+		feet in height. She looks to be in whatever the lizard equivalent of
+		the teenage years is with a bright smile and a pair of loose wraps
+		around hips and chest instead of the usual tunic. </description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Suri's punch fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Suri hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<respawn delay="100"/>
+	<respawn delay="100" />
 
-<talk conversation="alpha_minoris_II/saurianSuri/chat" />
-<controller AI="village_encounter"/>
-<faction value="saurian"/>
+	<talk conversation="alpha_minoris_II/saurianSuri/chat" />
+	<controller AI="village_encounter" />
+	<faction value="saurian" />
 </NPC>

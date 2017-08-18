@@ -28,7 +28,7 @@
 		<edge value="WEST" />
 		<edge value="EAST" />
 		<edge value="NORTH" />
-		<edge value="SOUTH" />		
+		<edge value="SOUTH" />
 		<row>00211200</row>
 		<row>02211220</row>
 		<row>22111122</row>
@@ -49,7 +49,7 @@
 		<row>02111120</row>
 		<row>02211220</row>
 		<row>00211200</row>
-		<widget x="2" y="2" name="chest" info="normalchest" />	
+		<widget x="2" y="2" name="chest" info="normalchest" />
 	</block>
 	<block name="WE pod1">
 		<edge value="WEST" />
@@ -62,13 +62,13 @@
 		<row>22111122</row>
 		<row>02233220</row>
 		<row>00000000</row>
-		<widget x="2" y="2" name="chest" info="normalchest" />		
+		<widget x="2" y="2" name="chest" info="normalchest" />
 	</block>
 	<block name="junction pod1">
 		<edge value="WEST" />
 		<edge value="EAST" />
 		<edge value="NORTH" />
-		<edge value="SOUTH" />		
+		<edge value="SOUTH" />
 		<row>00211200</row>
 		<row>02211220</row>
 		<row>22111122</row>
@@ -77,9 +77,9 @@
 		<row>22111122</row>
 		<row>02211220</row>
 		<row>00211200</row>
-		<widget x="2" y="2" name="chest" info="normalchest" />		
-	</block>	
-	
+		<widget x="2" y="2" name="chest" info="normalchest" />
+	</block>
+
 	<block name="NS tube">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />
@@ -103,5 +103,5 @@
 		<row>23233232</row>
 		<row>00000000</row>
 		<row>00000000</row>
-	</block>	
+	</block>
 </blocks>

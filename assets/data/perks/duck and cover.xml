@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
-<perk name="duck and cover" >
-<requirement count="1">
-<req>PERKmarksman</req>
-</requirement>
-<description> First learn how to shoot someone, then learn how not to be shot. You might think it'd be better to do it the other way around, but the former gives insight into the methods of the opponents wishing to do the latter. +2 to dodge.</description>
-<modifier affects="DODGE" value="2" type="ATTRIBUTE"/>
-<maxrank value="3"/>
+<perk name="duck and cover">
+	<requirement count="1">
+		<req>PERKmarksman</req>
+	</requirement>
+	<description> First learn how to shoot someone, then learn how not to
+		be shot. You might think it'd be better to do it the other way around,
+		but the former gives insight into the methods of the opponents wishing
+		to do the latter. +2 to dodge.</description>
+	<modifier affects="DODGE" value="2" type="ATTRIBUTE" />
+	<maxrank value="3" />
 
 </perk>

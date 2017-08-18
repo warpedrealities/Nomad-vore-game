@@ -5,6 +5,7 @@
 		a stimulant and make you more active.</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
 		modvalue="10" modifies="ACTION">
-		Damn that's a fizzy drink, did the trick though.
+		Damn that's a fizzy drink, did the trick
+		though.
 	</effectrecover>
 </ItemConsumable>

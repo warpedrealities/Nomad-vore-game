@@ -1,20 +1,24 @@
 <?xml version="1.0"?>
 <ItemWeapon name="spacebar" weight="1" value="125">
-<description>
-A tool for levering up and safely dismantling modules allowing them to be removed from their slot without destroying them. Alas, the bar does not survive the process for re-use.
-</description>
-<modifier>
+	<description>
+		A tool for levering up and safely dismantling modules allowing them to
+		be removed from their slot without destroying them. Alas, the bar does
+		not survive the process for re-use.
+	</description>
+	<modifier>
 
-</modifier>
-<combatMove name="use" ammoCost="1" pattern="MELEE" bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2" throw="true" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectDismantle/>
-<missText count="1">
-<text></text>
-</missText>
-<hitText count="1">
-<text></text>
-</hitText>
-<energySource value="stack"/>
-</combatMove>
-<stackEquip value="true"/>
+	</modifier>
+	<combatMove name="use" ammoCost="1" pattern="MELEE"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2"
+		throw="true" actionCost="2" basicAction="true" moveType="FIGHT">
+		<effectDismantle />
+		<missText count="1">
+			<text></text>
+		</missText>
+		<hitText count="1">
+			<text></text>
+		</hitText>
+		<energySource value="stack" />
+	</combatMove>
+	<stackEquip value="true" />
 </ItemWeapon>

@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <world>
-<entitysprite filename="jungleplanet" size="3.0"/>
-<zone x="2" y="2" type="SURFACE">alien village</zone>
-<zone x="-2" y="-2" type="CLOSED">village basement</zone>
-<zone x="2" y="1" type="SURFACE">zoneE</zone>
-<zone x="1" y="2" type="SURFACE">zoneN</zone>
-<zone x="1" y="1" type="SURFACE">zoneC</zone>
-<zone x="0" y="2" type="SURFACE">zoneNW</zone>
-<zone x="1" y="0" type="SURFACE">zoneS</zone>
-<zone x="0" y="-2" type="CLOSED">Cave zone</zone>
-<zone x="0" y="-2" type="CLOSED">Deep Cave zone</zone>
-<zone x="2" y="1" type="CLOSED">zorr</zone>
-<zone x="2" y="1" type="CLOSED">zorrSanctum</zone>
-<zone x="0" y="0" type="SURFACE">saurian village</zone>
-<zone x="0" y="-1" type="CLOSED">Mine zone</zone>
-<zone x="0" y="3" type="LIMITED">crash site</zone>
-<ship name="heavy" unusableState="ship buried" posX="0" posY="3"></ship>
+	<entitysprite filename="jungleplanet" size="3.0" />
+	<zone x="2" y="2" type="SURFACE">alien village</zone>
+	<zone x="-2" y="-2" type="CLOSED">village basement</zone>
+	<zone x="2" y="1" type="SURFACE">zoneE</zone>
+	<zone x="1" y="2" type="SURFACE">zoneN</zone>
+	<zone x="1" y="1" type="SURFACE">zoneC</zone>
+	<zone x="0" y="2" type="SURFACE">zoneNW</zone>
+	<zone x="1" y="0" type="SURFACE">zoneS</zone>
+	<zone x="0" y="-2" type="CLOSED">Cave zone</zone>
+	<zone x="0" y="-2" type="CLOSED">Deep Cave zone</zone>
+	<zone x="2" y="1" type="CLOSED">zorr</zone>
+	<zone x="2" y="1" type="CLOSED">zorrSanctum</zone>
+	<zone x="0" y="0" type="SURFACE">saurian village</zone>
+	<zone x="0" y="-1" type="CLOSED">Mine zone</zone>
+	<zone x="0" y="3" type="LIMITED">crash site</zone>
+	<ship name="heavy" unusableState="ship buried" posX="0" posY="3"></ship>
 </world>

@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <recipe name="explosive grenade" requiredskill="1" startunlocked="true">
-<description>
-A pair of explosive grenades. Cause sometimes you need to blow someone up.
-</description>
-<ingredient item="scrap metal" quantity="1"/>
-<ingredient item="volatile crystal" quantity="1"/>
-<result item="explosive grenade"/>
+	<description>
+		A pair of explosive grenades. Cause sometimes you need to blow someone
+		up.
+	</description>
+	<ingredient item="scrap metal" quantity="1" />
+	<ingredient item="volatile crystal" quantity="1" />
+	<tokenRequirement item="gadgeteer" quantity="1" />
+	<result item="explosive grenade" />
 </recipe>

@@ -4,7 +4,8 @@
 	<page ID="start">
 
 		<text>
-		"...as much as I like to stand around and chat there's still a lot of digging to do."
+			"...as much as I like to stand around and chat there's still a lot of
+			digging to do."
 		</text>
 
 		<choice destination="end" text="-Well, bye.-" />

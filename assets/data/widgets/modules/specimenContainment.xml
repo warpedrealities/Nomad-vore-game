@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <capture sprite="67" name="specimen containment" health="20">
-<contains minimum="2" maximum="4">scrap metal</contains>
-<description>A device that contains alien lifeforms in a form of reduced activity for longterm storage and later experimentation. This device comes with three containment chambers accessible with the wonders of 'carousel' technology.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<capacity value="3"/>
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>A device that contains alien lifeforms in a form of
+		reduced activity for longterm storage and later experimentation. This
+		device comes with three containment chambers accessible with the
+		wonders of 'carousel' technology.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<capacity value="3" />
 </capture>

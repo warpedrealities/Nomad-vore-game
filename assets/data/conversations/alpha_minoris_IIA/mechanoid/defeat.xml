@@ -2,19 +2,22 @@
 <Conversation>
 	<page ID="start">
 		<text>
-		You have finally forcibly decommissioned the combat mechanoid.
+			You have finally forcibly decommissioned the combat mechanoid.
 		</text>
-		<choice destination="core" text="extract flux capacitor core"/>
+		<choice destination="core" text="extract flux capacitor core" />
 		<choice destination="end" text="do nothing" />
 	</page>
 
 	<page ID="core">
-	<text>
-	You open up the armoured chest of the machine and see the flux capacitor nestled within as the mechanoids technological heart. Carefully you extract it from the surrounding machinery, the last few subsystems of the mechanoid going dead as you do so.
-	</text>
-	<effect type="giveitem" value="1" item="flux capacitor" />
-	<special effect="removenpc" />
-	<choice destination="end" text="a suitable prize for your accomplishment" />		
+		<text>
+			You open up the armoured chest of the machine and see the flux capacitor
+			nestled within as the mechanoids technological heart. Carefully you
+			extract it from the surrounding machinery, the last few subsystems of
+			the mechanoid going dead as you do so.
+		</text>
+		<effect type="giveitem" value="1" item="flux capacitor" />
+		<special effect="removenpc" />
+		<choice destination="end" text="a suitable prize for your accomplishment" />
 	</page>
 
 </Conversation>

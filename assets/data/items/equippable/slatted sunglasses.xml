@@ -2,8 +2,10 @@
 <ItemEquip name="slatted sunglasses" weight="1.5" slot="ACCESSORY"
 	value="250">
 	<description>
-		sunglasses with horizontal slats across them. So very 80s. +2 to tease
-		resistance as you can't see half the sluttery going on in front of
+		sunglasses with horizontal slats across them. So very 80s.
+		+2 to tease
+		resistance as you can't see half the sluttery going on in
+		front of
 		you. +2 tease defence, -4 to ranged.
 	</description>
 	<modifier>

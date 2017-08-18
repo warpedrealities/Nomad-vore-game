@@ -1,96 +1,102 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="jungle.png">
-<landingsite x="32" y="32"/>
-<zonerules ruleset="alienvillage"/>
-<tileset count-x="4" count-y="4">
-<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-<tile sprite="1" vision="0" movement="0"> a platform of crude masonry </tile>
-<tile sprite="2" vision="0" movement="0"> jungle vegetation</tile>
-<tile sprite="3" vision="0" movement="0"> jungle mud</tile>
-<tile sprite="4" vision="0" movement="0"> jungle grass</tile>
-<tile sprite="6" vision="1" movement="2"> drooping jungle tree</tile>
-<tile sprite="7" vision="1" movement="2"> thick and proud jungle tree</tile>
-<tile sprite="11" vision="0" movement="0"> straw matting</tile>
-<tile sprite="10" vision="1" movement="2"> lashed together wooden wall</tile>
-<tile sprite="8" vision="1" movement="2"> twisted jungle tree</tile>
-<tile sprite="14" vision="1" movement="2"> shelves</tile>
-<tile sprite="15" vision="0" movement="2"> table</tile>
-<tile sprite="16" vision="0" movement="2"> a clay pot</tile>
-</tileset>
-<transition direction="south">zoneE</transition>
-<transition direction="west">zoneN</transition>
-<description>The sound of drums and the tribal decorations on the wooden huts speak of a primitive village. But while primitive, its clearly civilization of a sort.</description>
+	<landingsite x="32" y="32" />
+	<zonerules ruleset="alienvillage" />
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="0" movement="0"> a platform of crude masonry </tile>
+		<tile sprite="2" vision="0" movement="0"> jungle vegetation</tile>
+		<tile sprite="3" vision="0" movement="0"> jungle mud</tile>
+		<tile sprite="4" vision="0" movement="0"> jungle grass</tile>
+		<tile sprite="6" vision="1" movement="2"> drooping jungle tree</tile>
+		<tile sprite="7" vision="1" movement="2"> thick and proud jungle tree</tile>
+		<tile sprite="11" vision="0" movement="0"> straw matting</tile>
+		<tile sprite="10" vision="1" movement="2"> lashed together wooden
+			wall</tile>
+		<tile sprite="8" vision="1" movement="2"> twisted jungle tree</tile>
+		<tile sprite="14" vision="1" movement="2"> shelves</tile>
+		<tile sprite="15" vision="0" movement="2"> table</tile>
+		<tile sprite="16" vision="0" movement="2"> a clay pot</tile>
+	</tileset>
+	<transition direction="south">zoneE</transition>
+	<transition direction="west">zoneN</transition>
+	<description>The sound of drums and the tribal decorations on the
+		wooden huts speak of a primitive village. But while primitive, its
+		clearly civilization of a sort.</description>
 
-<mapgen>
+	<mapgen>
 
-<partition xmin="24" xmax="40" ymin="24" ymax="40">
-<floodfill tile="1">
+		<partition xmin="24" xmax="40" ymin="24" ymax="40">
+			<floodfill tile="1">
 
-</floodfill>
+			</floodfill>
 
-</partition>
-<placeNPC x="25" y="25" name="minoris2_elves/village_neri"/>
-<partition xmin="4" xmax="56" ymin="4" ymax="56">
-<randprefab width="8" height="7">
-<row>55999995</row>
-<row>59988899</row>
-<row>59888889</row>
-<row>58888889</row>
-<row>59888889</row>
-<row>59988899</row>
-<row>55999995</row>
-<pairedportal sprite="9" destination="village basement" x="4" y="1" ID="15">stairs down</pairedportal>
-<placeTile x="4" y="3" tile="11"/>
-<placeNPC name="minoris2_elves/minyos_alchemist" x="4" y="4"/>
-</randprefab>
-<town minsize="4" maxsize="7" minhouses="12" maxhouses="20" tile="8" gap="7" registerRooms="true">
-		<floodfill tile="7">
-			<SeedNPCs min="16" max="32" name="minoris2_elves/alienvillager"> </SeedNPCs>
+		</partition>
+		<placeNPC x="25" y="25" name="minoris2_elves/village_neri" />
+		<partition xmin="4" xmax="56" ymin="4" ymax="56">
+			<randprefab width="8" height="7">
+				<row>55999995</row>
+				<row>59988899</row>
+				<row>59888889</row>
+				<row>58888889</row>
+				<row>59888889</row>
+				<row>59988899</row>
+				<row>55999995</row>
+				<pairedportal sprite="9" destination="village basement"
+					x="4" y="1" ID="15">stairs down</pairedportal>
+				<placeTile x="4" y="3" tile="11" />
+				<placeNPC name="minoris2_elves/minyos_alchemist" x="4" y="4" />
+			</randprefab>
+			<town minsize="4" maxsize="7" minhouses="12" maxhouses="20"
+				tile="8" gap="7" registerRooms="true">
+				<floodfill tile="7">
+					<SeedNPCs min="16" max="32" name="minoris2_elves/alienvillager">
+					</SeedNPCs>
+				</floodfill>
+			</town>
+
+
+		</partition>
+		<clumps lowerlimit="0" upperlimit="45">
+			<noise tile="5" scarcity="6" />
+			<floodfill tile="3"></floodfill>
+		</clumps>
+		<clumps lowerlimit="0" upperlimit="45">
+			<noise tile="6" scarcity="6" />
+			<floodfill tile="4"></floodfill>
+		</clumps>
+		<clumps lowerlimit="0" upperlimit="45">
+			<noise tile="9" scarcity="6" />
+			<floodfill tile="4"></floodfill>
+		</clumps>
+		<floodfill tile="2">
+
 		</floodfill>
-</town>
 
-
-</partition>
-<clumps lowerlimit="0" upperlimit="45">
-<noise tile="5" scarcity="6"/>
-<floodfill tile="3"></floodfill>
-</clumps>
-<clumps lowerlimit="0" upperlimit="45">
-<noise tile="6" scarcity="6"/>
-<floodfill tile="4"></floodfill>
-</clumps>
-<clumps lowerlimit="0" upperlimit="45">
-<noise tile="9" scarcity="6"/>
-<floodfill tile="4"></floodfill>
-</clumps>
-<floodfill tile="2">
-
-</floodfill>
-
-<SeedNPCs min="8" max="16" name="minoris2_elves/villageguard"/>
-<POINPC name="minoris2_elves/minyos_shopkeep"/>
-<POICornerDecorate floor="7">
-<tileplacer tile="10"/>
-</POICornerDecorate>
-<POINPC name="minoris2_elves/companionVala"/>
-<POICornerDecorate floor="7">
-<widgetplacer name="modules/single bed"/>
-</POICornerDecorate>
-<POINPC name="minoris2_elves/minyos_Awari"/>
-<POICornerDecorate floor="7">
-<widgetplacer name="chest"/>
-</POICornerDecorate>
-<POIWidget name="craftingtable"/>
-<POINPC name="minoris2_elves/minyos_priestess"/>
-<POICornerDecorate floor="7">
-<tileplacer tile="12"/>
-</POICornerDecorate>
-<POIITEM>
-<item itemname="elf statue"/>
-</POIITEM>
-<POINPC name="minoris2_elves/doggy"/>
-<walloff wall="6" sides="northeast"/>
-<auditpaths carve="8" replace="7"/>
-</mapgen>
+		<SeedNPCs min="8" max="16" name="minoris2_elves/villageguard" />
+		<POINPC name="minoris2_elves/minyos_shopkeep" />
+		<POICornerDecorate floor="7">
+			<tileplacer tile="10" />
+		</POICornerDecorate>
+		<POINPC name="minoris2_elves/companionVala" />
+		<POICornerDecorate floor="7">
+			<widgetplacer name="modules/single bed" />
+		</POICornerDecorate>
+		<POINPC name="minoris2_elves/minyos_Awari" />
+		<POICornerDecorate floor="7">
+			<widgetplacer name="chest" />
+		</POICornerDecorate>
+		<POIWidget name="craftingtable" />
+		<POINPC name="minoris2_elves/minyos_priestess" />
+		<POICornerDecorate floor="7">
+			<tileplacer tile="12" />
+		</POICornerDecorate>
+		<POIITEM>
+			<item itemname="elf statue" />
+		</POIITEM>
+		<POINPC name="minoris2_elves/doggy" />
+		<walloff wall="6" sides="northeast" />
+		<auditpaths carve="8" replace="7" />
+	</mapgen>
 
 </zone>

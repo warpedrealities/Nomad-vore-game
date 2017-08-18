@@ -2,52 +2,112 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			The raptor girl chirrs at lustfully at your approach, rubbing her thighs
-			together. It's clear from the sweet nectar of her loins you've
+			The raptor girl chirrs at lustfully at your approach, rubbing
+			her thighs
+			together. It's clear from the sweet nectar of her loins
+			you've
 			enthralled her.
 		</text>
 		<choice destination="sex0" text="have sex with her">
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
 		<choice destination="oralvore0" text="she looks tasty">
-		<assertion evaluate="hasperk" perk="oralvore"/>
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
 		</choice>
 		<choice destination="end" text="leave her be" />
 	</page>
-	
-	<page ID="oralvore0">
-	<text>
-	The raptor girl watches you approach with hazy, lustful eyes. You open your mouth and point to it, making your intentions clear, and to your surprise, this elicits a moan from the aroused young raptor woman. She leans forward and presses her face right onto your tongue. Your mouth explodes with her delectable flavor. Her scales are slick and smooth and they taste divine as she eagerly rubs her cheek on your tongue. She doesn’t protest as you bring your jaws all around her head and your lips press around her neck. You hear soft, pleasured cooing sounds coming from inside your mouth as she willingly lets herself be devoured.
-	</text>
-	<choice destination="oralvore1" text="Swallow her"/>
-	</page>
-	
-	<page ID="oralvore1">
-	<text>
-	You take her shoulders in your hands and lift. Her head tilts directly into your throat. You begin to gulp her down, aided by gravity. The raptor girl seems to realize what’s happening. You feel some half-hearted squirms from within your throat. She wriggles her arms, pinned to her sides by your mouth, and her legs kick a bit, tail swishing this way and that, but as your tongue reaches her mound she moans out loud. Her body quakes, then relaxes, giving in to you entirely. You slurp her legs and tail together like one big noodle and gulp them down. She settles in your stomach. You soon begin to feel some shifting inside. A few muffled moans from within confirm that she’s pleasuring herself inside you.
-	</text>
-	<choice destination="oralvore2" text="digest her"/>
-	<choice destination="oralvore2Endo" text="let her finish, then let her out"/>
-	</page>
-	
-	<page ID="oralvore2">
-	<text>
-	You sit back and begin to work her down. The moans only get louder as your stomach fills with deadly digestive acids. She kicks and writhes and cries out in ecstasy. You see bulges form on your stomach where her legs and elbows push out. Her moans reach a peak as the acids begin to eat away at her scales. Soon, she’s no longer moving inside you. You churn and grind her body until your bulgy stomach begins to smooth and round out, your prey liquefying until she’s nothing but digestive mush, her body used up to fuel yours.
-	</text>
+
+	<page ID="devour">
+		<text>
+			You have devoured her in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
 		<effect type="feed" value="95" />
 		<special effect="removenpc" />
-		<choice destination="end" text="delicious, moving on"/>
+		<choice destination="end" text="carry on" />
 	</page>
-	
+
+
+	<page ID="oralvore0">
+		<text>
+			The raptor girl watches you approach with hazy, lustful eyes. You open
+			your mouth and point to it, making your intentions clear, and to your
+			surprise, this elicits a moan from the aroused young raptor woman.
+			She leans forward and presses her face right onto your tongue. Your
+			mouth explodes with her delectable flavor. Her scales are slick and
+			smooth and they taste divine as she eagerly rubs her cheek on your
+			tongue. She doesn’t protest as you bring your jaws all around her
+			head and your lips press around her neck. You hear soft, pleasured
+			cooing sounds coming from inside your mouth as she willingly lets
+			herself be devoured.
+		</text>
+		<choice destination="oralvore1" text="Swallow her" />
+	</page>
+
+	<page ID="oralvore1">
+		<text>
+			You take her shoulders in your hands and lift. Her head tilts directly
+			into your throat. You begin to gulp her down, aided by gravity. The
+			raptor girl seems to realize what’s happening. You feel some
+			half-hearted squirms from within your throat. She wriggles her arms,
+			pinned to her sides by your mouth, and her legs kick a bit, tail
+			swishing this way and that, but as your tongue reaches her mound she
+			moans out loud. Her body quakes, then relaxes, giving in to you
+			entirely. You slurp her legs and tail together like one big noodle
+			and gulp them down. She settles in your stomach. You soon begin to
+			feel some shifting inside. A few muffled moans from within confirm
+			that she’s pleasuring herself inside you.
+		</text>
+		<choice destination="oralvore2" text="digest her" />
+		<choice destination="oralvore2Endo" text="let her finish, then let her out" />
+	</page>
+
+	<page ID="oralvore2">
+		<text>
+			You sit back and begin to work her down. The moans only get louder as
+			your stomach fills with deadly digestive acids. She kicks and writhes
+			and cries out in ecstasy. You see bulges form on your stomach where
+			her legs and elbows push out. Her moans reach a peak as the acids
+			begin to eat away at her scales. Soon, she’s no longer moving inside
+			you. You churn and grind her body until your bulgy stomach begins to
+			smooth and round out, your prey liquefying until she’s nothing but
+			digestive mush, her body used up to fuel yours.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="delicious, moving on" />
+	</page>
+
 	<page ID="oralvore2Endo">
-	<text>
-	You sit back, allowing her to continue her blissful pleasure. You can feel wriggling and bucking within you, and every so often you’ll hear a high pitched moan of ecstasy. You begin to rub at your stomach, helping her along, and her moans in response let you know this is exactly what she wants. You continue to rub and knead at her, feeding her pleasure, until her moans begin to rise in pitch, turning into all out cries. She’s reaching her summit. You wrap your arms around your stomach and squeeze her. In moments she reaches her climax and an explosion of femcum erupts into your stomach. She cries out loud, then heaves for breath, slumping within you. She lovingly rubs your inner walls as her orgasm slowly fades. You then bend forward and begin to cough her up. Soon, the raptor girl splats onto the ground in front of you, slick with your inner juices. She beams up at you in wordless thanks.	
-	</text>
-	<special effect="nonhostile" />
-	<choice destination="end" text="well that was fun"/>
-	<special effect="healnpc" />
+		<text>
+			You sit back, allowing her to continue her blissful pleasure. You can
+			feel wriggling and bucking within you, and every so often you’ll hear
+			a high pitched moan of ecstasy. You begin to rub at your stomach,
+			helping her along, and her moans in response let you know this is
+			exactly what she wants. You continue to rub and knead at her, feeding
+			her pleasure, until her moans begin to rise in pitch, turning into
+			all out cries. She’s reaching her summit. You wrap your arms around
+			your stomach and squeeze her. In moments she reaches her climax and
+			an explosion of femcum erupts into your stomach. She cries out loud,
+			then heaves for breath, slumping within you. She lovingly rubs your
+			inner walls as her orgasm slowly fades. You then bend forward and
+			begin to cough her up. Soon, the raptor girl splats onto the ground
+			in front of you, slick with your inner juices. She beams up at you in
+			wordless thanks.
+		</text>
+		<special effect="nonhostile" />
+		<choice destination="end" text="well that was fun" />
+		<special effect="healnpc" />
 	</page>
-	
+
 	<page ID="sex0">
 		<text>
 			<conditional>
@@ -70,11 +130,16 @@
 		<condition operator="greaterthan" evaluate="BODYVALUE"
 			bodypart="penis" partvalue="length" value="18" />
 		<text>
-			You tease for only a bit of time before working your ample endowment
-			into her, the raptor letting out a gasping chirr as she's stretched
-			out but rocking her hips back to meet yours even if you're stretching
-			her so much your dick can be seen on her belly like a coke can under
-			a blanket. Her tail curls around your waist as you set your hands on
+			You tease for only a bit of time before working your ample
+			endowment
+			into her, the raptor letting out a gasping chirr as she's
+			stretched
+			out but rocking her hips back to meet yours even if you're
+			stretching
+			her so much your dick can be seen on her belly like a coke
+			can under
+			a blanket. Her tail curls around your waist as you set your
+			hands on
 			her hips, then start to thrust urged on by her movements and
 			delighted chirrings. Soon you're falling into a rthythm of mutual
 			pleasure, rutting her vigorously as she animalisticly coaxes you to
@@ -85,13 +150,20 @@
 
 	<page ID="sex1">
 		<text>
-			You tease for only a bit of time before working your hard cock into her,
-			the raptor letting out a gasping chirr as she's you fit snugly within
-			her and rocking her hips back to meet yours, clenching around your
-			cock eagerly with her nethers. Her tail curls around your waist as
-			you set your hands on her hips, then start to thrust urged on by her
-			movements and delighted chirrings. Soon you're falling into a rthythm
-			of mutual pleasure, rutting her vigorously as she animalisticly
+			You tease for only a bit of time before working your hard cock
+			into her,
+			the raptor letting out a gasping chirr as she's you fit
+			snugly within
+			her and rocking her hips back to meet yours, clenching
+			around your
+			cock eagerly with her nethers. Her tail curls around your
+			waist as
+			you set your hands on her hips, then start to thrust urged on
+			by her
+			movements and delighted chirrings. Soon you're falling into a
+			rthythm
+			of mutual pleasure, rutting her vigorously as she
+			animalisticly
 			coaxes you to ever greater feats of penetration.
 		</text>
 		<choice destination="sex2" text="fill her up" />

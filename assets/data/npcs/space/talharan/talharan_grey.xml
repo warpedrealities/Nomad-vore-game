@@ -1,39 +1,48 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="greyt.png"/>
-<name>talharan greysuit</name>
-<description>A shapely feminine figure covered by a space or environment suit. The grey metallic fabric covers her from the neck all the way down to her toes. Her head is covered by a large bulletshaped helmet that has no faceplate through which you could peer to reveal what they look like under it. She can be seen to be wielding a plasma pistol.</description>
-<rpg>
-<experiencevalue value="50"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
-<attribute attribute="KINETIC" value="2"/>
-<attribute attribute="SHOCK" value="2"/>
-<attribute attribute="KINETIC" value="2"/>
-<combatMove name="plasma bolt" pattern="RANGED" bonusAttribute="RANGED" timeCost="2">
-<effectDamage type="KINETIC" minValue="2" maxValue="6" modifier="STRENGTH"/>
-<effectDamage type="THERMAL" minValue="2" maxValue="6" modifier="STRENGTH"/>
-<missText count="1">
-<text>the suited talharan fires a plasma bolt at TARGET but misses</text>
-</missText>
-<hitText count="1">
-<text>the suited talharan shoots TARGET for VALUE thermokinetic damage</text>
-</hitText>
-</combatMove>
-<itemDrop chance="20" item="plasma pistol"/>
-<itemDrop chance="50" item="plasma cartridge"/>
-</rpg>
+	<sprite value="greyt.png" />
+	<name>talharan greysuit</name>
+	<description>A shapely feminine figure covered by a space or
+		environment suit. The grey metallic fabric covers her from the neck
+		all the way down to her toes. Her head is covered by a large
+		bulletshaped helmet that has no faceplate through which you could peer
+		to reveal what they look like under it. She can be seen to be wielding
+		a plasma pistol.</description>
+	<rpg>
+		<experiencevalue value="50" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="KINETIC" value="2" />
+		<attribute attribute="SHOCK" value="2" />
+		<attribute attribute="KINETIC" value="2" />
+		<combatMove name="plasma bolt" pattern="RANGED"
+			bonusAttribute="RANGED" timeCost="2">
+			<effectDamage type="KINETIC" minValue="2" maxValue="6"
+				modifier="STRENGTH" />
+			<effectDamage type="THERMAL" minValue="2" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the suited talharan fires a plasma bolt at TARGET but misses</text>
+			</missText>
+			<hitText count="1">
+				<text>the suited talharan shoots TARGET for VALUE thermokinetic
+					damage</text>
+			</hitText>
+		</combatMove>
+		<itemDrop chance="20" item="plasma pistol" />
+		<itemDrop chance="50" item="plasma cartridge" />
+	</rpg>
 
-<defeated conversation="space/talharan/talharan_grey/defeat" />
-<seduced conversation="space/talharan/talharan_grey/seduced" />
-<victory conversation="space/talharan/talharan_grey/victory" />
-<seducer conversation="space/talharan/talharan_grey/victory" />
-<controller AI="soldier_AI"/>
-<faction value="talharan"/>
+	<defeated conversation="space/talharan/talharan_grey/defeat" />
+	<seduced conversation="space/talharan/talharan_grey/seduced" />
+	<victory conversation="space/talharan/talharan_grey/victory" />
+	<seducer conversation="space/talharan/talharan_grey/victory" />
+	<controller AI="soldier_AI" />
+	<faction value="talharan" />
 </NPC>

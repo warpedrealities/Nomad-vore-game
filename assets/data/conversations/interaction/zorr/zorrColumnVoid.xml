@@ -2,16 +2,18 @@
 <Conversation>
 
 	<page ID="start">
-			<condition operator="equals" evaluate="LOCALFLAG" flag="USED"
-			value="1" />	
-			<text>
-			The slot on this column contains an amulet now tightly clasped by its ancient mechanisms, it'd be devilishly tricky to remove it.
-			</text>
-			<choice destination="end" text="leave it be"/>
+		<condition operator="equals" evaluate="LOCALFLAG" flag="USED"
+			value="1" />
+		<text>
+			The slot on this column contains an amulet now tightly clasped
+			by its ancient mechanisms, it'd be devilishly tricky to remove it.
+		</text>
+		<choice destination="end" text="leave it be" />
 	</page>
-	
+
 	<page ID="start">
-		<text>This column has a slot in the center of it for something to be inserted into and an encompassing empty circle inscribed above it.
+		<text>This column has a slot in the center of it for something to be
+			inserted into and an encompassing empty circle inscribed above it.
 		</text>
 		<choice destination="useAmulet" text="insert void amulet">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
@@ -23,33 +25,38 @@
 		</choice>
 		<choice destination="end" text="leave it be for now" />
 	</page>
-	
+
 	<page ID="useWrongAmulet">
-	<text>
-	The amulet settles into the slot a moment when you insert it but then pops free, maybe you did something wrong?
-	</text>
-	<choice destination="end" text="curse these ancient ruins and their bewildering mechanisms!"/>
+		<text>
+			The amulet settles into the slot a moment when you insert it but then
+			pops free, maybe you did something wrong?
+		</text>
+		<choice destination="end"
+			text="curse these ancient ruins and their bewildering mechanisms!" />
 	</page>
 
 	<page ID="useAmulet">
-			<condition operator="equals" evaluate="GLOBALFLAG" flag="zorrDoor"
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="zorrDoor"
 			value="0" />
 		<text>
-		You insert the amulet and it makes a clicking sound as it settles into the slot snugly.
+			You insert the amulet and it makes a clicking sound as it settles into
+			the slot snugly.
 		</text>
 		<effect type="setlocalflag" flag="USED" value="1" />
-		<effect type="removeitem" item="void amulet" value="1"/>
-		<effect type="setglobalflag" flag="zorrDoor" value="1"/>
+		<effect type="removeitem" item="void amulet" value="1" />
+		<effect type="setglobalflag" flag="zorrDoor" value="1" />
 		<choice destination="end" text="exit" />
 	</page>
 	<page ID="useAmulet">
-			<condition operator="equals" evaluate="GLOBALFLAG" flag="zorrDoor"
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="zorrDoor"
 			value="1" />
 		<text>
-		You insert the amulet and it makes a clicking sound as it settles into the slot snugly. As it does so you hear a grinding sound as the barrier blocking off the inner sanctum grinds open.
+			You insert the amulet and it makes a clicking sound as it settles into
+			the slot snugly. As it does so you hear a grinding sound as the
+			barrier blocking off the inner sanctum grinds open.
 		</text>
-		<effect type="setlocalflag" flag="USED" value="1" />	
-		<effect type="removeitem" item="void amulet" value="1"/>
+		<effect type="setlocalflag" flag="USED" value="1" />
+		<effect type="removeitem" item="void amulet" value="1" />
 		<special effect="opendoor" lock="zorrSanctum" />
 		<choice destination="end" text="exit" />
 	</page>

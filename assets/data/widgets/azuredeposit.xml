@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <widgetharvestable sprite="37">
-<contains minimum="1" maximum="2">volatile crystal</contains>
-<usedescription>You mine some volatile crystals</usedescription>
-<description>A deposit of crystals throbbing with dangerous amounts of energy, possibly usable as fuel, or explosives</description>
-<regeneration regentime="2000"/>
+	<contains minimum="1" maximum="2">volatile crystal</contains>
+	<usedescription>You mine some volatile crystals</usedescription>
+	<description>A deposit of crystals throbbing with dangerous amounts of
+		energy, possibly usable as fuel, or explosives</description>
+	<regeneration regentime="2000" />
 </widgetharvestable>

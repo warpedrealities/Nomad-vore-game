@@ -8,37 +8,83 @@
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
 		<choice destination="cockvore0" text="she looks like she'd make great cockfood">
-		<assertion evaluate="hasperk" perk="cockvore"/>
+			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
 		<choice destination="meal0" text="and she looks delicious">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="devour">
+		<text>
+			You have devoured her in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
 	<page ID="cockvore0">
-	<text>
-	The incapacitated raptor looks up at you in horror as you pull out your <macro ID="penis_size_desc" /> cock and stroke to stir it to a suitable size. She tries to crawl away from you, but there’s little she can do to escape you now. You take her head in your hand and bring her face up to the head of your now enormous and hungry shaft. She tries to resist you as you push her up against your cock slit. She whimpers wordlessly and you push. Hard. Her head pops right inside. You can’t hold back a groan as you feel your cock expand to slurp around the raptor girl’s head. Her cries are muffled by your cock flesh.
-	</text>
-	<choice destination="cockvore1" text="schlurp her up"/>
+		<text>
+			The incapacitated raptor looks up at you in horror as you pull out
+			your
+			<macro ID="penis_size_desc" />
+			cock and stroke to stir it to a suitable size. She tries to crawl
+			away from you, but there’s little she can do to escape you now. You
+			take her head in your hand and bring her face up to the head of your
+			now enormous and hungry shaft. She tries to resist you as you push
+			her up against your cock slit. She whimpers wordlessly and you push.
+			Hard. Her head pops right inside. You can’t hold back a groan as you
+			feel your cock expand to slurp around the raptor girl’s head. Her
+			cries are muffled by your cock flesh.
+		</text>
+		<choice destination="cockvore1" text="schlurp her up" />
 	</page>
-	
+
 	<page ID="cockvore1">
-	<text>
-	You force her shoulders inside. She weakly puts her clawed hands on your shaft and tries to pull her head out, but it’s far too late. You grab her wrists and pin her arms to her sides as your cock slurps in her breasts and elbows. Her cries grow louder. She begins to wriggle and squirm with renewed strength, but this only serves to aid her slide in deeper. Before long only her legs and tail are dangling out of your cock slit. You tilt your member up, and with the aid of gravity, she descends into your cock the rest of the way. Your sack expands and dangles heavy with her curled up form.
-	</text>
-	<choice destination="cockvore2" text="Turn her into cum"/>
+		<text>
+			You force her shoulders inside. She weakly puts her clawed hands on your
+			shaft and tries to pull her head out, but it’s far too late. You grab
+			her wrists and pin her arms to her sides as your cock slurps in her
+			breasts and elbows. Her cries grow louder. She begins to wriggle and
+			squirm with renewed strength, but this only serves to aid her slide
+			in deeper. Before long only her legs and tail are dangling out of
+			your cock slit. You tilt your member up, and with the aid of gravity,
+			she descends into your cock the rest of the way. Your sack expands
+			and dangles heavy with her curled up form.
+		</text>
+		<choice destination="cockvore2" text="Turn her into cum" />
 	</page>
-	
+
 	<page ID="cockvore2">
-	<text>
-	The raptor girl is kicking and squirming with all the might left in her, but she can’t manage to force her way back out. Her wriggling motions, however, are really starting to work you up. You pump your shaft. Your balls begin to fill with bubbly, frothy cum. The raptor girl cries out as she begins to melt into the boiling substance. You jack yourself eagerly, speeding up the process. The raptor girl’s cries begin to gurgle as she’s submerged in the digestive cream. She kicks and bucks a few more times, her struggles growing weaker, until at last she falls still. You jack yourself faster until, at last, you burst, spraying her out all over the ground. All that’s left of her is a large, spoogy stain.
-	</text>
-	<effect type="feed" value="95" />
-	<special effect="removenpc" />
-	<choice destination="end" text="she's better this way, moving on"/>
+		<text>
+			The raptor girl is kicking and squirming with all the might left in her,
+			but she can’t manage to force her way back out. Her wriggling
+			motions, however, are really starting to work you up. You pump your
+			shaft. Your balls begin to fill with bubbly, frothy cum. The raptor
+			girl cries out as she begins to melt into the boiling substance. You
+			jack yourself eagerly, speeding up the process. The raptor girl’s
+			cries begin to gurgle as she’s submerged in the digestive cream. She
+			kicks and bucks a few more times, her struggles growing weaker, until
+			at last she falls still. You jack yourself faster until, at last, you
+			burst, spraying her out all over the ground. All that’s left of her
+			is a large, spoogy stain.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="she's better this way, moving on" />
 	</page>
-	
+
 	<page ID="sex0">
 		<text>
 			The raptor lets out a startled hiss and struggles as you press down
@@ -86,11 +132,16 @@
 
 	<page ID="sex2">
 		<text>
-			The raptor is nice and tight, you pace yourself until you feel her stop
-			struggling..until you feel her submit, and only then go to town and
-			really start pounding her. The raptor gal shuddering as you thrust in
-			and out her, hips working overtime as your pleasure builds. You use
-			the reptile for your pleasure, and as she lets out a whimper you
+			The raptor is nice and tight, you pace yourself until you feel
+			her stop
+			struggling..until you feel her submit, and only then go to
+			town and
+			really start pounding her. The raptor gal shuddering as you
+			thrust in
+			and out her, hips working overtime as your pleasure builds.
+			You use
+			the reptile for your pleasure, and as she lets out a whimper
+			you
 			reach your climax, pumping your hot seed deep within her. You pull
 			out and pull swiftly back, staining her chest and belly with spurts
 			of your cum after filling her womb, marking her with your satisfied
@@ -103,11 +154,16 @@
 
 	<page ID="meal0">
 		<text>
-			That athletic raptor body really would look better as a bulge in your
-			belly. And besides, scales have a flavour of all of their own. She
-			seems to sense the intent behind your reward and lets out a whimper,
-			but cannot resist in any meaningful way as you grab ahold of her
-			hands and guide them into your lips. A swallow safely keeping those
+			That athletic raptor body really would look better as a bulge in
+			your
+			belly. And besides, scales have a flavour of all of their own.
+			She
+			seems to sense the intent behind your reward and lets out a
+			whimper,
+			but cannot resist in any meaningful way as you grab ahold of
+			her
+			hands and guide them into your lips. A swallow safely keeping
+			those
 			claws pressed together and starting to lift the raptor up into a
 			seated position. Her whimpers and attempts to pull back all for
 			naught as you reach down to seize her shoulders and pull her up and
@@ -118,14 +174,22 @@
 
 	<page ID="meal1">
 		<text>
-			Her body is slender, easily consumed. Despite her protesting sounds as
-			you engulf her head she cannot pull away, despite her squirms all she
-			can do is pleasingly rub at the inside of your throat and mouth as
-			her hands plunge down into your belly. She's going down, the mighty
-			hunter turned prey as your belly begins to swell out around her arms
-			and she's drawn helplessly down. Those petite breasts of hers were
-			quite tastey though passing over your tongue, but the need to utterly
-			conquer this predator and feel her bulging you out is too strong for
+			Her body is slender, easily consumed. Despite her protesting
+			sounds as
+			you engulf her head she cannot pull away, despite her
+			squirms all she
+			can do is pleasingly rub at the inside of your throat
+			and mouth as
+			her hands plunge down into your belly. She's going down,
+			the mighty
+			hunter turned prey as your belly begins to swell out around
+			her arms
+			and she's drawn helplessly down. Those petite breasts of hers
+			were
+			quite tastey though passing over your tongue, but the need to
+			utterly
+			conquer this predator and feel her bulging you out is too
+			strong for
 			you to linger overmuch.
 		</text>
 		<choice destination="meal2" text="eat her all the way up" />
@@ -133,9 +197,12 @@
 
 	<page ID="meal2">
 		<text>
-			Down down down the raptor goes. Her long reptilian tail and tastey firm
-			legs sliding down your throat as you get comfortable and stroke over
-			the growing bulge she's making, already a pleasing swell in your
+			Down down down the raptor goes. Her long reptilian tail and
+			tastey firm
+			legs sliding down your throat as you get comfortable and
+			stroke over
+			the growing bulge she's making, already a pleasing swell
+			in your
 			middle just like you predicted. And soon enough she's entirely
 			trapped within you, her tail and toes vanishing past your lips as
 			she's forced to curl up within the digestive embrace of your stomach.

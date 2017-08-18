@@ -1,52 +1,57 @@
 ﻿<?xml version="1.0"?>
 <zone width="64" height="64" spriteset="geothermal.png">
-<tileset count-x="8" count-y="8">
-<tile sprite="9" vision="1" movement="2"> rock wall</tile>
-<tile sprite="1" vision="0" movement="0"> dusty cave floor </tile>
-<tile sprite="2" vision="0" movement="1"> broken ground </tile>
-<tile sprite="3" vision="0" movement="0"> cracked </tile>
-<tile sprite="4" vision="1" movement="2"> stalagmite </tile>
-<tile sprite="5" vision="1" movement="2"> stalagmites </tile>
-<tile sprite="6" vision="0" movement="2"> steam vent </tile>
-<tile sprite="7" vision="0" movement="2"> steam vent </tile>
-<tile sprite="8" vision="0" movement="1"> covered magma </tile>
-</tileset>
+	<tileset count-x="8" count-y="8">
+		<tile sprite="9" vision="1" movement="2"> rock wall</tile>
+		<tile sprite="1" vision="0" movement="0"> dusty cave floor </tile>
+		<tile sprite="2" vision="0" movement="1"> broken ground </tile>
+		<tile sprite="3" vision="0" movement="0"> cracked </tile>
+		<tile sprite="4" vision="1" movement="2"> stalagmite </tile>
+		<tile sprite="5" vision="1" movement="2"> stalagmites </tile>
+		<tile sprite="6" vision="0" movement="2"> steam vent </tile>
+		<tile sprite="7" vision="0" movement="2"> steam vent </tile>
+		<tile sprite="8" vision="0" movement="1"> covered magma </tile>
+	</tileset>
 
-<description>The geothermal caverns stretch on in all directions, a maze of passages all looking similar to eachother.</description>
-<transition direction="north">Cave 1A</transition>
-<transition direction="east">Cave 2B</transition>
-<mapgen>
-<walloff wall="0" sides="southwest"/>
-<preloadprefab width="5" height="5" preloadID="4">
-<row>22222</row>
-<row>21112</row>
-<row>21212</row>
-<row>21212</row>
-<row>22222</row>
-<recordVector x="2" y="2" ID="4" zone="Zone 2A"/>
-<pairedportal sprite="3" destination="Zone 2A" x="2" y="2" ID="11">a tunnel to the surface</pairedportal>
-</preloadprefab>
-<cavegen iterations="2" tile="0" threshold="35" bounds="100" minfloor="0.5">
+	<description>The geothermal caverns stretch on in all directions, a
+		maze of passages all looking similar to eachother.</description>
+	<transition direction="north">Cave 1A</transition>
+	<transition direction="east">Cave 2B</transition>
+	<mapgen>
+		<walloff wall="0" sides="southwest" />
+		<preloadprefab width="5" height="5" preloadID="4">
+			<row>22222</row>
+			<row>21112</row>
+			<row>21212</row>
+			<row>21212</row>
+			<row>22222</row>
+			<recordVector x="2" y="2" ID="4" zone="Zone 2A" />
+			<pairedportal sprite="3" destination="Zone 2A" x="2" y="2"
+				ID="11">a tunnel to the surface</pairedportal>
+		</preloadprefab>
+		<cavegen iterations="2" tile="0" threshold="35" bounds="100"
+			minfloor="0.5">
 
-<noise tile="2" scarcity="32"/>
-<noise tile="3" scarcity="32"/>
-<noise tile="4" scarcity="32"/>
-<noise tile="5" scarcity="32"/>
-<noise tile="6" scarcity="32"/>
-<noise tile="7" scarcity="32"/>
-<noise tile="8" scarcity="32"/>
-<floodfill tile="1">
-<Seedwidgets min="6" max="12" name="crystaldeposit" />
-<Seedwidgets min="4" max="8" name="zymonitedeposit" />
-<SeedNPCs min="8" max="12" name="AlphaMinoris_III/lixi_breeder"> </SeedNPCs>
-<SeedNPCs min="8" max="12" name="AlphaMinoris_III/lixi_worker"> </SeedNPCs>
-</floodfill>
-</cavegen>
-<recordEdges zone="Cave 1A" preloadID="2" side="north"/>
-<recordEdges zone="Cave 2B" preloadID="3" side="east"/>
-<carveEdges preloadID="0" side="north" tile="1" replace="0"/>
-<carveEdges preloadID="1" side="east" tile="1" replace="0"/>
-<auditpaths carve="0" replace="1"/>
-</mapgen>
+			<noise tile="2" scarcity="32" />
+			<noise tile="3" scarcity="32" />
+			<noise tile="4" scarcity="32" />
+			<noise tile="5" scarcity="32" />
+			<noise tile="6" scarcity="32" />
+			<noise tile="7" scarcity="32" />
+			<noise tile="8" scarcity="32" />
+			<floodfill tile="1">
+				<Seedwidgets min="6" max="12" name="crystaldeposit" />
+				<Seedwidgets min="4" max="8" name="zymonitedeposit" />
+				<SeedNPCs min="8" max="12" name="AlphaMinoris_III/lixi_breeder">
+				</SeedNPCs>
+				<SeedNPCs min="8" max="12" name="AlphaMinoris_III/lixi_worker">
+				</SeedNPCs>
+			</floodfill>
+		</cavegen>
+		<recordEdges zone="Cave 1A" preloadID="2" side="north" />
+		<recordEdges zone="Cave 2B" preloadID="3" side="east" />
+		<carveEdges preloadID="0" side="north" tile="1" replace="0" />
+		<carveEdges preloadID="1" side="east" tile="1" replace="0" />
+		<auditpaths carve="0" replace="1" />
+	</mapgen>
 
 </zone>

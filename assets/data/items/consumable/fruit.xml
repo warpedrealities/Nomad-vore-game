@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
-<ItemConsumable name="fruit" weight="0.25" value="10" tag="1">
+<ItemConsumable name="fruit" weight="0.25" value="10"
+	tag="1">
 	<description>A strange fruit, its texture and colouration make the
 		notion of eating it somewhat unappealing.</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
 		modvalue="15" modifies="SATIATION">
-		You eat the fruit, it tastes strange and somehow unsatisfying.
+		You eat the fruit, it tastes strange and
+		somehow unsatisfying.
 	</effectrecover>
 </ItemConsumable>

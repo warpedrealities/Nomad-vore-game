@@ -4,8 +4,10 @@
 		<condition evaluate="LOCALFLAG" operator="equals" value="0"
 			flag="gender" />
 		<text>
-			You have fallen before a saurian warrior out in the wilderness, from
-			your position down in the dirt you can get a good look up under the
+			You have fallen before a saurian warrior out in the wilderness,
+			from
+			your position down in the dirt you can get a good look up under
+			the
 			hem of her armoured tunic and you see...
 		</text>
 		<choice destination="genderF" text="a hungry snatch">
@@ -22,7 +24,8 @@
 
 	<page ID="genderF">
 		<text>
-			A hairless snatch nestled between her legs, already moist and pliant
+			A hairless snatch nestled between her legs, already moist and
+			pliant
 			as she sees where your gaze is going and reaches down to fondle
 			herself, gently parting her lower lips. The hot pink of her nethers a
 			dreadful invitation as she flashes them at you.
@@ -36,12 +39,18 @@
 		<condition evaluate="LOCALFLAG" operator="equals" value="-1"
 			flag="gender" />
 		<text>
-			The saurian looks down at you and grins, dropping down into a squat. As
-			she spreads her thighs you see her hairless snatch drooling wetly for
-			you and she chuckles following your gaze "Mhmm, that's it..you're
-			going in there." she says with a mhmmm and then reaches out. The
-			saurian warrior grabbing your feet afore you can pull them away,
-			instead they're pulled towards her and together so she can press them
+			The saurian looks down at you and grins, dropping down into a
+			squat. As
+			she spreads her thighs you see her hairless snatch drooling
+			wetly for
+			you and she chuckles following your gaze "Mhmm, that's
+			it..you're
+			going in there." she says with a mhmmm and then reaches
+			out. The
+			saurian warrior grabbing your feet afore you can pull them
+			away,
+			instead they're pulled towards her and together so she can press
+			them
 			against her hot and hungry nethers "No escape" she taunts with a
 			growl as she engulfs your feet with her ravenous pussy "but feel free
 			to struggle, it'll feel better for me."
@@ -51,7 +60,8 @@
 
 	<page ID="unbirth0">
 		<text>
-			You can't help but protest your fate, but your lustful predator is
+			You can't help but protest your fate, but your lustful predator
+			is
 			having none of it and simply chuckles and grins as she grabs your
 			legs and feeds them into her snatch. You feel the hot tightness of
 			her sex squeeze down over your thighs and your feet plunge into her
@@ -67,7 +77,8 @@
 
 	<page ID="unbirth1">
 		<text>
-			In, in in. With each rippling clench of her nethers and lewd schlorp
+			In, in in. With each rippling clench of her nethers and lewd
+			schlorp
 			more of your body is drawn inside her. Her hungry snatch and
 			voracious womb claiming ever more of you as she chirrs in delight
 			"mhmmm, you're gonna feel so good gushing down the inside of my
@@ -77,7 +88,8 @@
 			back and reaching down to frig her clit as you're dragged inside her.
 			Her thighs are outlining your view of the outline now as you scrabble
 			in vain for purchase to resist
-			her voracious snatch but you both know that soon you'll end up inside of
+			her voracious snatch but you both know
+			that soon you'll end up inside of
 			her.
 		</text>
 		<choice destination="unbirth2" text="overtaken utterly" />
@@ -85,13 +97,20 @@
 
 	<page ID="unbirth2">
 		<text>
-			You feel her clenching nethers ripple up around your head, your last
-			view of the outside world framed by her lower lips afore being sealed
-			into wet and squeezing darkness. Your arms flail and grasp uselessly
-			a moment more before being drawn up inside of her as she chirrs in
-			delight. The predatory warrior pressing her arms over her distended
-			middle and clenching her thighs together to prevent you escaping back
-			out "all roads end traveller, and this one ends with you as
+			You feel her clenching nethers ripple up around your head, your
+			last
+			view of the outside world framed by her lower lips afore being
+			sealed
+			into wet and squeezing darkness. Your arms flail and grasp
+			uselessly
+			a moment more before being drawn up inside of her as she
+			chirrs in
+			delight. The predatory warrior pressing her arms over her
+			distended
+			middle and clenching her thighs together to prevent you
+			escaping back
+			out "all roads end traveller, and this one ends with you
+			as
 			wombfodder." she says and gives her roundness a pat. Your body soon
 			finishes being drawn up inside her, entombed within that hungry womb
 			you know she intends only ill for you now.
@@ -109,7 +128,20 @@
 
 	<page ID="UBStruggleEscape">
 		<text>
-		Despite her statement of finality you set yourself to attempting to squirm your way back out of her clenching womb. The intimate insides of the reptilian pressing snugly all around you and starting to rthythmically knead on your form and you shove back harshly against her inner flesh, your probing hands searching around for the way back out in a way the warrior starts to find rather disagreeable. The saurian warrior shifting around and then letting out a hiss as you find your way, flushing as she presses her legs together. But she finds herself no match for you as your hands shove first out from betwixt her netherlips then finds you shoving her legs apart forcing her to fall disagreeably backwards as you worm your way out of her. The saurian giving you a heated glare as you slip entirely free from her flushed and panting form, it won't take her long to recover and have her revenge for this.
+			Despite her statement of finality you set yourself to attempting to squirm
+			your way back out of her clenching womb. The intimate insides of the
+			reptilian pressing snugly all around you and starting to
+			rthythmically knead on your form and you shove back harshly against
+			her inner flesh, your probing hands searching around for the way back
+			out in a way the warrior starts to find rather disagreeable. The
+			saurian warrior shifting around and then letting out a hiss as you
+			find your way, flushing as she presses her legs together. But she
+			finds herself no match for you as your hands shove first out from
+			betwixt her netherlips then finds you shoving her legs apart forcing
+			her to fall disagreeably backwards as you worm your way out of her.
+			The saurian giving you a heated glare as you slip entirely free from
+			her flushed and panting form, it won't take her long to recover and
+			have her revenge for this.
 		</text>
 		<effect type="heal" value="0.1" />
 		<effect type="stunnpc" value="10" />
@@ -118,14 +150,42 @@
 
 	<page ID="UBStruggleDigest">
 		<text>
-		Despite her statement of finality you set yourself to attempting to squirm your way back out of her clenching womb. The intimate insides of the reptilian pressing snugly all around you and starting to rthythmically knead on your form and you shove back harshly against her inner flesh, your probing hands searching around for the way back out in a way the warrior starts to find rather disagreeable. The saurian warrior shifting around and then letting out a hiss as you find your way, flushing as she presses her legs together. You shove your hands into her birthcanal and try to force her muscular passage apart so you can escape, worming further towards her netherlips and freedom. But her legs are together and as you worm your hands out you feel only her thighs squeezing them and making it impossible to escape. You strain and struggle, but tire as she clenches and ripples, tugging you back inside "you fought well, now...melt" the saurian says as you're sealed back inside, worn out and exhausted from your struggles you feel her tingling fluids kneading into you and know the end is coming. 
+			Despite her statement of finality you set yourself to attempting to squirm
+			your way back out of her clenching womb. The intimate insides of the
+			reptilian pressing snugly all around you and starting to
+			rthythmically knead on your form and you shove back harshly against
+			her inner flesh, your probing hands searching around for the way back
+			out in a way the warrior starts to find rather disagreeable. The
+			saurian warrior shifting around and then letting out a hiss as you
+			find your way, flushing as she presses her legs together. You shove
+			your hands into her birthcanal and try to force her muscular passage
+			apart so you can escape, worming further towards her netherlips and
+			freedom. But her legs are together and as you worm your hands out you
+			feel only her thighs squeezing them and making it impossible to
+			escape. You strain and struggle, but tire as she clenches and
+			ripples, tugging you back inside "you fought well, now...melt" the
+			saurian says as you're sealed back inside, worn out and exhausted
+			from your struggles you feel her tingling fluids kneading into you
+			and know the end is coming.
 		</text>
 		<choice destination="UBSTRUGGLEGO" text="liquidate" />
 	</page>
 
 	<gameover ID="UBSTRUGGLEGO">
 		<text>
-		You writhe and plead weakly inside the saurian, but all you get for your troubles is the chiding scold of "Die with dignity." from your predator even as she sets about rubbing you out, which some might say is hypocritical. But you have bigger problems as you start to soften and liquidate in her, hearing her chirr and moan as she pleasures herself and you are compressed into an ever tighter mass of liquidated lust "no-" you manage to start to say only to end in a burble as you're scrunched and sloshed away by her voracious womb. The saurian letting out a cry that drowns out your final plea as she orgasms, splattering your remnants all over the ground beneath her as a wet puddle. The saurian warrior has truly bested you now, all that's left is a stain beneath her as she gets up and recovers her composure.
+			You writhe and plead weakly inside the saurian, but all you get for your
+			troubles is the chiding scold of "Die with dignity." from your
+			predator even as she sets about rubbing you out, which some might say
+			is hypocritical. But you have bigger problems as you start to soften
+			and liquidate in her, hearing her chirr and moan as she pleasures
+			herself and you are compressed into an ever tighter mass of
+			liquidated lust "no-" you manage to start to say only to end in a
+			burble as you're scrunched and sloshed away by her voracious womb.
+			The saurian letting out a cry that drowns out your final plea as she
+			orgasms, splattering your remnants all over the ground beneath her as
+			a wet puddle. The saurian warrior has truly bested you now, all
+			that's left is a stain beneath her as she gets up and recovers her
+			composure.
 		</text>
 	</gameover>
 
@@ -137,7 +197,21 @@
 
 	<page ID="UBPleasureEscape">
 		<text>
-		You hear her definitive statement, oddly dignified for someone who has just shoved a defeated foe up her snatch. And well, that can't stand, also flustering her into submission from within MIGHT just be enough to stop you ending up her next orgasm. Not ending up an orgasm might of weighed heavier on your thinking as you start rubbing at her insides, tracing your expert hands along her the inside of her womb and probing at the entrance of her birth canal. You hear her gasp and chirr, the saurian flushing heavily and shivering "what are you? ooh, keep on...yes" she moans as her better judgement is derailed by your hands and of her own hands one traces down to finger herself vigorously. The saurian letting out a cry as she soon peaks and in her rapturous state of orgasm and afterglow barely registers your escape until you worm your way entirely out. Though she'll probably come down from that high in a bit, might be trouble in the offing when that happens.
+			You hear her definitive statement, oddly dignified for someone who has
+			just shoved a defeated foe up her snatch. And well, that can't stand,
+			also flustering her into submission from within MIGHT just be enough
+			to stop you ending up her next orgasm. Not ending up an orgasm might
+			of weighed heavier on your thinking as you start rubbing at her
+			insides, tracing your expert hands along her the inside of her womb
+			and probing at the entrance of her birth canal. You hear her gasp and
+			chirr, the saurian flushing heavily and shivering "what are you? ooh,
+			keep on...yes" she moans as her better judgement is derailed by your
+			hands and of her own hands one traces down to finger herself
+			vigorously. The saurian letting out a cry as she soon peaks and in
+			her rapturous state of orgasm and afterglow barely registers your
+			escape until you worm your way entirely out. Though she'll probably
+			come down from that high in a bit, might be trouble in the offing
+			when that happens.
 		</text>
 		<effect type="heal" value="0.1" />
 		<effect type="stunnpc" value="10" />
@@ -146,35 +220,81 @@
 
 	<page ID="UBPleasureDigest">
 		<text>
-		You hear her definitive statement, oddly dignified for someone who has just shoved a defeated foe up her snatch. And well, that can't stand, also flustering her into submission from within MIGHT just be enough to stop you ending up her next orgasm. Not ending up an orgasm might of weighed heavier on your thinking as you start rubbing at her insides, tracing your hands along her the inside of her womb and probing at the entrance of her birth canal. You hear her gasp and chirr, the saurian flushing heavily and shivering "what are you? ooh, keep on...wait" she manages, keeping her wits about you despite your apparently less than magic fingers. The saurian clenching herself around you to impede your motions and chuckling "nice try, but i orgasm once you're a bit sloshier and not before."
+			You hear her definitive statement, oddly dignified for someone who has
+			just shoved a defeated foe up her snatch. And well, that can't stand,
+			also flustering her into submission from within MIGHT just be enough
+			to stop you ending up her next orgasm. Not ending up an orgasm might
+			of weighed heavier on your thinking as you start rubbing at her
+			insides, tracing your hands along her the inside of her womb and
+			probing at the entrance of her birth canal. You hear her gasp and
+			chirr, the saurian flushing heavily and shivering "what are you? ooh,
+			keep on...wait" she manages, keeping her wits about you despite your
+			apparently less than magic fingers. The saurian clenching herself
+			around you to impede your motions and chuckling "nice try, but i
+			orgasm once you're a bit sloshier and not before."
 		</text>
 		<choice destination="UBPleasureGO" text="nothing to do but get sloshed" />
 	</page>
 
 	<gameover ID="UBPleasureGO">
 		<text>
-		The saurian chuckles and mhmms as you try despite her fore-warned and thus fore-armed state to attempt to pleasure her. Your predator flushing as she feels you squirming and softening simultaneously in her voracious womb. Her hand only now going to rub her nethers now you're too soft to survive much longer, her womb steadily grinding away your solidity and resistance. "mhmm, nearly...nearly...mhmm" she utters as she feels her orgasm building in strength and your own weakening. Your last sensation that of experiencing her orgasm from within her as she climaxes with a cry and her womb squishes you down into a sopping wet expulsion of her juices, sticky glops of former space adventure splattering all over the floor under her as the saurian moans and gasps in delight. She doesn't even try to mop you up, just leaving you a mess out in the open for others to see as she rises back to her feet and adjusts the lay of her clothing. What an end.
+			The saurian chuckles and mhmms as you try despite her fore-warned and
+			thus fore-armed state to attempt to pleasure her. Your predator
+			flushing as she feels you squirming and softening simultaneously in
+			her voracious womb. Her hand only now going to rub her nethers now
+			you're too soft to survive much longer, her womb steadily grinding
+			away your solidity and resistance. "mhmm, nearly...nearly...mhmm" she
+			utters as she feels her orgasm building in strength and your own
+			weakening. Your last sensation that of experiencing her orgasm from
+			within her as she climaxes with a cry and her womb squishes you down
+			into a sopping wet expulsion of her juices, sticky glops of former
+			space adventure splattering all over the floor under her as the
+			saurian moans and gasps in delight. She doesn't even try to mop you
+			up, just leaving you a mess out in the open for others to see as she
+			rises back to her feet and adjusts the lay of her clothing. What an
+			end.
 		</text>
 	</gameover>
 
 
 	<page ID="UBSubmit">
 		<text>
-		You feel her womb pressing possessively around you as she declares your fate and settles contently. Though you surprise her as she hears your mhmm at those words "My you're an eager one? well..." she chuckles and leans back, stroking one womb over her distended middle and the other one sets to work leisurely between her legs. You find yourself following suit in masturbating as you let yourself get sloshed and juiced by her ravenous womb. The clenching snug confines rubbing her sexual fluids into you as you moan and hear her chirr around you, each clench making you feel even more wonderful and yet softer and more pliant.. you feel your orgasm nearing as things get wetter and wetter in every sense of the word. Nearly there, nearly, nearly...
+			You feel her womb pressing possessively around you as she declares your
+			fate and settles contently. Though you surprise her as she hears your
+			mhmm at those words "My you're an eager one? well..." she chuckles
+			and leans back, stroking one womb over her distended middle and the
+			other one sets to work leisurely between her legs. You find yourself
+			following suit in masturbating as you let yourself get sloshed and
+			juiced by her ravenous womb. The clenching snug confines rubbing her
+			sexual fluids into you as you moan and hear her chirr around you,
+			each clench making you feel even more wonderful and yet softer and
+			more pliant.. you feel your orgasm nearing as things get wetter and
+			wetter in every sense of the word. Nearly there, nearly, nearly...
 		</text>
 		<choice destination="UBSUBMITGO" text="*slosh*" />
 	</page>
 
 	<gameover ID="UBSUBMITGO">
-	<text>
-	The saurian hears your final blissed cry muffled inside her and swiftly silenced with a burbling glorp as her own orgasm follows on the heels of your own and mashes your semi solid form entirely down into delightful liquids. The saurian bucking on the ground and splattering hot fluids out of her womb as she squeezes you into femmecum and discharges you out all over the ground. As her orgasm subsides the saurian gasps, but still chirrs in delight as she basks in afterglow and the erotic scents steaming off your heated remains. Always good when a defeated enemy knows how to be a satisfying orgasm, and that's all you've amounted to now.
-	</text>
+		<text>
+			The saurian hears your final blissed cry muffled inside her and swiftly
+			silenced with a burbling glorp as her own orgasm follows on the heels
+			of your own and mashes your semi solid form entirely down into
+			delightful liquids. The saurian bucking on the ground and splattering
+			hot fluids out of her womb as she squeezes you into femmecum and
+			discharges you out all over the ground. As her orgasm subsides the
+			saurian gasps, but still chirrs in delight as she basks in afterglow
+			and the erotic scents steaming off your heated remains. Always good
+			when a defeated enemy knows how to be a satisfying orgasm, and that's
+			all you've amounted to now.
+		</text>
 	</gameover>
 
 	<page ID="genderH">
 		<text>
-			A thick tanned cock and some hefty hairless balls. The lizard sees
-			where your gaze is drifting and cracks a smile, reaching down under
+			A thick tanned cock and some hefty hairless balls. The lizard
+			sees
+			where your gaze is drifting and cracks a smile, reaching down
+			under
 			her tunic to wrap one hand around that cock and stroke it as it
 			twitches and a single glop of musk pre oozes forth to dribble on the
 			ground beneath her and tantalize your nose with its scent.
@@ -188,7 +308,8 @@
 			flag="gender" />
 		<!--herm -->
 		<text>
-			The saurian looks down at you and grins, stroking her firm cock and
+			The saurian looks down at you and grins, stroking her firm cock
+			and
 			glancing down meaningfully at your feet afore a droplet of her pre
 			drops upon them "I think we both know what's coming next." she says
 			and drops down into a squat, grabbing your feet even as you try to
@@ -203,7 +324,8 @@
 
 	<page ID="cockvore0">
 		<text>
-			You do squirm, though it does little more than make her moan as her
+			You do squirm, though it does little more than make her moan as
+			her
 			voracious shaft ripples and schlurps its way up your legs. It
 			certainly doesn't help you escape as your feet dip into her cum and
 			she works her hands forwards up your body to help work you into her
@@ -214,15 +336,24 @@
 
 	<page ID="cockvore1">
 		<text>
-			Down you slide as she reaches your waist, her balls starting to bulge out
-			as your legs are fed into their ravenous and sticky embrace. Contours
-			of your feet imprinting on her sack rather nicely as she crams you in
-			with a delighted moan and shuddering blissed out mannerisms. The
-			lizard giving you a little smooch "good cockfood" she says and then
-			forces more of a kiss out of you afore you can protest. The lizard
-			violating your mouth with her long tongue as she shoves your body
-			down into her cock..breaking the kiss to smile and place a hand atop
-			your head "goodbye cockfood" she says and then all goes dark as she
+			Down you slide as she reaches your waist, her balls starting to
+			bulge out
+			as your legs are fed into their ravenous and sticky embrace.
+			Contours
+			of your feet imprinting on her sack rather nicely as she
+			crams you in
+			with a delighted moan and shuddering blissed out
+			mannerisms. The
+			lizard giving you a little smooch "good cockfood" she
+			says and then
+			forces more of a kiss out of you afore you can protest.
+			The lizard
+			violating your mouth with her long tongue as she shoves
+			your body
+			down into her cock..breaking the kiss to smile and place a
+			hand atop
+			your head "goodbye cockfood" she says and then all goes dark
+			as she
 			shoves the last of you into her cock.
 		</text>
 		<choice destination="cockvore2" text="disappear" />
@@ -230,8 +361,10 @@
 
 	<page ID="cockvore2">
 		<text>
-			The saurian warrior who bested you now settles back into a seated
-			position, stroking over the bulges made in her shaft from your head
+			The saurian warrior who bested you now settles back into a
+			seated
+			position, stroking over the bulges made in her shaft from your
+			head
 			and upper body as you slide down entirely into her bloated sack
 			"mhmmm, too few of my fights end this way." she says and then
 			chuckles "but you were easier to get down than an elf, always hard to
@@ -247,8 +380,10 @@
 	<page ID="CVsubmit">
 		<!-- continue patrol, fuck another warrior with the cum -->
 		<text>
-			You consider your fate, and relax, settling comfortably into the cummy
-			confines of her balls. The lizard looks down at her sack and pokes
+			You consider your fate, and relax, settling comfortably into the
+			cummy
+			confines of her balls. The lizard looks down at her sack and
+			pokes
 			"not going to fight for your life? suit yourself" she says and
 			fondles herself, getting to her feet with a grunt. The lizard's heavy
 			balls swaying against her thighs, weighed down and bulging with your
@@ -266,11 +401,16 @@
 
 	<gameover ID="CVsubmitGO">
 		<text>
-			One of our vanquisher's comrades had been giving her blushing looks for
-			much of the patrol, so it was on the way back that she acted. The
-			predatory lizard with balls full of your cummified remains snagging
-			her friend and tugging her into the bushes earning a giggle, and
-			frenzied clumsy makeouts as the two stumble and fumble till they find
+			One of our vanquisher's comrades had been giving her blushing
+			looks for
+			much of the patrol, so it was on the way back that she
+			acted. The
+			predatory lizard with balls full of your cummified remains
+			snagging
+			her friend and tugging her into the bushes earning a giggle,
+			and
+			frenzied clumsy makeouts as the two stumble and fumble till they
+			find
 			themselves laying down one atop the other. The hermier of the two
 			wasting no more time with foreplay and thrusting into her horny
 			partner, gasps and chirrs and moans audible from the rustling bushes
@@ -290,13 +430,20 @@
 	<page ID="CVstruggle">
 		<!-- kneeling/sitting and stroking off -->
 		<text>
-			Your only hope is to make enough of a fuss that she'll be forced to let
-			you go. All you need to do is find the entrance to start sliding back
-			up her cock amidst all this sticky cum, as you begin to push and
-			shove around you hear the lizard gasp and chirr blissfully "oh yeah
-			that's the stuff." she exclaims, apparently finding your vigorous
-			movements pleasurable as she closes her eyes and begins to jerk off
-			vigorously, the sack beginning to churn around you as you jostle it
+			Your only hope is to make enough of a fuss that she'll be forced
+			to let
+			you go. All you need to do is find the entrance to start
+			sliding back
+			up her cock amidst all this sticky cum, as you begin to
+			push and
+			shove around you hear the lizard gasp and chirr blissfully
+			"oh yeah
+			that's the stuff." she exclaims, apparently finding your
+			vigorous
+			movements pleasurable as she closes her eyes and begins to
+			jerk off
+			vigorously, the sack beginning to churn around you as you
+			jostle it
 			against the ground and her thighs.
 		</text>
 		<choice destination="CVstrugglecheck" text="must escape!" />
@@ -311,12 +458,18 @@
 
 	<page ID="CVstruggleescape">
 		<text>
-			You push around inside her sack, shoving at the inside of her cummy
-			balls every which way with your hands and feet. Shoving and rubbing
-			them against your imprisoning confines as she jerks off, then lets
-			out a startled gasp and shudders in bliss "ah don't...noo stay.." she
-			protests incoherently as you push your hands up through her shaft and
-			shove off from the inside of her sack. The lizard overwhelmed by the
+			You push around inside her sack, shoving at the inside of her
+			cummy
+			balls every which way with your hands and feet. Shoving and
+			rubbing
+			them against your imprisoning confines as she jerks off, then
+			lets
+			out a startled gasp and shudders in bliss "ah don't...noo stay.."
+			she
+			protests incoherently as you push your hands up through her shaft
+			and
+			shove off from the inside of her sack. The lizard overwhelmed by
+			the
 			sensation as you course up her sensitive shaft, under her stroking
 			hands that do nothing to jerk you back down as you force your way out
 			into the open air, hands grasping her tip them pulling yourself
@@ -332,8 +485,10 @@
 
 	<page ID="CVstruggledigest">
 		<text>
-			You push around inside her sack, shoving at the inside of her cummy
-			balls every which way with your hands and feet. Shoving and rubbing
+			You push around inside her sack, shoving at the inside of her
+			cummy
+			balls every which way with your hands and feet. Shoving and
+			rubbing
 			them against your imprisoning confines as she jerks off and
 			blissfully moans and utters muffled approvals. But you can't find the
 			way out of her balls, and as you shove at the inside of her sack you
@@ -348,8 +503,10 @@
 
 	<gameover ID="CVstruggleGO">
 		<text>
-			"yes, yes yes" the lizard chants as she strokes off and feels her balls
-			burble and churn, softening and rounding out with a final loud
+			"yes, yes yes" the lizard chants as she strokes off and feels
+			her balls
+			burble and churn, softening and rounding out with a final
+			loud
 			blorping sound as you dissolve away entirely in her sack. Her
 			chanting of delight taking on a more insistent tone, her strokes
 			already as vigorous as can be as she feels all that pent up cum in
@@ -369,10 +526,14 @@
 	<page ID="CVpleasure">
 		<!-- laying on back stroking off, auto fellatio lizard? -->
 		<text>
-			Your only hope to get her to let you out is to pleasure her into orgasm
-			from inside. Hopefully it'll let you be able to escape and so you
-			start rubbing around at the inside of her sack, hearing her gasp and
-			chirr in delight from your antics. You feel her slip onto her back,
+			Your only hope to get her to let you out is to pleasure her into
+			orgasm
+			from inside. Hopefully it'll let you be able to escape and so
+			you
+			start rubbing around at the inside of her sack, hearing her gasp
+			and
+			chirr in delight from your antics. You feel her slip onto her
+			back,
 			her swaying balls shifting with the motion to settle against the
 			ground and her tail as she spreas her legs and jerks off. The lizard
 			laying back as her balls shift with the imprints of your hands
@@ -390,9 +551,12 @@
 
 	<page ID="CVpleasureescape">
 		<text>
-			You rub vigourously around the inside of the lizardwarrior's sack as she
-			vigorously jerks off. Your efforts yielding increasingly empassioned
-			moans and chirrs from your predator as you rub around the cummy
+			You rub vigourously around the inside of the lizardwarrior's
+			sack as she
+			vigorously jerks off. Your efforts yielding increasingly
+			empassioned
+			moans and chirrs from your predator as you rub around the
+			cummy
 			confines and finally bearing fruit. The lizard shuddering, hips
 			spasming up as she ejaculates and you shoot back up her dick whole
 			and intact. Your hands coming through her tip and groping her tits a
@@ -408,14 +572,22 @@
 
 	<page ID="CVpleasuredigest">
 		<text>
-			You rub vigourously around the inside of the lizardwarrior's sack as she
-			vigorously jerks off. Your actions are clearly giving the lizard a
-			great deal of pleasure, her moans and chirrs and gasps are audible
-			over the burble of her balls as they churn around you. In her passion
-			she arches forwards to lick her cocktip as her balls start to lose
-			their lumpy bulges, as your body starts to get churned in record time
-			inside her now rather stimulated sack. The lizard shuddering in bliss
-			as you lose your fight for solidity and slosh away into jizz inside
+			You rub vigourously around the inside of the lizardwarrior's
+			sack as she
+			vigorously jerks off. Your actions are clearly giving the
+			lizard a
+			great deal of pleasure, her moans and chirrs and gasps are
+			audible
+			over the burble of her balls as they churn around you. In her
+			passion
+			she arches forwards to lick her cocktip as her balls start to
+			lose
+			their lumpy bulges, as your body starts to get churned in record
+			time
+			inside her now rather stimulated sack. The lizard shuddering in
+			bliss
+			as you lose your fight for solidity and slosh away into jizz
+			inside
 			her balls.
 		</text>
 		<choice destination="CVpleasureGO" text="gurgle" />
@@ -423,7 +595,8 @@
 
 	<gameover ID="CVpleasureGO">
 		<text>
-			The lizard warrior moans in triumphant bliss as her balls round out
+			The lizard warrior moans in triumphant bliss as her balls round
+			out
 			entirely and arches further forwards. She succeeds in the feat of
 			getting her own engorged girl eating cock into her mouth, moaning
 			around her own tip as she strokes the exposed length until it erupts.

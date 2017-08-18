@@ -3,7 +3,8 @@
 	<description>A standard medical kit. </description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
 		modvalue="12" modifies="HEALTH">
-		Your injuries heal feel less pressing now that you have given yourself
+		Your injuries heal feel less pressing now that
+		you have given yourself
 		medical attention.
 	</effectrecover>
 </ItemConsumable>

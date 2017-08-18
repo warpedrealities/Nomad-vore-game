@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <ItemConsumable name="laser sentinel" weight="8" value="800">
-	<description>A computer controlled laser gun mounted on a self stabilizing tripod. Once deployed it won't last very long. But can be useful when you need some extra firepower.</description>
+	<description>A computer controlled laser gun mounted on a self
+		stabilizing tripod. Once deployed it won't last very long. But can be
+		useful when you need some extra firepower.</description>
 	<effectSpawn value="temp/laser_sentinel">
-	You setup and activate the laser sentinel, watching it power up and start to scan the area as its legs auto adjust.
+		You setup and activate the laser sentinel, watching it power up and start
+		to scan the area as its legs auto adjust.
 	</effectSpawn>
 </ItemConsumable>

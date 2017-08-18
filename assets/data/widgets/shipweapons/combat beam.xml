@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
-<shipsystem sprite="74" name="combat beam" health="30" hardpoint="true">
-<contains minimum="1" maximum="2">scrap metal</contains>
-<description>starship combat beam for dev test.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<shipWeapon>
-<damage min="4" max="24" falloff="1"/>
-<cooldown value="10"/>
-<effects script="laser" sheet="redbeam"/>
-<range arc="2" range="10" />
-<weaponCost resource="ENERGY" cost="4"/>
-<description>
+<shipsystem sprite="74" name="combat beam" health="30"
+	hardpoint="true">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>starship combat beam for dev test.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipWeapon>
+		<damage min="4" max="24" falloff="1" />
+		<cooldown value="10" />
+		<effects script="laser" sheet="redbeam" />
+		<range arc="2" range="10" />
+		<weaponCost resource="ENERGY" cost="4" />
+		<description>
 
-</description>
-</shipWeapon>
+		</description>
+	</shipWeapon>
 </shipsystem>

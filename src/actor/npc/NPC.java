@@ -817,11 +817,18 @@ public class NPC extends Actor implements Controllable {
 	}
 
 	public void attackOfOpportunity(Actor target) {
+		if (!RPGHandler.getActive())
+		{
+			return;
+		}
 		if (actorRPG.getBusy()<=getMoveCost())
 		{
-			senseInterface.drawText("attack of opportunity!");
 			int threat=((NPC_RPG)actorRPG).getThreatMove();
-			useMove(threat,target);			
+			if (threat>=0)
+			{
+				senseInterface.drawText("attack of opportunity!");
+				useMove(threat,target);						
+			}	
 		}
 	}
 

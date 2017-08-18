@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
-<perk name="poorly childhood" >
-<requirement count="1">
-<req>CHARGEN</req>
-</requirement>
-<description>You had an illness growing up. While it focused the mind wonderfully on academia by rendering other pursuits impossible it's left its mark on you. +1 to intelligence, -1 to endurance.
-</description>
-<modifier affects="INTELLIGENCE" value="1"  type="ABILITY"/>
-<modifier affects="ENDURANCE" value="-1"  type="ABILITY"/>
-<maxrank value="1"/>
+<perk name="poorly childhood">
+	<requirement count="1">
+		<req>CHARGEN</req>
+	</requirement>
+	<description>You had an illness growing up. While it focused the mind
+		wonderfully on academia by rendering other pursuits impossible it's
+		left its mark on you. +1 to intelligence, -1 to endurance.
+	</description>
+	<modifier affects="INTELLIGENCE" value="1" type="ABILITY" />
+	<modifier affects="ENDURANCE" value="-1" type="ABILITY" />
+	<maxrank value="1" />
 </perk>

@@ -11,17 +11,36 @@
 			</conditional>
 		</text>
 		<choice destination="receiveoral" text="Force her to lick you">
-		<assertion evaluate="haspart" part="vagina" />	
+			<assertion evaluate="haspart" part="vagina" />
 		</choice>
 		<choice destination="receiveblowjob" text="make her suck it">
-		<assertion evaluate="haspart" part="penis" />	
+			<assertion evaluate="haspart" part="penis" />
 		</choice>
 		<choice destination="giveoral" text="Lick her folds" />
 		<choice destination="meal0" text="she'd make a great meal">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="do nothing" />
 	</page>
+
+	<page ID="devour">
+		<text>
+			You have devoured her in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
 	<page ID="giveoral">
 		<text>With her legs splayed you see no reason not to sample her
 			defeated folds. Getting situated to lick at her warm nethers you hear
@@ -34,9 +53,12 @@
 	</page>
 	<page ID="giveoralfinish">
 		<text>
-			You decide to keep on enjoying those moans and coos from the helpless
-			harpy you're licking from the outside. stroking her thighs as you
-			keep on licking, the scent of her downy sex flooding your nostrils as
+			You decide to keep on enjoying those moans and coos from the
+			helpless
+			harpy you're licking from the outside. stroking her thighs as
+			you
+			keep on licking, the scent of her downy sex flooding your nostrils
+			as
 			the sound of her gasps and moans fill your ears. Several minutes of
 			helpless but hardly resistive writhing from the harpy culminates in
 			her letting out a cry and staining your face with juices. the panting
@@ -189,7 +211,8 @@
 			belly swells out under your hands. The harpy curling within you as
 			with a final swallow you tuck her feet past your lips and gulp her
 			down. Now all she can do is is squirm within your dome of a belly,
-			pleasing you as you feel the harpy fill you so deliciously. </text>
+			pleasing you as you feel the harpy fill you so deliciously.
+		</text>
 		<choice destination="meal3" text="digest her" />
 	</page>
 

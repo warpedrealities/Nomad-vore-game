@@ -3,6 +3,7 @@ package chargen;
 import java.util.ArrayList;
 
 import menu.Menu;
+import nomad.Universe;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
@@ -231,7 +232,7 @@ public class PlayerStartScene extends SceneBase implements MyListener, Callback 
 				} else {
 					player.setActorName("Nomad");
 				}
-
+				Universe.getInstance().setPlaying(true);
 				Game.sceneManager.SwapScene(new StartIntro());
 			}
 		} else {

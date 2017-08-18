@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <ItemEquip name="scarf" weight="0.5" slot="HEAD" value="200">
 	<description>
-		A scarf, worn across the face bandit style it provides some protection
+		A scarf, worn across the face bandit style it provides
+		some protection
 		against pheremones. +1 to pheremone protection
 	</description>
 	<modifier>

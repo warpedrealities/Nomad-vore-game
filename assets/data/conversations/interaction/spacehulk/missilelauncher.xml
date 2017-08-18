@@ -2,20 +2,24 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			This missile battery is long dormant, the links that would of controlled it are no longer operational. It could however do you more good if salvaged, which you can do with a bit of work.
+			This missile battery is long dormant, the links that would of
+			controlled it are no longer operational. It could however do you more
+			good if salvaged, which you can do with a bit of work.
 		</text>
 		<choice destination="remove" text="do it" />
 		<choice destination="end" text="not now" />
 	</page>
-	
+
 	<page ID="remove">
 		<text>
-		You remove the dagger missile launcher. It's not the most impressive weapon you could lay hands on as the missiles are small and unsophisticated but it's better than going into space unarmed.
+			You remove the dagger missile launcher. It's not the most impressive
+			weapon you could lay hands on as the missiles are small and
+			unsophisticated but it's better than going into space unarmed.
 		</text>
 		<effect type="giveitem" value="1" item="dagger missile launcher" />
 		<special effect="destroywidget" />
 		<choice destination="end" text="got what i came for" />
 	</page>
 
-	
+
 </Conversation>

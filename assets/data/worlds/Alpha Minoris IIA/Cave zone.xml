@@ -1,46 +1,55 @@
 ﻿<?xml version="1.0"?>
 <zone width="32" height="32" spriteset="cave.png">
-<tileset count-x="4" count-y="4">
-<tile sprite="1" vision="1" movement="2"> rock wall</tile>
-<tile sprite="2" vision="0" movement="0"> dusty cave floor </tile>
-<tile sprite="3" vision="1" movement="2"> a rock boulder</tile>
-</tileset>
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> rock wall</tile>
+		<tile sprite="2" vision="0" movement="0"> dusty cave floor </tile>
+		<tile sprite="3" vision="1" movement="2"> a rock boulder</tile>
+	</tileset>
 
-<description>The air is stale, the caves are poorly lit and alive with shifting shadows</description>
-<mapgen>
-<walloff wall="0" sides="northwesteastsouth">
-<cavegen iterations="3" tile="0" threshold="45" bounds="100" minfloor="0.5">
-
-
-<randprefab width="3" height="3">
-<row>111</row>
-<row>121</row>
-<row>222</row>
-<pairedportal sprite="3" destination="Zone 1A" x="1" y="1" ID="11">a tunnel to the surface</pairedportal>
-</randprefab>
-<randprefab width="3" height="3">
-<row>111</row>
-<row>121</row>
-<row>222</row>
-<pairedportal sprite="3" destination="Deep Cave zone" x="1" y="1" ID="15">a tunnel to the surface</pairedportal>
-<placeWidget x="1" y="2" name="DESCRIBER">
-as you approach the tunnel that plunges yet deeper into the earth you scent even stronger pheremones wafting up from there. None of the small fungiforms you’ve seen could form such a dense outpouring of mind altering aromas, something big dwells down there and if you descend you may not be able to resist its allure.
-</placeWidget>
-</randprefab>
-<auditpaths carve="0"/>
-<noise tile="2" scarcity="5"/>
+	<description>The air is stale, the caves are poorly lit and alive with
+		shifting shadows</description>
+	<mapgen>
+		<walloff wall="0" sides="northwesteastsouth">
+			<cavegen iterations="3" tile="0" threshold="45" bounds="100"
+				minfloor="0.5">
 
 
+				<randprefab width="3" height="3">
+					<row>111</row>
+					<row>121</row>
+					<row>222</row>
+					<pairedportal sprite="3" destination="Zone 1A" x="1"
+						y="1" ID="11">a tunnel to the surface</pairedportal>
+				</randprefab>
+				<randprefab width="3" height="3">
+					<row>111</row>
+					<row>121</row>
+					<row>222</row>
+					<pairedportal sprite="3" destination="Deep Cave zone"
+						x="1" y="1" ID="15">a tunnel to the surface</pairedportal>
+					<placeWidget x="1" y="2" name="DESCRIBER">
+						as you approach the tunnel that plunges yet deeper into the earth
+						you scent even stronger pheremones wafting up from there. None of
+						the small fungiforms you’ve seen could form such a dense
+						outpouring of mind altering aromas, something big dwells down
+						there and if you descend you may not be able to resist its allure.
+					</placeWidget>
+				</randprefab>
+				<auditpaths carve="0" />
+				<noise tile="2" scarcity="5" />
 
-<floodfill tile="1">
-<Seedwidgets min="8" max="16" name="crystaldeposit" />
-<SeedNPCs min="4" max="8" name="Alpha_Minoris_IIA/mushroom girl"> </SeedNPCs>
-</floodfill>
-</cavegen>
-</walloff>
-<auditpaths carve="2" replace="1" />
-<auditpaths carve="2" replace="1" exclude="impassable"/>
-<auditpaths carve="0" exclude="impassable"/>
-</mapgen>
+
+
+				<floodfill tile="1">
+					<Seedwidgets min="8" max="16" name="crystaldeposit" />
+					<SeedNPCs min="4" max="8" name="Alpha_Minoris_IIA/mushroom girl">
+					</SeedNPCs>
+				</floodfill>
+			</cavegen>
+		</walloff>
+		<auditpaths carve="2" replace="1" />
+		<auditpaths carve="2" replace="1" exclude="impassable" />
+		<auditpaths carve="0" exclude="impassable" />
+	</mapgen>
 
 </zone>

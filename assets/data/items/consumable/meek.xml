@@ -3,10 +3,13 @@
 	<description>The vial of liquid is remarkably unthreatening. It's a
 		biological refactoring agent that will render your biology better
 		specialized to derive nutrition from non prey sources. The meek will
-		inherit the urth. </description>
+		inherit the urth.
+	</description>
 	<effectmodifier modvalue="-20" modifies="KARMA">
-		You can feel the substance seep into your every pore and coursing through
-		you, rewriting your digestive and other processes. Your karma score is
+		You can feel the
+		substance seep into your every pore and coursing through
+		you, rewriting
+		your digestive and other processes. Your karma score is
 		now VALUE
 	</effectmodifier>
 </ItemConsumable>

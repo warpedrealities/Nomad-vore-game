@@ -1,31 +1,36 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="greenW.png"/>
-<name>worker</name>
-<description>This pointy eared green elf is hard at work, her curves are clad in a thin sheen of sweat and she's bared to the waist. She has a shovel on one shoulder and dirt smeared on her body at random from the excavation work.</description>
-<rpg >
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="30"/>
-<stat stat="RESOLVE" value="20"/>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
-<missText count="1">
-<text>the worker's punch fails to connect with TARGET</text>
-</missText>
-<hitText count="1">
-<text>the worker hits TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="greenW.png" />
+	<name>worker</name>
+	<description>This pointy eared green elf is hard at work, her curves
+		are clad in a thin sheen of sweat and she's bared to the waist. She
+		has a shovel on one shoulder and dirt smeared on her body at random
+		from the excavation work.</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the worker's punch fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the worker hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<respawn delay="2000"/>
-<talk conversation="alpha_minoris_II/elfworker/chat" />
-<controller AI="villager_wander"/>
-<faction value="minyos"/>
+	<respawn delay="2000" />
+	<talk conversation="alpha_minoris_II/elfworker/chat" />
+	<controller AI="villager_wander" />
+	<faction value="minyos" />
 </NPC>

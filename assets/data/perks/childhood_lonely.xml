@@ -1,9 +1,14 @@
 <?xml version="1.0"?>
-<perk name="lonely childhood" >
-<requirement count="1"><req>CHARGEN</req></requirement>
-<description>Whether due to addictions to unsociable hobbies or anxiety you had very very few friends growing up. While your social skills suffered you seem to have been strengthened by self reliance. +1 to endurance, -1 to charisma
-</description>
-<modifier affects="CHARM" value="-1"  type="ABILITY"/>
-<modifier affects="ENDURANCE" value="1"  type="ABILITY"/>
-<maxrank value="1"/>
+<perk name="lonely childhood">
+	<requirement count="1">
+		<req>CHARGEN</req>
+	</requirement>
+	<description>Whether due to addictions to unsociable hobbies or anxiety
+		you had very very few friends growing up. While your social skills
+		suffered you seem to have been strengthened by self reliance. +1 to
+		endurance, -1 to charisma
+	</description>
+	<modifier affects="CHARM" value="-1" type="ABILITY" />
+	<modifier affects="ENDURANCE" value="1" type="ABILITY" />
+	<maxrank value="1" />
 </perk>

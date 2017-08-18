@@ -1,86 +1,90 @@
 <?xml version="1.0"?>
 <Ship width="6" height="7" sprite="prospector">
 
-<shipstats>
-<movecost value="20"/>
-<hullpoints value="35"/>
-<thrustcost value="1.0"/>
-</shipstats>
+	<shipstats>
+		<movecost value="20" />
+		<hullpoints value="35" />
+		<thrustcost value="1.0" />
+	</shipstats>
 
-<emitters>
-<weapon x="0" y="0.0"/>
-<engine x="-0.1" y="-0.4"/>
-<engine x="0.1" y="-0.4"/>
-</emitters>
+	<emitters>
+		<weapon x="0" y="0.0" />
+		<engine x="-0.1" y="-0.4" />
+		<engine x="0.1" y="-0.4" />
+	</emitters>
 
-<layout width="16" height="16" spriteset="ship.png">
-<tileset>
-<tile sprite="1" vision="1" movement="2">a metal wall</tile>
-<tile sprite="2" vision="0" movement="0">a metal floor</tile>
-</tileset>
-<description>The ship is stained, but rugged and serviceable.</description>
-<mapgen>
-<prefab positionX="0" positionY="0" width="7">
-<row>1111111</row>
-<row>1222221</row>
-<row>1222221</row>
-<row>1222221</row>
-<row>2222222</row>
-<row>1122211</row>
-<row>0121210</row>
-<row>0122210</row>
-<row>0122210</row>
-<row>0011100</row>
-</prefab>
-<pairedportal x="0" y="4" sprite="1" ID="-101" facing="2"> Exterior hatch </pairedportal>
-<pairedportal x="6" y="4" sprite="1" ID="-102" facing="6"> Exterior hatch </pairedportal>
-<placeWidget x="2" y="8" name="slot"/>
-<placeWidget x="3" y="8" name="slot">
-<contains name="modules/navconsole"/>
-</placeWidget>
-<placeWidget x="4" y="8" name="slot"/>
+	<layout width="16" height="16" spriteset="ship.png">
+		<tileset>
+			<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+			<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+		</tileset>
+		<description>The ship is stained, but rugged and serviceable.</description>
+		<mapgen>
+			<prefab positionX="0" positionY="0" width="7">
+				<row>1111111</row>
+				<row>1222221</row>
+				<row>1222221</row>
+				<row>1222221</row>
+				<row>2222222</row>
+				<row>1122211</row>
+				<row>0121210</row>
+				<row>0122210</row>
+				<row>0122210</row>
+				<row>0011100</row>
+			</prefab>
+			<pairedportal x="0" y="4" sprite="1" ID="-101" facing="2">
+				Exterior hatch </pairedportal>
+			<pairedportal x="6" y="4" sprite="1" ID="-102" facing="6">
+				Exterior hatch </pairedportal>
+			<placeWidget x="2" y="8" name="slot" />
+			<placeWidget x="3" y="8" name="slot">
+				<contains name="modules/navconsole" />
+			</placeWidget>
+			<placeWidget x="4" y="8" name="slot" />
 
-<placeWidget x="3" y="5" name="hardpoint">
-<facing value="0"/>
-</placeWidget>
-<placeWidget x="1" y="1" name="slot"/>
-<placeWidget x="3" y="1" name="slot">
-</placeWidget>
-<placeWidget x="5" y="1" name="slot">
-</placeWidget>
-<placeWidget x="1" y="2" name="slot"/>
-<placeWidget x="5" y="2" name="slot"/>
-<placeItem x="2" y="2">
-<item itemname="scrap metal"/>
-<item itemname="scrap metal"/>
-<item itemname="scrap metal"/>
-</placeItem>
-<placeItem x="4" y="4">
-<item itemname="scrap metal"/>
-<item itemname="scrap metal"/>
-<item itemname="scrap metal"/>
-</placeItem>
-<placeItem x="2" y="6">
-<item itemname="scrap metal"/>
-<item itemname="scrap metal"/>
-<item itemname="scrap metal"/>
-</placeItem>
-<placeItem x="3" y="1">
-<item itemname="scrap metal"/>
-<item itemname="scrap metal"/>
-<item itemname="scrap metal"/>
-</placeItem>
-</mapgen>
-</layout>
-<exterior width="6">
-<row>000000</row>
-<row>011110</row>
-<row>011110</row>
-<row>001100</row>
-<row>011110</row>
-<row>001100</row>
-<row>001100</row>
-<pairedportal x="1" y="3" sprite="1" ID="-101" destination="prospector" facing="6"> a ship hatch </pairedportal>
-<pairedportal x="4" y="3" sprite="1" ID="-102" destination="prospector" facing="2"> a ship hatch </pairedportal>
-</exterior>
+			<placeWidget x="3" y="5" name="hardpoint">
+				<facing value="0" />
+			</placeWidget>
+			<placeWidget x="1" y="1" name="slot" />
+			<placeWidget x="3" y="1" name="slot">
+			</placeWidget>
+			<placeWidget x="5" y="1" name="slot">
+			</placeWidget>
+			<placeWidget x="1" y="2" name="slot" />
+			<placeWidget x="5" y="2" name="slot" />
+			<placeItem x="2" y="2">
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+			</placeItem>
+			<placeItem x="4" y="4">
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+			</placeItem>
+			<placeItem x="2" y="6">
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+			</placeItem>
+			<placeItem x="3" y="1">
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+			</placeItem>
+		</mapgen>
+	</layout>
+	<exterior width="6">
+		<row>000000</row>
+		<row>011110</row>
+		<row>011110</row>
+		<row>001100</row>
+		<row>011110</row>
+		<row>001100</row>
+		<row>001100</row>
+		<pairedportal x="1" y="3" sprite="1" ID="-101"
+			destination="prospector" facing="6"> a ship hatch </pairedportal>
+		<pairedportal x="4" y="3" sprite="1" ID="-102"
+			destination="prospector" facing="2"> a ship hatch </pairedportal>
+	</exterior>
 </Ship>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<widgetcontainer sprite="29" name="drop container" health="20">
-<contains minimum="2" maximum="4">scrap metal</contains>
-<description>Metal supply canister, reinforced to survive re-entry.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
+<widgetcontainer sprite="29" name="drop container"
+	health="20">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>Metal supply canister, reinforced to survive re-entry.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
 </widgetcontainer>

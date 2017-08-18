@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <widgetharvestable sprite="36">
-<contains minimum="1" maximum="3">scrap metal</contains>
-<usedescription>you rummage in the pile of junk and and retrieve some scrap metal</usedescription>
-<description>a pile of junk</description>
-<regeneration regentime="2000"/>
+	<contains minimum="1" maximum="3">scrap metal</contains>
+	<usedescription>you rummage in the pile of junk and and retrieve some
+		scrap metal</usedescription>
+	<description>a pile of junk</description>
+	<regeneration regentime="2000" />
 </widgetharvestable>

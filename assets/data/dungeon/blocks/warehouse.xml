@@ -5,7 +5,7 @@
 		<edge value="WEST" />
 		<edge value="EAST" />
 		<edge value="NORTH" />
-		<edge value="SOUTH" />	
+		<edge value="SOUTH" />
 		<row>22211222</row>
 		<row>11111111</row>
 		<row>11111111</row>
@@ -20,7 +20,7 @@
 		<edge value="WEST" />
 		<edge value="EAST" />
 		<edge value="NORTH" />
-		<edge value="SOUTH" />	
+		<edge value="SOUTH" />
 		<row>22211222</row>
 		<row>11111111</row>
 		<row>11611611</row>
@@ -30,12 +30,12 @@
 		<row>11111111</row>
 		<row>22211222</row>
 	</block>
-	
+
 	<block name="lootnswe">
 		<edge value="WEST" />
 		<edge value="EAST" />
 		<edge value="NORTH" />
-		<edge value="SOUTH" />	
+		<edge value="SOUTH" />
 		<row>22211222</row>
 		<row>11111111</row>
 		<row>11611611</row>
@@ -44,14 +44,14 @@
 		<row>11611611</row>
 		<row>11111111</row>
 		<row>22211222</row>
-		<widget x="2" y="3" name="cargocontainer" info="normalchest" />		
-	</block>	
-	
+		<widget x="2" y="3" name="cargocontainer" info="normalchest" />
+	</block>
+
 	<block name="doublelootnswe">
 		<edge value="WEST" />
 		<edge value="EAST" />
 		<edge value="NORTH" />
-		<edge value="SOUTH" />	
+		<edge value="SOUTH" />
 		<row>22211222</row>
 		<row>11111111</row>
 		<row>11611611</row>
@@ -60,10 +60,10 @@
 		<row>11611611</row>
 		<row>11111111</row>
 		<row>22211222</row>
-		<widget x="2" y="3" name="cargocontainer" info="normalchest" />		
-		<widget x="5" y="4" name="cargocontainer" info="normalchest" />		
-	</block>		
-	
+		<widget x="2" y="3" name="cargocontainer" info="normalchest" />
+		<widget x="5" y="4" name="cargocontainer" info="normalchest" />
+	</block>
+
 	<block name="ns">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />
@@ -89,7 +89,7 @@
 		<row>26111162</row>
 		<row>22211222</row>
 	</block>
-	
+
 	<block name="lootns">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />
@@ -101,9 +101,9 @@
 		<row>26111162</row>
 		<row>26111162</row>
 		<row>22211222</row>
-		<widget x="1" y="4" name="cargocontainer" info="normalchest" />		
-	</block>	
-	
+		<widget x="1" y="4" name="cargocontainer" info="normalchest" />
+	</block>
+
 	<block name="we">
 		<edge value="WEST" />
 		<edge value="EAST" />
@@ -127,8 +127,8 @@
 		<row>11666611</row>
 		<row>11111111</row>
 		<row>22222222</row>
-	</block>	
-	
+	</block>
+
 	<block name="storagewe1">
 		<edge value="WEST" />
 		<edge value="EAST" />
@@ -141,7 +141,7 @@
 		<row>11666611</row>
 		<row>22222222</row>
 	</block>
-	
+
 	<block name="lootwe0">
 		<edge value="WEST" />
 		<edge value="EAST" />
@@ -153,9 +153,9 @@
 		<row>11666611</row>
 		<row>11111111</row>
 		<row>22222222</row>
-		<widget x="5" y="2" name="cargocontainer" info="normalchest" />			
-	</block>	
-	
+		<widget x="5" y="2" name="cargocontainer" info="normalchest" />
+	</block>
+
 	<block name="lootwe1">
 		<edge value="WEST" />
 		<edge value="EAST" />
@@ -167,10 +167,10 @@
 		<row>11111111</row>
 		<row>11666611</row>
 		<row>22222222</row>
-		<widget x="4" y="4" name="cargocontainer" info="normalchest" />			
+		<widget x="4" y="4" name="cargocontainer" info="normalchest" />
 	</block>
-		
-	
+
+
 	<block name="lootwe0">
 		<edge value="WEST" />
 		<edge value="EAST" />
@@ -182,9 +182,9 @@
 		<row>11666611</row>
 		<row>11111111</row>
 		<row>22222222</row>
-		<widget x="4" y="2" name="cargocontainer" info="normalchest" />	
-	</block>	
-	
+		<widget x="4" y="2" name="cargocontainer" info="normalchest" />
+	</block>
+
 	<block name="lootwe1">
 		<edge value="WEST" />
 		<edge value="EAST" />
@@ -196,9 +196,9 @@
 		<row>11111111</row>
 		<row>11666611</row>
 		<row>22222222</row>
-		<widget x="4" y="4" name="cargocontainer" info="normalchest" />	
-	</block>	
-	
+		<widget x="4" y="4" name="cargocontainer" info="normalchest" />
+	</block>
+
 	<block name="machines0">
 		<edge value="NORTH" />
 		<edge value="WEST" />
@@ -210,8 +210,8 @@
 		<row>23111130</row>
 		<row>22111120</row>
 		<row>22211220</row>
-	</block>	
-		
+	</block>
+
 	<block name="machines1">
 		<edge value="SOUTH" />
 		<edge value="WEST" />
@@ -223,7 +223,7 @@
 		<row>11111130</row>
 		<row>11111120</row>
 		<row>22222220</row>
-	</block>		
+	</block>
 	<block name="machines2">
 		<edge value="SOUTH" />
 		<edge value="WEST" />

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="power-cell" weight="1" value="250">
+	<description>
+		A power cell for fuelling things that require energy.
+	</description>
+	<energy refill="ENERGY" efficiency="1" capacity="10" />
+</ItemAmmo>

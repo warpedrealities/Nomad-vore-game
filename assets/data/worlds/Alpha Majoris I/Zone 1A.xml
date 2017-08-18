@@ -1,42 +1,45 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="alienBlue.png">
-<tileset count-x="4" count-y="4">
-<tile sprite="2" vision="1" movement="2"> a metal wall</tile>
-<tile sprite="2" vision="0" movement="0"> blue stone ground </tile>
-<tile sprite="3" vision="1" movement="1"> boulder</tile>
-<tile sprite="7" vision="1" movement="1"> boulder</tile>
-<tile sprite="4" vision="1" movement="2"> strange alien plant</tile>
-<tile sprite="6" vision="1" movement="2"> strange alien plant</tile>
-<tile sprite="8" vision="1" movement="2"> strange alien plant</tile>
-<tile sprite="5" vision="1" movement="2"> stone wall</tile>
-</tileset>
+	<tileset count-x="4" count-y="4">
+		<tile sprite="2" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="2" vision="0" movement="0"> blue stone ground </tile>
+		<tile sprite="3" vision="1" movement="1"> boulder</tile>
+		<tile sprite="7" vision="1" movement="1"> boulder</tile>
+		<tile sprite="4" vision="1" movement="2"> strange alien plant</tile>
+		<tile sprite="6" vision="1" movement="2"> strange alien plant</tile>
+		<tile sprite="8" vision="1" movement="2"> strange alien plant</tile>
+		<tile sprite="5" vision="1" movement="2"> stone wall</tile>
+	</tileset>
 
-<description>The world is covered in unusual blue hue'd stone and exotic purple foliage that shifts and rustles even when the wind does not blow.</description>
-<mapgen>
-<perlin>
-<band low="-1.0" high="-0.5">
-<floodfill tile="7"/>	
-</band>
+	<description>The world is covered in unusual blue hue'd stone and
+		exotic purple foliage that shifts and rustles even when the wind does
+		not blow.</description>
+	<mapgen>
+		<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="7" />
+			</band>
 
-<band low="-0.5" high="-0.0">
-<noise tile="2" scarcity="20"/>
-<noise tile="3" scarcity="20"/>
-<floodfill tile="1">
-<SeedNPCs min="16" max="32" name="Alpha_Majoris_I/formic"> </SeedNPCs>
-</floodfill>	
-</band>
-<band low="0.0" high="0.5">
-<noise tile="4" scarcity="20"/>
-<noise tile="5" scarcity="20"/>
-<noise tile="6" scarcity="20"/>
-<floodfill tile="1"/>	
-</band>
-<band low="0.5" high="1.0">
-<floodfill tile="7"/>	
-</band>
-</perlin>
+			<band low="-0.5" high="-0.0">
+				<noise tile="2" scarcity="20" />
+				<noise tile="3" scarcity="20" />
+				<floodfill tile="1">
+					<SeedNPCs min="16" max="32" name="Alpha_Majoris_I/formic">
+					</SeedNPCs>
+				</floodfill>
+			</band>
+			<band low="0.0" high="0.5">
+				<noise tile="4" scarcity="20" />
+				<noise tile="5" scarcity="20" />
+				<noise tile="6" scarcity="20" />
+				<floodfill tile="1" />
+			</band>
+			<band low="0.5" high="1.0">
+				<floodfill tile="7" />
+			</band>
+		</perlin>
 
-<walloff wall="7" sides="northwesteastsouth"/>
-</mapgen>
+		<walloff wall="7" sides="northwesteastsouth" />
+	</mapgen>
 
 </zone>

@@ -2,27 +2,27 @@
 <Conversation>
 	<page ID="start">
 		<text>
-		The mechanoid seems to not be acknowledging your presence.	
+			The mechanoid seems to not be acknowledging your presence.
 		</text>
-		<choice destination="talk" text="*attempt to talk to it*"/>
+		<choice destination="talk" text="*attempt to talk to it*" />
 		<choice destination="obstruct" text="*attempt to get in its way*" />
 		<choice destination="end" text="*leave it be*" />
 	</page>
-	
+
 	<page ID="talk">
-	<text>
-	The robot does not seem to respond to you as you talk to it.
-	</text>
-	<choice destination="obstruct" text="*attempt to get in its way*" />
-	<choice destination="end" text="*leave it be*" />
+		<text>
+			The robot does not seem to respond to you as you talk to it.
+		</text>
+		<choice destination="obstruct" text="*attempt to get in its way*" />
+		<choice destination="end" text="*leave it be*" />
 	</page>
-	
+
 	<page ID="obstruct">
-	<text>
-	You stand in front of the robot. But all it does is walk around you.
-	</text>
-	<choice destination="talk" text="*attempt to talk to it*"/>
-	<choice destination="end" text="*leave it be*" />	
+		<text>
+			You stand in front of the robot. But all it does is walk around you.
+		</text>
+		<choice destination="talk" text="*attempt to talk to it*" />
+		<choice destination="end" text="*leave it be*" />
 	</page>
-	
+
 </Conversation>

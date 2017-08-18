@@ -1,36 +1,41 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="saurianworker.png"/>
-<name>peasant</name>
-<description>This lizardy woman's tunic is marred with toil, dirt staining her hands, feet and tail. She has a sack slung on one shoulder and a pickaxe in her hands, she's clearly here to work the ore veins deep in this mine.</description>
-<rpg>
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="30"/>
-<stat stat="RESOLVE" value="20"/>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<missText count="1">
-<text>the worker's pickaxe fails to connect with TARGET</text>
-</missText>
-<hitText count="1">
-<text>the worker's pickaxe hits TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="saurianworker.png" />
+	<name>peasant</name>
+	<description>This lizardy woman's tunic is marred with toil, dirt
+		staining her hands, feet and tail. She has a sack slung on one
+		shoulder and a pickaxe in her hands, she's clearly here to work the
+		ore veins deep in this mine.</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the worker's pickaxe fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the worker's pickaxe hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<respawn delay="100"/>
-<disposition value="55"/>
-<defeated conversation="alpha_minoris_II/saurianworker/defeat" />
-<seduced conversation="alpha_minoris_II/saurianworker/seduced" />
-<victory conversation="alpha_minoris_II/saurianworker/victory" />
-<seducer conversation="alpha_minoris_II/saurianworker/victory" />
-<talk conversation="alpha_minoris_II/saurianworker/chat" />
-<controller AI="villager_wander"/>
-<faction value="saurian"/>
+	<respawn delay="100" />
+	<disposition value="55" />
+	<defeated conversation="alpha_minoris_II/saurianworker/defeat" />
+	<seduced conversation="alpha_minoris_II/saurianworker/seduced" />
+	<victory conversation="alpha_minoris_II/saurianworker/victory" />
+	<seducer conversation="alpha_minoris_II/saurianworker/victory" />
+	<talk conversation="alpha_minoris_II/saurianworker/chat" />
+	<controller AI="villager_wander" />
+	<faction value="saurian" />
 </NPC>

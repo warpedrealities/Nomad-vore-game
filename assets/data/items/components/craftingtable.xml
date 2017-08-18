@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <ItemWidget name="crafting table" weight="10" value="500.0">
-<description>A versatile crafting table containing the tools required to convert many useless things into useful things</description>
-<placeditem widget="craftingtable"/>
+	<description>A versatile crafting table containing the tools required
+		to convert many useless things into useful things</description>
+	<placeditem widget="craftingtable" />
 </ItemWidget>

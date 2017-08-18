@@ -1,11 +1,17 @@
 <?xml version="1.0"?>
-<ItemConsumable name="citrullus mammatus" weight="2" value="250">
-	<description>A peculiar soft and fleshy pink fruit. Its shape makes you feel vaguely immature.</description>
+<ItemConsumable name="citrullus mammatus" weight="2"
+	value="250">
+	<description>A peculiar soft and fleshy pink fruit. Its shape makes you
+		feel vaguely immature.</description>
 	<effectmutator>
-		<criteriaValue part="breasts" variable="size" value="6" lessthan="true"/>
+		<criteriaValue part="breasts" variable="size" value="6"
+			lessthan="true" />
 		<mutation part="breasts" variable="size" modifier="1">
-			You manage to eat the whole damned fruit and you can feel it going to all the right places that its shape had suggested
-			your cupsize is now MACRObreast_size_desc
+			You manage
+			to eat the whole damned fruit and you can feel it going to all the
+			right places that its shape had suggested
+			your cupsize is now
+			MACRObreast_size_desc
 		</mutation>
 	</effectmutator>
 

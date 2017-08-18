@@ -12,7 +12,25 @@
 			<assertion evaluate="hasperk" perk="unbirthing" />
 			<preference fetish="unbirth" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="*push her away*" />
+	</page>
+
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="unbirth0">
@@ -29,20 +47,28 @@
 			lapping her forked tongue around your wondrous mound afore delving
 			and exploring your alluring cleft. It's clear that she's happy to
 			please you this way, and not exactly inexperienced.
-			Course you might want to use her for your pleasure in a less mundane
-			fashion. You hear her chirr against your snatch as you rest one hand
-			on her head and stroke her hair encouragingly.
+			Course you might
+			want to use her for your pleasure in a less mundane
+			fashion. You hear
+			her chirr against your snatch as you rest one hand
+			on her head and
+			stroke her hair encouragingly.
 		</text>
 		<choice destination="unbirth1" text="feed her to your snatch" />
 	</page>
 
 	<page ID="unbirth1">
 		<text>
-			The red scaled and gold skinned lizard chirrs hotly against your sex as
-			she feels your grip on the back of her head firm, her tongue lapping
-			inside your soaked nethers delightfully. But even that long and
-			forked tongue is not deep enough or enough to satisfy you and with a
-			groan you shove her inside. The raptor letting out a startled hiss as
+			The red scaled and gold skinned lizard chirrs hotly against your
+			sex as
+			she feels your grip on the back of her head firm, her tongue
+			lapping
+			inside your soaked nethers delightfully. But even that long
+			and
+			forked tongue is not deep enough or enough to satisfy you and with
+			a
+			groan you shove her inside. The raptor letting out a startled hiss
+			as
 			she feels your sex parting around her face, engulfing her head in
 			clenching hot darkness that softly but firmly tugs on her. You feel
 			her shiver and squirm, but then feel her lick anew deep within your
@@ -53,8 +79,10 @@
 
 	<page ID="unbirth2">
 		<text>
-			She seems willing to give herself over to your needs and yield herself
-			up to pleasure you, and that is something you can certainly work
+			She seems willing to give herself over to your needs and yield
+			herself
+			up to pleasure you, and that is something you can certainly
+			work
 			with. You rock your hips forwards and press down over her, in her
 			submissive kneeling this works well to go about feeding her to your
 			hungry nethers. Her shoulders slide in, the scales on her body
@@ -72,7 +100,8 @@
 
 	<page ID="unbirth3">
 		<text>
-			You can feel her curling up as you claim the last of her. Her legs
+			You can feel her curling up as you claim the last of her. Her
+			legs
 			slipping up through your voracious sex and disappearing from view
 			along with her dangling and twitching tail. The reptile chirring and
 			squirming to get comfortable inside your womb. Her tailtip the last
@@ -90,20 +119,34 @@
 
 	<page ID="unbirth4">
 		<text>
-			You can feel her masturbating inside you, but that'll hardly satiate
-			your own desire for release. She does not seem to notice as you slide
-			your hand down between your legs, the other clutching at your chest
-			as you begin to pleasure yourself. The reptile blissfully pleasuring
-			herself, chirring and moaning as she slickly pleasures herself in
-			your slick womb, her pleasure building as your womb begins to clench
-			and ooze more wondrously blissful fluids all over her. The reptile
-			reaching her peak before you do, gasping and shuddering in delight as
-			she orgasms messily inside you. Only now she realizes the sticky
-			situation she's now in, your womb pressing around her, your moans
-			sounding above her and her form exquisitely softening and starting to
-			degrade. The raptor realizing she's soon going to be your orgasm so
-			soon after having her own, and in her final moments you feel her
-			chirr and nuzzle at your insides...and then, then she goes slosh. The
+			You can feel her masturbating inside you, but that'll hardly
+			satiate
+			your own desire for release. She does not seem to notice as
+			you slide
+			your hand down between your legs, the other clutching at
+			your chest
+			as you begin to pleasure yourself. The reptile blissfully
+			pleasuring
+			herself, chirring and moaning as she slickly pleasures
+			herself in
+			your slick womb, her pleasure building as your womb begins
+			to clench
+			and ooze more wondrously blissful fluids all over her. The
+			reptile
+			reaching her peak before you do, gasping and shuddering in
+			delight as
+			she orgasms messily inside you. Only now she realizes the
+			sticky
+			situation she's now in, your womb pressing around her, your
+			moans
+			sounding above her and her form exquisitely softening and
+			starting to
+			degrade. The raptor realizing she's soon going to be your
+			orgasm so
+			soon after having her own, and in her final moments you feel
+			her
+			chirr and nuzzle at your insides...and then, then she goes slosh.
+			The
 			raptor's final noises a series of schlorps and sloshes as she's
 			liquidated and squished into fluids, your own orgasm rocking through
 			you. The raptor splattering out on the ground in a sloshy puddle

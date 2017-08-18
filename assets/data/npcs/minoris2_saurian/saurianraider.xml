@@ -1,46 +1,60 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="saurianwarrioritalic.png"/>
-<name>saurian warrior</name>
-<description>This reptile is clearly garbed for war with her crossbow slung crosswise on her back and a mace at her hip. She watches you as well, ever alert. Her colouration beneath the brigantine'd tunic she's wearing is leaning somewhere between dusky dark red and the common ochre of the more common peasant lizards. Figure wise tunic with its loosely space metal scales does little to fully conceal the ampleness of her chest, and not extending much past the waist does very little to conceal the shapelyness of her thighs, especially if you're checking her out from behind where the tail makes it ride up.</description>
-<rpg>
-<experiencevalue value="25"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
-<attribute attribute="KINETIC" value="2"/>
-<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<missText count="2">
-<text>the saurian warrior's mace doesn't connect with TARGET</text>
-<text>the saurian warrior attempts to pummel TARGET but the blow doesn't connect</text>
-</missText>
-<hitText count="2">
-<text>the saurian warrior hits TARGET for VALUE points of damage</text>
-<text>the saurian warrior hammers TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-<combatMove name="arrow" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4">
-<effectDamage type="KINETIC" minValue="1" maxValue="8" modifier="STRENGTH"/>
-<missText count="1">
-<text>the saurian warrior looses a bolt at TARGET but it misses</text>
-</missText>
-<hitText count="1">
-<text>the saurian warrior fires a bolt at TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="saurianwarrioritalic.png" />
+	<name>saurian warrior</name>
+	<description>This reptile is clearly garbed for war with her crossbow
+		slung crosswise on her back and a mace at her hip. She watches you as
+		well, ever alert. Her colouration beneath the brigantine'd tunic she's
+		wearing is leaning somewhere between dusky dark red and the common
+		ochre of the more common peasant lizards. Figure wise tunic with its
+		loosely space metal scales does little to fully conceal the ampleness
+		of her chest, and not extending much past the waist does very little
+		to conceal the shapelyness of her thighs, especially if you're
+		checking her out from behind where the tail makes it ride up.</description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="KINETIC" value="2" />
+		<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>the saurian warrior's mace doesn't connect with TARGET</text>
+				<text>the saurian warrior attempts to pummel TARGET but the blow
+					doesn't connect</text>
+			</missText>
+			<hitText count="2">
+				<text>the saurian warrior hits TARGET for VALUE points of damage</text>
+				<text>the saurian warrior hammers TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="arrow" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" rangedbias="4">
+			<effectDamage type="KINETIC" minValue="1" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the saurian warrior looses a bolt at TARGET but it misses</text>
+			</missText>
+			<hitText count="1">
+				<text>the saurian warrior fires a bolt at TARGET for VALUE points of
+					damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<defeated conversation="alpha_minoris_II/saurianraider/defeat" />
-<seduced conversation="alpha_minoris_II/saurianraider/seduced" />
-<victory conversation="alpha_minoris_II/saurianraider/victory" />
-<seducer conversation="alpha_minoris_II/saurianraider/victory" />
-<talk conversation="alpha_minoris_II/saurianraider/chat" />
-<controller AI="patrol0"/>
-<faction value="saurian"/>
+	<defeated conversation="alpha_minoris_II/saurianraider/defeat" />
+	<seduced conversation="alpha_minoris_II/saurianraider/seduced" />
+	<victory conversation="alpha_minoris_II/saurianraider/victory" />
+	<seducer conversation="alpha_minoris_II/saurianraider/victory" />
+	<talk conversation="alpha_minoris_II/saurianraider/chat" />
+	<controller AI="patrol0" />
+	<faction value="saurian" />
 </NPC>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <widgetbreakable sprite="20" name="machinery" health="10">
-<contains minimum="1" maximum="2">scrap metal</contains>
-<description>Ruined machinery, sufficiently aggressive disassembly may yield some scrap</description>
-<resistance resists="KINETIC" strength="2"></resistance>
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>Ruined machinery, sufficiently aggressive disassembly may
+		yield some scrap</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
 </widgetbreakable>

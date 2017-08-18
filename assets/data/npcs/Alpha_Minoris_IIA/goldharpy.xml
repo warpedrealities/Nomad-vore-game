@@ -1,36 +1,44 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="goldharpy.png"/>
-<name>BrightFeather</name>
-<description>A clean and well groomed harpy, her skin unmarred, her feathers bright and straight. Her blonde hair is bound with crude ties into locks to keep it manageable despite its length. Other than these ties she wears not a scrap of clothing leaving her tall and part avian form on full display. Though you can see her eyeing you with more consideration and calculation than you've seen in the eyes of the harpies down below.</description>
-<rpg>
-<experiencevalue value="30"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="50"/>
-<stat stat="RESOLVE" value="40"/>
-<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<missText count="1">
-<text>BrightFeather fails to claw TARGET</text>
-</missText>
-<hitText count="1">
-<text>BrightFeather claws TARGET for VALUE damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="goldharpy.png" />
+	<name>BrightFeather</name>
+	<description>A clean and well groomed harpy, her skin unmarred, her
+		feathers bright and straight. Her blonde hair is bound with crude ties
+		into locks to keep it manageable despite its length. Other than these
+		ties she wears not a scrap of clothing leaving her tall and part avian
+		form on full display. Though you can see her eyeing you with more
+		consideration and calculation than you've seen in the eyes of the
+		harpies down below.</description>
+	<rpg>
+		<experiencevalue value="30" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="40" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>BrightFeather fails to claw TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>BrightFeather claws TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<flying />
-<peacebond/>
-<defeated conversation="alpha_minoris_IIA/goldharpy/defeat" />
-<seduced conversation="alpha_minoris_IIA/goldharpy/defeat" />
-<talk conversation="alpha_minoris_IIA/goldharpy/chat" />
-<victory conversation="alpha_minoris_IIA/goldharpy/victory" />
-<seducer conversation="alpha_minoris_IIA/goldharpy/victory" />
-<controller AI="goldharpy"/>
-<faction value="harpy"/>
+	<flying />
+	<peacebond />
+	<defeated conversation="alpha_minoris_IIA/goldharpy/defeat" />
+	<seduced conversation="alpha_minoris_IIA/goldharpy/defeat" />
+	<talk conversation="alpha_minoris_IIA/goldharpy/chat" />
+	<victory conversation="alpha_minoris_IIA/goldharpy/victory" />
+	<seducer conversation="alpha_minoris_IIA/goldharpy/victory" />
+	<controller AI="goldharpy" />
+	<faction value="harpy" />
 </NPC>

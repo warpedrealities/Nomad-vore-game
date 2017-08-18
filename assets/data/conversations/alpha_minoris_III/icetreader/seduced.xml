@@ -3,186 +3,535 @@
 
 	<page ID="start">
 		<text>
-		The ice treader growls as you approach but not with threat but desire as she fondles her chest and shifts back and forth. As she does you half glimpse something shifting about underneath her as she adjusts her balance in aroused discomfort.
+			The ice treader growls as you approach but not with threat but desire as
+			she fondles her chest and shifts back and forth. As she does you half
+			glimpse something shifting about underneath her as she adjusts her
+			balance in aroused discomfort.
 		</text>
-		<choice destination="meal0" text="Nevermind what's under her, she looks delicious">
-		<assertion evaluate="hasperk" perk="oralvore" />
+		<choice destination="meal0"
+			text="Nevermind what's under her, she looks delicious">
+			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
-		<choice destination="cock" text="investigate underneath the ice treader"/>
-		<choice destination="end" text="leave her to take care of it herself"/>
+		<choice destination="cock" text="investigate underneath the ice treader" />
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
+		<choice destination="end" text="leave her to take care of it herself" />
+	</page>
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="130" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	<page ID="meal0">
+		<text>
+			You look upon the aroused taur and all you can think of is how fantastic
+			it'd be to cram that body of hers down into your belly to digest.
+			She'd make a scrooce of a meal certainly and you pad closer, licking
+			your lips and regarding her with obvious intent. The icetreader's
+			gaze flicking down a moment in recognition then back up to your face
+			even as you beckon her downwards. She leans forwards into your
+			embrace even as you follow up the embrace with lavishing licks upon
+			her face, tasting and sampling her and yet she's so enamoured by you
+			that she doesn't pull away even as you intend to devour her. Finally
+			you take one of her hands and guide it down to rest on your belly and
+			let her know its time, you feel the powerful feline shiver but flush
+			as her gaze rests on your lips and she feels your belly gurgling
+			hungrily under her palm.
+		</text>
+		<choice destination="meal1" text="enough stalling, get with the eating!" />
 	</page>
 
-	<page ID="meal0">
-	<text>
-	You look upon the aroused taur and all you can think of is how fantastic it'd be to cram that body of hers down into your belly to digest. She'd make a scrooce of a meal certainly and you pad closer, licking your lips and regarding her with obvious intent. The icetreader's gaze flicking down a moment in recognition then back up to your face even as you beckon her downwards. She leans forwards into your embrace even as you follow up the embrace with lavishing licks upon her face, tasting and sampling her and yet she's so enamoured by you that she doesn't pull away even as you intend to devour her. Finally you take one of her hands and guide it down to rest on your belly and let her know its time, you feel the powerful feline shiver but flush as her gaze rests on your lips and she feels your belly gurgling hungrily under her palm.
-	</text>
-	<choice destination="meal1" text="enough stalling, get with the eating!"/>
-	</page>
-	
 	<page ID="meal1">
-	<text>
-	You're done with foreplay and so the last thing she sees is your mouth parting around her face. the feline letting out a conflicted whimper of desire and fear as she finds her head encompassed by your mouth and your hands go to stroke down her furred back and mane of hair to calm her, trying to convey with muffled sounds that she should be fine with being your food. With a swallow or two you work her head down your throat, sampling the flavour of her collar and chest as they cross over your tongue in a mix of soft skin and fur as different parts of her flesh cross over your tongue. But even with a compliant meal you have an endeavour ahead of you to cram all of this taur down inside you.
-	</text>
-	<choice destination="meal2" text="her size isn't going to stop you"/>
+		<text>
+			You're done with foreplay and so the last thing she sees is your mouth
+			parting around her face. the feline letting out a conflicted whimper
+			of desire and fear as she finds her head encompassed by your mouth
+			and your hands go to stroke down her furred back and mane of hair to
+			calm her, trying to convey with muffled sounds that she should be
+			fine with being your food. With a swallow or two you work her head
+			down your throat, sampling the flavour of her collar and chest as
+			they cross over your tongue in a mix of soft skin and fur as
+			different parts of her flesh cross over your tongue. But even with a
+			compliant meal you have an endeavour ahead of you to cram all of this
+			taur down inside you.
+		</text>
+		<choice destination="meal2" text="her size isn't going to stop you" />
 	</page>
-	
+
 	<page ID="meal2">
-	<text>
-	Her breasts slide past your lips, those soft orbs tantalizing your tongue as their bare flesh and fur cross your palate at different points. Your hands continue to stroke over her as you draw her upper half inside yourself with soft swallows. And as your lips slide down to her waist you hear her purring rumble emanating from within as your wonderful heat soaks her and your inner fluids soak her fur. The taur's lower half is still to go and you can already feel your belly bulging, the thought of how how deliciously full this snow cat is going to make you is enough to make you moan with anticipation.
-	</text>
-	<choice destination="meal3" text="the rest of her"/>
+		<text>
+			Her breasts slide past your lips, those soft orbs tantalizing your
+			tongue as their bare flesh and fur cross your palate at different
+			points. Your hands continue to stroke over her as you draw her upper
+			half inside yourself with soft swallows. And as your lips slide down
+			to her waist you hear her purring rumble emanating from within as
+			your wonderful heat soaks her and your inner fluids soak her fur. The
+			taur's lower half is still to go and you can already feel your belly
+			bulging, the thought of how how deliciously full this snow cat is
+			going to make you is enough to make you moan with anticipation.
+		</text>
+		<choice destination="meal3" text="the rest of her" />
 	</page>
-	
+
 	<page ID="meal3">
-	<text>
-	You feel her wriggle, both her upper body inside your belly and her lower half still protruding outside. Kitty wants in out of the cold and has gotten impatient it seems and you're happy to give her what she wants. Your powerful swallows starting to tug her densely furred and powerful forequarters past your lips and down your throat. The bulk of her body needed careful managing as you supported and swallowed it up, pressing those forepaws tight against her and working towards her hindlegs. You feel your stomach stretch out to ever more extraordinary degrees with a groan as it contains more and more of the taur's lower half. 
-	</text>
-	<choice destination="meal4" text="polish her off"/>
+		<text>
+			You feel her wriggle, both her upper body inside your belly and her
+			lower half still protruding outside. Kitty wants in out of the cold
+			and has gotten impatient it seems and you're happy to give her what
+			she wants. Your powerful swallows starting to tug her densely furred
+			and powerful forequarters past your lips and down your throat. The
+			bulk of her body needed careful managing as you supported and
+			swallowed it up, pressing those forepaws tight against her and
+			working towards her hindlegs. You feel your stomach stretch out to
+			ever more extraordinary degrees with a groan as it contains more and
+			more of the taur's lower half.
+		</text>
+		<choice destination="meal4" text="polish her off" />
 	</page>
-	
+
 	<page ID="meal4">
-	<text>
-	You look at those hindpaws and that thick furred tail protruding from your lips and mhmm, wriggling around on a spot and then slowly closing your eyes afore swallowing the kitty down entirely. The taur now only visible as an immense distended gut you're sporting as you send all of her down into your belly. You feel her settle inside you, paws and hands rubbing at your innards gently as she purrs and nuzzles. You get the impression from these movements she's amazed and impressed with the fact you managed to get her down. Course now she's down where food goes she runs the risk of her big furry body being broken down for nutrients, but something tells you that won't bother her overmuch. After all, who wouldn't want to be broken down and added to a sexy and alluring predator and that's what you are to her.
-	</text>
-	<choice destination="meal5" text="she's food now, digest her"/>
+		<text>
+			You look at those hindpaws and that thick furred tail protruding from
+			your lips and mhmm, wriggling around on a spot and then slowly
+			closing your eyes afore swallowing the kitty down entirely. The taur
+			now only visible as an immense distended gut you're sporting as you
+			send all of her down into your belly. You feel her settle inside you,
+			paws and hands rubbing at your innards gently as she purrs and
+			nuzzles. You get the impression from these movements she's amazed and
+			impressed with the fact you managed to get her down. Course now she's
+			down where food goes she runs the risk of her big furry body being
+			broken down for nutrients, but something tells you that won't bother
+			her overmuch. After all, who wouldn't want to be broken down and
+			added to a sexy and alluring predator and that's what you are to her.
+		</text>
+		<choice destination="meal5" text="she's food now, digest her" />
 	</page>
-	
+
 	<page ID="meal5">
-	<text>
-	Your belly gets to work on gurgling the icetreader and you hear her murr and push out at your insides, rubbing your gut from within as it begins to work on digesting her. The taur flushed with arousal at being digested by so sexy a predator. As you gurgle and grind the snow cat in your belly you feel her continuing to purr and squirm pleasantly as you work her over. But as time passes her purrs fade into the gurgles of your belly, and her squirms still and are replaced with churns and slops. The satiatingly gut stretching bulk of your meal now softening and losing all definition inside your belly before starting to shrink and diminish. That steady processing and compacting process of your powerful belly soon giving your adoring meal her wish, to become food for and thus a part of you. Your belly is flat again now, the ice treader's nutrients coursing through your form and warming you against the chill. You should move on.
-	</text>
-	<effect type="feed" value="130" />
-	<special effect="removenpc" />
-	<choice destination="end" text="carry on" />
+		<text>
+			Your belly gets to work on gurgling the icetreader and you hear her murr
+			and push out at your insides, rubbing your gut from within as it
+			begins to work on digesting her. The taur flushed with arousal at
+			being digested by so sexy a predator. As you gurgle and grind the
+			snow cat in your belly you feel her continuing to purr and squirm
+			pleasantly as you work her over. But as time passes her purrs fade
+			into the gurgles of your belly, and her squirms still and are
+			replaced with churns and slops. The satiatingly gut stretching bulk
+			of your meal now softening and losing all definition inside your
+			belly before starting to shrink and diminish. That steady processing
+			and compacting process of your powerful belly soon giving your
+			adoring meal her wish, to become food for and thus a part of you.
+			Your belly is flat again now, the ice treader's nutrients coursing
+			through your form and warming you against the chill. You should move
+			on.
+		</text>
+		<effect type="feed" value="130" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
-	
+
 	<page ID="cock">
-	<text>
-	You crawl down between the forelegs of the taur as she pats you on the shoulder encouragingly, the kitty petting you as you go explore down under her and find what's the fixation of her current situation now. And that cock of hers is probably quite the handful no wonder she's having trouble with its aroused state, still there's only you around to help her with it and you did give her this condition. Not that there isn't enough incentive in the drooling steaming pre oozing from the tip of her magnificent length and the sway her heavy balls sway in shadow to stir you to action.
-	</text>
-	<choice destination="cockvore0" text="the best medicine for an erection as big as this is a nice dose of cockfeeding">
-	<preference fetish="cockvore" />
-	</choice>
-	<choice destination="pleasure0" text="a good regimen of licking and stroking should take care of this"/>
-	<choice destination="end" text="she'll just have to sort it out herself, i'm not interested."/>
+		<text>
+			You crawl down between the forelegs of the taur as she pats you on the
+			shoulder encouragingly, the kitty petting you as you go explore down
+			under her and find what's the fixation of her current situation now.
+			And that cock of hers is probably quite the handful no wonder she's
+			having trouble with its aroused state, still there's only you around
+			to help her with it and you did give her this condition. Not that
+			there isn't enough incentive in the drooling steaming pre oozing from
+			the tip of her magnificent length and the sway her heavy balls sway
+			in shadow to stir you to action.
+		</text>
+		<choice destination="cockvore0"
+			text="the best medicine for an erection as big as this is a nice dose of cockfeeding">
+			<preference fetish="cockvore" />
+		</choice>
+		<choice destination="cockvoreEndo0"
+			text="those look like some nice balls to curl up inside">
+			<preference fetish="cockvore" />
+		</choice>
+		<choice destination="pleasure0"
+			text="a good regimen of licking and stroking should take care of this" />
+		<choice destination="end"
+			text="she'll just have to sort it out herself, i'm not interested." />
 	</page>
-	
+
+	<page ID="cockvoreEndo0">
+		<text>
+			With the cold wind brushing against you from one direction and a
+			pulsating emanation of musky warmth in the other it's easy to pick
+			which you want.You patpat the tauric cat and hope she'll get the
+			impression you want to go in there without a churning.
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				Then strip naked so you can marinate in her sack in bare skin.
+			</conditional>
+			Then once ready you start to push your way inside, closing your eyes
+			as you slide headfirst into her cocktip and let the sticky warmth of
+			her throbbing dick ooze around your ears. Her shaft rippling softly
+			as it stretches snugly around your shoulders, tugging on you and
+			trying to draw more of you inside. The kitty letting out a moaning
+			rumble as you start to slide yourself into her loins.
+		</text>
+		<choice destination="cockvoreEndo1" text="come in from the cold" />
+	</page>
+
+	<page ID="cockvoreEndo1">
+		<text>
+			You push off against the ground, working yourself forwards and
+			squelching your upper body past the tip of the ice treader's enormous
+			cock..the pungent smells and overpowering sticky heat of her dick
+			wrapping wonderfully around your chest and then midriff as you feel
+			yourself nearing her balls, your head pressing up against the
+			entrance of her sack and feeling that slightly greater tightness
+			stretching around and letting you inside. The hot cum providing a
+			wonderfully thick gooey sensation as it coats your head and you
+			plunge into her balls steadily. Your legs lifting up off the floor as
+			the snow cat rumbles in delight and holds you up inside her mighty
+			shaft, rippling to draw you in as she reaches down to grab your feet
+			and work you into her dick.
+		</text>
+		<choice destination="cockvoreEndo2" text="all the way" />
+	</page>
+
+	<page ID="cockvoreEndo2">
+		<text>
+			With the ice treader's help you curl into her balls steadily as more of
+			you slides down her dick into those wonderfully hot and sticky orbs.
+			Your legs disappearing into her tip. Her shaft bulging for a few
+			moments more with the shape of the last of you before it ripples and
+			the ice treader lets out a murr as you're deposited entirely in her
+			balls, curled up snugly in their wonderful heat. Her sack sags low
+			and heavy with your weight as you get comfortable inside her and feel
+			her hitch up a hindleg to rub a paw against her balls and jostle you.
+		</text>
+		<choice destination="cockvoreEndo3" text="get comfortable to stay a while" />
+	</page>
+
+	<page ID="cockvoreEndo3">
+		<text>
+			You feel her shift about to get comfortable and as she does you sway
+			around and for a moment worry she doesn't know you're just here to
+			enjoy her warmth not add to her load. But no churning transpires and
+			you smile realizing you've either gotten through to her or it was her
+			intention the whole time. You press a hand out feeling where her
+			underside shelters her sack and just bask in the wonderful warmth.
+			Time passing as you cozily soak in her cum and let her heat permeate
+			your form.
+		</text>
+		<effect type="imprison" value="100" />
+		<special effect="nonhostile" />
+		<effect type="heal" value="0.1" />
+		<special effect="healnpc" />
+		<choice destination="cockvoreEndo4" text="sometime later" />
+	</page>
+
+	<page ID="cockvoreEndo4">
+		<text>
+			You feel you're done stewing around contently in her balls and start to
+			work on wriggling and stroking the inside of her sack. You can feel
+			her shaft had softened during your long stay and you know you're
+			going to need to get her hard again in order to get back up it, still
+			you feel her rumble and feel her shift at your stimulating motions
+			inside her. The taur realizing what you're doing as she rubs a
+			forepaw against her shaft and stiffens up as she gets back onto all
+			fours from her half seated half sprawled position. Her erection now
+			sufficiently form for you to be able to start pushing your back up
+			through it. So you set about worming your way out, the sticky tube
+			throbbing semi hard around you as you work up her arousal towards the
+			open air. The tip disgorging you with a schlurp as you wriggle free.
+			You look back at the flushed taur and her shaft and blush yourself at
+			how nice a bed her balls make, maybe sometime it'd be practical to
+			take her with you.
+		</text>
+		<choice destination="end" text="that's one way to get warm" />
+	</page>
+
 	<page ID="pleasure0">
-	<text>
-	You snuggle in close to her cock, slipping half under the taur so you can get better access to her enormous length. That needy thing requires ministering to and you set about it with your hands stroking up and down her girth while you lick at her tip. The taur uttering a delighted gasp and rocking her hindquarters to thrust her cock against you, rubbing it back and forth over your body. Your full frontage being used to stimulate her as you rub your hips up against her cock with a moan. The musk and the naughty flavours getting to you as you work to get the tauric feline off.
-	</text>
-	<choice destination="pleasure1" text="keep jerking off an enormous cock"/>
+		<text>
+			You snuggle in close to her cock, slipping half under the taur so you
+			can get better access to her enormous length. That needy thing
+			requires ministering to and you set about it with your hands stroking
+			up and down her girth while you lick at her tip. The taur uttering a
+			delighted gasp and rocking her hindquarters to thrust her cock
+			against you, rubbing it back and forth over your body. Your full
+			frontage being used to stimulate her as you rub your hips up against
+			her cock with a moan. The musk and the naughty flavours getting to
+			you as you work to get the tauric feline off.
+		</text>
+		<choice destination="pleasure1" text="keep jerking off an enormous cock" />
 	</page>
-	
+
 	<page ID="pleasure1">
-	<text>
-	The two of you find your rthythm as you writhe and rub up against her shaft and she humps against you, grinding her length along your frontage as you stroke and caress her shaft. Each thrust mashing your face against the hot pre drooling cocktip you're making out with, making you partially dip your slathered face and eager tongue between the lips of her broad cumslit. The sounds of your lusty tauric companion above you make it clear she's enjoying this at least as much as you are, won't be long now.
-	</text>
-	<choice destination="pleasure2" text="her climax"/>
+		<text>
+			The two of you find your rthythm as you writhe and rub up against her
+			shaft and she humps against you, grinding her length along your
+			frontage as you stroke and caress her shaft. Each thrust mashing your
+			face against the hot pre drooling cocktip you're making out with,
+			making you partially dip your slathered face and eager tongue between
+			the lips of her broad cumslit. The sounds of your lusty tauric
+			companion above you make it clear she's enjoying this at least as
+			much as you are, won't be long now.
+		</text>
+		<choice destination="pleasure2" text="her climax" />
 	</page>
-	
+
 	<page ID="pleasure2">
-	<text>
-	You feel her cock throbbing and her moans becoming more heated as she ruts against your body and you know she's not far off at all. In anticipation you find yourself subtly shifting yourself a bit further in front of her shaft and close your eyes, you're not far off as seconds later you hear her let out a rumbling roar of pleasure as she climaxes. The hot seed gushing up her shaft making it pulse and ripple against your belly and thighs afore gushing out thick seed over your face and chest, coating you in thick cream. It takes a dozen voluminous blasts of cum for her orgasm to subside and when it happens you're fairly plastered with her goopy nutbutter. 
-	</text>
-	<choice destination="pleasure3" text="clean up"/>
-	<choice destination="cockvoreAlt0" text="she has other ideas"/>
+		<text>
+			You feel her cock throbbing and her moans becoming more heated as she
+			ruts against your body and you know she's not far off at all. In
+			anticipation you find yourself subtly shifting yourself a bit further
+			in front of her shaft and close your eyes, you're not far off as
+			seconds later you hear her let out a rumbling roar of pleasure as she
+			climaxes. The hot seed gushing up her shaft making it pulse and
+			ripple against your belly and thighs afore gushing out thick seed
+			over your face and chest, coating you in thick cream. It takes a
+			dozen voluminous blasts of cum for her orgasm to subside and when it
+			happens you're fairly plastered with her goopy nutbutter.
+		</text>
+		<choice destination="pleasure3" text="clean up" />
+		<choice destination="cockvoreAlt0" text="she has other ideas" />
 	</page>
-	
+
 	<page ID="pleasure3">
-	<text>
-	The taur slips up off of you as her shaft begins to soften, well satisfied by your ministrations she smiles and bends down to lick and groom you affectionately, helping wipe off some of the thick jizz coating you as you try your best to help her along. That warm tongue of hers at least as effective as you rubbing yourself over in getting that jizz off of you, after a bit she straightens up and licks her lips still smiling and gives you a nudge with a foreleg. Seems you're ready to move on.
-	</text>
+		<text>
+			The taur slips up off of you as her shaft begins to soften, well
+			satisfied by your ministrations she smiles and bends down to lick and
+			groom you affectionately, helping wipe off some of the thick jizz
+			coating you as you try your best to help her along. That warm tongue
+			of hers at least as effective as you rubbing yourself over in getting
+			that jizz off of you, after a bit she straightens up and licks her
+			lips still smiling and gives you a nudge with a foreleg. Seems you're
+			ready to move on.
+		</text>
 		<special effect="nonhostile" />
-		<effect type="heal" value="0.1" />	
+		<effect type="heal" value="0.1" />
 		<special effect="healnpc" />
-		<choice destination="end" text="carry on"/>
+		<choice destination="end" text="carry on" />
 	</page>
-	
+
 	<page ID="cockvoreAlt0">
-	<text>
-	The taur looks down at you coated in her hot cum and rumbles thoughtfully afore shifting up off of you. But she doesn't move off entirely, instead padding backwards a few steps and glancing meaningfully down at you then down underneath her. You see her cock settling against your feet now as you're most of the way out from under her, that enormous shaft of hers still hard and its tip gapes open against your feet in invitation. It seems she'd rather like you to replace the cum you emptied out of her, a flush on her face as she looks at your expression but makes no move to use that powerful body of hers to force you in.
-	</text>
-	<choice destination="cockvoreAlt1" text="being a refill sounds hot"/>
-	<choice destination="cockvoreAltReject" text="thanks but no thanks"/>
+		<text>
+			The taur looks down at you coated in her hot cum and rumbles
+			thoughtfully afore shifting up off of you. But she doesn't move off
+			entirely, instead padding backwards a few steps and glancing
+			meaningfully down at you then down underneath her. You see her cock
+			settling against your feet now as you're most of the way out from
+			under her, that enormous shaft of hers still hard and its tip gapes
+			open against your feet in invitation. It seems she'd rather like you
+			to replace the cum you emptied out of her, a flush on her face as she
+			looks at your expression but makes no move to use that powerful body
+			of hers to force you in.
+		</text>
+		<choice destination="cockvoreAlt1" text="being a refill sounds hot" />
+		<choice destination="cockvoreAltReject" text="thanks but no thanks" />
 	</page>
-	
+
 	<page ID="cockvoreAlt1">
-	<text>
-	You smile and nod at her offer and flex your feet, dipping them into her cocktip and wriggling down a bit to get ankle deep in that voracious cock. The taur letting out a delighted growl and thrusting forwards. The big cat schlurping your calves into her shaft as she begins to engulf her sticky and willing cockfood, namely you, her shaft rippling wonderfully to suck and tug on your legs hungrily.
-	</text>
-	<choice destination="cockvoreAlt2" text="get schlurped up"/>
+		<text>
+			You smile and nod at her offer and flex your feet, dipping them into her
+			cocktip and wriggling down a bit to get ankle deep in that voracious
+			cock. The taur letting out a delighted growl and thrusting forwards.
+			The big cat schlurping your calves into her shaft as she begins to
+			engulf her sticky and willing cockfood, namely you, her shaft
+			rippling wonderfully to suck and tug on your legs hungrily.
+		</text>
+		<choice destination="cockvoreAlt2" text="get schlurped up" />
 	</page>
-	
+
 	<page ID="cockvoreAlt2">
-	<text>
-	The taur smiles at your willing and seemingly eager expression as she looks down at you then growls and shifts her gaze forward with a flush of pleasure as she humps forwards even further. The taur working up midway along your thighs and then clenching, tugging you along the ground by the strength of her impressive length as her cock swallows up to your hips. Not needing to hump forwards anymore she settles her haunches down into a seated position and looks down to watch your expression with a purring rumble as she draws you in deeper. Her cock starting to lift upwards as your weight begins to settle into her sack, bulging and stretching her wonderfully warm sack out around your legs.
-	</text>
-	<choice destination="cockvoreAlt3" text="all the way in"/>
+		<text>
+			The taur smiles at your willing and seemingly eager expression as she
+			looks down at you then growls and shifts her gaze forward with a
+			flush of pleasure as she humps forwards even further. The taur
+			working up midway along your thighs and then clenching, tugging you
+			along the ground by the strength of her impressive length as her cock
+			swallows up to your hips. Not needing to hump forwards anymore she
+			settles her haunches down into a seated position and looks down to
+			watch your expression with a purring rumble as she draws you in
+			deeper. Her cock starting to lift upwards as your weight begins to
+			settle into her sack, bulging and stretching her wonderfully warm
+			sack out around your legs.
+		</text>
+		<choice destination="cockvoreAlt3" text="all the way in" />
 	</page>
-	
+
 	<page ID="cockvoreAlt3">
-	<text>
-	You're shoulders deep in her cock when it tips fully up. That large and now bulging shaft nestled against the chestfur of the icetreader's tauric half and throbbing powerfully around you. The taur patting your head and shoulders with a smile, her body rumbling with her pleasure as she slides one forepaw up to stroke her enormous shaft and slides her hands to rest on your head. The Taur's smile widening afore it vanishes from your sight as she shoves you down into her cock with a mrowl of delight, sheathing you entirely in her voracious length. The icetreader stroking over the bulges you make in her length as best she can as you slip and slide steadily down. Soon you're piling entirely into her balls, making them swollen and bulgey with your curled up form. The hot and naughty environs squeelching and glorping around you as you get situated as ballfodder in the feline's sack.
-	</text>
-	<choice destination="cockvoreAlt4" text="time to churn"/>
+		<text>
+			You're shoulders deep in her cock when it tips fully up. That large and now
+			bulging shaft nestled against the chestfur of the icetreader's tauric
+			half and throbbing powerfully around you. The taur patting your head
+			and shoulders with a smile, her body rumbling with her pleasure as
+			she slides one forepaw up to stroke her enormous shaft and slides her
+			hands to rest on your head. The Taur's smile widening afore it
+			vanishes from your sight as she shoves you down into her cock with a
+			mrowl of delight, sheathing you entirely in her voracious length. The
+			icetreader stroking over the bulges you make in her length as best
+			she can as you slip and slide steadily down. Soon you're piling
+			entirely into her balls, making them swollen and bulgey with your
+			curled up form. The hot and naughty environs squeelching and glorping
+			around you as you get situated as ballfodder in the feline's sack.
+		</text>
+		<choice destination="cockvoreAlt4" text="time to churn" />
 	</page>
-	
+
 	<page ID="cockvoreAlt4">
-	<text>
-	You feel the taur shift posture and continuing to rub over her shaft as you get comfortable in her balls and feel them begin to churn and burble around you. The ample roomyness of her sack starting to get more congested with hot spunk as cum oozes off the fleshy walls of your cosy resting place. The hot seed tingling wonderfully as the thick goo soaks into you and begins the slow process of melting you down into gallons of cream to replace the stuff you jerked out of her. Your spunk slathered form starting to feel soft and weak as the churning glorping of her balls takes on a more satisfying note. The feline purring loudly the whole time you're melting away in there as her balls start to round out and lose definition, compacting until finally your form sloshes away entirely into hot cum.
-	</text>
-	<choice destination="cockvoreAltGO" text="used for fun"/>
+		<text>
+			You feel the taur shift posture and continuing to rub over her shaft as
+			you get comfortable in her balls and feel them begin to churn and
+			burble around you. The ample roomyness of her sack starting to get
+			more congested with hot spunk as cum oozes off the fleshy walls of
+			your cosy resting place. The hot seed tingling wonderfully as the
+			thick goo soaks into you and begins the slow process of melting you
+			down into gallons of cream to replace the stuff you jerked out of
+			her. Your spunk slathered form starting to feel soft and weak as the
+			churning glorping of her balls takes on a more satisfying note. The
+			feline purring loudly the whole time you're melting away in there as
+			her balls start to round out and lose definition, compacting until
+			finally your form sloshes away entirely into hot cum.
+		</text>
+		<choice destination="cockvoreAltGO" text="used for fun" />
 	</page>
-	
+
 	<gameover ID="cockvoreAltGO">
-	<text>
-	With you sloshed away entirely into icetreader splooge the tauric cat's self fondling and masturbation takes on a more vigorous and urgent air. Having topped her balls back up again one can only assume that they're over full, or that cumgesting a willing spacetraveller has gotten her ever so horny. The taur so horny in fact that she doesn't just ply her hands along the nearer part of her cock but balances on her hindlegs to use the soft pads of her forepaws as a second set of hands. The feline's remarkable feat of self gratification soon bringing her to a growling, rumbling and roaring climax, the first gush of your creamy remnants splashing in her face and the follow ups arcing up and out and then down to splatter on the ground. The taur orgasm leaving at least half of your goopy remnants steaming in front of her and leaving her licking up her own seed off her face as she settles back onto all fours well satisfied. If you intended to please the ice treader you certainly succeeded.
-	</text>
+		<text>
+			With you sloshed away entirely into icetreader splooge the tauric cat's
+			self fondling and masturbation takes on a more vigorous and urgent
+			air. Having topped her balls back up again one can only assume that
+			they're over full, or that cumgesting a willing spacetraveller has
+			gotten her ever so horny. The taur so horny in fact that she doesn't
+			just ply her hands along the nearer part of her cock but balances on
+			her hindlegs to use the soft pads of her forepaws as a second set of
+			hands. The feline's remarkable feat of self gratification soon
+			bringing her to a growling, rumbling and roaring climax, the first
+			gush of your creamy remnants splashing in her face and the follow ups
+			arcing up and out and then down to splatter on the ground. The taur
+			orgasm leaving at least half of your goopy remnants steaming in front
+			of her and leaving her licking up her own seed off her face as she
+			settles back onto all fours well satisfied. If you intended to please
+			the ice treader you certainly succeeded.
+		</text>
 	</gameover>
-	
+
 	<page ID="cockvoreAltReject">
-	<text>
-	You look down at her cock then back up at her and shake your head, getting to your feet and giving her a pat even as she whines softly in dismay. But she accepts it and pads back, though one wonders what she'll do about her softening arousal and emptied balls. Still she's survived this long out here, she must have some way of handling it.
-	</text>
+		<text>
+			You look down at her cock then back up at her and shake your head,
+			getting to your feet and giving her a pat even as she whines softly
+			in dismay. But she accepts it and pads back, though one wonders what
+			she'll do about her softening arousal and emptied balls. Still she's
+			survived this long out here, she must have some way of handling it.
+		</text>
 		<special effect="nonhostile" />
-		<effect type="heal" value="0.1" />	
+		<effect type="heal" value="0.1" />
 		<special effect="healnpc" />
-		<choice destination="end" text="and it's not your problem, so carrying on"/>	
+		<choice destination="end" text="and it's not your problem, so carrying on" />
 	</page>
-	
+
 	<page ID="cockvore0">
-	<text>
-	<conditional><assertion evaluate="slothasitem" slot="2" />You strip off in preparation before beginning treatment.</conditional> Both of your hands go to knead at her cocktip and fondle the end of her length making her growl in delight. The feline taur continuing to pet and stroke over your back as if you're some kind of exceptionally naughty and precocious cub. So she seems quite surprised as you shove your hands into her tip and prove just how naughty, and for that matter shamelessly preyslutty, you really are. The ice treader gasping and reaching down to grasp your shoulder and coax you away from this. But as you shrug off her hand and force your arms deeper into her drooling cocktip she growls in delight and shivers, pleasure roiling through her and her face gaining a delighted grin. She's not arguing anymore with your desire to feed her cock, oh no.
-	</text>
-	<choice destination="cockvore1" text="feed that cock"/>
+		<text>
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				You strip off in preparation before beginning treatment.
+			</conditional>
+			Both of your hands go to knead at her cocktip and fondle the end of
+			her length making her growl in delight. The feline taur continuing to
+			pet and stroke over your back as if you're some kind of exceptionally
+			naughty and precocious cub. So she seems quite surprised as you shove
+			your hands into her tip and prove just how naughty, and for that
+			matter shamelessly preyslutty, you really are. The ice treader
+			gasping and reaching down to grasp your shoulder and coax you away
+			from this. But as you shrug off her hand and force your arms deeper
+			into her drooling cocktip she growls in delight and shivers, pleasure
+			roiling through her and her face gaining a delighted grin. She's not
+			arguing anymore with your desire to feed her cock, oh no.
+		</text>
+		<choice destination="cockvore1" text="feed that cock" />
 	</page>
-	
+
 	<page ID="cockvore1">
-	<text>
-	You fix that grin in your face as you work your arms inside, then duck down to feed your head inside. The icekitty letting out a delighted mrowl as her tip stretches to encompass your head with a gooey squelch. The hot precum oozing forth and soaking your hair feels entirely delightful against your skin as you wriggle your shoulders inside. That done you set to work stroking the insides of her immense shaft and are rewarded with a rippling undulation as the cock you're feeding schlorps more of your body inside and devours your chest. Your one regret is that you can't simultaneously be the bulge in this magnificent cock and see what it looks like as you slide even deeper in. Pushing off with your feet to help her schlurp you up.
-	</text>
-	<choice destination="cockvore2" text="let it have the rest of you"/>
+		<text>
+			You fix that grin in your face as you work your arms inside, then duck
+			down to feed your head inside. The icekitty letting out a delighted
+			mrowl as her tip stretches to encompass your head with a gooey
+			squelch. The hot precum oozing forth and soaking your hair feels
+			entirely delightful against your skin as you wriggle your shoulders
+			inside. That done you set to work stroking the insides of her immense
+			shaft and are rewarded with a rippling undulation as the cock you're
+			feeding schlorps more of your body inside and devours your chest.
+			Your one regret is that you can't simultaneously be the bulge in this
+			magnificent cock and see what it looks like as you slide even deeper
+			in. Pushing off with your feet to help her schlurp you up.
+		</text>
+		<choice destination="cockvore2" text="let it have the rest of you" />
 	</page>
-	
+
 	<page ID="cockvore2">
-	<text>
-	The taur shudders, shifting about and clenching around you with her shaft as you feed yourself into her cock. The hungry rippling of her length gradually taking over from you as more and more of you is wrapped in the wonderfully hot and needy shaft of the ice kitty and you find it harder to force yourself inside. Her pleased purrs gradually get drowned out by the throbbing of her shaft, the squelch of pre and the anticipatory burble of her balls ahead of your head as your legs gradually disappear out of view. Your wriggling feet soon all that's exposed to the chill outside air until with a final rippling schlorp they disappear past her cumslit, all of you contained now in her loins. The icetreader mhmming and then rolling slowly onto her back, curled flexibly to let her watch as the bulges you make in her cock gradually slide down to enter and fill her balls. Her forepaws stroking along the shape of your legs as you slip inside to curl up in her hot sack as a willing meal for her balls.
-	</text>
-	<choice destination="cockvore3" text="time to get churned into nutbatter"/>
+		<text>
+			The taur shudders, shifting about and clenching around you with her
+			shaft as you feed yourself into her cock. The hungry rippling of her
+			length gradually taking over from you as more and more of you is
+			wrapped in the wonderfully hot and needy shaft of the ice kitty and
+			you find it harder to force yourself inside. Her pleased purrs
+			gradually get drowned out by the throbbing of her shaft, the squelch
+			of pre and the anticipatory burble of her balls ahead of your head as
+			your legs gradually disappear out of view. Your wriggling feet soon
+			all that's exposed to the chill outside air until with a final
+			rippling schlorp they disappear past her cumslit, all of you
+			contained now in her loins. The icetreader mhmming and then rolling
+			slowly onto her back, curled flexibly to let her watch as the bulges
+			you make in her cock gradually slide down to enter and fill her
+			balls. Her forepaws stroking along the shape of your legs as you slip
+			inside to curl up in her hot sack as a willing meal for her balls.
+		</text>
+		<choice destination="cockvore3" text="time to get churned into nutbatter" />
 	</page>
-	
+
 	<page ID="cockvore3">
-	<text>
-	Curled up in her balls you  can feel them churn softly around you, glorping as they get to work. You can feel from the way the sack occasionally shifts and presses that she's still fondling her cock you'd chosen to feed yourself to. You can only hope that melting you down into cum and ejaculating you out as a sticky mess will satisfy her needs and satiate her arousal. You start to rub your hands against the inside of her balls as you begin to soften in their wonderfully hot and sticky confines. The taur letting out a rumbling purr and rubbing her hindlegs against the bulges of your shape to feel you yield slightly in her balls, yield and deform as your melty form is beginning to get steadily more and more akin to the cum you're bathing in. As time progresses you find yourself yielding more and more, her lumpy balls rounding out as you soften and then eventually spread out to dissolve into her cum with a sloshing churn.
-	</text>
-	<choice destination="cockvoreGO" text="burble"/>
+		<text>
+			Curled up in her balls you can feel them churn softly around you, glorping
+			as they get to work. You can feel from the way the sack occasionally
+			shifts and presses that she's still fondling her cock you'd chosen to
+			feed yourself to. You can only hope that melting you down into cum
+			and ejaculating you out as a sticky mess will satisfy her needs and
+			satiate her arousal. You start to rub your hands against the inside
+			of her balls as you begin to soften in their wonderfully hot and
+			sticky confines. The taur letting out a rumbling purr and rubbing her
+			hindlegs against the bulges of your shape to feel you yield slightly
+			in her balls, yield and deform as your melty form is beginning to get
+			steadily more and more akin to the cum you're bathing in. As time
+			progresses you find yourself yielding more and more, her lumpy balls
+			rounding out as you soften and then eventually spread out to dissolve
+			into her cum with a sloshing churn.
+		</text>
+		<choice destination="cockvoreGO" text="burble" />
 	</page>
-	
+
 	<gameover ID="cockvoreGO">
-	<text>
-	The ice treader continues to fondle herself feeling her balls now fluid filled and round. Her sack resting heavily and sloshily against the inside of her legs as she rests on her furred back. The taur masturbating with four limbs by stroking over her cock, moaning as her tail swishes through the snow with her rising pleasure. That needy hot liquid pressure of her full balls stirring her on until finally, she erupts. The snow kitty letting out a roar of delight as her cock spurts forth your sticky remnants, splattering jizz into the snows and coating her face and chest with part of each gush. The feline's orgasm lasting sometime before subsiding leaving her pants and purring, licking her face and chest clean as her cock softens against her belly. You were a wonderful orgasm, and certainly helped her relieve a nice bit of tension.
-	</text>
+		<text>
+			The ice treader continues to fondle herself feeling her balls now fluid
+			filled and round. Her sack resting heavily and sloshily against the
+			inside of her legs as she rests on her furred back. The taur
+			masturbating with four limbs by stroking over her cock, moaning as
+			her tail swishes through the snow with her rising pleasure. That
+			needy hot liquid pressure of her full balls stirring her on until
+			finally, she erupts. The snow kitty letting out a roar of delight as
+			her cock spurts forth your sticky remnants, splattering jizz into the
+			snows and coating her face and chest with part of each gush. The
+			feline's orgasm lasting sometime before subsiding leaving her pants
+			and purring, licking her face and chest clean as her cock softens
+			against her belly. You were a wonderful orgasm, and certainly helped
+			her relieve a nice bit of tension.
+		</text>
 	</gameover>
-	
+
 </Conversation>

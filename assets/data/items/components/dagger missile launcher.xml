@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <ItemWidget name="dagger missile launcher" weight="30" value="1500">
-<description>Spaceship weapon, launches and guides tracking 'dagger missiles' which are a form of light and economical anti fighter/anti small craft missile.</description>
-<placeditem widget="shipweapons/dagger missile launcher"/>
+	<description>Spaceship weapon, launches and guides tracking 'dagger
+		missiles' which are a form of light and economical anti fighter/anti
+		small craft missile.</description>
+	<placeditem widget="shipweapons/dagger missile launcher" />
 </ItemWidget>

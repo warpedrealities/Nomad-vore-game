@@ -4,7 +4,8 @@
 		<condition evaluate="LOCALFLAG" value="1" operator="equals"
 			flag="first" />
 		<text>
-			“greetings again, traveller from the stars. What can I do for you?”
+			“greetings again, traveller from the stars. What can I do for
+			you?”
 		</text>
 		<choice destination="job0" text="*inquire about tasks*">
 			<condition operator="equals" evaluate="LOCALFLAG" flag="swordquest"
@@ -25,11 +26,16 @@
 	<page ID="job0">
 		<!--quest start -->
 		<text>
-			Your inquiry about a job makes her smile "well traveller, seen as you
-			want to make yourself useful...there is something you can do for me.
-			My sister went missing investigating the ruins in the valley to the
-			south. She was almost certainly devoured by a raptor, but if you
-			could recover her sword so I have something to remember her by I'd be
+			Your inquiry about a job makes her smile "well traveller, seen
+			as you
+			want to make yourself useful...there is something you can do
+			for me.
+			My sister went missing investigating the ruins in the valley
+			to the
+			south. She was almost certainly devoured by a raptor, but if
+			you
+			could recover her sword so I have something to remember her by I'd
+			be
 			very grateful."
 		</text>
 		<choice destination="end" text="I'd be happy to get your sword for you" />
@@ -41,9 +47,12 @@
 		<condition evaluate="HASITEM" operator="greaterthan" value="1"
 			item="sister sword" />
 		<text>
-			"You found it? oh thankyou traveller. It's in surprisingly good condition
-			for how long its been down there isn't it. Now that's workmanship."
-			she smiles and taking the sword from you hands you a bag of coin for
+			"You found it? oh thankyou traveller. It's in surprisingly good
+			condition
+			for how long its been down there isn't it. Now that's
+			workmanship."
+			she smiles and taking the sword from you hands you a bag
+			of coin for
 			your troubles.
 		</text>
 		<effect type="givegold" value="100" />
@@ -57,16 +66,20 @@
 	<page ID="job1">
 		<!--quest proceeding -->
 		<text>
-			"Have you found my sister's sword yet? I know the ruins are a dangerous
-			place, but your strange devices should keep you safe down there."
+			"Have you found my sister's sword yet? I know the ruins are a
+			dangerous
+			place, but your strange devices should keep you safe down
+			there."
 		</text>
 		<choice destination="end" text="I'm still looking" />
 		<choice destination="end" text="i don't feel like the risk is worth it" />
 	</page>
 	<page ID="start">
 		<text>
-			“Oooh, you are something new.” Her voice calls out to you as you approach
-			her. “A being from the stars? Oh I do hope so, I have prepared for
+			“Oooh, you are something new.” Her voice calls out to you as you
+			approach
+			her. “A being from the stars? Oh I do hope so, I have
+			prepared for
 			many years to trade for Cargo.”
 
 		</text>
@@ -89,14 +102,22 @@
 
 	<page ID="lands">
 		<text>
-			“Hmm? Oh yes I suppose that is a prudent, if boring, question if you plan
-			on adventuring. To the south are number of ravenous raptor girls.
-			They’re shy enough when caught alone but will swarm you in a pack.
-			There are also some rarer rajini down there, I would love to inspect
-			one of them up close. To the west is dense jungle. Plenty of fruit to
-			be found but it’s also inhabited by a large number of snake women.
-			They will happily coil and devour a cute thing like you. All in all
-			I’d recommending staying in the comfort of our village, where surely
+			“Hmm? Oh yes I suppose that is a prudent, if boring, question if
+			you plan
+			on adventuring. To the south are number of ravenous raptor
+			girls.
+			They’re shy enough when caught alone but will swarm you in a
+			pack.
+			There are also some rarer rajini down there, I would love to
+			inspect
+			one of them up close. To the west is dense jungle. Plenty of
+			fruit to
+			be found but it’s also inhabited by a large number of snake
+			women.
+			They will happily coil and devour a cute thing like you. All in
+			all
+			I’d recommending staying in the comfort of our village, where
+			surely
 			no one will try to consume you.”
 		</text>
 		<choice destination="shop" text="I would like to buy things" />
@@ -109,18 +130,27 @@
 
 	<page ID="know">
 		<text>
-			“Hmm, you must be from off world if you do not know about the Quendi. We
-			are the dominant species on the planet after all.” She lets a small,
-			musical sigh. “But I can of course answer your questions. Provided
+			“Hmm, you must be from off world if you do not know about the
+			Quendi. We
+			are the dominant species on the planet after all.” She lets
+			a small,
+			musical sigh. “But I can of course answer your questions.
+			Provided
 			they aren’t too ridiculous. What are they?”
 
-			You quickly bring up the most pressing question about the elven aliens
-			on your mind. Namely: Their shapely asses. How do they all get their
-			ass to be so nice and round? It is truly a head puzzler.
+			You quickly bring
+			up the most pressing question about the elven aliens
+			on your mind.
+			Namely: Their shapely asses. How do they all get their
+			ass to be so
+			nice and round? It is truly a head puzzler.
 
-			“Ah yes, imagine such a thing would be a mystery to one not versed in
-			our ways. It is a very elaborate ritual which we undertake in order
-			create these perfect derrieres. Would you like me to show you it?”
+			“Ah yes, imagine such a
+			thing would be a mystery to one not versed in
+			our ways. It is a very
+			elaborate ritual which we undertake in order
+			create these perfect
+			derrieres. Would you like me to show you it?”
 		</text>
 		<choice destination="analvore0" text="yes" />
 		<choice destination="refuse" text="no" />
@@ -128,7 +158,8 @@
 
 	<page ID="refuse">
 		<text>
-			“Ah, a shame. Some other time then. Anything else I can help you with?”
+			“Ah, a shame. Some other time then. Anything else I can help you
+			with?”
 		</text>
 		<choice destination="shop" text="I would like to buy things" />
 		<choice destination="lands"
@@ -158,20 +189,30 @@
 
 	<page ID="analvore1">
 		<text>
-			You are over joyed at the prospect. Finally all of your hopes and dreams
-			will be realized, you will have the perfect ass. That will make the
+			You are over joyed at the prospect. Finally all of your hopes
+			and dreams
+			will be realized, you will have the perfect ass. That will
+			make the
 			crash landing and all of your excessively dangerous and life
 			threatening adventures worth it. She instructs you to kneel down
 			before her and you excitedly do so.
 			LBREAK
-			“Now for the next step you must raise your face towards the skies and
-			shut your eyes. Only then will you gain your great surprise.”
-			Ignoring the awful rhyme you do as instructed. While at first nothing
-			seems to happen you soon feel something press against your face and a
-			pressure grow around your head. Opening your eyes to see what’s going
-			on, you see naught but darkness. Smelly darkness. Lifting your arms
-			up to figure out what’s going on you feel a pair of round, squishy
-			orbs descending around your neck. A low moan echoes from above you.
+			“Now for the next step you
+			must raise your face towards the skies and
+			shut your eyes. Only then
+			will you gain your great surprise.”
+			Ignoring the awful rhyme you do as
+			instructed. While at first nothing
+			seems to happen you soon feel
+			something press against your face and a
+			pressure grow around your
+			head. Opening your eyes to see what’s going
+			on, you see naught but
+			darkness. Smelly darkness. Lifting your arms
+			up to figure out what’s
+			going on you feel a pair of round, squishy
+			orbs descending around your
+			neck. A low moan echoes from above you.
 		</text>
 		<choice destination="analvore2" text="panic" />
 	</page>
@@ -194,8 +235,10 @@
 
 	<page ID="analvore3">
 		<text>
-			Well at least hands means that there’s still someone out there right?
-			You’re not just disappearing into blind nothingness, there must be
+			Well at least hands means that there’s still someone out there
+			right?
+			You’re not just disappearing into blind nothingness, there must
+			be
 			some reason for your surroundings. You call out, asking the
 			shopkeeper if everything’s alright. “Hmm? Oh yes dear, everything’s
 			fantastic. Do wiggle some more for me, it feels sublime!” Confused by
@@ -220,13 +263,20 @@
 
 	<gameover ID="analvoreGO">
 		<text>
-			“Ah, yes, please do kick more. It is quite enjoyable. You see my species
-			gains significant pleasure from eating living beings. Ahh, especially
-			feeling them move about inside. Fret not, though, you will be put to
-			great use. As ass fat.” Further taunts from her are drowned out by
-			the sounds of your imminent digestion. Gurgles and groans fill the
-			air as the stomach bubbles you down to mush and the intestines then
-			convert you to yet another layer of fat on the shopkeeper’s backside.
+			“Ah, yes, please do kick more. It is quite enjoyable. You see my
+			species
+			gains significant pleasure from eating living beings. Ahh,
+			especially
+			feeling them move about inside. Fret not, though, you will
+			be put to
+			great use. As ass fat.” Further taunts from her are drowned
+			out by
+			the sounds of your imminent digestion. Gurgles and groans fill
+			the
+			air as the stomach bubbles you down to mush and the intestines
+			then
+			convert you to yet another layer of fat on the shopkeeper’s
+			backside.
 		</text>
 
 	</gameover>

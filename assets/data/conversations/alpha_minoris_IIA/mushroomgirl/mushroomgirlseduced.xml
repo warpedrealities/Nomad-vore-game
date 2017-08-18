@@ -4,29 +4,53 @@
 	<page ID="start">
 		<text>
 
-			The mushroom girl is unable to fight anymore, leaned against the rocky
+			The mushroom girl is unable to fight anymore, leaned against the
+			rocky
 			cavern wall with a hand.
-			Her little chest raises and falls with her panting, her slender thighs
-			rubbing against each other in a desperate attempt to satisfy her
+			Her little chest raises and falls with
+			her panting, her slender thighs
+			rubbing against each other in a
+			desperate attempt to satisfy her
 			lust.
-			The other arm stretched out in your direction, the enthralled, young
-			little thing pleades to you with your eyes.
+			The other arm stretched out in
+			your direction, the enthralled, young
+			little thing pleades to you with
+			your eyes.
 
 		</text>
-		<choice destination="end" text="Do nothing." />
+
 		<choice destination="oralvore1" text="Just a little taste...">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="study" text="study her">
-			<assertnot evaluate="hasEntry" entry="lifeforms/mushroomfolk.xml" />	
+			<assertnot evaluate="hasEntry" entry="lifeforms/mushroomfolk.xml" />
 			<assertnot evaluate="hasResearch" research="mushroomfolk" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
+		<choice destination="end" text="Do nothing." />
 	</page>
-
+	<page ID="devour">
+		<text>
+			You have devoured her in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
 	<page ID="study">
 		<text>
-			you study the mushroom extensively, your scans collecting a large amount
-			of data. You benignly give the mushroom girl a chance to scurry off
+			you study the mushroom extensively, your scans collecting a
+			large amount
+			of data. You benignly give the mushroom girl a chance to
+			scurry off
 			now you're done probing her.
 		</text>
 		<special effect="removenpc" />
@@ -38,23 +62,34 @@
 		<text>
 
 			With just a few steps, you are at her side.
-			If it is pleasure she wants, you have just the right thing for this
+			If it is pleasure she
+			wants, you have just the right thing for this
 			cavern beauty.
-			Pressing yourself against her, pinning the grey skinned girl against the
-			wall, you can feel the heat radiating from her lithe, little body.
-			Your lips inch closer to hers and she lowers her eyes, the female's
-			bottom lip trembling with anticipation.
+			Pressing
+			yourself against her, pinning the grey skinned girl against the
+			wall,
+			you can feel the heat radiating from her lithe, little body.
+			Your lips
+			inch closer to hers and she lowers her eyes, the female's
+			bottom lip
+			trembling with anticipation.
 			You can smell her arousal, her need.
 			LBREAK
 			But you do not kiss her.
-			Instead, you stop just an inch before you would touch her, wrapping an arm
-			around her slender waist to pull her even closer against your body
-			and she raises one of her shapely legs to rub its calf against you.
-			"I am going to eat you." you whisper - and she nods in return.
-			There is no denial in her eyes, just lust and eager desperation, as she
+			Instead, you stop just an inch before
+			you would touch her, wrapping an arm
+			around her slender waist to pull
+			her even closer against your body
+			and she raises one of her shapely
+			legs to rub its calf against you.
+			"I am going to eat you." you whisper
+			- and she nods in return.
+			There is no denial in her eyes, just lust
+			and eager desperation, as she
 			raises her slender hands to your lips.
 			At this point, she does not care anymore how you satisfy her lust.
-			If you are going to devour her, she seems to be more than willing to go
+			If
+			you are going to devour her, she seems to be more than willing to go
 			along with that.
 
 		</text>
@@ -65,25 +100,40 @@
 	<page ID="oralvore2">
 		<text>
 
-			Smooth and quick her slim, grey digits slide past your lips, over your
+			Smooth and quick her slim, grey digits slide past your lips,
+			over your
 			tongue and into your throat.
-			She seems eager, very eager to get herself into your body.
-			Still shifting from one foot onto the other to try and get some pleasure
-			out of the friction of her thighs, the mushroom girl raises onto the
-			tips of her cute, little toes as she bends her head with the bright
+			She seems eager, very eager to
+			get herself into your body.
+			Still shifting from one foot onto the
+			other to try and get some pleasure
+			out of the friction of her thighs,
+			the mushroom girl raises onto the
+			tips of her cute, little toes as she
+			bends her head with the bright
 			red cap between her arms.
-			You sample her flavour as you hold her by the hips and stretch your
-			mouth over her arms and the large hood, experiencing a light, earthy
-			aroma with a nuttily note.
+			You sample her
+			flavour as you hold her by the hips and stretch your
+			mouth over her
+			arms and the large hood, experiencing a light, earthy
+			aroma with a
+			nuttily note.
 			LBREAK
-			Hoisting her off the ground to take her in further, the short female gasps
-			and kicks her feet back in surprise, but the gentle gasp soon turns
-			into a breathed moan as you squeeze her rump into your hands - and
+			Hoisting her off the ground to take her in
+			further, the short female gasps
+			and kicks her feet back in surprise,
+			but the gentle gasp soon turns
+			into a breathed moan as you squeeze her
+			rump into your hands - and
 			then her head into your mouth.
-			With the large hood on top, the beginning is a bit more difficult than
-			usual. But nothing you cannot handle.
-			Shoving the girl further in, trembling in your hands with need, you envelop
-			the rest of her arms, then the shoulders.
+			With the
+			large hood on top, the beginning is a bit more difficult than
+			usual.
+			But nothing you cannot handle.
+			Shoving the girl further in, trembling
+			in your hands with need, you envelop
+			the rest of her arms, then the
+			shoulders.
 
 		</text>
 		<choice destination="oralvore3" text="Perky and firm..." />
@@ -93,23 +143,35 @@
 	<page ID="oralvore3">
 		<text>
 
-			When her small breasts are squeezed past your lips alongside her chest,
-			you close your eyes and moan, causing your throat to vibrate around
+			When her small breasts are squeezed past your lips alongside her
+			chest,
+			you close your eyes and moan, causing your throat to vibrate
+			around
 			the mushroom girl.
-			They are far from big, but so firm and full of flavour.
-			It feels as if her nipples leave a trail of exploded taste buds in
-			their wake over your tongue on the way to your throat, and you press
-			the fleshy muscle against them, eager to get the most out of this
+			They are far from big, but so firm and full
+			of flavour.
+			It feels as if her nipples leave a trail of exploded taste
+			buds in
+			their wake over your tongue on the way to your throat, and you
+			press
+			the fleshy muscle against them, eager to get the most out of
+			this
 			experience.
 			LBREAK
-			The girl writhes in your grasp in response, moaning deeply in your
-			throat, and you are sure that she at least by now regrets to have
+			The girl writhes in your grasp in response,
+			moaning deeply in your
+			throat, and you are sure that she at least by
+			now regrets to have
 			started with her hands.
-			Unable to reach the sweet-smelling spot between her legs, the young female
-			squirms and kicks her legs, eager to get it closer towards your
+			Unable to reach the
+			sweet-smelling spot between her legs, the young female
+			squirms and
+			kicks her legs, eager to get it closer towards your
 			tongue.
-			You smile around her midriff at her reaction, watching small rivulets of
-			her juices trailing down her legs.
+			You smile
+			around her midriff at her reaction, watching small rivulets of
+			her
+			juices trailing down her legs.
 
 		</text>
 		<choice destination="oralvore4" text="Time for the juicy part..." />
@@ -119,23 +181,36 @@
 	<page ID="oralvore4">
 		<text>
 
-			Her hips to not pose much of an obstacle, and you suck them into your
-			mouth with ease, holding up her slightly spread legs by the knees.
-			The grey skinned girl immediatedly begins to grind her crotch against
-			your tongue, and you nearly choke on the chuckle as you hear her cry
+			Her hips to not pose much of an obstacle, and you suck them into
+			your
+			mouth with ease, holding up her slightly spread legs by the
+			knees.
+			The grey skinned girl immediatedly begins to grind her crotch
+			against
+			your tongue, and you nearly choke on the chuckle as you hear
+			her cry
 			out with lust deep inside you.
-			The sweet taste of her nectar mingles with its heavenly aroma, and for a
-			brief moment you consider coughing her up so you can give this little
+			The sweet taste of her nectar
+			mingles with its heavenly aroma, and for a
+			brief moment you consider
+			coughing her up so you can give this little
 			box a proper licking.
-			But you are too eager to get her inside you now, and your growling
+			But
+			you are too eager to get her inside you now, and your growling
 			stomach reminds you of who is calling the shots here.
 			LBREAK
-			Still, you allow yourself a few more minutes to sample her delicious
-			femcum, digging the tip of your tongue as deep into her pussy as it
-			will go, before switching back to rubbing over her labia with your
-			slippery muscle.
-			A desperate cry of frustration is heard from below when you finally
-			swallow, sending the young woman's hips down your throat as a very
+			Still, you
+			allow yourself a few more minutes to sample her delicious
+			femcum,
+			digging the tip of your tongue as deep into her pussy as it
+			will go,
+			before switching back to rubbing over her labia with your
+			slippery
+			muscle.
+			A desperate cry of frustration is heard from below when you
+			finally
+			swallow, sending the young woman's hips down your throat as a
+			very
 			lively, squirming bulge.
 
 		</text>
@@ -146,20 +221,29 @@
 	<page ID="oralvore5">
 		<text>
 
-			With her hips and the cute, little rump now gone, only the slender legs
+			With her hips and the cute, little rump now gone, only the
+			slender legs
 			of the mushroom girl remain to be gobbled up.
-			But now she is squirming more actively, struggling and kicking in your
-			grasp, trying anything to speed up her descent into your waiting gut.
+			But now she
+			is squirming more actively, struggling and kicking in your
+			grasp,
+			trying anything to speed up her descent into your waiting gut.
 			Luckily for her, you do not intend to keep her waiting.
 			LBREAK
-			Tilting your head back, you begin to swallow her legs with quick, short
+			Tilting
+			your head back, you begin to swallow her legs with quick, short
 			gulps.
-			Within moments her thighs vanish behind your lips, soon followed by her
+			Within moments her thighs vanish behind your lips, soon
+			followed by her
 			knees and well-curved calves.
-			Even her feet with those cute, wiggling toes do not linger in front of
-			your hungry lips for long, and you snap them up with ease.
-			One last swallow sends the girl finally down into your distended gut,
-			and you breathe a deep sigh of relief.
+			Even her feet with those
+			cute, wiggling toes do not linger in front of
+			your hungry lips for
+			long, and you snap them up with ease.
+			One last swallow sends the girl
+			finally down into your distended gut,
+			and you breathe a deep sigh of
+			relief.
 
 		</text>
 		<choice destination="oralvoreend" text="Make her a part of you..." />
@@ -169,25 +253,38 @@
 	<page ID="oralvoreend">
 		<text>
 
-			Leaning against the cavern wall, you wipe your forehead with the back of
-			your arm, panting heavily as the mushroom girl settles inside your
+			Leaning against the cavern wall, you wipe your forehead with the
+			back of
+			your arm, panting heavily as the mushroom girl settles inside
+			your
 			belly.
 			Well, that was a delicious encounter for sure.
-			You can feel the short female move around in there, most likely trying
-			her best to get herself off - now, where her hands have access to all
-			of her body again.
+			You can feel
+			the short female move around in there, most likely trying
+			her best to
+			get herself off - now, where her hands have access to all
+			of her body
+			again.
 			LBREAK
-			You give the girl a few moments to busy herself, before gurgling and
+			You give the girl a few moments to busy herself, before
+			gurgling and
 			churning noises indicate the start of digestion.
-			It does not seem to bother your prey at all however, and she keeps up
-			her activities even as you rub your hands over your bloated belly,
+			It does
+			not seem to bother your prey at all however, and she keeps up
+			her
+			activities even as you rub your hands over your bloated belly,
 			moaning quietly at the pleasant feelings.
 			LBREAK
-			After a while she finally quiets down within you, and the outlines of your
-			stretched gut begin to soften.
-			It takes the good part of an hour before you can comfortly move again,
-			and you pick up your belongings to continue your journey.
-			Hopefully, all encounters with the mushroom folk will end as pleasant as this.
+			After a while she
+			finally quiets down within you, and the outlines of your
+			stretched gut
+			begin to soften.
+			It takes the good part of an hour before you can
+			comfortly move again,
+			and you pick up your belongings to continue your
+			journey.
+			Hopefully, all encounters with the mushroom folk will end as
+			pleasant as this.
 
 		</text>
 		<effect type="feed" value="110" />

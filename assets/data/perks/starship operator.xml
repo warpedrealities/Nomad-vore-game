@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <perk name="starship operator">
-<description> 
-You have acquired some proficiency in operating spaceship systems. +1 to navigation, +1 to gunnery
-</description>
-<modifier affects="NAVIGATION" value="1" type="ATTRIBUTE"/>
-<modifier affects="GUNNERY" value="1" type="ATTRIBUTE"/>
-<maxrank value="3"/>
+	<description>
+		You have acquired some proficiency in operating spaceship systems. +1 to
+		navigation, +1 to gunnery
+	</description>
+	<modifier affects="NAVIGATION" value="1" type="ATTRIBUTE" />
+	<modifier affects="GUNNERY" value="1" type="ATTRIBUTE" />
+	<maxrank value="3" />
 
 </perk>

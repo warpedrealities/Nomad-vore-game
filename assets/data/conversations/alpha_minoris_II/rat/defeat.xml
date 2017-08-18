@@ -2,8 +2,10 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			The little rodent looks up at you. Defeated she lets out a pliantive
-			squeek and clutches her tail for comfort as you loom over her.
+			The little rodent looks up at you. Defeated she lets out a
+			pliantive
+			squeek and clutches her tail for comfort as you loom over
+			her.
 		</text>
 		<choice destination="meal0" text="she's snack sized">
 			<assertion evaluate="hasperk" perk="oralvore" />
@@ -12,18 +14,44 @@
 			<assertion evaluate="hasperk" perk="unbirthing" />
 			<preference fetish="unbirth" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="leave her be" />
+	</page>
+
+
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="60" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="meal0">
 		<text>
-			The weakened ratgirl squeaks and tries to wiggle away as you pick her up
-			by the nape. She’s not really big, but will count as a free snack. So
-			not waiting for long you open your mouth and shove almost half of the
-			ratgirl inside. Another squeak echoes into your throat, quickly
-			followed by a loud gulp. The snack tries to squirm still, pushing her
-			lil hands into the throat walls and rubbing your neck from inside,
-			but one more swallow sends most of her torso past your jaws.
+			The weakened ratgirl squeaks and tries to wiggle away as you
+			pick her up
+			by the nape. She’s not really big, but will count as a
+			free snack. So
+			not waiting for long you open your mouth and shove
+			almost half of the
+			ratgirl inside. Another squeak echoes into your
+			throat, quickly
+			followed by a loud gulp. The snack tries to squirm
+			still, pushing her
+			lil hands into the throat walls and rubbing your
+			neck from inside,
+			but one more swallow sends most of her torso past
+			your jaws.
 		</text>
 		<choice destination="meal1" text="gobble her up" />
 
@@ -31,10 +59,14 @@
 
 	<page ID="meal1">
 		<text>
-			You can feel her soft booty shaking around close enough to let you lick
-			at and tease the short meal before gulping her down. Her legs and the
-			long, thin tail slide in soon after as the whole ratgirl lands into
-			your stomach and curls up, making just a lil visible lump. And your
+			You can feel her soft booty shaking around close enough to let
+			you lick
+			at and tease the short meal before gulping her down. Her legs
+			and the
+			long, thin tail slide in soon after as the whole ratgirl lands
+			into
+			your stomach and curls up, making just a lil visible lump. And
+			your
 			belly will start gurgling soon, easily breaking down a squirmy
 			appetizer. Well, after all the ratgirl works better than some
 			not-squirmy fruits.
@@ -46,13 +78,20 @@
 
 	<page ID="unbirth0">
 		<text>
-			The ratgirl squirms in your grip, weakly trying to break free and
-			escape. She’s pretty short and will work great as a pleasure source
-			for you. With a chuckle your spread your thighs wide apart and press
-			the smaller girl into the sensitive folds. Her little hands rub into
-			the pussy lips and then further into the moist tunnel, caressing it
-			in a really pleasant way as more of the ratgirl slides inside. Feels
-			like you got an extra warm, squirmy dildo sliding into your pussy,
+			The ratgirl squirms in your grip, weakly trying to break free
+			and
+			escape. She’s pretty short and will work great as a pleasure
+			source
+			for you. With a chuckle your spread your thighs wide apart and
+			press
+			the smaller girl into the sensitive folds. Her little hands rub
+			into
+			the pussy lips and then further into the moist tunnel, caressing
+			it
+			in a really pleasant way as more of the ratgirl slides inside.
+			Feels
+			like you got an extra warm, squirmy dildo sliding into your
+			pussy,
 			and then even deeper as you push at the soft booty.
 		</text>
 		<choice destination="unbirth1" text="shove her in" />
@@ -60,12 +99,18 @@
 
 	<page ID="unbirth1">
 		<text>
-			Another squeak vibrates into your womb as first of the ratgirl starts
-			sliding inside. Her body fits easily within the tight, hot chamber in
-			your abdomen, able to curl without any effort. And she’ll make just a
-			cute, small lump outside. The long tail smoothly slides in as the
-			pussy muscles tug last bits of the new ‘guest’. You can feel the
-			ratgirl moving around still and rubbing into the sensitive walls as
+			Another squeak vibrates into your womb as first of the ratgirl
+			starts
+			sliding inside. Her body fits easily within the tight, hot
+			chamber in
+			your abdomen, able to curl without any effort. And she’ll
+			make just a
+			cute, small lump outside. The long tail smoothly slides in
+			as the
+			pussy muscles tug last bits of the new ‘guest’. You can feel
+			the
+			ratgirl moving around still and rubbing into the sensitive walls
+			as
 			your womb starts working and melting the rat into a warm puddle for
 			your pussy to leak later.
 		</text>

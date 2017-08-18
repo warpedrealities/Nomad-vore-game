@@ -5,8 +5,10 @@
 	<effectmutator>
 		<criteriaAssertion part="penis" />
 		<mutation part="penis" variable="length" modifier="3">
-			your penis grows CHANGE inches, you are now in possession of a shaft
-			VALUE inches in length
+			your penis
+			grows CHANGE inches, you are now in possession of a shaft
+			VALUE inches
+			in length
 		</mutation>
 	</effectmutator>
 	<effectmutator>

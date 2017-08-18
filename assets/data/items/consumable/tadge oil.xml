@@ -16,7 +16,8 @@
 		<criteriaAssertion part="penis" negative="true" />
 		<criteriaAssertion part="vagina" negative="true" />
 		<mutation part="vagina" bodychange="add">
-			Well, now you have a vagina again.
+			Well, now you have a
+			vagina again.
 		</mutation>
 	</effectmutator>
 
@@ -27,8 +28,10 @@
 			value="18" />
 		<!-- if penis larger than 5 inches -->
 		<mutation part="penis" variable="length" modifier="-3">
-			your penis shrinks CHANGE inches, you are now in possession of a shaft
-			VALUE inches in length
+			your penis
+			shrinks CHANGE inches, you are now in possession of a shaft
+			VALUE
+			inches in length
 		</mutation>
 	</effectmutator>
 
@@ -37,8 +40,10 @@
 		<criteriaValue part="penis" variable="length" value="18" />
 		<!-- if penis larger than 12 inches -->
 		<mutation part="penis" variable="length" modifier="-6">
-			your penis shrinks CHANGE inches, you are now in possession of a shaft
-			VALUE inches in length
+			your penis
+			shrinks CHANGE inches, you are now in possession of a shaft
+			VALUE
+			inches in length
 		</mutation>
 	</effectmutator>
 

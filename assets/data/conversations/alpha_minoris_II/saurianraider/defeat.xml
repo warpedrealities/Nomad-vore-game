@@ -3,8 +3,10 @@
 
 	<page ID="start">
 		<text>
-			The saurian warrior sees you approach her defeated form and pushes
-			herself up with difficulty into a seated position, growling as she
+			The saurian warrior sees you approach her defeated form and
+			pushes
+			herself up with difficulty into a seated position, growling as
+			she
 			sees your smile "I suppose it is too much to expect you to be
 			gracious in victory." she says, clearly expecting you to do something
 			to or with her now you have her at your mercy.
@@ -13,8 +15,26 @@
 			text="$I think victory is worth celebrating with a good cockmeal">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end"
 			text="$actually, it isn't. I don't intend to do anything to you" />
+	</page>
+
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="cockvore0">
@@ -44,14 +64,22 @@
 
 	<page ID="cockvore1">
 		<text>
-			The warrior lizard has no answer to that, but then she's muffled by hot
-			throbbing dick sliding down over her anyway. The lizard squirming and
-			struggling mightily but without any success as you schlurp her
-			steadily into your cock. Your rocking hips forcing thrusting her into
-			your cumslit inch by inch over her chest and down towards h er hips,
-			that partially scaled and all firm form swelling out your cock and
-			sliding closer and closer to your awaiting balls. And her tail
-			tantalizes as it sways and swishes around with her vigorous but
+			The warrior lizard has no answer to that, but then she's muffled
+			by hot
+			throbbing dick sliding down over her anyway. The lizard
+			squirming and
+			struggling mightily but without any success as you
+			schlurp her
+			steadily into your cock. Your rocking hips forcing
+			thrusting her into
+			your cumslit inch by inch over her chest and down
+			towards h er hips,
+			that partially scaled and all firm form swelling
+			out your cock and
+			sliding closer and closer to your awaiting balls.
+			And her tail
+			tantalizes as it sways and swishes around with her
+			vigorous but
 			futile resistance.
 		</text>
 		<choice destination="cockvore2" text="she feels so good sliding in there!" />
@@ -59,8 +87,10 @@
 
 	<page ID="cockvore2">
 		<text>
-			The warrior lets out a gasping "you won't-" as her head slides into your
-			sack before plunging facefirst into a pool of sticky jizz. The
+			The warrior lets out a gasping "you won't-" as her head slides
+			into your
+			sack before plunging facefirst into a pool of sticky jizz.
+			The
 			reptile redoubling her struggles delightfully as she's dunked into
 			your cum, a substance she'll get quite acquainted with as you melt
 			her into your next load. As you crest her hips and thighs that
@@ -77,17 +107,28 @@
 
 	<page ID="cockvore3">
 		<text>
-			You look at the protruding parts of her and smile, stroking both hands
-			up and down your bulging shaft to coax the rest of her down where she
-			belongs. Your shaft schlurping lewdly and easily along her calves and
-			scaley tail as you jerk her down into your loins. The saurian warrior
-			hissing and snarling as she feels the last of her sealed away
-			disappearing past your cocktip and she squirms to push out against
-			the inside of your sack and try to stop her descent into your balls.
-			But she's no match for the triumphant strength of your cock as you
-			plunged her entirely into your balls "you...release me!" she demands
-			defiantly as she squirms around, pleasingly thrashing in the hot
-			cummy bath you're giving her as you fondle yourself and revel in your
+			You look at the protruding parts of her and smile, stroking both
+			hands
+			up and down your bulging shaft to coax the rest of her down
+			where she
+			belongs. Your shaft schlurping lewdly and easily along her
+			calves and
+			scaley tail as you jerk her down into your loins. The
+			saurian warrior
+			hissing and snarling as she feels the last of her
+			sealed away
+			disappearing past your cocktip and she squirms to push out
+			against
+			the inside of your sack and try to stop her descent into your
+			balls.
+			But she's no match for the triumphant strength of your cock as
+			you
+			plunged her entirely into your balls "you...release me!" she
+			demands
+			defiantly as she squirms around, pleasingly thrashing in the
+			hot
+			cummy bath you're giving her as you fondle yourself and revel in
+			your
 			victory.
 		</text>
 		<choice destination="cockvore4" Text="$you'll make a very nice load" />
@@ -95,13 +136,20 @@
 
 	<page ID="cockvore4">
 		<text>
-			"You will pay for this!" she protests as your balls gurgle and you stroke
-			off "you'll pay for this..." the repeating makes it sound like she's
-			trying to convince herself as she struggles against the churning of
-			your sack. But the saurian warrior is no match for the might of your
-			balls as they work her over and down. The saurian's struggles and
-			threats of far fetched retribution fade away gradually, being
-			replaced with the sloshing sensations of cum and the churns of thick
+			"You will pay for this!" she protests as your balls gurgle and
+			you stroke
+			off "you'll pay for this..." the repeating makes it sound
+			like she's
+			trying to convince herself as she struggles against the
+			churning of
+			your sack. But the saurian warrior is no match for the
+			might of your
+			balls as they work her over and down. The saurian's
+			struggles and
+			threats of far fetched retribution fade away gradually,
+			being
+			replaced with the sloshing sensations of cum and the churns of
+			thick
 			cum as she melted away. Soon enough not an ounce of the saurian
 			remains unconquered by your ravenous balls. the sensation of the last
 			of her churning away so toe curlingly exquisite it has you stroking

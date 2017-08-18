@@ -2,7 +2,7 @@
 <Conversation>
 	<page ID="start">
 		<text>
-		no interactions to be had with black zetamorphs yet.
+			no interactions to be had with black zetamorphs yet.
 		</text>
 		<choice destination="end" text="darn" />
 	</page>

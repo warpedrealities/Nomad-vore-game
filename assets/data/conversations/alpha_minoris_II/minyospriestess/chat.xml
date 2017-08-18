@@ -7,19 +7,24 @@
 		<text>
 			"Greetings again star traveller."
 		</text>
-		<choice destination="hauntedValley0" text="$I would like to talk to you about something I found in a valley by the plains">
-						<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="1" />
+		<choice destination="hauntedValley0"
+			text="$I would like to talk to you about something I found in a valley by the plains">
+			<condition operator="greaterthan" evaluate="GLOBALFLAG"
+				flag="hauntedValley" value="1" />
 		</choice>
-		<choice destination="crashRecovery0" text="$I would like to talk to you about digging up the ship">
-						<condition operator="equals" evaluate="LOCALFLAG" flag="hauntedValleyL"
-				value="1" />	
-						<condition operator="lessthan" evaluate="GLOBALFLAG" flag="hauntedValley"
-				value="5" />	
+		<choice destination="crashRecovery0"
+			text="$I would like to talk to you about digging up the ship">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="hauntedValleyL"
+				value="1" />
+			<condition operator="lessthan" evaluate="GLOBALFLAG" flag="hauntedValley"
+				value="5" />
 		</choice>
-		<choice destination="crashRecovery1" text="$I would like to talk about how the excavation is going">
-				<condition operator="equals" evaluate="LOCALFLAG" flag="hauntedValleyL"
-				value="1" />	
-				<condition operator="equals" evaluate="GLOBALFLAG" flag="hauntedValley" value="5" />	
+		<choice destination="crashRecovery1"
+			text="$I would like to talk about how the excavation is going">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="hauntedValleyL"
+				value="1" />
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="hauntedValley"
+				value="5" />
 		</choice>
 		<choice destination="history" text="$I would like to know your history" />
 		<choice destination="statue0" text="$you misplaced something?">
@@ -37,88 +42,122 @@
 			<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
 				value="0" />
 		</choice>
-		<choice destination="area" text="$can you tell me more about the surrounding area?"/>
+		<choice destination="area"
+			text="$can you tell me more about the surrounding area?" />
 		<choice destination="end" text="$farewell" />
 	</page>
-	
+
 	<page ID="hauntedValley0">
-	<text>
-	"you braved the haunted valley and returned to speak of it?" this seems to immediately get the priestess's attention "and tell me, what did you find there?"	
-	</text>
-		<choice destination="hauntedValley1" text="$there's dangerous robots, but they're guarding a spaceship that looks like it might be in a salvageable condition."/>
-		<choice destination="end" text="actually my mistake, I was thinking of something else farewell."/>
+		<text>
+			"you braved the haunted valley and returned to speak of it?" this seems
+			to immediately get the priestess's attention "and tell me, what did
+			you find there?"
+		</text>
+		<choice destination="hauntedValley1"
+			text="$there's dangerous robots, but they're guarding a spaceship that looks like it might be in a salvageable condition." />
+		<choice destination="end"
+			text="actually my mistake, I was thinking of something else farewell." />
 	</page>
-	
+
 	<page ID="hauntedValley1">
-	<effect type="setlocalflag" flag="hauntedValleyL" value="1"/>
-	<text>
-	"A vessel from the stars has been lying there all this time." she seems to consider this for a few moments "It is fair that we consider this yours as you have bested the trial none of our warriors e'er have." she says and then adds "and besides, we lack the arts to command vessels of the void. It would be of little use to us."
-	</text> 
-	<choice destination="hauntedValley2" text="$Yes, however the ship is buried. I would need help to unearth it."/>
+		<effect type="setlocalflag" flag="hauntedValleyL" value="1" />
+		<text>
+			"A vessel from the stars has been lying there all this time." she seems
+			to consider this for a few moments "It is fair that we consider this
+			yours as you have bested the trial none of our warriors e'er have."
+			she says and then adds "and besides, we lack the arts to command
+			vessels of the void. It would be of little use to us."
+		</text>
+		<choice destination="hauntedValley2"
+			text="$Yes, however the ship is buried. I would need help to unearth it." />
 	</page>
 
 	<page ID="hauntedValley2">
-	<text>
-	"The Quendi could come to your aid in this matter as I'm sure you have surmised. But, it would take us many hands and days of our time. You ask much of us, but perhaps for a token of respect I could bring Minyos to your aid." she says hinting heavily with her fingers as to what she means.
-	</text>
-	<choice destination="end" text="$this is going to be a somewhat expensive token of respect isn't it, well when i have the gold we will discuss this again"/>
+		<text>
+			"The Quendi could come to your aid in this matter as I'm sure you have
+			surmised. But, it would take us many hands and days of our time. You
+			ask much of us, but perhaps for a token of respect I could bring
+			Minyos to your aid." she says hinting heavily with her fingers as to
+			what she means.
+		</text>
+		<choice destination="end"
+			text="$this is going to be a somewhat expensive token of respect isn't it, well when i have the gold we will discuss this again" />
 	</page>
-	
+
 	<page ID="crashRecovery0">
-	<!--start digging proposal"-->
-	<text>
-	"Ah yes, I think a sum of one thousand gold coins should show us ample respect...and in return we will have laborers from the village dig out this ship for you. A fair trade no?"
-	</text>
-	<choice destination="crashRecoveryStarted" text="$I have the gold required for the excavation">
-		<condition evaluate="GOLD" operator="greaterthan" value="1000" />
-		<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="4" />	
-	</choice>
-	<choice destination="end" text="$I can't afford how much gold you're asking for">
-	<condition evaluate="GOLD" operator="lessthan" value="1000" />
-			<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="4" />	
-	</choice>
-	<choice destination="end" text="$It's actually not safe for you to start digging while there's still robots there">
-				<condition operator="lessthan" evaluate="GLOBALFLAG" flag="hauntedValley" value="4" />
-	</choice>
-	<choice destination="end" text="$actually nevermind"/>
+		<!--start digging proposal" -->
+		<text>
+			"Ah yes, I think a sum of one thousand gold coins should show us ample
+			respect...and in return we will have laborers from the village dig
+			out this ship for you. A fair trade no?"
+		</text>
+		<choice destination="crashRecoveryStarted"
+			text="$I have the gold required for the excavation">
+			<condition evaluate="GOLD" operator="greaterthan" value="1000" />
+			<condition operator="greaterthan" evaluate="GLOBALFLAG"
+				flag="hauntedValley" value="4" />
+		</choice>
+		<choice destination="end"
+			text="$I can't afford how much gold you're asking for">
+			<condition evaluate="GOLD" operator="lessthan" value="1000" />
+			<condition operator="greaterthan" evaluate="GLOBALFLAG"
+				flag="hauntedValley" value="4" />
+		</choice>
+		<choice destination="end"
+			text="$It's actually not safe for you to start digging while there's still robots there">
+			<condition operator="lessthan" evaluate="GLOBALFLAG" flag="hauntedValley"
+				value="4" />
+		</choice>
+		<choice destination="end" text="$actually nevermind" />
 	</page>
-	
+
 	<page ID="crashRecoveryStarted">
-			<effect type="givegold" value="-1000" />
-	<effect type="setglobalflag" flag="hauntedValley" value="5"/>
-			<special effect="marktime" />
-			<effect type="setglobalflag" flag="hauntedValley" value="5"/>
-	<text>
-	"Excellent, you are most respectful and generous traveller. We will begin unearthing this wondrous vessel for you without delay."
-	</text>
-	<choice destination="end" text="$I'll check back later then"/>
+		<effect type="givegold" value="-1000" />
+		<effect type="setglobalflag" flag="hauntedValley" value="5" />
+		<special effect="marktime" />
+		<effect type="setglobalflag" flag="hauntedValley" value="5" />
+		<text>
+			"Excellent, you are most respectful and generous traveller. We will begin
+			unearthing this wondrous vessel for you without delay."
+		</text>
+		<choice destination="end" text="$I'll check back later then" />
 	</page>
-	
+
 	<page ID="crashRecovery1">
-	<condition evaluate="TIMEPASSED" operator="lessthan" value="10" />
-	<text>
-	"The quendi labor diligently to unearth the vessel traveller, but they need more time."
-	</text>
-	<choice destination="end" text="$This is going to take a while, I'll come back later"/>
+		<condition evaluate="TIMEPASSED" operator="lessthan" value="10" />
+		<text>
+			"The quendi labor diligently to unearth the vessel traveller, but they
+			need more time."
+		</text>
+		<choice destination="end"
+			text="$This is going to take a while, I'll come back later" />
 	</page>
 	<page ID="crashRecovery1">
-	<condition evaluate="TIMEPASSED" operator="greaterthan" value="10" />
-	<text>
-	"Our laborers have returned, the task is complete. Go in peace traveller, the vessel is yours."
-	</text>
-	<effect type="setglobalflag" flag="hauntedValley" value="7"/>	
-	<special effect="worldScript" script="restoreShip"/>
-	<choice destination="end" text="$pass my thanks to the village priestess. I must attend to my new spacecraft"/>
+		<condition evaluate="TIMEPASSED" operator="greaterthan"
+			value="10" />
+		<text>
+			"Our laborers have returned, the task is complete. Go in peace traveller,
+			the vessel is yours."
+		</text>
+		<effect type="setglobalflag" flag="hauntedValley" value="7" />
+		<special effect="worldScript" script="restoreShip" />
+		<choice destination="end"
+			text="$pass my thanks to the village priestess. I must attend to my new spacecraft" />
 	</page>
-	
+
 	<page ID="start">
 		<!--first meeting -->
 		<text>
-			The priestess seems to be frowning and searching around the room when
-			you approach, but stops and her eyes alight upon you swiftly "Forgive
-			me star traveller, I have misplaced something of mine. It is most
-			distracting" she sketches out some form of ritualistic gesture "I am
-			Shanna, keeper of histories, speaker for the spirits and priestess of
+			The priestess seems to be frowning and searching around the room
+			when
+			you approach, but stops and her eyes alight upon you swiftly
+			"Forgive
+			me star traveller, I have misplaced something of mine. It is
+			most
+			distracting" she sketches out some form of ritualistic gesture "I
+			am
+			Shanna, keeper of histories, speaker for the spirits and priestess
+			of
 			this village."
 		</text>
 		<effect type="setlocalflag" flag="talked" value="1" />
@@ -127,79 +166,133 @@
 			<condition operator="equals" evaluate="LOCALFLAG" flag="quest"
 				value="0" />
 		</choice>
-		<choice destination="area" text="$can you tell me more about the surrounding area?"/>
+		<choice destination="area"
+			text="$can you tell me more about the surrounding area?" />
 		<choice destination="end" text="$nice to meet you but farewell" />
 	</page>
 
 	<page ID="area">
-	<text>
-		"Very well, I suppose it is not unreasonable that you benefit from my wisdom rather than stray on your own and stumble into somewhere tight and digestive. I know much of the lands to the south and the west."
-	</text>
-	<choice destination="west" text="$What lies to the west?"/>
-	<choice destination="south" text="$What lies to the south?"/>
-	<choice destination="end" text="$On second thoughts I'll not take up more of your time"/>
+		<text>
+			"Very well, I suppose it is not unreasonable that you benefit from my
+			wisdom rather than stray on your own and stumble into somewhere tight
+			and digestive. I know much of the lands to the south and the west."
+		</text>
+		<choice destination="west" text="$What lies to the west?" />
+		<choice destination="south" text="$What lies to the south?" />
+		<choice destination="end"
+			text="$On second thoughts I'll not take up more of your time" />
 	</page>
 
 	<page ID="west">
-	<text>
-	"To the west lies a fertile yet perilous jungle. You can brave its winding paths if you wish, many do to forage for fruits or seek to travel beyond it. But I should warn you the area is beset with voracious lamia, their coils are strong as the trees that surround them and should they entrap you your submission will be swift in coming. As will you coming to an end as a melting bulge in their tail."
-	</text>
-	<choice destination="farwest" text="$and beyond the jungle?"/>
-
-	<choice destination="south" text="$and what about the south?"/>
-	<choice destination="end" text="$my thanks, that is all i require for now, farewell."/>
-	</page>
-	
-	<page ID="farwest">
-	<text>
-	"Bold to ask about what lies beyond the dangers I've spoken of." says the priestess with a quirky smile "But very well, beyond is a broad plain. Hiding places are limited, lucky for you predators are seldom seen there. Though the great beasts there are not harmless, if you agitate them you will find yourself laid low. So keep your distance from them. You should also keep your distance from the haunted valley if you value your life."
-	</text>
-	<choice destination="hauntedValley" text="$...what haunted valley?">
-	<condition operator="equals" evaluate="GLOBALFLAG" flag="hauntedValley" value="0" />
-	</choice>
-	<choice destination="south" text="$and what about the south?"/>
-	<choice destination="end" text="$my thanks, that is all i require for now, farewell."/>
-	</page>
-	
-	<page ID="hauntedValley">
-	<text>
-	"It a is a reckless curiousity I can see in your eyes. But you will seek it out regardless of whether i share what the quendi know of it, so be it." she says warningly before continuing "It is a narrow valley created by sorcery before my mother's mother's mother was priestess here. The tales speak of a great noise and bright light in the sky one night and in the morning that followed brave warriors of the tribe found a valley where once was none, and from it came strange voices. The bravest amongst those warriors entered the valley, none returned. None who have entered the valley have ever returned. So I warn you once again, avoid that place, for it is cursed most terribly."
-	</text>
-	<choice destination="end" text="$my thanks, that is all i require for now, farewell."/>	
-	</page>
-	
-	<page ID="south">
-	<text>
-	"To the south is a valley which is the only land upon which the tastey Deku nut tree will grow. Which is a shame as it is beset by raptors, these lizard folk cannot be bargained with and will devour you with a surety once they have laid you low with their claws. The only saving grace is they lack courage when alone. We think perhaps they make their nest in the ancient ruins. You should avoid the ruins if you can, they are dangerous as the last person to travel there did not return."
-	</text>
-	<choice destination="person" text="$Who was the last person to travel to those ruins?"/>
-	<choice destination="west" text="$and what about the west?"/>
-	<choice destination="end" text="$my thanks, that is all i require for now, farewell."/>	
-	</page>
-	
-	<page ID="person">
-	<text>
-	"Her name was Zhan, she was a scholar whose wisdom almost matched my own. She sought to re-connect us with our stolen past. She went to the ruins to search for answers in the relics of our foremothers. She was well armed, skilled and had friends of valour at her side, but none returned from her expedition. So I tell you now, avoid the ruins in the valley."
-	</text>
-	<choice destination="end" text="$an unfortunate fate, but perhaps there's something to discover, farewell"/>
-	<choice destination="end" text="$thank you for the warning, i'll make sure to keep clear of the ruins"/>
-	</page>
-	
-	<page ID="friends">
-	<condition evaluate="LIKENESS" operator="greaterthan" likeness="saurian" value="6" />
 		<text>
-			"Traveller, you bear similarities to our ancient enemy. While I have wisdom to look past this others are not so accepting. I am afraid to force them to hold you fast to their bosom when you are so marked would be for me to over step my bounds as their priestess and instead become their tyrant."
+			"To the west lies a fertile yet perilous jungle. You can brave its
+			winding paths if you wish, many do to forage for fruits or seek to
+			travel beyond it. But I should warn you the area is beset with
+			voracious lamia, their coils are strong as the trees that surround
+			them and should they entrap you your submission will be swift in
+			coming. As will you coming to an end as a melting bulge in their
+			tail."
+		</text>
+		<choice destination="farwest" text="$and beyond the jungle?" />
+
+		<choice destination="south" text="$and what about the south?" />
+		<choice destination="end"
+			text="$my thanks, that is all i require for now, farewell." />
+	</page>
+
+	<page ID="farwest">
+		<text>
+			"Bold to ask about what lies beyond the dangers I've spoken of." says the
+			priestess with a quirky smile "But very well, beyond is a broad
+			plain. Hiding places are limited, lucky for you predators are seldom
+			seen there. Though the great beasts there are not harmless, if you
+			agitate them you will find yourself laid low. So keep your distance
+			from them. You should also keep your distance from the haunted valley
+			if you value your life."
+		</text>
+		<choice destination="hauntedValley" text="$...what haunted valley?">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="hauntedValley"
+				value="0" />
+		</choice>
+		<choice destination="south" text="$and what about the south?" />
+		<choice destination="end"
+			text="$my thanks, that is all i require for now, farewell." />
+	</page>
+
+	<page ID="hauntedValley">
+		<text>
+			"It a is a reckless curiousity I can see in your eyes. But you will seek
+			it out regardless of whether i share what the quendi know of it, so
+			be it." she says warningly before continuing "It is a narrow valley
+			created by sorcery before my mother's mother's mother was priestess
+			here. The tales speak of a great noise and bright light in the sky
+			one night and in the morning that followed brave warriors of the
+			tribe found a valley where once was none, and from it came strange
+			voices. The bravest amongst those warriors entered the valley, none
+			returned. None who have entered the valley have ever returned. So I
+			warn you once again, avoid that place, for it is cursed most
+			terribly."
+		</text>
+		<choice destination="end"
+			text="$my thanks, that is all i require for now, farewell." />
+	</page>
+
+	<page ID="south">
+		<text>
+			"To the south is a valley which is the only land upon which the tastey
+			Deku nut tree will grow. Which is a shame as it is beset by raptors,
+			these lizard folk cannot be bargained with and will devour you with a
+			surety once they have laid you low with their claws. The only saving
+			grace is they lack courage when alone. We think perhaps they make
+			their nest in the ancient ruins. You should avoid the ruins if you
+			can, they are dangerous as the last person to travel there did not
+			return."
+		</text>
+		<choice destination="person"
+			text="$Who was the last person to travel to those ruins?" />
+		<choice destination="west" text="$and what about the west?" />
+		<choice destination="end"
+			text="$my thanks, that is all i require for now, farewell." />
+	</page>
+
+	<page ID="person">
+		<text>
+			"Her name was Zhan, she was a scholar whose wisdom almost matched my own.
+			She sought to re-connect us with our stolen past. She went to the
+			ruins to search for answers in the relics of our foremothers. She was
+			well armed, skilled and had friends of valour at her side, but none
+			returned from her expedition. So I tell you now, avoid the ruins in
+			the valley."
+		</text>
+		<choice destination="end"
+			text="$an unfortunate fate, but perhaps there's something to discover, farewell" />
+		<choice destination="end"
+			text="$thank you for the warning, i'll make sure to keep clear of the ruins" />
+	</page>
+
+	<page ID="friends">
+		<condition evaluate="LIKENESS" operator="greaterthan"
+			likeness="saurian" value="6" />
+		<text>
+			"Traveller, you bear similarities to our ancient enemy. While I
+			have wisdom to look past this others are not so accepting. I am
+			afraid to force them to hold you fast to their bosom when you are so
+			marked would be for me to over step my bounds as their priestess and
+			instead become their tyrant."
 		</text>
 		<choice destination="end" text="A pity" />
-	</page>	
+	</page>
 
 	<page ID="friends">
 		<condition operator="greaterthan" evaluate="FACTIONFLAG"
 			flag="friendship" value="1" />
 		<text>
-			"You have proven yourself stranger, your deeds are known. You have given
-			of yourself to the village of minyos. So yes, if you truly wish I
-			will declare to all the village that you are our friend and ally,
+			"You have proven yourself stranger, your deeds are known. You
+			have given
+			of yourself to the village of minyos. So yes, if you truly
+			wish I
+			will declare to all the village that you are our friend and
+			ally,
 			ever to be welcomed and provided for by our people."
 		</text>
 		<choice destination="allegiance" text="yes, i am sure." />
@@ -208,14 +301,22 @@
 
 	<page ID="allegiance">
 		<text>
-			The priestess brings you before the village, ringing a bell to bring
-			forth additional green elves to gather. And announces to them "You
-			see before you the stranger from the stars, she came to us alone. She
-			did not know us, yet she gave of herself to us. Now she has affirmed
-			her desire for a deeper friendship. So it is time for us to give of
-			ourselves to this stranger, you are alone no longer, we will comfort
-			you, we will protect you, we will provide for you. and though your
-			journey may take you far, know that we will always welcome you. Let
+			The priestess brings you before the village, ringing a bell to
+			bring
+			forth additional green elves to gather. And announces to them
+			"You
+			see before you the stranger from the stars, she came to us alone.
+			She
+			did not know us, yet she gave of herself to us. Now she has
+			affirmed
+			her desire for a deeper friendship. So it is time for us to
+			give of
+			ourselves to this stranger, you are alone no longer, we will
+			comfort
+			you, we will protect you, we will provide for you. and though
+			your
+			journey may take you far, know that we will always welcome you.
+			Let
 			all know that you are kin of the queendi, and rejoice." after the
 			ceremony there is much cheering and celebration. You have sworn
 			allegiance to the village of minyos.
@@ -232,7 +333,8 @@
 		<condition operator="equals" evaluate="FACTIONFLAG" flag="friendship"
 			value="0" />
 		<text>
-			"Yes? you want us to call you friend? and what have you done for the
+			"Yes? you want us to call you friend? and what have you done for
+			the
 			Quendi?" the priestess asks with a sardonic eyebrow "Go, show that
 			you are friend of quendi, then we will call you friend of quendi."
 		</text>
@@ -244,13 +346,20 @@
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="rockscleared"
 			value="0" />
 		<text>
-			"Normally I would not share such things. But you have proven a friend of our
-			people. So I will tell you. For many generations we have lived upon
-			this, our home. In peace we traded with star travellers such as
-			yourselves who visited this world. All this ended when the ancient
-			enemy came from the stars. They invaded seeking our land and our
-			wealth. These reptilian monsters were relentless, we fought them and
-			the struggle lasted many years. Their evil depredations caused us to
+			"Normally I would not share such things. But you have proven a
+			friend of our
+			people. So I will tell you. For many generations we have
+			lived upon
+			this, our home. In peace we traded with star travellers
+			such as
+			yourselves who visited this world. All this ended when the
+			ancient
+			enemy came from the stars. They invaded seeking our land and
+			our
+			wealth. These reptilian monsters were relentless, we fought them
+			and
+			the struggle lasted many years. Their evil depredations caused us
+			to
 			lose many wonders we once knew. Finally we called upon the great
 			spirits of the sky, who destroyed the ancient enemy. The way to what
 			was once their lands forever cut off."
@@ -266,11 +375,16 @@
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="rockscleared"
 			value="1" />
 		<text>
-			"Normally I would not share such things. But you have proven a friend of our
-			people. So I will tell you. For many generations we have lived upon
-			this, our home. In peace we traded with star travellers such as
-			yourselves who visited this world. All this ended when the ancient
-			enemy who now plagues us once more originally came from the stars.
+			"Normally I would not share such things. But you have proven a
+			friend of our
+			people. So I will tell you. For many generations we have
+			lived upon
+			this, our home. In peace we traded with star travellers
+			such as
+			yourselves who visited this world. All this ended when the
+			ancient
+			enemy who now plagues us once more originally came from the
+			stars.
 			They invaded seeking our land and our wealth. These reptilian
 			monsters were relentless, we fought them and the struggle lasted many
 			years. Their evil depredations caused us to lose many wonders we once
@@ -284,11 +398,16 @@
 
 	<page ID="raptors">
 		<text>
-			"The lizards you speak of are a pale imitation of the evil of their
-			progenitors. When we drove them forth the callous creatures did not
-			seek to take with them their unborn young, several clutches survived
-			and grew to be the ones of which you speak. But without the words and
-			wisdoms of their foul ancestors they are but little threat, they're
+			"The lizards you speak of are a pale imitation of the evil of
+			their
+			progenitors. When we drove them forth the callous creatures did
+			not
+			seek to take with them their unborn young, several clutches
+			survived
+			and grew to be the ones of which you speak. But without the
+			words and
+			wisdoms of their foul ancestors they are but little threat,
+			they're
 			actually rather tastey and alone are no match for a Quendi."
 		</text>
 		<choice destination="end" text="My thanks, farewell" />
@@ -305,9 +424,12 @@
 		<!-- establish quest -->
 		<effect type="setlocalflag" flag="quest" value="1" />
 		<text>
-			"Ah so good of you to ask traveller. I've misplaced a statue, it has
-			ritual significance. But if it's not here it must be in the village
-			somewhere. If you could do me the favour of fetching it for me I
+			"Ah so good of you to ask traveller. I've misplaced a statue, it
+			has
+			ritual significance. But if it's not here it must be in the
+			village
+			somewhere. If you could do me the favour of fetching it for me
+			I
 			would be ever so grateful."
 		</text>
 		<choice destination="look" text="can't you find it yourself?" />
@@ -316,11 +438,16 @@
 
 	<page ID="look">
 		<text>
-			"Yes but I am expecting a visitor soon. And I wouldn't want to leave this
-			place unattended. Besides, you're a new visitor here and have an
-			adventuresome look to you. You're probably going to search the entire
-			village for hidden secrets or other such nonsense while bothering the
-			residents so you may as well be useful to me while you do so."
+			"Yes but I am expecting a visitor soon. And I wouldn't want to
+			leave this
+			place unattended. Besides, you're a new visitor here and
+			have an
+			adventuresome look to you. You're probably going to search the
+			entire
+			village for hidden secrets or other such nonsense while
+			bothering the
+			residents so you may as well be useful to me while you
+			do so."
 		</text>
 		<choice destination="end" text="I guess you have a point" />
 	</page>
@@ -330,9 +457,12 @@
 		<condition evaluate="HASITEM" operator="greaterthan" value="1"
 			item="elf statue" />
 		<text>
-			"You found it. Here, it's not much. But I believe it's appropriate you
-			have this gold for your assistance." she says taking the statue from
-			you and handing you a small bag of gold for your troubles.
+			"You found it. Here, it's not much. But I believe it's
+			appropriate you
+			have this gold for your assistance." she says taking
+			the statue from
+			you and handing you a small bag of gold for your
+			troubles.
 		</text>
 		<effect type="setfactionflag" flag="friendship" value="1" />
 		<effect type="removeitem" item="elf statue" value="1" />
@@ -345,7 +475,8 @@
 	<page ID="statue1">
 		<!-- does not have item -->
 		<text>
-			"I'm sure the statue is in the village somewhere. Have you looked
+			"I'm sure the statue is in the village somewhere. Have you
+			looked
 			everywhere yet?"
 		</text>
 		<choice destination="end" text="I'll keep looking then" />

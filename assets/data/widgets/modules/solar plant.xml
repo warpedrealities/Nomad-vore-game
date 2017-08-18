@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <shipsystem sprite="68" name="solar plant" health="30">
-<contains minimum="1" maximum="2">scrap metal</contains>
-<description>A device to convert sunlight into power, can only unfold its mirrors in space</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<shipResource capacity="25" resource="ENERGY"/>
-<shipConverter>
-<convertFrom value="SOLAR"/>
-<convertTo value="ENERGY"/>
-<conversionEfficiency value="5"/>
-<conversionRate value="0.02"/>
-</shipConverter>
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>A device to convert sunlight into power, can only unfold
+		its mirrors in space</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="25" resource="ENERGY" />
+	<shipConverter>
+		<convertFrom value="SOLAR" />
+		<convertTo value="ENERGY" />
+		<conversionEfficiency value="5" />
+		<conversionRate value="0.02" />
+	</shipConverter>
 </shipsystem>

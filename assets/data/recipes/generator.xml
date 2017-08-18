@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <recipe name="generator" requiredskill="0" startunlocked="true">
-<description>
-A generator that produces energy from fuel.
-</description>
-<ingredient item="scrap metal" quantity="10"/>
-<ingredient item="computation valve" quantity="5"/>
-<ingredient item="battery" quantity="5"/>
-<result item="generator"/>
+	<description>
+		A generator that produces energy from fuel.
+	</description>
+	<ingredient item="scrap metal" quantity="10" />
+	<ingredient item="computation valve" quantity="5" />
+	<ingredient item="battery" quantity="5" />
+	<result item="generator" />
 </recipe>

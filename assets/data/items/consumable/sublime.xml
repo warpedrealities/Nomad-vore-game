@@ -3,9 +3,12 @@
 	<description>The vial of liquid seethes with potential. It's a
 		biological refactoring agent that will specialize your body as an
 		eating machine to better subsist on living creatures you consume.
-		sublime elevation can only be attained through predatory dominance. </description>
+		sublime elevation can only be attained through predatory dominance.
+	</description>
 	<effectmodifier modvalue="20" modifies="KARMA">
-		You can feel the substance burn through your body, rewriting your
-		digestive and other processes. Your karma score is now VALUE
+		You can feel the
+		substance burn through your body, rewriting your
+		digestive and other
+		processes. Your karma score is now VALUE
 	</effectmodifier>
 </ItemConsumable>

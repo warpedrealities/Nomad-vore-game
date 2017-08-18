@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<recipe name="targeting visor" requiredskill="3" startunlocked="true">
+	<description>
+		The targeting visor is a device that provides a HUD and assistance with
+		using ranged weapons +2 to ranged
+	</description>
+	<ingredient item="scrap metal" quantity="1" />
+	<ingredient item="computation valve" quantity="3" />
+	<ingredient item="optics" quantity="1" />
+	<ingredient item="battery" quantity="1" />
+	<tokenRequirement item="gadgeteer" quantity="2" />
+	<result item="targeting visor" />
+</recipe>

@@ -1,71 +1,87 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="icetreader.png"/>
-<name>icetreader</name>
-<description> An unusual large and six limbed form catches your eye, her upper body is feminine and humanoid with only some bare skin showing only partially where soft white fur and a long mane of unruly hair doesn't cover it. The taur towers some nearly 8 feet tall with the addition of her lower half. She regards you with clear predatory intent and seems at home in these icey wastes. Her lower body brings to mind a heavy set big cat or other quadrepedal pawed predator covered in thick long fur of a mottled white colour. Those paws look unusual, with spread furred almost fingerlike digits ending in claws that splay to grip the treacherous footing under her.
-</description>
-<rpg>
-<experiencevalue value="70"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
+	<sprite value="icetreader.png" />
+	<name>icetreader</name>
+	<description> An unusual large and six limbed form catches your eye,
+		her upper body is feminine and humanoid with only some bare skin
+		showing only partially where soft white fur and a long mane of unruly
+		hair doesn't cover it. The taur towers some nearly 8 feet tall with
+		the addition of her lower half. She regards you with clear predatory
+		intent and seems at home in these icey wastes. Her lower body brings
+		to mind a heavy set big cat or other quadrepedal pawed predator
+		covered in thick long fur of a mottled white colour. Those paws look
+		unusual, with spread furred almost fingerlike digits ending in claws
+		that splay to grip the treacherous footing under her.
+	</description>
+	<rpg>
+		<experiencevalue value="70" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
 
-<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
-<missText count="2">
-<text>The ice treader misses TARGET</text>
-<text>The ice treader swipes at TARGET but doesn't hit</text>
-</missText>
-<hitText count="2">
-<text>The ice treader claws TARGET for VALUE damage</text>
-<text>The ice treader claws TARGET for VALUE damage</text>
-</hitText>
-<effectDamage type="KINETIC" minValue="2" maxValue="12" modifier="STRENGTH"/>
-</combatMove>
-<combatMove name="leap" bonusAttribute="MELEE" timeCost="2" bonusToHit="8" pattern="RANGED"  actionCost="2" moveType="MOVEMENT"> 
-<effectMovement moveType="SELF_TOWARDS" distance="4" abilityMod="AGILITY"/>
-<missText count="1">
-<text>ice treader fails to leap towards TARGET</text>
-</missText>
-<hitText count="1">
-<text>ice treader leaps towards TARGET</text>
-</hitText>
-</combatMove>
-<combatMove name="pounce" bonusAttribute="MELEE" timeCost="2" bonusToHit="6" pattern="MELEE"  actionCost="2"> 
-<effectDamage type="KINETIC" minValue="2" maxValue="12" modifier="STRENGTH"/>
-<missText count="1">
-<text>ice treader attempts to pounce TARGET</text>
-</missText>
-<hitText count="1">
-<text>ice treader pounces on TARGET inflicting VALUE damage from the impact</text>
-</hitText>
-<effectStatus probability="100">
-<applyText>TARGET is pinned by an ice treader</applyText>
-<statusBind uid="20" icon="4"  numModifiers="2">
-<removeText> TARGET has escaped the ice treader's pin</removeText>
-<effect attribute="RANGED" modifier="-2"/>
-<effect attribute="MELEE" modifier="-2"/>
-<bind strength="10" originDependent="true"/>
-<struggle count="2">
-<text>TARGET struggles against the ice treader's pinning forepaws
-</text>
-<text>TARGET tries to escape the icetreader but fails
-</text>
-</struggle>
-</statusBind>
-</effectStatus>
-</combatMove>
-</rpg>
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<missText count="2">
+				<text>The ice treader misses TARGET</text>
+				<text>The ice treader swipes at TARGET but doesn't hit</text>
+			</missText>
+			<hitText count="2">
+				<text>The ice treader claws TARGET for VALUE damage</text>
+				<text>The ice treader claws TARGET for VALUE damage</text>
+			</hitText>
+			<effectDamage type="KINETIC" minValue="2" maxValue="12"
+				modifier="STRENGTH" />
+		</combatMove>
+		<combatMove name="leap" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="8" pattern="RANGED" actionCost="2" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>ice treader fails to leap towards TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>ice treader leaps towards TARGET</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="pounce" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="6" pattern="MELEE" actionCost="2">
+			<effectDamage type="KINETIC" minValue="2" maxValue="12"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>ice treader attempts to pounce TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>ice treader pounces on TARGET inflicting VALUE damage from the
+					impact</text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is pinned by an ice treader</applyText>
+				<statusBind uid="20" icon="4" numModifiers="2">
+					<removeText> TARGET has escaped the ice treader's pin</removeText>
+					<effect attribute="RANGED" modifier="-2" />
+					<effect attribute="MELEE" modifier="-2" />
+					<bind strength="10" originDependent="true" />
+					<struggle count="2">
+						<text>TARGET struggles against the ice treader's pinning forepaws
+						</text>
+						<text>TARGET tries to escape the icetreader but fails
+						</text>
+					</struggle>
+				</statusBind>
+			</effectStatus>
+		</combatMove>
+	</rpg>
 
-<respawn delay="1000"/>
-<defeated conversation="alpha_minoris_III/icetreader/defeat" />
-<seduced conversation="alpha_minoris_III/icetreader/seduced" />
-<victory conversation="alpha_minoris_III/icetreader/victory" />
-<seducer conversation="alpha_minoris_III/icetreader/victory" />
-<controller AI="icetreader"/>
-<faction value="monster"/>
+	<respawn delay="1000" />
+	<defeated conversation="alpha_minoris_III/icetreader/defeat" />
+	<seduced conversation="alpha_minoris_III/icetreader/seduced" />
+	<victory conversation="alpha_minoris_III/icetreader/victory" />
+	<seducer conversation="alpha_minoris_III/icetreader/victory" />
+	<controller AI="icetreader" />
+	<faction value="monster" />
 </NPC>

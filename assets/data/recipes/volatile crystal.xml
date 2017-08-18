@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <recipe name="volatile crystal" requiredskill="2" startunlocked="true">
-<description>
-By a series of somewhat inefficient conversions its possible to energize a single blue crystal with excessive power levels, rendering it volatile. However nearly half of the energy going into the process is wasted.
-</description>
-<ingredient item="blue crystal" quantity="4"/>
-<result item="volatile crystal"/>
+	<description>
+		By a series of somewhat inefficient conversions its possible to energize
+		a single blue crystal with excessive power levels, rendering it
+		volatile. However nearly half of the energy going into the process is
+		wasted.
+	</description>
+	<ingredient item="blue crystal" quantity="4" />
+	<result item="volatile crystal" />
 </recipe>

@@ -11,7 +11,25 @@
 		<choice destination="cockvore0" text="cockvore her">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="not interested right now" />
+	</page>
+
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="cockvore0">
@@ -34,14 +52,22 @@
 
 	<page ID="cockvore1">
 		<text>
-			You bend forwards to scoop up her tailtip and feel her shift and coil
-			uneasily. Then it's a simple matter to stick that tailtip in and the
-			lamia's eyes widen and she writhes in resistance, but you seize firm
-			her muscular tail a few feet above the tip and stop her from pulling
-			away. Your shaft rippling and schlurping its way up the taper of her
-			tail as you groan and look into her fearful gaze with a smirk. Your
-			grip on her tail only helps to pull her deeper into you, working your
-			hands up over her tail length and then pulling her deeper in with the
+			You bend forwards to scoop up her tailtip and feel her shift and
+			coil
+			uneasily. Then it's a simple matter to stick that tailtip in and
+			the
+			lamia's eyes widen and she writhes in resistance, but you seize
+			firm
+			her muscular tail a few feet above the tip and stop her from
+			pulling
+			away. Your shaft rippling and schlurping its way up the taper
+			of her
+			tail as you groan and look into her fearful gaze with a smirk.
+			Your
+			grip on her tail only helps to pull her deeper into you, working
+			your
+			hands up over her tail length and then pulling her deeper in with
+			the
 			help of your ravenous shaft.
 		</text>
 		<choice destination="cockvore2"
@@ -50,15 +76,24 @@
 
 	<page ID="cockvore2">
 		<text>
-			The lamia struggles against your ravenous shaft, uncoiling to try and
-			knock you off your feet but alas for her you see the move coming in
-			time to step over those muscular coils. Your response of sucking in a
-			few inches of her tail with no hands to show your superiority over
-			her doesn't cow her though does get a hissing whine out of her as you
-			feel her tail starting to pile and coil in your balls wonderfully.
-			You can feel more and more of her wriggling serpentine body sliding
-			down your shaft and as it does so the lamia's forced to straighten,
-			having less tail to work with in her futile attempts to stop you she
+			The lamia struggles against your ravenous shaft, uncoiling to
+			try and
+			knock you off your feet but alas for her you see the move
+			coming in
+			time to step over those muscular coils. Your response of
+			sucking in a
+			few inches of her tail with no hands to show your
+			superiority over
+			her doesn't cow her though does get a hissing whine
+			out of her as you
+			feel her tail starting to pile and coil in your
+			balls wonderfully.
+			You can feel more and more of her wriggling
+			serpentine body sliding
+			down your shaft and as it does so the lamia's
+			forced to straighten,
+			having less tail to work with in her futile
+			attempts to stop you she
 			grabs ahold of the ground in desperation.
 		</text>
 		<choice destination="cockvore3" text="conquer her with your cock" />
@@ -66,11 +101,16 @@
 
 	<page ID="cockvore3">
 		<text>
-			But to no avail as you lean back and with a moan on your lips and
-			squeelches from your tip you draw her in. Your rippling cock working
-			up towards where her girlsome part begins, all of her tail writhing
-			now in your balls and length as you draw her in. Your nuts sagging
-			low and shifting with the movements of her tail even as she glances
+			But to no avail as you lean back and with a moan on your lips
+			and
+			squeelches from your tip you draw her in. Your rippling cock
+			working
+			up towards where her girlsome part begins, all of her tail
+			writhing
+			now in your balls and length as you draw her in. Your nuts
+			sagging
+			low and shifting with the movements of her tail even as she
+			glances
 			back at your expression and redoubles her effort to pull away,
 			pulling chunks of plant detritus in her hands she lets out a
 			despairing cry and feels her breasts and shoulders are pulled into
@@ -85,9 +125,12 @@
 
 	<page ID="cockvore4">
 		<text>
-			You look down at those flailing fingers and clench, pulling them inside.
-			Your shaft bulging for only a little longer with her arms as they
-			slither down to join the rest of her underneath the stroking of your
+			You look down at those flailing fingers and clench, pulling them
+			inside.
+			Your shaft bulging for only a little longer with her arms as
+			they
+			slither down to join the rest of her underneath the stroking of
+			your
 			hands. Your sack is massive now, hanging low past your knees and
 			bloated with the mass of roiling lamia hissing and whining as she
 			seeks to try and escape the cummy confines to which you have banished
@@ -98,17 +141,28 @@
 
 	<page ID="cockvore5">
 		<text>
-			There isn't, and you set about making that so. As you stroke your cock you
-			feel your sack churn and hear the lamia squirm and hiss anew as she
-			realizes what you're doing to her, turning all of that tail length
-			and indeed the rest of her into a heaping load. The lamia's hands
-			shoving out and her tail trying to uncoil and stretch your sack makes
-			you groan but does nothing to help her escape. Instead the churning
-			burbles of your balls only grow more pronounced as her struggles
-			weaken and she begins to soften and succum. Her hissing whimpers
-			overwhelmed by your gurgling balls now you feel her slow to stop and
-			her motions taken over by the slosh of cum as she loses definition,
-			spreading out into an immense load of jizz and giving you an
+			There isn't, and you set about making that so. As you stroke
+			your cock you
+			feel your sack churn and hear the lamia squirm and hiss
+			anew as she
+			realizes what you're doing to her, turning all of that
+			tail length
+			and indeed the rest of her into a heaping load. The
+			lamia's hands
+			shoving out and her tail trying to uncoil and stretch
+			your sack makes
+			you groan but does nothing to help her escape. Instead
+			the churning
+			burbles of your balls only grow more pronounced as her
+			struggles
+			weaken and she begins to soften and succum. Her hissing
+			whimpers
+			overwhelmed by your gurgling balls now you feel her slow to
+			stop and
+			her motions taken over by the slosh of cum as she loses
+			definition,
+			spreading out into an immense load of jizz and giving you
+			an
 			incredible desire to let her loose. The lamia's form dissipating
 			completely as you redouble your stroking and feel the pleasures and
 			desires building...and then, unleashing.. the sensation of cumming
@@ -156,7 +210,8 @@
 
 	<page ID="tailsex1">
 		<text>
-			Once you’ve fed a good, sturdy amount of that smooth-scaled tail into
+			Once you’ve fed a good, sturdy amount of that smooth-scaled tail
+			into
 			your sopping sex, both of your hands are free to grab her by the
 			shoulders, and you press your weight into her, making a rape-bed of
 			her coils. Once some of the latter few inches are pinned under your
@@ -169,13 +224,20 @@
 
 	<page ID="tailsex2">
 		<text>
-			Once you’re comfortable with the rhythm and certain of her submission,
-			those tits of hers start looking like much more pleasant handholds,
-			and your fingertips deeply dimple the supple flesh as you squeeze one
-			roughly, her nipple grinding against your palm. The other hand moves
-			between your legs to stimulate your clit, her own sex left ungraced
-			by friction aside from the occasional brush of her own tail. When
-			your orgasm finally comes, hers is still rising and, as cruelly as
+			Once you’re comfortable with the rhythm and certain of her
+			submission,
+			those tits of hers start looking like much more pleasant
+			handholds,
+			and your fingertips deeply dimple the supple flesh as you
+			squeeze one
+			roughly, her nipple grinding against your palm. The other
+			hand moves
+			between your legs to stimulate your clit, her own sex left
+			ungraced
+			by friction aside from the occasional brush of her own tail.
+			When
+			your orgasm finally comes, hers is still rising and, as cruelly
+			as
 			she surely would have treated you, had the tables been turned, you
 			don’t even grant her that much, slipping up and off of her to re-gird
 			your loins, leaving her desperate and mewling.
@@ -186,7 +248,8 @@
 
 	<page ID="unbirth0">
 		<text>
-			After a few moments of enjoying the lamia’s wriggling struggles, the
+			After a few moments of enjoying the lamia’s wriggling struggles,
+			the
 			thought crosses your mind that you’d like a bit more than a few
 			paltry inches of tail inside of you and, after eyeing the massive
 			length of the girleater, you decide that there would be some poetic
@@ -205,14 +268,22 @@
 
 	<page ID="unbirth1">
 		<text>
-			Eventually, you run out of tail, and must lean forward. Thankfully, at this
-			point, her upper body is close enough that you can hook your insteps
-			over her shoulders. In that time, however, she manages to twist
-			around onto her belly, the motion subsequently rolling the rest of
-			her muscular coils around inside your loins as she starts clawing at
-			the ground in a last-ditch effort to escape. But it’s too late, and
-			there’s too much of her already trapped, at the mercy of your reverse
-			contractions, and your folds are soon hugging at her waist, then her
+			Eventually, you run out of tail, and must lean forward.
+			Thankfully, at this
+			point, her upper body is close enough that you can
+			hook your insteps
+			over her shoulders. In that time, however, she
+			manages to twist
+			around onto her belly, the motion subsequently
+			rolling the rest of
+			her muscular coils around inside your loins as she
+			starts clawing at
+			the ground in a last-ditch effort to escape. But
+			it’s too late, and
+			there’s too much of her already trapped, at the
+			mercy of your reverse
+			contractions, and your folds are soon hugging at
+			her waist, then her
 			shoulders.
 		</text>
 		<choice destination="unbirth2" text="snake makes the best pussy food" />
@@ -220,13 +291,20 @@
 
 	<page ID="unbirth2">
 		<text>
-			The last the world ever properly sees of her, as the light shrinks in
-			her sight, are her weakly-scrabbling fingers. After that, you’re free
-			to nap where you are, folding your arms under your chin to elevate it
-			above your bulging bed of flesh, which begins to squirm less and less
-			as its occupant slowly loses oxygen. Then, stillness and quiet, as
-			the walls of your womb squeeze mercilessly at the massive form,
-			compacting it down and juicing it into sweet, feminine fluids. The
+			The last the world ever properly sees of her, as the light
+			shrinks in
+			her sight, are her weakly-scrabbling fingers. After that,
+			you’re free
+			to nap where you are, folding your arms under your chin to
+			elevate it
+			above your bulging bed of flesh, which begins to squirm
+			less and less
+			as its occupant slowly loses oxygen. Then, stillness and
+			quiet, as
+			the walls of your womb squeeze mercilessly at the massive
+			form,
+			compacting it down and juicing it into sweet, feminine fluids.
+			The
 			final disappearance of the bump is preceded by your busy fingers
 			finally being able to easily reach down there to get to work and is
 			accompanied by your shrill cry and a clear, sticky spray that would

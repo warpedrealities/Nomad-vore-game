@@ -27,7 +27,7 @@ import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemStack;
 import playerscreens.subscreens.ItemContainerScreen;
-
+import crafting.CraftingIngredient;
 import java.io.IOException;
 import java.nio.FloatBuffer;
 import java.util.Collections;
@@ -306,6 +306,33 @@ public class InventoryScreen extends Screen implements Callback {
 	}
 
 
+	private void useBlueprint(ItemBlueprintInstance ibi)
+	{
+		m_player.getCraftingLibrary().unlockRecipe(ibi.getRecipe());
+		CraftingRecipe r=m_player.getCraftingLibrary().getRecipe(ibi.getRecipe()+".xml");
+		if (r.getRequiredSkill()>m_player.getRPG().getAttribute(Actor_RPG.TECH))
+		{
+			ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "
+					+ibi.getRecipe()+" but you lack the skill to craft this currently");		
+		}
+		else
+		{
+			java.util.List <CraftingIngredient> unmet=r.getUnmetRequirements((Player_RPG) m_player.getRPG());
+			if (unmet!=null)
+			{
+				ViewScene.m_interface.DrawText("you've learned the design for "+ibi.getRecipe()+ " but lack the specialist skills to craft it.");		
+			}
+			else
+			{
+				ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "+ibi.getRecipe());
+			}
+		}
+		popup.setClock(10);
+		if (ViewScene.m_interface.getLastMessage()!=null)
+		{
+			popup.setText(ViewScene.m_interface.getLastMessage());
+		}			
+	}
 
 	void UseItem()
 	{
@@ -322,23 +349,7 @@ public class InventoryScreen extends Screen implements Callback {
 			//apply item
 			if (ItemBlueprintInstance.class.isInstance(item))
 			{
-				ItemBlueprintInstance ibi=(ItemBlueprintInstance)item;
-				m_player.getCraftingLibrary().unlockRecipe(ibi.getRecipe());
-				CraftingRecipe r=m_player.getCraftingLibrary().getRecipe(ibi.getRecipe()+".xml");
-				if (r.getRequiredSkill()>m_player.getRPG().getAttribute(Actor_RPG.TECH))
-				{
-					ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "
-							+ibi.getRecipe()+" but you lack the skill to craft this currently");		
-				}
-				else
-				{
-					ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "+ibi.getRecipe());
-				}
-				popup.setClock(10);
-				if (ViewScene.m_interface.getLastMessage()!=null)
-				{
-					popup.setText(ViewScene.m_interface.getLastMessage());
-				}		
+				useBlueprint((ItemBlueprintInstance)item);
 				m_player.setBusy(2);
 				m_dropdown.setVisible(false);			
 			}

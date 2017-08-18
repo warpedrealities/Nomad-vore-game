@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <widgetharvestable sprite="38">
-<contains minimum="1" maximum="2">herb</contains>
-<usedescription>You pick some herbs</usedescription>
-<description>A herb bush</description>
-<regeneration regentime="2000"/>
+	<contains minimum="1" maximum="2">herb</contains>
+	<usedescription>You pick some herbs</usedescription>
+	<description>A herb bush</description>
+	<regeneration regentime="2000" />
 </widgetharvestable>

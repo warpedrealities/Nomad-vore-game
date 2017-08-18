@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<perk name="gadgeteer">
+	<requirement count="1">
+		<req>PERKjury rigger1</req>
+	</requirement>
+	<description> Crafting has the possibility of providing you with a
+		range of tools, devices and weapons made from parts and materials you
+		find in your adventures. </description>
+	<craftingToken token="gadgeteer" />
+	<maxrank value="3" />
+
+</perk>

@@ -1,11 +1,14 @@
 <?xml version="1.0"?>
-<recipe name="laser sentinel" requiredskill="5" startunlocked="true">
-<description>
-A computer controlled laser gun mounted on a self stabilizing tripod. Once deployed it won't last very long.But while active it will shoot all detected hostiles with extra firepower.
-</description>
-<ingredient item="scrap metal" quantity="2"/>
-<ingredient item="computation valve" quantity="2"/>
-<ingredient item="optics" quantity="2"/>
-<ingredient item="battery" quantity="1"/>
-<result item="laser sentinel"/>
+<recipe name="laser sentinel" requiredskill="3" startunlocked="true">
+	<description>
+		A computer controlled laser gun mounted on a self stabilizing tripod.
+		Once deployed it won't last very long. But while active it will shoot
+		all hostiles it detects with a high intensity laser.
+	</description>
+	<ingredient item="scrap metal" quantity="2" />
+	<ingredient item="computation valve" quantity="2" />
+	<ingredient item="optics" quantity="2" />
+	<ingredient item="battery" quantity="1" />
+	<tokenRequirement item="roboticist" quantity="1" />
+	<result item="laser sentinel" />
 </recipe>

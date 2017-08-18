@@ -1,46 +1,56 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="goblinwarrior.png"/>
-<name>elf warrior</name>
-<description>The shapely green skinned humanoid is alert and wary in this dangerous environment. Her eyes roving, her body clad in a crude armoured jacket of wooden slats over cloth. The armed and pointy eared warrior looks ready for trouble, one hand resting on her knife hilt as she keeps a wary eye out.</description>
-<rpg>
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
-<attribute attribute="KINETIC" value="1"/>
-<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" threatening="true">
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<missText count="2">
-<text>the elf warrior's knife slash doesn't connect with TARGET</text>
-<text>the elf warrior attempts to stab TARGET but the blow doesn't connect</text>
-</missText>
-<hitText count="2">
-<text>the elf warrior hits TARGET for VALUE points of damage</text>
-<text>the elf warrior slashes TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-<combatMove name="arrow" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4">
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<missText count="1">
-<text>the elf warrior looses an arrow at TARGET but it misses</text>
-</missText>
-<hitText count="1">
-<text>the elf warrior fires an arrow at TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="goblinwarrior.png" />
+	<name>elf warrior</name>
+	<description>The shapely green skinned humanoid is alert and wary in
+		this dangerous environment. Her eyes roving, her body clad in a crude
+		armoured jacket of wooden slats over cloth. The armed and pointy eared
+		warrior looks ready for trouble, one hand resting on her knife hilt as
+		she keeps a wary eye out.</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="KINETIC" value="1" />
+		<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>the elf warrior's knife slash doesn't connect with TARGET</text>
+				<text>the elf warrior attempts to stab TARGET but the blow doesn't
+					connect</text>
+			</missText>
+			<hitText count="2">
+				<text>the elf warrior hits TARGET for VALUE points of damage</text>
+				<text>the elf warrior slashes TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="arrow" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" rangedbias="4">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the elf warrior looses an arrow at TARGET but it misses</text>
+			</missText>
+			<hitText count="1">
+				<text>the elf warrior fires an arrow at TARGET for VALUE points of
+					damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<defeated conversation="alpha_minoris_II/elfraider/defeat" />
-<seduced conversation="alpha_minoris_II/elfraider/seduced" />
-<victory conversation="alpha_minoris_II/elfraider/victory" />
-<seducer conversation="alpha_minoris_II/elfraider/victory" />
-<talk conversation="alpha_minoris_II/elfraider/chat" />
-<controller AI="patrol1"/>
-<faction value="minyos"/>
+	<defeated conversation="alpha_minoris_II/elfraider/defeat" />
+	<seduced conversation="alpha_minoris_II/elfraider/seduced" />
+	<victory conversation="alpha_minoris_II/elfraider/victory" />
+	<seducer conversation="alpha_minoris_II/elfraider/victory" />
+	<talk conversation="alpha_minoris_II/elfraider/chat" />
+	<controller AI="patrol1" />
+	<faction value="minyos" />
 </NPC>

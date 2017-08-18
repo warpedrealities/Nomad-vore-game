@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <ItemConsumable name="fighting spirits" weight="1" value="50">
-	<description>An alcoholic beverage. Drinking in moderation restores action, drinking to excess reduces dignity.</description>
+	<description>An alcoholic beverage. Drinking in moderation restores
+		action, drinking to excess reduces dignity.</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
 		modvalue="12" modifies="ACTION">
-		You chug down the fiery beverage, you feel more vigorous.
+		You chug down the fiery beverage, you feel more
+		vigorous.
 	</effectrecover>
 </ItemConsumable>

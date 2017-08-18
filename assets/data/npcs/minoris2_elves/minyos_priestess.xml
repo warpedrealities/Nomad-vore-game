@@ -1,36 +1,41 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="greenP.png"/>
-<name>Shanna</name>
-<description>Of all the elves this one is the most decorated, her green skin streaked with blue curving lines of body paint and she has enough jewelry on to make clinking noises when she moves. She's also got the religiously mandated funny hat on.</description>
-<rpg>
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="80"/>
-<stat stat="RESOLVE" value="80"/>
-<combatMove name="reinforce" pattern="SELF" bonusAttribute="MELEE" timeCost="2">
-<effectReinforce npc="minoris2_elves\elfReinforcement" min="2" max="4">
-<direction distance="16">
-NORTHSOUTHEASTWEST
-</direction>
-</effectReinforce>
-<hitText count="2">
-<text>the priestess calls for warriors to aid her</text>
-<text>the priestess calls out for aid!</text>
-</hitText>
+	<sprite value="greenP.png" />
+	<name>Shanna</name>
+	<description>Of all the elves this one is the most decorated, her green
+		skin streaked with blue curving lines of body paint and she has enough
+		jewelry on to make clinking noises when she moves. She's also got the
+		religiously mandated funny hat on.</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="80" />
+		<stat stat="RESOLVE" value="80" />
+		<combatMove name="reinforce" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectReinforce npc="minoris2_elves\elfReinforcement"
+				min="2" max="4">
+				<direction distance="16">
+					NORTHSOUTHEASTWEST
+				</direction>
+			</effectReinforce>
+			<hitText count="2">
+				<text>the priestess calls for warriors to aid her</text>
+				<text>the priestess calls out for aid!</text>
+			</hitText>
 
-</combatMove>
-</rpg>
+		</combatMove>
+	</rpg>
 
-<respawn delay="1000"/>
-<disposition value="55"/>
+	<respawn delay="1000" />
+	<disposition value="55" />
 
-<talk conversation="alpha_minoris_II/minyospriestess/chat" />
-<controller AI="leader"/>
-<faction value="minyos"/>
+	<talk conversation="alpha_minoris_II/minyospriestess/chat" />
+	<controller AI="leader" />
+	<faction value="minyos" />
 </NPC>

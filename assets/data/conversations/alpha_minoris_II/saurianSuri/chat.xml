@@ -6,7 +6,8 @@
 			flag="talked" />
 		<!-- first time -->
 		<text>
-			"Hey star traveller. Can I ask like a huge favour of you?" the lizard
+			"Hey star traveller. Can I ask like a huge favour of you?" the
+			lizard
 			smiles brightly, though as she continues to get it out her gaze
 			lowers and she blushes "see I'm Suri and well, I'm not quite ready
 			for breeding, but I kinda wanna feel what being a mom is like. Can I
@@ -26,7 +27,8 @@
 			flag="times" />
 		<!--refused -->
 		<text>
-			"Oh uh, hi star traveller..have you changed your mind? I can't ask
+			"Oh uh, hi star traveller..have you changed your mind? I can't
+			ask
 			anyone else, and I really wanna know how it feels to hold another
 			inside me like that."
 		</text>
@@ -71,9 +73,12 @@
 
 	<page ID="unbirthA1">
 		<text>
-			Suri giggles a bit and twitches her tail under you as you settle onto
-			your knees and then crawl fowards towards the open invitation of her
-			nethers. That tail rubbing up between your own legs naughtily as you
+			Suri giggles a bit and twitches her tail under you as you settle
+			onto
+			your knees and then crawl fowards towards the open invitation of
+			her
+			nethers. That tail rubbing up between your own legs naughtily as
+			you
 			lean in to give her a lick. That lick making the tail twitch and
 			flick underneath you as Suri chirrs "ah, mhmm...nice but i'm already
 			wet enough for ya." she says and then giggles, using her free hand to
@@ -89,15 +94,24 @@
 
 	<page ID="unbirthA2">
 		<text>
-			"oh, oh my this is...wonderful" suri exclaims with a gasp, sliding a hand
-			up to tenderly rub the bulge made by your head and shoulders inside
-			her. You can't help but agree, her warmth welcoming you as you push
-			off against the ground with your feet. More of your body disappearing
-			between her thighs as she chirrs and pants in delight, clenching
-			rthythmically around your midriff, then hips until only your legs are
-			left outside of her. Her middle now distended, bulged, massively
-			pregnant with your upper body curled inside the cradle of her womb. A
-			delightful embrace you cannot help but crave for the whole of your
+			"oh, oh my this is...wonderful" suri exclaims with a gasp,
+			sliding a hand
+			up to tenderly rub the bulge made by your head and
+			shoulders inside
+			her. You can't help but agree, her warmth welcoming
+			you as you push
+			off against the ground with your feet. More of your
+			body disappearing
+			between her thighs as she chirrs and pants in
+			delight, clenching
+			rthythmically around your midriff, then hips until
+			only your legs are
+			left outside of her. Her middle now distended,
+			bulged, massively
+			pregnant with your upper body curled inside the
+			cradle of her womb. A
+			delightful embrace you cannot help but crave for
+			the whole of your
 			body.
 		</text>
 		<choice destination="unbirthA3" text="all the way in" />
@@ -106,7 +120,8 @@
 	<page ID="unbirthA3">
 		<effect type="passtime" value="75" />
 		<text>
-			"almost there...thanks so much for...mhmm" Suri moans in delight and
+			"almost there...thanks so much for...mhmm" Suri moans in delight
+			and
 			clenches, dragging your legs deeper inside. She can't see past the
 			massive dome of her belly, now can she seem to keep her hands off of
 			it as she draws you steadily the rest of the way inside of her womb.
@@ -123,7 +138,8 @@
 
 		<special effect="marktime" />
 		<text>
-			The bulge in Suri's middle is treated good naturedly by the other
+			The bulge in Suri's middle is treated good naturedly by the
+			other
 			villagers of Dammath as she hauls you around. Your form cradled
 			snugly within her own for what's probably several hours as she enjoys
 			doting on her taut tummy with strokes and pats now and then. It's
@@ -144,7 +160,8 @@
 	<page ID="unbirthBcheck">
 		<condition evaluate="TIMEPASSED" operator="lessthan" value="5" />
 		<text>
-			"Eh, already? eager one aren't you. It's not that I didn't enjoy having
+			"Eh, already? eager one aren't you. It's not that I didn't enjoy
+			having
 			you in there, it's just can we do it a bit later?" she smiles
 			apologetically, blushing as she turns your offer down.
 		</text>
@@ -154,8 +171,10 @@
 		<condition evaluate="TIMEPASSED" operator="greaterthan"
 			value="5" />
 		<text>
-			"...mhmm, eager to get all tucked away inside my womb again hmm? Sure. Though
-			I think this practice is starting to be more for your benefit than
+			"...mhmm, eager to get all tucked away inside my womb again hmm?
+			Sure. Though
+			I think this practice is starting to be more for your
+			benefit than
 			mine" she teases with a blush.
 		</text>
 		<choice destination="unbirthB0" text="whatever you say 'mom'." />
@@ -185,9 +204,12 @@
 
 	<page ID="unbirthB1">
 		<text>
-			Suri's nethers tug gently around your shoulders and chest, drawing you into
-			her warmth inch by inch with more ease than the first time. The
-			lizard gasping, chirring and running a hand over her middle in
+			Suri's nethers tug gently around your shoulders and chest,
+			drawing you into
+			her warmth inch by inch with more ease than the first
+			time. The
+			lizard gasping, chirring and running a hand over her middle
+			in
 			delight as you begin to nestle into her warm insides. Her tail
 			curling up around you lovingly as she clenches and tugs inside your
 			middle, her own midriff stretching wonderfully as your upper body
@@ -201,9 +223,12 @@
 	<page ID="unbirthB2">
 		<effect type="passtime" value="75" />
 		<text>
-			"mhmm eager aren't we." remarks Suri and moans, eyes slipping closed as
-			she arches her back and tugs your legs inside. Your feet sliding up
-			between her thighs, and disappearing as she clenches her legs
+			"mhmm eager aren't we." remarks Suri and moans, eyes slipping
+			closed as
+			she arches her back and tugs your legs inside. Your feet
+			sliding up
+			between her thighs, and disappearing as she clenches her
+			legs
 			together forcing them up past her netherlips. The lizard's womb
 			encompassing you entirely yet again as you curl once more in her
 			wonderfully snug embrace. Suri laying there chirring in delight and
@@ -218,13 +243,20 @@
 
 		<special effect="marktime" />
 		<text>
-			The sight of Suri playing with her new friend again garners little more
-			than doting smiles. Not that you would notice, encompassed entirely
-			within the darkness of her womb you are asleep within her warmth in
-			minutes. Your last waking thought before pleasant dreams have their
-			say how nice the lizard is to heft you around like this and keep you
-			warm and safe inside her. Time passing with her curling up in her own
-			bed, protectively wrapped snuggling around the bulge of your form as
+			The sight of Suri playing with her new friend again garners
+			little more
+			than doting smiles. Not that you would notice, encompassed
+			entirely
+			within the darkness of her womb you are asleep within her
+			warmth in
+			minutes. Your last waking thought before pleasant dreams
+			have their
+			say how nice the lizard is to heft you around like this and
+			keep you
+			warm and safe inside her. Time passing with her curling up in
+			her own
+			bed, protectively wrapped snuggling around the bulge of your
+			form as
 			she sleeps.
 		</text>
 		<effect type="heal" value="1.00" />
@@ -343,7 +375,7 @@
 			<mutation part="scales" variable="covering" set="3" />
 
 		</special>
-		
+
 		<!--all but face and back scales, also grows tail -->
 		<text>
 			You're familiar by now with the sensation of waking up to changes
@@ -369,17 +401,28 @@
 
 	<page ID="unbirthBend">
 		<text>
-			You awaken sometime later, from the angle you can tell Suri is up and
-			about and push out to get her attention. You hear her giggle around
-			you and make her apologies to whatever muffled individuals she was
-			interacting with before walking back to the bushes where your stuff
-			was stashed. The naughty lizard patting her middle and then squatting
-			down, the familiar clench and release of her insides pressing around
-			you as gradually you're eased out into the world. Emerging headfirst
-			into the cool air once more as she gasps and groans above you,
-			squeezing you out inch by inch until your feet finally pop free of
-			her sex. Suri taking a few moments to lick over you with a smile
-			"Mhmm, hope you enjoyed. But I think that's enough inside time for
+			You awaken sometime later, from the angle you can tell Suri is
+			up and
+			about and push out to get her attention. You hear her giggle
+			around
+			you and make her apologies to whatever muffled individuals she
+			was
+			interacting with before walking back to the bushes where your
+			stuff
+			was stashed. The naughty lizard patting her middle and then
+			squatting
+			down, the familiar clench and release of her insides
+			pressing around
+			you as gradually you're eased out into the world.
+			Emerging headfirst
+			into the cool air once more as she gasps and groans
+			above you,
+			squeezing you out inch by inch until your feet finally pop
+			free of
+			her sex. Suri taking a few moments to lick over you with a
+			smile
+			"Mhmm, hope you enjoyed. But I think that's enough inside time
+			for
 			you don't you?"
 		</text>
 		<choice destination="end" text="for now yes, but perhaps later." />

@@ -1,62 +1,73 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="lixiB.png"/>
-<name>Lixi Breeder</name>
-<description> Lithe and diminutive at less than five foot tall the mostly female form is clad to a great degree in bonewhite chitinous exoskeleton. She bounds furtively from spot to spot her whiplike antenna waving and tasting the air, her movements almost hyper active in appearance. Thin vestigial insect wings buzzing, squashed insectile tail wobbling back and forth at her rear. As her attention turns to you she flexes her claws, sensing an opportunity, flecks of venom oozing forth to coat those modest fingerblades.
-</description>
-<rpg>
-<experiencevalue value="60"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="30"/>
-<stat stat="RESOLVE" value="30"/>
-<attribute attribute="KINETIC" value="4"/>
-<combatMove name="poison" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4">
-<missText count="2">
-<text>The lixi attempts to slash TARGET</text>
-<text>The lixi attempts to claw TARGET</text>
-</missText>
-<hitText count="2">
-<text>The lixi slashes TARGET for VALUE damage</text>
-<text>The lixi claws TARGET for VALUE damage</text>
-</hitText>
-<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<effectStatus probability="50">
-<probabilityModifier value="ENDURANCE"/>
-<statusTag tag="poison"/>
-<applyText>TARGET has been poisoned.</applyText>
-<statusDoT uid="50" icon="7" duration="120" numModifiers="1">
-<removeText> TARGET is no longer poisoned.</removeText>
-<affectText> TARGET is poisoned and loses VALUE health</affectText>
-<resist strength="15" tag="poison" test="ENDURANCE"/>
-<effect stat="HEALTH" modifier="4"/>
-</statusDoT>
-</effectStatus>
-</combatMove>
-<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
-<hitText count="1">
-<text></text>
-</hitText>
-<missText count="1">
-<text></text>
-</missText>
-<effectStatus probability="100">
-<applyText></applyText>
-<statusStealth uid="23" icon="5" duration="1000" numModifiers="2" strength="15" interval="60">
-</statusStealth>
-</effectStatus>
-</combatMove>
-</rpg>
+	<sprite value="lixiB.png" />
+	<name>Lixi Breeder</name>
+	<description> Lithe and diminutive at less than five foot tall the
+		mostly female form is clad to a great degree in bonewhite chitinous
+		exoskeleton. She bounds furtively from spot to spot her whiplike
+		antenna waving and tasting the air, her movements almost hyper active
+		in appearance. Thin vestigial insect wings buzzing, squashed insectile
+		tail wobbling back and forth at her rear. As her attention turns to
+		you she flexes her claws, sensing an opportunity, flecks of venom
+		oozing forth to coat those modest fingerblades.
+	</description>
+	<rpg>
+		<experiencevalue value="60" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="30" />
+		<attribute attribute="KINETIC" value="4" />
+		<combatMove name="poison" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4">
+			<missText count="2">
+				<text>The lixi attempts to slash TARGET</text>
+				<text>The lixi attempts to claw TARGET</text>
+			</missText>
+			<hitText count="2">
+				<text>The lixi slashes TARGET for VALUE damage</text>
+				<text>The lixi claws TARGET for VALUE damage</text>
+			</hitText>
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<effectStatus probability="50">
+				<probabilityModifier value="ENDURANCE" />
+				<statusTag tag="poison" />
+				<applyText>TARGET has been poisoned.</applyText>
+				<statusDoT uid="50" icon="7" duration="120" numModifiers="1">
+					<removeText> TARGET is no longer poisoned.</removeText>
+					<affectText> TARGET is poisoned and loses VALUE health</affectText>
+					<resist strength="15" tag="poison" test="ENDURANCE" />
+					<effect stat="HEALTH" modifier="4" />
+				</statusDoT>
+			</effectStatus>
+		</combatMove>
+		<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusStealth uid="23" icon="5" duration="1000"
+					numModifiers="2" strength="15" interval="60">
+				</statusStealth>
+			</effectStatus>
+		</combatMove>
+	</rpg>
 
-<respawn delay="2000"/>
-<defeated conversation="alpha_minoris_III/lixi_breeder/defeat" />
-<seduced conversation="alpha_minoris_III/lixi_breeder/defeat" />
-<victory conversation="alpha_minoris_III/lixi_breeder/victory" />
-<seducer conversation="alpha_minoris_III/lixi_breeder/victory" />
-<controller AI="poisoner"/>
-<faction value="monster"/>
+	<respawn delay="2000" />
+	<defeated conversation="alpha_minoris_III/lixi_breeder/defeat" />
+	<seduced conversation="alpha_minoris_III/lixi_breeder/defeat" />
+	<victory conversation="alpha_minoris_III/lixi_breeder/victory" />
+	<seducer conversation="alpha_minoris_III/lixi_breeder/victory" />
+	<controller AI="poisoner" />
+	<faction value="monster" />
 </NPC>

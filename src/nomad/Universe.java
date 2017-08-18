@@ -193,7 +193,7 @@ public class Universe extends GameManager
 			}
 		}
 		
-		isPlaying=true;
+
 	}
 	
 

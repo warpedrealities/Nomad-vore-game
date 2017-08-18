@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <perk name="space pilot">
-<requirement count="1">
-<req>PERKstarship operator</req>
-</requirement>
-<description> 
-You've learned how to handle better the rigours of ship handling. +2 to navigation
-</description>
-<modifier affects="NAVIGATON" value="2" type="ATTRIBUTE"/>
-<maxrank value="3"/>
+	<requirement count="1">
+		<req>PERKstarship operator</req>
+	</requirement>
+	<description>
+		You've learned how to handle better the rigours of ship handling. +2 to
+		navigation
+	</description>
+	<modifier affects="NAVIGATION" value="2" type="ATTRIBUTE" />
+	<maxrank value="3" />
 
 </perk>

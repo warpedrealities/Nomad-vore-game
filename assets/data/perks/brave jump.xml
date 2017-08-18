@@ -1,19 +1,23 @@
 <?xml version="1.0"?>
 <perk name="brave jump">
-<description> 
-A leap that carries you with foolhardy courage towards your foes, a reckless jump of 4 or so tiles of distance.
-</description>
-<move count="1">
-<combatmove name="brave jump" bonusAttribute="MELEE" timeCost="2" bonusToHit="8" cooldown="100" icon="11" pattern="RANGED"  actionCost="4" moveType="MOVEMENT"> 
-<effectMovement moveType="SELF_TOWARDS" distance="4" abilityMod="AGILITY"/>
-<missText count="1">
-<text>you fail to leap towards TARGET</text>
-</missText>
-<hitText count="1">
-<text>you leap towards TARGET</text>
-</hitText>
-</combatmove>
-</move>
-<maxrank value="1"/>
+	<description>
+		A leap that carries you with foolhardy courage towards your foes, a
+		reckless jump of 4 or so tiles of distance.
+	</description>
+	<move count="1">
+		<combatmove name="brave jump" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="8" cooldown="100" icon="11" pattern="RANGED"
+			actionCost="4" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>you fail to leap towards TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>you leap towards TARGET</text>
+			</hitText>
+		</combatmove>
+	</move>
+	<maxrank value="1" />
 
 </perk>

@@ -1,11 +1,25 @@
 <?xml version="1.0"?>
 <entry name="F: biowarfare">
 	<text>
-	You've studied several non verbal alien species and come to some disturbing conclusions as a result. These non verbal species share the traits of having atrophied sections of their brain dealing with language and abstract thought. Without these areas fully functional they're reduced to a form of savagery, unable to progress beyond primitive vocalizations and body language and without the ability to use tools. The condition is horrifying to contemplate.
-	LBREAK
-	However worse still is the implication of the widespread nature and commonality of the effects. This was clearly intentional, some form of virus has inflicted genetic damage on multiple species without regards to zoonotic barriers which could only be plausible if it was an engineered bio weapon. It's clear that this bio engineered plague ravaged at least this part of the galaxy, it may explain the presence of ruins and the lack of an organized interstellar civilization in the present despite hints of one in the past.
-	LBREAK
-	who unleashed the plague and why is unclear, but it may be possible to reverse its effects in some circumstances.
+		You've studied several non verbal alien species and come to some disturbing
+		conclusions as a result. These non verbal species share the traits of
+		having atrophied sections of their brain dealing with language and
+		abstract thought. Without these areas fully functional they're reduced
+		to a form of savagery, unable to progress beyond primitive
+		vocalizations and body language and without the ability to use tools.
+		The condition is horrifying to contemplate.
+		LBREAK
+		However worse still is the implication of the widespread nature and
+		commonality of the effects. This was clearly intentional, some form of
+		virus has inflicted genetic damage on multiple species without regards
+		to zoonotic barriers which could only be plausible if it was an
+		engineered bio weapon. It's clear that this bio engineered plague
+		ravaged at least this part of the galaxy, it may explain the presence
+		of ruins and the lack of an organized interstellar civilization in the
+		present despite hints of one in the past.
+		LBREAK
+		who unleashed the plague and why is unclear, but it may be possible to
+		reverse its effects in some circumstances.
 	</text>
 	<requirement name="lifeforms0" count="3" />
 

@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
 <ItemWeapon name="war axe" weight="4" value="600">
-<tagSet value="PM"/>
-<description>
-A one handed iron war axe. 2AP Does 4-8 kinetic damage. (P)
-</description>
-<modifier>
-</modifier>
-<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectDamage type="KINETIC" minValue="4" maxValue="8" modifier="STRENGTH"/>
-<missText count="1">
-<text>you fail to chop the TARGET .</text>
-</missText>
-<hitText count="1">
-<text>you chop TARGET for VALUE kinetic damage</text>
-</hitText>
-</combatMove>
+	<tagSet value="PM" />
+	<description>
+		A one handed iron war axe. 2AP Does 4-8 kinetic damage. (P)
+	</description>
+	<modifier>
+	</modifier>
+	<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE"
+		timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="4" maxValue="8"
+			modifier="STRENGTH" />
+		<missText count="1">
+			<text>you fail to chop the TARGET .</text>
+		</missText>
+		<hitText count="1">
+			<text>you chop TARGET for VALUE kinetic damage</text>
+		</hitText>
+	</combatMove>
 </ItemWeapon>

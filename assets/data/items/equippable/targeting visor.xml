@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="targeting visor" weight="3" slot="HEAD"
+	value="500">
+	<description>
+		The targeting visor is a fully wrap around piece of headgear which uses a
+		marvel of computing to a HUD and assistance with using ranged weapons
+		+2 to ranged
+	</description>
+	<modifier>
+		<ranged value="2" />
+	</modifier>
+</ItemEquip>

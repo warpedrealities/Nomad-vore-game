@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
 <start>
-<system value="Alpha Minoris"/>
-<world value="Alpha Minoris IIA"/>
-<zone value="escapepod"/>
-<position x="2" y="2"/>
-<item value="Laser Pistol"/>
-<item value="Knife"/>
-<item value="jumpsuit"/>
-<item value="medkit"/>
-<item value="space meal"/>
+	<system value="Alpha Minoris" />
+	<world value="Alpha Minoris IIA" />
+	<zone value="escapepod" />
+	<position x="2" y="2" />
+	<item value="Laser Pistol" />
+	<item value="Knife" />
+	<item value="jumpsuit" />
+	<item value="medkit" />
+	<item value="space meal" />
 
-<appearance>
-<bodypart partname="body">
-<partvalue variablename="height" value="60"/>
-</bodypart>
-<bodypart partname="hair">
+	<appearance>
+		<bodypart partname="body">
+			<partvalue variablename="height" value="60" />
+		</bodypart>
+		<bodypart partname="hair">
 
-</bodypart>
-<bodypart partname="skin">
-<partvalue variablename="colour" value="1"/>
-</bodypart>
-<bodypart partname="vagina">
-</bodypart>
-</appearance>
+		</bodypart>
+		<bodypart partname="skin">
+			<partvalue variablename="colour" value="1" />
+		</bodypart>
+		<bodypart partname="vagina">
+		</bodypart>
+	</appearance>
 </start>

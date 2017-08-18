@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<trap sprite="10" >
-<discoverSprite value="11"/>
-<DC value="10"/>
-<effect type="COMBAT">
-<damage amount="6" type="SHOCK">
-TARGET suffers VALUE shock damage as the trap discharges.
-</damage>
-</effect>
-<description>
-A shock trap
-</description>
+<trap sprite="10">
+	<discoverSprite value="11" />
+	<DC value="10" />
+	<effect type="COMBAT">
+		<damage amount="6" type="SHOCK">
+			TARGET suffers VALUE shock damage as the trap discharges.
+		</damage>
+	</effect>
+	<description>
+		A shock trap
+	</description>
 </trap>

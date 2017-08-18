@@ -2,74 +2,166 @@
 <Conversation>
 	<page ID="start">
 		<preference fetish="ferals" />
-		<preference fetish="oralvore" />	
+		<preference fetish="oralvore" />
 		<text>
-		The Formic skitters up to you, mincing along on its six blade like legs afore lowering its head down towards you. Its antenna sweeping forwards to fondle and perhaps taste over your legs afore its mandibles part and the throat beyond encompasses your feet. The small creature seemingly having no problem with the size of its meal as it uses its mandibles to start tugging your calves past its jaws as if using a pair of tiny hands. The insect scuttles forwards as you feel its underbelly carapace pressing around your feet before yielding and parting, floating on taut flesh as your feet plunge into a sacklike belly that seems to run continously through its segments. Your feet plunging even deeper as your knees are engulfed.
+			The Formic skitters up to you, mincing along on its six blade like legs
+			afore lowering its head down towards you. Its antenna sweeping
+			forwards to fondle and perhaps taste over your legs afore its
+			mandibles part and the throat beyond encompasses your feet. The small
+			creature seemingly having no problem with the size of its meal as it
+			uses its mandibles to start tugging your calves past its jaws as if
+			using a pair of tiny hands. The insect scuttles forwards as you feel
+			its underbelly carapace pressing around your feet before yielding and
+			parting, floating on taut flesh as your feet plunge into a sacklike
+			belly that seems to run continously through its segments. Your feet
+			plunging even deeper as your knees are engulfed.
 		</text>
-		<choice destination="oralvore0" text="bug food"/>
+		<choice destination="oralvore0" text="bug food" />
 	</page>
 
 	<page ID="oralvore0">
-	<text>
-	You try to wriggle away but only succeed in dragging the bug skittering along the ground after you as you move, its throat and mandibles not even relinquishing an inch of your body. It seems there's naught you can do to stop this voracious bug from encompassing more of your defeated form, grasping its mouth to try and pull it off only results in painful cuts from its mandibles. The insect forces itself forwards vigorously in the lul as you martial your strength, forcing more of your legs into its belly and only pausing where it reaches your ass. The creature's tight stomach sack stretches around your legs as you're forced to bend your knees inside the creature. You wonder for a few moments whether it'll give up here, surely being unable to lift up the rump of someone so much larger than itself so it can encompass that...
-	</text>
-	<choice destination="oralvore1" text="wait, ants can lift up many times their own weight?"/>
+		<text>
+			You try to wriggle away but only succeed in dragging the bug skittering
+			along the ground after you as you move, its throat and mandibles not
+			even relinquishing an inch of your body. It seems there's naught you
+			can do to stop this voracious bug from encompassing more of your
+			defeated form, grasping its mouth to try and pull it off only results
+			in painful cuts from its mandibles. The insect forces itself forwards
+			vigorously in the lul as you martial your strength, forcing more of
+			your legs into its belly and only pausing where it reaches your ass.
+			The creature's tight stomach sack stretches around your legs as
+			you're forced to bend your knees inside the creature. You wonder for
+			a few moments whether it'll give up here, surely being unable to lift
+			up the rump of someone so much larger than itself so it can encompass
+			that...
+		</text>
+		<choice destination="oralvore1"
+			text="wait, ants can lift up many times their own weight?" />
 	</page>
-	
+
 	<page ID="oralvore1">
-	<text>
-	And alien ants turn out to be the same, those six legs shoving off the rocks and dirt proving adept at levering your ass up off the ground. The bug performing another forward shove and tugging your hips inwards as it does so, engulfing your rump and squeezing your legs still more uncomfortably. That stomach sack resting against the ground now, extending beyond even the ability of those long legs to span it rests now on the shape of your legs as it pulls your upper body through its circular maw using its mandibles. Least the bug is light, but it's still eating you alive.
-	</text>
-	<choice destination="oralvore2" text="unreasonable bug"/>
+		<text>
+			And alien ants turn out to be the same, those six legs shoving off the
+			rocks and dirt proving adept at levering your ass up off the ground.
+			The bug performing another forward shove and tugging your hips
+			inwards as it does so, engulfing your rump and squeezing your legs
+			still more uncomfortably. That stomach sack resting against the
+			ground now, extending beyond even the ability of those long legs to
+			span it rests now on the shape of your legs as it pulls your upper
+			body through its circular maw using its mandibles. Least the bug is
+			light, but it's still eating you alive.
+		</text>
+		<choice destination="oralvore2" text="unreasonable bug" />
 	</page>
-	
+
 	<page ID="oralvore2">
-	<text>
-	You can't reason with it, dissuade it or even change its mind really. The insect isn't just non verbal and bereft of language skills but almost dumb as a rock, not that this has stopped it besting you. Such a thought is hardly a comfort as your body steadily gets packed away in a tight uncomfortable mass underneath the insect, held tight within the stretched taut sack as it swallows up your head and arms...least with the critter hardly able to reach the floor it's, no you're still far more inconvenienced than it is, but at least unlike some predators you've ended up in this one IS inconvenienced.
-	</text>
-	<choice destination="oralvoreStruggle" text="get out of here"/>
-	<choice destination="oralvoreSubmit" text="hell with it, let it digest you"/>
+		<text>
+			You can't reason with it, dissuade it or even change its mind really.
+			The insect isn't just non verbal and bereft of language skills but
+			almost dumb as a rock, not that this has stopped it besting you. Such
+			a thought is hardly a comfort as your body steadily gets packed away
+			in a tight uncomfortable mass underneath the insect, held tight
+			within the stretched taut sack as it swallows up your head and
+			arms...least with the critter hardly able to reach the floor it's, no
+			you're still far more inconvenienced than it is, but at least unlike
+			some predators you've ended up in this one IS inconvenienced.
+		</text>
+		<choice destination="oralvoreStruggle" text="get out of here" />
+		<choice destination="oralvoreSubmit" text="hell with it, let it digest you" />
 	</page>
-	
+
 	<check ID="oralvoreStruggle">
-	<test what="STRUGGLE" DC="12" />
-	<outcome destination="oralvoreEscape" />
-	<outcome destination="oralvoreDigest" />
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="oralvoreEscape" />
+		<outcome destination="oralvoreDigest" />
 	</check>
-	
+
 	<page ID="oralvoreEscape">
-	<text>
-	You manage with difficulty to start shifting your arms towards the throat of the bug. The tight stretched sack that shows your every contour makes it extremely tricky to move, getting out of here is going to be tricky..though at least there's little musculature to hold you down, and it's for th at reason you manage to reach out up the insect's throat and grab ahold of the safe lower parts of its mandibles, not cut and unable to be cut by the sharper parts of its jaws as you start to pull yourself out of the vexxing insect. It's slow going, you find it hard to push off against the thin sack lining of its stomach to any degree so have to use the leverage of your grasp on its jaws, but with time and a persevering will not to be digested you gradually draw yourself out of the insect. The bug seems to be busy contracting its stomach sack so won't be coming after you that quickly, but they're seldom alone and so you should probably worry about its fellows.
-	</text>
-	<effect type="heal" value="0.1" />
-	<effect type="stunnpc" value="10" />
-	<choice destination="end" text="get clear" />	
+		<text>
+			You manage with difficulty to start shifting your arms towards the
+			throat of the bug. The tight stretched sack that shows your every
+			contour makes it extremely tricky to move, getting out of here is
+			going to be tricky..though at least there's little musculature to
+			hold you down, and it's for th at reason you manage to reach out up
+			the insect's throat and grab ahold of the safe lower parts of its
+			mandibles, not cut and unable to be cut by the sharper parts of its
+			jaws as you start to pull yourself out of the vexxing insect. It's
+			slow going, you find it hard to push off against the thin sack lining
+			of its stomach to any degree so have to use the leverage of your
+			grasp on its jaws, but with time and a persevering will not to be
+			digested you gradually draw yourself out of the insect. The bug seems
+			to be busy contracting its stomach sack so won't be coming after you
+			that quickly, but they're seldom alone and so you should probably
+			worry about its fellows.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
 	</page>
-	
+
 	<page ID="oralvoreDigest">
-	<text>
-	You manage with difficulty to start shifting your arms towards the throat of the bug. The tight stretched sack that shows your every contour makes it extremely tricky to move, getting out of here is going to be tricky. You work your arms up its throat only to feel the insect swallow, tugging you back down. You try to push off against the inside of its belly but the thin flesh is too slippery and yielding for any firm purchase. Despite this you persevere, shoving your hands up only to get jabbed by its insectoid mandibles and swallowed back down as you flinch. Your efforts proceeding like this for a time until you're utterly tired out and unable to continue, despite in every way being that which should not have bested you this insect is going to digest you and there's nothing you can do about that.
-	</text>
-	<choice destination="oralvoreDigestGO" text="...a most terrible fate"/>
+		<text>
+			You manage with difficulty to start shifting your arms towards the
+			throat of the bug. The tight stretched sack that shows your every
+			contour makes it extremely tricky to move, getting out of here is
+			going to be tricky. You work your arms up its throat only to feel the
+			insect swallow, tugging you back down. You try to push off against
+			the inside of its belly but the thin flesh is too slippery and
+			yielding for any firm purchase. Despite this you persevere, shoving
+			your hands up only to get jabbed by its insectoid mandibles and
+			swallowed back down as you flinch. Your efforts proceeding like this
+			for a time until you're utterly tired out and unable to continue,
+			despite in every way being that which should not have bested you this
+			insect is going to digest you and there's nothing you can do about
+			that.
+		</text>
+		<choice destination="oralvoreDigestGO" text="...a most terrible fate" />
 	</page>
-	
+
 	<gameover ID="oralvoreDigestGO">
-	<text>
-	You're trapped inside the heinously tight confines of the insectoids belly, enzymes oozing over your body to start breaking you down. Bereft of kneading stomach muscles to ease and hurry along the process your stay in the insects is drawn out to a torturously long degree, gradually melting over a seeming small eternity as enzymes seep into your flesh and break it down layer by layer. The formic resting in a dull witted torpor as your form liquidates, its belly round out into a smooth oval under surface tension. In still more hours it absorbs your form, that sack deflating as groblets of nutritious buttery wax ooze out of the insect. The other formics sharing in the products of your body as you're converted into nutrition for this and many other formics.
-	</text>
+		<text>
+			You're trapped inside the heinously tight confines of the insectoids belly,
+			enzymes oozing over your body to start breaking you down. Bereft of
+			kneading stomach muscles to ease and hurry along the process your
+			stay in the insects is drawn out to a torturously long degree,
+			gradually melting over a seeming small eternity as enzymes seep into
+			your flesh and break it down layer by layer. The formic resting in a
+			dull witted torpor as your form liquidates, its belly round out into
+			a smooth oval under surface tension. In still more hours it absorbs
+			your form, that sack deflating as groblets of nutritious buttery wax
+			ooze out of the insect. The other formics sharing in the products of
+			your body as you're converted into nutrition for this and many other
+			formics.
+		</text>
 	</gameover>
-	
+
 	<page ID="oralvoreSubmit">
-	<text>
-	You can hardly move inside the insect's gut, but you find yourself resigned to your fate. It'd be next to impossible to escape, and maybe part of you is curious if this insect is capable of digesting meals your size...everything else you've encountered seems able to. And as you feel the enzymes soaking into your flesh you suspect this'll be no different, even if the insect has no stomach muscles with which to knead and squeeze over you to help you get digested.
-	</text>
-	<choice destination="oralvoreSubmitGO" text="get digested"/>
+		<text>
+			You can hardly move inside the insect's gut, but you find yourself
+			resigned to your fate. It'd be next to impossible to escape, and
+			maybe part of you is curious if this insect is capable of digesting
+			meals your size...everything else you've encountered seems able to.
+			And as you feel the enzymes soaking into your flesh you suspect
+			this'll be no different, even if the insect has no stomach muscles
+			with which to knead and squeeze over you to help you get digested.
+		</text>
+		<choice destination="oralvoreSubmitGO" text="get digested" />
 	</page>
-	
+
 	<gameover ID="oralvoreSubmitGO">
-	<text>
-	Your stay in the taut sack of a stomach the formic has is long and drawn out as the enzymes soak into your flesh without the aid of stomach muscles to coax you along. But gradually it takes its toll on you. Melting you away over a seeming small eternity as enzymes seep into your flesh and break it down layer by layer. The formic resting in a dull witted torpor as your form liquidates, its belly round out into a smooth oval under surface tension. In still more hours it absorbs your form, that sack deflating as groblets of nutritious buttery wax ooze out of the insect. The other formics sharing in the products of your body as you're converted into nutrition for this and many other formics.
-	</text>
+		<text>
+			Your stay in the taut sack of a stomach the formic has is long and drawn
+			out as the enzymes soak into your flesh without the aid of stomach
+			muscles to coax you along. But gradually it takes its toll on you.
+			Melting you away over a seeming small eternity as enzymes seep into
+			your flesh and break it down layer by layer. The formic resting in a
+			dull witted torpor as your form liquidates, its belly round out into
+			a smooth oval under surface tension. In still more hours it absorbs
+			your form, that sack deflating as groblets of nutritious buttery wax
+			ooze out of the insect. The other formics sharing in the products of
+			your body as you're converted into nutrition for this and many other
+			formics.
+		</text>
 	</gameover>
-	
+
 </Conversation>

@@ -2,341 +2,575 @@
 <Conversation>
 
 	<page ID="start">
-		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten" value="3" />
-		<!--digested once and talked about it-->
+		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
+			value="3" />
+		<!--digested once and talked about it -->
 		<text>
-		"Greetings immortal, what can I do for you today?" she says pausing her exercises to turn and face you once more
+			"Greetings immortal, what can I do for you today?" she says pausing her
+			exercises to turn and face you once more
 		</text>
-		<choice destination="end" text="nothing, but I just wanted to say hi"/>
+		<choice destination="end" text="nothing, but I just wanted to say hi" />
 	</page>
 
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
 			value="2" />
-		<!--digested once-->
+		<!--digested once -->
 		<text>
-		Awari notices your approach and pauses, she seems to quickly rally from her confusion though "So, I see you have little need of my help if you can so easily return from digestion."
+			Awari notices your approach and pauses, she seems to quickly rally from
+			her confusion though "So, I see you have little need of my help if
+			you can so easily return from digestion."
 		</text>
-		<choice destination="stride" text="...you're talking this remarkably in stride"/>
+		<choice destination="stride"
+			text="...you're talking this remarkably in stride" />
 	</page>
-	
+
 	<page ID="stride">
-	<effect type="setlocalflag" flag="eaten" value="3" />		
-	<text>
-	"Self evidently you have returned from digestion. And therefore you have little to fear from being digested. My being dramatic about such things will change little about these two truths."
-	</text>
-	<choice destination="end" text="I suppose you're right, farewell"/>
+		<effect type="setlocalflag" flag="eaten" value="3" />
+		<text>
+			"Self evidently you have returned from digestion. And therefore you have
+			little to fear from being digested. My being dramatic about such
+			things will change little about these two truths."
+		</text>
+		<choice destination="end" text="I suppose you're right, farewell" />
 	</page>
-	
+
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="challenge"
 			value="2" />
-	<!--received combat training-->
-	<text>
-	"Greetings warrior, what can I do for you today?" she says pausing her exercises to turn and face you once more.
-	</text>
-	<choice destination="offer0" text="Well I have a confession"/>	
-	<choice destination="end" text="nothing, but I just wanted to say hi"/>
+		<!--received combat training -->
+		<text>
+			"Greetings warrior, what can I do for you today?" she says pausing her
+			exercises to turn and face you once more.
+		</text>
+		<choice destination="offer0" text="Well I have a confession" />
+		<choice destination="end" text="nothing, but I just wanted to say hi" />
 	</page>
 
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
 			value="1" />
-		<!--eaten once-->
+		<!--eaten once -->
 		<text>
-		"Greetings warrior, what can I do for you today?" she says pausing her exercises to turn and face you once more.
+			"Greetings warrior, what can I do for you today?" she says pausing her
+			exercises to turn and face you once more.
 		</text>
-		<choice destination="offer0" text="Well I have a confession"/>
-		<choice destination="end" text="nothing, but I just wanted to say hi"/>
+		<choice destination="offer0" text="Well I have a confession" />
+		<choice destination="end" text="nothing, but I just wanted to say hi" />
 	</page>
-	
+
 	<page ID="offer0">
-	<text>
-	"I am hardly the sort who can provide council on such matters...unless this confession pertains to me in particular." Says Awari with a headtilt, but she listens expectantly. Though your expression clearly intrigues her as to what you're about to admit.	
-	</text>
-	<choice destination="offer1" text="Well, i dont think I'm warrior material"/>
-	<choice destination="end" text="actually you're right, nevermind"/>
+		<text>
+			"I am hardly the sort who can provide council on such matters...unless
+			this confession pertains to me in particular." Says Awari with a
+			headtilt, but she listens expectantly. Though your expression clearly
+			intrigues her as to what you're about to admit.
+		</text>
+		<choice destination="offer1" text="Well, i dont think I'm warrior material" />
+		<choice destination="end" text="actually you're right, nevermind" />
 	</page>
 
 	<page ID="offer1">
-	<text>
-	"Really? you have changed your mind." she asks and then tenses as you unexpectedly step close to her "what manner of 'material' do you now believe yourself to be?"
-	</text>
-	<choice destination="offer2" text="why, ass padding material of course *grope"/>
-	<choice destination="end" text="you're right it was foolish of me to doubt myself"/>
+		<text>
+			"Really? you have changed your mind." she asks and then tenses as you
+			unexpectedly step close to her "what manner of 'material' do you now
+			believe yourself to be?"
+		</text>
+		<choice destination="offer2"
+			text="why, ass padding material of course *grope" />
+		<choice destination="end"
+			text="you're right it was foolish of me to doubt myself" />
 	</page>
-	
+
 	<page ID="offer2">
-	<text>
-	Awari's eyes widen in slight surprise, but she clearly expected this from your teasing. She doesn't push you away when you put your hands on her ass and grope her rump meaningfully "mhmm, I see. well. I am here to help people meet their full potential...do you want my, help?" she says moistening her lips faintly.
-	</text>
-	<choice destination="offerOral0" text="mhmm yes,i'll look great on you"/>
-	<choice destination="end" text="Not yet, it's a big step for me to be fat on your ass after all"/>
+		<text>
+			Awari's eyes widen in slight surprise, but she clearly expected this from
+			your teasing. She doesn't push you away when you put your hands on
+			her ass and grope her rump meaningfully "mhmm, I see. well. I am here
+			to help people meet their full potential...do you want my, help?" she
+			says moistening her lips faintly.
+		</text>
+		<choice destination="offerOral0" text="mhmm yes,i'll look great on you" />
+		<choice destination="end"
+			text="Not yet, it's a big step for me to be fat on your ass after all" />
 	</page>
-	
+
 	<page ID="offerOral0">
-	<text>
-	"You're a hopeless prey deviant. and you were destined to end up nourishing someone...it's really best for all concerned that it's me" says Awari
-	<conditional><assertion evaluate="slothasitem" slot="2" /> as you get undressed, your clothing wouldn't make good assfat after all</conditional>. Her attitude is more teasing than rebuking as she categorizes you. Besides, being called a prey deviant by Awari is thrilling in its own way. You can see her openly sizing you up as a meal, licking her lips, stepping close to let her hands stray over your shape to take stock of your sexy digestable body.
-	</text>
-	<choice destination="offerOral1" text="i'm ready when you are Awari"/>
+		<text>
+			"You're a hopeless prey deviant. and you were destined to end up
+			nourishing someone...it's really best for all concerned that it's me"
+			says Awari
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				as you get undressed, your clothing wouldn't make good assfat after
+				all
+			</conditional>
+			. Her attitude is more teasing than rebuking as she categorizes you.
+			Besides, being called a prey deviant by Awari is thrilling in its own
+			way. You can see her openly sizing you up as a meal, licking her
+			lips, stepping close to let her hands stray over your shape to take
+			stock of your sexy digestable body.
+		</text>
+		<choice destination="offerOral1" text="i'm ready when you are Awari" />
 	</page>
-	
+
 	<page ID="offerOral1">
-	<text>
-	Awari chuckles "Long before I suspect." she says and then rests her hands on your ass as she presses her lips to your head. The green elf letting out a mhmm as her jaws begin to part and stretch over your scalp and slide down over your face. The predatory warrior's tongue roving shamelessly over your cheeks, chin and then neck as she takes the first swallow and begins gobbling you down whole and alive. Her hands on your ass helping to lift and angle you into her wonderfully warm and inviting mouth.
-	</text>
-	<choice destination="offerOral2" text="such a sexy predator you've given yourself to"/>
+		<text>
+			Awari chuckles "Long before I suspect." she says and then rests her hands
+			on your ass as she presses her lips to your head. The green elf
+			letting out a mhmm as her jaws begin to part and stretch over your
+			scalp and slide down over your face. The predatory warrior's tongue
+			roving shamelessly over your cheeks, chin and then neck as she takes
+			the first swallow and begins gobbling you down whole and alive. Her
+			hands on your ass helping to lift and angle you into her wonderfully
+			warm and inviting mouth.
+		</text>
+		<choice destination="offerOral2"
+			text="such a sexy predator you've given yourself to" />
 	</page>
-	
+
 	<page ID="offerOral2">
-	<text>
-	Awari is certainly appreciative of your flavour judging by the sounds rumbling around your head as you slide down her throat. The elf kneading and lifting up your ass without difficulty, your toes barely touching the floor as she gobbles up more of you. Her tongue lapping over your chest, pausing to savour your softness and flavours as your head gets acquainted with the inside of her belly. Her trim middle bulging out with the shape of your face as you stretch her tummy and hear it let out a welcoming eager gurgle that can only make you thrilled at how happy her belly is to accept you.
-	</text>
-	<choice destination="offerOral3" text="$hurry up and eat all of me Awari"/>
+		<text>
+			Awari is certainly appreciative of your flavour judging by the sounds
+			rumbling around your head as you slide down her throat. The elf
+			kneading and lifting up your ass without difficulty, your toes barely
+			touching the floor as she gobbles up more of you. Her tongue lapping
+			over your chest, pausing to savour your softness and flavours as your
+			head gets acquainted with the inside of her belly. Her trim middle
+			bulging out with the shape of your face as you stretch her tummy and
+			hear it let out a welcoming eager gurgle that can only make you
+			thrilled at how happy her belly is to accept you.
+		</text>
+		<choice destination="offerOral3" text="$hurry up and eat all of me Awari" />
 	</page>
-	
+
 	<page ID="offerOral3">
-	<text>
-	Awari seems to hmm disapprovingly at the eager preyslutty demands from her food and slows up her swallows, as if showing you that even if you offered prey has no place bossing predators around. Her lingering savouring gentle swallows slow and drawn out as she works over your belly, her hands kneading into your ass as she gets closer and closer to your hips. You wave your legs around playfully as she lifts them into the air and finally swallows your ass, packing more of you away to curl up in her now nicely stretching and distending belly. Won't be long until she's made a meal of you.
-	</text>
-	<choice destination="offerOral4" text="wait for her to polish you off"/>
+		<text>
+			Awari seems to hmm disapprovingly at the eager preyslutty demands from her
+			food and slows up her swallows, as if showing you that even if you
+			offered prey has no place bossing predators around. Her lingering
+			savouring gentle swallows slow and drawn out as she works over your
+			belly, her hands kneading into your ass as she gets closer and closer
+			to your hips. You wave your legs around playfully as she lifts them
+			into the air and finally swallows your ass, packing more of you away
+			to curl up in her now nicely stretching and distending belly. Won't
+			be long until she's made a meal of you.
+		</text>
+		<choice destination="offerOral4" text="wait for her to polish you off" />
 	</page>
-	
+
 	<page ID="offerOral4">
-	<text>
-	Her throat ripples around your thighs as she reaches up to grasp your feet, placing her palms flat against your soles as she engulfs your calves. A final push and swallow sends your feet sliding past her lips and then down her throat as she snaps them closed. Awari looking down at her domed out and bulgey green belly and letting out a mhmm, licking your flavour off her lips contemplatively and then using both hands to support her gut as you curl up within her. The elf's innards already gurgling around you in a way that speaks of impending digestion "well, you were certainly a delicious preyslut"
-	</text>
-	<effect type="setlocalflag" flag="eaten" value="2" />
-	<choice destination="offerOralGO" text="$preyslut?"/>
+		<text>
+			Her throat ripples around your thighs as she reaches up to grasp your
+			feet, placing her palms flat against your soles as she engulfs your
+			calves. A final push and swallow sends your feet sliding past her
+			lips and then down her throat as she snaps them closed. Awari looking
+			down at her domed out and bulgey green belly and letting out a mhmm,
+			licking your flavour off her lips contemplatively and then using both
+			hands to support her gut as you curl up within her. The elf's innards
+			already gurgling around you in a way that speaks of impending
+			digestion "well, you were certainly a delicious preyslut"
+		</text>
+		<effect type="setlocalflag" flag="eaten" value="2" />
+		<choice destination="offerOralGO" text="$preyslut?" />
 	</page>
-	
+
 	<gameover ID="offerOralGO">
-	<text>
-	"Shush, food doesn't get to have opinions, should of thought of that before you decided to be mine." she says at your query about her moniker for you. As you wriggle about to get into a good position for digestion she hmmphs "Now, good food should be quiet." she says somewhat dismissively and gets comfortable. The elf chiding any noises you make except inarticulate moans as she digests you away, time passing and her gut softening as you're melted away by your sexy, if somewhat demeaning predator. In an hour there's nothing solid remaining of you, in another 1 or 2 even that is gone. Your form utterly converted into padding for her curves and fuel for her vigorous exercise regimen.
-	</text>
+		<text>
+			"Shush, food doesn't get to have opinions, should of thought of that before
+			you decided to be mine." she says at your query about her moniker for
+			you. As you wriggle about to get into a good position for digestion
+			she hmmphs "Now, good food should be quiet." she says somewhat
+			dismissively and gets comfortable. The elf chiding any noises you
+			make except inarticulate moans as she digests you away, time passing
+			and her gut softening as you're melted away by your sexy, if somewhat
+			demeaning predator. In an hour there's nothing solid remaining of
+			you, in another 1 or 2 even that is gone. Your form utterly converted
+			into padding for her curves and fuel for her vigorous exercise
+			regimen.
+		</text>
 	</gameover>
-	
+
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
 			value="1" />
-		<!--subsequent meeting-->
+		<!--subsequent meeting -->
 		<text>
-		"Before me again are you? Very well, speak your piece." she says pausing her exercises to turn and face you once more.
+			"Before me again are you? Very well, speak your piece." she says pausing her
+			exercises to turn and face you once more.
 		</text>
 		<choice destination="challenge" text="I'm ready for your challenge">
-				<condition operator="equals" evaluate="LOCALFLAG" flag="challenge"
-			value="1" />
-		</choice>		
-		<choice destination="tone" text="you have quite a dismissive tone">
-				<condition operator="equals" evaluate="LOCALFLAG" flag="challenge"
-			value="0" />
+			<condition operator="equals" evaluate="LOCALFLAG" flag="challenge"
+				value="1" />
 		</choice>
-		<choice destination="end" text="I'll quit bothering you"/>		
+		<choice destination="tone" text="you have quite a dismissive tone">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="challenge"
+				value="0" />
+		</choice>
+		<choice destination="end" text="I'll quit bothering you" />
 	</page>
 
-	
+
 	<page ID="challenge">
-	<text>
-	Awari chuckles and tosses the staff to one side as she licks her lips and approaches<conditional><assertion evaluate="slothasitem" slot="2" /> her meaningful glance having you quickly undressing</conditional>. Her stalk towards you is remarkably predatory in a way that arouses trepidation, or perhaps...desire. Her hands trace over your body and she mhmms "no backing out now, you've gotten me riled up." she says and licks you on the nose gently.
-	</text>
-	<choice destination="challenge0" text="so how is this supposed to go again?"/>
-	<choice destination="challenge1" text="i'm not backing out...get started"/>
-	</page>	
-	
+		<text>
+			Awari chuckles and tosses the staff to one side as she licks her lips
+			and approaches
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				her meaningful glance having you quickly undressing
+			</conditional>
+			. Her stalk towards you is remarkably predatory in a way that arouses
+			trepidation, or perhaps...desire. Her hands trace over your body and
+			she mhmms "no backing out now, you've gotten me riled up." she says
+			and licks you on the nose gently.
+		</text>
+		<choice destination="challenge0" text="so how is this supposed to go again?" />
+		<choice destination="challenge1" text="i'm not backing out...get started" />
+	</page>
+
 	<page ID="challenge0">
-	<text>
-	"Forgot so quickly. Well then, let me remind you. I'm going to swallow you up, much like most of the things you'll find out in the world will. And then you're going to prove you're a warrior and not just food by escaping my belly before I can digest you." she says, pressing close enough against you that you can feel her bared belly gurgle hungrily for you as she explains so matter of factly.
-	</text>
-	<choice destination="challenge0Query" text="couldn't you just do this without the risk of digestion?"/>
-	<choice destination="challenge1" text="okay..get started"/>
+		<text>
+			"Forgot so quickly. Well then, let me remind you. I'm going to swallow you
+			up, much like most of the things you'll find out in the world will.
+			And then you're going to prove you're a warrior and not just food by
+			escaping my belly before I can digest you." she says, pressing close
+			enough against you that you can feel her bared belly gurgle hungrily
+			for you as she explains so matter of factly.
+		</text>
+		<choice destination="challenge0Query"
+			text="couldn't you just do this without the risk of digestion?" />
+		<choice destination="challenge1" text="okay..get started" />
 	</page>
-	
+
 	<page ID="challenge0Query">
-	<text>
-	"Anyone can escape a belly given enough time. And you'd hardly be properly motivated without a little realism." she says with a smirk and then cants her head to the side "and besides, there is a self destructive impulse in many to let themselves get digested by a sexy predator who has them. You need to prove you're strong enough to resist that."
-	</text>
-	<choice destination="challenge1" text="I see...okay, lets get started"/>
+		<text>
+			"Anyone can escape a belly given enough time. And you'd hardly be properly
+			motivated without a little realism." she says with a smirk and then
+			cants her head to the side "and besides, there is a self destructive
+			impulse in many to let themselves get digested by a sexy predator who
+			has them. You need to prove you're strong enough to resist that."
+		</text>
+		<choice destination="challenge1" text="I see...okay, lets get started" />
 	</page>
-	
+
 	<page ID="challenge1">
-	<text>
-	"Excellent. So good of you to give me, permission." she says in an amused tone as she presses her lips against your face, her hot breath and moist saliva wafting around your features. Awari now stretching her jaws around your head and wraps her arms possessively around your body. The emerald warrior woman starting to eat you alive as you agreed to be, her hands sliding further down as she begins to take her first powerful and practiced swallows to engulf more of your frame.
-	</text>
-	<effect type="setlocalflag" flag="challenge" value="3" />	
-	<choice destination="challenge2" text="agreed to this, let yourself to consumed"/>
+		<text>
+			"Excellent. So good of you to give me, permission." she says in an amused tone
+			as she presses her lips against your face, her hot breath and moist
+			saliva wafting around your features. Awari now stretching her jaws
+			around your head and wraps her arms possessively around your body.
+			The emerald warrior woman starting to eat you alive as you agreed to
+			be, her hands sliding further down as she begins to take her first
+			powerful and practiced swallows to engulf more of your frame.
+		</text>
+		<effect type="setlocalflag" flag="challenge" value="3" />
+		<choice destination="challenge2" text="agreed to this, let yourself to consumed" />
 	</page>
-	
+
 	<page ID="challenge2">
-	<text>
-	Awari continues swallowing you up and lifting your feet up off the floor as she does so. Her throat rippling to tug you deeper and deeper. Very soon your head is pushing through the bottom of her throat and out into the steaming depths of her belly. The strength of her throat and the snug pressure of her belly around the shape of your head and shoulders stretching her out makes you consider the difficulty in getting out of her belly, but you did agree to this and it's not like other predators will go easy on you. And it didn't take her long at all to reach your waist as she gobbles you down.
-	</text>
-	<choice destination="challenge3" text="soon to be entirely swallowed"/>
+		<text>
+			Awari continues swallowing you up and lifting your feet up off the floor
+			as she does so. Her throat rippling to tug you deeper and deeper.
+			Very soon your head is pushing through the bottom of her throat and
+			out into the steaming depths of her belly. The strength of her throat
+			and the snug pressure of her belly around the shape of your head and
+			shoulders stretching her out makes you consider the difficulty in
+			getting out of her belly, but you did agree to this and it's not like
+			other predators will go easy on you. And it didn't take her long at
+			all to reach your waist as she gobbles you down.
+		</text>
+		<choice destination="challenge3" text="soon to be entirely swallowed" />
 	</page>
-	
+
 	<page ID="challenge3">
-	<text>
-	The emerald elf rapidly sets about polishing you off, tipping her head back and angling your legs into the air above her. Your waving feet getting nearer and nearer to her mouth as she greedily swallows and works your thighs, then calves, then finally ankles and feet past her lips. Her jaws snapping shut with a click and satisfied mhmm as she sends you down into her belly with a final swallow. Your entire form now cradled in her gut, curled up basking in the warmth and sexy possessive snugness of her belly "mhmm you were delicious, but we'll see whether you're warrior or food." she says and then gets comfortable on a bench "now, struggle, show me what you've got. Escape my insides...or.." she says and lets her gurgling belly pressing around you continue her statement.
-	</text>
-	<choice destination="challengeStruggle" text="*try to escape*"/>
-	<choice destination="challengeSubmit" text="no I..don't want to get out of here, digest me you sexy predator"/>
+		<text>
+			The emerald elf rapidly sets about polishing you off, tipping her head
+			back and angling your legs into the air above her. Your waving feet
+			getting nearer and nearer to her mouth as she greedily swallows and
+			works your thighs, then calves, then finally ankles and feet past her
+			lips. Her jaws snapping shut with a click and satisfied mhmm as she
+			sends you down into her belly with a final swallow. Your entire form
+			now cradled in her gut, curled up basking in the warmth and sexy
+			possessive snugness of her belly "mhmm you were delicious, but we'll
+			see whether you're warrior or food." she says and then gets
+			comfortable on a bench "now, struggle, show me what you've got.
+			Escape my insides...or.." she says and lets her gurgling belly
+			pressing around you continue her statement.
+		</text>
+		<choice destination="challengeStruggle" text="*try to escape*" />
+		<choice destination="challengeSubmit"
+			text="no I..don't want to get out of here, digest me you sexy predator" />
 	</page>
-	
+
 	<check ID="challengeStruggle">
 		<test what="STRUGGLE" DC="10" />
 		<outcome destination="challengeSuccess" />
 		<outcome destination="challengeFailure" />
-	</check>	
-	
+	</check>
+
 	<page ID="challengeSuccess">
-	<text>
-	This is it the moment of truth, to prove to Awari you're not food. You can feel her belly gurgling around you, enzymes starting to secrete onto your skin. It's now or never and you set to it with a will, shoving at her insides as you try to discomfort the predatory elf and find the exit. You need to force your way out before you tire or get digested. It's a struggle, you push at the way up out of her gut and the first few times she manages to shove you back down. Though you suspect she's not trying as hard as she can do keep you inside as you struggle and push around inside her. Finally though you manage to make a proper amount of headway, properly bracing your feet against the bottom of her belly and shoving yourself back up her throat. Awari letting out some discomforted sounds around your arms as you shove yourself back out into the open air. Once you get your ass past her lips though she horks the rest of you up and wipes her lips "I hope you appreciate that with real predators you won't be as well rested and ready when you have to try and escape their belly." she says and smiles "but you did well, i think there's hope for you yet. I hope you remember and benefit from this experience."
-	</text>
-	<special effect="giveperk" perk="Awari endurance training" />	
-	<effect type="setlocalflag" flag="eaten" value="1" />	
-	<choice destination="end" text="Yes I will, thankyou Awari"/>
-	<choice destination="end" text="yes, I'll definitely fondly remember being inside you Awari"/>	
-	</page>
-	
-	<page ID="challengeFailure">
-	<text>
-	This is it the moment of truth, to prove to Awari you're not food. You can feel her belly gurgling around you, enzymes starting to secrete onto your skin. It's now or never and you set to it with a will, shoving at her insides as you try to discomfort the predatory elf and find the exit. You need to force your way out before you tire or get digested.
-	You struggle against her insides trying to push out, feeling her gut pressing back against your efforts to discomfort her. You try to find the entrance of her throat and shove your way out, pushing your hands up into her throat only for her to swallow you down as your feet slip on the wet insides of her gut and enzymes soak your squirming body. Your efforts to escape the increasingly digestive confines of the elf earning a "come on try harder" from the warrior you're trying to avoid becoming food for.
-	</text>
-	<effect type="setlocalflag" flag="eaten" value="2" />		
-	<choice destination="challengeFailure1" text="keep trying"/>
-	</page>
-	
-	<page ID="challengeFailure1">
-	<text>
-	You keep on struggling to escape her, pushing against her insides with your hands and feet and trying to shove your head back out of her throat now. But her throat and belly are too strong for you and each attempt ends the same way and with less energy for the next attempt, your body increasingly lathered in enzymes that are making ever more progress on your body "I'm not even trying my hardest to try and hold you down and you can't escape me. Pathetic, you're better off as food." she says with a sigh and shifts, laying out on the bench and resting her head on her hands as she gurgles you, weak prey in her belly.
-	</text>
-	<choice destination="challengeFailureGO" text="maybe i'm only good for being food"/>
-	</page>
-	
-	<gameover ID="challengeFailureGO">
-	<text>
-	Awari rests as your tired out body is helplessly digested away, too exhausted and broken down to put up a struggle against her stomach walls as they smoosh and compress you into a goopy mass. Her gut rounding out as you're utterly digested and your struggles and movements truly cease, fading into the glorps of her bellies contentment. That round stomach of hers starting to compress down, your nourishment and nutrients going to the superior predator who had shown you what you truly were in the grand scheme of things.
-	</text>
-	</gameover>
-	
-	<page ID="challengeSubmit">
-	<text>
-	Awari pauses at hearing that going silent for a few moments then speaks "I suspected as much, you're not a warrior. You're food. At least you saved us all the trouble of denying it." says Awari with a soft sigh and then just rubs her belly and mhmms as she starts to digest her perverse meal. Hot enzymes soaking your flesh as you settle contently in her belly, your own preyish arousal adding to the sounds of her gurgling belly and contented murrs as her gut gets to work on you with increasing vigour.
-	</text>
-	<effect type="setlocalflag" flag="eaten" value="2" />		
-	<choice destination="challengeSubmitGO" text="get digested"/>
-	</page>
-	
-	<gameover ID="challengeSubmitGO">
-	<text>
-	Within the sexy green warrior's belly you're worked over by her enzymes and gurgling fluids. Your willing flesh yielding up to her as you submit to being food for your predator. Her gut turning from lumpy to smooth as you steadily break down into goopy nourishment inside her. Your squirms having faded to nothing to be replaced by churns as you slop into fluids and soon her belly is round and soft. Awari mhmming and letting out a sigh as her gut shrinks down and she gets up, looking down at her belly "Well, I'm glad I didn't waste any real training on you preyslut. Now I'll have to work you off." she says taking up her staff to resume her training even as her gut bulge trims to a compact but still visible pudge.
-	</text>
-	</gameover>
-	
-	<page ID="start">
-		<!--first meeting-->
 		<text>
-		The elf warrior idly swings her staff through a series of stances then turns to you and looks you up and down as if sizing you up, it has a worrisome aspect of being as more than a potential opponent to it "You are the stranger from the stars? I am Awari, and I thought you'd be taller." she remarks somewhat ungraciously and plants the staff butt resting it against the floor mats.
+			This is it the moment of truth, to prove to Awari you're not food. You
+			can feel her belly gurgling around you, enzymes starting to secrete
+			onto your skin. It's now or never and you set to it with a will,
+			shoving at her insides as you try to discomfort the predatory elf and
+			find the exit. You need to force your way out before you tire or get
+			digested. It's a struggle, you push at the way up out of her gut and
+			the first few times she manages to shove you back down. Though you
+			suspect she's not trying as hard as she can do keep you inside as you
+			struggle and push around inside her. Finally though you manage to
+			make a proper amount of headway, properly bracing your feet against
+			the bottom of her belly and shoving yourself back up her throat.
+			Awari letting out some discomforted sounds around your arms as you
+			shove yourself back out into the open air. Once you get your ass past
+			her lips though she horks the rest of you up and wipes her lips "I
+			hope you appreciate that with real predators you won't be as well
+			rested and ready when you have to try and escape their belly." she
+			says and smiles "but you did well, i think there's hope for you yet.
+			I hope you remember and benefit from this experience."
+		</text>
+		<special effect="giveperk" perk="Awari endurance training" />
+		<effect type="setlocalflag" flag="eaten" value="1" />
+		<choice destination="end" text="Yes I will, thankyou Awari" />
+		<choice destination="end"
+			text="yes, I'll definitely fondly remember being inside you Awari" />
+	</page>
+
+	<page ID="challengeFailure">
+		<text>
+			This is it the moment of truth, to prove to Awari you're not food. You
+			can feel her belly gurgling around you, enzymes starting to secrete
+			onto your skin. It's now or never and you set to it with a will,
+			shoving at her insides as you try to discomfort the predatory elf and
+			find the exit. You need to force your way out before you tire or get
+			digested.
+			You struggle against her insides trying to push out, feeling her gut
+			pressing back against your efforts to discomfort her. You try to find
+			the entrance of her throat and shove your way out, pushing your hands
+			up into her throat only for her to swallow you down as your feet slip
+			on the wet insides of her gut and enzymes soak your squirming body.
+			Your efforts to escape the increasingly digestive confines of the elf
+			earning a "come on try harder" from the warrior you're trying to
+			avoid becoming food for.
+		</text>
+		<effect type="setlocalflag" flag="eaten" value="2" />
+		<choice destination="challengeFailure1" text="keep trying" />
+	</page>
+
+	<page ID="challengeFailure1">
+		<text>
+			You keep on struggling to escape her, pushing against her insides with
+			your hands and feet and trying to shove your head back out of her
+			throat now. But her throat and belly are too strong for you and each
+			attempt ends the same way and with less energy for the next attempt,
+			your body increasingly lathered in enzymes that are making ever more
+			progress on your body "I'm not even trying my hardest to try and hold
+			you down and you can't escape me. Pathetic, you're better off as
+			food." she says with a sigh and shifts, laying out on the bench and
+			resting her head on her hands as she gurgles you, weak prey in her
+			belly.
+		</text>
+		<choice destination="challengeFailureGO" text="maybe i'm only good for being food" />
+	</page>
+
+	<gameover ID="challengeFailureGO">
+		<text>
+			Awari rests as your tired out body is helplessly digested away, too
+			exhausted and broken down to put up a struggle against her stomach
+			walls as they smoosh and compress you into a goopy mass. Her gut
+			rounding out as you're utterly digested and your struggles and
+			movements truly cease, fading into the glorps of her bellies
+			contentment. That round stomach of hers starting to compress down,
+			your nourishment and nutrients going to the superior predator who had
+			shown you what you truly were in the grand scheme of things.
+		</text>
+	</gameover>
+
+	<page ID="challengeSubmit">
+		<text>
+			Awari pauses at hearing that going silent for a few moments then speaks "I
+			suspected as much, you're not a warrior. You're food. At least you
+			saved us all the trouble of denying it." says Awari with a soft sigh
+			and then just rubs her belly and mhmms as she starts to digest her
+			perverse meal. Hot enzymes soaking your flesh as you settle contently
+			in her belly, your own preyish arousal adding to the sounds of her
+			gurgling belly and contented murrs as her gut gets to work on you
+			with increasing vigour.
+		</text>
+		<effect type="setlocalflag" flag="eaten" value="2" />
+		<choice destination="challengeSubmitGO" text="get digested" />
+	</page>
+
+	<gameover ID="challengeSubmitGO">
+		<text>
+			Within the sexy green warrior's belly you're worked over by her enzymes and
+			gurgling fluids. Your willing flesh yielding up to her as you submit
+			to being food for your predator. Her gut turning from lumpy to smooth
+			as you steadily break down into goopy nourishment inside her. Your
+			squirms having faded to nothing to be replaced by churns as you slop
+			into fluids and soon her belly is round and soft. Awari mhmming and
+			letting out a sigh as her gut shrinks down and she gets up, looking
+			down at her belly "Well, I'm glad I didn't waste any real training on
+			you preyslut. Now I'll have to work you off." she says taking up her
+			staff to resume her training even as her gut bulge trims to a compact
+			but still visible pudge.
+		</text>
+	</gameover>
+
+	<page ID="start">
+		<!--first meeting -->
+		<text>
+			The elf warrior idly swings her staff through a series of stances then
+			turns to you and looks you up and down as if sizing you up, it has a
+			worrisome aspect of being as more than a potential opponent to it
+			"You are the stranger from the stars? I am Awari, and I thought you'd
+			be taller." she remarks somewhat ungraciously and plants the staff
+			butt resting it against the floor mats.
 		</text>
 		<effect type="setlocalflag" flag="talked" value="1" />
-		<choice destination="tone" text="you have quite a dismissive tone"/>
-		<choice destination="end" text="well, i'm sorry to disappoint, fair well"/>
+		<choice destination="tone" text="you have quite a dismissive tone" />
+		<choice destination="end" text="well, i'm sorry to disappoint, fair well" />
 	</page>
-	
+
 	<page ID="tone">
-	<text>
-	"You are a traveller, and yet I can see that you would not last against the dangers that lie in the wilderness beyond our village. It takes a warrior to brave the jungles of our world."
-	</text>
-	<choice destination="warrior" text="And what does it take to be a warrior in your eyes?"/>
-	<choice destination="end" text="I don't need validation from you, i will survive"/>
+		<text>
+			"You are a traveller, and yet I can see that you would not last against
+			the dangers that lie in the wilderness beyond our village. It takes a
+			warrior to brave the jungles of our world."
+		</text>
+		<choice destination="warrior"
+			text="And what does it take to be a warrior in your eyes?" />
+		<choice destination="end"
+			text="I don't need validation from you, i will survive" />
 	</page>
-	
+
 	<page ID="warrior">
-	<text>
-	"It takes many things to survive in our jungles. Guile, cunning, alertness, willpower. But sooner or later you will find yourself in direst circumstances, when a lamia devours you will you have the toughness to resist her enzymes and the strength and techniques to escape her insides?"
-	</text>
-	<choice destination="teach0" text="Can you teach me to be a warrior?"/>
-	<choice destination="end" text="...Well thank you for sharing I guess"/>
+		<text>
+			"It takes many things to survive in our jungles. Guile, cunning,
+			alertness, willpower. But sooner or later you will find yourself in
+			direst circumstances, when a lamia devours you will you have the
+			toughness to resist her enzymes and the strength and techniques to
+			escape her insides?"
+		</text>
+		<choice destination="teach0" text="Can you teach me to be a warrior?" />
+		<choice destination="end" text="...Well thank you for sharing I guess" />
 	</page>
-	
+
 	<page ID="teach0">
-	<text>
-	"In a day? hardly. But we'll see if you have what it takes to survive if you are willing to prove your worth." she says with an anticipatory smirk.
-	</text>
-	<choice destination="teach1" text="And what do you propose?"/>
+		<text>
+			"In a day? hardly. But we'll see if you have what it takes to survive if
+			you are willing to prove your worth." she says with an anticipatory
+			smirk.
+		</text>
+		<choice destination="teach1" text="And what do you propose?" />
 	</page>
-	
+
 	<page ID="teach1">
-	<text>
-	"Simple, I will swallow you. And you will prove your worth by managing to force your way back out of my belly." says Awari with a lick of her lips, something about the way she'd looked at you had clued you in this might be coming.
-	</text>
-	<choice destination="teach2" text="And if I don't?"/>
+		<text>
+			"Simple, I will swallow you. And you will prove your worth by managing to
+			force your way back out of my belly." says Awari with a lick of her
+			lips, something about the way she'd looked at you had clued you in
+			this might be coming.
+		</text>
+		<choice destination="teach2" text="And if I don't?" />
 	</page>
 
 	<page ID="teach2">
-	<text>
-	"Then you were never warrior material to begin with. The choice of course is yours. But either way I'll have helped you meet your destiny." she says.
-	</text>
-	<effect type="setlocalflag" flag="challenge" value="1" />	
-	<choice destination="challenge" text="I guess that's reasonable."/>	
-	<choice destination="teach3" text="this...is absurd, there's no way i'm going to let myself be swallowed"/>
-	<choice destination="teachAlt0" text="surely there's a way of training that you can give that doesn't involve a risk of digestion?"/>
+		<text>
+			"Then you were never warrior material to begin with. The choice of course
+			is yours. But either way I'll have helped you meet your destiny." she
+			says.
+		</text>
+		<effect type="setlocalflag" flag="challenge" value="1" />
+		<choice destination="challenge" text="I guess that's reasonable." />
+		<choice destination="teach3"
+			text="this...is absurd, there's no way i'm going to let myself be swallowed" />
+		<choice destination="teachAlt0"
+			text="surely there's a way of training that you can give that doesn't involve a risk of digestion?" />
 	</page>
-	
+
 	<page ID="teachAlt0">
-	<text>
-	"Oh of course, but why should I waste that on you if you'll just end up fat padding a lamia's tail?" she asks with a raised eyebrow.
-	</text>
-	<choice destination="challenge" text="you're right, I'll accept the challenge"/>
-	<choice destination="persuade" text="I have arts that your people know only in stories. I think i'll be safe from digestion, especially if I have your help"/>
-	<choice destination="teachAlt1" text="What kind of an argument is that? surely you don't try to digest everyone you teach?"/>
+		<text>
+			"Oh of course, but why should I waste that on you if you'll just end up
+			fat padding a lamia's tail?" she asks with a raised eyebrow.
+		</text>
+		<choice destination="challenge" text="you're right, I'll accept the challenge" />
+		<choice destination="persuade"
+			text="I have arts that your people know only in stories. I think i'll be safe from digestion, especially if I have your help" />
+		<choice destination="teachAlt1"
+			text="What kind of an argument is that? surely you don't try to digest everyone you teach?" />
 	</page>
-	
+
 	<check ID="persuade">
 		<test what="PERSUADE" DC="12" />
 		<outcome destination="persuadeSuccess" />
 		<outcome destination="persuadeFailure" />
 	</check>
-	
+
 	<page ID="persuadeSuccess">
-	<text>
-	"You truly expect that no one will have ever opportunity to make the attempt? and all you need is my aid? very well. I am intrigued. Perhaps I will train you just to see if this is true. I hope you are ready, I might yet change my mind" she says with a smirk as she goes and takes up another staff from where it's leaning against the wall.
-	</text>
-	<choice destination="training" text="Well then, no time like the present"/>
-	</page>
-	
-	<page ID="training">
-	<text>
-	"excellent, let us begin" she says with a smirk that bodes ill. What follows was everything you could of imagined, if what you could of imagined is a prolonged period of being wailed on with a fighting staff and told repeatedly what you were doing wrong in order to acquire all those bruises. By the time she finally relents in her brutal education you're sore all over, but you think her training has made you a bit better at defending yourself.
-	</text>
-	<effect type="setlocalflag" flag="challenge" value="2" />	
-	<special effect="giveperk" perk="Awari combat training" />
-	<choice destination="end" text="...ow."/>
-	</page>
-	
-	<page ID="persuadeFailure">
-	<text>
-	"If you have such arts then what need you of my training? even with my training you would eventually end up inside of someone. If your arts of science and technology can keep you safe from predators rely on them. If you realize it is not enough then come back to me." says Awari, apparently unimpressed she dismissively turns and resumes training.
-	</text>
-	<choice destination="end" text="...worth a try i suppose."/>
-	</page>
-	
-	<page ID="teachAlt1">
-	<text>
-	"Of course not, but my obligation to the tribe does not extend to you...and besides, they have grown to majority amidst us. I know the trials they face before they stand before me. What trials you have faced I cannot say, all I can say is by the look of you they were no great hardship..when you are ready to face the trial I propose come see me."
-	</text>
-	<choice destination="challenge" text="You're right, but i'm ready for the challenge now."/>	
-	<choice destination="end" text="of all the messed up philosophies, fine i'll steer clear unless that happens"/>
-	<choice destination="end" text="You're right, but I'm not ready yet. I will return then."/>	
-	</page>
-	
-	<page ID="teach3">
-	<text>
-	"Hardly, come back if you change your mind. Unless you run afoul of a hungry pred before then, in which case I guess it was nice meeting you." she says going back to her training.
-	</text>
-	<choice destination="end" text="I'm not entirely sure the feeling is mutual.."/>
+		<text>
+			"You truly expect that no one will have ever opportunity to make the
+			attempt? and all you need is my aid? very well. I am intrigued.
+			Perhaps I will train you just to see if this is true. I hope you are
+			ready, I might yet change my mind" she says with a smirk as she goes
+			and takes up another staff from where it's leaning against the wall.
+		</text>
+		<choice destination="training" text="Well then, no time like the present" />
 	</page>
 
-	
+	<page ID="training">
+		<text>
+			"excellent, let us begin" she says with a smirk that bodes ill. What follows was
+			everything you could of imagined, if what you could of imagined is a
+			prolonged period of being wailed on with a fighting staff and told
+			repeatedly what you were doing wrong in order to acquire all those
+			bruises. By the time she finally relents in her brutal education
+			you're sore all over, but you think her training has made you a bit
+			better at defending yourself.
+		</text>
+		<effect type="setlocalflag" flag="challenge" value="2" />
+		<special effect="giveperk" perk="Awari combat training" />
+		<choice destination="end" text="...ow." />
+	</page>
+
+	<page ID="persuadeFailure">
+		<text>
+			"If you have such arts then what need you of my training? even with my
+			training you would eventually end up inside of someone. If your arts
+			of science and technology can keep you safe from predators rely on
+			them. If you realize it is not enough then come back to me." says
+			Awari, apparently unimpressed she dismissively turns and resumes
+			training.
+		</text>
+		<choice destination="end" text="...worth a try i suppose." />
+	</page>
+
+	<page ID="teachAlt1">
+		<text>
+			"Of course not, but my obligation to the tribe does not extend to
+			you...and besides, they have grown to majority amidst us. I know the
+			trials they face before they stand before me. What trials you have
+			faced I cannot say, all I can say is by the look of you they were no
+			great hardship..when you are ready to face the trial I propose come
+			see me."
+		</text>
+		<choice destination="challenge"
+			text="You're right, but i'm ready for the challenge now." />
+		<choice destination="end"
+			text="of all the messed up philosophies, fine i'll steer clear unless that happens" />
+		<choice destination="end"
+			text="You're right, but I'm not ready yet. I will return then." />
+	</page>
+
+	<page ID="teach3">
+		<text>
+			"Hardly, come back if you change your mind. Unless you run afoul of a hungry
+			pred before then, in which case I guess it was nice meeting you." she
+			says going back to her training.
+		</text>
+		<choice destination="end"
+			text="I'm not entirely sure the feeling is mutual.." />
+	</page>
+
+
 </Conversation>

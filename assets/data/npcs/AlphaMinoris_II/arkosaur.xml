@@ -1,43 +1,51 @@
 <?xml version="1.0"?>
 <Harpy>
-<sprite value="capitalA.png"/>
+	<sprite value="capitalA.png" />
 
-<name>arkosaur</name>
-<description>A dun coloured reptilian quadraped. One dimwitted eye regards you from the side of its plated and bony head as it munches on plantlife. Five foot high at the shoulder its bulk moves slowly on stubtoed heavy feet, tail swaying slowly behind it. It's clear that while placid the beast would be a considerable threat if riled and its strength and power turned to the expression of feral anger and bestial rage.
-</description>
-<rpg>
-<experiencevalue value="25"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
-<attribute attribute="TEASE" value="6"/>
-<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="0">
-<missText count="2">
-<text>The arkosaur stomps at TARGET but is evaded</text>
-<text>The arkosaur tries to headbutt TARGET but doesn't connect</text>
-</missText>
-<hitText count="2">
-<text>The arkosaur headbutts TARGET for VALUE damage</text>
-<text>The arkosaur stomps on TARGET for VALUE damage</text>
-</hitText>
-<effectDamage type="KINETIC" minValue="3" maxValue="6" modifier="STRENGTH"/>
-</combatMove>
-<statusTags count="2">
-<tag>seduction</tag>
-</statusTags>
-</rpg>
+	<name>arkosaur</name>
+	<description>A dun coloured reptilian quadraped. One dimwitted eye
+		regards you from the side of its plated and bony head as it munches on
+		plantlife. Five foot high at the shoulder its bulk moves slowly on
+		stubtoed heavy feet, tail swaying slowly behind it. It's clear that
+		while placid the beast would be a considerable threat if riled and its
+		strength and power turned to the expression of feral anger and bestial
+		rage.
+	</description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="TEASE" value="6" />
+		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0">
+			<missText count="2">
+				<text>The arkosaur stomps at TARGET but is evaded</text>
+				<text>The arkosaur tries to headbutt TARGET but doesn't connect</text>
+			</missText>
+			<hitText count="2">
+				<text>The arkosaur headbutts TARGET for VALUE damage</text>
+				<text>The arkosaur stomps on TARGET for VALUE damage</text>
+			</hitText>
+			<effectDamage type="KINETIC" minValue="3" maxValue="6"
+				modifier="STRENGTH" />
+		</combatMove>
+		<statusTags count="2">
+			<tag>seduction</tag>
+		</statusTags>
+	</rpg>
 
-<respawn delay="2000"/>
+	<respawn delay="2000" />
 
-<defeated conversation="alpha_minoris_II/arkosaur/defeat" />
-<seduced conversation="alpha_minoris_II/arkosaur/defeat" />
-<victory conversation="alpha_minoris_II/arkosaur/victory" />
-<seducer conversation="alpha_minoris_II/arkosaur/victory" />
-<controller AI="dinocow"/>
-<faction value="monster"/>
+	<defeated conversation="alpha_minoris_II/arkosaur/defeat" />
+	<seduced conversation="alpha_minoris_II/arkosaur/defeat" />
+	<victory conversation="alpha_minoris_II/arkosaur/victory" />
+	<seducer conversation="alpha_minoris_II/arkosaur/victory" />
+	<controller AI="dinocow" />
+	<faction value="monster" />
 </Harpy>

@@ -1,32 +1,36 @@
 <?xml version="1.0"?>
 <ItemWeapon name="net" weight="1" value="125">
-<description>
-A net woven out of fabric strips and suitably weighted. Good for temporarily immobilizing an assailant, but can only be thrown a comparatively short distance.
-</description>
-<modifier>
+	<description>
+		A net woven out of fabric strips and suitably weighted. Good for
+		temporarily immobilizing an assailant, but can only be thrown a
+		comparatively short distance.
+	</description>
+	<modifier>
 
-</modifier>
-<combatMove name="throw" ammoCost="1" pattern="SHORT" bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2" throw="true" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectStatus probability="100">
-<applyText>TARGET is caught in a net</applyText>
-<statusBind uid="20" icon="4"  numModifiers="2">
-<removeText> TARGET has struggled free of the net</removeText>
-<effect attribute="DODGE" modifier="-2"/>
-<effect attribute="PARRY" modifier="-2"/>
-<bind strength="20" originDependent="true"/>
-<struggle count="1">
-<text>TARGET struggles to try to escape the net
-</text>
-</struggle>
-</statusBind>
-</effectStatus>
-<missText count="1">
-<text>Your net misses the target</text>
-</missText>
-<hitText count="1">
-<text></text>
-</hitText>
-<energySource value="stack"/>
-</combatMove>
-<stackEquip value="true"/>
+	</modifier>
+	<combatMove name="throw" ammoCost="1" pattern="SHORT"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2"
+		throw="true" actionCost="2" basicAction="true" moveType="FIGHT">
+		<effectStatus probability="100">
+			<applyText>TARGET is caught in a net</applyText>
+			<statusBind uid="20" icon="4" numModifiers="2">
+				<removeText> TARGET has struggled free of the net</removeText>
+				<effect attribute="DODGE" modifier="-2" />
+				<effect attribute="PARRY" modifier="-2" />
+				<bind strength="20" originDependent="true" />
+				<struggle count="1">
+					<text>TARGET struggles to try to escape the net
+					</text>
+				</struggle>
+			</statusBind>
+		</effectStatus>
+		<missText count="1">
+			<text>Your net misses the target</text>
+		</missText>
+		<hitText count="1">
+			<text></text>
+		</hitText>
+		<energySource value="stack" />
+	</combatMove>
+	<stackEquip value="true" />
 </ItemWeapon>

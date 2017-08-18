@@ -1,74 +1,79 @@
 <?xml version="1.0"?>
 <Ship width="8" height="5" sprite="heavy">
 
-<shipstats>
-<movecost value="24"/>
-<hullpoints value="40"/>
-<thrustcost value="1.2"/>
-<armour value="2"/>
-</shipstats>
+	<shipstats>
+		<movecost value="24" />
+		<hullpoints value="40" />
+		<thrustcost value="1.2" />
+		<armour value="2" />
+	</shipstats>
 
-<emitters>
-<weapon x="0.0" y="0.2"/>
-<engine x="0.0" y="-0.2"/>
-</emitters>
+	<emitters>
+		<weapon x="0.0" y="0.2" />
+		<engine x="0.0" y="-0.2" />
+	</emitters>
 
-<layout width="16" height="16" spriteset="ship.png">
-<tileset>
-<tile sprite="1" vision="1" movement="2">a metal wall</tile>
-<tile sprite="2" vision="0" movement="0">a metal floor</tile>
-</tileset>
-<description>this ship is in remarkably good condition considering the force with which it hit the ground</description>
-<mapgen>
-<prefab positionX="0" positionY="0" width="13">
-<row>0121000011210</row>
-<row>1222111112221</row>
-<row>1222122212221</row>
-<row>1122222222211</row>
-<row>0112122212110</row>
-<row>0001111111000</row>
+	<layout width="16" height="16" spriteset="ship.png">
+		<tileset>
+			<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+			<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+		</tileset>
+		<description>this ship is in remarkably good condition considering the
+			force with which it hit the ground</description>
+		<mapgen>
+			<prefab positionX="0" positionY="0" width="13">
+				<row>0121000011210</row>
+				<row>1222111112221</row>
+				<row>1222122212221</row>
+				<row>1122222222211</row>
+				<row>0112122212110</row>
+				<row>0001111111000</row>
 
-</prefab>
-<pairedportal x="2" y="0" sprite="1" ID="-101" facing="0"> Exterior hatch </pairedportal>
-<pairedportal x="10" y="0" sprite="1" ID="-102" facing="0"> Exterior hatch </pairedportal>
-<placeWidget x="1" y="1" name="slot"/>
-<placeWidget x="1" y="2" name="slot"/>
-<placeWidget x="9" y="4" name="slot"/>
-<placeWidget x="7" y="4" name="slot">
-<contains name="modules/navconsole"/>
-</placeWidget>
+			</prefab>
+			<pairedportal x="2" y="0" sprite="1" ID="-101" facing="0">
+				Exterior hatch </pairedportal>
+			<pairedportal x="10" y="0" sprite="1" ID="-102" facing="0">
+				Exterior hatch </pairedportal>
+			<placeWidget x="1" y="1" name="slot" />
+			<placeWidget x="1" y="2" name="slot" />
+			<placeWidget x="9" y="4" name="slot" />
+			<placeWidget x="7" y="4" name="slot">
+				<contains name="modules/navconsole" />
+			</placeWidget>
 
-<placeWidget x="6" y="4" name="hardpoint"/>
+			<placeWidget x="6" y="4" name="hardpoint" />
 
-<placeWidget x="5" y="4" name="slot">
-<contains name="modules/interplanetary reactor">
-<resource type="FUEL" value="40"/>
-</contains>
-</placeWidget>
+			<placeWidget x="5" y="4" name="slot">
+				<contains name="modules/interplanetary reactor">
+					<resource type="FUEL" value="40" />
+				</contains>
+			</placeWidget>
 
-<placeWidget x="3" y="4" name="slot">
-<contains name="modules/generator">
-<resource type="ENERGY" value="25"/>
-</contains>
-</placeWidget>
+			<placeWidget x="3" y="4" name="slot">
+				<contains name="modules/generator">
+					<resource type="ENERGY" value="25" />
+				</contains>
+			</placeWidget>
 
-<placeWidget x="11" y="1" name="slot">
-<contains name="modules/algae cultivator">
-<resource type="ALGAE" value="25"/>
-</contains>
-</placeWidget>
+			<placeWidget x="11" y="1" name="slot">
+				<contains name="modules/algae cultivator">
+					<resource type="ALGAE" value="25" />
+				</contains>
+			</placeWidget>
 
-<placeWidget x="11" y="2" name="slot"/>
-</mapgen>
-</layout>
-<exterior width="8">
-<row>00000000</row>
-<row>01011010</row>
-<row>01111110</row>
-<row>00111100</row>
-<row>00000000</row>
-<pairedportal x="2" y="1" sprite="1" ID="-101" destination="heavyComplete" facing="4"> ship hatch </pairedportal>
-<pairedportal x="5" y="1" sprite="1" ID="-102" destination="heavyComplete" facing="4"> ship hatch </pairedportal>
+			<placeWidget x="11" y="2" name="slot" />
+		</mapgen>
+	</layout>
+	<exterior width="8">
+		<row>00000000</row>
+		<row>01011010</row>
+		<row>01111110</row>
+		<row>00111100</row>
+		<row>00000000</row>
+		<pairedportal x="2" y="1" sprite="1" ID="-101"
+			destination="heavyComplete" facing="4"> ship hatch </pairedportal>
+		<pairedportal x="5" y="1" sprite="1" ID="-102"
+			destination="heavyComplete" facing="4"> ship hatch </pairedportal>
 
-</exterior>
+	</exterior>
 </Ship>

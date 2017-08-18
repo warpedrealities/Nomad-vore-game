@@ -33,9 +33,9 @@ public class ColouredList extends List {
 				GL20.glUniform4f(m_tint, 0, 1, 0.5F, 1);
 				m_fonts[i].Draw(buffer, matrixloc);
 			} else {
-				if (stringColours.length>i)
+				if (stringColours.length>i+m_offset)
 				{
-					float [] colours=colourList[stringColours[i]];
+					float [] colours=colourList[stringColours[i+m_offset]];
 					GL20.glUniform4f(m_tint, colours[0], colours[1], colours[2], 1);	
 				}
 				else

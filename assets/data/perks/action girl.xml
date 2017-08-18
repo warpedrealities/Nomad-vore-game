@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <perk name="action girl">
-<description> 
-Prepare, for ACTION! you are full of action! see how you ACTION! get your ACTION ready today! +6 to action</description>
-<modifier affects="ACTION" value="6" type="STAT"/>
+	<description>
+		Prepare, for ACTION! you are full of action! see how you ACTION! get your
+		ACTION ready today! +6 to action</description>
+	<modifier affects="ACTION" value="6" type="STAT" />
 
-<maxrank value="3"/>
+	<maxrank value="3" />
 
 </perk>

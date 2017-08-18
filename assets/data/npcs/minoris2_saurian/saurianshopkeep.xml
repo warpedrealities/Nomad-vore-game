@@ -1,31 +1,39 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="orangeshop.png"/>
-<name>Arissa</name>
-<description>The saurian has a certainly more vivid orange in her scales than other females. Less ochre and more the colour of the fruit, least from what you can see outside her robe. She smiles up at your arrival in her humble shop. A low display table before her seated form upon which many things to sell are laid out. She doesn't rise from her seated position on the pillow but there's a pillow across from her, its clear any conversations will be had at her level. </description>
-<rpg>
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
-<missText count="1">
-<text>Arissa's punch fails to connect with TARGET</text>
-</missText>
-<hitText count="1">
-<text>Arissa hits TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="orangeshop.png" />
+	<name>Arissa</name>
+	<description>The saurian has a certainly more vivid orange in her
+		scales than other females. Less ochre and more the colour of the
+		fruit, least from what you can see outside her robe. She smiles up at
+		your arrival in her humble shop. A low display table before her seated
+		form upon which many things to sell are laid out. She doesn't rise
+		from her seated position on the pillow but there's a pillow across
+		from her, its clear any conversations will be had at her level. </description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Arissa's punch fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Arissa hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<respawn delay="100"/>
-<talk conversation="alpha_minoris_II/saurianshop/chat" />
-<controller AI="staystill"/>
-<faction value="saurian"/>
+	<respawn delay="100" />
+	<talk conversation="alpha_minoris_II/saurianshop/chat" />
+	<controller AI="staystill" />
+	<faction value="saurian" />
 </NPC>

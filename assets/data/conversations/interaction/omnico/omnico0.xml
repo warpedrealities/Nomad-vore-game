@@ -2,71 +2,85 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			workstation online. LBREAK 
-			warning data corruption detected. LBREAK 
+			workstation online. LBREAK
+			warning data corruption detected. LBREAK
 		</text>
-		<choice destination="mailbox" text="access mailbox"/>
+		<choice destination="mailbox" text="access mailbox" />
 		<choice destination="end" text="exit" />
 	</page>
 
 	<page ID="mailbox">
 		<text>
-			partial mailbox contents recovered LBREAK 
-			select message LBREAK 
+			partial mailbox contents recovered LBREAK
+			select message LBREAK
 		</text>
-		<choice destination="email0" text="access 713"/>
-		<choice destination="email1" text="access 749"/>
-		
-		<choice destination="email3" text="access 1025"/>	
+		<choice destination="email0" text="access 713" />
+		<choice destination="email1" text="access 749" />
+
+		<choice destination="email3" text="access 1025" />
 		<choice destination="end" text="exit" />
 	</page>
-	
+
 	<page ID="email0">
-	<text>
-		From: mgr. Ansbel LBREAK 
-		To: all staff LBREAK 
-		subject: improper storage of synth accessories LBREAK 
+		<text>
+			From: mgr. Ansbel LBREAK
+			To: all staff LBREAK
+			subject: improper storage of synth accessories LBREAK
 
-		To the responsible parties, LBREAK 
+			To the responsible parties, LBREAK
 
-		Please note that when not attached to the Omnico synthetic predator gynoid the class II genital attachment is to be stored safely in sub-level 2 storage area B. Furthermore they're to be contained  in a type-7 cargo box compliant with the standards for the preservation of flexible synth material.  LBREAK 
+			Please note that when not attached to the Omnico synthetic predator gynoid
+			the class II genital attachment is to be stored safely in sub-level 2
+			storage area B. Furthermore they're to be contained in a type-7 cargo
+			box compliant with the standards for the preservation of flexible
+			synth material. LBREAK
 
-		It is not in fact appropriate to store them in an open topped plastic document tray perched precariously atop the door to Orrena's office. I should warn you that should you persist I will be forced to make some HR decisions. LBREAK 
-		 
-		I also should remind you that unlike our products I don't need an attachment for that, and I have space on my shelf for a 2 gallon jug. LBREAK 
+			It is not in fact appropriate to store them in an open topped plastic
+			document tray perched precariously atop the door to Orrena's office.
+			I should warn you that should you persist I will be forced to make
+			some HR decisions. LBREAK
 
-		-Ansbel. LBREAK 
+			I also should remind you that unlike our products I don't need an
+			attachment for that, and I have space on my shelf for a 2 gallon jug.
+			LBREAK
 
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
+			-Ansbel. LBREAK
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
 	</page>
 
-	
+
 	<page ID="email1">
-	<text>
-		From: Reshi LBREAK 
-		To: T. Velas LBREAK 
-		subject: dodgy units? LBREAK 
+		<text>
+			From: Reshi LBREAK
+			To: T. Velas LBREAK
+			subject: dodgy units? LBREAK
 
-		Is it just me or are the latest batch of synths from head office kinda off. I can't put my finger on it, but something about the way they talk and look at me is freaking me out. Reminds me a tad too much of my last girlfriend, or the boss for that matter.
-	
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
+			Is it just me or are the latest batch of synths from head office kinda
+			off. I can't put my finger on it, but something about the way they
+			talk and look at me is freaking me out. Reminds me a tad too much of
+			my last girlfriend, or the boss for that matter.
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
 	</page>
-	
-	<page ID="email3">
-	<text>
-		From: Reshi LBREAK 
-		To: T. Velas LBREAK 
-		subject: why build an omnico boutique out here? LBREAK 
 
-		I don't get it. We're setup in the ass end of nowhere. I mean, I get that we're technically on a trade route. But how many ships have passed by since I came here? And how many fewer bought any synths.	
-	
-	</text>
-	<choice destination="mailbox" text="return to mailbox"/>
-	<choice destination="end" text="exit"/>
+	<page ID="email3">
+		<text>
+			From: Reshi LBREAK
+			To: T. Velas LBREAK
+			subject: why build an omnico boutique out here? LBREAK
+
+			I don't get it. We're setup in the ass end of nowhere. I mean, I get
+			that we're technically on a trade route. But how many ships have
+			passed by since I came here? And how many fewer bought any synths.
+
+		</text>
+		<choice destination="mailbox" text="return to mailbox" />
+		<choice destination="end" text="exit" />
 	</page>
 
 </Conversation>

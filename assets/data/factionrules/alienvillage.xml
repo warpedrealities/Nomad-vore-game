@@ -13,17 +13,17 @@
 	</superRule>
 	<superRule subject="Shanna" level="2" violation="ATTACK">
 		<factionRelationship faction="minyos" mod="-10" />
-	</superRule>	
+	</superRule>
 	<superRule subject="Avei" level="2" violation="ATTACK">
 		<factionRelationship faction="minyos" mod="-10" />
-	</superRule>	
+	</superRule>
 	<superRule subject="Awari" level="2" violation="ATTACK">
 		<factionRelationship faction="minyos" mod="-10" />
-	</superRule>		
+	</superRule>
 	<witness name="villager" />
 	<witness name="warrior" />
 	<witness name="Minyos shopkeeper" />
 	<witness name="Shanna" />
-	<witness name="Avei" />	
-	<witness name="Awari" />	
+	<witness name="Avei" />
+	<witness name="Awari" />
 </rules>

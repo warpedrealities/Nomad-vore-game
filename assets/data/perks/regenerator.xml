@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <perk name="regenerator">
-<description> You recover faster now from injuries. As super powers from exposure to alien suns go this one is sub par but might make all the difference. regen rate increase +0.05</description>
-<modifier affects="REGENERATION" value="5"  type="SUBABILITY"/>
-<maxrank value="1"/>
+	<description> You recover faster now from injuries. As super powers
+		from exposure to alien suns go this one is sub par but might make all
+		the difference. regen rate increase +0.05</description>
+	<modifier affects="REGENERATION" value="5" type="SUBABILITY" />
+	<maxrank value="1" />
 
 </perk>

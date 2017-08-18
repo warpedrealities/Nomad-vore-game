@@ -86,7 +86,7 @@
 			</effect>
 		</mutation>
 	</phaseMutation>
-	
+
 	<phasePerk name="occupation on the Heinlein">
 		<perk name="Security guard" />
 		<perk name="Helm officer" />
@@ -95,10 +95,10 @@
 		<perk name="Science officer" />
 		<perk name="Contact team" />
 	</phasePerk>
-	
+
 	<phaseMutation name="physique">
 
-	<mutation name="slender" descriptor="your physique is slender">
+		<mutation name="slender" descriptor="your physique is slender">
 			<effect>
 				<mutation part="butt" variable="size" set="4">
 				</mutation>
@@ -111,12 +111,12 @@
 				<mutation part="breasts" variable="size" set="4">
 				</mutation>
 			</effect>
-	<effect>
-	<mutation part="vagina" bodychange="add"/>
-	</effect>
-	</mutation>
-	
-	<mutation name="average" descriptor="your body type is average">
+			<effect>
+				<mutation part="vagina" bodychange="add" />
+			</effect>
+		</mutation>
+
+		<mutation name="average" descriptor="your body type is average">
 			<effect>
 				<mutation part="butt" variable="size" set="6">
 				</mutation>
@@ -124,58 +124,63 @@
 			<effect>
 				<mutation part="body" variable="weight" set="55">
 				</mutation>
-			</effect>	
+			</effect>
 			<effect>
 				<mutation part="breasts" variable="size" set="4">
 				</mutation>
 			</effect>
-	</mutation>
-	
-	<mutation name="curvy" descriptor="you possess a curvier form than average">
+		</mutation>
+
+		<mutation name="curvy" descriptor="you possess a curvier form than average">
 			<effect>
 				<mutation part="butt" variable="size" set="8">
 				</mutation>
 			</effect>
 			<effect>
-			<mutation part="body" variable="weight" set="70">
-			</mutation>
+				<mutation part="body" variable="weight" set="70">
+				</mutation>
 			</effect>
 			<effect>
 				<mutation part="breasts" variable="size" set="5">
 				</mutation>
 			</effect>
-	</mutation>	
-	
-	</phaseMutation>	
-	
+		</mutation>
+
+	</phaseMutation>
+
 	<phaseMutation name="unexplained mutation">
 
-	<mutation name="none" descriptor="you have remained normal and have not mutated">
-	<effect>
-	<mutation part="penis" bodychange="remove"/>
-	</effect>
-	<effect>
-	<mutation part="vagina" bodychange="add"/>
-	</effect>
-	</mutation>
-	
-	<mutation name="dickgirl" descriptor="you wake up with your vagina replaced with a penis">
-	<effect>
-	<mutation part="penis" bodychange="add" variable="length" set="6"/>
-	</effect>
-	<effect>
-	<mutation part="vagina" bodychange="remove"/>
-	</effect>
-	</mutation>
-	
-	<mutation name="herm" descriptor="you wake up with a penis in addition to your vagina">
-	<effect>
-	<mutation part="penis" bodychange="add" variable="length" set="6"/>
-	</effect>
-	<effect>
-	<mutation part="vagina" bodychange="add"/>
-	</effect>
-	</mutation>	
-	
+		<mutation name="none"
+			descriptor="you have remained normal and have not mutated">
+			<effect>
+				<mutation part="penis" bodychange="remove" />
+			</effect>
+			<effect>
+				<mutation part="vagina" bodychange="add" />
+			</effect>
+		</mutation>
+
+		<mutation name="dickgirl"
+			descriptor="you wake up with your vagina replaced with a penis">
+			<effect>
+				<mutation part="penis" bodychange="add" variable="length"
+					set="6" />
+			</effect>
+			<effect>
+				<mutation part="vagina" bodychange="remove" />
+			</effect>
+		</mutation>
+
+		<mutation name="herm"
+			descriptor="you wake up with a penis in addition to your vagina">
+			<effect>
+				<mutation part="penis" bodychange="add" variable="length"
+					set="6" />
+			</effect>
+			<effect>
+				<mutation part="vagina" bodychange="add" />
+			</effect>
+		</mutation>
+
 	</phaseMutation>
 </chargen>

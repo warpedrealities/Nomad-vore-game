@@ -2,103 +2,141 @@
 <Conversation>
 	<page ID="start">
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
-			flag="talked" />	
+			flag="talked" />
 		<text>
-		"Greetings customer, what can we, as a representative of the Talharan Commerce League, do for you today?"
+			"Greetings customer, what can we, as a representative of the Talharan Commerce
+			League, do for you today?"
 		</text>
-		<choice destination="trade" text="I would like to see your wares"/>
-		<choice destination="approach" text="I've had enough of your shit, I'm taking what I need"/>
-		<choice destination="end" text="just saying hi"/>
+		<choice destination="trade" text="I would like to see your wares" />
+		<choice destination="approach"
+			text="I've had enough of your shit, I'm taking what I need" />
+		<choice destination="end" text="just saying hi" />
 	</page>
-	
+
 	<page ID="trade">
-	<text>
-	</text>
-	<special effect="shop" ID="talharan_trader0" />	
+		<text>
+		</text>
+		<special effect="shop" ID="talharan_trader0" />
 	</page>
-	
+
 	<page ID="start">
 		<text>
-		"Greetings unexpected potential customer, you are approaching a trade vessel of the Talharan commerce league. Please maintain safe separation. We regret that in light of the dangerous nature of modern spacelanes we are required to respond to a threatening posture with deadly force."
+			"Greetings unexpected potential customer, you are approaching a trade vessel of
+			the Talharan commerce league. Please maintain safe separation. We
+			regret that in light of the dangerous nature of modern spacelanes we
+			are required to respond to a threatening posture with deadly force."
 		</text>
-		<choice destination="greetings" text="Greetings"/>	
-		<choice destination="customer" text="Potential customer?"/>
-		<choice destination="doingHere" text="What are you doing here?"/>	
-		<choice destination="approach" text="*approach anyway*"/>		
-		<choice destination="approach" text="Trade ship? that means you must have good cargo, i'll take it"/>
-		<choice destination="end" text="*fly away*"/>
+		<choice destination="greetings" text="Greetings" />
+		<choice destination="customer" text="Potential customer?" />
+		<choice destination="doingHere" text="What are you doing here?" />
+		<choice destination="approach" text="*approach anyway*" />
+		<choice destination="approach"
+			text="Trade ship? that means you must have good cargo, i'll take it" />
+		<choice destination="end" text="*fly away*" />
 	</page>
-	
+
 	<page ID="greetings">
-	<text>
-	"yes, greetings. We as a representative of the Talharan Commerce league, welcome you and look forward to a long and profitable relationship with you."
-	</text>
-	<choice destination="commerce" text="Well that's good, pretty mercantile, but good"/>
+		<text>
+			"yes, greetings. We as a representative of the Talharan Commerce league,
+			welcome you and look forward to a long and profitable relationship
+			with you."
+		</text>
+		<choice destination="commerce"
+			text="Well that's good, pretty mercantile, but good" />
 	</page>
-	
+
 	<page ID="customer">
-	<text>
-	"Indeed we detected no activity in this system that would lead us to believe we would encounter a spacefaring individual, such as yourself, in this environs. We are surprised" "and gratified" "-and gratified to make your unexpected acquaintance."
-	</text>
-	<choice destination="commerce" text="very good, now you called me a potential customer"/>
+		<text>
+			"Indeed we detected no activity in this system that would lead us to believe
+			we would encounter a spacefaring individual, such as yourself, in
+			this environs. We are surprised" "and gratified" "-and gratified to
+			make your unexpected acquaintance."
+		</text>
+		<choice destination="commerce"
+			text="very good, now you called me a potential customer" />
 	</page>
-	
+
 	<page ID="doingHere">
-	<text>
-	"We cannot divulge the reason for our presence in this system at this time. You are welcome to speculate upon this subject and how it may or may not pertain to our potential enigmatic and sinister long range plans. However while we are conducting our activities in this system our mandate from the commerce league means we are open to conduct business with potential customers."
-	</text>
-	<choice destination="commerce" text="what sort of business?"/>
+		<text>
+			"We cannot divulge the reason for our presence in this system at this
+			time. You are welcome to speculate upon this subject and how it may
+			or may not pertain to our potential enigmatic and sinister long range
+			plans. However while we are conducting our activities in this system
+			our mandate from the commerce league means we are open to conduct
+			business with potential customers."
+		</text>
+		<choice destination="commerce" text="what sort of business?" />
 	</page>
-	
+
 	<page ID="commerce">
-	<effect type="setlocalflag" flag="talked" value="1" />	
-	<text>
-	"indeed, we are a representative of the Talharan commerce league. As such we offer an inventory of items for a fair and equitable price in credits" "we apologize for the limited inventory""indeed we apologize that we were not expecting customers. However, we have a range of high technology goods available to you at what we believe is an equitable price. More specifically our scans indicate your vessel lacks an FTL drive, how you have come to this system therefore is no doubt a long, unusual, but ultimately unimportant story. What is important is that we can sell you one for an equitable price."
-	</text>
-	<choice destination="trade" text="I would like to look at your wares"/>
-	<choice destination="equitable" text="how 'equitable' are we talking here?"/>
-	<choice destination="end" text="I'll come back to see your wares another time"/>
+		<effect type="setlocalflag" flag="talked" value="1" />
+		<text>
+			"indeed, we are a representative of the Talharan commerce league. As such we
+			offer an inventory of items for a fair and equitable price in
+			credits" "we apologize for the limited inventory""indeed we apologize
+			that we were not expecting customers. However, we have a range of
+			high technology goods available to you at what we believe is an
+			equitable price. More specifically our scans indicate your vessel
+			lacks an FTL drive, how you have come to this system therefore is no
+			doubt a long, unusual, but ultimately unimportant story. What is
+			important is that we can sell you one for an equitable price."
+		</text>
+		<choice destination="trade" text="I would like to look at your wares" />
+		<choice destination="equitable" text="how 'equitable' are we talking here?" />
+		<choice destination="end"
+			text="I'll come back to see your wares another time" />
 	</page>
-	
+
 	<page ID="equitable">
-	<text>
-	"Indeed, our pricing scheme is flexible and reflects numerous factors" "such as your clear need and lack of alternatives" "indeed, we believe our prices fairly reflect your desperation and lack of other means to acquire a warp engine"
-	</text>
-	<choice destination="truth" text="not sure how i feel about you being so open about this"/>
-	<choice destination="leaving" text="well screw you then, i'm leaving"/>
-	<choice destination="approach" text="screw you then, i'll come take it if you're gonna rip me off"/>
+		<text>
+			"Indeed, our pricing scheme is flexible and reflects numerous factors" "such
+			as your clear need and lack of alternatives" "indeed, we believe our
+			prices fairly reflect your desperation and lack of other means to
+			acquire a warp engine"
+		</text>
+		<choice destination="truth"
+			text="not sure how i feel about you being so open about this" />
+		<choice destination="leaving" text="well screw you then, i'm leaving" />
+		<choice destination="approach"
+			text="screw you then, i'll come take it if you're gonna rip me off" />
 	</page>
-	
+
 	<page ID="truth">
-	<text>
-	"We believe that deception leads to a lack of trust in our customers, therefore we feel no reason to lie" "also you have to deal with us to get out of this system"
-	</text>
-	<choice destination="trade" text="..very well, lets see what you have for sale"/>
-	<choice destination="end" text="I'll take a look at your wares later then"/>
+		<text>
+			"We believe that deception leads to a lack of trust in our customers,
+			therefore we feel no reason to lie" "also you have to deal with us to
+			get out of this system"
+		</text>
+		<choice destination="trade"
+			text="..very well, lets see what you have for sale" />
+		<choice destination="end" text="I'll take a look at your wares later then" />
 	</page>
-	
+
 	<page ID="leaving">
-	<text>
-	"In light of your lack of alternative ways of acquiring an FTL solution we suspect we will be hearing from you again soon. Until you come to your senses farewell."
-	</text>
-	<choice destination="end" text="*end transmission*"/>
+		<text>
+			"In light of your lack of alternative ways of acquiring an FTL solution
+			we suspect we will be hearing from you again soon. Until you come to
+			your senses farewell."
+		</text>
+		<choice destination="end" text="*end transmission*" />
 	</page>
-	
+
 	<page ID="approach">
-	<text>
-	"We regret your decision born of poor judgement is to lead to your imminent expiration." "Arming weapons."
-	</text>
-	<choice destination="fight" text="*fight*"/>
+		<text>
+			"We regret your decision born of poor judgement is to lead to your
+			imminent expiration." "Arming weapons."
+		</text>
+		<choice destination="fight" text="*fight*" />
 	</page>
-	
+
 	<page ID="fight">
-	<text>
-	The trade ship is prepared for combat as you close on it.
-	</text>
-	<effect type="modfactiondisposition" value="-25" />	
-	<effect type="setlocalflag" flag="fight" value="1" />	
-	<special effect="spaceCombat" />
+		<text>
+			The trade ship is prepared for combat as you close on it.
+		</text>
+		<effect type="modfactiondisposition" value="-25" />
+		<effect type="setlocalflag" flag="fight" value="1" />
+		<special effect="spaceCombat" />
 
 	</page>
-	
+
 </Conversation>

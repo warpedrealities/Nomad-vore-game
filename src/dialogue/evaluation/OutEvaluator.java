@@ -63,6 +63,13 @@ public class OutEvaluator {
 			}
 
 		}
+		if (eval.equals("operatorOr")) {
+			try {
+				return operatorOr(E);
+			} catch (MalformedDialogException e) {
+				e.printStackTrace();
+			}
+		}
 		if (eval.equals("companionSlotFree")) {
 			if (m_player.isFreeCompanion()) {
 				return true;
@@ -109,6 +116,21 @@ public class OutEvaluator {
 			}
 		}
 		return true;
+	}
+
+	private boolean operatorOr(Element e) throws MalformedDialogException {
+		NodeList list=e.getChildNodes();
+		for (int i=0;i<list.getLength();i++)
+		{
+			if (list.item(i).getNodeType()==Node.ELEMENT_NODE)
+			{
+				Element element=(Element)list.item(i);
+				if (Evalthiscondition(element) == true) {
+					return true;
+				}					
+			}
+		}
+		return false;
 	}
 
 	public boolean Evalthiscondition(Element E) throws MalformedDialogException {
@@ -247,7 +269,14 @@ public class OutEvaluator {
 					return false;
 				}
 			}
-			
+			if (eval.equals("CRAFTINGTOKEN")) {
+				String operator = E.getAttribute("operator");
+				int value = Integer.parseInt(E.getAttribute("value"));
+				int v=((Player_RPG)m_player.getRPG()).getCraftingTokenCount(E.getAttribute("token"));
+				if (ConditionCheck(value, operator, v) == false) {
+					return false;
+				}
+			}	
 		}
 
 		if (E.getTagName().equals("assertion")) {

@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <shipsystem sprite="53" name="simple reactor" health="30">
-<contains minimum="1" maximum="2">scrap metal</contains>
-<description>A power generator that uses a series of increasingly energetic reactions to convert fuel into energy at a steady pace.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<shipResource capacity="25" resource="ENERGY"/>
-<shipConverter boostable="true">
-<convertFrom value="FUEL"/>
-<convertTo value="ENERGY"/>
-<conversionEfficiency value="10"/>
-<conversionRate value="0.02"/>
-</shipConverter>
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>A power generator that uses a series of increasingly
+		energetic reactions to convert fuel into energy at a steady pace.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="25" resource="ENERGY" />
+	<shipConverter boostable="true">
+		<convertFrom value="FUEL" />
+		<convertTo value="ENERGY" />
+		<conversionEfficiency value="10" />
+		<conversionRate value="0.02" />
+	</shipConverter>
 </shipsystem>

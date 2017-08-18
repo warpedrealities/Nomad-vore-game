@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <recipe name="net" requiredskill="1" startunlocked="true">
-<description>
-A net woven out of fabric strips and suitably weighted. Good for temporarily immobilizing an assailant, but can only be thrown a comparatively short distance.
-</description>
-<ingredient item="fabric" quantity="4"/>
-<result item="net"/>
+	<description>
+		A net woven out of fabric strips and suitably weighted. Good for
+		temporarily immobilizing an assailant, but can only be thrown a
+		comparatively short distance.
+	</description>
+	<ingredient item="fabric" quantity="4" />
+	<result item="net" />
 </recipe>

@@ -5,7 +5,8 @@
 	<effectmutator>
 		<criteriaAssertion part="vagina" negative="true" />
 		<mutation part="vagina" bodychange="add">
-			Well, now you have a vagina again.
+			Well, now you have a
+			vagina again.
 		</mutation>
 	</effectmutator>
 </ItemConsumable>

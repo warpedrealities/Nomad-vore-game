@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
 <perk name="cleave">
-<requirement count="1">
-<req>PERKwarrior</req>
-</requirement>
-<description> 
-you're able to unleash a broad attack able to hit multiple foes at once so long as they're close together (x2 AP, arc, weapon tag: S)
-</description>
-<weaponMove name="cleave" bonusToHit="0" tag="S" pattern="SWEEP" actionCost="2" moveType="FIGHT">
-</weaponMove>
-<maxrank value="1"/>
+	<requirement count="1">
+		<req>PERKwarrior</req>
+	</requirement>
+	<description>
+		you're able to unleash a broad attack able to hit multiple foes at once so
+		long as they're close together (x2 AP, arc, weapon tag: S)
+	</description>
+	<weaponMove name="cleave" bonusToHit="0" tag="S" pattern="SWEEP"
+		actionCost="2" moveType="FIGHT">
+	</weaponMove>
+	<maxrank value="1" />
 
 </perk>

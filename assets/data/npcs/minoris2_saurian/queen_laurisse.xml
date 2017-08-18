@@ -1,37 +1,45 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="goldL.png"/>
-<name>Laurisse</name>
-<description>Her Majesty Laurisse reclines upon aa sprawl of cushions. Her tall lizard demi form is clad in a vivid red kimono like robe of embroidered fine cloth and crowned with a slender golden band atop her head. The gleaming red scales covering all but her face and front of her torso are all immaculately clean and her dusky gold skin is smooth and unmarred. Even in such leisurely langour though she radiates a subtle aura of confidence and power, this is one used to command.</description>
-<rpg>
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="80"/>
-<stat stat="RESOLVE" value="80"/>
-<attribute attribute="KINETIC" value="2"/>
-<combatMove name="reinforce" pattern="SELF" bonusAttribute="MELEE" timeCost="2">
-<effectReinforce npc="minoris2_saurian\saurianReinforcement" min="2" max="4">
-<direction distance="16">
-EASTWEST
-</direction>
-</effectReinforce>
-<hitText count="2">
-<text>Laurisse calls for her guards!</text>
-<text>the queen calls for her guards!</text>
-</hitText>
+	<sprite value="goldL.png" />
+	<name>Laurisse</name>
+	<description>Her Majesty Laurisse reclines upon aa sprawl of cushions.
+		Her tall lizard demi form is clad in a vivid red kimono like robe of
+		embroidered fine cloth and crowned with a slender golden band atop her
+		head. The gleaming red scales covering all but her face and front of
+		her torso are all immaculately clean and her dusky gold skin is smooth
+		and unmarred. Even in such leisurely langour though she radiates a
+		subtle aura of confidence and power, this is one used to command.</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="80" />
+		<stat stat="RESOLVE" value="80" />
+		<attribute attribute="KINETIC" value="2" />
+		<combatMove name="reinforce" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectReinforce npc="minoris2_saurian\saurianReinforcement"
+				min="2" max="4">
+				<direction distance="16">
+					EASTWEST
+				</direction>
+			</effectReinforce>
+			<hitText count="2">
+				<text>Laurisse calls for her guards!</text>
+				<text>the queen calls for her guards!</text>
+			</hitText>
 
-</combatMove>
-</rpg>
+		</combatMove>
+	</rpg>
 
-<respawn delay="300"/>
-<disposition value="55"/>
+	<respawn delay="300" />
+	<disposition value="55" />
 
-<talk conversation="alpha_minoris_II/saurianqueen/chat" />
-<controller AI="leader"/>
-<faction value="saurian"/>
+	<talk conversation="alpha_minoris_II/saurianqueen/chat" />
+	<controller AI="leader" />
+	<faction value="saurian" />
 </NPC>

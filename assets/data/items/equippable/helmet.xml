@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <ItemEquip name="helmet" weight="2" slot="HEAD" value="100">
 	<description>
-		A medieval looking metal helm, open faced. provides +1 to thermal, +1
+		A medieval looking metal helm, open faced. provides +1 to
+		thermal, +1
 		to kinetic and -1 shock protection.
 	</description>
 	<modifier>

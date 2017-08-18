@@ -249,10 +249,10 @@
 		<widget x="6" y="6" name="chest" info="normalchest" />
 		<widget x="4" y="4" name="machinery" info="" />
 		<widget x="4" y="2" name="machinery" info="" />
-		<spawn x="4" y="1" tag="0" />	
-	</block>	
-	
-		<block name="horizontalTHRUREWARD">
+		<spawn x="4" y="1" tag="0" />
+	</block>
+
+	<block name="horizontalTHRUREWARD">
 		<edge value="SOUTH" />
 		<edge value="WEST" />
 		<edge value="EAST" />
@@ -268,7 +268,7 @@
 		<widget x="4" y="2" name="machinery" info="" />
 		<widget x="3" y="1" name="chest" info="doublechest" />
 	</block>
-	
+
 	<block name="verticalTHRUTrap">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />

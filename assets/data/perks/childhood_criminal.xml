@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
-<perk name="criminal childhood" >
-<requirement count="1">
-<req>CHARGEN</req></requirement>
-<description> Your childhood was marked by criminality required to get by. Your knack for pickpocketing and lockbreaking coupled with truancy both shaped who you are today. +1 to dexterity, -1 to intelligence.</description>
-<modifier affects="DEXTERITY" value="1"  type="ABILITY"/>
-<modifier affects="INTELLIGENCE" value="-1"  type="ABILITY"/>
-<maxrank value="1"/>
+<perk name="criminal childhood">
+	<requirement count="1">
+		<req>CHARGEN</req>
+	</requirement>
+	<description> Your childhood was marked by criminality required to get
+		by. Your knack for pickpocketing and lockbreaking coupled with truancy
+		both shaped who you are today. +1 to dexterity, -1 to intelligence.</description>
+	<modifier affects="DEXTERITY" value="1" type="ABILITY" />
+	<modifier affects="INTELLIGENCE" value="-1" type="ABILITY" />
+	<maxrank value="1" />
 </perk>

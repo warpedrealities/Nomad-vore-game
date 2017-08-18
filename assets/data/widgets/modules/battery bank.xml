@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <shipsystem sprite="52" name="battery bank" health="30">
-<contains minimum="1" maximum="2">scrap metal</contains>
-<description>A bank of batteries to provide a reserve of energy for the ship.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<shipResource capacity="50" resource="ENERGY"/>
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>A bank of batteries to provide a reserve of energy for the
+		ship.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="50" resource="ENERGY" />
 </shipsystem>

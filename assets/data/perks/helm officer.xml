@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <perk name="Helm officer">
-<requirement count="1">
-<req>CHARGEN</req>
-</requirement>
-<description> You were part of the ship's navigation crew, taking the helm in shift and on call to pilot the lander if the need arose. +2 navigation</description>
-<modifier affects="NAVIGATION" value="2" type="ATTRIBUTE"/>
-<maxrank value="1"/>
+	<requirement count="1">
+		<req>CHARGEN</req>
+	</requirement>
+	<description> You were part of the ship's navigation crew, taking the
+		helm in shift and on call to pilot the lander if the need arose. +2
+		navigation</description>
+	<modifier affects="NAVIGATION" value="2" type="ATTRIBUTE" />
+	<maxrank value="1" />
 </perk>

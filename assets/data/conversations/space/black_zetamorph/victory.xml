@@ -1,179 +1,416 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<preference fetish="cocktransformation" />	
+		<preference fetish="cocktransformation" />
 		<text>
-		The black skinned zeta snatched up your falling form as you're laid low by her might and power. The alluring yet terribly xenoform holding you up, baring her teeth in a feral grin as she dangles you in the air in front of her with her upper arms. Her lower arms busy ministering down below to her own erection. Her tongue flicks out to tease over your chin as she chuckles seeing where your gaze has drifted, her enormous charcoal black shaft standing at attention beneath you as she grins <conditional>
-				<assertion evaluate="slothasitem" slot="2" /> and then slides one hand up to yank at your attire and bare your hips to her depredations.
-			</conditional>.
+			The black skinned zeta snatched up your falling form as you're laid
+			low by her might and power. The alluring yet terribly xenoform
+			holding you up, baring her teeth in a feral grin as she dangles you
+			in the air in front of her with her upper arms. Her lower arms busy
+			ministering down below to her own erection. Her tongue flicks out to
+			tease over your chin as she chuckles seeing where your gaze has
+			drifted, her enormous charcoal black shaft standing at attention
+			beneath you as she grins
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				and then slides one hand up to yank at your attire and bare your
+				hips to her depredations.
+			</conditional>
+			.
 		</text>
-		<choice destination="sex0" text="she's going to put it in isn't she"/>
+		<choice destination="sex0" text="she's going to put it in isn't she" />
 	</page>
-	
+
 	<page ID="sex0">
-	<assertion evaluate="haspart" part="vagina" />
-	<text>
-	She is. The mightiest of the zetamorphs uses one hand to roughly pull one of your thighs wide as she uses the other to line herself up with your bared sex, the dark hued terror's upper claws holding your arms spread above you to dangle you and prevent your interference with your impending rape. She lets out a growl as she thrusts and ruts into you, her broad cocktip shoving into your sex, stretching your inner passage around her to give her wonderful tightness to enjoy. The Zeta treating you remarkably roughly in how quickly she's forced much of her meat into your body, your abdomen bulging with her shaft as she slaps her balls against your ass with quiver inducing force.
-	</text>
-	<choice destination="sexV1" text="fucked like a toy"/>
+		<assertion evaluate="haspart" part="vagina" />
+		<text>
+			She is. The mightiest of the zetamorphs uses one hand to roughly pull
+			one of your thighs wide as she uses the other to line herself up with
+			your bared sex, the dark hued terror's upper claws holding your arms
+			spread above you to dangle you and prevent your interference with
+			your impending rape. She lets out a growl as she thrusts and ruts
+			into you, her broad cocktip shoving into your sex, stretching your
+			inner passage around her to give her wonderful tightness to enjoy.
+			The Zeta treating you remarkably roughly in how quickly she's forced
+			much of her meat into your body, your abdomen bulging with her shaft
+			as she slaps her balls against your ass with quiver inducing force.
+		</text>
+		<choice destination="sexV1" text="fucked like a toy" />
 	</page>
 
 	<page ID="sexV1">
-	<text>
-	The zeta starts to thrust in and out of your tight stretched nethers, groaning and moaning in pleasure at your tightness as she uses you. With all four of her hands grasping and clutching you as she roughly fucks and reams out your sex you start to feeling like a toy. Your body treated like an onahole of sorts that she's thrusting into to  get off, shoving you down over her cock to meet each buck of her hips as her pace increases. Her use of your warm hole so overwhelming you can't even struggle effectively against her even with your arms free.
-	</text>
-	<choice destination="sexV2" text="degradation continues"/>
+		<text>
+			The zeta starts to thrust in and out of your tight stretched nethers,
+			groaning and moaning in pleasure at your tightness as she uses you.
+			With all four of her hands grasping and clutching you as she roughly
+			fucks and reams out your sex you start to feeling like a toy. Your
+			body treated like an onahole of sorts that she's thrusting into to
+			get off, shoving you down over her cock to meet each buck of her hips
+			as her pace increases. Her use of your warm hole so overwhelming you
+			can't even struggle effectively against her even with your arms free.
+		</text>
+		<choice destination="sexV2" text="degradation continues" />
 	</page>
 
 	<page ID="sexV2">
-	<text>
-	You can feel the mighty alien's pleasure building as she continues to pound away at your sex, her pleasure sounds becoming more lustful and her savage fucking more vigorous. You clench and whimper in anticipation of what's to come and are not disappointed, the black zeta's climax roaring through her and into you. Her cock erupting deep within you, painting your womb white with her hot thick cum as she lets out her delighted orgasmic cry. The zeta's spurting climax into your well fucked nethers seems to last an age afore finally tapering off, your belly looking faintly bulgy with all that pent up cum filling your womb and kept inside by her thick shaft corking up your sex. The zeta seems to relax in afterglow for the moment. She's recovering after orgasm with soft hissing pants.
-	</text>
-	<choice destination="sexVStruggle" text="try to get up off of her cock"/>
-	<choice destination="sexVSubmit" text="she's not the only one who needs to catch their breath, stay awhile"/>
+		<text>
+			You can feel the mighty alien's pleasure building as she continues to
+			pound away at your sex, her pleasure sounds becoming more lustful and
+			her savage fucking more vigorous. You clench and whimper in
+			anticipation of what's to come and are not disappointed, the black
+			zeta's climax roaring through her and into you. Her cock erupting
+			deep within you, painting your womb white with her hot thick cum as
+			she lets out her delighted orgasmic cry. The zeta's spurting climax
+			into your well fucked nethers seems to last an age afore finally
+			tapering off, your belly looking faintly bulgy with all that pent up
+			cum filling your womb and kept inside by her thick shaft corking up
+			your sex. The zeta seems to relax in afterglow for the moment. She's
+			recovering after orgasm with soft hissing pants.
+		</text>
+		<choice destination="sexVStruggle" text="try to get up off of her cock" />
+		<choice destination="sexVSubmit"
+			text="she's not the only one who needs to catch their breath, stay awhile" />
 	</page>
 
 	<check ID="sexVStruggle">
-	<test what="STRUGGLE" DC="15" />
-	<outcome destination="sexVSuccess" />
-	<outcome destination="sexVFail" />
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="sexVSuccess" />
+		<outcome destination="sexVFail" />
 	</check>
-	
+
 	<page ID="sexVSuccess">
-	<text>
-	You take advantage of her afterglow and plant your hands and feet as best you can on her body to shove away, pulling yourself up off cock as her jizz starts to leak out around it to splatter against her balls and inner thighs. The zetamorph's eyes snap open as you get close to the tip of her cock popping free of your snatch and she in turn snatches at you with her hands. But she's too slow and your shove pushes you fully off her cock and out of her grasp. Still leaking hot zeta spunk from your nethers you back away from the Zeta as she gets up. The zeta apparently not willing to just let go her unwilling fucktoy.
-	</text>
+		<text>
+			You take advantage of her afterglow and plant your hands and feet as
+			best you can on her body to shove away, pulling yourself up off cock
+			as her jizz starts to leak out around it to splatter against her
+			balls and inner thighs. The zetamorph's eyes snap open as you get
+			close to the tip of her cock popping free of your snatch and she in
+			turn snatches at you with her hands. But she's too slow and your
+			shove pushes you fully off her cock and out of her grasp. Still
+			leaking hot zeta spunk from your nethers you back away from the Zeta
+			as she gets up. The zeta apparently not willing to just let go her
+			unwilling fucktoy.
+		</text>
 		<effect type="heal" value="0.1" />
 		<effect type="stunnpc" value="10" />
-		<choice destination="end" text="get clear" />		
+		<choice destination="end" text="get clear" />
 	</page>
-	
+
 	<page ID="sexVFail">
-	<text>
-		You take advantage of her afterglow and plant your hands and feet as best you can on her body to shove away, pulling yourself up off cock as her jizz starts to leak out around it to splatter against her balls and inner thighs. The zetamorph's eyes snap open as you get close to the tip of her cock popping free of your snatch and she in turn snatches at you with her hands. Her hands grasping your thighs firmly and pulling you back down as she snarls. Her cock hilted anew in your snatch as she glares into your face for trying to escape, apparently she's not willing to let you off her dick post coitus.	
-	</text>
-	<choice destination="CTFV-0" text="well, it can't be that bad can it"/>
+		<text>
+			You take advantage of her afterglow and plant your hands and feet as
+			best you can on her body to shove away, pulling yourself up off cock
+			as her jizz starts to leak out around it to splatter against her
+			balls and inner thighs. The zetamorph's eyes snap open as you get
+			close to the tip of her cock popping free of your snatch and she in
+			turn snatches at you with her hands. Her hands grasping your thighs
+			firmly and pulling you back down as she snarls. Her cock hilted anew
+			in your snatch as she glares into your face for trying to escape,
+			apparently she's not willing to let you off her dick post coitus.
+		</text>
+		<choice destination="CTFV-0" text="well, it can't be that bad can it" />
 	</page>
-	
+
 	<page ID="CTFV-0">
-	<text>
-	You squirm only a little but don't try to escape from being hilted on her cock what with her and her mighty arms alert to thwart your attempt. You shift uncertainly about though and blush at your lewd predicament, a hot flush throbbing up through your body seemingly emanating from your well fucked sex and cumfilled middle. And that makes you concerned enough to glance down only to see to your shock her nightblack skintone is starting to encroach out from your ass and crotch, replacing your <macro id="skin_colour_desc" /> colour with that of her own as her body begins to assimilate and overtake your own. You hear her hiss and grin in pleasure at the expression on your face as she goes to hold you close now. Not that your renewed struggles can stop you fusing to her cock. 
-	</text>
-	<choice destination="CTFV-1" text="she's cocking me!"/>
+		<text>
+			You squirm only a little but don't try to escape from being hilted on
+			her cock what with her and her mighty arms alert to thwart your
+			attempt. You shift uncertainly about though and blush at your lewd
+			predicament, a hot flush throbbing up through your body seemingly
+			emanating from your well fucked sex and cumfilled middle. And that
+			makes you concerned enough to glance down only to see to your shock
+			her nightblack skintone is starting to encroach out from your ass and
+			crotch, replacing your
+			<macro id="skin_colour_desc" />
+			colour with that of her own as her body begins to assimilate and
+			overtake your own. You hear her hiss and grin in pleasure at the
+			expression on your face as she goes to hold you close now. Not that
+			your renewed struggles can stop you fusing to her cock.
+		</text>
+		<choice destination="CTFV-1" text="she's cocking me!" />
 	</page>
-	
+
 	<page ID="sexVSubmit">
-	<text>
-	You rest and clutch tight to her front as you work on recovering after being so thoroughly fucked by the mighty alien. The zeta letting out a mhmm and wrapping her arms around you, not so bad. Her larger frame and ample breasts providing a good place to cuddle post fucking even if the zeta was rather rough with you..and besides, you don't have the strength to get away. 
-	</text>
-	<choice destination="CTFV-0A" text="just..rest a while"/>
+		<text>
+			You rest and clutch tight to her front as you work on recovering after
+			being so thoroughly fucked by the mighty alien. The zeta letting out
+			a mhmm and wrapping her arms around you, not so bad. Her larger frame
+			and ample breasts providing a good place to cuddle post fucking even
+			if the zeta was rather rough with you..and besides, you don't have
+			the strength to get away.
+		</text>
+		<choice destination="CTFV-0A" text="just..rest a while" />
 	</page>
-	
+
 	<page ID="CTFV-0A">
-	<text>
-	You find that the still hard cock, her abs and her embrace provide a good amount of support for you as you rest there. The Zeta seeming to let out a chuckle as you rest against her coalblack skin, nice and warm against her alien body as she seems content to just hold you close. Though considering the nature of these aliens perhaps she has something less friendly in mind for you.And that thought rouses you from your relaxed warm torpor of post coital snuggling. And With that you look down to notice that while you were resting her black colouration has started to spread to stain and overtake your own <macro id="skin_colour_desc" /> skin. With a start you shift and your eyes widen at the zeta upon realizing that you're fused and merged to her shaft, stuck to her crotch and destined to end up a perverted part of this alien.
-	</text>
-	<choice destination="CTFV-1" text="she's cocking me!"/>	
+		<text>
+			You find that the still hard cock, her abs and her embrace provide a
+			good amount of support for you as you rest there. The Zeta seeming to
+			let out a chuckle as you rest against her coalblack skin, nice and
+			warm against her alien body as she seems content to just hold you
+			close. Though considering the nature of these aliens perhaps she has
+			something less friendly in mind for you.And that thought rouses you
+			from your relaxed warm torpor of post coital snuggling. And With that
+			you look down to notice that while you were resting her black
+			colouration has started to spread to stain and overtake your own
+			<macro id="skin_colour_desc" />
+			skin. With a start you shift and your eyes widen at the zeta upon
+			realizing that you're fused and merged to her shaft, stuck to her
+			crotch and destined to end up a perverted part of this alien.
+		</text>
+		<choice destination="CTFV-1" text="she's cocking me!" />
 	</page>
-	
+
 	<page ID="CTFV-1">
-	<text>
-	Your reaction to your impending fate seems to amuse and arouse the zetamorph greatly as she holds you tight and changes you in her arms. You can feel yourself increasingly throbbing with how turned on she is as those black patches spread on your skin and your body begins to look veiny and turn sensitive in a patch spreading out from where you're joined to her hips. With her holding your arms against your sides though you can do nothing to even resist her, it's already too late to stop the zeta from doing this to you..was from the moment you fully merged onto her cock, now you're going to become her shaft. And you can feel your arms and legs turning weak and soft, merging into your flanks and her sack respectively as they're re-purposed for the zeta who is taking away your independence.
-	</text>
-	<choice destination="CTFV-2" text="a hard price for a hard fuck"/>
+		<text>
+			Your reaction to your impending fate seems to amuse and arouse the
+			zetamorph greatly as she holds you tight and changes you in her arms.
+			You can feel yourself increasingly throbbing with how turned on she
+			is as those black patches spread on your skin and your body begins to
+			look veiny and turn sensitive in a patch spreading out from where
+			you're joined to her hips. With her holding your arms against your
+			sides though you can do nothing to even resist her, it's already too
+			late to stop the zeta from doing this to you..was from the moment you
+			fully merged onto her cock, now you're going to become her shaft. And
+			you can feel your arms and legs turning weak and soft, merging into
+			your flanks and her sack respectively as they're re-purposed for the
+			zeta who is taking away your independence.
+		</text>
+		<choice destination="CTFV-2" text="a hard price for a hard fuck" />
 	</page>
-	
+
 	<page ID="CTFV-2">
-	<text>
-	You squirm in her grasp but can do naught to resist as your arms sink into your sides making you a limbless increasingly tubular fleshy worm jutting from her hips. Your feminine qualities, the curves of your hips, chest and shoulders, are steadily being subsumed into the veiny cylinder you're destined to become. All of your body now has assumed the black tone of her skin over your own, a testament to how far your assimilation has progressed. The zetamorph's hands start to jack up and down your flanks rather than holding you tight, stroking the bumps out of her new cock and overwhelming you with pleasure as your sensitive form is stimulated by her. Your body throbbing and steadily regressing, muscles devolving, flesh and organs converting to cockflesh and cumtube within you. Even if you want to struggle or squirm now you couldn't.
-	</text>
-	<choice destination="CTFV-GO" text="soon to be nothing but an alien dick"/>
+		<text>
+			You squirm in her grasp but can do naught to resist as your arms sink
+			into your sides making you a limbless increasingly tubular fleshy
+			worm jutting from her hips. Your feminine qualities, the curves of
+			your hips, chest and shoulders, are steadily being subsumed into the
+			veiny cylinder you're destined to become. All of your body now has
+			assumed the black tone of her skin over your own, a testament to how
+			far your assimilation has progressed. The zetamorph's hands start to
+			jack up and down your flanks rather than holding you tight, stroking
+			the bumps out of her new cock and overwhelming you with pleasure as
+			your sensitive form is stimulated by her. Your body throbbing and
+			steadily regressing, muscles devolving, flesh and organs converting
+			to cockflesh and cumtube within you. Even if you want to struggle or
+			squirm now you couldn't.
+		</text>
+		<choice destination="CTFV-GO" text="soon to be nothing but an alien dick" />
 	</page>
-	
+
 	<gameover ID="CTFV-GO" noReform="true">
-	<text>
-	Your lips ooze a constant stream of pre as all of your form pulses and throbs in her hands. The alien jacking off her new cock, each time her hands slide up a little more of your identity is gone. Folds of black foreskin sliding up over your purpling face and each time they slide back a little more of you is gone, your face puffing out into a glans, then with a slide your eyes are sealed over, another and your nose disappears, finally the foreskin rolls up a final time and when it pulls back your mouth is naught but a vertical cumslit. And the alien wastes no more time in putting you to use, her building orgasm finally reaching its apex to come gushing out through you. Hot sticky seed coursing up out of your vertical lips cementing your position as naught but an enhancement to her already enormous alien cock. You feel her spurts trail off and you soften, being paid no more attention by the alien as you come to rest between her legs...what a way for your adventure to end.
-	</text>
+		<text>
+			Your lips ooze a constant stream of pre as all of your form pulses and
+			throbs in her hands. The alien jacking off her new cock, each time
+			her hands slide up a little more of your identity is gone. Folds of
+			black foreskin sliding up over your purpling face and each time they
+			slide back a little more of you is gone, your face puffing out into a
+			glans, then with a slide your eyes are sealed over, another and your
+			nose disappears, finally the foreskin rolls up a final time and when
+			it pulls back your mouth is naught but a vertical cumslit. And the
+			alien wastes no more time in putting you to use, her building orgasm
+			finally reaching its apex to come gushing out through you. Hot sticky
+			seed coursing up out of your vertical lips cementing your position as
+			naught but an enhancement to her already enormous alien cock. You
+			feel her spurts trail off and you soften, being paid no more
+			attention by the alien as you come to rest between her legs...what a
+			way for your adventure to end.
+		</text>
 	</gameover>
-	
+
 	<page ID="sex0">
-	<assertnot evaluate="haspart" part="vagina" />	
-	<text>
-	The zetamorph grinds her cock up between your legs a moment, then growls and wrenches you around. You can't see what she's doing facing away as you are, but soon enough you can feel the hot broad head of her cock pressing against your arsecheeks. Your squirming only makes her grab your legs with her hands and wrench your arms painfully back as she thrusts in, your bowels stretching incredibly as her thick shaft is shoved deep into your back passage. Her snarls of delight heard above your whimpers of discomfort as she uses and abuses your back hole.</text>
-	<choice destination="sexA1" text="fucked like a toy"/>
-	</page>	
-	
-	<page ID="sexA1">
-	<text>
-	The black zeta gives no mercy to your tender hole as she thrusts into your derriere. Her coalblack veiny shaft hilting in your ass with every thrust. The zeta holding your legs in place with her lower arms as she ploughs your anal sphincter and lets out delighted moans and growls from how tight, hot and squirmy you are around her dick. Your protests falling on deaf ears as the mighty zeta shoves you down repeatedly over her dick, the size and power disparity between the two of you putting you firmly in the category of fuck toy for the creature.
-	</text>
-	<choice destination="sexA2" text="degradation continues"/>
+		<assertnot evaluate="haspart" part="vagina" />
+		<text>
+			The zetamorph grinds her cock up between your legs a moment, then growls
+			and wrenches you around. You can't see what she's doing facing away
+			as you are, but soon enough you can feel the hot broad head of her
+			cock pressing against your arsecheeks. Your squirming only makes her
+			grab your legs with her hands and wrench your arms painfully back as
+			she thrusts in, your bowels stretching incredibly as her thick shaft
+			is shoved deep into your back passage. Her snarls of delight heard
+			above your whimpers of discomfort as she uses and abuses your back
+			hole.</text>
+		<choice destination="sexA1" text="fucked like a toy" />
 	</page>
-	
+
+	<page ID="sexA1">
+		<text>
+			The black zeta gives no mercy to your tender hole as she thrusts into
+			your derriere. Her coalblack veiny shaft hilting in your ass with
+			every thrust. The zeta holding your legs in place with her lower arms
+			as she ploughs your anal sphincter and lets out delighted moans and
+			growls from how tight, hot and squirmy you are around her dick. Your
+			protests falling on deaf ears as the mighty zeta shoves you down
+			repeatedly over her dick, the size and power disparity between the
+			two of you putting you firmly in the category of fuck toy for the
+			creature.
+		</text>
+		<choice destination="sexA2" text="degradation continues" />
+	</page>
+
 	<page ID="sexA2">
-	<text>
-	You can feel from the tempo of her violations that the alien's climax is fast approaching, her balls slapping against your thighs more rapidly and her lusty sounds grow more feral and loud. Your abuse and use at her hands soon to be at an end. You feel her hilt in your ass one last time and let out a snarling blisssful cry, holding you firm against her crotch as she unloads into your stretched bowels, pumping hot cum deep into your innards and filling you up. When her spurting finally relents you feel her hot cum filling your belly making it bulge and your burp when it comes smells of spunk. You're worn out on her cock, but you can feel her grip on you loosen as she pants and mhmms in afterglow and recovers her strength.
-	</text>
-	<choice destination="sexAStruggle" text="try to get up off of her cock"/>
-	<choice destination="sexASubmit" text="she's not the only one who needs to catch their breath, stay awhile"/>	
+		<text>
+			You can feel from the tempo of her violations that the alien's climax is
+			fast approaching, her balls slapping against your thighs more rapidly
+			and her lusty sounds grow more feral and loud. Your abuse and use at
+			her hands soon to be at an end. You feel her hilt in your ass one
+			last time and let out a snarling blisssful cry, holding you firm
+			against her crotch as she unloads into your stretched bowels, pumping
+			hot cum deep into your innards and filling you up. When her spurting
+			finally relents you feel her hot cum filling your belly making it
+			bulge and your burp when it comes smells of spunk. You're worn out on
+			her cock, but you can feel her grip on you loosen as she pants and
+			mhmms in afterglow and recovers her strength.
+		</text>
+		<choice destination="sexAStruggle" text="try to get up off of her cock" />
+		<choice destination="sexASubmit"
+			text="she's not the only one who needs to catch their breath, stay awhile" />
 	</page>
 
 	<check ID="sexAStruggle">
-	<test what="STRUGGLE" DC="15" />
-	<outcome destination="sexASuccess" />
-	<outcome destination="sexAFail" />
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="sexASuccess" />
+		<outcome destination="sexAFail" />
 	</check>
-	
+
 	<page ID="sexASuccess">
-	<text>
-	Taking advantage of the lul as the black zetamorph recovers you marshal your strength and kick out, reaching down to shove at her hips and force yourself up off her cock and out of her grasp before she can stop you. The zeta's eyes snapping open as your heated stretched and cumfilled bowels start to slide up off of her shaft and she realizes what you're trying to do, but to no avail it seems as you kick off her grasping hands and land in a leaky heap on the floor. You know it won't be enough to escape her though. So glancing back over your shoulder you kick out and backwards to strike her in a sensitive spot..hearing her snarl in pain and stagger back as you get to your feet.
-	</text>
+		<text>
+			Taking advantage of the lul as the black zetamorph recovers you marshal
+			your strength and kick out, reaching down to shove at her hips and
+			force yourself up off her cock and out of her grasp before she can
+			stop you. The zeta's eyes snapping open as your heated stretched and
+			cumfilled bowels start to slide up off of her shaft and she realizes
+			what you're trying to do, but to no avail it seems as you kick off
+			her grasping hands and land in a leaky heap on the floor. You know it
+			won't be enough to escape her though. So glancing back over your
+			shoulder you kick out and backwards to strike her in a sensitive
+			spot..hearing her snarl in pain and stagger back as you get to your
+			feet.
+		</text>
 		<effect type="heal" value="0.1" />
 		<effect type="stunnpc" value="10" />
-		<choice destination="end" text="get clear" />	
+		<choice destination="end" text="get clear" />
 	</page>
-	
+
 	<page ID="sexAFail">
-	<text>
-		Taking advantage of the lul as the black zetamorph recovers you marshal your strength and kick out, reaching down to shove at her hips and force yourself up off her cock and out of her grasp before she can stop you. The zeta's eyes snapping open as your heated stretched and cumfilled bowels start to slide up off of her shaft and she realizes what you're trying to do, but to no avail it seems as you kick off her grasping hands and land in a leaky heap on the floor. Looking back you know it won't be enough to escape her, you start to rear your leg back to deliver a kick to her crotch only to find your ankle seized and your body dragged backwards. The imposing alien not done with you as she squats down and drags your ass back down over her cock. Her length sliding easily back into your well stretched and lubricated hole.
-	</text>
-	<choice destination="CTFA-Doggy-0" text="another round of fucking?"/>
+		<text>
+			Taking advantage of the lul as the black zetamorph recovers you marshal
+			your strength and kick out, reaching down to shove at her hips and
+			force yourself up off her cock and out of her grasp before she can
+			stop you. The zeta's eyes snapping open as your heated stretched and
+			cumfilled bowels start to slide up off of her shaft and she realizes
+			what you're trying to do, but to no avail it seems as you kick off
+			her grasping hands and land in a leaky heap on the floor. Looking
+			back you know it won't be enough to escape her, you start to rear
+			your leg back to deliver a kick to her crotch only to find your ankle
+			seized and your body dragged backwards. The imposing alien not done
+			with you as she squats down and drags your ass back down over her
+			cock. Her length sliding easily back into your well stretched and
+			lubricated hole.
+		</text>
+		<choice destination="CTFA-Doggy-0" text="another round of fucking?" />
 	</page>
 
 	<page ID="CTFA-Doggy-0">
-	<text>
-	The Zetamorph mercifully seems to not want to plough your ass anew. That jetblack cock hilted in your rear end now as she growls and squeezes your hips roughly where she's holding you firm against her crotch. Her intent is a mystery for a few moments as that thickness of hers throbs within your rear, but then it becomes terribly clear as the changes begin. Your bowels intermingling with the flesh of her shaft, her pulsating veins starting to infiltrate your flesh. Your body becoming rooted to her crotch as she lets out a hissing moan of delight and runs her upper hands along your body. newly Sensitive and hot flesh starts to spread out from the point of fusion while splotches of night black hue starting to rise up in a steady tide overtaking your <macro id="skin_colour_desc" /> colouration in a steady wave out from that self same point.
-	</text>
-	<choice destination="CTFA-1" text="she's cocking me!"/>
+		<text>
+			The Zetamorph mercifully seems to not want to plough your ass anew.
+			That jetblack cock hilted in your rear end now as she growls and
+			squeezes your hips roughly where she's holding you firm against her
+			crotch. Her intent is a mystery for a few moments as that thickness
+			of hers throbs within your rear, but then it becomes terribly clear
+			as the changes begin. Your bowels intermingling with the flesh of her
+			shaft, her pulsating veins starting to infiltrate your flesh. Your
+			body becoming rooted to her crotch as she lets out a hissing moan of
+			delight and runs her upper hands along your body. newly Sensitive and
+			hot flesh starts to spread out from the point of fusion while
+			splotches of night black hue starting to rise up in a steady tide
+			overtaking your
+			<macro id="skin_colour_desc" />
+			colouration in a steady wave out from that self same point.
+		</text>
+		<choice destination="CTFA-1" text="she's cocking me!" />
 	</page>
-	
-	
+
+
 	<page ID="sexASubmit">
-	<text>
-	Panting you can do naught but rest in the grasp of the dominant alien. Overwhelmed by her virility and vigor you do your best to recover even as she leaves her cock hilted in your sore arse. Her shaft remains firm and hard and still throbbing inside you even after her orgasm, the pulsating warmth seeming to seep out into your well stretched asshole. But after you feel somewhat recovered and try to pull up off her cock you find that, you can't. Your efforts only tugging at her crotch and making her groan and wrap her hands around you again. You look down and see that your <macro id="skin_colour_desc" /> skin is starting to turn black and veiny in splotches spreading out from where you're rooted to her ass, her cock now merged into your bowels as she sets about making you a part of her.
-	</text>
-	<choice destination="CTFA-1" text="she's cocking me!"/>	
+		<text>
+			Panting you can do naught but rest in the grasp of the dominant
+			alien. Overwhelmed by her virility and vigor you do your best to
+			recover even as she leaves her cock hilted in your sore arse. Her
+			shaft remains firm and hard and still throbbing inside you even after
+			her orgasm, the pulsating warmth seeming to seep out into your well
+			stretched asshole. But after you feel somewhat recovered and try to
+			pull up off her cock you find that, you can't. Your efforts only
+			tugging at her crotch and making her groan and wrap her hands around
+			you again. You look down and see that your
+			<macro id="skin_colour_desc" />
+			skin is starting to turn black and veiny in splotches spreading out
+			from where you're rooted to her ass, her cock now merged into your
+			bowels as she sets about making you a part of her.
+		</text>
+		<choice destination="CTFA-1" text="she's cocking me!" />
 	</page>
-	
+
 
 	<page ID="CTFA-1">
-	<text>
-	The realization makes you struggle, but that only seems to make the zetamorph amused as she lets out a growling chuckle. Your hips remaining rooted to her crotch despite your efforts, in desperation you try to shove off from her thighs with your feet. But sheer bad luck as your feet instead press on and into her balls, sinking into the veined hairless sack of the zetamorph. black skin stretching and easing up over your legs, encasing them in her loins and reshaping your legs steadily into two hefty fertile balls. The dreadful loss of your legs does not entirely distract you from the way your upper body and innards are changing, veiny black throbbing flesh has replaced your belly and reached as far as your chest now and your protests are muffled as hot pre jets up and out of your mouth. Each throb of her cock robbing you of more of your individuality and girlsome features as your neck swells out and your shoulders turn into folds of loose foreskin.
-	</text>
-	<choice destination="CTFA-2" text="won't be long now"/>
+		<text>
+			The realization makes you struggle, but that only seems to make the
+			zetamorph amused as she lets out a growling chuckle. Your hips
+			remaining rooted to her crotch despite your efforts, in desperation
+			you try to shove off from her thighs with your feet. But sheer bad
+			luck as your feet instead press on and into her balls, sinking into
+			the veined hairless sack of the zetamorph. black skin stretching and
+			easing up over your legs, encasing them in her loins and reshaping
+			your legs steadily into two hefty fertile balls. The dreadful loss of
+			your legs does not entirely distract you from the way your upper body
+			and innards are changing, veiny black throbbing flesh has replaced
+			your belly and reached as far as your chest now and your protests are
+			muffled as hot pre jets up and out of your mouth. Each throb of her
+			cock robbing you of more of your individuality and girlsome features
+			as your neck swells out and your shoulders turn into folds of loose
+			foreskin.
+		</text>
+		<choice destination="CTFA-2" text="won't be long now" />
 	</page>
-	
+
 	<page ID="CTFA-2">
-	<text>
-	You're more resembling a dick with arms than the girl you were before the zeta got her hands on you. The alien's black hued skin has entirely overtaken and erased your own skin tone on every inch of you except your face, but only because that is purpling and swelling out. You can feel your skull softening as your head changes into the soft throbbing glans of the zeta's new dick. Your hands futilely feeling over your face as your eyes seal over, but your arms are oddly lethargic and you find them sticking into the folds of foreskin.. the last parts of your former self sinking into the flanks of your cylindrical body. All you can do now is throb and twitch now, sightless, voiceless, but you can still hear without ears..and the sense of touch..
-	</text>
-	<choice destination="CTFA-GO" text="is incredible"/>
+		<text>
+			You're more resembling a dick with arms than the girl you were before the
+			zeta got her hands on you. The alien's black hued skin has entirely
+			overtaken and erased your own skin tone on every inch of you except
+			your face, but only because that is purpling and swelling out. You
+			can feel your skull softening as your head changes into the soft
+			throbbing glans of the zeta's new dick. Your hands futilely feeling
+			over your face as your eyes seal over, but your arms are oddly
+			lethargic and you find them sticking into the folds of foreskin.. the
+			last parts of your former self sinking into the flanks of your
+			cylindrical body. All you can do now is throb and twitch now,
+			sightless, voiceless, but you can still hear without ears..and the
+			sense of touch..
+		</text>
+		<choice destination="CTFA-GO" text="is incredible" />
 	</page>
-	
+
 	<gameover ID="CTFA-GO" noReform="true">
-	<text>
-	You can feel every stimulating touch as the black zetamorph, your owner, strokes over you with her hands. The triumphant alien stroking her new cock with increasing vigour as not a trace of your former self remains. Every part of you now is indistinguishable from an enormous black skinned cock as you throb between her thighs. Your resistance to your fate steadily eroding as she masturbates, the amazing pleasure making it harder and harder to object to her repurposing you as her girth. Your awareness seeming to shrink down to sensation and pleasure to the extent that all the things you can no longer do seem like impossibly remote and inconsequential wants. Your mind simplifying in the wake of the simplification of your body as her pleasure builds and so does your own...building and rising until with a final burst she sends hot cum splattering out through you, what's left of you after she's done has only dim memories of being something before. And no particular desire to return, life is so much simpler now for you as you soften against her thighs, having succeeded in making the already well equipped black zeta even more endowed.
-	</text>
-	</gameover>	
-	
+		<text>
+			You can feel every stimulating touch as the black zetamorph, your owner,
+			strokes over you with her hands. The triumphant alien stroking her
+			new cock with increasing vigour as not a trace of your former self
+			remains. Every part of you now is indistinguishable from an enormous
+			black skinned cock as you throb between her thighs. Your resistance
+			to your fate steadily eroding as she masturbates, the amazing
+			pleasure making it harder and harder to object to her repurposing you
+			as her girth. Your awareness seeming to shrink down to sensation and
+			pleasure to the extent that all the things you can no longer do seem
+			like impossibly remote and inconsequential wants. Your mind
+			simplifying in the wake of the simplification of your body as her
+			pleasure builds and so does your own...building and rising until with
+			a final burst she sends hot cum splattering out through you, what's
+			left of you after she's done has only dim memories of being something
+			before. And no particular desire to return, life is so much simpler
+			now for you as you soften against her thighs, having succeeded in
+			making the already well equipped black zeta even more endowed.
+		</text>
+	</gameover>
+
 </Conversation>

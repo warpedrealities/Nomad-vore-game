@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <craftingtable sprite="21" name="crafting table" health="10">
-<contains minimum="1" maximum="2">scrap metal</contains>
-<description>a work bench for crafting equipment and devices.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>a work bench for crafting equipment and devices.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
 </craftingtable>

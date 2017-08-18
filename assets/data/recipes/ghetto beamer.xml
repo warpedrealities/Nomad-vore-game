@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <recipe name="ghetto beamer" requiredskill="4" startunlocked="true">
-<description>
-An improvised heavy beam weapon built out of suitable components found in the field
-</description>
-<ingredient item="optics" quantity="6"/>
-<ingredient item="computation valve" quantity="3"/>
-<ingredient item="flux capacitor" quantity="1"/>
-<result item="Ghetto Beamer"/>
+	<description>
+		An improvised heavy beam weapon built out of suitable components found
+		in the field
+	</description>
+	<ingredient item="optics" quantity="6" />
+	<ingredient item="computation valve" quantity="3" />
+	<ingredient item="flux capacitor" quantity="1" />
+	<tokenRequirement item="gadgeteer" quantity="2" />
+	<result item="Ghetto Beamer" />
 </recipe>

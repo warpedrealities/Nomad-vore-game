@@ -5,7 +5,8 @@
 			flag="dammathquest1" value="3" />
 		<!--quest complete -->
 		<text>
-			Nissa gives you a delighted smile at your approach "Friend! the pump is
+			Nissa gives you a delighted smile at your approach "Friend! the
+			pump is
 			working well, what can I do for you?"
 		</text>
 		<choice destination="reward" text="you said something about being grateful?">
@@ -36,7 +37,8 @@
 
 	<page ID="shop">
 		<text>
-			"Okay! now, I get all sorts of things...most of them don't work but you're
+			"Okay! now, I get all sorts of things...most of them don't work
+			but you're
 			real clever, I'm sure you can figure out a use for them."
 		</text>
 		<special effect="shop" ID="dammathMechanic" />
@@ -47,8 +49,10 @@
 			value="1" />
 		<!--talked before -->
 		<text>
-			"Hello!...say, I don't suppose..no I shouldn't ask it's embarassing but, could you
-			give me some help? I can't fix this pump and you have the look of
+			"Hello!...say, I don't suppose..no I shouldn't ask it's
+			embarassing but, could you
+			give me some help? I can't fix this pump
+			and you have the look of
 			someone who might be good with technology."
 		</text>
 		<choice destination="pump" text="tell me about this pump" />
@@ -58,11 +62,16 @@
 	<page ID="start">
 		<!--first greetings -->
 		<text>
-			The saurian takes a second or two to notice your approach as she's
-			frowning and looking over a rather rusty looking chunk of metal with
-			a sense of unhappyness, but she smiles as she rises to her feet to
-			face you "Oh, uh hello...name's Nissa..last mechanic of Dammath." she
-			says and then feels need to elaborate "it's why i'm fixing this here
+			The saurian takes a second or two to notice your approach as
+			she's
+			frowning and looking over a rather rusty looking chunk of metal
+			with
+			a sense of unhappyness, but she smiles as she rises to her feet
+			to
+			face you "Oh, uh hello...name's Nissa..last mechanic of Dammath."
+			she
+			says and then feels need to elaborate "it's why i'm fixing this
+			here
 			pump, or trying to anyway."
 		</text>
 		<effect type="setlocalflag" flag="talked" value="1" />
@@ -77,15 +86,24 @@
 		<text>
 			A chance to talk about machines and the earnest if somewhat ill
 			tutored mechanic lights up with enthusiasm.
-			"This pump is the primary source of water for our village...my mentor's,
-			mentor's mentor made it and we've kept it working since...till now
-			anyway, now it's broken and I..I don't know how to fix it okay? I'm
-			not fully trained and I'm not sure what's wrong with it." she says
-			looking upset for a moment before bouncing back "but it's really
-			quite an amazing thing isn't it? when it's running we don't even have
-			to operate it by hand." she pauses "..listen I'm kinda in a bind
-			here, if I dont fix the pump they'll probably replace it with a
-			boring old crank. If you want to take a look at it.. I'd be ever so
+			"This pump is the primary
+			source of water for our village...my mentor's,
+			mentor's mentor made it
+			and we've kept it working since...till now
+			anyway, now it's broken and
+			I..I don't know how to fix it okay? I'm
+			not fully trained and I'm not
+			sure what's wrong with it." she says
+			looking upset for a moment before
+			bouncing back "but it's really
+			quite an amazing thing isn't it? when
+			it's running we don't even have
+			to operate it by hand." she pauses
+			"..listen I'm kinda in a bind
+			here, if I dont fix the pump they'll
+			probably replace it with a
+			boring old crank. If you want to take a
+			look at it.. I'd be ever so
 			grateful if you manage to fix it."
 		</text>
 		<choice destination="swamp"
@@ -106,7 +124,8 @@
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest1"
 			value="1" />
 		<text>
-			"The pump still isn't working. I'm not sure what's wrong, but if you
+			"The pump still isn't working. I'm not sure what's wrong, but if
+			you
 			could lend a hand I'd be ever so grateful." she says sincerely and
 			fidgets "I dun want to be a mechanic without a pump."
 		</text>
@@ -128,15 +147,24 @@
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest1"
 			value="2" />
 		<text>
-			"you think you fixed it? let me check." she says and then goes to prod at
-			the pump afore throwing the circuit breaker closed and then letting
-			out a squee as the machine stutters and shudders to life. The pump
-			gears grinding and squeeling makes Nissa frantic for a moment or two
-			as she applies liberal lubrication, the noise becoming steadily more
-			healthy. Nissa stepping back just as water starts to belch and burst
-			up out of the pump to fill the bucket "it works! it really works you
-			fixed it oh thankyou!" the lizard mechanic turns around and embraces
-			you, overjoyed by the restoration of the pump and without a care for
+			"you think you fixed it? let me check." she says and then goes
+			to prod at
+			the pump afore throwing the circuit breaker closed and then
+			letting
+			out a squee as the machine stutters and shudders to life. The
+			pump
+			gears grinding and squeeling makes Nissa frantic for a moment or
+			two
+			as she applies liberal lubrication, the noise becoming steadily
+			more
+			healthy. Nissa stepping back just as water starts to belch and
+			burst
+			up out of the pump to fill the bucket "it works! it really works
+			you
+			fixed it oh thankyou!" the lizard mechanic turns around and
+			embraces
+			you, overjoyed by the restoration of the pump and without a
+			care for
 			the stains on her tunic she might be exposing you to with her
 			exuberant celebration.
 		</text>
@@ -151,10 +179,14 @@
 
 	<page ID="swamp">
 		<text>
-			"It's wet sure, but it's not exactly good to drink, like....at all." she
-			looks concerned at you, stepping closer to examine your facial
-			features "you didn't try to drink it did you? it can make you really
-			sick...you look fine though." she steps back out of your personal
+			"It's wet sure, but it's not exactly good to drink, like....at
+			all." she
+			looks concerned at you, stepping closer to examine your
+			facial
+			features "you didn't try to drink it did you? it can make you
+			really
+			sick...you look fine though." she steps back out of your
+			personal
 			space.
 		</text>
 		<effect type="setlocalflag" flag="swamp" value="1" />
@@ -179,8 +211,10 @@
 
 	<page ID="pumpquest">
 		<text>
-			"you will? oh thankyou" she bounces on the spot and looks a moment like
-			she's about to embrace you then lowers her hands "i'll be ever so
+			"you will? oh thankyou" she bounces on the spot and looks a
+			moment like
+			she's about to embrace you then lowers her hands "i'll be
+			ever so
 			grateful if you can get it to work."
 		</text>
 		<effect type="setglobalflag" flag="dammathquest1" value="1" />

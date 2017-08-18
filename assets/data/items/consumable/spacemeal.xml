@@ -1,11 +1,15 @@
 <?xml version="1.0"?>
-<ItemConsumable name="space meal" weight="1" value="120" tag="1">
+<ItemConsumable name="space meal" weight="1" value="120"
+	tag="1">
 	<description>A meal, as prepared IN SPACE. It comes in a silvery foil
 		wrapper as a series of rectangular chunks. Guaranteed to still be
-		edible after exposure to vacuum. </description>
+		edible after exposure to vacuum.
+	</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
 		modvalue="80" modifies="SATIATION">
-		Its presentation was lacklustre, but the contents are certainly
-		nutritious..if a bit peculiar and yet monotonous in their texture.
+		Its presentation was lacklustre, but the
+		contents are certainly
+		nutritious..if a bit peculiar and yet monotonous
+		in their texture.
 	</effectrecover>
 </ItemConsumable>

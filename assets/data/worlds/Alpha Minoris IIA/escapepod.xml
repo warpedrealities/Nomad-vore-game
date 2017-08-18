@@ -1,42 +1,48 @@
 <?xml version="1.0"?>
 <zone width="16" height="16" spriteset="ship.png">
-<tileset>
-<tile sprite="1" vision="1" movement="2">a metal wall</tile>
-<tile sprite="2" vision="0" movement="0">a metal floor</tile>
-</tileset>
-<description></description>
-<mapgen>
-<prefab positionX="0" positionY="0" width="5">
-<row>01210</row>
-<row>11211</row>
-<row>12221</row>
-<row>11211</row>
-<row>01110</row>
+	<tileset>
+		<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+		<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+	</tileset>
+	<description></description>
+	<mapgen>
+		<prefab positionX="0" positionY="0" width="5">
+			<row>01210</row>
+			<row>11211</row>
+			<row>12221</row>
+			<row>11211</row>
+			<row>01110</row>
 
-<conditionalportal sprite="1" x="2" y="0" destination="Zone 1A" ID="16" facing="0">
-<description>
-Exterior Hatch
-</description>
-<forbidtext>
-You really shouldn't pop the outer hatch without checking its safe on the computer first.
-</forbidtext>
-<condition flag="ESCAPEPOD" operator="greaterthan" value="1"/>
-</conditionalportal>
-</prefab>
-<!--
-<pairedportal x="2" y="0" destination="Zone 1A" sprite="1" ID="16" facing="0"> Exterior hatch </pairedportal>
--->
-<placeWidget x="2" y="3" name="console" info="interaction/escapepod" variable="31"/>
-<breakable name="cryopod" x="3" y="2" sprite="17" hp="10" items="1">
-<description>A cryogenic stasis chamber, able to preserve life by slowing metabolic processes to a near stop.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<Item>scrap metal</Item>
-</breakable>
-<breakable name="cryopod" x="1" y="2" sprite="17" hp="10" items="1">
-<description>A cryogenic stasis chamber, able to preserve life by slowing metabolic processes to a near stop.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<Item>scrap metal</Item>
-</breakable>
-</mapgen>
+			<conditionalportal sprite="1" x="2" y="0"
+				destination="Zone 1A" ID="16" facing="0">
+				<description>
+					Exterior Hatch
+				</description>
+				<forbidtext>
+					You really shouldn't pop the outer hatch without checking its safe on
+					the computer first.
+				</forbidtext>
+				<condition flag="ESCAPEPOD" operator="greaterthan" value="1" />
+			</conditionalportal>
+		</prefab>
+		<!-- <pairedportal x="2" y="0" destination="Zone 1A" sprite="1" ID="16" 
+			facing="0"> Exterior hatch </pairedportal> -->
+		<placeWidget x="2" y="3" name="console" info="interaction/escapepod"
+			variable="31" />
+		<breakable name="cryopod" x="3" y="2" sprite="17" hp="10"
+			items="1">
+			<description>A cryogenic stasis chamber, able to preserve life by
+				slowing metabolic processes to a near stop.</description>
+			<resistance resists="KINETIC" strength="2"></resistance>
+			<Item>scrap metal</Item>
+		</breakable>
+		<breakable name="cryopod" x="1" y="2" sprite="17" hp="10"
+			items="1">
+			<description>A cryogenic stasis chamber, able to preserve life by
+				slowing metabolic processes to a near stop.</description>
+			<resistance resists="KINETIC" strength="2"></resistance>
+			<Item>scrap metal</Item>
+		</breakable>
+	</mapgen>
 
 </zone>

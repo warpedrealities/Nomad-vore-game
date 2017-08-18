@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import nomad.Universe;
 
@@ -13,6 +15,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actorRPG.player.Player_RPG;
 import shared.ParserHelper;
 
 import item.Item;
@@ -26,7 +29,7 @@ public class CraftingRecipe implements Comparable {
 	private int requiredSkill;
 
 	private ArrayList<CraftingIngredient> ingredients;
-
+	private ArrayList<CraftingIngredient> tokenRequirements;
 	private Item result;
 
 	private int resultCount = 1;
@@ -44,6 +47,7 @@ public class CraftingRecipe implements Comparable {
 	private void loadFromFile(Element enode) {
 
 		ingredients = new ArrayList<CraftingIngredient>();
+		tokenRequirements=new ArrayList<CraftingIngredient>();
 		name = enode.getAttribute("name");
 		unlocked = Boolean.parseBoolean(enode.getAttribute("startunlocked"));
 		requiredSkill = Integer.parseInt(enode.getAttribute("requiredskill"));
@@ -64,12 +68,14 @@ public class CraftingRecipe implements Comparable {
 				if (Enode.getTagName() == "ingredient") {
 					ingredients.add(new CraftingIngredient(Enode));
 				}
+				if (Enode.getTagName() == "tokenRequirement") {
+					tokenRequirements.add(new CraftingIngredient(Enode));
+				}
 			}
 		}
 	}
 
 	public boolean getUnlocked() {
-		// TODO Auto-generated method stub
 		return unlocked;
 	}
 
@@ -107,4 +113,53 @@ public class CraftingRecipe implements Comparable {
 		return requiredSkill-r.getRequiredSkill();
 	}
 
+	public ArrayList<CraftingIngredient> getTokenRequirements() {
+		return tokenRequirements;
+	}
+
+	public List<CraftingIngredient> getUnmetRequirements(Player_RPG rpg)
+	{
+		if (tokenRequirements.size()==0)
+		{
+			return null;
+		}
+		List <CraftingIngredient> l=new ArrayList<CraftingIngredient>();
+		for (int i=0;i<tokenRequirements.size();i++)
+		{
+			int token=rpg.getCraftingTokenCount(tokenRequirements.get(i).getName());
+			if (token<tokenRequirements.get(i).getQuantity())
+			{
+				l.add(tokenRequirements.get(i));
+			}
+			
+		}
+		
+		if (l.size()>0)
+		{
+			return l;
+		}
+		return null;
+	}
+
+	public List<CraftingIngredient> getUnmetRequirements(Map<String, Integer> map) {
+		if (tokenRequirements.size()==0)
+		{
+			return null;
+		}
+		List <CraftingIngredient> l=new ArrayList<CraftingIngredient>();
+		for (int i=0;i<tokenRequirements.size();i++)
+		{
+			int token=map.get(tokenRequirements.get(i).getName());
+			if (token<tokenRequirements.get(i).getQuantity())
+			{
+				l.add(tokenRequirements.get(i));
+			}
+			
+		}		
+		if (l.size()>0)
+		{
+			return l;
+		}
+		return null;
+	}
 }

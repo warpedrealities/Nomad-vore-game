@@ -2,373 +2,659 @@
 <Conversation>
 
 	<page ID="start">
-	<!--transformation in progress-->
-	<condition evaluate="TIMEPASSED" operator="lessthan" value="5" />
-	<condition operator="equals" evaluate="LOCALFLAG" flag="transformation" value="1" />		
-	<text>
-	The test subject appears to be still transforming, you won't be able to interact with her until she's done with the metamorphosis.
-	</text>
-	<choice destination="end" text="need to wait more"/>
-	</page>
-	
-	<page ID="start">
-	<!--transformation completed-->
-	<condition evaluate="TIMEPASSED" operator="greaterthan" value="5" />
-	<condition operator="equals" evaluate="LOCALFLAG" flag="transformation" value="1" />		
-	<text>
-	The metamorphosis is complete, you appear to have created a stag out of a doe. The subject is now seven feet tall. Imposing with curvaceous breasts, hips and a set of curling and branching antlers that add another foot and a half to her height. Shifting your gaze back down again you see a thick and ample package nestled down at crotch level.
-	</text>
-	<effect type="setlocalflag" flag="transformation" value="2"/>
-	<choice destination="releaseSubject" text="release subject">
-	<condition operator="equals" evaluate="GLOBALFLAG" flag="stagherm" value="0" />		
-	</choice>
-	<choice destination="end" text="leave subject in containment for now"/>
-	</page>
-	
-	<page ID="start">
-	<!--transformation completed and still in the tank-->
-	<condition operator="equals" evaluate="LOCALFLAG" flag="transformation" value="2" />		
-	<text>
-	The subject is now seven feet tall. Imposing with curvaceous breasts, hips and a set of curling and branching antlers that add another foot and a half to her height. Shifting your gaze back down again you see a thick and ample package nestled down at crotch level.
-	</text>
-	<choice destination="releaseSubject" text="release subject">
-	<condition operator="equals" evaluate="GLOBALFLAG" flag="stagherm" value="0" />		
-	</choice>
-	<choice destination="end" text="leave subject in containment for now"/>
-	</page>
-	
-	<page ID="releaseSubject">
-	<effect type="setglobalflag" flag="stagherm" value="1"/>
-	<special effect="createNPC" file="Alpha_Minoris_IIA/stagHerm.xml"/>
-	<special effect="removeCaptive"/>
-	<text>
-	You trigger the system to release your new creation. The big herm's eyes flickering open, with a new hint of deeper comprehension in her eyes as she looks around. Though she's clearly unfamiliar with all things, most especially her new imposing stature and that swaying shaft down between her legs as she pushes up out of the containment tube and stumbles to her feet in front of it. You've succeeded in creating something wonderful from the fawn, we'll have to see what happens now.
-	</text>
-	<choice destination="end" text="I feel so proud at this moment"/>
-	<choice destination="end" text="It's alive! It's alive!"/>
-	</page>
-	
-	<page ID="start">
-	<!--unwilling captive-->
-	<condition operator="equals" evaluate="LOCALFLAG" flag="seduced"
-			value="0" />	
+		<!--transformation in progress -->
+		<condition evaluate="TIMEPASSED" operator="lessthan" value="5" />
+		<condition operator="equals" evaluate="LOCALFLAG" flag="transformation"
+			value="1" />
 		<text>
-		The fawn is decanted from containment and looks scared by her surroundings, and of you. But there's no way for her to run away and escape now, and the look in her eyes makes it clear she knows it as well. The adorable doe demi shrinking back at seeing your attention fixed on her.
+			The test subject appears to be still transforming, you won't be able to
+			interact with her until she's done with the metamorphosis.
+		</text>
+		<choice destination="end" text="need to wait more" />
+	</page>
+
+	<page ID="start">
+		<!--transformation completed -->
+		<condition evaluate="TIMEPASSED" operator="greaterthan"
+			value="5" />
+		<condition operator="equals" evaluate="LOCALFLAG" flag="transformation"
+			value="1" />
+		<text>
+			The metamorphosis is complete, you appear to have created a stag out of
+			a doe. The subject is now seven feet tall. Imposing with curvaceous
+			breasts, hips and a set of curling and branching antlers that add
+			another foot and a half to her height. Shifting your gaze back down
+			again you see a thick and ample package nestled down at crotch level.
+		</text>
+		<effect type="setlocalflag" flag="transformation" value="2" />
+		<choice destination="releaseSubject" text="release subject">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="stagherm"
+				value="0" />
+		</choice>
+		<choice destination="end" text="leave subject in containment for now" />
+	</page>
+
+	<page ID="start">
+		<!--transformation completed and still in the tank -->
+		<condition operator="equals" evaluate="LOCALFLAG" flag="transformation"
+			value="2" />
+		<text>
+			The subject is now seven feet tall. Imposing with curvaceous breasts,
+			hips and a set of curling and branching antlers that add another foot
+			and a half to her height. Shifting your gaze back down again you see
+			a thick and ample package nestled down at crotch level.
+		</text>
+		<choice destination="releaseSubject" text="release subject">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="stagherm"
+				value="0" />
+		</choice>
+		<choice destination="end" text="leave subject in containment for now" />
+	</page>
+
+	<page ID="releaseSubject">
+		<effect type="setglobalflag" flag="stagherm" value="1" />
+		<special effect="createNPC" file="Alpha_Minoris_IIA/stagHerm.xml" />
+		<special effect="removeCaptive" />
+		<text>
+			You trigger the system to release your new creation. The big herm's eyes
+			flickering open, with a new hint of deeper comprehension in her eyes
+			as she looks around. Though she's clearly unfamiliar with all things,
+			most especially her new imposing stature and that swaying shaft down
+			between her legs as she pushes up out of the containment tube and
+			stumbles to her feet in front of it. You've succeeded in creating
+			something wonderful from the fawn, we'll have to see what happens
+			now.
+		</text>
+		<choice destination="end" text="I feel so proud at this moment" />
+		<choice destination="end" text="It's alive! It's alive!" />
+	</page>
+
+	<page ID="start">
+		<!--unwilling captive -->
+		<condition operator="equals" evaluate="LOCALFLAG" flag="seduced"
+			value="0" />
+		<text>
+			The fawn is decanted from containment and looks scared by her
+			surroundings, and of you. But there's no way for her to run away and
+			escape now, and the look in her eyes makes it clear she knows it as
+			well. The adorable doe demi shrinking back at seeing your attention
+			fixed on her.
 		</text>
 		<choice destination="oralvore0A" text="scarf her down">
-		<assertion evaluate="hasperk" perk="oralvore" />
+			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
-		<choice destination="pleasure0A" text="sample her honeypot"/>
+		<choice destination="pleasure0A" text="sample her honeypot" />
 		<choice destination="loving0" text="make love to her">
-		<assertion evaluate="haspart" part="penis"/>	
+			<assertion evaluate="haspart" part="penis" />
 		</choice>
 		<choice destination="fuck0" text="fuck her hard">
-		<assertion evaluate="haspart" part="penis"/>
+			<assertion evaluate="haspart" part="penis" />
 		</choice>
-		<!--
-		<choice destination="transform" text="inject catalyst">
-		<assertion evaluate="hasEntry" entry="lifeforms/fawn.xml" />
-		</choice>
-		-->
+		<!-- <choice destination="transform" text="inject catalyst"> <assertion 
+			evaluate="hasEntry" entry="lifeforms/fawn.xml" /> </choice> -->
 		<choice destination="end" text="return her to containment" />
 	</page>
-	
+
 	<page ID="start">
-	<!--willing captive-->
-	<condition operator="equals" evaluate="LOCALFLAG" flag="seduced"
-			value="1" />	
+		<!--willing captive -->
+		<condition operator="equals" evaluate="LOCALFLAG" flag="seduced"
+			value="1" />
 		<text>
-		The fawn is decanted from containment and is a bit uneasy at her strange surroundings but is put at ease at the familiar sight of you. The fawn blushing a bit in memory as she looks up at you and one hand traces down between her legs to rest against her furred snatch.
+			The fawn is decanted from containment and is a bit uneasy at her strange
+			surroundings but is put at ease at the familiar sight of you. The
+			fawn blushing a bit in memory as she looks up at you and one hand
+			traces down between her legs to rest against her furred snatch.
 		</text>
 		<choice destination="oralvore0B" text="swallow her up">
-		<assertion evaluate="hasperk" perk="oralvore" />
+			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="sex0" text="have sex with her">
-		<assertion evaluate="haspart" part="penis"/>
+			<assertion evaluate="haspart" part="penis" />
 		</choice>
-		<!--
-		<choice destination="transform" text="inject catalyst">
-		<assertion evaluate="hasEntry" entry="lifeforms/fawn.xml" />
-		<condition operator="equals" evaluate="GLOBALFLAG" flag="stagherm" value="0" />		
-		</choice>
-		-->
+		<!-- <choice destination="transform" text="inject catalyst"> <assertion 
+			evaluate="hasEntry" entry="lifeforms/fawn.xml" /> <condition operator="equals" 
+			evaluate="GLOBALFLAG" flag="stagherm" value="0" /> </choice> -->
 		<choice destination="end" text="return her to containment" />
 	</page>
-	
+
 	<page ID="transform">
-	<effect type="setlocalflag" flag="transformation" value="1"/>
-	<special effect="marktime"/>
-	<text>
-	The fawn doesn't have time to react as you step close and inject her. She looks at you in shock as the plunger slams down and fills her veins with the protein catalysts for the metamorphosis hidden in her genes. Her eyes dilate enormously, then she collapses into a heap. She'll probably sleep till the metamorphosis is complete.
-	</text>
-	<choice destination="end" text="return her to containment and wait"/>
+		<effect type="setlocalflag" flag="transformation" value="1" />
+		<special effect="marktime" />
+		<text>
+			The fawn doesn't have time to react as you step close and inject her.
+			She looks at you in shock as the plunger slams down and fills her
+			veins with the protein catalysts for the metamorphosis hidden in her
+			genes. Her eyes dilate enormously, then she collapses into a heap.
+			She'll probably sleep till the metamorphosis is complete.
+		</text>
+		<choice destination="end" text="return her to containment and wait" />
 	</page>
-	
+
 	<page ID="oralvore0A">
-	<!--unwilling vore-->
-	<text>
-	the fawn doesn't get a chance to linger in a state of trepidation as you grab ahold of her by her shoulders. The fawn starting to let out a squeel of protest and squirm but is swiftly muffled as you wrap your lips around her head. The lil doe's flavour soaks your tongue as you lap over her face and prepare to show her why she was brought aboard. And that, is to fill you. You take a gulping swallow and the fawn redoubles her struggles as her head plunges down your throat, your hands restraining her cute squirms rather easily as you feed her down your throat.
-	</text>
-	<choice destination="oralvore1A" text="eat her up"/>
+		<!--unwilling vore -->
+		<text>
+			the fawn doesn't get a chance to linger in a state of trepidation as you
+			grab ahold of her by her shoulders. The fawn starting to let out a
+			squeel of protest and squirm but is swiftly muffled as you wrap your
+			lips around her head. The lil doe's flavour soaks your tongue as you
+			lap over her face and prepare to show her why she was brought aboard.
+			And that, is to fill you. You take a gulping swallow and the fawn
+			redoubles her struggles as her head plunges down your throat, your
+			hands restraining her cute squirms rather easily as you feed her down
+			your throat.
+		</text>
+		<choice destination="oralvore1A" text="eat her up" />
 	</page>
-	
+
 	<page ID="oralvore1A">
-	<text>
-	The fawn is nice and muffled, not to mention delicious, as she slides down your throat. Her squeels and squirms don't seem to do her any good as you gobble her down steadily, hands grasping her legs as you tip your head back and feel your belly start to stretch out around the cutie you're consuming. The fawn's feet wiggling adorably ahead of you as you work your lips around her hips.
-	</text>
-	<choice destination="oralvore2A" text="polish her off"/>
+		<text>
+			The fawn is nice and muffled, not to mention delicious, as she slides
+			down your throat. Her squeels and squirms don't seem to do her any
+			good as you gobble her down steadily, hands grasping her legs as you
+			tip your head back and feel your belly start to stretch out around
+			the cutie you're consuming. The fawn's feet wiggling adorably ahead
+			of you as you work your lips around her hips.
+		</text>
+		<choice destination="oralvore2A" text="polish her off" />
 	</page>
-	
+
 	<page ID="oralvore2A">
-	<text>
-	As much as her wriggling legs are cute to tease she belongs inside of you, and you swallow firmly to draw the unruly and adorable fawn down your throat even further. The fawn pushing out at your belly as you slurp up those slender legs of hers. You finish packing her away within your body with a half dozen more potent swallows. Those toes enjoyable to tease afore she disappears entirely within you and her squirmyness is confined to your belly.
-	</text>
-	<choice destination="oralvore3A" text="digest her"/>
-	<choice destination="oralvoreEndo3A" text="keep her as a belly pet"/>
+		<text>
+			As much as her wriggling legs are cute to tease she belongs inside of
+			you, and you swallow firmly to draw the unruly and adorable fawn down
+			your throat even further. The fawn pushing out at your belly as you
+			slurp up those slender legs of hers. You finish packing her away
+			within your body with a half dozen more potent swallows. Those toes
+			enjoyable to tease afore she disappears entirely within you and her
+			squirmyness is confined to your belly.
+		</text>
+		<choice destination="oralvore3A" text="digest her" />
+		<choice destination="oralvoreEndo3A" text="keep her as a belly pet" />
 	</page>
-	
+
 	<page ID="oralvore3A">
-	<text>
-	The fawn is a squirmy snack even now as you work on making her fuel for you. The little whimpers of the fawn as she pushes out at your belly making you mhmm as your gurgling belly works her over. It doesn't matter how much she squirms though, but she resists futilely until her body weakens and gives out. The fawn's form going still and soft and mushy inside you. It doesn't take much longer for that goopy mass of former cuteness and current nutrition to become nothing more than a soup inside you. And with her soup your belly rounds out, compacts and shrinks away to nothing before too much longer has passed.
-	</text>
-	<special effect="removeCaptive"/>
-	<effect type="feed" value="80" />	
-	<choice destination="end" text="delicious, just what you needed"/>
+		<text>
+			The fawn is a squirmy snack even now as you work on making her fuel for
+			you. The little whimpers of the fawn as she pushes out at your belly
+			making you mhmm as your gurgling belly works her over. It doesn't
+			matter how much she squirms though, but she resists futilely until
+			her body weakens and gives out. The fawn's form going still and soft
+			and mushy inside you. It doesn't take much longer for that goopy mass
+			of former cuteness and current nutrition to become nothing more than
+			a soup inside you. And with her soup your belly rounds out, compacts
+			and shrinks away to nothing before too much longer has passed.
+		</text>
+		<special effect="removeCaptive" />
+		<effect type="feed" value="80" />
+		<choice destination="end" text="delicious, just what you needed" />
 	</page>
-	
+
 	<page ID="oralvoreEndo3A">
-	<text>
-	The fawn squirms around inside you in an adorable fashion, letting out little whimpers and squeels as she finds herself trapped inside you. But all you do is get comfortable and run your hands over your stretched belly in a way that lets it gradually dawn on her that you don't intend to digest her. The fawn seems a bit confused by this but settles down into the hot confines of your belly as she tires out and starts to become aware of the snug warmth all around her as something other than a threat.
-	</text>
-	<choice destination="oralvoreEndo4A" text="hold her for a bit"/>
+		<text>
+			The fawn squirms around inside you in an adorable fashion, letting out
+			little whimpers and squeels as she finds herself trapped inside you.
+			But all you do is get comfortable and run your hands over your
+			stretched belly in a way that lets it gradually dawn on her that you
+			don't intend to digest her. The fawn seems a bit confused by this but
+			settles down into the hot confines of your belly as she tires out and
+			starts to become aware of the snug warmth all around her as something
+			other than a threat.
+		</text>
+		<choice destination="oralvoreEndo4A" text="hold her for a bit" />
 	</page>
-	
+
 	<page ID="oralvoreEndo4a">
-	<effect type="incrementlocalflag" flag="nice" value="1"/>
-	<text>
-	The fawn occasionally presses out at your insides, but seems resigned to being loved on and snuggled by your belly. Silly thing. You spend a fair amount of time doting and rubbing on the form of your bellypet, letting the daft yet cute thing know you just want to hold her close. After ample time you decide you've made your point and give the bulge of that dozing critter a pat to rouse her. Time to let her out.
-	</text>
-	<choice destination="oralvoreEndo5A" text="regurgitation"/>
+		<effect type="incrementlocalflag" flag="nice" value="1" />
+		<text>
+			The fawn occasionally presses out at your insides, but seems resigned to
+			being loved on and snuggled by your belly. Silly thing. You spend a
+			fair amount of time doting and rubbing on the form of your bellypet,
+			letting the daft yet cute thing know you just want to hold her close.
+			After ample time you decide you've made your point and give the bulge
+			of that dozing critter a pat to rouse her. Time to let her out.
+		</text>
+		<choice destination="oralvoreEndo5A" text="regurgitation" />
 	</page>
-	
+
 
 	<page ID="oralvoreEndo5A">
-	<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice" value="3" />
-	<text>
-	The fawn squirms around only to find herself being forced up and out as you lean forwards. Her questing hand probing ahead of her only to be seized in the embrace of your own as it protrudes past her lips and you slide the fawn out from inside of you. It takes very little time to ease the squirming fawn up and out into the open air, her slick form flushed and still confused as she looks up at you. She seems somewhat disbelieving and conflicted about the whole thing.
-	</text>
-	<choice destination="end" text="return her to containment"/>
-	</page>	
-	
+		<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			The fawn squirms around only to find herself being forced up and out as
+			you lean forwards. Her questing hand probing ahead of her only to be
+			seized in the embrace of your own as it protrudes past her lips and
+			you slide the fawn out from inside of you. It takes very little time
+			to ease the squirming fawn up and out into the open air, her slick
+			form flushed and still confused as she looks up at you. She seems
+			somewhat disbelieving and conflicted about the whole thing.
+		</text>
+		<choice destination="end" text="return her to containment" />
+	</page>
+
 	<page ID="oralvoreEndo5A">
-	<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice" value="3" />	
-	<text>
-	The fawn squirms around only to find herself being forced up and out as you lean forwards. Her questing hand probing ahead of her only to be seized in the embrace of your own as it protrudes past her lips and you slide the fawn out from inside of you. It takes very little time to ease the squirming fawn up and out into the open air, slick with your juices she blushes and looks up at you. Then she leans up and nuzzles affectionately, first under your chin then lower down as she plants a lick on your belly. Looks like you've made a new fan.
-	</text>
-	<effect type="setlocalflag" flag="seduced" value="1"/>
-	<choice destination="end" text="return your new fan to containment"/>
-	</page>	
-	
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			The fawn squirms around only to find herself being forced up and out as
+			you lean forwards. Her questing hand probing ahead of her only to be
+			seized in the embrace of your own as it protrudes past her lips and
+			you slide the fawn out from inside of you. It takes very little time
+			to ease the squirming fawn up and out into the open air, slick with
+			your juices she blushes and looks up at you. Then she leans up and
+			nuzzles affectionately, first under your chin then lower down as she
+			plants a lick on your belly. Looks like you've made a new fan.
+		</text>
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<choice destination="end" text="return your new fan to containment" />
+	</page>
+
 	<page ID="oralvore0B">
-	<!--willing vore,feet first -->
-	<text>
-	You guide the fawn onto her back and she goes agreeably along with the motion, nuzzling at you gently with a murr as you stroke her sides and lay her down. Once you've done that you start licking, tasting her face and making her giggle. She blushes and watch as you start sampling further down her cute lil body, working over her petite chest and belly. The fawn craning her head up to watch as you make your way down her thighs, then calves, then finally nibble on her toes. She giggles again, but then lets out an adorable meep as you guide her feet together and slip them into your mouth. She looks at you starting to eat her alive, and just blushes adorably, squirming her legs about gently but not pulling them from your lips as you tease the entrance of your throat with her wriggly toes.
-	</text>
-	<choice destination="oralvore1B" text="swallow"/>
+		<!--willing vore,feet first -->
+		<text>
+			You guide the fawn onto her back and she goes agreeably along with the
+			motion, nuzzling at you gently with a murr as you stroke her sides
+			and lay her down. Once you've done that you start licking, tasting
+			her face and making her giggle. She blushes and watch as you start
+			sampling further down her cute lil body, working over her petite
+			chest and belly. The fawn craning her head up to watch as you make
+			your way down her thighs, then calves, then finally nibble on her
+			toes. She giggles again, but then lets out an adorable meep as you
+			guide her feet together and slip them into your mouth. She looks at
+			you starting to eat her alive, and just blushes adorably, squirming
+			her legs about gently but not pulling them from your lips as you
+			tease the entrance of your throat with her wriggly toes.
+		</text>
+		<choice destination="oralvore1B" text="swallow" />
 	</page>
-	
+
 	<page ID="oralvore1B">
-	<text>
-	The fawn lets out an adorable squeek as you make it clear you're not just teasing by swallowing and gulping her feet into your throat. She can catch a glimpse of the bulge they make in your neck. The fawn seems to have enough of a crush on your sexy self to not find the thought of sliding down inside you unwelcome however and she scoots a bit forwards to slide her feet further down with your next swallow as you start to work her legs down your throat as well.
-	</text>
-	<choice destination="oralvore2B" text="gulp down the agreeable lil thing"/>
+		<text>
+			The fawn lets out an adorable squeek as you make it clear you're not
+			just teasing by swallowing and gulping her feet into your throat. She
+			can catch a glimpse of the bulge they make in your neck. The fawn
+			seems to have enough of a crush on your sexy self to not find the
+			thought of sliding down inside you unwelcome however and she scoots a
+			bit forwards to slide her feet further down with your next swallow as
+			you start to work her legs down your throat as well.
+		</text>
+		<choice destination="oralvore2B" text="gulp down the agreeable lil thing" />
 	</page>
-	
+
 	<page ID="oralvore2B">
-	<text>
-	The fawn blushes heavily as you swallow up her legs, working her cute little body down your throat such you can feel her toes squirming around as she rubs her feet against the inside of your belly and mhmms. She fidgets around a bit as you swallow her up but that just provides some delightful squirms for you to feel between your lips and belly as you reach her waist. The fawn blushing hotly and sliding a hand into your lips to play with herself as the warm wetness of your mouth around her derriere and special parts makes this all the more exciting for the cutie.
-	</text>
-	<choice destination="oralvore3B" text="polish her off"/>
+		<text>
+			The fawn blushes heavily as you swallow up her legs, working her cute
+			little body down your throat such you can feel her toes squirming
+			around as she rubs her feet against the inside of your belly and
+			mhmms. She fidgets around a bit as you swallow her up but that just
+			provides some delightful squirms for you to feel between your lips
+			and belly as you reach her waist. The fawn blushing hotly and sliding
+			a hand into your lips to play with herself as the warm wetness of
+			your mouth around her derriere and special parts makes this all the
+			more exciting for the cutie.
+		</text>
+		<choice destination="oralvore3B" text="polish her off" />
 	</page>
-	
+
 	<page ID="oralvore3B">
-	<text>
-	The lil one gasps and moans as her busy fingers are squeezed against her nethers by your throat. Her delicious body sliding down into your own as you swallow and gulp your way towards her head. The fawn's aroused panting as she watches you eat her alive something to savour. But not for long as you work up around her shoulders and beyond. She lets out a shuddering squeel as your jaws snap shut over the crown of her head and you swallow, the cute fawn orgasming all the way down into your belly until she curls up in a blushing and pleased panting ball within you. The fawn squirming to push out at your insides a bit to get comfortable but apparently content with being there deep inside you.
-	</text>
-	<choice destination="oralvore4B" text="time to digest her"/>
-	<choice destination="oralvoreEndo4B" text="she's too adorable to digest, hold her inside you"/>
+		<text>
+			The lil one gasps and moans as her busy fingers are squeezed against her
+			nethers by your throat. Her delicious body sliding down into your own
+			as you swallow and gulp your way towards her head. The fawn's aroused
+			panting as she watches you eat her alive something to savour. But not
+			for long as you work up around her shoulders and beyond. She lets out
+			a shuddering squeel as your jaws snap shut over the crown of her head
+			and you swallow, the cute fawn orgasming all the way down into your
+			belly until she curls up in a blushing and pleased panting ball
+			within you. The fawn squirming to push out at your insides a bit to
+			get comfortable but apparently content with being there deep inside
+			you.
+		</text>
+		<choice destination="oralvore4B" text="time to digest her" />
+		<choice destination="oralvoreEndo4B"
+			text="she's too adorable to digest, hold her inside you" />
 	</page>
-	
+
 	<page ID="oralvore4B">
-	<text>
-	She'll make a good meal, just what you need at a time like this. She cooes as you patpat over the bulge of her in your belly, then lets out a meep as your stomach walls knead and press over her. The fawn hearing the gurgle of her impending fate she hesitates, then you feel her nuzzle out against your hand, willing to be gurgled down as food for you. Such an adorably willing meal she is. You get settled, hands resting on your gut as it gurgles and churns. As time passes the fawn gets soft and quiet, then sloshy and the shape of her in your belly turns round and satisfying. With yet more time not a trace of the fawn'll be left, your belly flat once more and only the satiated sensation left to remember her by.
-	</text>
-	<special effect="removeCaptive"/>
-	<effect type="feed" value="80" />	
-	<choice destination="end" text="carry on"/>
+		<text>
+			She'll make a good meal, just what you need at a time like this. She cooes
+			as you patpat over the bulge of her in your belly, then lets out a
+			meep as your stomach walls knead and press over her. The fawn hearing
+			the gurgle of her impending fate she hesitates, then you feel her
+			nuzzle out against your hand, willing to be gurgled down as food for
+			you. Such an adorably willing meal she is. You get settled, hands
+			resting on your gut as it gurgles and churns. As time passes the fawn
+			gets soft and quiet, then sloshy and the shape of her in your belly
+			turns round and satisfying. With yet more time not a trace of the
+			fawn'll be left, your belly flat once more and only the satiated
+			sensation left to remember her by.
+		</text>
+		<special effect="removeCaptive" />
+		<effect type="feed" value="80" />
+		<choice destination="end" text="carry on" />
 	</page>
-	
+
 	<page ID="oralvoreEndo4B">
-	<text>
-	You get settled in, doting on the round bulge in your belly the fawn makes. And for her part the fawn seems to be happy to be doted on, nuzzling out gently against your belly flesh as you rub and pat over her contours. The fawn remains contently nestled in your belly for quite a while. The cutie getting to experience your proficiency at full body snuggles for a few hours afore you decide maybe its time to get on with your day rather than keeping the fawn within you and lazing about all the time.
-	</text>
-	<choice destination="oralvoreEndo5B" text="time to let her out"/>
+		<text>
+			You get settled in, doting on the round bulge in your belly the fawn
+			makes. And for her part the fawn seems to be happy to be doted on,
+			nuzzling out gently against your belly flesh as you rub and pat over
+			her contours. The fawn remains contently nestled in your belly for
+			quite a while. The cutie getting to experience your proficiency at
+			full body snuggles for a few hours afore you decide maybe its time to
+			get on with your day rather than keeping the fawn within you and
+			lazing about all the time.
+		</text>
+		<choice destination="oralvoreEndo5B" text="time to let her out" />
 	</page>
-	
+
 	<page ID="oralvoreEndo5B">
-	<text>
-	You settle into a seated position and rub your throat afore getting to work on horking the fawn up. The fawn letting out a meep and squirming as she feels your gut clench and squeeze around her. Soon enough though she's going up, up and out into the open air as you work her through your throat, past your lips and out into the open air. The fawn blushing and reaching down to grab your lips as she comes into the open air and helps ease herself back out. Your belly pet soon emerging entirely and settles in a blushing heap covered in your fluids. She seems a bit disappointed to be back out of you to be honest, but you have work to do.
-	</text>
-	<choice destination="end" text="return her to containment, in the system not your belly"/>
+		<text>
+			You settle into a seated position and rub your throat afore getting to
+			work on horking the fawn up. The fawn letting out a meep and
+			squirming as she feels your gut clench and squeeze around her. Soon
+			enough though she's going up, up and out into the open air as you
+			work her through your throat, past your lips and out into the open
+			air. The fawn blushing and reaching down to grab your lips as she
+			comes into the open air and helps ease herself back out. Your belly
+			pet soon emerging entirely and settles in a blushing heap covered in
+			your fluids. She seems a bit disappointed to be back out of you to be
+			honest, but you have work to do.
+		</text>
+		<choice destination="end"
+			text="return her to containment, in the system not your belly" />
 	</page>
-	
+
 	<page ID="pleasure0A">
-	<!--unwilling receive oralsex-->
-	<text>
-	that snatch of hers looks delectible to you, and you decide you want a taste. The fawn lets out a squeel as you pull her close and pry her legs apart, the fawn looking flustered as she tries to fend off your hands and your head as you part her thighs and delve down between them. your first lap at her sex rather disarms her though, a squeel coming out as the sensations of your tongue shoots through her and she loses her grip on you.
-	</text>
-	<choice destination="pleasure1A" text="sample her thoroughly"/>
+		<!--unwilling receive oralsex -->
+		<text>
+			that snatch of hers looks delectible to you, and you decide you want a
+			taste. The fawn lets out a squeel as you pull her close and pry her
+			legs apart, the fawn looking flustered as she tries to fend off your
+			hands and your head as you part her thighs and delve down between
+			them. your first lap at her sex rather disarms her though, a squeel
+			coming out as the sensations of your tongue shoots through her and
+			she loses her grip on you.
+		</text>
+		<choice destination="pleasure1A" text="sample her thoroughly" />
 	</page>
-	
+
 	<page ID="pleasure1A">
-	<effect type="incrementlocalflag" flag="nice" value="1"/>
-	<text>
-	The fawn alternates between squeeling and trying to push you back and moaning and writhing as your tongue laps deep into her sensitive folds. That cunning tongue of her eroding her resistance as you lap deep inside the cutie's lil honeypot. Her sex clenching around your tongue and her thighs brushing against your cheeks when she manages to briefly get some headway.
-	</text>
-	<choice destination="pleasure2A" text="drink her honey"/>
+		<effect type="incrementlocalflag" flag="nice" value="1" />
+		<text>
+			The fawn alternates between squeeling and trying to push you back and
+			moaning and writhing as your tongue laps deep into her sensitive
+			folds. That cunning tongue of her eroding her resistance as you lap
+			deep inside the cutie's lil honeypot. Her sex clenching around your
+			tongue and her thighs brushing against your cheeks when she manages
+			to briefly get some headway.
+		</text>
+		<choice destination="pleasure2A" text="drink her honey" />
 	</page>
 	<page ID="pleasure2A">
-	<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice" value="3" />	
-	<text>
-	The fawn seems close, she's hardly resisting at all now as you lick deep into her sweet cunny. The fawn's moans and squeeks coming faster as she grips hard to her perch and her eyes flutter. With a final squeel though her slit yields up the juices you'd been hoping to sample, the nectar of the cutie spilling over your tongue and drippin from your chin as she spasms with bliss and then steadily subsides into a panting wreck. The fawn flushing as she gives you a look, the violation of your sampling visible in her eyes. But you're fairly sure she enjoyed this more than you did.
-	</text>
-	<choice destination="end" text="return her to containment"/>
+		<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			The fawn seems close, she's hardly resisting at all now as you lick deep
+			into her sweet cunny. The fawn's moans and squeeks coming faster as
+			she grips hard to her perch and her eyes flutter. With a final squeel
+			though her slit yields up the juices you'd been hoping to sample, the
+			nectar of the cutie spilling over your tongue and drippin from your
+			chin as she spasms with bliss and then steadily subsides into a
+			panting wreck. The fawn flushing as she gives you a look, the
+			violation of your sampling visible in her eyes. But you're fairly
+			sure she enjoyed this more than you did.
+		</text>
+		<choice destination="end" text="return her to containment" />
 	</page>
-	
+
 	<page ID="pleasure2A">
-	<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice" value="3" />	
-	<text>
-	The fawn seems close, she's hardly resisting at all now as you lick deep into her sweet cunny. The fawn's moans and squeeks coming faster as she grips hard to her perch and her eyes flutter. With a final squeel though her slit yields up the juices you'd been hoping to sample, the nectar of the cutie spilling over your tongue and drippin from your chin as she spasms with bliss and then steadily subsides into a panting wreck. She looks at you with a pleased afterglow suffusing her features, it's clear her attitude to you and your play has changed from the pleasure she's been feeling. Maybe she'll stop being so silly about it in future.
-	</text>
-	<effect type="setlocalflag" flag="seduced" value="1"/>
-	<choice destination="end" text="return her to containment"/>
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			The fawn seems close, she's hardly resisting at all now as you lick deep
+			into her sweet cunny. The fawn's moans and squeeks coming faster as
+			she grips hard to her perch and her eyes flutter. With a final squeel
+			though her slit yields up the juices you'd been hoping to sample, the
+			nectar of the cutie spilling over your tongue and drippin from your
+			chin as she spasms with bliss and then steadily subsides into a
+			panting wreck. She looks at you with a pleased afterglow suffusing
+			her features, it's clear her attitude to you and your play has
+			changed from the pleasure she's been feeling. Maybe she'll stop being
+			so silly about it in future.
+		</text>
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<choice destination="end" text="return her to containment" />
 	</page>
 
 	<page ID="loving0">
-	<!--tender sex-->
-	<text>
-	You take the reluctant fawn and pull her close. She meeps and squirms but you quieten her with a kiss that seems to surprise her more than anything else as you hold the cute thing in your embrace and make out with her. The fawn seemed to baulk at this but gradually eases into this as your twines hers. Moving on with your foreplay to break her resistance you slide your hand down to her nethers, plying fingers into her furred muff and getting a startled squeel from her the first time, followed by a cute moan as you delve your fingers into her once again.
-	</text>
-	<choice destination="loving1" text="moving on"/>
+		<!--tender sex -->
+		<text>
+			You take the reluctant fawn and pull her close. She meeps and squirms
+			but you quieten her with a kiss that seems to surprise her more than
+			anything else as you hold the cute thing in your embrace and make out
+			with her. The fawn seemed to baulk at this but gradually eases into
+			this as your twines hers. Moving on with your foreplay to break her
+			resistance you slide your hand down to her nethers, plying fingers
+			into her furred muff and getting a startled squeel from her the first
+			time, followed by a cute moan as you delve your fingers into her once
+			again.
+		</text>
+		<choice destination="loving1" text="moving on" />
 	</page>
-	
+
 	<page ID="loving1">
-	<text>
-	Under your amorous ministrations you feel her shiver and moan. Her wetness coating your fingers as you guided the lusty fawn up against the wall, sliding your hand out of her and down her thigh afore hitching it up. The fawn looking into your eyes in lustful uncertainty yet instinctively raising her arms to your shoulders. You let her know what you intend by leaning in to plant another kiss on her lips and pressing the tip of your <macro ID="penis_size_desc" /> up against her netherlips.
-	</text>
-	<choice destination="loving2" text="penetrate"/>
+		<text>
+			Under your amorous ministrations you feel her shiver and moan. Her
+			wetness coating your fingers as you guided the lusty fawn up against
+			the wall, sliding your hand out of her and down her thigh afore
+			hitching it up. The fawn looking into your eyes in lustful
+			uncertainty yet instinctively raising her arms to your shoulders. You
+			let her know what you intend by leaning in to plant another kiss on
+			her lips and pressing the tip of your
+			<macro ID="penis_size_desc" />
+			up against her netherlips.
+		</text>
+		<choice destination="loving2" text="penetrate" />
 	</page>
-	
+
 	<page ID="loving2">
-	<text>
-	The fawn shivers a bit as you press against her folds but you can see her arousal in her eyes and press into her in earnest. The wonderful tight warmth of the cutie engulfing your shaft as you work it inside. The fawn's embracing arms tugging you closer as you hilt inside her cunny and she gasps. Planting another smooch on her you give her a chance to get used to the sensation of being filled with your shaft then began thrusting, making love to the fawn up against the wall.
-	</text>
-	<choice destination="loving3" text="love her good"/>
+		<text>
+			The fawn shivers a bit as you press against her folds but you can see
+			her arousal in her eyes and press into her in earnest. The wonderful
+			tight warmth of the cutie engulfing your shaft as you work it inside.
+			The fawn's embracing arms tugging you closer as you hilt inside her
+			cunny and she gasps. Planting another smooch on her you give her a
+			chance to get used to the sensation of being filled with your shaft
+			then began thrusting, making love to the fawn up against the wall.
+		</text>
+		<choice destination="loving3" text="love her good" />
 	</page>
-	
+
 	<page ID="loving3">
-	<effect type="incrementlocalflag" flag="nice" value="1"/>
-	<text>
-	The fawn starts to make adorable little moans as you work your length in and out of her. Her body writhing to meet your thrusts as you fuck her at a slow and luxurious pace and plant kisses upon her face. The fawn is overwhelmed by your charms now and loving your wonderful dick, feeling her clenching and moaning with rising pleasure as you screw her. Your own pleasure rising at having the horny lusty little thing pressed snugly against you.
-	</text>
-	<choice destination="loving4" text="climax"/>
+		<effect type="incrementlocalflag" flag="nice" value="1" />
+		<text>
+			The fawn starts to make adorable little moans as you work your length in
+			and out of her. Her body writhing to meet your thrusts as you fuck
+			her at a slow and luxurious pace and plant kisses upon her face. The
+			fawn is overwhelmed by your charms now and loving your wonderful
+			dick, feeling her clenching and moaning with rising pleasure as you
+			screw her. Your own pleasure rising at having the horny lusty little
+			thing pressed snugly against you.
+		</text>
+		<choice destination="loving4" text="climax" />
 	</page>
 
 	<page ID="loving4">
-	<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice" value="3" />	
-	<text>
-	You keep the pace, drawing out the moments as the fawn moans and bucks to thrust herself down on your cock when you thrust it up into her. Her pleasure cresting moments before your own due to your considerate expertise, a squeel emerging from her lips as she clenches down on you and shudders. The spasms of pleasure rolling through her coming even as you climax inside her and fill the fawn with sticky seed. With it all over you slowly pull out of her. The fawn looking up at you with a flushed panting look, she clearly enjoyed it but seems confused and less than fully comfortable in your presence now she's not overwhelmed by lust. Oh well, still you had fun.
-	</text>
-	<choice destination="end" text="return her to containment"/>
+		<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			You keep the pace, drawing out the moments as the fawn moans and bucks
+			to thrust herself down on your cock when you thrust it up into her.
+			Her pleasure cresting moments before your own due to your considerate
+			expertise, a squeel emerging from her lips as she clenches down on
+			you and shudders. The spasms of pleasure rolling through her coming
+			even as you climax inside her and fill the fawn with sticky seed.
+			With it all over you slowly pull out of her. The fawn looking up at
+			you with a flushed panting look, she clearly enjoyed it but seems
+			confused and less than fully comfortable in your presence now she's
+			not overwhelmed by lust. Oh well, still you had fun.
+		</text>
+		<choice destination="end" text="return her to containment" />
 	</page>
-	
-	
+
+
 	<page ID="loving4">
-	<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice" value="3" />	
-	<text>
-	You keep the pace, drawing out the moments as the fawn moans and bucks to thrust herself down on your cock when you thrust it up into her. Her pleasure cresting moments before your own due to your considerate expertise, a squeel emerging from her lips as she clenches down on you and shudders. The spasms of pleasure rolling through her coming even as you climax inside her and fill the fawn with sticky seed. With it all over you slowly pull out of her. The fawn looking up at you with a flushed panting look of satisfaction and wonder on her face and she nuzzles against your chest until you set her down, it's clear you've won over the fawn with pleasure and dickings.
-	</text>
-	<effect type="setlocalflag" flag="seduced" value="1"/>
-	<choice destination="end" text="return her to containment"/>
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			You keep the pace, drawing out the moments as the fawn moans and bucks
+			to thrust herself down on your cock when you thrust it up into her.
+			Her pleasure cresting moments before your own due to your considerate
+			expertise, a squeel emerging from her lips as she clenches down on
+			you and shudders. The spasms of pleasure rolling through her coming
+			even as you climax inside her and fill the fawn with sticky seed.
+			With it all over you slowly pull out of her. The fawn looking up at
+			you with a flushed panting look of satisfaction and wonder on her
+			face and she nuzzles against your chest until you set her down, it's
+			clear you've won over the fawn with pleasure and dickings.
+		</text>
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<choice destination="end" text="return her to containment" />
 	</page>
-	
+
 	<page ID="fuck0">
-	<!--rough sex-->
-	<text>
-	Time to have your way with her. You force the fawn to the floor  and pin her down roughly with one hande while you fondle your <macro ID="penis_size_desc" /> shaft with the other. The fawn whimpering and squirming on the floor beneath you as you work yourself to full hardness then wedge a knee against her thigh and transfer your hand to her other leg and pry her apart, angling your tip towards her nethers as she shakes her head. But she's yours, she doesn't get a say and she lets out a squeel as you thrust into her tender sex, hilting hard within her.
-	</text>
-	<choice destination="fuck1" text="pound the fawn"/>
+		<!--rough sex -->
+		<text>
+			Time to have your way with her. You force the fawn to the floor and
+			pin her down roughly with one hande while you fondle your
+			<macro ID="penis_size_desc" />
+			shaft with the other. The fawn whimpering and squirming on the floor
+			beneath you as you work yourself to full hardness then wedge a knee
+			against her thigh and transfer your hand to her other leg and pry her
+			apart, angling your tip towards her nethers as she shakes her head.
+			But she's yours, she doesn't get a say and she lets out a squeel as
+			you thrust into her tender sex, hilting hard within her.
+		</text>
+		<choice destination="fuck1" text="pound the fawn" />
 	</page>
-	
+
 	<page ID="fuck1">
-	<text>
-	The fawn squirms and gasps as you start to thrust in and out of her, using the lil creature most thoroughly. Each hard thrust bottoming out and slapping your balls against her petite bottom as she shuddered and twitched under you but presents no meaningful resistance to being used. Her hands pressing weakly against your chest to try and force you back as you rut her eagerly. Her tightness and resistance only seems to make you harder inside her.
-	</text>
-	<choice destination="fuck2" text="fill her with cream"/>
+		<text>
+			The fawn squirms and gasps as you start to thrust in and out of her,
+			using the lil creature most thoroughly. Each hard thrust bottoming
+			out and slapping your balls against her petite bottom as she
+			shuddered and twitched under you but presents no meaningful
+			resistance to being used. Her hands pressing weakly against your
+			chest to try and force you back as you rut her eagerly. Her tightness
+			and resistance only seems to make you harder inside her.
+		</text>
+		<choice destination="fuck2" text="fill her with cream" />
 	</page>
-	
+
 	<page ID="fuck2">
-	<text>
-	The fawn is helpless to do anything but receive your seed, her gasps and pants stirring you on as your pleasure builds and her body warms despite her resistance. The fawn letting out a squeel as she feels your cock erupt, filling her with hot seed. Several spurts pumping into the fawn's womb afore you pull out to paint her frontage and mark her with cum. The fawn left a twitching and gasping mess under you after you've used her as a fucktoy.
-	</text>
-	<choice destination="end" text="return her to containment, until next time you need to bust a nut"/>
+		<text>
+			The fawn is helpless to do anything but receive your seed, her gasps and
+			pants stirring you on as your pleasure builds and her body warms
+			despite her resistance. The fawn letting out a squeel as she feels
+			your cock erupt, filling her with hot seed. Several spurts pumping
+			into the fawn's womb afore you pull out to paint her frontage and
+			mark her with cum. The fawn left a twitching and gasping mess under
+			you after you've used her as a fucktoy.
+		</text>
+		<choice destination="end"
+			text="return her to containment, until next time you need to bust a nut" />
 	</page>
-	
+
 	<page ID="sex0">
-	<!--willing sex-->
-	<!-- fawn on top riding the dick?-->
-	<text>
-	You pull the horny little thing close. You slide one hand around to cup her ass and embrace her, the fawn blushing as you lean in to plant a kiss on her arched up face. Your other hand takes her hand from her sex and guides it to your firming cock while you slide your own fingers into her nethers, making sure she's nice and needy before you'll move on to the main event.
-	</text>
-	<choice destination="sex1" text="down onto the floor"/>
+		<!--willing sex -->
+		<!-- fawn on top riding the dick? -->
+		<text>
+			You pull the horny little thing close. You slide one hand around to cup
+			her ass and embrace her, the fawn blushing as you lean in to plant a
+			kiss on her arched up face. Your other hand takes her hand from her
+			sex and guides it to your firming cock while you slide your own
+			fingers into her nethers, making sure she's nice and needy before
+			you'll move on to the main event.
+		</text>
+		<choice destination="sex1" text="down onto the floor" />
 	</page>
-	
+
 	<page ID="sex1">
-	<text>
-	The fawn strokes and squeezes over your now hard cock and you know with that and the lusty gasp exhaling from her lips that she's more than ready. You slide your fingers out of her sex then grasps her hips with both hands and guide her down with you as you settle onto the floor and pull her atop yourself.
-	The fawn letting out a cute meep as she's settled straddling your lap. She's still stroking your cock as you rub it up against her adorable thighs and then help her along by lifting her hips up and forwards. Her hand no longer wrapped around your cock which makes her look momentarily confused, until she feels your tip pressing against her netherlips and gasps, anticipation and need in her eyes.
-	</text>
-	<choice destination="sex2" text="and now, screw her"/>
+		<text>
+			The fawn strokes and squeezes over your now hard cock and you know with
+			that and the lusty gasp exhaling from her lips that she's more than
+			ready. You slide your fingers out of her sex then grasps her hips
+			with both hands and guide her down with you as you settle onto the
+			floor and pull her atop yourself.
+			The fawn letting out a cute meep as she's settled straddling your lap.
+			She's still stroking your cock as you rub it up against her adorable
+			thighs and then help her along by lifting her hips up and forwards.
+			Her hand no longer wrapped around your cock which makes her look
+			momentarily confused, until she feels your tip pressing against her
+			netherlips and gasps, anticipation and need in her eyes.
+		</text>
+		<choice destination="sex2" text="and now, screw her" />
 	</page>
-	
+
 	<page ID="sex2">
-	<text>
-	"such a cute thing" you plant another smooch on her face before guiding her down onto your <macro ID="penis_size_desc" /> shaft. A delighted squeel squeezed out of her as you sheathe your shaft inside her lil cunny and she clutches tight against you. An adorable flush on her face as she pants and squeezes, her nethers clenching around your sex <conditional>
-	<condition operator="greaterthan" evaluate="BODYVALUE" bodypart="penis" partvalue="length" value="18" /> as she gets used to your sheer size stretching her out
-</conditional>. Your hands stroking her back afore you squeeze her tush and coax her into starting to ride up and down your length.
-	</text>
-	<choice destination="sex3" text="cutie on your cock, enjoy it "/>
+		<text>
+			"such a cute thing" you plant another smooch on her face before
+			guiding her down onto your
+			<macro ID="penis_size_desc" />
+			shaft. A delighted squeel squeezed out of her as you sheathe your
+			shaft inside her lil cunny and she clutches tight against you. An
+			adorable flush on her face as she pants and squeezes, her nethers
+			clenching around your sex
+			<conditional>
+				<condition operator="greaterthan" evaluate="BODYVALUE"
+					bodypart="penis" partvalue="length" value="18" />
+				as she gets used to your sheer size stretching her out
+			</conditional>
+			. Your hands stroking her back afore you squeeze her tush and coax
+			her into starting to ride up and down your length.
+		</text>
+		<choice destination="sex3" text="cutie on your cock, enjoy it " />
 	</page>
 
 	<page ID="sex3">
-	<text>
-	The fawn isn't an experienced lover, but learns quickly as her lust stirrs her on to move her hips up and down upon your cock. The fawn gasping and moaning adorably as she rides your <macro ID="penis_size_desc" /> shaft and her hands rest against your chest. The cutie taking your gropes on her ass as encouragement to ride faster.
-	</text>
-	<choice destination="sex4" text="pump it in"/>
+		<text>
+			The fawn isn't an experienced lover, but learns quickly as her lust
+			stirrs her on to move her hips up and down upon your cock. The fawn
+			gasping and moaning adorably as she rides your
+			<macro ID="penis_size_desc" />
+			shaft and her hands rest against your chest. The cutie taking your
+			gropes on her ass as encouragement to ride faster.
+		</text>
+		<choice destination="sex4" text="pump it in" />
 	</page>
-	
+
 	<page ID="sex4">
-	<text>
-	You feel her moving atop you and decide to help her by doing more of the work now, and grasp the lil thing firmly by her hips afore starting to thrust up rapidly to meet her lowering hips. The fawn letting out a delighted squeel and clutching to your chest, moving her hips faster to meet your tempo as your pleasures build. The lead up fucking putting her close enough that a few minutes of vigorous rutting is enough to have her gasp and squeeze down in spasms about your dick. The fawn climaxing nicely even as you spill over your own threshold and fill her with thick seed.
-	</text>
-	<choice destination="sex5" text="mhmm"/>
+		<text>
+			You feel her moving atop you and decide to help her by doing more of the
+			work now, and grasp the lil thing firmly by her hips afore starting
+			to thrust up rapidly to meet her lowering hips. The fawn letting out
+			a delighted squeel and clutching to your chest, moving her hips
+			faster to meet your tempo as your pleasures build. The lead up
+			fucking putting her close enough that a few minutes of vigorous
+			rutting is enough to have her gasp and squeeze down in spasms about
+			your dick. The fawn climaxing nicely even as you spill over your own
+			threshold and fill her with thick seed.
+		</text>
+		<choice destination="sex5" text="mhmm" />
 	</page>
-	
+
 	<page ID="sex5">
-	<text>
-	Your cute lil fawn opens her eyes as she recovers, feeling the hot warmth of your seed deep within her now. She flushes and smiles, leaning in to lick and nuzzle at your neck and chin adorably as you rest there with her, fondling her lil tail and butt a bit more afore pulling out of her. The fawn looking a bit disapointed to not be filled with your dick, but she probably knows you'll be filling her with it again sometime.
-	</text>
-	<choice destination="end" text="return her to containment"/>
+		<text>
+			Your cute lil fawn opens her eyes as she recovers, feeling the hot warmth
+			of your seed deep within her now. She flushes and smiles, leaning in
+			to lick and nuzzle at your neck and chin adorably as you rest there
+			with her, fondling her lil tail and butt a bit more afore pulling out
+			of her. The fawn looking a bit disapointed to not be filled with your
+			dick, but she probably knows you'll be filling her with it again
+			sometime.
+		</text>
+		<choice destination="end" text="return her to containment" />
 	</page>
-	
+
 </Conversation>

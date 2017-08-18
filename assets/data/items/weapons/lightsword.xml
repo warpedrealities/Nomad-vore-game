@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
 <ItemWeapon name="lightsword" weight="1" value="1000">
-<tagSet value="SM"/>
-<description>
-A cylindrical sword hilt from which projects on demand a radiant blade. 1AP does 4-9 thermal damage. (S)
-</description>
+	<tagSet value="SM" />
+	<description>
+		A cylindrical sword hilt from which projects on demand a radiant blade.
+		1AP does 4-9 thermal damage. (S)
+	</description>
 
-<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" ammoCost="1" actionCost="1" basicAction="true" moveType="FIGHT">
-<effectDamage type="THERMAL" minValue="4" maxValue="9" modifier="STRENGTH"/>
-<missText count="1">
-<text>you fail to slash TARGET</text>
-</missText>
-<hitText count="1">
-<text>you burn TARGET for VALUE thermal damage</text>
-</hitText>
-</combatMove>
-<energy refill="ENERGY" efficiency="5" capacity="25"/>
+	<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE"
+		timeCost="2" ammoCost="1" actionCost="1" basicAction="true" moveType="FIGHT">
+		<effectDamage type="THERMAL" minValue="4" maxValue="9"
+			modifier="STRENGTH" />
+		<missText count="1">
+			<text>you fail to slash TARGET</text>
+		</missText>
+		<hitText count="1">
+			<text>you burn TARGET for VALUE thermal damage</text>
+		</hitText>
+	</combatMove>
+	<energy refill="ENERGY" efficiency="5" capacity="25" />
 </ItemWeapon>

@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
-<perk name="warrior" >
-<description> Your hands are full of might, and spoiling for a fight! +1 to melee, +1 to parry.</description>
-<modifier affects="MELEE" value="1" type="ATTRIBUTE"/>
-<modifier affects="PARRY" value="1" type="ATTRIBUTE"/>
-<maxrank value="3"/>
+<perk name="warrior">
+	<description> Your hands are full of might, and spoiling for a fight!
+		+1 to melee, +1 to parry.</description>
+	<modifier affects="MELEE" value="1" type="ATTRIBUTE" />
+	<modifier affects="PARRY" value="1" type="ATTRIBUTE" />
+	<maxrank value="3" />
 
 </perk>

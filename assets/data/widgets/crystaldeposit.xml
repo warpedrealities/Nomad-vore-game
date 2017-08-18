@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <widgetharvestable sprite="34">
-<contains minimum="1" maximum="2">blue crystal</contains>
-<usedescription>You mine some blue crystals</usedescription>
-<description>A deposit of crystals high in energy, possibly usable as fuel</description>
-<regeneration regentime="2000"/>
+	<contains minimum="1" maximum="2">blue crystal</contains>
+	<usedescription>You mine some blue crystals</usedescription>
+	<description>A deposit of crystals high in energy, possibly usable as
+		fuel</description>
+	<regeneration regentime="2000" />
 </widgetharvestable>

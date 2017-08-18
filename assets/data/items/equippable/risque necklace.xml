@@ -2,7 +2,8 @@
 <ItemEquip name="risque necklace" weight="1" slot="ACCESSORY"
 	value="250">
 	<description>
-		A metal figurine of a naked female figure attached to a cord so it can
+		A metal figurine of a naked female figure attached to a
+		cord so it can
 		be worn around the neck. +1 to seduction.
 	</description>
 	<modifier>

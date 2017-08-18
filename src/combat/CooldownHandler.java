@@ -46,10 +46,15 @@ public class CooldownHandler {
 
 					break;
 				}
+
 			}
 		}
 		if (index < moves.length) {
 			for (int i = 0; i < moves.length; i++) {
+				if (moves[i].getOverrideCooldown()!=null)
+				{
+					moves[i]=null;
+				}
 				if (moves[i] != null) {
 					newlist[index] = new MoveCooldown(moves[i].getIcon(), moves[i].getMoveName(),
 							moves[i].getMoveCooldown());

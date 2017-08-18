@@ -36,7 +36,7 @@ public class PerkQualifier {
 					playerAppearance.getPart(split[0]).getValue(split[1])>=Integer.parseInt(split[3])) {
 					return true;
 				}
-				if (split[2].equals("lestthan") && 
+				if (split[2].equals("lessthan") && 
 						playerAppearance.getPart(split[0]).getValue(split[1])<Integer.parseInt(split[3])) {
 						return true;
 					}
@@ -78,6 +78,14 @@ public class PerkQualifier {
 					}
 					if (str[i].contains("PERK")) {
 						String find = str[i].replace("PERK", "");
+						int rank=1;
+						if (Character.isDigit(find.charAt(find.length()-1)))
+						{
+							String n=find.substring(find.length()-1, find.length());
+							
+							rank=Integer.parseInt(n);
+							find=find.substring(0,find.length()-1);
+						}
 						ArrayList<PerkInstance> perklist = playerRPG.getPlayerPerks();
 						for (int j = 0; j < perklist.size(); j++) {
 							if (perklist.get(j).getPerk().getName().equals(find)) {
@@ -111,6 +119,18 @@ public class PerkQualifier {
 						if (playerAppearance.getPart(str[i].replace("BODY", "").replace(" ", "")) != null) {
 							return true;
 						}
+						return false;
+					}
+					if (str[i].contains("PARTVAR")) {
+						String []split=str[i].split(" ");
+						if (split[2].equals("morethan") && 
+							playerAppearance.getPart(split[0]).getValue(split[1])>=Integer.parseInt(split[3])) {
+							return true;
+						}
+						if (split[2].equals("lessthan") && 
+								playerAppearance.getPart(split[0]).getValue(split[1])<Integer.parseInt(split[3])) {
+								return true;
+							}
 						return false;
 					}
 				}

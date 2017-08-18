@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <widgetdoor sprite="4" name="reinforced door" health="20">
-<contains minimum="2" maximum="4">scrap metal</contains>
-<description>a locked door</description>
-<resistance resists="KINETIC" strength="4"></resistance>
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>a locked door</description>
+	<resistance resists="KINETIC" strength="4"></resistance>
 </widgetdoor>

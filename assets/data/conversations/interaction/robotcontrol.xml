@@ -4,7 +4,8 @@
 		<text>
 			$%/R0B0T C0N7R0l%$ LBREAK
 			$%/R34DY 4 C0MM4ND%$ LBREAK
-			You've succeeded in subverting the robots. this device is of no further use
+			You've
+			succeeded in subverting the robots. this device is of no further use
 			to you.
 		</text>
 		<condition evaluate="LOCALFLAG" operator="equals" value="2"
@@ -14,7 +15,8 @@
 	<page ID="start">
 		<text>
 			$%/R0B07 C0N7R0L OFFL1N3%$
-			your hacking attempt has triggered a tampering lockout on this device.
+			your hacking attempt has triggered a
+			tampering lockout on this device.
 		</text>
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
 			flag="SYSTEM" />
@@ -25,8 +27,10 @@
 		<text>
 			$%/R0B0T C0N7R0l%$ LBREAK
 			$%/R34DY 4 C0MM4ND%$ LBREAK
-			the system is alien and damaged. But apparently is linked to the robots
-			plaguing this region.
+			the system
+			is alien and damaged. But apparently is linked to the robots
+			plaguing
+			this region.
 		</text>
 		<choice destination="hack" text="attempt to control robots" />
 		<choice destination="end" text="leave it be" />
@@ -37,8 +41,10 @@
 			value="1" attribute="TECH" />
 		<text>
 			$%4W4171NG C0MM4ND%$ LBREAK
-			You manage to decipher the rudiments of the interface and can attempt to
-			amend the targeting protocols. However a mistake might trigger some
+			You manage to decipher the rudiments
+			of the interface and can attempt to
+			amend the targeting protocols.
+			However a mistake might trigger some
 			form of security system.
 		</text>
 		<choice destination="check" text="attempt hack" />
@@ -54,7 +60,8 @@
 	<page ID="checksucceed">
 		<text>
 			$%R0B07 74RG4T1NG 4M3ND3D %$ LBREAK
-			success, you've amended the targeting protocols for the robots. They're not
+			success, you've amended the
+			targeting protocols for the robots. They're not
 			hostile to you now.
 		</text>
 		<effect type="setlocalflag" flag="SYSTEM" value="2" />
@@ -78,7 +85,8 @@
 			value="1" attribute="TECH" />
 		<text>
 			$%UNW4NT3D F1L3 3RR0R%$ LBREAK
-			Your knowledge is inadequate for the task and you cannot make sense of
+			Your knowledge is inadequate for
+			the task and you cannot make sense of
 			this alien computer.
 		</text>
 		<choice destination="end" text="leave it be" />

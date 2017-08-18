@@ -1,51 +1,62 @@
 <?xml version="1.0"?>
 <Harpy>
-<sprite value="uppercaseD.png"/>
+	<sprite value="uppercaseD.png" />
 
-<name>draconian</name>
-<description>Towering seven feet tall from horns to toes this imposing yet shapely figure is clad only in skin and gleaming green scales. The scales cover hear forearms, calves and her flanks but leave her shapely ass and magnificent rack clad only in skin and glory. Though perhaps what only adds to her tremble inducing majesty are the leathery wings from her back and the long reptilian tail snaking from above that aforementioned well formed derriere.</description>
-<rpg>
-<experiencevalue value="50"/>
-<ability ability="STRENGTH" value="6" />
-<ability ability="AGILITY" value="6" />
-<ability ability="DEXTERITY" value="6" />
-<ability ability="ENDURANCE" value="6" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="50"/>
-<stat stat="RESOLVE" value="40"/>
-<attribute attribute="DODGE" value="4"/>
-<attribute attribute="PARRY" value="4"/>
-<attribute attribute="WILLPOWER" value="4"/>
-<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
-<effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="STRENGTH"/>
-<missText count="2">
-<text>The draconian swipes at TARGET but misses</text>
-<text>The draconian misses TARGET</text>
-</missText>
-<hitText count="2">
-<text>The draconian strikes TARGET for VALUE damage</text>
-<text>The draconian slashes at TARGET for VALUE damage</text>
-</hitText>
-</combatMove>
-<combatMove name="flame" pattern="RANGED" bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
-<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<missText count="2">
-<text>The draconian blasts fire ineffectually at TARGET</text>
-<text>The draconian breathes fire at TARGET without hitting</text>
-</missText>
-<hitText count="2">
-<text>The draconian flames TARGET for VALUE damage</text>
-<text>The draconian breathes fire on TARGET for VALUE damage</text>
-</hitText>
-</combatMove>
-</rpg>
-<flying />
-<defeated conversation="alpha_minoris_II/draconian/defeat" />
-<seduced conversation="alpha_minoris_II/draconian/defeat" />
-<victory conversation="alpha_minoris_II/draconian/victory" />
-<seducer conversation="alpha_minoris_II/draconian/victory" />
-<controller AI="draconian"/>
-<faction value="monster"/>
+	<name>draconian</name>
+	<description>Towering seven feet tall from horns to toes this imposing
+		yet shapely figure is clad only in skin and gleaming green scales. The
+		scales cover hear forearms, calves and her flanks but leave her
+		shapely ass and magnificent rack clad only in skin and glory. Though
+		perhaps what only adds to her tremble inducing majesty are the
+		leathery wings from her back and the long reptilian tail snaking from
+		above that aforementioned well formed derriere.</description>
+	<rpg>
+		<experiencevalue value="50" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="6" />
+		<ability ability="DEXTERITY" value="6" />
+		<ability ability="ENDURANCE" value="6" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="2" maxValue="7"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>The draconian swipes at TARGET but misses</text>
+				<text>The draconian misses TARGET</text>
+			</missText>
+			<hitText count="2">
+				<text>The draconian strikes TARGET for VALUE damage</text>
+				<text>The draconian slashes at TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="flame" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<effectDamage type="THERMAL" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<effectDamage type="THERMAL" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>The draconian blasts fire ineffectually at TARGET</text>
+				<text>The draconian breathes fire at TARGET without hitting</text>
+			</missText>
+			<hitText count="2">
+				<text>The draconian flames TARGET for VALUE damage</text>
+				<text>The draconian breathes fire on TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+	<flying />
+	<defeated conversation="alpha_minoris_II/draconian/defeat" />
+	<seduced conversation="alpha_minoris_II/draconian/defeat" />
+	<victory conversation="alpha_minoris_II/draconian/victory" />
+	<seducer conversation="alpha_minoris_II/draconian/victory" />
+	<controller AI="draconian" />
+	<faction value="monster" />
 </Harpy>

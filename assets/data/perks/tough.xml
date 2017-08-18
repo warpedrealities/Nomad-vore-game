@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <perk name="tough">
-<description> 
-Tougher than the mountain, 
-you eat a jar of nails and break a sword over your knee every morning just cause you can...or maybe not. +8 health. </description>
-<modifier affects="HEALTH" value="8" type="STAT"/>
+	<description>
+		Tougher than the mountain,
+		you eat a jar of nails and break a sword over your knee every morning
+		just cause you can...or maybe not. +8 health.
+	</description>
+	<modifier affects="HEALTH" value="8" type="STAT" />
 
-<maxrank value="3"/>
+	<maxrank value="3" />
 
 </perk>

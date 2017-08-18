@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <recipe name="solar plant" requiredskill="1" startunlocked="false">
-<description>
-A ship board device that collects solar energy using a series of unfolding focusing mirrors to create power while in space.
-</description>
-<ingredient item="optics" quantity="10"/>
-<ingredient item="battery" quantity="5"/>
-<ingredient item="computation valve" quantity="5"/>
-<result item="solar plant"/>
+	<description>
+		A ship board device that collects solar energy using a series of
+		unfolding focusing mirrors to create power while in space.
+	</description>
+	<ingredient item="optics" quantity="10" />
+	<ingredient item="battery" quantity="5" />
+	<ingredient item="computation valve" quantity="5" />
+	<result item="solar plant" />
 </recipe>

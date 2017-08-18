@@ -1,83 +1,89 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="jungle.png">
-<tileset count-x="4" count-y="4">
-<tile sprite="2" vision="1" movement="2"> a metal wall</tile>
-<tile sprite="1" vision="0" movement="0"> a platform of crude masonry </tile>
-<tile sprite="2" vision="0" movement="0"> jungle vegetation</tile>
-<tile sprite="3" vision="0" movement="0"> jungle mud</tile>
-<tile sprite="4" vision="0" movement="0"> jungle grass</tile>
-<tile sprite="6" vision="1" movement="2"> drooping jungle tree</tile>
-<tile sprite="7" vision="1" movement="2"> thick and proud jungle tree</tile>
-<tile sprite="8" vision="1" movement="2"> twisted jungle tree</tile>
-<tile sprite="10" vision="1" movement="2"> lashed together wooden wall</tile>
-<tile sprite="11" vision="0" movement="0"> straw matting</tile>
-</tileset>
-<transition direction="east">alien village</transition>
-<transition direction="west">zoneNW</transition>
-<transition direction="south">zoneC</transition>
-<description>This jungle is densely overgrown, the plant life providing a chaotic and dense barrier to getting a clear image of the lay of the land. Anything could be lurking here, be on your guard. </description>
+	<tileset count-x="4" count-y="4">
+		<tile sprite="2" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="0" movement="0"> a platform of crude masonry </tile>
+		<tile sprite="2" vision="0" movement="0"> jungle vegetation</tile>
+		<tile sprite="3" vision="0" movement="0"> jungle mud</tile>
+		<tile sprite="4" vision="0" movement="0"> jungle grass</tile>
+		<tile sprite="6" vision="1" movement="2"> drooping jungle tree</tile>
+		<tile sprite="7" vision="1" movement="2"> thick and proud jungle tree</tile>
+		<tile sprite="8" vision="1" movement="2"> twisted jungle tree</tile>
+		<tile sprite="10" vision="1" movement="2"> lashed together wooden
+			wall</tile>
+		<tile sprite="11" vision="0" movement="0"> straw matting</tile>
+	</tileset>
+	<transition direction="east">alien village</transition>
+	<transition direction="west">zoneNW</transition>
+	<transition direction="south">zoneC</transition>
+	<description>This jungle is densely overgrown, the plant life providing
+		a chaotic and dense barrier to getting a clear image of the lay of the
+		land. Anything could be lurking here, be on your guard. </description>
 
-<mapgen>
-<randprefab width="5" height="5">
-<row>33333</row>
-<row>33333</row>
-<row>33133</row>
-<row>33333</row>
-<row>33333</row>
-<placeItem x="2" y="0">
-<item itemname="disc" exposition="srv0"/>
-</placeItem>
-<placeWidget x="4" y="4" name="junkpile"/>
-<placeWidget x="0" y="0" name="SPRITE" width="5" height="5" file="wreck1"/>
-<placeWidget x="1" y="1" name="DESCRIBER">
-This drone has crashed remarkably intact, though only in the sense that it reached the ground as something other than incandescent vapour not in the sense that it's in any way repairable.
-</placeWidget>
-</randprefab>
+	<mapgen>
+		<randprefab width="5" height="5">
+			<row>33333</row>
+			<row>33333</row>
+			<row>33133</row>
+			<row>33333</row>
+			<row>33333</row>
+			<placeItem x="2" y="0">
+				<item itemname="disc" exposition="srv0" />
+			</placeItem>
+			<placeWidget x="4" y="4" name="junkpile" />
+			<placeWidget x="0" y="0" name="SPRITE" width="5" height="5"
+				file="wreck1" />
+			<placeWidget x="1" y="1" name="DESCRIBER">
+				This drone has crashed remarkably intact, though only in the sense that
+				it reached the ground as something other than incandescent vapour
+				not in the sense that it's in any way repairable.
+			</placeWidget>
+		</randprefab>
 
-<randprefab width="3" height="3">
-<row>333</row>
-<row>333</row>
-<row>333</row>
-<placeWidget x="1" y="1" name="cargocontainer">
-<lootTable>
-	<lootSubTable chance="1" file="cargodrops_primary"/>
-	<lootSubTable chance="1" file="cargodrops_secondary"/>
-	<lootSubTable chance="0.5" file="resource_tier_1"/>
-	<lootSubTable chance="0.5" file="consumable_tier_1"/>
-</lootTable>
-</placeWidget>
-</randprefab>
+		<randprefab width="3" height="3">
+			<row>333</row>
+			<row>333</row>
+			<row>333</row>
+			<placeWidget x="1" y="1" name="cargocontainer">
+				<lootTable>
+					<lootSubTable chance="1" file="cargodrops_primary" />
+					<lootSubTable chance="1" file="cargodrops_secondary" />
+					<lootSubTable chance="0.5" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="consumable_tier_1" />
+				</lootTable>
+			</placeWidget>
+		</randprefab>
 
-<clumps lowerlimit="0" upperlimit="45">
-<noise tile="5" scarcity="6"/>
-<floodfill tile="3"></floodfill>
-</clumps>
-<clumps lowerlimit="0" upperlimit="45">
-<noise tile="6" scarcity="6"/>
-<floodfill tile="4"></floodfill>
-</clumps>
-<clumps lowerlimit="0" upperlimit="45">
-<noise tile="7" scarcity="6"/>
-<floodfill tile="4"></floodfill>
-</clumps>
-<floodfill tile="2">
+		<clumps lowerlimit="0" upperlimit="45">
+			<noise tile="5" scarcity="6" />
+			<floodfill tile="3"></floodfill>
+		</clumps>
+		<clumps lowerlimit="0" upperlimit="45">
+			<noise tile="6" scarcity="6" />
+			<floodfill tile="4"></floodfill>
+		</clumps>
+		<clumps lowerlimit="0" upperlimit="45">
+			<noise tile="7" scarcity="6" />
+			<floodfill tile="4"></floodfill>
+		</clumps>
+		<floodfill tile="2">
 
-</floodfill>
-<Seedwidgets min="16" max="32" name="fruitbush" />
-<Seedwidgets min="8" max="16" name="gourdbush" />
-<SeedNPCs min="8" max="16" name="AlphaMinoris_II/lamia"/>
-<walloff wall="7" sides="north"/>
-<prefab positionX="32" positionY="32" width="1" height="1">
-<row>3</row>
-</prefab>
-<placeWidget x="32" y="32" name="SPAWNER">
-<radius value="30"/>
-<spawnLimit value="1"/>
-<script value="alphaminorisbattlespawns"/>
-<spawns count="1">
-<data npc="AlphaMinoris_II/draconian" min="1" max="1" chance="25"/>
-</spawns>
-</placeWidget>
-</mapgen>
+		</floodfill>
+		<Seedwidgets min="16" max="32" name="fruitbush" />
+		<Seedwidgets min="8" max="16" name="gourdbush" />
+		<SeedNPCs min="8" max="16" name="AlphaMinoris_II/lamia" />
+		<walloff wall="7" sides="north" />
+		<prefab positionX="32" positionY="32" width="1" height="1">
+			<row>3</row>
+		</prefab>
+		<placeWidget x="32" y="32" name="SPAWNER">
+			<radius value="30" />
+			<spawnLimit value="1" />
+			<script value="alphaminorisbattlespawns" />
+			<spawns count="1">
+				<data npc="AlphaMinoris_II/draconian" min="1" max="1" chance="25" />
+			</spawns>
+		</placeWidget>
+	</mapgen>
 
 </zone>

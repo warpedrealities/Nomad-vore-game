@@ -1,133 +1,140 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="ruins.png">
-<tileset count-x="4" count-y="4">
-<tile sprite="8" vision="1" movement="2"> a metal wall</tile>
-<tile sprite="3" vision="0" movement="0"> tiled floor </tile>
-<tile sprite="2" vision="0" movement="0"> strange grass</tile>
-<tile sprite="4" vision="1" movement="2"> a brick wall</tile>
-<tile sprite="5" vision="0" movement="1"> water</tile>
-<tile sprite="6" vision="0" movement="0"> brick rubble </tile>
-<tile sprite="7" vision="1" movement="2"> strange tree </tile>
-<tile sprite="8" vision="0" movement="0"> dirt </tile>
-<tile sprite="10" vision="1" movement="2"> rusty metal wall </tile>
-</tileset>
+	<tileset count-x="4" count-y="4">
+		<tile sprite="8" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="3" vision="0" movement="0"> tiled floor </tile>
+		<tile sprite="2" vision="0" movement="0"> strange grass</tile>
+		<tile sprite="4" vision="1" movement="2"> a brick wall</tile>
+		<tile sprite="5" vision="0" movement="1"> water</tile>
+		<tile sprite="6" vision="0" movement="0"> brick rubble </tile>
+		<tile sprite="7" vision="1" movement="2"> strange tree </tile>
+		<tile sprite="8" vision="0" movement="0"> dirt </tile>
+		<tile sprite="10" vision="1" movement="2"> rusty metal wall </tile>
+	</tileset>
 
-<description>The ruins are crumbled and long abandoned</description>
+	<description>The ruins are crumbled and long abandoned</description>
 
-<transition direction="south">Zone 2B</transition>
-<transition direction="west">Zone 1A</transition>
-<mapgen>
-<partition xmin="8" xmax="56" ymin="8" ymax="56">
-<randprefab width="6" height="6">
-<row>399999</row>
-<row>392229</row>
-<row>399299</row>
-<row>322229</row>
-<row>392229</row>
-<row>399999</row>
-<placeWidget x="3" y="4" name="console" info="interaction/robotcontrol" variable="31"/>
-<placeWidget x="3" y="2" name="door">
-<lock key="controlonly" strength="20"/>
-</placeWidget>
-<placeNPC name="Alpha_Minoris_IIA/securitybot" x="3" y="1"/>
-</randprefab>
-<randprefab width="5" height="6">
-<row>99999</row>
-<row>92229</row>
-<row>92229</row>
-<row>92229</row>
-<row>99299</row>
-<row>33233</row>
-<placeWidget x="2" y="4" name="door">
-<lock key="rusty generator" strength="10"/>
-</placeWidget>
-<placeWidget x="1" y="1" name="machinery"/>
-<placeWidget x="2" y="1" name="chest">
-<lootTable>
-<loot item="fuel cell(poor)" chance="1.0"/>
-<loot item="fuel cell(poor)" chance="1.0"/>
-<loot item="fuel cell(poor)" chance="1.0"/>
-<loot item="fuel cell(poor)" chance="0.5"/>
-</lootTable>
-</placeWidget>
-<placeItem x="2" y="2">
-<item itemname="note" exposition="dev03"/>
-</placeItem>
-<placeWidget x="3" y="1" name="chargingstation">
-<resource type="ENERGY" value="1000"/>
-</placeWidget>
-</randprefab>
-<randprefab width="6" height="6">
-<row>999993</row>
-<row>992993</row>
-<row>922293</row>
-<row>922293</row>
-<row>992993</row>
-<row>332333</row>
-<placeWidget x="2" y="2" name="DESCRIBER">
-a sign is barely legible above the empty door frame, beyond the frame concrete stairs plunge into darkness. Upon the sign is a stylized logo and the words 'omni consumer co synth manufactory, authorized personnel only'
-</placeWidget>
-<pairedportal sprite="3" destination="factory" x="2" y="1" ID="11">a stairway into the depths</pairedportal>
-</randprefab>
-	<town minsize="5" maxsize="9" minhouses="24" maxhouses="32" tile="3" gap="1" registerRooms="true">
-		<floodfill tile="1">
-		<SeedNPCs min="8" max="16" name="Alpha_Minoris_IIA/robot" minDistance="12" />
-			<Seedwidgets min="12" max="24" name="machinery" />
-			<Seedwidgets min="12" max="24" name="chest">
-			<lootTable>
-			<loot item="computation valve" chance="0.4" unique="3" />
-			<loot item="computation valve" chance="0.4" unique="3" />
-			<loot item="computation valve" chance="0.4" unique="3" />
-			<loot item="computation valve" chance="0.4" unique="3" />
-			<loot item="computation valve" chance="0.4" unique="3" />
-			<lootSubTable chance="1" file="resource_tier_1"/>
-			<lootSubTable chance="0.5" file="resource_tier_1"/>
-			<lootSubTable chance="0.5" file="consumable_tier_1"/>
-			<lootSubTable chance="0.25" file="moon_ruins_special"/>
-			<lootSubTable chance="0.15" file="mutators_tier_1"/>
-			<lootSubTable chance="0.25" file="consumable_tier_1"/>
-			<loot item="key" chance="1.0" unique="2" addendum="rusty generator"/>
-			</lootTable>
-			</Seedwidgets>
-			<Seedwidgets min="1" max="1" name="computer">
-			<sprite value="31"/>
-			<conversation value="interaction/omnico/omnico0"/>
-			</Seedwidgets>
-			<Seedwidgets min="1" max="1" name="computer">
-			<sprite value="31"/>
-			<conversation value="interaction/omnico/omnico1"/>
-			</Seedwidgets>
-			<Seedwidgets min="1" max="1" name="computer">
-			<sprite value="31"/>
-			<conversation value="interaction/omnico/omnico2"/>
-			</Seedwidgets>
+	<transition direction="south">Zone 2B</transition>
+	<transition direction="west">Zone 1A</transition>
+	<mapgen>
+		<partition xmin="8" xmax="56" ymin="8" ymax="56">
+			<randprefab width="6" height="6">
+				<row>399999</row>
+				<row>392229</row>
+				<row>399299</row>
+				<row>322229</row>
+				<row>392229</row>
+				<row>399999</row>
+				<placeWidget x="3" y="4" name="console" info="interaction/robotcontrol"
+					variable="31" />
+				<placeWidget x="3" y="2" name="door">
+					<lock key="controlonly" strength="20" />
+				</placeWidget>
+				<placeNPC name="Alpha_Minoris_IIA/securitybot" x="3" y="1" />
+			</randprefab>
+			<randprefab width="5" height="6">
+				<row>99999</row>
+				<row>92229</row>
+				<row>92229</row>
+				<row>92229</row>
+				<row>99299</row>
+				<row>33233</row>
+				<placeWidget x="2" y="4" name="door">
+					<lock key="rusty generator" strength="10" />
+				</placeWidget>
+				<placeWidget x="1" y="1" name="machinery" />
+				<placeWidget x="2" y="1" name="chest">
+					<lootTable>
+						<loot item="fuel canister(poor)" chance="1.0" />
+						<loot item="fuel canister(poor)" chance="1.0" />
+						<loot item="fuel canister(poor)" chance="1.0" />
+						<loot item="fuel canister(poor)" chance="0.5" />
+					</lootTable>
+				</placeWidget>
+				<placeItem x="2" y="2">
+					<item itemname="note" exposition="dev03" />
+				</placeItem>
+				<placeWidget x="3" y="1" name="chargingstation">
+					<resource type="ENERGY" value="1000" />
+				</placeWidget>
+			</randprefab>
+			<randprefab width="6" height="6">
+				<row>999993</row>
+				<row>992993</row>
+				<row>922293</row>
+				<row>922293</row>
+				<row>992993</row>
+				<row>332333</row>
+				<placeWidget x="2" y="2" name="DESCRIBER">
+					a sign is barely legible above the empty door frame, beyond the
+					frame concrete stairs plunge into darkness. Upon the sign is a
+					stylized logo and the words 'omni consumer co synth manufactory,
+					authorized personnel only'
+				</placeWidget>
+				<pairedportal sprite="3" destination="factory" x="2" y="1"
+					ID="11">a stairway into the depths</pairedportal>
+			</randprefab>
+			<town minsize="5" maxsize="9" minhouses="24" maxhouses="32"
+				tile="3" gap="1" registerRooms="true">
+				<floodfill tile="1">
+					<SeedNPCs min="8" max="16" name="Alpha_Minoris_IIA/robot"
+						minDistance="12" />
+					<Seedwidgets min="12" max="24" name="machinery" />
+					<Seedwidgets min="12" max="24" name="chest">
+						<lootTable>
+							<loot item="computation valve" chance="0.4" unique="3" />
+							<loot item="computation valve" chance="0.4" unique="3" />
+							<loot item="computation valve" chance="0.4" unique="3" />
+							<loot item="computation valve" chance="0.4" unique="3" />
+							<loot item="computation valve" chance="0.4" unique="3" />
+							<lootSubTable chance="1" file="resource_tier_1" />
+							<lootSubTable chance="0.5" file="resource_tier_1" />
+							<lootSubTable chance="0.5" file="consumable_tier_1" />
+							<lootSubTable chance="0.25" file="moon_ruins_special" />
+							<lootSubTable chance="0.15" file="mutators_tier_1" />
+							<lootSubTable chance="0.25" file="consumable_tier_1" />
+							<loot item="key" chance="1.0" unique="2" addendum="rusty generator" />
+						</lootTable>
+					</Seedwidgets>
+					<Seedwidgets min="1" max="1" name="computer">
+						<sprite value="31" />
+						<conversation value="interaction/omnico/omnico0" />
+					</Seedwidgets>
+					<Seedwidgets min="1" max="1" name="computer">
+						<sprite value="31" />
+						<conversation value="interaction/omnico/omnico1" />
+					</Seedwidgets>
+					<Seedwidgets min="1" max="1" name="computer">
+						<sprite value="31" />
+						<conversation value="interaction/omnico/omnico2" />
+					</Seedwidgets>
+				</floodfill>
+
+			</town>
+			<POIWidget name="craftingtable" />
+		</partition>
+		<randprefab width="3" height="3">
+			<row>888</row>
+			<row>888</row>
+			<row>888</row>
+			<placeWidget x="1" y="1" name="dropcontainer">
+				<lootTable>
+					<loot item="medicine" chance="0.5" />
+					<loot item="medicine" chance="1.0" />
+					<loot item="space meal" chance="0.5" />
+					<loot item="space meal" chance="1.0" />
+				</lootTable>
+			</placeWidget>
+		</randprefab>
+		<noise tile="6" scarcity="4"></noise>
+		<noise tile="7" scarcity="6"></noise>
+
+		<floodfill tile="2">
+
 		</floodfill>
-
-</town>
-<POIWidget name="craftingtable"/>
-</partition>
-<randprefab width="3" height="3">
-<row>888</row>
-<row>888</row>
-<row>888</row>
-<placeWidget x="1" y="1" name="dropcontainer">
-<lootTable>
-<loot item="medicine" chance="0.5"/>
-<loot item="medicine" chance="1.0"/>
-<loot item="space meal" chance="0.5"/>
-<loot item="space meal" chance="1.0"/>
-</lootTable>
-</placeWidget>
-</randprefab>
-<noise tile="6" scarcity="4"></noise>
-<noise tile="7" scarcity="6"></noise>
-
-<floodfill tile="2">
-
-</floodfill>
-<degrade chance="25" degradethis="3" replacewith="5"/>
-<walloff wall="4" sides="northeast"/>
-<auditpaths carve="3" replace="5" />
-</mapgen>
+		<degrade chance="25" degradethis="3" replacewith="5" />
+		<walloff wall="4" sides="northeast" />
+		<auditpaths carve="3" replace="5" />
+	</mapgen>
 
 </zone>

@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <recipe name="E-cell" requiredskill="1" startunlocked="true">
-<description>
-A battery combined with a connection to charge and discharge it makes this primitive energy cell.
-</description>
-<ingredient item="scrap metal" quantity="2"/>
-<ingredient item="battery" quantity="1"/>
-<result item="E-cell"/>
+	<description>
+		A battery combined with a connection to charge and discharge it makes
+		this primitive energy cell.
+	</description>
+	<ingredient item="scrap metal" quantity="2" />
+	<ingredient item="battery" quantity="1" />
+	<tokenRequirement item="gadgeteer" quantity="1" />
+	<result item="E-cell" />
 </recipe>

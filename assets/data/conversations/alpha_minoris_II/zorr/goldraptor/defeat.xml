@@ -7,15 +7,36 @@
 		<choice destination="sexF0" text="put that cock of hers to work">
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="do nothing" />
+	</page>
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="sexF0">
 		<text>
-			Standing over her your eyes can't help but to wander over her curves, after
-			managing to overpower such an alluring creature you can't help
-			yourself – adrenaline and excitement, perhaps a dash of fear still
-			running through your system, but you want more, and its clear how she
+			Standing over her your eyes can't help but to wander over her
+			curves, after
+			managing to overpower such an alluring creature you
+			can't help
+			yourself – adrenaline and excitement, perhaps a dash of
+			fear still
+			running through your system, but you want more, and its
+			clear how she
 			can give it to you.
 		</text>
 		<choice destination="sexF1" text="leap atop her!" />
@@ -23,15 +44,24 @@
 
 	<page ID="sexF1">
 		<text>
-			With a shrill cry the raptor-girl shifts, trying to dislodge you, yet
-			already your chest is smushing down against her own, shamelessly
-			rubbing your crotch against the hardening shaft. The golden raptor
-			can't help but note the lust in your eyes, unable to resist as it was
-			cowed by your stubborn insistance – it lets out a guttural whine,
-			pushing you down onto its thick shaft with a lustful moan. With
-			wicked glee you so eager pin down the golden raptors limbs, bucking
-			against your hips needily and greedily as you take inch after inch of
-			the member, your muscles already clenching down upon the steadily
+			With a shrill cry the raptor-girl shifts, trying to dislodge
+			you, yet
+			already your chest is smushing down against her own,
+			shamelessly
+			rubbing your crotch against the hardening shaft. The
+			golden raptor
+			can't help but note the lust in your eyes, unable to
+			resist as it was
+			cowed by your stubborn insistance – it lets out a
+			guttural whine,
+			pushing you down onto its thick shaft with a lustful
+			moan. With
+			wicked glee you so eager pin down the golden raptors limbs,
+			bucking
+			against your hips needily and greedily as you take inch after
+			inch of
+			the member, your muscles already clenching down upon the
+			steadily
 			hardening shaft.
 		</text>
 		<choice destination="sexF2" text="enjoy yourself" />
@@ -39,9 +69,12 @@
 
 	<page ID="sexF2">
 		<text>
-			After a few moments she surrenders to your growing lusts, thrusting
-			herself into you deeply, the hard shaft properly lubricated by your
-			growing desire. Lust overrides reason as your lips latch onto its
+			After a few moments she surrenders to your growing lusts,
+			thrusting
+			herself into you deeply, the hard shaft properly lubricated
+			by your
+			growing desire. Lust overrides reason as your lips latch onto
+			its
 			neck, suckling and kissing against the cool scales, bucking and
 			thrusting, it takes no time at all for you both to get so excited,
 			the sounds of your moans and its guttural squeals echoing into the
@@ -57,8 +90,10 @@
 
 	<page ID="sexF3">
 		<text>
-			As you try to dismount yourself the raptor-girl seems to smirk up as
-			you, even from your dominant position she is already bucking her hips
+			As you try to dismount yourself the raptor-girl seems to smirk
+			up as
+			you, even from your dominant position she is already bucking her
+			hips
 			back into you, elicting another whine from your lips – still warm
 			from your first peak the raptor-girl doesn't seem like she is done
 			with you yet, despite how the tables were in your favour. With each

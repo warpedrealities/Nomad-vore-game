@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <faction>
-	<factionRelationship ID="omnicofactory_robot" value="100" />
+	<factionRelationship ID="omnicofactory_robot"
+		value="100" />
 	<defaultRelationship value="25" />
 </faction>

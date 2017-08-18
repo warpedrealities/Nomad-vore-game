@@ -2,33 +2,57 @@
 <entry name="LF:mushroomfolk">
 	<text>
 		description:
-		The more common form is a petite greyskinned but fundamentally flesh and
-		blood humanoid with her hair replaced with a helmetlike red 'cap' of
+		The more common form is a petite greyskinned but
+		fundamentally flesh and
+		blood humanoid with her hair replaced with a
+		helmetlike red 'cap' of
 		spongey material.
 		LBREAK
-		biological findings: The 'cap' appears to be a complicated mass of folded and
-		ridged material that act to manufacture a form of 'omni-pheremone'
-		capable of weakening will and increasing arousal in a wide variety of
-		creatures. Further analysis of the pheremone samples reveals spore
-		like airborne particles, however these particles are sterile and while
-		clearly a form of reproduction this form of mushroom folk is clearly
-		sterile. Coupled with the suppressant pheremones accumulated in the
-		subject's biology this may lead to the conjecture that a more advanced
-		form of mushroom folk will arise in any location where no other
-		evolved form is present. So long as a subject has enough nutrients to
-		actualize the costly transformation that is. This advanced form would
-		certainly be capable of reproduction as well as suppressing the
-		metamorphosis of nearby shroomfolk. this mushroom mother or queen
-		would secrete fertile spores that would form mushroom girls when
-		coming to rest in suitable locations.
+		biological findings: The
+		'cap' appears to be a complicated mass of folded and
+		ridged material
+		that act to manufacture a form of 'omni-pheremone'
+		capable of weakening
+		will and increasing arousal in a wide variety of
+		creatures. Further
+		analysis of the pheremone samples reveals spore
+		like airborne
+		particles, however these particles are sterile and while
+		clearly a form
+		of reproduction this form of mushroom folk is clearly
+		sterile. Coupled
+		with the suppressant pheremones accumulated in the
+		subject's biology
+		this may lead to the conjecture that a more advanced
+		form of mushroom
+		folk will arise in any location where no other
+		evolved form is present.
+		So long as a subject has enough nutrients to
+		actualize the costly
+		transformation that is. This advanced form would
+		certainly be capable
+		of reproduction as well as suppressing the
+		metamorphosis of nearby
+		shroomfolk. this mushroom mother or queen
+		would secrete fertile spores
+		that would form mushroom girls when
+		coming to rest in suitable
+		locations.
 		LBREAK
-		Tactical assessment: The physical threat from the shroom folk is minimal with
-		their diminutive stature, slender frames and limited muscle mass. The
-		real threat comes from their ability to project pheremones at a target
-		in order to bring that target into a state of self submission where
-		they can devour them. their soft naked forms are probably vulnerable
-		to all knowns forms of attack and their naive and immature
-		personalities may leave them with little will to resist more esoteric
+		Tactical assessment: The physical threat from the
+		shroom folk is minimal with
+		their diminutive stature, slender frames
+		and limited muscle mass. The
+		real threat comes from their ability to
+		project pheremones at a target
+		in order to bring that target into a
+		state of self submission where
+		they can devour them. their soft naked
+		forms are probably vulnerable
+		to all knowns forms of attack and their
+		naive and immature
+		personalities may leave them with little will to
+		resist more esoteric
 		forms of 'assault'.
 	</text>
 	<requirement name="mushroomfolk" count="1" />

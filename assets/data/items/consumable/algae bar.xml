@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
-<ItemConsumable name="algae bar" weight="0.5" value="20" tag="1">
-	<description>A dark green slab of condensed algae as a basic nutritional product to meet your needs but little more.</description>
+<ItemConsumable name="algae bar" weight="0.5" value="20"
+	tag="1">
+	<description>A dark green slab of condensed algae as a basic
+		nutritional product to meet your needs but little more.</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
 		modvalue="30" modifies="SATIATION">
-		The algae bar is bland to the tastebuds though dense and in need of extensive chewing in order to make it go down. It satiates your physical need for nourishment but eating it is hardly an experience.
+		The algae bar is bland to the tastebuds though
+		dense and in need of extensive chewing in order to make it go down. It
+		satiates your physical need for nourishment but eating it is hardly an
+		experience.
 	</effectrecover>
 </ItemConsumable>

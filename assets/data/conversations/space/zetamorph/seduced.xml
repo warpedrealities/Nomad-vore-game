@@ -2,9 +2,12 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			The zetamorph mhmms and strokes her already hard cock at your approach,
-			flushed a slightly purple hue with arousal as her tail sways and she
-			eyes you lustfully. Her libido is yours to command now you've gotten
+			The zetamorph mhmms and strokes her already hard cock at your
+			approach,
+			flushed a slightly purple hue with arousal as her tail sways
+			and she
+			eyes you lustfully. Her libido is yours to command now you've
+			gotten
 			her horny.
 		</text>
 		<choice destination="sexF0" text="get screwed">
@@ -28,7 +31,25 @@
 			<assertnot evaluate="hasEntry" entry="lifeforms/zetamorph.xml" />
 			<assertnot evaluate="hasResearch" research="zetamorph" />
 		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
 		<choice destination="end" text="not interested right now" />
+	</page>
+
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
 	</page>
 
 	<page ID="cockvore0">
@@ -58,8 +79,10 @@
 
 	<page ID="cockvore1">
 		<text>
-			You groan in pleasure as the alien submits to your cock. Her foursome of
-			arms tucking and curling against herself as she succumbs to your
+			You groan in pleasure as the alien submits to your cock. Her
+			foursome of
+			arms tucking and curling against herself as she succumbs
+			to your
 			wiles, your allure, and the ravenous hunger of your loins. The
 			thought makes you shudder, thrusting your hips forwards. Your cock
 			schlurping and squeezing around her shoulders, pinning her arms
@@ -83,29 +106,46 @@
 
 	<page ID="cockvore2">
 		<text>
-			You can feel her head pressing against the entrance of your sack. The
-			zeta writhing in your big ravenous cock as she jerks off desperately,
-			lost to lust and self destructive desires. Her body spasming in a
-			delightful way as her hips buck and her cock erupts, splattering the
-			floor beneath her with cum. Her spasms serve though also to stimulate
-			your hungry shaft and with a groan you feel it ripple and flex,
-			dragging that spurting cock into your tip and squeezing it inside
-			your shaft. Your balls swelling out as the blissfully orgasmic zeta
-			is steadily fed down into them, tail and clawed feet swaying up in
-			front of you as your cock lifts upwards and the Zeta slides down. A
-			final schlurping pop audible as your cumslit seals shut behind that
-			tail and your stroking hands guide the bulges of her legs down to
-			join the rest of her in curling up between your legs.
+			You can feel her head pressing against the entrance of your
+			sack. The
+			zeta writhing in your big ravenous cock as she jerks off
+			desperately,
+			lost to lust and self destructive desires. Her body
+			spasming in a
+			delightful way as her hips buck and her cock erupts,
+			splattering the
+			floor beneath her with cum. Her spasms serve though
+			also to stimulate
+			your hungry shaft and with a groan you feel it
+			ripple and flex,
+			dragging that spurting cock into your tip and
+			squeezing it inside
+			your shaft. Your balls swelling out as the
+			blissfully orgasmic zeta
+			is steadily fed down into them, tail and
+			clawed feet swaying up in
+			front of you as your cock lifts upwards and
+			the Zeta slides down. A
+			final schlurping pop audible as your cumslit
+			seals shut behind that
+			tail and your stroking hands guide the bulges
+			of her legs down to
+			join the rest of her in curling up between your
+			legs.
 		</text>
 		<choice destination="cockvore3" text="churning alien nutbutter" />
 	</page>
 
 	<page ID="cockvore3">
 		<text>
-			The lusty yet mighty zetamorph now squirms entirely within your balls
-			and while the sensation is one to savour it's possible if you linger
-			too long you might be interrupted. With one hand on your sack and the
-			other on your shaft you feel her writhing and crooning in your balls
+			The lusty yet mighty zetamorph now squirms entirely within your
+			balls
+			and while the sensation is one to savour it's possible if you
+			linger
+			too long you might be interrupted. With one hand on your sack
+			and the
+			other on your shaft you feel her writhing and crooning in your
+			balls
 			and your cock throbbing well sated in your hand. And now having
 			savoured its time to move on and as you close your eyes you feel your
 			balls start to churn and burble around the alien. Your other hand
@@ -150,13 +190,20 @@
 
 	<page ID="sexF1">
 		<text>
-			The alien settled down over you, her true arms groping over your body as
-			her claw arms come down above your head to hold her up. Your hand on
-			her cock guiding that thick blue girth inside yourself, stretching
-			you out as she moans atop you...sliding that thick cock inside until
-			her hefty blue balls are pressing against your thighs and all of her
-			is sheathed in your sex. Your legs rising up to wrap around her hips
-			as she begins to thrust, working her cock in and out of your greedy
+			The alien settled down over you, her true arms groping over your
+			body as
+			her claw arms come down above your head to hold her up. Your
+			hand on
+			her cock guiding that thick blue girth inside yourself,
+			stretching
+			you out as she moans atop you...sliding that thick cock
+			inside until
+			her hefty blue balls are pressing against your thighs and
+			all of her
+			is sheathed in your sex. Your legs rising up to wrap around
+			her hips
+			as she begins to thrust, working her cock in and out of your
+			greedy
 			nethers.
 		</text>
 		<choice destination="sexF2" text="harder, faster" />
@@ -164,12 +211,18 @@
 
 	<page ID="sexF2">
 		<text>
-			The zeta ruts you, hips thrusting vigorously back and forth between the
-			embrace of your legs that stir her onto ever greater lustful feats of
-			virility. Her moans issuing forth with ever greater volume as her
-			pace redoubles and then redoubles again displaying remarkable amounts
-			of stamina. This alien giving you the fucking you definitely needed
-			as its thrusting increases in tempo and you feel your pleasure waxing
+			The zeta ruts you, hips thrusting vigorously back and forth
+			between the
+			embrace of your legs that stir her onto ever greater
+			lustful feats of
+			virility. Her moans issuing forth with ever greater
+			volume as her
+			pace redoubles and then redoubles again displaying
+			remarkable amounts
+			of stamina. This alien giving you the fucking you
+			definitely needed
+			as its thrusting increases in tempo and you feel
+			your pleasure waxing
 			ever stronger from the ploughing.
 		</text>
 		<choice destination="sexF3" text="climax" />
@@ -177,8 +230,10 @@
 
 	<page ID="sexF3">
 		<text>
-			You hear the alien screech in pleasure as she reaches her peak, pushing
-			you over the edge as she thrusts hard into you and pumps hot seed
+			You hear the alien screech in pleasure as she reaches her peak,
+			pushing
+			you over the edge as she thrusts hard into you and pumps hot
+			seed
 			into your body. Her thick cock spasming repeatedly, gushing spurt
 			after spurt into you until she rests spent and warm atop you. Her cum
 			a hot mass roiling in your womb as lays atop you, her soft breasts
@@ -277,17 +332,28 @@
 
 	<page ID="cocker3">
 		<text>
-			One by one the Zetas limbs start to be overtaken by the transformation
-			into your private parts. Her legs flopping and folding inwards
-			towards your sack, making burbling noises as their insides convert
-			and merge into your newly expanded balls. Her deadly tail starts to
-			bind against her hips, merging into her segment by segment until it's
-			just a prominent vein along the flanks of your new cock. The zeta
-			finding herself shrinking down slightly as one by one her arms and
-			claw arms stroking her sides sink into her body. As she finds herself
-			unable to pleasure herself she utters a gasping moan looking up at
-			you from her diminished position, desperate for you to stroke over
-			her and you oblige. Your hands stroking her arms down into her flanks
+			One by one the Zetas limbs start to be overtaken by the
+			transformation
+			into your private parts. Her legs flopping and folding
+			inwards
+			towards your sack, making burbling noises as their insides
+			convert
+			and merge into your newly expanded balls. Her deadly tail
+			starts to
+			bind against her hips, merging into her segment by segment
+			until it's
+			just a prominent vein along the flanks of your new cock.
+			The zeta
+			finding herself shrinking down slightly as one by one her
+			arms and
+			claw arms stroking her sides sink into her body. As she finds
+			herself
+			unable to pleasure herself she utters a gasping moan looking
+			up at
+			you from her diminished position, desperate for you to stroke
+			over
+			her and you oblige. Your hands stroking her arms down into her
+			flanks
 			as she becomes more easily jerked off.
 		</text>
 		<special effect="mutation">
@@ -348,15 +414,24 @@
 
 	<page ID="CTF1">
 		<text>
-			Her hands give either side of your rear a squeeze as she lines herself
-			up. Her cocktip brushing against your sex, then pushing inside. Her
-			thrust slow yet powerful, easing up forwards up against the wall as
-			she groans. She starts to pump her cock in and out, and perhaps you
-			worry that she didn't really understand your desires. Not just to
-			feel that cock, but to become it, not receive her cum but spurt it.
-			But as she thrusts in and out hot tingles spread through you, and her
-			thrusts slow down again. Your sex sticking to her shaft, clamping
-			down around her length, merging into her crotch as she lets out a
+			Her hands give either side of your rear a squeeze as she lines
+			herself
+			up. Her cocktip brushing against your sex, then pushing
+			inside. Her
+			thrust slow yet powerful, easing up forwards up against
+			the wall as
+			she groans. She starts to pump her cock in and out, and
+			perhaps you
+			worry that she didn't really understand your desires. Not
+			just to
+			feel that cock, but to become it, not receive her cum but
+			spurt it.
+			But as she thrusts in and out hot tingles spread through
+			you, and her
+			thrusts slow down again. Your sex sticking to her shaft,
+			clamping
+			down around her length, merging into her crotch as she lets
+			out a
 			long groan of pleasure. It's really happening, she's starting to
 			change you.
 		</text>
@@ -403,14 +478,22 @@
 
 	<gameover ID="CTFGO" noReform="true">
 		<text>
-			The last features that distinguish you as anything but a fat alien cock
-			fade away as the zeta groans and masturbates with her new Dick. Your
-			own moans trailing into a splutter and then nothing as your sideways
-			lip are now to issue nothing so elevated as speech or sound. You feel
-			her hands wrapped around you, stroking back and forwards in time with
-			her bucking hips. Your mind awash in pleasure even as it simplifies,
-			motor skills? language? you don't need those. Gradually you're
-			simplified into a primal psuedo being, your needs and desires fitting
+			The last features that distinguish you as anything but a fat
+			alien cock
+			fade away as the zeta groans and masturbates with her new
+			Dick. Your
+			own moans trailing into a splutter and then nothing as your
+			sideways
+			lip are now to issue nothing so elevated as speech or sound.
+			You feel
+			her hands wrapped around you, stroking back and forwards in
+			time with
+			her bucking hips. Your mind awash in pleasure even as it
+			simplifies,
+			motor skills? language? you don't need those. Gradually
+			you're
+			simplified into a primal psuedo being, your needs and desires
+			fitting
 			your new role as a cock. No longer to crave independence or
 			amusement, content to be soft and flaccid resting against her balls
 			and thighs but ever ready for naughty play. As the last of your
@@ -426,8 +509,10 @@
 
 	<page ID="study">
 		<text>
-			you study the zetamorph extensively, your scans collecting a large
-			amount of data. When you're done you're left with a large amount of
+			you study the zetamorph extensively, your scans collecting a
+			large
+			amount of data. When you're done you're left with a large amount
+			of
 			data on zetamorphs to try and further refine and no zetamorph. But
 			such is the price one must pay for SCIENCE.
 		</text>

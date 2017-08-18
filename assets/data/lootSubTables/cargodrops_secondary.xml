@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <lootTable>
-<loot item="medkit" chance="1"/>
-<loot item="space meal" chance="1"/>
-<loot item="staid" chance="1"/>
-<loot item="isotope" chance="1"/>
+	<loot item="medkit" chance="1" />
+	<loot item="space meal" chance="1" />
+	<loot item="staid" chance="1" />
+	<loot item="isotope" chance="1" />
 </lootTable>

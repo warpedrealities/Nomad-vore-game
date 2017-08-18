@@ -11,7 +11,7 @@
 		<choice destination="who" text="who are you?" />
 		<choice destination="tableprelude"
 			text="I think you dropped something under the table">
-							<assertion evaluate="haspart" part="vagina" />
+			<assertion evaluate="haspart" part="vagina" />
 		</choice>
 		<choice destination="shop" text="what can you sell me?" />
 		<choice destination="end" text="later." />
@@ -26,8 +26,10 @@
 
 	<page ID="tableprelude">
 		<text>
-			"Oh my, are you sure?" she says coyly and grins knowingly "Perhaps you'd
-			like to go down there and look for it." she suggests with a wink.
+			"Oh my, are you sure?" she says coyly and grins knowingly
+			"Perhaps you'd
+			like to go down there and look for it." she suggests
+			with a wink.
 		</text>
 		<choice destination="table" text="*crawl under*" />
 	</page>
@@ -37,7 +39,8 @@
 			value="1" />
 		<!-- additional meeting -->
 		<text>
-			"Oh hello again, sorry but I can't do anything for you without access to
+			"Oh hello again, sorry but I can't do anything for you without
+			access to
 			my ingredients."
 		</text>
 		<choice destination="who" text="who are you?" />
@@ -64,70 +67,115 @@
 			<preference fetish="sex" />
 
 		</choice>
-		<choice destination="lick0" text="it's her tongue" >
+		<choice destination="lick0" text="it's her tongue">
 
 		</choice>
 	</page>
 
 	<page ID="sex0">
-	<assertnot evaluate="haspart" part="vagina" />	
-	<text>
-	You feel her grasp your hip and line herself up against your derriere, that thickness prodding against your pucker as she chuckles "See, told you you'd find your reward down there." she says and chuckles as she places both hands on your hips and prepares to thrust in, then hesitates and cants her head thoughtfully "I have some stuff I prepared a while back that could make this even more fun. Let you really get close to me, want to try it?" she asks releasing her grip on your rear to fondle a container of paste on the table above you.
-	</text>
+		<assertnot evaluate="haspart" part="vagina" />
+		<text>
+			You feel her grasp your hip and line herself up against your derriere,
+			that thickness prodding against your pucker as she chuckles "See,
+			told you you'd find your reward down there." she says and chuckles as
+			she places both hands on your hips and prepares to thrust in, then
+			hesitates and cants her head thoughtfully "I have some stuff I
+			prepared a while back that could make this even more fun. Let you
+			really get close to me, want to try it?" she asks releasing her grip
+			on your rear to fondle a container of paste on the table above you.
+		</text>
 		<choice destination="cocktf0A" text="sure">
 			<preference fetish="cocktransformation" />
 		</choice>
-		<choice destination="sex1A" text="this is fun enough" />	
+		<choice destination="sex1A" text="this is fun enough" />
 	</page>
-	
+
 	<page ID="sex1A">
-	<text>
-	"suits me fine." she says and sets the jar aside "always next time." she remarks and shifts her hands back to your ass, thrusting into your ass with a mhmm and little foreplay. Her length spearing your derriere admirably, plunging deep into your bowels as she thrusts in until she's nestled balls deep in your ass and from there she begins to thrust in and out of you firmly. The alchemist using your ass feels wonderful.
-	</text>
-	<choice destination="sex2A" text="mhmm"/>
+		<text>
+			"suits me fine." she says and sets the jar aside "always next time." she
+			remarks and shifts her hands back to your ass, thrusting into your
+			ass with a mhmm and little foreplay. Her length spearing your
+			derriere admirably, plunging deep into your bowels as she thrusts in
+			until she's nestled balls deep in your ass and from there she begins
+			to thrust in and out of you firmly. The alchemist using your ass
+			feels wonderful.
+		</text>
+		<choice destination="sex2A" text="mhmm" />
 	</page>
-	
+
 	<page ID="sex2A">
-	<text>
-	"mhmm, you feel good traveller.. have to have you under there again sometime." she says with a groan as she thrusts her hips, driving her cock repeatedly into your ass with delight. The tight confines trapped under her table giving her control to dominate your rear end to her heart's content and her lusty thrusts become all the more vigorous as she loosens you up and ploughs your depths.
-	</text>
-	<choice destination="sex3A" text="more"/>
+		<text>
+			"mhmm, you feel good traveller.. have to have you under there again
+			sometime." she says with a groan as she thrusts her hips, driving her
+			cock repeatedly into your ass with delight. The tight confines
+			trapped under her table giving her control to dominate your rear end
+			to her heart's content and her lusty thrusts become all the more
+			vigorous as she loosens you up and ploughs your depths.
+		</text>
+		<choice destination="sex3A" text="more" />
 	</page>
-	
+
 	<page ID="sex3A">
-	<text>
-	The alchemist's groans and moans of delight as she thrusts into your ass grow all the more lusty as you submissively add your own voice to the chorus. You can sense her pleasure building in the way her fingers dig into your sides and her balls slap against your rear end. Won't be long now, won't be long at all.
-	</text>
-	<choice destination="sex4A" text="climax"/>
+		<text>
+			The alchemist's groans and moans of delight as she thrusts into your ass
+			grow all the more lusty as you submissively add your own voice to the
+			chorus. You can sense her pleasure building in the way her fingers
+			dig into your sides and her balls slap against your rear end. Won't
+			be long now, won't be long at all.
+		</text>
+		<choice destination="sex4A" text="climax" />
 	</page>
-	
+
 	<page ID="sex4A">
-	<text>
-	You feel her thrust in hard as she climaxes, pumping a hefty load deep into your ass. The sensation enough to push you over the edge yourself from the hot spurting deep inside you. <conditional><assertion evaluate="haspart" part="penis" />your own lusty release spurting to strain the floor underneath the table, but judging by the dried stains it's not the first time that's happened. </conditional> The alchemist leaning on the table for a moment as her cock pulses and then her orgasm tapers off, pulling out of your now well filled ass and cleaning herself off as she stands to one side to let you out from under there.
-	</text>
-	<choice destination="end" text="*crawl out*" />
+		<text>
+			You feel her thrust in hard as she climaxes, pumping a hefty load
+			deep into your ass. The sensation enough to push you over the edge
+			yourself from the hot spurting deep inside you.
+			<conditional>
+				<assertion evaluate="haspart" part="penis" />
+				your own lusty release spurting to strain the floor underneath the
+				table, but judging by the dried stains it's not the first time
+				that's happened.
+			</conditional>
+			The alchemist leaning on the table for a moment as her cock pulses
+			and then her orgasm tapers off, pulling out of your now well filled
+			ass and cleaning herself off as she stands to one side to let you out
+			from under there.
+		</text>
+		<choice destination="end" text="*crawl out*" />
 	</page>
-	
+
 	<page ID="cocktf0A">
 		<text>
-			"Excellent, You'll love it I just know it." she says happily, uncorking the jar
-			of mystery ointment and smearing it over her cock. Avei soon enough
-			completing the application and guiding herself into your ass "Knew from the moment I laid eyes on you." she remarks, the stuff
-			acting initially as a wonderful lubricating gel easing the sliding of
-			her cock inside the tightness of your bowels. Avei half closing her eyes and humming softly as
-			she works her shaft in and out slowly, wonderful hot tingles and
-			tugging sensations spreading through you out from where her cock is
-			filling you out with its wonderful throbbing heat.
+			"Excellent, You'll love it I just know it." she says happily,
+			uncorking the jar
+			of mystery ointment and smearing it over her cock.
+			Avei soon enough
+			completing the application and guiding herself into
+			your ass "Knew from the moment I laid eyes on you." she remarks, the
+			stuff
+			acting initially as a wonderful lubricating gel easing the
+			sliding of
+			her cock inside the tightness of your bowels. Avei half
+			closing her eyes and humming softly as
+			she works her shaft in and out
+			slowly, wonderful hot tingles and
+			tugging sensations spreading through
+			you out from where her cock is
+			filling you out with its wonderful
+			throbbing heat.
 		</text>
 		<choice destination="cocktf1" text="*her dick feels.. sticky*" />
 	</page>
-	
-	
+
+
 	<page ID="sex0">
 		<assertion evaluate="haspart" part="vagina" />
 		<text>
-			You feel her grasp your hip with one hand and use the other to rub her
-			tip up and down your netherlips teasingly "see, told you you'd find
+			You feel her grasp your hip with one hand and use the other to
+			rub her
+			tip up and down your netherlips teasingly "see, told you you'd
+			find
 			your reward down there." she says and chuckles before canting her
 			head to the side consideringly "I have some stuff I prepared a while
 			back that could make this even more fun. Let you really get close to
@@ -142,10 +190,14 @@
 
 	<page ID="sex1">
 		<text>
-			"suits me fine." she sets and sets the jar aside "always next time." she
-			remarks and shifts her hands back to your ass, thrusting into your
-			sex with a mhmm and little foreplay. Her thick cock spearing deep
-			inside you, her balls brushing against your thighs as she fucks you
+			"suits me fine." she sets and sets the jar aside "always next
+			time." she
+			remarks and shifts her hands back to your ass, thrusting
+			into your
+			sex with a mhmm and little foreplay. Her thick cock spearing
+			deep
+			inside you, her balls brushing against your thighs as she fucks
+			you
 			down there trapped under her table. Her hands firmly grasping your
 			hips as she begins to work her hips back and forth, ploughing you
 			leisurely.
@@ -155,11 +207,16 @@
 
 	<page ID="sex2">
 		<text>
-			"mhmm, you know friend. you're quite a good lay." remarks Avei as she
-			steadily fucks you, her green cock sliding in and out of your nethers
-			and pushing pleasured sounds out of your lips. The herm elf moaning
-			at the feelings of your nethers and the sheer dominative thrill of
-			having you trapped down there with no choice but to take her cock.
+			"mhmm, you know friend. you're quite a good lay." remarks Avei
+			as she
+			steadily fucks you, her green cock sliding in and out of your
+			nethers
+			and pushing pleasured sounds out of your lips. The herm elf
+			moaning
+			at the feelings of your nethers and the sheer dominative
+			thrill of
+			having you trapped down there with no choice but to take her
+			cock.
 			Her pace increases steadily as she hears your cries and seems to
 			meditate on that one fact. That you must take her cock.
 		</text>
@@ -168,8 +225,10 @@
 
 	<page ID="sex3">
 		<text>
-			Avei's pace is now vigorous and lustful, balls slapping against your
-			thighs, hips slapping against your ass as she pounds away. Her moans
+			Avei's pace is now vigorous and lustful, balls slapping against
+			your
+			thighs, hips slapping against your ass as she pounds away. Her
+			moans
 			and gasps of pleasure mingling with your own, you can feel your
 			pleasure build..can feel her pace shift slightly, drawing it
 			out..nice enough to let you cum first, only when she feels you spasm
@@ -185,14 +244,22 @@
 
 	<page ID="cocktf0">
 		<text>
-			"Excellent, You'll love it I just know it." she says happily, uncorking the jar
-			of mystery ointment and smearing it over her cock. Avei soon enough
-			completing the application and guiding herself into your welcoming
-			sex "Knew from the moment I laid eyes on you." she remarks, the stuff
-			acting initially as a wonderful lubricating gel easing the sliding of
-			her cock inside you. Avei half closing her eyes and humming softly as
-			she works her shaft in and out slowly, wonderful hot tingles and
-			tugging sensations spreading through you out from where her cock is
+			"Excellent, You'll love it I just know it." she says happily,
+			uncorking the jar
+			of mystery ointment and smearing it over her cock.
+			Avei soon enough
+			completing the application and guiding herself into
+			your welcoming
+			sex "Knew from the moment I laid eyes on you." she
+			remarks, the stuff
+			acting initially as a wonderful lubricating gel
+			easing the sliding of
+			her cock inside you. Avei half closing her eyes
+			and humming softly as
+			she works her shaft in and out slowly, wonderful
+			hot tingles and
+			tugging sensations spreading through you out from
+			where her cock is
 			filling you out with its wonderful throbbing heat.
 		</text>
 		<choice destination="cocktf1" text="*her dick feels.. sticky*" />
@@ -200,18 +267,30 @@
 
 	<page ID="cocktf1">
 		<text>
-			You feel her thrusts slow as the lube seems to turn not so much to
-			friction but to a form of glue. Hot sensations radiating out through
-			you, wonderful pleasure throbbing through you as she eases her hips
-			up firmly against your ass. In the darkness it's hard to tell what's
-			happening, the sensations enough to make you moan even as you try to
-			inquire just what that stuff was you agreed to have used on you was.
-			Unfortunately your query is cut short by the sensation of upwelling
-			musky fluid filling your mouth making you splutter "Oh can you feel
-			it? I just knew you'd love becoming a part of me friend." Avei says
-			taking the moaning splutter as a sound of delight. You squirm around,
-			feeling pleasure shoot through you, but trapped beneath the table and
-			rooted ass to crotch to the green elf blocking the only exit you can
+			You feel her thrusts slow as the lube seems to turn not so much
+			to
+			friction but to a form of glue. Hot sensations radiating out
+			through
+			you, wonderful pleasure throbbing through you as she eases her
+			hips
+			up firmly against your ass. In the darkness it's hard to tell
+			what's
+			happening, the sensations enough to make you moan even as you
+			try to
+			inquire just what that stuff was you agreed to have used on you
+			was.
+			Unfortunately your query is cut short by the sensation of
+			upwelling
+			musky fluid filling your mouth making you splutter "Oh can
+			you feel
+			it? I just knew you'd love becoming a part of me friend."
+			Avei says
+			taking the moaning splutter as a sound of delight. You
+			squirm around,
+			feeling pleasure shoot through you, but trapped beneath
+			the table and
+			rooted ass to crotch to the green elf blocking the only
+			exit you can
 			do little to change her mind.
 		</text>
 		<choice destination="cocktf2" text="get CLOSE to her" />
@@ -219,11 +298,16 @@
 
 	<page ID="cocktf2">
 		<text>
-			You can feel your body changing, feel her pleasure throbbing through you
-			as you wordlessly ooze her pre and steadily lose the use of your arms
-			and legs. The former turning limp, weak, your hands nubs of flesh
-			that cannot support you making you rest your face against the floor
-			matts while the latter curl upwards, sticking against Avei's thighs
+			You can feel your body changing, feel her pleasure throbbing
+			through you
+			as you wordlessly ooze her pre and steadily lose the use
+			of your arms
+			and legs. The former turning limp, weak, your hands nubs
+			of flesh
+			that cannot support you making you rest your face against the
+			floor
+			matts while the latter curl upwards, sticking against Avei's
+			thighs
 			and then sliding up further and losing definition as they join
 			together to form a fertile green sack and heavy virile balls within
 			it. You're losing yourself, diminishing into a mere cock between the
@@ -237,13 +321,20 @@
 
 	<page ID="cocktf3">
 		<text>
-			Avei moans, panting, uttering blissful exclaimations of yes and "be my
-			cock" as she strokes at you. You feel yourself shrinking, becoming a
-			more manageable shaft as your limbless veiny tube of a body lifts up
-			off the ground. Boneless now you're held aloft by her arousal pulsing
-			through you. It won't be much longer now and you feel her pulling her
-			hips further back from the table edge so she can easier stroke her
-			shaft, letting more of your green and veiny flesh be exposed to the
+			Avei moans, panting, uttering blissful exclaimations of yes and
+			"be my
+			cock" as she strokes at you. You feel yourself shrinking,
+			becoming a
+			more manageable shaft as your limbless veiny tube of a body
+			lifts up
+			off the ground. Boneless now you're held aloft by her arousal
+			pulsing
+			through you. It won't be much longer now and you feel her
+			pulling her
+			hips further back from the table edge so she can easier
+			stroke her
+			shaft, letting more of your green and veiny flesh be
+			exposed to the
 			light.
 		</text>
 		<choice destination="cocktfGO" text="life as a dick" />
@@ -272,12 +363,18 @@
 	<page ID="lick0">
 		<assertion evaluate="haspart" part="vagina" />
 		<text>
-			You feel her tongue delve into your sex and hear her giggle at your gasp
-			of pleasure "I see you've found your reward." she teases, hands
-			massaging the sides of your ass as she delves once again. Her tongue
-			lapping deeper into your sex, lapping into your increasingly wet and
-			aroused nethers as you moan and soon start to writhe under the table.
-			She really is quite work good at this, clearly having expertise in
+			You feel her tongue delve into your sex and hear her giggle at
+			your gasp
+			of pleasure "I see you've found your reward." she teases,
+			hands
+			massaging the sides of your ass as she delves once again. Her
+			tongue
+			lapping deeper into your sex, lapping into your increasingly
+			wet and
+			aroused nethers as you moan and soon start to writhe under the
+			table.
+			She really is quite work good at this, clearly having expertise
+			in
 			the arts of pleasure.
 		</text>
 		<choice destination="lick1" text="mhmmm" />
@@ -285,7 +382,8 @@
 
 	<page ID="lick1">
 		<text>
-			Her tongue laps, expertly twirling through your soaked snatch and
+			Her tongue laps, expertly twirling through your soaked snatch
+			and
 			seeking out your most pleasurable spots. Pleasure washing through
 			you, building, rolling back and forth in your depths as you're
 			helplessly and delightfully trapped at the mercy of her tongue. Her
@@ -307,9 +405,12 @@
 			value="4" />
 		<!--completed quest -->
 		<text>
-			"Oh are they gone?" she goes to listen at the stairs, then looks down
-			and finally returns "They're gone. I'm ever so grateful." she says
-			and then hands over a small bag of gold, then smiles "Though if you
+			"Oh are they gone?" she goes to listen at the stairs, then looks
+			down
+			and finally returns "They're gone. I'm ever so grateful." she
+			says
+			and then hands over a small bag of gold, then smiles "Though if
+			you
 			want a more...personal reward, I did say you could get to know me
 			better." she mhmms at your curiousity and adds "Lets just say if you
 			look under my table you'll find my reward there."
@@ -332,7 +433,8 @@
 			value="4" />
 		<!-- in the midst of quest -->
 		<text>
-			"I can still hear them moving around down there, I don't think they're
+			"I can still hear them moving around down there, I don't think
+			they're
 			gone."
 		</text>
 		<choice destination="end"
@@ -345,10 +447,14 @@
 			value="0" />
 		<!--start quest -->
 		<text>
-			"There are rats in my basement. They're messing with my equipment and
-			ruining my ingredients. I cannot work under these conditions...You
-			look like a brave sort, do you think you could sor this out for me? I
-			assure you the rats are individually rather small. Shouldn't be too
+			"There are rats in my basement. They're messing with my
+			equipment and
+			ruining my ingredients. I cannot work under these
+			conditions...You
+			look like a brave sort, do you think you could sor
+			this out for me? I
+			assure you the rats are individually rather small.
+			Shouldn't be too
 			dangerous for someone like you."
 		</text>
 
@@ -358,8 +464,10 @@
 
 	<page ID="acceptquest">
 		<text>
-			"Oh excellent, you must be ever so brave. Perhaps once you've done this
-			for me we could get to know eachother better. I can be ever so
+			"Oh excellent, you must be ever so brave. Perhaps once you've
+			done this
+			for me we could get to know eachother better. I can be ever
+			so
 			grateful".
 		</text>
 
@@ -369,7 +477,8 @@
 
 	<page ID="who">
 		<text>
-			"My name is Avei, I'm an alchemist. I can do the most amazing things
+			"My name is Avei, I'm an alchemist. I can do the most amazing
+			things
 			with the right ingredients...amazing and, fun, things."
 		</text>
 		<choice destination="end" text="thankyou for the information" />
@@ -378,9 +487,12 @@
 	<page ID="start">
 		<!-- first meeting -->
 		<text>
-			"Nibbled, again." she tosses a chewed root aside in frustration as you
-			approach then turns to you with a smile "greetings stranger, forgive
-			me. I just have a bit of a rat problem interfering with my work at
+			"Nibbled, again." she tosses a chewed root aside in frustration
+			as you
+			approach then turns to you with a smile "greetings stranger,
+			forgive
+			me. I just have a bit of a rat problem interfering with my
+			work at
 			the moment. I'm sure once it's resolved I can be of service. "
 		</text>
 		<effect type="setlocalflag" flag="talked" value="1" />

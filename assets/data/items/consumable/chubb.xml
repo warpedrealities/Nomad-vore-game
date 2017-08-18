@@ -1,21 +1,29 @@
 <?xml version="1.0"?>
 <ItemConsumable name="chubb" weight="1" value="100">
-	<description>This product promotes the creation of fat deposits for a more full figured woman </description>
+	<description>This product promotes the creation of fat deposits for a
+		more full figured woman </description>
 	<effectmutator>
-	<criteriaValue part="breasts" variable="size" value="30" lessthan="true" />
+		<criteriaValue part="breasts" variable="size" value="30"
+			lessthan="true" />
 		<mutation part="breasts" variable="size" modifier="1">
 		</mutation>
 	</effectmutator>
 	<effectmutator>
-	<criteriaValue part="butt" variable="size" value="18" lessthan="true" />
+		<criteriaValue part="butt" variable="size" value="18"
+			lessthan="true" />
 		<mutation part="butt" variable="size" modifier="2">
 		</mutation>
-	</effectmutator>	
+	</effectmutator>
 	<effectmutator>
-		<criteriaValue part="body" variable="weight" value="75" lessthan="true" />
+		<criteriaValue part="body" variable="weight" value="75"
+			lessthan="true" />
 		<mutation part="body" variable="weight" modifier="25">
-			You apply the chubb, and can feel it converting nourishment into fat deposits bulking out your form
-			your build is now MACRObody_weight_desc and your breasts are now size MACRObreast_size_desc while your ass is MACRObutt_size_desc
+			You apply
+			the chubb, and can feel it converting nourishment into fat deposits
+			bulking out your form
+			your build is now MACRObody_weight_desc and your
+			breasts are now size MACRObreast_size_desc while your ass is
+			MACRObutt_size_desc
 		</mutation>
 	</effectmutator>
 </ItemConsumable>

@@ -1,19 +1,23 @@
 <?xml version="1.0"?>
 <ItemWeapon name="sister sword" weight="3" value="250">
-<tagSet value="SM"/>
-<description>
-A leaf shaped metal blade, curving patterns etched into the flat of it on either side. (S)
-</description>
-<modifier>
-<parry value="1"/>
-</modifier>
-<combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="1" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectDamage type="KINETIC" minValue="4" maxValue="7" modifier="STRENGTH"/>
-<missText count="1">
-<text>you fail to slash TARGET </text>
-</missText>
-<hitText count="1">
-<text>you slash TARGET for VALUE kinetic damage</text>
-</hitText>
-</combatMove>
+	<tagSet value="SM" />
+	<description>
+		A leaf shaped metal blade, curving patterns etched into the flat of it
+		on either side. (S)
+	</description>
+	<modifier>
+		<parry value="1" />
+	</modifier>
+	<combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE"
+		timeCost="2" bonusToHit="1" actionCost="2" basicAction="true"
+		moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="4" maxValue="7"
+			modifier="STRENGTH" />
+		<missText count="1">
+			<text>you fail to slash TARGET </text>
+		</missText>
+		<hitText count="1">
+			<text>you slash TARGET for VALUE kinetic damage</text>
+		</hitText>
+	</combatMove>
 </ItemWeapon>

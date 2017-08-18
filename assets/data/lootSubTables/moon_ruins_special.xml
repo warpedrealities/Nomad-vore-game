@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <lootTable>
-<loot item="deflector band" chance="2"/>
-<loot item="repulsor band" chance="2"/>
-<loot item="explosive grenade" chance="2"/>
+	<loot item="deflector band" chance="2" />
+	<loot item="repulsor band" chance="2" />
+	<loot item="explosive grenade" chance="2" />
 </lootTable>

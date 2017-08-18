@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text> 
-		No interaction to be had with defeated wyverns yet.
+		<text>
+			No interaction to be had with defeated wyverns yet.
 		</text>
 		<choice destination="end" text="darn" />
 	</page>

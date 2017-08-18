@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <controller>
-<faction value="talharan"/>
-<systemEntry value="talharan_trader_0Entry"/>
-<contact value="talharan_trader_0Contact"/>
-<ai value="talharan_trader_0Ai"/>
-<combat value="talharan_trader_0Combat"/>
-<victory value="talharan_trader_0Victory"/>
-<loss value="talharan_trader_0Loss"/>
+	<faction value="talharan" />
+	<systemEntry value="talharan_trader_0Entry" />
+	<contact value="talharan_trader_0Contact" />
+	<ai value="talharan_trader_0Ai" />
+	<combat value="talharan_trader_0Combat" />
+	<victory value="talharan_trader_0Victory" />
+	<loss value="talharan_trader_0Loss" />
 </controller>

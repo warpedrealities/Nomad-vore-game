@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
-<widgetreformer sprite="51" name="reformation tube" health="20">
-<contains minimum="2" maximum="4">scrap metal</contains>
-<description>a reformation tube required to reproduce the body and retrieve consciousness of synchronized individuals. This allows one to cheat death, a useful thing to have in this dangerous galaxy.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
+<widgetreformer sprite="51" name="reformation tube"
+	health="20">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>a reformation tube required to reproduce the body and
+		retrieve consciousness of synchronized individuals. This allows one to
+		cheat death, a useful thing to have in this dangerous galaxy.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
 </widgetreformer>

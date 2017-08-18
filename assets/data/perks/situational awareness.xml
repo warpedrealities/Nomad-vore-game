@@ -1,30 +1,39 @@
 <?xml version="1.0"?>
 <perk name="situational awareness">
-<requirement count="1"><req>PERKmarksman</req></requirement>
-<description> 
-The best gunslingers often focus more on how not to be shot over further advancing their ability to shoot others. And as such cultivate a form of threat awareness that can be maintained for the length of a single fight. Grants dodge boost special move +4.
-</description>
-<move count="3">
-<combatmove name="hyper awareness" timeCost="2" cooldown="300" icon="1" pattern="SELF" bonusAttribute="RANGED" actionCost="2" moveType="FIGHT"> 
-<hitText count="1">
-<text></text>
-</hitText>
-<effectStatus probability="100">
-<applyText>TARGET is now hyper aware of where they're being shot at from</applyText>
-<statusAttribMod uid="10" icon="6" duration="30" numModifiers="1">
-<effect attribute="DODGE" modifier="4"/>
-<removeText> TARGET 's hyper awareness has worn off</removeText>
-</statusAttribMod>
-<missText count="1">
-<text>TARGET is now caught in a net</text>
-</missText>
-<hitText count="1">
-<text>TARGET evades the net</text>
-</hitText>
-</effectStatus>
-</combatmove>
+	<requirement count="1">
+		<req>PERKmarksman</req>
+	</requirement>
+	<description>
+		The best gunslingers often focus more on how not to be shot over further
+		advancing their ability to shoot others. And as such cultivate a form
+		of threat awareness that can be maintained for the length of a single
+		fight. Grants dodge boost special move +4.
+	</description>
+	<move count="3">
+		<combatmove name="hyper awareness" timeCost="2" cooldown="300"
+			icon="1" pattern="SELF" bonusAttribute="RANGED" actionCost="2"
+			moveType="FIGHT">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is now hyper aware of where they're being shot at
+					from</applyText>
+				<statusAttribMod uid="10" icon="6" duration="30"
+					numModifiers="1">
+					<effect attribute="DODGE" modifier="4" />
+					<removeText> TARGET 's hyper awareness has worn off</removeText>
+				</statusAttribMod>
+				<missText count="1">
+					<text>TARGET is now caught in a net</text>
+				</missText>
+				<hitText count="1">
+					<text>TARGET evades the net</text>
+				</hitText>
+			</effectStatus>
+		</combatmove>
 
-</move>
-<maxrank value="1"/>
+	</move>
+	<maxrank value="1" />
 
 </perk>

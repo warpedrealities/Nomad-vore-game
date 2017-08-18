@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<widgetconversation sprite="31" name="computer" health="30">
-<contains minimum="1" maximum="2">scrap metal</contains>
-<description>a computer with built in terminal</description>
-<resistance resists="KINETIC" strength="2"></resistance>
+<widgetconversation sprite="31" name="computer"
+	health="30">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>a computer with built in terminal</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
 </widgetconversation>

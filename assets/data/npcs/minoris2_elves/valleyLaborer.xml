@@ -1,36 +1,43 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="goblinvillager.png"/>
-<name>villager</name>
-<description>The pointy eared humanoid is mostly baseline but for her pale green skin. She stands around five foot high and is shapely, especially if viewed from behind. That skirt the topless fem is wearing does little to hide the pear like shape of her ass. Her breasts sway free on her chest though do not compare to that magnificent derriere.</description>
-<rpg >
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="30"/>
-<stat stat="RESOLVE" value="20"/>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
-<missText count="1">
-<text>the villager's punch fails to connect with TARGET</text>
-</missText>
-<hitText count="1">
-<text>the villager hits TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="goblinvillager.png" />
+	<name>villager</name>
+	<description>The pointy eared humanoid is mostly baseline but for her
+		pale green skin. She stands around five foot high and is shapely,
+		especially if viewed from behind. That skirt the topless fem is
+		wearing does little to hide the pear like shape of her ass. Her
+		breasts sway free on her chest though do not compare to that
+		magnificent derriere.</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the villager's punch fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the villager hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<respawn delay="2000"/>
-<disposition value="55"/>
-<defeated conversation="alpha_minoris_II/alienvillager/villagerdefeat" />
-<seduced conversation="alpha_minoris_II/alienvillager/villagerseduced" />
-<victory conversation="alpha_minoris_II/alienvillager/villagervictory" />
-<seducer conversation="alpha_minoris_II/alienvillager/villagervictory" />
-<talk conversation="alpha_minoris_II/alienvillager/villagerchat" />
-<controller AI="villager_wander"/>
-<faction value="minyos"/>
+	<respawn delay="2000" />
+	<disposition value="55" />
+	<defeated conversation="alpha_minoris_II/alienvillager/villagerdefeat" />
+	<seduced conversation="alpha_minoris_II/alienvillager/villagerseduced" />
+	<victory conversation="alpha_minoris_II/alienvillager/villagervictory" />
+	<seducer conversation="alpha_minoris_II/alienvillager/villagervictory" />
+	<talk conversation="alpha_minoris_II/alienvillager/villagerchat" />
+	<controller AI="villager_wander" />
+	<faction value="minyos" />
 </NPC>

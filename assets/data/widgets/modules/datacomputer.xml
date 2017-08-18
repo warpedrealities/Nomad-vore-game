@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <computer sprite="65" name="research computer" health="10">
-<contains minimum="2" maximum="4">computation valve</contains>
-<description>A computer capable of over a thousand thousand calculations per second and data storage on reel to reel tape. Can be used to process or view data. </description>
-<resistance resists="KINETIC" strength="2"></resistance>
+	<contains minimum="2" maximum="4">computation valve</contains>
+	<description>A computer capable of over a thousand thousand
+		calculations per second and data storage on reel to reel tape. Can be
+		used to process or view data. </description>
+	<resistance resists="KINETIC" strength="2"></resistance>
 </computer>

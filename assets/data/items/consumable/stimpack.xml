@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <ItemConsumable name="stimpack" weight="1" value="450">
 	<description>A syringe full of medical stimulants to encourage
-		extremely rapid healing </description>
+		extremely rapid healing
+	</description>
 	<effectstatus probability="100">
 		<statusTag tag="regeneration" />
 		<applyText>TARGET is now under the affects of a stimpack</applyText>

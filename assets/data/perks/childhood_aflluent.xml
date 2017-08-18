@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
-<perk name="affluent childhood" >
-<requirement count="1">
-<req>CHARGEN</req>
-</requirement>
-<description> Your childhood was affluent, devoid of toil and high in social mingling. +1 charm, -1 strength </description>
-<modifier affects="STRENGTH" value="-1"  type="ABILITY"/>
-<modifier affects="CHARM" value="1"  type="ABILITY"/>
-<maxrank value="1"/>
+<perk name="affluent childhood">
+	<requirement count="1">
+		<req>CHARGEN</req>
+	</requirement>
+	<description> Your childhood was affluent, devoid of toil and high in
+		social mingling. +1 charm, -1 strength </description>
+	<modifier affects="STRENGTH" value="-1" type="ABILITY" />
+	<modifier affects="CHARM" value="1" type="ABILITY" />
+	<maxrank value="1" />
 </perk>

@@ -2,20 +2,23 @@
 <ItemConsumable name="slimfast" weight="1" value="100">
 	<description>A small weight loss package</description>
 	<effectmutator>
-	<criteriaValue part="breasts" variable="size" value="1" />
+		<criteriaValue part="breasts" variable="size" value="1" />
 		<mutation part="breasts" variable="size" modifier="-1">
 		</mutation>
 	</effectmutator>
 	<effectmutator>
-	<criteriaValue part="butt" variable="size" value="1" />
+		<criteriaValue part="butt" variable="size" value="1" />
 		<mutation part="butt" variable="size" modifier="-1">
 		</mutation>
-	</effectmutator>	
+	</effectmutator>
 	<effectmutator>
 		<criteriaValue part="body" variable="weight" value="25" />
 		<mutation part="body" variable="weight" modifier="-25">
-			you take the slimfast, woah they weren't kidding about the fast part.
-			your build is now MACRObody_weight_desc and your breasts are now size MACRObreast_size_desc while your ass is MACRObutt_size_desc
+			you take the
+			slimfast, woah they weren't kidding about the fast part.
+			your build is
+			now MACRObody_weight_desc and your breasts are now size
+			MACRObreast_size_desc while your ass is MACRObutt_size_desc
 		</mutation>
 	</effectmutator>
 

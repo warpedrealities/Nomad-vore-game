@@ -1,106 +1,113 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="medieval.png">
-<landingsite x="9" y="9"/>
-<zonerules ruleset="saurianvillage"/>
-<tileset count-x="4" count-y="4">
-<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-<tile sprite="1" vision="0" movement="0"> stone cobbles </tile>
-<tile sprite="3" vision="0" movement="0"> stone floor </tile>
-<tile sprite="4" vision="1" movement="2"> stone wall </tile>
-<tile sprite="5" vision="0" movement="0"> dirt </tile>
-<tile sprite="6" vision="0" movement="2"> plant </tile>
-<tile sprite="7" vision="0" movement="0"> grass </tile>
-<tile sprite="8" vision="1" movement="2"> natural stone </tile>
-</tileset>
-<transition direction="east">zoneS</transition>
-<description>A village lies before you, reptilian figures visible amidst orderly stone homes.</description>
+	<landingsite x="9" y="9" />
+	<zonerules ruleset="saurianvillage" />
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="0" movement="0"> stone cobbles </tile>
+		<tile sprite="3" vision="0" movement="0"> stone floor </tile>
+		<tile sprite="4" vision="1" movement="2"> stone wall </tile>
+		<tile sprite="5" vision="0" movement="0"> dirt </tile>
+		<tile sprite="6" vision="0" movement="2"> plant </tile>
+		<tile sprite="7" vision="0" movement="0"> grass </tile>
+		<tile sprite="8" vision="1" movement="2"> natural stone </tile>
+	</tileset>
+	<transition direction="east">zoneS</transition>
+	<description>A village lies before you, reptilian figures visible
+		amidst orderly stone homes.</description>
 
-<mapgen>
-<prefab width="5" height="6" positionX="56" positionY="56">
-<row>55555</row>
-<row>58585</row>
-<row>88588</row>
-<row>88588</row>
-<row>88888</row>
-<row>58885</row>
-<pairedportal sprite="3" destination="Mine zone" x="2" y="3" ID="11" facing="4">A mine entrance</pairedportal>
-</prefab>
-<partition xmin="1" xmax="17" ymin="1" ymax="17">
-<floodfill tile="1">
+	<mapgen>
+		<prefab width="5" height="6" positionX="56" positionY="56">
+			<row>55555</row>
+			<row>58585</row>
+			<row>88588</row>
+			<row>88588</row>
+			<row>88888</row>
+			<row>58885</row>
+			<pairedportal sprite="3" destination="Mine zone" x="2"
+				y="3" ID="11" facing="4">A mine entrance</pairedportal>
+		</prefab>
+		<partition xmin="1" xmax="17" ymin="1" ymax="17">
+			<floodfill tile="1">
 
-</floodfill>
+			</floodfill>
 
-</partition>
-<partition xmin="8" xmax="56" ymin="8" ymax="56">
-<towngrid minhouses="12" maxhouses="20" tile="3" path="1" registerRooms="true">
-		<gridprefab width="2" height="2">
-			<row>0000000000000000</row>
-			<row>0443440000044344</row>
-			<row>0433344444443334</row>
-			<row>0433333333333334</row>
-			
-			<row>0433343333343334</row>
-			<row>0443343333343344</row>
-			<row>0543343333343345</row>
-			<row>0543343333343345</row>
-			
-			<row>0543343333343345</row>
-			<row>0543343333343345</row>
-			<row>0543343333343345</row>
-			<row>0443333333333344</row>
-			
-			<row>0433343333343334</row>
-			<row>0433343333343334</row>
-			<row>0433344444443334</row>
-			<row>0444445555544444</row>
-			<placeDoor x="3" y="1"/>
-			<placeDoor x="12" y="1"/>
-			<placeNPC x="8" y="13" name="minoris2_saurian/queen_laurisse"/>
-			<placeNPC x="7" y="13" name="minoris2_saurian/sauriansentry"/>
-			<placeNPC x="9" y="13" name="minoris2_saurian/sauriansentry"/>
-		</gridprefab>
-		<floodfill tile="2">
-				<SeedNPCs min="16" max="32" name="minoris2_saurian/saurianpeasant"> </SeedNPCs>
-		</floodfill>
-</towngrid>
+		</partition>
+		<partition xmin="8" xmax="56" ymin="8" ymax="56">
+			<towngrid minhouses="12" maxhouses="20" tile="3" path="1"
+				registerRooms="true">
+				<gridprefab width="2" height="2">
+					<row>0000000000000000</row>
+					<row>0443440000044344</row>
+					<row>0433344444443334</row>
+					<row>0433333333333334</row>
 
-</partition>
-<perlin>
-<band low="-1.0" high="-0.5">
-<floodfill tile="6"/>
-</band>
+					<row>0433343333343334</row>
+					<row>0443343333343344</row>
+					<row>0543343333343345</row>
+					<row>0543343333343345</row>
 
-<band low="-0.5" high="0.5">
-	
-<noise tile="5" scarcity="8"/>
-<floodfill tile="4">
-<SeedNPCs min="8" max="16" name="minoris2_saurian/saurianwarrior"/>
-</floodfill>	
-</band>
-<band low="0.5" high="1.0">
-<floodfill tile="6"/>
-</band>
-</perlin>
-<walloff wall="7" sides="southwest"/>
-<POIWidget name="craftingtable"/>
-<POIprefab width="2" height="2">
-<row>33</row>
-<row>33</row>
-<placeWidget x="1" y="1" name="mechanism" info="interaction/saurian_pump" variable="50">
-<description>
-A mechanical pump connected by an array of belts, cogs and gears to an engine that relieves the saurians of the need to have to operate the pump by hand.
-</description>
-</placeWidget>
-<placeNPC x="0" y="0" name="minoris2_saurian/saurianmechanic"/>
-</POIprefab>
+					<row>0543343333343345</row>
+					<row>0543343333343345</row>
+					<row>0543343333343345</row>
+					<row>0443333333333344</row>
 
-<placeNPC x="22" y="22" name="minoris2_saurian/saurianSuri"/>
-	
-<POINPC name="minoris2_saurian/saurianshopkeep"/>
-<POICornerDecorate floor="2">
-<widgetplacer name="chest"/>
-</POICornerDecorate>	
+					<row>0433343333343334</row>
+					<row>0433343333343334</row>
+					<row>0433344444443334</row>
+					<row>0444445555544444</row>
+					<placeDoor x="3" y="1" />
+					<placeDoor x="12" y="1" />
+					<placeNPC x="8" y="13" name="minoris2_saurian/queen_laurisse" />
+					<placeNPC x="7" y="13" name="minoris2_saurian/sauriansentry" />
+					<placeNPC x="9" y="13" name="minoris2_saurian/sauriansentry" />
+				</gridprefab>
+				<floodfill tile="2">
+					<SeedNPCs min="16" max="32" name="minoris2_saurian/saurianpeasant">
+					</SeedNPCs>
+				</floodfill>
+			</towngrid>
 
-</mapgen>
+		</partition>
+		<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="6" />
+			</band>
+
+			<band low="-0.5" high="0.5">
+
+				<noise tile="5" scarcity="8" />
+				<floodfill tile="4">
+					<SeedNPCs min="8" max="16" name="minoris2_saurian/saurianwarrior" />
+				</floodfill>
+			</band>
+			<band low="0.5" high="1.0">
+				<floodfill tile="6" />
+			</band>
+		</perlin>
+		<walloff wall="7" sides="southwest" />
+		<POIWidget name="craftingtable" />
+		<POIprefab width="2" height="2">
+			<row>33</row>
+			<row>33</row>
+			<placeWidget x="1" y="1" name="mechanism" info="interaction/saurian_pump"
+				variable="50">
+				<description>
+					A mechanical pump connected by an array of belts, cogs and gears to
+					an engine that relieves the saurians of the need to have to operate
+					the pump by hand.
+				</description>
+			</placeWidget>
+			<placeNPC x="0" y="0" name="minoris2_saurian/saurianmechanic" />
+		</POIprefab>
+
+		<placeNPC x="22" y="22" name="minoris2_saurian/saurianSuri" />
+
+		<POINPC name="minoris2_saurian/saurianshopkeep" />
+		<POICornerDecorate floor="2">
+			<widgetplacer name="chest" />
+		</POICornerDecorate>
+
+	</mapgen>
 
 </zone>

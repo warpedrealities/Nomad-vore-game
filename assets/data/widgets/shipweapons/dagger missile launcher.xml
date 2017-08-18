@@ -1,21 +1,24 @@
 <?xml version="1.0"?>
-<shipsystem sprite="85" name="dagger missile launcher" health="30" hardpoint="true">
-<contains minimum="1" maximum="2">scrap metal</contains>
-<description>An anti starfighter and small craft missile launcher, typically used for perimeter security on warships.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<shipResource capacity="12" resource="dagger missile">
-<resourceConversion itemName="dagger missile" value="1.0"/>
-</shipResource>
-<shipWeapon>
-<damage min="8" max="12" falloff="0"/>
-<special tracking="4"/>
-<cooldown value="3"/>
-<effects script="seeker" sheet="missile"/>
-<range arc="2" range="20" />
-<weaponCost resource="dagger missile" cost="1"/>
-<description>
+<shipsystem sprite="85" name="dagger missile launcher"
+	health="30" hardpoint="true">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>An anti starfighter and small craft missile launcher,
+		typically used for perimeter security on warships.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="12" resource="dagger missile">
+		<resourceConversion itemName="dagger missile"
+			value="1.0" />
+	</shipResource>
+	<shipWeapon>
+		<damage min="8" max="12" falloff="0" />
+		<special tracking="4" />
+		<cooldown value="3" />
+		<effects script="seeker" sheet="missile" />
+		<range arc="2" range="20" />
+		<weaponCost resource="dagger missile" cost="1" />
+		<description>
 
-</description>
-</shipWeapon>
+		</description>
+	</shipWeapon>
 
 </shipsystem>

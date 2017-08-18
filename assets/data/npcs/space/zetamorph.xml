@@ -1,43 +1,56 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="zetamorph.png"/>
-<name>Zetamorph</name>
-<description>An imposing yet sexy humanoid dark blue skinned figure standing seven feet tall, with her secondary set of arms adding another 2-3 feet atop that. Every limb of hers from her segmented tail to her four arms ends in sharp claws or blades. Her feminine build and lethality makes her a special kind of deadly sexy. While clad in not a shred of clothing her smooth skin gives way in places to dark blueblack chitinous armour that hugs her curves tightly.</description>
-<rpg>
-<experiencevalue value="60"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
-<stat stat="HEALTH" value="45"/>
-<stat stat="RESOLVE" value="25"/>
-<attribute attribute="MELEE" value="2"/>
-<attribute attribute="PARRY" value="2"/>
-<attribute attribute="THERMAL" value="12"/>
-<combatMove name="cuisinart" pattern="MELEE" bonusAttribute="MELEE" timeCost="2"  bonusToHit="2" threatening="true">
-<effectDamage type="KINETIC" minValue="0" maxValue="7" modifier="STRENGTH"/>
-<missText count="3">
-<text>the lash of the zetamorph's tail fails to connect with TARGET</text>
-<text>a chain of the zetamorph's claw swipes with all four arms is evaded by TARGET</text>
-<text>a devastating kick from the zetamorph fails to connect with TARGET</text>
-</missText>
-<hitText count="5">
-<text>the zetamorph whirls and her tail slashes TARGET for VALUE damage</text>
-<text>the zetamorph slashes TARGET with her claws for VALUE damage</text>
-<text>the zetamorph kicks TARGET with a clawed foot for VALUE damage</text>
-<text>the zetamorph unleashes a devastating flurry of blows on TARGET for VALUE damage</text>
-<text>the zetamorph manages to clutch TARGET and rake them with the claws of both arms on one side for VALUE damage</text>
-</hitText>
-</combatMove>
-</rpg>
-<respawn delay="2000"/>
+	<sprite value="zetamorph.png" />
+	<name>Zetamorph</name>
+	<description>An imposing yet sexy humanoid dark blue skinned figure
+		standing seven feet tall, with her secondary set of arms adding
+		another 2-3 feet atop that. Every limb of hers from her segmented tail
+		to her four arms ends in sharp claws or blades. Her feminine build and
+		lethality makes her a special kind of deadly sexy. While clad in not a
+		shred of clothing her smooth skin gives way in places to dark
+		blueblack chitinous armour that hugs her curves tightly.</description>
+	<rpg>
+		<experiencevalue value="60" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="45" />
+		<stat stat="RESOLVE" value="25" />
+		<attribute attribute="MELEE" value="2" />
+		<attribute attribute="PARRY" value="2" />
+		<attribute attribute="THERMAL" value="12" />
+		<combatMove name="cuisinart" pattern="MELEE"
+			bonusAttribute="MELEE" timeCost="2" bonusToHit="2" threatening="true">
+			<effectDamage type="KINETIC" minValue="0" maxValue="7"
+				modifier="STRENGTH" />
+			<missText count="3">
+				<text>the lash of the zetamorph's tail fails to connect with TARGET</text>
+				<text>a chain of the zetamorph's claw swipes with all four arms is
+					evaded by TARGET</text>
+				<text>a devastating kick from the zetamorph fails to connect with
+					TARGET</text>
+			</missText>
+			<hitText count="5">
+				<text>the zetamorph whirls and her tail slashes TARGET for VALUE
+					damage</text>
+				<text>the zetamorph slashes TARGET with her claws for VALUE damage</text>
+				<text>the zetamorph kicks TARGET with a clawed foot for VALUE damage</text>
+				<text>the zetamorph unleashes a devastating flurry of blows on
+					TARGET for VALUE damage</text>
+				<text>the zetamorph manages to clutch TARGET and rake them with the
+					claws of both arms on one side for VALUE damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+	<respawn delay="2000" />
 
-<defeated conversation="space/zetamorph/defeat" />
-<seduced conversation="space/zetamorph/seduced" />
-<victory conversation="space/zetamorph/victory" />
-<seducer conversation="space/zetamorph/victory" />
-<controller AI="zetamorph_AI"/>
-<faction value="monster"/>
+	<defeated conversation="space/zetamorph/defeat" />
+	<seduced conversation="space/zetamorph/seduced" />
+	<victory conversation="space/zetamorph/victory" />
+	<seducer conversation="space/zetamorph/victory" />
+	<controller AI="zetamorph_AI" />
+	<faction value="monster" />
 </NPC>

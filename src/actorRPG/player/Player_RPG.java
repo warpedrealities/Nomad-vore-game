@@ -19,6 +19,7 @@ import combat.statusEffects.StatusLoader;
 import combat.statusEffects.Status_Bind;
 
 import perks.Perk;
+import perks.PerkCraftingToken;
 import perks.PerkElement;
 import perks.PerkInstance;
 import perks.PerkLoader;
@@ -219,7 +220,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=500;
+		playerExperience=00;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -1124,6 +1125,25 @@ public class Player_RPG implements Actor_RPG {
 				break;
 			}
 		}
+	}
+
+	public int getCraftingTokenCount(String token) {
+		int v=0;
+		for (int i=0;i<playerPerks.size();i++)
+		{
+			for (int j=0;j<playerPerks.get(i).getPerk().getNumElements();j++)
+			{
+				if (PerkCraftingToken.class.isInstance(playerPerks.get(i).getPerk().getElement(j)))
+				{
+					PerkCraftingToken t=(PerkCraftingToken)playerPerks.get(i).getPerk().getElement(j);
+					if (t.getToken().equals(token))
+					{
+						v+=playerPerks.get(i).getPerkRank();
+					}
+				}
+			}
+		}
+		return v;
 	}
 
 	

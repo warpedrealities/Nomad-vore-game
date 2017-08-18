@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <lootTable>
-<loot item="plasma canister" chance="8"/>
-<loot item="space meal" chance="16"/>
-<loot item="medkit" chance="8"/>
-<loot item="clarity" chance="8"/>
-<loot item="stimpack" chance="4"/>
+	<loot item="plasma canister" chance="8" />
+	<loot item="space meal" chance="16" />
+	<loot item="medkit" chance="8" />
+	<loot item="clarity" chance="8" />
+	<loot item="stimpack" chance="4" />
 </lootTable>

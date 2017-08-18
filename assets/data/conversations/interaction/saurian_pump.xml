@@ -5,8 +5,10 @@
 			value="3" />
 		<!--fixed -->
 		<text>
-			The pump appears to be working perfectly. Humming, clicking and chugging
-			to spurt gouts of water up out the spout to fill up the bucket. You
+			The pump appears to be working perfectly. Humming, clicking and
+			chugging
+			to spurt gouts of water up out the spout to fill up the
+			bucket. You
 			probably shouldn't ruin a good thing.
 		</text>
 		<choice destination="end" text="i'll leave it be" />
@@ -17,7 +19,8 @@
 			value="2" />
 		<!--fixed -->
 		<text>
-			The pump should be fixed, you should tell Nissa about it and see if
+			The pump should be fixed, you should tell Nissa about it and see
+			if
 			it'll work now.
 		</text>
 		<choice destination="end" text="i'll leave it be" />
@@ -28,8 +31,10 @@
 			value="1" />
 		<!--needs fixing -->
 		<text>
-			The pump is broken and in need of repair. The mechanisms appear to have
-			nothing significantly wrong with them though, it might be something
+			The pump is broken and in need of repair. The mechanisms appear
+			to have
+			nothing significantly wrong with them though, it might be
+			something
 			else that's stopping it working.
 		</text>
 		<choice destination="motor" text="I'll check the motor" />
@@ -38,8 +43,10 @@
 
 	<page ID="motor">
 		<text>
-			The generator's electrical components and wiring seem to have been worn
-			out and damaged. you'd need some scraps to even attempt a repair and
+			The generator's electrical components and wiring seem to have
+			been worn
+			out and damaged. you'd need some scraps to even attempt a
+			repair and
 			replace the broken pieces and degraded wiring.
 		</text>
 		<choice destination="attempt"
@@ -63,10 +70,14 @@
 
 	<page ID="success">
 		<text>
-			You skillfully fashion a series of replacement parts from the fragments
-			of wiring, metal and electronic components you have on hand and place
-			them into the engine. Sealing it up again you're confident the device
-			will function now, you should probably tell Nissa so you can both try
+			You skillfully fashion a series of replacement parts from the
+			fragments
+			of wiring, metal and electronic components you have on hand
+			and place
+			them into the engine. Sealing it up again you're confident
+			the device
+			will function now, you should probably tell Nissa so you
+			can both try
 			it together.
 		</text>
 		<effect type="setglobalflag" flag="dammathquest1" value="2" />
@@ -76,12 +87,18 @@
 
 	<page ID="failure">
 		<text>
-			You attempt to replace the damaged components, but your crude fumbling
-			and incompetent bungling only succeed in ruining perfectly good wires
-			and mangling metal fragments beyond any reasonable use. You're fairly
-			sure you've not repaired the engine, and that you've wasted the
-			materials used in the attempt. Nothing but the risk of further damage
-			to your own pride stops you making the attempt again though if you
+			You attempt to replace the damaged components, but your crude
+			fumbling
+			and incompetent bungling only succeed in ruining perfectly
+			good wires
+			and mangling metal fragments beyond any reasonable use.
+			You're fairly
+			sure you've not repaired the engine, and that you've
+			wasted the
+			materials used in the attempt. Nothing but the risk of
+			further damage
+			to your own pride stops you making the attempt again
+			though if you
 			had more materials.
 		</text>
 		<effect type="removeitem" item="scrap metal" value="2" />
@@ -95,7 +112,8 @@
 			value="0" />
 		<!--quest not given -->
 		<text>
-			The pump appears to be inactive. But it's no business of yours and you
+			The pump appears to be inactive. But it's no business of yours
+			and you
 			are a guest in the saurian village.
 		</text>
 		<choice destination="end" text="i'll leave it alone" />

@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <recipe name="Radio gun" requiredskill="1" startunlocked="true">
-<description>
-A gun of sorts. Attempts to impair robots by firing high intensity and rapidly cycling radio impulses at them. Affects on targets not open to being controlled by radio waves is liable to be minimal.
-</description>
-<ingredient item="scrap metal" quantity="3"/>
-<ingredient item="computation valve" quantity="2"/>
-<ingredient item="battery" quantity="1"/>
-<result item="radio gun"/>
+	<description>
+		A gun of sorts. Attempts to impair robots by firing high intensity and
+		rapidly cycling radio impulses at them. Affects on targets not open to
+		being controlled by radio waves is liable to be minimal.
+	</description>
+	<ingredient item="scrap metal" quantity="3" />
+	<ingredient item="computation valve" quantity="2" />
+	<ingredient item="battery" quantity="1" />
+	<tokenRequirement item="gadgeteer" quantity="1" />
+	<result item="radio gun" />
 </recipe>

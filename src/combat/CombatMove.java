@@ -62,7 +62,7 @@ public class CombatMove {
 		T_KEEP, T_THROW, T_ONCE
 	};
 
-	private String moveName;
+	private String moveName,overrideCooldown;
 	private int ammoCost, timeCost, moveCooldown, attackBonus, bonusAttribute, rangedBias, icon;
 	private AttackPattern attackPattern;
 	private MoveType moveType;
@@ -94,7 +94,11 @@ public class CombatMove {
 
 		// name
 		moveName = Enode.getAttribute("name");
-		// bonus
+		if (Enode.getAttribute("cooldownName").length()>0)
+		{
+			overrideCooldown=Enode.getAttribute("cooldownName");
+		}
+		// bonus			
 		if (Enode.getAttribute("bonusToHit").length() > 0) {
 			attackBonus = Integer.parseInt(Enode.getAttribute("bonusToHit"));
 		}
@@ -600,6 +604,11 @@ public class CombatMove {
 
 	public boolean isThreatening() {
 		return threatening;
+	}
+
+	public String getOverrideCooldown() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

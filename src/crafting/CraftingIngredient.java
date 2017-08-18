@@ -13,11 +13,11 @@ public class CraftingIngredient {
 		itemQuantity = Integer.parseInt(enode.getAttribute("quantity"));
 	}
 
-	public String getItemName() {
+	public String getName() {
 		return itemName;
 	}
 
-	public int getItemQuantity() {
+	public int getQuantity() {
 		return itemQuantity;
 	}
 

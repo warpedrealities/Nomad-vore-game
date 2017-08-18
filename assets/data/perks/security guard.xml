@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
-<perk name="Security guard" >
-<requirement count="1">
-<req>CHARGEN</req>
-</requirement>
-<description> On the Heinlein you were a security guard, meaning dealing with minor infractions, standing around guarding doors for hours on end, and longing for an alien boarding party to make your life interesting. +1 dodge, +1 ranged</description>
-<modifier affects="DODGE" value="1" type="ATTRIBUTE"/>
-<modifier affects="RANGED" value="1" type="ATTRIBUTE"/>
-<maxrank value="1"/>
+<perk name="Security guard">
+	<requirement count="1">
+		<req>CHARGEN</req>
+	</requirement>
+	<description> On the Heinlein you were a security guard, meaning
+		dealing with minor infractions, standing around guarding doors for
+		hours on end, and longing for an alien boarding party to make your
+		life interesting. +1 dodge, +1 ranged</description>
+	<modifier affects="DODGE" value="1" type="ATTRIBUTE" />
+	<modifier affects="RANGED" value="1" type="ATTRIBUTE" />
+	<maxrank value="1" />
 </perk>

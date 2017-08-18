@@ -4,60 +4,127 @@
 	<page ID="start">
 		<preference fetish="oralvore" />
 		<text>
-		The taur lets out a pleased growl as she reaches down and hauls you up. Those human arms formidably strong as she lifts you clear of the ground and grins in triumph, licking her lips as she looks you over. your attempts to ward her off only yielding a vigorous and disorientating shaking. Your brain hasn't stopped bouncing around in your skull by the time she tires of toying with you, and your eyes refocus a moment before things all go dark and wet. The icetreader's mouth hot in a way that'd be pleasing in its contrast to the chill outside were it not for the way she's now setting about eating you alive.
+			The taur lets out a pleased growl as she reaches down and hauls you up.
+			Those human arms formidably strong as she lifts you clear of the
+			ground and grins in triumph, licking her lips as she looks you over.
+			your attempts to ward her off only yielding a vigorous and
+			disorientating shaking. Your brain hasn't stopped bouncing around in
+			your skull by the time she tires of toying with you, and your eyes
+			refocus a moment before things all go dark and wet. The icetreader's
+			mouth hot in a way that'd be pleasing in its contrast to the chill
+			outside were it not for the way she's now setting about eating you
+			alive.
 		</text>
-		<choice destination="oralvore0" text="eaten by a tauric snow cat"/>
+		<choice destination="oralvore0" text="eaten by a tauric snow cat" />
 	</page>
-	
+
 	<page ID="oralvore0">
-	<text>
-	You feel her mouth and throat working powerfully to take in your shoulders as her hands shift to grasp you lower down your body. Her fingers pressing firmly against your ass and lifting you up as she eats you alive.Your kicking legs batting against the fur of her tauric chest and then helplessly waving in the air as she straightens out and works down to your waist. Her voracious devouring of you remarkably perfunctory with little in the way of lingering or savouring as she gobbles you up as the food you are to her.
-	</text>
-	<choice destination="oralvore1" text="down into the forestomach"/>
+		<text>
+			You feel her mouth and throat working powerfully to take in your
+			shoulders as her hands shift to grasp you lower down your body. Her
+			fingers pressing firmly against your ass and lifting you up as she
+			eats you alive.Your kicking legs batting against the fur of her
+			tauric chest and then helplessly waving in the air as she straightens
+			out and works down to your waist. Her voracious devouring of you
+			remarkably perfunctory with little in the way of lingering or
+			savouring as she gobbles you up as the food you are to her.
+		</text>
+		<choice destination="oralvore1" text="down into the forestomach" />
 	</page>
-	
+
 	<page ID="oralvore1">
-	<text>
-	The snowcats swallows steadily cram you down inside her, your upper body initially forced to curl up below her tits. Her belly bulging out steadily, distending as she gobbles your legs up entirely. But your safe albeit cramped confines in this belly seems to be short lived, her hands going down to rub over her gut as she purrs before with a clench you're suddenly forced out of the belly and down deeper inside of her.
-	</text>
-	<choice destination="oralvore2" text="even further, to the taurstomach"/>
+		<text>
+			The snowcats swallows steadily cram you down inside her, your upper body
+			initially forced to curl up below her tits. Her belly bulging out
+			steadily, distending as she gobbles your legs up entirely. But your
+			safe albeit cramped confines in this belly seems to be short lived,
+			her hands going down to rub over her gut as she purrs before with a
+			clench you're suddenly forced out of the belly and down deeper inside
+			of her.
+		</text>
+		<choice destination="oralvore2" text="even further, to the taurstomach" />
 	</page>
-	
+
 	<page ID="oralvore2">
-	<text>
-	The not quite throat like fleshy tube you plunge through undulates to squeeze and pull your body down. The heat of her insides becoming still more intense as you slide into the well insulated depths of her tauric body. Plunging entirely into her roomy taur stomach, feeling it stretch and sag down between her paws as you're entrapped entirely within her. You can feel her moving around, paying you little mind as you sway with her steps and feel the fleshy chamber starting to ooze wetly against your body.
-	</text>
-	<choice destination="oralvoreStruggle" text="not sticking around for this, try to struggle back out the way you came"/>
+		<text>
+			The not quite throat like fleshy tube you plunge through undulates to
+			squeeze and pull your body down. The heat of her insides becoming
+			still more intense as you slide into the well insulated depths of her
+			tauric body. Plunging entirely into her roomy taur stomach, feeling
+			it stretch and sag down between her paws as you're entrapped entirely
+			within her. You can feel her moving around, paying you little mind as
+			you sway with her steps and feel the fleshy chamber starting to ooze
+			wetly against your body.
+		</text>
+		<choice destination="oralvoreStruggle"
+			text="not sticking around for this, try to struggle back out the way you came" />
 	</page>
-	
-	
+
+
 	<check ID="oralvoreStruggle">
 		<test what="STRUGGLE" DC="15" />
 		<outcome destination="oralvoreStruggleEscape" />
 		<outcome destination="oralvoreStruggleDigest" />
 	</check>
-	
+
 	<page ID="oralvoreStruggleEscape">
-	<text>
-	You decide this is a little too digestive to be truly cozy and start shoving your way back up against the inner tube leading up to the taur's forestomach. The ice cat realizing fairly quickly what you're doing and growling as she attempts to flump down on her belly and smother your movements under her weight. But to no avail as you push off against the ground through her belly walls and shove your way up through her, the taur letting out a disgruntled merf as you push your way into her forestomach and she reaches down to try and squeeze you with both hands and her belly walls and force you back down, but despite the length of the journey you aren't weakening and you brace against the slick insides of her forestomach and shove your way upwards. The icetreader gagging and then shuddering and doubling over as your hands force out between her lips and you haul yourself out, landing in a wet heap in the cold exterior. The icetreader padding back a tad, disappointed her meal has escaped.
-	</text>
-	<effect type="heal" value="0.1" />
-	<effect type="stunnpc" value="10" />
-	<choice destination="end" text="get clear" />
+		<text>
+			You decide this is a little too digestive to be truly cozy and start
+			shoving your way back up against the inner tube leading up to the
+			taur's forestomach. The ice cat realizing fairly quickly what you're
+			doing and growling as she attempts to flump down on her belly and
+			smother your movements under her weight. But to no avail as you push
+			off against the ground through her belly walls and shove your way up
+			through her, the taur letting out a disgruntled merf as you push your
+			way into her forestomach and she reaches down to try and squeeze you
+			with both hands and her belly walls and force you back down, but
+			despite the length of the journey you aren't weakening and you brace
+			against the slick insides of her forestomach and shove your way
+			upwards. The icetreader gagging and then shuddering and doubling over
+			as your hands force out between her lips and you haul yourself out,
+			landing in a wet heap in the cold exterior. The icetreader padding
+			back a tad, disappointed her meal has escaped.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
 	</page>
-	
+
 	<page ID="oralvoreStruggleDigest">
-	<text>
-	You decide this is a little too digestive to be truly cozy and start shoving your way back up against the inner tube leading up to the taur's forestomach. The ice cat realizing fairly quickly what you're doing and growling as she attempts to flump down on her belly and smother your movements under her weight. But to no avail as you just about manage push off against the ground through her belly walls and shove your way up through her, the taur letting out a disgruntled merf as you push your way into her forestomach and she reaches down to try and squeeze you with both hands and her belly walls and force you back down. You strain against her as she tries to force you down, but you can't..you can't quite do it and as you tire yourself out you feel her give her forebelly a pat and a consoling rub afore setting about squeezing you back down. She commends your resolve, but it won't stop her digesting you it seem as you pile into the steamy depths of her eager gut and feel the hot enzymes splash around you.
-	</text>
-	<choice destination="oralvoreStruggleDigestGO" text="naught to do but get digested"/>
+		<text>
+			You decide this is a little too digestive to be truly cozy and start
+			shoving your way back up against the inner tube leading up to the
+			taur's forestomach. The ice cat realizing fairly quickly what you're
+			doing and growling as she attempts to flump down on her belly and
+			smother your movements under her weight. But to no avail as you just
+			about manage push off against the ground through her belly walls and
+			shove your way up through her, the taur letting out a disgruntled
+			merf as you push your way into her forestomach and she reaches down
+			to try and squeeze you with both hands and her belly walls and force
+			you back down. You strain against her as she tries to force you down,
+			but you can't..you can't quite do it and as you tire yourself out you
+			feel her give her forebelly a pat and a consoling rub afore setting
+			about squeezing you back down. She commends your resolve, but it
+			won't stop her digesting you it seem as you pile into the steamy
+			depths of her eager gut and feel the hot enzymes splash around you.
+		</text>
+		<choice destination="oralvoreStruggleDigestGO" text="naught to do but get digested" />
 	</page>
-	
+
 	<gameover ID="oralvoreStruggleDigestGO">
-	<text>
-	You slide entirely back down into her tauric belly and feel it stretch and hang lower as you're imprisoned within. Your tired movements do little to stretch or make definable bulges in her underside as you start to digest away. The taur apparently pays little heed to your movements as she gurgles you away, going about her business padding through these wastes as within her you soften and weaken until you're naught but unmoving mush. The taur probably doesn't even really notice the moment you transition from girl to gurgle. By the time she settles for the night her gut looks normal under the fur, your weight and bulk no longer making her belly heavy and saggy.
-	</text>
+		<text>
+			You slide entirely back down into her tauric belly and feel it stretch
+			and hang lower as you're imprisoned within. Your tired movements do
+			little to stretch or make definable bulges in her underside as you
+			start to digest away. The taur apparently pays little heed to your
+			movements as she gurgles you away, going about her business padding
+			through these wastes as within her you soften and weaken until you're
+			naught but unmoving mush. The taur probably doesn't even really
+			notice the moment you transition from girl to gurgle. By the time she
+			settles for the night her gut looks normal under the fur, your weight
+			and bulk no longer making her belly heavy and saggy.
+		</text>
 	</gameover>
 
-	
+
 </Conversation>

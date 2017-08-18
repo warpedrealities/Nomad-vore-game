@@ -46,6 +46,7 @@ import actor.player.reformation.ReformationHandler;
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
 import combat.CombatMove.MoveType;
+import combat.CooldownHandler;
 import combat.ThrownWeaponHandler;
 import combat.effect.Effect;
 import combat.effect.Effect_Damage;
@@ -659,7 +660,12 @@ public class Player extends Actor {
 			return false;
 		}
 		CombatMove move = ((Player_RPG) actorRPG).getCombatMove(number);
-		if (((Player_RPG) actorRPG).getCooldownHandler().moveIsUnusable(move.getMoveName())) {
+		CooldownHandler handler=((Player_RPG) actorRPG).getCooldownHandler();
+		if (move.getOverrideCooldown()==null && handler.moveIsUnusable(move.getMoveName())) {
+			ViewScene.m_interface.DrawText("move " + move.getMoveName() + " isn't usable right now");
+			return false;
+		}
+		if (move.getOverrideCooldown()!=null && handler.moveIsUnusable(move.getMoveName())) {
 			ViewScene.m_interface.DrawText("move " + move.getMoveName() + " isn't usable right now");
 			return false;
 		}
@@ -699,7 +705,14 @@ public class Player extends Actor {
 		boolean b = move.useMove(this, attackable);
 		// remove energy
 		if (b == true) {
-			((Player_RPG) actorRPG).getCooldownHandler().useMove(move.getMoveName());
+			if (move.getOverrideCooldown()!=null)
+			{
+				handler.useMove(move.getOverrideCooldown());	
+			}
+			else
+			{
+				handler.useMove(move.getMoveName());			
+			}
 			if (slot == -1) {
 				if (ItemStack.class.isInstance((playerInventory).getSlot(0))) {
 					ItemStack stack = (ItemStack) playerInventory.getSlot(0);

@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
-<perk name="psychic" >
+<perk name="psychic">
 
-<requirement count="1">
-<req>FLAGpsychic_potential</req>
-</requirement>
+	<requirement count="1">
+		<req>FLAGpsychic_potential</req>
+	</requirement>
 
-<description> Your mind has been opened, its potential awakened by recent events. And now you are beginning to develop the power to exert control over the world around you through thought alone.</description>
-<maxrank value="1"/>
+	<description> Your mind has been opened, its potential awakened by
+		recent events. And now you are beginning to develop the power to exert
+		control over the world around you through thought alone.</description>
+	<maxrank value="1" />
 
 </perk>

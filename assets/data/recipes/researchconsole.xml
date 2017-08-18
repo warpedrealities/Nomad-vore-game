@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <recipe name="research computer" requiredskill="0" startunlocked="true">
-<description>
-A powerful computer for storing, processing and viewing data.
-</description>
-<ingredient item="computation valve" quantity="10"/>
-<result item="research computer"/>
+	<description>
+		A powerful computer for storing, processing and viewing data.
+	</description>
+	<ingredient item="computation valve" quantity="10" />
+	<result item="research computer" />
 </recipe>

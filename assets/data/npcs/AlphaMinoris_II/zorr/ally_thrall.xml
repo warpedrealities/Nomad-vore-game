@@ -1,40 +1,51 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="thrall.png"/>
-<name>thrall</name>
-<volatility value="500"/>
-<description>The female figure is mostly humanlike if you discount her tattered feathered wings and the feathers that form something a shape similar to hair rising from her scalp. Her body is a pale grey colour and unhealthily slender in a way that brings to mind drug addicts. The blemishes of dark green splotching her skin and staining out from her eyes, lips and nethers don't help with giving her an air of health. Despite this air of sickness and ill treatment the sword in her hand does not waver, that long fluted sword blade held in a skilled armswoman stance as her clear steel grey eyes focus with desperate resolve upon the task at hand.</description>
-<rpg>
-<experiencevalue value="80"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
+	<sprite value="thrall.png" />
+	<name>thrall</name>
+	<volatility value="500" />
+	<description>The female figure is mostly humanlike if you discount her
+		tattered feathered wings and the feathers that form something a shape
+		similar to hair rising from her scalp. Her body is a pale grey colour
+		and unhealthily slender in a way that brings to mind drug addicts. The
+		blemishes of dark green splotching her skin and staining out from her
+		eyes, lips and nethers don't help with giving her an air of health.
+		Despite this air of sickness and ill treatment the sword in her hand
+		does not waver, that long fluted sword blade held in a skilled
+		armswoman stance as her clear steel grey eyes focus with desperate
+		resolve upon the task at hand.</description>
+	<rpg>
+		<experiencevalue value="80" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
 
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
-<attribute attribute="DODGE" value="2"/>
-<attribute attribute="PARRY" value="4"/>
-<combatMove name="swipe" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" bonusToHit="4">
-<effectDamage type="KINETIC" minValue="1" maxValue="8" modifier="STRENGTH"/>
-<missText count="2">
-<text>The thrall swipes at TARGET without connecting</text>
-<text>The thrall slashes at TARGET but the blow does not land </text>
-</missText>
-<hitText count="2">
-<text>The thrall slashes TARGET for VALUE damage</text>
-<text>The thrall stabs TARGET for VALUE damage</text>
-</hitText>
-</combatMove>
-</rpg>
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="2" />
+		<attribute attribute="PARRY" value="4" />
+		<combatMove name="swipe" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4">
+			<effectDamage type="KINETIC" minValue="1" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>The thrall swipes at TARGET without connecting</text>
+				<text>The thrall slashes at TARGET but the blow does not land </text>
+			</missText>
+			<hitText count="2">
+				<text>The thrall slashes TARGET for VALUE damage</text>
+				<text>The thrall stabs TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<defeated conversation="alpha_minoris_II/zorr/thrall/defeat" />
-<seduced conversation="alpha_minoris_II/zorr/thrall/seduced" />
-<victory conversation="alpha_minoris_II/zorr/thrall/victory" />
-<seducer conversation="alpha_minoris_II/zorr/thrall/victory" />
-<talk conversation="alpha_minoris_II/zorr/thrall/chat" />
-<controller AI="indoor_raptor"/>
-<faction value="player"/>
+	<defeated conversation="alpha_minoris_II/zorr/thrall/defeat" />
+	<seduced conversation="alpha_minoris_II/zorr/thrall/seduced" />
+	<victory conversation="alpha_minoris_II/zorr/thrall/victory" />
+	<seducer conversation="alpha_minoris_II/zorr/thrall/victory" />
+	<talk conversation="alpha_minoris_II/zorr/thrall/chat" />
+	<controller AI="indoor_raptor" />
+	<faction value="player" />
 </NPC>

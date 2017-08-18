@@ -20,8 +20,10 @@
 	</page>
 	<page ID="start">
 		<text>
-			"Greetings, I am Arissa welcome to my shop, I hope my wares please you. Though I
-			beg your apologies, I cannot sell my metal goods due to lack of
+			"Greetings, I am Arissa welcome to my shop, I hope my wares
+			please you. Though I
+			beg your apologies, I cannot sell my metal goods
+			due to lack of
 			stock."
 		</text>
 		<effect type="setlocalflag" flag="talked" value="1" />
@@ -40,7 +42,8 @@
 	<page ID="quest0">
 		<!--start quest -->
 		<text>
-			"It's a terrible thing really. All our metal goods are made with ore
+			"It's a terrible thing really. All our metal goods are made with
+			ore
 			brought up from the mine just north east of our town of Dammath.
 			However, some time ago a beast made the mine its home. Since then all
 			my stock has been bought up and without ore more cannot be made."
@@ -51,8 +54,10 @@
 
 	<page ID="acceptquest">
 		<text>
-			"There is a reward yes, but you are not the first to try claiming it.
-			However, if you believe your resolve is up to the task I wish you
+			"There is a reward yes, but you are not the first to try
+			claiming it.
+			However, if you believe your resolve is up to the task I
+			wish you
 			luck. May your ancestors watch over you in this endeavour."
 		</text>
 		<effect type="setglobalflag" flag="dammathquest0" value="1" />
@@ -64,7 +69,8 @@
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
 			value="3" />
 		<text>
-			"The miners have returned to their work. All is well, you have our
+			"The miners have returned to their work. All is well, you have
+			our
 			gratitude."
 		</text>
 		<choice destination="shop" text="I would like to discuss your wares" />
@@ -76,11 +82,16 @@
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
 			value="2" />
 		<text>
-			"You have rid of us of this beast? truly? you have succeeded where many
-			champions of our people have fallen. We will be honoured to call you
-			friend as you have done us a great service. And here as promised is
-			your reward." says the smiling Arissa as she hands over a small pouch
-			of gold and bestows the thanks and friendship of her people upon you.
+			"You have rid of us of this beast? truly? you have succeeded
+			where many
+			champions of our people have fallen. We will be honoured to
+			call you
+			friend as you have done us a great service. And here as
+			promised is
+			your reward." says the smiling Arissa as she hands over a
+			small pouch
+			of gold and bestows the thanks and friendship of her
+			people upon you.
 		</text>
 
 		<effect type="setglobalflag" flag="dammathquest0" value="3" />
@@ -96,7 +107,8 @@
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="dammathquest0"
 			value="1" />
 		<text>
-			"The beast still plagues the mine, no work can be done there while this
+			"The beast still plagues the mine, no work can be done there
+			while this
 			serpent exists to lure the miners into its gullet."
 		</text>
 		<choice destination="beast" text="tell me about this beast" />
@@ -105,10 +117,14 @@
 
 	<page ID="beast">
 		<text>
-			"It's a great serpent, black as the stars and beguiling in its gaze. It's
-			why we've not rid ourselves of the beast already, it is cunning. If
-			we send a great war party it hides in the deep until we leave, great
-			champions are beguiled by its gaze..lost in desire until they give
+			"It's a great serpent, black as the stars and beguiling in its
+			gaze. It's
+			why we've not rid ourselves of the beast already, it is
+			cunning. If
+			we send a great war party it hides in the deep until we
+			leave, great
+			champions are beguiled by its gaze..lost in desire until
+			they give
 			themselves unto it."
 		</text>
 		<choice destination="acceptquest" text="Is there a reward for killing it?">

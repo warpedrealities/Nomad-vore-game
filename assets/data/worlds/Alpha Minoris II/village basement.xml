@@ -1,35 +1,37 @@
 <?xml version="1.0"?>
 <zone width="16" height="16" spriteset="dungeon.png">
-<tileset count-x="8" count-y="4">
-<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
-<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
-<tile sprite="18" vision="0" movement="1"> liquid water</tile>
-</tileset>
-<description></description>
-<mapgen>
-<prefab positionX="0" positionY="0" width="8">
-<row>22222222</row>
-<row>21111112</row>
-<row>21111111</row>
-<row>21111112</row>
-<row>21111112</row>
-<row>21111111</row>
-<row>21111112</row>
-<row>22222222</row>
-</prefab><pairedportal sprite="8" destination="alien village" x="2" y="2" ID="15">stairs up</pairedportal>
-<prefab positionX="8" positionY="0" width="8">
-<row>22222222</row>
-<row>11111112</row>
-<row>11111112</row>
-<row>11111112</row>
-<row>11111112</row>
-<row>11111112</row>
-<row>11111112</row>
-<row>22222222</row>
-</prefab>
-<SeedNPCs min="3" max="3" name="AlphaMinoris_II/ratkin">
-<script spawn="ratspawn" death="ratdeath"/>
-</SeedNPCs> 
-</mapgen>
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
+		<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
+		<tile sprite="18" vision="0" movement="1"> liquid water</tile>
+	</tileset>
+	<description></description>
+	<mapgen>
+		<prefab positionX="0" positionY="0" width="8">
+			<row>22222222</row>
+			<row>21111112</row>
+			<row>21111111</row>
+			<row>21111112</row>
+			<row>21111112</row>
+			<row>21111111</row>
+			<row>21111112</row>
+			<row>22222222</row>
+		</prefab>
+		<pairedportal sprite="8" destination="alien village" x="2"
+			y="2" ID="15">stairs up</pairedportal>
+		<prefab positionX="8" positionY="0" width="8">
+			<row>22222222</row>
+			<row>11111112</row>
+			<row>11111112</row>
+			<row>11111112</row>
+			<row>11111112</row>
+			<row>11111112</row>
+			<row>11111112</row>
+			<row>22222222</row>
+		</prefab>
+		<SeedNPCs min="3" max="3" name="AlphaMinoris_II/ratkin">
+			<script spawn="ratspawn" death="ratdeath" />
+		</SeedNPCs>
+	</mapgen>
 
 </zone>

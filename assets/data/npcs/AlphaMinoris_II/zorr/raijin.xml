@@ -1,37 +1,45 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="raijin.png"/>
-<name>raijin</name>
-<description> This dark blue scaled lizard girl is jumpy, and small, notably shorter than the others you've encountered recently. Her claws are small and short and she lacks the raw athletic look of the raptors, there must be some other threat she poses. Perhaps the crystalline stubby horns and crystalline nodes along her spine from neck to tailtip have something to do with it.</description>
-<rpg>
-<experiencevalue value="30"/>
-<ability ability="STRENGTH" value="5" />
-<ability ability="AGILITY" value="5" />
-<ability ability="DEXTERITY" value="5" />
-<ability ability="ENDURANCE" value="5" />
-<ability ability="CHARM" value="5" />
-<ability ability="INTELLIGENCE" value="5" />
+	<sprite value="raijin.png" />
+	<name>raijin</name>
+	<description> This dark blue scaled lizard girl is jumpy, and small,
+		notably shorter than the others you've encountered recently. Her claws
+		are small and short and she lacks the raw athletic look of the
+		raptors, there must be some other threat she poses. Perhaps the
+		crystalline stubby horns and crystalline nodes along her spine from
+		neck to tailtip have something to do with it.</description>
+	<rpg>
+		<experiencevalue value="30" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
 
-<stat stat="HEALTH" value="20"/>
-<stat stat="RESOLVE" value="20"/>
-<attribute attribute="DODGE" value="2"/>
-<combatMove name="display" pattern="RANGED" bonusAttribute="RANGED" timeCost="4" bonusToHit="0">
-<effectDamage type="SHOCK" minValue="1" maxValue="6" modifier="STRENGTH"/>
-<missText count="1">
-<text>The raijin's lightning bolt fails to hit TARGET</text>
-</missText>
-<hitText count="1">
-<text>the raijin's lightning bolt hits TARGET for VALUE shock damage.</text>
+		<stat stat="HEALTH" value="20" />
+		<stat stat="RESOLVE" value="20" />
+		<attribute attribute="DODGE" value="2" />
+		<combatMove name="display" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="4" bonusToHit="0">
+			<effectDamage type="SHOCK" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>The raijin's lightning bolt fails to hit TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the raijin's lightning bolt hits TARGET for VALUE shock
+					damage.</text>
 
-</hitText>
-</combatMove>
-</rpg>
-<disposition value="25"/>
-<respawn delay="2000"/>
-<defeated conversation="alpha_minoris_II/zorr/raijin/defeat" />
-<seduced conversation="alpha_minoris_II/zorr/raijin/defeat" />
-<victory conversation="alpha_minoris_II/zorr/raijin/victory" />
-<seducer conversation="alpha_minoris_II/zorr/raijin/victory" />
-<controller AI="raijin"/>
-<faction value="monster"/>
+			</hitText>
+		</combatMove>
+	</rpg>
+	<disposition value="25" />
+	<respawn delay="2000" />
+	<defeated conversation="alpha_minoris_II/zorr/raijin/defeat" />
+	<seduced conversation="alpha_minoris_II/zorr/raijin/defeat" />
+	<victory conversation="alpha_minoris_II/zorr/raijin/victory" />
+	<seducer conversation="alpha_minoris_II/zorr/raijin/victory" />
+	<controller AI="raijin" />
+	<faction value="monster" />
 </NPC>

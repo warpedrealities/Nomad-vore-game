@@ -2,228 +2,496 @@
 <Conversation>
 
 
-	
+
 	<page ID="start">
-	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>	
-	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="1"/>	
-	<preference fetish="unbirthing" />	
-	<text>
-	"Ma'am, thank you for choosing liquidation as your omnico experience." the synth says cheerfully as she positions herself over you, legs spread presenting her hairless gynoid pussy in all its drooling glory in front of your face. Her words make you glance up at her in frank disbelief but she smiles "here ma'am, let me help you with that. We are quite able to help with your insertion" she says as she reaches down to seize your head with one hand and your shoulder with the other, bringing your face into contact with her netherlips. The gynoid emitting a pleased mhmm as her folds part around your face, mashing you into the hot sticky embrace of her birth canal.
-	</text>
-	<choice destination="unbirthingB0" text="shoved inside"/>
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals"
+			value="1" />
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY"
+			operator="equals" value="1" />
+		<preference fetish="unbirthing" />
+		<text>
+			"Ma'am, thank you for choosing liquidation as your omnico experience." the
+			synth says cheerfully as she positions herself over you, legs spread
+			presenting her hairless gynoid pussy in all its drooling glory in
+			front of your face. Her words make you glance up at her in frank
+			disbelief but she smiles "here ma'am, let me help you with that. We
+			are quite able to help with your insertion" she says as she reaches
+			down to seize your head with one hand and your shoulder with the
+			other, bringing your face into contact with her netherlips. The
+			gynoid emitting a pleased mhmm as her folds part around your face,
+			mashing you into the hot sticky embrace of her birth canal.
+		</text>
+		<choice destination="unbirthingB0" text="shoved inside" />
 	</page>
-	
+
 	<page ID="unbirthingB0">
-	<text>
-	"Our liquidation option is ideal for both stress relief and supplying beverage ingredients. Please consider our drink mixer guide sold separately." the synth advertises. Though you can barely hear her over the sound of squeelching and slurping fluids filling your ears. Especially as with your head up her snatch everything is a tad muffled. It's hardly comforting to know you'll be brewed into juices though as she forces you deeper in muffling her next bit of corporate commentary into unintelligability. The gynoid's snatch stretching around your shoulders and chest. Her moist insides snugly squeezing tightly as your head slides into her womb and bulges out the surface of her midsection.
-	</text>
-	<choice destination="unbirthingB1" text="fed inside"/>
+		<text>
+			"Our liquidation option is ideal for both stress relief and supplying
+			beverage ingredients. Please consider our drink mixer guide sold
+			separately." the synth advertises. Though you can barely hear her
+			over the sound of squeelching and slurping fluids filling your ears.
+			Especially as with your head up her snatch everything is a tad
+			muffled. It's hardly comforting to know you'll be brewed into juices
+			though as she forces you deeper in muffling her next bit of corporate
+			commentary into unintelligability. The gynoid's snatch stretching
+			around your shoulders and chest. Her moist insides snugly squeezing
+			tightly as your head slides into her womb and bulges out the surface
+			of her midsection.
+		</text>
+		<choice destination="unbirthingB1" text="fed inside" />
 	</page>
-	
+
 	<page ID="unbirthingB1">
-	<text>
-	The synth's clenching nethers drag more of you in as she stands in a powerfully dominative spread stance. Your weight lifting up off the floor steadily as she draws you up inside her gynoid womb. Her hands resting on her hips as her powerful sex squeezes and tugs over your belly and down to your own hips. Her middle distending and doming out steadily as you're squeezed into confinement in her womb despite any efforts of yours to resist "Omnico appreciates your compliance with your impending liquidation valued customer." she says as your feet dangle between her legs and slide up steadily towards her hungry snatch.
-	</text>
-	<choice destination="unbirthingB2" text="the rest of the way"/>
+		<text>
+			The synth's clenching nethers drag more of you in as she stands in a
+			powerfully dominative spread stance. Your weight lifting up off the
+			floor steadily as she draws you up inside her gynoid womb. Her hands
+			resting on her hips as her powerful sex squeezes and tugs over your
+			belly and down to your own hips. Her middle distending and doming out
+			steadily as you're squeezed into confinement in her womb despite any
+			efforts of yours to resist "Omnico appreciates your compliance with
+			your impending liquidation valued customer." she says as your feet
+			dangle between her legs and slide up steadily towards her hungry
+			snatch.
+		</text>
+		<choice destination="unbirthingB2" text="the rest of the way" />
 	</page>
-	
+
 	<page ID="unbirthingB2">
-	<text>
-	The gynoid adjusts her stance in a slow and gravid fashion as your feet near her snatch. The synth's feet settling closer together as her sexual juices stream down the inside of her thighs and down your feet as you disappear inside of her. Your feet soon slipping up between her legs. Your toes now vanished between her netherlips as she emits a pleased moan. Imprisoned within her womb as she strokes and presses her hands possessively against the domed out roundness of her middle "you feel good inside me valued customer, please prepare yourself for liquidation. We hope you appreciate the highly tailored experience you are about to undergo."
-	</text>
-	<choice destination="unbirthingBStruggle" text="no, no i'm not going to appreciate it, i'm out of here"/>
-	<choice destiantion="unbirthingBSubmit" text="that sounds...fun"/>
+		<text>
+			The gynoid adjusts her stance in a slow and gravid fashion as your feet
+			near her snatch. The synth's feet settling closer together as her
+			sexual juices stream down the inside of her thighs and down your feet
+			as you disappear inside of her. Your feet soon slipping up between
+			her legs. Your toes now vanished between her netherlips as she emits
+			a pleased moan. Imprisoned within her womb as she strokes and presses
+			her hands possessively against the domed out roundness of her middle
+			"you feel good inside me valued customer, please prepare yourself for
+			liquidation. We hope you appreciate the highly tailored experience
+			you are about to undergo."
+		</text>
+		<choice destination="unbirthingBStruggle"
+			text="no, no i'm not going to appreciate it, i'm out of here" />
+		<choice destiantion="unbirthingBSubmit" text="that sounds...fun" />
 	</page>
-	
-		
+
+
 	<check ID="unbirthingBStruggle">
-	<test what="STRUGGLE" DC="12" />
-	<outcome destination="unbirthingBEscape" />
-	<outcome destination="unbirthingBTrapped" />
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="unbirthingBEscape" />
+		<outcome destination="unbirthingBTrapped" />
 	</check>
-	
+
 	<page ID="unbirthingBEscape">
-	<text>
-	You decide that being turned into the ingredient for a debauched beverage doesn't sound like a good idea. Even if it'd feel amazing. Not wanting to waste your blandishments on an uncaring gynoid you start shoving and pushing to try and force your way out "valued customer, the liquidation is not yet underway. I'll have a chance to let you out as a gush between my thighs later just be patient." the synth teases with a giggle as she presses her thighs together to try keeping you inside. But apparently to no avail as you work against her powerful nether muscles and force your hands out, shoving at her inner thighs and toppling her over. The impact jolting her enough that you manage to work your way out while she's 'stunned'. Though it won't be long before she's after you again.
-	</text>
-	<effect type="heal" value="0.1" />
-	<effect type="stunnpc" value="10" />
-	<choice destination="end" text="get clear" />
+		<text>
+			You decide that being turned into the ingredient for a debauched
+			beverage doesn't sound like a good idea. Even if it'd feel amazing.
+			Not wanting to waste your blandishments on an uncaring gynoid you
+			start shoving and pushing to try and force your way out "valued
+			customer, the liquidation is not yet underway. I'll have a chance to
+			let you out as a gush between my thighs later just be patient." the
+			synth teases with a giggle as she presses her thighs together to try
+			keeping you inside. But apparently to no avail as you work against
+			her powerful nether muscles and force your hands out, shoving at her
+			inner thighs and toppling her over. The impact jolting her enough
+			that you manage to work your way out while she's 'stunned'. Though it
+			won't be long before she's after you again.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
 	</page>
-	
+
 	<page ID="unbirthingBTrapped">
-	<text>
-	You decide that being turned into the ingredient for a debauched beverage doesn't sound like a good idea. Even if it'd feel amazing. Not wanting to waste your blandishments on an uncaring gynoid you start shoving and pushing to try and force your way out "valued customer, the liquidation is not yet underway. I'll have a chance to let you out as a gush between my thighs later just be patient." the synth teases with a giggle as she presses her thighs together to try keeping you inside. You shove your hands down through her sexual channel, fingers sliding into the open air only for her sex to clench and ripple and suck your back inside "Valued customer, be patient.." she chides you with a giggle as her womb starts to clench and ooze around you. Her soft flesh marinating you in sensual fluids that make you shudder in delight, distracting you further and further from your efforts to escape. Your strength and resolve waning as you give yourself over to the pleasure of being worked over.
-	</text>
-	<choice destination="unbirthingBTrappedGO" text="too good..can't resist"/>
+		<text>
+			You decide that being turned into the ingredient for a debauched
+			beverage doesn't sound like a good idea. Even if it'd feel amazing.
+			Not wanting to waste your blandishments on an uncaring gynoid you
+			start shoving and pushing to try and force your way out "valued
+			customer, the liquidation is not yet underway. I'll have a chance to
+			let you out as a gush between my thighs later just be patient." the
+			synth teases with a giggle as she presses her thighs together to try
+			keeping you inside. You shove your hands down through her sexual
+			channel, fingers sliding into the open air only for her sex to clench
+			and ripple and suck your back inside "Valued customer, be patient.."
+			she chides you with a giggle as her womb starts to clench and ooze
+			around you. Her soft flesh marinating you in sensual fluids that make
+			you shudder in delight, distracting you further and further from your
+			efforts to escape. Your strength and resolve waning as you give
+			yourself over to the pleasure of being worked over.
+		</text>
+		<choice destination="unbirthingBTrappedGO" text="too good..can't resist" />
 	</page>
-	
+
 	<gameover ID="unbirthingBTrappedGO">
-	<text>
-	Her soft womb walls knead over you, rthythmically contracting as you writhe in helpless bliss. Your hands busy in self gratification rather than escape now as the pleasurable fluids overwhelm you and work you down. The synth remarks "we are pleased you are enjoying your liquidation valued customer, it will not be longer until you are reduced to my fluids." but you barely hear or register her words as you orgasm, then orgasm again..then..gush. The Synth's hand stroking over her nethers as she emits a moan and splatters you out in a gushing series of bursts of sticky fluids. When she's done reducing you to an orgasm she steps away, unmindful of the fluids saturating the inside of her legs and snatch as she returns to her activities.
-	</text>
+		<text>
+			Her soft womb walls knead over you, rthythmically contracting as you
+			writhe in helpless bliss. Your hands busy in self gratification
+			rather than escape now as the pleasurable fluids overwhelm you and
+			work you down. The synth remarks "we are pleased you are enjoying
+			your liquidation valued customer, it will not be longer until you are
+			reduced to my fluids." but you barely hear or register her words as
+			you orgasm, then orgasm again..then..gush. The Synth's hand stroking
+			over her nethers as she emits a moan and splatters you out in a
+			gushing series of bursts of sticky fluids. When she's done reducing
+			you to an orgasm she steps away, unmindful of the fluids saturating
+			the inside of her legs and snatch as she returns to her activities.
+		</text>
 	</gameover>
-	
+
 	<page ID="unbirthingBSubmit">
-	<text>
-	You decide to comply and settle in to enjoy this liquidation. You can hear the synth's finger messily shlick shlicking into her sex as she emits a murr "we hope you enjoy your conversion valued customer." the synth commends at your submission. Her womb kneading over you soaking you in blissful juices, making it harder and harder to focus on anything outside your little world of pleasure and lust. Your moans emanating from within her as you attend to your depraved kneads and, gradually, begin to soften..
-	</text>
-	<choice destination="unbirthingBSubmitGO" text="oh yes"/>
+		<text>
+			You decide to comply and settle in to enjoy this liquidation. You can
+			hear the synth's finger messily shlick shlicking into her sex as she
+			emits a murr "we hope you enjoy your conversion valued customer." the
+			synth commends at your submission. Her womb kneading over you soaking
+			you in blissful juices, making it harder and harder to focus on
+			anything outside your little world of pleasure and lust. Your moans
+			emanating from within her as you attend to your depraved kneads and,
+			gradually, begin to soften..
+		</text>
+		<choice destination="unbirthingBSubmitGO" text="oh yes" />
 	</page>
-	
+
 	<gameover ID="unbirthingBSubmitGO">
-	<text>
-	The gynoid seems to pace herself, stimulating her sex as your pleasure builds as you soften into a blissful blushing mass within her. Your pleasure finally cresting into a series of rolling orgasms. Your body shuddering, spasming as you literally slosh yourself away into a mass of femmecum inside her. The Gynoid smiling and moaning as she strokes her nethers more vigorously upon feeling your liquidation. Her own climax sending you gushing out to splatter on the ground, a sticky mass of fragrant girljuice forming a puddle underneath her as she pleasantly discharges you. All that remains of you staining her legs and the ground beneath. You can say one thing for sure though, it really did feel amazing.
-	
-	</text>
+		<text>
+			The gynoid seems to pace herself, stimulating her sex as your pleasure
+			builds as you soften into a blissful blushing mass within her. Your
+			pleasure finally cresting into a series of rolling orgasms. Your body
+			shuddering, spasming as you literally slosh yourself away into a mass
+			of femmecum inside her. The Gynoid smiling and moaning as she strokes
+			her nethers more vigorously upon feeling your liquidation. Her own
+			climax sending you gushing out to splatter on the ground, a sticky
+			mass of fragrant girljuice forming a puddle underneath her as she
+			pleasantly discharges you. All that remains of you staining her legs
+			and the ground beneath. You can say one thing for sure though, it
+			really did feel amazing.
+
+		</text>
 	</gameover>
-	
+
 	<page ID="start">
-	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="1"/>	
-	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>	
-	<preference fetish="unbirthing" />	
-	<text>
-	"Prepare for containment valued customer." the synth commands as she reaches down to grasp your head firmly with both hands and guides it willing or not towards her netherlips. Those emulated sex lips realistic, moist and as it happens fully functional as the gynoid forces you facefirst into her snatch. Lewd squeelches audible as her juices soak your head and she wedges you in down to your neck in one movement "As you can tell Omnico has put a lot of work into emulating the experience of being taken and forced into a womb." the synth comments and continues handling you to feed in your shoulders, her insides are hot and welcoming. And she's right, that womb of hers is remarkably soft and accomodating, definitely realistic.
-	</text>
-	<choice destination="unbirth0" text="a realistic womb domination experience"/>
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals"
+			value="1" />
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY"
+			operator="equals" value="0" />
+		<preference fetish="unbirthing" />
+		<text>
+			"Prepare for containment valued customer." the synth commands as she reaches
+			down to grasp your head firmly with both hands and guides it willing
+			or not towards her netherlips. Those emulated sex lips realistic,
+			moist and as it happens fully functional as the gynoid forces you
+			facefirst into her snatch. Lewd squeelches audible as her juices soak
+			your head and she wedges you in down to your neck in one movement "As
+			you can tell Omnico has put a lot of work into emulating the
+			experience of being taken and forced into a womb." the synth comments
+			and continues handling you to feed in your shoulders, her insides are
+			hot and welcoming. And she's right, that womb of hers is remarkably
+			soft and accomodating, definitely realistic.
+		</text>
+		<choice destination="unbirth0" text="a realistic womb domination experience" />
 	</page>
-	
+
 	<page ID="unbirth0">
-	<text>
-	The synth continues cramming you inside. Her hands methodically moving down your flanks and each time they grasp you they haul you deeper inside, cramming your upper body up between her legs. Her womb stretching easily to accomodate you, her midriff distending as you're curled and crammed into that fleshy prison. Once she reaches your thighs though she straightens up, and draws you inside using nothing more than her clenching and potent pussy wrapped around your legs "Submit to my womb valued customer, your satisfaction is our greatest concern."
-	</text>
-	<choice destination="unbirth1" text="satisfied or not this customer is getting enwombed"/>
+		<text>
+			The synth continues cramming you inside. Her hands methodically moving
+			down your flanks and each time they grasp you they haul you deeper
+			inside, cramming your upper body up between her legs. Her womb
+			stretching easily to accomodate you, her midriff distending as you're
+			curled and crammed into that fleshy prison. Once she reaches your
+			thighs though she straightens up, and draws you inside using nothing
+			more than her clenching and potent pussy wrapped around your legs
+			"Submit to my womb valued customer, your satisfaction is our greatest
+			concern."
+		</text>
+		<choice destination="unbirth1"
+			text="satisfied or not this customer is getting enwombed" />
 	</page>
-	
+
 	<page ID="unbirth1">
-	<text>
-	You're not sure how being trapped in a womb is supposed to make you a satisfied customer but you doubt the Synth is paying much attention to your protests as she reaches one hand down to fondle her snatch just above where it stretches around your disappearing legs. Your feet kicking about as they get closer and closer to her domed out middle. Most of you is already confined in the snuggley warm prison of her womb. And soon all of you is imprisoned within the synth's body as your feet are slurped between her netherlips "Valued customer, please take the time to experience thoroughly the synthoid womb product before providing feedback." the synth continues, her voice as ever normal and untroubled even after shoving you bodily into her drooling snatch.
-	</text>
-	<choice destination="unbirthStruggle" text="take time nothing, i'm getting out of here"/>
-	<choice destination="unbirthSubmit" text="well she has a point, it is rather comfortable"/>
+		<text>
+			You're not sure how being trapped in a womb is supposed to make you a
+			satisfied customer but you doubt the Synth is paying much attention
+			to your protests as she reaches one hand down to fondle her snatch
+			just above where it stretches around your disappearing legs. Your
+			feet kicking about as they get closer and closer to her domed out
+			middle. Most of you is already confined in the snuggley warm prison
+			of her womb. And soon all of you is imprisoned within the synth's
+			body as your feet are slurped between her netherlips "Valued
+			customer, please take the time to experience thoroughly the synthoid
+			womb product before providing feedback." the synth continues, her
+			voice as ever normal and untroubled even after shoving you bodily
+			into her drooling snatch.
+		</text>
+		<choice destination="unbirthStruggle"
+			text="take time nothing, i'm getting out of here" />
+		<choice destination="unbirthSubmit"
+			text="well she has a point, it is rather comfortable" />
 	</page>
-	
+
 	<check ID="unbirthStruggle">
-	<test what="STRUGGLE" DC="12" />
-	<outcome destination="struggleUBescape" />
-	<outcome destination="struggleUBtrapped0" />
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="struggleUBescape" />
+		<outcome destination="struggleUBtrapped0" />
 	</check>
-	
+
 	<page ID="struggleUBescape">
-	<text>
-	Yeah no your customer experience has not been satisfactory and you push off against her insides to try and force your way back out of this deranged gynoid. The synth's womb proving soft, yielding and slick which makes your efforts a little tricky. But you're not to be deterred by a comfy prison and some marketspeak and persist, tipping yourself upside down in order to push off against the inside of the womb and thrust yourself back out through her nethers into the open air "error, customer is attempting escape before trial period is concluded." she utters robotically as she clenches to try and force you back inside, but to no avail as you're well beyond the point of being easily subdued. Instead of going back inside you wriggle the rest of the way out leaving the synth looking confused in that blank eyed mechanized way of any machine with no quick answer to what just happened. Still you should probably get clear before she resets and shoves you back inside, you might not be so lucky next time.
-	</text>
-	<effect type="heal" value="0.1" />
-	<effect type="stunnpc" value="10" />
-	<choice destination="end" text="get clear" />
+		<text>
+			Yeah no your customer experience has not been satisfactory and you push
+			off against her insides to try and force your way back out of this
+			deranged gynoid. The synth's womb proving soft, yielding and slick
+			which makes your efforts a little tricky. But you're not to be
+			deterred by a comfy prison and some marketspeak and persist, tipping
+			yourself upside down in order to push off against the inside of the
+			womb and thrust yourself back out through her nethers into the open
+			air "error, customer is attempting escape before trial period is
+			concluded." she utters robotically as she clenches to try and force
+			you back inside, but to no avail as you're well beyond the point of
+			being easily subdued. Instead of going back inside you wriggle the
+			rest of the way out leaving the synth looking confused in that blank
+			eyed mechanized way of any machine with no quick answer to what just
+			happened. Still you should probably get clear before she resets and
+			shoves you back inside, you might not be so lucky next time.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
 	</page>
-	
+
 	<page ID="struggleUBtrapped0">
-	<text>
-	You want out of here so you can write a scathing yelp review or something and so you shove at the insides of the womb in search of the way out, it's the way you came in so it shouldn't be too hard to find. You press your fingers against the entrance of her synthoid birth canal and shove off against the inside of the womb. Only to find yourself slipping, tumbling unruly inside her. You don't give up though and continue your efforts to escape despite the difficulty. The synth resting a hand against the dome of her middle as you tire yourself out inside of her "error, customer actions do not complete...error" she hesitates a moment with a stutter of resetting relays then smiles "thankyou for selecting extended stay as your chosen option, we hope you have a pleasant entrapment." she announces, and you groan. Great you're tired and now set for a long stay as you somehow triggered a different protocol...
-	</text>
-	<choice destination="struggleUBtrapped1" text="damnit, trapped"/>
+		<text>
+			You want out of here so you can write a scathing yelp review or
+			something and so you shove at the insides of the womb in search of
+			the way out, it's the way you came in so it shouldn't be too hard to
+			find. You press your fingers against the entrance of her synthoid
+			birth canal and shove off against the inside of the womb. Only to
+			find yourself slipping, tumbling unruly inside her. You don't give up
+			though and continue your efforts to escape despite the difficulty.
+			The synth resting a hand against the dome of her middle as you tire
+			yourself out inside of her "error, customer actions do not
+			complete...error" she hesitates a moment with a stutter of resetting
+			relays then smiles "thankyou for selecting extended stay as your
+			chosen option, we hope you have a pleasant entrapment." she
+			announces, and you groan. Great you're tired and now set for a long
+			stay as you somehow triggered a different protocol...
+		</text>
+		<choice destination="struggleUBtrapped1" text="damnit, trapped" />
 	</page>
-	
+
 	<page ID="struggleUBtrapped1">
-	<text>
-	The synth walks around unmindful of the burden she's carrying. You're forced to endure this prolonged stay as her prisoner, tightly smuggled away in her distended middle as the gynoid seems to go around doing nothing in particular. She'll walk around purely to walk around and then pat and rub now and then against where you're confined, but mostly she seems to be reinforcing your powerlessness to act by doing things. Eventually after a seemingly endless period of torpor inside her you feel her come to a halt and announce "we hope you have enjoyed this prolonged stay within the womb of an Omnico synthetic predator gynoid version 42." she rattles off and settles down into a seated position, spreading her thighs as she clenches down and sets about rebirthing you into the world. slick gynoid juices coating your form as you emerge inch by inch from between her legs until with a final schlorp your feet pop free and you lie there free once more "please fill out a customer feedback questionaire at the information office." she says placing a towel next to you afore stepping away seemingly done with you.
-	</text>
-	<effect type="imprison" value="400" />
-	<special effect="nonhostile" />
-	<effect type="heal" value="0.1" />
-	<choice destination="end" text="get up" />	
+		<text>
+			The synth walks around unmindful of the burden she's carrying. You're
+			forced to endure this prolonged stay as her prisoner, tightly
+			smuggled away in her distended middle as the gynoid seems to go
+			around doing nothing in particular. She'll walk around purely to walk
+			around and then pat and rub now and then against where you're
+			confined, but mostly she seems to be reinforcing your powerlessness
+			to act by doing things. Eventually after a seemingly endless period
+			of torpor inside her you feel her come to a halt and announce "we
+			hope you have enjoyed this prolonged stay within the womb of an
+			Omnico synthetic predator gynoid version 42." she rattles off and
+			settles down into a seated position, spreading her thighs as she
+			clenches down and sets about rebirthing you into the world. slick
+			gynoid juices coating your form as you emerge inch by inch from
+			between her legs until with a final schlorp your feet pop free and
+			you lie there free once more "please fill out a customer feedback
+			questionaire at the information office." she says placing a towel
+			next to you afore stepping away seemingly done with you.
+		</text>
+		<effect type="imprison" value="400" />
+		<special effect="nonhostile" />
+		<effect type="heal" value="0.1" />
+		<choice destination="end" text="get up" />
 	</page>
-	
+
 	<page ID="unbirthSubmit">
-	<text>
-	The synth smiles "We hope you enjoy this enwombing experience." the gynoid reiterates as she sets about wandering around, demonstrating her ability to handle the weight of your body inside her womb. Your form is nicely cradled by the fleshy confines of her soft womb as she goes about her business and dotes upon her bulge now and then with pats and rubs. When the time comes though your stay comes to an end as she settles down into a seated position and starts to ease you out of herself. slick gynoid juices coating your form as you emerge inch by inch from between her legs until with a final schlorp your feet pop free and you lie there free once more "please fill out a customer feedback questionaire at the information office." she says placing a towel next to you afore stepping away seemingly done with you.
-	</text>
-	<effect type="imprison" value="100" />
-	<special effect="nonhostile" />
-	<effect type="heal" value="0.1" />
-	<choice destination="end" text="get up" />
+		<text>
+			The synth smiles "We hope you enjoy this enwombing experience." the
+			gynoid reiterates as she sets about wandering around, demonstrating
+			her ability to handle the weight of your body inside her womb. Your
+			form is nicely cradled by the fleshy confines of her soft womb as she
+			goes about her business and dotes upon her bulge now and then with
+			pats and rubs. When the time comes though your stay comes to an end
+			as she settles down into a seated position and starts to ease you out
+			of herself. slick gynoid juices coating your form as you emerge inch
+			by inch from between her legs until with a final schlorp your feet
+			pop free and you lie there free once more "please fill out a customer
+			feedback questionaire at the information office." she says placing a
+			towel next to you afore stepping away seemingly done with you.
+		</text>
+		<effect type="imprison" value="100" />
+		<special effect="nonhostile" />
+		<effect type="heal" value="0.1" />
+		<choice destination="end" text="get up" />
 	</page>
-	
+
 	<page ID="start">
-	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="0"/>	
-	<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="1"/>	
-	<preference fetish="oralvore" />	
-	<text>
-	"Ma'am you look delicious, please hold still and allow me to devour you" she commands as she comes to a halt looming over you. The synth's body emitting soft whirs as she leans down to grasp beneath your arms and lift you up with uncanny strength "Omnico believes that complimentary voracious teasing amplifies the arousal of a prey's impending digestion" she says offhandedly before her jaws stretch open. The air that wafts out is warm and moist, the experience already seems unexpectedly authentic as hot wet saliva coated mouth flesh stretches to encompass your head and her tongue plies over your face. The Synth's hit or miss vorish teasing unable to continue as she takes her first swallow and her throat bulges around the shape of your head. 
-	</text>
-	<choice destination="oralvoreB0" text="Such impersonal and businesslike consumption"/>
-	</page>	
-	
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals"
+			value="0" />
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY"
+			operator="equals" value="1" />
+		<preference fetish="oralvore" />
+		<text>
+			"Ma'am you look delicious, please hold still and allow me to devour you"
+			she commands as she comes to a halt looming over you. The synth's
+			body emitting soft whirs as she leans down to grasp beneath your arms
+			and lift you up with uncanny strength "Omnico believes that
+			complimentary voracious teasing amplifies the arousal of a prey's
+			impending digestion" she says offhandedly before her jaws stretch
+			open. The air that wafts out is warm and moist, the experience
+			already seems unexpectedly authentic as hot wet saliva coated mouth
+			flesh stretches to encompass your head and her tongue plies over your
+			face. The Synth's hit or miss vorish teasing unable to continue as
+			she takes her first swallow and her throat bulges around the shape of
+			your head.
+		</text>
+		<choice destination="oralvoreB0"
+			text="Such impersonal and businesslike consumption" />
+	</page>
+
 	<page ID="oralvoreB0">
-	<text>
-	The synth letting out emulated moans around her mouthful of your body and slides her hand down to your ass as she begins feeding you down her throat.
-	Her hands on your ass steadily feed you up and in, supporting your rump and pushing you past those flexing jaws and into that rippling throat. The synth continuing to emit moaning noises as your head slides deeper and deeper into her body, working down into her convincingly voracious and accomodating gut. The pale blue skin of her middle distending out around your form as you're forcefully curled in her gut by more of your body piling in atop you.
-	</text>
-	<choice destination="oralvoreB1" text="packed away"/>
+		<text>
+			The synth letting out emulated moans around her mouthful of your body
+			and slides her hand down to your ass as she begins feeding you down
+			her throat.
+			Her hands on your ass steadily feed you up and in, supporting your rump
+			and pushing you past those flexing jaws and into that rippling
+			throat. The synth continuing to emit moaning noises as your head
+			slides deeper and deeper into her body, working down into her
+			convincingly voracious and accomodating gut. The pale blue skin of
+			her middle distending out around your form as you're forcefully
+			curled in her gut by more of your body piling in atop you.
+		</text>
+		<choice destination="oralvoreB1" text="packed away" />
 	</page>
-	
+
 	<page ID="oralvoreB1">
-	<text>
-	The synth gropes your thighs afore they slip between her legs, adding a bit more to the possessive air your robotic predator has for you. The synth gulping heavily around your ass and tipping her head back to swallow more and more of you, gulping, gulping and gulping until with a final clack she shuts her jaws past your toes. The Synth mhmming and licking her lips smacking them together a little as she moves her hands down to rest upon the bulge of your form as you're squeezed snugly within her "We hope you enjoy being digested alive valued prospective customer and that you or your friend, acquaintance, relation or life partner will choose to purchase an Omnico product in the near future."
-	</text>
-	<choice destination="oralvoreBStruggle" text="like hell i'm gonna"/>
-	<choice destination="oralvoreBSubmit" text="well i may as well settle in to see if the experience is properly authentic"/>
+		<text>
+			The synth gropes your thighs afore they slip between her legs, adding a
+			bit more to the possessive air your robotic predator has for you. The
+			synth gulping heavily around your ass and tipping her head back to
+			swallow more and more of you, gulping, gulping and gulping until with
+			a final clack she shuts her jaws past your toes. The Synth mhmming
+			and licking her lips smacking them together a little as she moves her
+			hands down to rest upon the bulge of your form as you're squeezed
+			snugly within her "We hope you enjoy being digested alive valued
+			prospective customer and that you or your friend, acquaintance,
+			relation or life partner will choose to purchase an Omnico product in
+			the near future."
+		</text>
+		<choice destination="oralvoreBStruggle" text="like hell i'm gonna" />
+		<choice destination="oralvoreBSubmit"
+			text="well i may as well settle in to see if the experience is properly authentic" />
 	</page>
-	
+
 	<check ID="oralvoreBStruggle">
 		<test what="STRUGGLE" DC="12" />
 		<outcome destination="oralvoreBEscape" />
 		<outcome destination="oralvoreBTrapped" />
-	</check>	
-	
+	</check>
+
 	<page ID="oralvoreBEscape">
-	<text>
-	You're not sold on this marketing gimmick and decide to not stick around as your skin becomes lathered in synthetic enzymes "Please remain calm valued customer, attempts to escape may disrupt the carefully tailored experience." the synth protests as you start shoving and jostling about in an attempt to force your way back up out the way you came. The synth placing both hands firmly atop its gut to try and keep you from getting any further up "please remain where you are, digestion is not yet compl-GL"her voice fades into incoherence as you shove your hands up her throat and crank her jaws wide open. The synth apparently not having a way of dealing with this problem as she shudders in robotic indecisiveness and you shove off the inside of her belly to force yourself back up and out. The synth overbalancing and toppling over once your ass is free, the impact discomforting but less so than the idea of being digested by an omnico pred doll. With a little more effort you pull your legs free.
-	</text>
-	<effect type="heal" value="0.1" />
-	<effect type="stunnpc" value="10" />
-	<choice destination="end" text="get clear" />
+		<text>
+			You're not sold on this marketing gimmick and decide to not stick around as
+			your skin becomes lathered in synthetic enzymes "Please remain calm
+			valued customer, attempts to escape may disrupt the carefully
+			tailored experience." the synth protests as you start shoving and
+			jostling about in an attempt to force your way back up out the way
+			you came. The synth placing both hands firmly atop its gut to try and
+			keep you from getting any further up "please remain where you are,
+			digestion is not yet compl-GL"her voice fades into incoherence as you
+			shove your hands up her throat and crank her jaws wide open. The
+			synth apparently not having a way of dealing with this problem as she
+			shudders in robotic indecisiveness and you shove off the inside of
+			her belly to force yourself back up and out. The synth overbalancing
+			and toppling over once your ass is free, the impact discomforting but
+			less so than the idea of being digested by an omnico pred doll. With
+			a little more effort you pull your legs free.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
 	</page>
-	
+
 	<page ID="oralvoreBTrapped">
-	<text>
-	You're not sold on this marketing gimmick and decide to not stick around as your skin becomes lathered in synthetic enzymes "Please remain calm valued customer, attempts to escape may disrupt the carefully tailored experience." the synth protests as you start shoving and jostling about in an attempt to force your way back up out the way you came. The synth placing both hands firmly atop its gut to try and keep you from getting any further up "please remain where you are, digestion is not yet.. complete" she says pausing to swallow you back down as you try to force your way back up her throat. The synth continuing to thwart your efforts until you tire out again "Omnico has invested in the finest prey suppression routines to induce a feeling of being helpless meat trapped in the body of a predator in prey facing imminent digestion." the synth explains as you realize there's really no getting out of her, the gurgling gut of the gynoid is gonna melt you down. 
-	</text>
-	<choice destination="oralvoreBTrappedGO" text="gurgle"/>
+		<text>
+			You're not sold on this marketing gimmick and decide to not stick around as
+			your skin becomes lathered in synthetic enzymes "Please remain calm
+			valued customer, attempts to escape may disrupt the carefully
+			tailored experience." the synth protests as you start shoving and
+			jostling about in an attempt to force your way back up out the way
+			you came. The synth placing both hands firmly atop its gut to try and
+			keep you from getting any further up "please remain where you are,
+			digestion is not yet.. complete" she says pausing to swallow you back
+			down as you try to force your way back up her throat. The synth
+			continuing to thwart your efforts until you tire out again "Omnico
+			has invested in the finest prey suppression routines to induce a
+			feeling of being helpless meat trapped in the body of a predator in
+			prey facing imminent digestion." the synth explains as you realize
+			there's really no getting out of her, the gurgling gut of the gynoid
+			is gonna melt you down.
+		</text>
+		<choice destination="oralvoreBTrappedGO" text="gurgle" />
 	</page>
-	
+
 	<gameover ID="oralvoreBTrappedGO">
-	<text>
-	Trapped by the gynoid you hear her emit pleased mhmms as she rubs over belly and you start melting away in earnest. The experience ever so distressingly authentic as you're helplessly digested and softened down into a goopy compact lump in her belly. Your fluidic form somehow stored about the gynoids body for later use, her breasts, ass and thighs inflating with reservoirs of glop as her belly flattens out. Were you still around to contemplate it you might consider the possibility that Omnico is a profoundly messed up company.
-	</text>
+		<text>
+			Trapped by the gynoid you hear her emit pleased mhmms as she rubs over belly
+			and you start melting away in earnest. The experience ever so
+			distressingly authentic as you're helplessly digested and softened
+			down into a goopy compact lump in her belly. Your fluidic form
+			somehow stored about the gynoids body for later use, her breasts, ass
+			and thighs inflating with reservoirs of glop as her belly flattens
+			out. Were you still around to contemplate it you might consider the
+			possibility that Omnico is a profoundly messed up company.
+		</text>
 	</gameover>
-	
+
 	<page ID="oralvoreBSubmit">
-	<text>
-	You decide to settle in and see how it compares to the digestion of flesh and blood predators. The synth rubbing hands over its gut as it starts to gurgle around your unresisting form "At Omnico we strive for customer satisfaction." she states as a nonsequiter of sorts as you soften in her middle, yielding more and more under her kneading hands as the gynoid digests you away steadily.
-	</text>
-	<choice destination="oralvoreBSubmitGO" text="gurgle"/>
+		<text>
+			You decide to settle in and see how it compares to the digestion of
+			flesh and blood predators. The synth rubbing hands over its gut as it
+			starts to gurgle around your unresisting form "At Omnico we strive
+			for customer satisfaction." she states as a nonsequiter of sorts as
+			you soften in her middle, yielding more and more under her kneading
+			hands as the gynoid digests you away steadily.
+		</text>
+		<choice destination="oralvoreBSubmitGO" text="gurgle" />
 	</page>
-	
+
 	<gameover ID="oralvoreBSubmitGO">
-	<text>
-	Resting cosy and increasingly goopily inside her gut you find the transition from girl to glorp rather peaceful and pleasant. But it happens none the less, your form now a compact mass in her belly that shrinks and fades away slowly as her curves plump out. The synth adding more softness to her tits and ass as your mass is redistributed, Omnico had clearly put a lot of thought and development time into making the result of your digestion aesthetically pleasing. Shame you're not around to look really.
-	</text>
+		<text>
+			Resting cosy and increasingly goopily inside her gut you find the transition
+			from girl to glorp rather peaceful and pleasant. But it happens none
+			the less, your form now a compact mass in her belly that shrinks and
+			fades away slowly as her curves plump out. The synth adding more
+			softness to her tits and ass as your mass is redistributed, Omnico
+			had clearly put a lot of thought and development time into making the
+			result of your digestion aesthetically pleasing. Shame you're not
+			around to look really.
+		</text>
 	</gameover>
-	
+
 	<page ID="start">
-		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals" value="0"/>	
-		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY" operator="equals" value="0"/>		
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA" operator="equals"
+			value="0" />
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY"
+			operator="equals" value="0" />
 		<preference fetish="oralvore" />
 		<text>"now ma'am, please relax and enjoy your experience." the synth
 			remarks as she jerks to a halt looming over you and smiles. She
-			bends forwards and with unyielding hands grasps about your body and
-			hauls you upwards. "Omnico has worked hard to make this as authentic
-			and pleasant as possible." she explains afore her jaws ratchet open
-			wide. Moist air wafting out as the synthetic woman shows off her gape
-			afore setting about devouring you, engulfing your head and cramming
-			it inside. The warm fluids oozing around you as that throat stretches
+			bends
+			forwards and with unyielding hands grasps about your body and
+			hauls
+			you upwards. "Omnico has worked hard to make this as authentic
+			and
+			pleasant as possible." she explains afore her jaws ratchet open
+			wide.
+			Moist air wafting out as the synthetic woman shows off her gape
+			afore
+			setting about devouring you, engulfing your head and cramming
+			it
+			inside. The warm fluids oozing around you as that throat stretches
 			and undulates, smoothly swelling around your head and gripping it to
 			draw you inside. They really did put a lot of effort into making it
 			feel like you really are being eaten alive by someone.</text>
@@ -232,15 +500,24 @@
 
 	<page ID="oralvore0">
 		<text>
-			The synth holds you aloft as she devours you, her slender form holding
-			surprising strength. Your legs squirm or flail around uselessly,
-			hanging in the air as she chugs you down. Her tongue carefully
-			tasting over you thoroughly, leaving you coated in artificial saliva
-			as you slide on down. Your head plunging down past her esophagus, her
-			gut steamy hot and wet and easily stretching as you're fed in. You
-			hear her moan around your middle and then waistline as she engulfs
-			more of you. Her hands stroking possessively over her gut as it
-			swells out. Your form starting to curl inside the prison of her belly
+			The synth holds you aloft as she devours you, her slender form
+			holding
+			surprising strength. Your legs squirm or flail around
+			uselessly,
+			hanging in the air as she chugs you down. Her tongue
+			carefully
+			tasting over you thoroughly, leaving you coated in
+			artificial saliva
+			as you slide on down. Your head plunging down past
+			her esophagus, her
+			gut steamy hot and wet and easily stretching as
+			you're fed in. You
+			hear her moan around your middle and then waistline
+			as she engulfs
+			more of you. Her hands stroking possessively over her
+			gut as it
+			swells out. Your form starting to curl inside the prison of
+			her belly
 			as it pushes out with your contours.
 		</text>
 		<choice destination="oralvore1" text="continue" />
@@ -248,8 +525,10 @@
 
 	<page ID="oralvore1">
 		<text>
-			The synth tips her head back, your legs swaying back and forth over her
-			head as she chugs and rthythmically works you down the rest of the
+			The synth tips her head back, your legs swaying back and forth
+			over her
+			head as she chugs and rthythmically works you down the rest
+			of the
 			way. Her jaws flexing wide and narrow around your thighs, then
 			calves, then finally flexing hard around your ankles as she swallows
 			a final time. The synth gobbling you down and sealing her jaws up
@@ -271,9 +550,12 @@
 
 	<page ID="struggleOVescape">
 		<text>
-			You're not about to stay around being carried around as a belly pet by a
-			walking talking sex doll. And you set about trying to shove your way
-			back upwards, the synth uttering a staticky hork and flailing her
+			You're not about to stay around being carried around as a belly
+			pet by a
+			walking talking sex doll. And you set about trying to shove
+			your way
+			back upwards, the synth uttering a staticky hork and flailing
+			her
 			arms afore trying to push down on the top of her belly with both
 			hands firmly. The synth protesting your lack of acquiescence "please
 			calm down ma'am, trying to get out prematurely will only harm your
@@ -293,9 +575,12 @@
 
 	<page ID="struggleOVtrapped0">
 		<text>
-			You're not about to stay around being carried around as a belly pet by a
-			walking talking sex doll. And you set about trying to shove your way
-			back upwards, the synth uttering a staticky hork and flailing her
+			You're not about to stay around being carried around as a belly
+			pet by a
+			walking talking sex doll. And you set about trying to shove
+			your way
+			back upwards, the synth uttering a staticky hork and flailing
+			her
 			arms afore trying to push down on the top of her belly with both
 			hands firmly. The synth protesting your lack of acquiescence "please
 			calm down ma'am, trying to get out prematurely will only harm your
@@ -313,17 +598,28 @@
 
 	<page ID="struggleOVtrapped1">
 		<text>
-			After a timeless period of jostling and swaying without references for how
-			long has passed you feel the gynoid come to a halt "we hope you have
-			enjoyed your extended stay inside this demonstration model and will
-			get in contact with a sales representative to make a purchase." she
-			intones and then doubles over, gut flexing then pressing in around
-			you. The synth starting to hork you up, forcing you up her throat and
-			taking ahold of you as you start to emerge into the light, pulling
-			you free and supporting you until she can set you down wetly and
-			gently on the floor in front of her. She smiles "please take the time
-			to fill out a customer satisfaction survey." she says and then looks
-			around and adds "we seem to be out of towels at the moment, Omnico
+			After a timeless period of jostling and swaying without
+			references for how
+			long has passed you feel the gynoid come to a halt
+			"we hope you have
+			enjoyed your extended stay inside this demonstration
+			model and will
+			get in contact with a sales representative to make a
+			purchase." she
+			intones and then doubles over, gut flexing then
+			pressing in around
+			you. The synth starting to hork you up, forcing you
+			up her throat and
+			taking ahold of you as you start to emerge into the
+			light, pulling
+			you free and supporting you until she can set you down
+			wetly and
+			gently on the floor in front of her. She smiles "please take
+			the time
+			to fill out a customer satisfaction survey." she says and
+			then looks
+			around and adds "we seem to be out of towels at the moment,
+			Omnico
 			apologizes for the inconvenience."
 		</text>
 		<effect type="imprison" value="400" />
@@ -334,11 +630,16 @@
 
 	<page ID="submitOV">
 		<text>
-			"Enjoy yourself customer, we hope you find your experience to your liking."
-			says the synth as you decide its fairly warm and comfortable inside
-			her and to just let yourself be a burden on this synth for a bit. You
-			feel the gynoid rub her belly now and then as she wanders around,
-			swaying you gently from side to side inside as she walks.
+			"Enjoy yourself customer, we hope you find your experience to
+			your liking."
+			says the synth as you decide its fairly warm and
+			comfortable inside
+			her and to just let yourself be a burden on this
+			synth for a bit. You
+			feel the gynoid rub her belly now and then as she
+			wanders around,
+			swaying you gently from side to side inside as she
+			walks.
 			Occasionally she'd pause to reach down and snug her massively
 			distended gut with both hands, cradling the bulges of your form
 			inside her. When the time comes she remarks "we hope you have enjoyed

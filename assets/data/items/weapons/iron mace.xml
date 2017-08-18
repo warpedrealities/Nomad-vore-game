@@ -1,19 +1,22 @@
 <?xml version="1.0"?>
 <ItemWeapon name="iron mace" weight="4" value="400">
-<tagSet value="PM"/>
-<description>
-A forged iron mace. A hefty nobbled metal ball on a wooden handle. 2AP Does 4-7 kinetic damage. (P)
-</description>
-<modifier>
-<parry value="1"/>
-</modifier>
-<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE" timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
-<effectDamage type="KINETIC" minValue="4" maxValue="7" modifier="STRENGTH"/>
-<missText count="1">
-<text>you fail to bludgeon TARGET .</text>
-</missText>
-<hitText count="1">
-<text>you bludgeon TARGET for VALUE kinetic damage</text>
-</hitText>
-</combatMove>
+	<tagSet value="PM" />
+	<description>
+		A forged iron mace. A hefty nobbled metal ball on a wooden handle. 2AP
+		Does 4-7 kinetic damage. (P)
+	</description>
+	<modifier>
+		<parry value="1" />
+	</modifier>
+	<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE"
+		timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="4" maxValue="7"
+			modifier="STRENGTH" />
+		<missText count="1">
+			<text>you fail to bludgeon TARGET .</text>
+		</missText>
+		<hitText count="1">
+			<text>you bludgeon TARGET for VALUE kinetic damage</text>
+		</hitText>
+	</combatMove>
 </ItemWeapon>

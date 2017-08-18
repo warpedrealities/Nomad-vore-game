@@ -2,63 +2,150 @@
 <Conversation>
 	<page ID="start">
 		<text>
-		You can hear her suit respirator rasping loudly with her heavy breathing and a soft mmhmm as you approach. You wonder why she doesn't take the suit off, but maybe there's a reason. She's clearly too enamoured with you to resist though "what are you going to do with me?" 
+			You can hear her suit respirator rasping loudly with her heavy breathing
+			and a soft mmhmm as you approach. You wonder why she doesn't take the
+			suit off, but maybe there's a reason. She's clearly too enamoured
+			with you to resist though "what are you going to do with me?"
 		</text>
-		<choice destination="cockvore0" text="$I was thinking I'd pump you back into that suit once you'd had a stay in my balls">
-		<assertion evaluate="hasperk" perk="cockvore" />	
+		<choice destination="cockvore0"
+			text="$I was thinking I'd pump you back into that suit once you'd had a stay in my balls">
+			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
-		<choice destination="end" text="$nothing, actually, but I could of done"/>
+		<choice destination="end" text="$nothing, actually, but I could of done" />
 	</page>
 
 	<page ID="cockvore0">
-	<text>
-	You hear a gasp and her knees quaver. Seems your debauched suggestion hit a soft and oh so submissive spot so without wasting any more time you<conditional><assertion evaluate="slothasitem" slot="2" /> whip out your shaft and </conditional>motion her down in front of your <macro ID="penis_size_desc" /> member "So depraved" she murmurs, but acquiesces to your demand. She lowers herself down onto her knees but makes no move to take off the suit, you frown and are about to speak on this but then feel her hands on your shaft. Her hands sliding distractingly up and down that length. She's surprisingly good at it, stimulating despite the gloves as she strokes expertly along your shaft. Your eyes starting to waver closed through the pleasure as a groan issues forth from your throat.
-	</text>
-	<choice destination="cockvore1" text="nice as this is though..."/>
+		<text>
+			You hear a gasp and her knees quaver. Seems your debauched suggestion
+			hit a soft and oh so submissive spot so without wasting any more time
+			you
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				whip out your shaft and
+			</conditional>
+			motion her down in front of your
+			<macro ID="penis_size_desc" />
+			member "So depraved" she murmurs, but acquiesces to your demand. She
+			lowers herself down onto her knees but makes no move to take off the
+			suit, you frown and are about to speak on this but then feel her
+			hands on your shaft. Her hands sliding distractingly up and down that
+			length. She's surprisingly good at it, stimulating despite the gloves
+			as she strokes expertly along your shaft. Your eyes starting to waver
+			closed through the pleasure as a groan issues forth from your throat.
+		</text>
+		<choice destination="cockvore1" text="nice as this is though..." />
 	</page>
-	
+
 	<page ID="cockvore1">
-	<text>
-	You let her work your shaft for a little bit, thinking that in a few more moments you'll coax her to strip out of that suit. Except before you can say anything you hear a thunk followed quickly by the wondrous sensation of a head being fed willingly into your cock. You're robbed of a chance to look at her face, but being able to schlurp her out of the suit and melt her into cum is such a treat that not knowing her appearance is hardly a downer. You hear her mhmm inside your cocktip, precum soaking her face and what feels like her hair as she reaches up to undo the back of the sealing collar around her neck then leans forwards. The collar parting as she tucks her arms down and thrusts her shoulders up through the neckhole of her suit into your cocktip.
-	</text>
-	<choice destination="cockvore2" text="unexpected, but welcome, and it's not like they don't all look the same when your balls are done with them"/>
+		<text>
+			You let her work your shaft for a little bit, thinking that in a few
+			more moments you'll coax her to strip out of that suit. Except before
+			you can say anything you hear a thunk followed quickly by the
+			wondrous sensation of a head being fed willingly into your cock.
+			You're robbed of a chance to look at her face, but being able to
+			schlurp her out of the suit and melt her into cum is such a treat
+			that not knowing her appearance is hardly a downer. You hear her mhmm
+			inside your cocktip, precum soaking her face and what feels like her
+			hair as she reaches up to undo the back of the sealing collar around
+			her neck then leans forwards. The collar parting as she tucks her
+			arms down and thrusts her shoulders up through the neckhole of her
+			suit into your cocktip.
+		</text>
+		<choice destination="cockvore2"
+			text="unexpected, but welcome, and it's not like they don't all look the same when your balls are done with them" />
 	</page>
-	
+
 	<page ID="cockvore2">
-	<text>
-	You ripple your shaft around your seduced willing cockfood, schlurping more of her out of the suit. the gloved hands going limp as her hands are drawn up and out of them. You thrust your hips forcing your tip past the suit collar with a moan of your own that matches the muffled moan audible from inside your shaft as she slides deeper into the naughty depths of your loins. You focus on tensing your shaft to draw her further and feel her suit start to slump as her feet slide out of the boots and she's supported more by your rippling cock wrapped around her upper body, her head nearing the base of your enlarged and feasting shaft.
-	</text>
-	<choice destination="cockvore3" text="soon have the secretive alien secreted away in your balls"/>
+		<text>
+			You ripple your shaft around your seduced willing cockfood, schlurping
+			more of her out of the suit. the gloved hands going limp as her hands
+			are drawn up and out of them. You thrust your hips forcing your tip
+			past the suit collar with a moan of your own that matches the muffled
+			moan audible from inside your shaft as she slides deeper into the
+			naughty depths of your loins. You focus on tensing your shaft to draw
+			her further and feel her suit start to slump as her feet slide out of
+			the boots and she's supported more by your rippling cock wrapped
+			around her upper body, her head nearing the base of your enlarged and
+			feasting shaft.
+		</text>
+		<choice destination="cockvore3"
+			text="soon have the secretive alien secreted away in your balls" />
 	</page>
-	
+
 	<page ID="cockvore3">
-	<text>
-	You hear her letting out a gasp and mhmm as her head plunges through the base of your shaft. Her evident pleasure at entering the chamber of her imminent churning sends a thrill running through you from head to toes to rippling dick and you redouble your efforts to shlurp this sackslut out of her spacesuit. Her face and then arms starting to press out your sagging sack as you draw her in, you feel her rump and then knees slipping past your cumslit. The weight of the girl settling into your sack you see catch a glimpse of her blue feed wiggling around beyond your tip as your shaft pops free of the now empty spacesuit with the last of your cockfood still to schlurp inside.
-	</text>
-	<choice destination="cockvore4" text="one more 'swallow'"/>
+		<text>
+			You hear her letting out a gasp and mhmm as her head plunges through the
+			base of your shaft. Her evident pleasure at entering the chamber of
+			her imminent churning sends a thrill running through you from head to
+			toes to rippling dick and you redouble your efforts to shlurp this
+			sackslut out of her spacesuit. Her face and then arms starting to
+			press out your sagging sack as you draw her in, you feel her rump and
+			then knees slipping past your cumslit. The weight of the girl
+			settling into your sack you see catch a glimpse of her blue feed
+			wiggling around beyond your tip as your shaft pops free of the now
+			empty spacesuit with the last of your cockfood still to schlurp
+			inside.
+		</text>
+		<choice destination="cockvore4" text="one more 'swallow'" />
 	</page>
-	
+
 	<page ID="cockvore4">
-	<text>
-	You run both hands along your cock as you schlurp the last of the space traveller into your tip. Her feet disappearing easily past your cumslit and forming a bulge that traces down your length to join the rest of her piled into your balls, making them nice and lumpy as they sag low and massive against your thighs and you feel her getting comfortable inside of you. One of your hands going down to rub against your balls and you feel her squirm around with a lewd squelch of cum "My you were easy..." you comment teasingly, you can only imagine the blush on what you imagine her face must look like as she replies "It's...it's something about you I guess...so, sexy and uninhibited and mhmm." she said, making you chuckle "I'm the one whose uninhibited? you're the one who dived down my dick to get sloshed into cum cause you were horny" she has no response to that except to moan with a quiver of lust within your sack.
-	</text>
-	<choice destination="cockvore5" text="churn her up"/>
+		<text>
+			You run both hands along your cock as you schlurp the last of the space
+			traveller into your tip. Her feet disappearing easily past your
+			cumslit and forming a bulge that traces down your length to join the
+			rest of her piled into your balls, making them nice and lumpy as they
+			sag low and massive against your thighs and you feel her getting
+			comfortable inside of you. One of your hands going down to rub
+			against your balls and you feel her squirm around with a lewd squelch
+			of cum "My you were easy..." you comment teasingly, you can only
+			imagine the blush on what you imagine her face must look like as she
+			replies "It's...it's something about you I guess...so, sexy and
+			uninhibited and mhmm." she said, making you chuckle "I'm the one
+			whose uninhibited? you're the one who dived down my dick to get
+			sloshed into cum cause you were horny" she has no response to that
+			except to moan with a quiver of lust within your sack.
+		</text>
+		<choice destination="cockvore5" text="churn her up" />
 	</page>
-	
+
 	<page ID="cockvore5">
-	<text>
-	"well, I suppose either way you're dick fodder. thanks for the load." you tease her a bit more as your sack begins to burble and churn around her. The teasing and tantalizing sensations of being melted into cum making her moan and squirm around all the more. You fondle yourself to the sensation as writhes lustfully within you, gradually softening her form and turning her pale, creamy and melty as your balls diligently convert her into gallons of wonderful nutbutter. Those balls softening and rounding out as you liquidate the alien woman within. The steady pressure of all that pent up cum providing a needy desire for release, luckily you already have a plan for where to put her.
-	</text>
-	<choice destination="cockvore6" text="where's that spacesuit"/>
+		<text>
+			"well, I suppose either way you're dick fodder. thanks for the load." you
+			tease her a bit more as your sack begins to burble and churn around
+			her. The teasing and tantalizing sensations of being melted into cum
+			making her moan and squirm around all the more. You fondle yourself
+			to the sensation as writhes lustfully within you, gradually softening
+			her form and turning her pale, creamy and melty as your balls
+			diligently convert her into gallons of wonderful nutbutter. Those
+			balls softening and rounding out as you liquidate the alien woman
+			within. The steady pressure of all that pent up cum providing a needy
+			desire for release, luckily you already have a plan for where to put
+			her.
+		</text>
+		<choice destination="cockvore6" text="where's that spacesuit" />
 	</page>
-	
+
 	<page ID="cockvore6">
-	<text>
-	It turns out to be right where you left it and you grin thinking of what you're about to do as you yank the suit into a semi upright position, the empty open neckhole angled towards you. With all in readyness you begin to stroke off, cocktip aimed at the hole as you lustfully and unrestrainedly jerk off letting your pleasure be heard openly. The vigorous fapping sounds and moans audible to any hypothetical listener, followed by a gasp and series of splattering spurts as you climax. Hot cum pouring out of your dick into the spacesuit, filling it up steadily with hot steaming jizz made of the suits prior occupant. As your orgasm starts to subside the suit fills to the brim, the last few spurts overflowing the suit, cum oozing from the neck hole to make a lewd mess of it all...best thing to make of her really, and you're sure she'd agree if she could see what you made of her.
-	</text>
-	<effect type="feed" value="100" />
-	<special effect="removenpc" />
-	<choice destination="end" text="well that was fun" />
+		<text>
+			It turns out to be right where you left it and you grin thinking of
+			what you're about to do as you yank the suit into a semi upright
+			position, the empty open neckhole angled towards you. With all in
+			readyness you begin to stroke off, cocktip aimed at the hole as you
+			lustfully and unrestrainedly jerk off letting your pleasure be heard
+			openly. The vigorous fapping sounds and moans audible to any
+			hypothetical listener, followed by a gasp and series of splattering
+			spurts as you climax. Hot cum pouring out of your dick into the
+			spacesuit, filling it up steadily with hot steaming jizz made of the
+			suits prior occupant. As your orgasm starts to subside the suit fills
+			to the brim, the last few spurts overflowing the suit, cum oozing
+			from the neck hole to make a lewd mess of it all...best thing to make
+			of her really, and you're sure she'd agree if she could see what you
+			made of her.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="well that was fun" />
 	</page>
-	
+
 </Conversation>

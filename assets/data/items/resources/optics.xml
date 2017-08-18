@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <ItemResource name="optics" weight="1" value="150">
-	<description>optical components consisting of lenses, fibre optics or reflectors. You can probably find a use for them.
+	<description>optical components consisting of lenses, fibre optics or
+		reflectors. You can probably find a use for them.
 	</description>
 
 </ItemResource>

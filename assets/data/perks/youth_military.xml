@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
-<perk name="military youth" >
-<requirement count="1"><req>CHARGEN</req></requirement>
-<description>You spent your youth in the army learning how to kill things with guns, lasers, missile launchers and machineguns. ranged +1, gunnery +1
-</description>
-<modifier affects="RANGED" value="1"  type="ATTRIBUTE"/>
-<modifier affects="GUNNERY" value="1"  type="ATTRIBUTE"/>
-<maxrank value="1"/>
+<perk name="military youth">
+	<requirement count="1">
+		<req>CHARGEN</req>
+	</requirement>
+	<description>You spent your youth in the army learning how to kill
+		things with guns, lasers, missile launchers and machineguns. ranged
+		+1, gunnery +1
+	</description>
+	<modifier affects="RANGED" value="1" type="ATTRIBUTE" />
+	<modifier affects="GUNNERY" value="1" type="ATTRIBUTE" />
+	<maxrank value="1" />
 </perk>

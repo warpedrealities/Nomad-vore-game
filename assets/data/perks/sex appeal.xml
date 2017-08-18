@@ -1,16 +1,19 @@
 <?xml version="1.0"?>
 <perk name="sex appeal">
-<requirement count="1">
-<req>PERKflirt</req>
-</requirement>
-<description> 
-you can more easily project your raw seductive charms towards individuals at a distance. This reduces the rate at which your seduction move is reduced in strength with distance.
-</description>
-<moveModifier name="seduce">
-<change type="MOD" >
-<effectDamage type="TEASE" minValue="0" maxValue="0" modifier="CHARM" rangeDecay="0.5"/>
-</change>
-</moveModifier>
-<maxrank value="2"/>
+	<requirement count="1">
+		<req>PERKflirt</req>
+	</requirement>
+	<description>
+		you can more easily project your raw seductive charms towards individuals
+		at a distance. This reduces the rate at which your seduction move is
+		reduced in strength with distance.
+	</description>
+	<moveModifier name="seduce">
+		<change type="MOD">
+			<effectDamage type="TEASE" minValue="0" maxValue="0"
+				modifier="CHARM" rangeDecay="0.5" />
+		</change>
+	</moveModifier>
+	<maxrank value="2" />
 
 </perk>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <widgetharvestable sprite="35">
-<contains minimum="1" maximum="3">deku nut</contains>
-<usedescription>you pick some nuts off the bush</usedescription>
-<description>A bush bearing nuts that can be picked</description>
-<regeneration regentime="500"/>
+	<contains minimum="1" maximum="3">deku nut</contains>
+	<usedescription>you pick some nuts off the bush</usedescription>
+	<description>A bush bearing nuts that can be picked</description>
+	<regeneration regentime="500" />
 </widgetharvestable>

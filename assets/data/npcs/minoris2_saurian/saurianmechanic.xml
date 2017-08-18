@@ -1,31 +1,39 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="SaurianN.png"/>
-<name>Nissa</name>
-<description>A somewhat grubby saurian, her ochre scales tinged outright brown through lack of cleanliness and polish, so to her tunic is marked with stains, scorchmarks and frayed in places. Her black hair is tied tightly into a single long braid behind her and she wears two grossly over burdened belts of tools and knicknacks. She seems well at ease despite her stains though, fiddling with something or other.</description>
-<rpg>
-<experiencevalue value="10"/>
-<ability ability="STRENGTH" value="8" />
-<ability ability="AGILITY" value="10" />
-<ability ability="DEXTERITY" value="10" />
-<ability ability="ENDURANCE" value="8" />
-<ability ability="CHARM" value="10" />
-<ability ability="INTELLIGENCE" value="10" />
-<stat stat="HEALTH" value="40"/>
-<stat stat="RESOLVE" value="40"/>
-<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="2">
-<effectDamage type="KINETIC" minValue="1" maxValue="4" modifier="STRENGTH"/>
-<missText count="1">
-<text>Nissa's punch fails to connect with TARGET</text>
-</missText>
-<hitText count="1">
-<text>Nissa hits TARGET for VALUE points of damage</text>
-</hitText>
-</combatMove>
-</rpg>
+	<sprite value="SaurianN.png" />
+	<name>Nissa</name>
+	<description>A somewhat grubby saurian, her ochre scales tinged
+		outright brown through lack of cleanliness and polish, so to her tunic
+		is marked with stains, scorchmarks and frayed in places. Her black
+		hair is tied tightly into a single long braid behind her and she wears
+		two grossly over burdened belts of tools and knicknacks. She seems
+		well at ease despite her stains though, fiddling with something or
+		other.</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Nissa's punch fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Nissa hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
 
-<respawn delay="100"/>
-<talk conversation="alpha_minoris_II/saurianMechanic/chat" />
-<controller AI="staystill"/>
-<faction value="saurian"/>
+	<respawn delay="100" />
+	<talk conversation="alpha_minoris_II/saurianMechanic/chat" />
+	<controller AI="staystill" />
+	<faction value="saurian" />
 </NPC>

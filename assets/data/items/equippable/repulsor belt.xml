@@ -2,9 +2,12 @@
 <ItemEquip name="repulsor belt" weight="2" slot="ACCESSORY"
 	value="750">
 	<description>
-		A belt made of interlocking metallic segments. Each segment seems
-		joined together by electrical wiring that all link to the central
-		control unit in the buckle. The belt creates a forcefield against
+		A belt made of interlocking metallic segments. Each
+		segment seems
+		joined together by electrical wiring that all link to the
+		central
+		control unit in the buckle. The belt creates a forcefield
+		against
 		kinetic attack with strength 6, 30 hp and duration 60.
 	</description>
 	<combatMove name="forcefield" ammoCost="1" timeCost="2"

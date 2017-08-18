@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <recipe name="bunk bed" requiredskill="0" startunlocked="true">
-<description>
-A bunk bed. Suitable to provide accomodations for 2 crew members.
-</description>
-<ingredient item="scrap metal" quantity="4"/>
-<ingredient item="fabric" quantity="16"/>
-<result item="bunk bed"/>
+	<description>
+		A bunk bed. Suitable to provide accomodations for 2 crew members.
+	</description>
+	<ingredient item="scrap metal" quantity="4" />
+	<ingredient item="fabric" quantity="16" />
+	<result item="bunk bed" />
 </recipe>

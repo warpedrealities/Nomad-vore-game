@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <recipe name="thunderstone" requiredskill="0" startunlocked="false">
-<description>
-A reproduction of the crystalline matrix that exists within raijin and allows them to project lightning
-</description>
-<ingredient item="blue crystal" quantity="5"/>
-<ingredient item="herb" quantity="4"/>
-<result item="thunderstone"/>
+	<description>
+		A reproduction of the crystalline matrix that exists within raijin and
+		allows them to project lightning
+	</description>
+	<ingredient item="blue crystal" quantity="5" />
+	<ingredient item="herb" quantity="4" />
+	<result item="thunderstone" />
 </recipe>

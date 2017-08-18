@@ -1,20 +1,22 @@
 <?xml version="1.0"?>
 <shipsystem sprite="66" name="algae cultivator" health="10">
-<contains minimum="2" maximum="4">scrap metal</contains>
-<description>A regulated hydroponic environment where algae is grown on a series of illuminated beds. Comes with an integrated packaging system to compress and dispense algae food bricks.</description>
-<resistance resists="KINETIC" strength="2"></resistance>
-<shipResource capacity="40" resource="ALGAE">
-</shipResource>
-<shipConverter>
-<convertFrom value="ENERGY"/>
-<convertTo value="ALGAE"/>
-<conversionEfficiency value="1"/>
-<conversionRate value="0.005"/>
-</shipConverter>
-<!--dispenser goes here-->
-<shipDispenser>
-<input value="ALGAE"/>
-<cost value="4"/>
-<output value="algae bar"/>
-</shipDispenser>
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>A regulated hydroponic environment where algae is grown on
+		a series of illuminated beds. Comes with an integrated packaging
+		system to compress and dispense algae food bricks.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="40" resource="ALGAE">
+	</shipResource>
+	<shipConverter>
+		<convertFrom value="ENERGY" />
+		<convertTo value="ALGAE" />
+		<conversionEfficiency value="1" />
+		<conversionRate value="0.005" />
+	</shipConverter>
+	<!--dispenser goes here -->
+	<shipDispenser>
+		<input value="ALGAE" />
+		<cost value="4" />
+		<output value="algae bar" />
+	</shipDispenser>
 </shipsystem>
