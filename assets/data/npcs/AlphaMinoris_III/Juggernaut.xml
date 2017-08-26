@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="lixiQ.png"/>
+<!--Basalia? Maeve?
+-->
+<name>juggernaut</name>
+<description>A collosal juggernaut, this canibalistic Lixi is easily twice the height of her sisters. GETetting caught by her will likely be certain doom</description>
+<rpg>
+<experiencevalue value="300"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<stat stat="HEALTH" value="100"/>
+<stat stat="RESOLVE" value="200"/>
+<attribute attribute="KINETIC" value="8"/>
+<attribute attribute="THERMAL" value="4"/>
+<attribute attribute="SHOCK" value="4"/>
+<attribute attribute="TEASE" value="2"/>
+<attribute attribute="PHEREMONE" value="2"/>
+<attribute attribute="PSYCHIC" value="2"/>
+<attribute attribute="DODGE" value="6"/>
+<attribute attribute="PARRY" value="6"/>
+<combatMove name="Slash" pattern="MELEE" bonusAttribute="MELEE" timeCost="1" bonusToHit="4">
+	<missText count="2">
+		<text>The giant Lixi misses TARGET</text>
+		<text>The lixi swings at TARGET but doesn't hit</text>
+	</missText>
+	<hitText count="2">
+		<text>The lixi slashes TARGET for VALUE damage</text>
+		<text>The lixi slices TARGET for VALUE damage</text>
+	</hitText>
+	<effectDamage type="KINETIC" minValue="3" maxValue="9" modifier="STRENGTH"/>
+</combatMove>
+<combatMove name="Crush" pattern="MELEE" bunusAttribute="MELEE" timeCost="4" bonusToHit="2">
+	<missText count="1">
+		<text>The Lixi Queen fails to strike you</text>
+	</missText>
+	<hitText count="1">
+		<text>The Lixi Queen delivers a staggering blow to TARGET for VALUE damage.</text>
+	</hitText>
+	<effectDamage type="KINETIC" minValue="8" maxValue="20" modifier="STRENGTH"/>
+	<effectStatus probability="85">
+		<applyText>TARGET is still reeling from the force of the Lixi queen's attack</applyText>
+		<statusStun uid="9" duration="10">
+			TARGET has recovered.
+		</statusStun>
+	</effectStatus>
+</combatMove>
+<combatMove name="Grab" pattern="REACH" bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2" basicAction="true" moveType="FIGHT">
+	<missText count="1">
+		<text>The juggernaut's grasping hand misses you</text>
+	</missText>
+	<hitText count="1">
+		<text></text>
+	</hitText>
+	<effectStatus probability="100">
+		<applyText>The juggernaut grabs TARGET</applyText>
+		<statusBind uid="20" icon="4"  numModifiers="2">
+			<removeText> TARGET has struggled free of the juggernaut's grip</removeText>
+			<effect attribute="DODGE" modifier="-2"/>
+			<effect attribute="PARRY" modifier="-2"/>
+			<bind strength="20" originDependent="true"/>
+			<struggle count="1">	
+				<text>TARGET struggles to try to escape the juggernaut's grip</text>
+			</struggle>
+		</statusBind>
+	</effectStatus>
+	<effectMovement moveType="TARGET_TOWARDS" distance="2" abilityMod="STRENGTH"/>
+	<energySource value="stack"/>
+</combatMove>
+<combatMove name="Dart Rope" bonusAttribute="MELEE" timeCost="1" bonusToHit="4" pattern="RANGED" moveType="MOVEMENT"> 
+	<missText count="1">
+		<text>A metal dart flies harmlessly past TARGET before being pulled back in.</text>
+	</missText>
+	<hitText count="1">
+		<text>The lixi queen impales TARGET for VALUE damage, before reeling them in.
+		"GET OVER HERE!"</text>
+	</hitText>
+	
+	<effectDamage type="KINETIC" minValue="1" maxValue="5" modifier="STRENGTH"/>
+</combatMove>
+</rpg>
+
+<respawn delay="1000"/>
+<defeated conversation="alpha_minoris_III/lixi_queen/defeat" />
+<seduced conversation="alpha_minoris_III/lixi_queen/defeat" />
+<victory conversation="alpha_minoris_III/lixi_queen/victory" />
+<seducer conversation="alpha_minoris_III/lixi_queen/victory" />
+<controller AI="lixi_queen"/>
+<faction value="monster"/>
+</NPC>

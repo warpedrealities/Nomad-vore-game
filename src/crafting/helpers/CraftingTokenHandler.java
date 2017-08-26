@@ -47,7 +47,7 @@ public class CraftingTokenHandler {
 		return map;
 	}
 
-	public int getToken(String token)
+	public Integer getToken(String token)
 	{
 		return map.get(token);
 	}

@@ -8,8 +8,9 @@ import zone.Zone;
 import actor.Actor;
 import actor.player.Inventory;
 import actorRPG.Actor_RPG;
+import actorRPG.RPG_Helper;
 import actorRPG.player.Player_RPG;
-import artificial_intelligence.Sense;
+import artificial_intelligence.detection.Sense;
 import item.Item;
 import item.ItemWeapon;
 
@@ -154,6 +155,51 @@ public class SceneController implements Sense {
 	public void useQuickslot() {
 		quickslotHandler.handle();
 
+	}
+
+	private boolean checkExclude(Actor actor, int exAttribute, int exValue)
+	{
+		int comp=actor.getRPG().getAttribute(exAttribute);
+		if (comp>=exValue)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public Actor getHostile(Actor origin, int maxRange, boolean visibleOnly, String exclude, int exValue) {
+		Actor hostile = null;
+		int attribute=RPG_Helper.AttributefromString(exclude);
+		float distance = 99;
+		for (int i = 0; i < activeZone.getActors().size(); i++) {
+			if (activeZone.getActors().get(i).getAttackable()
+					&& activeZone.getActors().get(i).isHostile(origin.getActorFaction().getFilename())) {
+				Actor target = activeZone.getActors().get(i);
+				float d = target.getPosition().getDistance(origin.getPosition());
+				if (d < maxRange) {
+					if (visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
+						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+								(int) origin.getPosition().y, (int) target.getPosition().x,
+								(int) target.getPosition().y, true)) {
+							if (distance > d && !checkExclude(target,attribute,exValue)) {
+								distance = d;
+								hostile = target;
+							
+							}
+						}
+					} else {
+						if (distance > d && !checkExclude(target,attribute,exValue)) {
+							distance = d;
+							hostile = target;
+						}
+					}
+
+				}
+
+			}
+		}
+		return hostile;
 	}
 
 }

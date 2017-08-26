@@ -136,7 +136,7 @@ public class ItemContainerInstance extends Item {
 	}	
 	
 	public boolean addItem(Item item) {
-		if (item.getTag()!=hostItem.getTag())
+		if (item.getTag()!=hostItem.getContainedTag())
 		{
 			return false;
 		}
@@ -151,6 +151,10 @@ public class ItemContainerInstance extends Item {
 
 		}
 
+	}
+	
+	public float getItemValue() {
+		return hostItem.getItemValue();
 	}
 
 }

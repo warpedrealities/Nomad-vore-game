@@ -22,8 +22,8 @@ public class WeaponCheck {
 	static private Vec2f vFromFacing(float facing, float heading)
 	{
 		Vec2f p=new Vec2f (0,1);
-		
-		p.rotate((facing+heading)* -0.785398F);
+		float r=(facing+heading)* -0.785398F;
+		p.rotate(r);
 
 		return p;
 	}
@@ -60,7 +60,7 @@ public class WeaponCheck {
 		double width=0.785398F*weapon.getWeapon().getWeapon().getFiringArc()/2;
 		
 		double r=angle(v.x,v.y,w.x,w.y);
-		
+		System.out.println(r);
 		if (r<=width && r>=width*-1)
 		{
 			return true;

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemConsumable name="sentinel drone" weight="12" value="1200">
+	<description>A computer controlled laser gun mounted on a sturdy quadruped frame. Once deployed it won't last very long. But can be useful when you need more firepower and a distraction, or a guard to block a choke point.</description>
+	<effectSpawn value="temp/sentinel_drone">
+	You setup and activate the sentinel drone, watching it power up and start to scan the area for enemies, its laser weapon sweeping back and forth.
+	</effectSpawn>
+</ItemConsumable>

@@ -66,6 +66,7 @@
 			seems rather appreciative of your lewd efforts to please her.
 		</text>
 		<effect type="incrementlocalflag" flag="disposition" value="2" />
+			<special effect="healnpc" />	
 		<choice destination="end" text="get up" />
 
 	</page>

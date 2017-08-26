@@ -162,12 +162,17 @@ public class SpaceshipActionHandler {
 	public void join(Spaceship ship, Spaceship ship2) {
 		if (ship2.getDockedShip() == null) {
 			Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
-			if (ship.getSpriteObj().getBatch()!=null)
+			if (ship.getSpriteObj()!=null)
 			{
-				ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
-			}	
-			ship.getSpriteObj().discard();
-			ship.setSpriteObj(null);
+				if (ship.getSpriteObj().getBatch()!=null)
+				{
+					ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
+				}		
+				ship.getSpriteObj().discard();
+				ship.setSpriteObj(null);
+			}
+
+
 			ship.setShipState(ShipState.SHIPDOCK);
 			ship2.setShipState(ShipState.SHIPDOCK);
 			ship.setPosition(new Vec2f(ship2.getPosition().x, ship2.getPosition().y));

@@ -36,7 +36,7 @@ public class TrailControl {
 				
 				for (int j=0;j<ships[i].getEmitters().getEngineEmitters().size();j++)
 				{
-					emitters[i][j]=new ParticleConeEmitter(256,sprite,new Vec2f(0,0),2,0.1F);;
+					emitters[i][j]=new ParticleConeEmitter(256,sprite,new Vec2f(0,0),4,0.1F);;
 				}	
 			}
 	
@@ -73,7 +73,7 @@ public class TrailControl {
 					emitters[i][j].Update(dt);
 					if (thrust>0)
 					{
-						emitters[i][j].spawnCone(thrust,ships[i].getHeading(),0.01F);		
+						emitters[i][j].spawnCone(thrust,ships[i].getHeading(),0.00F);		
 					}
 				}			
 			}

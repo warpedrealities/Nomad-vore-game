@@ -7,4 +7,5 @@
 	<combat value="talharan_trader_0Combat" />
 	<victory value="talharan_trader_0Victory" />
 	<loss value="talharan_trader_0Loss" />
+	<experienceReward value="200" />	
 </controller>

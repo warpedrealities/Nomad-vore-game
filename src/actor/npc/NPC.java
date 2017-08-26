@@ -37,8 +37,8 @@ import artificial_intelligence.Code_AI;
 import artificial_intelligence.Controllable;
 import artificial_intelligence.Controller;
 import artificial_intelligence.Script_AI;
-import artificial_intelligence.Sense;
 import artificial_intelligence.SpecialCommandHandler;
+import artificial_intelligence.detection.Sense;
 import artificial_intelligence.pathfinding.Path;
 
 import shared.ParserHelper;

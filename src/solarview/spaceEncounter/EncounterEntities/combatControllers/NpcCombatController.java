@@ -22,6 +22,7 @@ public class NpcCombatController implements CombatController {
 	private NpcCombatControllerSense sense;
 	private EffectHandler effectHandler;
 
+	
 	public NpcCombatController(String file) {
 		// load lua file
 		sense=new NpcCombatControllerSense();
@@ -101,4 +102,5 @@ public class NpcCombatController implements CombatController {
 				sense.getShips()[target],index));
 		return;
 	}
+
 }

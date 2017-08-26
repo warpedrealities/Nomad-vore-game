@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="empty" />		
+		<text>
+		the maintenance pod is now empty.
+		</text>
+		<choice destination="end" text="leave it be"/>	
+	</page>
+	
+	<page ID="open">
+	<text>
+	the capsule opens, as it does you see the sleeping eyes of the synth within snap open to reveal a radiant blue glow.
+	</text>
+	<effect type="setlocalflag" flag="empty" value="1" />	
+	<special effect="createNPC" file="minoris2_elves/Zin.xml" />
+	<choice destination="end" text="she's alive!"/>
+	</page>
+	
+	<page ID="start">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="1"	flag="NERI_BASEMENT" />		
+		<!--powered-->
+		<text>
+		This capsule contains a feminine figure seemingly slumbering, she has pale skin but is obviously synthetic with seams around her joints. Through the viewing slot you can only see her upper body but you can see her pointed ears and that she has long green hair spilling around her shoulders and over her nice and perky breasts. The capsule seems to be powered up, the tell tales and control systems seem to be lit up and active.
+		</text>
+		<choice destination="open" text="open the capsule"/>
+		<choice destination="end" text="leave it be"/>
+	</page>
+
+	<page ID="start">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="NERI_BASEMENT" />			
+		<!-- unpowered-->
+		<text>
+		This capsule contains a feminine figure seemingly slumbering, she has pale skin but is obviously synthetic with seams around her joints. Through the viewing slot you can only see her upper body but you can see her pointed ears and that she has long green hair spilling around her shoulders and over her nice and perky breasts. The capsule seems to be entirely powered down with no telltales or power for its mechanisms. You can see a bunch of wires with mouldy insulation winding their way across the room to the other device.
+		</text>
+		<choice destination="end" text="leave it be"/>
+	</page>
+</Conversation>

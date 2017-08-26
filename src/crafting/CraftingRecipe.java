@@ -149,7 +149,12 @@ public class CraftingRecipe implements Comparable {
 		List <CraftingIngredient> l=new ArrayList<CraftingIngredient>();
 		for (int i=0;i<tokenRequirements.size();i++)
 		{
-			int token=map.get(tokenRequirements.get(i).getName());
+			
+			Integer token=map.get(tokenRequirements.get(i).getName());
+			if (token==null)
+			{
+				token=0;
+			}
 			if (token<tokenRequirements.get(i).getQuantity())
 			{
 				l.add(tokenRequirements.get(i));

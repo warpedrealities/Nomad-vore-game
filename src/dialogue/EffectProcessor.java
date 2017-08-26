@@ -23,6 +23,7 @@ import vmo.Game;
 import widgets.Widget;
 import widgets.WidgetCapture;
 import widgets.WidgetConversation;
+import worldgentools.WidgetPlacer;
 import actor.npc.NPC;
 import actor.player.CompanionTool;
 import actor.player.Player;
@@ -33,6 +34,8 @@ import dialogue.worldscript.WorldScript;
 import dialogue.worldscript.WorldScript_Imp;
 import faction.Faction;
 import faction.FactionLibrary;
+import item.Item;
+import item.instances.ItemKeyInstance;
 import item.instances.ItemStack;
 
 public class EffectProcessor {
@@ -85,6 +88,9 @@ public class EffectProcessor {
 		}
 		if (str.equals("destroywidget")) {
 			ViewScene.m_interface.RemoveWidget(widget);
+		}
+		if (str.equals("replaceWidget")) {
+			ViewScene.m_interface.ReplaceWidget(widget, new WidgetPlacer().genWidget(node));
 		}
 		if (str.equals("makecompanion")) {
 			CompanionTool.addCompanion(m_npc, m_player);
@@ -205,6 +211,15 @@ public class EffectProcessor {
 		}
 	}
 
+	private void handleItems(Item item, Element node)
+	{
+		if (ItemKeyInstance.class.isInstance(item))
+		{
+			ItemKeyInstance iki=(ItemKeyInstance)item;
+			iki.setLock(node.getAttribute("addendum"));
+		}		
+	}
+	
 	public void ProcessEffect(Element node) {
 		String str = node.getAttribute("type");
 		str = str.toLowerCase();
@@ -241,7 +256,9 @@ public class EffectProcessor {
 							.AddItem(Universe.getInstance().getLibrary().getItem(node.getAttribute("item")));
 				}
 			} else {
-				m_player.getInventory().AddItem(Universe.getInstance().getLibrary().getItem(node.getAttribute("item")));
+				Item item=Universe.getInstance().getLibrary().getItem(node.getAttribute("item"));
+				handleItems(item,node);
+				m_player.getInventory().AddItem(item);
 			}
 		}
 		if (str.equals("setlocalflag")) {

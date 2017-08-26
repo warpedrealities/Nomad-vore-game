@@ -20,6 +20,9 @@
 	<superRule subject="Awari" level="2" violation="ATTACK">
 		<factionRelationship faction="minyos" mod="-10" />
 	</superRule>
+	<superRule subject="door" level="2" violation="ATTACK">
+		<factionRelationship faction="minyos" mod="-10" />
+	</superRule>	
 	<witness name="villager" />
 	<witness name="warrior" />
 	<witness name="Minyos shopkeeper" />

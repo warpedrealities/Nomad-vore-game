@@ -1,8 +1,8 @@
 
 function main(script,sense)  
-	script:getFlags():setFlag("boarding",1)
+	sense:getFlags():setFlag("boarding",1)
 	currentTime=sense:getTime()/100;
-	script:getFlags():setFlag("CLOCK",currentTime)	
+	sense:getFlags():setFlag("CLOCK",currentTime)	
 	
 	a={}
 	a[0]="space/talharan/talharan_grey"

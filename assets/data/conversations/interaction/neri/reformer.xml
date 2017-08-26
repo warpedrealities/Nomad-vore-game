@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		This device might be familiar to you, the transparent front of the cylinder reveals an interior made up of padding and apertures. A worn inscription on the flank says 'Fontaine'Re-Life'N'Go' in a vaguely cheerful font. The device appears to be powered down however. From its base a series of cables can be seen snaking towards the capsule it shares the room with.
+		</text>
+		<choice destination="turnOn" text="throw the on switch"/>
+		<choice destination="open" text="open up the maintenance panel"/>
+		<choice destination="end" text="leave it be"/>
+	</page>
+	
+	<page ID="turnOn">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="power" />	
+	<text>
+	You flick the switch, turning on the reformation device. You see the power levels stabilize and a flicker of activity from the capsule sharing the basement. Then, to indicate the device is truly online the reformation device emits a badly distorted corporate jingle that was probably banal and tuneless even before the speaker was left in a basement for several centuries.
+	</text>
+		<effect type="setglobalflag" flag="NERI_BASEMENT" value="1" />
+	<special effect="replaceWidget" name="modules/reformer"/>		
+	<choice destination="end" text="success"/>
+	</page>
+		
+	<page ID="turnOn">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="power" />	
+	<text>
+	You flick the switch, nothing appears to happen.
+	</text>
+	<choice destination="end" text="darn, i kinda expected it to be that simple"/>
+	</page>
+	<page ID="open">
+	<text>
+	You've opened up the maintenance panel to reveal 3 reserve power batteries.
+	</text>
+	<choice destination="test" text="test circuit"/>
+	<choice destination="replace" text="replace the three batteries">
+	<condition evaluate="HASITEM" operator="greaterthan" value="3"
+		item="battery" />
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="power" />		
+	</choice>
+	<choice destination="end" text="close the panel up and leave it be"/>
+	</page>
+
+	<page ID="test">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="power" />			
+	<text>
+	Testing the circuit shows the needle climbing the meter, out of red and a bit into the yellow.
+	</text>
+	<choice destination="start" text="close the panel up"/>
+	<choice destination="end" text="huzzah"/>
+	</page>
+	<page ID="test">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="power" />			
+	<text>
+	Testing the circuit yields no response, the needle doesn't move on the meter.
+	</text>
+	<choice destinaiton="open" text="I want to try something else"/>
+	<choice destination="end" text="damnable machine"/>
+	</page>
+
+</Conversation>

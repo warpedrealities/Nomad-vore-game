@@ -7,6 +7,6 @@
 		ability to make craft autonomous robots can only come in handy in
 		future.</description>
 	<craftingToken token="roboticist" />
-	<maxrank value="1" />
+	<maxrank value="2" />
 
 </perk>

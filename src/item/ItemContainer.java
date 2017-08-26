@@ -11,7 +11,7 @@ public class ItemContainer extends Item {
 
 	private int capacity;
 	private float weightRatio;
-	private int tag;
+	private int containedTag;
 	
 	public ItemContainer(Element node, int uid) {
 		super(uid);
@@ -33,7 +33,7 @@ public class ItemContainer extends Item {
 				{
 					weightRatio=Float.parseFloat(Enode.getAttribute("ratio"));
 					capacity=Integer.parseInt(Enode.getAttribute("capacity"));
-					tag=Integer.parseInt(Enode.getAttribute("tag"));
+					containedTag=Integer.parseInt(Enode.getAttribute("tag"));
 				}
 			}
 		}
@@ -47,8 +47,10 @@ public class ItemContainer extends Item {
 		return weightRatio;
 	}
 
-	public int getTag() {
-		return tag;
+	public int getContainedTag() {
+		return containedTag;
 	}
+	
+
 
 }

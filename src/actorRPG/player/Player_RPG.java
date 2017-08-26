@@ -482,20 +482,18 @@ public class Player_RPG implements Actor_RPG {
 	public void addEXP(int value)
 	{
 		playerExperience+=value;
-		if (playerExperience>=getNextLevel())
+		if (ViewScene.m_interface!=null)
 		{
-			ViewScene.m_interface.DrawText("you gain "+value+ " experience and can now level up");
-		}
-		else
-		{
-			ViewScene.m_interface.DrawText("you gain "+value+ " experience");
-		}
-		
+			if (playerExperience>=getNextLevel())
+			{
+				ViewScene.m_interface.DrawText("you gain "+value+ " experience and can now level up");
+			}
+			else
+			{
+				ViewScene.m_interface.DrawText("you gain "+value+ " experience");
+			}		
+		}		
 	}
-
-
-
-
 
 	@Override
 	public int getAttribute(int i) {

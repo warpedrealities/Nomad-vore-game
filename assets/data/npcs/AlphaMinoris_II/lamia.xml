@@ -13,7 +13,7 @@
 		She was very clearly in hunt mode, and must have had quite the hunger
 		to sate.</description>
 	<rpg>
-		<experiencevalue value="25" />
+		<experiencevalue value="35" />
 		<ability ability="STRENGTH" value="6" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

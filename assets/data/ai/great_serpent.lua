@@ -24,7 +24,7 @@ end
 
 function flee(controllable, sense)
 -- if see player, flee player, if can't see player, regenerate
-	hostile=sense:getHostile(controllable,10,true)
+	hostile=sense:getHostile(controllable,10,true,"PSYCHIC",4)
 	if not (hostile == nil ) and not controllable:getPeace() then
 			if controllable:HasPath() then
 			controllable:FollowPath()

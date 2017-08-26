@@ -33,7 +33,7 @@ public class BoardingHelper {
 		Zone z=ship.getZone(0);
 		for (int i=0;i<z.getWidth();i++)
 		{
-			for (int j=0;j<z.getHeight();i++)
+			for (int j=0;j<z.getHeight();j++)
 			{
 				if (z.getTile(i, j)!=null && 
 						WidgetPortal.class.isInstance(z.getTile(i, j).getWidgetObject()))

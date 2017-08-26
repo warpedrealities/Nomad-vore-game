@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<recipe name="spider droid" requiredskill="6" startunlocked="true">
+<description>
+An six legged robot with a small laser weapon on top. It follows you and shoots automatically at enemies in view until its brief life expires or it is destroyed. Fragile, but nimble, it sacrifices armor for the ability to move and shoot at the same time.
+</description>
+<ingredient item="scrap metal" quantity="3"/>
+<ingredient item="computation valve" quantity="4"/>
+<ingredient item="optics" quantity="2"/>
+<ingredient item="battery" quantity="2"/>
+<tokenRequirement item="roboticist" quantity="2" />
+<result item="spider droid"/>
+</recipe>

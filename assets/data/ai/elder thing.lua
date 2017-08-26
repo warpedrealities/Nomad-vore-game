@@ -28,7 +28,7 @@ function combat(controllable,sense,pos,hostile)
 	if b<25 then
 		controllable:startConversation()
 	end
-	if b<100 then
+	if b<100 or hostile:getRPG():getAttribute(5)>4 then
 		melee(controllable,sense,pos,hostile);
 	else
 		ranged(controllable,sense,pos,hostile);

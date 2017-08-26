@@ -16,7 +16,7 @@ end
 
 function main(controllable, sense, script)  
 	pos=controllable:getPosition()	
-	hostile=sense:getHostile(controllable,10,true)
+	hostile=sense:getHostile(controllable,10,true,"TEASE",4)
 	if not (hostile == nil ) and not controllable:getPeace() then
 		--combat ai here
 		combat(controllable,sense,pos,script,hostile)

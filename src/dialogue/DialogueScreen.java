@@ -74,7 +74,7 @@ public class DialogueScreen extends Screen implements Callback {
 		m_player = player;
 		m_text = textview;
 		m_window = new Window(new Vec2f(3, -1), new Vec2f(17, 17), frame, true);
-		m_choices = new String[8];
+		m_choices = new String[16];
 
 		portraitImage = new Image(new Vec2f(-17, -1), new Vec2f(17, 17), "assets/art/portraits/test.png");
 		portraitImage.setVisible(false);

@@ -17,6 +17,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import dialogue.evaluation.OutEvaluator;
+import item.Item;
 import shared.ParserHelper;
 import vmo.GameManager;
 
@@ -101,7 +102,8 @@ public class ShopData {
 		if (enode.getAttribute("cost").length() > 0) {
 			cost = Float.parseFloat(enode.getAttribute("cost"));
 		} else {
-			cost = Universe.getInstance().getLibrary().getItem(itemName).getItemValue() * profitRatio;
+			Item it=Universe.getInstance().getLibrary().getItem(itemName);
+			cost =it.getItemValue() * profitRatio;
 		}
 		if (enode.getAttribute("tag").length() > 0) {
 			tag = enode.getAttribute("tag");

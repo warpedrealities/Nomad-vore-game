@@ -18,7 +18,7 @@
 			matter. We are transferring the FTL device over to you now."
 		</text>
 		<effect type="giveitem" value="1" item="space warper" />
-		<choice destinatio="end" text="finally" />
+		<choice destination="end" text="finally" />
 	</page>
 
 	<page ID="boarding">
@@ -26,7 +26,6 @@
 		</text>
 		<effect type="setlocalflag" flag="boarded" value="1" />
 		<special effect="dock" />
-		<special effect="toView" />
 	</page>
 
 </Conversation>

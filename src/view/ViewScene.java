@@ -61,7 +61,7 @@ import actor.player.CompanionTool;
 import actorRPG.Actor_RPG;
 import actorRPG.player.Player_RPG;
 import artificial_intelligence.BrainBank;
-import artificial_intelligence.Sense;
+import artificial_intelligence.detection.Sense;
 
 public class ViewScene extends SceneBase implements ModelController_Int, Scene_Int, MyListener, Callback {
 

@@ -55,9 +55,9 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 				Vec2i origin=Universe.getInstance().getcurrentSystem().getPosition();
 				Universe.getInstance().getSystem().getEntities().remove(spaceship);
 				StarSystem system=Universe.getInstance().getSystem(spaceship.getWarpHandler().getDestination().x, spaceship.getWarpHandler().getDestination().y);
-				system.arrival();
-				Universe.getInstance().setSystem(system);
 				
+				Universe.getInstance().setSystem(system);
+				system.arrival();
 				Universe.getInstance().getSystem().getEntities().add(spaceship);
 			
 				Vec2i destination=Universe.getInstance().getcurrentSystem().getPosition();
@@ -100,12 +100,6 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 	
 		if (warp)
 		{
-
-		//	Vec2f p=new Vec2f(playerShip.getPosition().x+0.5F,playerShip.getPosition().y+0.5F);
-		//	renderer.getParticleEmitter().setPosition(p);
-		//	renderer.getParticleEmitter().SpawnParticles(128);
-		//	renderer.getParticleEmitter().Update(0.1F);
-		//	renderer.getParticleEmitter().runEffector(new ParticleDraw(p,-8));
 			int dir=(int) Geometry.getAngle(0, 0, playerShip.getPosition().x,playerShip.getPosition().y);
 			if (dir>7){dir=dir-8;}
 			((SpriteRotatable) (playerShip.getSpriteObj())).setFacing(dir);

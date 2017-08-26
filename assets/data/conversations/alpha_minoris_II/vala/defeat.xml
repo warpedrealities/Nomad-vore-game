@@ -8,7 +8,7 @@
 		<choice destination="help" text="lemme help you with that" />
 		<choice destination="end" text="your own fault" />
 	</page>
-	<page ID="start">
+	<page ID="help">
 		<text>
 			thanks
 		</text>

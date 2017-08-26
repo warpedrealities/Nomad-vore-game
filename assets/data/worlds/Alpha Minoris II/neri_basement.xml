@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<zone width="16" height="16" spriteset="dungeon.png">
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
+		<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
+		<tile sprite="18" vision="0" movement="1"> liquid water</tile>
+	</tileset>
+	<description></description>
+	<mapgen>
+		<prefab positionX="0" positionY="0" width="8">
+			<row>222222</row>
+			<row>211112</row>
+			<row>211112</row>
+			<row>211112</row>
+			<row>222222</row>
+		</prefab>
+		<pairedportal sprite="8" destination="alien village" x="2"
+			y="1" ID="25">stairs up</pairedportal>
+		<placeWidget x="1" y="3" name="mechanism" info="interaction/neri/pod"
+			variable="17" />	
+		<placeWidget x="3" y="3" name="mechanism" info="interaction/neri/reformer"
+		variable="51"/>		
+	</mapgen>
+
+</zone>

@@ -50,5 +50,7 @@ public interface ShipController {
 
 	public default void setBusy(int i){}
 
-	public void setShip(Spaceship spaceship);;
+	public void setShip(Spaceship spaceship);
+
+	public int getExperience();;
 }

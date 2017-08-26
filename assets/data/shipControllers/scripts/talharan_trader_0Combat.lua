@@ -22,8 +22,9 @@ function main(script,sense)
 
 	if (s>-0.25 and s<0.25) then
 		script:setCourse(0,1)
+	end
+	if (s>-0.5 and s<0.5) then
 		script:fire(0,0)
-
 	end
 	if (s>0.25) then
 		script:setCourse(-1,1)

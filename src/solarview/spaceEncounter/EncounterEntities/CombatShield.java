@@ -1,6 +1,7 @@
 package solarview.spaceEncounter.EncounterEntities;
 
 import shared.Vec2f;
+import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 import solarview.spaceEncounter.effectHandling.effects.EffectSprite;
@@ -72,6 +73,7 @@ public class CombatShield {
 		int h=hitpoints;
 		damage = weakenShield(damage);
 		hitpoints -= disruption;
+
 		if (damage < 0) {
 			damage = 0;
 		}
@@ -88,6 +90,7 @@ public class CombatShield {
 			effectHandler.addEffect(e);		
 		}
 		String s=Integer.toString(h-hitpoints);
+		ship.getMonitor().reportShield(h-hitpoints);	
 		effectHandler.drawText(ship.getPosition().replicate(),s, 1);
 		return damage;
 	}

@@ -331,7 +331,11 @@ public class CraftingScreen extends Screen implements Callback {
 			{
 				for (int i=0;i<recipe.getTokenRequirements().size();i++)
 				{
-					int token=tokenHandler.getToken(recipe.getTokenRequirements().get(i).getName());
+					Integer token=tokenHandler.getToken(recipe.getTokenRequirements().get(i).getName());
+					if (token==null)
+					{
+						token=new Integer(0);
+					}
 					if (recipe.getTokenRequirements().get(i).getQuantity()>token)
 					{
 						return false;

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="greenZ.png" />
+	<name>Zin</name>
+	<description>
+	This pale skinned gynoid has obvious signs of artificiality in her joints and glowing blue eyes but is a remarkable accomplishment in verisimilitude. Her body looks soft and pert, with a rounded ass, shapely breasts and..a prodigious and very authentic looking cock. All of this is on display as she's not wearing a stitch of clothing. Her ass length green hair doesn't really serve to hide much of her authentic attributes.
+	</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="30" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Zin's punch fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Zin hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<defeated conversation="alpha_minoris_II/Zin/defeat" />
+	<seduced conversation="alpha_minoris_II/Zin/defeat" />
+	<talk conversation="alpha_minoris_II/Zin/chat" />
+	<controller AI="melee_companion_greeting" />
+	<faction value="minyos" />
+</NPC>

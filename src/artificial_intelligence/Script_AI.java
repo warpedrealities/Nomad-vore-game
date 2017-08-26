@@ -10,6 +10,7 @@ import org.luaj.vm2.*;
 import org.luaj.vm2.lib.jse.*;
 
 import actor.npc.NPC;
+import artificial_intelligence.detection.Sense;
 
 public class Script_AI implements Controller {
 	Globals m_globals;

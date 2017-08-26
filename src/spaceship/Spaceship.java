@@ -73,6 +73,11 @@ public class Spaceship extends Entity {
 
 	}
 
+	@Override
+	public String getName() {
+		return super.getName()+UID;
+	}
+
 	public String getSprite() {
 		return exteriorSprite;
 	}
@@ -320,6 +325,7 @@ public class Spaceship extends Entity {
 		{
 			shipController=new NpcShipController();
 			shipController.load(dstream);
+			shipController.setShip(this);
 		}
 		if (dstream.readBoolean())
 		{
@@ -518,5 +524,9 @@ public class Spaceship extends Entity {
 
 	public void setWarpHandler(WarpHandler warpHandler) {
 		this.warpHandler=warpHandler;
+	}
+
+	public String getshipName() {
+		return entityName;
 	}
 }

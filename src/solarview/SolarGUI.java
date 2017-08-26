@@ -74,7 +74,7 @@ public class SolarGUI {
 			} else {
 				resourceTexts[i] = new Text(new Vec2f(0.2F, 12.5F - i),
 						resourceStrings[i] + ":"
-								+ playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount() + "/"
+								+ (int)playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount() + "/"
 								+ playerShip.getShipStats().getResource(resourceStrings[i]).getResourceCap(),
 						0.8F, 0);
 			}

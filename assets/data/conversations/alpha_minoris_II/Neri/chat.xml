@@ -2,6 +2,23 @@
 <Conversation>
 
 	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="meltslut" />	
+	<text>
+	“Greetings, I have a gift for you my melt slut friend, please take it you might be able to understand what it is with your reformation magic. It has been in my family for generations.”
+	</text>
+	<effect type="setlocalflag" flag="meltslut" value="2" />	
+	<effect type="giveitem" value="1" item="key" addendum="Neri's house"/>
+	<choice destination="huh" text="thanks, but..this is a key"/>
+	</page>
+
+	<page ID="huh">
+	<text>
+	"It's for my house duh, the thing is in my basement..you need the key to get in." she explains with a giggle.
+	</text>
+	<choice destination="end" text="Okay..I'll go check it out"/>
+	</page>
+	
+	<page ID="start">
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
 			flag="digestion" />
 		<text>
@@ -198,6 +215,7 @@
 			experience of the cute elf melting you into cum soaking into every
 			ounce of your body along with its gooey effects.
 		</text>
+		<effect type="setlocalflag" flag="meltslut" value="1" />		
 		<choice destination="offerCockvoreGO" text="melt away" />
 	</page>
 

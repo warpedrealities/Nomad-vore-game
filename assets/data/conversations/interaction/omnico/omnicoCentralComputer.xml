@@ -37,8 +37,10 @@
 		</choice>
 		<choice destination="hack"
 			text="attempt to trick the computer into unlocking the reformer">
+			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_OVERRIDE"
+				operator="equals" value="0" />
 			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_EMAIL"
-				operator="equals" value="1" />
+				operator="equals" value="1" />	
 			<condition evaluate="PLAYERATTRIBUTE" operator="greaterthan"
 				value="1" attribute="TECH" />
 		</choice>

@@ -6,7 +6,7 @@
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipWeapon>
 		<damage min="6" max="12" falloff="0.5" />
-		<cooldown value="5" />
+		<cooldown value="3" />
 		<effects script="laser" sheet="laser" />
 		<range arc="2" range="20" />
 		<weaponCost resource="ENERGY" cost="4" />

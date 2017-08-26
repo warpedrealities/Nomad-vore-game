@@ -47,6 +47,22 @@
 				<placeTile x="4" y="3" tile="11" />
 				<placeNPC name="minoris2_elves/minyos_alchemist" x="4" y="4" />
 			</randprefab>
+				<randprefab width="5" height="7">
+				<row>99999</row>
+				<row>98889</row>
+				<row>98889</row>
+				<row>98889</row>	
+				<row>99899</row>
+				<row>55555</row>	
+				<placeWidget x="2" y="2" name="DESCRIBER">
+				This small dwelling smells faintly of long dried jizz, a pile of cum encrusted clothing has been stashed in the shadows of a corner and white stains besmirch the walls and floor.
+				</placeWidget>	
+				<pairedportal sprite="9" destination="neri_basement"
+					x="2" y="1" ID="25">stairs down</pairedportal>	
+				<placeWidget x="2" y="4" name="door">
+					<lock key="Neri's house" strength="15" />
+				</placeWidget>				
+				</randprefab>
 			<town minsize="4" maxsize="7" minhouses="12" maxhouses="20"
 				tile="8" gap="7" registerRooms="true">
 				<floodfill tile="7">
@@ -54,8 +70,6 @@
 					</SeedNPCs>
 				</floodfill>
 			</town>
-
-
 		</partition>
 		<clumps lowerlimit="0" upperlimit="45">
 			<noise tile="5" scarcity="6" />
@@ -78,10 +92,12 @@
 		<POICornerDecorate floor="7">
 			<tileplacer tile="10" />
 		</POICornerDecorate>
+		<!--
 		<POINPC name="minoris2_elves/companionVala" />
 		<POICornerDecorate floor="7">
 			<widgetplacer name="modules/single bed" />
 		</POICornerDecorate>
+		-->
 		<POINPC name="minoris2_elves/minyos_Awari" />
 		<POICornerDecorate floor="7">
 			<widgetplacer name="chest" />

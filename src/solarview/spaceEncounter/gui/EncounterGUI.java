@@ -1,4 +1,4 @@
-package solarview.spaceEncounter;
+package solarview.spaceEncounter.gui;
 
 import java.nio.FloatBuffer;
 
@@ -19,9 +19,13 @@ import input.Keyboard;
 import input.MouseHook;
 import nomad.Universe;
 import shared.MyListener;
+import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
+import solarview.spaceEncounter.EncounterLogic;
+import solarview.spaceEncounter.EncounterWeaponController;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterLogic.GameState;
 import solarview.spaceEncounter.rendering.CircleHandler;
 import spaceship.Spaceship;
 
@@ -43,7 +47,8 @@ public class EncounterGUI implements MyListener {
 	private TextColoured rangeText;
 	private EncounterWeaponController weaponController;
 	private float clock;
-	
+	private Screen screen;
+
 	public EncounterGUI(EncounterShip ship, EncounterLogic logic) {
 		this.encounterShip = ship;
 		this.playerShip = ship.getShip();
@@ -174,46 +179,78 @@ public class EncounterGUI implements MyListener {
 		matrix44Buffer.flip();
 		GL20.glUniformMatrix4fv(viewMatrix, false, matrix44Buffer);
 		GL20.glUniform4f(tintvar, 1, 1, 1, 1);
-		for (int i = 0; i < 2; i++) {
-			windows[i].Draw(matrix44Buffer, objmatrix);
+		if (screen!=null)
+		{
+			screen.draw(matrix44Buffer, objmatrix);
 		}
+		else
+		{
+			for (int i = 0; i < 2; i++) {
+				windows[i].Draw(matrix44Buffer, objmatrix);
+			}			
+		}
+
 	}
 
 	public void update(float dt) {
-		if (clock>0)
+		if (screen!=null)
 		{
-			clock-=dt;
+			screen.update(dt);
 		}
-		boolean v=false;
-		if (weaponButtons != null) {
-			for (int i = 0; i < weaponButtons.length; i++) {
-				weaponButtons[i].update(dt);
-				if (weaponButtons[i].isMouseOver())
-				{
-					if (weaponIndex!=i)
+		else
+		{
+			if (clock>0)
+			{
+				clock-=dt;
+			}
+			boolean v=false;
+			if (weaponButtons != null) {
+				for (int i = 0; i < weaponButtons.length; i++) {
+					weaponButtons[i].update(dt);
+					if (weaponButtons[i].isMouseOver())
 					{
-						weaponIndex=i;
+						if (weaponIndex!=i)
+						{
+							weaponIndex=i;
+							v=true;
+							circle.setRotation(encounterShip.getWeapons().get(i).getWeapon().getFacing()+encounterShip.getHeading());
+							circle.setWidth(encounterShip.getWeapons().get(i).getWeapon().getWeapon().getFiringArc());
+							circle.setPosition(encounterShip.getPosition());
+							break;				
+						}
 						v=true;
-						circle.setRotation(encounterShip.getWeapons().get(i).getWeapon().getFacing()+encounterShip.getHeading());
-						circle.setWidth(encounterShip.getWeapons().get(i).getWeapon().getWeapon().getFiringArc());
-						circle.setPosition(encounterShip.getPosition());
-						break;				
-					}
-					v=true;
 
+					}
 				}
 			}
+			if (v==false)
+			{
+				weaponIndex=-1;
+			}
+			circle.setVisible(v);	
+			buttons();			
 		}
-		if (v==false)
-		{
-			weaponIndex=-1;
-		}
-		circle.setVisible(v);
-		
-		buttons();
 	}
 
 	public void updateUI() {
+		
+		if (logic.getGameState()==GameState.playing)
+		{
+			updateStats();
+		}
+		else
+		{
+			screen=new Screen_Recap(logic.getGameState(),logic.getShipList()[0],logic.getShipList()[1]);
+			int []textures=new int[4];
+			textures[1]=textureIds[0];
+			textures[2]=textureIds[1];
+			screen.initialize(textures, null);
+			screen.start(mouse);
+		}
+	}
+
+	private void updateStats()
+	{
 		for (int i = 0; i < resourceStrings.length; i++) {
 			if (resourceStrings[i].equals("FOOD")) {
 				resourceTexts[i]
@@ -240,9 +277,9 @@ public class EncounterGUI implements MyListener {
 							+ encounterShip.getWeapons().get(i).getCooldown());
 				}
 			}
-		}
+		}	
 	}
-
+	
 	private void writeShieldStatus() {
 		switch (encounterShip.getShield().getStatus()) {
 		case OFF:
@@ -280,6 +317,11 @@ public class EncounterGUI implements MyListener {
 	}
 
 	public void discard() {
+		
+		if (screen!=null)
+		{
+			screen.discard(mouse);
+		}
 		for (int i = 0; i < windows.length; i++) {
 			mouse.Remove(windows[i]);
 			windows[i].discard();
@@ -287,6 +329,7 @@ public class EncounterGUI implements MyListener {
 		for (int i = 0; i < textureIds.length; i++) {
 			GL11.glDeleteTextures(textureIds[i]);
 		}
+		
 
 	}
 
@@ -405,21 +448,24 @@ public class EncounterGUI implements MyListener {
 	
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-		if (ID < 9) {
-			encounterShip.setCourse((byte) ID);
-			updateButtons();
-		}
-		switch (ID) {
-		case 13:
-			encounterShip.getShield().toggleStatus();
-			writeShieldStatus();
-			break;
-		case 14:
-			logic.startTurn();
-			break;
-		}
-		if (ID >= 20) {
-			triggerWeapon(ID-20);
+		if (screen==null)
+		{
+			if (ID < 9) {
+				encounterShip.setCourse((byte) ID);
+				updateButtons();
+			}
+			switch (ID) {
+			case 13:
+				encounterShip.getShield().toggleStatus();
+				writeShieldStatus();
+				break;
+			case 14:
+				logic.startTurn();
+				break;
+			}
+			if (ID >= 20) {
+				triggerWeapon(ID-20);
+			}			
 		}
 	}
 

@@ -8,6 +8,9 @@
 		<choice destination="oralvore0" text="feeling hungry">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+		<choice destination="analvore0" text="maybe it'd be fun to force her up your ass">
+				<assertion evaluate="hasperk" perk="analvore" />
+		</choice>
 		<choice destination="cockvore0"
 			text="you feel your balls ache at the sight of her">
 			<assertion evaluate="hasperk" perk="cockvore" />
@@ -32,6 +35,41 @@
 		<choice destination="end" text="feeling merciful" />
 	</page>
 
+	<page ID="analvore0">
+	<text>
+	You've made your decision, this cute thing is going to go into you via the back way. She seems uneasy at the look in your eye as you 
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				pause to undress and then
+			</conditional>
+			place yourself over her, your bared rump placed over her head. The fawn blushing and trying to shrink back from your <macro ID="butt_size_desc"/> rear end. But you're easily able to keep her where you need her. But it's not where you need her, oh no...you start to squat down, one hand keeping the helpless fawn's head from pulling back as she lets out a muffled whimper...then you feel the exquisite sensations and hear the nice lewd schlorp as your sphincter parts around her face and you usher your prey into the heat of your back passage. 
+	</text>
+	<choice destination="analvore1" text="ass food is the best use for someone as cute as this"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	You can hear her muffled distress from deep in your bowels as she struggles. But she's in no position to stop you sitting down over her and thus sliding her steadily into your ass, the fawn's writhing torso steadily disappearing between the cheeks of your <macro ID="butt_size_desc"/> ass as you can't help but groan in decadent delight. Your middle bulging with the outline of her face as she's forced deeper and deeper inside of you. Your clenching rump starting to tug her in as you squat there with her legs protruding from your ass. She keeps on squirming, legs flailing as they're constrained by your tight sphincter, but she isn't even really slowing down the schlorping of your ravenous rear end.
+	</text>
+	<choice destination="analvore2" text="pull her in entirely"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	You ease yourself into a more comfortable position as the cute fawn's feet get closer and closer to disappearing betwixt your ass cheeks. Her legs easily schlurped up, only able to twitch now as she sounds her distress muffledly from where she's clenched and curled deep inside of you. In a few more moments though you're feeling the wonderful satisfaction of those wriggly toes of hers disappearing past your sphincter. Her body now disappearing entirely into your squeezing derriere. You can feel her forcibly curled up within you, squirming and twitching around in your possessive and smothering heat. You get comfortable with both hands on your round and full belly, the fawn entirely under your control and within your power.
+	</text>
+	<choice destination="analvore3" text="digest her of course"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	The fawn lets out a whimper as you let your insides start to gurgle her away, but she can hardly move let alone struggle and so her twitching only serves to please you. The fawn gradually fading into silence as your digestive processes take their toll and she softens then eventually melts and smoothes out into a nice nourishing soup within you. The fawn serving to fuel you as her body works back the way she came, seeping through your innards and being absorbed gradually yet efficiently into your being.
+	</text>
+	<effect type="feed" value="80" />
+	<special effect="removenpc" />
+	<choice destination="end" text="carry on" />	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured her in some unspecified, unelaborated on yet
@@ -68,13 +106,9 @@
 			<conditional>
 				<assertion evaluate="slothasitem" slot="2" />
 				stroke over your crotch afore you start to remove your pants and
-				unveil your growing cock
+				unveil your growing cock before
 			</conditional>
-			<conditional>
-				<assertnot evaluate="slothasitem" slot="2" />
-				stroke over your growing cock
-			</conditional>
-			. That firming erection transfixing the fawn's gaze as she uneasily
+				stroke over your hard and hungry length. That firming erection transfixing the fawn's gaze as she uneasily
 			watches you work your hands up and down your cock. As you then squat
 			down she looks confused as she looks down past herself at you and
 			your cock, but all is swiftly revealed to her as you seize her feet

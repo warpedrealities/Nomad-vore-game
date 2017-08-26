@@ -81,8 +81,10 @@ public class CombatActionHandler {
 		if (roll-rPenalty<defence)
 		{
 			miss=true;
+
 		}
 		//create effect and pass hit or miss
+		ship.getMonitor().reportAttack(miss);	
 		effectHandler.addScript(ship,action,miss);
 		action.getWeapon().useWeapon();
 	}

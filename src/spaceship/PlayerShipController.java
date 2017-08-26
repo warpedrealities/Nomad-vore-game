@@ -232,4 +232,10 @@ public class PlayerShipController implements ShipController {
 		
 	}
 
+	@Override
+	public int getExperience() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

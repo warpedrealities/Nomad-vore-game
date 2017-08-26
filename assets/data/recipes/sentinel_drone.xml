@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<recipe name="sentinel drone" requiredskill="5" startunlocked="true">
+<description>
+A heavy drone that shoots automatically at enemies in view until its brief life expires or it is destroyed. It has a powerful cannon but it requires for the drone to lock itself down to fire.
+</description>
+<ingredient item="scrap metal" quantity="3"/>
+<ingredient item="computation valve" quantity="2"/>
+<ingredient item="optics" quantity="4"/>
+<ingredient item="battery" quantity="2"/>
+<tokenRequirement item="roboticist" quantity="2" />
+<result item="sentinel drone"/>
+</recipe>

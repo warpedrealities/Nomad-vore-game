@@ -327,9 +327,36 @@
 			<assertion evaluate="hasperk" perk="unbirthing" />
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>
+		<choice destination="analvore0" text="butt wait there's more">
+			<assertion evaluate="hasperk" perk="analvore" />
+			<assertion evaluate="haspart" part="butt" />	
+		</choice>
 	</page>
 
-
+	<page ID="analvore0">
+	<!--analvore content by serenity-->
+	<text>
+	She bends down and gives your crotch a few sniffs. Her nose wrinkles at the smell and for few a moments you’re worried that you might have to go unsatisfied. Then, though, she turns around to your backside and her whole expression changes. Seems like she’s got a thing for butts as she dives straight to it, licking and squeezing and fondling yours. You let out a low moan and bend over as she spreads your cheeks and circles around your backdoor with her tongue. That tongue flickers inside of you a moment later, causing you to gasp. You feel more pressure against your pucker and before you have a chance to ask what’s going on, the elf is pushing her whole head into your rectum! You stumble for balance but she continues onward. With a wet schlurping sound her head is stuffed neatly into your anus, your sphincter wrapped around her neck. You stumble some more and fall backwards, landing on her. Her neck and shoulders slide into your back door and you look down to see her masturbating rather furiously. 
+	</text>
+	<choice destination="analvore1" text="continue"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	From here gravity is running the show, and you pant as her chest is squeezed into your intestines. Your stomach bulges out as more and more of her fills your colon, your ass sliding down her torso. As her hips slip in you fall forward, landing on your hands and knees. More wet schlurping sounds fill the air as you anus begins pulling her in of its own accord, her legs disappearing inside of you. Finally with a pop her feet are pulled in, leaving you gasping and panting. As she travels backwards through your intestines you sheepishly look around to see if anyone saw what just happened. To your embarrassment a guard is standing not two feet from you, and she looks as though she saw the whole thing. You start to mumble some sort of explanation but she simply walks over and gives you a pat on the butt and walks off.
+	</text>
+	<choice destination="analvore2" text="continue"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	You get to your feet as the elf is pulled into your stomach, the gut already gurgling and groaning around her and try to figure out what just happened. You recall seeing a few of the elves around the village with engorged stomachs, you had assumed that they were pregnant but maybe this is just something they do from time to time. As you get your clothes back on your stomach churns around your playmate. Well at least you won’t have to use any rations for a little while.	
+	</text>
+		<effect value="95" type="feed" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Well that was unexpected" />	
+	</page>
+	
 	<page ID="oralsex1">
 		<text>
 			She gives your crotch a few sniffs and you suddenly realise you

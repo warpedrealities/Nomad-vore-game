@@ -12,6 +12,8 @@ import shared.ParserHelper;
 import shared.Vec2f;
 import shipsystem.weapon.ShipWeapon;
 import solarview.spaceEncounter.EncounterEntities.combatControllers.CombatController;
+import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
+import solarview.spaceEncounter.EncounterEntities.monitoring.Ship_Monitor;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 import spaceship.Spaceship;
@@ -30,9 +32,11 @@ public class EncounterShip {
 	private CombatShield shield;
 	private List<CombatWeapon> weapons;
 	private CombatActionHandler actionHandler;
+	private Monitor monitor;
 	
 	public EncounterShip(Spaceship ship, Vec2f position, int heading) {
 		this.ship = ship;
+		monitor=new Ship_Monitor();
 		if (ship.getShipStats().getShield() != null) {
 			shield = new CombatShield(ship, ship.getShipStats().getShield());
 		}
@@ -53,7 +57,7 @@ public class EncounterShip {
 	}
 
 	private void buildEmitters() {
-		Document doc = ParserHelper.LoadXML("assets/data/ships/" + ship.getName() + ".xml");
+		Document doc = ParserHelper.LoadXML("assets/data/ships/" + ship.getshipName() + ".xml");
 
 		// read through the top level nodes
 		Element root = doc.getDocumentElement();
@@ -166,10 +170,18 @@ public class EncounterShip {
 			damage=0;
 		}
 		effectHandler.drawText(manouver.getPosition().replicate(),Integer.toString(damage), 0);
-		
-		ship.getShipStats().getResource("HULL").subtractResourceAmount(damage);
-		
+		if (damage>0)
+		{
+			monitor.reportDamage(damage);
+			ship.getShipStats().getResource("HULL").subtractResourceAmount(damage);		
+		}	
 	}
 
+	public Monitor getMonitor() {
+		return monitor;
+	}
 
+	public void setMonitor(Monitor monitor) {
+		this.monitor = monitor;
+	}
 }

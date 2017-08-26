@@ -9,10 +9,9 @@
 			though if that thick length of blue cock at halfmast between her legs
 			is any indication.
 		</text>
-
 		<choice destination="blowjob0" text="that's a tastey cock" />
 		<choice destination="sex0" text="I could go for a fuck">
-
+		<assertion evaluate="haspart" part="vagina" />
 		</choice>
 		<choice destination="Pcockvore0" text="cockvore her">
 			<assertion evaluate="hasperk" perk="cockvore" />
@@ -22,6 +21,9 @@
 		</choice>
 		<choice destination="unbirth0" text="she should submit to my loins">
 			<assertion evaluate="hasperk" perk="unbirthing" />
+		</choice>
+		<choice destination="unbirth0" text="she should submit to my ass">
+			<assertion evaluate="hasperk" perk="analvore" />
 		</choice>
 		<choice destination="study" text="study her">
 			<assertnot evaluate="hasEntry" entry="lifeforms/zetamorph.xml" />
@@ -37,6 +39,42 @@
 		</choice>
 		<choice destination="end" text="not interested right now" />
 	</page>
+
+		
+	<page ID="analvore0">
+	<text>
+		You look at your formidable meal but think you're up for the challenge. Besides, she was already a pain in your ass, making her a meal for your ass is just poetic justice. You 
+				<conditional>
+				<assertion evaluate="slothasitem" slot="2" /> drop trou and
+				</conditional>
+		plant your ass in the face of the zetamorph. A confused mhmmph sounding out against your <macro ID="butt_size_desc" /> cheeks as you press your derriere back and forth across her face and then press down. The alien seems both confused and aroused as you grind your rumpcheeks against her face. But all becomes clear and she squirms in shock as your sphincter welcomes her with a schlorp. The mighty zeta starting to try and struggle and push at your stretched ass resting on her shoulders. She succeeds, or so she thinks, in pushing you up..only to find you ramming your ass back down over her and shoving her shoulders into your butt, devouring her further and pinning her four arms against her body.
+	</text>
+		<choice destination="analvore1" text="the mighty make mighty fine assfood"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	You force the squirming zeta into your derriere despite her efforts. Your bowels not suffering adversely as they stretch around her dangerous form and with each clench you drag more of her inside of you, her sexy curves and pointy parts equally satisfying to claim as you work towards her waistline with your voracious sphincter. Your gut stretching and bulging out with the contours and outline of her upper body, her arms shoving out at your insides but unable to overcome the strength and resilience of your innards as you claim her as a meal for your ass.
+	</text>
+	<choice destination="analvore2" text="finish her!"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	You straighten your legs and lean forwards, her flailing legs and thrashing tail protruding from your ass as you dominate her with your squeezing abdominals and clenching glutes. The zetamorph's struggles serving only to please you as you drag the last of her into your rump, the zetamorph's deadly form disappearing steadily until clawed toes and flicking tailtip vanish between your asscheeks with a pop. You straighten up then to clench and keep her from even trying to wriggle out, her form soon squeezed deep inside of you, pressed tightly she makes a wonderful bulge in your middle. The zeta's form utterly dominated and contained by your own.	
+	</text>
+	<choice destination="analvore3" text="and now, digest her"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	You keep her a bit longer before deciding to make her subjection complete, to take her very body as well as her freedom and dignity. You mhmm as you patpat your gut and feel her thrash around as you begin to gurgle and churn her away inside your belly. The zetamorph putting up a mighty but ultimately futile struggle as her superior predator converts her into a form more fitting her role in life. The alien gradually tiring, then softening and melting away as you digest her. Your gut turning smooth and round and still as the alien is digested away into a compact mass of nutritious goop. Only the occasional lump of her chitin disrupting the conformity of her new form and soon even those melt away into nothing but fuel for your body. Your belly shrinking down as the alien is utterly absorbed into your form.
+	</text>
+	<effect type="feed" value="120" />
+	<special effect="removenpc" />
+	<choice destination="end" text="carry on" />	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

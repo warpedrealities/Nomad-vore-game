@@ -18,12 +18,16 @@ import org.w3c.dom.NodeList;
 import faction.Faction;
 import faction.FactionLibrary;
 import nomad.FlagField;
+import nomad.Universe;
+import rendering.SpriteRotatable;
 import shared.ParserHelper;
+import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.combatControllers.CombatController;
 import solarview.spaceEncounter.EncounterEntities.combatControllers.NpcCombatController;
 import spaceship.ShipController;
 import spaceship.Spaceship;
 import spaceship.ShipController.scriptEvents;
+import view.ZoneInteractionHandler;
 
 public class NpcShipController implements ShipController {
 
@@ -31,6 +35,7 @@ public class NpcShipController implements ShipController {
 	private String[] scripts;
 	private FlagField flags;
 	private NpcShipSpaceAI ai;
+	private int experience;
 	
 	private void commonConstruction(Element element)
 	{
@@ -72,6 +77,10 @@ public class NpcShipController implements ShipController {
 				{
 					scripts[scriptEvents.loss.getValue()]=e.getAttribute("value");
 				}
+				if (e.getTagName().equals("experienceReward"))
+				{
+					experience=Integer.parseInt(e.getAttribute("value"));
+				}
 			}
 		}
 
@@ -90,6 +99,10 @@ public class NpcShipController implements ShipController {
 	public void setShip(Spaceship ship)
 	{
 		ai.setShip(ship);
+		if (ship.getBaseStats()==null)
+		{
+			ship.Generate();
+		}
 	}
 	
 	public NpcShipController(String filename) {
@@ -117,7 +130,8 @@ public class NpcShipController implements ShipController {
 				dstream.writeBoolean(false);
 			}
 		}
-
+		
+		dstream.writeInt(experience);
 	}
 	
 	@Override
@@ -139,6 +153,7 @@ public class NpcShipController implements ShipController {
 			ai=new NpcShipSpaceAI(scripts[scriptEvents.ai.getValue()],flags,faction);
 		}
 
+		experience=dstream.readInt();
 	}
 	
 	@Override
@@ -203,4 +218,10 @@ public class NpcShipController implements ShipController {
 			
 		}
 	}
+
+	public int getExperience() {
+		return experience;
+	}
+	
+
 }

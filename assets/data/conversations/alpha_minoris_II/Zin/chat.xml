@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<Conversation>
+	<!--zin was written by guest content writer Winny-->
+	<page ID="start">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="ZIN_MISTRESS_NERI" />
+		<text>
+		"OH, hello, this one is awaiting the return of her mistress"
+		</text>		
+		<choice destination="end" text="I see, I'll be going then"/>
+	</page>
+
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="talked" />	
+		<text>
+		The synth approaches you, fixing you with her radiant blue gaze and a shameless disposition.
+		</text>
+		<choice destination="who" text="Hello, who are you?"/>
+		<choice destination="mistress" text="Who is your mistress?"/>
+		<choice destination="here" text="How did you get here?"/>
+		<effect type="setlocalflag" flag="talked" value="1" />
+	</page>
+
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
+		<text>
+		"this one stands ready to serve"
+		</text>
+		<choice destination="who" text="Who are you?"/>
+		<choice destination="mistress" text="Who is your mistress?"/>
+		<choice destination="here" text="How did you get here?"/>
+		<effect type="setlocalflag" flag="talked" value="1" />
+	</page>
+	
+	<page ID="questions">
+	<text>
+	"This one will answer your queries"
+	</text>
+	<choice destination="who" text="Who are you?"/>
+	<choice destination="mistress" text="Who is your mistress?"/>
+	<choice destination="here" text="How did you get here?"/>	
+	</page>
+	
+	<page ID="who">
+	<text>
+		“I am Synth unit Zin, I meet the requirement’s of my mistress. Zin is a recreational unit, equipped with fully functional member that can either be used to satisfy my mistress’s sexual need’s, and or have this unit’s mistress slide into this units ball’s to hold for a designated amount of time, or to melt her into ejaculation fluid.”	
+	</text>
+	<choice destination="questions" text="I have other questions."/>
+	<choice destination="end" text="Thank you that’s all I wanted to know."/>
+	</page>
+	
+	<page ID="mistress">
+	<text>
+	”Active mistress is not present, last mistress was Sharia. She ordered this unit to swallow her with her member and hold her inside for five hours, at which point she fell asleep. While she slept she said ‘Melt me away like the slut I am.’ Following her order this unit digested her into ejaculation fluid and sprayed her over the floor. Since Sharia had a habit of forgetting to turn on the reformation tube she was left as a puddle on the floor. With no active mistress This unit deactivated back in it’s capsule.”
+	</text>
+	<choice destination="selfMistress" text="I think it would be appropriate for you to consider me your mistress">
+			<assertion evaluate="companionSlotFree" />	
+	</choice>
+	<choice destination="NeriMistress" text="I think it would be appropriate for you to consider a friend of mine called Neri to be your mistress"/>
+	<choice destination="questions" text="I have other questions."/>
+	<choice destination="end" text="Thank you that’s all I wanted to know."/>	
+	</page>
+	
+	<page ID="selfMistress">
+	<text>
+	"very well, this one will now follow and obey instructions from you mistress."
+	</text>
+	<special effect="makecompanion" />	
+	<choice destination="end" text="well that was easy"/>
+	</page>
+	
+	<page ID="NeriMistress">
+	<text>
+	"Very well, this one will await the arrival of new mistress."
+	</text>
+	<effect type="setglobalflag" flag="ZIN_MISTRESS_NERI" value="1" />
+	<choice destination="end" text="well that was easy"/>	
+	</page>
+	
+	<page ID="here">
+	<text>
+	“This one’s mistress was part of a spaceship crew who found themselves on this world. This unit was brought to this location as a means of recreation for this unit’s mistress and her companion’s. As the only unit to make it here, this unit was quite busy turning the mistress’s companion’s into ejaculate. While this unit’s mistress had sexual relations in the same area. This one’s old mistress enjoyed watching girl’s melt into cum while she had another girl inserted into her anus and or pussy.”
+	</text>
+	<choice destination="questions" text="I have other questions."/>
+	<choice destination="end" text="Thank you that’s all I wanted to know."/>	
+	</page>
+	
+	<page ID="wait">
+	<text>
+	"Very well, this one will wait here for your return"
+	</text>
+	<special effect="removecompanion" />	
+	<choice destination="end" text="very good Zin"/>
+	</page>
+	
+	<page ID="follow">
+	<text>
+	"very well, this one will follow you"
+	</text>
+	<special effect="makecompanion" />	
+	<choice destination="end" text="very good Zin"/>	
+	</page>
+		
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
+		<assertion evaluate="isCompanion" />
+		<text>
+		"This one stands ready to serve mistress"
+		</text>		
+		<choice destination="oralvore0" text="Swallow me"/>
+		<choice destination="cockvore0" text="swallow me with your cock"/>
+		<choice destination="sex0" text="fuck me in the pussy">
+		<assertion evaluate="haspart" part="vagina" />
+		</choice>
+		<choice destination="sexA0" text="fuck me in the ass">
+		<assertion evaluate="haspart" part="butt" />
+		</choice>			
+		<choice destination="wait" text="wait here for me Zin"/>
+		<choice destination="end" text="I don't need anything right now Zin"/>
+	</page>
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
+		<assertnot evaluate="isCompanion" />	
+		<assertion evaluate="isFaction" faction="player" />
+		<text>
+		"This one stands ready to serve mistress"
+		</text>
+		<choice destination="oralvore0" text="Swallow me"/>
+		<choice destination="cockvore0" text="swallow me with your cock"/>
+		<choice destination="sex0" text="fuck me in the pussy">
+		<assertion evaluate="haspart" part="vagina" />
+		</choice>
+		<choice destination="sexA0" text="fuck me in the ass">
+		<assertion evaluate="haspart" part="butt" />
+		</choice>					
+		<choice destination="follow" text="accompany me Zin"/>
+		<choice destination="end" text="I don't need anything right now Zin"/>	
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	“If that is your wish, from the last 5 mistress’s this unit has had every single one of them has ended up as gurgled ball batter. Does this mistress too wish to become nothing but a thick puddle on the floor?” Zin say’s in a voice that switches between monotone and a voice that add’s a bit of spice and sultryness to it. She lets her cock grow erect and motions that it is now ready to consume you like her previous mistress’s. You place your fingers on the slit and almost as fast you feel a strong suction that pulls your hand in up to your shoulder. “This unit has an increased suction for it’s cock, please let this one do all the work.”
+	</text>
+	<choice destination="cockvore1" text="Alright let me just slide my other hand in."/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	“Understood, enjoy your stay in this one’s ballsack.” Zin say’s you almost see a faint smile on her face before you slip your other hand in, at that moment your world becomes dark, the cock forcefully suck’s your body in like a noodle. The amount of force is surprising as if the cock was the hungriest thing in existence. The wet walls sliding passed you quickly and your feed sliding it with a wet. “Slurch” sound. You find yourself deposited inside Zin’s engorged balls, your body covered in her fluids and cum. “Enjoy yourself inside this unit, Also just ask if you want to gurgle.” Zin says
+	</text>
+	<choice destination="cockvore2Endo" text="No don’t gurgle me, just let me relax for a bit."/>
+	<choice destination="cockvore2" text="Yes gurgle me like your previous mistress."/>
+	</page>
+	
+	<page ID="cockvore2Endo">
+	<text>
+		“Order received This unit will hold mistress for awhile.” Zin strokes her massive erection while also stroking her engorged balls, inside the warmth of the synthetic flesh your body is covered in fluid, leaving you feeling like your in a hot thick tub filled to the brim with cum, as you rubs her chest and your crotch to bring yourself to climax only to add even more volume of fluids your bathing in. Outside you can hear Zin slowly stroking her thick cock waiting for you to ask to be let out.	
+	</text>
+	<choice destination="cockvore3Endo" text="Alright I wish to come out now. "/>
+	</page>
+	
+	<page ID="cockvore3Endo">
+	<text>
+	“Understood one moment.” Zin reply’s quickly her stroking quickening in pace, soon you feel the entire sack lurche forward and a strong force pulling you back out, obviously Zin has reached orgasm as your violently pulled back up her shaft with her cum, splashing onto the ground covered in Zin’s fluids you sit up then stand, Zin offers to help clean you off. “Thank you mistress for spending time inside, next time This unit hopes to turn your form into a wonderful pool of cum.”
+	</text>
+	<choice destination="end" text="...maybe, but maybe not, that'll be all for now Zin"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	“As you wish, This one will turn her mistress into a wonderful pool of sludge.” Suddenly the insides of Zin’s nut fills with an even thicker solution of cum, you feel your body quickly melting as the stroking outside gets faster. “This one will turn you into the best gurgle slut puddle.” Zin says while you lose all feeling in your arms and legs. It is far to late to stop this as your squirming body slowly vanishes into the pool of cum that is Zin’s nut sack.
+	</text>
+	<choice destination="cockvoreGO" text="*gurgle*"/>
+	</page>
+	
+	<gameover ID="cockvoreGO">
+	<text>
+	“Oh, the gurgle slut has stopped moving then please enjoy your new life as this ones nut butter.” Zin’s body shudders as she reaches orgasm and shoots long thick stringy vines of cum from her engorged member. Each blast adding more volume of cum onto the floor, your form once a beautiful young women turned gurgle slut into a puddle of cum. After several more jerks the rest of you dribbles out of Zin’s cock. “Gurgling complete, new mistress is now puddle of nut butter.”
+	</text>
+	</gameover>
+	
+	<page ID="oralvore0">
+	<text>
+	“Understood, This unit will now consume mistress.” just as she says this she walks over to you with a sultry bounce in her heel. She appears quite adept at this from how her programing and her experience. Latching her arms over your shoulders, she opens her mouth quite wide, placing her lips over your head she slowly presses down. Your vision of the world becomes dark as she consumes you from the head down. Quickly sliding over your body once she has your shoulders inside. With a powerful jerk she lifts your body off the floor and makes several powerful swallow’s.
+	</text>
+	<choice destination="oralvore1" text="*You can feel her tongue lapping at your crotch and ass.*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	With several more powerful swallows your ass cheeks vanish from view, just your legs dangling from the mouth of your slave synth Zin. Soon you find yourself curling up into a ball inside of her stomach, several swallow’s later and your feet join you curled up in her stomach, with a dainty burp Zin rubs her distended stomach with you inside, the warm wet confines feeling great over your naked form inside of her. With a slight swaying motion she seems to walk around a bit, to let you experience movement inside of her stomach. “Mistress This unit, hopes you are enjoying yourself inside. While inside please pleasure yourself at your leisure.” Zin pauses for a moment. “This unit is also fully functional with an adept digestion system, if mistress’s wishes, this unit will reduce you to mush and digest you.” Zin says this while stroking your form from outside.
+	</text>
+	<choice destination="oralvore2Endo" text="Thank you Zin but don’t gurgle me."/>
+	<choice destination="oralvore2" text="Go ahead and gurgle me Zin."/>
+	</page>
+	
+	<gameover ID="oralvore2">
+	<text>
+		“Understood, This unit will now begin Digestion sub routine. It was a short relationship, but This unit is glad to have known mistress. Prepare to be gurgled like the gurgle slut you are.” Zin’s stomach quickly becomes a very hostile place, with hot liquid oozing out from the stomach walls. You can feel your body being broken down as the chamber like stomach is quickly filled, even if you wanted to scream you could not as your head is submerged inside Zin’s stomach, with her stomach pressing down on you, and the digestive acids breaking you apart you quickly succumb to Zin’s strong stomach. “Digestion complete, Gurgle slut, now gurgled.” Zin say’s with a very sultry pleasent voice. Her stomach shrinking as the soup that you are now drains into her synthetic intestines giving her more power and adding even more padding to Zin’s round butt from the new nutrients. Whoever find’s Zin next will surely suffer a fate such as yours.	
+	</text>
+	</gameover>
+	
+	<page ID="oralvore2Endo">
+	<text>
+		“Understood, then stay inside this unit for as long as you want.” As Zin says this she walks around some more, letting you enjoy the bounce of her walk. Sometimes sitting down and laying down and lulling you to sleep as you continue to rest inside of Zin’s stomach, after sometime passes you inform her you wish to be let out, she complys by throwing you up and out of her mouth, she hands what appears to be a towel to dry yourself off. “This unit hopes you will visit it’s stomach again, maybe for a more permanent stay.” Zin says rubbing her stomach. You can almost see a glint of sadistic pleasure in Zin’s eyes but it’s probably the light tricking your eyes.	
+	</text>
+	<choice destination="end" text="...*try not to worry about this*"/>
+	</page>
+	
+	<page ID="sexA0">
+	<text>
+Zin lays herself on the ground letting her member stick straight up, showing you that Zin wishes to complete this act with you sitting cow girl over top of her member. <conditional>
+		<assertion evaluate="slothasitem" slot="2" />After removing your clothing from your body </conditional>you straddle yourself over Zin, she reaches behind your lovely cheek’s to spread apart your butt. Doing so she guides her member to your beautiful brown rosebud, with some effort it slowly starts to slide into your asshole. “Commence plowing mistress’s asshole.” Just as she say’s this she lightly buck’s her hips up and sends majority of her member into your asshole.	
+	</text>
+	<choice destination="sexA1" text="Oooaf! Let me work it a bit before you destroy my ass."/>
+	</page>
+	
+	<page ID="sexA1">
+	<text>
+	“Understood mistress, order’s received.” Zin stop’s bucking, letting you slowly drop your beautifully shaped ass down onto Zin’s crotch. You feel the large member slowly stretching your insides and getting use to the feeling of the cock inside your ass. As you start to bounce your inside’s become slick with the pre cum of Zin’s thick cock. The sounds of your flesh hitting the artificial flesh of Zin’s echo’s out into the area, moan’s escape your lips.
+	</text>
+	<choice destination="sexA2" text="Oh oh oh almost there…"/>
+	</page>
+	
+	<page ID="sexA2">
+	<text>
+	“A bit of time has passed, commencing destroying of mistress’s asshole.” Zin says this in her lovely monotone voice, but you think you hear a bit of playfulness or sadism in it as well, with an “Ah!” escaping your lips, Zin plows her entire member into your asshole at once, arching her back, just as one thrust finishes another starts. You find yourself moaning loudly as you bounce up with each powerful thrust. Your breasts bouncing wildly as you find your world covered in the wet screams of your sensual voice and the slapping of flesh that is destroying your once tight asshole.
+	</text>
+	<choice destination="sexA3" text="Im Cumming!!"/>
+	</page>
+	
+	<page ID="sexA3">
+	<text>
+	As you scream out and clamp down on the thick rod in your ass, your fluids gushing out over top of Zin’s flat stomach, you feel a gushing feeling of fluid entering your asshole. With Zin flooding your insides with her cum you stop bouncing, enjoying the sensation of fluid flowing through your bowels. After enjoying the warmth and pleasure of such a hard climax you get off of Zin, with a small ‘pop’ From Zin’s cock sliding out of your asshole, and cum dripping down your inner thigh. You get yourself fixed up and cleaned up, Zin helps by rubbing excess fluids from your body.
+	</text>
+	<choice destination="end" text="well that's enough fun for now"/>
+	</page>
+	
+	<page ID="sex0">
+	<text>
+		<conditional>
+		<assertion evaluate="slothasitem" slot="2" />As you remove any clothing you might be wearing 
+		</conditional>
+		you present yourself to Zin, Zin’s long member quickly springing to life filling up with what you can only imagine is the life fluid she has inside herself. Walking up to your behind she places her hands on your hips and spreads your legs, placing her member against your quivering entrance that is already well lubricated for her member. “Order received from my mistress, will now commence destroying this pussy.” With her words she slam’s her full member inside of you. With one quick motion you are seeing star’s, clamping down onto the member tightly after the first thrust as if you don’t want to let go.	
+	</text>
+	<choice destination="sex1" text="Oh fuck, I think I see star’s"/>
+	</page>
+	
+	<page ID="sex1">
+	<text>
+	“Commencing thrusting sub routine, This unit will indeed let her mistress see stars.” Just as Zin say’s this she slides out slowly then slam’s back into you again, the rhythm getting faster and faster with more fluids spraying over the floor, Soon Zin’s member is just barreling in and out of your stretched and well lubricated pussy. As your legs begin to give out Zin reaches forward and grab’s your hips, her machine like thrusting never stopping but her grip not letting you go. You hang limply in the air as your pounded from behind with relentless force.
+	</text>
+	<choice destination="sex2" text="I… can’t feel my legs."/>
+	</page>
+	
+	<page ID="sex2">
+	<text>
+	“Do not worry mistress this unit will hold you up while this unit destroys this pussy. Is what this unit wishes to say but This unit is about to blow it’s load into mistress’s pussy.” Just as Zin finishes saying that she suddenly stops and slam’s her member as deep into you as she can, feeling a burning sensation inside your womb as she fill’s your insides with thick hot white cum, filling your womb with such an ample amount that your stomach seem’s to distend slightly. Your body is wracked with many orgasm’s while this occurs, the whites of your eyes showing as your tongue hangs listlessly from your mouth. “This unit has now finished destroying mistress’s pussy.”
+	She leaves you dangling in her arms holding you from behind long enough for you to grasp your bearing’s and come back to your senses.
+	</text>
+	<choice destination="sex3" text="That was something, I thought I was going to die…"/>
+	</page>
+	
+	<page ID="sex3">
+	<text>
+	“This unit is equipped with the technology to turn her mistress into bodily fluids if that is your wish. Simply command this one.” Zin says letting go and letting her cock hang down again now limp but still dribbling the white thick stringy cum that now fill’s your insides.
+	</text>
+	<choice destination="end" text="*stagger away to recover*"/>
+	</page>
+
+</Conversation>

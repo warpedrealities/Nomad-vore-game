@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="laser_sentinel.png"/>
+<name>sentinel drone</name>
+<description>The robot has plated armor, and fists at the ready, prepared to fight and, if need be, fall for it's maker.</description>
+<volatility value="500"/>
+<rpg> xcvbg
+<experiencevalue value="0"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<attribute attribute="TEASE" value="10"/>
+<attribute attribute="PHEREMONE" value="10"/>
+<attribute attribute="PSYCHIC" value="10"/>
+<attribute attribute="KINETIC" value="3"/>
+<attribute attribute="THERMAL" value="1"/>
+<attribute attribute="SHOCK" value="-2"/>
+<stat stat="HEALTH" value="40"/>
+<stat stat="RESOLVE" value="40"/>
+<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE" timeCost="6">
+		<effectDamage type="KINETIC" minValue="2" maxValue="7" modifier="NONE"/>
+	<missText count="2">
+		<text>the drone fails to punch TARGET</text>
+		<text>the drone misses TARGET</text>
+	</missText>
+	<hitText count="2">
+		<text>the drone swings at TARGET for VALUE damage</text>
+		<text>the drone punches TARGET for VALUE damage</text>
+	</hitText>
+</combatMove>
+<statusTags count="3">
+<tag>psychic</tag>
+<tag>radio</tag>
+<tag>seduction</tag>
+</statusTags>
+<itemDrop chance="50" item="scrap metal"/>
+<itemDrop chance="50" item="scrap metal"/>
+<itemDrop chance="50" item="computation valve"/>
+</rpg>
+<controller AI="sentinel_drone"/>
+<faction value="player"/>
+</NPC>

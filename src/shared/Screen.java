@@ -4,6 +4,8 @@ import input.MouseHook;
 
 import java.nio.FloatBuffer;
 
+import gui.Window;
+
 public abstract class Screen implements MyListener {
 
 	public abstract void update(float DT);

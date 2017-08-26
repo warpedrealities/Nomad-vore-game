@@ -8,14 +8,19 @@ import spaceship.stats.SpaceshipAnalyzer;
 
 public class EncounterLogic {
 
+	
+	
 	private EncounterShip[] shipList;
 	private float turn;
 	private TrailControl trailControl;
 	private EffectHandler effectHandler;
+	public enum GameState{playing,victory,defeat,retreat};
+	private GameState gameState;
 	
 	public EncounterLogic(EncounterShip[] ships) {
 		shipList = ships;
 		effectHandler=new EffectHandler();
+		gameState=GameState.playing;
 	}
 
 	public EncounterShip[] getShipList() {
@@ -66,16 +71,23 @@ public class EncounterLogic {
 	
 	private void resolveDefeat()
 	{
-		decomposeStats();
-		shipList[1].getShip().getShipController().event(scriptEvents.victory);
+		//decomposeStats();
+		//shipList[1].getShip().getShipController().event(scriptEvents.victory);
+		gameState=GameState.defeat;
 	}
 	
 	private void resolveVictory()
 	{
-		decomposeStats();
-		shipList[1].getShip().getShipController().event(scriptEvents.loss);
+		//decomposeStats();
+		//shipList[1].getShip().getShipController().event(scriptEvents.loss);
+		gameState=GameState.victory;
 	}
 
+	public void end()
+	{
+		decomposeStats();
+	}
+	
 	private void decomposeStats()
 	{
 		for (int i=1;i<shipList.length;i++)
@@ -100,6 +112,20 @@ public class EncounterLogic {
 
 	public EffectHandler getEffectHandler() {
 		return effectHandler;
+	}
+
+	public GameState getGameState() {
+		return gameState;
+	}
+
+	public void start() {
+		for (int i=0;i<shipList.length;i++)
+		{
+			if (shipList[i].getShip().getShipStats()==null)
+			{
+				shipList[i].getShip().setShipStats(new SpaceshipAnalyzer().generateStats(shipList[i].getShip()));
+			}
+		}
 	}
 
 }

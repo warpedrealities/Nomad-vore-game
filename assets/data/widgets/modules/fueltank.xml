@@ -6,7 +6,7 @@
 	<shipResource capacity="50" resource="FUEL">
 		<resourceConversion itemName="blue crystal" value="1.0" />
 		<resourceConversion itemName="azure crystal" value="2.0" />
-		<resourceConversion itemName="fuel cell(poor)"
+		<resourceConversion itemName="fuel canister(poor)"
 			value="3.0" />
 		<resourceConversion itemName="isotope" value="3.0" />
 	</shipResource>

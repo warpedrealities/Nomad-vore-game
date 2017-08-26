@@ -11,6 +11,7 @@ import shared.SceneBase;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.animation.Animator;
+import solarview.spaceEncounter.gui.EncounterGUI;
 import solarview.spaceEncounter.rendering.EncounterRenderer;
 import solarview.spaceEncounter.rendering.Targeting;
 import spaceship.Spaceship;
@@ -38,9 +39,16 @@ public class SpaceEncounter extends SceneBase {
 		EncounterShip[] list = new EncounterShip[c];
 		list[0] = new EncounterShip(playerShip, new Vec2f(0, 0), 0);
 		for (int i = 1; i < c; i++) {
+			
+			if (alienShips[i-1].getShipStats()==null)
+			{
+				alienShips[i-1].setShipStats(new SpaceshipAnalyzer().generateStats(alienShips[i-1]));
+			}
+			
 			list[i] = new EncounterShip(alienShips[i - 1],
 					new Vec2f(-6 + (GameManager.m_random.nextInt(12)), 15 + GameManager.m_random.nextInt(10)),
 					GameManager.m_random.nextInt(8));
+		
 		}
 		return list;
 
@@ -101,13 +109,15 @@ public class SpaceEncounter extends SceneBase {
 
 	@Override
 	public void start(MouseHook mouse) {
-
+		logic.start();
 		gui.start(mouse);
+
 	}
 
 	@Override
 	public void end() {
 
+		logic.end();
 		renderer.discard();
 		gui.discard();
 		targeting.discard();

@@ -203,7 +203,7 @@
 		<choice destination="oralvoreEndo4A" text="hold her for a bit" />
 	</page>
 
-	<page ID="oralvoreEndo4a">
+	<page ID="oralvoreEndo4A">
 		<effect type="incrementlocalflag" flag="nice" value="1" />
 		<text>
 			The fawn occasionally presses out at your insides, but seems resigned to

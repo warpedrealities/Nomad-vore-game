@@ -3,5 +3,5 @@
 	<description>
 		A bag to hold and carry food with less inconvenience. Max weight 20,
 		encumbrance effect 25% </description>
-	<Container tag="1" capacity="20" ratio="0.25" />
+	<container tag="1" capacity="20" ratio="0.25" />
 </ItemContainer>

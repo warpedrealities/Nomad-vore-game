@@ -16,8 +16,14 @@ public class ParticleConeEmitter extends ParticleEmitter {
 				// generate random velocity
 				float v = GameManager.m_random.nextFloat() * (maxSpeed * 0.5F);
 				v = v + maxSpeed / 2;
-				float angle = facing-(width/2);
-				angle+=GameManager.m_random.nextFloat()*width;
+				facing*=0.8F;
+				float angle = facing;
+				if (width>0)
+				{
+					angle-=(width/2);
+					angle+=GameManager.m_random.nextFloat()*width;	
+				}
+
 				Vec2f vel = new Vec2f(0,-v);
 				vel.rotate(angle);
 				m_particles[i].Spawn(position, vel, 4);
