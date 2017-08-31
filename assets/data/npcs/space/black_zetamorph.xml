@@ -13,7 +13,7 @@
 		skin but unlike that voidlike smooth softness her natural armour
 		gleams and glints reflecting the light off its hard surfaces.</description>
 	<rpg>
-		<experiencevalue value="100" />
+		<experiencevalue value="60" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

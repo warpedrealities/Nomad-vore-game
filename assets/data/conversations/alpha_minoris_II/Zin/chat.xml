@@ -10,6 +10,7 @@
 	</page>
 
 	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="playerCompanion" />	
 	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="talked" />	
 		<text>
 		The synth approaches you, fixing you with her radiant blue gaze and a shameless disposition.
@@ -21,6 +22,7 @@
 	</page>
 
 	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="playerCompanion" />		
 	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
 		<text>
 		"this one stands ready to serve"
@@ -64,6 +66,7 @@
 	<text>
 	"very well, this one will now follow and obey instructions from you mistress."
 	</text>
+	<effect type="setlocalflag" flag="playerCompanion" value="1" />		
 	<special effect="makecompanion" />	
 	<choice destination="end" text="well that was easy"/>
 	</page>
@@ -101,6 +104,7 @@
 	</page>
 		
 	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="playerCompanion" />	
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
 		<assertion evaluate="isCompanion" />
 		<text>
@@ -119,6 +123,7 @@
 	</page>
 
 	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="playerCompanion" />	
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
 		<assertnot evaluate="isCompanion" />	
 		<assertion evaluate="isFaction" faction="player" />

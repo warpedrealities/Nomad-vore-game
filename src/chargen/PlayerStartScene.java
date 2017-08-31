@@ -134,8 +134,10 @@ public class PlayerStartScene extends SceneBase implements MyListener, Callback 
 	}
 
 	private void populateList() {
+		
 		choiceList.GenList(phaseList.get(phaseIndex).getChoices());
 		choiceList.GenFonts();
+		choiceList.setOffset(0);
 		phaseNameLabel.setString("phase:" + phaseList.get(phaseIndex).getName());
 		description.addText(phaseList.get(phaseIndex).getChoiceDescription(0));
 	}

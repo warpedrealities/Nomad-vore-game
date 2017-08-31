@@ -7,12 +7,12 @@
 	</tileset>
 	<description></description>
 	<mapgen>
-		<prefab positionX="0" positionY="0" width="8">
-			<row>222222</row>
-			<row>211112</row>
-			<row>211112</row>
-			<row>211112</row>
-			<row>222222</row>
+		<prefab positionX="0" positionY="0" width="5">
+			<row>22222</row>
+			<row>21112</row>
+			<row>21112</row>
+			<row>21112</row>
+			<row>22222</row>
 		</prefab>
 		<pairedportal sprite="8" destination="alien village" x="2"
 			y="1" ID="25">stairs up</pairedportal>

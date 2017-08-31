@@ -76,11 +76,18 @@ public class ShopScreen extends Screen implements Callback {
 		// check player currency
 		int c = player.getInventory().getPlayerGold();
 		if (shopData.isUseCredits()) {
-			c = player.getInventory().getPlayerCredits() * DEF_CREDIT_TO_GOLD;
+			c = player.getInventory().getPlayerCredits();
+			if (item.getCost()* DEF_CREDIT_TO_GOLD > c) {
+				return;
+			}		
 		}
-		if (item.getCost() > c) {
-			return;
+		else
+		{
+			if (item.getCost() > c) {
+				return;
+			}			
 		}
+
 		// add item to player inventory
 		Item itemBought = Universe.getInstance().getLibrary().getItem(item.getName());
 		if (ItemKeyInstance.class.isInstance(itemBought)) {

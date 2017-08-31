@@ -46,7 +46,7 @@ public class CombatProjector implements ILosBoard {
 
 		Tile t= zone.getTile(x, y);
 		if (zone.getTile(x, y) != null &&t.getActorInTile() != null) {
-			if (t.getActorInTile() != origin) {
+			if (t.getActorInTile() != origin && t.getActorInTile().getRPGHandler().getActive()) {
 				attack(origin, move, t.getActorInTile());
 			}
 

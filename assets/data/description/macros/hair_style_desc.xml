@@ -1,8 +1,20 @@
 <?xml version="1.0"?>
 <macrovalue part="hair" variable="style">
-	<translate value="0" string="ponytail" />
-	<translate value="1" string="crewcut" />
-	<translate value="2" string="wavey" />
-	<translate value="3" string="long" />
-	<translate value="3" string="messy" />
+	<translate value="0" string="wavy" />
+	<translate value="1" string="straight" />
+	<translate value="2" string="curly" />
+	<translate value="3" string="kinky" />
+	<translate value="4" string="long and wavy" />
+	<translate value="5" string="long and straight" />
+	<translate value="6" string="long and curly" />
+	<translate value="7" string="ponytail" />
+	<translate value="8" string="braided" />
+	<translate value="9" string="pigtailed" />
+	<translate value="10" string="dreaded" />
+	<translate value="11" string="bun" />
+	<translate value="12" string="afro" />
+	<translate value="13" string="crewcut" />
+	<translate value="14" string="shaved" />
+	<translate value="15" string="messy" />
+	<translate value="16" string="tonsure" />
 </macrovalue>

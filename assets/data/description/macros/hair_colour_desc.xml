@@ -5,4 +5,9 @@
 	<translate value="2" string="red" />
 	<translate value="3" string="black" />
 	<translate value="4" string="platinum" />
+	<translate value="5" string="pink" />
+	<translate value="6" string="purple" />
+	<translate value="7" string="blue" />
+	<translate value="8" string="aqua" />
+	<translate value="9" string="green" />
 </macrovalue>

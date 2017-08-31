@@ -5,6 +5,9 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 import actor.player.Player;
+import actorRPG.Actor_RPG;
+import view.ViewScene;
+import vmo.GameManager;
 import widgets.Widget;
 
 public class WidgetDamage extends Widget {
@@ -47,10 +50,35 @@ public class WidgetDamage extends Widget {
 		widgetDescription="A rent in the interior caused by hull damage to the ship. represents"+damageValue+" hull damage";	
 	}
 
+	private void repair(Player player)
+	{
+		int max=1+player.getAttribute(Actor_RPG.TECH);
+		int r=GameManager.m_random.nextInt(max);
+		if (r>damageValue)
+		{
+			r=damageValue;
+		}
+		damageValue-=r;
+
+		ViewScene.m_interface.DrawText("conducting hull repairs, 2 scrap used to recover"+r+" hull points");	
+		if (damageValue<=0)
+		{
+			ViewScene.m_interface.RemoveWidget(this);
+		}	
+	}
+	
 	public boolean Interact(Player player)
 	{
-		
-		
+		if (player.getInventory().countItem("scrap metal")>2)
+		{
+			repair(player);
+			player.getInventory().removeItems("scrap metal", 2);
+			player.setBusy(20);
+		}
+		else
+		{
+			ViewScene.m_interface.DrawText("need at least 2 scrap metal to perform hull repairs");
+		}
 		return false;
 	}
 	

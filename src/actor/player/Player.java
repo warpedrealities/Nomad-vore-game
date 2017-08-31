@@ -214,9 +214,10 @@ public class Player extends Actor {
 
 		return false;
 	}
-
+	
 	@Override
 	public boolean move(int direction) {
+		
 		boolean b = false;
 		Vec2f p = ZoneInteractionHandler.getPos(direction, getPosition());
 		Actor actor = Universe.getInstance().getCurrentZone().getActor((int) p.x, (int) p.y);
@@ -235,11 +236,14 @@ public class Player extends Actor {
 
 		}
 		//check for threat	
-		Tile t=collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y);
-		if (t.getThreat()!=null)
+		if (collisionInterface.passable((int) p.x, (int) p.y + 1, getFlying()))
 		{
-			((NPC)t.getThreat()).attackOfOpportunity(this);
-		}	
+			Tile t=collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y);
+			if (t.getThreat()!=null)
+			{
+				((NPC)t.getThreat()).attackOfOpportunity(this);
+			}			
+		}
 		b = super.move(direction);
 		if (b == true) {
 		

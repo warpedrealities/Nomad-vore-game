@@ -23,9 +23,9 @@
 
 
 			<keyBlock x="4" y="0">
-				<row>00000000</row>
-				<row>02221220</row>
-				<row>22111122</row>
+				<row>02222220</row>
+				<row>02111120</row>
+				<row>22221222</row>
 				<row>11111111</row>
 				<row>11111111</row>
 				<row>22111122</row>
@@ -34,7 +34,8 @@
 				<edge value="EAST" />
 				<edge value="WEST" />
 				<edge value="NORTH" />
-				<widget x="4" y="1" name="airlockN" variable="-101" />
+				<widget x="2" y="1" name="airlockE" variable="-101" />
+				<widget x="4" y="2" name="reinforced_door"/>		
 			</keyBlock>
 
 
@@ -164,12 +165,14 @@
 			<SeedNPCs min="8" max="16" name="space/zetamorph">
 			</SeedNPCs>
 		</partition>
+		<placeItem x="35" y="1">
+			<item itemname="note" exposition="nia05" />
+		</placeItem>
 		<placeItem x="34" y="6">
 			<item itemname="Laser rifle" energy="0" />
 			<item itemname="power-cell" energy="0" />
-			<item itemname="note" exposition="nia05" />
 		</placeItem>
-
+		<placeNPC x="35" y="6" name="space/zetamorph" />		
 		<degrade chance="4" degradethis="0" replacewith="5" />
 
 	</mapgen>

@@ -103,11 +103,11 @@ public class Game implements SceneManager {
 
 		sceneManager = this;
 		graphicsConfiguration = new Config();
-		/*
+		
 		  try { System.setErr(new PrintStream(new
 		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
 		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
-		*/
+		
 		
 		// Initialize GLFW. Most GLFW functions will not work before doing this.
 		if (!glfwInit())
@@ -176,20 +176,6 @@ public class Game implements SceneManager {
 		m_currentscene = new Menu(var);
 		SceneBase.setVariables(var);
 
-		/*
-		 universe.Newgame(); Spaceship
-		 ship=(Spaceship)universe.getCurrentEntity(); ship.setShipStats(new
-		 SpaceshipAnalyzer().generateStats(ship));
-		  
-		 Spaceship [] alienShip=new Spaceship[1];
-		 alienShip[0]=new Spaceship("talharan_trader",0,0,ShipState.SPACE);
-		 alienShip[0].Generate();
-		 alienShip[0].setShipStats(new
-				 SpaceshipAnalyzer().generateStats(alienShip[0]));
-		 alienShip[0].setShipController(new NpcShipController("talharan_trader0"));
-		 
-		 m_currentscene=new SpaceEncounter(ship,alienShip);
-		*/ 
 		mouseInput = new MouseHook(openGLWindow);
 		glfwSetCursorPosCallback(openGLWindow, mouseInput);
 		GL11.glDepthFunc(GL_LEQUAL);

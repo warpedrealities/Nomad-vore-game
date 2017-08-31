@@ -13,7 +13,7 @@
 	the capsule opens, as it does you see the sleeping eyes of the synth within snap open to reveal a radiant blue glow.
 	</text>
 	<effect type="setlocalflag" flag="empty" value="1" />	
-	<special effect="createNPC" file="minoris2_elves/Zin.xml" />
+	<special effect="createNPC" file="minoris2_elves/Zin" />
 	<choice destination="end" text="she's alive!"/>
 	</page>
 	

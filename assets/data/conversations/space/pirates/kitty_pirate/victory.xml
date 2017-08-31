@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		The catgirl chuckles as she looms over you, planting a booted foot on your chest triumphantly and smirking "Well now. Looks like you're ripe for plundering now aren't ya." she says with a wicked gleam in her eyes afore she moistens her lips. Seems though that as her eyes rove over you and she rubs one thigh in against the other with a mrowl she has some naughty desires in mind.
+		</text>
+		<choice destination="sex0" text="used for sex">
+		<assertion evaluate="haspart" part="penis"/>
+		</choice>
+		<choice destination="oralsex0" text="made to service her"/>
+	</page>
+	
+	<page ID="sex0">
+	<text>
+	
+	</text>
+	
+	</page>
+
+	<page ID="oralsex0">
+	<text>
+	The piratical kitty looms over you and sees your expression "I'm not interested in what you have to say." she says at your open mouth and then reaches one hand down to twine her fingers into your hair "I am interested in what you can do with that tongue though." she says with a mhmm, her other hand straying down to hitch her skirts up and settles astride your shoulders, guiding your head up close between her thighs. Your face coming to rest nestled between those hot thighs and up against the pungent moistness of her netherlips, a scent so tantalizing you can't help but give it a taste..and hear her mrowl in delight "that's it, to the victor go the...nyah..spoils." she says, her voice hitching as you lick again at her pleasure dew'd snatch.
+	</text>
+	<choice destination="oralsex1" text="pleasure the kitty girl"/>
+	</page>
+	
+	<page ID="oralsex1">
+	<text>
+	You start to lap at her sex tastey sex, lost in the moment of servicing this eager and horny feline. You hear her mrowls and purrs as she grinds against your face. Her hand clutching tight to the back of your head holding you firmly in place as she stains your lips and chin with feline sexual fluids. The kitty rocking back and forth riding your face as you lick vigorously deep into her nethers and hear her mrowling atop you with every stimulating flick of your tongue between her folds.
+	</text>
+	<choice destination="oralsex2" text="how many more licks to make this kitty cum?"/>
+	</page>
+	
+	<page ID="oralsex3">
+	<text>
+	Not too many more it seems. The kitty's mrowls and yowls of delight hitch into an incoherent blending sound of pleasure as she closes her eyes and spasms atop you. The kitty mashing your face against her nethers as she gushes her lustful juices over your face, coating your face entirely with her lust as she shudders and purrs atop you. Her afterglow settling in as she relaxes hotly and aroused still with her legs bestride your face.
+	</text>
+	<choice destination="unbirth0" text="try to nuzzle into her">		
+	<preference fetish="unbirthing" />
+	</choice>
+	<choice destination="oralvore0" text="...just...rest a minute"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="unbirth0">
+	<text>
+	You nuzzle against her sex lips as they relax and find them gratifyingly accomodating to yourface as you start to slide up between them into her sweltering warmth. The kitty pirate letting out a gasp and then a mrowl "ooh, have a thing for being turned into a gush do you? well then." she says and giggles as she firms up her grasp on the back of your head and eases herself forwards. Your head disappearing entirely into her nethers as she rocks forwards and clenches to start squeezing in your shoulders with a deep and lusty mrowl.
+	</text>
+	<choice destination="unbirth1" text="wrong decision? gonna be womb fodder now"/>
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	The kitty's skirts tickle against your flanks as she settles onto all fours and clenches again and again, rocking her hips backwards in between to work more of you into her voracious snatch. The pirate claiming ever more of your body as she does so and imprisoning more of your body in the sweltering depths of her womb, bulging out her middle with increasing gravidity as she works you in all the way down to your hips "mhmm...you're gonna be an amazing orgasm, even better than the one you gave me." she says teasingly, starting to draw your legs into her hungry sex inch by delicious inch.
+	</text>
+	<choice destination="unbirth2" text="a prisoner in a cutie kitty"/>
+	</page>
+	
+	<page ID="unbirth2"> 
+	<text>
+	You feel your soft and snug confines shifting around you as she stands up, slurping your feet into her nethers as she does so and entirely confining your body within her womb. The kitty purring as she feels you moving around in there and runs her hand over her rounded tum where it spills out from within her jacket, bared and gravid and clearly something supremely satisfying for her "Mmhmm, gonna feel amazing to gush ya....i'm told its..pretty..mraw, good for the gushee as well." she says and giggles as you feel her till now cosy if soaking wet womb squeeze around you.
+	</text>
+	<choice destination="unbirthPleasure" text="try to get her off afore she can melt you"/>
+	<choice destination="unbirthSubmit" text="she's right, gushing'll feel amazing, let it happen"/>
+	</page>
+	
+	<check ID="unbirthPleasure">
+		<test what="PLEASURE" DC="14" />
+		<outcome destination="unbirthEscape" />
+		<outcome destination="unbirthDigest0" />
+	</check>
+	
+	<page ID="unbirthEscape">
+	<text>
+	All you got to do is get off a libidinous feline before you melt to a slush of lustjuices inside her. Couldn't be simpler, you ply your fingers along her inner flesh and rub your feet and hips against the inside of her womb. Your tongue darting out to flick over her inner flesh and seek out the most mrowlsome parts of her insides "nyah, what are you...oooh, are you try- don't care, keep on doing it...mrah..." the kitty pirate shudders in an increasingly incoherent mess, panting and mewling and weak in the knees as you stimulate her to orgasm from within...the kitty stumbling and landing on her knees and then yowling out as she crashes onto all fours and climaxes. The second climax so soon after the first seems to have left her pretty much half conscious, you take advantage to start worming your way out of her womb. Your hands pushing out of her sex and into the open air followed by the rest of you as you drag yourself free and clear...probably best to back up afore she recovers her wits though.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />	
+	</page>
+	
+	<page ID="unbirthDigest0">
+	<text>
+	All you got to do is get off a libidinous feline before you melt to a slush of lustjuices inside her. Couldn't be simpler, you ply your fingers along her inner flesh and rub your feet and hips against the inside of her womb. Your tongue darting out to flick over her inner flesh and seek out the most mrowlsome parts of her insides "nyah, what are you...oooh, you think that'll get you out...nya... don't care, keep on doing it..." she utters as you caress her sweltering insides, her hot sexual juices soaking into you as you work her towards her pleasurable release. The kitty going weak kneed and mewly as you rub at her insides, her climax approaching as she drops to her knees and vigorously masturbates to the sensations coming from within her. Her pleasure finally reaching a fever pitch as she yowls, her womb clenching down and her fluids gushing out anew onto her still sticky thighs. the kitty panting in afterglow and delight you try to make your escape, only to find her channel clenching and trapping inside...	
+	</text>
+	<choice destination="unbirthDigest1" text="not good enough to escape"/>
+	</page>
+	
+	<page ID="unbirthDigest1">
+	<text>
+	"Not going anywhere myah..you're gonna be a puddle." the kitty says, her fingers languidly stroking over her clenching nethers as you try without success to escape her womb. But she's too aware to let you out and you can't work against the muscles of her birth canal, though you do try and that seems to please her. Or maybe that's just the afterglow of her orgasm that's making her purr..either way there's naught to do but be helplessly melted down into sloppy fluids inside her...
+	</text>
+	<choice destination="unbirthDigestGO" text="sploosh"/>
+	</page>
+	
+	<gameover ID="unbirthDigestGO">
+	<text>
+	The kitty masturbates, thighs splayed and resting on her own calves as she fingers herself with steadily increasing vigor. Inside her intimate depths you can do nothing to stop her as she uses your form to fuel her pleasure, her womb squeezing over your softened form until the sensations and pressure get the better of you and you're squished into juices in a last moment of exctasy followed by extinquishment. The kitty letting out a mrowl as she follows up your liquidation with her own orgasm, that final moment of bliss on your part followed by her own delight as she climaxes you messily out over the floor. Your remains forming a sticky spreading puddle beneath the purring kitty when her orgasm is spent and every ounce of you has been used up to give her pleasure.
+	</text>
+	</gameover>
+	
+	<page ID="unbirthSubmit">
+	<text>
+	You shiver at her words and the tantalizing sensations of her juices exquisitely marinading your body and can't help but agree..this is going to feel amazing. You make no effort to escape your most intimate prison as you hear her purring in delight and sliding one hand down between her legs to delve into her nethers repeatedly, her drooling snatch spilling fluids down her legs from hips to boots as she frig herself to the sensation of your form softening blissfully within her. The kitty's womb squeezing repeatedly around you as you get sloshier and more liquid, steadily mashing away into delightful goo.
+	</text>
+	<choice destination="unbirthSubmitGO" text="...sploosh"/>
+	</page>
+	
+	<gameover ID="unbirthSubmitGO">
+	<text>
+	Your moans fade away yet the pirate's remain constant as she sloshes you away, your last breathless cry within her doesn't even register as you liquidate entirely within her wom and her pleasure roils ever more intensely through her. The kitty masturbating vigorously as you slop away into a mass of fluids, with all of you mooshed inside her it seems to take only a little more effort for the kitty to push herself over the edge. The catgirl letting out a yowling cry of bliss as she orgasms out your remains, creating a splattering mess underneath her 			
+	<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				containing naught but your 
+				<readequipment slot="2" />
+				as a sticky legacy of the one who served to give her this satisfying orgasm.
+	</conditional>
+	<conditional>
+	<assertnot evaluate="slothasitem" slot="2" />
+	, a formless puddle of femmecum with not a trace of you left other than her satisfying orgasm.			
+	</conditional>
+	</text>
+	</gameover>
+	
+</Conversation>

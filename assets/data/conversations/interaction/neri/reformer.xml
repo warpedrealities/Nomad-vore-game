@@ -38,7 +38,16 @@
 	</choice>
 	<choice destination="end" text="close the panel up and leave it be"/>
 	</page>
-
+	
+	<page ID="replace">
+	<text>
+	You take out the 3 batteries and replace them with fresh batteries.
+	</text>		
+	<effect type="setlocalflag" flag="power" value="1" />	
+	<effect type="removeitem" item="battery" value="3" />
+	<choice destination="open" text="okay, let's see if that fixed it."/>	
+	</page>
+	
 	<page ID="test">
 	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="power" />			
 	<text>

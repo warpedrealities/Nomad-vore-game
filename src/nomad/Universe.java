@@ -568,11 +568,11 @@ public class Universe extends GameManager
 		//now load time
 		worldClock=dstream.readLong();
 
-		//load uid
 		Game.sceneManager.getConfig().setVerboseCombat(dstream.readBoolean());
 		Game.sceneManager.getConfig().setDisableAutosave(dstream.readBoolean());
 		//load factions
 		FactionLibrary.getInstance().load(dstream);	
+		NPCStatblockLibrary.getInstance().resetThreat();
 		//load current system name
 		String s=ParserHelper.LoadString(dstream);
 		//find system

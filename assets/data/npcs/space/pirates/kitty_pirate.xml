@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="pirate_kitty.png" />
+	<name>pirate kitty</name>
+	<description>Some five feet of catgirl stands ready to pillage and plunder t'would seem. A tricorn hat perched atop her head somehow without covering either of her white furred ears, the kitty is garbed further down in a long jacket that extends down past her belt with gleaming buttons double rowed along it and a slit for her white furred tail to move freely behind her. The ensemble ends in tall boots and is more than complimented by a high tech rapier and a pair of simple energy pistols tucked into her belt.</description>
+	<rpg>
+		<experiencevalue value="80" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="45" />
+		<stat stat="RESOLVE" value="45" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />	
+		<combatMove name="sword" pattern="MELEE"
+			bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="3" maxValue="9"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>pirate lunges at TARGET but doesn't connect</text>
+				<text>pirate slashes at TARGET but their attack is evaded</text>
+			</missText>
+			<hitText count="2">
+				<text>pirate lunges at TARGET and pierces them for VALUE kinetic damage</text>
+				<text>pirate slashes TARGET for VALUE kinetic damage</text>	
+			</hitText>
+		</combatMove>
+		<combatMove name="handblaster" pattern="RANGED"
+			bonusAttribute="RANGED" timeCost="2" bonusToHit="4">
+			<effectDamage type="THERMAL" minValue="4" maxValue="6" modifier="NONE" />
+			<effectDamage type="KINETIC" minValue="4" maxValue="6" modifier="NONE" />
+			<missText count="2">
+				<text>pirate pulls out a blaster and fires it off at TARGET who evades the shot</text>
+				<text>pirate pulls a blaster and fires it at TARGET but misses them</text>
+			</missText>
+			<hitText count="2">
+				<text>pirate pulls out a blaster and shoots TARGET for VALUE thermokinetic damage</text>
+				<text>pirate blasts TARGET for VALUE thermokinetic damage with the handweapon they just pulled out </text>	
+			</hitText>
+		</combatMove>	
+	</rpg>
+	<defeated conversation="space/pirates/kitty_pirate/defeat" />
+	<seduced conversation="space/pirates/kitty_pirate/seduced" />
+	<victory conversation="space/pirates/kitty_pirate/victory" />
+	<seducer conversation="space/pirates/kitty_pirate/victory" />
+	<controller AI="pirate_AI" />
+	<faction value="pirate" />
+</NPC>

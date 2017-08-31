@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			You've defeated the pirates, you can choose to board them, or not to risk it.
+		</text>
+			<effect type="setlocalflag" flag="boarded" value="1" />	
+		<choice destination="end"
+			text="leave them be" />
+		<choice destination="boarding"
+			text="board them" />
+	</page>
+
+	<page ID="boarding">
+		<text>
+		</text>
+
+		<special effect="dock" />
+	</page>
+
+</Conversation>

@@ -249,8 +249,8 @@ public class NPC extends Actor implements Controllable {
 
 			clock--;
 			if (clock == 0) {
-				if (actorRPG.getStat(Actor_RPG.HEALTH) > 0) {
-					actorRPG.setStat(Actor_RPG.RESOLVE, actorRPG.getStatMax(Actor_RPG.RESOLVE));
+				if (actorRPG.getStat(Actor_RPG.HEALTH) > 0 && actorRPG.getStat(Actor_RPG.RESOLVE) <= 0) {
+					lustRemove();
 				} else {
 					Remove();
 				}
@@ -285,8 +285,28 @@ public class NPC extends Actor implements Controllable {
 		return b;
 	}
 	
+	private void lustRemove()
+	{
+		clock=0;
+		actorVisibility = false;
+		spriteInterface.setVisible(false);
+		if (((NPC_RPG) actorRPG).getItemDrop() != null) {
+			((NPC_RPG) actorRPG).getItemDrop().useDrop(actorPosition);
+		}
+		if (collisionInterface != null
+				&& collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y) != null) {
+			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
+		}
+		actorPosition.x = -(actorPosition.x+100);
+		actorPosition.y = -(actorPosition.y+100);
+		if (respawnController != null) {
+			respawnController.setGone();
+		}	
+	}
+	
 	public void Remove() {
 
+		clock=0;
 		actorVisibility = false;
 		spriteInterface.setVisible(false);
 		if (((NPC_RPG) actorRPG).getItemDrop() != null) {
@@ -445,6 +465,15 @@ public class NPC extends Actor implements Controllable {
 				return true;
 			}
 			if (actorRPG.getStat(Actor_RPG.RESOLVE) <= 0) {
+				if (actorPosition.x<0)
+				{
+					actorPosition.x = (actorPosition.x-100)*-1;
+					actorPosition.y = (actorPosition.y-100)*-1;	
+					if (spriteInterface != null) {
+						spriteInterface.setImage(0);
+					}
+				}
+
 				actorRPG.setStat(Actor_RPG.RESOLVE, actorRPG.getStatMax(Actor_RPG.RESOLVE));
 			}
 		}
@@ -817,7 +846,7 @@ public class NPC extends Actor implements Controllable {
 	}
 
 	public void attackOfOpportunity(Actor target) {
-		if (!RPGHandler.getActive())
+		if (!RPGHandler.getActive()||isPeace())
 		{
 			return;
 		}

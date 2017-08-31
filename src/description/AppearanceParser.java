@@ -56,11 +56,11 @@ public class AppearanceParser {
 					Element EN = (Element) N;
 					if (EN.getTagName().equals("macro")) {
 						String str = MacroLibrary.getInstance().lookupMacro(look, EN.getAttribute("ID"));
-						builder.append(str);
+						builder.append(" "+str+" ");
 					}
 					if (EN.getTagName().equals("value")) {
 						String str = parseValue(EN, look, bodypart);
-						builder.append(str);
+						builder.append(" "+str+" ");
 					}
 				}
 				if (N.getNodeType() == Node.TEXT_NODE) {

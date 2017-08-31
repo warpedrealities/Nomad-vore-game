@@ -34,6 +34,10 @@ public class ReformationTool {
 	
 	private Vec2f findMachine(Zone z, Long l)
 	{
+		if (z.getTiles()==null)
+		{
+			return null;
+		}
 		for (int i=0;i<z.getWidth();i++)
 		{
 			for (int j=0;j<z.getHeight();j++)

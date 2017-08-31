@@ -46,6 +46,7 @@ public class ColouredList extends List {
 			}
 
 		}
+		GL20.glUniform4f(m_tint, 1,1,1, 1);		
 		slider.Draw(buffer, matrixloc);
 	}
 

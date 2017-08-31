@@ -10,6 +10,7 @@ import nomad.Universe;
 import view.ViewScene;
 
 import item.Item;
+import item.ItemCoin;
 
 public class WidgetItemPile extends Widget {
 
@@ -62,7 +63,14 @@ public class WidgetItemPile extends Widget {
 	public boolean Interact(Player player) {
 		// grab item
 		Item item = m_items.get(0);
-		player.getInventory().AddItem(item);
+		if (ItemCoin.class.isInstance(item)) {
+			ItemCoin coin = (ItemCoin) item;
+			player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + coin.getCount());
+		}
+		else
+		{
+			player.getInventory().AddItem(item);			
+		}
 		player.calcMove();
 		m_items.remove(0);
 

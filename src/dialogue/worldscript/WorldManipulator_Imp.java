@@ -35,7 +35,7 @@ public class WorldManipulator_Imp implements WorldManipulator {
 		List <Landing> landings=entity.getLandings();
 		for (int i=0;i<landings.size();i++)
 		{
-			if (landings.get(i).getShip().getName().equals(shipName) && 
+			if (landings.get(i).getShip().getshipName().equals(shipName) && 
 				landings.get(i).getX()==x && 
 				landings.get(i).getY()==y)
 			{

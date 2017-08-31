@@ -58,15 +58,20 @@ public class CraftingLibrary {
 		int count = dstream.readInt();
 		for (int i = 0; i < count; i++) {
 			String str = ParserHelper.LoadString(dstream);
-			if (craftables.get(str) != null) {
+			CraftingRecipe r=craftables.get(str);
+			if  (r!= null) {
 				boolean b=dstream.readBoolean();
-				if (b && !craftables.get(str).getUnlocked())
+				if (b && !r.getUnlocked())
 				{
 
-					sortedCraftables.add(craftables.get(str));
+					sortedCraftables.add(r);
 		
 				}
-				craftables.get(str).setUnlocked(b);
+				r.setUnlocked(b);
+			}
+			else
+			{
+				dstream.readBoolean();
 			}
 		}
 

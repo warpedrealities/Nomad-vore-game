@@ -38,6 +38,8 @@
 	<effectmutator>
 		<criteriaAssertion part="penis" />
 		<criteriaValue part="penis" variable="length" value="18" />
+		<criteriaValue lessthan="true" part="penis" variable="length"
+			value="60" />	
 		<!-- if penis larger than 12 inches -->
 		<mutation part="penis" variable="length" modifier="-6">
 			your penis
@@ -46,5 +48,15 @@
 			inches in length
 		</mutation>
 	</effectmutator>
-
+	<effectmutator>
+		<criteriaAssertion part="penis" />
+		<criteriaValue part="penis" variable="length" value="60" />	
+		<!-- if penis larger than 12 inches -->
+		<mutation part="penis" variable="length" modifier="-12">
+			your penis
+			shrinks CHANGE inches, you are now in possession of a shaft
+			VALUE
+			inches in length
+		</mutation>
+	</effectmutator>
 </ItemConsumable>

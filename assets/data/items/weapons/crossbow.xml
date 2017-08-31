@@ -4,7 +4,7 @@
 	<description>
 		A crossbow and matching bolt pouch. It can be recocked with a handle
 		leading to fairly fast rate of fire, for a crossbow anyway. It is
-		however a very unwieldy weapon to use in close quarters. AP 3-8
+		however a very unwieldy weapon to use in close quarters. AP 3 4-9
 		kinetic damage, 3 TU per shot. (A)
 	</description>
 	<modifier>
@@ -13,7 +13,7 @@
 	<combatMove name="shoot" ammoCost="1" pattern="RANGED"
 		bonusAttribute="RANGED" timeCost="3" rangedbias="4" bonusToHit="-2"
 		actionCost="3" basicAction="true" moveType="FIGHT">
-		<effectDamage type="KINETIC" minValue="3" maxValue="8"
+		<effectDamage type="KINETIC" minValue="4" maxValue="9"
 			modifier="NONE" />
 		<missText count="1">
 			<text>you fail to shoot TARGET</text>

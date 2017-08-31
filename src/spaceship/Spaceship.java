@@ -529,4 +529,5 @@ public class Spaceship extends Entity {
 	public String getshipName() {
 		return entityName;
 	}
+
 }

@@ -60,7 +60,7 @@ public class WeaponCheck {
 		double width=0.785398F*weapon.getWeapon().getWeapon().getFiringArc()/2;
 		
 		double r=angle(v.x,v.y,w.x,w.y);
-		System.out.println(r);
+
 		if (r<=width && r>=width*-1)
 		{
 			return true;

@@ -60,7 +60,7 @@
 				<pairedportal sprite="9" destination="neri_basement"
 					x="2" y="1" ID="25">stairs down</pairedportal>	
 				<placeWidget x="2" y="4" name="door">
-					<lock key="Neri's house" strength="15" />
+					<lock key="Neri's house" strength="99" />
 				</placeWidget>				
 				</randprefab>
 			<town minsize="4" maxsize="7" minhouses="12" maxhouses="20"

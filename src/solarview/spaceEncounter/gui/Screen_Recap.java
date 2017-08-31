@@ -65,6 +65,7 @@ public class Screen_Recap extends Screen implements MyListener {
 	public void ButtonCallback(int ID, Vec2f p) {
 		if (ID==0)
 		{
+			Universe.getInstance().getPlayer().setBusy(0);
 			switch(state)
 			{
 				case victory:

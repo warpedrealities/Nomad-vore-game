@@ -47,7 +47,7 @@
 		</prefab>
 
 		<pairedportal sprite="3" destination="zorr" x="16" y="1"
-			ID="22" facing="2">tunnel up</pairedportal>
+			ID="22" facing="0">tunnel up</pairedportal>
 		<placeWidget x="14" y="17" name="SCRIPTEDEVENT">zorrSanctum</placeWidget>
 		<placeWidget x="8" y="8" name="mechanism" variable="97"
 			info="interaction/zorr/sarcophagus">

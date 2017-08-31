@@ -1,4 +1,4 @@
-#version 150 core
+#version 140 core
 
 uniform mat4 projMatrix;
 uniform mat4 modelMatrix;

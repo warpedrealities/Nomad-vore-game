@@ -1,104 +1,27 @@
 <?xml version="1.0"?>
 <chargen>
-	<phasePerk name="childhood">
-		<perk name="affluent childhood" />
-		<perk name="abusive childhood" />
-		<perk name="criminal childhood" />
-		<perk name="labourious childhood" />
-		<perk name="scholastic childhood" />
-		<perk name="lonely childhood" />
-	</phasePerk>
-	<phaseMutation name="hair colour">
-		<mutation name="blonde" descriptor="your hair is blonde">
-			<effect>
-				<mutation part="hair" variable="colour" set="0">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="brown" descriptor="your hair is brown">
-			<effect>
-				<mutation part="hair" variable="colour" set="1">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="redhead" descriptor="your hair is red">
-			<effect>
-				<mutation part="hair" variable="colour" set="2">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="black" descriptor="your hair is black">
-			<effect>
-				<mutation part="hair" variable="colour" set="3">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="platinum" descriptor="your hair is platinum">
-			<effect>
-				<mutation part="hair" variable="colour" set="4">
-				</mutation>
-			</effect>
-		</mutation>
-	</phaseMutation>
-	<phasePerk name="youth">
-		<perk name="academic youth" />
-		<perk name="fast youth" />
-		<perk name="military youth" />
-		<perk name="slutty youth" />
-		<perk name="techy youth" />
-		<perk name="violent youth" />
-	</phasePerk>
-	<phaseMutation name="skin colour">
-		<mutation name="white" descriptor="your skin is is a near white pallor">
-			<effect>
-				<mutation part="skin" variable="colour" set="0">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="pale" descriptor="your skin is a healthy yet pale tone">
-			<effect>
-				<mutation part="skin" variable="colour" set="1">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="tanned" descriptor="your skin is a darker yet overral light hue">
-			<effect>
-				<mutation part="skin" variable="colour" set="2">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="caramel" descriptor="your skin is a light brown">
-			<effect>
-				<mutation part="skin" variable="colour" set="3">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="brown" descriptor="your skin is a deep brown">
-			<effect>
-				<mutation part="skin" variable="colour" set="4">
-				</mutation>
-			</effect>
-		</mutation>
-		<mutation name="ebony" descriptor="your skin is a near black shade">
-			<effect>
-				<mutation part="skin" variable="colour" set="5">
-				</mutation>
-			</effect>
-		</mutation>
-	</phaseMutation>
 
-	<phasePerk name="occupation on the Heinlein">
-		<perk name="Security guard" />
-		<perk name="Helm officer" />
-		<perk name="Tactical officer" />
-		<perk name="Engineer" />
-		<perk name="Science officer" />
-		<perk name="Contact team" />
-	</phasePerk>
+<phaseMutation name="Physique">
 
-	<phaseMutation name="physique">
+		<mutation name="Scrawny" descriptor="You're really just skin and bones.">
+			<effect>
+				<mutation part="butt" variable="size" set="2">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="body" variable="weight" set="20">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="breasts" variable="size" set="3">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="vagina" bodychange="add" />
+			</effect>
+		</mutation>
 
-		<mutation name="slender" descriptor="your physique is slender">
+		<mutation name="Slender" descriptor="You are lithe and slender of form.">
 			<effect>
 				<mutation part="butt" variable="size" set="4">
 				</mutation>
@@ -116,7 +39,22 @@
 			</effect>
 		</mutation>
 
-		<mutation name="average" descriptor="your body type is average">
+		<mutation name="Flat" descriptor="You're a little underendowed, so to speak.">
+			<effect>
+				<mutation part="butt" variable="size" set="4">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="body" variable="weight" set="55">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="breasts" variable="size" set="4">
+				</mutation>
+			</effect>
+		</mutation>
+
+		<mutation name="Average" descriptor="Your body type is perfectly average.">
 			<effect>
 				<mutation part="butt" variable="size" set="6">
 				</mutation>
@@ -131,7 +69,22 @@
 			</effect>
 		</mutation>
 
-		<mutation name="curvy" descriptor="you possess a curvier form than average">
+		<mutation name="Curvy" descriptor="Your assets are larger than most.">
+			<effect>
+				<mutation part="butt" variable="size" set="8">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="body" variable="weight" set="55">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="breasts" variable="size" set="5">
+				</mutation>
+			</effect>
+		</mutation>
+
+		<mutation name="Chubby" descriptor="You've got some real softness to your form.">
 			<effect>
 				<mutation part="butt" variable="size" set="8">
 				</mutation>
@@ -146,6 +99,244 @@
 			</effect>
 		</mutation>
 
+		<mutation name="Big" descriptor="You've definitely got meat on your bones.">
+			<effect>
+				<mutation part="butt" variable="size" set="10">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="body" variable="weight" set="85">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="breasts" variable="size" set="6">
+				</mutation>
+			</effect>
+		</mutation>
+
+
+		<mutation name="Fat" descriptor="You really fill your form.">
+			<effect>
+				<mutation part="butt" variable="size" set="12">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="body" variable="weight" set="95">
+				</mutation>
+			</effect>
+			<effect>
+				<mutation part="breasts" variable="size" set="7">
+				</mutation>
+			</effect>
+		</mutation>
+
+	</phaseMutation>
+
+	<phaseMutation name="Skin color">
+		<mutation name="Ghostly" descriptor="Your skin is deathly pale.">
+			<effect>
+				<mutation part="skin" variable="colour" set="0">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Pale" descriptor="Your skin takes on a healthy yet notable pale tone.">
+			<effect>
+				<mutation part="skin" variable="colour" set="1">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Tanned" descriptor="You've been under some UV radiation, whether natural or artificial.">
+			<effect>
+				<mutation part="skin" variable="colour" set="2">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Caramel" descriptor="Your skin is a light, ambiguous brown.">
+			<effect>
+				<mutation part="skin" variable="colour" set="3">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Brown" descriptor="Your skin is brown as fertile soil and walnut wood.">
+			<effect>
+				<mutation part="skin" variable="colour" set="4">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Ebony" descriptor="Your skin approaches onyx and pitch.">
+			<effect>
+				<mutation part="skin" variable="colour" set="5">
+				</mutation>
+			</effect>
+		</mutation>
+	</phaseMutation>
+
+	<phaseMutation name="Hair style">
+		<mutation name="Wavy" descriptor="Your hair flows like a creek.">
+			<effect>
+				<mutation part="hair" variable="style" set="0">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Straight" descriptor="Your hair falls straight.">
+			<effect>
+				<mutation part="hair" variable="style" set="1">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Curly" descriptor="Your hair curls and curls.">
+			<effect>
+				<mutation part="hair" variable="style" set="2">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Kinky" descriptor="Your hair curls so much it doesn't even fall.">
+			<effect>
+				<mutation part="hair" variable="style" set="3">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Long and wavy" descriptor="Your hair flows like a river.">
+			<effect>
+				<mutation part="hair" variable="style" set="4">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Long and straight" descriptor="Your hair drops to your back.">
+			<effect>
+				<mutation part="hair" variable="style" set="5">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Long and curly" descriptor="Your hair curls down to your shoulders.">
+			<effect>
+				<mutation part="hair" variable="style" set="6">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Ponytail" descriptor="Your hair is tied in a ponytail behind your head.">
+			<effect>
+				<mutation part="hair" variable="style" set="7">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Braided" descriptor="Your hair is braided into a cord.">
+			<effect>
+				<mutation part="hair" variable="style" set="8">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Pigtails" descriptor="Your hair is braided into two cords that fall past your shoulders.">
+			<effect>
+				<mutation part="hair" variable="style" set="9">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Dreadlocks" descriptor="Your hair has been shaped into ropelike cords.">
+			<effect>
+				<mutation part="hair" variable="style" set="10">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Bun" descriptor="Your hair is tied into a bun.">
+			<effect>
+				<mutation part="hair" variable="style" set="11">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Afro" descriptor="Your kinky hair has been allowed to just grow.">
+			<effect>
+				<mutation part="hair" variable="style" set="12">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Crewcut" descriptor="Your hair is cut extremely short.">
+			<effect>
+				<mutation part="hair" variable="style" set="13">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Shaved" descriptor="Most, if not all, of the hair has been removed from your head.">
+			<effect>
+				<mutation part="hair" variable="style" set="14">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Messy" descriptor="Your hair needs cleaning.">
+			<effect>
+				<mutation part="hair" variable="style" set="15">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Tonsure" descriptor="You tonsure about that?">
+			<effect>
+				<mutation part="hair" variable="style" set="16">
+				</mutation>
+			</effect>
+		</mutation>
+	</phaseMutation>
+
+	<phaseMutation name="Hair color">
+		<mutation name="Blonde" descriptor="Your hair is blonde.">
+			<effect>
+				<mutation part="hair" variable="colour" set="0">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Brunette" descriptor="Your hair is brown.">
+			<effect>
+				<mutation part="hair" variable="colour" set="1">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Redheaded" descriptor="Your hair is red.">
+			<effect>
+				<mutation part="hair" variable="colour" set="2">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Black" descriptor="your hair is black.">
+			<effect>
+				<mutation part="hair" variable="colour" set="3">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Platinum" descriptor="your hair is platinum-white, possibly bleached.">
+			<effect>
+				<mutation part="hair" variable="colour" set="4">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Pink" descriptor="Your hair is dyed pink.">
+			<effect>
+				<mutation part="hair" variable="colour" set="5">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Purple" descriptor="Your hair is dyed purple.">
+			<effect>
+				<mutation part="hair" variable="colour" set="6">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Blue" descriptor="Your hair is dyed blue.">
+			<effect>
+				<mutation part="hair" variable="colour" set="7">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Aqua" descriptor="your hair is dyed aqua.">
+			<effect>
+				<mutation part="hair" variable="colour" set="8">
+				</mutation>
+			</effect>
+		</mutation>
+		<mutation name="Green" descriptor="your hair is dyed green.">
+			<effect>
+				<mutation part="hair" variable="colour" set="9">
+				</mutation>
+			</effect>
+		</mutation>
 	</phaseMutation>
 
 	<phaseMutation name="unexplained mutation">
@@ -183,4 +374,30 @@
 		</mutation>
 
 	</phaseMutation>
+	
+
+	<phasePerk name="Childhood">
+		<perk name="affluent childhood" />
+		<perk name="abusive childhood" />
+		<perk name="criminal childhood" />
+		<perk name="labourious childhood" />
+		<perk name="scholastic childhood" />
+		<perk name="lonely childhood" />
+	</phasePerk>
+	<phasePerk name="Youth">
+		<perk name="academic youth" />
+		<perk name="fast youth" />
+		<perk name="military youth" />
+		<perk name="slutty youth" />
+		<perk name="techy youth" />
+		<perk name="violent youth" />
+	</phasePerk>
+	<phasePerk name="Occupation on the Heinlein">
+		<perk name="Security guard" />
+		<perk name="Helm officer" />
+		<perk name="Tactical officer" />
+		<perk name="Engineer" />
+		<perk name="Science officer" />
+		<perk name="Contact team" />
+	</phasePerk>	
 </chargen>

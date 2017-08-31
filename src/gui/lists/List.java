@@ -130,6 +130,13 @@ public class List extends GUIBase implements Callback {
 		return m_offset;
 	}
 
+
+	public void setOffset(int i) {
+		m_offset=i;
+		slider.setIndex(m_offset);
+		GenFonts();
+	}	
+	
 	@Override
 	public boolean ClickEvent(Vec2f pos) {
 
@@ -231,5 +238,6 @@ public class List extends GUIBase implements Callback {
 		m_offset = slider.getPositionIndex();
 		GenFonts();
 	}
+
 
 }

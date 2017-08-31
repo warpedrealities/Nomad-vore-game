@@ -4,7 +4,7 @@ function main(script,sense)
 	currentTime=sense:getTime()/100;
 	sense:getFlags():setFlag("CLOCK",currentTime)	
 	
-	a={"space/talharan/talharan_grey","space/talharan/talharan_grey"}
+	a={"space/pirates/kitty_pirate","space/pirates/kitty_pirate","space/pirates/kitty_pirate"}	
 	sense:spawnBoarders(a)
 	sense:toView()
 end  

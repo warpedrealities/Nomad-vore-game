@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <controller>
 	<faction value="pirate" />
-	<systemEntry value="doNothingEntryScript" />
+	<systemEntry value="pirateEntryScript" />
 	<contact value="initiateCombatContactScript" />
 	<ai value="pirateAI" />
 	<combat value="broadsider" />
-	<victory value="talharan_trader_0Victory" />
-	<loss value="talharan_trader_0Loss" />
-	<experienceReward value="200" />	
+	<victory value="pirateSloopVictory" />
+	<loss value="pirateSloopDefeat" />
+	<experienceReward value="300" />	
 </controller>

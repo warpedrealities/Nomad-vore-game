@@ -113,7 +113,11 @@ public class NPC_RPG implements Actor_RPG {
 
 	@Override
 	public void setStat(int stat, int value) {
-
+		statValues[stat]=value;
+		if (statValues[stat]>statBlock.getStatMaximum(stat))
+		{
+			statValues[stat]=statBlock.getStatMaximum(stat);
+		}
 	}
 
 	@Override

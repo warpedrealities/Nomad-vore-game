@@ -4,5 +4,10 @@
 	<translate value="1" string="brown" />
 	<translate value="2" string="fiery" />
 	<translate value="3" string="dark" />
-	<translate value="3" string="silvery" />
+	<translate value="4" string="silvery" />
+	<translate value="5" string="pink" />
+	<translate value="6" string="orchid" />
+	<translate value="7" string="azure" />
+	<translate value="8" string="seafoam" />
+	<translate value="9" string="green" />
 </macrovalue>

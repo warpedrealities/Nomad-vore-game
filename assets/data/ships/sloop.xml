@@ -84,7 +84,11 @@
 			</placeWidget>
 
 			<pairedportal x="5" y="12" sprite="1" ID="-101" facing="2">
-			Exterior hatch </pairedportal>			
+			Exterior hatch </pairedportal>		
+			<placeNPC name="space/pirates/kitty_pirate" x="2" y="2" />
+			<placeNPC name="space/pirates/kitty_pirate" x="4" y="2" />
+			<placeNPC name="space/pirates/kitty_pirate" x="2" y="5" />	
+			<placeNPC name="space/pirates/kitty_pirate" x="4" y="5" />				
 		</mapgen>
 	</layout>
 	<exterior width="5">
