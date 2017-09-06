@@ -252,7 +252,7 @@ public class StatusEffectHandler {
 	}
 
 
-	public boolean stealthCheck(Actor_RPG observer,Actor_RPG actor) {
+	public boolean stealthCheck(int spot,Actor_RPG actor) {
 
 		if (stealthState>=statusEffects.size() || !Status_Stealth.class.isInstance(statusEffects.get(stealthState)))
 		{
@@ -269,7 +269,7 @@ public class StatusEffectHandler {
 		}
 		Status_Stealth status=(Status_Stealth)statusEffects.get(stealthState);
 		
-		if (status.spotCheck(observer))
+		if (status.spotCheck(spot))
 		{
 			status.remove(actor);
 			statusEffects.remove(stealthState);

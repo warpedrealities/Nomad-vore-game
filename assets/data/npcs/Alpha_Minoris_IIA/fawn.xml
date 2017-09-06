@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <NPC>
 	<sprite value="fawn.png" />
-	<name>fawn</name>
-	<description>The cute fawn girl is slender and small, barely four feet
-		to the tips of her stubby horns. And the moment she notices your
-		attention on her her deerish ears flick up and she's off and running,
-		in a world like this creatures like her probably have little to
-		protect themselves with except an ability to flee. her short tail atop
-		her petite butt flicking in the breeze as she makes tracks away from
-		you.</description>
+	<name>Fawn</name>
+	<description>The cute, little, sorta fawn-like deergirl stands slender and small,
+		barely four feet from her hooves to the to the tips of her stubby horns.
+		And the moment she notices your gaze, her deerish ears flick up and she's
+		off running. Seems her species' answer to the dangers of this world was
+		the grace of speed. The short tail atop her petite runner's butt
+		flicks in the breeze as she makes tracks away from you.
+	</description>
 	<rpg>
 		<experiencevalue value="5" />
 		<ability ability="STRENGTH" value="5" />

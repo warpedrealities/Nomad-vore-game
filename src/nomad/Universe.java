@@ -543,7 +543,7 @@ public class Universe extends GameManager
 		saveName=null;
 	}
 	
-	public void Load(String filename) throws IOException
+	public void Load(String filename, boolean forceReset) throws IOException
 	{
 		saveName=filename;
 		File file=new File("saves/"+filename+"/"+"verse.sav");
@@ -559,7 +559,7 @@ public class Universe extends GameManager
 		LoadUniverse();
 		//version
 		int version=dstream.readInt();
-		if (versionCheck(version))
+		if (versionCheck(version)||forceReset)
 		{
 			versionShift(filename);	
 			dstream.close();

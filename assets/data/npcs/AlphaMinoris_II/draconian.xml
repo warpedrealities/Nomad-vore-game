@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Harpy>
+<NPC>
 	<sprite value="uppercaseD.png" />
 
 	<name>draconian</name>
@@ -59,4 +59,4 @@
 	<seducer conversation="alpha_minoris_II/draconian/victory" />
 	<controller AI="draconian" />
 	<faction value="monster" />
-</Harpy>
+</NPC>

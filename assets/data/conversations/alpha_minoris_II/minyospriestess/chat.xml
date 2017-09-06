@@ -87,19 +87,19 @@
 	<page ID="crashRecovery0">
 		<!--start digging proposal" -->
 		<text>
-			"Ah yes, I think a sum of one thousand gold coins should show us ample
+			"Ah yes, I think a sum of four thousand gold coins should show us ample
 			respect...and in return we will have laborers from the village dig
 			out this ship for you. A fair trade no?"
 		</text>
 		<choice destination="crashRecoveryStarted"
 			text="$I have the gold required for the excavation">
-			<condition evaluate="GOLD" operator="greaterthan" value="1000" />
+			<condition evaluate="GOLD" operator="greaterthan" value="4000" />
 			<condition operator="greaterthan" evaluate="GLOBALFLAG"
 				flag="hauntedValley" value="4" />
 		</choice>
 		<choice destination="end"
 			text="$I can't afford how much gold you're asking for">
-			<condition evaluate="GOLD" operator="lessthan" value="1000" />
+			<condition evaluate="GOLD" operator="lessthan" value="4000" />
 			<condition operator="greaterthan" evaluate="GLOBALFLAG"
 				flag="hauntedValley" value="4" />
 		</choice>
@@ -112,7 +112,7 @@
 	</page>
 
 	<page ID="crashRecoveryStarted">
-		<effect type="givegold" value="-1000" />
+		<effect type="givegold" value="-4000" />
 		<effect type="setglobalflag" flag="hauntedValley" value="5" />
 		<special effect="marktime" />
 		<effect type="setglobalflag" flag="hauntedValley" value="5" />

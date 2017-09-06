@@ -43,10 +43,68 @@
 	
 	<page ID="oralvore0">
 	<text>
-	
+	Your focus wavers for a few moments, when your eyes open again you feel <conditional> the kitty undressing you as she makes her way down your body. The kitty pirate settling at your feet, lifting them up before you feel
+	</conditional> her tongue and warm mouth around your feet. The kitty wanting a post pleasure snack of you as she swallows and tugs your feet into her mouth. The neko's tail swaying in delight as she murrs and swallows her way up your calves, padding forwards as she gobbles you up and plunges more and more of your body down her throat. You feel your thighs start to disappear and your feet push through into her voracious belly, she can't tease you with her mouth full but to lick over your bared skin. But you can only imagine how she would as you try to squirm free but cannot stop her lips encroaching on your waistline.
 	</text>
-	
+	<choice destination="oralvore1" text="kitty food"/>
 	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You can feel her purring around your thighs then rear end as she eats you alive. The neko pirate enjoying herself clearly as she squeezes your legs inside her stretching belly and runs her hands up along your bared flanks. Your predator sampling the softer parts afore her lips will reach them as she swallows more and more of you down. She's a sweet kitty but you can't help but attempt to spoil her enjoyment, shoving at her face with both hands to stop her lips encroaching further up over your ass. You manage to get a frustrated muffled feline sound from her as her hands go from enjoying your frame to thwarting your resistance. The kitty shoving your arms up and away from where they're halting her progress into you as she takes a mighty swallow to drag your midriff past her lips. Like it or not she's eating you, you don't have the angles to keep her from doing so now.
+	</text>
+	<choice destination="oralvore2" text="swallowed completely"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Gradually sensations of the outside world are cut off as she swallows up past your shoulders and encompasses your head. Your arms forced over your head, you see them briefly above you as your vision is framed by her jaws and then you slide down her throat. The kitty schlurping your arms down and licking her lips with an indecent satisfying series of smacks once she's dislodged your final defiant fingers from her jaws and swallowed you down entirely "Delicious, best bit of the job is getting to swallow and digest prey things like you" she says as you're entirely packed away in her belly, her fingers drumming on her taut and distended belly. 
+	</text>
+	<choice destination="oralvoreStruggle" text="I'm no prey thing! I'm getting out of here"/>
+	<choice destination="oralvoreSubmit" text="Maybe she's right, maybe a prey thing is all I am"/>	
+	</page>
+	
+	<check ID="oralvoreStruggle">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="oralvoreEscape" />
+		<outcome destination="oralvoreDigest" />
+	</check>
+	
+	<page ID="oralvoreEscape">
+	<text>
+	You reject the labelling as prey despite your current predicament and set about attempting to get out of here. She's a catgirl you're sure you've bested stronger predators than this and start jostling and shoving around to try and force your way back up her throat. The kitty letting out a displeased mrowl as her gut starts bouncing around and delivering a thump to her belly "quiet down in there, digest like good prey thing!" she protests, though winces at having punched herself in the gut. Her wince turns into a distressed expression and a hurk as she finds your arms shoving their way back up her throat and out into the open air. All she can os flail around impotently as you force yourself back out of her, leaving her in a distressed whimpering and panting heap. You glance back at her then attempt to get your bearings, her stomach juices drying on your skin.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
+	
+	<page ID="oralvoreDigest">
+	<text>
+	You reject the labelling as prey despite your current predicament and set about attempting to get out of here. She's a catgirl you're sure you've bested stronger predators than this and start jostling and shoving around to try and force your way back up her throat. The kitty letting out a displeased mrowl as her gut starts bouncing around and delivering a thump to her belly "quiet down in there, digest like good prey thing!" she protests, though winces at having punched herself in the gut. The blow seems to disorientate you though as despite your efforts you can't find your way back up out of her throat. Your jostling movements availing you naught but tiring you out as the kitty giggles and snugs her stomach realizing she's bested you "Silly prey thing, you can't get out of me, all you're gonna be is digested." she says and grins, murring as her stomach gurgles around you.		
+	</text>
+	<choice destination="oralvoreDigestGO" text="get digested"/>
+	</page>
+	
+	<gameover ID="oralvoreDigestGO">
+	<text>
+	You can't escape from her, maybe she was right after all. In time your struggles fade away to be replaced by fluid gurgles as you soften and digest away. The kitty's belly turning nice and soft and round as you're reduced down to a nutritious slurry within her. The kitty giving her belly a pat and straightening up as her middle compacts and shrinks slowly away. You put up a good fight but were no match for her belly and she does her jacket back up over the bulge of your remnants with a satisfied smile.
+	</text>
+	</gameover>
+	
+	<page ID="oralvoreSubmit">
+	<text>
+	You feel her purring in satisfaction as her belly presses around you from all around. Her flesh squeezing against you and oozing enzymes into your body as it treats you as the food you are. And that's what you are, her food...the thought makes you shiver but not shrink back as you accept your role as nourishment for the triumphant kitty pirate. Her hands rubbing over her belly as she realizes you're being awfully calm and relaxed about this as she's starting to digest you "I guess I'm just too cute to resist huh?" she says and giggles as she gives her gut a pat and then gets back to purring. The sounds of her enjoyment becoming harder to hear over the increasingly loud gurgles of her stomach.
+	</text>
+	<choice destination="oralvoreSubmitGO" text="gurgle away"/>
+	</page>
+	
+	<gameover ID="oralvoreSubmitGO">
+	<text>
+	The kitty girl's fingers keep on tracing around the shape of your curled up form in her belly as your digestion takes its toll. That shape turning soft, mushy and then nice and round as you gurgle away inside her. The kitty's purring never changing as you melt until you're utterly digested into sloshy fluid within her and ripe for the absorption that happens immediately afterwards. In time her belly has shrunk enough to let her do her jacket back up over the compact paunchy bulge in her middle and mhmms "I love my job nya, i get to digest so many tastey people."
+	</text>
+	</gameover>
+		
 	
 	<page ID="unbirth0">
 	<text>

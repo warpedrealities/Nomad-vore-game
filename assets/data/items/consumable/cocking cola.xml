@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ItemConsumable name="cocking cola" weight="1" value="400">
-	<description>allows cocking</description>
-	<effectperk perk="cockmerging" experiencevalue="100" />
-</ItemConsumable>

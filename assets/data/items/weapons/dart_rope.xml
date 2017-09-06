@@ -7,7 +7,7 @@ A sharp metal dart at the end of a long rope. Takes a fair amount of skill to us
 <modifier>
 
 </modifier>
-<combatMove name="impale" pattern="RANGED" bonusAttribute="RANGED" timeCost="1" rangedbias="4" bonusToHit="-2" actionCost="2" basicAction="true" moveType="FIGHT">
+<combatMove name="impale" pattern="RANGED" bonusAttribute="RANGED" timeCost="1" rangedbias="4" bonusToHit="-2" actionCost="8" basicAction="true" moveType="FIGHT">
 <effectDamage type="KINETIC" minValue="1" maxValue="3" modifier="STRENGTH"/>
 <missText count="1">
 <text>you fail to impale TARGET </text>

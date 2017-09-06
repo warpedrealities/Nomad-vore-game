@@ -417,7 +417,7 @@
 		</text>
 		<effect type="setglobalflag" flag="ratquest" value="5" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
-		<effect type="givegold" value="100" />
+		<effect type="givegold" value="400" />
 		<effect type="experience" value="100" />
 		<choice destination="table" text="let me go look then">
 			<assertion evaluate="haspart" part="vagina" />

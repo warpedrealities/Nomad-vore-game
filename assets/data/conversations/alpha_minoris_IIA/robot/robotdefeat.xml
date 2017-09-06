@@ -2,14 +2,13 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			You have disabled the robot, it slumps into a heap of tangled
-			robotic
-			limbs and actuators.
+			You have defeated the robot. Now disabled, it slumps into a heap of tangled
+			robotic limbs and actuators.
 		</text>
 		<choice destination="extractComputer"
-			text="try to remove its computational components" />
-		<choice destination="extractOptics" text="try to remove its weapon system" />
-		<choice destination="end" text="do nothing" />
+			text="Try to remove its computational components." />
+		<choice destination="extractOptics" text="Try to remove something from its weapon system." />
+		<choice destination="end" text="Do nothing." />
 	</page>
 
 	<check ID="extractComputer">
@@ -20,29 +19,29 @@
 
 	<page ID="computerFail">
 		<text>
-			You attempt to extract the computational parts of the robot intact. But
-			your lack of skill leads to you breaking them in your inept attempt
+			You attempt to extract the computational parts of the robot intact but
+			your lack of skill just leads to you breaking them in an inept attempt
 			to rip them out. They're useless now, but at least you have a few
-			wires and chunks of the robot's casing as souvenirs. Or maybe as
-			paperweights or raw material for future use.
+			wires and chunks of the robot's casing as souvenirs. Or maybe they can
+			be paperweights, or raw material for future use.
 		</text>
 		<effect type="giveitem" value="2" item="scrap metal" />
 		<special effect="removenpc" />
-		<choice destination="end" text="ah well, better luck next time" />
+		<choice destination="end" text="Ah well, better luck next time." />
 	</page>
 
 	<page ID="computerSuccess">
 		<text>
 			You attempt to extract the delicate computation valves. The devices take
-			a careful touch to extra from the surrounding systems but you manage
-			it. You've managed to successfully extract two computation valves
-			from the robots 'brain' and to celebrate you dismantle some of its
-			wiring and casing to get some additional raw materials.
+			a careful touch to extract from the surrounding systems but your steady
+			your hands and manage to successfully extract two computation valves
+			from the robot's brain, so to speak. To celebrate, you dismantle some of its
+			wiring and casing for some additional raw materials.
 		</text>
 		<effect type="giveitem" value="2" item="computation valve" />
 		<effect type="giveitem" value="2" item="scrap metal" />
 		<special effect="removenpc" />
-		<choice destination="end" text="excellent" />
+		<choice destination="end" text="Excellent!" />
 	</page>
 
 	<check ID="extractOptics">
@@ -53,26 +52,27 @@
 
 	<page ID="opticsFail">
 		<text>
-			You think you can extract the robot's weapon system, cause everything is
-			better with lasers. Alas you're not as clever as you think you are
-			and the robot's combined sensor and laser focusing optics are reduced
+			You think you should try and extract the robot's weapon system, 'cause everything is
+			better with lasers. Alas you're not as capable of that as you think you are
+			and the robot's combination sensor and laser focusing optics is reduced
 			to uselessness by your fumbling.
 		</text>
 		<special effect="removenpc" />
-		<choice destination="end" text="damnit!" />
+		<choice destination="end" text="Damn it!" />
 	</page>
 
 	<page ID="opticsSuccess">
 		<text>
-			You look at the robot's head consideringly, it's probably too much to
-			attempt to extract the laser system whole cloth but some elements may
-			be valuable. You set about dismounting the optical lenses and mirrors
-			from inside the robot's otherwise empty head. Soon enough you have
+			Looking at the robot's head, it's probably not possible to
+			extract the laser system whole-cloth in any fashion that would be
+			convenient or even possible to weild, but some elements may
+			still be valuable. You set about dismounting the optical lenses and mirrors
+			from inside the robot's otherwise empty head and soon enough, you have
 			some relatively intact optical components for future use.
 		</text>
 		<effect type="giveitem" value="1" item="optics" />
 		<special effect="removenpc" />
-		<choice destination="end" text="ah well, least these might come in handy" />
+		<choice destination="end" text="Well, at least these might come in handy." />
 	</page>
 
 </Conversation>

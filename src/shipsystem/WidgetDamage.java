@@ -52,8 +52,12 @@ public class WidgetDamage extends Widget {
 
 	private void repair(Player player)
 	{
-		int max=1+player.getAttribute(Actor_RPG.TECH);
-		int r=GameManager.m_random.nextInt(max);
+		int max=player.getAttribute(Actor_RPG.TECH);
+		int r=1;
+		if (max>0)
+		{
+			r+=GameManager.m_random.nextInt(max);
+		}
 		if (r>damageValue)
 		{
 			r=damageValue;
@@ -69,7 +73,7 @@ public class WidgetDamage extends Widget {
 	
 	public boolean Interact(Player player)
 	{
-		if (player.getInventory().countItem("scrap metal")>2)
+		if (player.getInventory().countItem("scrap metal")>=2)
 		{
 			repair(player);
 			player.getInventory().removeItems("scrap metal", 2);

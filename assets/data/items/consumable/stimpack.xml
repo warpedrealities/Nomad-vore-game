@@ -6,7 +6,7 @@
 	<effectstatus probability="100">
 		<statusTag tag="regeneration" />
 		<applyText>TARGET is now under the affects of a stimpack</applyText>
-		<statusDoT uid="50" icon="9" duration="120" numModifiers="1">
+		<statusDoT uid="51" icon="9" duration="120" numModifiers="1">
 			<removeText> TARGET is no longer under the affects of a stimpack.</removeText>
 			<resist strength="15" tag="poison" test="NONE" />
 			<effect stat="HEALTH" modifier="-2" />

@@ -55,8 +55,8 @@
 			of coin for
 			your troubles.
 		</text>
-		<effect type="givegold" value="100" />
-		<effect type="experience" value="200" />
+		<effect type="givegold" value="400" />
+		<effect type="experience" value="300" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
 
 		<effect type="setlocalflag" flag="swordquest" value="2" />

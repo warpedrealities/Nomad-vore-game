@@ -25,10 +25,10 @@
 					<removeText> TARGET 's hyper awareness has worn off</removeText>
 				</statusAttribMod>
 				<missText count="1">
-					<text>TARGET is now caught in a net</text>
+					<text></text>
 				</missText>
 				<hitText count="1">
-					<text>TARGET evades the net</text>
+					<text></text>
 				</hitText>
 			</effectStatus>
 		</combatmove>

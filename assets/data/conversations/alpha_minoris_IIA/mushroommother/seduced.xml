@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+
+<Conversation>
+	<page ID="start">
+		<text>
+		The mother of these mushrooms lies on her back, overwhelmed
+		by your own seductive retaliation. She thought she'd be the seducer here.
+		</text>
+		<choice destination="sample" text="Take a sample for research purposes." />
+			<assertnot evaluate="hasEntry" entry="lifeforms/mushroommother.xml"/>
+			<assertnot evaluate="hasResearch" research="mushroommother"/>
+		<choice destination="drink1" text="Drink from the tap." />
+		<choice destination="end" text="Leave her be." />
+	</page>
+
+	<page ID="sample">
+		<text>
+		Holding an emptied can of space soda to the mother's nipple, you quickly fill
+		the can and then some. Lord, it just doesn't stop coming out, does it?
+		</text>
+		<special effect="research" data="mushroommother" DC="10" />
+		<choice destination="end" text="Time to do some research." />
+	</page>
+
+	<page ID="drink1">
+		<text>
+		Those orbs look so heavy on her. You think you oughtta lighten the load,
+		so, ignoring or not suffering of lactose intolerance (if her milk even has lactose in it),
+		you get down on your knees beside her pudgy, pacified form and wrap
+		your arms around the breast closest to you, taking a second to really
+		appreciate how soft they are. They're like water balloons you could fit
+		a person inside! Then, licking you lips, you lean forward and fit the
+		nozzle of her bottlecap nipple in your mouth. And man, is the elixir
+		ever delightful. Warm, sweet, a little earthy. It's... intoxicating.
+		Not literally, but you know. And it sounds like the mother's getting
+		some enjoyment out of this, too.
+		</text>
+		<choice destination="drink2" text="Keep drinking." />
+		<choice destination="sated1" text="That's enough for now." />
+	</page>
+
+	<page ID="sated1">
+		<text>
+		Alright, let's not get carried away. You've still got plenty of stuff
+		on your schedule. Your lips make a popping sound when you pry them from
+		her nipple. The mother isn't the happiest that you gotta bounce, but
+		that's her issue.
+		</text>
+		<effect value="20" type="feed"/>
+		<choice destination="end" text="Get moving." />
+	</page>
+
+	<page ID="drink2">
+		<text>
+		You didn't need to tell you twice. You aren't stepping away from this
+		teat until you're damn ready to. You're not even nearly full. And the
+		mother hasn't gotten her fill of enjoyment out of this either, her cooing
+		getting louder and louder. The taste doesn't get old-- hell, you might
+		say it's getting better with every drop. It's... it's heavenly. It beats
+		out all the swill you used to call booze, or soda, or juice, or water...
+		What's it even made of? Your head feels too funny to think about that.
+		</text>
+		<choice destination="submitA" text="Climb in. You need more." />
+		<choice destination="stopcheck" text="Maybe you should stop..." />
+		<choice destination="controlcheck" text="Clear your head and keep going." />
+	</page>
+
+	<page ID="submitA">
+		<text>
+		You can't help it. You can't have enough. Not while you're still outside.
+		You pop your mouth from her nipple and jam your fingers through the opening,
+		prying it wide open for your head to fit through. Soon, you've wormed your
+		shoulders, your collar, and your breasts through the opening, but you got stuck
+		at the waist as your feet left the ground. The fungal mother is happy to help you
+		the rest of the way through, though, sweetie, with a hand on your ass to
+		finish the job, nipple slapping wetly shut behind you. And so you're left to
+		drink and drink and drink 
+		<conditional>
+			<assertion evaluate="slothasitem" slot="2" />
+			as milk seeps into your clothes
+		</conditional>.
+		Soon, though, that funny feeling in your head spreads to the
+		rest of your body.
+		</text>
+		<choice destination="milk" text="You're melting." />
+	</page>
+
+	<gameover ID="milkA">
+		<text>
+		You're turning into milk and it's the most wonderful thing you can imagine.
+		To become this heavenly elixir! To shed your much less nourishing body and
+		become the purest of drinks! It suits you. The girls upstairs are going to
+		love what you add to the mix.
+		</text>
+	</gameover>
+
+	<check ID="stopcheck">
+		<test what="WILLPOWER" DC="8" />
+		<outcome destination="sated2" />
+		<outcome destination="submitB" />
+	</check>
+
+	<page ID="sated2">
+		<text>
+		Suddenly your brow furrows in realization: you're getting hit by pheromones.
+		They're all around you like a curtain of smoke. You must not have noticed
+		while you were busy engorging yourself on her milk. Immediately, you push
+		yourself off of her, gulp down the rest of what's in your mouth, cover your
+		lower face, and put some distance between the two of you, much to the mother's
+		disappointment. Well, at least you filled your belly.
+		</text>
+		<effect value="80" type="feed"/>
+		<choice destination="end" text="Get going." />
+	</page>
+
+	<page ID="submitB">
+		<text>
+		You... you were thinking about doing something just now, but you forgot what
+		it was. Whatever. It probably wasn't as important as this. You don't think
+		anything's been as good for you as this has been. But you can only get so
+		much in you with your mouth...
+		</text>
+		<choice destination="submitA" text="Climb in." />
+	</page>
+
+	<check ID="controlcheck">
+		<test what="WILLPOWER" DC="12" />
+		<outcome destination="drink3" />
+		<outcome destination="submitB" />
+	</check>
+
+	<page ID="drink3">
+		<text>
+		Focus. It's good, but not worth losing your mind over. And you've had plenty
+		of good drinks before. You're sure they could be improved with her milk, but
+		it's not worth forsaking them over. Like, what was that dumb shit you thought
+		about water being swill? It's fucking water. There's like a cosmic rule out
+		there that drinking-water cannot be swill. In any sense. Anyways, you've had...
+		maybe too much of her milk. Your belly's bulging
+		<conditional>
+			<assertion evaluate="slothasitem" slot="2" />
+			against your clothes like you've stuffed a pillow or two in there
+		</conditional>
+		<conditional>
+			<assertnot evaluate="slothasitem" slot="2" />
+			out like you're pregnant
+		</conditional>
+		and sloshing wildly with every movement.
+		</text>
+		<special effect="mutation">
+			<mutation part="breasts" modifier="1" variable="size"> </mutation>
+		</special>
+		<choice destination="sated3" text="Finish up." />
+	</page>
+
+	<page ID="sated3">
+		<text>
+		You give her teat one last gulp
+		(or two. or three) before popping her nipple from your mouth and stepping
+		away. The mother tries to pull you back in with a swipe of the arm but she's
+		too weak to succeed, saying, "Come back! Don't you want more?~" It falls on
+		deaf ears. Then, after a loud, prolonged burp, you wipe your mouth
+		with your
+		<conditional>
+			<assertion evaluate="slothasitem" slot="2" />
+			sleeve
+		</conditional>
+		<conditional>
+			<assertnot evaluate="slothasitem" slot="2" />
+			wrist
+		</conditional>
+		and look at your belly. Already, you're digesting her milk, belly visibly
+		shrinking every minute. What's more, you seem to be growing. Or, at least, your tits
+		are. When your belly returns to normal, you've grown a size. You're now a nice
+		<measurement part="breast" variable="size"/>
+		.
+		</text>
+		<effect value="160" type="feed"/>
+		<choice destination="sated3" text="Get going with your new assets." />
+	</page>
+
+</Conversation>

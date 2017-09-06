@@ -10,13 +10,14 @@ import actorRPG.Actor_RPG;
 import faction.Faction;
 import faction.FactionLibrary;
 import shared.ParserHelper;
+import view.ViewScene;
 
 public class StatusFaction implements StatusEffect {
 
 	private int uid;
 	private int duration;
 	private Faction faction;
-	
+	private String removeText;
 	public StatusFaction()
 	{
 		
@@ -27,7 +28,8 @@ public class StatusFaction implements StatusEffect {
 		if (e.getAttribute("duration").length() > 0) {
 			duration = Integer.parseInt(e.getAttribute("duration"));
 		}
-		faction=FactionLibrary.getInstance().getFaction(e.getTextContent());
+		faction=FactionLibrary.getInstance().getFaction(e.getAttribute("faction"));
+		removeText=e.getTextContent();
 	}
 
 	@Override
@@ -35,6 +37,7 @@ public class StatusFaction implements StatusEffect {
 		uid=dstream.readInt();
 		duration=dstream.readInt();
 		faction=FactionLibrary.getInstance().getFaction(ParserHelper.LoadString(dstream));
+		removeText = ParserHelper.LoadString(dstream);	
 	}
 
 	@Override
@@ -43,6 +46,7 @@ public class StatusFaction implements StatusEffect {
 		dstream.writeInt(uid);
 		dstream.writeInt(duration);
 		ParserHelper.SaveString(dstream, faction.getFilename());
+		ParserHelper.SaveString(dstream, removeText);
 	}
 
 	@Override
@@ -58,7 +62,7 @@ public class StatusFaction implements StatusEffect {
 
 	@Override
 	public void remove(Actor_RPG subject) {
-		
+		ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));		
 	}
 
 	@Override

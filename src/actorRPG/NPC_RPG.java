@@ -260,8 +260,8 @@ public class NPC_RPG implements Actor_RPG {
 		statusEffectHandler.struggle(this, actor);
 	}
 
-	public boolean stealthCheck(Actor_RPG observer) {
-		return statusEffectHandler.stealthCheck(observer, this);
+	public boolean stealthCheck(int spot) {
+		return statusEffectHandler.stealthCheck(spot, this);
 	}
 
 	@Override

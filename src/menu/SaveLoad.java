@@ -1,16 +1,20 @@
 package menu;
 
 import gui.Button;
+import gui.MultiLineText;
 import gui.Text;
 import gui.TextColoured;
 import gui.Textwindow;
 import gui.Window;
 import gui.lists.List;
+import input.Keyboard;
 import input.MouseHook;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.FloatBuffer;
+
+import org.lwjgl.glfw.GLFW;
 
 import nomad.Universe;
 
@@ -24,26 +28,24 @@ import vmo.Game;
 
 public class SaveLoad extends Screen implements Callback {
 
-	Callback m_callback;
-	boolean m_savemode;
+	private Callback m_callback;
+	private Window m_window;
+	private Window m_subWindow;
+	private List m_list;
 
-	Window m_window;
-	List m_list;
-
-	String m_slots[];
-	Textwindow m_text;
-	Button textButton;
-	boolean textEntry;
-	float clock;
-	TextColoured text;
-
+	private String m_slots[];
+	private Textwindow m_text;
+	private Button textButton;
+	private boolean textEntry;
+	private float clock;
+	private TextColoured text;
+	
 	public SaveLoad(int font, int frame, int button, int tint, boolean save, Callback callback) {
-		m_callback = callback;
-		m_savemode = save;
 		m_callback = callback;
 		clock = 0.5F;
 		// generate window
 		m_window = new Window(new Vec2f(-6.5F, -12), new Vec2f(13, 10), frame, true);
+
 		// generate list of saves
 		m_list = new List(new Vec2f(-6.5F, -10.0F), 12, frame, tint, this, 13);
 		// m_window.Add(m_list);
@@ -69,6 +71,16 @@ public class SaveLoad extends Screen implements Callback {
 		m_window.add(text);
 		
 		buildTemp();
+		
+		m_subWindow=new Window(new Vec2f(6.5F, -12), new Vec2f(8, 12), frame, true);
+		Button toggle = new Button(new Vec2f(1.5F, 0.25F), new Vec2f(5, 1.5F), button, this, "activate", 4);
+		m_subWindow.add(toggle);
+		MultiLineText tm=new MultiLineText(new Vec2f(0.5F,12.0F),12,26,0.8F);
+		m_subWindow.add(tm);
+		tm.addText("save progress reset, "
+				+ "this will reset the world and place your character back at "
+				+ "the start of the game but retain your perks and inventory"
+				+ " only use if you know what you're doing");
 	}
 	
 	void buildTemp()
@@ -149,20 +161,24 @@ public class SaveLoad extends Screen implements Callback {
 			m_text.Draw(buffer, matrixloc);
 			textButton.Draw(buffer, matrixloc);
 		}
-
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT))
+		{
+			m_subWindow.Draw(buffer, matrixloc);
+		}
 	}
 
 	@Override
 	public void discard(MouseHook mouse) {
-		// TODO Auto-generated method stub
 		mouse.Remove(m_window);
 		mouse.Remove(m_list);
 		mouse.Remove(m_text);
 		mouse.Remove(textButton);
+		mouse.Remove(m_subWindow);
 		m_window.discard();
 		m_list.discard();
 		m_text.discard();
 		textButton.discard();
+		m_subWindow.discard();
 	}
 
 	@Override
@@ -194,7 +210,7 @@ public class SaveLoad extends Screen implements Callback {
 					if (m_list.getSelect() < m_slots.length) {
 						if (!m_slots[m_list.getSelect()].equals("temp"))
 						{
-							Load(m_slots[m_list.getSelect()]);				
+							Load(m_slots[m_list.getSelect()],false);				
 						}
 					}
 				}
@@ -205,7 +221,22 @@ public class SaveLoad extends Screen implements Callback {
 					textEntry = false;
 				}
 				break;
+			case 4:
+				if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT) || 
+						Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT))
+				{
+					if (m_slots != null) {
+						if (m_list.getSelect() < m_slots.length) {
+							if (!m_slots[m_list.getSelect()].equals("temp"))
+							{
+								Load(m_slots[m_list.getSelect()],true);				
+							}
+						}
+					}				
+				}
+				break;
 			}
+
 		}
 	}
 
@@ -216,6 +247,7 @@ public class SaveLoad extends Screen implements Callback {
 		hook.Register(m_list);
 		hook.Register(m_text);
 		hook.Register(textButton);
+		hook.Register(m_subWindow);
 	}
 
 	private void buildDirectory() {
@@ -249,9 +281,9 @@ public class SaveLoad extends Screen implements Callback {
 
 	}
 
-	void Load(String filename) {
+	void Load(String filename,boolean forceReset) {
 		try {
-			Universe.getInstance().Load(filename);
+			Universe.getInstance().Load(filename,forceReset);
 			if (Universe.getInstance().getPlaying()) {
 				Game.sceneManager.SwapScene(new ViewScene(SceneBase.getVariables(), Universe.getInstance()));
 			}

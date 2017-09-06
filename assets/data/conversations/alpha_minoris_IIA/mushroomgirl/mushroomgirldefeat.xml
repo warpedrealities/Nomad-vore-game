@@ -2,17 +2,23 @@
 <Conversation>
 
 	<page ID="start">
-		<text>You have defeated the mushroom girl, her little body slumped
-			before you</text>
-		<choice destination="oralvore1" text="You could use a snack">
+		<text>
+			You have defeated the mushroom girl, her frail body sprawled
+			out on the floor before you.
+		</text>
+		<choice destination="oralvore1" text="You could use a snack.">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 
-		<choice destination="study" text="study her">
+		<choice destination="oralvore1" text="She's shaped like a plug (AV).">
+			<assertion evaluate="hasperk" perk="analvore" />
+		</choice>
+
+		<choice destination="study" text="Study her.">
 			<assertnot evaluate="hasEntry" entry="lifeforms/mushroomfolk.xml" />
 			<assertnot evaluate="hasResearch" research="mushroomfolk" />
 		</choice>
-		<choice destination="devour" text="devour her">
+		<choice destination="devour" text="Devour her.">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
 				<assertion evaluate="hasperk" perk="cockvore" />
@@ -20,159 +26,208 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-		<choice destination="end" text="do nothing" />
+		<choice destination="end" text="Do nothing." />
 	</page>
 	<page ID="devour">
 		<text>
-			You have devoured her in some unspecified, unelaborated on yet
-			satisfying way.
+			You have devoured her in some unspecified and unelaborated-on, yet
+			surely satisfying way.
 		</text>
 		<effect type="feed" value="110" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>
 
+	<!--written by chardos, edited by Slayerhero90 -->
 
 	<page ID="oralvore1">
-		<!--written by chardos -->
 		<text>
-
-			Smiling, you approach the defeated mushroom girl, your growling
-			stomach
-			signalling its intent. Battered and momentarily unconscious,
-			the petite mushroom
-			girl is completely unaware of you
+			Smiling, you approach the defeated mushroom-girl, your growling
+			stomach signalling its intent. Battered and momentarily unconscious,
+			she is completely unaware of your approach. You lick your lips
 			<conditional>
 				<assertion evaluate="slothasitem" slot="2" />
-				licking your lips while disrobing, before
+				as you disrobe,
 			</conditional>
-			taking her feet in both hands and gently placing them in your mouth
-			for an experimental taste.
-			A moment of confusion passes as you try to
-			detect her flavor before it slowly begins seeping into
-			your mouth and
-			across your tongue. A contented moan escapes from you as her earthy
-			richness
-			begins to permeate your mouth, strengthening the longer you
-			hold her there. While it is tempting
-			to simply savor the moment, a
-			more insistent growl from your stomach reminds you that you have
-			only
-			begun.
-			LBREAK
-			The mushrooms girl's legs begin effortlessly sliding down
-			your throat as you blissfully push forward, hardly
-			having to swallow
-			as her prone figure is briefly lifted from the ground before
-			descending down your throat. You realize
-			she must be waking up as you
-			barely notice a weary frown cross her face and her legs begin to
-			twitch
-			in your throat. Such movement serves only to spread her
-			gradually intensifying flavor across your tongue and
-			you begin to
-			notice a nutty aftertaste as you work closer to her waist. You smile
-			to yourself as you
-			continue forward, sealing the mushroom girl's fate
+			before taking her petite feet in both hands, wiping the dirt off
+			her soles, and gingerly placing them in your mouth for an
+			experimental taste. It takes only a moment for her flavor to begin
+			seeping onto your tongue, like a rich, nutty, earthy broth permeating
+			your mouth, strengthening with every second you hold her there. While
+			it is tempting to simply savor the moment, an insistent growl from your
+			stomach reminds you that you have only just begun. So you push forward,
+			the fungirl's savory legs effortlessly sliding down your throat while
+			you blissfully run your tongue along her calves and thighs. You hardly
+			even have to put any muscle into swallowing, slender as her legs are,
+			and every gulp briefly lifts her prone figure off the ground a little
+			more, until soon, she doesn't even touch the ground anymore. You also
+			start to notice a weary frown occasionally crossing her face and while
+			her legs begin to twitch in your throat. She must be waking up. For you,
+			however, such movement only serves to spread her intense flavor across
+			your tongue, the nuttiness getting a little stronger as you near her
+			groin. You smile and continue forward, sealing the mushroom girl's fate
 			without her even knowing.
-
 		</text>
-		<choice destination="oralvore2" text="delicious" />
+		<choice destination="oralvore2" text="Delicious." />
 	</page>
 
 	<page ID="oralvore2">
 		<text>
-
-			You grab her hands and put them in your mouth as well, now even
-			if she awakens you can enjoy her
-			with no worry. Her arms and legs now
-			secured, you grin as you clutch her firm butt, lifting her waist
-			towards your eager tongue. A strand of saliva escape your maw as the
-			mushroom girl's flavor takes on a sweeter
-			note...perhaps like nectar?
-			Your eyes widen as a trickle of feminine fluid touches your tongue.
-			No,
-			not nectar...you've come upon a honeypot. Grinning devilishly, you
-			forcefully swallow to bring this new flavor
-			within reach, you give a
-			firm lick across it and plunge your tongue into this unexpected
-			treat...just as
-			her feet finally plunge into your stomach.
-			LBREAK
-			The
-			mushroom girl awakens with a startled cry, confusedly moaning as she
-			struggles to look around. Seeing
-			your grinning face around her waist
-			and gleefully probing her sparks an expression of fear, but she can
-			do
-			nothing but helplessly squirm with both legs and arms locked in
-			your mouth and still battered as she is
-			from your battle. Any sense of
-			stealth lost at this point you stand up, lifting her torso with you,
-			and
-			resume swallowing, easily sending her hips and slender waist down
-			as the rest of her drawn near.
-
-
+			As you make your way closer to her breasts, you grab her hands and
+			cram them in your mouth as well. Now, even if she fully awakens,
+			you may continue to enjoy her without worry of physical resistance.
+			Those spores might still be a problem, though, but you'll cross that
+			bridge if you even get to it. Arms and legs now secured and her pucker
+			inches from your mouth, you grin (as best you can) and grab her by her
+			firm tush, lifting her whole body up in the air without breaking a
+			sweat, all waiting to slide down your eager tongue. A strand of saliva
+			escapes your maw as the shroom-girl's flavor takes on a sweeter
+			note, perhaps like nectar. Then your eyes widen as a trickle of familiar,
+			feminine fluid graces your tongue. Nectar could describe it, sure,
+			as nectar comes from a flower, but in terms of flavor prifoles and
+			euphemisms for that which seeps from a snatch, you'd sooner call
+			this honey, dripping from a honeypot. With nothing but devious intent,
+			you forcefully swallow another couple inches down to bring her
+			within reach and twist her unconscious torso around until her front
+			touches your tongue. Now that she's in position, you lick your
+			tongue across her folds and plunge it into this unexpected
+			treat, just as her feet finally plunge into your stomach.
+			The mushroom girl awakens with a startled cry, confusedly moaning
+			as she struggles to look around. Between your sly face around her
+			crotch and your gleeful probing of her box, she's caught between
+			fear and hesitant pleasure, and both are telling her to squirm
+			helplessly in your mouth, limbs all locked in place and body
+			still battered from your fight with her. Well, now that she's
+			awake, it'd be in your best interest to hurrry this along, so,
+			kicking your head back, you get back to swallowing her down,
+			taking large swathes of her slender waist with every contraction
+			of your muscles. The rest of her draws near.
 		</text>
-		<choice destination="oralvoreend" text="going down" />
+		<choice destination="oralvoreend" text="Going down." />
 	</page>
 
 	<page ID="oralvoreend">
 		<text>
-			Still enjoying yourself, you chomp on her pert breasts a bit as
-			they enter your mouth, eliciting more
-			confused moans from the mushroom
-			girl. Despite her initial reaction, she seems to be almost enjoying
-			this.
-			Or at the very least she understands she's not getting out of
-			it. With now only her head and mushroom
-			cap outside your mouth, You
-			reach up to her and run a hand across a flushed cheek, momentarily
-			calming her
-			confused whimpers and moans. Slightly teary eyed, she
-			gazes at you as you try your best to smile at her,
-			before grabbing her
-			mushroom cap with both hands and closing it over her head like an
-			umbrella. You forcefully
-			swallow a few more times and finally send her
-			on her way to your stomach.
-			LBREAK
-			Her mushroom cap flares out in your
-			throat, almost causing you to choke, and definitely forcing you to
-			take a few large gulps. It proves no problem though, eventually it
-			slowly slides down and the mushroom
-			girl is forced to curl up in your
+			Still enjoying yourself, you press your teeth into her pert breasts
+			just a little bit as they enter your mouth, eliciting more
+			confused moans from the mushroom-girl. Despite her initial reaction,
+			she seems to be almost enjoying this. Or, at the very least, she
+			understands she's not getting out of it. Now, with only her head and
+			cap outside your mouth, you reach up and run a hand across her flushed
+			cheek, momentarily calming her confused whimpers and moans. Fortunately,
+			she doesn't seem too keen on blasting you with pheromones as you had
+			initially surmised she might. Instead, slightly teary eyed, she locks
+			eyes with you, silently pleading. Though, difficult as it may be to be
+			certain, she seems to be begging you to keep going. You try your best
+			to smile at her before grabbing her mushroom-cap with both hands and
+			closing it over her head like an umbrella. Then, after a few forceful
+			swallows, you finally send her on her way to your stomach. However,
+			en route to your belly, her cap tries to flare out in your throat,
+			almost causing you to choke, and definitely forcing you to lay your
+			hands on the lump and push it down manually. Eventually, though, you
+			manage to slowly slide it down and, at last, the girl curls up in your
 			stomach. You give a contented sigh as your snack squirms inside you,
-			still not fully ready to accept her place within your stomach, though
-			your stomach is fully accepting of her.
-			You smile and rub your belly
-			as the gurgles and groans begin to overpower the squirms and
-			struggles. The
-			shapes and bulges in your belly soften out and form a
-			single curve before even that gradually shrinks away.
-			You lick your
-			lips in a final attempt to get the last of the mushroom girl's flavor
-			before continuing on your
-			journey.
-
+			still not fully ready to accept her place within your stomach as much as
+			your stomach is more than ready to accept of her. You smile and rub your
+			belly as its gurgles and groans begin to overpower her weak squirms and
+			struggles, the shapes and bulges in your belly softening out and forming a
+			single curve, before even that gradually shrinks away. Eventually, you
+			can barely taste her in your burps anymore, so you lick your lips one last time,
+			in a final attempt to savor the last of the mushroom-girl's flavors
+			before continuing on your journey.
 		</text>
 		<effect type="feed" value="110" />
 		<special effect="removenpc" />
-		<choice destination="end" text="carry on" />
+		<choice destination="end" text="Carry on." />
 	</page>
 
 	<page ID="study">
 		<text>
-			you study the mushroom extensively, your scans collecting a
-			large amount
-			of data. You benignly give the mushroom girl a chance to
-			scurry off
-			now you're done probing her.
+			You study the shroom-girl extensively, your scans collecting a large
+			amount of data. Once you're done probing her, you mercifully give her
+			the opportunity to scurry off.
 		</text>
 		<special effect="removenpc" />
 		<special effect="research" DC="10" data="mushroomfolk" group="liforms0" />
 		<choice destination="end" text="time to do some research" />
+	</page>
+
+	<!--anal vore scene written by Slayerhero90 -->
+
+	<page ID="analvore1">
+		<text>
+			You step forward and prop the shroom-gal butt-first and belly-up
+			against a nearby stalagmite, still utterly conked-out. Then,
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2"/>
+				after stripping out of your get-up, away, and kneeling down,
+			</conditional>
+			<conditional>
+				<assertnot evaluate="slothasitem" slot="2"/>
+				turning away and kneeling down,
+			</conditional>
+			you slip your feet beneath her back so you
+			your heels keep her shoulderblades off the ground. All that remains
+			for this peculiar system to be set up is for you to plant your hands
+			firm on the ground, sidle your knees back, and lift your feet (and
+			therefore the fungus-girl) just a bit higher, like orienting a missile
+			to the heavens. Except this girl isn't aimed anywhere but your
+			<macro ID="butt_size_desc"/>
+			back-end.
+		</text>
+		<choice destination="analvore2" text="Pop it in." />
+	</page>
+
+	<page ID="analvore2">
+		<text>
+			Chuckling to yourself to ease the thick suspense, you steel yourself
+			and press your posterior dead-center against the mush-girl's
+			amanita-esque cap. Of course, it's just a touch too big and wide to
+			simply pop right through your pucker just like that. But you knew that.
+			That's why you set her up against the rocky outcrop like this. And
+			there's more fun to this way of eating than just the having-her-in-there
+			part. You take one hand off the cavern floor to pull aside an ass-cheek
+			while grinding your star against her crown, all slickened with
+			cave-moisture. And then, suddenly, your backdoor parts with a
+			resounding pop which almost successfully masks your gasp of surprise
+			and pleasure and the clap of your ass against her shoulders. And, to
+			make matters more complicated, a startled yelp sounds out from within
+			your belly, so it looks like your buttplug's up. And it would seem
+			her first reaction is to swing and flail her arms around. We can't have
+			any of that, now, can we?
+		</text>
+		<choice destination="analvore3" text="Push back." />
+	</page>
+
+	<page ID="analvore3">
+		<text>
+			Fortunately for you, her shoulders aren't nearly as broad as her
+			cap. It's the arms that are gonna be a little tricky. You may
+			have been willing to get violent to take this cutie-pie down,
+			but that doesn't mean you wanna dislocate her shoulders and have
+			her spend the rest of her life crying about it. So, taking your hands
+			off the ground and your ass, you wait until the time is right to
+			snatch her arms by the wrist before working your grip closer to her
+			body, quickly binding her arms to the side. All that's left is to
+			scoot back until your
+			<macro ID="butt_size_desc"/>
+			tush touches the stalagmite and you can let go, stand up, clench
+			your asshole, and slurp the last of her dainty, kicking legs up.
+		</text>
+		<choice destination="analvoreend" text="She's on her way now." />
+	</page>
+
+	<page ID="analvoreend">
+		<text>
+			Your stomach's more than ready for her by the time she finishes her
+			voyage through your guts, rumbling while it waited like an impatient
+			child at a fancy restaurant. It doesn't take long at all for the
+			shroom-girl to dissolve into soup and course through your innards,
+			absorbed into fuel for your body.
+		</text>
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Carry on." />
 	</page>
 
 </Conversation>

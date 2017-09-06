@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ItemConsumable name="Distilled mushmilk mutagen" weight="1" value="400">
+	<description>
+	This syringe contains a wicked combination of mushroom-girl
+	DNA, milk, mutagenic chemicals, vaginal juices, and brilliant ideas.
+	</description>
+	<effectperk perk="Lactation" experiencevalue="0"/>
+</ItemConsumable>

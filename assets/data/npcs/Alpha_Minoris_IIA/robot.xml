@@ -25,14 +25,15 @@
 			<effectDamage type="THERMAL" minValue="1" maxValue="4"
 				modifier="NONE" />
 			<missText count="1">
-				<text>the robot's laser eye beams fail to alight on TARGET</text>
+				<text>The robot's laser eye beams fail to alight on TARGET</text>
 			</missText>
 			<hitText count="1">
-				<text>the robot's laser eye beams sear TARGET for VALUE damage</text>
+				<text>The robot's laser eye beams sear TARGET for VALUE damage</text>
 			</hitText>
 		</combatMove>
-		<statusTags count="3">
+		<statusTags count="4">
 			<tag>psychic</tag>
+			<tag>life</tag>	
 			<tag>radio</tag>
 			<tag>seduction</tag>
 		</statusTags>

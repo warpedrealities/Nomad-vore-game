@@ -29,8 +29,11 @@
 				<text>the robot's laser eye beams sear TARGET for VALUE damage</text>
 			</hitText>
 		</combatMove>
-		<statusTags count="1">
+		<statusTags count="4">
+			<tag>psychic</tag>
 			<tag>radio</tag>
+			<tag>seduction</tag>
+			<tag>life</tag>		
 		</statusTags>
 	</rpg>
 	<respawn delay="4000" />

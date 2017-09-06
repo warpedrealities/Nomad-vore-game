@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text> The fawn whimpers looking up at you with literal doe eyes,
-			helpless and unable to escape your might she's entirely at your mercy
+		<text> The fawn whimpers up at you with literal doe eyes,
+			helpless and unable to escape your might. She's entirely at your mercy
 			and knows it.
 		</text>
-		<choice destination="oralvore0" text="feeling hungry">
+		<choice destination="oralvore0" text="Craving venison...">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
-		<choice destination="analvore0" text="maybe it'd be fun to force her up your ass">
+		<choice destination="analvore0" text="Maybe it'd be fun to fit her up your ass.">
 				<assertion evaluate="hasperk" perk="analvore" />
 		</choice>
 		<choice destination="cockvore0"
-			text="you feel your balls ache at the sight of her">
+			text="Your balls ache at the sight of her.">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
 
-		<choice destination="capture" text="use capture device">
+		<choice destination="capture" text="Use your capture device.">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="capture device" />
 		</choice>
-		<choice destination="study" text="study her">
+		<choice destination="study" text="Study her.">
 			<assertnot evaluate="hasEntry" entry="lifeforms/fawn.xml" />
 			<assertnot evaluate="hasResearch" research="fawn" />
 		</choice>
-		<choice destination="devour" text="devour her">
+		<choice destination="devour" text="Devour her.">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
 				<assertion evaluate="hasperk" perk="cockvore" />
@@ -32,239 +32,225 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-		<choice destination="end" text="feeling merciful" />
+		<choice destination="end" text="Feeling merciful." />
 	</page>
 
 	<page ID="analvore0">
-	<text>
-	You've made your decision, this cute thing is going to go into you via the back way. She seems uneasy at the look in your eye as you 
-			<conditional>
-				<assertion evaluate="slothasitem" slot="2" />
-				pause to undress and then
-			</conditional>
-			place yourself over her, your bared rump placed over her head. The fawn blushing and trying to shrink back from your <macro ID="butt_size_desc"/> rear end. But you're easily able to keep her where you need her. But it's not where you need her, oh no...you start to squat down, one hand keeping the helpless fawn's head from pulling back as she lets out a muffled whimper...then you feel the exquisite sensations and hear the nice lewd schlorp as your sphincter parts around her face and you usher your prey into the heat of your back passage. 
-	</text>
-	<choice destination="analvore1" text="ass food is the best use for someone as cute as this"/>
+		<text>
+		You've made your decision, this cute thing is going up your rear end. She seems uneasy
+		about the look in your eyes as you 
+		<conditional>
+			<assertion evaluate="slothasitem" slot="2" />
+			first pause to undress and then
+		</conditional>
+		place yourself over her, bare rump looming over her head. The fawn blushes and tries to
+		shrink away from your
+		<macro ID="butt_size_desc"/>
+		ass, but you're easily able to keep her where you need her. But it's not where you really,
+		really need her, no ma'am... You squat down, one hand clutching the helpless fawn's head to
+		prevent her from pulling back, leaving her unable to do anything about her situation but
+		whimper, this time muffled by the posterior inches from her face. Then, pushing down, the
+		exquisite sensations and the schlorp of a parting pucker around her face ring through your
+		body and ears as you usher your prey into the heat of your backdoor. 
+		</text>
+		<choice destination="analvore1" text="Ass-food is the best way to eat someone as cute as this girl."/>
 	</page>
 	
 	<page ID="analvore1">
-	<text>
-	You can hear her muffled distress from deep in your bowels as she struggles. But she's in no position to stop you sitting down over her and thus sliding her steadily into your ass, the fawn's writhing torso steadily disappearing between the cheeks of your <macro ID="butt_size_desc"/> ass as you can't help but groan in decadent delight. Your middle bulging with the outline of her face as she's forced deeper and deeper inside of you. Your clenching rump starting to tug her in as you squat there with her legs protruding from your ass. She keeps on squirming, legs flailing as they're constrained by your tight sphincter, but she isn't even really slowing down the schlorping of your ravenous rear end.
-	</text>
-	<choice destination="analvore2" text="pull her in entirely"/>
+		<text>
+		You can hear her muffled distress from deep in your bowels as she struggles. But she's in
+		no position to stop your descent on her, sliding steadily into your ass, her writhing torso
+		steadily disappearing between the cheeks of your <macro ID="butt_size_desc"/> ass. And you
+		can't help but groan in decadent delight while your abdomen bulges with the outline of her face
+		forced deeper and deeper inside of you. Your clenching rump starts to tug her in faster than you
+		can bear down as you squat there with her legs protruding from your ass, and faster the more her
+		body tapers down. She keeps on squirming, legs flailing until they're locked together by your
+		tightened sphincter. She, of course, had no hope of actually accomplishing anything to really
+		slow down the schlorping of your ravenous rear.
+		</text>
+		<choice destination="analvore2" text="Pull her in entirely."/>
 	</page>
 	
 	<page ID="analvore2">
-	<text>
-	You ease yourself into a more comfortable position as the cute fawn's feet get closer and closer to disappearing betwixt your ass cheeks. Her legs easily schlurped up, only able to twitch now as she sounds her distress muffledly from where she's clenched and curled deep inside of you. In a few more moments though you're feeling the wonderful satisfaction of those wriggly toes of hers disappearing past your sphincter. Her body now disappearing entirely into your squeezing derriere. You can feel her forcibly curled up within you, squirming and twitching around in your possessive and smothering heat. You get comfortable with both hands on your round and full belly, the fawn entirely under your control and within your power.
-	</text>
-	<choice destination="analvore3" text="digest her of course"/>
+		<text>
+		You ease yourself into a more comfortable position as the cute fawn's feet get closer and closer to
+		disappearing betwixt your ass-cheeks. Her legs easily schlurped up, only able to twitch now as she
+		sounds her distress muffledly from where she's clenched and curled deep inside of you. In a few more
+		moments though, you're feeling the wonderful satisfaction of those wriggly hoof-toes of hers disappearing
+		past your back-entrance with a wet little pop. Her body hs now disappeared entirely into your derriere.
+		You can feel her forcibly curled up within you, squirming and twitching around in your possessive and
+		smothering heat. You get comfortable with both hands on your round and full belly, the fawn entirely under
+		your control and within your power.
+		</text>
+		<choice destination="analvore3" text="Digest her, of course."/>
 	</page>
 	
 	<page ID="analvore3">
-	<text>
-	The fawn lets out a whimper as you let your insides start to gurgle her away, but she can hardly move let alone struggle and so her twitching only serves to please you. The fawn gradually fading into silence as your digestive processes take their toll and she softens then eventually melts and smoothes out into a nice nourishing soup within you. The fawn serving to fuel you as her body works back the way she came, seeping through your innards and being absorbed gradually yet efficiently into your being.
-	</text>
-	<effect type="feed" value="80" />
-	<special effect="removenpc" />
-	<choice destination="end" text="carry on" />	
+		<text>
+			After your intestines send her along on the conveyor belt to your stomach, the fawn lets out a whimper,
+			realizing what you plan for her right before your insides start to gurgle her away, but she can hardly
+			move, let alone struggle, and so her resistance only really serves to please you more. In time, the
+			deer-girl's voice gradually fades into silence as your digestive processes take their toll, and soon
+			her body softens then eventually melts and smoothens out into a nice, nourishing soup within you which
+			shall fuel you as her body works back the way she came, seeping through your innards and being absorbed 
+			gradually yet efficiently into your being.
+		</text>
+		<effect type="feed" value="80" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Carry on." />	
 	</page>
 	
 	<page ID="devour">
 		<text>
-			You have devoured her in some unspecified, unelaborated on yet
-			satisfying way.
+			You have devoured her in some unspecified and unelaborated-on, yet surely satisfying way.
 		</text>
 		<effect type="feed" value="80" />
 		<special effect="removenpc" />
-		<choice destination="end" text="carry on" />
+		<choice destination="end" text="Carry on." />
 	</page>
 
 	<page ID="capture">
 		<effect type="setlocalflag" flag="seduced" value="0" />
 		<special effect="captureNPC" />
-		<text></text>
+		<text>Yoink. The device worked.</text>
 
-		<choice destination="end" text="carry on" />
+		<choice destination="end" text="Carry on." />
 	</page>
 
 	<page ID="study">
 		<text>
-			you study the fawn extensively, observing and taking samples.
+			You study the fawn extensively, observing and taking samples before sending her back off, all frazzled and frightened.
 		</text>
 		<special effect="removenpc" />
 		<special effect="research" DC="10" data="fawn" />
-		<choice destination="end" text="time to do some research" />
+		<choice destination="end" text="Time to do some research." />
 	</page>
 
 
 	<page ID="cockvore0">
 		<text>
-			She's truly a delectible little doe and you find your balls acheing
-			hungrily in desire to have her inside. The fawn letting out a squeek
-			as she sees your hand slide down to
+			She's truly a delectible little doe and you find your balls aching hungrily with desire to have her inside. She lets
+			out a squeak when she sees you slide your hand down to
 			<conditional>
 				<assertion evaluate="slothasitem" slot="2" />
-				stroke over your crotch afore you start to remove your pants and
-				unveil your growing cock before
+				stroke over your crotch, before removing the obstruction so you can whip out and 
 			</conditional>
-				stroke over your hard and hungry length. That firming erection transfixing the fawn's gaze as she uneasily
-			watches you work your hands up and down your cock. As you then squat
-			down she looks confused as she looks down past herself at you and
-			your cock, but all is swiftly revealed to her as you seize her feet
-			and stuff them into your cocktip. The fawn letting out a helpless
-			whimper and squirming, but unable to pull away from your grip as you
-			feet more of her cute lil legs down your dick.
+			run it along your hard and hungry cock. Your firming erection transfixes the fawn's gaze as she anxiously follows the
+			movement of your hands up and down its length. Then, as you squat down beside her feet, she puts forth a confused expression,
+			nonverbally entreating you for an explanation. All is swiftly revealed to her, however, as you seize her feet
+			and stuff them into your cocktip. The fawn helplessly whimpers and squirms but is unable to pull away from your grip as you
+			feed more of her cute li'l legs down your dick.
 		</text>
-		<choice destination="cockvore1" text="feed her in" />
+		<choice destination="cockvore1" text="Push her in." />
 	</page>
 
 	<page ID="cockvore1">
 		<text>
-			The fawn tries to struggle, but she was no match for you even
-			before
-			this. her cute little body feels wonderful sliding into your
-			dick
-			though, nice and squirmy as she tries to wriggle around onto her
-			front and grasp the ground beneath her. The fawn whimpering and
-			squeeling as your cock steadily schlurp schlurp schlurps up her
-			writhing legs. You can feel her slender form stretching out your cock
-			as you engulf her thighs and work up to her waist, her cute nub of a
-			doe-tail teasing at your cockslit before being engulfed as well. Her
-			feet pushing into your balls, pressing and stretching them out and
-			the sticky sensations of hot goo on her toes makes her squirm in a
-			pleasingly and adorably helpless fashion.
+			The fawn tries to struggle, to free herself, but she was no match for you, even before all this. Her body slides wonderfully
+			into your dick though, nice and squirmy as she tries to wriggle around onto her front and clutch onto the grass beneath her,
+			whimpering and squealing all the way. Your schlong makes short work of her legs and easily stretches to fit her slender form,
+			engulfing her thighs and working up to her waist, cute nub of a doe-tail teasing at your cockslit before slipping in as well.
+			Meanwhile, her feet push into your balls, making hoof-shaped indents in your skin as the hot spunk and slack elasticity inside
+			revitalizes her squirming magnificently.
 		</text>
-		<choice destination="cockvore2" text="rest of the way" />
+		<choice destination="cockvore2" text="Take her the rest of the way." />
 	</page>
 
 	<page ID="cockvore2">
 		<text>
-			The fawn must of already known it was hopeless, but she squirms
-			even as
-			you work up over her belly and petite chest. the fawn letting
-			out a
-			whimper as your cocktip slides up around her grasping arms and
-			woe-stricken face. You feel her squirming form contained in your
-			loins as those arms are sucked inside, stroking your cock to feel her
-			being fed steadily into your balls. Her legs curling up, distending
-			your sack with their shape afore her upper body plunges down to join
-			the lower as fuel for your hungry sack. The fawn whimpering and
-			squirming about in the hot cummy bath, making your sack jostle
-			against your thighs as you stroke yourself.
+			The fawn surely must know it's hopeless by now, but still, she squirms, even as you work up over her belly and petite, A-cuppish
+			chest. She whines as your cocktip slides up around her grasping arms and woe-stricken face, kicking and struggling but steadfastly
+			contained your collective loins as her arms are bound and sucked inside. You feel her contours against your palms as you stroke your
+			cock, no longer even needing to put the effort in to push her along; your body has that handled, steadily drawing her into your balls.
+			Her legs are forced to curl up, already distending your sack with their shape before her upper body plunges down to join them as a new
+			pendulum for your hungry sack. And yet her futile resistance does not cease even after she's reached the end of the line, thrashing and
+			fussing as though it could possibly convince you to let her out. All she accomplishes is jostling her confines around while you sit back
+			stroke yourself.
 		</text>
-		<choice destination="cockvore3" text="melt her up" />
+		<choice destination="cockvore3" text="Melt her up." />
 	</page>
+
+<!-- really let the line length get away from me. don't feel like fixing it though since it doesn't truly affect anything -->
 
 	<page ID="cockvore3">
 		<text>
-			Time to turn the lil fawn to nutbutter, oh yes. And the thought
-			makes you
-			stroke all the harder, running your hand up and down your
-			shaft as
-			you feel her squirm and whimper in your churning balls. The
-			fawn
-			pushing out weakly against the inside of those sagging nuts as
-			they
-			steadily do away with her. Her form gurgling and softening and
-			then
-			melting away into gallons of hot thick cream as your pace of
-			stroking
-			steadily increases. Your balls going still and contracting,
-			rounding
-			out as every solid mass is sloshed away and all that's left
-			is a
-			pleasing liquid weight. That needy pressure stirring you on to
-			greater heights of stimulation, a groaning gasp heralding your climax
-			as with a spasm of your hips you reach orgasm. A blast of hot cum
-			rocketing up your shaft, splattering on the ground only to be
-			followed by another hefty discharge of cum..and another, and another,
-			as shot after shot you empty out your balls of much of the cum made
-			of the fawn. that cute body now nothing more than fuel for your lust.
-			By the time you're done you sigh and behold both your sticky and
-			still dribbling tip and the immense gooey puddle of fawn you've
-			created. She was adorable, but it's hard not to think she's better
+			Time to turn the li'l doe to pearls, yes ma'am. The thought of her transformation
+			makes you jerk it that much harder while her pushing against the inside of those
+			sagging nuts weakens, minute by minute, as they work their magic with her.
+			Pretty soon, the gurgling softens and melts her away into gallons of thick, hot
+			cream and your pace quickens with her expiry. Your balls go still and contract,
+			rounding out as every hint of solid mass sloshes away and all that's left
+			is a heavy, pleasant weight, itching for release. That needy pressure stirs you on to
+			greater heights of stimulation before a moaning gasp and spasming hips herald your
+			volcanic climax. A blast of hot cum rockets up your shaft and separates in the air,
+			every droplet splattering sloppily on the ground, on the rocks and grass, on your limp,
+			panting form; only to be followed by another hefty discharge and ensuing rain of cum, 
+			and another, and another, and another, and another, shot after shot after shot. And so
+			you soon empty your balls of the jizz you made of the fawn, that charming frame reduced
+			to nothing more than the remains of your lust. By the time you recover from the afterglow,
+			you sigh, beholding both your sticky and still-dribbling tip and the immense, slippery puddle
+			of fawn you've created around you. She was adorable, but it's hard not to think she's better
 			this way.
 		</text>
 		<effect type="feed" value="80" />
 		<special effect="removenpc" />
-		<choice destination="end" text="she was a wonderful load" />
+		<choice destination="end" text="She was a wonderful load." />
 	</page>
 
 	<page ID="oralvore0">
 		<text>
-			Mercy? when she looks so delectible? how absurd. Besides,
-			helpless morsel
-			like her would of ended up eaten by someone sooner or
-			later. And so
-			it doesn't seem that bad to seize her hands and pull
-			them to your
-			lips, sliding them into your mouth, then your throat and
-			enjoying her
-			delicious flavour. Her eyes widen and with a whimper she
-			attempts to
-			pull her arms back, but the weak lil fawn is unable to
-			resist your
-			hunger. Her head being eased slowly closer to your lips
-			even as she
-			struggles.
+			Mercy? When she looks so delectible? The prospect is patently absurd. Besides,
+			a helpless morsel like her would have ended up eaten by someone else sooner or
+			later. Best that it's you. And so, without any ethical qualms, you seize her hands
+			and guide them to your lips, sliding them into your mouth for your throat to swallow,
+			enjoying her delicious, sweat-salted flavour all the way. Her eyes widen and,
+			with an eep, she attempts to retract her arms, but the doe, already frail and
+			weakened further by defear, is way unable to resist your hunger and iron grip.
+			She yanks her head back, but as you pass her elbows, she resigns to bow it
+			forward, between her upper arms, perhaps fearing a broken neck.
 		</text>
-		<choice destination="oralvore1" text="tastey fawn" />
+		<choice destination="oralvore1" text="Succulent morsel." />
 	</page>
 
 	<page ID="oralvore1">
 		<text>
-			She lets out a fearful squeel when you get past her head,
-			sealing her
-			into darkness as you wrap your lips around her shoulders.
-			Her tail
-			twitching cutely as she wriggles around and her legs scramble
-			for
-			purchase. It makes it all the more delicious as you work her down
-			your throat, feel her plunging headfirst into your belly and starting
-			to push it out from the inside. Truly someone so tastey and so unable
-			to resist belongs in your belly and you take a series of eager
-			swallows dragging her chest and middle past your lips, her form
-			starting to curl as she's fed squirming into your now growing gut.
+			Her fearful squaeling muffles once you get past her head and seal her
+			eyes into darkness while your lips slink past her neck and over her
+			shoulders. Her tail twitches before you quite adorably as she wriggles
+			around in your grip, her legs scramble for purchase as you hoist
+			her off the ground. Her fear makes her all the more delicious as you
+			work her down your throat and feel her plunge headfirst into your belly,
+			making just a faint outline. Truly, someone so tasty and so helpless
+			to resist belongs in your belly. You take a series of eager
+			swallows, dragging her chest and midsection past your lips, her form
+			starting to curl and contort as she's fed squirming into your bulging gut.
 		</text>
-		<choice destination="oralvore2" text="finish her" />
+		<choice destination="oralvore2" text="Take one last gulp." />
 	</page>
 
 	<page ID="oralvore2">
 		<text>
-			She's but a meal, her petite body easy to claim as you tip your
-			head back
-			and start swallowing her legs. She still squirms, but even
-			the
-			whimpering fawn has probably realized it was hopeless from the
-			moment
-			you set eyes on her and decided to make her your meal. Those
-			delicious legs sliding past your lips, over your tongue and down your
-			throat. As you claim your feet and send them on their way she lets
-			out a whimper of resignation, curling up entirely as a bulge in your
-			belly now as you polish her off. She was already in your power, the
-			imprisonment inside your hungry belly is merely a formal codifying of
-			the natural order.
+			She's doomed to mealhood, her petite body easy to claim the rest of
+			as you tip your head back and gulp down her legs. Even after she settles
+			into your stomach, she insists on squirming. She really should have realized
+			escape was hopeless from the moment you set eyes on her. Eventually, though,
+			you hear her groan her resignation, masked by the gurgling of your gut. Such
+			is the natural order of things.
 		</text>
-		<choice destination="oralvore3" text="let her be one with her superior" />
+		<choice destination="oralvore3" text="Let her become one with her superior." />
 	</page>
 
 	<page ID="oralvore3">
 		<text>
-			She resists your digestive system as well as she resisted your
-			other
-			desires. The weak squirms overcome in record time with the
-			gurgles
-			and churns of your stomach breaking her down. The bulge of her
-			cute
-			body turning round and soft and then shrinking away as she takes
-			her
-			rightful place as your food. The fawn's nutrients flowing into you
-			with ease.
+			She resists your digestive system about as well as she resisted your
+			other plans for her. Pitiful fussing cedes to deigestion in record time
+			as your churning stomach breaks her down. The bulge of her darling
+			form softens up and rounds out before shrinking away as she takes
+			her rightful place as your food.
 		</text>
 		<effect type="feed" value="80" />
 		<special effect="removenpc" />
-		<choice destination="end" text="she was a delicious snack" />
+		<choice destination="end" text="What a delicious snack." />
 	</page>
 
 </Conversation>

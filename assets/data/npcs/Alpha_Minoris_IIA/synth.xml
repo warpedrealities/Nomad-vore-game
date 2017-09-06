@@ -32,9 +32,11 @@
 				<text>The synth delivers a shocking touch to TARGET for VALUE damage</text>
 			</hitText>
 		</combatMove>
-		<statusTags count="2">
+		<statusTags count="4">
+			<tag>psychic</tag>
 			<tag>radio</tag>
 			<tag>seduction</tag>
+			<tag>life</tag>		
 		</statusTags>
 	</rpg>
 	<respawn delay="4000" />

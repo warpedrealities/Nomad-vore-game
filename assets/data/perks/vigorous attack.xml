@@ -8,7 +8,7 @@
 		enemies defences, requires a melee weapon. +4 to hit, but double ap
 		cost.
 	</description>
-	<weaponMove name="aimed shot" bonusToHit="4" tag="M"
+	<weaponMove name="vigorous attack" bonusToHit="4" tag="M"
 		actionCost="2" moveType="FIGHT">
 	</weaponMove>
 	<maxrank value="1" />

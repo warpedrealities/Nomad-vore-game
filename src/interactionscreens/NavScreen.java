@@ -318,6 +318,9 @@ public class NavScreen extends Screen implements Callback {
 		case SPACE:
 			buttons[1] = new Button(new Vec2f(34.0F, 2.0F), new Vec2f(6, 1.8F), textures[2], this, "control", 1, 1);
 			break;
+		case ADRIFT:
+			buttons[1] = new Button(new Vec2f(34.0F, 2.0F), new Vec2f(6, 1.8F), textures[2], this, "control", 1, 1);
+			break;	
 		}
 
 		for (int i = 0; i < 2; i++) {

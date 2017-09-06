@@ -108,7 +108,7 @@ public interface Actor_RPG {
 
 	public void struggle();
 
-	public boolean stealthCheck(Actor_RPG observer);
+	public boolean stealthCheck(int spot);
 
 	public boolean hasStatus(int uid);
 

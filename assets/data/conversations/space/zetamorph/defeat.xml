@@ -22,7 +22,7 @@
 		<choice destination="unbirth0" text="she should submit to my loins">
 			<assertion evaluate="hasperk" perk="unbirthing" />
 		</choice>
-		<choice destination="unbirth0" text="she should submit to my ass">
+		<choice destination="analvore0" text="she should submit to my ass">
 			<assertion evaluate="hasperk" perk="analvore" />
 		</choice>
 		<choice destination="study" text="study her">

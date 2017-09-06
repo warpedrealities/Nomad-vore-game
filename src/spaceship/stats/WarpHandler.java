@@ -69,6 +69,8 @@ public class WarpHandler {
 				{
 					initializationTime=Universe.getClock();
 					flightDuration=6000/ship.getShipStats().getFTL();
+					float navBonus=((float)ship.getShipStats().getCrewStats().getNavigation())*0.05F;
+					flightDuration=(long) (flightDuration*(1-navBonus));
 					return true;
 				}
 			}

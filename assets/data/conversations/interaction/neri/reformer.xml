@@ -28,7 +28,7 @@
 	</page>
 	<page ID="open">
 	<text>
-	You've opened up the maintenance panel to reveal 3 reserve power batteries.
+	You've opened up the maintenance panel to reveal 3 <conditional><condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="power" />	corroded</conditional><conditional>	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="power" />	freshly replaced</conditional> reserve power batteries.
 	</text>
 	<choice destination="test" text="test circuit"/>
 	<choice destination="replace" text="replace the three batteries">

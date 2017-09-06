@@ -2,9 +2,9 @@
 <Conversation>
 	<page ID="start">
 		<text>
-
+		No interactions to be had with a defeated pirate yet.
 		</text>
-	
+		<choice destination="end" text="darn"/>
 	</page>
 
 </Conversation>

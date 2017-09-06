@@ -8,7 +8,7 @@
 	<shipConverter boostable="true">
 		<convertFrom value="FUEL" />
 		<convertTo value="ENERGY" />
-		<conversionEfficiency value="10" />
-		<conversionRate value="0.02" />
+		<conversionEfficiency value="5" />
+		<conversionRate value="0.01" />
 	</shipConverter>
 </shipsystem>

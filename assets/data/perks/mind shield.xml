@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<perk name="mind shield">
+	<requirement count="1">
+		<req>PERKpsychic</req>
+	</requirement>
+	<description> You have mastered the art of forming a fortress of your mind to resist the attacks of other psionic beings. psi barrier has +10 psi absorption.
+	</description>
+	<move count="1">
+		<combatmove name="mind shield" cooldown="100" icon="12"
+			timeCost="2" actionCost="8" pattern="SELF" bonusAttribute="SEDUCTION" bonusToHit="2"
+			moveType="DOMINATE">
+	<effectStatus probability="100">
+			<applyText>TARGET shields their mind against psionic attack</applyText>
+			<statusDefence uid="12" icon="11" duration="60"
+				numModifiers="2">
+				<strength value="50" />
+				<effect attribute="PSYCHIC" modifier="10" />
+				<removeText> TARGET 's mental defences crumble</removeText>
+			</statusDefence>
+		</effectStatus>
+		</combatmove>
+	</move>
+	<maxrank value="1" />
+
+</perk>

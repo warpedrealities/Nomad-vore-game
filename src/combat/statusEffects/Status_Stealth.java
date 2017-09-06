@@ -109,11 +109,11 @@ public class Status_Stealth implements StatusEffect {
 		return clock;
 	}
 
-	public boolean spotCheck(Actor_RPG observer) {
+	public boolean spotCheck(int spot) {
 		if (clock > 0) {
 			return false;
 		}
-		int roll = Universe.getInstance().m_random.nextInt(20) + observer.getAttribute(Actor_RPG.PERCEPTION);
+		int roll = Universe.getInstance().m_random.nextInt(20) + spot;
 		if (roll > strength) {
 			return true;
 		}

@@ -2,10 +2,10 @@
 <NPC>
 	<sprite value="roboSphere.png" />
 	<name>RoboSphere</name>
-	<description>A floating metal sphere, articulated robotic arms dangling
-		limb or twitching from its underside. Its body is bisected by a slit
-		in which an ominous red light wavers back and forth with a faint whom
-		whom noise.</description>
+	<description>A floating metal sphere, with articulated robotic arms hanging from its undersid.
+		The robot's clearly seen better days, as said arms dangle limply and twitch erratically.
+		Its body is bisected by a slit in which an ominous red light wavers back and forth with a faint
+		&quot;whoom, whoom&quot; noise.</description>
 	<rpg>
 		<experiencevalue value="60" />
 		<ability ability="STRENGTH" value="5" />
@@ -26,10 +26,10 @@
 			<effectDamage type="THERMAL" minValue="2" maxValue="7"
 				modifier="NONE" />
 			<missText count="1">
-				<text>the robosphere unleashes a searing light at TARGET but misses</text>
+				<text>The robosphere unleashes a searing beam of light at TARGET but misses.</text>
 			</missText>
 			<hitText count="1">
-				<text>the robosphere sears TARGET with its laser for VALUE damage</text>
+				<text>The robosphere sears TARGET with its laser for VALUE damage.</text>
 			</hitText>
 		</combatMove>
 		<combatMove name="forcefield" timeCost="2" bonusAttribute="RANGED"
@@ -38,19 +38,21 @@
 				<text></text>
 			</hitText>
 			<effectStatus probability="100">
-				<applyText>TARGET is now surrounded by a deflective shield</applyText>
+				<applyText>TARGET is now surrounded by a deflective shield.</applyText>
 				<statusDefence uid="16" icon="1" duration="60"
 					numModifiers="1">
 					<strength value="20" />
 					<effect attribute="THERMAL" modifier="2" />
-					<removeText> TARGET deflective shield has faded away</removeText>
+					<removeText> TARGET's deflective shield has faded away.</removeText>
 				</statusDefence>
 			</effectStatus>
 			<energySource value="accessory" />
 		</combatMove>
-		<statusTags count="2">
+		<statusTags count="4">
+			<tag>psychic</tag>
 			<tag>radio</tag>
 			<tag>seduction</tag>
+			<tag>life</tag>		
 		</statusTags>
 	</rpg>
 

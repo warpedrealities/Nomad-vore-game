@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ItemEquip name="tribal outfit" weight="1" slot="BODY"
+	value="750">
+	<description>
+		Made of an assorted mix of fur, fabric, leather strips, beads and shells this outfit covers almost nothing but accentuates everything. It's about as protective as going naked but looking like you stepped out of a Frazetta painting should enhance your seductive charms (+2 to seduction)
+	</description>
+	<modifier>
+		<seduction value="2" />
+	</modifier>
+</ItemEquip>

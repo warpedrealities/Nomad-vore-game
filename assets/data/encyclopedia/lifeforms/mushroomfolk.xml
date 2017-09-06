@@ -1,59 +1,52 @@
 <?xml version="1.0"?>
 <entry name="LF:mushroomfolk">
 	<text>
-		description:
-		The more common form is a petite greyskinned but
-		fundamentally flesh and
-		blood humanoid with her hair replaced with a
-		helmetlike red 'cap' of
-		spongey material.
+		Description: LBREAK
+		The more common form of mushroom-girl resembles
+		a petite, gray-skinned, fungal, but fundamentally
+		flesh-and-blood humanoid with a helmetlike red cap of
+		spongy material in place of hair.
 		LBREAK
-		biological findings: The
-		'cap' appears to be a complicated mass of folded and
-		ridged material
-		that act to manufacture a form of 'omni-pheremone'
-		capable of weakening
-		will and increasing arousal in a wide variety of
-		creatures. Further
-		analysis of the pheremone samples reveals spore
-		like airborne
-		particles, however these particles are sterile and while
-		clearly a form
-		of reproduction this form of mushroom folk is clearly
-		sterile. Coupled
-		with the suppressant pheremones accumulated in the
-		subject's biology
-		this may lead to the conjecture that a more advanced
-		form of mushroom
-		folk will arise in any location where no other
-		evolved form is present.
-		So long as a subject has enough nutrients to
-		actualize the costly
-		transformation that is. This advanced form would
-		certainly be capable
-		of reproduction as well as suppressing the
-		metamorphosis of nearby
-		shroomfolk. this mushroom mother or queen
-		would secrete fertile spores
-		that would form mushroom girls when
-		coming to rest in suitable
-		locations.
+		Biological findings: LBREAK
+		The cap appears to be a complicated mass of folded and
+		ridged material that manufactures a form of omni-pheremone
+		capable of weakening will and increasing arousal in a wide
+		variety of creatures. Analysis of pheremones samples
+		reveals a spore-like structure to these airborne
+		particles, as well as vestigial and inactive code
+		that would imply once having been used for the purposes
+		of reproduction but since then being developed into
+		a means of defense. In this form, however, the spores
+		are completely sterile. Coupled with the foreign
+		pheromones found within in the subject's bloodstream,
+		which possessed another individual's DNA,
+		it is possible that a more advanced form of mushroom-folk
+		exists within the same species, and perhaps develops
+		when no other similar form is present in the colony,
+		using its own pheromones to suppress superfluous
+		metamorphoses. Of course, such a transformation
+		would require a large amount of nutrients to fuel
+		its development. It can be inferred that this advanced
+		form, possibly a "mother" or "queen", would be capable
+		of reproduction, secreting fertile spores that would,
+		upon landing in a suitable location, develop into
+		healthy mushroom-girls.
 		LBREAK
-		Tactical assessment: The physical threat from the
-		shroom folk is minimal with
-		their diminutive stature, slender frames
-		and limited muscle mass. The
-		real threat comes from their ability to
-		project pheremones at a target
-		in order to bring that target into a
-		state of self submission where
-		they can devour them. their soft naked
-		forms are probably vulnerable
-		to all knowns forms of attack and their
-		naive and immature
-		personalities may leave them with little will to
-		resist more esoteric
-		forms of 'assault'.
+		Tactical assessment: LBREAK
+		The physical threat presented by the shroomfolk is minimal,
+		between their diminutive stature, slender builds,
+		and limited muscle mass. The real threat comes from their
+		ability to project their spore pheremones at a target,
+		in order to diminish said target's resolve and heighten
+		arousal to the point where the target would willingly
+		allow the mushroom-girl to devour them. Being both very
+		soft and completely unarmored, they are likely vulnerable
+		to all forms of physical attack, while their naive and
+		immature personalities may leave them with little will to
+		resist more esoteric forms of 'assault'. It should also be
+		notede that, despite manufacturing an omni-pheromone,
+		they do not appear to be resistant to the pheromones of other
+		creatures.
 	</text>
 	<requirement name="mushroomfolk" count="1" />
 

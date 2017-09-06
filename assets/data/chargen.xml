@@ -339,10 +339,10 @@
 		</mutation>
 	</phaseMutation>
 
-	<phaseMutation name="unexplained mutation">
+		<phaseMutation name="Your junk">
 
-		<mutation name="none"
-			descriptor="you have remained normal and have not mutated">
+		<mutation name="Vagina"
+			descriptor="You've got a vagina, whether it was always there or a new development.">
 			<effect>
 				<mutation part="penis" bodychange="remove" />
 			</effect>
@@ -351,8 +351,8 @@
 			</effect>
 		</mutation>
 
-		<mutation name="dickgirl"
-			descriptor="you wake up with your vagina replaced with a penis">
+		<mutation name="Dick"
+			descriptor="You've got a dick, whether it was always there or a new development.">
 			<effect>
 				<mutation part="penis" bodychange="add" variable="length"
 					set="6" />
@@ -362,8 +362,8 @@
 			</effect>
 		</mutation>
 
-		<mutation name="herm"
-			descriptor="you wake up with a penis in addition to your vagina">
+		<mutation name="Hermaphroditic"
+			descriptor="You've got both parts, whether they were always there or any combination of new developments.">
 			<effect>
 				<mutation part="penis" bodychange="add" variable="length"
 					set="6" />
@@ -386,7 +386,6 @@
 	</phasePerk>
 	<phasePerk name="Youth">
 		<perk name="academic youth" />
-		<perk name="fast youth" />
 		<perk name="military youth" />
 		<perk name="slutty youth" />
 		<perk name="techy youth" />

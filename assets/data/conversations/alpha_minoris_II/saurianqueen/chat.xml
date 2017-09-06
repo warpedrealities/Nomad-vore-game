@@ -327,7 +327,7 @@
 			"And we could certainly do so, though my people. It would be wrong to ask
 			them to work for free. Lets see it should take.." Laurisse looks
 			thoughtful and glances off to mentally check into her calculation
-			space "1000 gold to pay for sufficient laborers to excavate the
+			space "4000 gold to pay for sufficient laborers to excavate the
 			ship." she says coming back with what she obviously feels is a fair
 			price for her people's efforts.
 		</text>
@@ -342,12 +342,12 @@
 			gold, well, we can begin."
 		</text>
 		<choice destination="crashRecoveryStarted" text="$I have the gold to pay the diggers">
-			<condition evaluate="GOLD" operator="greaterthan" value="1000" />
+			<condition evaluate="GOLD" operator="greaterthan" value="4000" />
 			<condition operator="greaterthan" evaluate="GLOBALFLAG"
 				flag="hauntedValley" value="4" />
 		</choice>
 		<choice destination="end" text="$I can't afford that much gold">
-			<condition evaluate="GOLD" operator="lessthan" value="1000" />
+			<condition evaluate="GOLD" operator="lessthan" value="4000" />
 			<condition operator="greaterthan" evaluate="GLOBALFLAG"
 				flag="hauntedValley" value="4" />
 		</choice>
@@ -360,7 +360,7 @@
 	</page>
 
 	<page ID="crashRecoveryStarted">
-		<effect type="givegold" value="-1000" />
+		<effect type="givegold" value="-4000" />
 		<effect type="setglobalflag" flag="hauntedValley" value="5" />
 		<special effect="marktime" />
 		<effect type="setglobalflag" flag="hauntedValley" value="6" />

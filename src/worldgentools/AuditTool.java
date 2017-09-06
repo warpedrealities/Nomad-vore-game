@@ -6,6 +6,7 @@ import nomad.Universe;
 import worldgentools.auditing.CarvingPathfinder;
 import worldgentools.auditing.FloodPathfinder;
 import zone.TileDef.TileMovement;
+import zone.Tile;
 import zone.Zone;
 import shared.Vec2f;
 import shared.Vec2i;
@@ -24,7 +25,7 @@ public class AuditTool {
 		points = new ArrayList<Vec2i>();
 	}
 
-	private void createPoints(boolean widgets, boolean npcs, boolean pointsOfInterest, int exclude) {
+	private void createPoints(boolean widgets, boolean npcs, boolean pointsOfInterest, int exclude,int replace) {
 		if (widgets == true) {
 			for (int i = 0; i < zone.getWidth(); i++) {
 				for (int j = 0; j < zone.getHeight(); j++) {
@@ -33,7 +34,7 @@ public class AuditTool {
 							if (zone.getTile(i, j).getWidgetObject().Walkable()) {
 								points.add(new Vec2i(i, j));
 							} else {
-								points.add(genNearbyP(i, j));
+								points.add(genNearbyP(i, j,replace));
 							}
 
 						}
@@ -71,24 +72,35 @@ public class AuditTool {
 		return true;
 	}
 
-	private Vec2i genNearbyP(int i, int j) {
+	private Vec2i genNearbyP(int i, int j,int replace) {
 
 		int r = Universe.m_random.nextInt(8);
 		Vec2i p0 = new Vec2i(i, j);
 		Vec2i p = ZoneInteractionHandler.getPos(r, p0);
+		int d=0;
 		while (checkTile(p) == false) {
 			r = r + 1;
 			if (r > 7) {
 				r = 0;
 			}
 			p = ZoneInteractionHandler.getPos(r, p0);
+			d++;
+			if (d>8)
+			{
+				if (zone.getTile((int) p.x, (int) p.y).getWidgetObject()== null)
+				{
+					zone.getTiles()[(int) p.x][(int)p.y] = new Tile(
+							(int) p.x, (int) p.y,
+							zone.getZoneTileLibrary().getDef(replace), zone, zone.getZoneTileLibrary());
+				}
+			}
 		}
 		return p;
 	}
 
 	public void runPathCarver(int tunneledTile, boolean widgets, boolean npcs, boolean pointsOfInterest, int replace,
 			int exclude) {
-		createPoints(widgets, npcs, pointsOfInterest, exclude);
+		createPoints(widgets, npcs, pointsOfInterest, exclude,replace);
 		ArrayList<Vec2i> unreachedpoints = new FloodPathfinder(zone).runFlood(points);
 		if (unreachedpoints.size() > 0) {
 			ArrayList<Vec2i> reachable = new ArrayList<Vec2i>(points);

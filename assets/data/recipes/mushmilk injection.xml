@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="Mushmilk injection" requiredskill="1" startunlocked="false">
+	<description>
+	This syringe containes a gnarly slurry of distilled mushroom milk, mush-girl DNA,
+	mutagenic herbs, vaginal fluid, and brilliant ideas.
+	</description>
+	<ingredient item="shroompaste" quantity="3" />
+	<ingredient item="mutagen" quantity="1" />
+	<result item="Mushmilk injection" />
+</recipe>

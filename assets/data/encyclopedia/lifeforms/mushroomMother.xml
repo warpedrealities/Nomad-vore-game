@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<entry name="LF:mushroommother">
+	<text>
+		Description: LBREAK
+		The Mother was clearly an advanced form of mushroom-girl,
+		serving as their matron.
+		LBREAK
+		Biological findings: LBREAK
+		The role of the mushroom Mother appears to be twofold:
+		she must both produce fertile spores, which shall grow
+		into the more common, infertile variety of mushroom girl,
+		and she must also produce a constant, steady supply of
+		huge quantities of milk for the others to rely on in times
+		of starvation. The former appears to be assisted
+		by the larger size of her cap, while the latter role seems
+		to be aided by a biological capability to ingest whole
+		creatures through her nipples. It should also be noted
+		that the increased mass of her body stems more from her
+		age and caste than her metabolic intake, though the latter
+		cannot wholly be discounted.
+		LBREAK
+		Tactical assessment: LBREAK
+		Though the Mother's increased mass over the common variety
+		of mushroom-girl would provide her an edge in physical combat
+		and present a tangible threat, it is clear that, like the
+		common varieties, pheromonal discharge is the preferred means
+		of attack. This bevahior might be a holdover from a previous,
+		less bulky stage of development. The pheromones of this caste
+		are notably more powerful than those of the common mushroom
+		girl, so one should take care to mitigate their effect. However,
+		as large as Mothers grow, this makes them much bigger targets
+		for physical assault.
+	</text>
+	<requirement name="mushroommother" count="1" />
+	<recipe_reward recipe="Mushmilk injection"/>
+</entry>

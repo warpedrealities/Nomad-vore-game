@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="hooded_lamia.png" />
+
+	<name>hooded lamia</name>
+	<description>
+	From waist to chin this creature is a lovely and curvaceous figure of sensuality, bared full breasts and a shapely frame. From waist below though she is a serpent, a long green orange dappled tail as thick as a tree trunk supporting and carrying her. She seems marginally smaller than her cousins, but equally as predatory as her tongue flicks out and she turns your way. Her face framed not by hair but by a cobra esque hood of scaley orange flesh that flares outwards as she catches sight of her prey.
+	</description>
+	<rpg>
+		<experiencevalue value="45" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="STRUGGLE" value="2" />
+		<attribute attribute="MELEE" value="2" />
+		<attribute attribute="PARRY" value="2" />
+		<combatMove name="coil" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0">
+			<missText count="1">
+				<text>The lamia fails to coil up TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>The lamia wraps TARGET in her coils</text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is wrapped in snakey coils.</applyText>
+				<statusBind uid="20" icon="4" numModifiers="2">
+					<removeText> TARGET has escaped the lamia coils.</removeText>
+					<effect attribute="RANGED" modifier="-2" />
+					<effect attribute="MELEE" modifier="-2" />
+					<bind strength="15" originDependent="true" />
+					<struggle count="2">
+						<text>TARGET struggles against the lamia coils but cannot escape
+						</text>
+						<text>TARGET tries to get out of the lamia coils, but fails
+						</text>
+					</struggle>
+				</statusBind>
+
+			</effectStatus>
+		</combatMove>
+		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>The lamia fails to squeeze TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>The lamia squeezes TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+			<combatMove name="spit" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="6">
+			<missText count="1">
+				<text>The lamia spits at TARGET but misses</text>
+			</missText>
+			<hitText count="3">
+				<text>The lamia spits aphrodisiac laden goo at TARGET who loses VALUE resolve from the scent</text>
+				<text>TARGET suddenly finds themselves smeared with a glop of goo the lamia spit at her and loses VALUE resolve from its pheremones</text>	
+				<text>TARGET is hit with pheremone laden spit and loses VALUE resolve</text>		
+			</hitText>
+			<effectDamage type="PHEREMONE" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+		</combatMove>	
+	</rpg>
+
+	<respawn delay="2000" />
+
+	<disposition value="25" />
+	<defeated conversation="alpha_minoris_II/hooded_lamia/defeat" />
+	<seduced conversation="alpha_minoris_II/hooded_lamia/defeat" />
+	<victory conversation="alpha_minoris_II/hooded_lamia/victory" />
+	<seducer conversation="alpha_minoris_II/hooded_lamia/seducer" />
+	<controller AI="hooded_lamia" />
+	<faction value="monster" />
+</Harpy>

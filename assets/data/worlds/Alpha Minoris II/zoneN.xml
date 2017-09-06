@@ -72,6 +72,7 @@
 		<Seedwidgets min="16" max="32" name="fruitbush" />
 		<Seedwidgets min="8" max="16" name="gourdbush" />
 		<SeedNPCs min="8" max="16" name="AlphaMinoris_II/lamia" />
+		<SeedNPCs min="4" max="8" name="AlphaMinoris_II/hooded_lamia" />	
 		<walloff wall="7" sides="north" />
 		<prefab positionX="32" positionY="32" width="1" height="1">
 			<row>3</row>

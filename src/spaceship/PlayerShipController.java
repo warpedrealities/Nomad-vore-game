@@ -78,7 +78,8 @@ public class PlayerShipController implements ShipController {
 	}
 
 	private void useFuel(Spaceship ship) {
-		float v = ship.getShipStats().getFuelEfficiency();
+		float navBonus=((float)ship.getShipStats().getCrewStats().getNavigation())*0.05F;
+		float v = ship.getShipStats().getFuelEfficiency()*(1-navBonus);
 		ship.getShipStats().getResource("FUEL")
 				.setResourceAmount(ship.getShipStats().getResource("FUEL").getResourceAmount() - v);
 	}

@@ -26,6 +26,7 @@
 		quantity="1" cost="400" />
 	<inventoryitem name="zymonite" probability="50" quantity="1"
 		cost="400" />
+	<inventoryitem name="tribal outfit" probability="100" quantity="1" />	
 	<inventoryitem name="tucksack" probability="100"
 		quantity="1" />
 	<buymodifier name="deku nut" cost="100" />

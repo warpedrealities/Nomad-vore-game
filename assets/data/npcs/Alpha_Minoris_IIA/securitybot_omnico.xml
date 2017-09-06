@@ -2,10 +2,10 @@
 <NPC>
 	<sprite value="securitybot.png" />
 	<name>RoboGuard</name>
-	<description>A sturdy drum shaped robot, each segmented arm ends in a
-		laser gun. Its head is devoid of features but for a scanning aperture
-		which is a mere foreboding slit, an ominous red light tracking back
-		and forth across it.</description>
+	<description>A sturdy, drum shaped robot, on wheels. Each segmented arm ends in a
+		laser gun. Its head is devoid of any features but for a mere foreboding slit
+		which must serve as a scanning aperture, an ominous red light tracking back
+		and forth across its span.</description>
 	<rpg>
 		<experiencevalue value="50" />
 		<ability ability="STRENGTH" value="5" />
@@ -25,15 +25,17 @@
 			<effectDamage type="THERMAL" minValue="1" maxValue="6"
 				modifier="NONE" />
 			<missText count="1">
-				<text>the roboguard fires off its handlasers at TARGET but misses</text>
+				<text>The roboguard fires off its handlasers at TARGET but misses</text>
 			</missText>
 			<hitText count="1">
-				<text>the roboguard zaps TARGET with its lasers for VALUE damage</text>
+				<text>The roboguard zaps TARGET with its lasers for VALUE damage</text>
 			</hitText>
 		</combatMove>
-		<statusTags count="2">
+		<statusTags count="4">
+			<tag>psychic</tag>
 			<tag>radio</tag>
 			<tag>seduction</tag>
+			<tag>life</tag>		
 		</statusTags>
 	</rpg>
 

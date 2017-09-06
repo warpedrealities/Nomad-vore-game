@@ -72,7 +72,7 @@
 
 	<disposition value="25" />
 	<defeated conversation="alpha_minoris_IIA/mushroommother/mushroommotherdefeat" />
-	<seduced conversation="alpha_minoris_IIA/mushroommother/mushroommotherdefeat" />
+	<seduced conversation="alpha_minoris_IIA/mushroommother/seduced" />
 	<victory conversation="alpha_minoris_IIA/mushroommother/mushroommothervictory" />
 	<seducer conversation="alpha_minoris_IIA/mushroommother/mushroommothervictory" />
 	<controller AI="mushroommother" />

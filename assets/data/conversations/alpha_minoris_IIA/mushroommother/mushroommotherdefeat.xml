@@ -3,7 +3,19 @@
 	<page ID="start">
 		<text>You have defeated the mushroom mother, her ample form now at
 			your mercy.</text>
-		<choice destination="end" text="do nothing" />
+		<choice destination="sample" text="Take a sample for research purposes." />
+			<assertnot evaluate="hasEntry" entry="lifeforms/mushroommother.xml"/>
+			<assertnot evaluate="hasResearch" research="mushroommother"/>
+		<choice destination="end" text="Leave her be." />
+	</page>
+
+	<page ID="sample">
+		<text>
+		Holding an emptied can of space soda to the mother's nipple, you quickly fill
+		the can and then some. Lord, it just doesn't stop coming out, does it?
+		</text>
+		<special effect="research" data="mushroommother" DC=10 />
+		<choice destination="end" text="Time to do some research." />
 	</page>
 
 </Conversation>

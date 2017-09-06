@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<perk name="Lactation">
+
+	<description>
+	You lactate on demand now and always have something to supply.
+	Of course, this might also mean you're always lactating or that
+	you accidentally soak your clothes when you're not suppressing it.
+	</description>
+	<maxrank value="1" />
+
+</perk>

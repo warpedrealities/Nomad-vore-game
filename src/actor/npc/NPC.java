@@ -20,6 +20,8 @@ import org.w3c.dom.NodeList;
 
 import actor.Actor;
 import actor.Attackable;
+import actor.npc.observerVore.VoreScript;
+import actor.npc.observerVore.impl.VoreScript_Impl;
 import actor.player.Player;
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
@@ -52,7 +54,8 @@ import zone.Zone_int;
 public class NPC extends Actor implements Controllable {
 
 	Controller controllerScript;
-
+	VoreScript voreScript;
+	
 	int uid;
 	int attackIndex;
 	int controllermemory[];
@@ -66,6 +69,7 @@ public class NPC extends Actor implements Controllable {
 
 	boolean peace;
 	boolean isCompanion;
+	boolean isBusy;
 	FlagField npcFlags;
 
 	static public final int CONVERSATIONDEFEAT = 0;
@@ -234,18 +238,49 @@ public class NPC extends Actor implements Controllable {
 		senseInterface = sense;
 	}
 
+	public boolean hasObserverScript()
+	{
+		if (voreScript!=null)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	
+	
 	@Override
 	public void Update() {
 		super.Update();
 		actorRPG.update();
 		if (actorRPG.getBusy() == 0) {
-			if (RPGHandler.getActive()) {
-				controllerScript.RunAI(this, senseInterface);
-
+			if (voreScript!=null)
+			{
+				voreScript.update(getVisible(),senseInterface.getHostile(this, 4,true)==null);
+				if (!voreScript.isActive())
+				{
+					voreScript=null;
+				}
+				else if (!voreScript.blocksAI())
+				{
+					if (RPGHandler.getActive()) {
+						controllerScript.RunAI(this, senseInterface);
+					}				
+				}
+				if (actorRPG.getBusy()==0)
+				{
+					actorRPG.setBusy(4);			
+				}				
+			}
+			else
+			{
+				if (RPGHandler.getActive()) {
+					controllerScript.RunAI(this, senseInterface);
+				}				
 			}
 		}
 
-		if (clock > 0) {
+		if (clock > 0 && !isBusy) {
 
 			clock--;
 			if (clock == 0) {
@@ -254,7 +289,6 @@ public class NPC extends Actor implements Controllable {
 				} else {
 					Remove();
 				}
-
 			}
 		}
 
@@ -442,6 +476,9 @@ public class NPC extends Actor implements Controllable {
 
 	@Override
 	public boolean Respawn(long time) {
+		
+		voreScript=null;
+		
 		actorRPG.getStatusEffectHandler().clearStatusEffects(this, actorRPG);
 		if (respawnController != null) {
 
@@ -483,19 +520,41 @@ public class NPC extends Actor implements Controllable {
 	public void Heal() {
 		actorRPG.Heal(1);
 		spriteInterface.setImage(0);
+		clock=0;
+	}
+
+	public boolean isBusy() {
+		return isBusy;
+	}
+	
+
+	public void setBusy(boolean isBusy) {
+		this.isBusy = isBusy;
+	}
+	
+	public void startVoreScript(String filename, Actor target)
+	{
+		voreScript=new VoreScript_Impl(filename,(NPC) target);
 	}
 
 	@Override
 	public void Interact(Player player) {
 
-		if (actorRPG.getStat(Actor_RPG.HEALTH) <= 0 && conversations[CONVERSATIONDEFEAT] != null) {
-			ViewScene.m_interface.StartConversation(conversations[CONVERSATIONDEFEAT], this, false);
+		if (voreScript!=null || isBusy)
+		{
+			ViewScene.m_interface.DrawText(actorName+" is busy right now");
 		}
-		if (actorRPG.getStat(Actor_RPG.RESOLVE) <= 0 && conversations[CONVERSATIONSEDUCED] != null) {
-			ViewScene.m_interface.StartConversation(conversations[CONVERSATIONSEDUCED], this, false);
-		}
-		if (conversations[CONVERSATIONTALK] != null && isHostile(player.getActorFaction().getFilename()) == false) {
-			ViewScene.m_interface.StartConversation(conversations[CONVERSATIONTALK], this, false);
+		else
+		{
+			if (actorRPG.getStat(Actor_RPG.HEALTH) <= 0 && conversations[CONVERSATIONDEFEAT] != null) {
+				ViewScene.m_interface.StartConversation(conversations[CONVERSATIONDEFEAT], this, false);
+			}
+			if (actorRPG.getStat(Actor_RPG.RESOLVE) <= 0 && conversations[CONVERSATIONSEDUCED] != null) {
+				ViewScene.m_interface.StartConversation(conversations[CONVERSATIONSEDUCED], this, false);
+			}
+			if (conversations[CONVERSATIONTALK] != null && isHostile(player.getActorFaction().getFilename()) == false) {
+				ViewScene.m_interface.StartConversation(conversations[CONVERSATIONTALK], this, false);
+			}			
 		}
 	}
 
@@ -687,7 +746,10 @@ public class NPC extends Actor implements Controllable {
 
 	@Override
 	public int applyEffect(Effect effect, Actor origin, boolean critical) {
-
+		if (voreScript!=null && origin!=this)
+		{
+			voreScript.attacked();
+		}
 		return effect.applyEffect(origin, this, critical);
 	}
 
@@ -837,7 +899,7 @@ public class NPC extends Actor implements Controllable {
 		if (actorVisibility == false && tile.getVisible() == true) {
 			if (actorRPG.getStealthState() > -1) {
 
-				return actorRPG.stealthCheck(Universe.getInstance().getPlayer().getRPG());
+				return actorRPG.stealthCheck(Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.PERCEPTION));
 			} else {
 				return true;
 			}

@@ -171,10 +171,11 @@ public class SystemScreen extends Screen implements MyListener {
 	
 	private WarpData genWarpData()
 	{
+		float navBonus=0.05F*((float)ship.getShipStats().getCrewStats().getNavigation());
 		WarpNavigator navigator=new WarpNavigator();
 		WarpData warpData=new WarpData();
 		warpData.position=Universe.getInstance().getcurrentSystem().getPosition();
-		warpData.stress=navigator.calculateStress(ship.getPosition());
+		warpData.stress=navigator.calculateStress(ship.getPosition())*(1-navBonus);
 		warpData.facing=navigator.calcFacing(ship.getPosition());
 		warpData.destination=navigator.calculateDestination(warpData.facing);
 
