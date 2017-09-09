@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<ItemConsumable name="meek" weight="1" value="250">
-	<description>The vial of liquid is remarkably unthreatening. It's a
-		biological refactoring agent that will render your biology better
-		specialized to derive nutrition from non prey sources. The meek will
-		inherit the urth.
+<ItemConsumable name="Meek" weight="0.5" value="250">
+	<description>This vial of liquid is remarkably unthreatening. It's labelled as a
+		biological refactoring agent that will render your metabolism better
+		specialized to derive nutrition from non-live sources. &quot;The meek will
+		inherit the urth,&quot; it says on the tagline.
 	</description>
 	<effectmodifier modvalue="-20" modifies="KARMA">
 		You can feel the
 		substance seep into your every pore and coursing through
 		you, rewriting
-		your digestive and other processes. Your karma score is
-		now VALUE
+		your digestive and other metabolic processes. Your karma score is
+		now VALUE and cooked food sounds a bit more appetizing.
 	</effectmodifier>
 </ItemConsumable>

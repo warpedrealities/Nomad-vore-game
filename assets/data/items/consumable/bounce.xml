@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
-<ItemConsumable name="bounce" weight="1" value="100">
-	<description>a bodysculpting drug to promote the growth of your ass for
-		those who want some more badonk</description>
+<ItemConsumable name="Bounce" weight="1" value="100">
+	<description>A body-sculpting drug to promote the growth of one's posterior, for
+		those who want some more badonk.</description>
 	<effectmutator>
 		<criteriaValue part="butt" variable="size" value="18"
 			lessthan="true" />
 		<mutation part="butt" variable="size" modifier="1">
-			you inject
-			some more bounce into your ass and can feel your rump steadily
-			enlargening under its effects leaving you with an ass that is
-			MACRObutt_size_desc
+			You flick off the cap and inject
+			some bounce into your ass. It doesn't take long to start
+			feeling your rump steadily
+			enlargening under its effects, leaving you with a
+			MACRObutt_size_desc ass.
 		</mutation>
 	</effectmutator>
 

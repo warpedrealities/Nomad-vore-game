@@ -13,9 +13,14 @@
 
 	<page ID="boarding">
 		<text>
+		You bring your ship in to dock with the pirate vessel, a series of thunks heralding the connection airlock to airlock. Steel yourself if you must, but waste no time to turn the tables on these thieves of the skyways.
+		</text>	
+		<choice destination="raid" text="time to board"/>
+	</page>
+	<page ID="raid">
+		<text>
 		</text>
 
 		<special effect="dock" />
 	</page>
-
 </Conversation>

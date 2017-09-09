@@ -78,6 +78,8 @@ public class CombatMovementHandler {
 			Universe.getInstance().getCurrentZone().removeThreat
 			((int)actor.getPosition().x, (int)actor.getPosition().y, actor);
 		}
+		last.x=(int)last.x;
+		last.y=(int)last.y;
 		Universe.getInstance().getCurrentZone().getTile((int) actor.getPosition().x, (int) actor.getPosition().y)
 				.setActorInTile(null);
 		actor.setPosition(last);

@@ -29,12 +29,7 @@ end
 
 function victimize(controllable,victim)
 	if pos:getDistance(victim:getPosition())<2 then
-		rand=math.random()
-		if (rand==0) then
-			controllable:startVoreScript("elf_raider_saurian_raider_OV", victim)
-		else
-			controllable:startVoreScript("elf_raider_saurian_raider_AV", victim)	
-		end
+		controllable:startVoreScript("elf_raider_saurian_raider_OV", victim)
 	else
 			if controllable:HasPath() then
 				controllable:FollowPath()

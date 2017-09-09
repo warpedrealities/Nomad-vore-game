@@ -2,6 +2,7 @@ package playerscreens;
 
 import gui.Button;
 import gui.MultiLineText;
+import gui.ScrollableMultiLineText;
 import gui.Text;
 import gui.Window;
 import gui.lists.List;
@@ -25,7 +26,7 @@ public class LevelUpScreen extends Screen implements Callback {
 	ArrayList<Perk> availablePerks;
 	List perkList;
 	Window window;
-	MultiLineText description;
+	ScrollableMultiLineText description;
 	int select;
 	Callback callback;
 
@@ -48,7 +49,7 @@ public class LevelUpScreen extends Screen implements Callback {
 		}
 
 		// build description
-		description = new MultiLineText(new Vec2f(00.5F, 8.5F), 16, 64, 0.8F);
+		description = new ScrollableMultiLineText(new Vec2f(0.5F, 8.5F), 16, 58, 0.8F,new Vec2f(-1.0F,-10.5F));
 		description.addText("text text text");
 		window.add(description);
 		Window subwindow = new Window(new Vec2f(00, 9.5F), new Vec2f(20, 18.5F), values[1], true);
@@ -87,6 +88,7 @@ public class LevelUpScreen extends Screen implements Callback {
 	@Override
 	public void update(float DT) {
 
+		description.update(DT);
 		perkList.update(DT);
 	}
 

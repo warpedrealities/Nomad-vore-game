@@ -2,6 +2,7 @@ package shop;
 
 import gui.Button;
 import gui.MultiLineText;
+import gui.ScrollableMultiLineText;
 import gui.Text;
 import gui.Window;
 import gui.lists.List;
@@ -34,7 +35,7 @@ public class ShopScreen extends Screen implements Callback {
 	List[] itemLists;
 	Text weightValue;
 	Text money;
-	MultiLineText description;
+	ScrollableMultiLineText description;
 
 	Callback callback;
 
@@ -48,8 +49,11 @@ public class ShopScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
-
+		for (int i=0;i<itemLists.length;i++)
+		{
+			itemLists[i].update(DT);
+		}
+		description.update(DT);
 	}
 
 	@Override
@@ -263,7 +267,7 @@ public class ShopScreen extends Screen implements Callback {
 
 		window.add(money);
 
-		description = new MultiLineText(new Vec2f(0.5F, 16), 10, 48, 0.8F);
+		description = new ScrollableMultiLineText(new Vec2f(0.5F, 16), 10, 48, 0.8F,new Vec2f(19,12));
 		description.addText("" + "");
 		subwindow.add(description);
 		resetList();

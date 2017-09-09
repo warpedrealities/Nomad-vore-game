@@ -88,7 +88,6 @@ public class Button extends GUIBase {
 
 	@Override
 	public boolean ClickEvent(Vec2f pos) {
-		// TODO Auto-generated method stub
 		// check inside
 		if (m_active == false) {
 			return false;

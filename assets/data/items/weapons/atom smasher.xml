@@ -11,7 +11,7 @@
 	</modifier>
 	<combatMove name="blast" ammoCost="1" pattern="CONE"
 		bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2"
-		actionCost="2" basicAction="true" moveType="FIGHT">
+		actionCost="2" basicAction="true" moveType="FIGHT" rangeDecay="1">
 		<effectDamage type="THERMAL" minValue="8" maxValue="16"
 			modifier="NONE" />
 		<missText count="1">

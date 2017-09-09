@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<ItemConsumable name="slimfast" weight="1" value="100">
-	<description>A small weight loss package</description>
+<ItemConsumable name="Slimfast" weight="0.5" value="250">
+	<description>A knock-off of the brand of weight-loss
+		pill that destroyed diet culture.</description>
 	<effectmutator>
 		<criteriaValue part="breasts" variable="size" value="1" />
 		<mutation part="breasts" variable="size" modifier="-1">
@@ -14,11 +15,12 @@
 	<effectmutator>
 		<criteriaValue part="body" variable="weight" value="25" />
 		<mutation part="body" variable="weight" modifier="-25">
-			you take the
-			slimfast, woah they weren't kidding about the fast part.
-			your build is
-			now MACRObody_weight_desc and your breasts are now size
-			MACRObreast_size_desc while your ass is MACRObutt_size_desc
+			You take the
+			slimfast, and wow, they weren't kidding about the fast part.
+			You drop to a
+			MACRObody_weight_desc build, your bust has become a
+			MACRObreast_size_desc pair, while a slimmer, MACRObutt_size_desc
+			ass now sits on your slenderer thighs. 
 		</mutation>
 	</effectmutator>
 

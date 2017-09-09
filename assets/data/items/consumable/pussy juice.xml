@@ -1,12 +1,25 @@
 <?xml version="1.0"?>
-<ItemConsumable name="pussy juice" weight="0.5" value="250">
-	<description>Refined substance, nicknamed pussy juice for an unusual
-		but easily guessable reason.</description>
+<ItemConsumable name="Pussy juice" weight="0.5" value="250">
+	<description>A slick, chemical substance, nicknamed &quot;pussy juice&quot; for an unusual,
+		but easily guessed reason.</description>
 	<effectmutator>
 		<criteriaAssertion part="vagina" negative="true" />
 		<mutation part="vagina" bodychange="add">
-			Well, now you have a
-			vagina again.
+			Well, you have a
+			vagina now.
+		</mutation>
+	</effectmutator>
+	<effectmutator>
+		<criteriaAssertion part="vagina" negative="false" />
+		<mutation part="vagina" bodychange="add">
+			You already have a vagina. You don't get another.
+		</mutation>
+	</effectmutator>
+	<effectmutator>
+		<criteriaAssertion part="penis" />
+		<mutation part="penis" bodychange="remove">
+			You no longer have a penis. It just receded into you,
+			along with your balls.
 		</mutation>
 	</effectmutator>
 </ItemConsumable>

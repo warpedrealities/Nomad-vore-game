@@ -10,7 +10,7 @@
 		cost. 1-6 pheremone damage.
 	</description>
 	<move count="1">
-		<combatmove name="pheremone dispersal" ammoCost="2"
+		<combatmove name="pheremone dispersal" ammoCost="2" actionCost="2"
 			timeCost="2" pattern="CIRCLE" bonusAttribute="SEDUCTION" bonusToHit="2"
 			moveType="DOMINATE">
 			<effectDamage type="PHEREMONE" minValue="1" maxValue="6"

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<perk name="art of war">
+	<requirement count="1">
+		<req>PERKwarrior</req>
+	</requirement>
+	<description>The best defence is a swift offence, followed by a relentless assault, followed by overwhelming blows, followed by a savage beating followed by... +2 to melee.</description>
+	<modifier affects="MELEE" value="2" type="ATTRIBUTE" />
+	<maxrank value="3" />
+
+</perk>

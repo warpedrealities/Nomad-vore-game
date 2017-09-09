@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
-<ItemConsumable name="phalifungi" weight="0.5" value="250">
-	<description>A very suggestive engineered fungi. Carefully prepared and
+<ItemConsumable name="Phallifungi" weight="0.5" value="250">
+	<description>A very suggestively-shaped, bio-engineered fungus, carefully prepared and
 		treated to amplify its effects.</description>
 	<effectmutator>
 		<criteriaAssertion part="vagina" />
 		<mutation part="vagina" bodychange="remove">
-			you no longer have a
-			vagina.
+			You no longer have a
+			vagina. It just seals up and disappears, your belly flattening a little.
 		</mutation>
 	</effectmutator>
 	<effectmutator>
 		<criteriaAssertion part="penis" />
 		<mutation part="penis" variable="length" modifier="3">
-			your penis
-			grows CHANGE inches, you are now in possession of a shaft
+			Your penis
+			grows CHANGE inches. You are now in possession of a shaft
 			VALUE inches
-			in length
+			in length.
 		</mutation>
 	</effectmutator>
 	<effectmutator>
 		<criteriaAssertion part="penis" negative="true" />
 		<mutation part="penis" bodychange="add" variable="length"
 			set="6">
-			You now have a penis.
+			You now have a six-inch penis, all soft and untouched.
 		</mutation>
 	</effectmutator>
 

@@ -2,13 +2,15 @@
 <NPC>
 	<sprite value="frog.png" />
 	<name>frog girl</name>
-	<description> A curvaceously figured humanoid, her skin a smooth
-		brilliant emerald over all but her pale cream belly and she wears not
-		a shred of clothing about her body. Her amphibious form possessed of
-		hefty tits, ample thighs and a soft padded belly. She eyes you with an
-		undeniably predatory air and a preposterously long tongue flicks out
-		of her mouth a moment with the air of a living hose unfurling from a
-		reel.</description>
+	<description> A curvaceously-figured humanoid, her skin a smooth
+		brilliant emerald over all but her pale, cream belly, wearing not
+		a shred of clothing on her body. Her amphibious form possesses
+		a pair of hefty tits, ample thighs, and a soft, padded belly which
+		almost completely hides a glistening snatch. She
+		leers at you with an undeniably predatory look in her eyes while a
+		predictably long tongue flicks out
+		of her mouth, like a living hose unfurling from a
+		reel, before springing back in.</description>
 	<rpg>
 		<experiencevalue value="35" />
 		<ability ability="STRENGTH" value="5" />
@@ -27,12 +29,13 @@
 			<effectDamage type="KINETIC" minValue="1" maxValue="6"
 				modifier="STRENGTH" />
 			<missText count="2">
-				<text>The froggy snaps out a powerful kick that does not connect
-					with TARGET</text>
-				<text>TARGET evades a kick from the froggy</text>
+				<text>The froggy snaps out a powerful kick, but does not connect
+					with TARGET.</text>
+				<text>TARGET evades a hard kick from the frog-girl.</text>
 			</missText>
-			<hitText count="1">
-				<text>The frog girl kicks TARGET for VALUE damage</text>
+			<hitText count="2">
+				<text>The frog-girl kicks TARGET for VALUE damage.</text>
+				<text>The frog-girl delivers a powerful spring-kick to TARGET, taking off VALUE health.</text>
 			</hitText>
 		</combatMove>
 
@@ -41,27 +44,26 @@
 			<effectDamage type="TEASE" minValue="1" maxValue="6"
 				modifier="STRENGTH" />
 			<missText count="1">
-				<text>The frog girl fails to lick TARGET</text>
+				<text>The frog-girl misses TARGET with her tongue.</text>
 			</missText>
 			<hitText count="1">
-				<text>TARGET loses VALUE resolve to the teasing licks of the frog
-					girl</text>
+				<text>TARGET loses VALUE resolve to the frog-girl's teasing licks.</text>
 			</hitText>
 		</combatMove>
 
 		<combatMove name="tongue" bonusAttribute="MELEE" timeCost="2"
 			bonusToHit="4" pattern="RANGED" moveType="MOVEMENT">
 			<missText count="2">
-				<text>the frog girl lashes out her tongue at TARGET who dodges the
-					attack.</text>
-				<text>the frog girl's amazingly long tail snaps out and flicks
+				<text>The frog girl lashes out her tongue at TARGET, who dodges the
+					biological grappling hook.</text>
+				<text>The frog girl's amazingly long tongue snaps out and flicks
 					harmlessly past TARGET before reeling back in.</text>
 			</missText>
 			<hitText count="2">
-				<text>the frog girl lashes out her tongue at TARGET and wraps it
-					around her briefly, tugging her closer</text>
-				<text>the frog girl snags TARGET with her tongue and hauls them
-					closer</text>
+				<text>The frog-girl lashes her tongue out at TARGET and manages to wraps it
+					around her and tug her closer.</text>
+				<text>The frog-girl nails TARGET with her tongue and yanks them
+					much closer.</text>
 			</hitText>
 			<effectMovement moveType="TARGET_TOWARDS" distance="2"
 				abilityMod="STRENGTH" />

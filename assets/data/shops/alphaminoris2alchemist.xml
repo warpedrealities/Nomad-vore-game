@@ -1,11 +1,23 @@
 <?xml version="1.0"?>
 <shop profitratio="1.25">
-	<inventoryitem name="hermilixir" probability="100"
+	<inventoryitem name="Hermilixir" probability="100"
 		quantity="20" cost="500" />
-	<inventoryitem name="pussy juice" probability="100"
+	<inventoryitem name="Pussy juice" probability="100"
 		quantity="20" cost="250" />
-	<inventoryitem name="phalifungi" probability="100"
+	<inventoryitem name="Phallifungi" probability="100"
 		quantity="20" cost="250" />
-	<inventoryitem name="tadge oil" probability="100"
+	<inventoryitem name="Tadge oil" probability="100"
 		quantity="20" cost="250" />
+	<inventoryitem name="Binder" probability="100"
+		quantity="20" cost="100" />
+	<inventoryitem name="Bounce" probability="100"
+		quantity="20" cost="100" />
+	<inventoryitem name="Chubb" probability="100"
+		quantity="20" cost="250" />
+	<inventoryitem name="Citrullus mammatus" probability="100"
+		quantity="20" cost="100" />
+	<inventoryitem name="Slimfast" probability="100"
+		quantity="20" cost="250" />
+	<inventoryitem name="Squeeze" probability="100"
+		quantity="20" cost="100" />
 </shop>

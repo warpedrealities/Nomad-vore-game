@@ -3,7 +3,7 @@
 
 	<page ID="start">
 		<text>
-			no interactions with a seduced frog girl yet.
+			no interactions with a seduced frog girl yet. research maybe?
 		</text>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
@@ -13,7 +13,22 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
+		<choice destination="study" text="study her">
+			<assertnot evaluate="hasEntry" entry="lifeforms/froggirl.xml" />
+			<assertnot evaluate="hasResearch" research="frog-girl" />
+		</choice>
 		<choice destination="end" text="darn" />
+	</page>
+
+
+	<page ID="study">
+		<text>
+			You study and probe the frog in a thorough and probably rather
+			disagreeable way, the data you've collected should be very valuable.
+		</text>
+		<special effect="removenpc" />
+		<special effect="research" DC="10" data="raijin" group="liforms0" />
+		<choice destination="end" text="time to do some research" />
 	</page>
 
 	<page ID="devour">

@@ -8,17 +8,17 @@
 	</description>
 	<rpg>
 		<experiencevalue value="45" />
-		<ability ability="STRENGTH" value="6" />
+		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />
 		<ability ability="ENDURANCE" value="5" />
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
-		<stat stat="HEALTH" value="40" />
+		<stat stat="HEALTH" value="30" />
 		<stat stat="RESOLVE" value="40" />
 		<attribute attribute="STRUGGLE" value="2" />
-		<attribute attribute="MELEE" value="2" />
-		<attribute attribute="PARRY" value="2" />
+		<attribute attribute="WILLPOWER" value="2" />
+		<attribute attribute="DODGE" value="2" />
 		<combatMove name="coil" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="0">
 			<missText count="1">
@@ -33,7 +33,7 @@
 					<removeText> TARGET has escaped the lamia coils.</removeText>
 					<effect attribute="RANGED" modifier="-2" />
 					<effect attribute="MELEE" modifier="-2" />
-					<bind strength="15" originDependent="true" />
+					<bind strength="12" originDependent="true" />
 					<struggle count="2">
 						<text>TARGET struggles against the lamia coils but cannot escape
 						</text>
@@ -44,15 +44,15 @@
 
 			</effectStatus>
 		</combatMove>
-		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"
+		<combatMove name="tease" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="0">
-			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+			<effectDamage type="TEASE" minValue="3" maxValue="6"
 				modifier="STRENGTH" />
 			<missText count="1">
-				<text>The lamia fails to squeeze TARGET</text>
+				<text>The lamia fails to arouse TARGET</text>
 			</missText>
 			<hitText count="1">
-				<text>The lamia squeezes TARGET for VALUE damage</text>
+				<text>The lamia presses her tits into TARGET 's face for VALUE resolve damage</text>
 			</hitText>
 		</combatMove>
 			<combatMove name="spit" pattern="RANGED" bonusAttribute="MELEE"
@@ -65,7 +65,7 @@
 				<text>TARGET suddenly finds themselves smeared with a glop of goo the lamia spit at her and loses VALUE resolve from its pheremones</text>	
 				<text>TARGET is hit with pheremone laden spit and loses VALUE resolve</text>		
 			</hitText>
-			<effectDamage type="PHEREMONE" minValue="1" maxValue="6"
+			<effectDamage type="PHEREMONE" minValue="2" maxValue="6"
 				modifier="STRENGTH" />
 		</combatMove>	
 	</rpg>

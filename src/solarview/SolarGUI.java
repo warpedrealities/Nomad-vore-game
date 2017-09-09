@@ -53,7 +53,7 @@ public class SolarGUI {
 
 	private void setupTextures() {
 		textureIds = new int[2];
-		textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
+		textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchgreen.png", GL13.GL_TEXTURE0);
 		textureIds[1] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
 		// textureIds[1]=Tools.loadPNGTexture("assets/art/font2.png",
 		// GL13.GL_TEXTURE0);

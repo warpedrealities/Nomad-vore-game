@@ -220,7 +220,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=00;
+		playerExperience=200;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -336,7 +336,7 @@ public class Player_RPG implements Actor_RPG {
 		
 		if (stats[HEALTH]<statMax[HEALTH])
 		{
-			stats[HEALTH]+=subAbilities[REGENERATION]*duration*2; stats[SATIATION]-=REGENCOST*2*duration;				
+			stats[HEALTH]+=subAbilities[REGENERATION]*duration*4; stats[SATIATION]-=REGENCOST*duration;				
 		}
 
 		if (stats[RESOLVE]<statMax[RESOLVE])

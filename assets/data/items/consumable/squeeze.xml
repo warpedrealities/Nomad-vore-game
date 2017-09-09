@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<ItemConsumable name="squeeze" weight="1" value="100">
-	<description>a bodysculpting drug to shrink and reduce an unnecessarily
-		large ass</description>
+<ItemConsumable name="Squeeze" weight="0.5" value="100">
+	<description>A body-sculpting drug used to shrink and reduce an unnecessarily
+		large ass.</description>
 	<effectmutator>
 		<criteriaValue part="butt" variable="size" value="1" />
 		<mutation part="butt" variable="size" modifier="-1">
-			you inject
-			squeeze and can feel your rump being reduced in size rapidly leaving
-			you with an ass that is MACRObutt_size_desc
+			You flick off the cap and inject the
+			squeeze. Soon, your rump reduces in size quite rapidly, leaving
+			you with a MACRObutt_size_desc ass.
 		</mutation>
 	</effectmutator>
 

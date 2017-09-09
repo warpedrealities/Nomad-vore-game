@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="dart rope" requiredskill="1" startunlocked="true">
+	<description>
+		Fashioning a barbed harpoon with a trailing strand of strong rope will let you attempt to sling it at people and hopefully have it lodge there so you can reel them in. It might not be the most practical idea ever, but it is very cool.
+	</description>
+	<ingredient item="fabric" quantity="3" />
+	<ingredient item="scrap metal" quantity="2" />
+	<tokenRequirement item="gadgeteer" quantity="1" />
+	<result item="dart rope" />
+</recipe>

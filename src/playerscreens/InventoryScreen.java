@@ -6,6 +6,7 @@ import gui.Button2;
 import gui.DropDown;
 import gui.GUIBase;
 import gui.MultiLineText;
+import gui.ScrollableMultiLineText;
 import gui.Text;
 import gui.TextColoured;
 import gui.UI_Popup;
@@ -60,7 +61,7 @@ public class InventoryScreen extends Screen implements Callback {
 	
 	int m_control;
 	
-	MultiLineText m_description;
+	ScrollableMultiLineText m_description;
 	Rect m_rect[];
 	MouseHook m_hook;
 	ModelController_Int m_callback;
@@ -135,7 +136,7 @@ public class InventoryScreen extends Screen implements Callback {
 		}
 		
 
-		m_description=new MultiLineText(new Vec2f (0.5F,7),10,70,0.8F);
+		m_description=new ScrollableMultiLineText(new Vec2f (0.5F,7),10,66,0.8F,new Vec2f(2,-12));
 		m_window.add(m_description);
 	//	m_description.AddText(m_player.getInventory().getItem(0).getDescription());
 		

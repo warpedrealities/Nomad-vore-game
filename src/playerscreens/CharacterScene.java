@@ -3,6 +3,7 @@ package playerscreens;
 import gui.Button;
 import gui.Button2;
 import gui.MultiLineText;
+import gui.ScrollableMultiLineText;
 import gui.Text;
 import gui.Window;
 import gui.lists.List;
@@ -37,11 +38,10 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 	Player player;
 	Player_RPG playerRPG;
 	Text experienceNotes;
-	MultiLineText description;
+	ScrollableMultiLineText description;
 	List perkList;
 	Screen m_screen;
 	private MouseHook hook;
-
 	public CharacterScene() {
 		SetupTextures();
 		m_GUImatrix = new Matrix4f();
@@ -71,8 +71,8 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
 		m_textureIds[1] = Tools.loadPNGTexture("assets/art/font2.png", GL13.GL_TEXTURE0);
-		// m_textureIds[2]=Tools.loadPNGTexture("assets/art/spritesheet.png",
-		// GL13.GL_TEXTURE0);
+		 m_textureIds[2]=Tools.loadPNGTexture("assets/art/ninepatchgreen.png",
+		 GL13.GL_TEXTURE0);
 		// m_textureIds[3]=Tools.loadPNGTexture("assets/art/"+m_world.currentZone.getTileset(),
 		// GL13.GL_TEXTURE0);
 		m_textureIds[4] = Tools.loadPNGTexture("assets/art/window.png", GL13.GL_TEXTURE0);
@@ -92,7 +92,7 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		} else {
 			m_screen.update(DT);
 		}
-
+		description.update(DT);
 	}
 
 	@Override
@@ -123,12 +123,13 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 	}
 
 	private void levelUp() {
-		int values[] = new int[5];
+		int values[] = new int[6];
 		values[0] = m_textureIds[1];
 		values[1] = m_textureIds[0];
 		values[2] = m_textureIds[7];
 		values[3] = m_textureIds[8];
 		values[4] = m_variables[0];
+		values[5] = m_textureIds[2];
 		m_screen = new LevelUpScreen(values, this);
 		m_screen.start(hook);
 		hook.Remove(perkList);
@@ -309,7 +310,7 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 	private void genPerkSection(int frame, int font, int tint) {
 
 		perkList = new List(new Vec2f(0, -6.75F), 16, font, frame, tint, this, 20, false);
-		description = new MultiLineText(new Vec2f(20.5F, 6.2F), 16, 64, 0.8F);
+		description = new ScrollableMultiLineText(new Vec2f(20.5F, 6.2F), 16, 58, 0.8F,new Vec2f(19,-11.4F));
 		window.add(description);
 		Text header = new Text(new Vec2f(2.2F, 7.0F), "perks", 0.8F, tint);
 

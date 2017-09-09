@@ -206,7 +206,12 @@ public class Inventory {
 
 		int count = dstream.read();
 		for (int i = 0; i < count; i++) {
-			m_items.add(Universe.getInstance().getLibrary().getItem(dstream));
+			Item item=Universe.getInstance().getLibrary().getItem(dstream);
+			if (item!=null)
+			{
+				m_items.add(item);
+			}
+		
 		}
 
 		playerCredits = dstream.readInt();

@@ -46,7 +46,7 @@
 		her nipple. The mother isn't the happiest that you gotta bounce, but
 		that's her issue.
 		</text>
-		<effect value="20" type="feed"/>
+		<effect value="20" type="givefood"/>
 		<choice destination="end" text="Get moving." />
 	</page>
 
@@ -109,7 +109,7 @@
 		lower face, and put some distance between the two of you, much to the mother's
 		disappointment. Well, at least you filled your belly.
 		</text>
-		<effect value="80" type="feed"/>
+		<effect value="80" type="givefood"/>
 		<choice destination="end" text="Get going." />
 	</page>
 
@@ -175,7 +175,7 @@
 		<measurement part="breast" variable="size"/>
 		.
 		</text>
-		<effect value="160" type="feed"/>
+		<effect value="160" type="givefood"/>
 		<choice destination="sated3" text="Get going with your new assets." />
 	</page>
 

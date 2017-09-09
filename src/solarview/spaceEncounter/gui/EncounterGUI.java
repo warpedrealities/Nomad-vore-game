@@ -147,7 +147,7 @@ public class EncounterGUI implements MyListener {
 
 	private void setupTextures() {
 		textureIds = new int[17];
-		textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
+		textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchgreen.png", GL13.GL_TEXTURE0);
 		textureIds[1] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
 		textureIds[2] = Tools.loadPNGTexture("assets/art/ui/halt0.png", GL13.GL_TEXTURE0);
 		textureIds[3] = Tools.loadPNGTexture("assets/art/ui/halt1.png", GL13.GL_TEXTURE0);
@@ -448,7 +448,7 @@ public class EncounterGUI implements MyListener {
 	
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-		if (screen==null)
+		if (screen==null && !logic.isRunning())
 		{
 			if (ID < 9) {
 				encounterShip.setCourse((byte) ID);

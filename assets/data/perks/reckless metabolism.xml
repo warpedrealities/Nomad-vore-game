@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<perk name="reckless metabolism">
+	<description> Your biology no longer reserves as much of your precious metabolic reserves for raw survival and will instead devote satiation to healing wounds even when doing so could risk starvation. You now regenerate at anything over 25% satiation as opposed to over 50%</description>
+	<modifier affects="REGENTHRESHOLD" value="-25" type="SUBABILITY" />
+	<maxrank value="1" />
+
+</perk>

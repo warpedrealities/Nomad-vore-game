@@ -23,9 +23,16 @@
 
 	<page ID="boarding">
 		<text>
+		The aliens waste no time pleading with you to sway from your course of space piracy. And their ship is disabled and unable to manouver to evade as you bring your vessel in to dock with a series of ringing thunks and clangs. The two airlocks are linked, you can only imagine these aliens are quaking in fear of your coming aggressive price re-negotiation.
 		</text>
-		<effect type="setlocalflag" flag="boarded" value="1" />
-		<special effect="dock" />
+		<choice destination="end" text="time to board them" />
 	</page>
 
+	<page ID="raid">
+	<text>
+	</text>
+	<effect type="setlocalflag" flag="boarded" value="1" />
+	<special effect="dock" />
+	</page>
+	
 </Conversation>

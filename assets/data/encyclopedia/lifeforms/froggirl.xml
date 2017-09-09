@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<entry name="LF: Frog-girl">
+	<text>
+		Description: LBREAK
+		Ribbit.
+		LBREAK
+		Biological Findings: LBREAK
+		Ribbit.
+		LBREAK
+		Tactical assessment:LBREAK
+		Ribbit.
+	</text>
+	<requirement name="frog-girl" count="1" />
+</entry>

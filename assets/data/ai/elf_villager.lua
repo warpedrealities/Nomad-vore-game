@@ -79,7 +79,7 @@ function main(controllable, sense, script)
 
 	else
 		b=controllable:getRPG():getStat(1);
-		if b<20 then
+		if b<20 and not controllable:isPeace() then
 			seduce(controllable,sense)
 		else
 			a=math.random(0,16)

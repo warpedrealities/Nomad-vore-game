@@ -47,6 +47,7 @@
 			she says and chuckles.
 		</text>
 		<special effect="healnpc" />
+			<special effect="nonhostile" />	
 		<effect type="heal" value="0.1" />
 		<choice destination="end" text="$I'd molest that ass of yours anytime" />
 	</page>
@@ -94,7 +95,7 @@
 		<choice destination="analvore3" text="cant talk, wriggle into her butt" />
 	</page>
 
-	<page Id="analvore3">
+	<page ID="analvore3">
 		<text>
 			"ah, you're...very willing" the elf says with a delighted chuckle as you
 			work yourself inside. Pushing off on the ground until your waist
@@ -182,6 +183,7 @@
 		</text>
 		<special effect="healnpc" />
 		<effect type="heal" value="0.1" />
+			<special effect="nonhostile" />	
 		<choice destination="end"
 			text="$That was fun, we should do it again sometime" />
 	</page>

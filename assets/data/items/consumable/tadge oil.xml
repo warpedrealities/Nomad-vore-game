@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<ItemConsumable name="tadge oil" weight="0.5" value="250">
+<ItemConsumable name="Tadge oil" weight="0.5" value="250">
 	<description>A substance for application to the genital region to
-		reduce unwanted masculinity.</description>
+		reduce unwanted size.</description>
 	<effectmutator>
 		<criteriaAssertion part="penis" />
 		<criteriaValue lessthan="true" part="penis" variable="length"
 			value="5" />
 		<!--if penis smaller than 5 inches -->
 		<mutation part="penis" bodychange="remove">
-			you no longer have a penis.
+			You no longer have a penis. It just receded into you, along with your balls.
 		</mutation>
 	</effectmutator>
 
@@ -17,7 +17,7 @@
 		<criteriaAssertion part="vagina" negative="true" />
 		<mutation part="vagina" bodychange="add">
 			Well, now you have a
-			vagina again.
+			vagina.
 		</mutation>
 	</effectmutator>
 
@@ -28,10 +28,10 @@
 			value="18" />
 		<!-- if penis larger than 5 inches -->
 		<mutation part="penis" variable="length" modifier="-3">
-			your penis
-			shrinks CHANGE inches, you are now in possession of a shaft
+			Your penis
+			shrinks CHANGE inches. You are now in possession of a shaft
 			VALUE
-			inches in length
+			inches in length.
 		</mutation>
 	</effectmutator>
 
@@ -42,10 +42,10 @@
 			value="60" />	
 		<!-- if penis larger than 12 inches -->
 		<mutation part="penis" variable="length" modifier="-6">
-			your penis
-			shrinks CHANGE inches, you are now in possession of a shaft
+			/your penis
+			shrinks CHANGE inches. You are now in possession of a shaft
 			VALUE
-			inches in length
+			inches in length.
 		</mutation>
 	</effectmutator>
 	<effectmutator>
@@ -53,10 +53,10 @@
 		<criteriaValue part="penis" variable="length" value="60" />	
 		<!-- if penis larger than 12 inches -->
 		<mutation part="penis" variable="length" modifier="-12">
-			your penis
-			shrinks CHANGE inches, you are now in possession of a shaft
+			Your penis
+			shrinks CHANGE inches. You are now in possession of a shaft
 			VALUE
-			inches in length
+			inches in length.
 		</mutation>
 	</effectmutator>
 </ItemConsumable>
