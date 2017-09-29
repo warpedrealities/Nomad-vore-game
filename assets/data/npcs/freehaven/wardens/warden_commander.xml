@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="blueWRing.png" />
+
+	<name>commander Frei</name>
+	<description>A tall and uncompromising bunny girl, even if you discount her stark white bunny ears she caps 6 feet tall easily. She's clad in a form fitting blue uniform jumpsuit that serves nicely to emphasize her bust, a gold shield on her chest as a badge. She watches you calculatingly, clearly she's not someone you'd want to try and fool. Judging by the equipment at her belt she has ways of dealing with those who try.</description>
+	<rpg>
+		<experiencevalue value="15" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="100" />
+		<stat stat="RESOLVE" value="100" />
+		<attribute attribute="DODGE" value="8" />		
+		<attribute attribute="PARRY" value="8" />
+		<attribute attribute="WILLPOWER" value="8" />			
+		<combatMove name="shock" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="8" threatening="true">
+			<effectDamage type="SHOCK" minValue="5" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Frei swings at TARGET but misses</text>
+			</missText>
+			<hitText count="1">
+				<text>Frei strikes TARGET for VALUE shock damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="shoot" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" bonusToHit="8" >
+			<effectDamage type="KINETIC" minValue="4" maxValue="7"
+				modifier="NONE" />
+			<missText count="1">
+				<text>Frei shoots at TARGET but misses</text>
+			</missText>
+			<hitText count="1">
+				<text>Frei shoots TARGET for VALUE kinetic damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<respawn delay="2000" />
+	<victory conversation="freehaven/commander_Frei/victory" />
+	<seducer conversation="freehaven/commander_Frei/victory" />
+	<talk conversation="freehaven/commander_Frei/chat" />	
+	<controller AI="commander_frei" />
+	<faction value="freehaven_wardens" />
+</NPC>

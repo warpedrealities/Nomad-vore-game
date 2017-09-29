@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="battery bank" requiredskill="1" startunlocked="true">
+	<description>
+		A battery bank, no generation capacity but plenty of storage to accumulate energy.
+	</description>
+	<ingredient item="battery" quantity="10" />
+	<result item="battery bank"/>
+</recipe>

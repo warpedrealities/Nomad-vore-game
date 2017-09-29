@@ -18,6 +18,7 @@ import rendering.SpriteBatch;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
+import solarview.spawningSystem.SpawningSystem;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
 import spaceship.npcShips.NpcShipController;
@@ -192,6 +193,7 @@ public class StarSystem {
 	}
 
 	public void systemEntry() {
+		new SpawningSystem(systemName).run(entitiesInSystem);
 		for (int i=0;i<entitiesInSystem.size();i++)
 		{
 			entitiesInSystem.get(i).systemEntry();

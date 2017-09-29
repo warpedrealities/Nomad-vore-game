@@ -8,11 +8,12 @@
 		<choice destination="extractComputer"
 			text="Try to remove its computational components." />
 		<choice destination="extractOptics" text="Try to remove something from its weapon system." />
+		<choice destination="extractPower" text="Try to remove the power unit"/> 
 		<choice destination="end" text="Do nothing." />
 	</page>
 
 	<check ID="extractComputer">
-		<test what="TECH" DC="10" />
+		<test what="TECH" DC="11" />
 		<outcome destination="computerSuccess" />
 		<outcome destination="computerFail" />
 	</check>
@@ -22,10 +23,9 @@
 			You attempt to extract the computational parts of the robot intact but
 			your lack of skill just leads to you breaking them in an inept attempt
 			to rip them out. They're useless now, but at least you have a few
-			wires and chunks of the robot's casing as souvenirs. Or maybe they can
-			be paperweights, or raw material for future use.
+			wires and chunks of the robot's casing as a souvenir. Or maybe it'll serve can as a paperweight, or raw material for future use.
 		</text>
-		<effect type="giveitem" value="2" item="scrap metal" />
+		<effect type="giveitem" value="1" item="scrap metal" />
 		<special effect="removenpc" />
 		<choice destination="end" text="Ah well, better luck next time." />
 	</page>
@@ -34,18 +34,18 @@
 		<text>
 			You attempt to extract the delicate computation valves. The devices take
 			a careful touch to extract from the surrounding systems but your steady
-			your hands and manage to successfully extract two computation valves
+			your hands and manage to successfully extract a computation valve
 			from the robot's brain, so to speak. To celebrate, you dismantle some of its
-			wiring and casing for some additional raw materials.
+			wiring and casing for some additional raw material.
 		</text>
-		<effect type="giveitem" value="2" item="computation valve" />
-		<effect type="giveitem" value="2" item="scrap metal" />
+		<effect type="giveitem" value="1" item="computation valve" />
+		<effect type="giveitem" value="1" item="scrap metal" />
 		<special effect="removenpc" />
 		<choice destination="end" text="Excellent!" />
 	</page>
 
 	<check ID="extractOptics">
-		<test what="TECH" DC="12" />
+		<test what="TECH" DC="13" />
 		<outcome destination="opticsSuccess" />
 		<outcome destination="opticsFail" />
 	</check>
@@ -74,5 +74,26 @@
 		<special effect="removenpc" />
 		<choice destination="end" text="Well, at least these might come in handy." />
 	</page>
+	<check ID="extractPower">
+		<test what="TECH" DC="15" />
+		<outcome destination="powerSuccess" />
+		<outcome destination="powerFail" />
+	</check>
+	
+	<page ID="powerFail">
+		<text>
+			You set about attempting to extricate the power supply from deep inside the machine. Alas somewhere in trying to disengage it you must of done something wrong, there's a flash of arcing as something shorts out in a spectacular fashion. The device now emanates a sickly aroma of burnt plastics and fried electronics..yeah, you might of bungled this.
+		</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="Damn it!" />
+	</page>
 
+	<page ID="powerSuccess">
+		<text>
+			You delicately remove the power supply from deep within the robot's innards. Having to disengage various damaged electrical circuits from it and unhook it from the chassis takes a good deal of skill but such you have in ample amounts. You've acquired a battery from the robot's guts, huzzah.
+		</text>
+		<effect type="giveitem" value="1" item="battery" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Excellent." />
+	</page>
 </Conversation>

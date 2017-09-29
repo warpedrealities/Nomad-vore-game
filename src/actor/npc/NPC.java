@@ -253,7 +253,7 @@ public class NPC extends Actor implements Controllable {
 	public void Update() {
 		super.Update();
 		actorRPG.update();
-		if (actorRPG.getBusy() == 0) {
+		if (actorRPG.getBusy() == 0 && !isBusy()) {
 			if (voreScript!=null)
 			{
 				voreScript.update(getVisible(),senseInterface.getHostile(this, 4,true)==null);
@@ -721,6 +721,10 @@ public class NPC extends Actor implements Controllable {
 
 	@Override
 	public boolean getAttackable() {
+		if (isBusy())
+		{
+			return false;
+		}
 		return RPGHandler.getAttackable();
 	}
 

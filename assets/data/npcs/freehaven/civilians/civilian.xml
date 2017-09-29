@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="blueTurret.png" />
+
+	<name></name>
+	<description></description>
+	<rpg>
+		<experiencevalue value="15" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="25" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="-2" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<respawn delay="2000" />
+	<flying />
+	<defeated conversation="" />
+	<seduced conversation="" />
+	<victory conversation="" />
+	<seducer conversation="" />
+	<controller AI="turret" />
+	<faction value="freehaven_civilian" />
+</Harpy>

@@ -2,5 +2,7 @@
 <System>
 	<Star x="0" y="0" sprite="starSmallBlue" intensity="15" />
 	<World x="4" y="-8">Alpha Majoris I</World>
-
+	<spawnRules>
+	<spawn ship="sloop" max="1" chance="25"/>
+	</spawnRules>
 </System>

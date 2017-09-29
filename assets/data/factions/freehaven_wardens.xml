@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<faction>
+	<factionRelationship ID="freehaven_gangs" value="0" />
+	<defaultRelationship value="55" />
+</faction>

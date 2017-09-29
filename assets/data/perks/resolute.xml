@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<perk name="resolute">
+	<description>
+		You shall not succumb to blandishments and wiles, you shall remain resolute in your purpose and not submit in lust to the seductive charms of those who would enthrall you... or at least, that's the plan. +10 resolve.
+	</description>
+	<modifier affects="RESOLVE" value="10" type="STAT" />
+
+	<maxrank value="3" />
+
+</perk>

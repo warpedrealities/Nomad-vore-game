@@ -33,6 +33,7 @@
 				Exterior hatch </pairedportal>
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="craftingtable" />
+				<widgetItem>crafting table</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="1" y="4" name="slot" />

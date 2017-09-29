@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="blueW.png" />
+
+	<name>station warden</name>
+	<description>The bunny girl would be cute with her long grey ears and bobble of grey floof for a tail. But she's no defenceless innocent as she keeps a watchful eye and ear out for trouble. Her fit and athletic body is clad in a blue uniform jumpsuit, a simple silver shield on her breast as a mark of allegiance. She's got a technologically enhanced baton and a pistol at her belt.</description>
+	<rpg>
+		<experiencevalue value="100" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="60" />
+		<stat stat="RESOLVE" value="60" />
+		<attribute attribute="DODGE" value="4" />		
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />		
+	
+		<combatMove name="shock" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="SHOCK" minValue="5" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>warden takes a swipe at TARGET but the blow is deflected</text>
+			</missText>
+			<hitText count="1">
+				<text>warden strikes TARGET for VALUE shock damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="shoot" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="4" maxValue="7"
+				modifier="NONE" />
+			<missText count="1">
+				<text>warden fires at TARGET but misses</text>
+			</missText>
+			<hitText count="1">
+				<text>warden shoots TARGET for VALUE kinetic damage</text>
+			</hitText>
+		</combatMove>
+	<itemDrop chance="10" item="enforcer pistol" />	
+	<itemDrop chance="20" item="bullets" />		
+	</rpg>
+
+	<respawn delay="2000" />
+	<victory conversation="" />
+	<seducer conversation="" />
+	<controller AI="station_sentry" />
+	<faction value="freehaven_wardens" />
+</NPC>

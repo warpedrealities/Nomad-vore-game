@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<zone width="32" height="32" spriteset="stationblue.png">
+	<zonerules ruleset="freehaven_level_5" />
+	<tileset count-x="8" count-y="8">
+		<tile sprite="1" vision="1" movement="2" smart="true">a metal wall</tile>
+		<tile sprite="17" vision="0" movement="0" smart="true">a metal floor</tile>
+		<tile sprite="33" vision="1" movement="2">metal shelf</tile>
+		<tile sprite="34" vision="1" movement="2">a machine</tile>
+		<tile sprite="35" vision="1" movement="2">a set of monitors</tile>
+		<tile sprite="36" vision="0" movement="0">tiled floor</tile>	
+		<tile sprite="37" vision="0" movement="2">worktable</tile>	
+		<tile sprite="38" vision="0" movement="2">counter</tile>	
+		<tile sprite="39" vision="0" movement="2">table</tile>				
+	</tileset>
+
+	<description></description>
+
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="16">
+		<row>0000000000000011</row>
+		<row>0000000000001112</row>
+		<row>0000000000111122</row>
+		<row>0000000001111122</row>
+		<row>0000000011111112</row>
+		<row>0000000111111112</row>
+		<row>0000001166661222</row>
+		<row>0000011666661222</row>	
+		<row>0000116666661222</row>
+		<row>0001116777761222</row>
+		<row>0011116666661222</row>
+		<row>0011111121111222</row>
+		<row>0112222222222222</row>
+		<row>0122222222222222</row>
+		<row>1122222222222221</row>
+		<row>1222222222222211</row>			
+	</prefab>
+	<prefab positionX="16" positionY="0" width="16">
+		<row>2100000000000000</row>
+		<row>2111000000000000</row>
+		<row>2211110000000000</row>
+		<row>2211111000000000</row>		
+		<row>2111111100000000</row>
+		<row>2111111110000000</row>
+		<row>2221333311000000</row>
+		<row>2221222221100000</row>	
+		<row>2221333322110000</row>
+		<row>2221222222111000</row>
+		<row>2221222222111100</row>
+		<row>2221112111111100</row>	
+		<row>2222222222222110</row>
+		<row>2222222222222210</row>
+		<row>1222222222222211</row>
+		<row>1122222222222221</row>			
+	</prefab>
+	<prefab positionX="0" positionY="16" width="16">
+		<row>1222222222222211</row>
+		<row>1122222222222221</row>
+		<row>0122222222222222</row>
+		<row>0112222222222222</row>		
+		<row>0011111121111112</row>
+		<row>0011112222212222</row>
+		<row>0001112222212922</row>
+		<row>0000112222212222</row>	
+		<row>0000011555512922</row>
+		<row>0000001111112222</row>
+		<row>0000000111112922</row>
+		<row>0000000011112222</row>	
+		<row>0000000001112288</row>
+		<row>0000000000111222</row>
+		<row>0000000000001111</row>
+		<row>0000000000000011</row>				
+	</prefab>
+	<prefab positionX="16" positionY="16" width="16">
+		<row>1122222222222221</row>
+		<row>1222222222222211</row>
+		<row>2222222222222210</row>
+		<row>2222222222222110</row>		
+		<row>2111111211111100</row>
+		<row>2222142242111100</row>
+		<row>2292122222111000</row>
+		<row>2222122222110000</row>	
+		<row>2292142241100000</row>
+		<row>2222122211000000</row>
+		<row>2292111110000000</row>
+		<row>2222111100000000</row>	
+		<row>8822111000000000</row>
+		<row>2221110000000000</row>
+		<row>1111000000000000</row>
+		<row>1100000000000000</row>			
+	</prefab>
+	<pairedportal x="16" y="0" sprite="7" ID="-101" facing="0"> airlock </pairedportal>	
+	<placeWidget x="16" y="4" name="panelH">
+	<lock key="controlonly" strength="20" />
+	</placeWidget>
+	<placeWidget x="15" y="4" name="panelH">
+	<lock key="controlonly" strength="20" />
+	</placeWidget>	
+	<placeNPC name="freehaven/wardens/wardenTurret" x="14" y="3" />
+	<placeNPC name="freehaven/wardens/wardenTurret" x="17" y="3" />	
+	<placeNPC name="freehaven/wardens/wardenTurret" x="14" y="14" />
+	<placeNPC name="freehaven/wardens/wardenTurret" x="17" y="14" />
+	<placeNPC name="freehaven/wardens/wardenTurret" x="14" y="17" />
+	<placeNPC name="freehaven/wardens/wardenTurret" x="17" y="17" />	
+	<placeNPC name="freehaven/wardens/wardenSentry" x="9" y="19" />		
+	<placeNPC name="freehaven/wardens/wardenSentry" x="7" y="19" />	
+	<placeNPC name="freehaven/wardens/warden_commander" x="16" y="3" />	
+		<partition xmin="2" xmax="30" ymin="11" ymax="19">
+			<SeedNPCs min="8" max="12" name="freehaven/wardens/warden">
+			</SeedNPCs>
+		</partition>	
+	</mapgen>
+
+</zone>

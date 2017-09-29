@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="gadgeteer">
 	<requirement count="1">
-		<req>PERKjury rigger1</req>
+		<req>SKILLTECH1</req>
 	</requirement>
 	<description> Crafting has the possibility of providing you with a
 		range of tools, devices and weapons made from parts and materials you

@@ -12,11 +12,179 @@
 	
 	<page ID="sex0">
 	<text>
-	
+	The kitty lets out a murr and then squats over you "You have something I want." she says as she reaches <conditional>in to free and <assertion evaluate="slothasitem" slot="2" /></conditional> fondle your <macro ID="penis_size_desc" /> shaft. she smirks at your expression and uses her other hand to hitch up her skirts, repositioning herself over you and lining your tip up underneath her. You feel a drip of moistness against your tip as her warm and ready nethers line up and she prepares to use you to get off. Her mrowl and your gasp come simultaneously as she sinks herself over you.
 	</text>
+	<choice destination="sex1" text="reverse rape from a catgirl isn't so bad?"/>
+	</page>
 	
+	<page ID="sex1">
+	<text>
+	The pirate's nethers are hot and tight around you. Her mrowls of delight as she slides down to sheathe your length inside her are delightful to hear even as she pins your shoulders down and starts to ride your dick, gazing down dominantly into your eyes as she does so "mhmm, you're a good fuck."
+	</text>
+	<choice destination="sex2" text="please her"/>
 	</page>
 
+	<page ID="sex2">
+	<text>
+	"mhmm that's..." she seems to be more focused on her own pleasure now than anything else as she speeds up her pace, hips rocking up and down as she lets out little mrowls and gasps as she fucks herself on your dick. It's certainly a stimulating sensation for you to have her doing all the work, dominated and screwed by the kitty girl and knowing she'll get off on you soon.
+	</text>
+	<choice destination="sex3" text="and soon"/>
+	</page>
+	
+	<page ID="sex3">
+	<text>
+	She's really not holding you down now, but as that wonderful erotic sensation slides up and down along your length you can hardly find the will to resist. The kitty bouncing on your dick vigorously and mewling as she works herself to crescendo. finally you find that it's too much and stirred on by her lust you shudder and buck your hips up to meet hers as you cum, pumping your seed deep into her and see her eyes widen. The kitty letting out a shuddering mrowl, stiffening in orgasm and clenching around your spurting dick afore slumping atop you panting and purring.
+	</text>
+	<choice destination="oralvoreA0" text="...worn out from that"/>
+	<choice destination="sex4" text="it's my turn on top, hope she's down for round two"/>
+	</page>
+	
+	<page ID="oralvoreA0">
+	<text>
+	The kitty pulls you into her embrace, shifting you upright and into her arms while she's still speared atop your length. Her purr thrumming against your chest as she presses you close "mhmm, best way to pique an appetite.." she remarks, abruptly reminding you she has more intentions for you but before you can rouse yourself from your post coital lethargy she's wrapping her lips around your face. The kitty pirate starting to eat you alive.
+	</text>
+	<choice destination="oralvoreA1" text="oh, oh dear"/>
+	</page>
+	
+	<page ID="oralvoreA1">
+	<text>
+	your kitty predator shifts her position rocking forwards on her haunches. Lifting her hips and popping your dick free of her cumfilled nethers as you hear her loud purring around your head and she swallows to pull you further down her throat, her hands grabbing ahold of your hips and pulling you deeper into her body. You can hear her gurgling eager belly beneath you as you kick your legs out futilely in protest of turning from sextoy to meal.
+	</text>
+	<choice destination="oralvoreA2" text="continue"/>
+	</page>
+	
+	<page ID="oralvoreA2">
+	<text>
+	The kitty purrs in indecent satisfaction in between her hearty gulps. your upper body steadily disappearing past her lips and being packed away in the hot and hungry depths of the kitty, her gut spilling and stretching out of her jacket as you're worked down inside of her. As your hips start to pass her lips she seems to slow, playfully licking and lapping around your sticky member as she grabs your thighs with her hands and prepares to gobble you down completely.
+	</text>
+	<choice destination="oralvoreA3" text="swallowed completely"/>
+	</page>
+	
+	<page ID="oralvoreA3">
+	<text>
+	The catgirl pirates throat glucks repeatedly and loudly around your legs as she swallows you down. Her head tipped back letting those flailing legs wave above her as she consumes you completely and mhmms, resting her hands on her belly as you're forced to settle and curl inside of her "mhmm you're delicious, best perk of being a pirate..getting to do this to fools like you." she says and rubs over her belly in delight as her hot stomach walls squish all over you.
+	
+	</text>
+	<choice destination="oralvoreAStruggle" text="$You just wait until i get out of here kitty, we'll see who'se the fool!"/>
+	<choice destination="oralvoreASubmit" text="$Actually it's really sexy to be eaten by a kitty like you, i don't mind you digesting me really"/>
+	</page>
+	
+	<check ID="oralvoreAStruggle">
+	<test what="STRUGGLE" DC="14" />
+	<outcome destination="oralvoreASuccess" />
+	<outcome destination="oralvoreAFailure" />
+	</check>
+	
+	<page ID="oralvoreASuccess">
+	<text>
+	"oh sure, you're gonna crawl up my throat and show me what for? just digest." she retorts to your bold defiance and squishes over you with both hands as you start your attempt to escape her belly. The kitty letting a giggle as you jostle around, but then a myah as it seems she under estimated your ability to force yourself out. Her second myah ending in a startled and discomforted gag as you shove your hands up her throat and into the open air, wriggling your fingers around outside her lips and grabbing ahold of her jaws. Your would be predator letting out distressed choking noises and trying to force your arms back in with no avail as you shove off from the bottom of her belly and thrust yourself up and out of her. In no time at all you're looking at the kitty from outside, she looks a bit cute and pitiable in that state but you're no ones meal.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
+	
+	<page ID="oralvoreAFailure">
+	<text>
+	"oh sure, you're gonna crawl up my throat and show me what for? just digest." she retorts to your bold defiance and squishes over you with both hands as you start your attempt to escape her belly. The kitty letting a giggle as you jostle around inside her and shove at her insides. But her clenching stomach walls prove too overwhelming in their embrace as she squeezes down over your form thoroughly, suppressing your attempts to escape "you done? now digest.." says the kitty girl.	
+	</text>
+	<special effect="healnpc" />	
+	<choice destination="oralvoreADigest" text="*cute kitty food*"/>
+	</page>
+	
+	<page ID="oralvoreADigest">
+	<text>
+	You protest your treatment, shoving at her insides. But she finds it just giggle inducing more than discomforting now as she settles and purrs. Her gut gurgling and glorping hungrily around you as she works on breaking you down into a delicious post victory meal "mhmm..you're a better meal than you are a fuck..do you know that?" she teases, patting her belly as you soften.
+	</text>
+	<choice destination="oralvoreAGO" text="*gurgle*"/>
+	</page>
+	
+	<gameover ID="oralvoreAGO">
+	<text>
+	You try to protest her taunt, but all that comes out is a burble as your mouth is flooded with her juices. Your form marinating in enzymes is too soft and goopy to do anything but slosh inside her, your struggles and squirms having faded to an occasional twitch. And then finally you come apart within her, the kitty purring as her belly turns round and soft and shrinks away. Your form now liquidated being compacted, processed and absorbed by the catgirl pirate until all that's left of you is a cheshire like smile of satisfaction on her face.
+	</text>
+	
+	</gameover>
+	
+	<page ID="oralvoreASubmit">
+	<text>
+	"nyah that's sweet of ya, well then. Guess I'll enjoy myself seen as ya being such a good sport about it." she says and rubs over her belly contently. Purring as she sprawls comfortably with her lumpy belly full of now fully submissive and willing prey.
+	</text>
+	<choice destination="oralvoreASubmitDigest" text="$of course..to the victor go the spoils"/>
+	</page>
+	
+	<page ID="oralvoreASubmitDigest">
+	<text>
+	"you're a good meal..." she purrs appreciatively, purring as she sprawls and gurgles you away. Her purrs and burbling gut noises sound loudly around you as you're immersed in the depths of her body and steadily processed, broken down and digested. Her stroking hands pawing at her belly start to feel your shape softening and yielding, her gut turning rounder as she does so.
+	</text>
+	<choice destination="oralvoreASubmitGO" text="*gurgle*"/>
+	</page>
+	
+	<gameover ID="oralvoreASubmitGO">
+	<text>
+	You revel in the sensations as she gurgles and processes you, your form turning soft and sloshy as your sexy predator melts you down. Her hands squishing your goopy remnants through the confines of her gut.
+	And finally you come apart within her, the kitty purring as her belly turns round and soft and shrinks away. Your form now liquidated being compacted, processed and absorbed by the catgirl pirate until all that's left of you is a cheshire like smile of satisfaction on her face.
+	</text>
+	</gameover>
+	
+	<page ID="sex4">
+	<text>
+	The kitty is dazed in afterglow, she clearly didn't expect you to still be horny nor have the energy to roll her over. She looks up startled into your eyes "nyah, but you're supposed to be.." she starts, so you silence the silly kitty with a thrust of your hips and hear her mewl and cease her protests. It's a gamble, but turning the table and fucking her into submission is a great way to avoid a gurgly fate inside her and you think yourself skill enough to do it.
+	</text>
+	<choice destination="sex5" text="fuck her senseless"/>
+	</page>
+	
+	<page ID="sex5">
+	<text>
+	You start to thrust into her, pinning her down in a turnabout of her earlier use of you. Your pistoning hips slamming into her making her gasp and mewl delightfully underneath you as you plough her tight kitty nethers vigorously.
+	</text>
+	<choice destination="sexCheck" text="everyone loves my D right?"/>
+	</page>
+	
+	<check ID="sexCheck">
+		<test what="PLEASURE" DC="14" />
+		<outcome destination="sexSuccess" />
+		<outcome destination="SexFailure" />	
+	</check>
+	
+	<page ID="sexSuccess">
+	<text>
+	The kitty mrowls and mewls underneath you as you add your moans to the sound of lust and hammer away at her nethers, expertly ploughing the catgirl pirate as your pleasures rise to crescendo. Your hips still moving even as your climaxes rock through you both. The kitty reaching up to grasp your shoulders and yowling as you pump her clenching nethers full of seed, filling the cute pirate to the brim with jizz. You look down at the well fucked mess beneath you and grin, pulling out of her. It'll be a while before she can muster the strength to get up let alone come after you after that.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
+	
+	<page ID="sexFailure">
+	<text>
+	The kitty mrowls and mewls underneath you as you add your moans to the sound of lust and hammer away at her nethers, eagerly ploughing the catgirl pirate as your pleasures rise to crescendo. Your eyes slipping closed as you let out a gasping cry and erupt, pumping the mrowling catgirl full of your seed for a second time. The kitty purring and thrumming in delight as your orgasm tapers off and you lean in close against her "mhmm that was fun..." she murmurs and strokes her hands over your exhausted and satiated form. But then you feel her lips sliding warmly and wetly down around the top of your head.	
+	</text>
+	<choice destination="oralvoreB0" text="from fuckbuddy to meal"/>
+	</page>
+	
+	<page ID="oralvoreB0">
+	<text>
+	The kitty takes a swallow, her hands groping your rear end as she starts to eat you up. She wriggles her hips to make sure you're no longer lodged in her as you start to disappear into her throat. Her hands on your hips lifting you up and helping you slip down her throat as she purrs and closes her eyes to focus on your taste as her tongue samples its way down past your chest.
+	</text>
+	<choice destination="oralvoreB1" text="must resist..."/>
+	</page>
+	
+	<page ID="oralvoreB1">
+	<text>
+	You try to reach up and grab ahold of her arms and stop yourself from sliding deeper into her throat. Your legs kicking around in protest as you succeed in thwarting her efforts, but you find your post coital energies giving out far faster than her will to devour you does. You'd used too much energy trying to fuck her into submission and now your vigor flags and your resistance crumbles, her throat rippling and engulfing your upper body steadily. You find your head crammed deep within her and pushing into her eager belly as she feasts on you.
+	</text>
+	<choice destination="oralvoreB2" text="it was worth a try.."/>
+	</page>
+	
+	<page ID="oralvoreB2">
+	<text>
+	You're steadily and inexorably polished off by the kitty girl you were fucking but a short time ago. Her hands sliding down your thighs, then calves as the aforementioned slide past her lips and out of reach. The kitty languidly sprawled with your seed still staining the inside of her thighs and your legs disappearing past her lips to join the rest of you in swelling out her gut. The kitty sporting a deliciously full and rounded gut as she snaps her jaws shut past your toes and feels the last of you pile into her entirely "Myah, thanks for the second round..but it doesn't change anything."
+	</text>
+	<choice destination="oralvoreAStruggle" text="$You just wait until i get out of here kitty, this isn't over!"/>
+	<choice destination="oralvoreASubmit" text="$Actually it's really sexy to be eaten by a kitty like you, i don't mind you digesting me really"/>	
+	</page>
+	
 	<page ID="oralsex0">
 	<text>
 	The piratical kitty looms over you and sees your expression "I'm not interested in what you have to say." she says at your open mouth and then reaches one hand down to twine her fingers into your hair "I am interested in what you can do with that tongue though." she says with a mhmm, her other hand straying down to hitch her skirts up and settles astride your shoulders, guiding your head up close between her thighs. Your face coming to rest nestled between those hot thighs and up against the pungent moistness of her netherlips, a scent so tantalizing you can't help but give it a taste..and hear her mrowl in delight "that's it, to the victor go the...nyah..spoils." she says, her voice hitching as you lick again at her pleasure dew'd snatch.
@@ -43,8 +211,7 @@
 	
 	<page ID="oralvore0">
 	<text>
-	Your focus wavers for a few moments, when your eyes open again you feel <conditional> the kitty undressing you as she makes her way down your body. The kitty pirate settling at your feet, lifting them up before you feel
-	</conditional> her tongue and warm mouth around your feet. The kitty wanting a post pleasure snack of you as she swallows and tugs your feet into her mouth. The neko's tail swaying in delight as she murrs and swallows her way up your calves, padding forwards as she gobbles you up and plunges more and more of your body down her throat. You feel your thighs start to disappear and your feet push through into her voracious belly, she can't tease you with her mouth full but to lick over your bared skin. But you can only imagine how she would as you try to squirm free but cannot stop her lips encroaching on your waistline.
+	Your focus wavers for a few moments, when your eyes open again you feel <conditional> the kitty undressing you as she makes her way down your body. The kitty pirate settling at your feet, lifting them up before you feel <assertion evaluate="slothasitem" slot="2" /></conditional> her tongue and warm mouth around your feet. The kitty wanting a post pleasure snack of you as she swallows and tugs your feet into her mouth. The neko's tail swaying in delight as she murrs and swallows her way up your calves, padding forwards as she gobbles you up and plunges more and more of your body down her throat. You feel your thighs start to disappear and your feet push through into her voracious belly, she can't tease you with her mouth full but to lick over your bared skin. But you can only imagine how she would as you try to squirm free but cannot stop her lips encroaching on your waistline.
 	</text>
 	<choice destination="oralvore1" text="kitty food"/>
 	</page>
@@ -83,6 +250,7 @@
 	<text>
 	You reject the labelling as prey despite your current predicament and set about attempting to get out of here. She's a catgirl you're sure you've bested stronger predators than this and start jostling and shoving around to try and force your way back up her throat. The kitty letting out a displeased mrowl as her gut starts bouncing around and delivering a thump to her belly "quiet down in there, digest like good prey thing!" she protests, though winces at having punched herself in the gut. The blow seems to disorientate you though as despite your efforts you can't find your way back up out of her throat. Your jostling movements availing you naught but tiring you out as the kitty giggles and snugs her stomach realizing she's bested you "Silly prey thing, you can't get out of me, all you're gonna be is digested." she says and grins, murring as her stomach gurgles around you.		
 	</text>
+		<special effect="healnpc" />	
 	<choice destination="oralvoreDigestGO" text="get digested"/>
 	</page>
 	
@@ -96,6 +264,7 @@
 	<text>
 	You feel her purring in satisfaction as her belly presses around you from all around. Her flesh squeezing against you and oozing enzymes into your body as it treats you as the food you are. And that's what you are, her food...the thought makes you shiver but not shrink back as you accept your role as nourishment for the triumphant kitty pirate. Her hands rubbing over her belly as she realizes you're being awfully calm and relaxed about this as she's starting to digest you "I guess I'm just too cute to resist huh?" she says and giggles as she gives her gut a pat and then gets back to purring. The sounds of her enjoyment becoming harder to hear over the increasingly loud gurgles of her stomach.
 	</text>
+		<special effect="healnpc" />	
 	<choice destination="oralvoreSubmitGO" text="gurgle away"/>
 	</page>
 	
@@ -154,6 +323,7 @@
 	<text>
 	"Not going anywhere myah..you're gonna be a puddle." the kitty says, her fingers languidly stroking over her clenching nethers as you try without success to escape her womb. But she's too aware to let you out and you can't work against the muscles of her birth canal, though you do try and that seems to please her. Or maybe that's just the afterglow of her orgasm that's making her purr..either way there's naught to do but be helplessly melted down into sloppy fluids inside her...
 	</text>
+		<special effect="healnpc" />	
 	<choice destination="unbirthDigestGO" text="sploosh"/>
 	</page>
 	
@@ -168,6 +338,7 @@
 	You shiver at her words and the tantalizing sensations of her juices exquisitely marinading your body and can't help but agree..this is going to feel amazing. You make no effort to escape your most intimate prison as you hear her purring in delight and sliding one hand down between her legs to delve into her nethers repeatedly, her drooling snatch spilling fluids down her legs from hips to boots as she frig herself to the sensation of your form softening blissfully within her. The kitty's womb squeezing repeatedly around you as you get sloshier and more liquid, steadily mashing away into delightful goo.
 	</text>
 	<choice destination="unbirthSubmitGO" text="...sploosh"/>
+		<special effect="healnpc" />	
 	</page>
 	
 	<gameover ID="unbirthSubmitGO">

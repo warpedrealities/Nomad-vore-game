@@ -14,7 +14,7 @@
 		Holding an emptied can of space soda to the mother's nipple, you quickly fill
 		the can and then some. Lord, it just doesn't stop coming out, does it?
 		</text>
-		<special effect="research" data="mushroommother" DC=10 />
+		<special effect="research" data="mushroommother" DC="10" />
 		<choice destination="end" text="Time to do some research." />
 	</page>
 

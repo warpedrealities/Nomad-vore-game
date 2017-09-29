@@ -2,7 +2,7 @@
 <Ship width="5" height="8" sprite="sloop">
 
 	<shipstats>
-		<movecost value="26" />
+		<movecost value="24" />
 		<hullpoints value="35" />
 		<thrustcost value="1.6" />
 	</shipstats>

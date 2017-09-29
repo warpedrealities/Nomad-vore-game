@@ -8,5 +8,4 @@
 	<loot item="shortsword" chance="1" />
 	<loot item="scarf" chance="1" />
 	<loot item="helmet" chance="1" />
-	<loot item="fuel cell(poor)" chance="1" />
 </lootTable>

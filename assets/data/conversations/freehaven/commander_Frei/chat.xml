@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<!--agreed-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="office" />	
+	<text>
+	"Hello again traveller, what can I do for you?"
+	</text>
+	<choice destination="offerOV" text="I was wondering if you were feeling hungry commander">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="preyslut" />
+	</choice>
+	<choice destination="offerCV" text="I was wondering if your dick was hungry commander">
+		<condition evaluate="LOCALFLAG" operator="equals" value="2"	flag="preyslut" />
+	</choice>
+	<choice destination="end" text="nothing at the moment, just saying hi"/>
+	</page>
+
+	<page ID="offerOV">
+	<text>
+	
+	</text>
+	
+	</page>
+
+	<page ID="offerCV">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="start">
+	<!--not agreed-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="office" />
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
+	<text>
+	"Listen, it's a waste of my time and yours for us to keep standing around here. Now you either agree to abide by the rules, take your chances trying to dock somewhere the folks'll nom you soon as look at you or get gone."	
+	</text>
+	<choice destination="agree" text="I agree to your terms"/>
+	<choice destination="eye2eye" text="could you go over the rules?"/>
+	<choice destination="freehaven" text="could you tell me about free haven"/>
+	<choice destination="end" text="not yet"/>
+	</page>
+
+	<page ID="start">
+	<!--first talk-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="office" />
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="talked" />	
+	<text>
+	Upon entering the station for the first time it seems you have a welcome of sorts. A somewhat buxom but serious seeming woman with a pair of white bunny ears extending from amidst her blonde hair and all of that shapelyness is wrapped in a blue uniform jumpsuit "Greetings stranger, I figure seen as this is your first time on Free Haven I'd make sure we'd be seeing eye to eye."
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />
+	<choice destination="greeting" text="Pleased to meet you, I'm PNAME"/>
+	<choice destination="eye2eye" text="eye to eye on what?"/>
+	<choice destination="freehaven" text="care to tell me about free haven then?"/>
+	</page>	
+	
+	<page ID="agree">
+	<text>
+	"Excellent, now we can both get on with things. If you need my help at all come by my office. And I hope you have a pleasant stay on free haven and find whatever you're here for."
+	</text>
+	<effect type="setlocalflag" flag="office" value="1" />
+	<special effect="opendoor" lock="controlonly" />
+	<special effect="opendoor" lock="controlonly" />
+	<choice destination="end" text="thanks, I'll do that"/>
+	</page>
+	
+	<page ID="greeting">
+	<text>
+	"A polite start, promising. I am commander Frei, leader of the wardens on this station."
+	</text>
+	<choice destination="wardens" text="and who exactly are the wardens"/>
+	<choice destination="eye2eye" text="Very well Frei, and what do you want us to see eye to eye on?"/>
+	<choice destination="freehaven" text="Very well Frei, could you tell me more about FreeHaven?"/>
+	</page>
+	
+	<page ID="eye2eye">
+	<text>
+	"Fairly simple, just cause this is a free port and we got no one in charge doesn't mean we got no laws. No stealing, no assault, no grabbing someone and scarfing them down. Make no trouble and there's a place for you, make trouble and well..there's a different place for you and you ain't gonna like it." she says and glances down meaningfully possibly indicating her belly or possibly something lower.
+	</text>
+	<choice destination="agree" text="seems simple enough, I agree"/>
+	<choice destination="anarchy" text="seems a bit excessive, why not just let people do what they please?"/>
+	<choice destination="authority" text="if you're enforcing the laws doesn't that make you in charge"/>
+	<choice destination="willing" text="you say grabbing someone is illegal, what about if they're willing to go down?"/>
+	</page>
+	
+	<page ID="authority">
+	<text>
+	"I enforce the rules we need, not the ones I want. I don't tell folks what to do or what to sell. I've seen plenty of tyrants and they can be as bad as any raider or pirate."
+	</text>
+	<choice destination="agree" text="very well, i agree to abide by your rules"/>
+	<choice destination="willing" text="you said grabbing someone is illegal, what about if they're willing to go down?"/>	
+	<choice destination="anarchy" text="but why bother why not just let people do as they please?"/>	
+	<choice destination="end" text="let me think about this"/>	
+	</page>
+	
+	<page ID="willing">
+	<text>
+	Frei chuckles "Then I suppose we'll let it slide. Sides, some traders are kinda into that sorta thing. And the smart ones of those have reformers. So yeah, we see any signs of a struggle or a cry for help and we'll come running and angry. Beyond that, have fun."
+	</text>
+	<choice destination="agree" text="very well, i agree to abide by your rules"/>
+	<!--
+	<choice destination="preyslut" text="well, seen as you bring it up.. I am kinda into getting into people"/>
+	-->
+	<choice destination="end" text="let me think about this"/>
+	</page>
+	
+	<page ID="preyslut">
+	<text>
+	Frei smirks a bit "Didn't have you pegged for one of those. You gonna leave it there or tell me more?"
+	</text>
+	<choice destination="preyslutOV" text="Well, i have a thing for bellies, for instance..sexy bunny commander bellies">
+		<preference fetish="oralvore" />
+	</choice>
+	<choice destination="preyslutCV" text="Well, i like the idea of churning around in a gooey sack. And the idea of being cum for an authority figure makes it all the hotter">
+		<preference fetish="cockvore" />
+	</choice>
+	<choice destination="end" text="I'm gonna leave it here, guess i'm a bit of a tease"/>
+	</page>
+	
+	<page ID="preyslutOV">
+	<text>
+	Frei lets out a little laugh "Ahuh, well. Hit me up later maybe. You look tastier than rations, don't blame me if chub on my hips is where you're story ends though. reformation is your own look out."
+	</text>
+	<effect type="setlocalflag" flag="preyslut" value="1" />	
+	<choice destination="end" text="It wouldn't be a bad ending"/>
+	<choice destination="end" text="Don't worry, I got it covered."/>
+	</page>
+	
+	<page ID="preyslutCV">
+	<text>
+	Frei chuckles and one hand strays down to her crotch "My you're forward, how about this. Hit me up later and i'll let the authority thing slide while you slide down this" she says rubbing around the outline of her bulge.
+	</text>
+	<effect type="setlocalflag" flag="preyslut" value="2" />	
+	<choice destination="end" text="Sounds like a wonderful plan"/>	
+	</page>	
+	
+	<page ID="anarchy">
+	<text>
+	"I'm gonna assume you're asking this rhetorically but fine I'm game." says Frei, straightening one of her ears with a calculating expression "The reason we got these laws is cause we're a spacestation, we get few enough traders as it is and funny enough traders like to be able to do their trading without ending up on some gangers thighs."
+	</text>
+	<choice destination="authority" text="If you enforce the laws though doesn't that mean you're the one in charge?"/>	
+	<choice destination="willing" text="you said grabbing someone is illegal, what about if they're willing to go down?"/>		
+	<choice destination="agree" text="I understand, i agree to your terms"/>
+	<choice destination="end" text="let me think about this"/>
+	</page>
+	
+	<page ID="freehaven">
+	<text>
+	"We're a little refuge near the edge of things. Most of the rest of the galaxy is chaos, tyrants or a whole lot of nothing. We'll accept anyone here, but if you want a bit of safety you'll have to abide the rules and stick to the upper levels."
+	</text>
+	<choice destination="lowerLevels" text="what's on the lower levels?"/>
+	<choice destination="eye2eye" text="thanks, you mentioned rules?"/>
+	</page>
+	
+	<page ID="lowerLevels">
+	<text>
+	"Taste of that chaos, we only patrol the upper levels. And residents pay us scrip to keep the peace. If you want to take your chances down below be my guest, can't guarantee you'll make it out as anything except a ganger's rack tho."
+	</text>
+	<choice destination="eye2eye" text="thanks, you mentioned rules?"/>
+	</page>
+	
+</Conversation>

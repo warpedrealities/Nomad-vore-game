@@ -3,7 +3,7 @@
 	<description>
 		Prepare, for ACTION! you are full of action! see how you ACTION! get your
 		ACTION ready today! +6 to action</description>
-	<modifier affects="ACTION" value="6" type="STAT" />
+	<modifier affects="ACTION" value="8" type="STAT" />
 
 	<maxrank value="3" />
 

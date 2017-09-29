@@ -3,6 +3,7 @@ package perks;
 import java.util.ArrayList;
 
 import actor.player.Player_LOOK;
+import actorRPG.RPG_Helper;
 import actorRPG.player.Player_RPG;
 import nomad.Universe;
 
@@ -91,6 +92,23 @@ public class PerkQualifier {
 							if (perklist.get(j).getPerk().getName().equals(find)) {
 								return true;
 							}
+						}
+						return false;
+					}
+					if (str[i].contains("SKILL")) {
+						String find = str[i].replace("SKILL", "");
+						int rank=1;
+						if (Character.isDigit(find.charAt(find.length()-1)))
+						{
+							String n=find.substring(find.length()-1, find.length());
+							
+							rank=Integer.parseInt(n);
+							find=find.substring(0,find.length()-1);
+						}
+						int attribute=RPG_Helper.AttributefromString(find);
+						if (playerRPG.getAttribute(attribute)>=rank)
+						{
+							return true;
 						}
 						return false;
 					}

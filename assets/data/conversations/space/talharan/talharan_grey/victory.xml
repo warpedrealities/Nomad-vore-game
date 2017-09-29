@@ -97,6 +97,7 @@
 			way, pulling your feet back into her ass and pulling your body deeper
 			into her own.
 		</text>
+		<special effect="healnpc" />		
 		<choice destination="analvoreDigestGO" text="doomed now" />
 	</page>
 
@@ -127,6 +128,7 @@
 			struggling seems to have caught her attention and she runs a hand
 			over her belly bulge "given up have we?"
 		</text>
+			<special effect="healnpc" />	
 		<choice destination="analvoreSubmitGO" text="mhmmm!" />
 	</page>
 

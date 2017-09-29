@@ -39,6 +39,7 @@
 			<placeWidget x="2" y="8" name="slot" />
 			<placeWidget x="3" y="8" name="slot">
 				<contains name="modules/navconsole" />
+				<widgetItem>nav console</widgetItem>	
 			</placeWidget>
 			<placeWidget x="4" y="8" name="slot" />
 

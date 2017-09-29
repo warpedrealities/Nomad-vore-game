@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
 <System>
 	<Star x="0" y="0" sprite="star" intensity="15" />
+	<spawnRules>
+	<spawn ship="sloop" max="1" chance="25"/>
+	</spawnRules>
 </System>

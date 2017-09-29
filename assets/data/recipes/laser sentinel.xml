@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="laser sentinel" requiredskill="3" startunlocked="true">
+<recipe name="laser sentinel" requiredskill="4" startunlocked="true">
 	<description>
 		A computer controlled laser gun mounted on a self stabilizing tripod.
 		Once deployed it won't last very long. But while active it will shoot

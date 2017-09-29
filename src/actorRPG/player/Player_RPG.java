@@ -778,7 +778,6 @@ public class Player_RPG implements Actor_RPG {
 	}
 
 	public void addPerk(Perk perk) {
-		// TODO Auto-generated method stub
 		//check if an existing is in the list
 		
 		//if so rank up that perk
@@ -797,7 +796,6 @@ public class Player_RPG implements Actor_RPG {
 	}
 
 	public int getNumPerks() {
-		// TODO Auto-generated method stub
 		return playerPerks.size();
 	}
 	
