@@ -2,29 +2,10 @@
 <start>
 <system value="Alpha Minoris"/>
 <world value="Alpha Minoris IIA"/>
-<zone value="escapepod"/>
-<position x="2" y="2"/>
-<item value="laser pistol"/>
-<item value="Knife"/>
-<item value="jumpsuit"/>
-<item value="medkit"/>
-<item value="space meal"/>
+<zone value="island"/>
+<position x="32" y="32"/>
 <appearance>
 <bodypart partname="body">
-<partvalue variablename="height" value="60"/>
-</bodypart>
-<bodypart partname="hair">
-</bodypart>
-<bodypart partname="skin">
-<partvalue variablename="colour" value="1"/>
-</bodypart>
-<bodypart partname="vagina">
-</bodypart>
-<bodypart partname="breasts">
-<partvalue variablename="size" value="4"/>
-</bodypart>
-<bodypart partname="butt">
-<partvalue variablename="size" value="6"/>
 </bodypart>
 </appearance>
 </start>

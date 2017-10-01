@@ -1,58 +1,7 @@
 <?xml version="1.0"?>
 <description>
 	<block bodypart="body">
-		you are 
-		<value ID="height" div="12" />
-		 feet 
-		<value ID="height" rem="12" />
-		 inches tall, your build is 
-		<macro ID="body_weight_desc" />
-		.
+	You are a quadrepedal female dragon possessing amphibian or reptilian characteristics. Were there any humans about you'd tower over them easily. Your hide is smooth and your body is long, slender and flexible. Your body is dark grey ontop and a pale grey on your underside, your eyes are blue.
 	</block>
 
-	<block bodypart="hair">
-		your hair is 
-		<macro ID="hair_colour_desc" />
-		 in a 
-		<macro ID="hair_style_desc" />
-		 style.
-	</block>
-	<block bodypart="skin">
-		your skin colour is 
-		<macro ID="skin_colour_desc" />
-		.
-	</block>
-	<block bodypart="scales">
-		You have 
-		<macro ID="scale_type_desc" />
-		<macro ID="scale_colour_desc" />
-		 scales covering your 
-		<macro ID="scale_covering_desc_long" />
-		.
-	</block>
-		<block bodypart="breasts">
-		Your  
-		<macro ID="breast_size_desc" /> breasts stick 
-		<value ID="size" div="1" /> inches away from your chest.
-	</block>
-	<block bodypart="butt">
-	You possess a 
-	<macro ID="butt_size_desc" /> ass.
-	</block>
-	<block bodypart="tail">
-		. You also possess a 
-		<macro ID="tail_type_desc" />
-		 tail.
-	</block>
-	<pbreak/>
-	<block bodypart="vagina">
-		downstairs you currently have a vagina.
-	</block>
-	<block bodypart="penis">
-		you are in possession of a 
-		<macro ID="penis_size_desc" />
-		 penis,
-		<value ID="length" div="1" />
-		 inches long,
-	</block>
 </description>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="ruins.png">
+<tileset count-x="4" count-y="4">
+<tile sprite="8" vision="1" movement="2"> a metal wall</tile>
+<tile sprite="3" vision="0" movement="0"> tiled floor </tile>
+<tile sprite="2" vision="0" movement="0"> strange grass</tile>
+<tile sprite="4" vision="1" movement="2"> a brick wall</tile>
+<tile sprite="5" vision="0" movement="1"> water</tile>
+<tile sprite="6" vision="0" movement="0"> brick rubble </tile>
+<tile sprite="7" vision="1" movement="2"> strange tree </tile>
+<tile sprite="8" vision="0" movement="0"> dirt </tile>
+<tile sprite="10" vision="1" movement="2"> rusty metal wall </tile>
+</tileset>
+
+<description>The ruins are crumbled and long abandoned</description>
+
+<transition direction="south">Zone 2B</transition>
+<transition direction="west">Zone 1A</transition>
+<mapgen>
+<partition xmin="24" xmax="40" ymin="24" ymax="40">
+<floodfill tile="7">
+
+</floodfill>
+
+</partition>
+<partition xmin="8" xmax="56" ymin="8" ymax="56">
+<town minsize="5" maxsize="9" minhouses="24" maxhouses="32" tile="3" gap="1" registerRooms="true">
+		<floodfill tile="7">
+		</floodfill>
+</town>
+
+</partition>
+<floodfill tile="2">
+
+</floodfill>
+<POIWidget name="modules/reformer"/>
+<POINPC name="Alpha_Minoris_IIA/drake"/>
+<POINPC name="Alpha_Minoris_IIA/wyvern"/>
+<walloff wall="4" sides="northeastsouthwest"/>
+
+</mapgen>
+
+</zone>

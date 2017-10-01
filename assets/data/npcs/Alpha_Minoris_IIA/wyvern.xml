@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <NPC>
-<sprite value="drake.png"/>
-<name>drake</name>
+<sprite value="wyvern.png"/>
+<name>wyvern</name>
 <description>
-A four legged dog sized reptile covered in pale blue scales. It watches you with inquisitive and predatory eyes set in a slender long jawed lizardlike head, long tail flicking around as it adjusts its posture and flares its wings out in preparation to fly at you.
+The bipedal protobird watches you, from slightly behind its toothsome jaws all the way to the tip of its long and trailing tail the wyvern is covered in long orange plumage above and downier fuzzy feathers along its underside. It seems remarkably fearless despite not really coming up to your knees.
 </description>
 <rpg>
 <experiencevalue value="20"/>
@@ -30,7 +30,7 @@ A four legged dog sized reptile covered in pale blue scales. It watches you with
 </rpg>
 <respawn delay="1000"/>
 <flying />
-<talk conversation="island/drake/chat" />
+<talk conversation="island/wyvern/chat" />
 <controller AI="staystill"/>
 <faction value="monster"/>
 </NPC>

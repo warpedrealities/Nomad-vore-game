@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<faction>
-	<factionRelationship ID="saurian" value="0" />
-	<defaultRelationship value="55" />
-</faction>

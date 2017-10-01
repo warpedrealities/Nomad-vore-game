@@ -1,44 +1,5 @@
 <?xml version="1.0"?>
-<intro count="4">
-	<text> The 22nd century saw the launch of earth's 1st starship. The
-		Heinlein's experimental wormhole drive would take the supposed best
-		that earth had to offer to Tau Ceti. Amongst their number you stood as
-		they said goodbye to earth, set forth to the stars and engaged the
-		drive.</text>
-	<text> But something went wrong, the energies of the wormhole far more
-		violent than predicted scoured and ravaged the Heinlein, flinging it
-		far beyond its intended destination and into the deep black. It
-		emerged from the vortex scorched and torn. As systems failed and the
-		wormhole drive destabilized the order to abandon ship was given, you
-		barely made it to an escape pod before secondary explosions ripped
-		through the Heinlein. You have no idea if anyone had made it off, your
-		last sight of the ship as the cryo pod engages and the glass frosts
-		over another wormhole erupting from the drive core of the ship. You
-		might be the only survivor of this disaster.</text>
-	<text>When your escape pod finally revived you it was unclear how much
-		time has passed, how long it had hurtled through the void to reach
-		this alien moon. You know from the stars that greet you through the
-		portholes that no rescue will reach so unfamiliar a sky. You have been
-		sundered from all you knew, a stranger in a strange land. You are
-		without a home and those to whom you hold allegiance are far from here
-		and unknown. You are a nomad.</text>
-	<text>
-		arrow, wasd and numpad to move. mouseclick on things to act upon them.
-		'look' button indicates current mouse click action, click it to change
-		action. buttons to the right access key elements. gain exp to level
-		up. running out of health may result in death or forced vore, running
-		out of resolve may result in becoming willing prey. Running out of
-		satiation may result in starving to death. LBREAK
-		Page Up, Page Down, Home and end control the text window.(scroll and
-		expand/contract) LBREAK
-		(i)nteract, (l)ook, attac(k) and s(p)ecial are the shortcuts to change the mouse
-		action. with the latter followed by number key input to select the
-		special. LBREAK
-		cntrl and shift keys compress time when held down to allow faster travel.
-		LBREAK
-		the 5 key waits 2 ticks, the r key rests for 20 ticks. LBREAK
-		Q key activates the item in your quickslot. LBREAK
-		If you want to find your way home you should first find a way off this
-		moon and to the planet below. LBREAK
+<intro count="1">
+	<text> you are a dragon, you find yourself on a strange island...
 	</text>
 </intro>
