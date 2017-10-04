@@ -157,6 +157,22 @@ public class OutEvaluator {
 					return false;
 				}
 			}
+			if (eval.equals("LOCALFLAGROLL")) {
+				String operator = E.getAttribute("operator");
+				int value=flags.readFlag(E.getAttribute("flag"));
+				int dice = GameManager.m_random.nextInt(20);
+				if (ConditionCheck(value, operator, dice) == false) {
+					return false;
+				}
+			}	
+			if (eval.equals("GLOBALFLAGROLL")) {
+				String operator = E.getAttribute("operator");
+				int value=m_player.getFlags().readFlag(E.getAttribute("flag"));
+				int dice = GameManager.m_random.nextInt(20);
+				if (ConditionCheck(value, operator, dice) == false) {
+					return false;
+				}
+			}				
 			if (eval.equals("VIOLATION")) {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));

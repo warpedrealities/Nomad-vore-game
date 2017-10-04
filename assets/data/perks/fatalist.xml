@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<perk name="Fatalist">
+	<description> 
+	As if compelled by an outside force, you find yourself submitting to the fates that aliens have presented for you. Unlocks surrender and fantasize, moves that instantly trigger npc victory or domination scenes.
+	</description>
+	<move count="2">
+		<combatmove name="surrender" actionCost="2"
+			timeCost="2" pattern="MELEE" bonusAttribute="SEDUCTION" bonusToHit="40"
+			moveType="OTHER">
+			<effectSubmit resolve="false"/>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatmove>
+		<combatmove name="fantasize" actionCost="2"
+			timeCost="2" pattern="MELEE" bonusAttribute="SEDUCTION" bonusToHit="40"
+			moveType="OTHER">
+			<effectSubmit resolve="true"/>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatmove>		
+	</move>
+	<maxrank value="1" />
+
+</perk>

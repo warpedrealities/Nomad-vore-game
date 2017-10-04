@@ -45,8 +45,8 @@
 	</rpg>
 
 	<respawn delay="2000" />
-	<victory conversation="" />
-	<seducer conversation="" />
+	<victory conversation="freehaven/wardens/victory" />
+	<talk conversation="freehaven/wardens/chat" />		
 	<controller AI="station_guard" />
 	<faction value="freehaven_wardens" />
 </NPC>

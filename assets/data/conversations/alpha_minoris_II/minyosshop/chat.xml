@@ -176,7 +176,7 @@
 			her many pocketed robes
 			<conditional>
 				<assertion evaluate="slothasitem" slot="2" />
-				she motions for you to do the same with your jumpsuit. Deciding that
+				she motions for you to do the same with your own clothes. Deciding that
 				when in Rome you might as well do as the Romans do, you peel off
 				your clothing.
 			</conditional>

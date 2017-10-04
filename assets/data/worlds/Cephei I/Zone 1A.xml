@@ -24,7 +24,7 @@
 				<noise tile="2" scarcity="20" />
 				<noise tile="3" scarcity="20" />
 				<floodfill tile="1">
-					<SeedNPCs min="16" max="32" name="Alpha_Majoris_I/formic">
+					<SeedNPCs min="16" max="32" name="Cephei_I/formic">
 					</SeedNPCs>
 				</floodfill>
 			</band>

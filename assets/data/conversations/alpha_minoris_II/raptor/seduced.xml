@@ -14,6 +14,10 @@
 		<choice destination="oralvore0" text="she looks tasty">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+		<choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>		
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -35,7 +39,14 @@
 		<choice destination="end" text="carry on" />
 	</page>
 
+	<page ID="capture">
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<special effect="captureNPC" />
+		<text>Yoink. The device worked.</text>
 
+		<choice destination="end" text="Carry on." />
+	</page>
+	
 	<page ID="oralvore0">
 		<text>
 			The raptor girl watches you approach with hazy, lustful eyes. You open

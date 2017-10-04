@@ -13,11 +13,12 @@ import shared.ParserHelper;
 
 public class ShipResource extends ShipAbility {
 
-	float amountContained;
-	int containedCapacity;
-	String containsWhat;
-	ArrayList<ResourceConversion> resourceConversions;
-
+	private float amountContained;
+	private int containedCapacity;
+	private String containsWhat;
+	private ArrayList<ResourceConversion> resourceConversions;
+	private boolean nonCombat;
+	
 	public ShipResource(Element node) {
 		abilityType = AbilityType.SA_RESOURCE;
 		NodeList children = node.getChildNodes();
@@ -25,7 +26,10 @@ public class ShipResource extends ShipAbility {
 		amountContained = 00;
 		containedCapacity = Integer.parseInt(node.getAttribute("capacity"));
 		containsWhat = node.getAttribute("resource");
-
+		if ("true".equals(node.getAttribute("nonCombat")))
+		{
+			nonCombat=true;
+		}
 		for (int i = 0; i < children.getLength(); i++) {
 			Node N = children.item(i);
 			if (N.getNodeType() == Node.ELEMENT_NODE) {
@@ -44,7 +48,7 @@ public class ShipResource extends ShipAbility {
 		containsWhat = ParserHelper.LoadString(dstream);
 		amountContained = dstream.readFloat();
 		containedCapacity = dstream.readInt();
-
+		nonCombat=dstream.readBoolean();
 		resourceConversions = new ArrayList<ResourceConversion>();
 
 		int count = dstream.readInt();
@@ -62,7 +66,7 @@ public class ShipResource extends ShipAbility {
 		ParserHelper.SaveString(dstream, containsWhat);
 		dstream.writeFloat(amountContained);
 		dstream.writeInt(containedCapacity);
-
+		dstream.writeBoolean(nonCombat);
 		dstream.writeInt(resourceConversions.size());
 		for (int i = 0; i < resourceConversions.size(); i++) {
 			resourceConversions.get(i).save(dstream);
@@ -95,6 +99,10 @@ public class ShipResource extends ShipAbility {
 
 	public void setAmountContained(float amountContained) {
 		this.amountContained = amountContained;
+	}
+
+	public boolean isNonCombat() {
+		return nonCombat;
 	}
 
 }

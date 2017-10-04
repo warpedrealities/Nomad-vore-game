@@ -5,7 +5,7 @@
 		a series of illuminated beds. Comes with an integrated packaging
 		system to compress and dispense algae food bricks.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
-	<shipResource capacity="40" resource="ALGAE">
+	<shipResource capacity="40" resource="ALGAE" nonCombat="true">
 	</shipResource>
 	<shipConverter>
 		<convertFrom value="ENERGY" />

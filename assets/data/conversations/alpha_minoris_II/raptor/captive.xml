@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="digestion"
+			value="1" />	
+	<condition operator="equals" evaluate="LOCALFLAG" flag="firstTime"
+			value="0" />				
+	<text>
+	Your captive raptor girl seems surprised to see you again. But then you did get digested inside her, she looks uncertain how to react to this new and unexpected development. The bewilderment is kinda a cute expression on her face, but it's up to you whether you want to let it affect how you treat her or not.
+	</text>
+	<effect type="setlocalflag" flag="firstTime" value="1" />	
+	<choice destination="oralvoreA0" text="swallow her of course">
+			<assertion evaluate="hasperk" perk="oralvore" />	
+	<condition operator="equals" evaluate="LOCALFLAG" flag="endo"
+			value="0" />
+	</choice>
+	<choice destination="oralvoreB0" text="eat her again">
+			<assertion evaluate="hasperk" perk="oralvore" />	
+	<condition operator="equals" evaluate="LOCALFLAG" flag="endo"
+			value="1" />	
+	</choice>
+	<choice destination="oralvorePreyA0" text="feed yourself to her">
+	<preference fetish="oralvore" />
+	<condition operator="equals" evaluate="LOCALFLAG" flag="prey"
+			value="0" />					
+	</choice>
+	<choice destination="oralvorePreyB0" text="feed yourself to her">
+	<preference fetish="oralvore" />
+	<condition operator="equals" evaluate="LOCALFLAG" flag="prey"
+			value="1" />					
+	</choice>	
+	<choice destination="punish0" text="punish her for digesting you">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="digestion"
+			value="1" />	
+	<condition operator="equals" evaluate="LOCALFLAG" flag="trained"
+			value="0" />			
+	</choice>	
+	<choice destination="reward0" text="reward her for digesting you">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="digestion"
+			value="1" />
+	<condition operator="equals" evaluate="LOCALFLAG" flag="trained"
+			value="0" />				
+	</choice>		
+	<choice destination="end" text="put her back in storage"/>	
+	</page>
+	
+	<page ID="start">
+	<text>
+	You decant the raptor girl from specimen containment, taking a few moments to admire the lizardgirl's tanned athletic body and orange scales as you decide what if anything you want to do with your captive.	
+	</text>
+	<choice destination="oralvoreA0" text="swallow her of course">
+			<assertion evaluate="hasperk" perk="oralvore" />	
+	<condition operator="equals" evaluate="LOCALFLAG" flag="endo"
+			value="0" />
+	</choice>
+	<choice destination="oralvoreB0" text="eat her again">
+			<assertion evaluate="hasperk" perk="oralvore" />	
+	<condition operator="equals" evaluate="LOCALFLAG" flag="endo"
+			value="1" />	
+	</choice>
+	<choice destination="oralvorePreyA0" text="feed yourself to her">
+	<preference fetish="oralvore" />
+	<condition operator="equals" evaluate="LOCALFLAG" flag="prey"
+			value="0" />					
+	</choice>
+	<choice destination="oralvorePreyB0" text="feed yourself to her">
+	<preference fetish="oralvore" />
+	<condition operator="equals" evaluate="LOCALFLAG" flag="prey"
+			value="1" />					
+	</choice>	
+	<choice destination="punish0" text="punish her for digesting you">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="digestion"
+			value="1" />	
+	<condition operator="equals" evaluate="LOCALFLAG" flag="trained"
+			value="0" />								
+	</choice>	
+	<choice destination="reward0" text="reward her for digesting you">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="digestion"
+			value="1" />			
+	<condition operator="equals" evaluate="LOCALFLAG" flag="trained"
+			value="0" />				
+	</choice>		
+	<choice destination="end" text="put her back in storage"/>
+	</page>
+
+	<page ID="oralvoreA0">
+	<text>
+	Her curves are wondrously delectible to you. And so seeking to taste her you grab ahold of the suddenly squirmy and concerned raptor girl who sees you moistening your lips voraciously. She lets out an unnerved whimper as you seize ahold of her shoulders and pull her towards your mouth, sliding her face into your lips. As you take your first swallow you feel her reach up to grab ahold of your sides and try to pull herself out, it's amusing that she thinks she can defy a predator such as you.
+	</text>
+	<choice destination="oralvoreA1" text="engulf her"/>
+	</page>
+	
+	<page ID="oralvoreA1">
+	<text>
+	The raptor girl wriggles around, her tail flicking back and forth as you dominant her and enforce your desires upon her. The lizard's delicious flavour flooding your mouth as you swallow more and more of her body up, engulfing her shoulders and forcing her arms down against her sides. Her protesting muffled noises emanating from lower and lower within you as you force her further and further down until she's squeezing into your belly.
+	</text>
+	<choice destination="oralvoreA2" text="gobble her up"/>
+	</page>
+	
+	<page ID="oralvoreA2">
+	<text>
+	Her delicious legs and tastey tail flail around outside your lips as you reach her waist, still struggling against you even though she's powerless to resist your whim to have her inside of you. Silly thing. Silly, tastey..delicious, but silly. You grab her ankles to still her feet, unmindful of her tail as you slowly feed her in. The raptor gal's legs sliding over your lips, past your tongue and then down your throat to join her upper body in the growing bulge of your belly. And finally, satisfyingly, wonderfully, you snap your jaws shut past her tailtip and make her yours. A final swallow coaxing the last of her down to join the rest of her squirming in your stretched tummy as you hold her entirely within yourself. Now, what did you want to do with her?
+	</text>
+	<choice destination="oralvoreAEndo0" text="affectionately hold her in your belly"/>
+	<choice destination="oralvoreADigest0" text="digest her, she's your meal"/>
+	</page>
+	
+	<page ID="oralvoreAEndo0">
+	<text>
+	You're feeling kinda doting and always wanted a pet, a belly pet to be specific..and maybe one you can use for other sorts of fun later. The raptor squirms in your belly whining and you rub over the bulge, stroking over her shape curled within you lovingly. Gradually you feel her settle in, confused mips giving way to chirs as she stops struggling and realizes that your belly is safe, warm and kinda cosy.
+	</text>
+	<choice destination="oralvoreAEndo1" text="keep her awhile"/>
+	</page>
+	
+	<page ID="oralvoreAEndo1">
+	<text>
+	You continue expressing your affection with a full body hug from your innards and strokes for quite a while before deciding you're done. The raptor letting out a mip as you squeeze on her then shift forwards to settle onto your haunches and hork her up. The raptor squirming as she finds herself spilling back up your throat and out into the open air in front of you. The raptor girl looking back at you with a blush and a confused chirr, looks like she enjoyed being held inside of you like that...cute.
+	</text>
+	<effect type="incrementlocalflag" flag="training" value="4" />	
+	<effect type="setlocalflag" flag="endo" value="1" />	
+	<choice destination="end" text="put her back in containment"/>
+	</page>
+	
+	<page ID="oralvoreADigest0">
+	<text>
+	She's really just food you captured for when you were feeling lazy. Under your rubbing hand her squirms become more vigorous and distressed as your gut gurgles and groans loudly around her. The raptor lets out whines and muffled cries, but she's just a meal and your gut treats her like any other. Your middle going from squirmy to still, and from lumpy and firm to soft and round as your churning guts take their toll on your meal. Her athletic body doesn't take long at all to be utterly digested within you, providing the fuel you'll need to keep going.
+	</text>
+		<effect type="feed" value="95" />
+		<special effect="removeCaptive" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
+	<page ID="oralvoreB0">
+	<text>
+	You lick your lips and approach your raptor girl. She recognizes the signs and blushes faintly watching your mouth as you get close and grab ahold of her again and settle in front of her. This time though she doesn't struggle, oh no, she submissively leans her head towards your lips as you lick over the top of her head and then stretch your jaws apart. Her taste delectible as ever as you ease her head past your lips and taste your pet.
+	</text>
+	<choice destination="oralvoreB1" text="gobble her up again"/>
+	</page>
+	
+	<page ID="oralvoreB2">
+	<text>
+	You stroke over your unstruggling pet as you swallow her up, tracing your hands down her back all the way to her tail in between your swallows. You can hear her chirrs as she plunges down your throat, finding your insides much less threatening as she's drawn down towards your belly steadily and you cup and grope her ass affectionately. The raptor girl's rump getting ever closer to your lips as you work over her chest and trim belly.
+	</text>
+	<choice destination="oralvoreB3" text="tuck her away completely"/>
+	</page>
+	
+	<page ID="oralvoreB3">
+	<text>
+	With her tail curling and her toes twitching you tip your head back and angle her lower half towards the ceiling. The raptor feeling delightful as she begins to curl chirring within your belly. Her willingness to fill you is truly exquisite and you trace a finger along her legs teasingly as they disappear. The raptor letting out a mip from within you at that and the way her feet and tailtip are nearing your lips, more and more of her body engulfed in the wet embrace of your body until finally you swallow her up completely.
+	</text>
+	<choice destination="oralvoreB4" text="mhmm"/>
+	</page>
+	
+	<page ID="oralvoreB4">
+	<text>
+	You feel the raptor girl settle inside you, curling up and chirring at the safe warmth of your gut embracing her snugly. You let one hand trace down over your belly to rub over the shape of her form bulging you out contemplatively.
+	</text>
+	<choice destination="oralvoreBEndo0" text="keep your belly pet for a while"/>
+	<choice destination="oralvoreBDigest0" text="you've changed your mind, digest her"/>
+	</page>
+	
+	<page ID="oralvoreBEndo0">
+	<text>
+	Your pet is already chirring in your belly, squirming now and then to stay comfortable and cosy within your warm and snug insides. The full body hug you're giving her and the occasional muscular squeeze helping her relax. The two of you resting contently together, one inside the other as you pass the time.
+	</text>
+	<choice destination="oralvoreBEndo1" text="hold her awhile and then let her out"/>
+	</page>
+	
+	<page ID="oralvoreBEndo1">
+	<text>
+	It takes some time for you to decide you need to get on with things. And you prod at your bulging raptor filled gut to rouse her from her relaxed and languid state. The raptor girl letting out a mip and nuzzling out at your belly afore wriggling around as she feels you leaning forwards and clenching in preparation to hork her up. Seems she knows what's coming and so she's lined up nicely so that the next squeeze pushes her headfirst up your throat. The raptor helping as you bring her back up and out into the outside world, slick with your saliva and juices and blushing in the aftermath of that enjoyable experience.
+	</text>
+	<effect type="incrementlocalflag" flag="training" value="4" />	
+	<choice destination="end" text="put her back in containment"/>	
+	</page>
+	
+	<page ID="oralvoreBDigest0">
+	<text>
+	Well, you are hungry. So why not. The earlier reprieve was just for fun but now, now she needs to gurgle. It takes her longer than usual to realize that the clenches of your gut and gurgles of your insides means she's fated to digest. But when she does she lets out a distressed mip, pushing out with her face and hands at your gut and squirming vigorously. A long series of mips audible from within you as if she's trying to plead nonvocally with you, but to no avail as you have your heart set on digesting her. The raptor's delicious athletic reptile like form gradually softening, her movements fading and her cries silenced. It doesn't take long at all before your gut is round and compact and the form within a goopy mass of nutritious soup. Your insides further processing and absorbing her until even that chubby roundness fades away and she's made one with you.
+	</text>
+	<effect type="feed" value="95" />
+	<special effect="removeCaptive" />
+	<choice destination="end" text="carry on" />	
+	</page>
+	
+	<page ID="oralvorePreyA0">
+	<text>
+	You've decided you want inside this cutie. Now to let her know. You <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				slip out of your clothes and then
+			</conditional> slip close up against her. one arm wrapped around the wriggly lizardgal while with the other you tease her. Your fingers tracing along her chin and cheeks afore plying at her lips. The raptor letting out a confused mip and keeping her mouth shut afore you rub her jaw and she blinks and relents. You slide your fingers slowly into her mouth, rubbing at her forked reptilian tongue and soaking your digits in saliva..it's only then that you move your hand deeper in, pushing at the back of her throat and giving her an encouraging nod.
+	</text>
+	<choice destination="oralvorePreyA1" text="down the hatch"/>
+	</page>
+	
+	<page ID="oralvorePreyA1">
+	<text>
+	The raptor glucks and blushes faintly. she seems unsure and surprised, but willing to go through with this. And so she swallows, starting to tug your arm down her throat. Just what you wanted and you raise up your other arm and feeds your hand into her mouth and throat, her eager swallows pulling you deeper into the warmth of her body. Her hands sliding down to your waist to help feed you down into her belly steadily. You duck down your head and close your eyes to make it easy for her as she gulps past your head and shoulders.
+	</text>
+	<choice destination="oralvorePreyA2" text="continue"/>
+	</page>
+	
+	<page ID="oralvorePreyA2">
+	<text>
+	The raptor girl is swallowing you quite eagerly now. Your upper body steadily disappearing past her lips and down into her belly. Your form starting to curl within the sexy lizardgirl as you wriggle your ass in impatience beyond her jaws and feel her belly snugly stretching all around you. You feel one of her hands reach down to trace over the gut bulge you're making as her lips start to creep around your <macro ID="butt_size_desc" /> rear end.
+	</text>
+	<choice destination="oralvorePreyA3" text="$mhmm, eat me up completely pet"/>
+	</page>
+	
+	<page ID="oralvorePreyA3">
+	<text>
+	The raptor seems to take your words as encouragement from lusty tone if not from the meaning. The lizard gulping eagerly and sliding her hands down along your legs as she steadily polishes you off, schlurping up your thighs and then calves and finally gulping you down completely. Your legs sliding down to curl up with the rest of you cosy and snug in the belly of your pet.
+	</text>
+	<choice destination="oralvorePreyA4" text="mhmm, now what i wonder?"/>
+	</page>
+	
+	<page ID="oralvorePreyA4">
+	<!--endo-->
+	<condition operator="equals" evaluate="LOCALFLAGROLL" flag="training"/>		
+	<text>
+	The raptor rubs over her belly, chirring and satisfied. But then you feel her wrap her arms around her dome of a belly to embrace you affectionately. No enzymes in evidence, seems she's taken the hint of how you want to interact with your pets. The raptor settled sat comfortably with you deep inside her belly, you wriggle around to get a bit more comfortable then mhmm and settle in.
+	</text>
+	<effect type="setlocalflag" flag="trained" value="1" />
+	<choice destination="oralvorePreyAEndo" text="so comfy"/>
+	</page>
+	
+	<page ID="oralvorePreyAEndo">
+	<text>
+	The lizard gal's stomach cradles you nicely and you find yourself dozing off in the snug warmth of her insides...when you rouse yourself she's sprawled on her side, half curled around her rounded belly as you've napped inside her. But it's time to coax her into letting you out, you prod at her stomach walls till you hear her mips and then prod meaningfully at the entrance of her throat. The lizardgal pushing herself up a bit before starting to hork you back up. The lizard's throat rippling around your arms as you wriggle back out until you emerge into the open air. The raptor gal blushing and nosing you a bit once you're fully out of her...she's maybe a bit uncertain about this..but..she seems to like this way of having fun with you.
+	</text>
+	<choice destination="end" text="as do I, but return her to containment"/>
+	</page>
+	
+	<page ID="oralvorePreyA4">
+	<!--digestion-->
+	<text>
+	The raptor girl rubs over her belly, chirring in satisfaction. And as she does you feel the stomach walls rub and knead at your body, gurgles audible around you as enzymes soak your naked flesh. Hot tingles soaking into your body as she starts to digest you. Well it is only natural, what else did you expect her to do after swallowing you whole. The raptor's chirrs sound pretty pleased with herself as you're worked over in her.
+	</text>
+	<effect type="setlocalflag" flag="digestion" value="1" />	
+	<choice destination="oralvorePreyADigest" text="nothing for it, gurgle away"/>
+	</page>
+	
+	<gameover ID="oralvorePreyADigest">
+	<text>
+	Regardless of your opinion on the matter you're here now and your pet steadily digests you away. Your form gurgling and glorping as she works you over, melting you down as her gut turns round and smooth. The lizard turning her owner into a slurry of thick nutritious gloop that her body has no trouble in soaking up. In mere hours you'll be nothing more than a hint of pudge around her middle.
+	</text>
+	</gameover>
+	
+	<page ID="oralvorePreyB0">
+	<!--feetfirst-->
+	<text>
+	Time to slip inside your pet again you <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				slip out of your clothes and 
+			</conditional> settle yourself in front of her. Posing a little and watching her gaze rove over you, you can almost feel her desire as she realizes what this signifies. Though she lets out a mip as you stretch out one leg towards her and nudge at her face with your toes. The raptor girl giggling a bit at the sillyness but silence as you press your toes against her open mouth now..she licks over your toes then engulfs your foot with her mouth. Her hands ready to help guide your other foot past her lips when you proffer it for her to consume.
+	</text>
+	<choice destination="oralvorePreyB1" text="$good pet, swallow up your owner"/>
+	</page>
+	
+	<page ID="oralvorePreyB1">
+	<text>
+	You feel tightness encompass your feet as she starts to swallow and you feed your legs into her mouth. Your pet swallowing you up nicely and even helping support your legs as you scoot your butt up off the floor so your thighs can start to slide past her lips. The raptor girl chirring around your calves and tasting her way up past your knees oh so nicely. You can feel her belly walls stretching around your feet as you're gobbled up steadily and she slips your <macro ID="butt_size_desc" /> rear into her mouth.
+	</text>
+	<choice destination="oralvorePreyB2" text="$you're doing well pet, keep on going"/>
+	</page>
+	
+	<page ID="oralvorePreyB2">
+	<text>
+	You watch her lips steadily encroaching on your form, hot gut flesh snugly pressing around your curling legs as you slip deeper inside her growing tummy bulge. Your pet lizard licking along your back and curling her tongue flexibly around to taste the underside of your <macro ID="breast_size_desc" /> breasts. Supported on all fours she works towards engulfing your head and with a smile you raise your arms up over your head to let her finish off gobbling you down.
+	</text>
+	<choice destination="oralvorePreyB3" text="$yes treat me as-mph"/>
+	</page>
+	
+	<page ID="oralvorePreyB3">
+	<text>
+	Your exhortations to her are muffled as your head vanishes into her mouth and she slurps up your arms. Your pet settling heavily with a mip onto the floor as all of your weight curls up inside her now sagging gut, her hands tracing over the bulges in her gut as she has you inside of her once again.
+	</text>
+	<choice destination="oralvorePreyB4" text="mhmm and then"/>
+	</page>
+	
+	<page ID="oralvorePreyB4">
+	<!--trained to endo-->
+	<condition operator="equals" evaluate="LOCALFLAG" flag="trained"
+			value="1" />	
+	<text>
+	Your well trained pet raptor obediently keeps you snug in her belly. No enzymes spoiling your cosy stay in your endosomaphiliac playmate as you close your eyes and get cosy and feel her shifting to rest on her side, one hand resting on her rounded gut as you shift once and then doze off for a nice nap within her.
+	</text>
+	<choice destination="oralvorePreyBEndo" text="zzz"/>
+	</page>
+	
+	<page ID="oralvorePreyBEndo">
+	<text>
+	You rest easily within your warm lizard girl sleeping bag. An enjoyable stay from which you rouse some interminable time later and stretch, pressing your feet against the insides of her belly and hearing the raptor mirp drowsily in reaction. Her hand sliding down to rub at the bulging imprint of your hands until you prod at her insides again and she mips and wakes fully. Your cosy rest spot hauling herself back upright so she can bring you back into the world, rubbing at her throat and then doubling over as you worm your way out. The lizard looking at your naked slick form once again with a flush.
+	</text>
+	<choice destination="end" text="return her to containment"/>	
+	</page>
+	
+	<page ID="oralvorePreyB4">
+	<!--trained to digest-->
+	<condition operator="equals" evaluate="LOCALFLAG" flag="trained"
+			value="2" />	
+	<text>
+	You get comfortable, squirming around a bit and pushing out at her insides in anticipation of what's to come. And your pet doesn't disappoint, her gurgling gut stirring into life around you and beginning to work you over. Enzymes soaking your flesh, breaking down your form as her stomach massages over you from all sides. Your body thoroughly kneaded over in her gurgling gut.
+	</text>
+	<choice destination="oralvorePreyBTrainedDigest" text="nothing better than a cutie's stomach working hungrily on you"/>
+	</page>
+				
+	<gameover ID="oralvorePreyBTrainedDigest">
+	<text>
+	Within the gurgling cauldron of her belly you digest for what seems like a small eternity. Her hands now and then kneading over the bulges you make and feeling them soften and yield to her prodding fingers and insistent gurgles. Your squirms of delight gradually fading into the smooth sloshing of your form breaking down. Your awareness dimming as your form becomes more and more goopy within her until finally her gut is soft and round. Your body utterly digested and ready for absorption. Your pet's innards soaking up your remains until her belly is flat and trim again. It's not a usual way to enjoy yourself with a pet, but you find it fun.
+	</text>
+	</gameover>
+				
+	<page ID="oralvorePreyB4">
+	<!--endo-->
+	<condition operator="equals" evaluate="LOCALFLAGROLL" flag="training"/>		
+	<text>
+	The raptor girl licks her lips and rub her hand over her belly gently. Her gut holding you snugly and warmly within her as she got comfortable and doted on her belly bulge with gentle and affectionate hands. Your pet lizard serving as a comfy place for you to rest as she gets comfortable, her heartbeat and breathing an omnipresent lulling ambience as you doze off.
+	</text>
+	<choice destination="oralvorePreyCEndo" text="zzz"/>
+	</page>
+	
+	<page ID="oralvorePreyCEndo">
+	<text>
+	You rouse, safe and none the worse for wear within her but restless and wanting to emerge. You nudge the raptor's insides to get her attention and make her let you out, your pet letting out a mip and chirr rubbing at her belly as if trying to persuade you to stay in her a bit longer. But you want out and set about wriggling and prodding to make it clear of your desire, this stops her rebellion and she doubles over to start horking you back up. Your body slipping easily and slickly back into the open air until you're looking at her from the outside and seeing your feet slip from her lips.
+	</text>
+	<choice destination="end" text="return her to containment"/>	
+	</page>
+	
+	<page ID="oralvorePreyB4">
+	<!--digestion-->
+	<text>
+	You're inside your pet again and feel her rub over her belly and give it a pat as her digestive processes get to work. Your pet setting about gurgling you up as food for her. Well it's not like it wasn't a possibility, nothing to do now but squirm around as you become a satisfying meal for the cute lizard. 
+	</text>
+	<effect type="setlocalflag" flag="digestion" value="1" />		
+	<choice destination="oralvorePreyBDigest" text="gurgle"/>
+	</page>	
+	
+	<gameover ID="oralvorePreyBDigest">
+	<text>
+	Your squirms and any possible protests you might choose to voice are for naught. Your pet is enjoying digesting you far too much. Your form steadily gurgling and glorping away inside of her, the shape in her belly softening, rounding out and then compacting and shrinking down as you're melted and absorbed. She's perhaps a little disobedient, but she's still kinda cute...then again, maybe she needs some correction.
+	</text>
+	</gameover>
+	
+	<page ID="punish0">
+	<text>
+	You don't appreciate being digested by your pet and seek to make that as clear as possible. Harsh words and a few chastising smacks, especially aimed at her middle should get it across that you are not food just becuase you like going in her belly. Maybe next time she'll take the hint that she's only supposed to hold you and be a nice place for a nap.
+	</text>
+	<effect type="incrementlocalflag" flag="training" value="4" />
+	<effect type="setlocalflag" flag="digestion" value="0" />			
+	<choice destination="end" text="she's learned her lesson, put her back in containment"/>		
+	
+	</page>
+	<page ID="reward0">
+	<text>
+	You actually find it quite hot to be digested by your cute pet. You try to make it clear to her, rubbing her belly, snuggling her and smooching her and letting her taste your cheek. Hopefully now she'll know that when you feed yourself to her you expect to gurgle and glorp away inside her like any other meal.
+	</text>
+	<effect type="setlocalflag" flag="trained" value="2" />	
+	<effect type="setlocalflag" flag="digestion" value="0" />		
+	<choice destination="end" text="she's learned her lesson, put her back in containment"/>	
+	</page>	
+</Conversation>

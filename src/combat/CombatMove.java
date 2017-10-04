@@ -13,6 +13,7 @@ import combat.effect.Effect_Damage;
 import combat.effect.Effect_Dismantle;
 import combat.effect.Effect_Movement;
 import combat.effect.Effect_Status;
+import combat.effect.Effect_Submit;
 import combat.statusEffects.StatusEffect;
 import combat.effect.Effect_Recover;
 import combat.effect.Effect_Reinforce;
@@ -186,6 +187,9 @@ public class CombatMove {
 				}
 				if (e.getTagName().equals("effectScan")) {
 					effects.add(new Effect_Scan(e));
+				}
+				if (e.getTagName().equals("effectSubmit")) {
+					effects.add(new Effect_Submit(e));
 				}
 				if (e.getTagName().equals("missText")) {
 					genMiss(e);

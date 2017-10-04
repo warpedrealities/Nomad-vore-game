@@ -1,6 +1,7 @@
 package spaceship.stats;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -125,7 +126,7 @@ public class SpaceshipStats {
 			resource.setResourceAmount(value + resource.getResourceAmount());
 			resource.setResourceCap(max + resource.getResourceCap());
 		} else {
-			resources.put(name, new SpaceshipResource(name, value, max));
+			resources.put(name, new SpaceshipResource(name, value, max,resource.isNonCombat()));
 		}
 	}
 
@@ -163,10 +164,17 @@ public class SpaceshipStats {
 		Set<String> keys = resources.keySet();
 		String[] strings = new String[keys.size()];
 		Iterator<String> it = keys.iterator();
+		int count=0;
 		for (int i = 0; i < keys.size(); i++) {
-			strings[i] = it.next();
+			String str=it.next();
+			if (resources.get(str).isNonCombat())
+			{
+				strings[count] = str;
+				count++;
+			}
+
 		}
-		return strings;
+		return Arrays.copyOfRange(strings, 0, count);
 	}
 
 	public SpaceshipResource getResource(String type) {

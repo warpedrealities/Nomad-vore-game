@@ -5,11 +5,12 @@ public class SpaceshipResource {
 	private String resourceName;
 	private float resourceAmount;
 	private float resourceCap;
-
-	public SpaceshipResource(String name, float amount, float cap) {
+	private boolean nonCombat;
+	public SpaceshipResource(String name, float amount, float cap,boolean nonCombat) {
 		resourceAmount = amount;
 		resourceCap = cap;
 		resourceName = name;
+		this.nonCombat=nonCombat;
 
 	}
 
@@ -35,6 +36,10 @@ public class SpaceshipResource {
 
 	public void subtractResourceAmount(float resourceMod) {
 		this.resourceAmount -= resourceMod;
+	}
+
+	public boolean isNonCombat() {
+		return nonCombat;
 	}
 
 }
