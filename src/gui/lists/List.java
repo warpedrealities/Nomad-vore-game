@@ -12,22 +12,23 @@ import org.lwjgl.glfw.GLFWKeyCallback;
 import org.lwjgl.glfw.GLFW;
 
 import shared.Callback;
+import shared.ConcertinaPatch;
 import shared.NinePatch;
 import shared.Vec2f;
 
 public class List extends GUIBase implements Callback {
 
-	NinePatch m_frame;
-	NuFont m_fonts[];
-	int m_select;
-	String m_strings[];
-	float m_delay;
-	int m_offset;
-	int m_tint;
-	Vec2f m_corner;
-	Vec2f m_size;
-	Callback m_callback;
-	Slider slider;
+	protected ConcertinaPatch m_frame;
+	protected NuFont m_fonts[];
+	protected int m_select;
+	protected String m_strings[];
+	protected float m_delay;
+	protected int m_offset;
+	protected int m_tint;
+	protected Vec2f m_corner;
+	protected Vec2f m_size;
+	protected Callback m_callback;
+	protected Slider slider;
 
 	public List(Vec2f position, int slots, int texture, int tint, Callback callback) {
 		m_callback = callback;
@@ -35,7 +36,7 @@ public class List extends GUIBase implements Callback {
 		m_offset = 0;
 		m_delay = 0.2F;
 		m_select = 0;
-		m_frame = new NinePatch(position, 17, (slots * 0.8F) + 0.5F, texture);
+		m_frame = new ConcertinaPatch(position, 17, (slots * 0.8F) + 0.5F,0.8F, texture);
 		m_fonts = new NuFont[slots];
 		for (int i = 0; i < slots; i++) {
 			m_fonts[i] = new NuFont(
@@ -54,7 +55,7 @@ public class List extends GUIBase implements Callback {
 		m_offset = 0;
 		m_delay = 0.2F;
 		m_select = 0;
-		m_frame = new NinePatch(position, width, (slots * 0.8F) + 0.5F, texture);
+		m_frame = new ConcertinaPatch(position, width, (slots * 0.8F) + 0.5F, 0.8F, texture);
 		m_fonts = new NuFont[slots];
 		for (int i = 0; i < slots; i++) {
 			m_fonts[i] = new NuFont(
@@ -67,7 +68,7 @@ public class List extends GUIBase implements Callback {
 				(slots * 0.8F) - 4, this);
 	}
 
-	public List(Vec2f position, int slots, int font, int texture, int tint, Callback callback, float width,
+	public List(Vec2f position, int slots, int texture, int tint, Callback callback, float width,
 			boolean genbackground) {
 		m_callback = callback;
 		m_tint = tint;
@@ -75,7 +76,7 @@ public class List extends GUIBase implements Callback {
 		m_delay = 0.2F;
 		m_select = 0;
 		if (genbackground == true) {
-			m_frame = new NinePatch(position, width, (slots * 0.8F) + 0.5F, texture);
+			m_frame = new ConcertinaPatch(position, width, (slots * 0.8F) + 0.5F,0.8F, texture);
 		}
 
 		m_fonts = new NuFont[slots];

@@ -110,6 +110,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 	@Override
 	public void Update(float dt) {
 
+		GUI.update(dt);
 		warpRenderer.update(dt);
 		if (screen != null) {
 			screen.update(dt);

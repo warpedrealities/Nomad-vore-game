@@ -42,7 +42,7 @@ public class SpaceshipAnalyzer {
 		stats.setArmour(ship.getBaseStats().getArmour());
 		stats.setManouverability(ship.getBaseStats().getManouverability());
 		stats.setMoveCost(ship.getBaseStats().getMoveCost());
-		stats.addResource("HULL", ship.getBaseStats().getMaxHullPoints(), ship.getBaseStats().getMaxHullPoints());
+		stats.addResource("HULL", ship.getBaseStats().getMaxHullPoints(), ship.getBaseStats().getMaxHullPoints(),false);
 
 		int emitterIndex = 0;
 		
@@ -79,7 +79,7 @@ public class SpaceshipAnalyzer {
 									case SA_RESOURCE:
 										ShipResource res = (ShipResource) system.getShipAbilities().get(k);
 										stats.addResource(res.getContainsWhat(), res.getAmountContained(),
-												res.getContainedCapacity());
+												res.getContainedCapacity(),res.isNonCombat());
 										break;
 
 									case SA_CONVERTER:

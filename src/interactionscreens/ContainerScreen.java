@@ -162,8 +162,8 @@ public class ContainerScreen extends Screen implements Callback {
 
 		itemLists = new List[2];
 		// build inventory left
-		itemLists[0] = new List(new Vec2f(3, -14.3F), 16, textures[1], textures[4], this);
-		itemLists[1] = new List(new Vec2f(-20, -14.3F), 16, textures[1], textures[4], this);
+		itemLists[0] = new List(new Vec2f(3, -14.3F), 16, textures[5], textures[4], this);
+		itemLists[1] = new List(new Vec2f(-20, -14.3F), 16, textures[5], textures[4], this);
 
 		String str[] = new String[16];
 		for (int i = 0; i < 16; i++) {

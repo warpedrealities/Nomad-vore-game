@@ -39,6 +39,15 @@ public class SystemScreen extends Screen implements MyListener {
 
 	@Override
 	public void update(float DT) {
+		if (navMode)
+		{
+			navWindow.update(DT);
+		}
+		else
+		{
+			window.update(DT);	
+		}
+		
 		if (clock>0)
 		{
 			clock-=DT;

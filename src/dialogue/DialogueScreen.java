@@ -437,6 +437,7 @@ public class DialogueScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
+		m_window.update(DT);
 		if (m_stagnation > 0) {
 			m_stagnation -= 0.1F;
 		}

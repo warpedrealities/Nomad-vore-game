@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
+		<text>
 		The spacesuited alien seems to have fallen and is unable rise to
 		continue the fight. You kick her plasma pistol away so she can't use
-		it and consider what best to use her for.
-		<text>
+		it and consider what best to use her for.		
+		</text>
 			<choice destination="cockvore0"
 				text="put her in your balls, then put 'her' back in the suit">
 				<assertion evaluate="hasperk" perk="cockvore" />
 			</choice>
 			<choice destination="end" text="nothing, just good to see her defeated" />
-		</text>
+	
 	</page>
 
 	<page ID="cockvore0">

@@ -38,7 +38,7 @@ public class GameOver extends SceneBase implements MyListener {
 		this.victor=victor;
 		m_window = new Window(new Vec2f(-20, -16), new Vec2f(40, 30), m_textureIds[0], true);
 
-		m_text = new TextView(m_textureIds[0], new Vec2f(-20, -14.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
+		m_text = new TextView(m_textureIds[3], new Vec2f(-20, -14.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
 		if (text != null) {
 			m_text.AddText(text);
 			m_text.BuildStrings();
@@ -70,7 +70,7 @@ public class GameOver extends SceneBase implements MyListener {
 		tool=new ReformationTool(Universe.getInstance().getCurrentEntity(),Universe.getInstance().getPlayer().getReformHandler());
 		m_window = new Window(new Vec2f(-20, -16), new Vec2f(40, 30), m_textureIds[0], true);
 
-		m_text = new TextView(m_textureIds[0], new Vec2f(-20, -14.0F), new Vec2f(40, 15), SceneBase.getVariables()[0],
+		m_text = new TextView(m_textureIds[3], new Vec2f(-20, -14.0F), new Vec2f(40, 15), SceneBase.getVariables()[0],
 				strings);
 		m_text.setExpanded(true);
 		if (text != null) {
@@ -98,12 +98,13 @@ public class GameOver extends SceneBase implements MyListener {
 	}
 
 	void SetupTextures() {
-		m_textureIds = new int[3];
+		m_textureIds = new int[4];
 		// first is square
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
 		m_textureIds[1] = Tools.loadPNGTexture("assets/art/font2.png", GL13.GL_TEXTURE0);
 		m_textureIds[2] = Tools.loadPNGTexture("assets/art/button.png", GL13.GL_TEXTURE0);
+		m_textureIds[3] = Tools.loadPNGTexture("assets/art/textWindow.png", GL13.GL_TEXTURE0);	
 	}
 
 	@Override

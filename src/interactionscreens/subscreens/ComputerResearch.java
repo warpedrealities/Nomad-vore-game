@@ -40,7 +40,7 @@ public class ComputerResearch implements Callback, MyListener {
 		Button button = new Button(new Vec2f(0.5F, 0.5F), new Vec2f(4, 1.8F), textures[2], this, "research", 3, 1);
 		window.add(button);
 
-		researchList = new List(new Vec2f(-15, -16), 18, textures[0], textures[1], textures[4], this, 15, true);
+		researchList = new List(new Vec2f(-15, -16), 18, textures[5], textures[4], this, 15, true);
 		genList();
 		this.callback = callback;
 

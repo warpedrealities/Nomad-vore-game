@@ -78,12 +78,12 @@ public class InventoryScreen extends Screen implements Callback {
 	
 	boolean screenAlive;
 	
-	public InventoryScreen(int frame, int button, int buttonalt,Player player, int tint,ModelController_Int callback)
+	public InventoryScreen(int frame,int list, int button, int buttonalt,Player player, int tint,ModelController_Int callback)
 	{
 		screenAlive=true;
 		m_callback=callback;
 		m_control=1;
-		m_list=new List(new Vec2f(3,-14.3F),16,frame,tint,this);
+		m_list=new List(new Vec2f(3,-14.3F),16,list,tint,this);
 		m_player=player;
 		String str[]=new String[m_player.getInventory().getNumItems()];
 		for (int i=0;i<str.length;i++)
@@ -207,7 +207,7 @@ public class InventoryScreen extends Screen implements Callback {
 	@Override
 	public void update(float DT)
 	{
-	
+		m_button.update(DT);
 		m_window.update(DT);
 		popup.update(DT);
 		popupBig.update(DT);

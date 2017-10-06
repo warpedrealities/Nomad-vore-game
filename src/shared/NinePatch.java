@@ -88,7 +88,7 @@ public class NinePatch {
 		GL30.glBindVertexArray(0);
 	}
 
-	void Generate(float width, float height) {
+	protected void Generate(float width, float height) {
 		m_indicecount = 54;
 		Vertex vertices[] = new Vertex[16];
 		m_VAO = GL30.glGenVertexArrays();

@@ -119,14 +119,14 @@ public class SpaceshipStats {
 		converters.add(converter);
 	}
 
-	public void addResource(String name, float value, float max) {
+	public void addResource(String name, float value, float max, boolean noncombat) {
 		value = (float) (Math.round(value * 100d) / 100d);
 		SpaceshipResource resource = resources.get(name);
 		if (resource != null) {
 			resource.setResourceAmount(value + resource.getResourceAmount());
 			resource.setResourceCap(max + resource.getResourceCap());
 		} else {
-			resources.put(name, new SpaceshipResource(name, value, max,resource.isNonCombat()));
+			resources.put(name, new SpaceshipResource(name, value, max,noncombat));
 		}
 	}
 
@@ -167,7 +167,7 @@ public class SpaceshipStats {
 		int count=0;
 		for (int i = 0; i < keys.size(); i++) {
 			String str=it.next();
-			if (resources.get(str).isNonCombat())
+			if (!resources.get(str).isNonCombat())
 			{
 				strings[count] = str;
 				count++;

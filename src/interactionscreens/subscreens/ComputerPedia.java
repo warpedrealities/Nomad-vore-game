@@ -37,7 +37,7 @@ public class ComputerPedia implements Callback, MyListener {
 		description = new MultiLineText(new Vec2f(0.5F, 31.5F), 76, 98, 0.8F);
 
 		view.add(description);
-		entryList = new List(new Vec2f(-20, -11), 33, textures[0], textures[1], textures[4], this, 9, true);
+		entryList = new List(new Vec2f(-20, -11), 33, textures[5], textures[4], this, 9, true);
 
 		Button[] buttons = new Button[2];
 		buttons[0] = new Button(new Vec2f(0.5F, 0.5F), new Vec2f(3, 1.8F), textures[2], this, "fore", 5, 1);

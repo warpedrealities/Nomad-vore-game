@@ -43,7 +43,7 @@
 			<pairedportal x="0" y="4" sprite="1" ID="-101" facing="2">
 				Exterior hatch </pairedportal>
 			<placeWidget x="3" y="10" name="slot">
-				<contains name="craftingtable" />
+				<contains name="modules/datacomputer" />
 			</placeWidget>
 			<placeWidget x="4" y="10" name="slot">
 				<contains name="modules/navconsole" />
@@ -84,7 +84,7 @@
 			</placeWidget>
 
 			<placeWidget x="3" y="1" name="slot">
-				<contains name="modules/single bed" />
+				<contains name="modules/cargocontainer_ship" />
 			</placeWidget>
 
 			<placeWidget x="5" y="1" name="slot">

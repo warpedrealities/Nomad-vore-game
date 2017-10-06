@@ -296,7 +296,7 @@ public class SystemScreen extends Screen implements Callback {
 		window = new Window(new Vec2f(-20, -16), new Vec2f(23, 15), textures[1], true);
 		this.callback = callback;
 		// build inventory left
-		itemList = new List(new Vec2f(3, -14.3F), 16, textures[1], textures[4], this);
+		itemList = new List(new Vec2f(3, -14.3F), 16, textures[5], textures[4], this);
 
 		String str[] = new String[16];
 		for (int i = 0; i < 16; i++) {

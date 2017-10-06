@@ -22,6 +22,7 @@ import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
 import spaceship.Spaceship;
+import vmo.Game;
 
 public class SolarGUI {
 
@@ -35,13 +36,8 @@ public class SolarGUI {
 	Text globalPosition;
 
 	public SolarGUI() {
-		m_GUImatrix = new Matrix4f();
-		m_GUImatrix.m00 = 0.05F;
-		m_GUImatrix.m11 = 0.0625F;
-		m_GUImatrix.m22 = 1.0F;
-		m_GUImatrix.m33 = 1.0F;
-		m_GUImatrix.m31 = 0;
-		m_GUImatrix.m32 = 0;
+		m_GUImatrix = Game.sceneManager.getConfig().getMatrix();
+
 
 		setupTextures();
 
@@ -109,6 +105,7 @@ public class SolarGUI {
 	}
 
 	public void update() {
+
 		for (int i = 0; i < resourceStrings.length; i++) {
 			if (resourceStrings[i].equals("FOOD")) {
 				resourceTexts[i]
@@ -133,5 +130,9 @@ public class SolarGUI {
 		for (int i = 0; i < textureIds.length; i++) {
 			GL11.glDeleteTextures(textureIds[i]);
 		}
+	}
+
+	public void update(float dt) {
+		window.update(dt);
 	}
 }

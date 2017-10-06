@@ -11,6 +11,7 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
 import vmo.Game;
+import vmo.GameManager;
 
 abstract public class SceneBase implements Scene {
 
@@ -25,15 +26,9 @@ abstract public class SceneBase implements Scene {
 	}
 
 	public SceneBase() {
-		m_viewmatrix = new Matrix4f();
-		m_viewmatrix.m00 = 0.05F;
-		m_viewmatrix.m11 = 0.0625F;
-		m_viewmatrix.m22 = 1.0F;
-		m_viewmatrix.m33 = 1.0F;
+		m_viewmatrix=Game.sceneManager.getConfig().getMatrix();
 		matrix44Buffer = BufferUtils.createFloatBuffer(16);
 
-		m_viewmatrix.m31 = 0;
-		m_viewmatrix.m32 = 0;
 	}
 
 	public SceneBase(int variables[]) {

@@ -34,7 +34,7 @@ public class Popup extends GUIBase {
 
 	@Override
 	public void update(float DT) {
-
+		window.update(DT);
 		if (clock > 0) {
 			clock -= DT;
 		}

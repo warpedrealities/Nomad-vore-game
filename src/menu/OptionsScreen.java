@@ -67,7 +67,7 @@ public class OptionsScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
+		m_window.update(DT);
 		if (clock > 0) {
 			clock -= DT;
 		}

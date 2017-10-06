@@ -77,7 +77,7 @@ public class CraftingScreen extends Screen implements Callback {
 	@Override
 	public void update(float DT) {
 		possibleCrafts.update(DT);
-		
+		root.update(DT);	
 		if (popupTimer > 0) {
 			popupTimer -= DT;
 		}

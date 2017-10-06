@@ -115,13 +115,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_interface = this;
 		m_mode = ViewMode.LOOK;
 
-		m_GUImatrix = new Matrix4f();
-		m_GUImatrix.m00 = 0.05F;
-		m_GUImatrix.m11 = 0.0625F;
-		m_GUImatrix.m22 = 1.0F;
-		m_GUImatrix.m33 = 1.0F;
-		m_GUImatrix.m31 = 0;
-		m_GUImatrix.m32 = 0;
+		m_GUImatrix = Game.sceneManager.getConfig().getMatrix();
 		sceneController.getUniverse().currentZone.ClearVisibleTiles();
 		sceneController.initializeHandler(this);
 		sceneController.setActiveZone(sceneController.getUniverse().currentZone);
@@ -230,13 +224,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_interface = this;
 		m_mode = ViewMode.LOOK;
 
-		m_GUImatrix = new Matrix4f();
-		m_GUImatrix.m00 = 0.05F;
-		m_GUImatrix.m11 = 0.0625F;
-		m_GUImatrix.m22 = 1.0F;
-		m_GUImatrix.m33 = 1.0F;
-		m_GUImatrix.m31 = 0;
-		m_GUImatrix.m32 = 0;
+		m_GUImatrix = Game.sceneManager.getConfig().getMatrix();
 		sceneController.getUniverse().currentZone.ClearVisibleTiles();
 		sceneController.initializeHandler(this);
 		sceneController.setActiveZone(sceneController.getUniverse().currentZone);
@@ -254,7 +242,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_time = 0;
 		Setup();
 
-		m_text = new TextView(m_textureIds[0], new Vec2f(-20, -16.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
+		m_text = new TextView(m_textureIds[1], new Vec2f(-20, -16.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
 		m_window = new Window(new Vec2f(3, -1), new Vec2f(17, 17), m_textureIds[0], true);
 		if (sceneController.getActiveZone().zoneDescription != null) {
 			m_text.AddText(sceneController.getActiveZone().zoneDescription);
@@ -361,11 +349,11 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	}
 
 	void SetupTextures() {
-		m_textureIds = new int[9];
+		m_textureIds = new int[10];
 		// first is square
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
-		m_textureIds[1] = Tools.loadPNGTexture("assets/art/font2.png", GL13.GL_TEXTURE0);
+		m_textureIds[1] = Tools.loadPNGTexture("assets/art/textWindow.png", GL13.GL_TEXTURE0);
 		m_textureIds[2] = Tools.loadPNGTexture("assets/art/spritesheet.png", GL13.GL_TEXTURE0);
 		m_textureIds[3] = Tools.loadPNGTexture("assets/art/" + sceneController.getActiveZone().getTileset(),
 				GL13.GL_TEXTURE0);
@@ -374,6 +362,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_textureIds[6] = Tools.loadPNGTexture("assets/art/bars.png", GL13.GL_TEXTURE0);
 		m_textureIds[7] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
 		m_textureIds[8] = Tools.loadPNGTexture("assets/art/button1.png", GL13.GL_TEXTURE0);
+		m_textureIds[9] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);	
 	}
 
 	public void redrawBars() {
@@ -466,6 +455,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	@Override
 	public void Update(float dt) {
 		m_dropdown.update(dt);
+		m_window.update(dt);
 		if (m_dropdown.getVisible() == false && m_mode.getValue()) {
 			m_mode = DropdownHandler.handleClosure(m_mode, Universe.getInstance().getPlayer(), m_buttons[4]);
 			m_buttons[4].setActive(true);
@@ -914,7 +904,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 			switch (ID) {
 			case 0:
-				m_screen = new InventoryScreen(m_textureIds[0], m_textureIds[7], m_textureIds[8],
+				m_screen = new InventoryScreen(m_textureIds[0],m_textureIds[1], m_textureIds[7], m_textureIds[8],
 						sceneController.getUniverse().player, m_variables[0], this);
 				m_screen.start(m_hook);
 				break;
@@ -1227,12 +1217,13 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	public void setScreen(Screen screen) {
 		targeter.setActive(false);
 		if (m_screen == null) {
-			int values[] = new int[5];
+			int values[] = new int[6];
 			values[0] = m_textureIds[6];
 			values[1] = m_textureIds[0];
 			values[2] = m_textureIds[7];
 			values[3] = m_textureIds[8];
 			values[4] = m_variables[0];
+			values[5] = m_textureIds[9];	
 			screen.initialize(values, this);
 			m_screen = screen;
 			m_disabled = true;
@@ -1251,12 +1242,13 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		}
 		if (screen!=null)
 		{
-			int values[] = new int[5];
+			int values[] = new int[6];
 			values[0] = m_textureIds[6];
 			values[1] = m_textureIds[0];
 			values[2] = m_textureIds[7];
 			values[3] = m_textureIds[8];
 			values[4] = m_variables[0];
+			values[5] = m_textureIds[9];	
 			screen.initialize(values, this);
 			m_screen = screen;
 			m_disabled = true;

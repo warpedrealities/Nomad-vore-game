@@ -3,6 +3,7 @@ package gui;
 import java.nio.FloatBuffer;
 import java.util.Scanner;
 
+import font.FontSupport;
 import font.NuFont;
 
 import shared.Vec2f;
@@ -14,7 +15,7 @@ public class MultiLineText extends GUIBase {
 	int m_length;
 
 	public MultiLineText(Vec2f p, int lines, int length, float lwidth) {
-		m_length = (int) ((int) length / (Game.sceneManager.getConfig().getTextscale()));
+		m_length = (int) ((int) length / (Game.sceneManager.getConfig().getTextWidth()));
 		m_fonts = new NuFont[lines];
 		for (int i = 0; i < lines; i++) {
 			m_fonts[i] = new NuFont(new Vec2f(p.x, p.y - ((float) i * (lwidth + 0.1F))), length, lwidth);
@@ -47,7 +48,7 @@ public class MultiLineText extends GUIBase {
 				index++;
 				l = 0;
 			} else {
-				if (str.length() + l > m_length * 0.8F) {
+				if (str.length() + l > ((float)m_length) * 0.8F) {
 					l = 0;
 					m_fonts[index].setString(builder.toString());
 					index++;

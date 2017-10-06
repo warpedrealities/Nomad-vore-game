@@ -70,14 +70,14 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		// first is square
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
-		m_textureIds[1] = Tools.loadPNGTexture("assets/art/font2.png", GL13.GL_TEXTURE0);
+		m_textureIds[1] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);
 		 m_textureIds[2]=Tools.loadPNGTexture("assets/art/ninepatchgreen.png",
 		 GL13.GL_TEXTURE0);
 		// m_textureIds[3]=Tools.loadPNGTexture("assets/art/"+m_world.currentZone.getTileset(),
 		// GL13.GL_TEXTURE0);
 		m_textureIds[4] = Tools.loadPNGTexture("assets/art/window.png", GL13.GL_TEXTURE0);
-		// m_textureIds[5]=Tools.loadPNGTexture("assets/art/widgets.png",
-		// GL13.GL_TEXTURE0);
+		 m_textureIds[5]=Tools.loadPNGTexture("assets/art/listWindow.png",
+		 GL13.GL_TEXTURE0);
 		// m_textureIds[6]=Tools.loadPNGTexture("assets/art/bars.png",
 		// GL13.GL_TEXTURE0);
 		m_textureIds[7] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
@@ -86,7 +86,12 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 
 	@Override
 	public void Update(float DT) {
-
+		window.update(DT);
+		for (int i=0;i<subWindows.length;i++)
+		{
+			subWindows[i].update(DT);	
+		}
+	
 		if (m_screen == null) {
 			perkList.update(DT);
 		} else {
@@ -307,12 +312,12 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		subWindows[2].add(header);
 	}
 
-	private void genPerkSection(int frame, int font, int tint) {
+	private void genPerkSection(int frame, int listWindow, int tint) {
 
-		perkList = new List(new Vec2f(0, -6.75F), 16, font, frame, tint, this, 20, false);
+		perkList = new List(new Vec2f(0, -7.25F), 16, listWindow, tint, this, 20, true);
 		description = new ScrollableMultiLineText(new Vec2f(20.5F, 6.2F), 16, 58, 0.8F,new Vec2f(19,-11.4F));
 		window.add(description);
-		Text header = new Text(new Vec2f(2.2F, 7.0F), "perks", 0.8F, tint);
+		Text header = new Text(new Vec2f(2.2F, 7.2F), "perks", 0.8F, tint);
 
 		buildList();
 

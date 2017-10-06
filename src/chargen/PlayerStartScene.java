@@ -69,7 +69,7 @@ public class PlayerStartScene extends SceneBase implements MyListener, Callback 
 		// first is square
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
-		m_textureIds[1] = Tools.loadPNGTexture("assets/art/font2.png", GL13.GL_TEXTURE0);
+		m_textureIds[1] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);
 		m_textureIds[2] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
 		m_textureIds[3] = Tools.loadPNGTexture("assets/art/button1.png", GL13.GL_TEXTURE0);
 	}
@@ -78,13 +78,13 @@ public class PlayerStartScene extends SceneBase implements MyListener, Callback 
 		// build window
 		window = new Window(new Vec2f(-14, -9), new Vec2f(28, 18), m_textureIds[0], true);
 		// build chargen label
-		Text label = new Text(new Vec2f(2, 10), "character generation", m_variables[0]);
+		Text label = new Text(new Vec2f(0, 10), "character generation", m_variables[0]);
 		window.add(label);
 		// build phase label
-		phaseNameLabel = new Text(new Vec2f(8, 10), "phase:" + phaseList.get(phaseIndex).getName(), m_variables[0]);
+		phaseNameLabel = new Text(new Vec2f(7, 10), "phase:" + phaseList.get(phaseIndex).getName(), m_variables[0]);
 		window.add(phaseNameLabel);
 		// build choicelist
-		choiceList = new List(new Vec2f(-14.0F, -9.0F), 17, m_textureIds[0], m_variables[0], this, 10);
+		choiceList = new List(new Vec2f(-14.0F, -9.0F), 17, m_textureIds[1], m_variables[0], this, 10);
 		// build description
 		description = new MultiLineText(new Vec2f(10.5F, 17.5F), 32, 56, 0.8F);
 		// description.addText(debugtext());

@@ -34,7 +34,7 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 		this.origin=origin;
 		this.filename=filename;
 		SetupTextures();
-		m_text = new TextView(m_textureIds[0], new Vec2f(-20, -16.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
+		m_text = new TextView(m_textureIds[1], new Vec2f(-20, -16.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
 		
 	}
 	void SetupTextures() {
@@ -42,7 +42,7 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 		// first is square
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
-		m_textureIds[1] = Tools.loadPNGTexture("assets/art/font2.png", GL13.GL_TEXTURE0);
+		m_textureIds[1] = Tools.loadPNGTexture("assets/art/textWindow.png", GL13.GL_TEXTURE0);
 		m_textureIds[2] = Tools.loadPNGTexture("assets/art/spritesheet.png", GL13.GL_TEXTURE0);
 		m_textureIds[4] = Tools.loadPNGTexture("assets/art/window.png", GL13.GL_TEXTURE0);
 		m_textureIds[5] = Tools.loadPNGTexture("assets/art/widgets.png", GL13.GL_TEXTURE0);

@@ -32,7 +32,7 @@ public class FontSupport {
 
 	private static FontSupport instance;
 	private int textureID;
-
+	private float widthAdjustment=1.1F;
 	private Map<Integer, Glyph> glyphData;
 
 	public static FontSupport getInstance() {
@@ -42,11 +42,16 @@ public class FontSupport {
 		return instance;
 	}
 
+	public float getWidthAdjustment()
+	{
+		return widthAdjustment;
+	}
+	
 	private FontSupport() {
-		textureID = Tools.loadPNGTexture("assets/art/arial_0.png", GL13.GL_TEXTURE0);
+		textureID = Tools.loadPNGTexture("assets/art/earth2073_0.png", GL13.GL_TEXTURE0);
 
 		GlyphLoader loader = new GlyphLoader();
-		loader.buildMap("assets/data/arial.fnt");
+		loader.buildMap("assets/data/earth2073.fnt");
 		glyphData = loader.getGlyphs();
 
 	}

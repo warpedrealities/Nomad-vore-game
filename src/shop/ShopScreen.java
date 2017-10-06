@@ -49,6 +49,8 @@ public class ShopScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
+		window.update(DT);
+		subwindow.update(DT);
 		for (int i=0;i<itemLists.length;i++)
 		{
 			itemLists[i].update(DT);
@@ -237,8 +239,8 @@ public class ShopScreen extends Screen implements Callback {
 		subwindow = new Window(new Vec2f(3, -1), new Vec2f(17, 17), textures[1], true);
 		itemLists = new List[2];
 		// build inventory left
-		itemLists[0] = new List(new Vec2f(3, -14.3F), 16, textures[1], textures[4], null);
-		itemLists[1] = new List(new Vec2f(-20, -14.3F), 16, textures[1], textures[4], this);
+		itemLists[0] = new List(new Vec2f(3, -14.3F), 16, textures[5], textures[4], null);
+		itemLists[1] = new List(new Vec2f(-20, -14.3F), 16, textures[5], textures[4], this);
 
 		String str[] = new String[16];
 		for (int i = 0; i < 16; i++) {

@@ -11,34 +11,34 @@ import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL20;
 
 import font.NuFont;
-
+import shared.ConcertinaPatch;
 import shared.NinePatch;
 import shared.Vec2f;
 import vmo.Game;
 
 public class TextView extends GUIBase {
 
-	NinePatch backgroundPatches[];
-	int tintControl;
-	Vec2f viewPosition, viewSize;
-	NuFont textLines[];
-	boolean isExpanded;
-	int textScrollOffset;
-	ArrayList<String> displayStrings;
-	String lastInput;
-	float keyTimer;
-	int highlightedLine;
+	private ConcertinaPatch backgroundPatches[];
+	private int tintControl;
+	private Vec2f viewPosition, viewSize;
+	private NuFont textLines[];
+	private boolean isExpanded;
+	private int textScrollOffset;
+	private ArrayList<String> displayStrings;
+	private String lastInput;
+	private float keyTimer;
+	private int highlightedLine;
 
 	public TextView(int background, Vec2f pos, Vec2f size, int colour) {
 		tintControl = colour;
 		keyTimer = 0;
 		isExpanded = false;
 		textScrollOffset = 0;
-		backgroundPatches = new NinePatch[2];
+		backgroundPatches = new ConcertinaPatch[2];
 		displayStrings = new ArrayList<String>();
-		backgroundPatches[0] = new NinePatch(pos, size.x, size.y, background);
+		backgroundPatches[0] = new ConcertinaPatch(pos, size.x, size.y,0.9F, background);
 		Vec2f p = new Vec2f(pos.x + 0, pos.y);
-		backgroundPatches[1] = new NinePatch(p, size.x, size.y * 2, background);
+		backgroundPatches[1] = new ConcertinaPatch(p, size.x, size.y * 2,0.9F, background);
 		textLines = new NuFont[42];
 		for (int i = 0; i < 42; i++) {
 			// build fonts
@@ -54,11 +54,11 @@ public class TextView extends GUIBase {
 		keyTimer = 0;
 		isExpanded = false;
 		textScrollOffset = 0;
-		backgroundPatches = new NinePatch[2];
+		backgroundPatches = new ConcertinaPatch[2];
 		displayStrings = strings;
-		backgroundPatches[0] = new NinePatch(pos, size.x, size.y, background);
+		backgroundPatches[0] = new ConcertinaPatch(pos, size.x, size.y,0.9F, background);
 		Vec2f p = new Vec2f(pos.x + 0, pos.y);
-		backgroundPatches[1] = new NinePatch(p, size.x, size.y * 2, background);
+		backgroundPatches[1] = new ConcertinaPatch(p, size.x, size.y * 2,0.9F, background);
 		textLines = new NuFont[42];
 		for (int i = 0; i < 42; i++) {
 			// build fonts
@@ -133,10 +133,10 @@ public class TextView extends GUIBase {
 		highlightedLine = 0;
 		StringBuilder builder = new StringBuilder();
 		Scanner scanner = new Scanner(text);
-		int lengthlimit = (int) (75.0F * Game.sceneManager.getConfig().getTextscale());
+		int lengthlimit = (int) (125.0F / Game.sceneManager.getConfig().getTextWidth());
 		while (scanner.hasNext()) {
 			String str = scanner.next();
-			if (builder.length() > lengthlimit) {
+			if (builder.length()+str.length() > lengthlimit) {
 				displayStrings.add(builder.toString());
 				builder = new StringBuilder();
 				highlightedLine++;
@@ -146,12 +146,13 @@ public class TextView extends GUIBase {
 					str = str.replace("LBREAK", "");
 					builder.append(str);
 					builder.append(" ");
-				} else
+				} 
 					displayStrings.add(builder.toString());
-				builder = new StringBuilder();
-				highlightedLine++;
-
-			} else {
+					builder = new StringBuilder();
+					highlightedLine++;				
+			} 
+			else 
+			{
 				builder.append(str);
 				builder.append(" ");
 			}
@@ -160,35 +161,6 @@ public class TextView extends GUIBase {
 		displayStrings.add(builder.toString());
 		highlightedLine++;
 	}
-	/*
-	 * public void AddText(String text) { lastInput=text; highlightedLine=0;
-	 * float divisions=(float)text.length()/(125/Game.sceneManager.getConfig().
-	 * getTextscale()); //divide text
-	 * 
-	 * if (divisions>1) { int index=0; for (int i=0;i<divisions;i++) { //find
-	 * split point int split=text.indexOf(" ",
-	 * index+(int)(120/Game.sceneManager.getConfig().getTextscale())); if
-	 * (split==-1) { break; } if
-	 * (split>index+125/Game.sceneManager.getConfig().getTextscale()) {
-	 * split=text.indexOf(" ",
-	 * index+(int)(115/Game.sceneManager.getConfig().getTextscale())); } String
-	 * str=text.substring(index, split); int dex=str.indexOf("LBREAK"); if
-	 * (dex!=-1) { str=str.substring(0,dex); str=str.replace("LBREAK", "");
-	 * split=index+dex+"LBREAK".length(); i--; } displayStrings.add(str);
-	 * highlightedLine++; index=split+1; if (index>=text.length()) { break; }
-	 * 
-	 * } String str=text.substring(index,text.length()); int
-	 * dex=str.indexOf("LBREAK"); while (dex!=-1) { str=str.replace("LBREAK",
-	 * ""); displayStrings.add(str.substring(0,dex)); index=dex+index+1;
-	 * str=text.substring(index,text.length()); dex=str.indexOf("LBREAK");
-	 * highlightedLine++; }
-	 * displayStrings.add(text.substring(index,text.length()));
-	 * highlightedLine++;
-	 * 
-	 * } else { displayStrings.add(text); highlightedLine++;
-	 * 
-	 * } }
-	 */
 
 	@Override
 	public boolean ClickEvent(Vec2f pos) {

@@ -6,20 +6,22 @@ import font.NuFont;
 
 import shared.MyListener;
 import shared.NinePatch;
+import shared.NinePatch_Alternate;
 import shared.Vec2f;
 import vmo.Game;
 
 public class Button extends GUIBase {
 
-	NinePatch m_patch;
-	String m_string;
-	NuFont m_font;
+	protected NinePatch_Alternate m_patch;
+	protected String m_string;
+	protected NuFont m_font;
 	// encapsulation of patch, means gui elements don't inherit boxes
-	Vec2f m_pos;
-	Vec2f m_size;
-	int m_ID;
-	boolean m_active;
-
+	protected Vec2f m_pos;
+	protected Vec2f m_size;
+	protected int m_ID;
+	protected boolean m_active;
+	protected float clock;
+	
 	public Button(Vec2f pos, Vec2f size, int texture, MyListener listener, String string, int ID) {
 		m_active = true;
 		m_pos = pos;
@@ -27,7 +29,7 @@ public class Button extends GUIBase {
 		m_listener = listener;
 		m_string = string;
 		// build ninepatch
-		m_patch = new NinePatch(pos, size.x, size.y, texture);
+		m_patch = new NinePatch_Alternate(pos, size.x, size.y, texture);
 		m_ID = ID;
 		Vec2f p = new Vec2f(pos.x, pos.y);
 		float sy = (size.y) * 0.65F;
@@ -50,7 +52,7 @@ public class Button extends GUIBase {
 		m_string = string;
 		// build ninepatch
 		float sy = (size.y) * 0.35F;
-		m_patch = new NinePatch(pos, size.x, size.y, texture);
+		m_patch = new NinePatch_Alternate(pos, size.x, size.y, texture);
 		m_ID = ID;
 		if (size.y < 2) {
 			m_font = new NuFont(new Vec2f(pos.x + 0.25F, pos.y + (0.5F * size.y) + sy), 64, 0.8F * s);
@@ -72,15 +74,21 @@ public class Button extends GUIBase {
 
 	@Override
 	public void update(float DT) {
-
+		if (clock>0)
+		{
+			clock-=DT;
+			if (clock<=0)
+			{
+				m_patch.toggle();
+				m_listener.ButtonCallback(m_ID, m_pos);		
+			}
+		}
 	}
 
 	@Override
 	public void Draw(FloatBuffer buffer, int matrixloc) {
 		if (m_active == true) {
 			m_patch.Draw(buffer, matrixloc);
-			// draw text
-			// m_font.drawString(m_pos.x, m_pos.y, m_string);
 			m_font.Draw(buffer, matrixloc);
 		}
 
@@ -94,7 +102,8 @@ public class Button extends GUIBase {
 		}
 		if (pos.x > m_pos.x && pos.x < m_pos.x + m_size.x) {
 			if (pos.y > m_pos.y && pos.y < m_pos.y + m_size.y) {
-				m_listener.ButtonCallback(m_ID, pos);
+				clock=0.02F;
+				m_patch.toggle();
 				// return true;
 			}
 		}

@@ -41,7 +41,7 @@ public class ItemContainerScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
+		window.update(DT);
 		for (int i = 0; i < 2; i++) {
 			itemLists[i].update(DT);
 		}
@@ -112,7 +112,7 @@ public class ItemContainerScreen extends Screen implements Callback {
 		case 3:
 			player.getInventory().setWeight(player.getInventory().getWeight()+container.getAdjustedContentWeight());
 			player.calcMove();
-			ViewScene.m_interface.replaceScreen(new InventoryScreen(sceneResources[1],sceneResources[2],
+			ViewScene.m_interface.replaceScreen(new InventoryScreen(sceneResources[1],sceneResources[0],sceneResources[2],
 					sceneResources[3],player,sceneResources[4],ViewScene.m_interface));
 			break;
 

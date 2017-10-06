@@ -40,14 +40,14 @@ public class SaveLoad extends Screen implements Callback {
 	private float clock;
 	private TextColoured text;
 	
-	public SaveLoad(int font, int frame, int button, int tint, boolean save, Callback callback) {
+	public SaveLoad(int frame,int list, int button, int tint, boolean save, Callback callback) {
 		m_callback = callback;
 		clock = 0.5F;
 		// generate window
 		m_window = new Window(new Vec2f(-6.5F, -12), new Vec2f(13, 10), frame, true);
 
 		// generate list of saves
-		m_list = new List(new Vec2f(-6.5F, -10.0F), 12, frame, tint, this, 13);
+		m_list = new List(new Vec2f(-6.5F, -10.0F), 12, list, tint, this, 13);
 		// m_window.Add(m_list);
 		GenSaveList();
 		// if in save mode add a button to make a new save
@@ -140,7 +140,8 @@ public class SaveLoad extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
+		m_window.update(DT);
+		m_subWindow.update(DT);
 		if (clock > 0) {
 			clock -= DT;
 		}

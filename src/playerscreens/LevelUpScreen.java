@@ -64,7 +64,7 @@ public class LevelUpScreen extends Screen implements Callback {
 		// 2 button
 		// 3 is button alt
 		// 4 tint
-		perkList = new List(new Vec2f(-20, -6.3F), 20, values[0], values[1], values[4], this, 20, false);
+		perkList = new List(new Vec2f(-20, -6.3F), 20, values[0], values[4], this, 20, false);
 
 		String[] str = new String[availablePerks.size()];
 		for (int i = 0; i < availablePerks.size(); i++) {
@@ -88,6 +88,7 @@ public class LevelUpScreen extends Screen implements Callback {
 	@Override
 	public void update(float DT) {
 
+		window.update(DT);
 		description.update(DT);
 		perkList.update(DT);
 	}

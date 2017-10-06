@@ -36,7 +36,7 @@
 			</hitText>
 		</combatMove>
 		<itemDrop chance="20" item="plasma pistol" />
-		<itemDrop chance="50" item="plasma cartridge" />
+		<itemDrop chance="50" item="plasma canister" />
 	</rpg>
 
 	<defeated conversation="space/talharan/talharan_grey/defeat" />

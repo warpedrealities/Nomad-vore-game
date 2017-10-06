@@ -151,7 +151,7 @@ public class CaptureScreen extends Screen implements Callback {
 			window.add(buttons[i]);
 		}
 
-		specimenList = new List(new Vec2f(-20, -14.3F), 16, textures[1], textures[4], this);
+		specimenList = new List(new Vec2f(-20, -14.3F), 16, textures[5], textures[4], this);
 		genList();
 
 		description = new MultiLineText(new Vec2f(17.5F, 14.5F), 76, 68, 0.8F);

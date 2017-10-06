@@ -6,12 +6,18 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.lwjgl.BufferUtils;
+import org.lwjgl.util.vector.Matrix4f;
+
+import font.FontSupport;
+
 public class Config {
 
-	float m_scale;
-	float m_textscale;
-	boolean verboseCombat;
-	boolean disableAutosave;
+	private float m_scale;
+	private float m_textscale;
+	private boolean verboseCombat;
+	private boolean disableAutosave;
+	protected Matrix4f matrix;
 	public static final int VERSION = 254;
 
 	public Config() {
@@ -53,9 +59,22 @@ public class Config {
 		if (px - 40 < (1024F * m_scale)) {
 			m_scale = ((px - 40) / 1024);
 		}
-
+		matrix = new Matrix4f();
+		matrix.m00 = 0.05F;
+		matrix.m11 = 0.0625F;
+		matrix.m22 = 1.0F;
+		matrix.m33 = 1.0F;	
+		matrix.m31 = 0;
+		matrix.m32 = 0;
 	}
 
+	public Matrix4f getMatrix()
+	{
+		Matrix4f r=new Matrix4f();
+		Matrix4f.load(matrix, r);
+		return r;
+	}
+	
 	public float getScale() {
 		return m_scale;
 	}
@@ -63,7 +82,9 @@ public class Config {
 	public float getTextscale() {
 		return m_textscale;
 	}
-
+	public float getTextWidth() {
+		return m_textscale*FontSupport.getInstance().getWidthAdjustment();
+	}
 	public boolean isVerboseCombat() {
 		return verboseCombat;
 	}

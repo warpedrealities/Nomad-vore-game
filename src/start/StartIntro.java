@@ -31,13 +31,8 @@ public class StartIntro extends SceneBase {
 
 	public StartIntro() {
 
-		m_GUImatrix = new Matrix4f();
-		m_GUImatrix.m00 = 0.05F;
-		m_GUImatrix.m11 = 0.0625F;
-		m_GUImatrix.m22 = 1.0F;
-		m_GUImatrix.m33 = 1.0F;
-		m_GUImatrix.m31 = 0;
-		m_GUImatrix.m32 = 0;
+		m_GUImatrix = Game.sceneManager.getConfig().getMatrix();
+
 
 		Document doc = ParserHelper.LoadXML("assets/data/intro.xml");
 		Element e = (Element) doc.getFirstChild();

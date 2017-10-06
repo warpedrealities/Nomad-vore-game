@@ -193,6 +193,10 @@ public class EncounterGUI implements MyListener {
 	}
 
 	public void update(float dt) {
+		for (int i=0;i<windows.length;i++)
+		{
+			windows[i].update(dt);
+		}
 		if (screen!=null)
 		{
 			screen.update(dt);

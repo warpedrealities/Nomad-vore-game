@@ -93,14 +93,13 @@ public class Menu extends SceneBase implements MyListener, Callback {
 		// first is square
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
-		m_textureIds[1] = Tools.loadPNGTexture("assets/art/font2.png", GL13.GL_TEXTURE0);
-		m_textureIds[2] = Tools.loadPNGTexture("assets/art/button.png", GL13.GL_TEXTURE0);
-
+		m_textureIds[1] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);
+		m_textureIds[2] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
 	}
 
 	@Override
 	public void Update(float dt) {
-		// TODO Auto-generated method stub
+		m_window.update(dt);
 		m_emitter.Update(dt);
 		if (m_stagger > 0) {
 
@@ -161,13 +160,13 @@ public class Menu extends SceneBase implements MyListener, Callback {
 
 	void Save() {
 		if (Universe.getInstance().getPlaying() == true) {
-			m_screen = new SaveLoad(m_textureIds[1], m_textureIds[0], m_textureIds[2], m_variables[0], true, this);
+			m_screen = new SaveLoad(m_textureIds[0],m_textureIds[1], m_textureIds[2], m_variables[0], true, this);
 			m_screen.start(m_hook);
 		}
 	}
 
 	void Load() {
-		m_screen = new SaveLoad(m_textureIds[1], m_textureIds[0], m_textureIds[2], m_variables[0], false, this);
+		m_screen = new SaveLoad(m_textureIds[0],m_textureIds[1], m_textureIds[2], m_variables[0], false, this);
 		m_screen.start(m_hook);
 
 	}
