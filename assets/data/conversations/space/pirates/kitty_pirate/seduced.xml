@@ -2,8 +2,9 @@
 <Conversation>
 	<page ID="start">
 		<text>
-		No interactions to be had with a defeated pirate yet.
+		The kitty pirate pants before you, her face flushed and her weapons scattered at her feet while her hands busily fondle herself. A murr emanating from her throat as she looks at you with a lustful desire and digs one hand under her skirt, busy with what by the occasional drip is a wet and aroused snatch "what are you going to do to me?" she asks needily.
 		</text>
+		<choice destination="oralvore0" text="$I'm going to swallow you up..and digest you inside me, doesn't that sound sexy?">
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -15,6 +16,48 @@
 		<choice destination="end" text="darn"/>
 	</page>
 
+	<page ID="oralvore0">
+	<text>
+	"That's not sexy that's..." she blushes deeply as she lets her gaze drift down, seems she might be against the idea on the surface..but deep down. She shivers and lets out a low mrowl as her gaze stays locked a short distance below your eyes.
+	</text>
+	<choice destination="oralvore1" text="$It is, just think, soon you'll be inside me, masturbating as I churn you away. Comeon kitty, just give your body to me."/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The horny kitty lets out a shuddering gasp as you tease her so, her knees wavering and a small dribble of steaming hot catgirl love juice staining the floor underneath her "yes...mhmm.." she utters in semi coherent need and fumbles to undress, her outfit steadily joining her equipment in a discarded pile. The catgirl blushing as you admire her naked form, letting your gaze rove over her teasingly until seemingly she can't hold herself back from your sexyness anymore and throws herself at you.
+	</text>
+	<choice destination="oralvore2" text="$my you're an impatient meal aren't you?"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	"yes...no...yes.." she seems to baulk at being called a meal at least initially, but then...she nuzzles at your lips submissively letting making you smile and lick over her face.
+	</text>
+	<choice destination="oralvore3" text="$I want you to say it"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	"say..." she fidgets and blushes, squirming on the spot..then meets your gaze "I'm your meal" she admits in a small voice, blushing at expressing her submission so. But it's what you wanted to hear, and so you start your meal. The kitty letting out a mrah as your lips stretch around her head, her ears tucking against the top of her head as you begin to swallow her up. Your hands sliding down to grope her rear and ease her upwards and inwards. Her tail curling and swaying as she purrs and slides into the hot warmth of your throat.
+	</text>
+	<choice destination="oralvore4" text="mhmm, delicious kitty"/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	She's a delicious and obedient meal, your tongue roams across her bared breasts following the path your gaze had traced across her front. Her wonderful flavours soaking your tongue as her mrowls rumble from your throat. The sexy kitty slipping deeper as you continue to swallow her up, lifting up her hips and watching her legs playfully kick around as you gulp your way to her waist. Only for her legs to straighten out obligingly as she sinks into your belly and prepares for you to devour her lower half "sooo warm" she exclaims, blushing heavily as she sinks inside.
+	</text>
+	<choice destination="oralvore5" text="swallow her up entirely"/>
+	</page>
+	
+	<page ID="oralvore5">
+	<text>
+	
+	</text>
+	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

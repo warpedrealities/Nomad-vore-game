@@ -55,7 +55,7 @@ public class SlotScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-
+		window.update(DT);
 		itemList.update(DT);
 	}
 

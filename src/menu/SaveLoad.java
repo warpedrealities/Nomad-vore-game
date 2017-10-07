@@ -142,6 +142,7 @@ public class SaveLoad extends Screen implements Callback {
 	public void update(float DT) {
 		m_window.update(DT);
 		m_subWindow.update(DT);
+		textButton.update(DT);
 		if (clock > 0) {
 			clock -= DT;
 		}

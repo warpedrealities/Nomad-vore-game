@@ -29,7 +29,7 @@
 
 	<page ID="initial1">
 		<text>
-			"Eve, I like it." Eve says, after thinking a bit about the moniker you'd
+			"Eve...eve? I like it." Eve says, after thinking a bit about the moniker you'd
 			given her. "What happens now?" she asks squatting down, cock bobbing
 			with the motion
 		</text>
@@ -39,19 +39,18 @@
 
 	<page ID="initial2">
 		<text>
-			"fun together? what sort of fun." asks the innocent Eve. Unaware it seems
-			of your roving gaze.
+			"What tool?" asks the innocent Eve and looking around without looking down. Unaware it seems of your roving gaze.
 		</text>
 		<choice destination="initial3"
-			text="$naughty fun, but the kind we'll both enjoy so long as you do what I say." />
+			text="$That member of yours, down between your legs." />
 	</page>
 
 	<page ID="initial3">
 		<text>
-			The stagherm nods "Course I'd do what you say, you know things right?"
+			She looks down and seems to notice that hefty cock of hers for the first time, reaching down to stroke over it and then look to you "oh, you like this part of me?"
 		</text>
 		<choice destination="end"
-			text="$yes, and I look forward to our lessons and playtime together Eve. For now, just try and get used to being you." />
+			text="$yes, very much, and I look forward to our lessons and playtime together Eve. For now, just try and get used to being you." />
 	</page>
 
 	<page ID="start">

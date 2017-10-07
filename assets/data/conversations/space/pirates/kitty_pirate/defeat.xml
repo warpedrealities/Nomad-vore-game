@@ -2,8 +2,11 @@
 <Conversation>
 	<page ID="start">
 		<text>
-		No interactions to be had with a defeated pirate yet.
+		The catgirl pirate pouts and pants as she slumps in front of you, she seems to have lost her hat and her rogueish outfit is in disarray. "no fair" she utters, apparently having taken being thoroughly duffed over by you with poor sportsmanship. 
 		</text>
+		<choice destination="oralvore0" text="$should of thought of that before you found yourself about to be eaten">
+				<assertion evaluate="hasperk" perk="oralvore" />		
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -15,6 +18,57 @@
 		<choice destination="end" text="darn"/>
 	</page>
 
+	<page ID="oralvore0">
+	<text>
+	"Nyah what that's not..." she starts to protest, silly really..were positions reversed she'd not hesitate, so you don't. Grabbing ahold of her and pulling her close before licking and slurping over her face, tasteing her and having her mewl and whine in distress at being sampled and treated as food. Still she can't muster the strength to thwart your desires as you yank her jacket off and then start eating her alive. One of your hands sliding up to grab ahold of the back of her head and then shoving her in.
+	</text>
+	<choice destination="oralvore1" text="mhmm tastey kitty"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	She lets out a muffled myah and half coherent pleas not to be eaten up as you slather her face with saliva and clutch her sexy squirming body against yourself. Her furred ears becoming soaked but still tickling the roof of your mouth as you savour her afore starting to gobble her up. Your throat bulging with the sweet shape of the catgirl's head as you work on turning the pirate into a tastey meal.
+	</text>
+	<choice destination="oralvore2" text="pirates make good prey"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Her legs kick out and flail as her tail swishes around in agitation as her blouse soaks with your saliva and sticks to her chest. You continue undressing your meal as you gobble her up, hefty swallows rippling around her upper body as you swallow your squirmy meal a few inches at a time. Your belly starting to stretch out pleasingly with the contours of her head and hands pushing out your tummy as the catgirl mewls and protests "I dun wanna be food, you're the one who'se supposed ta get..."
+	</text>
+	<choice destination="oralvore3" text="silly kitty should of thought of what happens to unsuccessful pirates, it's an occupational hazard"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	No matter how much she protests being on the receiving end of predatory intentions she's filling you out just the same as you pack her away. Her upper body curling within you as you finish undressing her for consumption, her boots smacking to the floor discarded as your swallows work over her thighs and confine her fussy leg kicks to whiny twitches of her feet and flicks of her tail.
+	</text>
+	<choice destination="oralvore4" text="swallow her completely"/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	You teasingly rub your hands over her feet and then hear a suppressed giggle from your belly, teasing more with your fingers you hear her gigglefit. Ticklish kitty, ticklish, but really tastey...time to gobble her up entirely so she can be food for you. You swallow to tug her feet past your lips, licking over them one last time to hear her protest of "nyah stoppit!" and then close your eyes and swallow. A final gluck sending the entirety of her down into your belly, your gut stretched, bulgey and sagging low against your thighs with her curled up shape "nyah, stupid meanie, you were supposed to lose and get ate by me..warm belly though." she mumbles protestingly.
+	</text>
+	<choice destination="oralvore5" text="$heh, glad you like it. but I'm gonna digest you now"/>
+	</page>
+	
+	<page ID="oralvore5">
+	<text>
+	"But I don't want to be digested I want to...nyah" she utters and shivers, pausing her squirms a moment as your gut gurgles around her and soaks her in hot enzymes. Sexy kitty girl is going to be one satisfying meal soon, your digestive processes starting to gurgle around her. The kitty squirming, mewling, but oddly seeming conflicted about her fate judging by the protests occasionally referring to 'sexy stomach' and other nonsense as you work her over in your belly.
+	</text>
+	<choice destination="oralvore6" text="$Sexy stomach? is someone all hot and bothered about getting digested?"/>
+	</page>
+	
+	<page ID="oralvore6">
+	<text>
+	"nyah am not, i'm not enjoying it..it's mean to digest kitties like me...with your gurgling, hot juices all around me and..." she lets out a mrowl and seems to redouble her motions, but not squirming and more rthythmic inside you. Several gasping mewls and shudders emanating from within you until finally she turns still and soft within you...silly thing didn't know what she was meant for. Gradually your gut turns round and compact, shrinking down as the catgirl is utterly digested and absorbed by you.
+	</text>
+	<effect type="feed" value="120" />
+	<special effect="removenpc" />
+	<choice destination="end" text="carry on" />	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

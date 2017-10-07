@@ -35,7 +35,7 @@ public class ContainerScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
+		window.update(DT);
 		for (int i = 0; i < 2; i++) {
 			itemLists[i].update(DT);
 		}
