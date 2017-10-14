@@ -4,7 +4,7 @@
 	<description>A peculiar, soft, and fleshy pink fruit. Its shape makes you
 		feel vaguely immature.</description>
 	<effectmutator>
-		<criteriaValue part="breasts" variable="size" value="6"
+		<criteriaValue part="breasts" variable="size" value="10"
 			lessthan="true" />
 		<mutation part="breasts" variable="size" modifier="1">
 			You manage
@@ -14,5 +14,11 @@
 			MACRObreast_size_desc breasts.
 		</mutation>
 	</effectmutator>
-
+	<effectmutator>
+		<criteriaValue part="breasts" variable="size" value="10"/>
+		<mutation part="breasts" variable="size" modifier="0">
+			You manage
+			to eat the whole damn fruit, but apparently you're already too busty for it to have any effect. 
+		</mutation>
+	</effectmutator>
 </ItemConsumable>

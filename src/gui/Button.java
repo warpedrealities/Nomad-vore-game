@@ -70,6 +70,7 @@ public class Button extends GUIBase {
 
 	public void setActive(boolean a) {
 		m_active = a;
+		clock=-0.2F;
 	}
 
 	@Override
@@ -79,10 +80,20 @@ public class Button extends GUIBase {
 			clock-=DT;
 			if (clock<=0)
 			{
+				clock=0;
 				m_patch.toggle();
 				m_listener.ButtonCallback(m_ID, m_pos);		
 			}
 		}
+		if (clock<0)
+		{
+			clock+=DT;
+			if (clock>=0)
+			{
+				clock=0;
+			}
+		}
+		
 	}
 
 	@Override
@@ -97,7 +108,7 @@ public class Button extends GUIBase {
 	@Override
 	public boolean ClickEvent(Vec2f pos) {
 		// check inside
-		if (m_active == false) {
+		if (m_active == false || clock<0) {
 			return false;
 		}
 		if (pos.x > m_pos.x && pos.x < m_pos.x + m_size.x) {

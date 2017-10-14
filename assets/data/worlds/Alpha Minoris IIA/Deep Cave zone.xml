@@ -42,6 +42,9 @@
 				</floodfill>
 			</cavegen>
 		</walloff>
+		<auditpaths carve="2" replace="1" />
+		<auditpaths carve="2" replace="1" exclude="impassable" />
+		<auditpaths carve="0" exclude="impassable" />
 	</mapgen>
 
 </zone>

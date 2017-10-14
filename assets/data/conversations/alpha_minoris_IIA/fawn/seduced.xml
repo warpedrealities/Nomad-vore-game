@@ -124,8 +124,8 @@
 			from your spine. And so she dangles there, continuing to fondle herself while waiting for
 			what comes next.
 		</text>
-		<choice destination="cockvoredigest" text="Melt her down." />
-		<choice destination="cockvoreendo" text="Hold her for a while." />
+		<choice destination="cockvore3" text="Melt her down." />
+		<choice destination="cockvore3Endo" text="Hold her for a while." />
 	</page>
 
 	<page ID="cockvore3">
@@ -160,7 +160,7 @@
 		<choice destination="end" text="Carry on." />
 	</page>
 
-<page ID="cockvore3">
+<page ID="cockvore3Endo">
 		<text>
 			Whether or not she understood what you were saying or even actually
 			cares to argue the case, technically, all you promised was that

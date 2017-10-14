@@ -3,10 +3,10 @@
 	<page ID="start">
 		<text>You have defeated the mushroom mother, her ample form now at
 			your mercy.</text>
-		<choice destination="sample" text="Take a sample for research purposes." />
+		<!--<choice destination="sample" text="Take a sample for research purposes." />
 			<assertnot evaluate="hasEntry" entry="lifeforms/mushroommother.xml"/>
 			<assertnot evaluate="hasResearch" research="mushroommother"/>
-		<choice destination="end" text="Leave her be." />
+		<choice destination="end" text="Leave her be." />-->
 	</page>
 
 	<page ID="sample">

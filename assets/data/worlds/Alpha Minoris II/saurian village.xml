@@ -101,7 +101,7 @@
 			<placeNPC x="0" y="0" name="minoris2_saurian/saurianmechanic" />
 		</POIprefab>
 
-		<placeNPC x="22" y="22" name="minoris2_saurian/saurianSuri" />
+		<placeNPC x="21" y="21" name="minoris2_saurian/saurianSuri" />
 
 		<POINPC name="minoris2_saurian/saurianshopkeep" />
 		<POICornerDecorate floor="2">

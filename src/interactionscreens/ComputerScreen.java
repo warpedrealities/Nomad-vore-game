@@ -27,7 +27,7 @@ public class ComputerScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
+		subWindow.update(DT);
 		if (side) {
 			encyclopediaPanel.update(DT);
 		} else {

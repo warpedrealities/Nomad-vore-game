@@ -62,7 +62,7 @@ public class SaveLoad extends Screen implements Callback {
 
 		Button exit = new Button(new Vec2f(6.5F, 0.25F), new Vec2f(5, 1.5F), button, this, "back", 0);
 		m_window.add(exit);
-		m_text = new Textwindow(button, new Vec2f(-6.5F, 1), new Vec2f(10, 2), tint, "enter save name");
+		m_text = new Textwindow(frame, new Vec2f(-6.5F, 1), new Vec2f(10, 2), tint, "enter save name");
 		textButton = new Button(new Vec2f(3.5F, 1), new Vec2f(3.0F, 2), button, this, "ok", 3);
 
 		text = new TextColoured(new Vec2f(-6, -0.5F), "", 2.0F, tint);
@@ -156,7 +156,6 @@ public class SaveLoad extends Screen implements Callback {
 
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc) {
-		// TODO Auto-generated method stub
 		m_window.Draw(buffer, matrixloc);
 		m_list.Draw(buffer, matrixloc);
 		if (textEntry == true) {

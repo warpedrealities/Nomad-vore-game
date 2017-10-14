@@ -61,10 +61,26 @@ public abstract class Actor implements Attackable {
 	}
 
 	public void setPosition(Vec2f position) {
-		actorPosition = position;
+		if (collisionInterface!=null)
+		{
+			Tile t=collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y);
+			if (t!=null)
+			{
+				t.setActorInTile(null);
+			}
+			t=collisionInterface.getTile((int)position.x, (int)position.y);
+			if (t!=null)
+			{
+				t.setActorInTile(this);
+			}
+		
+
+		}
+		actorPosition = position;	
 		if (spriteInterface != null) {
 			spriteInterface.reposition(actorPosition);
 		}
+
 	}
 
 	public void setSpriteInterface(Square_Int sinterface) {

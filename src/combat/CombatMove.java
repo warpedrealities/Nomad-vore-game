@@ -154,14 +154,13 @@ public class CombatMove {
 		// load effects
 		effects = new ArrayList<Effect>();
 		NodeList list = Enode.getChildNodes();
-		for (int i = 0; i < list.getLength(); i++) {
-			if (list.item(i).getNodeType() == Node.ELEMENT_NODE) {
+		for (int i = 0; i < list.getLength(); i++) 
+		{
+			if (list.item(i).getNodeType() == Node.ELEMENT_NODE) 
+			{
 				Element e = (Element) list.item(i);
 				if (e.getTagName().equals("effectDamage")) {
 					Effect_Damage ed = new Effect_Damage(e);
-					if (ed.harmless()) {
-						nonViolent = true;
-					}
 					effects.add(ed);
 				}
 				if (e.getTagName().equals("effectrecover")) {
@@ -219,8 +218,15 @@ public class CombatMove {
 					}
 				}
 			}
+			
 		}
-
+		for (int i=0;i<effects.size();i++)
+		{
+			if (effects.get(i).harmless())
+			{
+				nonViolent=true;
+			}
+		}
 	}
 
 	public int getActionCost() {

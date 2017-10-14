@@ -5,6 +5,16 @@
 		The kitty pirate pants before you, her face flushed and her weapons scattered at her feet while her hands busily fondle herself. A murr emanating from her throat as she looks at you with a lustful desire and digs one hand under her skirt, busy with what by the occasional drip is a wet and aroused snatch "what are you going to do to me?" she asks needily.
 		</text>
 		<choice destination="oralvore0" text="$I'm going to swallow you up..and digest you inside me, doesn't that sound sexy?">
+		<choice destination="facefuck0" text="$I'm gonna use your mouth, and you're gonna like it">
+		<condition operator="lessthan" evaluate="BODYVALUE"
+					bodypart="penis" partvalue="length" value="30" />	
+		<assertion evaluate="haspart" part="penis"/>	
+		<choice>
+		<choice destination="sex0" text="$Well, it starts with your legs spread and ends with you yowling for joy">
+		<condition operator="lessthan" evaluate="BODYVALUE"
+					bodypart="penis" partvalue="length" value="30" />		
+			<assertion evaluate="haspart" part="penis"/>	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -16,6 +26,168 @@
 		<choice destination="end" text="darn"/>
 	</page>
 
+	
+	<page ID="oralvoreA0">
+	<!--oralvore after sex, feetfirst-->
+	<text>
+	She really is a delicious kitty. And she seems a bit out of it after the good hard screw you've given her. So while she purrs relaxedly in post coital relaxation you slip down to shuck off her boots, smiling as you expose her bare feet and see her toes twitch as you raise them to your lips.
+	</text>
+	<choice destination="oralvoreA1" text="$Fucking you worked up an appetite kitty"/>
+	</page>	
+
+	<page ID="oralvoreA1">
+	<text>
+	"hungry what are you-" she starts to say but stops when she feels her feet engulfed by your mouth "you're eating me?" she asks, silly question with your mouth full and the answer evident to all to see. You lick over her soles a little and then she myahs flushing as she watches you take your first swallow. Your neck bulging out as her feet start to slide down your throat, your hands creeping up her legs to start undressing her.
+	</text>
+	<choice destination="oralvoreA2" text="*gobble her up"/>
+	</page>
+	
+	<page ID="oralvoreA2">
+	<text>
+	"so you fucked me and now you're just gonna eat me?" asks the kitty, she seems oddly un distressed by the prospect. Maybe you're just that sexy, you nod and swallow your way up her smooth delicious calves. The kitty blushing as she realizes you're serious about this, her hand slipping between her legs to rub at her well fucked sex hornily as you steadily gobble her up. Your hands sliding up her legs until you're lifting up her ass as you continue to eat her.
+	</text>
+	<choice destination="oralvoreA3" text="*continue*"/>
+	</page>
+	
+	<page ID="oralvoreA3">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="cockvore0">
+	<!--cockvore after blowjob, "you emptied me out, now there's room for a catgirl to fill me back up again"-->
+	<text>
+	
+	</text>
+	</page>
+	
+	<page ID="sex0">
+	<text>
+	"What do you-oooh" the kitty seemed unsure where you were going with this at first but catches on quickly as you shift your posture and her gaze drifts down to your crotch and the clear clues there-in that she's in for a ploughing. And judging by her expression and the way she starts to settle back and spread her legs she's more than okay with that.
+	</text>
+	<choice destination="sex1" text="$Well someone's eager"/>
+	</page>
+	
+	<page ID="sex1">
+	<text>
+	"You've gotten me all hot and bothered myah" the kitty replied with a blush as she settles onto her back and watches as you 
+	<conditional>
+	<assertion evaluate="slothasitem" slot="2" />
+			expose your length and 
+	</conditional> stroke your hard <macro ID="penis_size_desc" /> cock. The catgirl blushing as she admires your shaft, her hand sliding under her skirt to stroke her nethers even as you lower yourself over her. Her legs spreading and her skirt rising up and out of the way as you prepare to rut the horny catgirl. You feel her hand wrapping around your cock and guiding it to her sopping wet nethers as her other hand rests on your shoulder.
+	</text>
+	<choice destination="sex2" text="$ready?"/>
+	</page>
+	
+	<page ID="sex2">
+	<text>
+	The kitty girl hears your question and responds emphatically without words. pulling you down to meet her lips in a lustful kiss, wrapping her arms around your shoulders while wrapping her legs around your hips. The catgirl spearing herself on your member with a mrowl, frenching you lustily for a few seconds before breaking from the kiss. Her nethers clenching around your thick shaft as she growls in pleasure "that answer your question?" she asks, smiling eagerly.
+	</text>
+	<choice destination="sex3" text="*let your hips do the talking*"/>
+	</page>
+	
+	<page ID="sex3">
+	<text>
+	You put words past the both of you now as you begin to thrust into her. The kitty letting out mrowls and moans of pleasure as you work your <macro ID="penis_size_desc" /> length in and out of her eager tight kitty sex. Your pirate fuckbuddy urging you on with tight gripping hands against your shoulders as you plough her most intimate innermost depths and steadily overwhelm her with a greatly needed screwing.
+	</text>
+	<choice destination="sex4" text="*fuck her harder"/>
+	</page>
+	
+	<page ID="sex4">
+	<text>
+	The kitty manages a breathless cry of "yes!" as you pick up the pace. Her legs urging you on in your vigorous thrusting as she scratches at your back in her fierce rutting frenzy. Your pleasures rising and intermingling as she accepts all you can give and more in the form of hard dickings.
+	</text>
+	<choice destination="sex5" text="*fill her up"/>
+	</page>
+	
+	<page ID="sex5">
+	<text>
+	Your noisy sex with the kitty girl continued for a time, wet schlicks and delighted mrowls emanating from hips and lips of the pirate respectively. But all things must come to a blissful, delightful and sticky end. Your orgasm rocking through you, your cock erupting deep within her welcoming nethers and filling her with spurt after spurt of seed. The kitty girl letting out a yowl of pleasure and shuddering, her own climax clearly sending her to cloud nine right after your own orgasm was unleashed within her. You only pull out when the last spurt has been spent, looking down at the purring kitty with her cum leaking nethers. A well fucked mess of a catgirl looking up at you with an expression of dazed but intense satisfaction. 
+	</text>
+	<choice destination="oralvoreA0" text="*she looks tastey that way, and you've worked up an appetite">
+	<assertion evaluate="hasperk" perk="oralvore" />	
+	</choice>
+	<choice destination="sex6A" text="*She's a good fuck, but you're done with her*"/>
+	<choice destination="sex6B" text="*She's a good fuck, but you don't want to see her around no more*"/>
+	</page>
+
+	
+	<page ID="sex6B">
+	<text>
+	"You're, done with me?" she blushes, but then seeing you already turning around she pouts. The dismissive attitude seems to get to her and she huffs a moment, probably taking a moment to pull a face at you behind your back afore slinking away. Well, it's not like it matters anyway.
+	</text>
+	<special effect="removenpc" />	
+	<choice destination="end" text="carry on" />		
+	</page>
+	
+	<page ID="sex6A">
+	<text>
+	"You're, done with me?" she blushes at the thought of being a quick lay, but seems forgiving of it. She leans up to give you a smooch and fondles your softening length a moment before seeing about cleaning herself off and dressing back up in her pirate outfit.
+	</text>
+	<special effect="nonhostile" />
+	<special effect="healnpc" />	
+	<choice destination="end" text="carry on" />		
+	</page>
+	
+	<page ID="facefuck0">
+	<text>
+	She blushes and her gave lowers, a mrowl and faint shiver going through her at such a...demeaning submission you have planned for her. The kitty's gaze following your hands as you <conditional> free your shaft and <assertion evaluate="slothasitem" slot="2" /></conditional> stroke over that already hardening <macro ID="penis_size_desc" /> length of yours. But she doesn't shrink back when you step forwards and grab the back of her head firmly in hand, guiding her lips towards your tip "you-" she starts to say, but you're not interested in her talking and thrust into her mouth. The kitty girl letting out a mmph as you fill her mouth with your length and push her head down over your dick.
+	</text>
+	<choice destination="facefuck1" text="she's got a good mouth, use it well"/>
+	</page>
+	
+	<page ID="facefuck1">
+	<text>
+	The kitty's tongue laps along the underside of your dick, servicing you even as you ram your cock balls deep into her lips and hold her head firmly in place. Your hips starting to rock back and force to use her mouth, the wonderful sensation as you use the submissive catgirls getting a moan out of you as you slam your cock repeatedly into her face.
+	</text>
+	<choice destination="facefuck2" text="keep on ploughing her mouth"/>
+	</page>
+	
+	<page ID="facefuck2">
+	<text>
+	You thrust into her mouth forcefully and her hands rise up. The kitty making a distressed muffled sound around your dick and clutching your hips, you consider..then relent, easing up your grip on her head and your hip thrusts. The catgirl space pirate looking up at you in gratitude, but now starting to service you without additional coaxing as she bobs her head up and down over your crotch. Her eyes slipping closed as she wraps her mouth and throat around your length and slides back and forth along it wonderfully.
+	</text>
+	<choice destination="facefuck3" text="$good kitty, keep that up and i might..reward you"/>
+	</page>
+	
+	<page ID="facefuck3">
+	<text>
+	You're not sure if the thought of a reward is what's motivating her or she just enjoys servicing your cock but she meets your hip thrusts with her bobbing head happily. Repeatedly she buries her nose in your crotch and engulfs your cock with her mouth as she moves to pleasure you. The hot wetness of her mouth rubbing back and forth as you feel your orgasm getting closer, closer..and finally, erupt. Your cock pulsing in her mouth as you hold her close over your dick and pump spurt after spurt of your cream down her throat. Draining your balls into the catgirl truly is satisfying and you let out a groan as your spurts begin to trail off.	
+	</text>
+	<choice destination="facefuck4" text="pull out"/>
+	</page>
+	
+	<page ID="facefuck4">
+	<text>
+	You pull your shaft out of her lips and mhmm, giving her a bit of a smack on the cheek with it to raise that submissive blush on her cheeks and leave her face sticky. The kitty girl flushed and panting as she looks up at you, Then lowers her gaze, licking her lips and then wiping her cheek clean and licking the seed off the back of her hand afore her gaze drifts back up "reward?" she asks simply.
+	</text>
+	<choice destination="cream" text="$kitties love cream silly, you got to drink mine"/>
+	<choice destination="kiss" text="*kiss her*"/>
+	<choice destination="cockvore0" text="$you emptied me out, now there's room for a catgirl to fill me back up again">
+	<assertion evaluate="hasperk" perk="cockvore" />
+	</choice>
+	</page>
+	
+	<page ID="cream">
+	<text>
+	The kitty blushes at that, but nyahs. she's maybe not entirely sold on this being the reward she was promised, but who cares you've had your fun. A quick nudge as you turn away from her is all she needs to know that you're pumped her belly full of jizz and you're done with her. You sense more than see her slink off after that.
+	</text>
+	<special effect="removenpc" />
+	<choice destination="end" text="carry on" />		
+	</page>
+	
+	<page ID="kiss">
+	<text>
+	The kitty probably wasn't expecting that your reaction after that was to pull her up to her feet and into your embrace "nyah w-" she started and them mpphs as she meets your lips, she blushes..but mrowls and gropes you as you kiss her deeply. The kitty's mrowl settling into an uneven purr as you tongue wrestle for a few moments before pull back from her "mhmm oh..that sort of reward." the cute kitty manages to say as you leave her blushing in your wake with your smile and the taste of your lips lingering to keep her company.
+	</text>
+	<special effect="nonhostile" />
+	<special effect="healnpc" />	
+	<choice destination="end" text="carry on" />	
+	</page>
+
+	
 	<page ID="oralvore0">
 	<text>
 	"That's not sexy that's..." she blushes deeply as she lets her gaze drift down, seems she might be against the idea on the surface..but deep down. She shivers and lets out a low mrowl as her gaze stays locked a short distance below your eyes.
@@ -53,9 +225,25 @@
 	
 	<page ID="oralvore5">
 	<text>
-	
+	Gradually the flavours of her thighs and calves soak your tongue afore those parts of her slide down your throat. Your hungry swallows tugging her ever deeper as she mewls and twitches her feet, her tail curling against one leg in submissive lust as she's gobbled up by a sexy and alluring predator in the form of your seductive self. Finally though at long last you snap your jaws shut past her toes and swallow her down. Your meal settling completely in your belly and purring as she's surrounded on all sides by your warm belly snugly holding her.
 	</text>
+	<choice destination="oralvore6" text="$you were delicious kitty, i hope you're ready to digest"/>
+	</page>
 	
+	<page ID="oralvore6">
+	<text>
+	The catgirl lets out a myah at that reminder, squirming around a bit at how she's about to engage in the ultimate form of submission and surrendering her entire being to you. The kitty hesitating a moment then pushing out with a hand "yes..." she says with a mewl, ready to feel the pleasure of your enzymes it seems. Cute kitty, so eager to submit.
+	</text>
+	<choice destination="oralvore7" text="$good kitty"/>
+	</page>
+	
+	<page ID="oralvore7">
+	<text>
+	The kitty squirms around as you get to work digesting her. Hot stomach fluids soaking her as she writhes within you. Her mewls, moans and mrowls providing a lewd counterpoint to the wet sounds of your gurgling belly glorping around her. But though the sounds and movements peak and lul a few times the end was inevitable. Her movements slow, her shape softens and her sounds fade, the kitty gurgling away inside of you and turning all sloshy under your hand as you rub your belly. Delicious kitty, your middle begins to shrink down now. The kitty finishes her transition that had started as submissive and horny, entered gurgly and soupy and now becoming one with you.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
 	</page>
 	
 	<page ID="devour">

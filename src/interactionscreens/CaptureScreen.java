@@ -34,6 +34,7 @@ public class CaptureScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
+		window.update(DT);
 		specimenList.update(DT);
 	}
 

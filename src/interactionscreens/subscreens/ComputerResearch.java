@@ -73,6 +73,7 @@ public class ComputerResearch implements Callback, MyListener {
 		if (clock > 0) {
 			clock -= DT;
 		}
+		window.update(DT);
 		popup.update(DT);
 		researchList.update(DT);
 	}

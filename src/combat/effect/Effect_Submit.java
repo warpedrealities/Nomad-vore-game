@@ -65,5 +65,10 @@ public class Effect_Submit extends Effect {
 		// TODO Auto-generated method stub
 
 	}
-
+	
+	@Override 
+	public boolean harmless()
+	{
+		return true;
+	}
 }

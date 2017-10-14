@@ -1336,6 +1336,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 					if (sceneController.getActiveZone().passable((int) v.x, (int) v.y, false)) {
 						actor.getSpriteInterface().setVisible(true);
 						actor.setPosition(v);
+					
 						break;
 					}
 				}

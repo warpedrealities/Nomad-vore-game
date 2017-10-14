@@ -479,6 +479,7 @@ public class Universe extends GameManager
 		//load player
 		player=new Player();
 		player.Load(filename);
+		FactionLibrary.getInstance().clean();
 		
 		//remove flags from player
 		player.getFlags().clear();

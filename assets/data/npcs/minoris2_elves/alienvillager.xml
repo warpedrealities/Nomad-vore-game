@@ -48,10 +48,6 @@
 	</rpg>
 
 	<respawn delay="2000" />
-	<disposition value="55" />
-	<defeated conversation="alpha_minoris_II/alienvillager/villagerdefeat" />
-	<seduced conversation="alpha_minoris_II/alienvillager/villagerseduced" />
-	<victory conversation="alpha_minoris_II/alienvillager/villagervictory" />
 	<seducer conversation="alpha_minoris_II/alienvillager/seducer" />
 	<talk conversation="alpha_minoris_II/alienvillager/villagerchat" />
 	<controller AI="elf_villager" />

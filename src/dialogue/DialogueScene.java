@@ -38,7 +38,7 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 		
 	}
 	void SetupTextures() {
-		m_textureIds = new int[9];
+		m_textureIds = new int[10];
 		// first is square
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
@@ -49,6 +49,7 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 		m_textureIds[6] = Tools.loadPNGTexture("assets/art/bars.png", GL13.GL_TEXTURE0);
 		m_textureIds[7] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
 		m_textureIds[8] = Tools.loadPNGTexture("assets/art/button1.png", GL13.GL_TEXTURE0);
+		m_textureIds[9] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);	
 	}
 	@Override
 	public void Update(float dt) {
@@ -128,12 +129,13 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 			this.screen.discard(m_hook);
 			this.screen = null;
 		}
-		int values[] = new int[5];
+		int values[] = new int[6];
 		values[0] = m_textureIds[6];
 		values[1] = m_textureIds[0];
 		values[2] = m_textureIds[7];
 		values[3] = m_textureIds[8];
 		values[4] = m_variables[0];
+		values[3] = m_textureIds[9];
 		if (screen!=null)
 		{
 			screen.initialize(values, this);

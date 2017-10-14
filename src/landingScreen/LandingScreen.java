@@ -32,6 +32,7 @@ public class LandingScreen extends Screen implements Callback {
 	@Override
 	public void update(float DT) {
 		// TODO Auto-generated method stub
+		window.update(DT);
 
 	}
 

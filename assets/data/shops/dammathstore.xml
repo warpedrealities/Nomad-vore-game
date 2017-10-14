@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <shop profitratio="1.25">
-	<inventoryitem name="primal steak" probability="100"
+	<inventoryitem name="primitive steak" probability="100"
 		quantity="20" />
-	<inventoryitem name="primal steak" probability="50"
+	<inventoryitem name="primitive steak" probability="50"
 		quantity="20" />
 	<inventoryitem name="fighting spirits" probability="100"
 		quantity="10" />

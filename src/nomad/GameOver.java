@@ -109,7 +109,7 @@ public class GameOver extends SceneBase implements MyListener {
 
 	@Override
 	public void Update(float dt) {
-		// TODO Auto-generated method stub
+		m_window.update(dt);
 		m_text.update(dt);
 	}
 

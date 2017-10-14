@@ -51,6 +51,7 @@ public class ComputerPedia implements Callback, MyListener {
 	}
 
 	public void update(float DT) {
+		window.update(DT);
 		entryList.update(DT);
 	}
 

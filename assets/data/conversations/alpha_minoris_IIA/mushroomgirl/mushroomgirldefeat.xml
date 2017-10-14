@@ -10,7 +10,7 @@
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 
-		<choice destination="oralvore1" text="She's shaped like a plug (AV).">
+		<choice destination="analvore1" text="She's shaped like a plug (AV).">
 			<assertion evaluate="hasperk" perk="analvore" />
 		</choice>
 

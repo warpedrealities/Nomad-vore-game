@@ -6,9 +6,9 @@
 		The mother of these mushrooms lies on her back, overwhelmed
 		by your own seductive retaliation. She thought she'd be the seducer here.
 		</text>
-		<choice destination="sample" text="Take a sample for research purposes." />
+		<!--<choice destination="sample" text="Take a sample for research purposes." />
 			<assertnot evaluate="hasEntry" entry="lifeforms/mushroommother.xml"/>
-			<assertnot evaluate="hasResearch" research="mushroommother"/>
+			<assertnot evaluate="hasResearch" research="mushroommother"/>-->
 		<choice destination="drink1" text="Drink from the tap." />
 		<choice destination="end" text="Leave her be." />
 	</page>
@@ -82,7 +82,7 @@
 		Soon, though, that funny feeling in your head spreads to the
 		rest of your body.
 		</text>
-		<choice destination="milk" text="You're melting." />
+		<choice destination="milkA" text="You're melting." />
 	</page>
 
 	<gameover ID="milkA">

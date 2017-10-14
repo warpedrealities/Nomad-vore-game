@@ -110,8 +110,15 @@ public class NavScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
-
+		window.update(DT);
+		if (statWindow!=null)
+		{
+			statWindow.update(DT);
+		}
+		if (crewWindow!=null)
+		{
+			crewWindow.update(DT);
+		}		
 	}
 
 	@Override

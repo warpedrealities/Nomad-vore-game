@@ -55,6 +55,7 @@ function shouldPatrol(controllable,sense,script)
 			victimize(controllable,victim)	
 		end
 	end
+	end
 end
 
 function patrol(controllable,sense,script)
