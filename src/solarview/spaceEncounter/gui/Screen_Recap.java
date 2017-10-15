@@ -47,7 +47,7 @@ public class Screen_Recap extends Screen implements MyListener {
 
 	@Override
 	public void update(float DT) {
-
+		window.update(DT);
 	}
 
 	@Override

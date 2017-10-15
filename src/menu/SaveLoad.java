@@ -75,7 +75,7 @@ public class SaveLoad extends Screen implements Callback {
 		m_subWindow=new Window(new Vec2f(6.5F, -12), new Vec2f(8, 12), frame, true);
 		Button toggle = new Button(new Vec2f(1.5F, 0.25F), new Vec2f(5, 1.5F), button, this, "activate", 4);
 		m_subWindow.add(toggle);
-		MultiLineText tm=new MultiLineText(new Vec2f(0.5F,12.0F),12,26,0.8F);
+		MultiLineText tm=new MultiLineText(new Vec2f(0.5F,12.0F),12,32,0.6F);
 		m_subWindow.add(tm);
 		tm.addText("save progress reset, "
 				+ "this will reset the world and place your character back at "
