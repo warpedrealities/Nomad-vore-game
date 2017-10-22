@@ -1,4 +1,4 @@
-package dialogue;
+package dialogue.effectProcessing;
 
 import actor.npc.NPC;
 import actor.player.Inventory;

@@ -34,6 +34,7 @@
 
 			<floodfill tile="0" />
 		</cavegen>
+		<auditpaths carve="2" replace="0" />		
 	</mapgen>
 
 </zone>

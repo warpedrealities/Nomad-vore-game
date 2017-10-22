@@ -99,6 +99,10 @@ public class ScrollableMultiLineText extends GUIBase implements Callback {
 		for (int i = 0; i < m_fonts.length; i++) {
 			m_fonts[i].setString("");
 		}
+		for (int i=0;i<strings.length;i++)
+		{
+			strings[i]="";
+		}
 		offset=0;
 		scrollbar.setIndex(0);
 	}

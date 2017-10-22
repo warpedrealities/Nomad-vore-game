@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="desert.png">
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="2" vision="0" movement="0"> desert sand</tile>
+		<tile sprite="3" vision="1" movement="1"> high dunes</tile>
+		<tile sprite="10" vision="0" movement="3"> sinking sands</tile>
+		<tile sprite="5" vision="0" movement="1"> boulder</tile>
+	</tileset>
+	<description>
+	The desert is deep and vast, the dunes march on to the wavering horizon. But it is not wind alone that stirs the sand, the unnatural shifting of a distant dune catching your eye. A humping surge rising up one side and down the other steadily.
+	</description>
+	<transition direction="north">Zone 3A</transition>	
+	<transition direction="south">Zone 3C</transition>
+	<transition direction="west">Zone 2B</transition>	
+	<mapgen>
+	<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="2" />
+			</band>
+			<band low="-0.5" high="0.5">
+				<noise tile="4" scarcity="12" />	
+				<floodfill tile="1" />
+			</band>		
+			<band low=".5" high="1.0">
+				<floodfill tile="3" />
+			</band>				
+	</perlin>
+			<SeedNPCs min="3" max="3" name="Forakis I/deathworm">
+			</SeedNPCs>		
+		<walloff wall="2" sides="east" />	
+	</mapgen>
+
+</zone>

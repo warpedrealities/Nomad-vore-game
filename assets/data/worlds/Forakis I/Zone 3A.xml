@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="desert.png">
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="6" vision="0" movement="0"> oasis grass</tile>
+		<tile sprite="2" vision="0" movement="0"> desert sands</tile>
+		<tile sprite="7" vision="0" movement="1"> boulder</tile>
+		<tile sprite="5" vision="0" movement="1"> boulder</tile>
+		<tile sprite="8" vision="1" movement="2"> oasis tree</tile>	
+		<tile sprite="9" vision="0" movement="1"> oasis</tile>	
+		<tile sprite="3" vision="1" movement="2"> high dunes</tile>			
+	</tileset>
+	<description>
+	This oasis is a balm to the spirit amidst the desert, even the wind seems to have died down. But the calm where one lowers their guard might be the most dangerous time for a threat to strike.
+	</description>
+	<transition direction="west">Zone 2A</transition>	
+	<transition direction="south">Zone 3B</transition>
+	<mapgen>
+	<placeWidget x="28" y="28" name="SPAWNER">
+		<radius value="28" />
+		<spawnLimit value="6" />
+		<spawns count="1">
+			<data npc="Forakis_I/scarab" min="1" max="1"
+					chance="50" />
+		</spawns>
+	</placeWidget>			
+		<prefab positionX="28" positionY="28" width="9">
+			<row>000777000</row>
+			<row>077777770</row>
+			<row>077777770</row>
+			<row>777777777</row>
+			<row>777777777</row>	
+			<row>777777777</row>
+			<row>077777770</row>
+			<row>077777770</row>			
+			<row>200777000</row>
+		</prefab>	
+	<partition xmin="16" xmax="48" ymin="16" ymax="48">		
+	<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="2" />
+			</band>
+			<band low="-0.5" high="0.5">
+				<noise tile="3" scarcity="16" />	
+				<noise tile="5" scarcity="8" />	
+				<floodfill tile="1">
+				<Seedwidgets min="12" max="24" name="gourdbush" />					
+				</floodfill>
+			</band>		
+			<band low=".5" high="1.0">
+				<floodfill tile="1" />
+			</band>				
+		</perlin>	
+	</partition>
+	<partition xmin="8" xmax="56" ymin="8" ymax="56">		
+	<perlin>
+			<band low="-1.0" high="-0.0">
+				<floodfill tile="1" />
+			</band>
+			<band low="0.0" high="1.0">	
+				<noise tile="4" scarcity="16" />
+				<noise tile="8" scarcity="16" />					
+				<floodfill tile="2" />
+			</band>					
+		</perlin>	
+	</partition>
+		<noise tile="4" scarcity="16" />	
+		<floodfill tile="2" />	
+		<walloff wall="7" sides="northeast" />	
+	</mapgen>
+
+</zone>

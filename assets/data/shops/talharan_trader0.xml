@@ -28,4 +28,5 @@
 		probability="100" quantity="1" cost="2500" />
 	<inventoryitem name="space warper" probability="100"
 		quantity="1" />
+	<buymodifier name="Cellular Rejuvenator" cost="7500" />		
 </shop>

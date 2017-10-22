@@ -1,3 +1,7 @@
+function start(controllable)
+	controllable:useSelfMove(1)
+	controllable:setValue(0,1)
+end
 
 function attack(controllable,sense,pos,hostile)
 	if pos:getDistance(hostile:getPosition())<2 then
@@ -21,11 +25,14 @@ function combat(controllable,sense,pos,hostile)
 			controllable:getRPG():removeStatus(23)
 			attack(controllable, sense,pos,hostile)
 		end
-	
 end	
 
 
 function main(controllable, sense, script)  
+	a=controllable:getValue(0)
+	if (a==0) then
+		start(controllable)
+	end
 	pos=controllable:getPosition()
 	hostile=sense:getHostile(controllable,10,true)
 	if not (hostile == nil ) and not controllable:isPeace() then

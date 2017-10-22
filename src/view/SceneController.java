@@ -177,7 +177,7 @@ public class SceneController implements Sense {
 			if (activeZone.getActors().get(i).getAttackable()
 					&& activeZone.getActors().get(i).isHostile(origin.getActorFaction().getFilename())) {
 				Actor target = activeZone.getActors().get(i);
-				float d = target.getPosition().getDistance(origin.getPosition());
+				float d = target.getPosition().getDistance(origin.getPosition())-target.getThreat().getThreat();
 				if (d < maxRange) {
 					if (visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
 						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,

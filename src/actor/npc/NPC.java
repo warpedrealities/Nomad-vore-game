@@ -20,6 +20,7 @@ import org.w3c.dom.NodeList;
 
 import actor.Actor;
 import actor.Attackable;
+import actor.ThreatAssessment;
 import actor.npc.observerVore.VoreScript;
 import actor.npc.observerVore.impl.VoreScript_Impl;
 import actor.player.Player;
@@ -101,6 +102,7 @@ public class NPC extends Actor implements Controllable {
 
 	public NPC(NPC npc, Vec2f p) // clone
 	{
+		threatAssessment=new ThreatAssessment();	
 		uid = Universe.getInstance().getUIDGenerator().getnpcUID();
 		moveCost = npc.moveCost;
 		actorPosition = p;
@@ -144,6 +146,7 @@ public class NPC extends Actor implements Controllable {
 	}
 
 	public NPC(Element node, Vec2f p, String filename) {
+		threatAssessment=new ThreatAssessment();
 		uid = Universe.getInstance().getUIDGenerator().getnpcUID();
 		actorPosition = p;
 		actorVisibility = false;
@@ -226,7 +229,7 @@ public class NPC extends Actor implements Controllable {
 	}
 
 	public NPC() {
-
+		threatAssessment=new ThreatAssessment();
 		controllermemory = new int[8];
 
 		for (int i = 0; i < 8; i++) {
@@ -252,6 +255,7 @@ public class NPC extends Actor implements Controllable {
 	@Override
 	public void Update() {
 		super.Update();
+		threatAssessment.update();	
 		actorRPG.update();
 		if (actorRPG.getBusy() == 0 && !isBusy()) {
 			if (voreScript!=null)
@@ -461,7 +465,7 @@ public class NPC extends Actor implements Controllable {
 
 	@Override
 	public void Defeat(Actor victor, boolean resolve) {
-		if (Player.class.isInstance(victor) && isHostile(victor.getActorFaction().getFilename())) {
+		if (victor.getActorFaction().getFilename().equals("player") && isHostile(victor.getActorFaction().getFilename())) {
 			((Player_RPG) Universe.getInstance().getPlayer().getRPG()).addEXP(((NPC_RPG) actorRPG).getExpValue());
 		}
 
@@ -903,7 +907,7 @@ public class NPC extends Actor implements Controllable {
 		if (actorVisibility == false && tile.getVisible() == true) {
 			if (actorRPG.getStealthState() > -1) {
 
-				return actorRPG.stealthCheck(Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.PERCEPTION));
+				return actorRPG.stealthCheck(Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.PERCEPTION),true);
 			} else {
 				return true;
 			}

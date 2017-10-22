@@ -35,7 +35,7 @@
 			<effectDamage type="KINETIC" minValue="3" maxValue="6"
 				modifier="STRENGTH" />
 		</combatMove>
-		<statusTags count="2">
+		<statusTags count="1">
 			<tag>seduction</tag>
 		</statusTags>
 	</rpg>

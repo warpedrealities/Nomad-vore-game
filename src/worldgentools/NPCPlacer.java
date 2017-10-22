@@ -158,5 +158,6 @@ public class NPCPlacer {
 		NPC npc = new NPC(n, new Vec2f(p.x, p.y), name);
 		zone.getActors().add(npc);
 		npc.setCollisioninterface(zone);
+		zone.getTile(p.x, p.y).setActorInTile(npc);
 	}
 }

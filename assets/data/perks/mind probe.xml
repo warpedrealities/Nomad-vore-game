@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<perk name="mind probe">
+	<requirement count="1">
+		<req>PERKpsychic</req>
+	</requirement>
+	<description>
+
+	</description>
+	<move count="3">
+		<combatmove name="mind probe" timeCost="2" pattern="RANGED"
+			bonusToHit="16" bonusAttribute="WILLPOWER" actionCost="4" moveType="DOMINATE">
+			<effectAnalyze tag="psychic" attribute="WILLPOWER">
+			<stat stat="RESOLVE" vague="1" detail="3" precise="5"/>
+			</effectAnalyze>
+			<missText count="1">
+				<text>you attempt to scan the mind of TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>TARGET 's mind is being scanned</text>
+			</hitText>
+		</combatmove>
+
+	</move>
+	<maxrank value="1" />
+
+</perk>

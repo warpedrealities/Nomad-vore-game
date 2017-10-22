@@ -10,6 +10,7 @@ import input.MouseHook;
 import item.Item;
 import item.ItemAmmo;
 import item.ItemEnergy;
+import item.QuestItem;
 import item.instances.ItemBlueprintInstance;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
@@ -160,9 +161,10 @@ public class ShopScreen extends Screen implements Callback {
 		}
 
 		// add the item to the shop list, because it matters
-
-		addToShop(it);
-
+		if (!QuestItem.class.isInstance(it))
+		{
+			addToShop(it);			
+		}
 		resetList();
 	}
 

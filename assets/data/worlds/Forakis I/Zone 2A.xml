@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="desert.png">
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="2" vision="0" movement="0"> desert sand</tile>
+		<tile sprite="3" vision="1" movement="1"> high dunes</tile>
+		<tile sprite="10" vision="0" movement="3"> sinking sands</tile>
+		<tile sprite="5" vision="0" movement="1"> boulder</tile>
+	</tileset>
+	<description>
+	The trackless desert is vast and inhospitable, its climate harsh and its moods pitiless. All you can hear is the sound of wind and shifting sands, and all you can feel is the subtle pervading sensation of threat.
+	</description>
+	<transition direction="west">Zone 1A</transition>	
+	<transition direction="east">Zone 3A</transition>
+	<transition direction="south">Zone 2B</transition>
+	<mapgen>
+	<perlin>
+	<prefab positionX="32" positionY="32" width="2">
+				<row>22</row>
+				<row>22</row>				
+	</prefab>
+	<placeWidget x="32" y="32" name="SPAWNER">
+		<radius value="32" />
+		<spawnLimit value="6" />
+		<spawns count="1">
+			<data npc="Forakis_I/scarab" min="1" max="1"
+					chance="50" />
+		</spawns>
+	</placeWidget>			
+			<band low="-1.0" high="-0.4">
+				<floodfill tile="2" />
+			</band>
+			<band low="-0.4" high="0.4">
+				<noise tile="4" scarcity="8" />	
+				<floodfill tile="1" />
+			</band>		
+			<band low=".4" high="1.0">
+				<floodfill tile="3" />
+			</band>				
+	</perlin>	
+	
+		<walloff wall="2" sides="north" />
+	</mapgen>
+
+</zone>

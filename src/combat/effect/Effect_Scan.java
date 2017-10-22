@@ -85,7 +85,7 @@ public class Effect_Scan extends Effect {
 					{
 						if (actors.get(i).getRPG().getStealthState()!=-1)
 						{
-							if (actors.get(i).getRPG().stealthCheck(strength))
+							if (actors.get(i).getRPG().stealthCheck(strength,false))
 							{
 								ViewScene.m_interface.Flash(actors.get(i).getPosition(), 5);			
 							}

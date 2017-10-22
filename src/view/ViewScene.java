@@ -520,6 +520,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 	public Vec2f Transition(String destination, int id) {
 		BrainBank.getInstance().cleanActives();
+		sceneController.getUniverse().getPlayer().getThreat().reset();
 		// find zone
 		Zone zone = sceneController.getUniverse().getZone(destination);
 		zone.LoadZone();
@@ -586,6 +587,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 	void Transition(int side, String destination) {
 		BrainBank.getInstance().cleanActives();
+		sceneController.getUniverse().getPlayer().getThreat().reset();		
 		// find zone
 		sceneController.getActiveZone().cleanup();
 		sceneController.setActiveZone(sceneController.getUniverse().getZone(destination));
@@ -704,6 +706,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 	public void Transition(String destination, int x, int y) {
 		BrainBank.getInstance().cleanActives();
+		sceneController.getUniverse().getPlayer().getThreat().reset();	
 		// find zone
 		sceneController.getActiveZone().cleanup();
 		sceneController.setActiveZone(sceneController.getUniverse().getZone(destination));

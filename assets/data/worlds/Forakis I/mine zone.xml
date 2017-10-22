@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<zone width="32" height="32" spriteset="cave.png">
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> rock wall</tile>
+		<tile sprite="2" vision="0" movement="0"> dusty cave floor </tile>
+		<tile sprite="3" vision="1" movement="2"> a rock boulder</tile>
+	</tileset>
+	<description>
+	
+	</description>
+	<mapgen>
+		<walloff wall="0" sides="northwesteastsouth">
+			<cavegen iterations="3" tile="0" threshold="45" bounds="100"
+				minfloor="0.5">
+				<randprefab width="3" height="3">
+					<row>111</row>
+					<row>121</row>
+					<row>222</row>
+					<pairedportal sprite="3" destination="Zone 2B" x="1"
+						y="1" ID="11">a tunnel to the surface</pairedportal>
+				</randprefab>
+				<auditpaths carve="0" />
+				<noise tile="2" scarcity="5" />
+				<floodfill tile="1">
+					<Seedwidgets min="8" max="16" name="crystaldeposit" />
+					</SeedNPCs>
+				</floodfill>
+			</cavegen>
+		</walloff>
+		<auditpaths carve="2" replace="1" />
+		<auditpaths carve="2" replace="1" exclude="impassable" />
+		<auditpaths carve="0" exclude="impassable" />
+	</mapgen>
+
+</zone>

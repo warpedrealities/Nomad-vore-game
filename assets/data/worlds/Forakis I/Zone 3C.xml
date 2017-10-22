@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="desert.png">
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="2" vision="0" movement="0"> desert sand</tile>
+		<tile sprite="3" vision="1" movement="1"> high dunes</tile>
+		<tile sprite="10" vision="0" movement="3"> sinking sands</tile>
+		<tile sprite="5" vision="0" movement="1"> boulder</tile>
+		<tile sprite="4" vision="1" movement="2"> stonework wall</tile>
+		<tile sprite="1" vision="0" movement="0"> stonework floor </tile>		
+	</tileset>
+	<description>
+	In the midst of the desert this ancient ruin rears towards the sky, an indomitable pyramid as a monument to glory either past or present.
+	</description>
+	<transition direction="west">Zone 2C</transition>	
+	<transition direction="north">Zone 3B</transition>
+	<mapgen>
+			<prefab positionX="28" positionY="28" width="11">
+				<row>77777777777</row>
+				<row>76666766667</row>
+				<row>76666766667</row>
+				<row>76666666667</row>
+				<row>76666666667</row>
+				<row>76666666667</row>
+				<row>76666666667</row>
+				<row>76666666667</row>
+				<row>76666666667</row>
+				<row>76666666667</row>
+				<row>77777777777</row>	
+			<placeWidget x="0" y="0" name="SPRITE" width="11" height="11"
+					file="pyramid" />				
+			</prefab>	
+			<prefab positionX="28" positionY="17" width="11">
+				<row>66667776666</row>
+				<row>67777777776</row>
+				<row>67677777676</row>
+				<row>67777777776</row>
+				<row>67677777676</row>
+				<row>67777777776</row>
+				<row>67677777676</row>
+				<row>67777777776</row>
+				<row>67677777676</row>
+				<row>67777777776</row>
+				<row>66667776666</row>				
+			</prefab>			
+	<perlin>
+			<band low="-1.0" high="-0.4">
+				<floodfill tile="2" />
+			</band>
+			<band low="-0.4" high="0.4">
+				<noise tile="4" scarcity="8" />	
+				<floodfill tile="1" />
+			</band>		
+			<band low=".4" high="1.0">
+				<floodfill tile="3" />
+			</band>				
+	</perlin>		
+		<walloff wall="2" sides="eastsouth" />
+	</mapgen>
+
+</zone>

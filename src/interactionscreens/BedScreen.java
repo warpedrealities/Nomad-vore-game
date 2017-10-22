@@ -24,13 +24,12 @@ public class BedScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
+		window.update(DT);
 		screenFade.update(DT);
 	}
 
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc) {
-		// TODO Auto-generated method stub
 		window.Draw(buffer, matrixloc);
 		screenFade.draw(matrixloc, buffer);
 	}

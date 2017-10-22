@@ -14,15 +14,33 @@
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="elderThing"
 			value="3" />
 		<text>
-			. The sarcophagus contains naught but bones and an unsightly ichor.
+			The sarcophagus contains a winged figure of corpselike stillness and
+			complexion. Her pale grey skin is discoloured by greenish stains
+			around her eyes, lips and nethers.
 		</text>
-		<choice destination="end" text="leave it be" />
+		<choice destination="awakenAfter" text="open the sarcophagus" />
+		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="awakenAfter">
+	<text>
+	You open the sarcophagus, triggering the revive process. However, the various sound tones that indicate the state of the figure within suddenly take a rthythmic low note. and the figure spasms and lets out a weak gasping noise, the notes becoming a clear repetitive alert sound...seems something is going wrong, perhaps after so long in stasis she can't survive reviving without outside aid.
+	</text>
+	<choice destination="afterPerish" text="uh, crap..whoops?" />	
+	</page>
+	
+	<page ID="afterPerish">
+	<text>
+	You look on helplessly as her eyes open, only to close again as she lets out a shuddering breathe and subside. The sarcophagi releases a steady tone as her body starts to rapidly degenerate.
+	</text>
+		<effect type="setlocalflag" flag="empty" value="1" />
+	<choice destination="end" text="well shit, didn't expect that to happen"/>
+	</page>
+	
 	<page ID="start">
 		<!--full -->
 		<text>
-			. The sarcophagus contains a winged figure of corpselike stillness and
+			The sarcophagus contains a winged figure of corpselike stillness and
 			complexion. Her pale grey skin is discoloured by greenish stains
 			around her eyes, lips and nethers.
 		</text>

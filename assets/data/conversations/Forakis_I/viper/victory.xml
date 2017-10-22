@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<preference fetish="ferals" />
+		<preference fetish="oralvore" />
+		<text>
+		You try in vain to get up as the viper slithered closer, a soft hiss of sand shifting under its scaled underbelly the only noise it makes as it approaches you. A forked tongue tasting the air, flick, flick. Then closer and tasteing your hair, flick, flick. And then the jaws of the snake lever open, pitiless in its base appetites the serpent is wasting no time as it scoops your head into its stretched jaws.
+		</text>
+		<choice destination="oralvore0" text="snake food" />
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	The serpent's throat flexes against the top of your head and its fangs scrape against your skull, kept tucked against its upper jaw but ready to serve should you try to escape. The viper makes no noise as it swallows, flexing and pushing itself over your shoulders to engulf them. The wet tight pressure of its throat and its slender body squeezing around you as it steadily works to draw you into itself. Slow writhing motions serving to shove its head further forwards over more and more of your body in place of the powerful swallows of some other predators.
+	</text>
+	<choice destination="oralvore1" text="maybe there's hope of getting out of here"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Hope or not the uncomplicated and hard edged attention of the serpent is clearly on gobbling you up. The viper's coils shifting to bunch up and then uncurl to shove itself forwards over your belly, then ass. The slender scaled body of the snake bulging and swelling out around you, your contours sharply visible as it works on engulfing your twitching and shifting legs. It won't be long until you're entirely consumed by the viper.
+	</text>
+	<choice destination="oralvore2" text="swallowed completely"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The snake gradually polishes you off, its jaws flexing then snapping shut past your toes. When they open again all of you has disappeared down into the snake, but not out of view. The tight thin body of the snake is bulged out with your clearly defined shape, trapped in the body of serpent every contour and outline of your form is visible through its scales. The viper shifting then going still, turning drowsy and entering a state of torpor as its body prepares to work over its heavy meal.
+	</text>
+	<choice destination="struggle" text="time to try and work your way out before it wakes up"/>
+	<choice destination="submit" text="get comfortable, time for digestion"/>
+	</page>
+	
+	<check ID="struggle">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>
+	
+	<page ID="struggleEscape">
+	<text>
+	You sense the serpent's torpor and set about trying to wriggle your way back out. Doing so feetfirst with no room to turn around will be difficult, but notable preferable to several hours of being digested by a dumb snake. Gradually you wriggle your way back out, pushing off with your arms against the inside of the narrow tube to worm your way back out inch by inch. Gradually you feel the open air, first against your feet and then against an ever increasing amount of your body as you worm your way out. Your predator rouses to the discomfort, but by then its too late to stop you and you're in short order prying its jaws wide as you pull free entirely from the serpent's jaws. Probably best to back up afore it recovers and tries to give you a repeat of the experience.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+		You sense the serpent's torpor and set about trying to wriggle your way back out. Doing so feetfirst with no room to turn around will be difficult, but notable preferable to several hours of being digested by a dumb snake. So you start to worm your way out, gradually pushing yourself backwards with your hands until your feet push into the open air. and then suddenly you feel pain, and a torpid lassitude flooding up your legs even as the serpent shifts and wriggles to push you back down again by flexing its form. You wait for it to rest only to try again, this time you don't even reach the outside before its twisting in on itself to thwart your progress..again and again you try...and again and again it seems that snakefood is your inevitable fate.
+	</text>	
+	<choice destination="struggleGO" text="this cannot be my fate"/>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	You struggle on valiantly but without success, the serpent's stomach inescapable and in time your energies are utterly exhausted. Digestive ooze soaks your skin from every angle now and you can feel yourself beginning to break down, to become unwound as the enzymes seek to melt your weakened and depleted form. You can only twitch and squirm weakly now, your defiance lingering on long past the point of futility and into the long hours of slow inexorable digestion. Your form softening and liquidating until the serpent slims out and you're utterly digested by the snake.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	Maybe you have a thing for snakes but for whatever reason you've decided that getting digested by this snake is a good idea. You wriggle to get a bit more comfortable as best you're able in the tight sleeping bag of the serpent's stomach. The vipers enzymes soaking your body gradually as it sets about slowly digesting you in that tightly stretched belly.
+	</text>
+	<choice destination="submitGO" text="get digested"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	In the depths of the serpent you feel yourself softening and breaking down. The digestive efforts of the serpent taking their slow and inexorable toll on your body as the shape in its tail turns less defined and more a smooth compacting lump. Your body gradually being rendered down over hours into more fuel for its own. In the end the serpent's body returns to its slim shape, shrinking down as you're absorbed into its form to fuel its survival in this arid and desolate environment.
+	</text>
+	</gameover>
+
+</Conversation>

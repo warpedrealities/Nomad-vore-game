@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text> How the hell did you manage this. There's no interaction with a defeated deathworm, I really didn't think anyone would manage this.
+		</text>
+		<choice destination="end" text="huh" />
+	</page>
+
+
+</Conversation>

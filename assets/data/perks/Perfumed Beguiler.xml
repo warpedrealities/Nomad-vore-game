@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<perk name="Perfumed Beguiler">
+	<requirement count="1">
+		<req>PERKalluring scent</req>
+	</requirement>
+
+	<description>
+		A subtle motif of pheremones clinging to your every motion and wafting out to enhance the effect of your beguiling gestures and seductive displays can increase its effectiveness. Adds 1-4 pheremone damage to seduction display.
+	</description>
+	<moveModifier name="seduce">
+		<change type="ADD">
+			<effectDamage type="PHEREMONE" minValue="1" maxValue="4"
+				modifier="CHARM" />
+		</change>
+
+	</moveModifier>
+	<maxrank value="1" />
+
+</perk>

@@ -22,7 +22,7 @@ public class SpawnScript {
 		m_globals = JsePlatform.standardGlobals();
 		String file=e.getAttribute("script");
 		try {
-			m_script = m_globals.load(new FileReader("assets/data/system/spawnscripts/" + file + ".lua"), "main.lua");
+			m_script = m_globals.load(new FileReader("assets/data/systems/spawnScripts/" + file + ".lua"), "main.lua");
 
 		} catch (FileNotFoundException exception) {
 

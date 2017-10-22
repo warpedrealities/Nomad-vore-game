@@ -6,24 +6,26 @@ import font.NuFont;
 import input.MouseHook;
 import shared.MyListener;
 import shared.NinePatch;
+import shared.NinePatch_Alternate;
 import shared.Vec2f;
 
 public class MultiLineButton extends GUIBase {
 
-	NinePatch m_patch;
-	String[] m_strings;
-	NuFont[] m_fonts;
-	int m_textures[];
-	boolean m_alternate;
+	private NinePatch_Alternate m_patch;
+	private String[] m_strings;
+	private NuFont[] m_fonts;
+	private int m_textures[];
+	private boolean m_alternate;
 
 	// encapsulation of patch, means gui elements don't inherit boxes
-	Vec2f m_pos;
-	Vec2f m_size;
-	int m_ID;
-	boolean m_active;
-	MouseHook mouse;
-	boolean mouseOver;
-
+	private Vec2f m_pos;
+	private Vec2f m_size;
+	private int m_ID;
+	private boolean m_active;
+	private MouseHook mouse;
+	private boolean mouseOver;
+	protected float clock;
+	
 	public MultiLineButton(Vec2f pos, Vec2f size, int texture, MyListener listener, String string, int ID,
 			int altTexture) {
 
@@ -36,7 +38,7 @@ public class MultiLineButton extends GUIBase {
 		m_listener = listener;
 		m_strings = new String[2];
 		// build ninepatch
-		m_patch = new NinePatch(pos, size.x, size.y, texture);
+		m_patch = new NinePatch_Alternate(pos, size.x, size.y, texture);
 		m_ID = ID;
 		Vec2f p = new Vec2f(pos.x, pos.y);
 		float sy = (size.y) * 0.65F;
@@ -95,6 +97,24 @@ public class MultiLineButton extends GUIBase {
 		} else {
 			mouseOver = false;
 		}
+		if (clock>0)
+		{
+			clock-=DT;
+			if (clock<=0)
+			{
+				clock=0;
+				m_patch.toggle();
+				m_listener.ButtonCallback(m_ID, m_pos);		
+			}
+		}
+		if (clock<0)
+		{
+			clock+=DT;
+			if (clock>=0)
+			{
+				clock=0;
+			}
+		}
 	}
 
 	public boolean isMouseOver() {
@@ -114,14 +134,14 @@ public class MultiLineButton extends GUIBase {
 
 	@Override
 	public boolean ClickEvent(Vec2f pos) {
-		// TODO Auto-generated method stub
 		// check inside
-		if (m_active == false) {
+		if (m_active == false || clock<0) {
 			return false;
 		}
 		if (pos.x > m_pos.x && pos.x < m_pos.x + m_size.x) {
 			if (pos.y > m_pos.y && pos.y < m_pos.y + m_size.y) {
-				m_listener.ButtonCallback(m_ID, pos);
+				clock=0.02F;
+				m_patch.toggle();
 				// return true;
 			}
 		}

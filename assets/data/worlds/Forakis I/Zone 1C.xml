@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="desert.png">
+	<landingsite x="32" y="32" />	
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="6" vision="0" movement="0"> valley grass</tile>
+		<tile sprite="2" vision="0" movement="0"> desert sands</tile>
+		<tile sprite="7" vision="0" movement="1"> boulder</tile>
+		<tile sprite="8" vision="1" movement="2"> valley tree</tile>	
+		<tile sprite="9" vision="0" movement="1"> water</tile>	
+		<tile sprite="11" vision="1" movement="2"> rock walls</tile>	
+		<tile sprite="4" vision="1" movement="2"> brick wall</tile>
+		<tile sprite="1" vision="0" movement="0"> brick floor </tile>		
+	</tileset>
+	<description>
+
+	</description>
+	<transition direction="west">Zone 2C</transition>	
+	<mapgen>
+		<partition xmin="24" xmax="40" ymin="24" ymax="40">
+			<floodfill tile="1">
+
+			</floodfill>
+
+		</partition>	
+		<partition xmin="8" xmax="64" ymin="8" ymax="56" inverse="true">
+		<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="6" />
+			</band>			
+		</perlin>			
+		</partition>	
+		<partition xmin="16" xmax="48" ymin="16" ymax="48">
+		<town minsize="4" maxsize="4" minhouses="8" maxhouses="16"
+				tile="7" gap="8" registerRooms="true">
+				<floodfill tile="8">			
+				</floodfill>
+		</town>			
+	
+		</partition>	
+		<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="5" />
+			</band>			
+		</perlin>			
+		<noise tile="4" scarcity="12" />		
+		<floodfill tile="1" />		
+		<walloff wall="6" sides="northwesteast" />	
+	</mapgen>
+
+</zone>

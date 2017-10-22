@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Set;
 
 import shared.ParserHelper;
+import view.ViewScene;
 
 public class FlagField {
 
@@ -23,6 +24,7 @@ public class FlagField {
 	
 	public void setFlag(String flagname, int value)
 	{
+
 		flagMap.put(flagname,value);
 	}
 	
@@ -33,6 +35,7 @@ public class FlagField {
 			flagMap.put(flagname, 0);
 		}
 		flagMap.put(flagname, flagMap.get(flagname)+1);
+	
 	}
 	
 	public int readFlag(String flagname)

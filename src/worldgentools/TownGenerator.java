@@ -142,8 +142,14 @@ public class TownGenerator {
 			// pick a spot
 			Rectangle r = new Rectangle(GameManager.m_random.nextInt(m_width), GameManager.m_random.nextInt(m_height),
 					0, 0);
-			r.setSize(GameManager.m_random.nextInt(maxsize - minsize) + minsize,
-					GameManager.m_random.nextInt(maxsize - minsize) + minsize);
+			int width=minsize; int height=minsize;
+			if (maxsize>minsize)
+			{
+				width+=GameManager.m_random.nextInt(maxsize - minsize);
+				height+=GameManager.m_random.nextInt(maxsize - minsize);
+			}
+			r.setSize(width,
+					height);
 			if (ValidSpot(r)) {
 				m_failcount = 0;
 				houses.add(r);

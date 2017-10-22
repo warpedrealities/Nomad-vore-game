@@ -11,7 +11,7 @@ function pursue(script,sense,hostile)
 end
 
 function main(script,sense)  
-	hostile=sense:getDetection():getHostile(script:getPosition().x,script:getPosition().y,8)
+	hostile=sense:getDetection():getHostile(script:getPosition().x,script:getPosition().y,16)
 	if not (hostile == nil ) then
 		pursue(script,sense,hostile)
 	end

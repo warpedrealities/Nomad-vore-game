@@ -72,7 +72,7 @@
 		</text>
 		<choice destination="unbirthingBStruggle"
 			text="no, no i'm not going to appreciate it, i'm out of here" />
-		<choice destiantion="unbirthingBSubmit" text="that sounds...fun" />
+		<choice destination="unbirthingBSubmit" text="that sounds...fun" />
 	</page>
 
 

@@ -954,7 +954,7 @@ public class Player_RPG implements Actor_RPG {
 		statusEffectHandler.struggle(this, actor);
 	}
 
-	public boolean stealthCheck(int spot)
+	public boolean stealthCheck(int spot,boolean remove)
 	{
 		
 		return true;

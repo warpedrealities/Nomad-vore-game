@@ -41,6 +41,7 @@ import org.lwjgl.glfw.GLFWKeyCallback;
 
 import actor.Actor;
 import actor.Attackable;
+import actor.ThreatAssessment;
 import actor.npc.NPC;
 import actor.player.reformation.ReformationHandler;
 import combat.CombatMove;
@@ -130,7 +131,7 @@ public class Player extends Actor {
 	}
 
 	public Player() {
-
+		threatAssessment=new ThreatAssessment();
 		actorVisibility = true;
 
 		craftingLibrary = new CraftingLibrary();
@@ -144,7 +145,7 @@ public class Player extends Actor {
 	}
 
 	public Player(Vec2f p) {
-
+		threatAssessment=new ThreatAssessment();
 		encyclopedia = new Encyclopedia();
 		encyclopedia.generateEntries();
 
@@ -178,6 +179,7 @@ public class Player extends Actor {
 
 	@Override
 	public void Update() {
+		threatAssessment.update();
 		actorRPG.update();
 	}
 

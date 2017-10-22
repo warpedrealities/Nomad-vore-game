@@ -3,16 +3,100 @@
 
 	<page ID="start">
 		<text>
-			The decayed seraphic like girl looks weary now, the will that kept her
-			going far beyond what one would think would be her limits. She seems
-			satisfied, but lost...it's clear her only purpose has been fulfilled
-			and the weight of years can be seen upon her shoulders. She is
-			content, and gives you a look of gratitude but nothing else as she
-			waits for the end.
+			The seraph sits quietly now. She seems contemplative, or weary, her wings droop but she doesn't seem in any way uncomfortable with her weakening state.
 		</text>
-		<choice destination="end" text="...such a melancholic victory." />
+		<choice destination="okay0" text="$are you okay?">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="asked" />				
+		</choice>
+		<choice destination="history" text="$I've tried to piece together the story of what happened here, but perhaps you could tell me">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="history" />				
+		</choice>		
+		<choice destination="end" text="leave her be"/>	
 	</page>
 
+	<page ID="okay0">
+	<text>
+	The seraph turns and gives you a small smile "I am dying, all those years in the sarcophagi. My thread run past its end in slumber and unquiet dreams. Only the false god's power sustained me."
+	she explained but held up a hand to forestall your interjection "But I am okay, I am at peace with this. You have freed me, I have avenged my people."
+	</text>
+	<effect type="setlocalflag" flag="asked" value="1" />		
+	<choice destination="okay1A" text="$You have no desire to live on?"/>
+	<choice destination="okay1B" text="$I see...I admire your courage in the face of this"/>
+	</page>
+	
+	<page ID="okay1A">
+	<text>
+	"Why wish for what cannot be?" she asks and shakes her head, she looks contemplatively off into the middle distance "And besides, there is no place for me here. My people are gone, the world and the galaxy are not as they were. No I will join my people in death, knowing that I have helped rid the world of a great evil."
+	</text>
+	<choice destination="history" text="$I've tried to piece together the story of what happened here, but perhaps you could tell me">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"
+		flag="history" />				
+	</choice>		
+	<choice destination="okay1B" text="$I see...I admire your courage in the face of this, but I will leave you to your contemplation"/>
+	</page>
+	
+	<page ID="okay1B">
+	<text>
+	"A life is measured by its accomplishments..you have given mine completion stranger, who could ask for more?"
+	</text>
+	<choice destination="history" text="$I've tried to piece together the story of what happened here, but perhaps you could tell me">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="history" />				
+		</choice>		
+	<choice destination="end" text="*withdraw*"/>
+	</page>
 
+	<page ID="history">
+	<text>
+	The seraph nods "It is good that you at least will remember our tale." she says and then martials her strength for the telling of their story before continuing "We were a peaceful people, this world was to be a place for us to be far removed from galactic society where we could get back in touch with the culture of our people."
+	</text>
+	<effect type="setlocalflag" flag="history" value="1" />	
+	<choice destination="history0B" text="$what separated you from your people's culture?"/>
+	<choice destination="history0A" text="$And then that thing arrived?"/>
+	</page>
+	
+	<page ID="history0B">
+	<text>
+	"Greater society, a great intermingling that had diluted seraphic culture of our history...I was born on this world, I cannot judge the beliefs of the dead. But it was thought that only in isolation from the other races could we rekindle the great golden age of seraphic arts. In the end it didn't matter though."
+	</text>
+	<choice destination="history0A" text="$because that thing arrived?"/>	
+	</page>
+	
+	<page ID="history0A">
+	<text>
+	"Yes. There was an asteroid on a collision course with our world, our isolation had left us without a means of eliminating it. And then the ship of that thing crashed into the asteroid, we were saved or so we thought and when the capsule from that ship crashed to our world we healed its occupant and hailed it as our saviour...it took hardly any time at all for it to go from saviour to god."
+	</text>
+	<choice destination="history1A" text="$How did it manage to do that to a whole planet?"/>
+	</page>
+	
+	<page ID="history1A">
+	<text>
+	"You fought it when it was greatly weakened, and even then it was a hard battle. At its height its psionic powers could reach out myriad miles to influence multitudes."
+	</text>
+	<choice destination="history2A" text="$I see, and so what happened?"/>
+	</page>
+	
+	<page ID="history2A">
+	<text>
+	"It became our god and ruled over us, we built monuments in its name like the one in which we now stand. And as it ruled, it feasted. Thousands of us were devoured by it over the decades. And as it feasted less and less of us were left to serve..."
+	</text>
+	<choice destination="history3A" text="$Then how did you seal it away?"/>
+	</page>
+	
+	<page ID="history3A">
+	<text>
+	"Poison, there were always some of us who could resist its will so long as it did not turn its attention on us. We arranged in secret for its meals to be laden with a subtle toxin, that fogged the mind and assailed the body once enough had been administered to it. And while it was brought low we sealed it in, and I was one of those who volunteered to attempt to slay the false god before it could recover."
+	</text>
+	<choice destination="history4A" text="$and what happened to the others who didn't go in with you?"/>
+	</page>
+	
+	<page ID="history4A">
+	<text>
+	"I do not know, but they did not tell you the tale of the false god..We were so very few in the end, perhaps they were not enough to carry on. This was never a truly safe world." says the seraph and then grips the stone for support "...I have told you the tale of our doom, I have told you what you have avenged...but, I need rest, I feel..so very tired"
+	</text>
+	<choice destination="end" text="$My thanks, rest now and conserve your strength"/>
+	</page>
 
 </Conversation>

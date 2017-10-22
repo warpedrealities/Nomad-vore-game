@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="desert.png">
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="2" vision="0" movement="0"> desert sand</tile>
+		<tile sprite="3" vision="1" movement="1"> high dunes</tile>
+		<tile sprite="10" vision="0" movement="3"> sinking sands</tile>
+		<tile sprite="5" vision="0" movement="1"> boulder</tile>
+		<tile sprite="11" vision="1" movement="2"> rock walls</tile>		
+	</tileset>
+	<description>
+	The desert is deep and vast, the dunes march on to the wavering horizon. But it is not wind alone that stirs the sand, the unnatural shifting of a distant dune catching your eye. A humping surge rising up one side and down the other steadily.
+	</description>
+	<transition direction="north">Zone 2A</transition>	
+	<transition direction="east">Zone 3B</transition>
+	<transition direction="west">Zone 1B</transition>
+	<transition direction="south">Zone 2C</transition>	
+	<mapgen>
+	<partition xmin="8" xmax="56" ymin="8" ymax="56">	
+			<randprefab width="7" height="6">
+				<row>2222222</row>
+				<row>2242422</row>
+				<row>2442442</row>
+				<row>2442442</row>
+				<row>2444442</row>
+				<row>2244422</row>
+				<pairedportal sprite="3" destination="mine zone" x="2"
+					y="3" ID="11" facing="4">A mine entrance</pairedportal>
+				<placeWidget x="2" y="0" name="DESCRIBER">
+					A natural rocky outcropping juts out of the shifting sands, bored out long ago a tunnel plunges into the subterreanean depths below. 
+				</placeWidget>
+			</randprefab>
+		</partition>			
+	<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="2" />
+			</band>
+			<band low="-0.5" high="0.5">
+				<noise tile="4" scarcity="12" />	
+				<floodfill tile="1" />
+			</band>		
+			<band low=".5" high="1.0">
+				<floodfill tile="3" />
+			</band>				
+	</perlin>	
+			<SeedNPCs min="3" max="3" name="Forakis I/deathworm">
+			</SeedNPCs>			
+		<auditpaths carve="3" replace="1" />	
+		<auditpaths carve="2" replace="1" />		
+	</mapgen>
+
+</zone>

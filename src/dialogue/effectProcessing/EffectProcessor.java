@@ -1,4 +1,4 @@
-package dialogue;
+package dialogue.effectProcessing;
 
 import mutation.Effect_Mutator;
 import nomad.FlagField;
@@ -30,11 +30,13 @@ import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.NPC_RPG;
 import actorRPG.player.Player_RPG;
+import dialogue.DialogueHelper;
 import dialogue.worldscript.WorldScript;
 import dialogue.worldscript.WorldScript_Imp;
 import faction.Faction;
 import faction.FactionLibrary;
 import item.Item;
+import item.QuestItem;
 import item.instances.ItemKeyInstance;
 import item.instances.ItemStack;
 
@@ -213,6 +215,11 @@ public class EffectProcessor {
 
 	private void handleItems(Item item, Element node)
 	{
+		if (QuestItem.class.isInstance(item))
+		{
+			QuestItem qi=(QuestItem)item;
+			qi.loadFromFile(node.getAttribute("addendum"));
+		}				
 		if (ItemKeyInstance.class.isInstance(item))
 		{
 			ItemKeyInstance iki=(ItemKeyInstance)item;
@@ -313,7 +320,9 @@ public class EffectProcessor {
 			}
 			Universe.AddClock((int) value);
 		}
-
+		if (str.equals("giveEnergy")) {
+			new RechargeHelper(m_player).run((int) value);
+		}
 	}
 
 	public void setSpaceship(Spaceship ship) {

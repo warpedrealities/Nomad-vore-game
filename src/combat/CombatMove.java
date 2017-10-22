@@ -14,6 +14,7 @@ import combat.effect.Effect_Dismantle;
 import combat.effect.Effect_Movement;
 import combat.effect.Effect_Status;
 import combat.effect.Effect_Submit;
+import combat.effect.analyze.Effect_Analyze;
 import combat.statusEffects.StatusEffect;
 import combat.effect.Effect_Recover;
 import combat.effect.Effect_Reinforce;
@@ -189,6 +190,9 @@ public class CombatMove {
 				}
 				if (e.getTagName().equals("effectSubmit")) {
 					effects.add(new Effect_Submit(e));
+				}
+				if (e.getTagName().equals("effectAnalyze")) {
+					effects.add(new Effect_Analyze(e));
 				}
 				if (e.getTagName().equals("missText")) {
 					genMiss(e);
@@ -449,7 +453,7 @@ public class CombatMove {
 					value += target.applyEffect(effects.get(i), origin, critical);
 				}
 				// show hit text
-
+				origin.getThreat().addThreat(value);
 				if (target.getAttackable() && visible) {
 					String text = hitText[GameManager.m_random.nextInt(hitText.length)];
 					if (text.length() > 0) {

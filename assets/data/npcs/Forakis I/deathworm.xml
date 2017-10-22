@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="uppercaseD.png" />
+	<name>Death worm</name>
+	<description>
+	A vermian form the width of a sturdy tree trunk and so long that at least half of its body remains perpetually beneath the desert sands. The burrowing predator shucks off tan sand from its dark brown hide as it rears into the outside air. Its segmented maw gaping open, its long dexterous tongues lashing out at the air hungrily. Perhaps running would be well advised.
+	</description>
+	<rpg>
+		<experiencevalue value="120" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="100" />
+		<stat stat="RESOLVE" value="100" />
+		<attribute attribute="TEASE" value="12" />
+		<attribute attribute="KINETIC" value="4" />
+		<attribute attribute="THERMAL" value="4" />		
+		<attribute attribute="SHOCK" value="4" />		
+		<combatMove name="overwhelm" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4">
+			<missText count="3">
+				<text>The deathworm thrashes at TARGET but is evaded</text>
+				<text>The deathworm lashes out at TARGET but doesn't connect</text>
+				<text>The deathworm attempts to strike TARGET with its tongue without success</text>				
+			</missText>
+			<hitText count="3">
+				<text>The deathworm slams into TARGET for VALUE damage</text>
+				<text>The deathworm bites TARGET for VALUE damage</text>
+				<text>The deathworm bites TARGET for VALUE damage</text>				
+			</hitText>
+			<effectDamage type="KINETIC" minValue="4" maxValue="16"
+				modifier="STRENGTH" />
+		<effectStatus probability="50">
+				<probabilityModifier value="STRENGTH" />		
+			<applyText>TARGET is knocked down by the fury of the death worm's attack!</applyText>
+			<statusStun uid="9" duration="4">
+				TARGET has recovered.
+			</statusStun>
+		</effectStatus>			
+		</combatMove>
+	<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusStealth uid="23" icon="5" duration="1000"
+					numModifiers="2" strength="40" interval="60">
+				</statusStealth>
+			</effectStatus>
+		</combatMove>		
+		<statusTags count="1">
+			<tag>seduction</tag>
+		</statusTags>
+	</rpg>
+
+	<respawn delay="2000" />
+
+	<defeated conversation="Forakis_I/deathworm/defeat" />
+	<seduced conversation="Forakis_I/deathworm/defeat" />
+	<victory conversation="Forakis_I/deathworm/victory" />
+	<seducer conversation="Forakis_I/deathworm/victory" />
+	<controller AI="deathworm" />
+	<faction value="monster" />
+</Harpy>

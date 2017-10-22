@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="desert.png">
+	<landingsite x="32" y="32" />
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="0" movement="0"> stonework floor </tile>
+		<tile sprite="2" vision="0" movement="0"> desert sand</tile>
+		<tile sprite="3" vision="1" movement="1"> high dunes</tile>
+		<tile sprite="4" vision="1" movement="2"> stonework wall</tile>
+		<tile sprite="5" vision="0" movement="1"> boulder</tile>
+	</tileset>
+	<description>
+	These buildings are long abandoned, their ruins partially engulfed now by the driving sands of countless years of neglect. No voice or sound of purposeful intent can be heard, only the sound of the driving wind and shifting sands.
+	</description>
+	<transition direction="east">Zone 2A</transition>
+	<transition direction="south">Zone 1B</transition>
+	<mapgen>
+
+		<partition xmin="24" xmax="40" ymin="24" ymax="40">
+			<floodfill tile="1">
+
+			</floodfill>
+
+		</partition>
+
+		<partition xmin="4" xmax="56" ymin="4" ymax="56">	
+		<town minsize="4" maxsize="8" minhouses="16" maxhouses="24"
+				tile="4" gap="1" registerRooms="true">
+				<floodfill tile="1">
+					<Seedwidgets min="16" max="32" name="chest">
+						<lootTable>
+							<lootSubTable chance="1" file="resource_tier_1" />
+							<lootSubTable chance="0.5" file="resource_tier_1" />
+							<lootSubTable chance="0.25" file="resource_tier_1" />						<lootSubTable chance="0.5" file="consumable_tier_1" />
+							<lootSubTable chance="0.25" file="consumable_tier_1" />	
+							<lootSubTable chance="0.25" file="moon_ruins_special" />
+							<lootSubTable chance="0.15" file="mutators_tier_1" />
+						</lootTable>
+					</Seedwidgets>				
+				
+				</floodfill>
+		</town>	
+		<degrade chance="20" degradethis="4" replacewith="2" />	
+		<!--perlin noise dunes-->
+	<perlin>
+			<band low="-1.0" high="-0.4">
+				<floodfill tile="3" />
+			</band>
+			<band low="-0.4" high="0.2">
+				<noise tile="5" scarcity="6" />	
+				<floodfill tile="2" />
+			</band>			
+	</perlin>
+		<noise tile="4" scarcity="6" />		
+		<floodfill tile="1"/>		
+		</partition>		
+	<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="3" />
+			</band>
+			<band low="-0.5" high="1.0">
+				<floodfill tile="2" />
+			</band>			
+	</perlin>
+		<auditpaths carve="4" replace="2" />	
+		<auditpaths carve="3" replace="2" />	
+		<walloff wall="3" sides="northwest" />
+		<placeWidget x="24" y="24" name="SPAWNER">
+			<radius value="24" />
+			<spawnLimit value="6" />
+			<spawns count="1">
+				<data npc="Forakis_I/scarab" min="1" max="1"
+					chance="50" />
+			</spawns>
+		</placeWidget>	
+			<SeedNPCs min="12" max="24" name="Forakis I/desert viper">
+			</SeedNPCs>		
+	</mapgen>
+
+</zone>

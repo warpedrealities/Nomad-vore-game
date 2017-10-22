@@ -8,6 +8,10 @@
 			League, do for you today?"
 		</text>
 		<choice destination="trade" text="I would like to see your wares" />
+		<choice destination="want" text="Is there anything you'd pay a decent amount?">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="asked" />		
+		</choice>
 		<choice destination="approach"
 			text="I've had enough of your shit, I'm taking what I need" />
 		<choice destination="end" text="just saying hi" />
@@ -19,6 +23,47 @@
 		<special effect="shop" ID="talharan_trader0" />
 	</page>
 
+	<page ID="want">
+	<text>
+	"Your implication that our valuation of your inventory is in some way indecent is predictable.""And unfair""Nevertheless we will answer your question by saying that there is a high probability that on the more hospitable of the two worlds there is a high probability of the presence of a cellular rejuvenator. Retrieve such, and will reward you suitably for your effort."
+	</text>
+	<effect type="setlocalflag" flag="asked" value="1" />		
+	<choice destination="whatIs" text="what exactly is a cellular rejuvenator"/>
+	<choice destination="howKnown" text="how do you know this item is on the planet?"/>
+	<choice destination="whereFind" text="do you know where I might find it?"/>
+	<choice destination="trade" text="I would like to see your wares before I go"/>
+	<choice destination="end" text="very well I will go investigate and see if i can find this device"/>
+	</page>
+	
+	<page ID="whatIs">
+	<text>
+	"It is a device that performs a complete cellular refresh, reversing the most chronic forms of biological degeneration. It is a specialist device of no use to you, but it is very valuable to certain buyers with which we are acquainted."
+	</text>
+	<choice destination="howKnown" text="how do you know this item is on the planet?"/>
+	<choice destination="whereFind" text="do you know where I might find it?"/>
+	<choice destination="trade" text="I would like to see your wares before I go"/>
+	<choice destination="end" text="very well I will go investigate and see if i can find this device"/>	
+	</page>
+
+	<page ID="howKnown">
+	<text>
+	"As members of the Talharan commerce league we have access to informed contacts" "informed, mysterious, enigmatic contacts" "-indeed, who serve to provide us with this information. However to reveal more about these contacts would jeopardize the trust we have cultivated with them over our long association.""And you could not afford the price of such information any way"
+	</text>
+	<choice destination="whatIs" text="what exactly is a cellular rejuvenator"/>
+	<choice destination="whereFind" text="do you know where I might find it?"/>
+	<choice destination="trade" text="I would like to see your wares before I go"/>
+	<choice destination="end" text="very well I will go investigate and see if i can find this device"/>	
+	</page>	
+	
+	<page ID="whereFind">
+	"Were we aware of its exact location obviously we would of already retrieved it.""obviously""However as you would clearly be unable to find it without further help we will offer further advice. The device dates back on the world to a period before the collapse, as such it is unlikely to be found in the hands of the current primitive stewards of that world but in the ruins left by an older and more sophisticated civilization."
+	<text>
+	</text>
+	<choice destination="whatIs" text="what exactly is a cellular rejuvenator"/>
+	<choice destination="howKnown" text="how do you know this item is on the planet?"/>
+	<choice destination="trade" text="I would like to see your wares before I go"/>
+	<choice destination="end" text="very well I will go investigate and see if i can find this device"/>	
+	</page>		
 	<page ID="start">
 		<text>
 			"Greetings unexpected potential customer, you are approaching a trade vessel of
@@ -82,6 +127,10 @@
 			important is that we can sell you one for an equitable price."
 		</text>
 		<choice destination="trade" text="I would like to look at your wares" />
+		<choice destination="want" text="Is there anything you'd pay a decent amount?">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="asked" />		
+		</choice>		
 		<choice destination="equitable" text="how 'equitable' are we talking here?" />
 		<choice destination="end"
 			text="I'll come back to see your wares another time" />
@@ -109,6 +158,10 @@
 		</text>
 		<choice destination="trade"
 			text="..very well, lets see what you have for sale" />
+		<choice destination="want" text="Is there anything you'd pay a decent amount?">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="asked" />		
+		</choice>			
 		<choice destination="end" text="I'll take a look at your wares later then" />
 	</page>
 

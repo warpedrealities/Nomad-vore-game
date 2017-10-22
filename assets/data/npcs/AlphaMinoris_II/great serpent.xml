@@ -16,7 +16,7 @@
 	</description>
 	<rpg>
 		<experiencevalue value="100" />
-		<ability ability="STRENGTH" value="5" />
+		<ability ability="STRENGTH" value="7" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />
 		<ability ability="ENDURANCE" value="5" />

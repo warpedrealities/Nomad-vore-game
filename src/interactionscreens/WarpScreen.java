@@ -32,6 +32,7 @@ public class WarpScreen extends Screen  implements Callback{
 	@Override
 	public void update(float DT) {
 		screenFade.update(DT);
+		window.update(DT);
 	}
 
 	@Override

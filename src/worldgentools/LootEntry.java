@@ -2,6 +2,7 @@ package worldgentools;
 
 import item.Item;
 import item.ItemCoin;
+import item.QuestItem;
 import item.instances.ItemBlueprintInstance;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
@@ -12,12 +13,12 @@ import org.w3c.dom.Element;
 
 public class LootEntry {
 
-	Item item;
+	String item;
 	float chance;
 	String addendum;
 	int unique;
 
-	public Item getItem() {
+	public String getItem() {
 		return item;
 	}
 
@@ -39,7 +40,7 @@ public class LootEntry {
 
 	public LootEntry(Element node) {
 		if (node.getAttribute("item").length() > 0) {
-			item = Universe.getInstance().getLibrary().getItem(node.getAttribute("item"));
+			item = node.getAttribute("item");
 		}
 
 		chance = Float.parseFloat(node.getAttribute("chance"));
@@ -81,8 +82,16 @@ public class LootEntry {
 		int roll = Universe.m_random.nextInt(100);
 
 		if (roll < chance) {
-			Item item = Universe.getInstance().getLibrary().getItem(getItem().getItem().getName());
-
+			Item item=null;
+			if (getItem().equals("questItem"))
+			{
+				item=new QuestItem(addendum);
+			}
+			else
+			{
+				item = Universe.getInstance().getLibrary().getItem(getItem());						
+			}
+			
 			commonFunction(item);
 
 			return item;

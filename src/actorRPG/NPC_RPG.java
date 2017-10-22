@@ -200,7 +200,6 @@ public class NPC_RPG implements Actor_RPG {
 
 	@Override
 	public boolean getTagged(String tag) {
-		// TODO Auto-generated method stub
 		return statBlock.getTagged(tag);
 	}
 
@@ -260,8 +259,8 @@ public class NPC_RPG implements Actor_RPG {
 		statusEffectHandler.struggle(this, actor);
 	}
 
-	public boolean stealthCheck(int spot) {
-		return statusEffectHandler.stealthCheck(spot, this);
+	public boolean stealthCheck(int spot,boolean remove) {
+		return statusEffectHandler.stealthCheck(spot, this,remove);
 	}
 
 	@Override

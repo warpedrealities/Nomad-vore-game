@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="viper.png" />
+	<name>desert viper</name>
+	<description>
+	This threatening serpent blends easily into the surrounding rock and sands, its scales a mix of tan and pale ochre along its entire 12 foot length. It's shovel shaped head is flanked by pitiless black eyes and its jaws flex to reveal long and dripping fangs. Not only is this serpent FAR too big, it's venomous.
+	</description>
+	<rpg>
+		<experiencevalue value="60" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="TEASE" value="12" />
+		<combatMove name="bite" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0">
+			<missText count="2">
+				<text>The viper snaps out at TARGET but is evaded</text>
+				<text>The viper tries to bite TARGET but doesn't connect</text>
+			</missText>
+			<hitText count="2">
+				<text>The viper bites TARGET for VALUE damage</text>
+				<text>The bites TARGET for VALUE damage</text>
+			</hitText>
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<effectStatus probability="50">
+				<probabilityModifier value="ENDURANCE" />
+				<statusTag tag="poison" />
+				<applyText>TARGET has been poisoned.</applyText>
+				<statusDoT uid="50" icon="7" duration="120" numModifiers="1">
+					<removeText> TARGET is no longer poisoned.</removeText>
+					<affectText> TARGET is poisoned and loses VALUE health</affectText>
+					<resist strength="15" tag="poison" test="ENDURANCE" />
+					<effect stat="HEALTH" modifier="8" />
+				</statusDoT>
+			</effectStatus>				
+		</combatMove>
+	<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusStealth uid="23" icon="5" duration="1000"
+					numModifiers="2" strength="18" interval="60">
+				</statusStealth>
+			</effectStatus>
+		</combatMove>		
+		<statusTags count="1">
+			<tag>seduction</tag>
+		</statusTags>
+	</rpg>
+
+	<respawn delay="2000" />
+
+	<defeated conversation="Forakis_I/viper/defeat" />
+	<seduced conversation="Forakis_I/viper/defeat" />
+	<victory conversation="Forakis_I/viper/victory" />
+	<seducer conversation="Forakis_I/viper/victory" />
+	<controller AI="batgirl" />
+	<faction value="monster" />
+</Harpy>

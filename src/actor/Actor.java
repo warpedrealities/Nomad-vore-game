@@ -43,6 +43,7 @@ public abstract class Actor implements Attackable {
 
 	protected int moveCost = 2;
 	protected boolean isFlying;
+	protected ThreatAssessment threatAssessment;
 
 	public RPGActionHandler getRPGHandler() {
 		return RPGHandler;
@@ -402,4 +403,8 @@ public abstract class Actor implements Attackable {
 		this.actorVisibility = actorVisibility;
 	}
 
+	public ThreatAssessment getThreat()
+	{
+		return threatAssessment;
+	}
 }

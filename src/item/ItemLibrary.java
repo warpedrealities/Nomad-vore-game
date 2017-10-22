@@ -74,6 +74,9 @@ public class ItemLibrary {
 		if (name.equals("gold")) {
 			return new ItemCoin();
 		}
+		if (name.equals("questItem")) {
+			return new QuestItem();
+		}
 		Item item = findItem(name);
 		if (item != null) {
 			if (ItemHasEnergy.class.isInstance(item)) {
@@ -199,6 +202,11 @@ public class ItemLibrary {
 			item.load(dstream);
 			return item;
 		}
+		if (c == 9) {
+			QuestItem item = new QuestItem();
+			item.load(dstream);
+			return item;
+		}	
 		return null;
 	}
 

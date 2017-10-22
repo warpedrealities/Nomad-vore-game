@@ -12,6 +12,11 @@ public class Item implements Comparable {
 	protected float m_weight, itemValue;
 	protected int tag;
 	
+	public Item()
+	{
+		
+	}
+	
 	public Item(int UID) {
 		this.UID = UID;
 	}

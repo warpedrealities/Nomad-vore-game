@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <System>
-	<Star x="0" y="0" sprite="star" intensity="15" />
+	<Star x="0" y="0" sprite="brightStar" intensity="25" />
+	<World x="-6" y="-9">Forakis I</World>	
 	<spawnRules>
 	<spawn script="pirates"/>
 	</spawnRules>

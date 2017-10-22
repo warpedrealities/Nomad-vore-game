@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<preference fetish="ferals" />
+		<preference fetish="oralvore" />
+		<text>
+		With the final overpowering blow the worm lays you low. Your form crashing to the dunes as the worm rears some portion of its length free of the sand to loom over you. Those dreadful mouth parts stretching open as the tongue of this apex desert predator stretches out like a tendril to grab ahold of your legs and starts to tug you towards the creature. The worm lowering down its mouth to scoop up your feet.
+		</text>
+		<choice destination="oralvore0" text="wormfodder"/>
+	</page>	
+
+	<page ID="oralvore0">
+	<text>
+	That tongue curls around your legs as you struggle, hauling you inwards so that the hot slimey throat of the worm is engulfing you up to your knees. Toothless hard edged mouthparts gripping you around your thighs with irresistable strength as the burrowing predator steadily devours you, it won't be long before you're devoured entirely.
+	</text>
+	<choice destination="oralvore1" text="struggle against the inevitable"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You desperately try to find something to grab as a handhold to resist the worm's powerful maw, but all that your hands can clutch at turns out to be sand. The worm dragging you in nonetheless, your hands leaving furrows in the sands as it pulls you into its mouth. Your waist, and then chest vanishing past its flexing mouthparts, your view of the dry outside world framed by those three wet jaw sections as you vanish down its throat. Your hands grabbing at its jaws a moment longer in final defiance afore they're consumed as well.
+	</text>
+	<choice destination="oralvore2" text="utterly devoured"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Inside the worm you're mired in hot fluids as you're steadily drawn deeper down its throat and into its belly. You hear the sound of it burrowing back into the earth and you know you are already lost, the worm's body is too immense to escape and even if you did it'd be into several feet of sand. Either way you are doomed, as enzymes soak your flesh and digestion sets in you know there is absolutely nothing you can do.
+	</text>
+	<choice destination="oralvoreGO" text="accept the inevitable"/>
+	</page>
+	
+	<gameover ID="oralvoreGO">
+	<text>
+	Your squirms amount to much except a psychological balm to your doomed state as you digest away. The worm burrowing slowly through the sands as deep within you liquidate, digested alive into a sloppy mass of nutritious fluids that soon sluice through the creature's innards to nourish it. You are yet another to have made the mistake of attracting the attention of these burrowing terrors, and yet another to have paid the price of such attention.
+	</text>
+	</gameover>
+</Conversation>

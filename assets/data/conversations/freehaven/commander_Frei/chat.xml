@@ -69,7 +69,7 @@
 	<text>
 	"A polite start, promising. I am commander Frei, leader of the wardens on this station."
 	</text>
-	<choice destination="wardens" text="and who exactly are the wardens"/>
+	<choice destination="wardens" text="and who exactly are the wardens?"/>
 	<choice destination="eye2eye" text="Very well Frei, and what do you want us to see eye to eye on?"/>
 	<choice destination="freehaven" text="Very well Frei, could you tell me more about FreeHaven?"/>
 	</page>

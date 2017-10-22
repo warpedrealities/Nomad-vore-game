@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="scarab.png" />
+	<name>Scarab</name>
+	<description>
+	This robotic beetle looks weathered and worn, its armoured carapace pitted and scoured by the sand. Yet somehow the machine functions after all this time in this inhospitable environment, perhaps clues lie in the signs of repair work here and there on its limbs and the myriad small tool tipped manipulater limbs tucked under its armoured body. The scarab is clearly some kind of repair bot, perhaps having no purpose but to maintain its existence for all these years of wandering.
+	<description>
+	<rpg>
+		<experiencevalue value="80" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<attribute attribute="TEASE" value="20" />
+		<attribute attribute="PHEREMONE" value="20" />
+		<attribute attribute="PSYCHIC" value="20" />
+		<attribute attribute="KINETIC" value="2" />
+		<attribute attribute="THERMAL" value="2" />		
+		<attribute attribute="SHOCK" value="-2" />
+		<stat stat="HEALTH" value="60" />
+		<stat stat="RESOLVE" value="60" />
+		<combatMove name="shock blaster" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" bonusToHit="2" rangedbias="2">
+			<effectDamage type="SHOCK" minValue="3" maxValue="8"
+				modifier="NONE" />
+			<missText count="1">
+				<text>The scarab fires a shock beam from between its mandibles at TARGET but missed</text>
+			</missText>
+			<hitText count="1">
+				<text>The scarab shockbeams TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+	<combatMove name="nerve disrupter" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" rangedbias="2">			
+		<effectStatus probability="80">
+			<probabilityModifier value="ENDURANCE" />		
+			<statusTag tag="life"/>
+			<applyText>TARGET 's nervous system has been disrupted, attack and defence is more difficult</applyText>
+			<statusAttribMod uid="17" icon="12" duration="60"
+				numModifiers="5">
+				<removeText> TARGET 's nervous system has recovered</removeText>
+				<effect attribute="RANGED" modifier="-8" />
+				<effect attribute="MELEE" modifier="-8" />			
+				<effect attribute="PARRY" modifier="-8" />
+				<effect attribute="DODGE" modifier="-8" />	
+				<effect attribute="SEDUCTION" modifier="-8" />				
+			</statusAttribMod>
+		</effectStatus>			
+			<missText count="1">
+				<text>The scarab misses TARGET with a blue ray</text>
+			</missText>
+			<hitText count="1">
+				<text>The scarab hits TARGET with a blue ray</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="dismantle" pattern="MELEE" bonusAttribute="RANGED"
+			timeCost="12" bonusToHit="12">
+			<effectDamage type="KINETIC" minValue="4" maxValue="10"
+				modifier="NONE" />
+			<effectDamage type="KINETIC" minValue="4" maxValue="10"
+				modifier="NONE" />
+			<effectDamage type="KINETIC" minValue="4" maxValue="10"
+				modifier="NONE" />				
+			<missText count="1">
+				<text>The scarab attempts to dismantle TARGET but fails</text>
+			</missText>
+			<hitText count="1">
+				<text>The scarab dismantles TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>	
+	<combatMove name="overdrive" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4">			
+		<effectStatus probability="100">		
+			<applyText>Scarab has activated a combat overdrive mode!</applyText>
+			<statusAttribMod uid="17" icon="12" duration="60" numModifiers="2">
+				<removeText> Scarab overdrive has worn off</removeText>
+				<effect attribute="RANGED" modifier="8" />
+				<effect attribute="DODGE" modifier="8" />				
+			</statusAttribMod>
+		</effectStatus>			
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatMove>		
+		<statusTags count="5">
+			<tag>psychic</tag>
+			<tag>life</tag>	
+			<tag>radio</tag>
+			<tag>seduction</tag>
+			<tag>poison</tag>			
+		</statusTags>
+	</rpg>
+	<defeated conversation="Forakis_I/scarab/defeat" />	
+	<controller AI="scarab_bot" />
+	<faction value="ForakisBots" />
+</NPC>

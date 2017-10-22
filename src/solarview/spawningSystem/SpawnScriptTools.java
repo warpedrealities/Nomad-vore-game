@@ -89,7 +89,11 @@ public class SpawnScriptTools {
 			r=Universe.getInstance().m_random.nextInt(systemEntities.size());
 		}
 		int d=Universe.getInstance().m_random.nextInt(8);
-		return Geometry.getPos(d, systemEntities.get(r).getPosition());
+		Vec2f p=Geometry.getPos(d, new Vec2f(0,0));
+		p.x*=2;
+		p.y*=2;
+		p.add(systemEntities.get(r).getPosition());
+		return p;
 	}
 	
 	public void spawn(String ship,String controller)

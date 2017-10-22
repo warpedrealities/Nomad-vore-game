@@ -37,25 +37,27 @@
 			<keyBlock heat="3">
 				<!--gate -->
 				<row>00000000</row>
-				<row>02222220</row>
-				<row>22111120</row>
-				<row>12111222</row>
+				<row>22222220</row>
+				<row>21111120</row>
+				<row>11111222</row>
 				<row>11111112</row>
-				<row>22111222</row>
-				<row>02111120</row>
-				<row>02222220</row>
+				<row>21111222</row>
+				<row>21111120</row>
+				<row>22222220</row>
 				<edge value="WEST" />
 				<widget x="5" y="4" name="invincible_door" info="zorrSanctum"
 					variable="99" />
 				<widget x="6" y="4" name="entranceW" variable="22" info="zorrSanctum" />
-				<widget x="4" y="6" name="mechanism" info="interaction/zorr/zorrColumnStars"
+				<widget x="4" y="6" name="mechanism" info="interaction/zorr/zorrColumnCalamity"
 					variable="32" />
-				<widget x="4" y="2" name="mechanism" info="interaction/zorr/zorrColumnVoid"
+				<widget x="3" y="6" name="mechanism" info="interaction/zorr/zorrColumnCrown"
 					variable="32" />
+				<widget x="2" y="6" name="mechanism" info="interaction/zorr/zorrColumnLament"
+					variable="32" />					
 				<widget x="4" y="4" name="itempile" info="note3" />
 			</keyBlock>
 
-			<keyBlock heat="3">
+			<keyBlock heat="2">
 				<!--shrine -->
 				<row>00000000</row>
 				<row>22222220</row>
@@ -70,7 +72,7 @@
 				<widget x="4" y="4" name="itempile" info="note1" />
 			</keyBlock>
 
-			<keyBlock heat="3">
+			<keyBlock heat="2">
 				<!--shrine -->
 				<row>00000000</row>
 				<row>22222220</row>
@@ -84,7 +86,20 @@
 				<widget x="2" y="4" name="itempile" info="amulet" />
 				<widget x="4" y="4" name="itempile" info="note2" />
 			</keyBlock>
-
+			
+			<keyBlock heat="2">
+				<!--shrine -->
+				<row>00000000</row>
+				<row>22222220</row>
+				<row>24141420</row>
+				<row>21111121</row>
+				<row>21111111</row>
+				<row>21111122</row>
+				<row>24141420</row>
+				<row>22222220</row>
+				<edge value="EAST" />
+				<widget x="2" y="4" name="itempile" info="amulet" />
+			</keyBlock>
 			<keyBlock heat="3">
 				<!--treasure room -->
 				<row>00211200</row>
@@ -118,6 +133,7 @@
 			</lootTable>
 
 			<lootTable identity="specialchest">
+				<loot item="questItem" chance="1.0" unique="3" addendum="zorrRejuvenator" />			
 				<lootSubTable chance="1" file="resource_tier_1" />
 				<lootSubTable chance="0.5" file="resource_tier_1" />
 				<lootSubTable chance="1" file="consumable_Tier_1" />
@@ -146,16 +162,17 @@
 			</lootTable>
 
 			<lootTable identity="amulet">
-				<loot item="amulet" chance="1.0" unique="3" addendum="stars" />
-				<loot item="amulet" chance="1.0" unique="3" addendum="void" />
+				<loot item="questItem" chance="1.0" unique="3" addendum="zorrCalamity" />
+				<loot item="questItem" chance="1.0" unique="3" addendum="zorrCrown" />
+				<loot item="questItem" chance="1.0" unique="3" addendum="zorrLament" />	
 			</lootTable>
 
 		</blockDungeon>
-
+		
 		<SeedNPCs min="8" max="16" name="AlphaMinoris_II/zorr/indoor raptor" />
 		<SeedNPCs min="4" max="8" name="AlphaMinoris_II/zorr/gold raptor" />
 		<SeedNPCs min="6" max="10" name="AlphaMinoris_II/zorr/raijin" />
-
+		
 	</mapgen>
 
 </zone>

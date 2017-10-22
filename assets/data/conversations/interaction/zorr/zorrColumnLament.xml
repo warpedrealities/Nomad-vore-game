@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="zorrDoor"
+			value="3" />	
+		<text>
+			The slot on this column contains an amulet with the image of a skull on it. The amulet is now tightly clasped by its ancient mechanisms, it'd be devilishly tricky to remove it now.
+		</text>
+		<choice destination="end" text="leave it be" />
+	</page>
+	
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="amulet"
+			value="1" />
+		<text>
+			The slot on this column contains an amulet held in its slot. The amulet has the image of a skull on it. You could remove it if you wish.
+		</text>
+		<choice destination="removeLament" text="remove the amulet"/>
+		<choice destination="end" text="leave it be" />
+	</page>	
+	
+	<page ID="removeLament">
+	<text>
+	You decide to remove the amulet of the skull from its slot in the column. It comes out easily, maybe you'll try something else.
+	</text>
+	<effect type="giveitem" value="1" item="questItem" addendum="zorrLament"/>
+	<effect type="incrementglobalflag" flag="zorrDoor" value="-1" />	
+	<effect type="setlocalflag" flag="amulet" value="0" />	
+	<choice destination="end" text="leave it be" />	
+	</page>
+
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="amulet"
+			value="2" />
+		<text>
+			The slot on this column contains an amulet held in its slot. The amulet has the image of a crown on it. You could remove it if you wish.
+		</text>
+		<choice destination="removeCrown" text="remove the amulet"/>		
+		<choice destination="end" text="leave it be" />
+	</page>		
+	
+	<page ID="removeCrown">
+	<text>
+	You decide to remove the amulet of the crown from its slot in the column. It comes out easily, maybe you'll try something else.
+	</text>
+	<effect type="giveitem" value="1" item="questItem" addendum="zorrCrown"/>	
+	<effect type="setlocalflag" flag="amulet" value="0" />	
+	<choice destination="end" text="leave it be" />	
+	</page>	
+	
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="amulet"
+			value="3" />
+		<text>
+			The slot on this column contains an amulet held in its slot. The amulet has the image of a blazing circle on it. You could remove it if you wish.
+		</text>
+		<choice destination="removeCataclysm" text="remove the amulet"/>	
+		<choice destination="end" text="leave it be" />
+	</page>			
+	
+	<page ID="removeCataclysm">
+	<text>
+	You decide to remove the amulet of the fire ringed circle from its slot in the column. It comes out easily, maybe you'll try something else.
+	</text>
+	<effect type="giveitem" value="1" item="questItem" addendum="zorrCalamity"/>
+	<effect type="setlocalflag" flag="amulet" value="0" />	
+	<choice destination="end" text="leave it be" />	
+	</page>		
+	
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="amulet"
+			value="0" />
+		<text>
+			The slot on this column is empty and open. It looks like it's the right size for something small to be slotted into it.
+		</text>
+		<choice destination="useCalamity" text="insert calamity amulet">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="calamity amulet" />
+		</choice>	
+		<choice destination="useCrown" text="insert crown amulet">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="crown amulet" />
+		</choice>		
+		<choice destination="useLament" text="insert lament amulet">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="lament amulet" />
+		</choice>	
+		<choice destination="end" text="leave it be" />
+	</page>		
+	
+	<page ID="useCalamity">
+	<text>
+		You slot the amulet into the slot, it looks like it fits. The blazing circle is nestled nicely into the hole. 
+	</text>
+		<effect type="removeitem" item="calamity amulet" value="1" />
+		<effect type="setlocalflag" flag="amulet" value="3" />	
+		<choice destination="end" text="leave it there for now" />		
+	</page>
+	
+	<page ID="useCrown">
+	<text>
+		You slot the amulet into the slot, it looks like it fits. The crown symbol is nestled snugly into the hole. 
+	</text>
+		<effect type="removeitem" item="crown amulet" value="1" />
+		<effect type="setlocalflag" flag="amulet" value="2" />	
+		<choice destination="end" text="leave it there for now" />		
+	</page>
+	
+	<page ID="useLament">
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="zorrDoor"
+			value="2" />	
+	<text>
+		You slot the amulet into the slot, it looks like it fits. The skull is ensconsed in a macabre fashion in the hole. As you fit it in there's a series of clicks from all the columns and a grinding noise as the door opens.
+	</text>
+		<effect type="setlocalflag" flag="amulet" value="1" />		
+		<effect type="removeitem" item="lament amulet" value="1" />
+		<effect type="incrementglobalflag" flag="zorrDoor" value="1" />	
+		<special effect="opendoor" lock="zorrSanctum" />	
+		<choice destination="end" text="leave it there for now" />		
+	</page>
+	
+	<page ID="useLament">
+	<text>
+		You slot the amulet into the slot, it looks like it fits. The skull is ensconsed in a macabre fashion in the hole.
+	</text>
+		<effect type="removeitem" item="lament amulet" value="1" />
+		<effect type="setlocalflag" flag="amulet" value="1" />	
+		<effect type="incrementglobalflag" flag="zorrDoor" value="1" />		
+		<choice destination="end" text="leave it there for now" />		
+	</page>	
+	
+</Conversation>

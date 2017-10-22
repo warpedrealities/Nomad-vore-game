@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text> The scarab machine is disabled and lies haphazard and spread limbed in the sand. Seems a shame after it'd been operational for all this time to lay it low. But it was a rather dangerous 'bot.
+		</text>
+		<choice destination="extractComputer"
+			text="Try to remove its computational components." />
+		<choice destination="extractPower" text="Try to remove the power unit"/> 
+		<choice destination="repairPower" text="attempt to resurrect the scarab machine using a programmed comp valve and have it recharge your equipment">
+			<condition operator="greaterthan" evaluate="CRAFTINGTOKEN" token="roboticist"
+			value="1" />	
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="computation valve" />
+		</choice>
+		<choice destination="end" text="leave it be" />
+	</page>	
+
+	<check ID="repairPower">
+		<test what="TECH" DC="15" />
+		<outcome destination="repairSuccess" />
+		<outcome destination="repairFail" />
+	</check>
+	
+	<page ID="repairSuccess">
+	<text>
+	You carefully program a computation valve to access a new subroutine then plug it into the scarab's brain afore repairing the systems around it. Once that's done you power it back on, a series of clicks and hums heralding the re-awakening the scarab which comes fully back into functionality with a faint glow re-lighting in its optic sensors.
+	</text>
+	<special effect="nonhostile" />
+	<special effect="healnpc" />	
+	<effect type="setlocalflag" flag="overdrive" value="1" />	
+	<choice destination="recharge" text="excellent, now, recharge my stuff robot i command you!"/>
+	<effect type="removeitem" item="computation valve" value="1" />		
+	</page>
+	
+	<page ID="recharge">
+	<text>
+	The scarab gives you free access to its charging ports. You have a chance to replenish your devices here. Once you're done it clambers away on its own inscrutable errands.
+	</text>
+	<choice destination="end" text="well, i got what i needed from it"/>
+	<effect type="giveEnergy" value="10" />	
+	</page>
+	
+	<page ID="repairFail">
+	<text>
+	You carefully program a computation valve and place it inside the brain of the repair bot before repairing the machine around it. By reconnecting and rewiring you think you've got the machine in the right state to power it back on and so do so. There's a click, hum and then a devastating blast as the scarab bot systems experience catastrophic failure. Well, chalk that one up as a learning experience. the scarab's useless now, even for parts.
+	</text>
+		<effect type="removeitem" item="computation valve" value="1" />	
+		<special effect="removenpc" />	
+		<choice destination="end" text="shit." />		
+	</page>
+	
+	<check ID="extractComputer">
+		<test what="TECH" DC="11" />
+		<outcome destination="computerSuccess" />
+		<outcome destination="computerFail" />
+	</check>
+
+	<page ID="computerFail">
+		<text>
+			You attempt to extract the computational parts of the scarab intact but
+			your lack of skill just leads to you breaking them in an inept attempt
+			to rip them out. They're useless now, but at least you have a few
+			wires and chunks of the scarab's casing as a souvenir. Or maybe it'll serve can as a paperweight, or raw material for future use.
+		</text>
+		<effect type="giveitem" value="2" item="scrap metal" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Ah well, better luck next time." />
+	</page>
+
+	<page ID="computerSuccess">
+		<text>
+			You attempt to extract the delicate computation valves. The devices take
+			a careful touch to extract from the surrounding systems but your steady
+			your hands and manage to successfully extract a computation valve
+			from the scarab's sophisticated brain, so to speak. To celebrate, you dismantle some of its
+			wiring and casing for some additional raw material.
+		</text>
+		<effect type="giveitem" value="2" item="computation valve" />
+		<effect type="giveitem" value="2" item="scrap metal" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Excellent!" />
+	</page>
+
+	<check ID="extractPower">
+		<test what="TECH" DC="15" />
+		<outcome destination="powerSuccess" />
+		<outcome destination="powerFail" />
+	</check>
+	
+	<page ID="powerFail">
+		<text>
+			You set about attempting to extricate the power supply from deep inside the machine. Alas somewhere in trying to disengage it you must of done something wrong, there's a flash of arcing as something shorts out in a spectacular fashion. The device now emanates a sickly aroma of burnt plastics and fried electronics..yeah, you might of bungled this.
+		</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="Damn it!" />
+	</page>
+
+	<page ID="powerSuccess">
+		<text>
+			You delicately remove the power supply from deep within the scarab's innards. Having to disengage various damaged electrical circuits from it and unhook it from the chassis takes a good deal of skill but such you have in ample amounts. You've acquired a battery from the robot's guts, huzzah.
+		</text>
+		<effect type="giveitem" value="2" item="battery" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Excellent." />
+	</page>
+</Conversation>

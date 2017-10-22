@@ -94,7 +94,16 @@ public class WidgetSpawner extends Widget {
 		// save radius
 		dstream.writeInt(radius);
 		// save script
-		ParserHelper.SaveString(dstream, script);
+		if (script!=null)
+		{
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, script);
+		}
+		else
+		{
+			dstream.writeBoolean(false);
+		}
+
 	}
 
 	public WidgetSpawner(DataInputStream dstream) throws IOException {
@@ -115,7 +124,10 @@ public class WidgetSpawner extends Widget {
 			data[i].load(dstream);
 		}
 		radius = dstream.readInt();
-		script = ParserHelper.LoadString(dstream);
+		if (dstream.readBoolean())
+		{
+			script = ParserHelper.LoadString(dstream);		
+		}
 	}
 
 	@Override
@@ -203,6 +215,10 @@ public class WidgetSpawner extends Widget {
 	}
 
 	private boolean checkScript() {
+		if (script==null)
+		{
+			return true;
+		}
 		Globals globals = JsePlatform.standardGlobals();
 
 		try {
