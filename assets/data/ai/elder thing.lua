@@ -10,6 +10,7 @@ function melee(controllable,sense,pos,hostile)
 		controllable:FollowPath()
 		else
 		controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+		controllable:FollowPath()		
 		end
 	end
 end

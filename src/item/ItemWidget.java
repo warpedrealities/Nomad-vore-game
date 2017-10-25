@@ -33,5 +33,8 @@ public class ItemWidget extends Item {
 			}
 		}
 	}
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

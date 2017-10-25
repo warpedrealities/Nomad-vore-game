@@ -25,5 +25,8 @@ public class ItemKey extends Item {
 			}
 		}
 	}
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

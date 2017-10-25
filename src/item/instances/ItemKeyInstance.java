@@ -62,4 +62,8 @@ public class ItemKeyInstance extends Item {
 		ParserHelper.SaveString(dstream, lock);
 
 	}
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

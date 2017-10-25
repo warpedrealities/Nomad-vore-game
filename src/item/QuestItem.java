@@ -53,5 +53,8 @@ public class QuestItem extends Item {
 		m_weight=dstream.readFloat();
 		itemValue=dstream.readFloat();
 	}
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

@@ -101,5 +101,8 @@ public class ItemEquip extends Item implements ItemHasEnergy {
 	public boolean isStackEquip() {
 		return stackEquip;
 	}
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

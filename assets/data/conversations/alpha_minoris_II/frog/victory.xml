@@ -72,8 +72,8 @@
 			you push out, being able to only make indistinct handprints as you
 			shove out against the thick walls of her tummy.
 		</text>
+		<choice destination="struggle" text="try to escape her belly by force" />	
 		<choice destination="submit" text="get comfortable and get digested" />
-		<choice destination="struggle" text="try to escape her belly by force" />
 	</page>
 
 	<page ID="submit">

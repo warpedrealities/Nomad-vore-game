@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import shared.ParserHelper;
 import item.Item;
+import item.ItemAmmo;
 import item.ItemHasEnergy;
 import item.Item.ItemUse;
 
@@ -77,5 +78,16 @@ public class ItemDepletableInstance extends Item {
 	public float getItemValue() {
 		return m_item.getItemValue();
 	}
-
+	
+	public boolean canStack()
+	{
+		if (m_energy==m_itemenergy.getEnergy().getMaxEnergy())
+		{
+			if (m_itemenergy.getEnergy().getMaxEnergy()==1||ItemAmmo.class.isInstance(m_item))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 }

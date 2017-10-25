@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="marauder.png" />
+	<name>Desert Marauder</name>
+	<description></description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="6" />
+		<attribute attribute="PARRY" value="2" />		
+		<attribute attribute="WILLPOWER" value="4" />		
+		<combatMove name="claw" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<missText count="2">
+				<text>The raptor girl fails to claw TARGET</text>
+				<text>The raptor girl's kick does not connect with TARGET </text>
+			</missText>
+			<hitText count="2">
+				<text>The raptor girl claws TARGET for VALUE damage</text>
+				<text>The raptor girl kicks TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="rifle butt" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0" threatening="true">
+			<effectDamage type="KINETIC" minValue="5" maxValue="10"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>The raptor girl fails to claw TARGET</text>
+				<text>The raptor girl's kick does not connect with TARGET </text>
+			</missText>
+			<hitText count="2">
+				<text>The raptor girl claws TARGET for VALUE damage</text>
+				<text>The raptor girl kicks TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>		
+		<itemDrop chance="20" item="Longneck breachloader" />
+		<itemDrop chance="50" item="bag of rifle rounds" />
+		<itemDrop chance="50" item="gourd" />		
+	</rpg>
+	<disposition value="25" />
+	<defeated conversation="alpha_minoris_II/raptor/defeat" />
+	<seduced conversation="alpha_minoris_II/raptor/seduced" />
+	<victory conversation="alpha_minoris_II/raptor/victory" />
+	<seducer conversation="alpha_minoris_II/raptor/victory" />
+	<captive conversation="alpha_minoris_II/raptor/captive" />	
+	<controller AI="raptor" />
+	<respawn delay="2000" />
+	<faction value="monster" />
+</NPC>

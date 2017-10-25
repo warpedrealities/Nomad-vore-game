@@ -6,7 +6,8 @@
 		<!--<choice destination="sample" text="Take a sample for research purposes." />
 			<assertnot evaluate="hasEntry" entry="lifeforms/mushroommother.xml"/>
 			<assertnot evaluate="hasResearch" research="mushroommother"/>
-		<choice destination="end" text="Leave her be." />-->
+		-->
+		<choice destination="end" text="Leave her be." />
 	</page>
 
 	<page ID="sample">

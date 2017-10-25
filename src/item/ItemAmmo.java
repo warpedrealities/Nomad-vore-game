@@ -43,4 +43,10 @@ public class ItemAmmo extends Item implements ItemHasEnergy {
 		return m_energy;
 	}
 
+	@Override
+	public boolean canStack() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

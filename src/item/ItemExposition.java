@@ -34,5 +34,8 @@ public class ItemExposition extends Item {
 		}
 
 	}
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

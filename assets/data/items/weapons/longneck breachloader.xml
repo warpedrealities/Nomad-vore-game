@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ItemWeapon name="Longneck breachloader" weight="10" value="1000">
+<tagSet value="A"/>
+<description>
+A long barreled break action rifle. Has iron sights and is suitable for inflicting a significant amount of damage on whoever you choose to fire it at.  (A)
+</description>
+<modifier>
+
+</modifier>
+<combatMove name="shoot" ammoCost="1" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" actionCost="4" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="6" maxValue="12" modifier="NONE"/>
+<missText count="1">
+<text>you fail to shoot TARGET</text>
+</missText>
+<hitText count="1">
+<text>you shoot TARGET for VALUE kinetic damage</text>
+</hitText>
+</combatMove>
+<energy refill="bag of rifle bullets" efficiency="1" capacity="1"/>
+</ItemWeapon>

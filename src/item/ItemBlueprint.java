@@ -29,5 +29,8 @@ public class ItemBlueprint extends Item {
 			}
 		}
 	}
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

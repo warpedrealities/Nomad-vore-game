@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemAmmo name="bullets" weight="2" value="150.0">
+<ItemAmmo name="bullets" weight="4" value="150.0">
 	<description>
 		A box of bullets, contains up to 50 of them. Cause sometimes one needs
 		to shoot somebody, or a lot of somebodies.

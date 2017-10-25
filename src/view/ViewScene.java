@@ -455,7 +455,10 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	@Override
 	public void Update(float dt) {
 		m_dropdown.update(dt);
-		m_window.update(dt);
+		if (!m_dropdown.getVisible())
+		{
+			m_window.update(dt);			
+		}
 		if (m_dropdown.getVisible() == false && m_mode.getValue()) {
 			m_mode = DropdownHandler.handleClosure(m_mode, Universe.getInstance().getPlayer(), m_buttons[4]);
 			m_buttons[4].setActive(true);

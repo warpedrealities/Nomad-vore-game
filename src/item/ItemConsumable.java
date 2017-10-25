@@ -76,5 +76,9 @@ public class ItemConsumable extends Item {
 	public int getNumEffects() {
 		return effectList.size();
 	}
-
+	
+	@Override
+	public boolean canStack() {
+		return true;
+	}
 }

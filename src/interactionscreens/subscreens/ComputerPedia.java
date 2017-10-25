@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import gui.Button;
 import gui.MultiLineText;
+import gui.ScrollableMultiLineText;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
@@ -22,7 +23,7 @@ public class ComputerPedia implements Callback, MyListener {
 	Window window;
 	int index;
 	Window view;
-	MultiLineText description;
+	ScrollableMultiLineText description;
 
 	public ComputerPedia(int[] textures, Callback callback) {
 		// TODO Auto-generated method stub
@@ -34,7 +35,7 @@ public class ComputerPedia implements Callback, MyListener {
 
 		window = new Window(new Vec2f(-15, -16), new Vec2f(4, 5), textures[1], true);
 		view = new Window(new Vec2f(-11, -16), new Vec2f(31, 32), textures[1], true);
-		description = new MultiLineText(new Vec2f(0.5F, 31.5F), 76, 98, 0.8F);
+		description = new ScrollableMultiLineText(new Vec2f(0.5F, 31.5F), 76, 98, 0.8F,new Vec2f(19,12));
 
 		view.add(description);
 		entryList = new List(new Vec2f(-20, -11), 33, textures[5], textures[4], this, 9, true);
@@ -51,6 +52,7 @@ public class ComputerPedia implements Callback, MyListener {
 	}
 
 	public void update(float DT) {
+		view.update(DT);
 		window.update(DT);
 		entryList.update(DT);
 	}

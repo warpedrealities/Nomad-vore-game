@@ -21,6 +21,7 @@ import item.ItemEquip;
 import item.ItemHasEnergy;
 import item.ItemWeapon;
 import item.ItemWidget;
+import item.handlers.ReloadingHandler;
 import item.Item.ItemUse;
 import item.instances.ItemBlueprintInstance;
 import item.instances.ItemContainerInstance;
@@ -608,49 +609,13 @@ public class InventoryScreen extends Screen implements Callback {
 	
 	void Reload(ItemDepletableInstance instance)
 	{
-		ItemHasEnergy item=(ItemHasEnergy)instance.getItem();
-		for (int i=0;i<m_player.getInventory().getNumItems();i++)
+		if (ReloadingHandler.reload(instance, m_player.getInventory().getItems()))
 		{
-			if (ItemAmmo.class.isInstance(m_player.getInventory().getItem(i).getItem()))
-			{
-				if (item.getEnergy().getRefill().contains(m_player.getInventory().getItem(i).getItem().getName()))
-				{
-					ItemDepletableInstance ammo=(ItemDepletableInstance)m_player.getInventory().getItem(i);
-					if (ammo.getEnergy()>0)
-					{
-						m_player.TakeAction();
-						//drain item to try and replenish that which we're recharging
-						float Eneed=item.getEnergy().getMaxEnergy()-instance.getEnergy();
-						float Eavailable=((float)ammo.getEnergy())*item.getEnergy().getrefillrate();
-						if (Eneed>=Eavailable)
-						{
-							//drain ammo entirely
-							ammo.setEnergy(0);
-							instance.setEnergy(instance.getEnergy()+Eavailable);
-							if (DisposeAmmo((ItemHasEnergy)ammo.getItem()))
-							{
-								Item item0=null;
-
-									item0=m_player.getInventory().getItem(i);
-									item0=m_player.getInventory().RemoveItem(item0);
-								//time tick
-								
-								m_player.TakeAction();
-								
-								//reset list
-								ResetList();
-							}
-						}
-						else
-						{
-							float Edrain=Eneed/item.getEnergy().getrefillrate();
-							ammo.setEnergy(ammo.getEnergy()-Edrain);
-							instance.setEnergy(item.getEnergy().getMaxEnergy());
-						}
-					}
-				}
-			}
-		}	
+			m_player.TakeAction();
+			//reset list
+			ResetList();
+		}
+		m_player.getInventory().recalc();
 		m_callback.UpdateInfo();
 		calculateWarning();
 	}

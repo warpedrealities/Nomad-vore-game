@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="bag of rifle rounds" weight="0.5" value="150.0">
+	<description>
+	A small bag of loose rifle rounds.
+	</description>
+	<energy capacity="6" />
+</ItemAmmo>

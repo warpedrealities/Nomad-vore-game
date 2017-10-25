@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		The marauding lion girl looms over your fallen form with a grin "You take what you beat, and that means you're mine. I'm going to enjoy you." she says, in a way that sounds worryingly but somewhat predictably predatory.
+		</text>
+		<choice destination="oralvore0" text="it's just what it sounds like">
+		<preference fetish="oralvore" />	
+		</choice>
+		<choice destination="herm0" text="not what it sounds like, she's whipping something out">
+		<preference fetish="herms" />		
+		</choice>
+	</page>	
+
+	<page ID="oralvore0">
+	<text>
+	The tall and predatory cat 	<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				takes her time to undress you. Her gaze roving over your body as she strips you and you struggle futilely. Once she has you entirely exposed and bared in front of her she 
+			</conditional>
+			smirks and lets her gaze drink in the sight afore she licks her lips "Oh outlander, you look delicious, if you taste as good as you look." she lets out a rumbling growl of delight and pulls you up into her embrace. Her ample bosom pressing against you as she licks over your face.
+	</text>
+	<choice destination="oralvoreA1" text="$Or you could not eat me? maybe?"/>
+	</page>
+	
+	<page ID="oralvoreA1">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="herm0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+</Conversation>

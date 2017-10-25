@@ -51,6 +51,9 @@ public class ItemContainer extends Item {
 		return containedTag;
 	}
 	
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 
 }

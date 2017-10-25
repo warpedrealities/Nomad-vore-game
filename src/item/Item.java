@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import shared.ParserHelper;
 
-public class Item implements Comparable {
+public abstract class Item implements Comparable {
 
 	private int UID;
 	protected String m_name, m_description;
@@ -71,4 +71,5 @@ public class Item implements Comparable {
 		return tag;
 	}
 
+	public abstract boolean canStack();	
 }

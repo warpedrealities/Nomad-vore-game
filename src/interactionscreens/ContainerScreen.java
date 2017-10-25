@@ -104,6 +104,7 @@ public class ContainerScreen extends Screen implements Callback {
 			take();
 			break;
 		case 3:
+			container.sort();
 			player.calcMove();
 			callback.Callback();
 			break;

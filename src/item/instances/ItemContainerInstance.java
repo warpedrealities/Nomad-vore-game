@@ -156,5 +156,8 @@ public class ItemContainerInstance extends Item {
 	public float getItemValue() {
 		return hostItem.getItemValue();
 	}
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

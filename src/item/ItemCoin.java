@@ -29,5 +29,9 @@ public class ItemCoin extends Item {
 	public void setCount(int count) {
 		this.count = count;
 	}
-
+	
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

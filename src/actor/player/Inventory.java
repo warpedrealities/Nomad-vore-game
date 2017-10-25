@@ -2,6 +2,7 @@ package actor.player;
 
 import item.Item;
 import item.ItemHasEnergy;
+import item.handlers.StackHandler;
 import item.instances.ItemBlueprintInstance;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
@@ -63,6 +64,8 @@ public class Inventory {
 	}
 
 	boolean Stack(Item item) {
+		return StackHandler.handleStacking(item, m_items);
+		/*
 		if (ItemExpositionInstance.class.isInstance(item)) {
 			return false;
 		}
@@ -107,6 +110,7 @@ public class Inventory {
 
 		}
 		return false;
+		*/
 	}
 
 	public Item RemoveItemStack(Item item) {

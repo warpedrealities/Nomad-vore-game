@@ -5,12 +5,14 @@ import item.Item;
 import item.ItemCoin;
 import item.ItemConsumable;
 import item.ItemResource;
+import item.handlers.StackHandler;
 import item.instances.ItemStack;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -26,7 +28,7 @@ import actorRPG.RPG_Helper;
 public class WidgetContainer extends WidgetBreakable {
 
 	private int maxWeight = 100;
-	private ArrayList<Item> containedItems;
+	private List<Item> containedItems;
 	private float containedWeight;
 
 	public WidgetContainer(int sprite, String description, String name, Item[] contains, int hp, int[] resistances) {
@@ -34,7 +36,7 @@ public class WidgetContainer extends WidgetBreakable {
 
 	}
 
-	public void setItems(ArrayList<Item> items) {
+	public void setItems(List<Item> items) {
 		containedItems = items;
 		CalcWeight();
 	}
@@ -51,6 +53,8 @@ public class WidgetContainer extends WidgetBreakable {
 	}
 
 	private boolean stack(Item item) {
+		return StackHandler.handleStacking(item, containedItems);
+		/*
 		if (ItemResource.class.isInstance(item) || ItemConsumable.class.isInstance(item)) {
 			Item id = item.getItem();
 			for (int i = 0; i < containedItems.size(); i++) {
@@ -72,6 +76,7 @@ public class WidgetContainer extends WidgetBreakable {
 		}
 
 		return false;
+		*/
 	}
 
 	public boolean addItem(Item item) {
@@ -131,7 +136,7 @@ public class WidgetContainer extends WidgetBreakable {
 		return (int) containedWeight;
 	}
 
-	public ArrayList<Item> getItems() {
+	public List<Item> getItems() {
 		return containedItems;
 	}
 
@@ -244,6 +249,10 @@ public class WidgetContainer extends WidgetBreakable {
 
 	public int getMaxWeight() {
 		return maxWeight;
+	}
+
+	public void sort() {
+		containedItems.sort(null);
 	}
 
 }

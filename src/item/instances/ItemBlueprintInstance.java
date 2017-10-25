@@ -65,4 +65,8 @@ public class ItemBlueprintInstance extends Item {
 		ParserHelper.SaveString(dstream, item.getName());
 		ParserHelper.SaveString(dstream, recipe);	
 	}
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

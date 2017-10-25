@@ -6,6 +6,7 @@ import java.io.IOException;
 import shared.ParserHelper;
 import item.Item;
 import item.Item.ItemUse;
+import nomad.Universe;
 
 public class ItemStack extends Item {
 
@@ -39,7 +40,7 @@ public class ItemStack extends Item {
 	public Item takeItem()
 	{
 		m_count--;
-		return m_item;
+		return Universe.getInstance().getLibrary().getItem(m_item.getName());
 	}
 	
 	public void setCount(int count)
@@ -80,5 +81,10 @@ public class ItemStack extends Item {
 		ParserHelper.SaveString(dstream, m_item.getName());
 
 		dstream.write(m_count);
+	}
+	
+	@Override
+	public boolean canStack() {
+		return false;
 	}
 }

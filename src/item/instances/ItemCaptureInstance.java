@@ -67,5 +67,8 @@ public class ItemCaptureInstance extends Item {
 			dstream.writeBoolean(false);
 		}
 	}
-
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }

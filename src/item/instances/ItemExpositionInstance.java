@@ -66,4 +66,8 @@ public class ItemExpositionInstance extends Item {
 		ParserHelper.SaveString(dstream, exposition);
 
 	}
+	@Override
+	public boolean canStack() {
+		return false;
+	}
 }
