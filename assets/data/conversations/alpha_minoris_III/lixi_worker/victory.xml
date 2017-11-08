@@ -18,7 +18,7 @@
 			that her tail is capable of gobbling you up, will wonders never
 			cease.
 		</text>
-		<choice destination="tailvore0" text="being eaten by a tail" />
+		<choice destination="tailvore1" text="being eaten by a tail" />
 	</page>
 
 	<page ID="tailvore1">

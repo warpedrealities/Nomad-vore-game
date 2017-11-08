@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="mountains0.png">
+	<tileset count-x="8" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="0" movement="0"> rocky ground </tile>
+		<tile sprite="3" vision="0" movement="1"> boulder</tile>	
+		<tile sprite="21" vision="0" movement="1"> shrub</tile>		
+		<tile sprite="5" vision="1" movement="2" smart="true"> mountain rocks</tile>			
+	</tileset>
+	<description>
+	You've entered the mountains, narrow clefts and steep cliffs all about you in a perilous jumble. It'll be tricky to navigate, and its wind swept rocky ground is harsh and unfertile.
+	</description>
+	<transition direction="south">saurian village</transition>	
+	<mapgen>
+	<prefab positionX="32" positionY="32" width="1" height="1">
+			<row>2</row>
+		</prefab>
+		<placeWidget x="32" y="32" name="SPAWNER">
+			<radius value="30" />
+			<spawnLimit value="1" />
+			<script value="alphaminorisbattlespawns" />
+			<spawns count="1">
+				<data npc="AlphaMinoris_II/draconian" min="1" max="1" chance="25" />
+			</spawns>
+		</placeWidget>	
+	<perlin>
+			<band low="-1.0" high="-0.3">
+				<floodfill tile="4" />
+			</band>
+			<band low="-0.3" high="0.3">
+				<noise tile="2" scarcity="22" />	
+				<noise tile="3" scarcity="22" />				
+				<floodfill tile="1">
+				<SeedNPCs min="8" max="12" name="AlphaMinoris_II/TyrantLizard"/>
+				<SeedNPCs min="16" max="24" name="AlphaMinoris_II/Salamander"/>							
+				</floodfill>
+			</band>			
+			<band low="0.3" high="1.0">
+				<floodfill tile="4" />
+			</band>
+	</perlin>
+	<floodfill tile="3"></floodfill>
+	<auditpaths carve="4" replace="1" />	
+	<walloff wall="1" sides="south" />	
+	<walloff wall="4" sides="northeastwest" />
+	</mapgen>
+
+</zone>

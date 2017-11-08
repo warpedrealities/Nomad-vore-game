@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="orangeT.png" />
+	<name>Tyrant Lizard</name>
+	<description>
+	This fully scaled humanoid stands some seven feet tall with a muscular physique and an air of menace yet maintains many elements of a feminine build especially in the form of finescaled mammary glands and curved hips and buttocks. But yet her head is that of some primordial predator, with a tooth filled jaw stretching outwards and able to gape like great doors when called upon to bellow or bite. Coupled with the monsters claws this makes it look all the more formidable.
+	</description>
+	<rpg>
+		<experiencevalue value="35" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="60" />
+		<stat stat="RESOLVE" value="60" />
+		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="0" threatening="true">
+			<missText count="2">
+				<text>The tyrant lizard tries to claw TARGET but is fended off</text>
+				<text>TARGET evades the tyrant lizard's attack </text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET is clawed by the tyrant lizard for VALUE damage</text>
+				<text>The tyrant lizard bites TARGET for VALUE damage</text>
+			</hitText>
+			<effectDamage type="KINETIC" minValue="4" maxValue="6"
+				modifier="STRENGTH" />
+		</combatMove>
+	</rpg>
+
+	<respawn delay="2000" />
+
+	<defeated conversation="alpha_minoris_II/tyrant Lizard/defeat" />
+	<seduced conversation="alpha_minoris_II/tyrant Lizard/defeat" />
+	<victory conversation="alpha_minoris_II/tyrant Lizard/victory" />
+	<seducer conversation="alpha_minoris_II/tyrant Lizard/victory" />
+	<controller AI="aggressiveMelee" />
+	<faction value="monster" />
+</Harpy>

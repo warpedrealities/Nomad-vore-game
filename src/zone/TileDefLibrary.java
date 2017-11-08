@@ -60,7 +60,6 @@ public class TileDefLibrary {
 	}
 
 	public void Save(DataOutputStream dstream) throws IOException {
-		// TODO Auto-generated constructor stub
 		dstream.writeInt(m_tileCountX);
 		dstream.writeInt(m_tileCountY);
 		dstream.write(m_tiledefinitions.size());

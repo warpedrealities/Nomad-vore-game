@@ -7,6 +7,7 @@ import nomad.Universe;
 import spaceship.PlayerShipController;
 import spaceship.Spaceship;
 import spaceship.boarding.BoardingHelper;
+import spaceship.stats.SpaceshipAnalyzer;
 import view.ViewScene;
 import vmo.Game;
 
@@ -49,6 +50,12 @@ public class NpcShipControllerSense {
 	
 	public void toView()
 	{
+		if (getPlayer().getShipStats()!=null)
+		{
+			new SpaceshipAnalyzer().decomposeResources(getPlayer().getShipStats(), getPlayer());
+			getPlayer().setShipStats(null);
+			getPlayer().setShipController(null);			
+		}
 		Game.sceneManager.SwapScene(new ViewScene());
 	}
 

@@ -46,4 +46,5 @@
 		libido.
 	</text>
 	<requirement name="zetamorph" count="1" />
+	<recipe_reward recipe="cockmerge injection"/>
 </entry>

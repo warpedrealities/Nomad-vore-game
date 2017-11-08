@@ -41,7 +41,7 @@
 			<floodfill tile="1">
 				<Seedwidgets min="6" max="12" name="crystaldeposit" />
 
-				<SeedNPCs min="8" max="12" name="AlphaMinoris_III/lixi_breeder">
+				<SeedNPCs min="6" max="10" name="AlphaMinoris_III/lixi_breeder">
 				</SeedNPCs>
 				<SeedNPCs min="8" max="12" name="AlphaMinoris_III/lixi_worker">
 				</SeedNPCs>

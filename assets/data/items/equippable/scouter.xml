@@ -4,8 +4,8 @@
 	<description>
 		A headset equipped with advanced scanning systems to allow one to analyze a target's power level. Displays information on the target's health level onto an eyepiece when the scan move is used.
 	</description>	
-	<combatMove name="scan" ammoCost="1" timeCost="2" pattern="RANGED" moveType="OTHER">
-			<effectAnalyze attribute="SCIENCE">
+	<combatMove name="scan" ammoCost="1" bonusToHit="8" timeCost="2" pattern="RANGED" actionCost="4" moveType="OTHER" bonusAttribute="RANGED">
+			<effectAnalyze control="SCIENCE">
 			<stat stat="HEALTH" vague="1" detail="3" precise="5"/>
 			</effectAnalyze>
 			<missText count="1">

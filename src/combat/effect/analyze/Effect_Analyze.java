@@ -9,16 +9,19 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import actor.Actor;
+import actorRPG.RPG_Helper;
 import combat.effect.Effect;
 import view.ViewScene;
 
 public class Effect_Analyze extends Effect {
 
 	private List<Analysis_Type> actions;
+	private int control;
 	private String tag;
 	
 	public Effect_Analyze(Element element)
 	{
+		control=RPG_Helper.AttributefromString(element.getAttribute("control"));
 		actions=new ArrayList<Analysis_Type>();
 		if (element.getAttribute("tag").length()>0)
 		{
@@ -51,7 +54,7 @@ public class Effect_Analyze extends Effect {
 		}
 		for (int i=0;i<actions.size();i++)
 		{
-			actions.get(i).analyze(target, origin.getRPG().getAttribute(actions.get(i).getAttribute()));
+			actions.get(i).analyze(target, origin.getRPG().getAttribute(control));
 		}
 		return 0;
 	}

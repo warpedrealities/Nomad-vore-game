@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<assertion evaluate="operatorOr">
+		<preference fetish="oralvore" />
+		</assertion>		
+		<text>
+		The lizard rumbles and runs her tongue over her teeth as she pins you to the ground beneath her. She leans down to sniff at your scent and let out a more threatening growl as she considers what to do with you.
+		</text>
+		<choice destination="oralvore0" text="just gonna eat you">
+		<preference fetish="oralvore" />		
+		</choice>
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	The menacing lizard grabs ahold of your body and shifts her feet off your back afore lifting you up in front of her face. Then she brings you closer to her snout and Her jaws part gaping wide and for a moment you worry that she might be about to bite down on you with those wicked teeth of hers. But instead she shoves you headfirst into her throat, her teeth clamping down around your chest.. dangerously close to cutting you if she applies more pressure. The beastial reptilian woman gulping harshly and feeding you into her mouth and down her throat, those long reptilian jaws stretching and re-seating themselves around your body as she scarfs you down more and more.
+	</text>
+	<choice destination="oralvore1" text="treated as no more than a snack"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You attempt to struggle out of the beasts grasp but the dinowoman is far too strong, your upper body disappearing past her jaws as she swallows you whole. Your legs flailing around as she lets go of you and knocks her head back, those jaws stretching to gape wide as she takes meaty swallows and flexes her jaws. Your predator working your legs down her throat as your waving legs are gradually constrained. The steaming depths of her gut welcoming you as you're forced down inside, squeezed and curled in her belly as she devours you unceremoniously and entirely.
+	</text>
+	<choice destination="struggle" text="can't end this way"/>
+	<choice destination="submit" text="it can end this way"/>
+	</page>
+	
+	<check ID="struggle">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>
+	
+	<page ID="struggleEscape">
+	<text>
+	You find yourself packed away entirely in the beastly woman's gut, but just cause you've been swallowed whole is no reason to give up and you shift around in the growling belly of the satiated reptile to turn around the rest of the way. Now you just need to shove your way up her throat and get past those teeth safely, you search around and shove at her innards until you've found and coaxed open the way back out of her belly, shoving yourself bodily up through her throat. The reptilian letting out disagreeable growls that you silence as you shove your hands up into her mouth and grab ahold of her jaws and force them apart. Your tight grip on her jaws between her teeth proving strong enough to keep her from closing your way out as you worm your way up out of her belly and give her a parting kick on the snout as you crash to the earth. She seems a bit stunned by this turn of events, best get clear.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+
+	<page ID="struggleDigest">
+	<text>
+	You find yourself packed away entirely in the beastly woman's gut, but just cause you've been swallowed whole is no reason to give up and you shift around in the growling belly of the satiated reptile to turn around the rest of the way. Now you just need to shove your way up her throat and get past those teeth safely, you search around and shove at her innards until you've found and coaxed open the way back out of her belly, shoving yourself bodily up through her throat. The dino woman letting out a growl as you try to escape..your hands sliding up her throat only to meet her tightly closed jaws, unable to get a grip with leverage to force her jaws apart you find yourself swallowed down again. Undeterred you try again, only to encounter the same problem and her hands clenching her belly tight to constrain you inside her as you're forced back down there.	
+	</text>
+	<choice destination="struggleGO" text="doomed"/>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	Your strength and determination waver as you're forced repeatedly back down into the dinosauroids belly until finally you give in, curling in a frustrated and helpless ball in her belly. You can feel the tyrant lizard walking around, her gait seemingly unburdened by your weight as you start to digest away inside of her. Her gurgling belly a relentless cauldron of enzymes that break you down steadily until the bulge of her gut goes round and still, your form liquidated and sloshed away. After but a little time more you're absorbed utterly by your predator, turned into mere nutrition for the beastial monsterwoman.
+	</text>
+	</gameover>
+
+	<page ID="submit">
+	<text>
+	Trapped in the depths of the primal reptilian you can't help but feel a certain sense of natural order in your predicament, she is your predator and you are her prey and in that you decide there's no use fighting against the way things should be. You wriggle around to get comfortable inside of her, finding her to be as unmindful of you as she would of any other food. And this to is right to you as her gut begins to gurgle around the meal bulging it out.
+	</text>
+	<choice destination="submitGO" text="get digested"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	The tyrant lizard wanders around unmindful of your fate or your weight. The creature's gut steadily gurgling you down as you stew in her enzymes, marinate in her stomach juices and finally melt into goop within her. The lizard's belly turning soft and round and shrinking down as your liquid remnants are soaked up by her insides. Just another prey encountering a powerful predator.
+	</text>
+	</gameover>
+	
+</Conversation>

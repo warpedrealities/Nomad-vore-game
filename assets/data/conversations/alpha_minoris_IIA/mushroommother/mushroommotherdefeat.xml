@@ -7,9 +7,63 @@
 			<assertnot evaluate="hasEntry" entry="lifeforms/mushroommother.xml"/>
 			<assertnot evaluate="hasResearch" research="mushroommother"/>
 		-->
+		
+		<choice destination="titfuck0" text="Glancing down at her prominent, heaving chest, you certainly got an idea for her. (Milky titfuck)"/>
+		
 		<choice destination="end" text="Leave her be." />
 	</page>
+	<!--written by andrea_crawford-->	
+	<page ID="titfuck0">
+	<text>
+	<conditional>
+	<assertion evaluate="slothasitem" slot="2" />	
+	You can see her shiver as you begin to peel out of your clothes. But only when your slowly hardening member, aroused by the promising sight of the female's motherly figure, is revealed does she lift her head up enough to look into your eyes with a shocked expression, her mouth forming a suprised, silent O.</conditional>
+	<conditional>
+	<assertnot evaluate="slothasitem" slot="2" />	
+	Her uncertainty is clear as you loom over her, clearly she does not know your intention. But seems to realize your perverse desires as she catches sight of your slowly hardening member, aroused by the promising sight of the female's motherly figure. The shroom matriarch lifting her head up enough to look into your eyes with a shocked expression, her mouth forming a suprised, silent O.</conditional>
+	The mushroom mother attempts to scramble away, pushing herself backwards on her arms with the help of her feet, but in her exhausted state she does not get very far. It only takes you a few steps to catch up with her after you discarded your armour, your now rigid shaft bobbing up and down as you walk.
+	</text>
+	<choice destination="titfuck1" text="Take a seat at the table."/>
+	</page>
+	
+	<page ID="titfuck1">
+	<text>
+	A last, futile attempt to scramble back to her feet is easily thwarted, and with a wide, lusty grin you push the matron back down onto the floor. "Didn't you want to draw my attention to those tits?" you taunt, settling down on her stomach as you grab one of the full orbs. Rich, creamy milk dribbles from its nipple as you squeeze it firmly. "You seemed so eager just a moment ago." It certainly gets the female's attention as you begin to roll the large mounds in your hands, your fingers sinking deep into the soft, grey flesh as you work her breasts over. They are like dough in your hands, large and warm, and you can hear the milk inside sloshing about under your ministrations. Every grope, every squeeze causes a bit of it to spill from the nipples, soon gathering in the deep valley of her cleavage and around her chest on the cavern floor.
+	</text>
+	<choice destination="titfuck2" text="Get the milk pumping."/>
+	</page>
+	
+	<page ID="titfuck2">
+	<text>
+	You play with her for a while, enjoying the softness of her massive breasts in your hands, and the quiet gasps and moans which your treatment elicits from her. But once a sufficient amount of her creamy, sweet-smelling milk has gathered on the mushroom mother's chest, you scoot closer. Warm and full by itself, albeit with a quite different load, your sac rests on her upper abdomen as you push your hard cock down into her cleavage. Hot and throbbing it rests on her pillows like on a waterbed, but gentle, rocking motions from your hips work it steadily deeper. Soon enough all but the base of your hard shaft has vanished, sunken deep into the matron's cleavage, bathed in her warm milk.
+	</text>
+	<choice destination="titfuck3" text="Try to make butter."/>
+	</page>
 
+	<page ID="titfuck3">
+	<text>
+	Now properly nestled between the grey mounds of titflesh, you start working her in earnest. Each bump of your hips against the mushroom mothers massive melons causes another gush of milk to bubble from her nipples, leaking over the breasts' full curves to seep into her cleavage. Slick, squishy sounds fill the cavern as you fuck her, grunts and moans echo back from the cold stone walls. The air is thick with the sweet smell of her milk and the heavy scent of your arousal, and she finally reaches up to interweave her grey fingers with yours and squeeze her milk-sloshing tits even tighter, allowing you to focus on pounding her wobbling chest.	
+	</text>
+	<choice destination="titfuck4" text="Adding your own cream."/>
+	</page>
+	
+	<page ID="titfuck4">
+	<text>
+	The pool of white liquid below you two has gained an impressive size by now, and you have to be careful not to slip as you kneel in the warm milk. Your hands work the female's breasts with strong squeezes supported by her own, and the mushroom mother has leaned her head back on the cavern floor, cushioned by the large, red cap, her eyes closed in delight. The malleable, milk-coated flesh of her grey tits easily shifts and forms around your hard member as you move, providing a tight, warm tunnel to sheath your cock into. But all the soft friction and warmth of the grey breasts around your cock, the sweet, milky smell and quiet gasps and moans eventually drive you towards a creamy finale. Deep inside her cleave you erupt, with enough force that one spurt even makes it out at the top, splashing against the surprised mushroom mother's chin. But even though you keep pumping, keep emptying your hot, bubbling seed into her bosom, nothing more of it escapes.
+	</text>
+	<choice destination="titfuck5" text="Leave before things turn sour."/>
+	</page>
+	
+	<page ID="titfuck5">
+	<text>
+	Given that all of your cum must have gone somewhere, you decide it is better to stop at this point and leave, before any more of yourself gets lost in that cleavage. With a satisfied groan you get back to your feet, leaving the exhausted mushroom mother behind on the rough cavern floor. She is still holding her breasts, squeezing those wonderful, grey tits idly with a dreamy expression on her face. Looks like she enjoyed her treatment as much as you did. 	<conditional>
+	<assertion evaluate="slothasitem" slot="2" />Redressing yourself,</conditional> you leave her behind. There is still much to explore on this alien world.
+	</text>
+		<choice destination="end" text="carry on" />
+		<special effect="healnpc" />
+		<special effect="nonhostile" />	
+	</page>
+	
 	<page ID="sample">
 		<text>
 		Holding an emptied can of space soda to the mother's nipple, you quickly fill

@@ -116,13 +116,12 @@ public class Inventory {
 	public Item RemoveItemStack(Item item) {
 		ItemStack stack = (ItemStack) item;
 
-		stack.setCount(stack.getCount() - 1);
-
+		Item r=stack.takeItem();
 		if (stack.getCount() == 0) {
 			m_items.remove(item);
 		}
 		m_weight -= item.getItem().getWeight();
-		return stack.getItem();
+		return r;
 	}
 
 	public Item RemoveItem(Item item) {

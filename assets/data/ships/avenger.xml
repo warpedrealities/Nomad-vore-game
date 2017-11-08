@@ -4,7 +4,7 @@
 	<shipstats>
 		<movecost value="20" />
 		<hullpoints value="50" />
-		<thrustcost value="1.5" />
+		<thrustcost value="3" />
 		<manouver value="2" />
 	</shipstats>
 
@@ -84,7 +84,15 @@
 			</placeWidget>
 
 			<placeWidget x="3" y="1" name="slot">
-				<contains name="modules/cargocontainer_ship" />
+				<contains name="modules/cargocontainer_ship">
+					<lootTable>
+						<loot item="explosive grenade" chance="1.0" />
+						<loot item="explosive grenade" chance="1.0" />
+						<loot item="bullets" chance="1.0" />
+						<loot item="bullets" chance="1.0" />
+						<loot item="bullets" chance="1.0" />
+					</lootTable>				
+				</contains>
 			</placeWidget>
 
 			<placeWidget x="5" y="1" name="slot">
@@ -92,8 +100,8 @@
 			</placeWidget>
 
 			<placeWidget x="1" y="1" name="slot">
-				<contains name="modules/interplanetary reactor">
-					<resource type="FUEL" value="40" />
+				<contains name="modules/fueltank">
+					<resource type="FUEL" value="150" />
 				</contains>
 			</placeWidget>
 

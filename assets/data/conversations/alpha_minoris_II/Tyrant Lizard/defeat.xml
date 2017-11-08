@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		The mighty tyrant lizard has been brought low. Her primeval power you have overcome and brought low. Her figure is impressive still even slumped into a heap on the ground and panting, tongue lolling out as she watches you warily.
+		</text>
+		<choice destination="oralvore0" text="show her who the real predator is">
+		<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
+		<choice destination="end" text="leave her be" />
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	This reptilian and beastial creature thought its raw might could make a prey out of you. It's only fitting then that you show her the depths of her mistake, and even if she won't comprehend it you've worked up an appetite that needs satisfying. Weakened from your triumph she fails to fend you off as you pin her clawed arms and grab ahold of her toothy snout, holding her jaws together and bringing them to meet your lips. The tyrant lizard lets out a growl as she realizes what you're about to do and struggles, thrashing around under you but she can't stop you from engulfing her head with your lips and start to swallow her alive.
+	</text>
+	<choice destination="oralvore1" text="show you're the apex"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The lizard's eyes flick around wildly in their sockets as you worked her jaws down your throat and then engulfed her head completely. Her powerful shoulders next to succumb to your ravenous hunger as you eat her alive. Her anthropomorphic reptile's mammalian mammaries sliding pleasingly over your tongue and down your throat shortly afterwards as you gobble her up despite her struggles. 
+	</text>
+	<choice destination="oralvore2" text="continue"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The mighty tyrant lizard proves no match for your hunger as you swallow your larger prey inches at a time, your gut distending and bulging out as you force her writhing form down into your stomach. Her bellows of outrage, with perhaps a tinge of fear, nicely muffled as you work her meaty hips past your jaws. Soon all of her will be trapped inside you and you can't help but run your hands off your stretched belly and trace over the outline of her head and rub it in that the reptile will soon be nothing but your food.
+	</text>
+	<choice destination="oralvore3" text="finish her off"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	Her tail, her legs, her clawed feet. Gradually you polish each and every part of her off, swallowing her down with vigorous glucking gulps until the last of her vanishes past your lips. The monstrous dino woman growling and thrashing around to try and escape your insides, but there's no escape oh no the lesson isn't finished yet.
+	</text>
+	<choice destination="oralvore4" text="finish by digesting her"/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	You hear the lizard growl defiantly and it makes you smirk, your gut starting to squeeze and gurgle around her. Your meal seeming to realize what's happening and redouble her struggles, jostling your gut around as your digestive processes set about grinding her down into mush. Her endurance is prolonged, but your triumph is inevitable as you churn her down into a soft and still lump of nourishment within her. From there it's delicious and oh so satisfying to soak up her remnant, your gut shrinking back down as you absorb the so called tyrant lizard.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+</Conversation>

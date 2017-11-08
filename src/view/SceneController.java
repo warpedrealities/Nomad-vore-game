@@ -253,4 +253,34 @@ public class SceneController implements Sense {
 		return false;
 	}
 
+	@Override
+	public Actor getNamedActor(Actor origin, int maxRange, boolean visibleOnly, String name) {
+		Actor actor = null;
+		float distance = 99;
+		for (int i = 0; i < activeZone.getActors().size(); i++) {
+			if (activeZone.getActors().get(i).isHostile(origin.getActorFaction().getFilename())) {
+				Actor target = activeZone.getActors().get(i);
+				float d = target.getPosition().getDistance(origin.getPosition());
+				if (d < maxRange) {
+					if (NPC.class.isInstance(target) && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
+						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+								(int) origin.getPosition().y, (int) target.getPosition().x,
+								(int) target.getPosition().y, true)) {
+							if (distance > d && target.getName().equals(name)) {
+								distance = d;
+								actor = target;						
+							}
+						}
+					} else {
+						if (distance > d && target.getName().equals(name)) {
+							distance = d;
+							actor = target;
+						}
+					}
+				}
+			}
+		}
+		return actor;
+	}
+
 }

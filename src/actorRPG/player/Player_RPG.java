@@ -736,7 +736,11 @@ public class Player_RPG implements Actor_RPG {
 		int count=dstream.readInt();
 		for (int i=0;i<count;i++)
 		{
-			playerPerks.add(PerkLoader.loadPerk(dstream));
+			PerkInstance p=PerkLoader.loadPerk(dstream);
+			if (p!=null)
+			{
+				playerPerks.add(p);		
+			}
 		}
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();

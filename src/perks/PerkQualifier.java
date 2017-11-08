@@ -77,6 +77,11 @@ public class PerkQualifier {
 						return false;
 
 					}
+					if (str[i].contains("ITEM"))
+					{
+						return false;
+					}
+					
 					if (str[i].contains("PERK")) {
 						String find = str[i].replace("PERK", "");
 						int rank=1;

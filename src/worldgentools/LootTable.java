@@ -2,6 +2,7 @@ package worldgentools;
 
 import item.Item;
 import item.ItemCoin;
+import item.handlers.StackHandler;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
 
@@ -79,7 +80,10 @@ public class LootTable {
 								list.add(item);
 							}
 						} else {
-							list.add(item);
+							if (!StackHandler.handleStacking(item, list))
+							{
+								list.add(item);						
+							}
 						}
 
 					}

@@ -141,7 +141,7 @@
 		<choice destination="cockvoreStruggleDigestGO" text="wait how long have i been in here?" />
 	</page>
 
-	<gameover ID="cockvoreStruggleGO">
+	<gameover ID="cockvoreStruggleDigestGO">
 		<text>
 			You stroke against the inside of the wyvern's sack, moving with the
 			rthythmic pressures of the lizard's balls to further and further

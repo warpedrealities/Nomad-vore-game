@@ -171,7 +171,8 @@ public class Status_DoT implements StatusEffect {
 				ViewScene.m_interface.DrawText(str.replace("TARGET", subject.getName()));
 			}
 
-			if (origin != null) {
+			if (origin != null && origin.getRPGHandler().getActive()) {
+				duration=0;
 				if (subject.getStat(Actor_RPG.HEALTH) <= 0 && zoneCheck()) {
 					subject.getActor().Defeat(origin, false);
 					return;

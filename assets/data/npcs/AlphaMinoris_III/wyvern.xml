@@ -35,11 +35,11 @@
 				<text>the wyvern blasts TARGET with a lightning bolt for VALUE
 					points of shock damage</text>
 			</hitText>
-			<effectDamage type="SHOCK" minValue="2" maxValue="12"
+			<effectDamage type="SHOCK" minValue="2" maxValue="8"
 				modifier="STRENGTH" />
 		</combatMove>
 		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
-			timeCost="2" bonusToHit="2">
+			timeCost="4" bonusToHit="2">
 			<missText count="2">
 				<text>The wyvern snaps impotently at TARGET</text>
 				<text>The wyvern lashes out at TARGET without effect</text>
@@ -48,7 +48,7 @@
 				<text>The wyvern bites TARGET for VALUE damage</text>
 				<text>The wyvern lashes out at TARGET for VALUE damage</text>
 			</hitText>
-			<effectDamage type="KINETIC" minValue="2" maxValue="12"
+			<effectDamage type="KINETIC" minValue="2" maxValue="8"
 				modifier="STRENGTH" />
 		</combatMove>
 	</rpg>

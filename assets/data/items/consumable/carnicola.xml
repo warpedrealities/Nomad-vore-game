@@ -4,5 +4,5 @@
 		drinks containing it appears to be called 'Carnicola: unleash the
 		predator within' and is probably some kind of alien mutagenic soft
 		drink. You're not really thinking about actually drinking it are you?</description>
-	<effectperk perk="oralvore" experiencevalue="100" />
+	<effectperk perk="oralvore" experiencevalue="200" />
 </ItemConsumable>

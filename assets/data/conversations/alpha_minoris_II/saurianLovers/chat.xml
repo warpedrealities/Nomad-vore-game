@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="talked" />	
+		<text>
+		As you approach the bustier and taller of the two lizardgirls is pressing herself over her lover. Their faces mashed together and tongues intertwined, one of her hands groping around over her friend's crotch. Her playmate though isn't quite as distracted not to see you however and gives her a push afore breaking the kiss "ah we've company Oshy" she says blushing heavily. 'Oshy' blinks, notices you and then disentangles from the other lizard, who hastily adjusts her tunic to cover her length "Oh hi, you're the traveller right? I'm Oshy, and this is my hermfriend Myrai." she says and snugs Myrai's shoulders, Myrai raises her hand "Pleased to meet you"
+		</text>
+		<choice destination="intro0" text="$I guess you two are close, I can come back later if I'm interrupting?"/>
+	</page>
+	
+	<page ID="intro0">
+	<text>
+	"Oh no, I mean. It's not every day we get to talk to someone from outside of Dammath?" says Oshy with a smile "You must be really capable to have gotten here past the swamp." says Oshy.
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />	
+	<choice destination="intro1" text="$Glad to have it recognized, it's a pleasure to meet you two"/>
+	</page>
+
+	<page ID="intro1">
+	<text>
+	"No problem.. Come around sometime if you want to talk more." says Oshy. Myrai mhmms "there's some stuff I think you could help me with." she says as Oshy starts groping her again. Oshy apparently too horny right now to keep talking.
+	</text>
+	<choice destination="end" text="$Alright, have fun you two."/>
+	</page>
+	
+	<page ID="start">
+		<condition evaluate="TIMEPASSED" operator="lessthan" value="5" />	
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="busy" />	
+	<text>
+	These two are...busy, yes..lets go with busy. and cannot be interrupted right now.
+	</text>
+	<choice destination="end" text="leave them to it"/>
+	</page>
+	
+	<page ID="start">
+		<condition evaluate="TIMEPASSED" operator="greaterthan"
+			value="5" />	
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="busy" />	
+	<text>
+	Oshy has a delighted grin on her face when you see her next, Myrai...tired but happy. Oshy chuckles "Thanks to you friend, that was WILD." she says and shivers in delighted memory.
+	</text>
+	<effect type="setlocalflag" flag="busy" value="0" />	
+		<choice destination="about" text="$So how did you two get together?"/>			
+		<choice destination="end" text="$Hi, i'm just passing by though."/>
+	</page>	
+	
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="talked" />	
+		<text>
+		"Hi again." Oshy says, Myrai smiling "hi." she says from her place snuggled against Oshy in a way that presses Oshy's breasts against her.
+		</text>
+		<choice destination="about" text="$So how did you two get together?"/>
+		<choice destination="help0" text="$So about that help you wanted Myrai?">
+		<condition evaluate="LOCALFLAG" operator="help" value="0"
+			flag="help" />		
+		</choice>
+		<choice destination="help1" text="$About that help you needed?">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="help" />		
+		</choice>
+		<choice destination="help2" text="$Is there any more help you need?">
+		<condition evaluate="LOCALFLAG" operator="equals" value="2"
+			flag="help" />	
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="cockfood" />			
+		</choice>	
+		<choice destination="cockvore0B" text="$Myrai, I was wondering if you fancied churning me again?">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="cockfood" />		
+		</choice>			
+		<choice destination="end" text="$Hi, i'm just passing by though."/>
+	</page>
+		
+	<page ID="cockvore0A">
+	<text>
+	"Told ya she'd say yes." says Oshy with a laugh "But I've never done this before." admits Myrai, though judging by the tenting in her skirt she's warming rapidly to the idea "Don't worry. I'll help ya." says Oshy and grins "I'm told it really isn't that hard."
+	</text>
+	<choice destination="cockvore1A" text="$I'll help as well, don't worry Myrai. You'll find I'm really easy cockfood"/>
+	</page>
+	
+	<page ID="cockvore1A">
+	<text>
+	Myrai looks between Oshy and you and blushes intensely. Especially as Oshy helps her skirt off to expose her erection to you
+	<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				 and you undress, exposing yourself to her in turn
+	</conditional>. "Wait you asked people about this Oshy?" asks Myrai as the poor overwhelmed herm catches up with something her lover had said "Well yeah, before I met you don't worry." she says as she pulls her tunic off over her head and then gives Myrai a lusty smooch Afore lowering down to get her lover ready. Oshy rubbing her luscious breasts against Myrai's shaft and licking it, giving her tip a schlurp and then looking up at Myrai "you have to focus on wanting to schlurp up our friend here. Otherwise it won't be big enough." she reminds Myrai, who blushes..focuses, and then her cock twitches and grows to a more voracious size. Oshy letting out a giggle and stepping back with a smile, stroking her lover's length "That's it."
+	</text>
+	<choice destination="cockvore2A" text="$Ready now Myrai?"/>
+	</page>
+	
+	<page ID="cockvore2A">
+	<text>
+	Myrai glances to Oshy as if to get courage and then nods "Yeah I'm ready to cockvore you friend." she says and without further ado Oshy moves behind you, her soft bosom squishing against your back as she wraps her arms around you and lifts you up. Getting the idea quickly you raise your feet into the air and hover your toes over Myrai's tip. Myrai blushing intensely as she strokes her enlargened length and then lets out a gasp and a chirr as you start to press in. Both of your feet easily dipping into her tip, sliding into her length and bulging it out.
+	</text>
+	<choice destination="cockvore3A" text="$See, easy, you'll be churning me up before you know it"/>
+	</page>
+	
+	<page ID="cockvore3A">
+	<text>
+	Myrai's length ripples and schlurps tugging on your feet as she flushes from your teasing "AH...feels.." she manages and moans. Oshy giggles "Feels amazing doesn't it, you're a natural lover." she says and then smooches your cheek "And you're great friend for being someone she can do this with."
+	</text>
+	<choice destination="cockvore4A" text="$ah anytime"/>
+	</page>
+	
+	<page ID="cockvore4A">
+	<text>
+	"My someone likes this. You hear that Myrai? you might be able to schlurp our friend down into your balls again sometime." says Oshy with a chuckle as she feeds you to her lover's cock. Hot pre squelching around your feet as they disappear deeper into Myrai's voracious length. Your calves and then knees gradually following them in and as they do you get to feel her hot cum ooze around your feet now as they enter her balls.
+	</text>
+	<choice destination="cockvore5A" text="$feels good, mhmm, schlurp me up"/>
+	</page>
+	
+	<page ID="cockvore5A">
+	<text>
+	"Yes, gonna..schlurp you up." Myrai replies with a moan as she strokes over her length, caressing the bulges of your legs as you slide down into her sack more and more. Your feet forming sexy bulges on her sack as your legs curl up in the gooey depths of her balls and Oshy helps feed your hips into her lover's tip. Myrai able to focus on her own pleasure as her busty friend feeds you in, her hands only lifting up off of you when your chest starts to slip into Myrai's cock. Only your head and shoulders left as she places her hands on the top of your head "In you go." she utters, before giving you a helpful push. Your body plunging entirely into Myrai's cock, the bulges of your head and shoulders sliding through her length as every inch of you is packed away in Myrai's hungry balls. Myrai gasping and still stroking her length as Oshy traces your path in fascination and feels over her lover's now well filled balls, tracing the shape of your curled up form.
+	</text>
+	<choice destination="cockvore6A" text="$It feels good in here Myrai, so gooey"/>
+	</page>
+	
+	<page ID="cockvore6A">
+	<text>
+	Oshy mhmms "cockfood is a good look for you" she says directing her words at you. Oshy rubbing at her lover's sack, feeling over your body and groping the bulges then looks up to Myrai "You look so sexy this way lover." she says, earning a delighted blush from her hermfriend. The stroking continuing as Myrai's balls begin to burble and churn, starting to melt you down. The sensations wonderful and enough to set you squirming and moaning, actions that seem to make Oshy knead at your shape all the more. In turn your pleasure as you're cumgested is only reinforced by Myrai's girlfriend enjoying your softening shape, helping massage your form into pale creamy goo until your body yields entirely and melts away in her balls.
+	</text>
+	<effect type="setlocalflag" flag="cockfood" value="1" />		
+	<choice destination="cockvoreGOA" text="and then..."/>
+	</page>
+	
+	<gameover ID="cockvoreGOA">
+	<text>
+	Oshy hears that final burble and feels you go all gooey and practically leaps atop Myrai. Who lets out a gasp but doesn't protest, oh no. Overcome with lust it seems they're fucking in moments, Oshy feeling the hefty bloated bulges of myrai's balls cushioning her ass each time she hilts her lover inside of herself. The two fucking away without restraint after the sexy prelude of your cumgestion, and so "that's one.." Oshy gasps and smooches Myrai, hot cream fillng her belly... "That's five.." Oshy says delighted, hot cum staining her inner thighs and the bed beneath her as she leans back and looks up at her lover who pumps another portion of your remnants into her. "that's...oh who cares.." Oshy manages, slumping from all fours onto her face..Myrai collapsing into an exhausted heap atop her and the cum saturated bed...your remains had certainly served to give the two a good time, but at what cost.	
+	</text>
+	</gameover>
+	
+	<page ID="cockvore0B">
+	<text>
+	"I dunno-" Myrai started to say while blushing before being interrupted "It'll be cleaner than the first time." she says and smooches Myrai "And I know you enjoy feeding gals to this thing" she says and strokes and gropes her length. Myrai nodding then looking up to you "Yes, we'd love it if you were cockfood for us to enjoy again."
+	</text>
+	<choice destination="cockvore1B" text="$Thought you'd say that"/>
+	</page>	
+	
+	<page ID="cockvore1B">
+	<text>
+	"Our friend knows ya well." says Oshy giving Myrai another kiss and exposing her shaft, freeing it from the confines of her skirt and stroking along it to get it hard and ready for you to dive down it and get churned into cum. Soon enough you're 
+	<conditional>
+	<assertion evaluate="slothasitem" slot="2" />
+	undressed and ready for your trip
+	</conditional> 
+	and Oshy gets out of the way so you can take your place, in front of Myrai's loins, but soon..inside of them. Your hands replacing those of Oshy's in stroking Myrai's girthy length. Your hands working up the sides of her schlong until you're pressing your fingers into her tip and getting delighted gasps from Myrai as the hermy lizard watches your preyish desires play out. Her gaze on you as you press your hands into her tip and begin to feed yourself to her cock. 
+	</text>
+	<choice destination="cockvore2B" text="*dive in*"/>
+	</page>
+	
+	<page ID="cockvore2B">
+	<text>
+	"Geeze you're eager friend." remarks Oshy as you plunge your arms in, ducking your head down afore it slides into Myrai's cocktip with a lewd schlurping noise. Myrai struck wordless can only chirr in delight as her length ripples and stretches around your arms. Her voracious length apparently remembering the feel of your body pressing into it as its ripples tug your arms down and help pull your hands down into the cummy depths of her sack. 
+	</text>
+	<choice destination="cockvore3B" text="*prove how eager you are*"/>
+	</page>
+	
+	<page ID="cockvore3B">
+	<text>
+	Myrai can only moan as you prove Oshy right, pushing your way into her length until you've gotten your belly part way inside and need to rely on the hunger of the saurian's shaft to schlurp you in the rest of the way. Your head'n'shoulders bulging out her sack and your hands making well shaped swells in her loins as you wriggle to get comfortably. Oshy helping angle your legs up towards the ceiling so gravity can help every inch of you slip down into her lover's balls and be cockfood.
+	</text>
+	<choice destination="cockvore4B" text="$mhmm, gawds i love this."/>
+	</page>
+	
+	<page ID="cockvore4B">
+	<text>
+	"And we love ya for loving it." Oshy says, Myrai nodding then adding "Yes, yes we do. we love how you're a slut for being cockfood." says Myrai as she strokes her cock and Oshy helps feed your legs in. Your form steadily piling into the herm's balls, filling them up with digestable girl flesh as you revel in the sensation of her sticky cum squelching around you and soaking your skin.
+	</text>
+	<choice destination="cockvore5B" text="*all the way in"/>
+	</page>
+	
+	<page ID="cockvore5B">
+	<text>
+	Myrai and Oshy help you slide the rest of the way in in short order. Oshy letting go of your feet as they near her lover's cocktip, planting a smooch on Myrai's shaft as she engulfs you with it completely and her strokes carry you down into her balls entirely. Your form once again curled up in Myrai's balls, bathing in her cum and basking in the anticipation of your impending transformation into her next load. Oshy massaging Myrai's sack as her cum begins to churn around you.
+	</text>
+	<choice destination="cockvore6B" text="$So good, melt me, churn me"/>
+	</page>
+	
+	<page ID="cockvore6B">
+	<text>	
+	Oshy and Myrai hear that and giggle, the two mhmming as you softly melt away. Oshy clambering up to rub her tail on myrai's sack and feeling you soften as she makes out with her lover. Your moans and gasps gradually fading away as Myrai churns you into gallons of sticky nutbutter, your form melting and sloshing away until not a trace of you is left. Oshy reaching down and rubbing over her lovers sack "love you." she says, seemingly meaning both her hermfriend and her sackslut friend. Then Oshy smiles and gets up off her lover, turning around and raising her tail.
+	</text>
+	<choice destination="cockvoreGOB" text="used for sex"/>
+	</page>
+	
+	<gameover ID="cockvoreGOB">
+	<text>
+	Myrai's sack sloshes as she presses up behind Oshy, lining her length up and thrusting into her lover. The weight of hot cum in her balls slows her hip motions, but between the two of them they make it work. Hips slapping together, your form sloshing back and forth as above them Myrai's shaft thrusts in and out of her lover, working them to climax. The duo shuddering into a heap as sticky cum fills Oshy and spills to stain the floor. The first climax of many as they use you up in a hedonistic and lusty fuckfest, different positions amidst an ever growing puddle of jizz on the floor into which they eventually collapse in delighted exhaustion. One wonders if they appreciate you more as a friend, or a cumload.
+	</text>
+	</gameover>
+	
+	<page ID="help2">
+	<condition operator="equals" evaluate="FACTIONFLAG" flag="sackslut"
+				value="1" />	
+	<text>
+	"Well actually there is" says Oshy with a smile. Myrai blinks and turns to her lover "There is?" she asks and Oshy nods "Yeah see I heard something interesting about her friend here." she says and then leans in to whisper in Myrai's ear. You can't overhear without leaning in obnoxiously, but you can see Myrai's face turning red with a blush. Oshy adds "so ask her" she adds insistently. Myrai shakes her head, then sees the look in Oshy's face and stands up in front of you and blushingly makes her request on behalf of the duo "Friend, I was wondering whether you might want to feed my cock and turn into my cum which I can use to have sex with my girlfriend." she says awkwardly.
+	</text>
+	<choice destination="cockvore0A" text="$Myrai, I'd happily be your next load."/>
+	<choice destination="end" text="$I'm sorry, but I'm not in the mood to be cockfood Myrai"/>
+	</page>
+
+	
+	<page ID="help2">
+	<text>
+	"You've helped us a lot friend." says Myrai with a smile and leans against Oshy who remarks "You could get us another of those herbs?" and Myrai pokes her "I dun have the gold, and it's not fair to ask them to brave that swamp for something if we can't pay them."
+	</text>
+	<choice destination="end" text="$that's alright, I'm glad you two are doing well"/>
+	</page>
+	
+	<page ID="help1">
+	<text>
+	"Yeah? you got the gold herb?" asks Myrai with a hopeful smile. Oshy just mhmms at the thought of what her lover could do dosed up on that stuff.
+	</text>
+	<choice destination="reward" text="$Yes I have the herb, it wasn't easy to get"/>
+	<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="golden herb" />	
+	<choice destination="end" text="$Not yet, but I'm still looking"/>
+	</page>
+	
+	<page ID="reward">
+	<text>
+	"OH thankyou!" Myrai says with a delighted smile after accepting the herb. Oshy rather more physical in her thanks as she gives you a soft and emphatic hug that makes one faintly envious of Myrai. When she disentangles she gives Oshy a snug "I can't wait to see what this can do. Comeon Myrai." she says. Myrai pushes on the chest of her lover for a moment "We gotta reward our friend first." she says. Oshy looks impatient and eager but lets Myrai hand you a bag of coin "It's not much, but it's all I can manage." she says uncertainly, before practically having Oshy jump her bones. 
+	</text> 
+		<effect type="givegold" value="300" />
+		<effect type="experience" value="400" />	
+	<effect type="setlocalflag" flag="help" value="2" />		
+	<effect type="setlocalflag" flag="busy" value="1" />	
+		<special effect="marktime" />	
+		<effect type="removeitem" item="golden herb" value="1" />	
+		<choice destination="end" text="$It'll be fine, your gratitude is what I wanted."/>
+	</page>
+	
+	<page ID="about">
+	<text>
+	"Oh it's simple really, Myrai here was always looking at me. And I could tell she liked me, but she never made a move so eventually I just asked her about her feelings and boom. Now we're an item and I got this wonderful dick of hers all to myself." she says and gropes Myrai's crotch making the herm lizard meep.
+	</text>
+		<choice destination="end" text="$that's sweet"/>	
+	</page>
+
+	<page ID="help0">
+	<text>
+	"Well, it's just. Oshy is great, but I sometimes have trouble keeping her satisfied. I hear there's a golden herb you can find in the swamps. But that's super dangerous and I'm..not much of a fighter..so. Could you? go get it for me? I can pay."
+	</text>
+	<choice destination="help0how" text="$how does this herb help you?"/>
+	<choice destination="help0oshy" text="$you don't feel weird asking me for this while she's right here?"/>
+	<choice destination="help0accept" text="$okay, I'll go get the herb from the swamp for you"/>
+	</page>
+	
+	<page ID="help0how">
+	<text>
+	"It's a powerful aphrodisiac, it'll give me the stamina to please her." she admits. Oshy smiles and snugs Myrai affectionately "Don't feel bad Myrai, you're really quite good. I just always like it better, or different at least."
+	</text>
+	<choice destination="help0oshy" text="$you don't feel weird asking me for this while she's right here?"/>
+	<choice destination="help0accept" text="$okay, I'll go get the herb from the swamp for you"/>	
+	</page>
+	
+	<page ID="help0oshy">
+	<text>
+	"Why would I be bothered she wants a herb that'll make her able to give me an even more satisfying fuck?" asks Oshy. Myrai blushes "I guess people aren't as open about this back where you come from?" she asks innocently while Oshy grins.
+	</text>
+	<choice destination="help0how" text="$how does this herb help you?"/>
+	<choice destination="help0accept" text="$okay, I'll go get the herb from the swamp for you"/>	
+	</page>
+	
+	<page ID="help0accept">
+	<text>
+	"Oh thankyou. I mean, I appreciate what you're doing. I know the swamp is REALLY dangerous."
+	</text>
+	<effect type="setlocalflag" flag="help" value="1" />
+	<choice destination="end" text="$Don't worry I'll be back with that herb soon"/>
+	</page>
+	
+</Conversation>

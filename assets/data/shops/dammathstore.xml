@@ -17,6 +17,10 @@
 		quantity="20" />
 	<inventoryitem name="fabric" probability="100" quantity="20" />
 	<inventoryitem name="fabric" probability="50" quantity="20" />
+	<inventoryitem name="antidote" probability="100"
+		quantity="10" />	
+	<inventoryitem name="antidote" probability="50"
+		quantity="10"/>		
 	<inventoryitem name="Hermilixir" probability="100"
 		quantity="20" />
 	<inventoryitem name="Pussy juice" probability="100"

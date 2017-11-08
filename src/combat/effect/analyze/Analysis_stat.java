@@ -10,7 +10,6 @@ import view.ViewScene;
 public class Analysis_stat implements Analysis_Type {
 
 	private int stat;
-	private int attribute;
 	private int []thresholds;
 	
 	private final static int VAGUE=0;
@@ -20,7 +19,7 @@ public class Analysis_stat implements Analysis_Type {
 	public Analysis_stat(Element e) {
 		thresholds=new int[3]; for (int i=0;i<3;i++){thresholds[i]=-1;}
 		stat=RPG_Helper.statFromString(e.getAttribute("stat"));
-		attribute=RPG_Helper.AttributefromString(e.getAttribute("attribute"));
+
 		if (e.getAttribute("vague").length()>0)
 		{
 			thresholds[VAGUE]=Integer.parseInt(e.getAttribute("vague"));			
@@ -35,14 +34,9 @@ public class Analysis_stat implements Analysis_Type {
 		}
 	}
 
-	@Override
-	public int getAttribute() {
-		return attribute;
-	}
-
 	private int getLevel(int attributeValue)
 	{
-		for (int i=2;i>=0;i++)
+		for (int i=2;i>=0;i--)
 		{
 			if (thresholds[i]!=-1 && thresholds[i]<=attributeValue)
 			{

@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <perk name="cockmerging">
-	<requirement count="2">
+	<requirement count="3">
 		<req>RESEARCHlifeforms/zetamorph.xml</req>
 		<req>BODYpenis</req>
+		<req>ITEM</req>		
 	</requirement>
 	<description> The reverse engineered ability to convert living beings
 		into cockflesh and add them to your member. </description>

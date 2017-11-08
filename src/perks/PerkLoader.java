@@ -14,6 +14,10 @@ public class PerkLoader {
 			PerkInstance perkInstance = new PerkInstance(perk, stream.readInt());
 			return perkInstance;
 		}
+		else
+		{
+			stream.readInt();
+		}
 		return null;
 	}
 }

@@ -252,6 +252,13 @@ public class WidgetContainer extends WidgetBreakable {
 	}
 
 	public void sort() {
+		//recalc weight
+		containedWeight=0;
+		for (int i=0;i<containedItems.size();i++)
+		{
+			float w=containedItems.get(i).getWeight();
+			containedWeight+=w;
+		}
 		containedItems.sort(null);
 	}
 

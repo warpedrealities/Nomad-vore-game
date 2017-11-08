@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="saurianLovers.png" />
+	<name>Myrai and Oshar</name>
+	<description>
+	A pair of saurians, clearly young lovers judging by the affectionate touch, hand holding, snuggling,...and the faint scent permeating the room that indicates far more than that is often going on between them. The bustier of the pair is female, the more slender not judging by her bulge down below. Both have smiles on their tanned faces and seem quite happy together.
+	</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />				
+			<missText count="1">
+				<text>the lovers attack fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the lover hit TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+	<talk conversation="alpha_minoris_II/saurianlovers/chat" />
+	<controller AI="staystill" />
+	<faction value="saurian" />
+</NPC>

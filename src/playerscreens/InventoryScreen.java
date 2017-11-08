@@ -667,8 +667,7 @@ public class InventoryScreen extends Screen implements Callback {
 	{
 		if (item.getCount()>1)
 		{
-			m_player.getInventory().getItems().add(item.getItem());
-			item.setCount(item.getCount()-1);
+			m_player.getInventory().getItems().add(item.takeItem());
 			ResetList();
 		}
 	}
@@ -854,12 +853,19 @@ public class InventoryScreen extends Screen implements Callback {
 			{
 				if (item.getEnergy().getRefill().contains(m_player.getInventory().getItem(i).getItem().getName()))
 				{
-					ItemDepletableInstance instance=(ItemDepletableInstance)m_player.getInventory().getItem(i);
-					if (instance.getEnergy()>0)
+					if (ItemStack.class.isInstance(m_player.getInventory().getItem(i)))
 					{
 						return true;
-					
 					}
+					else
+					{			
+						ItemDepletableInstance instance=(ItemDepletableInstance)m_player.getInventory().getItem(i);
+						if (instance.getEnergy()>0)
+						{
+							return true;					
+						}					
+					}
+
 				}
 			}
 		}

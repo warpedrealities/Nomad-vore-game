@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <perk name="Lactation">
-	<requirement count="2">
+	<requirement count="3">
 		<req>RESEARCHlifeforms/mushroomMother.xml</req>
 		<req>BODYbreasts</req>
+		<req>ITEM</req>		
 	</requirement>
 	<description>
 	You lactate on demand now and always have something to supply.

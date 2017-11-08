@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="cockmerge injection" requiredskill="0" startunlocked="false">
+	<description>
+	A small injection of mutagens programmed to bestow the ability of cockmerging on the subject.
+	</description>
+	<ingredient item="mutagen" quantity="1" />
+	<result item="Cockmerge injection" />
+</recipe>

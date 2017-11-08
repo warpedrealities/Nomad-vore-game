@@ -25,7 +25,7 @@ public class StackHandler {
 				} else {
 					if (items.get(i).getItem() == item.getItem()) {
 						items.remove(i);
-						ItemStack stack = new ItemStack(item, 1 + 1);
+						ItemStack stack = new ItemStack(item.getItem(), 1 + 1);
 						items.add(stack);
 						return true;
 						// remove this item

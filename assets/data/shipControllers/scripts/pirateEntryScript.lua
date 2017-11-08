@@ -20,7 +20,7 @@ function checkBoarding(script,sense)
 	boarding=sense:getFlags():readFlag("boarding")
 	if (boarding>0) then
 		local markTime=sense:getFlags():readFlag("CLOCK")
-		local actualTime=marktTime*100
+		local actualTime=markTime*100
 		local worldTime=sense:getTime();
 		if (worldTime-actualTime<1000) then
 			--move away

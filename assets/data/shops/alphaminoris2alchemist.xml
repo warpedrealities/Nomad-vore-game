@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <shop profitratio="1.25">
+	<inventoryitem name="antidote" probability="100"
+		quantity="10" />	
+	<inventoryitem name="antidote" probability="50"
+		quantity="10" />	
 	<inventoryitem name="Hermilixir" probability="100"
 		quantity="20" cost="500" />
 	<inventoryitem name="Pussy juice" probability="100"
@@ -20,4 +24,5 @@
 		quantity="20" cost="250" />
 	<inventoryitem name="Squeeze" probability="100"
 		quantity="20" cost="100" />
+	
 </shop>

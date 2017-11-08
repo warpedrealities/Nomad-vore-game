@@ -67,6 +67,10 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 	public static ModelController_Int m_interface;
 
+	/*
+	 * booleans determine whether to run the 'handle closure' tool for when the player leaves a selection 
+	 * screen without clicking an option by moving the mouse outside the window, do not set special(true)
+	 */
 	enum ViewMode {
 		SELECT(true), FIGHT(true), DOMINATE(true), MOVEMENT(true), OTHER(true), LOOK(false), INTERACT(false), ATTACK(
 				false), SPECIAL(false);
@@ -457,11 +461,18 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_dropdown.update(dt);
 		if (!m_dropdown.getVisible())
 		{
+			if (!m_buttons[4].getVisible())
+			{
+				m_buttons[4].setActive(true);						
+			}
 			m_window.update(dt);			
+		}
+		else
+		{
+			m_buttons[4].setActive(false);		
 		}
 		if (m_dropdown.getVisible() == false && m_mode.getValue()) {
 			m_mode = DropdownHandler.handleClosure(m_mode, Universe.getInstance().getPlayer(), m_buttons[4]);
-			m_buttons[4].setActive(true);
 		}
 		if (FXanimationControl.getActive() == true) {
 			FXanimationControl.Update();
@@ -929,9 +940,12 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 				break;
 
 			case 4:
-				m_dropdown.setVisible(true);
-				DropdownHandler.genStandardDropdown(m_dropdown, sceneController.getUniverse().player);
-				m_dropdown.AdjustPos(new Vec2f(p.x - 1.0F, p.y - 1.0F));
+				if (!m_dropdown.getVisible())
+				{
+					m_dropdown.setVisible(true);				
+					DropdownHandler.genStandardDropdown(m_dropdown, sceneController.getUniverse().player);
+					m_dropdown.AdjustPos(new Vec2f(p.x - 1.0F, p.y - 1.0F));				
+				}
 				break;
 			}
 

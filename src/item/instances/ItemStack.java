@@ -85,6 +85,6 @@ public class ItemStack extends Item {
 	
 	@Override
 	public boolean canStack() {
-		return false;
+		return true;
 	}
 }

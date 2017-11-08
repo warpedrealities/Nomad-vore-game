@@ -73,6 +73,7 @@
 			interest to me. And I think being that someone is of interest to
 			you... I will await your request with anticipation."
 		</text>
+		<effect type="setfactionflag" flag="sackslut" value="1" />		
 		<effect type="setlocalflag" flag="sackslut" value="1" />
 		<choice destination="end"
 			text="I enjoyed last time, I think I'll enjoy the next time as well. But until then I will bid you farewell." />

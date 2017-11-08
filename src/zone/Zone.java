@@ -255,7 +255,14 @@ public class Zone implements ILosBoard, Zone_int {
 					if (NPC.class.isInstance(zoneActors.get(i))) {
 						((NPC) zoneActors.get(i)).Remove();
 					}
-
+				}
+				if (NPC.class.isInstance(zoneActors.get(i))) {
+					NPC npc=(NPC)zoneActors.get(i);
+					if (npc.isCompanion())
+					{
+						zoneActors.remove(i);
+						i--;
+					}
 				}
 			}
 		}

@@ -20,8 +20,12 @@ public class Vec2i {
 	}
 
 	public float getDistance(Vec2f p) {
-		float xe = Math.abs(x - p.x);
-		float ye = Math.abs(y - p.y);
+		return getDistance((int)p.x,(int)p.y);
+	}
+
+	public float getDistance(int x0, int y0) {
+		float xe = Math.abs(x - x0);
+		float ye = Math.abs(y - y0);
 		xe = xe * xe;
 		ye = ye * ye;
 		float sqrt = (float) Math.sqrt(xe + ye);

@@ -16,7 +16,7 @@
 			</hitText>
 			<effectMovement moveType="TARGET_AWAY" distance="4"
 				abilityMod="STRENGTH" />
-			<effectStatus probability="10">
+			<effectStatus probability="25">
 				<applyText>TARGET is reeling from the might of your mighty boot</applyText>
 				<statusStun uid="9" duration="10">
 					TARGET is no longer stunned

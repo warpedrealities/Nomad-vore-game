@@ -109,7 +109,7 @@
 		lower face, and put some distance between the two of you, much to the mother's
 		disappointment. Well, at least you filled your belly.
 		</text>
-		<effect value="80" type="givefood"/>
+		<effect value="40" type="givefood"/>
 		<choice destination="end" text="Get going." />
 	</page>
 
@@ -172,11 +172,11 @@
 		and look at your belly. Already, you're digesting her milk, belly visibly
 		shrinking every minute. What's more, you seem to be growing. Or, at least, your tits
 		are. When your belly returns to normal, you've grown a size. You're now a nice
-		<measurement part="breast" variable="size"/>
+		<measurement part="breasts" variable="size"/>
 		.
 		</text>
-		<effect value="160" type="givefood"/>
-		<choice destination="sated3" text="Get going with your new assets." />
+		<effect value="80" type="givefood"/>
+		<choice destination="end" text="Get going with your new assets." />
 	</page>
 
 </Conversation>

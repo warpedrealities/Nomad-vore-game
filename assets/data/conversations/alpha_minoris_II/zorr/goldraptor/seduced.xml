@@ -12,6 +12,9 @@
 			<assertion evaluate="hasperk" perk="unbirthing" />
 			<preference fetish="unbirth" />
 		</choice>
+		<choice destination="sex0" text="*let her fuck you*">
+		<assertion evaluate="haspart" part="vagina" />
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -22,7 +25,64 @@
 		</choice>
 		<choice destination="end" text="*push her away*" />
 	</page>
+	
+	<page ID="sex0">
+	<text>
+	<conditional>
+	<assertion evaluate="slothasitem" slot="2" />	
+	You undress in front of the horny lizard herm, making a show of undressing and watching the expression on her face as you perform your striptease.
+	</conditional>	
+	<conditional>
+	<assertnot evaluate="slothasitem" slot="2" />
+	You stroke your hands over your naked body, showing yourself off in front of the horny lizard and tracing your fingers down from your chest to between your legs to tantalize her.	
+	</conditional>	
+	Now you've gotten the already horny lizard even hornier you decide to make your intentions clear, pressing yourself  against her and locking lips with the appreciative lizard. Your hand going down to grope her length and your other to her ass.
+	</text>
+	<choice destination="sex1" text="*get screwing*"/>
+	<!--
+	<choice destination="ctf0" text="*inject her with cockmerge first*">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="cockmerge injection" />
+	</choice>
+	-->
+	</page>
 
+	<page ID="sex1">
+	<text>
+	You give one of her asscheeks a squeeze and pull her down atop you, spreading your legs to welcome her as you settle onto your back and tongue wrestle with the lizard. You feel her lining herself up with your eager nethers. Her anticipated hipthrust coaxing a delighted moan from your lips. The lizard starting to thrust in and out of you as you wrap your legs around her and urge her on.
+	</text>
+	<choice destination="sex2" text="*a jolly good screw"/>
+	</page>
+	
+	<page ID="sex2">
+	<text>
+	Your scaley lover hisses and moans against your lips as she ruts into you, fucking you vigorously and without restraint. The herm's cock schlick schlicking in and out of your nethers, filling the air with lewd sounds of slapping flesh and wet friction as she pounds away at your sex and you urge her on and ever on. Her enthusiasm and lust just delightful and makes it all the more pleasurable a fuck.
+	</text>
+	<choice destination="sex3" text="comeon, cum inside me"/>
+	</page>
+	
+	<page ID="sex3">
+	<text>
+	The raptor's pace faulters and her chirring moans hitch in her throat for a moment, a herald of her impending climax that makes you pant in anticipation and your own pent up and lustful need that she satiates a few seconds later. Her cock spasming and spurting inside you as she lets out a screech of pleasure and bottoms out in your nethers, the sensations cresting you over the edge of your own orgasm and leaving you spasming underneath her in bliss. When your orgasm finally subsides leaving you panting in afterglow you feel her recover and pull out of you, you crack open your eyes only to see her lick at your face with a smile and then slip away. By the time you've recovered she's no where to be seen.
+	</text>
+	<special effect="removenpc" />
+	<choice destination="end" text="get up" />	
+	</page>
+	
+	<page ID="ctf0">
+	<text>
+	Your hand goes to her ass, discreetly injecting the syringe's contents into her. The raptor herm letting out a yelp from the sting and glancing down behind herself but you've already discarded the syringe and ignored all the warnings. It's easy to get the horny lizard to forget the sting as you bring her attention back to your lips. A minute or two of makeouts sufficing before you pull away and turn around, presenting yourself as you settle on your hands and knees..glancing back at her and wriggling your hips invitingly.
+	</text>
+	<choice destination="ctf1" text="*she enters, having no idea what's to come*"/>
+	</page>
+	
+	<page ID="ctf1">
+	<text>
+	
+	</text>
+	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

@@ -112,7 +112,7 @@ public class ItemContainerScreen extends Screen implements Callback {
 		case 3:
 			player.getInventory().setWeight(player.getInventory().getWeight()+container.getAdjustedContentWeight());
 			player.calcMove();
-			ViewScene.m_interface.replaceScreen(new InventoryScreen(sceneResources[1],sceneResources[0],sceneResources[2],
+			ViewScene.m_interface.replaceScreen(new InventoryScreen(sceneResources[1],sceneResources[5],sceneResources[2],
 					sceneResources[3],player,sceneResources[4],ViewScene.m_interface));
 			break;
 
@@ -168,8 +168,8 @@ public class ItemContainerScreen extends Screen implements Callback {
 
 		itemLists = new List[2];
 		// build inventory left
-		itemLists[0] = new List(new Vec2f(3, -14.3F), 16, textures[1], textures[4], this);
-		itemLists[1] = new List(new Vec2f(-20, -14.3F), 16, textures[1], textures[4], this);
+		itemLists[0] = new List(new Vec2f(3, -14.3F), 16, textures[5], textures[4], this);
+		itemLists[1] = new List(new Vec2f(-20, -14.3F), 16, textures[5], textures[4], this);
 
 		String str[] = new String[16];
 		for (int i = 0; i < 16; i++) {

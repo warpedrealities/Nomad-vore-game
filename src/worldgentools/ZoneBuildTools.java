@@ -28,6 +28,7 @@ import widgets.WidgetPortal;
 import widgets.WidgetSprite;
 import worldgentools.blockdungeon.BlockDungeonGenerator;
 import worldgentools.decoratingTools.DecoratorTool;
+import worldgentools.nodeMapGenerator.NodeMapGenerator;
 import worldgentools.preload.PreloadTools;
 import worldgentools.preload.PreloadUtilizer;
 import zone.Landing;
@@ -501,6 +502,7 @@ public class ZoneBuildTools {
 						grid = CloneOverlay(grid);
 						gridTown(Enode, grid);
 					}
+
 					if (Enode.getTagName() == "randprefab") {
 						grid = CloneOverlay(grid);
 						RandPrefab(Enode, grid);
@@ -518,6 +520,11 @@ public class ZoneBuildTools {
 					}
 					if (Enode.getTagName() == "placeSpawner") {
 						new WidgetPlacer(m_zone).placeSpawner(Enode);
+					}
+					if (Enode.getTagName().equals("nodeMapGen"))
+					{
+						grid = CloneOverlay(grid);
+						NextPhase(Enode,new NodeMapGenerator(Enode).run(m_zone,grid).getGrid());
 					}
 				}
 
@@ -813,6 +820,11 @@ public class ZoneBuildTools {
 				}
 				if (Enode.getTagName().equals("overlayTrees")) {
 					new OverlayTool(m_zone).runTrees(Enode);
+				}
+				if (Enode.getTagName().equals("nodeMapGen"))
+				{
+					grid = GenOverlay();
+					NextPhase(Enode,new NodeMapGenerator(Enode).run(m_zone,grid).getGrid());
 				}
 			}
 

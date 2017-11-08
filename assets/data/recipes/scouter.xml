@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="scouter" requiredskill="4" startunlocked="true">
+<recipe name="scouter" requiredskill="2" startunlocked="true">
 	<description>
 		A headset equipped with advanced scanning systems to allow one to analyze a target's power level. Displays information on the target's health level onto an eyepiece when the scan move is used.
 	</description>
@@ -7,6 +7,6 @@
 	<ingredient item="computation valve" quantity="3" />
 	<ingredient item="optics" quantity="2" />
 	<ingredient item="battery" quantity="1" />
-	<tokenRequirement item="gadgeteer" quantity="2" />
+	<tokenRequirement item="gadgeteer" quantity="1" />
 	<result item="scouter" />
 </recipe>

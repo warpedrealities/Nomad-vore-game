@@ -34,8 +34,7 @@
 		</combatMove>
 	</rpg>
 
-	<respawn delay="100" />
-	<disposition value="55" />
+	<respawn delay="4000" />
 	<defeated conversation="alpha_minoris_II/saurianpeasant/defeat" />
 	<seduced conversation="alpha_minoris_II/saurianpeasant/seduced" />
 	<victory conversation="alpha_minoris_II/saurianpeasant/victory" />

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="amberS.png" />
+	<name>Salamander</name>
+	<description>
+	A fiery lizard demi, her mane like mass of hair is a lurid almost unnatural orange and spills to her mid back. The rest of her athletic body is a mix of middling reddish tan on her skin combined with a deep crimson on her scales that cover her flanks, back and much of her limbs. On the subject of limbs her legs are markedly toned rising to shapely thighs and a muscular posterior. In a similar vein her tail appears unusually long, thicker at the base than that of similar breeds of humanoid and in possession of a non uniform taper for a heftier overral look to it.
+	</description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="20" />
+		<stat stat="RESOLVE" value="20" />
+		<attribute attribute="THERMAL" value="4" />		
+		<combatMove name="flames" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" bonusToHit="0">
+			<missText count="2">
+				<text>The salamander launches a blast of fire at TARGET but misses</text>
+				<text>TARGET evades the fire blast of the salamander</text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET is blasted with fire by the salamander for VALUE damage</text>
+				<text>The salamander scorches TARGET for VALUE damage</text>
+			</hitText>
+			<effectDamage type="THERMAL" minValue="4" maxValue="6"
+				modifier="NONE" />
+		</combatMove>
+		<combatMove name="kick" pattern="MELEE" bonusAttribute="RANGED"
+			timeCost="2" bonusToHit="2">
+			<missText count="2">
+				<text>The salamander tries to kick TARGET but misses</text>
+				<text>TARGET evades the salamander's kick </text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET is kicked by the salamander</text>
+				<text>The salamander kicks TARGET</text>
+			</hitText>
+			<effectMovement moveType="TARGET_AWAY" distance="4"
+				abilityMod="STRENGTH" />
+			<effectStatus probability="25">
+				<applyText>TARGET is reeling from the kick</applyText>
+				<statusStun uid="9" duration="10">
+					TARGET is no longer stunned
+				</statusStun>
+			</effectStatus>				
+		</combatMove>		
+	</rpg>
+
+	<respawn delay="2000" />
+
+	<defeated conversation="alpha_minoris_II/salamander/defeat" />
+	<seduced conversation="alpha_minoris_II/salamander/defeat" />
+	<victory conversation="alpha_minoris_II/salamander/victory" />
+	<seducer conversation="alpha_minoris_II/salamander/victory" />
+	<controller AI="Salamander" />
+	<faction value="monster" />
+</Harpy>

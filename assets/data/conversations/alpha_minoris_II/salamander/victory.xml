@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<preference fetish="analvore" />
+	<text>
+	The salamander lets out a pleased hissing whistle as she strides over and places a clawed foot on your chest, pinning you down and taking time to express her dominance afore moving on to the main and naughty act of predation upon you. The salamander twirling around and squatting down over your face, her hot ass flesh mooshing and stretching over you as she starts to shove your body up her rear end in a depraved action of consumption.
+	</text>
+	<choice destination="analvore0" text="into the lewd lizard ass"/>
+	</page>
+	
+	<page ID="analvore0">
+	<text>
+	The tight and sweltering bowels of the salamander clench and squeeze all around your head. The naughty lizard hissing in delight as she shifts you around and curls her thick and powerful tail up against your shoulders, hoisting you up with her as she rises until you're sitting up with her tail curled around your middle. The lizard letting out a mhmm, licking her lips and exhaling a steamy anticipatory breath before she rocks her hips down to engulf your shoulders and chest. That voracious lizard ass steadily working down towards your own ass as she uses the ground as a ram to cram you inside her body.
+	</text>
+	<choice destination="analvore1" text="into the depths"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	You feel her insides clench tightly around you as she straightens up fully. Your legs protruding from her lewd ass and still tightly squeezed by her dexterous tail as she feeds you up her rump with tail curls and inner muscles. Your legs steadily disappearing between her powerful rump cheeks until your feet vanish entirely into her tight sphincter with a long drawn out delighted hiss from the salamander and a schlorping noise from her hungry ass. Your form now entirely squeezed within the fiery lizard's hot bowels and guts and being steadily drawn deeper.
+	</text>
+	<choice destination="struggleCheck" text="attempt to get out"/>
+	<choice destination="pleasure" text="maybe if you give her insides a rubbing she'll let you go?"/>
+	<choice destination="submit" text="go along for the ride"/>
+	</page>
+	
+	<check ID="struggleCheck">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>	
+	
+	<page ID="struggleEscape">
+	<text>
+	The sweltering tight tubing of her innards rippling and clenching to tug you ever deeper are disagreeably inhospitable you find, and so you set about fighting against her depraved predations. Struggling and pushing against the salamander's insides you feel her shifting around in distress and redouble your efforts, finding purchase against the slick walls of her innards and starting to shove yourself back down and out of her. You feel her tail pressing against her rump, trying to squish you back inside but you're too strong for that. You shove yourself out of her, sliding free with a series of lewd schlorps until you pop entirely clear of her ass. The salamander letting out an annoyed whistle as she turns on you, probably best to get well clear of her afore she shoves you back in.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+	The sweltering tight tubing of her innards rippling and clenching to tug you ever deeper are disagreeably inhospitable you find, and so you set about fighting against her depraved predations. Struggling and pushing against the salamander's insides you feel her shifting around in distress and redouble your efforts, finding purchase against the slick walls of her innards and starting to shove yourself back down and out of her. You feel her tail pressing against her rump, trying to squish you back inside. You push with your feet against that meddlesome limb, trying to slip past its scaled underside and worm out of her ass..but you find the canny salamander's tail thwarting you at every turn and finally she curls it firmly against her rear, letting out a triumphant hiss as she shoves her unruly meal back into her ass.
+	</text>
+	<choice destination="struggleGO" text="condemned to her ass"/>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	You struggle on, but never achieve your earlier success of worming out of her rear end and once you've lost your second wind she sends you schlorping deep inside herself with a hissing moan. The salamander rubbing her rounded belly as you're packed and curled away inside that steaming hot and already gurgling tummy of hers. The lizards innards making quick work of you, her metabolism burning hot and melting you down rapidly once she has you in her stomach's clutches. The salamander's middle jostling with your initial squirms, but soon turning soft and round and still and compacting down as you're liquidated and utter digested by your hotblooded reptilian predator.
+	</text>
+	</gameover>
+	
+	<page ID="pleasure">
+	<text>
+	The sweltering tightness of her innards rubs sensually over you as it ripples and she prepares to pull you even deeper into the depths of her body. But maybe if you pleasure her you can get her to let you go. The salamander lets out a confused mip as you wriggle around, pressing your hands against the insides of her bowels. But soon as you start to rub around that mip is followed by a delighted hiss, the salamander wriggling her hips in delight as you dexterously touch and tantalize her innards with your sensitivity seeking fingers. The Salamander's own fingers delving between her thighs as you keep up your pleasurable assault. Her sounds of delight growing louder and more frantic as does her busy fingers.
+	</text>
+	<choice destination="pleasureCheck" text="nearly there?"/>
+	</page>
+	
+	<check ID="pleasureCheck">
+		<test what="PLEASURE" DC="10" />
+		<outcome destination="pleasureEscape" />
+		<outcome destination="pleasureDigest" />
+	</check>		
+	
+
+	
+	<page ID="pleasureEscape">
+	<text>
+	You feel her pleasure building as you rub and writhe against her inner walls. Her fingers and hisses becoming more energetic until she crashes over the threshold of her orgasm, her body spasming in delight as steaming sex juices spill down her inner thighs. Her innards clench and squeeze around you, each spasm pressing tightly on your body until she subsides to her knees. The salamander letting out soft whistles and panting, her innards relaxing around you..loosening up enough to let you wriggle free. The salamander seems untroubled by her buttfood escaping, far from it and she gives you an affectionate lick once you're fully out and she can turn around to get at ya...well that was certainly an experience.
+	</text>
+	<special effect="nonhostile" />
+	<effect type="heal" value="0.1" />
+	<choice destination="end" text="get up" />	
+	</page>
+	
+	<page ID="pleasureDigest">
+	<text>
+	You hear the salamander's hisses carry on, her fingers working vigorously at her nethers as she gets off to you rubbing around at her innards. The lizard finally letting out a gasping hiss like venting steam as she reaches her climax, her nethers slick with juices and her bowels clenching tightly around you then starting to relax as her afterglow starts to set in. But as you feel her orgasm pass you feel her innards clench anew, tugging you deeper into her ass. The salamander apparently thought not enough of your magic fingers and into her belly you go, sliding up through her depths until you finally surface into her gut and are forced to curl up as her meal.
+	</text>
+	<choice destination="pleasureDigestGO" text="condemned to digestion for being a lacklustre pleasurer"/>
+	</page>
+	
+	<gameover ID="pleasureDigestGO">
+	<text>
+	The salamander rubs her round belly as it gets to work on churning and gurgling you down. And with her already vigorous state piqued by your naughty play inside her ass the sloshing is soon grinding you down rapidly. The salamander melting you down swiftly as she rubs over her lumpy gut. The salamander's middle jostling with your initial squirms, but soon turning soft and round and still and compacting down as you're liquidated and utter digested by your hotblooded reptilian predator.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	You feel her innards clenching and rippling around you in rtythmic contractions that build in strength and decide to go with the flow. You decide to go with the flow as the salamander mhmms and shifts her posture, wriggling her hips slowly side to side as she schlorps and tugs you deeper and deeper through her innards. Her tail swaying back and forth as you slither through her guts and steadily slide into her stomach, piling into her bloating out gut as she packs you away in the steaming heat of her insides.
+	</text>
+	<choice destination="submitGO" text="time to gurgle"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	Without protest or struggle you've been fed up her lewd ass, through her naughty innards and finally into the gurgling depths of her stomach to be digested. And that's just what happens, the salamander seeming to gain a particular kind of enjoyment judging by her pleased whistling and hisses and her hands rubbing over her round and bloated gut. But soon you can only hear the gurgles and feel the churns of her stomach walls working over you as she steadily digests you down into a goopy mass of nutritious slurry within her. Her gut turning still, round, smooth and shrinking back down as she utterly digests and absorbs every ounce of your form to sustain her own...and perhaps, make it just that much more sexy.
+	</text>
+	</gameover>
+	
+</Conversation>

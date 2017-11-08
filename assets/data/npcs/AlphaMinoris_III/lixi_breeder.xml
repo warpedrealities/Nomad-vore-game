@@ -34,7 +34,7 @@
 			</hitText>
 			<effectDamage type="KINETIC" minValue="1" maxValue="6"
 				modifier="STRENGTH" />
-			<effectStatus probability="50">
+			<effectStatus probability="40">
 				<probabilityModifier value="ENDURANCE" />
 				<statusTag tag="poison" />
 				<applyText>TARGET has been poisoned.</applyText>
@@ -42,7 +42,7 @@
 					<removeText> TARGET is no longer poisoned.</removeText>
 					<affectText> TARGET is poisoned and loses VALUE health</affectText>
 					<resist strength="15" tag="poison" test="ENDURANCE" />
-					<effect stat="HEALTH" modifier="4" />
+					<effect stat="HEALTH" modifier="2" />
 				</statusDoT>
 			</effectStatus>
 		</combatMove>

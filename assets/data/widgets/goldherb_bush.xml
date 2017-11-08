@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgetharvestable sprite="41">
+	<contains minimum="1" maximum="1">golden herb</contains>
+	<usedescription>You manage to pick a golden herb from the bush</usedescription>
+	<description>A bush with strange golden leaves</description>
+	<regeneration regentime="4000" />
+</widgetharvestable>

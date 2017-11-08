@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemConsumable name="Cockmerge injection" weight="1" value="400">
+	<description>A small injection of mutagens programmed to bestow the ability of cockmerging on the subject. Warning, do not use if not in possession of a penis. Uncontrolled activation of the ability may occur if injection is followed up with sexual contact within 25 minutes.</description>
+	<effectperk perk="cockmerging" experiencevalue="200" />
+</ItemConsumable>

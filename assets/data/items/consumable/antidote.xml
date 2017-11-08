@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ItemConsumable name="antidote" weight="0.5" value="250">
+	<description>A Mix of purgatives, binding agents and counter agents that when ingested should remove venom from your system. </description>
+	<effect_ReduceStatus count="1">
+	<statusId value="50"/>
+	<description>
+	You chug down the vile brew, this better cure the poison considering how it tastes.
+	</description>
+	</effect_ReduceStatus>
+</ItemConsumable>
