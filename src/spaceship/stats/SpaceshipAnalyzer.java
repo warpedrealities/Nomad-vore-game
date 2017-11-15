@@ -30,6 +30,10 @@ import zone.TileDef.TileMovement;
 public class SpaceshipAnalyzer {
 
 	public SpaceshipStats generateStats(Spaceship ship) {
+		if (ship.getBaseStats()==null)
+		{
+			ship.Generate();
+		}
 		List<ShipShield> shields = new ArrayList<ShipShield>();
 		List<SpaceshipWeapon> weapons = new ArrayList<SpaceshipWeapon>();
 		ArrayList<Integer> uids = new ArrayList<Integer>();
@@ -241,7 +245,11 @@ public class SpaceshipAnalyzer {
 			// create another damage impact holder
 			createDamageWidget(ship, statdamage - accounteddamage);
 		}
-
+		if (accounteddamage >statdamage)
+		{
+			removeDamageWidgets(ship,accounteddamage-statdamage);
+		}
+		
 		// convey changes one to the other
 		for (int i = 0; i < resources.size(); i++) {
 			if (!resources.get(i).getResourceName().equals("HULL")) {
@@ -254,6 +262,37 @@ public class SpaceshipAnalyzer {
 						shipres.get(j).setAmountContained(shipres.get(j).getContainedCapacity());
 					} else {
 						shipres.get(j).setAmountContained(v);
+					}
+				}
+			}
+		}
+	}
+
+	private void removeDamageWidgets(Spaceship ship, int damage) {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < ship.getZone(0).getWidth(); i++) 
+		{
+			for (int j = 0; j < ship.getZone(0).getHeight(); j++) 
+			{
+				if (damage==0)
+				{
+					return;
+				}
+				// check tile
+				Tile t = ship.getZone(0).getTile(i, j);
+				if (t != null && t.getWidgetObject() != null) 
+				{
+					if (t.getWidgetObject().getClass().getName().contains("WidgetDamage")) 
+					{					
+						WidgetDamage wd=(WidgetDamage)t.getWidgetObject();
+						if (wd.getDamageValue()>damage)
+						{
+							wd.setDamageValue(wd.getDamageValue()-damage);
+							return;
+						}
+						t.setWidget(null);
+						damage-=wd.getDamageValue();
+
 					}
 				}
 			}

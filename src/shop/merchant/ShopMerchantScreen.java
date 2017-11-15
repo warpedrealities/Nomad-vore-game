@@ -1,4 +1,4 @@
-package shop;
+package shop.merchant;
 
 import gui.Button;
 import gui.MultiLineText;
@@ -26,9 +26,9 @@ import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
 
-public class ShopScreen extends Screen implements Callback {
+public class ShopMerchantScreen extends Screen implements Callback {
 	public static final int DEF_CREDIT_TO_GOLD = 10;
-	private ShopData shopData;
+	private ShopMerchant shopData;
 	private Player player;
 	private ArrayList<ShopLineItem> shopList;
 	Window window;
@@ -40,9 +40,9 @@ public class ShopScreen extends Screen implements Callback {
 
 	Callback callback;
 
-	public ShopScreen(String attribute) {
+	public ShopMerchantScreen(ShopMerchant merchant) {
 
-		shopData = ShopList.getInstance().getShop(attribute);
+		shopData = merchant;
 		shopData.visit(Universe.getClock());
 		player = Universe.getInstance().getPlayer();
 		shopList = shopData.getItems();

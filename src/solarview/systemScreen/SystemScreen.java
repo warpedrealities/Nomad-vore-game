@@ -187,7 +187,7 @@ public class SystemScreen extends Screen implements MyListener {
 		warpData.stress=navigator.calculateStress(ship.getPosition())*(1-navBonus);
 		warpData.facing=navigator.calcFacing(ship.getPosition());
 		warpData.destination=navigator.calculateDestination(warpData.facing);
-
+		
 		if (warpData.destination!=null)
 		{
 			warpData.canWarp=true;

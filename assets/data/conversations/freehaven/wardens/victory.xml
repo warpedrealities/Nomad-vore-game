@@ -3,9 +3,87 @@
 	<page ID="start">
 	<preference fetish="oralvore" />	
 	<text>
-	
+	The warden hauls you to your feet, but something tells you that you're not about to be then hauled off to jail..or at least not the normal kind, the bunny girl and officer of law and order glaring "It was simple enough to obey our laws. But I guess that was too much for you." she explains, though her glare fades and a smirk appears on her face "But personally, I appreciate it.. You're far better than the lunchbars we get during our shift." she says and moistens her lips.
 	</text>
-	
+	<choice destination="oralvore0" text="oh, oh crap"/>
 	</page>
 
+	<page ID="oralvore0">
+	<text>
+	"You'll get there eventually" the warden says and then adds "Anything you say may be used as a reason to digest you, including saying nothing at all." she mhmms and then pulls you close, her lips stretching around your head. Her hot breath washing over your face as the bunny cop sets about eating you alive, her throat rippling as with a hearty gluck she eases you deeper into herself and starts to work on devouring your shoulders.
+	</text>
+	<choice destination="oralvore1" text="*cop fodder*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	<conditional>
+	<assertion evaluate="slothasitem" slot="2" />
+	You can feel her expertly disrobing you as she gobbles over your shoulders, peeling you naked as she eats you.
+	</conditional>
+	<conditional>
+	<assertnot evaluate="slothasitem" slot="2" />
+	You can feel her hands groping your naked form, feeling you up as she swallows down over your shoulders.
+	</conditional>
+	You get the feeling despite her claims that wrongdoers are not a particularly rare part of her diet while she's on duty. The bunny officer letting out pleased murrs as she swallows down over your chest and licks over your breasts with the air of someone well practiced at swallowing up squirmy prey.
+	</text>
+	<choice destination="oralvore2" text="*polished off*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Down down down you go as the bunny unzips the front of her uniform and gropes at your ass as she swallows you steadily down her throat and into her belly. Her gut stretching and bulging out as you're forced into it, spilling through the opening in her uniform. Her bared tum flaunted to the world as she crams your ass past her lips and scarfs down your legs down in steady almost businesslike gulps until you vanish entirely down her throat "Mhmm, you hit the spot."
+	</text>
+	<choice destination="struggle" text="$I'll hit more than that when I get out of here!"/>
+	<choice destination="submit" text="$I accept my punishment"/>
+	</page>
+	
+	<page ID="struggle">
+	<text>
+	"Ha, I've heard that one before." the warden says with a chuckle and rests her hands on her belly, squeezing and holding her bulge to try and thwart your escape even as you start trying to struggle your way out of her gut. The glorious dome of her tummy jostling and bulging with your vigorous attempts to escape.
+	</text>
+	<choice destination="struggleCheck" text="*show the warden what for*"/>
+	</page>
+	
+	<check ID="struggleCheck">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>	
+	
+	<page ID="struggleEscape">
+	<text>
+	As you feel the bunny officer squeezing you tightly within her you don't waste any time in shifting around to push against the bottom of her belly and push yourself up against the entrance back up her throat "What are you? feisty aren't you." says the warden and then coughs and hurks, shuddering "this is resisting arre-" she starts to say afore you shove your hands firmly out of her mouth. The bunny doubling over, horking you up as you force your way out and upset her innards to the point of distraction in the process. The bunny staggering ears drooping and looking bedraggled and disorientated as you get up from the floor. All slick with her inner juices you make a fine pair of sorry sods with her, but she's probably got friends who can put you in your place.
+	</text>
+	<choice destination="end" text="back away" />
+	<effect type="heal" value="0.1" />
+	<effect type="stunnpc" value="10" />		
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+	As you feel the bunny officer squeezing you tightly within her you don't waste any time in shifting around to push against the bottom of her belly and push yourself up against the entrance back up her throat "What are you? feisty aren't you." says the warden and then coughs and hurks, shuddering "this is resisting arrest you know" she says, and swallows..her powerful throat shoving you back down into her depths. Your best efforts to escape her guts coming to naught as she squeezes you in her belly, clenching to keep you in your place in her gurgling gut "Now, take your punishment like a good meal." she chides, seemingly rather satisfied now she's able to get on with digesting you.
+	</text>
+	<choice destination="struggleGO" text="*succumb to law and order*"/>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	Your disagreement and protests of your punishment fall on deaf ears as the bunny saunters along taking a leisurely patrol. Her gut swaying to and fro as she walks and digests you as she does so. The jostling motions of your struggles subsiding into smooth burbling roundness as her enzymes take their toll and melt your form down. Soon enough her middle is shrinking down, your form a slurry of nourishment that her insides absorb eagerly. And in time nought remains of your law breaking ways except a trace of pudge on her tum and a satisfied expression on her face.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	"Mhmm oh you do? well, that's mighty reasonable of you." says the warden and smiles "Guess you got a kick for gurgling bunny tummies. Wouldn't be the first time." she says in amusement, rubbing her hand over the curve of her filled gut as she sets about digesting you.
+	</text>
+	<choice destination="submitGO" text="$I kinda do."/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	The warden chuckles, but pays you little mind as she saunters on her patrol, her rounded gut swelling to and fro with her steps swaying you around as you grow softer and gurglier inside of her. The enzymes and digestive processes working you over until Soon enough her middle is shrinking down, your form a slurry of nourishment that her insides absorb eagerly. And in time nought remains of your law breaking ways except a trace of pudge on her tum and a satisfied expression on her face.
+	</text>
+	</gameover>
+	
 </Conversation>

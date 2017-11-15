@@ -21,6 +21,7 @@
 			down over you. The harpy starting to cram you into her hungry snatch
 			to sate it once and for all.
 		</text>
+		<picture source="harpyportrait"/>
 		<choice destination="unbirth0" text="continue" />
 	</page>
 	<page ID="start">
@@ -38,6 +39,7 @@
 			rthythmically, those powerful muscles working seemingly in reverse of
 			normal but with great ability as she works you deeper inside.
 		</text>
+		<picture source="harpyportrait"/>		
 		<choice destination="unbirth1" text="continue" />
 	</page>
 

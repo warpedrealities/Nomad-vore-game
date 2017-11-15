@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ItemWeapon name="stun grenade" weight="1" value="250">
+	<description>
+		An electroshock grenade intended as a non lethal take down weapon. 
+		2AP Does 4-8 shock damage with a chance to stun.
+	</description>
+	<combatMove name="boom" ammoCost="1" pattern="BOMB"
+		bonusAttribute="RANGED" timeCost="2" bonusToHit="4" actionCost="2"
+		basicAction="true" moveType="FIGHT">
+		<effectDamage type="SHOCK" minValue="4" maxValue="8"
+			modifier="DEXTERITY" />
+
+		<effectStatus probability="75">
+			<probabilityModifier value="ENDURANCE" />		
+			<applyText>TARGET is stunned!</applyText>
+			<statusStun uid="9" duration="20">
+				TARGET is no longer stunned.
+			</statusStun>
+		</effectStatus>	
+		<missText count="1">		
+			<text>TARGET is unscathed </text>
+		</missText>
+		<hitText count="1">
+			<text>TARGET suffers VALUE damage</text>
+		</hitText>
+		<energySource value="stack" />
+	</combatMove>
+	<stackEquip value="true" />
+</ItemWeapon>

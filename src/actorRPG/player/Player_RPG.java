@@ -474,6 +474,11 @@ public class Player_RPG implements Actor_RPG {
 					}
 				}
 			}	
+			attributes[DODGE]-=(playerInventory.getEncumbrance()-1);
+			if (attributes[DODGE]<-1)
+			{
+				attributes[DODGE]=-1;
+			}
 		}
 
 		statusEffectHandler.reApplyStatuses(this);

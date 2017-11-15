@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="rifle round" weight="0.1" value="5.0">
+	<description>
+	A single rifle bullet, loose.
+	</description>
+	<energy capacity="1" />
+</ItemAmmo>

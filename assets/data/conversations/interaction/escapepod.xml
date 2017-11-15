@@ -12,6 +12,7 @@
 			AWAITING
 			INPUT
 		</text>
+		
 		<effect type="setglobalflag" flag="ESCAPEPOD" value="1" />
 		<choice destination="atmosphere" text="atmospheric readings" />
 		<choice destination="signals" text="perform signal scan" />

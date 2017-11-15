@@ -16,5 +16,5 @@ A long barreled break action rifle. Has iron sights and is suitable for inflicti
 <text>you shoot TARGET for VALUE kinetic damage</text>
 </hitText>
 </combatMove>
-<energy refill="bag of rifle bullets" efficiency="1" capacity="1"/>
+<energy refill="rifle round" efficiency="1" capacity="1"/>
 </ItemWeapon>

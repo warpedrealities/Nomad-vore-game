@@ -10,6 +10,7 @@
 				or your own hunger...
 			</conditional>
 		</text>
+		<picture source="harpyportrait"/>		
 		<choice destination="receiveoral" text="Force her to lick you">
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>

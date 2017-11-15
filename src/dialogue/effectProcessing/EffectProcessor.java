@@ -12,7 +12,7 @@ import org.w3c.dom.NodeList;
 import perks.PerkLibrary;
 import shared.Scene_Int;
 import shop.ShopList;
-import shop.ShopScreen;
+import shop.merchant.ShopMerchantScreen;
 import solarview.spaceEncounter.SpaceCombatInitializer;
 import spaceship.Spaceship;
 import spaceship.SpaceshipActionHandler;
@@ -110,7 +110,7 @@ public class EffectProcessor {
 			controller.getHandler().getFactionListener().setViolation(0, null);
 		}
 		if (str.equals("shop")) {
-			scene.replaceScreen(new ShopScreen(node.getAttribute("ID")));
+			scene.replaceScreen(ShopList.getInstance().getShop(node.getAttribute(("ID"))).getScreen());
 		}
 		if (str.equals("blueprint")) {
 			m_player.getCraftingLibrary().unlockRecipe(node.getAttribute("ID"));

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ItemEquip name="hazard jacket" weight="4" slot="BODY" value="1500">
+	<description>
+	An engineer's best friend, the jackets layered absorptive and neutralizing fibres provide good protection again heat and electricity. A perfect garment to wear in dangerous work spaces. Kinda unflattering though. +5 to thermal/shock defence, -2 to seduction.	
+	</description>
+	<modifier>
+		<seduction value="-2" />
+		<thermal value="5" />
+		<shock value="5" />
+	</modifier>
+</ItemEquip>

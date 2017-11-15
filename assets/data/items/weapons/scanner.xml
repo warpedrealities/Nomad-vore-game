@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ItemWeapon name="scanner" weight="2" value="1250">
+	<description>
+	A handheld scanning device. Looks like a TV remote engaged in flagrant mating with a small satellite dish. If you're scientifically minded you could use it to scan enemies and determine their remaining strengths both physical and mental. If not, you can pretend to be a traffic cop or annoy people with the shrill beeping noise it makes when used.
+	</description>
+	<modifier>
+	</modifier>
+	<combatMove name="scan" ammoCost="1" bonusToHit="8" timeCost="2" pattern="RANGED" actionCost="4" moveType="OTHER" bonusAttribute="RANGED">
+			<effectAnalyze control="SCIENCE">
+			<stat stat="HEALTH" vague="1" detail="3" precise="5"/>
+			</effectAnalyze>
+			<effectAnalyze control="SCIENCE">
+			<stat stat="RESOLVE" vague="2" detail="4" precise="6"/>
+			</effectAnalyze>			
+			<missText count="1">
+				<text>you attempt to scan TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>TARGET 's is being scanned</text>
+			</hitText>
+	</combatMove>	
+	<energy refill="ENERGY" efficiency="2" capacity="20" />
+</ItemWeapon>

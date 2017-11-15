@@ -101,7 +101,7 @@
 
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="modules/fueltank">
-					<resource type="FUEL" value="150" />
+					<resource type="FUEL" value="10" />
 				</contains>
 			</placeWidget>
 

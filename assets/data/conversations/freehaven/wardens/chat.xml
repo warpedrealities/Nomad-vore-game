@@ -2,9 +2,9 @@
 <Conversation>
 	<page ID="start">
 	<text>
-	
+	"Visitor. What can I do to help you?" the warden seems friendly enough, willing to stop her patrol amicably to talk to you.
 	</text>
-	
+	<choice destination="end" text="$Nothing at the moment, just wanted to say hello."/>
 	</page>
 
 </Conversation>

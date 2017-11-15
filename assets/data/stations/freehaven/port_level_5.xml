@@ -104,8 +104,11 @@
 	<placeNPC name="freehaven/wardens/wardenSentry" x="9" y="19" />		
 	<placeNPC name="freehaven/wardens/wardenSentry" x="7" y="19" />	
 	<placeNPC name="freehaven/wardens/warden_commander" x="16" y="3" />	
+	<placeNPC name="freehaven/civilians/robyn" x="25" y="9" />		
+	<placeNPC name="freehaven/civilians/Jehari" x="8" y="8" />	
+	<placeNPC name="freehaven/civilians/Laesha" x="23" y="23" />		
 		<partition xmin="2" xmax="30" ymin="11" ymax="19">
-			<SeedNPCs min="8" max="12" name="freehaven/wardens/warden">
+			<SeedNPCs min="6" max="10" name="freehaven/wardens/warden">
 			</SeedNPCs>
 		</partition>	
 	</mapgen>

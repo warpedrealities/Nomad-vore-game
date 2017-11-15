@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
 <ItemConsumable name="golden herb" weight="0.5" value="250">
-	<description>A golden leaf'd herb, a powerful aphrodisiac +6 pleasure, 6 seduction, -6 willpower.</description>
+	<description>A golden leaf'd herb, a powerful aphrodisiac +4 pleasure, 4 seduction, -4 willpower, -4 tease defence.</description>
 	<effectstatus probability="100">
 		<applyText> Tastes spicey, and tingles going down.
 		</applyText>
 		<statusAttribMod uid="47" icon="13" duration="60"
-			numModifiers="3">
-			<effect attribute="PLEASURE" modifier="6" />
-			<effect attribute="WILLPOWER" modifier="-6" />
-			<effect attribute="SEDUCTION" modifier="6" />
+			numModifiers="4">
+			<effect attribute="PLEASURE" modifier="4" />
+			<effect attribute="TEASE" modifier="-4" />			
+			<effect attribute="WILLPOWER" modifier="-4" />
+			<effect attribute="SEDUCTION" modifier="4" />
 			<removeText>You can feel your libido return to normal levels
 			</removeText>
 		</statusAttribMod>

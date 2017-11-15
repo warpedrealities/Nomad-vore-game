@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ItemConsumable name="psyche" weight="1" value="300">
+	<description>A neural stimulant, accelerates nerve transmission times improving ones melee, parry and dodge. However the initial rush will soon be followed by a crash where misfiring pathways will interfere with the same combat proficiencies.
+	</description>
+	<effectstatus probability="100">
+		<statusTag tag="pharma" />
+		<applyText>TARGET is now under the effect of psyche</applyText>
+		<statusAttribMod uid="22" icon="14" duration="60"
+			numModifiers="3">
+			<effect attribute="MELEE" modifier="6" />
+			<effect attribute="PARRY" modifier="6" />
+			<effect attribute="DODGE" modifier="6" />			
+			<removeText>The positive effects of psyche have worn off
+			</removeText>
+		</statusAttribMod>
+		<statusAttribMod uid="23" icon="15" duration="180"
+			numModifiers="3">
+			<effect attribute="MELEE" modifier="-4" />
+			<effect attribute="PARRY" modifier="-4" />
+			<effect attribute="DODGE" modifier="-4" />				
+			<removeText>The negative effects of psyche have worn off
+			</removeText>
+		</statusAttribMod>
+	</effectstatus>
+</ItemConsumable>

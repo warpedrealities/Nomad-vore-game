@@ -39,6 +39,7 @@ import widgets.WidgetPortal;
 import widgets.spawner.WidgetSpawner;
 import worldgentools.ZoneBuildTools;
 import zone.TileDef.TileMovement;
+import zone.Environment.EnvironmentalConditions;
 import zonePreload.ZonePreload;
 import zonePreload.ZonePreloadController;
 
@@ -70,7 +71,8 @@ public class Zone implements ILosBoard, Zone_int {
 	public Tile[][] zoneTileGrid;
 	public ZonePreloadController preload;
 	private int violationLevel;
-
+	private EnvironmentalConditions zoneConditions;
+	
 	public void setZoneTileGrid(Tile[][] zoneTileGrid) {
 		this.zoneTileGrid = zoneTileGrid;
 	}
@@ -637,6 +639,15 @@ public class Zone implements ILosBoard, Zone_int {
 		} else {
 			dstream.writeBoolean(false);
 		}
+		if (zoneConditions!=null)
+		{
+			dstream.writeBoolean(true);
+			zoneConditions.save(dstream);
+		}
+		else
+		{
+			dstream.writeBoolean(false);		
+		}
 	}
 
 	public void load(DataInputStream dstream) throws IOException {
@@ -706,6 +717,10 @@ public class Zone implements ILosBoard, Zone_int {
 		if (dstream.readBoolean()) {
 			zoneRules = ParserHelper.LoadString(dstream);
 			violationLevel = dstream.readInt();
+		}
+		if (dstream.readBoolean())
+		{
+			zoneConditions=new EnvironmentalConditions(dstream);
 		}
 	}
 

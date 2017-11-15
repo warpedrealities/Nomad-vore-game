@@ -6,6 +6,7 @@
 		<text>The harpy leans up at your approach, nuzzling against you and
 			looking up at you with clear desire both for your delightful company
 			and your pleasurable ministrations.</text>
+		<picture source="harpyportrait"/>			
 		<choice destination="receiveoral" text="get her to pleasure you">
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>
@@ -29,6 +30,7 @@
 		<text>The harpy coos and watches your approach with arousal and
 			fondness. Her soaked inner thighs show how clearly happy she is to
 			fall into submission to you once again.</text>
+		<picture source="harpyportrait"/>			
 		<choice destination="receiveoral" text="get her to pleasure you">
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>
@@ -51,6 +53,7 @@
 			wing against the sopping cleft between her thighs. Aroused and
 			enthralled she pants submissively at your approach, it's clear what
 			she wants.</text>
+		<picture source="harpyportrait"/>			
 		<choice destination="receiveoral" text="get her to pleasure you">
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>

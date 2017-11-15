@@ -24,7 +24,8 @@ public class TargetingControls {
 		this.targeting=targeting;
 		playerShip=player;
 		this.ships=ships;
-		index=-1;
+		index=1;
+		Recalc(index);
 	}
 	
 	public void Recalc(int i)

@@ -5,11 +5,13 @@
 		The kitty pirate pants before you, her face flushed and her weapons scattered at her feet while her hands busily fondle herself. A murr emanating from her throat as she looks at you with a lustful desire and digs one hand under her skirt, busy with what by the occasional drip is a wet and aroused snatch "what are you going to do to me?" she asks needily.
 		</text>
 		<choice destination="oralvore0" text="$I'm going to swallow you up..and digest you inside me, doesn't that sound sexy?">
+		<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
 		<choice destination="facefuck0" text="$I'm gonna use your mouth, and you're gonna like it">
 		<condition operator="lessthan" evaluate="BODYVALUE"
 					bodypart="penis" partvalue="length" value="30" />	
 		<assertion evaluate="haspart" part="penis"/>	
-		<choice>
+		</choice>
 		<choice destination="sex0" text="$Well, it starts with your legs spread and ends with you yowling for joy">
 		<condition operator="lessthan" evaluate="BODYVALUE"
 					bodypart="penis" partvalue="length" value="30" />		

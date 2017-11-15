@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="whiteshop.png" />
+	<name>Robyn</name>
+	<description>
+	What is before you is clearly a catgirl, only exceeding five foot if you count her peach furred feline ears perked up atop her head and if you can get her to not be slouching into her seat. The kitty girl's surroundings mark her as a shopkeeper of sorts, though the somewhat casual clothing and the way her strawberry blonde hair is mussed untidily and she's allowing herself to be engrossed in a portable gaming device indicates an oddly carefree sort of indifference to the demands of such a role. 
+	</description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="25" />
+		<stat stat="RESOLVE" value="20" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="-2" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="4"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<flying />
+	<talk conversation="freehaven/Robyn/chat" />		
+	<controller AI="staystill" />
+	<faction value="freehaven_civilians" />
+</Harpy>

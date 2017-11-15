@@ -42,7 +42,7 @@
 	</rpg>
 
 	<respawn delay="2000" />
-	<victory conversation="freehaven/commander_Frei/victory" />
+	<!--<victory conversation="freehaven/commander_Frei/victory" />-->
 	<seducer conversation="freehaven/commander_Frei/victory" />
 	<talk conversation="freehaven/commander_Frei/chat" />	
 	<controller AI="commander_frei" />

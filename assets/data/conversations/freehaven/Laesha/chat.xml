@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
+	<text>
+	Laesha smiles "Hello again, what can I do for you today?"
+	</text>
+	<choice destination="shop" text="$I have need of your services"/>
+	<choice destination="questions" text="$Can I ask you some questions?"/>	
+	<choice destination="end" text="$nothing, i think i must of gotten lost, i'll be going now"/>
+	</page>
+	
+	<page ID="start">
+	<text>
+	The lamia slithers closer at your arrival, unsettling as she looms for a moment only to settle down on her coils to look you in the eyes and smile "Greetings, I haven't seen you around here before. I'm Laesha, this is my shop. And unless you've gotten to be here in front of me by some truly outlandish means You're probably gonna be interested in my services."
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />
+	<choice destination="services" text="$What sort of services?"/>
+	</page>
+	
+	<page ID="services">
+	<text>
+	"You came here on a ship right? I run the most trustworthy servicing operation here. Need refuelling, need someone to fix up some holes. Me and mine got you covered."
+	</text>
+	<choice destination="shop" text="$excellent, show me what you're offering"/>
+	<choice destination="questions" text="$Can I ask you some questions?"/>
+	<choice destination="end" text="$good to know, i'll look you up if i need your services"/>
+	</page>
+	
+	<page ID="questions">
+	<text>
+	"Sure I guess, but only cause I'm not too busy right now."
+	</text>
+	<choice destination="talk" text="$This'll be an odd question, but last time I saw someone like you they didn't talk"/>
+	<choice destination="end" text="$actually on second thoughts maybe not right now, I'll come back later"/>
+	</page>
+	
+	<page ID="talk">
+	<text>
+	"..And this is surprising to you because..." she says and then watches your expression and the lack of you having her on "Shit, you been living under a rock?..hooboy." she says and considers how to explain common knowledge "Few centuries back, there was this plague. Brought down galactic civilization cause anyone who succumbed couldn't talk, and couldn't use tools and it affected a good fraction of everyone in the entire galaxy. So the ones you met are probably descendants of those who weren't immune to it."
+	</text>
+	<choice destination="immunity" text="$Are you immune?"/>
+	<choice destination="danger" text="$A plague? does that mean I'm in danger of getting infected?"/>
+	<choice destination="end" text="$Thanks for telling me about this I genuinely didn't know this before now"/>
+	</page>
+	
+	<page ID="danger">
+	<text>
+	"Well you're talking to me, so you must be a descendant of those who weren't affected. Unless you came from somewhere it never hit." Laesha has to think about it for a minute which does nothing to ease your concerns especially as she follows up with a shrug "Sorry, I never knew anyone who knows more about it. Maybe you'll find someone who knows the answer?"
+	</text>
+	<choice destination="end" text="$not exactly comforting... I'll be going now."/>
+	</page>
+
+	<page ID="immunity">
+	<text>
+	"Well duh, you inherit the immunity. But only if both your parents got it...there's been stories of that sorta thing, girls grabbed by ferals of their own species and bred. Their children feral, every one of them."
+	</text>
+	<choice destination="end" text="$that's horrifying, I think i've learned all I want to for the moment"/>
+	</page>
+	
+	<page ID="shop">
+	<text>
+	</text>
+		<special effect="shop" ID="freehaven_services" />	
+	</page>
+	
+</Conversation>

@@ -56,7 +56,7 @@
 		</text>
 		<choice destination="about" text="$So how did you two get together?"/>
 		<choice destination="help0" text="$So about that help you wanted Myrai?">
-		<condition evaluate="LOCALFLAG" operator="help" value="0"
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
 			flag="help" />		
 		</choice>
 		<choice destination="help1" text="$About that help you needed?">

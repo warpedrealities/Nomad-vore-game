@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <Harpy>
-	<sprite value="blueTurret.png" />
-
-	<name></name>
-	<description></description>
+	<sprite value="greenshop.png" />
+	<name>Jehari</name>
+	<description>
+	An unusual scientist who towers at 8 feet tall. Her head is reptilian and her toothy jaws taper giving her head a blunted triangle sort of outline though her eyes are bright with intelligence. Her hexapodal form is tauric in outline. Her upper body buxomly humanoid and feminine down to the waist and her lower body that of a great saurian beast. That heavy lower half settled on powerful digitigrade limbs ending in flexible broad clawed almost handlike feet and terminating in an equally powerful tail. Despite how much her form seems built for power the lab coat and air of distraction to her do a lot to calm down any apprehension. That lab coat of hers ensures her modesty and seems to have a second part that drapes over her tauric back and sides concealing her underside from view.
+	</description>
 	<rpg>
 		<experiencevalue value="15" />
 		<ability ability="STRENGTH" value="5" />
@@ -12,8 +13,8 @@
 		<ability ability="ENDURANCE" value="5" />
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
-		<stat stat="HEALTH" value="25" />
-		<stat stat="RESOLVE" value="20" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
 		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="-2" threatening="true">
 			<effectDamage type="KINETIC" minValue="1" maxValue="4"
@@ -27,12 +28,8 @@
 		</combatMove>
 	</rpg>
 
-	<respawn delay="2000" />
 	<flying />
-	<defeated conversation="" />
-	<seduced conversation="" />
-	<victory conversation="" />
-	<seducer conversation="" />
-	<controller AI="turret" />
-	<faction value="freehaven_civilian" />
+	<talk conversation="freehaven/Robyn/chat" />	
+	<controller AI="staystill" />
+	<faction value="freehaven_civilians" />
 </Harpy>

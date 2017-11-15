@@ -4,7 +4,7 @@ import actor.npc.NPC;
 import item.Item;
 import shared.Screen;
 import shared.Vec2f;
-import shop.ShopScreen;
+import shop.merchant.ShopMerchantScreen;
 import widgets.Widget;
 import widgets.WidgetCapture;
 import widgets.WidgetConversation;

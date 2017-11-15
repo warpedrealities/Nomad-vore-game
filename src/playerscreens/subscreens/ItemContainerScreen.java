@@ -19,7 +19,7 @@ import playerscreens.InventoryScreen;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
-import shop.ShopScreen;
+import shop.merchant.ShopMerchantScreen;
 import view.ViewScene;
 import widgets.WidgetContainer;
 

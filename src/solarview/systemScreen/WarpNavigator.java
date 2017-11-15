@@ -15,7 +15,7 @@ public class WarpNavigator {
 	
 	public double getAngle(float x0, float y0, float x1, float y1)
 	{	
-		Vec2f p=new Vec2f(y1-y0,x0-x1);
+		Vec2f p=new Vec2f(y0-y1,x0-x1);
 		p.normalize();
 		double angle = Math.atan2(p.y,p.x);
 		if (angle<0)
@@ -43,7 +43,7 @@ public class WarpNavigator {
 		Vec2i coordinates=Universe.getInstance().getSystem().getPosition();
 		Vec2i p=ZoneInteractionHandler.getPos(dir, coordinates);
 		
-		StarSystem system=Universe.getInstance().getSystem(p.x, p.y);
+		StarSystem system=Universe.getInstance().getSystem(p.x, p.y*-1);
 		if (system!=null)
 		{
 			return system.getPosition();

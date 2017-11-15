@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
+	<text>
+	"Hi again valued customer, what can I do for you today?" asks the kitty bounding up to her counter at the prospect of potential sales.
+	</text>
+	<choice destination="shop" text="$You can show me what you have for sale"/>
+	<choice destination="questions" text="$Can I ask you some questions?"/>
+	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
+	</page>
+	
+	<page ID="start">
+	<text>
+	You try to get the shopkeeper's attention and pry it away from the beeping device. It takes but a moment for her to notice you and she taps a button and carelessly tosses the device to one side bounding up as she shifts gear in the span of a breath and unleashes smiling cuteness on you "Nyah welcome to Robyn's emporium of general goods and supplies. I'm Robyn the proprietor and how can I help you today?" 
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />
+	<choice destination="shop" text="$You can show me what you have for sale"/>
+	<choice destination="questions" text="$Can I ask you some questions?"/>
+	<choice destination="end" text="$I'm happy to make your acquaintance, but I'll see what you're selling another time"/>
+	</page>
+	
+	<page ID="questions">
+	<text>
+	"Sure, I got time."
+	</text>
+	<choice destination="about" text="$Can I ask a bit about you? you seem a bit 'young' for this"/>
+	<choice destination="end" text="$I have no questions at the moment"/>
+	</page>
+	
+	<page ID="about">
+	<text>
+	Robyn takes the comment on her air of immaturity in stride "Yeah I get that a lot. You ever hear knowledge is power? well, I inherited a bunch of that from mom. And I came here cause the wardens'd keep folks from taking it from me."
+	</text>
+	<choice destination="knowledge" text="$What sort of knowledge?"/>
+	<choice destination="past" text="$What did you do before settling down here?"/>
+	<choice destination="shop" text="$Thanks Robyn, I'd like to see what you for sale now"/>
+	<choice destination="questions" text="$Can I ask more questions?"/>
+	<choice destination="end" text="$thanks for telling me Robyn, that's all I wanted to know"/>
+	</page>
+	
+	<page ID="past">
+	<text>
+	"That was another life, more exciting certainly. But a lot more dangerous. Lets just say I had my fill of a mis-spent youth and running the risk of ending up padding an ass on a daily basis started to wear on me."	
+	</text>
+	<choice destination="shop" text="$Thanks Robyn, I'd like to see what you for sale now"/>
+	<choice destination="questions" text="$Can I ask more questions?"/>
+	<choice destination="end" text="$thanks for telling me Robyn, that's all I wanted to know"/>
+	</page>
+	
+	<page ID="knowledge">
+	<text>
+	"Contacts. Who does what and where. You'd be amazed how hard it is to get your hands on some things if you don't know who is still producing them."
+	</text>
+	<choice destination="shop" text="$Thanks Robyn, I'd like to see what you for sale now"/>
+	<choice destination="questions" text="$Can I ask more questions?"/>
+	<choice destination="end" text="$thanks for telling me Robyn, that's all I wanted to know"/>	
+	</page>
+	
+	<page ID="shop">
+	<text>
+	</text>
+		<special effect="shop" ID="freehaven_general" />	
+	</page>
+	
+</Conversation>

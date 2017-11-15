@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <Harpy>
-	<sprite value="blueTurret.png" />
-
-	<name></name>
-	<description></description>
+	<sprite value="lamia.png" />
+	<name>Laesha</name>
+	<description>
+	Some forty foot of coiled thick serpentine tail is something that catches your eye almost before seeing her upper body. The lamia clad in a tanktop, loincloth and an idle smile as she contemplates you with a gaze that while predatory is more perhaps mercantile than voracious. Her hair is neatly trimmed to neck length, dark and highlighted with green dye that matches the colour of her scaled lower body.
+	</description>
 	<rpg>
-		<experiencevalue value="15" />
+		<experiencevalue value="25" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />
@@ -29,10 +30,7 @@
 
 	<respawn delay="2000" />
 	<flying />
-	<defeated conversation="" />
-	<seduced conversation="" />
-	<victory conversation="" />
-	<seducer conversation="" />
-	<controller AI="turret" />
-	<faction value="freehaven_civilian" />
+	<talk conversation="freehaven/Laesha/chat" />		
+	<controller AI="staystill" />
+	<faction value="freehaven_civilians" />
 </Harpy>

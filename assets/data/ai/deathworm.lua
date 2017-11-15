@@ -10,7 +10,7 @@ function wormBehaviour(controllable,sense)
 	y=hostile:getPosition().y
 	distance=hostile:getPosition():getDistance(pos)
 	
-	if (distance<2)
+	if (distance<2) then
 		controllable:getRPG():removeStatus(23)
 		sense:drawText("A deathworm erupts from beneath the sands!")		
 		controllable:setValue(0,2)		

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<!--subsequent meetings-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
+	<text>
+	Jehari turns around when you get her attention "Ah! you're back, yes?" she pauses a moment then nods "Yes, you're back. Sorry sometimes it's hard to keep things straight. What can I do for you today?"
+	</text>	
+	<choice destination="shop" text="$I'd like to see what you have for sale"/>
+	<choice destination="questions" text="$I'd like to ask you some questions"/>
+	<choice destination="end" text="$Nothing at the moment, I'll let you get back to your experiments"/>
+	</page>
+	
+	<page ID="start">
+	<!--initial meeting-->
+	<text>
+	The reptile taur is contemplatively musing to herself, seemingly deep in consideration of..something on her datapad only to look up saying something inscrutably technical to herself and darting over to a scanner and from there shortly to rummage in a cabinet all without noticing your presence. Just about the time you were starting to wonder whether it was a good idea to disturb her though she seems to catch a glimpse of you out of the corner of her eye and lets out a startled mip, the heavy taur jumping in surprise "Oh! I didn't see you there...you, how long have you been standing there, you didn't see me...no you don't look like you did. Uh, why are you here?"
+	</text>
+	<choice destination="initial0" text="$You're just off the station concourse, there's no do not disturb sign, I thought this was a shop"/>
+	</page>
+
+	<page ID="initial0">
+	<text>
+	"Oh, oh well I suppose it is..not just that. Mostly it's my lab, but Frei says I need to pay for a place on this level. So yes, i sell things, that makes this is a shop right? probably. Are you interested in being sold things?" she cants her head to the side. 
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />
+	<choice destination="initial1" text="$I normally like to know the name of the person I'm talking to, my name is PNAME what's yours?"/>
+	</page>
+	
+	<page ID="initial1">
+	<text>
+	"I told you my name is Jehari already didn't I?" she says at that, then blinks "I didn't...did I? sorry. My name is Jehari, and yes I'm a valk, don't worry I'm REALLY harmless." she says forestalling a reaction that she's apparently gotten before "It's a pleasure to meet you." she says doing a sorta half bow half bob down then up again.
+	</text>
+	<choice destination="questions" text="$It's a pleasure to meet you, can I ask some questions?"/>
+	<choice destination="shop" text="$It's a pleasure, can you show me what you have for sale?"/>
+	<choice destination="end" text="$It's a pleasure to meet you, I'll be back later though, farewell"/>
+	</page>
+	
+	<page ID="questions">
+	<text>
+	"Of course. A thirst for knowledge is always important."
+	</text>
+	<choice destination="about_Jehari" text="$Could you tell me a bit about yourself, you seem a rather unique individual"/>
+	<choice destination="about_research" text="$You said this is a lab, what do you research exactly?"/>
+	<choice destination="about_valk" text="$You said you were a Valk, what does that mean exactly?"/>
+	<choice destination="end" text="$Actually, I have no questions at the moment, I'll leave you be"/>
+	</page>
+	
+	<page ID="about_Jehari">
+	<text>
+	"Oh well, I suppose I am here. Not much to say. I was decanted defective and slated for liquidation. I can't fight you see, it's why I'm so glad for the wardens. Anyway I found a way of getting to an escape pod and i was picked up by some nice girls who dropped me off here. And I've been here ever since, Frei got me a lab once she realized the sorta mind I had."
+	</text>
+	<choice destination="questions" text="$I have more questions"/>
+	<choice destination="shop" text="$I have no more questions, can I see what you have for sale?"/>
+	<choice destination="end" text="$Thankyou, I have no more questions"/>
+	</page>
+	
+	<page ID="about_research">
+	<text>
+	"All sorts really, it ALL interests me. But I particularly want to try and correct some of my own defects, Frei says I'm really smart but I keep getting distracted. I can't focus really easily and I keep on forgetting things. I did mention this already didn't I?"
+	</text>
+	<choice destination="questions" text="$I have more questions"/>
+	<choice destination="shop" text="$I have no more questions, can I see what you have for sale?"/>
+	<choice destination="end" text="$Thankyou, I have no more questions"/>
+		
+	</page>
+	
+	<page ID="about_valk">
+	<text>
+	"You don't know? oh, I suppose you might not. My people are all grown in vats, we were originally meant to be soldiers for our makers but they were seemingly all reduced to less than full sapience by the plague so we had to create our own leaders and goals with no one to tell us what to do. I think we mostly lack imagination though, fighting and conquering was what we were doing before we were free."
+	</text>
+	<choice destination="questions" text="$I have more questions"/>
+	<choice destination="shop" text="$I have no more questions, can I see what you have for sale?"/>
+	<choice destination="end" text="$Thankyou, I have no more questions"/>	
+	</page>
+	
+	<page ID="shop">
+	<text>
+	</text>
+		<special effect="shop" ID="freehaven_biotech" />	
+	</page>
+		
+</Conversation>

@@ -77,7 +77,7 @@ public class DialogueScreen extends Screen implements Callback {
 		m_window = new Window(new Vec2f(3, -1), new Vec2f(17, 17), frame, true);
 		m_choices = new String[16];
 
-		portraitImage = new Image(new Vec2f(-17, -1), new Vec2f(17, 17), "assets/art/portraits/test.png");
+		portraitImage = new Image(new Vec2f(-20, -1), new Vec2f(23, 17), "assets/art/portraits/test.png");
 		portraitImage.setVisible(false);
 
 		m_stagnation = 0;
@@ -262,7 +262,7 @@ public class DialogueScreen extends Screen implements Callback {
 			portraitImage.setVisible(false);
 		} else {
 			portraitImage.setVisible(true);
-			portraitImage.setTexture(str);
+			portraitImage.setTexture("assets/art/portraits/"+str+".png");
 		}
 
 	}

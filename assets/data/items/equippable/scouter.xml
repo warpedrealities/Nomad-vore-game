@@ -18,5 +18,5 @@
 	</combatMove>	
 	<modifier>
 	</modifier>
-	<energy refill="ENERGY" efficiency="0.5" capacity="5" />	
+	<energy refill="ENERGY" efficiency="0.5" capacity="10" />	
 </ItemEquip>

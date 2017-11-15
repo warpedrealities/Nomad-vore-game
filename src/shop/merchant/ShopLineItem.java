@@ -1,4 +1,4 @@
-package shop;
+package shop.merchant;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
