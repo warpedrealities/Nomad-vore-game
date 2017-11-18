@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Preferences {
 
@@ -41,6 +42,11 @@ public class Preferences {
 
 	}
 
+	public List<String> getPrefs()
+	{
+		return m_list;
+	}
+	
 	public boolean ForbiddenPref(String str) {
 		if (m_list.size() > 0) {
 			for (int i = 0; i < m_list.size(); i++) {
@@ -51,6 +57,11 @@ public class Preferences {
 			}
 		}
 		return false;
+	}
+
+	public void setPreferences(List<String> prefs) {
+		m_list.clear();
+		m_list.addAll(prefs);
 	}
 
 }

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<text>
+		The draconian looms over you, flushed, breathing heavily as she lets out a low growl "You, I've never felt this way before." she says and then a little shiver runs through her afore she declares...what it is she wants.
+		</text>
+		<choice destination="oralvore0" text="#..i want to be your food, i want to feed myself to you">
+		<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="sex0" text="#..I want to mate with you">
+		</choice>	
+		<choice destination="cockvoreP0" text="#..I want your sexy body, churning in my balls">
+		<preference fetish="herms" />
+		<preference fetish="cockvore" />		
+		</choice>
+		<choice destination="analvoreP0" text="#..I want you inside me, you belong in my ass">
+		<preference fetish="analvore" />	
+		</choice>	
+		<choice destination="analvore0" text="#I want you to debase me, let me crawl into your ass">
+		<assertion evaluate="hasperk" perk="analvore" />
+		</choice>		
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>	
+		<choice destination="end" text="*whatever it is you beat a hasty retreat*"/>	
+		</page>	
+			<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="130" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+	<page ID="sex0">
+	<text>
+	Well a tumble with a sexy draconian sounds like a good idea to you. Question is who is going to be on the receiving end...
+	</text>
+	<choice destination="sexF0" text="that'd be me">
+		<assertion evaluate="haspart" part="vagina" />
+	</choice>
+	<choice destination="sexH0" text="that'd be her">
+		<assertion evaluate="haspart" part="penis" />
+	</choice>
+	</page>
+	
+	<page ID="sexF0">
+	<text>
+	You express your agreement to be screwed
+	</text>
+	
+	</page>
+	
+	<page ID="sexH0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	The draconian seems aroused and yet shameful at the urges you've instilled in her. With a flush on her face and yet she doesn't hesitate on unfamiliar ground "so do it, what are you waiting for, eat me" she declares with a growl. Not waiting as she thrusts a hand at your lips, pressing her fingers past your lips and down your throat. You're forced to swallow or choke and as her hand bulges out your neck she blushes heavier "why are you so sexy" she mumbles accusingly as if you're really forcing her hand as she shoves her other hand into your mouth and down your throat. The draconian tucking her wings down against her back and lowering her head as you take another swallow, and then another. The draconian's newfound preyish desires are still a bit unexpected, but managable like those of everyone else who wants inside of you.
+	</text>
+	<choice destination="oralvore1" text="*accomodate the draconian*"/>
+	</page>
+
+	<page ID="oralvore1">
+	<text>
+	The draconian mumbles and moans as she thrusts her head down your throat, your hands sliding up to grasp her ample and powerful frame as she leans into your mouth. She's being such a good prey in feeding herself to you, your tongue lashing over her bared large breasts and then you're squishing them down your throat. Gradually you take over from her powerful body pushing herself into your mouth and help feed her in, squeezing her ass and feeling her tail swaying around against the back of your hands as you gobble her up "gonna be just food" the draconian moans out, aroused..but ashamed as she admits what she's gonna be..what she wants to be, for you.
+	</text>
+	<choice destination="oralvore2" text="*swallow her the rest of the way*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	You feel your gut stretching and filling out with her body as you tip her legs into the air, feeling her grinding her hips against the inside of your throat as you swallow her down steadily. The draconian turning into a filling bulge stretching out your gut with your powerful yet preyish meal. The draconian's legs and tail the last to disappear as you polish her off and look down at your middle, she was delicious, both in attitude and flavour.
+	</text>
+	<choice destination="oralvore3" text="$Well satisfied now food? you're all held in a belly, ready to be digested"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	The draconian lets out a growl but it turns swiftly into a moan as you tease her and she squirms "...yes, ready to be digested.." she really doesn't second guess her decision now, she's going all the way and so you feel happy to fulfil her goals. Your stomach starting to gurgle and glorp around her, pressing around her as she groans and squirms around and her mighty form is bathed and marinated in your enzymes.
+	</text>
+	<choice destination="oralvore4" text="*treat her like the food she is*"/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	The draconian groans and squirms and churns inside you for a seeming age. The sensations of her form stretching and pushing against your insides toe curlingly exquisite at containing and claiming so mighty a predator as your willing meal. Gradually her form is conquered by your digestive powers, ground down into mush inside your belly. The draconian a deliciously satisfying meal for you, and one you're happy to accomodate. Once she's liquidated its not that long to absorb her entirely, her body putting up no more resistance and soon your gut shrinks down to nothing.
+	</text>
+		<effect type="feed" value="130" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
+</Conversation>

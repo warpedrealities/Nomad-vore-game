@@ -87,6 +87,7 @@
 			that you gained a deep satisfaction in serving me in that fashion.
 			Very well then...I will await your offer with anticipation."
 		</text>
+		<effect type="setfactionflag" flag="sackslut" value="1" />		
 		<effect type="setlocalflag" flag="sackslut" value="1" />
 		<choice destination="end"
 			text="Mhmm, I look forward to filling your balls again soon your majesty, for now farewell" />

@@ -13,13 +13,13 @@ import font.FontSupport;
 
 public class Config {
 
-	private float m_scale;
+	private float m_scale,yScale=1,yInputScale=1;
 	private float m_textscale;
 	private boolean verboseCombat;
 	private boolean disableAutosave;
 	protected Matrix4f matrix;
 	public static final int VERSION = 256;
-
+	
 	public Config() {
 		// open config file
 		// read
@@ -42,6 +42,14 @@ public class Config {
 							String input = BR.readLine();
 							m_textscale = Float.parseFloat(input);
 						}
+						if (str.contains("yScale")) {
+							String input = BR.readLine();
+							yScale = Float.parseFloat(input);
+						}
+						if (str.contains("yInputScale")) {
+							String input = BR.readLine();
+							yInputScale = Float.parseFloat(input);
+						}
 					} else {
 						break;
 					}
@@ -61,7 +69,7 @@ public class Config {
 		}
 		matrix = new Matrix4f();
 		matrix.m00 = 0.05F;
-		matrix.m11 = 0.0625F;
+		matrix.m11 = 0.0625F*yScale;
 		matrix.m22 = 1.0F;
 		matrix.m33 = 1.0F;	
 		matrix.m31 = 0;
@@ -99,6 +107,10 @@ public class Config {
 
 	public void setDisableAutosave(boolean disableAutosave) {
 		this.disableAutosave = disableAutosave;
+	}
+
+	public float getyInputScale() {
+		return yInputScale;
 	}
 
 }

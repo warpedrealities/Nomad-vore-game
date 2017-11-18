@@ -54,7 +54,7 @@
 	</rpg>
 	<flying />
 	<defeated conversation="alpha_minoris_II/draconian/defeat" />
-	<seduced conversation="alpha_minoris_II/draconian/defeat" />
+	<seduced conversation="alpha_minoris_II/draconian/seduced" />
 	<victory conversation="alpha_minoris_II/draconian/victory" />
 	<seducer conversation="alpha_minoris_II/draconian/victory" />
 	<controller AI="draconian" />

@@ -102,8 +102,8 @@ public class MouseHook extends GLFWCursorPosCallback {
 	public void invoke(long screen, double xpos, double ypos) {
 		float x = ((float) xpos - (640 * Game.sceneManager.getConfig().getScale()))
 				/ (32 * Game.sceneManager.getConfig().getScale());
-		float y = ((float) ypos - (512 * Game.sceneManager.getConfig().getScale()))
-				/ (32 * Game.sceneManager.getConfig().getScale()) * -1;
+		float y = ((float) ypos - (512 * Game.sceneManager.getConfig().getScale()*Game.sceneManager.getConfig().getyInputScale()))
+				/ (32 * Game.sceneManager.getConfig().getScale()*Game.sceneManager.getConfig().getyInputScale()) * -1;
 
 		m_position.x = x;
 		m_position.y = y;

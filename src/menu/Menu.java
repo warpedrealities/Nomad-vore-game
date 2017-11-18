@@ -5,6 +5,7 @@ import gui.Button2;
 import gui.Text;
 import gui.Window;
 import input.MouseHook;
+import menu.preferenceControls.PreferencesScreen;
 import nomad.Universe;
 
 import org.lwjgl.opengl.GL11;
@@ -48,20 +49,14 @@ public class Menu extends SceneBase implements MyListener, Callback {
 		}
 
 		SetupTextures();
-		m_GUImatrix = new Matrix4f();
-		m_GUImatrix.m00 = 0.05F;
-		m_GUImatrix.m11 = 0.0625F;
-		m_GUImatrix.m22 = 1.0F;
-		m_GUImatrix.m33 = 1.0F;
-		m_GUImatrix.m31 = 0;
-		m_GUImatrix.m32 = 0;
+		m_GUImatrix = Game.sceneManager.getConfig().getMatrix();
 		m_stagger = 0.1F;
 		// build logo
 		m_sprite = new Sprite("logo", new Vec2f(-5, 0), 10);
 		// build window
-		m_window = new Window(new Vec2f(-6, -12), new Vec2f(12, 11), m_textureIds[0], true);
+		m_window = new Window(new Vec2f(-6, -14), new Vec2f(12, 13), m_textureIds[0], true);
 		// build buttons
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 6; i++) {
 			String str = null;
 			switch (i) {
 			case 0:
@@ -78,8 +73,12 @@ public class Menu extends SceneBase implements MyListener, Callback {
 				break;
 			case 4:
 				str = "options";
+				break;
+			case 5:
+				str = "preferences";
+				break;
 			}
-			Button button = new Button(new Vec2f(0.5F, 0.5F + 8 - (2 * i)), new Vec2f(11, 2), m_textureIds[2], this,
+			Button button = new Button(new Vec2f(0.5F, 0.5F + 10 - (2 * i)), new Vec2f(11, 2), m_textureIds[2], this,
 					str, i);
 
 			m_window.add(button);
@@ -202,6 +201,9 @@ public class Menu extends SceneBase implements MyListener, Callback {
 				// options
 				options();
 				break;
+			case 5:
+				preferences();
+				break;
 			}
 		}
 
@@ -211,7 +213,16 @@ public class Menu extends SceneBase implements MyListener, Callback {
 		m_screen = new OptionsScreen(m_textureIds[1], m_textureIds[0], m_textureIds[2], m_variables[0], true, this);
 		m_screen.start(m_hook);
 	}
-
+	public void preferences() {
+		m_screen = new PreferencesScreen();
+		int values[] = new int[4];
+		values[0] = m_textureIds[0];
+		values[1] = m_textureIds[1];
+		values[2] = m_textureIds[2];	
+		values[3] = SceneBase.getVariables()[0];
+		m_screen.initialize(values, this);
+		m_screen.start(m_hook);
+	}
 	@Override
 	public void Callback() {
 		// TODO Auto-generated method stub
