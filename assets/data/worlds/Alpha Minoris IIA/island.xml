@@ -36,6 +36,7 @@
 <POIWidget name="modules/reformer"/>
 <POINPC name="Alpha_Minoris_IIA/drake"/>
 <POINPC name="Alpha_Minoris_IIA/wyvern"/>
+<POINPC name="Alpha_Minoris_IIA/kittytaur"/>
 <walloff wall="4" sides="northeastsouthwest"/>
 
 </mapgen>

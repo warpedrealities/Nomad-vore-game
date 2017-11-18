@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="known"
+			value="1" />	
+	<text>
+	The kitty taur perks up in surprise as you approach. But her face soon flushes as her mind works quickkly and she makes an assumption about why you're approaching her, after all..you expressed it pretty well before. Her hands reaching out, grasping your head firmly yet gently...
+	</text>
+	<choice destination="cockvoreA0" text="and guiding you down between her forelegs"/>
+	</page>
+	
+	<page ID="cockvoreA0">
+	<text>
+	You find yourself staring at her firming tip, the kitty taur taking charge. Faced with your depravity she knows now how to treat dragons such as yourself, holding your head in place as she thrusts forwards. Her broad cocktip letting out a squeelch as it starts to stretch mightily once more around your snout, sliding and slithering up towards and then over your eyes to seal you into the kind of naughty darkness that is your natural habitat.
+	</text>
+	<choice destination="cockvoreA1" text="mhmm!"/>
+	</page>
+	
+	<page ID="cockvoreA1">
+	<text>
+	Hot cum soaked flesh ripples and presses tight around the form of your head as you're fed into those debauched depths by your now somewhat more assertive predator. The kitty letting out a rumbling purr as her length stretches mightily around your head and she works her hands steadily up your neck. The taur feeding her hefty schlong with a large cockmeal, a shamelessly sackslutty dragon who she seems to enjoy greatly putting in her place. Your forelegs soon squeezing against your body as her ravenous schlong works over them and her sack bulges out with your head and thrums with your submissive chirrs. 
+	</text>
+	<choice destination="cockvoreA2" text="such a good kitty"/>
+	</page>
+	
+	<page ID="cockvoreA2">
+	<text>
+	Hot cum squelches as you displace it, pushing it into the corner of the taur's balls and making her spread her stance to accomodate the contours of her sack as it assumes the shape of your head and curling neck. The taur's purrs and relentless palms making you squirm in submission as she feeds you down her dick to the place where you belong. Your hindlegs soon becoming pinned against your flanks and from there it's a long slow schlurp for her clenching shaft to drag you inside, the taur's rear legs lifted up off the ground. Her weight now supported by the immensity of your curled form and her forelegs as she mhmms and blushes, shivering and smiling as the last of you vanishes into her hungry balls. Well she learned really quickly the best way to treat dragons like you.
+	</text>
+	<choice destination="cockvoreA3" text="and now..now comes the melting"/>
+	</page>
+	
+	<page ID="cockvoreA3">
+	<text>
+	You feel all about you her sack walls pressing in on you, conforming to your features as you bask in her satisfaction and no small amount of her cum. The virile sack of the taur starting to burble and churn once more about your form, converting your shamelessly submissive and oh so meltable form into countless gallons of thick spunk for her to waste on the ground.
+	</text>
+	<choice destination="cockvoreA4" text="...melt away"/>
+	</page>
+
+	<gameover ID="cockvoreA4">
+	<text>
+	You wonder if the taur can hear your submissive moans over the burble of her active balls around you, and more importantly whether she cares that the draconic sackslut in her balls is shuddering in bliss from her liquidation. Perhaps not, all that matters..is that you make a satisfying orgasm. The taur's balls gradually rounding out, your form softening and spreading into the surrounding cum. Her hindlegs once resting on the solid bulk of your shape now indent into the cushion like liquidfilled sack and her curls to bring her hands onto her cock and stroke off...stroking, stroking, and then finally her shaft erupts..all those gallons of seed splurting out onto the ground as she relieves the pressure, her sack shrinking down and her hindpaws settling back onto the ground. The kitty purring as she surveys her handiwork and the last splorts of your goopy remains splatter atop the mounded up pile. She's probably not sure if she likes you better this way or eager to go in.
+	</text>
+	</gameover>
+	
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="known"
+			value="0" />	
+	<text>
+	The kitty easily senses your approach, ears twitching in your direction atop her head and she turns, shifting uncertainly at the sight of so large a dragon with unclear intentions. Still for her uncertainty she's remarkably passive about your presence.
+	</text>
+	<choice destination="nuzzle0" text="she has soft belly fur, nuzzle nuzzle"/>
+	<choice destination="end" text="leave her be"/>
+	</page>
+	
+	<page ID="nuzzle0">
+	<text>
+	The kitty does indeed have soft belly fur, you hear her rumble in a confused purr as you stick your head down between her forelegs. Her hands reaching down to stroke and pat over your neck as she blushes and gets used to this attention. Honestly she seems a bit shy, maybe it's cause she doesn't know what kind of dragon you are other than a big one.
+	</text>
+	<choice destination="nuzzle1" text="..not just fur down here, what's this?"/>
+	</page>
+	
+	<page ID="nuzzle1">
+	<text>
+	Oh what's this? you nuzzle and in the gloom between her legs you nudge up against something warm and fleshy. Your tongue darting out instinctively to taste and experience that musky flavour. The kitty letting out a mrowl as you lick again, startling..and arousing, the taur. Her hidden cannon steadily extending and firming underneath her, course..underneath her is currently occupied by your head...that tip pressing against the tip of your snout, then schlurping up over your face as she utters a delighted moan. Her cock rippling, growing, hardening..and feeding as she unexpectedly finds a big reptilian sackslut plunging into her loins.
+	</text>
+	<choice destination="cockvore0" text="such a nice cock she was hiding, mhmmph"/>
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	The kitty seems unsure how to react to this wonderful and unexpected experience of a dragon worming into her schlong. Her now massive feasting shaft rippling around your head, schlurping in your neck as you plunge deeper and push into her sack. The hefty bulges of her balls replaced by the outline of your head as you wriggle your way deeper into her cock. The kitty spreading her stance accomodatingly as her balls bulge out larger, hanging lower as they get more swollen with your shape. 
+	</text>
+	<choice destination="cockvore1" text="soo warm, sticky, hungry"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	Her purrs and mrowls rumble with pleasure at the surprise treat as your weight in her sack starts to press down on the ground. The kitty leaning back onto her hindlegs as her growing balls swell out underneath and in front of her. Her forepaws and hands working to help slide you in as you sluttily squirm through her cock and into the cummy embrace of her balls. The kitty has certainly risen to the attention as she claims your hindlegs with her schlorping tip and only has your swaying tail left to schlurp up.
+	</text>
+	<choice destination="cockvore2" text="good kitty, soon gonna schlurp up all of me"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	Resting comfortably on her hind legs and immensely swollen sack the kitty taur steadily schlurps the rest of you into her loins. Her sack now immensely distended, bulging with the contours of your curled up and tightly contained shape. Her hands and forepaws running along her now thoroughly well fed cock as as you shift around within the sweltering and wondrously sticky kitty balls that contain you so well. 
+	</text>
+	<choice destination="cockvore3" text="comeon kitty, churn me up, churn up your cockfood"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	Your predator can't help but do what comes natural now that a big dragon has fed herself to that kitty cock of hers. Her balls starting to churn and burble your form down into thick and gooey seed. Wonderful sensations soaking into your body, filling you with submissive delight as you're rendered down into sticky cum. Your shape softening and yielding as her forepaws knead against your shape while she simultaneously jerks off her enormous cock with her both hands. Your body won't last too long in here, destined to be turned into a hot orgasm for her to squirt out and enjoy.
+	</text>
+	<effect type="setlocalflag" flag="known" value="1" />
+	<choice destination="cockvore4" text="...so good sooo-sploosh"/>
+	</page>
+	
+	<gameover ID="cockvore4">
+	<text>
+	Your moans within her burbling balls fade away as she melts you down. Your last moments fixated on the experience of your body spreading out and turning into liquid. Her balls rounding out with a paw clenchingly satisfying drawn out burble as the lumps and solids of your form disappear into the surrounding cum. Her hands redoubling their stroking up and down her length as your remains compact within her. The pleasure too much for her and she climaxes, her cock erupting like a fire hose to splatter the ground with your gooey remnants. Kitty taur gradually settling back onto all fours as her balls deflate pumping you out..until all that's left is a small lake of jizz in front of her, she blushes surveying her handiwork.. one hand raises almost demurely to her face..who'd of thought a dragon'd be such shamelessly submissive cockfood.
+	</text>
+	</gameover>
+	
+</Conversation>

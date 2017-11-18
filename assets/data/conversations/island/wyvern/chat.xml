@@ -94,10 +94,44 @@
 	
 	<page ID="cockvore0">
 	<text>
-	
+	You feel something sticky throbbing and pulsating and schlurping up your tail. Feels, kinda nice so you don't feel terribly alarmed even if he sounds pleased with himself. But when your tailtip prods up against a snug but yielding fleshy wall you glance back to see a smug and audacious wyvern engulfing most of your tail with his hungry cock. His pleased growl of pleasure growing louder, or maybe you're paying him more attention. You try to wriggle your long tail within him and only hear his pleasure increase, your tail curling in his sack. Despite the size difference it seems his shaft can pull you in pretty easily.
 	</text>
-	
+	<choice destination="cockvore1" text="schlurped up"/>
 	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	In seemingly no time at all it's like his cocktip is stretching around your hindquarters. That mighty bulging dick rippling and tugging more and more of your body into his ever growing sack. You try again to pull away but he digs his wingclaws into your flanks firmly and lets out an intimidating growl, getting you to submit to his desires once again even as he slurps you into his member to be churned into hot cum. Your hindlegs disappear into his tip entirely, a pair of mighty bulges showing on the underside of his member afore they slide down into his sack which contains ever more of you in its hot creamy depths.
+	</text>
+	<choice destination="cockvore2" text="won't be long entirely until you're naught but cockfood waiting to melt"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	The wyvern hears your soft submissive whine and releases his grip on you with his wings, but not with his shaft..he rubs his length vigorously as he feels your smooth sinous and slurpable body steadily coursing through his length and into his sack. Your forelimbs soon ending up tucked against your sides as he claims those as well as food for his dick. Your predator growling in delight and looking at your expression as your head nears his tip, your neck claimed swiftly until finally his cocktip is creeping up over the top of your head and you're sealed into musky darkness.
+	</text>
+	<choice destination="cockvore3" text="truly cockfood now"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	The fearlessly confident wyvern has claimed all of your body with his dick now. You feel him stroke over the bulge of your head as he schlurps you entirely down into his balls. Your form curled and coiled and compacted in his immense cum filled sack, his weight almost unnoticeable perched atop his sack as if atop a throne. For you all your world has contracted to a cramped fleshy prison full of hot cum and burbles and rounded with goo slick sack flesh that stretches to snugly conform to your contours. 
+	</text>
+	<choice destination="cockvore4" text="and now, the churn"/>
+	</page>
+	
+	<page ID="cockvore4">
+	<text>
+	The wyvern rubs over his own sack, resting atop your contained body as he kneads at it and growls in delight. You can feel his cum soaking into your form, your hide softening and becoming permeated with his lusty juices..the sensation makes you shiver and whine, but your nuzzling out at the tight confines around you just makes the wyvern growl in delight and his sack glorp all the more around you. The wyvern rubs his softening and rounding sack as you begin to soften and melt inside him. Your magnificent dragon body subsiding like butter on a summer day beneath the churning ministrations of his hungry balls.
+	</text>
+	<choice destination="cockvore5" text="soo gooey"/>
+	</page>
+	
+	<gameover ID="cockvore5">
+	<text>
+	 As your form becomes increasingly compact and fluid he starts to jack off, decadently and shamelessly masturbating as you fade away. His sack letting out a final burble to accompany his growls and herald your utter dissolution..followed by ejaculation. The wyvern pumping his balls empty with glee and utmost satiation, gouts of hot cum erupting from his tip to splatter on the ground for minutes until he's spent..and licks his smirking lips at his handiwork..all that dragon, rendered down into a lake of jizz. The humiliation and degradation would be palpable were you meaningfully around to experience it, but a deviant and submissive attitude in one so might was always destined to lead to a fate like this. 
+	</text>
+	</gameover>
 	
 	
 </Conversation>

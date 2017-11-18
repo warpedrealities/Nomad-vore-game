@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="icetreader.png"/>
+<name>kitty taur</name>
+<description>
+A half feline half feminine taur. Her lower body that of a stocky and hefty built big cat supported on broad paws and covered in white fur. Her upper body that of a fetchingly busty and wide hipped woman with a mane of white hair that extends to the small of her back and almost joins her furred lower half.
+</description>
+<rpg>
+<experiencevalue value="20"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<stat stat="HEALTH" value="25"/>
+<stat stat="RESOLVE" value="25"/>
+<attribute attribute="TEASE" value="8"/>
+</rpg>
+<respawn delay="1000"/>
+<flying />
+<talk conversation="island/kittytaur/chat" />
+<controller AI="staystill"/>
+<faction value="monster"/>
+</NPC>
