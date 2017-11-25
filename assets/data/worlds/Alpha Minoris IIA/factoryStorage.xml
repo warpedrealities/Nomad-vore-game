@@ -35,7 +35,7 @@
 					<widget x="4" y="6" name="entrance" variable="15" info="factory" />
 				</keyBlock>
 
-				<keyBlock heat="2">
+				<keyBlock heat="3">
 					<row>22222222</row>
 					<row>21112111</row>
 					<row>21112111</row>
@@ -64,13 +64,15 @@
 				<npcType value="Alpha_Minoris_IIA/synth" />
 			</blockDungeon>
 		</partition>
+	
 		<SeedNPCs min="6" max="12" name="Alpha_Minoris_IIA/dungeonrobot">
 		</SeedNPCs>
 		<SeedNPCs min="6" max="12" name="Alpha_Minoris_IIA/synth">
 		</SeedNPCs>
 		<SeedNPCs min="6" max="8" name="Alpha_Minoris_IIA/securitybot_omnico" minDistance="12">
-			<script spawn="ratspawn" death="omnico/securitySpawn" />
+			<script spawn="omnico/securitySpawn" death="" />
 		</SeedNPCs>
+
 	</mapgen>
 
 </zone>

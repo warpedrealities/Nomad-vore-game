@@ -80,9 +80,10 @@ public class ShopList {
 		{
 			case 0:
 			data=new ShopMerchant(str,dstream);
-		
+			break;
 			case 1:
 			data=new ShopServices(str,dstream);
+			break;
 		}
 		return data;
 	}

@@ -126,8 +126,8 @@ public class ShopMerchant implements ShopData {
 		}
 	}
 
+
 	public void save(DataOutputStream dstream) throws IOException {
-		dstream.writeInt(getType());
 		ParserHelper.SaveString(dstream, shopName);
 		Set<String> keyset = sellInventory.keySet();
 		Iterator<String> it = keyset.iterator();
@@ -217,7 +217,6 @@ public class ShopMerchant implements ShopData {
 
 	@Override
 	public Screen getScreen() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ShopMerchantScreen(this);
 	}
 }

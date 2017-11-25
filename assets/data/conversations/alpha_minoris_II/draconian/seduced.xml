@@ -44,28 +44,81 @@
 	<text>
 	Well a tumble with a sexy draconian sounds like a good idea to you. Question is who is going to be on the receiving end...
 	</text>
-	<choice destination="sexF0" text="that'd be me">
+	<choice destination="sexF0" text="$Good, cause I want to feel that dick of yours in me">
 		<assertion evaluate="haspart" part="vagina" />
 	</choice>
-	<choice destination="sexH0" text="that'd be her">
+	<choice destination="sexH0" text="$Good, cause I had a hankering to fuck a draconic slut">
 		<assertion evaluate="haspart" part="penis" />
 	</choice>
 	</page>
 	
-	<page ID="sexF0">
-	<text>
-	You express your agreement to be screwed
-	</text>
-	
-	</page>
-	
 	<page ID="sexH0">
 	<text>
-	
+	The draconian blushes deeper at that, and a soft growl rises in her throat. But yet her reaction may surprise you as your belittling taunt is answered with "Yes, your draconic slut, use me." she agrees, seemingly aroused by debasing herself as such a thing but committed to the role she's chosen and needy for your touch. The mighty dragongirl turning around, bending forwards and lifting her tail as she presents her moist nethers to you needily.
 	</text>
-	
+	<choice destination="sexH1" text="*use your slut*"/>
+	</page>
+		
+	<page ID="sexH1">
+	<text>
+	You watch the draconian presenting herself needily to you, and her tail flicks in impatience "hurry up!...use me.." she growls and it's all you can do to tease her and not just dive in, taking time moving up behind her. The dragongirl grinding back against your length but you keep your hands on her ass to control her, and let her know that she's your slut and you'll fuck her on your terms.
+	</text>
+	<choice destination="sexH2" text="*finally put it in*"/>
 	</page>
 	
+	<page ID="sexH2">
+	<text>
+	You grind your tip up against her nethers, and she tries to press herself down over your length without effect as you grip her hips and pull back. She lets out a growl, but looking back at you realizes you're serious and she shivers...afore submissively lowering her gaze. And only then do you thrust into her. Filling the mighty dragongirl with your shaft as you drive your cock deep into her soaking wet and amazingly hot nethers.
+	</text>
+	<choice destination="sexH3" text="$You're a good slut"/>
+	</page>
+	
+	<page ID="sexH3">
+	<text>
+	The draconian growls at the belittling compliment "stop taunting me and fuck me!" she demands. And whether you finally gave into the puissant woman or were going to start thrusting regardless she lets out a delighted moan as you begin to pound her pussy, digging your fingers deep into the flanks of her meaty ass as you plough her cauldron like nethers with your shaft.
+	</text>
+	<choice destination="sexH4" text="*fuck her hard*"/>
+	</page>
+	
+	<page ID="sexH4">
+	<text>
+	The draconian seems not to care that she's no longer in control as you fuck her like the submissive slut she's chosen to be. The mighty dragongirl moaning and growling as you use her nethers and squeeze her ass possessively. Your vigorous fucking of the dragongirl finally reaching crescendo as you slam your shaft into her a final time and paint her innards with your seed, marking her womb as yours. The sensation seeming if anything even more overwhelming for the dragongirl as she shudders and slumps down as you fill her up, the draconian spasming in orgasm until you spend yourself in her and pull out. The draconian looking up and blushing, licking at your sticky dick as you stand over her.
+	</text>
+		<special effect="nonhostile" />
+		<choice destination="end" text="well that was fun" />
+		<special effect="healnpc" />		
+	</page>
+	
+	<page ID="sexF0">
+	<text>
+	You express your agreement to be screwed and step in close to her, leaning up to plant a kiss on her lips while groping and caressing her length. Your hand running up and down that hard and eager shaft as she growls in delight. Her hands cupping around your ass firmly, lifting your feet up of the floor and carrying you down onto your back under the lusty draconian. Her tail curling as she looks down at you dominantly and shifts her hips "Yes, you deserve my cock" she pronounces as you feel her tip lining up with your nethers.
+	</text>
+	<choice destination="sexF1" text="$I NEED your cock"/>
+	</page>
+	
+	<page ID="sexF1">
+	<text>
+	"yes" the draconian agrees simply, as she thrusts inside of you. Her thick length parting your folds, stretching your intimate insides. The dragon herm grasping ahold of your legs as she sheathes her length inside you with a growl of delight. And then she began to work her length in and out, picking up a vigorous pace she's soon pounding her cock in and out of your sex with all the animalistic lust you feel you can handle. The sensations making you shudder as her balls slap against your ass repeatedly.
+	</text>.
+	<choice destination="sexF2" text="$yes that's it, fuck me!"/>
+	</page>
+	
+	<page ID="sexF2">
+	<text>
+	The draconian's power and lust make you moan under her and make to lift and wrap your legs around her hips, but she grips your legs tighter and growls as she thrusts more firmly into you. Your fuck buddy keeping you from taking an control of the pace she's rutting you. You're helplessly, but delightfully, dominated as her pace quickens and her growls of pleasure mingle with your moans of the same. You can feel her orgasm approaching through the shuddering molten waves of your own and it makes you tingle with anticipation.
+	</text>
+	<choice destination="sexF3" text="$fill me up"/>
+	</page>
+	
+	<page ID="sexF3">
+	<text>
+	The draconian hears your words and growls "Yes!" she declares, hilting her cock inside of you as it spurts and paints your innermost intimates with hot seed. Her hips twitching slightly and her tail thrashing around in broad sweeps as she pumps spurt after spurt of hot cum into you "Mhmm..you're a good one" she finally compliments as she looks down at your dazed form, rumbling with pleasure as her spurts trail off and she pulls out of you. Her last cumshots splatting on your belly as she stands up, apparently done..her desires satiated and her equilibrium restored.
+	</text>
+		<special effect="nonhostile" />
+		<choice destination="end" text="well that was fun" />
+		<special effect="healnpc" />	
+	</page>
+
 	<page ID="oralvore0">
 	<text>
 	The draconian seems aroused and yet shameful at the urges you've instilled in her. With a flush on her face and yet she doesn't hesitate on unfamiliar ground "so do it, what are you waiting for, eat me" she declares with a growl. Not waiting as she thrusts a hand at your lips, pressing her fingers past your lips and down your throat. You're forced to swallow or choke and as her hand bulges out your neck she blushes heavier "why are you so sexy" she mumbles accusingly as if you're really forcing her hand as she shoves her other hand into your mouth and down your throat. The draconian tucking her wings down against her back and lowering her head as you take another swallow, and then another. The draconian's newfound preyish desires are still a bit unexpected, but managable like those of everyone else who wants inside of you.

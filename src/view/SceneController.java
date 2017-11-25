@@ -12,6 +12,8 @@ import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
 import actorRPG.player.Player_RPG;
 import artificial_intelligence.detection.Sense;
+import artificial_intelligence.senseCriteria.CriteriaRepository;
+import artificial_intelligence.senseCriteria.Sense_Criteria;
 import item.Item;
 import item.ItemWeapon;
 
@@ -21,9 +23,11 @@ public class SceneController implements Sense {
 	private Universe gameUniverse;
 	private ZoneInteractionHandler interactionHandler;
 	private QuickslotHandler quickslotHandler = new QuickslotHandler();
-
+	private CriteriaRepository criteriaRepository;
+	
 	public void initializeHandler(ModelController_Int view) {
 		interactionHandler = new ZoneInteractionHandler(null, view);
+		criteriaRepository=new CriteriaRepository();
 	}
 
 	public ZoneInteractionHandler getHandler() {
@@ -281,6 +285,39 @@ public class SceneController implements Sense {
 			}
 		}
 		return actor;
+	}
+
+	@Override
+	public Actor getActor(Actor origin, int maxRange, boolean visibleOnly, Sense_Criteria criteria) {
+		Actor actor = null;
+		float distance = 99;
+		for (int i = 0; i < activeZone.getActors().size(); i++) {
+				Actor target = activeZone.getActors().get(i);
+				float d = target.getPosition().getDistance(origin.getPosition());
+				if (d < maxRange) {
+					if (NPC.class.isInstance(target) && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
+						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+								(int) origin.getPosition().y, (int) target.getPosition().x,
+								(int) target.getPosition().y, true)) {
+							if (distance > d && criteria.checkCriteria(target,origin)) {
+								distance = d;
+								actor = target;						
+							}
+						}
+					} else {
+						if (distance > d && criteria.checkCriteria(target,origin)) {
+							distance = d;
+							actor = target;
+						}
+					}
+				}
+		}
+		return actor;
+	}
+
+	@Override
+	public Sense_Criteria getCriteria(String properties) {
+		return criteriaRepository.getCriteria(properties);
 	}
 
 }

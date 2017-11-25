@@ -9,7 +9,7 @@
 			value="1.0" />
 	</shipResource>
 	<shipWeapon>
-		<damage min="4" max="8" falloff="0" />
+		<damage min="5" max="9" falloff="0" />
 		<cooldown value="1" />
 		<effects script="slugthrower" sheet="slugthrower" />
 		<range arc="2" range="10" />

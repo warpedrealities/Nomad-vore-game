@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="pirate_drone.png" />
+	<name>pirate drone</name>
+	<description>A lashed together robot floating on a humming propulsion unit. Haphazard plates providing a modicum of protection to its cobbled together components. A few emitters and nozzles protrude from the underside beneath its sensor array. </description>
+	<rpg>
+		<experiencevalue value="20" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="20" />
+		<stat stat="RESOLVE" value="45" />
+		<attribute attribute="KINETIC" value="2" />
+		<attribute attribute="SHOCK" value="-2" />
+		<attribute attribute="TEASE" value="99" />	
+		<attribute attribute="PHEREMONE" value="99" />	
+		<attribute attribute="PSYCHIC" value="99" />			
+		<combatMove name="mist" pattern="MELEE"
+			bonusAttribute="MELEE" timeCost="2" bonusToHit="12">
+			<effectrecover modifier="INTELLIGENCE" modstrength="0.2"
+				modvalue="10" modifies="RESOLVE" />
+			<missText count="2">
+				<text>drone tries to mist TARGET but manages to miss</text>
+				<text>drone sprays mist at TARGET but fails to land the effect</text>
+			</missText>
+			<hitText count="2">
+				<text>drone sprays TARGET with calming mist and they recover VALUE resolve</text>
+				<text>drone surrounds TARGET with a calming mist for VALUE resolve recovery</text>	
+			</hitText>
+		</combatMove>
+		<combatMove name="project shield" pattern="MELEE"
+			bonusAttribute="MELEE" timeCost="2" bonusToHit="99">
+			<effectStatus probability="100">
+			<applyText>TARGET is now surrounded by a deflective forcefield</applyText>
+			<statusDefence uid="16" icon="1" duration="20"
+				numModifiers="2">
+				<strength value="10" />
+				<effect attribute="KINETIC" modifier="6" />
+				<effect attribute="THERMAL" modifier="6" />
+				<removeText> TARGET forcefield fades away</removeText>
+			</statusDefence>
+		</effectStatus>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatMove>	
+	</rpg>
+	<controller AI="pirate_drone" />
+	<faction value="pirate" />
+</NPC>

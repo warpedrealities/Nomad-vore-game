@@ -137,7 +137,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_time = 0;
 		Setup();
 
-		m_text = new TextView(m_textureIds[0], new Vec2f(-20, -16.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
+		m_text = new TextView(m_textureIds[1], new Vec2f(-20, -16.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
 		m_window = new Window(new Vec2f(3, -1), new Vec2f(17, 17), m_textureIds[0], true);
 		if (sceneController.getActiveZone().zoneDescription != null) {
 			m_text.AddText(sceneController.getActiveZone().zoneDescription);

@@ -1,6 +1,7 @@
 package artificial_intelligence.detection;
 
 import actor.Actor;
+import artificial_intelligence.senseCriteria.Sense_Criteria;
 import shared.Vec2f;
 
 public interface Sense {
@@ -12,7 +13,8 @@ public interface Sense {
 	public Actor getVictim(Actor origin, int maxrange, boolean visibleOnly, String name, boolean seduced);
 	public Actor getNamedActor(Actor origin, int maxRange, boolean visibleOnly, String name);
 	public Actor getPlayer(Actor origin, boolean visibleOnly);
-
+	public Actor getActor(Actor origin, int maxrange, boolean visibleOnly,Sense_Criteria criteria);
+	public Sense_Criteria getCriteria(String properties);
 	public int getViolationLevel();
 
 	public Vec2f getViolationLocation();

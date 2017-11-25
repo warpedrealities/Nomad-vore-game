@@ -15,6 +15,7 @@ import combat.effect.Effect_Movement;
 import combat.effect.Effect_Status;
 import combat.effect.Effect_Submit;
 import combat.effect.analyze.Effect_Analyze;
+import combat.effect.map.Effect_Map;
 import combat.statusEffects.StatusEffect;
 import combat.effect.Effect_Recover;
 import combat.effect.Effect_Reinforce;
@@ -193,6 +194,9 @@ public class CombatMove {
 				}
 				if (e.getTagName().equals("effectAnalyze")) {
 					effects.add(new Effect_Analyze(e));
+				}
+				if (e.getTagName().equals("effectMap")) {
+					effects.add(new Effect_Map(e));
 				}
 				if (e.getTagName().equals("missText")) {
 					genMiss(e);

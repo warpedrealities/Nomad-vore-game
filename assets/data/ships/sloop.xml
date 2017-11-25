@@ -88,7 +88,8 @@
 			<placeNPC name="space/pirates/kitty_pirate" x="2" y="2" />
 			<placeNPC name="space/pirates/kitty_pirate" x="4" y="2" />
 			<placeNPC name="space/pirates/kitty_pirate" x="2" y="5" />	
-			<placeNPC name="space/pirates/kitty_pirate" x="4" y="5" />				
+			<placeNPC name="space/pirates/kitty_pirate" x="4" y="5" />	
+			<placeNPC name="space/pirates/pirate_drone" x="3" y="2" />				
 		</mapgen>
 	</layout>
 	<exterior width="5">

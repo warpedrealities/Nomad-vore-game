@@ -480,7 +480,6 @@ public class Universe extends GameManager
 		player=new Player();
 		player.Load(filename);
 		FactionLibrary.getInstance().clean();
-		
 		//remove flags from player
 		player.getFlags().clear();
 		//move player to the first area.

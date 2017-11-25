@@ -16,6 +16,51 @@
 		<row>22211222</row>
 	</block>
 
+	<block name="narrow">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<row>22211222</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>22211222</row>
+		<row>22211222</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>22211222</row>
+	</block>	
+	
+	<block name="central">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<row>22211222</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>21122112</row>
+		<row>21122112</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>22211222</row>
+	</block>		
+
+	<block name="open">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<row>22211222</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>22211222</row>
+	</block>	
+	
 	<block name="storagenswe">
 		<edge value="WEST" />
 		<edge value="EAST" />

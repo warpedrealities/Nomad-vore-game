@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ItemEquip name="automap" weight="2" slot="ACCESSORY"
+	value="250">
+	<description>
+		A wrist mounted computer using a dedicated rom unit of comp valves, miniature data tape and some sophisticated technology to display an area map for those with the scientific skill to use it. 
+	</description>
+	<combatMove name="view map" ammoCost="0" timeCost="2" pattern="SELF" moveType="OTHER">
+		<hitText count="1">
+			<text></text>
+		</hitText>
+		<effectMap skill="SCIENCE" vague="1" detail="3" precise="5"/>
+	</combatMove>
+	<modifier>
+	</modifier>
+</ItemEquip>

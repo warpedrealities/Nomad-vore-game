@@ -153,6 +153,14 @@ public class Player_RPG implements Actor_RPG {
 						addMove(weapon.getMove(j));
 					}
 				}
+				else if (ItemEquip.class.isInstance((playerInventory.getSlot(i))))
+				{
+					ItemEquip weapon=(ItemEquip)playerInventory.getSlot(i).getItem();
+					for (int j=0;j<weapon.getMoveCount();j++)
+					{
+						addMove(weapon.getMove(j));
+					}			
+				}
 			}		
 		}
 		//read seduction

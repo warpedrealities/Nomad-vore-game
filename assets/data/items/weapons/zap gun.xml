@@ -13,7 +13,7 @@
 		bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2"
 		basicAction="true" moveType="FIGHT">
 
-		<effectDamage type="SHOCK" minValue="1" maxValue="6"
+		<effectDamage type="SHOCK" minValue="1" maxValue="8"
 			modifier="NONE" />
 
 		<missText count="1">

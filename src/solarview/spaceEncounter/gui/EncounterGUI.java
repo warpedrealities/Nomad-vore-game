@@ -19,6 +19,7 @@ import input.Keyboard;
 import input.MouseHook;
 import nomad.Universe;
 import shared.MyListener;
+import shared.SceneBase;
 import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
@@ -28,6 +29,7 @@ import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.EncounterLogic.GameState;
 import solarview.spaceEncounter.rendering.CircleHandler;
 import spaceship.Spaceship;
+import vmo.Game;
 
 public class EncounterGUI implements MyListener {
 	private Spaceship playerShip;
@@ -98,7 +100,7 @@ public class EncounterGUI implements MyListener {
 			windows[1].add(button);
 		}
 
-		rangeText = new TextColoured(new Vec2f(3.2F, 0.7F), "text", 1.6F, 0);	
+		rangeText = new TextColoured(new Vec2f(3.2F, 0.7F), "text", 1.6F, SceneBase.getVariables()[0]);	
 		rangeText.setTint(1,0,0);
 		windows[0].add(rangeText);
 
@@ -167,11 +169,7 @@ public class EncounterGUI implements MyListener {
 	}
 
 	private void setMatrix() {
-		m_viewMatrix = new Matrix4f();
-		m_viewMatrix.m00 = 0.05F;
-		m_viewMatrix.m11 = 0.0625F;
-		m_viewMatrix.m22 = 1.0F;
-		m_viewMatrix.m33 = 1.0F;
+		m_viewMatrix = Game.sceneManager.getConfig().getMatrix();
 	}
 
 	public void draw(int viewMatrix, int objmatrix, int tintvar, FloatBuffer matrix44Buffer) {

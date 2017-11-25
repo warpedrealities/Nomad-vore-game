@@ -27,7 +27,7 @@ public class Choice {
 	DisplayType displayType;
 
 	public Choice(int tint) {
-		tint = tintID;
+		tintID = tint;
 		lineCount = 2;
 		lines = new NuFont[3];
 

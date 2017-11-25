@@ -3,8 +3,11 @@
 
 	<page ID="start">
 		<text>
-			no interaction to be had with a defeated reptile yet
+			The reptilian warrior pants, her accountrements of war discarded and scattered around her feet as she blushes and sees you approach only to throw herself at you. The warrior pressing her warm body against you "ngh, why are you so sexy.." she says and nuzzles "...i'm yours, what are you going to do with me?"
 		</text>
+		<choice destination="oralvore0" text="$Why, eat you of course.">
+		<assertion evaluate="hasperk" perk="oralvore" />		
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -16,6 +19,43 @@
 		<choice destination="end" text="end" />
 	</page>
 
+	<page ID="oralvore0">
+	<text>
+	The saurian blushes heavily at that bold declaration, then shivers as her gaze drifts to your lips "I guess I'm your meal then.." she admits, no doubt imagining herself curling up and gurgling away in that belly of yours as she lowers her eyes. The saurian letting out a mip as you lick over her face, tasteing her and pulling her in tight as you prepare to start eating..your meal.
+	</text>
+	<choice destination="oralvore1" text="$You'll look sexy as a bulge, digesting inside me"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The saurian chirrs and her tail curls at that, blushing as you tease her..and then, start to devour her. The reptilian warrior so enamoured with you she does not flinch as your jaws part and stretch over the top of her head. Your tongue dancing over her facial features afore you start swallowing and gobbling her up. Your hands roaming over her body to pull her clothes off and help feed her form down your throat as her muffled moans emanate from ever deeper inside your body.
+	</text>
+	<choice destination="oralvore2" text="*delicious lizard*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	You lick up between her thighs and sample the taste of her clear arousal at being devoured by you. The saurian writhing as she slides steadily down your throat and into your belly under the ministrations of your hungry swallows. Your hands working down along her flailing legs as you lift them up over your head, shifting your hands to your swelling belly as her legs disappear past your lips.
+	</text>
+	<choice destination="oralvore3" text="$Mhmm you're delicious, and you look good on me food"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	The reptile lets out a moan at that, squirming around as she gets settled into your belly and flushes at the hot confines and the thought of her being the sexy tummy you're sporting now. Your hot stomach juices soaking over her as your innards squeelch and press about her, marinating her in fluids as you prepare to digest your aroused meal.
+	</text>
+	<choice destination="oralvore4" text="*digest her, of course*"/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	"Ah yes, melt me..i'm your food.." the reptile moans out blissfully as your stomach gurgles and churns around her. The digestive processes overwhelming her, body and soul alike as she writhes to rub against your enzyme laden stomach walls. The saurian lost to her lusts and steadily succumbing to your gurgling insides, subsiding and weakening as you break her down until finally she stills and softens within her. The saurian warrior liquidating into a slurry of nourishment inside you that is easily soaked up and absorbed. All that's left of her is a satisfying chubby roundness to your middle that shrinks away under your stroking hands. She was delightful in every meaning of the word.
+	</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet
