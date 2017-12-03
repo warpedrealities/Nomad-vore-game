@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="known"
+			value="1" />	
+	<text>
+	The serpent stirs as you loom over him again. He glances up and sees it's you once more, he seems unfearful even though you might seek to have recompense for him bringing about your self destruction. But that troubles him not at all, in fact he seems bored...meeting your gaze once more before you can stop him, dominating your will and then presenting his genital slit to you. His head turning away from you as if having dominated you once turning you into nutbutter again is just a necessary chore.
+	</text>
+	<choice destination="cockvoreB0" text="i am cockfood, i am cockfood"/>
+	</page>
+	
+	<page ID="cockvoreB0">
+	<text>
+	He might be remarkably uninvolved, but you are cockfood, you must be his cum. And so you lick insistently until he's ready and hard then thrust your nose into his tip once more. The little dominant dragon letting out a humm as you force your way deep into his loins, pushing through the base of his shaft and into his sack without the slightest hesitation. The serpent dragon making an almost comically pointed show of checking his foreclaw for imperfections as you slide your bulk into his balls. Your piling up body within him creating a growing swell as his sack bulges out into an immense beanbag like contoured pile resting on his tail.
+	</text>
+	<choice destination="cockvoreB1" text="i must be cum for his magnificence"/>
+	</page>
+	
+	<page ID="cockvoreB1">
+	<text>
+	Your supreme predator humms in pleasure as you worm your way into his balls. Your writhing hindquarters and tail protruding from his tip, but gradually schlurping and vanishing away into the depths of his sack where the rest of you already rightfully dwells. The hot cummy confines of his balls ably containing your immense form though he makes a seeming show of being indifferent to the massiveness of his sack and the easily dominated cockfood contained within.
+	</text>
+	<choice destination="cockvoreB2" text="and now..the melting, yes? please, the melting."/>
+	</page>
+	
+	<gameover ID="cockvoreB2">
+	<text>
+	You rest like a good cockmeal deep in the sack of your predator, your purpose soon to be fulfilled in the balls of this seemingly indifferent predator. The hot cummy walls beginning to grind and press against you, gooey cream soaking into your body and making you softer and more pliant. Your form turning gooey and then coming apart like melting butter within his balls. The dominant little dragon reaching down to stroke over his length, jerking off with both foreclaws and humming until with a little hiss of pleasure he peaks and reaches orgasm. Your big and easily dominated form, now rendered into cum, splattering back out of his shaft to form a stain upon the ground atop the other one. It really is such an onerous duty that fate has burdened him with it seems, or at least, that's what he'd like the world to think as he gets comfortable atop those pillows and goes back to sunning himself.
+	</text>
+	</gameover>
+	
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="known"
+			value="0" />	
+	<text>
+	The serpent stirs as you overshadow him. You loom over the small slender draconid, but he seems quite frankly unperturbed by a much larger dragon in his space except for how you're in his light. He looks up, unfearful as he opens his majestic eyes. And you find yourself falling into whirlpools of gold, the little dragon's will peeling back your resolve...
+	</text>
+	<choice destination="cockvoreA0" text="must...feed..his...cock"/>
+	</page>	
+	
+	<page ID="cockvoreA0">
+	<text>
+	The serpent's eyes remain locked to yours as he feels your mind fill with the clamour of his imperious command. And as you lower your head down and bring your nose down towards the join of his rear legs he quirks just a bit of a triumphant smile, seemingly pleased at how he can dominant even large dragons and make them serve him...as cockfood, your submissive licking coaxes his shaft and sack out of its protective slit.
+	</text>
+	<effect type="setlocalflag" flag="known" value="1" />
+	<choice destination="cockvoreA1" text="let me feed it..let me feed it"/>
+	</page>
+	
+	<page ID="cockvoreA1">
+	<text>
+	That superior and perfect cock is now hardening out in the air as you slather it worshipfully with your tongue. Your mind echoing with the imperative to submit and serve, once you've gotten the little dragon's magnificent shaft nice and hard though it's time for you to do what every ounce of your self tells you is your purpose..and you nose insistently at his tip. The serpent dragon letting out a soft suppressed mhmm, as if it's beneath his dignity to acknowledge with lustful sounds the feeding his cock is now receiving. That peerless length rippling and stretching around your snout, schlurping up over your eyes as you press yourself insistently into his loins...
+	</text>
+	<choice destination="cockvoreA2" text="i need to be...deeper"/>
+	</page>
+	
+	<page ID="cockvoreA2">
+	<text>
+	The serpent dragon starts to let out a pleased humming as you nose past the base of his cock and into his balls. The hot cummy confines of his sack stretching able to accept the entirety of your head as you feed yourself in as a sacrifice. Meeting your purpose as a transitory source of hedonistic pleasure for the oh so superior little dragon seems the most important and significant thing you could do with yourselves right now. And with that imperative you worm your neck, and then forelegs past his cocktip and curling in his balls more and more.
+	</text>
+	<choice destination="cockvoreA3" text="he deserves..all of me.."/>
+	</page>
+	
+	<page ID="cockvoreA3">
+	<text>
+	The serpent mhmms and shifts to keep his hips angled skywards, his tail and legs steadily becoming pinned under the weight of the larger but inferior dragonbody schlurping steadily into his balls. His sack stretching and bulging out with the imperfectly realized outline of your coiled body as you feed your hindlegs in then insistently wriggle your tail back and forth until your magnificent little predator does you the immense favour of schlurping up the last of you. Your body now entirely incased in his sack as he grooms his whiskers and hums in pleasure, not deigning to give his sack any rubs or attention..but that's okay, you're only his cockfood after all.
+	</text>
+	<choice destination="cockvoreA4" text="i need to be..cum"/>
+	</page>
+	
+	<page ID="cockvoreA4">
+	<text>
+	Your immense body starts to cramp up in the tight confines of his balls, but you make no move to squirm that might discomfort your deserving predator. And besides, cummification will relax and ease out those muscles very nicely. You can only hope he begins to liquidate you soon so he can compact you into a sloshy mass of jizz and stroke you out. And as you feel the first burbling churns you realize that he's starting to do just that. You let out a chirr despite the need to digest like good cockfood, but earn no rebuke from your predator for disturbing his repose as he languidly melts you down into gallons of nutbutter.
+	</text>
+	<choice destination="cockvoreA5" text="need to be...churn"/>
+	</page>
+	
+	<gameover ID="cockvoreA5">
+	<text>
+	You submit yourself to liquidation without a qualm, starting to melt and soften in the balls of the magnificent little dragon who you'd fed yourself to the cock of without a word. You dimly in the back of your mind start to question that decision, the first uneasy squirms shifting through your body. But your goopy form starts to come apart from the motion and so your introspection swiftly washes away in the creamy tide of rising cum and dissolving dragon. The dominating serpent letting out a pleased mhmm as you blorp away and reaching down his forelegs, stroking along his shaft and glancing around as if daring someone to be watching. That shaft of his soon erupting as he lets out a hiss of pleasure, pumping gallons of splattery former dragoness out to pool on the ground. Your entire form reduced to a reeking mire of jizz before his 'throne' and, that done, he settles back to comfortably sunning himself unmindful of the smell and as if nothing of significance had just happened.
+	</text>
+	</gameover>
+	
+</Conversation>
