@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="saurianfootlizard.png" />
+	<name>saurian footlizard</name>
+	<description>This reptilian demi is clad for war, a brigantine jacket laced over her tunic and a broad shield lashed to one arm. In her other hand she holds a heavy mace and to her demeanour she holds a fierce and warlike aura of menace.</description>
+	<rpg>
+		<experiencevalue value="40" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="KINETIC" value="2" />
+		<attribute attribute="MELEE" value="2" />			
+		<attribute attribute="PARRY" value="2" />
+		<attribute attribute="DODGE" value="2" />		
+		<combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>the footlizard's mace doesn't connect with TARGET</text>
+				<text>the footlizard attempts to pummel TARGET but the blow
+					doesn't connect</text>
+			</missText>
+			<hitText count="2">
+				<text>the footlizard hits TARGET for VALUE points of damage</text>
+				<text>the footlizard pummels TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="shield bash" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" threatening="true">
+			<effectStatus probability="100">
+				<applyText>TARGET is stunned by the shield bash!</applyText>
+				<statusStun uid="9" duration="4">
+					TARGET recovers
+				</statusStun>
+			</effectStatus>
+			<missText count="1">
+				<text>the footlizard attempts to bash TARGET with her shield but misses</text>
+			</missText>
+			<hitText count="1">
+				<text>the footlizard bashes TARGET with her shield</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<defeated conversation="alpha_minoris_II/saurianraider/defeat" />
+	<seduced conversation="alpha_minoris_II/saurianraider/seduced" />
+	<victory conversation="alpha_minoris_II/saurianraider/victory" />
+	<seducer conversation="alpha_minoris_II/saurianraider/victory" />
+	<talk conversation="alpha_minoris_II/saurianraider/chat" />
+	<controller AI="saurian_footlizard0" />
+	<faction value="saurian" />
+</NPC>

@@ -98,7 +98,6 @@
 				<npcType value="Alpha_Minoris_IIA/synth" />
 			</blockDungeon>
 		</partition>
-		<1--
 		<SeedNPCs min="4" max="8" name="Alpha_Minoris_IIA/dungeonrobot">
 		</SeedNPCs>
 		<SeedNPCs min="4" max="8" name="Alpha_Minoris_IIA/synth">

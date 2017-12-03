@@ -31,4 +31,9 @@ public class Vec2i {
 		float sqrt = (float) Math.sqrt(xe + ye);
 		return sqrt;
 	}
+	public Vec2i add(Vec2i a) {
+		x+=a.x;
+		y+=a.y;
+		return this;
+	}
 }

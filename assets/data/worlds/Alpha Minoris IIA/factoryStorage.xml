@@ -51,6 +51,19 @@
 						variable="51" />
 				</keyBlock>
 
+				<keyBlock heat="2">
+				<row>22222222</row>
+				<row>26111162</row>
+				<row>26111162</row>
+				<row>26111162</row>
+				<row>26111162</row>
+				<row>26111162</row>
+				<row>26111162</row>
+				<row>22211222</row>
+				<edge value="NORTH" />
+				<widget x="2" y="2" name="cargocontainer" info="bio" />
+				</keyBlock>				
+				
 				<clean value="2" />
 				<lootTable identity="normalchest">
 					<loot item="protein synthesizer" chance="0.4" unique="3" />
@@ -60,6 +73,13 @@
 					<lootSubTable chance="0.25" file="moon_ruins_special" />
 					<lootSubTable chance="0.25" file="mutators_tier_1" />
 					<loot item="protein synthesizer" chance="0.1" />
+				</lootTable>
+				<lootTable identity="bio">
+					<loot item="mutagen" chance="1.0"/>
+					<lootSubTable chance="0.5" file="mutators_tier_1" />
+					<lootSubTable chance="0.5" file="mutators_tier_1" />
+					<lootSubTable chance="0.25" file="mutators_tier_1" />
+					<lootSubTable chance="0.25" file="mutators_tier_1" />
 				</lootTable>
 				<npcType value="Alpha_Minoris_IIA/synth" />
 			</blockDungeon>

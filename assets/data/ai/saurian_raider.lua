@@ -71,7 +71,9 @@ function patrol(controllable,sense,script)
 			var_y=y
 		end
 		script:setValue(1,var_x)
-		script:setValue(2,var_y)		
+		script:setValue(2,var_y)
+		script:getShared():setValue(2,var_x)
+		script:getShared():setValue(3,var_y)		
 		var_time=0
 	else
 		if controllable:HasPath() then

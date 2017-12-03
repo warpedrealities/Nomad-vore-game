@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="sauriancaptain.png" />
+	<name>saurian captain</name>
+	<description></description>
+	<rpg>
+		<experiencevalue value="80" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="60" />
+		<stat stat="RESOLVE" value="60" />
+		<attribute attribute="KINETIC" value="2" />
+		<attribute attribute="RANGED" value="2" />			
+		<attribute attribute="PARRY" value="2" />
+		<attribute attribute="DODGE" value="2" />		
+		<attribute attribute="WILLPOWER" value="2" />
+		<combatMove name="shoot" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="2" maxValue="7"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>the captain's crossbow bolt misses TARGET</text>
+				<text>the captain fires her crossbow at her TARGET but her aim was off</text>
+			</missText>
+			<hitText count="2">
+				<text>the captain shoots TARGET for VALUE points of damage</text>
+				<text>the captain puts a quarrel in TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="buff" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4">
+			<statusAttribMod uid="17" icon="12" duration="20"
+				numModifiers="3">
+				<removeText> TARGET is no longer encouraged</removeText>
+				<effect attribute="RANGED" modifier="4" />
+				<effect attribute="MELEE" modifier="4" />			
+				<effect attribute="WILLPOWER" modifier="4" />			
+			</statusAttribMod>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text>the captain encourages TARGET</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<defeated conversation="alpha_minoris_II/sauriancaptain/defeat" />
+	<seduced conversation="alpha_minoris_II/sauriancaptain/seduced" />
+	<victory conversation="alpha_minoris_II/sauriancaptain/victory" />
+	<seducer conversation="alpha_minoris_II/sauriancaptain/victory" />
+	<controller AI="saurian_captain0" />
+	<faction value="saurian" />
+</NPC>

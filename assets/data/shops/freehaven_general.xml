@@ -21,15 +21,15 @@
 		quantity="10" />	
 	<inventoryitem name="stun grenade" probability="50"
 		quantity="10" />
-	<inventoryitem name="deflector band " probability="50"
+	<inventoryitem name="deflector band" probability="50"
 		quantity="2" />	
 	<inventoryitem name="deflector band" probability="50"
 		quantity="1" />	
-	<inventoryitem name="repulser band " probability="50"
+	<inventoryitem name="repulsor band" probability="50"
 		quantity="2" />	
-	<inventoryitem name="repulser band" probability="50"
+	<inventoryitem name="repulsor band" probability="50"
 		quantity="1" />	
-	<inventoryitem name="dissipator band " probability="50"
+	<inventoryitem name="dissipator band" probability="50"
 		quantity="2" />	
 	<inventoryitem name="dissipator band" probability="50"
 		quantity="1" />				
@@ -42,5 +42,7 @@
 	<inventoryitem name="scanner" probability="50"
 		quantity="1" />		
 	<inventoryitem name="lifeform detector" probability="100"
-		quantity="1" />			
+		quantity="1" />	
+	<inventoryitem name="shrink pill" probability="100"
+		quantity="100" />			
 </shop>

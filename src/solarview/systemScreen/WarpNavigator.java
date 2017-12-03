@@ -2,6 +2,7 @@ package solarview.systemScreen;
 
 import nomad.StarSystem;
 import nomad.Universe;
+import shared.Geometry;
 import shared.Vec2f;
 import shared.Vec2i;
 import view.ZoneInteractionHandler;
@@ -41,9 +42,10 @@ public class WarpNavigator {
 		//calc angle
 
 		Vec2i coordinates=Universe.getInstance().getSystem().getPosition();
-		Vec2i p=ZoneInteractionHandler.getPos(dir, coordinates);
-		
-		StarSystem system=Universe.getInstance().getSystem(p.x, p.y*-1);
+		Vec2i p=Geometry.getPos(dir,new Vec2i(0,0));
+		p.y=p.y*-1;
+		p.add(coordinates);
+		StarSystem system=Universe.getInstance().getSystem(p.x, p.y);
 		if (system!=null)
 		{
 			return system.getPosition();

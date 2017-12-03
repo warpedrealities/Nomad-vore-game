@@ -16,7 +16,7 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-		<choice destination="end" text="end" />
+		<choice destination="end" text="$nothing, get away from me" />
 	</page>
 
 	<page ID="oralvore0">

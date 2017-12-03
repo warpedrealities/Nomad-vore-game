@@ -62,11 +62,11 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 			
 				Vec2i destination=Universe.getInstance().getcurrentSystem().getPosition();
 				
-				int x=(origin.x-destination.x)*32;
-				int y=(origin.y-destination.y)*32;
+				int x=(origin.x-destination.x)*24;
+				int y=(destination.y-origin.y)*24;
 				Vec2f v=new Vec2f(x,y); v.normalize();
-				v.x*=32;
-				v.y*=32;
+				v.x*=24;
+				v.y*=24;
 				spaceship.setPosition(v);
 				spaceship.setWarpHandler(null);
 				return true;
@@ -100,7 +100,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 	
 		if (warp)
 		{
-			int dir=(int) Geometry.getAngle(0, 0, playerShip.getPosition().x,playerShip.getPosition().y);
+			int dir=(int) Geometry.getAngle(0, 0, playerShip.getPosition().x,playerShip.getPosition().y*-1);
 			if (dir>7){dir=dir-8;}
 			((SpriteRotatable) (playerShip.getSpriteObj())).setFacing(dir);
 			warpRenderer.warpIn();

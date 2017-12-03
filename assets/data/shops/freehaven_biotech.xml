@@ -17,7 +17,7 @@
 	<inventoryitem name="staid" probability="50" quantity="5" />
 	<inventoryitem name="psyche" probability="100" quantity="2" />
 	<inventoryitem name="psyche" probability="100" quantity="2" />
-	<inventoryitem name="bounce " probability="50"
+	<inventoryitem name="bounce" probability="50"
 		quantity="2" />	
 	<inventoryitem name="squeeze" probability="50"
 		quantity="1" />	

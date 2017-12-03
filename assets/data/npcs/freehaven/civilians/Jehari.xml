@@ -29,7 +29,7 @@
 	</rpg>
 
 	<flying />
-	<talk conversation="freehaven/Robyn/chat" />	
+	<talk conversation="freehaven/Jehari/chat" />	
 	<controller AI="staystill" />
 	<faction value="freehaven_civilians" />
 </Harpy>

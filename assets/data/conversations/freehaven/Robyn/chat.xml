@@ -7,7 +7,87 @@
 	</text>
 	<choice destination="shop" text="$You can show me what you have for sale"/>
 	<choice destination="questions" text="$Can I ask you some questions?"/>
+	<choice destination="pill0" text="$So, why do you keep these shrink pills in stock? you get many buyers?">
+	<condition evaluate="HASITEM" operator="greaterthan" value="1" item="shrink pill" />	
+	</choice>
 	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
+	</page>
+	
+	<page ID="pill0">
+	<text>
+	"Oh, well. There's you, so maybe you should tell me why you bought one. Unless it's just idle curiousity." she says and smiles playfully "I stock them purely to see who might buy something that has no other purpose than to make them tiny and easy to dominate and devour."
+	</text>
+	<choice destination="pill1" text="$And why are you so interested in people who, might have such an interest?"/>
+	<choice destination="end" text="$I've heard enough"/>
+	</page>
+	
+	<page ID="pill1">
+	<text>
+	"Because I'm a playful kitty..and sometimes, i want someone i can play catch and eat with." she says and licks her lips suggestively.
+	</text>
+	<choice destination="pill2" text="$catch and eat huh, sounds fun"/>
+	<choice destination="pillExit" text="$I don't like the idea of being toyed with"/>
+	</page>
+	
+	<page ID="pill2">
+	<text>
+	"Oh joy i found another mousie!" she says with a giggle and smiles, then pats her counter meaningfully "Just hop up and take the pill and we can get started."
+	</text>
+	<choice destination="pill3" text="*pop up on the counter and take the pill*"/>
+	<choice destination="end" text="$ah, this is going a bit fast, i'm gonna pass for now"/>
+	</page>
+	
+	<page ID="pill3">
+	<text>
+	Robyn grins as you scoot yourself up onto the counter, tail swishing with anticipation as you pop the pill in your mouth and then within moments begin shrinking down. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				your clothing piling around you as you shrink down to bitesize.
+	</conditional>
+	Once you're nice and tiny you see Robyn loom over you, a delighted smile on her face as it's clear she really enjoys these sorts of moments "mhmm, you're so cute like this." she says, leaning up over the counter, you can feel her breath as powerful wafts and see her tail flicking eagerly back and forth when you can glimpse it past her..but soon her face is becoming all that you can see..
+	</text>
+	<effect type="removeitem" item="shrink pill" value="1" />
+	<choice destination="playA0" text="*make a run for it*"/>
+	</page>
+	
+	<page ID="playA0">
+	<text>
+	You make a dash for it across her counter, and hear her giggle, reaching out to snatch your naked little form up off the surface "gotcha!" she says and hoists you easily into the air, dangling you in front of her smiling face.
+	</text>
+	<choice destination="oralvore0" text="$Thought you wanted to play mousie"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	"I said I sometimes did, sometimes it's enough to gobble up a little treat and know they're helpless inside me...and it's been a while, you wouldn't take me for an impulsive person though right?" she asks, but doesn't wait for you to answer..her mouth opening up as she tilts her head back, her warm wet breath washing over you as she lowers you past her lips. Her tongue undulating against you to press you up against the roof of her mouth and sample you as she pulls her fingers away and closes her mouth. Those teeth of hers sealing you in as she rolls you around in her mouth, tasting your body and brushing your feet against the entrance of her throat.
+	</text>
+	<choice destination="oralvore1" text="*treated like candy*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You try to push against her tongue only to find it overwhelming as she mashes you against the inside of her mouth, being a bit rough with you at your small and delicate size. Your squirms just making her purr, a loud hum of her pleasure thrumming around you as her tongue laps between your legs, down your front only for her to press you into one cheek and turn you around afore sampling the flavour of your other side.
+	</text>
+	<choice destination="oralvore2" text="*and then*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Robyn plays with you with her tongue for a few more moments, before tipping her head back.. your legs pressing against the entrance of her throat afore she swallows, closing her eyes as you plunge into her throat. The catgirl pressing a finger against her neck to feel the lump of your body vanishing down into her. That tight throat pressing around you as your tiny body is conveyed steadily and inexorably down into the depths of her belly, plunging abruptly through a sphincter and dropping into her tummy. The kitty letting out a giggle as she presses her fingers against her middle "It's roomier when you're that size isn't it.. i can feel you moving around in me." she says as you got to your feet in her stomach and tried to push out, but were unable to make even a dent in her tummy walls, not a bulge or trace of your presence inside her. You're hidden away in the kitty girl as a snack.
+	</text>
+	<choice destination="oralvore3" text="*digestion*"/>
+	</page>
+	
+	<gameover ID="oralvore3">
+	<text>
+	You try to respond to her, but she's not able to hear someone so tiny over the gurgles of her gut as her enzymes begin to flow in and ooze from her stomach walls. Robyn getting comfortable as you look at the rising level of digestive fluids. It's a bit late to have second thoughts about being her snack though, the enzymes eating away at your legs as they rise up your thighs, digesting you rapidly as you feel her drum her fingers on her tummy. Abruptly your legs give way under you sending you crash into the fluid, a submersion into her potent stomach acids that you don't emerge from. Dunked into the fluids you break down in record time, only a mass of chunky ooze rising up the surface where you'd vanished within about a minute. Robyn smacking her lips and letting out a sigh as she feels her snack dissolve, mousie really is the best game to play with people.
+	</text>
+	</gameover>
+	
+	<page ID="pillExit">
+	<text>
+	"It's not for everyone, but you wouldn't of been the first to be my little mouse if you'd of said yes." says Robynn, giving a wink and a smile. She seems to take the rejection in stride.
+	</text>
+	<choice destination="end" text="$good thing there's no hard feelings, farewell"/>
 	</page>
 	
 	<page ID="start">

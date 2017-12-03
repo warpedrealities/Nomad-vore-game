@@ -13,14 +13,37 @@ import actor.npc.NPC;
 import artificial_intelligence.detection.Sense;
 
 public class Script_AI implements Controller {
-	Globals m_globals;
-	LuaValue m_script;
+	private Globals m_globals;
+	private LuaValue m_script;
 
-	ScriptMemory memory;
-	String m_name;
+	private ScriptMemory localMemory;
+	private ScriptMemory sharedMemory;
+	private String m_name;
 
 	boolean active;
 
+	public class Memory
+	{
+		public ScriptMemory localMemory;
+		public ScriptMemory sharedMemory;
+		public Memory(ScriptMemory localMemory2, ScriptMemory sharedMemory2) {
+			this.localMemory=localMemory2;
+			this.sharedMemory=sharedMemory2;
+		}
+		public int getValue(int index) {
+			return localMemory.getValue(index);
+		}
+		public void setValue(int index, int value) {
+			localMemory.setValue(index, value);
+		}
+		public ScriptMemory getShared()
+		{
+			return sharedMemory;
+		}
+	};
+	
+	private Memory memory;
+	
 	public boolean getActive() {
 		return active;
 	}
@@ -29,11 +52,11 @@ public class Script_AI implements Controller {
 		active = value;
 	}
 
-	public Script_AI(String file) {
+	public Script_AI(String file, ScriptMemory sharedMemory) {
 		m_name = file;
-
-		memory = new ScriptMemory();
-
+		this.sharedMemory=sharedMemory;
+		localMemory = new ScriptMemory();
+		memory=new Memory(localMemory,sharedMemory);
 		// load lua file
 		m_globals = JsePlatform.standardGlobals();
 		try {
@@ -56,6 +79,7 @@ public class Script_AI implements Controller {
 		try {
 			m_script.call();
 			LuaValue luascript = CoerceJavaToLua.coerce(memory);
+			LuaValue luaShared = CoerceJavaToLua.coerce(sharedMemory);			
 			LuaValue luacontrollable = CoerceJavaToLua.coerce(controllable);
 			LuaValue luasense = CoerceJavaToLua.coerce(senses);
 			LuaValue luacontrol = m_globals.get("main");

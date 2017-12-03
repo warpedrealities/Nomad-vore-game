@@ -88,7 +88,7 @@ public class Choice {
 		StringBuilder builder = new StringBuilder();
 		while (scanner.hasNext()) {
 			String str = scanner.next();
-			if (str.length() + length > 37) {
+			if (str.length() + length > 32) {
 				length = 0;
 				if (list.size() > 0) {
 					builder.insert(0, " ");

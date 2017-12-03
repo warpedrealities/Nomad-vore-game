@@ -2,8 +2,11 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			no interaction to be had with a defeated elf yet
+			The elf warrior discards her weapons as you approach, blushing and moaning as she slides one hand into her skirt "I hope you're planning on following through...I, I need you to." she blushes deeper, fingers making a slick sound as dewdrops of sexual fluid run down the inside of her thighs.
 		</text>
+		<choice destination="analvore0" text="$on your knees, I'm going to sit down over you">
+			<assertion evaluate="hasperk" perk="analvore" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -12,9 +15,52 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-		<choice destination="end" text="well bye" />
+		<choice destination="end" text="$No, sort it out yourself" />
 	</page>
 
+	<page ID="analvore0">
+	<text>
+	Her expression looks calculating for a moment as she visualizes..then smiles "Oooh, I like you..that's definitely my kind of naughty." she says and steps in close to grope her hand around to cup your <macro ID="butt_size_desc" /> ass and grind her fingers at your crack probingly. She lets out a mhmm 
+	<conditional>
+	<condition operator="lessthan" evaluate="BODYVALUE" bodypart="butt" partvalue="size" value="10" />"I'd love to plump up your ass, needs feeding." she admits. 
+	</conditional>
+	<conditional>
+	<condition operator="greaterthan" evaluate="BODYVALUE" bodypart="butt" partvalue="size" value="10" />"I'd love to slide into your ass...so sexy." she admits. 
+	</conditional>
+	</text>
+	<choice destination="analvore1" text="$And yet you're still not down there where I can shove you in"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	"Mhmm, I just wanted to hear you say it again." she says and blushes afore wriggling out of her clothes and down onto her knees so you can take your place over her. An anxious and eager expression on her face afore you shift your gaze from her face, and slip your ass onto it instead. A muffled mhmm heard from down below your rumpcheeks, followed by a schlorp as with a groan you start to press down over her and feed her into your hungry rump.
+	</text>
+	<choice destination="analvore2" text="$good buttslut, in you go"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	The elf's moans emanate from deep inside your ass now as her shoulders and chest squeeze past your ravenous sphincter. That green skinned curvaceous beauty sliding smoothly past your rear cheeks as you press down over her and she presses up against your lowering hips, willingly feeding herself into your sexy insides without any seeming hesitation. Such a preyslut. In seemingly no time at all you're pressing her own ample behind through your ass, the sensations making you both groan as those curves are squeezed into you and her body slides deeper and still deeper. It won't be long until all of her is inside, mere food for your ass.
+	</text>
+	<choice destination="analvore3" text="$mhmm, my ass has never had an easier meal"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	The teasing about being an easy meal seems to make the elf gasp and moan, muffledly responding with "I don't do this with just anyone you know...obviously" she makes a sound that might be a giggle from deep inside you as you steadily schlorp in her legs, her toes twitching afore they disappear past your pucker. The elf entirely claimed as buttfood now, forced to curl and compact inside you as you trace one hand over your bulging middle. The elf feels so good there, only thing that could be better is to feel her digest.
+	</text>
+	<choice destination="analvore4" text="$Obviously not, as you'd of been digested already...mhmm, just like you're about to be"/>
+	</page>
+	
+	<page ID="analvore4">
+	<text>
+	The elf lets out a moan at that "mhmm, yes...add me to your ass you sexy thing you..." she utters as she squirms around and feels your hot enzymes flow in and soak every inch of her. Your insides gurgling and grinding over her hungrily, steadily processing and churning her down into goop. She writhes and moans but eventually sloshes and blorps instead as you liquidate her, absorbing her body into yourself to pad your attributes that had won you this meal in the first place. Sometimes, it's good to be you.
+	</text>
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

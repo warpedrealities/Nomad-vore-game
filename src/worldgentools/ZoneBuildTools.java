@@ -444,6 +444,32 @@ public class ZoneBuildTools {
 						ngrid = CloneOverlay(grid);
 						PerlinFramework.useFramework(ngrid, Enode, this);
 					}
+					if (Enode.getTagName() == "auditpaths") {
+						AuditTool tool = new AuditTool(m_zone, pointsOfInterest);
+						int replace = 0;
+						if (Enode.getAttribute("replace").length() > 0) {
+							replace = Integer.parseInt(Enode.getAttribute("replace"));
+						}
+						int widgetselection = 0;
+						if (Enode.getAttribute("exclude").equals("impassable")) {
+							widgetselection = 1;
+						}
+						tool.runPathCarver(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
+								widgetselection);
+					}	
+					if (Enode.getTagName() == "auditpathsthroughvoid") {
+						AuditTool tool = new AuditTool(m_zone, pointsOfInterest);
+						int replace = 0;
+						if (Enode.getAttribute("replace").length() > 0) {
+							replace = Integer.parseInt(Enode.getAttribute("replace"));
+						}
+						int widgetselection = 0;
+						if (Enode.getAttribute("exclude").equals("impassable")) {
+							widgetselection = 1;
+						}
+						tool.runMakePath(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
+								widgetselection);
+					}	
 					if (Enode.getTagName() == "noise") {
 						ngrid = CloneOverlay(grid);
 						Noise(Enode, ngrid);
@@ -681,6 +707,19 @@ public class ZoneBuildTools {
 						widgetselection = 1;
 					}
 					tool.runPathCarver(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
+							widgetselection);
+				}
+				if (Enode.getTagName() == "auditpathsthroughvoid") {
+					AuditTool tool = new AuditTool(m_zone, pointsOfInterest);
+					int replace = 0;
+					if (Enode.getAttribute("replace").length() > 0) {
+						replace = Integer.parseInt(Enode.getAttribute("replace"));
+					}
+					int widgetselection = 0;
+					if (Enode.getAttribute("exclude").equals("impassable")) {
+						widgetselection = 1;
+					}
+					tool.runMakePath(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
 							widgetselection);
 				}
 				if (Enode.getTagName() == "blockDungeon") {

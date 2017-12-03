@@ -12,7 +12,7 @@
 		to conceal the shapelyness of her thighs, especially if you're
 		checking her out from behind where the tail makes it ride up.</description>
 	<rpg>
-		<experiencevalue value="25" />
+		<experiencevalue value="30" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />
@@ -23,7 +23,7 @@
 		<stat stat="RESOLVE" value="40" />
 		<attribute attribute="KINETIC" value="2" />
 		<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE"
-			timeCost="2">
+			timeCost="2" threatening="true">
 			<effectDamage type="KINETIC" minValue="1" maxValue="6"
 				modifier="STRENGTH" />
 			<missText count="2">

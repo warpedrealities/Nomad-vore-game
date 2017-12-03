@@ -8,7 +8,7 @@
 		warrior looks ready for trouble, one hand resting on her knife hilt as
 		she keeps a wary eye out.</description>
 	<rpg>
-		<experiencevalue value="10" />
+		<experiencevalue value="30" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

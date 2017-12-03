@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 public class BrainBank {
 
-	static BrainBank m_instance;
-	ArrayList<Script_AI> m_ai;
-
+	private static BrainBank m_instance;
+	private ArrayList<Script_AI> m_ai;
+	private ScriptMemory sharedMemory;
+	
 	public BrainBank() {
 		m_ai = new ArrayList<Script_AI>();
-
+		sharedMemory=new ScriptMemory();
 	}
 
 	Script_AI getDupe(String name) {
@@ -29,7 +30,7 @@ public class BrainBank {
 		Script_AI ai = getDupe(name);
 
 		if (ai == null) {
-			ai = new Script_AI(name);
+			ai = new Script_AI(name,sharedMemory);
 			m_ai.add(ai);
 		}
 		return ai;

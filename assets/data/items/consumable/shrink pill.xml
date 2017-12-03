@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemConsumable name="shrink pill" weight="0.1" value="500">
+	<description>A pill, meant to reduce your size drastically but temporarily when imbibed. You're not sure how useful becoming bite sized is to you in this dangerously vorish galaxy. But maybe being bitesize is your idea of fun. </description>
+
+</ItemConsumable>

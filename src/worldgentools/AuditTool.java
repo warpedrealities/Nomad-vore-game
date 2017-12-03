@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import nomad.Universe;
 import worldgentools.auditing.CarvingPathfinder;
 import worldgentools.auditing.FloodPathfinder;
+import worldgentools.auditing.VoidPathfinder;
 import zone.TileDef.TileMovement;
 import zone.Tile;
 import zone.Zone;
@@ -108,5 +109,14 @@ public class AuditTool {
 			new CarvingPathfinder(zone, tunneledTile).runCarving(reachable, unreachedpoints, replace);
 		}
 	}
-
+	public void runMakePath(int tunneledTile, boolean widgets, boolean npcs, boolean pointsOfInterest, int replace,
+			int exclude) {
+		createPoints(widgets, npcs, pointsOfInterest, exclude,replace);
+		ArrayList<Vec2i> unreachedpoints = new FloodPathfinder(zone).runFlood(points);
+		if (unreachedpoints.size() > 0) {
+			ArrayList<Vec2i> reachable = new ArrayList<Vec2i>(points);
+			reachable.removeAll(unreachedpoints);
+			new VoidPathfinder(zone, tunneledTile).run(reachable, unreachedpoints, replace);
+		}
+	}
 }
