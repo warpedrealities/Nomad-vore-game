@@ -31,6 +31,32 @@
 				variable="49" />
 		</prefab>
 
+		<prefab positionX="8" positionY="8" width="2">
+					<row>22</row>
+					<row>22</row>
+					<placeNPC name="minoris2_saurian/saurianCaptain" x="1"
+						y="1">
+					<script spawn="elf_campaign_0" death="elf_campaign_0_kill" />
+					</placeNPC>
+					<placeNPC name="minoris2_saurian/saurianFootlizard" x="1"
+						y="0">
+					<script spawn="elf_campaign_0"/>		
+					</placeNPC>
+					<placeNPC name="minoris2_saurian/saurianFootlizard" x="0"
+						y="1">
+					<script spawn="elf_campaign_0"/>
+					</placeNPC>
+		<placeWidget x="0" y="0" name="SPAWNER">
+			<radius value="8" />
+			<spawnLimit value="6" />
+			<script value="alphaminorisbattlespawns" />
+			<spawns count="1">
+				<data npc="minoris2_saurian/saurianraider" min="2" max="4"
+					chance="50" />
+			</spawns>
+		</placeWidget>						
+		</prefab>		
+		
 		<randprefab width="5" height="5">
 			<row>33333</row>
 			<row>33333</row>
@@ -67,15 +93,7 @@
 
 		</floodfill>
 		<walloff wall="8" sides="southeastwest" />
-		<placeWidget x="8" y="8" name="SPAWNER">
-			<radius value="8" />
-			<spawnLimit value="6" />
-			<script value="alphaminorisbattlespawns" />
-			<spawns count="1">
-				<data npc="minoris2_saurian/saurianraider" min="2" max="4"
-					chance="50" />
-			</spawns>
-		</placeWidget>
+
 		<placeWidget x="56" y="56" name="SPAWNER">
 			<radius value="8" />
 			<spawnLimit value="6" />

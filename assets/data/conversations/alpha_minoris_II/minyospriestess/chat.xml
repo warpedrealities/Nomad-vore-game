@@ -1,6 +1,121 @@
 ﻿<?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
+		<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
+				value="0" />
+		<condition operator="lessthan" evaluate="GLOBALFLAG" flag="AM_ELF_CAMPAIGN"
+				value="5" />				
+		<text>
+		"Greetings again friend." the priestess gives you a smile, though is no longer so guarded you can't tell she's troubled.
+		</text>
+		<choice destination="campaign0" text="$What troubles you priestess?">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="campaignDiscussion"
+			value="0" />		
+		</choice>
+		<choice destination="campaign1" text="$Lets discuss the war against the enemy">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="campaignDiscussion"
+			value="1" />		
+		</choice>		
+		<choice destination="hauntedValley0"
+			text="$I would like to talk to you about something I found in a valley by the plains">
+			<condition operator="greaterthan" evaluate="GLOBALFLAG"
+				flag="hauntedValley" value="1" />
+		</choice>
+		<choice destination="crashRecovery0"
+			text="$I would like to talk to you about digging up the ship">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="hauntedValleyL"
+				value="1" />
+			<condition operator="lessthan" evaluate="GLOBALFLAG" flag="hauntedValley"
+				value="5" />
+		</choice>
+		<choice destination="crashRecovery1"
+			text="$I would like to talk about how the excavation is going">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="hauntedValleyL"
+				value="1" />
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="hauntedValley"
+				value="5" />
+		</choice>
+		<choice destination="history" text="$I would like to know your history" />
+		<choice destination="statue0" text="$you misplaced something?">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="quest"
+				value="0" />
+		</choice>
+		<choice destination="statue1" text="$about that statue">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="quest"
+				value="1" />
+		</choice>
+		<choice destination="area"
+			text="$can you tell me more about the surrounding area?" />
+		<choice destination="end" text="$farewell" />
+	</page>
+
+	<page ID="campaign0">	
+	<text>
+	"Since the mysterious clearing of the mountain pass to the lands of the south we have been at war. How could I not be troubled, saurians have been seen abroad and their long and just exile in that harsh and unforgiving land has if anything only strengthened their vileness and power...it will be many moons before we drive them back again, but perhaps..as a friend, you would lend us your strength. I can only believe that the great spirits sent you to us afore this time of trial so that we may finally be free of these terrible lizards."
+	</text>
+	<choice destination="campaign0A" text="$I will stand with you, your foes are my foes friend"/>
+	<choice destination="campaign0B" text="$I do not believe it is my place, this trial is for the quendi to pass alone"/>
+	</page>
+	
+	<page ID="campaign0B">
+	<text>
+	"Pretty words to mask a hollow heart. But no matter, we have no need of weakness."
+	</text>
+	<choice destination="end" text="$I'll come back when you're in a better mood"/>
+	</page>
+
+	<page ID="campaign0A">
+	<text>
+	"Friend, your words stir my heart. Put deed to them and we will come through this trial, together and stronger for it." she says clasping your arm firmly and giving you a fierce smile. With the star traveller on their side surely the elves cannot fail now.
+	</text>
+	<effect type="setlocalflag" flag="campaignDiscussion" value="1" />
+	<choice destination="campaign1" text="$Then let us begin, tell me of the war"/>
+	<choice destination="end" text="$I must prepare, i will speak to you of the war soon"/>
+	</page>
+	
+	<page ID="campaign1">	
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="AM_ELF_CAMPAIGN" value="0" />	
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="AM_ELF_MISSION0" value="0" />		
+	<text>
+	"For now we have confined the spread of the saurians to the jungles that lead to the mountain pass but already our forces are hard pressed. A scaled warrior has been seen directing the others of them, making them as many bodies that act with one mind though she herself hangs back from the front. Without this leader their invasion would faulter and their warriors would be more easily, done away with." she says and smirks, her hips canting to an angle suggestive.
+	</text>
+	<effect type="setglobalflag" flag="AM_ELF_MISSION0" value="1" />	
+	<choice destination="end" text="$Very well, I'll go deal with this saurian captain who leads their forces"/>
+	</page>
+	
+	<page ID="campaign1">	
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="AM_ELF_CAMPAIGN" value="0" />	
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="AM_ELF_MISSION0" value="1" />		
+	<text>
+	"The scaled captain still leads their forces against us friend. Find her on the field of battle, enter the lamia jungle to our west, then turn south, seek her out in the jungles before the mountain pass and slay her."
+	</text>
+	<choice destination="end" text="$Of course, thanks for the directions. I'll get right on that."/>
+	</page>	
+	
+	<page ID="campaign1">	
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="AM_ELF_CAMPAIGN" value="0" />	
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="AM_ELF_MISSION0" value="2" />		
+	<text>
+	"Word travels swiftly friend. Their captain has been defeated, their will has been broken..and many of their warriors have vanished into quendi rears as we routed their forces. They will regroup, but you have won us a great victory today."
+	</text>
+	<effect type="setglobalflag" flag="AM_ELF_MISSION0" value="3" />		
+	<effect type="experience" value="400" />	
+	<choice destination="end" text="$I am pleased to hear it"/>
+	</page>	
+	
+	<page ID="hauntedValley0">
+		<text>
+			"you braved the haunted valley and returned to speak of it?" this seems
+			to immediately get the priestess's attention "and tell me, what did
+			you find there?"
+		</text>
+		<choice destination="hauntedValley1"
+			text="$there's dangerous robots, but they're guarding a spaceship that looks like it might be in a salvageable condition." />
+		<choice destination="end"
+			text="actually my mistake, I was thinking of something else farewell." />		
+	</page>
+	
+	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
 			value="1" />
 		<!--subsequent meetings -->
