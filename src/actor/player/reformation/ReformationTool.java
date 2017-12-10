@@ -114,8 +114,21 @@ public class ReformationTool {
 		}
 	}
 	
+	private void healNPCs()
+	{
+		Zone z=Universe.getInstance().getCurrentZone();
+		for (int i=0;i<z.getActors().size();i++)
+		{
+			if (z.getActors().get(i).getRPGHandler().getActive())
+			{
+				z.getActors().get(i).getRPG().Heal(1);
+			}
+		}
+	}
+	
 	public void reform()
 	{
+		healNPCs();
 		Universe.getInstance().setPlaying(true);
 		Player player=Universe.getInstance().getPlayer();
 		//drop all equipment at location

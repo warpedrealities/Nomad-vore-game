@@ -453,28 +453,28 @@ public class DialogueScreen extends Screen implements Callback {
 	}
 
 	private void keyboardControls() {
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_1)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_1)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_1)) {
 			ButtonCallback(0, null);
 		}
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_2)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_2)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_2)) {
 			ButtonCallback(1, null);
 		}
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_3)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_3)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_3)) {
 			ButtonCallback(2, null);
 		}
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_4)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_4)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_4)) {
 			ButtonCallback(3, null);
 		}
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_5)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_5)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5)) {
 			ButtonCallback(4, null);
 		}
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_6)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_6)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_6)) {
 			ButtonCallback(5, null);
 		}
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_7)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_7)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_7)) {
 			ButtonCallback(6, null);
 		}
-		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_8)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_8)||Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_8)) {
 			ButtonCallback(7, null);
 		}
 	}

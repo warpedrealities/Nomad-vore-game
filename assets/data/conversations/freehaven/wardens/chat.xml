@@ -4,7 +4,55 @@
 	<text>
 	"Visitor. What can I do to help you?" the warden seems friendly enough, willing to stop her patrol amicably to talk to you.
 	</text>
+	<choice destination="oralvore0" text="$I've committed a crime and need to be punished!">
+		<assertion evaluate="hasperk" perk="oralvore" />	
+	</choice>
 	<choice destination="end" text="$Nothing at the moment, just wanted to say hello."/>
 	</page>
 
+	<page ID="oralvore0">
+	<text>
+	Her eyes widen and her hand flex, clearly about to lay down the lay afore she realizes the tone in which you just said that..and she lets out a little groan, though a slow smile appears on her face "Really? not the first time I've heard that line. Still, win win. I get a meal, and you get what you want."
+	</text>
+	<choice destination="oralvore1" text="$Win win indeed, I hope you're a hungry bunny"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	"Course I am, you haven't seen the sorta thing we get served at mealtimes. Lawbreakers and preysluts like you are one of the best perks of the job." she says 			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				as you strip off in anticipation of feeling her tongue on your skin.
+			</conditional>. You smile at her, unmindful of being eaten in public by the sexy bunny girl as she looks you over and moistens her lip "Oh you'll do nicely, for the crime of being too delicious to remain uneaten How do you plead?" she asks playfully as she steps closer to you. Close enough you can feel her warm moist breath on your skin. 
+	</text>
+	<page ID="oralvore2" text="$EDIBLE!"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The warden chuckles at your response "Well then, there's only one punishment for a reprobate like you..thorough digestion..mhmm inside..a sexy bunny." she says, starting to taste over your face as she speaks..murring at your flavour and then finally parting her lips around your face, stretching her jaws to encompass your head as she sets about eating you alive. Her hands cupping your ass possessively as she gobbles you up in full view of everyone. Her throat soon welcoming you as well as she takes her first swallows and crams your shoulders past her lips with a delighted mhmm as she gets to savour more of your delicious frame.
+	</text>
+	<choice destination="oralvore3" text="*eaten by the warden*"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	The bunny grips your ass hard as she hauls you up off of your feet and swallows more and more of you. Her throat rippling to tug you down. One of her hands sliding off your ass only to slide down the front of her uniform unzipping it from collar to crotch. The bunny gal exposing the pale flesh of her belly and a tantalizing patch of her fur as she makes room for the bulge you're making in her tummy. Your form piling into her guts as she swallows over your chest, middle and then finally is gobbling up your ass with hearty swallows. It's clear despite being what some would consider a prey species the bunny is quite a capable and experienced predator. And her turning you into a mid shift meal is done in a way that'd be downright businesslike were she not licking over you and moaning in appreciation of your flavour.
+	</text>
+	<choice destination="oralvore4" text="$Mhmm someone's enjoying their...food."/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	It doesn't take her long to polish you off, your twitching feet disappearing past her lips as she snaps her jaws shut past the last of you and swallows you down "mhmm, well you are delicious. Now are you ready to serve out your sentence of thorough digestion in a sexy bun?" asks the warden, playing along as she runs her hand along her gut with one hand. With the other she does up a little tie across the chest to at least partially hold her uniform closed where it doesn't have to let her bellyful of prey spill out.
+	</text>
+	<choice destination="oralvore5" text="$yes I want my sentence..digest me"/>
+	</page>
+	
+	<gameover ID="oralvore5">
+	<text>
+	The bunny giggles at that, and goes on with her patrol. And as she walks around keeping an eye out for ne-er do wells you gradually fulfil your sentence within her. The warden showing off the gut she's sporting as gradually the lumpy contours in her belly turn soft and round and smooth. Your form liquidating easily within her over the length of the shift until by the time she clocks off the day her gut is only a compact paunche containing what remnants of you haven't already been absorbed. By the time she turns in she won't show even that as a signifier of her willing meal earlier in the day.
+	</text>
+	
+	</gameover>
+	
 </Conversation>

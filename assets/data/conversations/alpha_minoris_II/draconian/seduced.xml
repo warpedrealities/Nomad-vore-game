@@ -9,17 +9,7 @@
 		<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="sex0" text="#..I want to mate with you">
-		</choice>	
-		<choice destination="cockvoreP0" text="#..I want your sexy body, churning in my balls">
-		<preference fetish="herms" />
-		<preference fetish="cockvore" />		
-		</choice>
-		<choice destination="analvoreP0" text="#..I want you inside me, you belong in my ass">
-		<preference fetish="analvore" />	
-		</choice>	
-		<choice destination="analvore0" text="#I want you to debase me, let me crawl into your ass">
-		<assertion evaluate="hasperk" perk="analvore" />
-		</choice>		
+		</choice>			
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />

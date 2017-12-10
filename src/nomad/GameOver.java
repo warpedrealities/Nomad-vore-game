@@ -36,6 +36,10 @@ public class GameOver extends SceneBase implements MyListener {
 		tool=new ReformationTool(Universe.getInstance().getCurrentEntity(),Universe.getInstance().getPlayer().getReformHandler());
 		SetupTextures();
 		this.victor=victor;
+		if (victor!=null)
+		{
+			victor.getRPG().Heal(1);
+		}
 		m_window = new Window(new Vec2f(-20, -16), new Vec2f(40, 30), m_textureIds[0], true);
 
 		m_text = new TextView(m_textureIds[3], new Vec2f(-20, -14.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);

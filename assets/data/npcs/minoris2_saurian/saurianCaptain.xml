@@ -2,7 +2,9 @@
 <NPC>
 	<sprite value="sauriancaptain.png" />
 	<name>saurian captain</name>
-	<description></description>
+	<description>
+	This saurian's mail coated tunic is better made than that of the others. And somone has attempted to add a dash of style with a cape that extends just past the root of her tail. She stands some six foot six and fills out the tunic in a way that doesn't quite get concealed by the marginally unshaped simple cut of her outfit. Perhaps she'd be as formidable in bed as she is on the battlefield, but she has a dangerous air as she surveys the field and holds her crossbow at the ready.
+	</description>
 	<rpg>
 		<experiencevalue value="80" />
 		<ability ability="STRENGTH" value="5" />
@@ -49,10 +51,10 @@
 		</combatMove>
 	</rpg>
 
-	<defeated conversation="alpha_minoris_II/sauriancaptain/defeat" />
-	<seduced conversation="alpha_minoris_II/sauriancaptain/seduced" />
-	<victory conversation="alpha_minoris_II/sauriancaptain/victory" />
-	<seducer conversation="alpha_minoris_II/sauriancaptain/victory" />
+	<defeated conversation="alpha_minoris_II/saurianCaptain/defeat" />
+	<seduced conversation="alpha_minoris_II/saurianCaptain/defeat" />
+	<victory conversation="alpha_minoris_II/saurianCaptain/victory" />
+	<seducer conversation="alpha_minoris_II/saurianCaptain/victory" />
 	<controller AI="saurian_captain0" />
 	<faction value="saurian" />
 </NPC>
