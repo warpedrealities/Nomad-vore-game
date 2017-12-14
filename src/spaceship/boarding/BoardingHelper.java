@@ -95,12 +95,14 @@ public class BoardingHelper {
 	
 	public void addNPCs(String [] filenames)
 	{
+		Vec2f position=getPosition();
 		for (int i=0;i<filenames.length;i++)
 		{
-			Vec2f position=getPosition();
+
 			Document doc = ParserHelper.LoadXML("assets/data/npcs/" + filenames[i] + ".xml");
 			Element n = (Element) doc.getFirstChild();
 			Vec2f p = Universe.getInstance().getCurrentZone().getEmptyTileNearP(position);
+			position=p;
 			NPC npc =new NPC(n, p, filenames[i]);		
 			Universe.getInstance().getCurrentZone().getActors().add(npc);
 			npc.setCollisioninterface(Universe.getInstance().getCurrentZone());

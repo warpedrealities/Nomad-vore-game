@@ -21,7 +21,7 @@
 		<attribute attribute="DODGE" value="2" />		
 		<attribute attribute="WILLPOWER" value="2" />
 		<combatMove name="shoot" pattern="RANGED" bonusAttribute="RANGED"
-			timeCost="2">
+			timeCost="2" bonusToHit="2">
 			<effectDamage type="KINETIC" minValue="2" maxValue="7"
 				modifier="STRENGTH" />
 			<missText count="2">

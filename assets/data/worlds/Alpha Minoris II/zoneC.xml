@@ -93,15 +93,32 @@
 
 		</floodfill>
 		<walloff wall="8" sides="southeastwest" />
-
-		<placeWidget x="56" y="56" name="SPAWNER">
+		<prefab positionX="56" positionY="56" width="2">
+					<row>22</row>
+					<row>22</row>
+					<placeNPC name="minoris2_elves/elfChampion" x="1"
+						y="1">
+					<script spawn="saurian_campaign_0" death="saurian_campaign_0_kill" />
+					</placeNPC>
+					<placeNPC name="minoris2_elves/elfArcher" x="1"
+						y="0">
+					<script spawn="saurian_campaign_0"/>		
+					</placeNPC>
+					<placeNPC name="minoris2_elves/elfArcher" x="0"
+						y="1">
+					<script spawn="saurian_campaign_0"/>
+					</placeNPC>
+		<placeWidget x="0" y="0" name="SPAWNER">
 			<radius value="8" />
 			<spawnLimit value="6" />
 			<script value="alphaminorisbattlespawns" />
 			<spawns count="1">
-				<data npc="minoris2_elves/elfraider" min="2" max="4" chance="50" />
+				<data npc="minoris2_elves/elfraider" min="2" max="4"
+					chance="50" />
 			</spawns>
-		</placeWidget>
+		</placeWidget>						
+		</prefab>	
+
 	</mapgen>
 
 </zone>
