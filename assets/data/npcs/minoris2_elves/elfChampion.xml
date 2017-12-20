@@ -61,7 +61,7 @@
 	</rpg>
 
 	<defeated conversation="alpha_minoris_II/elfChampion/defeat" />
-	<seduced conversation="alpha_minoris_II/elfChampion/seduced" />
+	<seduced conversation="alpha_minoris_II/elfChampion/defeat" />
 	<victory conversation="alpha_minoris_II/elfChampion/victory" />
 	<seducer conversation="alpha_minoris_II/elfChampion/victory" />
 	<talk conversation="alpha_minoris_II/elfChampion/chat" />

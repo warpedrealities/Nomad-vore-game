@@ -1,40 +1,93 @@
 <?xml version="1.0"?>
 <Conversation>
+	<!--written by mikoc5 and edited by darkevilme-->
 	<page ID="start">
+	<preference fetish="oralvore" />
+	<preference fetish="demis" />	
 		<text>
-		The marauding lion girl looms over your fallen form with a grin "You take what you beat, and that means you're mine. I'm going to enjoy you." she says, in a way that sounds worryingly but somewhat predictably predatory.
+		A sharp, almost stunning pain suddenly skewers you, impacting you hard enough to cause you to stagger and fall to your knees, your arm instinctively reaching to hold the injury. You attempt to get back to your feet and stumble, unable to stand. Getting away is no longer an option, and the marauder that shot you quickly catches up, grinning smugly at her prey. “You’re gonna make a good snack, scrub!” She reaches down and grabs you by the ankle, yanking your leg upwards. The violent jolt cause you even more pain, and your vision blurs from the pain. You’re now held upside down over the lioness’ head like a dying animal, a description you’re a good match for, courtesy of her bullets. The lioness opens up, showing off the ravenous maw, letting you have a good look at her wide-open maw and hungry throat, the tongue already sliding out to start lapping at you.
 		</text>
-		<choice destination="oralvore0" text="it's just what it sounds like">
-		<preference fetish="oralvore" />	
-		</choice>
-		<choice destination="herm0" text="not what it sounds like, she's whipping something out">
-		<preference fetish="herms" />		
-		</choice>
+		<choice destination="persuadeCheck" text="$Please, don’t eat me.”/>
+		<choice destination="oralvore0B" text="*do nothing*"/>
 	</page>	
 
-	<page ID="oralvore0">
+	<page ID="oralvore0B">
 	<text>
-	The tall and predatory cat 	<conditional>
-				<assertion evaluate="slothasitem" slot="2" />
-				takes her time to undress you. Her gaze roving over your body as she strips you and you struggle futilely. Once she has you entirely exposed and bared in front of her she 
-			</conditional>
-			smirks and lets her gaze drink in the sight afore she licks her lips "Oh outlander, you look delicious, if you taste as good as you look." she lets out a rumbling growl of delight and pulls you up into her embrace. Her ample bosom pressing against you as she licks over your face.
+	Realizing you’re not exactly in a position to argue, you stay quiet and let the wet and voracious confines of her mouth engulf you. As you descend, those hot lips of hers make contact with your face, brushing past it as the wet, rough tongue starts curling around your ear, helping keep you on a straight path towards the entrance of her throat, the squishy throat pressing up against your face. The tongue starts running back and forth around your scalp, the lioness clearly enjoying your flavor, your head gets fully coated in drool before she starts slowly swallowing, the powerful throat pulling you down.
 	</text>
-	<choice destination="oralvoreA1" text="$Or you could not eat me? maybe?"/>
+	<choice destination="oralvore1B" text="Descend into darkness"/>
+	</page>
+
+	<page ID="oralvore1B">
+	<text>
+	You can’t see anything anymore, but you can still touch and hear. Judging by the warmth slowly advancing up your back, it seems the lion gal has your shoulders inside now, and continues to gently swallow, the smooth but strong tissues of her esophagus bringing your body down in large chunks, softly massaging you from all sides during your descent. Your battered body relaxes, snugly held by the lioness’ body, with the loud beating of her heart and calming rush of blood around her accompanying you in your journey.
+	</text>
+	<choice destination="oralvore2B" text="Did her stomach just roar?"/>
 	</page>
 	
-	<page ID="oralvoreA1">
+	<page ID="oralvore2B">
 	<text>
-	
+	Hearing a loud, roar-like noise under you, you look down, only to see darkness just like last time. You realize you feel a smell of very obvious stomach acid. Right... of course... The lioness swallows again, your head pushing through a fleshy valve and into a more relaxed, spacious area. For a gulp or two, it felt like you were entering an empty space that smelled of acid and made gurgly noises, and your head finally breaks the water level, slowly descending into the thick, tingly liquid.
 	</text>
-	
+	<choice destination="oralvore3B" text="Belly of the beast"/>
 	</page>
 	
-	<page ID="herm0">
+	<gameover ID="oralvore3B">
 	<text>
-	
+	You continue being squeezed by the soft muscles, they keep pressing over you to push your form down into the stomach, eventually letting your entire body curl up in the spacious puddle of tingling liquid. The lioness softly rubs her hands against the stomach, pressing her paws into you through the flesh, at least giving you some TLC before your inevedible demise. Allured by the softness and warmth of the stomach around you, you fall asleep for the last time, by the time you’d’ve woken you became nothing but another layer of flab on a fab lion’s flank.	
 	</text>
+	</gameover>
 	
+	<check ID="persuadeCheck">
+		<test what="PERSUADE" DC="15" />
+		<outcome destination="success" />
+		<outcome destination="failure" />
+	</check>	
+	
+	<page ID="success">
+	<text>
+		“You jest surely traveller?” She asks, looking around uncertainly, then giving you a questioning look. “I have bested you, at great cost in precious rounds and the struggle. My stomach is already gurgling for you and you are mine, You think I will show mercy merely cause you asked politely?” You nod with sincere eyes, very obviously concerned with your survival. The lion girl gives you an unamused stare and shrugs, dropping you into the sand and looting your pockets for valuables and money, but at least leaving you alive. As she walks away, she remarks “Now shoo, I doubt you’ll catch me in a merciful mood next time.” As you lie there, severely injured but at least still alive, your body eventually stabilizes and allows you to limp away despite your injuries.	
+	</text>
+		<effect type="givegold" value="-100" />	
+		<special effect="removenpc" />		
+		<choice destination="end" text="at least you have your life..even if not your dignity"/>
 	</page>
+	
+	<page ID="failure">
+	<preference fetish="cockvore" />
+	<preference fetish="herms" />	
+	<condition operator="lessthan" 
+		evaluate="DICEROLL" value="10"/>	
+	<text>
+	“Hmmmmm...” The lioness considers your request and gives you an evil grin, smiling broadly with her teeth exposed. “Alright. I won’t EAT you, just like you asked.” She starts lowering you down in front of herself until your head stops at her crotch height. You blink, unsure what she meant by this, until you notice something start to bulge the crotch out. Suddenly, a penis pops out from between her legs, hidden until now by her attire, and quickly growing to an impressive size. Realizing what she meant, you groan, the hungry, red tip of her girthy shaft softly poking your nose like a brush.
+	</text>
+	<choice destination="cockvore0" text="Down I go"/>
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	The lioness loudly moans as her dick starts pressing against your face, stretching over and sucking on it. You try to get away, but the deceptively strong shaft tip starts tugging on you, slowly spreading the hot meat further onto you, rolling over your skin and taking your whole head inside, sucking it down slowly like you’re a piece of candy stuck in a straw. Your body starts slowly sliding into the tight, meaty tunnel, warth creeping up your back and squeezing you tightly on all sides. You hear the lioness moaning loudly and her blood rushing past you as the cock continues to pump and bring you down, eventually dipping your head in a pool of sticky, gooey liquid that starts tingling your skin.
+	</text>
+	<choice destination="cockvore1" text="Melted alive"/>
+	</page>
+	
+	<gameover ID="cockvore1">
+	<text>
+	Your whole body eventually makes it inside her balls, the lion girl stroking her massive cock as her cum starts melting you, first bleaching your skin and seeping into your flesh, your body becoming partially homogenous with the sexy liquid, her hands stroking up and down her dick lustfully the whole time as you digest. Her balls softening and rounding out gradually. Eventually she fully melts you down and reaches her climax at about the same time. Your predator releasing you into the world, only to realize she let an entire person worth of food and water go to waste and curses loudly, putting her loincloth back on as she goes looking for someone else to eat. 
+	</text>
+	</gameover>
+	
+	<page ID="failure">
+	<text>
+		“No prey animal, you are my meal. Accept it.”, she says, putting you in her mouth, her jaws holding you firmly with her pointy teeth, making sure you’re not going to try and squirm away. Her throat quickly opens up and she starts gulping, lowering your body into her as it ripples and pulsates around you in bursts, squeezing you down tightly, a mighty gulp bringing your chest down, and another gulp sends your head into the stomach, underwater, your submerged scalp stung by the burning acid. Instinctively, you squirm, trying to get above the stinging liquid, and the lioness starts loudly purrrrrrrring, vibrating around your body. The following gulps only make it worse, and between your wounds and the acids your body can’t handle the pain and you pass out...
+	</text>
+	<choice destination="oralvoreGO" text="End of the line"/>
+	</page>	
+	
+	<gameover ID="oralvoreGO">
+	<text>
+	The lioness gulps one last time, packing your entire body away inside her, forcibly curled up within her large, hungry belly. Even if you were awake, there was nothing you could do at this point, and your life slowly fades away, just like the bulge on the lioness’ sexy stomach goes from XXL to normal, with not even a gravestone to mark your final resting place, though let’s be fair - even if you did get one, she would've probably digested that too.
+	</text>
+	</gameover>
 	
 </Conversation>

@@ -3,9 +3,29 @@
 	<page ID="start">
 	<preference fetish="analvore" />	
 	<text>
-	
+	The elf sweeps your legs out from under you and then plants a foot on your chest as you slam into the ground with a thump. The impact taking the breath away from you as she looms over you "Yet another victory. You know, I might get tired of winning this hard...but not any time soon." she says confidently. And considering how well she's bested you her superiority might be justified "Get this one ready, I know she's important to the lizards." she says and greenskinned arms are soon grabbing your shoulders roughly and pulling you upright. Your arms kept by your sides as she turns around and presents her magnificent asscheeks in front of your face before starting to lower herself down over you.
 	</text>
-	
+	<choice destination="analvore0" text="$You won't win you won-mph!"/>
 	</page>
 
+	<page ID="analvore0">
+	<text>
+	Those ample muscular buttcheeks part around your face, squishing her sphincter against your nose afore you begin to pass through that well practiced and voracious pucker. The champion pressing down over you as her comrades keep you restrained "Mhmm never gonna get tired of this, putting lizards and their friends in their place." she says with a delighted groan as her ass stretches around your shoulders, your head sliding deeper into the steaming hot and inescapable tightness of her bowels. Your <macro ID="breast_size_desc" /> rack failing to slow the predatory prowess of that ass appreciably as she works herself down over you.
+	</text>
+	<choice destination="analvore1" text="*forced into the rump*"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	That voracious elven ass schlorps lewdly around your middle, working down towards your hips before the victor adjusts her posture, angling your flailing legs out into the open air and tracing a hand over the bulge of your head pressing out the inside of her gut. You feel the hands of another on your legs as you attempt to resist the inevitable, the elf's friends helping shove you fully up her ass. Those hands finally settling on your feet and giving them a shove in, your body entirely vanishing past those perfect green buttcheeks. Your body forcibly curled and confined now deep within her as she straightens up and runs both hands over her full gut "Another foe beaten, another layer of fat on my ass." she says and mhmms.
+	</text>
+	<choice destination="analvore2" text="*The indignity of being food for elven ass*"/>
+	</page>
+	
+	<gameover ID="analvore2">
+	<text>
+	"Got nothing to say? good, I've heard it all before."  says the elf as her gurgling insides that to grind you down into mush. Any protests and struggles you attempt at this point all for naught and indeed utterly ignored. Heck as you soften and turn round you suspect the champion didn't even wait for you to liquidate fully before returning to the fray. Her movements only serving to jostle you into goo more fully until her belly is compact and round and every ounce of you has been claimed to nourish the victorious predator who so deftly overcame you.
+	</text>
+	</gameover>
+	
 </Conversation>

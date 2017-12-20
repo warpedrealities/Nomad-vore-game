@@ -1,9 +1,105 @@
 <?xml version="1.0"?>
 <Conversation>
+	<!--written by mikoc5 and edited by darkevilme-->
 	<page ID="start">
 		<text>
+			You see the lioness kneeling in the sands, with her face all red and her hands by the nether regions, she’s obviously trying not to masturbate in front of you. Her eyes blink shut for extended periods of time, and it seems she’s not fully here. 		
 		</text>
+		<choice destination="lust0" text="$Wanna see if we can cool eachother down?”/>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>		
+		<choice destination="end" text="leave her be"/>
+	</page>
+	
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	
+	<page ID="lust0">
+	<text>
+	The lioness looks at you with lusty eyes, your gazes meeting and her head nodding eagerly in wordless agreement. You step up in front of her and bury your face into her breasts, your bodies rubbing together as you start taking eachother’s clothes and armour off, your hands running through her copious mane of hair and against her coal black skin of her back. Whereas her hands run down the bare <macro ID="skin_colour_desc" /> skin of yours. While neither of you was by any means cold, you still felt relatively cool in touch, at least to one another.
+	</text>
+	<choice destination="lust1" text="Let’s get intimate"/>
+	</page>
 
-	</page>	
-
+	<page ID="lust1">
+	<text>
+	With your naked bodies pressed together, the two of you begin nuzzling and nosing, which leads to the lioness trying to softly wrestle you for dominance. You let her, but only because it means she starts grooming you, that rough, wet tongue runs across your skin, the evaporating water drawing heat from your skin as you engage in close, sensual rubbing of skin against skin, breast pressed against breast and lips against lips, your tongues rapidly intertwining and exploring eachother’s mouths.
+	</text>
+	<choice destination="oralvore0" text="Let get a LOT closer!">
+	<assertion evaluate="hasperk" perk="oralvore" />	
+	</choice>
+	<choice destination="lust2" text="Let’s not take it too far."/>
+	</page>
+	
+	<page ID="lust2">
+	<text>
+	After a bit of kissing, the two of you slowly simmer down and and start getting dressed again. You exchange friendly smiles and glances, make sure you both got all the right stuff and part ways, feeling refreshed and ready for more adventures. It was nice to make a new friend, exchanged god knows how many alien bacteria, and even got a little cooler in the process. And she didn’t even try to eat you!
+	</text>
+	<special effect="nonhostile" />
+	<special effect="healnpc" />	
+	<choice destination="end" text="carry on"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	You figure that since the lion is already this close, why not get her ALL inside you? You start aggressively pressing yourself onto her, and she likes it at first, snuggling up hard in kind. But when she tries to nibble on your face in response to you nibbling hers, she finds, much to her surprise, that you’re not letting her face go. She fidgets, trying to get away, but you firmly hold her head in your absurdly stretched mouth, gulping until you get a good grip. The lioness stops squirming for now, her body remains tense as you start gulping her down softly, the cute, big kitty’s form slowly disappearing into your neck, first bulging it out, then stretching out your chest and finally bloating out your stomach. It took some effort, but now the lion is all yours to do with as you please.
+	</text>
+	<choice destination="oralvore1Digest" text="Make her yours forever!"/>
+	<choice destination="oralvore1" text="It’s a wonderful hug"/>
+	</page>
+	
+	<page ID="oralvore1Digest">
+	<text>
+	Time to show the lion what being together really is like, by digesting her and turning her into a part of you~ You hoist the lioness’ body up over yours, letting gravity do most of the work for you, and watch that young, tender cat butt slide right past your nose and into your hungry jaws, bouncing and jiggling as its owner squirms vigorously for her life. Not that you care, you get to eat some lion pussy alive. Your jaws shut close behind those dirty, sweaty cat feet, your mouth briefly filled with the uncanny flavor of sweat, but considering what’s about to go down inside you, it’s a tolerable inconvenience.
+	</text>
+	<choice destination="oralvore2BDigest" text="Candy bars taste better, though this is more filling"/>
+	</page>
+	
+	<page ID="oralvore2BDigest">
+	<text>
+		With the lioness safely tucked away in your very unsafe stomach, you lie back down to relax and take in the sights of... well, your squirming, bulgy belly. There’s not much else to view there, with the lioness throwing her entire body weight around like her life depends on it, which it probably would if it weren’t for the fact you were gonna digest her anyway. But at least it’s interesting to watch the bulges on you slowly round out as the lioness’ form gets taken apart, her body lines getting less and less pronounced and more and more vague, your gut gradually shrinking, until all the flesh is stripped down from the bones and you get to see the skeleton’s shapes on your stomach. Oh well, enough lion around. You carefully get up, feeling a lot heavier but also a lot less thirsty and put your clothes on again. Even though your latest victim isn’t quite fully gone yet, you’re certain these bones will be nothing but mush and meal by the time you find someone else to look at your usual, always hungry gut.	
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You relax, leaning back a bit, balanced out by the heavy belly resting on the sand. You start rubbing the lioness’ form through your belly, and feel her slowly relaxing as well. And sure enough, once she gets used to being in there, she starts nudging around and nuzzling, pressing her face into your stomach walls, letting you know where to gently pat and pet. It fells nice to be full, your stomach gets the satisfaction without having to go through the troublesome process of resisting your prey’s intensive struggles. Besides, the two of you are now a whole lot closer.
+	</text>
+	<choice destination="oralvore2Endo" text="Time to get you out, hun"/>
+	<choice destination="oralvore2Digest" text=""/>
+	</page>
+	
+	<page ID="oralvore2Endo">
+	<text>
+	She’s been there a while now, and clearly got used to spending some quality time within your gut, but perhaps it’d be better if you went your separate ways again. After you unceremonously release the lion and help her dry off, you both gather your stuff and wave bye to one another, the lioness promising you some revenge noms!	
+	</text>
+	<special effect="removenpc" />
+	<choice destination="end" text="carry on"/>	
+	</page>
+	
+	<page ID="oralvore2Digest">
+	<text>
+	But... you get an idea. Right now, she’s completely defenseless. She might not even squirm if you do it right, and she’ll definitely satisfy your hunger. You start quietly altering your stomach chemistry, letting your companion relax even further while your belly gets ready for some quick and easy food. And then, the perfect chance arises and your gut floods with potent digestive liquids, starting to melt the lion away quickly. By the time she realizes what’s happening and reacts, her flesh has already melted and she weakly pokes at your stomach with her mostly exposed bones. All she manages to do is utter a single, weak whimper, as if to ask “why”?, but she will only get a loud, long burp in response. Why should she expect anything else? She’s just a pocket of soup inside a clearly superior being, one that will soon turn whatever remained of her old body into a fabulous, hungering one, ready to bury more lions like her in the grave that is your body.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	
 </Conversation>

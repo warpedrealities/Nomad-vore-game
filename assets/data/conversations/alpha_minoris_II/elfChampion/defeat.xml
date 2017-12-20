@@ -1,20 +1,65 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<condition evaluate="FACTIONFLAG" value="1" operator="equals"
-			flag="allegiance" />
 		<text>
-			"greetings friend, be wary, there may be reptiles about"
+		The champion has the most disbelieving look on her face as she realizes she's looking up at you. That last blow must of dazed her a moment cause now she's finding herself sprawled at your feet and seeing your confident smile "I..I lost? but..I can't lose.."
 		</text>
+		<choice destination="analvore0" text="$Yes, you lost..and of course..you know what happens to losers...">
+				<assertion evaluate="hasperk" perk="analvore" />		
+		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>		
+		<choice destination="end" text="$Funny how that happens doesn't it"/>
 
-		<choice destination="end" text="*nod and carry on*" />
 	</page>
-
-	<page ID="start">
+	
+	<page ID="analvore0">
+	<text>
+	The elf catches on quickly as you stride over and grab her roughly by the hair, your parted thighs standing astride her<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				,the way you've already shucked your clothes aside
+			</conditional> and the smirk on your face all get your meaning across clearly "NO! I can't be humiliated tha-MMPH!" luckily her protests are easily silenced as you cram her face between your rumpcheeks, the elf's head disappearing into your pucker with a schlorp. The feeling of her frantically struggling against the inevitable consequence of her failure coaxing a groan out of you. She did this to so many others, but she's unable to accept or even believe that she's about to experience it herself.
+	</text>
+	<choice destination="analvore1" text="What goes around comes around, especially if what goes around is anal vore"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	Your musings seem under appreciated by the greenskinned woman sliding steadily between your rump cheeks. Her curves proving no impediment to your desire to conquer her with your ass as her breasts squeeze in with an audible plop and you press yourself down over her seated form. Her own fabulous derriere performing fabulously as a backstop to help wedge her deep into your innards. That struggling form soon trapped halfway into you and your sphincter is clenching on her waistline in preparation to pull her in entirely. You savour the moment for a brief time, straightening up to put her squirming legs in the air and let it sink in how helpless your buttfood is before..
+	</text>
+	<choice destination="analvore2" text="schlorping her in entirely of course"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	Her muffled noises emanate from deep inside of you now as you tug her completely into your ass. Her feet twitching around furiously as they're confined and then vanish between your rumpcheeks as you straighten up. The elf champion now trapped curled within your bulging belly, helpless and squirming and ready to be digested. Though by the sound of it she's not going to go quietly "Let me out, this can't end this way.." she protests, until you squeeze down on her and feel her become nicely muffled and incoherent.
+	</text>
+	<choice destination="analvore3" text="Oh it's ending this way"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	The champion puts up a satisfying struggle, but gradually her protests and squirms are subsumed and fade away into the increasingly liquid glorps and gurgles of your belly. The elven champion was one of their greatest warriors, now she's not even your greatest meal. Your gut turning smooth and round as succumbs utterly to her fate as your food. A few burbles audible as her remnants compact and start to filter back the way they'd come, the elf soaked up utterly as she traces her way back through your innards until not a trace of her remains unabsorbed. Victory is yours.
+	</text>
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	
+	<page ID="devour">
 		<text>
-			"keep your distance stranger"
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
 		</text>
-		<choice destination="end" text="*keep your distance*" />
-	</page>
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>	
 
 </Conversation>

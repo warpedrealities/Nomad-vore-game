@@ -1,9 +1,53 @@
 <?xml version="1.0"?>
 <Conversation>
+	<!--written by mikoc5 and edited by darkevilme-->
 	<page ID="start">
 		<text>
+			The Lioness lies before you, defeated and beaten, clutching at her battered form to try and stabilize her body enough to at least attempt an escape at a snail’s pace. But now that you approach, she looks up at you, her eyes begrudgingly admitting defeat but her spirit still defiant despite her broken body.		
 		</text>
-
+		<choice destination="oralvore0" text="Let’s see if she’s as good as the candy bars">
+			<assertion evaluate="hasperk" perk="oralvore" />		
+		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>		
+		<choice destination="end" text="leave her be"/>
 	</page>	
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>	
+	<page ID="oralvore0">
+	<text>
+	You crouch in front of the injured lion girl, your hand gripping her mane fiercely and yanking her towards you. The lion meowls in pain, reduced to a helpless kitten in your hands, and we can’t have her calling for help, can we? You open your mouth and start engulfing her face as you hastily rip off any semblence of clothing off of her. The slightly sandy taste of rough hair being slightly unpalatable to your tastebuds, but that gold hair-clad hunk of delicious meat will be a great source of water and satiation for you in its final moments. 
+	</text>
+	<choice destination="oralvore1" text="Swallow her up"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You begin swallowing harder, pushing that copious mane of hair into your throat along with her head. Your throat and tongue working in tandem to pack the lioness up into you whole, her form still too weak to fight back effectively. Not that it stops her trying, she’s fully aware her life is at stake, and she squirms around madly insofar as her battered body allows her. This however doesn’t stop you, and you even manage to use her own wriggling against her to slurp more of her in faster. Her nubian dark flesh sliding smoothly now over your tongue once sufficiently lubed and washed clean of sand and grit. Soon though you have nearly the entire lioness’s body is inside you, only briefly pausing to carefully brush the sand stuck in her flailing feet before you swallow even those down. 
+	</text>
+	<choice destination="oralvore2" text=""/>
+	</page>
 
+	<page ID="oralvore2">
+	<text>
+		How rude of that squirmy lion to leave you parched! Thankfully, you have a way of getting your water’s worth back, even though it’ll take a while for your stomach acids to work down such a large and ample meal. But that’s OK. You’ve got time, and using her old clothes and gear you get some decent shade while you’re here. Sadly, none of them seem to be your size, and definitly won’t be once you’re finished with her, so you just discard whatever you can’t use. After a while, the lionesses struggles weaken and fade, ending with a few last kicks of defiance. Your stomach goes still and silent. Or rather, about as still and silent as the planet around you, the currents inside it akin to the howling, harsh winds.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
 </Conversation>
