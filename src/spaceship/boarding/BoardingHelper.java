@@ -103,7 +103,7 @@ public class BoardingHelper {
 			Element n = (Element) doc.getFirstChild();
 			Vec2f p = Universe.getInstance().getCurrentZone().getEmptyTileNearP(position);
 			position=p;
-			NPC npc =new NPC(n, p, filenames[i]);		
+			NPC npc =new NPC(n, p.replicate(), filenames[i]);		
 			Universe.getInstance().getCurrentZone().getActors().add(npc);
 			npc.setCollisioninterface(Universe.getInstance().getCurrentZone());
 		}
