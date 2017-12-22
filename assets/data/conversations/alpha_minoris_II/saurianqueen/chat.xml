@@ -136,7 +136,7 @@
 	</text>
 	<effect type="setlocalflag" flag="campaignDiscussion" value="1" />
 	<choice destination="campaign1" text="$Then let us waste no more time, how can i serve"/>
-	<choice destination="end" text="$I must myself, i will return soon"/	
+	<choice destination="end" text="$I must myself, i will return soon"/>	
 	</page>
 	
 	<page ID="campaign0B">
