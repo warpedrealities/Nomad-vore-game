@@ -50,7 +50,7 @@
 			</hitText>
 		</combatMove>
 	</rpg>
-
+	<respawn delay="999999" />
 	<defeated conversation="alpha_minoris_II/saurianCaptain/defeat" />
 	<seduced conversation="alpha_minoris_II/saurianCaptain/defeat" />
 	<victory conversation="alpha_minoris_II/saurianCaptain/victory" />

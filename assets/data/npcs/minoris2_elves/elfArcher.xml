@@ -27,7 +27,7 @@
 			</hitText>
 		</combatMove>
 	</rpg>
-
+	<respawn delay="999999" />
 	<defeated conversation="alpha_minoris_II/elfraider/defeat" />
 	<seduced conversation="alpha_minoris_II/elfraider/seduced" />
 	<victory conversation="alpha_minoris_II/elfraider/victory" />

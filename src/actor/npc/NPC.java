@@ -498,8 +498,6 @@ public class NPC extends Actor implements Controllable {
 				// reset respawn
 				respawnController.Reset();
 
-			} else {
-				checkSpawnable();
 			}
 		} else {
 			if (actorRPG.getStat(Actor_RPG.HEALTH) <= 0) {
@@ -518,6 +516,7 @@ public class NPC extends Actor implements Controllable {
 				actorRPG.setStat(Actor_RPG.RESOLVE, actorRPG.getStatMax(Actor_RPG.RESOLVE));
 			}
 		}
+		checkSpawnable();	
 		return false;
 	}
 
