@@ -30,9 +30,10 @@
 			<noise tile="3" scarcity="10" />
 			<floodfill tile="1" />
 		</cavegen>
-
-		<walloff wall="5" sides="westnortheastsouth" />
+		<auditpaths carve="3" replace="2" />
+		<auditpaths carve="4" replace="2" />
 		<auditpaths carve="5" replace="1" />
+		<walloff wall="5" sides="westnortheastsouth" />		
 	</mapgen>
 
 </zone>

@@ -48,6 +48,8 @@
 					damage</text>
 			</hitText>
 		</combatMove>
+		<itemDrop chance="50" item="bolts" />		
+		<itemDrop chance="50" item="primitive steak" />			
 	</rpg>
 
 	<defeated conversation="alpha_minoris_II/saurianraider/defeat" />

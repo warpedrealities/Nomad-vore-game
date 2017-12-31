@@ -2,6 +2,7 @@
 <Conversation>
 
 	<page ID="start">
+		<preference fetish="demis" />		
 		<text>
 			The draconian looms over you in all her sexy yet intimidating glory
 			and looks down upon you with a smirk
@@ -13,6 +14,7 @@
 		</text>
 		<choice destination="cockvore0" text="#all you're good for is to sate my lust">
 			<preference fetish="cockvore" />
+			<preference fetish="herms" />			
 		</choice>
 		<choice destination="analvore0" text="#you deserve to die without dignity">
 			<preference fetish="analvore" />

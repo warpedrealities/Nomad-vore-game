@@ -36,6 +36,7 @@
 	</text>
 	<choice destination="sexF0" text="$Good, cause I want to feel that dick of yours in me">
 		<assertion evaluate="haspart" part="vagina" />
+		<preference fetish="herms" />		
 	</choice>
 	<choice destination="sexH0" text="$Good, cause I had a hankering to fuck a draconic slut">
 		<assertion evaluate="haspart" part="penis" />

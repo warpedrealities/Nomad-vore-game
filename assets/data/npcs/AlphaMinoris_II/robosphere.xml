@@ -23,7 +23,7 @@
 		<stat stat="RESOLVE" value="20" />
 		<combatMove name="laser" pattern="RANGED" bonusAttribute="RANGED"
 			timeCost="2" bonusToHit="0" rangedbias="2">
-			<effectDamage type="THERMAL" minValue="2" maxValue="7"
+			<effectDamage type="THERMAL" minValue="3" maxValue="8"
 				modifier="NONE" />
 			<missText count="1">
 				<text>The robosphere unleashes a searing beam of light at TARGET but misses.</text>
@@ -41,8 +41,8 @@
 				<applyText>TARGET is now surrounded by a deflective shield.</applyText>
 				<statusDefence uid="16" icon="1" duration="60"
 					numModifiers="1">
-					<strength value="20" />
-					<effect attribute="THERMAL" modifier="2" />
+					<strength value="40" />
+					<effect attribute="THERMAL" modifier="5" />
 					<removeText> TARGET's deflective shield has faded away.</removeText>
 				</statusDefence>
 			</effectStatus>

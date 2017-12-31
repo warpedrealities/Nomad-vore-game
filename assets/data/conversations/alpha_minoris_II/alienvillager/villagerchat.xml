@@ -135,6 +135,8 @@
 
 
 	<page ID="seduction">
+			<preference fetish="females" />
+			<preference fetish="demis" />	
 		<text>
 			“Still? Still? You know what, fine, I am tired of having to deal
 			with you.
@@ -148,7 +150,13 @@
 		<choice destination="seductionfail0" text="Get on your knees." />
 	</page>
 
-
+	<page ID="seduction">
+	<text>
+	“Still? Still? go away. I'm not interested."
+	</text>
+	<choice destination="end" text="*leave*"/>
+	</page>
+	
 	<page ID="seductionfail0">
 		<text>
 			You take your cue, kneeling down on both knees and leaning in to

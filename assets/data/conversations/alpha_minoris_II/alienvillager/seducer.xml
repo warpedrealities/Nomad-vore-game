@@ -26,6 +26,8 @@
 			"compliment my ass more."
 		</text>
 		<choice destination="analvore0" text="$you have an ass to die for">
+			<preference fetish="females" />
+			<preference fetish="demis" />
 			<preference fetish="analvore" />
 		</choice>
 		<choice destination="ass1"

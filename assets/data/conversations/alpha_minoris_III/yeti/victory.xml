@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="females" />
+		<preference fetish="demis" />
+		<preference fetish="oralvore" />		
+		<text>
+		The last crashing impact floors you, letting the yeti approach and hoist you up. In her expansive arms you feel a bit like a teddy, your feet dangling. But the rumbling furred behemoth clutching you to her ample bosom is perhaps far more the snugglable comfort. Her soft breasts smooshing against your body as she holds you close and then licks over your head with her warm broad tongue. But as she does so you feel her gut growl, the vibration against your hips through the layer of warm fat padding her tummy. And now you realize this cuddle is about to get a whole lot more all encompassing, her lips parting and stretching around the top of your head sealing you into darkness.
+		</text>		
+		<choice destination="oralvore0" text="*gobbled into warmth*" />
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	The yeti sets about making a meal of your body even as you squirm and struggle in protest. But you're no match for her strength as she forces you to trade the somewhat dry warmth of her fur for the hot wet embrace of her throat, her hearty swallows gobbling you down as she leans forwards and feeds you in. The furred predator gobbling you up out of her arms, licking over your <macro ID="breast_size_desc" /> tits and then swallowing them down. Her furred and muscled neck rippling out with the shape of them afore your breasts slip down behind her own and you start to slide into her belly.
+	</text>
+	<choice destinatino="oralvore1" text="*defiance is for naught, devoured*"/>
+	</page>
+
+	<page ID="oralvore1">
+	<text>
+	The yeti's powerful throat and ample gut seems well equipped to welcome you. Her broad palms now on your <macro ID="butt_size_desc" /> ass to help shove you down her throat. Your <macro ID="body_weight_desc" /> form proving naught but a fitting meal for the abominable snow woman as she crams your ass away and works to steadily swallow down your legs. Soon enough your entire body disappears past her lips, the yeti giving her lips a hearty smack and wiping them off with the furred back of her arm. Your steadily squeezed down and curled up in her belly, concealed behind layers of fur and fat that at least keeps you toasty warm in the otherwise cold environs. Though it's hardly safe for all the warm comfort, you can feel her gut gurgle around you.
+	</text>
+	<choice destination="struggle" text="*try to escape the stomach*"/>
+	<choice destination="submit" text="*submit to the stomach*"/>
+	</page>
+	
+		<check ID="struggle">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleescape" />
+		<outcome destination="struggledigest" />
+	</check>
+
+	<page ID="struggleescape">
+	<text>
+	This cuddly warmth may be preferable to the chill, but not when combined with a gurgling that'll convert you into another layer of padding on her already amply protected form. You set about getting out of here, shoving at her innards and roiling around to try and find the exit. The yeti letting out a growl and giving her a gut a thump to try and quiet her unruly meal, but to no avail as you shrug off the blow and thrust yourself up her throat. The growl becoming a glurck rather than a rumble as you shove yourself out of her mouth and into the open air. Her gooey saliva and internal fluids soaking your flesh turn swiftly cold wicking heat out of your body as you force yourself entirely out of her. The yeti soon coughing as she wipes her lips and looks at you, shaking and shrugging off the disorientation from your actions she'll swiftly come at you again. Probably best to flee now.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />	
+	</page>
+	
+	<page ID="struggledigest">
+	<text>
+	This cuddly warmth may be preferable to the chill, but not when combined with a gurgling that'll convert you into another layer of padding on her already amply protected form. You set about getting out of here, shoving at her innards and roiling around to try and find the exit. The yeti letting out a growl and giving her a gut a thump to try and quiet her unruly meal, the blow putting your efforts into disarray but not dampening your fighting spirit. You thrust up against the entrance of her throat though only to find it stubborn and unyielding, or again only to find you get a short distance afore being swallowed back down. You can hear an almost chuckle in the rumbling of the yeti as she settles contently and you tire yourself out. Your second wind wanes steadily as her gurgling gut waxes digestive...there's no escape now.
+	</text>
+	<choice destination="struggleGO" text="*doomed*"/>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	Your struggles have availed you nought, but the stubborn desire to keep on in defiance only peters out when the last of your strength is spent. The stomach of the yeti jostling and swaying with your motion but now going still as you pant helpless and break down inside her. The stomach walls pressing all about as you steadily gurgle and slosh away. The yeti occasionally kneading at her rounded gut with a broad hand and feeling you yield more and more to the pressure..soon not a trace of your solidity is left, your form utterly digested away within her. Soon that bulge will spread out, adding just a little extra fat to her frame. One suspects helping keeping her warm would be a poor ending for your adventure.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	You settle into the warmth, a lassitude coming over you at the thought of struggling only to return to that bitterly cold outside realm. The stomach is warm..cosy, and the layers of fat and fur cushion you against anything the outside world could throw at you. So what if her stomach will take her due in time..you find the trade a welcome one as you close your eyes and curl up comfortably..feeling the gurgling stomach walls cradling you even as she sets about digesting you down into goo, least the goo'll be warm and cosy...
+	</text>
+	<choice destination="submitGO" text="*digested*"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	You can feel the yeti moving, but such is something you're only dimly aware of as you settle in. All is the soft chubby belly walls cradling you, her enzymes soaking through you and digesting you and the faint sway of motion that's barely discernible above the churns of her gut. Gradually your perception of yourself as apart from these motions fades away and you become one with them in truth, the round gut of the yeti turning soft and shrinking down as you liquidate and are absorbed. All that you are and were being claimed to nourish this snow bound predator, but perhaps it is not an unwelcome end.
+	</text>
+	</gameover>
+	
+</Conversation>

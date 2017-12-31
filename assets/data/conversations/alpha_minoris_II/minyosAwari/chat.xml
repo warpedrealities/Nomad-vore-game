@@ -77,7 +77,10 @@
 			believe yourself to be?"
 		</text>
 		<choice destination="offer2"
-			text="why, ass padding material of course *grope" />
+			text="why, ass padding material of course *grope">
+				<preference fetish="demis" />
+			<preference fetish="females" />			
+		</choice>
 		<choice destination="end"
 			text="you're right it was foolish of me to doubt myself" />
 	</page>
@@ -225,7 +228,10 @@
 			and licks you on the nose gently.
 		</text>
 		<choice destination="challenge0" text="so how is this supposed to go again?" />
-		<choice destination="challenge1" text="i'm not backing out...get started" />
+		<choice destination="challenge1" text="i'm not backing out...get started">
+					<preference fetish="demis" />
+		<preference fetish="females" />	
+		</choice>
 	</page>
 
 	<page ID="challenge0">
@@ -239,7 +245,10 @@
 		</text>
 		<choice destination="challenge0Query"
 			text="couldn't you just do this without the risk of digestion?" />
-		<choice destination="challenge1" text="okay..get started" />
+		<choice destination="challenge1" text="okay..get started">
+					<preference fetish="demis" />
+		<preference fetish="females" />	
+		</choice>
 	</page>
 
 	<page ID="challenge0Query">
@@ -264,7 +273,7 @@
 			powerful and practiced swallows to engulf more of your frame.
 		</text>
 		<effect type="setlocalflag" flag="challenge" value="3" />
-		<choice destination="challenge2" text="agreed to this, let yourself to consumed" />
+		<choice destination="challenge2" text="*agreed to this, let yourself to consumed*" />
 	</page>
 
 	<page ID="challenge2">

@@ -1,6 +1,16 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="subverted"
+			value="1" />	
+	<text>
+	Some safeguard system must of tripped when the robot shut down again, overloading its power systems and charring its internals into a mass of scorched and ruined slag. You'll get nothing from this robot now.
+	</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="darn!" />	
+	</page>
+	
+	<page ID="start">
 		<text>
 			You have defeated the robot. Now disabled, it slumps into a heap of tangled
 			robotic limbs and actuators.

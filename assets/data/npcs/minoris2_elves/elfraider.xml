@@ -44,6 +44,8 @@
 					damage</text>
 			</hitText>
 		</combatMove>
+		<itemDrop chance="50" item="knife" />		
+		<itemDrop chance="50" item="primitive meal" />			
 	</rpg>
 
 	<defeated conversation="alpha_minoris_II/elfraider/defeat" />

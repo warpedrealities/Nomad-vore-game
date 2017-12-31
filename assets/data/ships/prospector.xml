@@ -68,11 +68,7 @@
 				<item itemname="scrap metal" />
 				<item itemname="scrap metal" />
 			</placeItem>
-			<placeItem x="3" y="1">
-				<item itemname="scrap metal" />
-				<item itemname="scrap metal" />
-				<item itemname="scrap metal" />
-			</placeItem>
+
 		</mapgen>
 	</layout>
 	<exterior width="6">

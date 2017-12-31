@@ -197,6 +197,10 @@
 	</gameover>
 	
 	<page ID="help2">
+<preference fetish="herms" />	
+<preference fetish="females" />		
+<preference fetish="cockvore" />	
+<preference fetish="demis" />		
 	<condition operator="equals" evaluate="FACTIONFLAG" flag="sackslut"
 				value="1" />	
 	<text>
@@ -218,9 +222,10 @@
 	<text>
 	"Yeah? you got the gold herb?" asks Myrai with a hopeful smile. Oshy just mhmms at the thought of what her lover could do dosed up on that stuff.
 	</text>
-	<choice destination="reward" text="$Yes I have the herb, it wasn't easy to get"/>
+	<choice destination="reward" text="$Yes I have the herb, it wasn't easy to get">
 	<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="golden herb" />	
+	</choice>
 	<choice destination="end" text="$Not yet, but I'm still looking"/>
 	</page>
 	

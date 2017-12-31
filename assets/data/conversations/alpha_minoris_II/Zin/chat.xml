@@ -110,13 +110,24 @@
 		<text>
 		"This one stands ready to serve mistress"
 		</text>		
-		<choice destination="oralvore0" text="Swallow me"/>
-		<choice destination="cockvore0" text="swallow me with your cock"/>
+		<choice destination="oralvore0" text="Swallow me">
+			<preference fetish="oralvore" />
+			<preference fetish="demis" />		
+		</choice>
+		<choice destination="cockvore0" text="swallow me with your cock">
+			<preference fetish="herms" />
+		<preference fetish="demis" />	
+				<preference fetish="cockvore" />	
+		</choice>
 		<choice destination="sex0" text="fuck me in the pussy">
 		<assertion evaluate="haspart" part="vagina" />
+				<preference fetish="herms" />
+		<preference fetish="demis" />		
 		</choice>
 		<choice destination="sexA0" text="fuck me in the ass">
 		<assertion evaluate="haspart" part="butt" />
+					<preference fetish="herms" />
+		<preference fetish="demis" />	
 		</choice>			
 		<choice destination="wait" text="wait here for me Zin"/>
 		<choice destination="end" text="I don't need anything right now Zin"/>
@@ -130,14 +141,25 @@
 		<text>
 		"This one stands ready to serve mistress"
 		</text>
-		<choice destination="oralvore0" text="Swallow me"/>
-		<choice destination="cockvore0" text="swallow me with your cock"/>
+		<choice destination="oralvore0" text="Swallow me">
+			<preference fetish="oralvore" />
+			<preference fetish="demis" />		
+		</choice>
+		<choice destination="cockvore0" text="swallow me with your cock">
+			<preference fetish="herms" />
+		<preference fetish="demis" />	
+				<preference fetish="cockvore" />	
+		</choice>
 		<choice destination="sex0" text="fuck me in the pussy">
 		<assertion evaluate="haspart" part="vagina" />
+				<preference fetish="herms" />
+		<preference fetish="demis" />		
 		</choice>
 		<choice destination="sexA0" text="fuck me in the ass">
 		<assertion evaluate="haspart" part="butt" />
-		</choice>					
+					<preference fetish="herms" />
+		<preference fetish="demis" />	
+		</choice>						
 		<choice destination="follow" text="accompany me Zin"/>
 		<choice destination="end" text="I don't need anything right now Zin"/>	
 	</page>

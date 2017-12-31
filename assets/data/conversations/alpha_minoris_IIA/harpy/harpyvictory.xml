@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
+				<preference fetish="demis" />
+				<preference fetish="females" />	
 		<preference fetish="unbirth" />
 		<condition operator="lessthan" evaluate="LOCALFLAG" flag="disposition"
 			value="2" />

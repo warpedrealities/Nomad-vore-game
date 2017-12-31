@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	
+	<page ID="start">
+		<condition evaluate="PLAYERATTRIBUTE" operator="greaterthan"
+			value="2" attribute="TECH" />
+		<text>This pile of rocks and dirt looks substantial. It'd take ages to clear using manual labour, luckily manual labour doesn't sit well with you and you happen to have the technical know how to blast the dirt away with a controlled explosion.
+		</text>
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="FIRST" />
+		<choice destination="bomb" text="controlled demolition">
+			<condition evaluate="HASITEM" operator="greaterthan" value="2"
+				item="high explosive" />
+		</choice>
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="start">
+		<text>Yep, that's a very big pile of dirt.
+		</text>
+		<choice destination="end" text="exit" />
+	</page>
+	
+	<page ID="bomb">
+		<text>
+		You set the explosives, set their fuses...and then run like hell, you don't want to be anywhere near this when the bombs go off. As you've bolting out of the valley you hear the immense earth shaking rumble of a hopefully controlled demolition blasting dirt free of that ship.
+		</text>
+		<special effect="transition" x="8" y="60" destination="zoneNW" />		
+		<effect type="removeitem" item="high explosive" value="2" />
+		<special effect="worldScript" script="restoreShip" />		
+		<choice destination="end" text="exit" />
+	</page>
+
+</Conversation>

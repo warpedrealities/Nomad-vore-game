@@ -12,7 +12,10 @@
 			text="Nevermind what's under her, she looks delicious">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
-		<choice destination="cock" text="investigate underneath the ice treader" />
+		<choice destination="cock" text="investigate underneath the ice treader">
+					<preference fetish="demis" />
+				<preference fetish="herms" />		
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />

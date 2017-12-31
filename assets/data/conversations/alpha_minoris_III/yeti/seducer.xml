@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<!--feetfirst-->
+		<preference fetish="females" />
+		<preference fetish="demis" />
+		<preference fetish="breastvore" />
+		<text>
+		You find yourself willing to do anything for the alluring and cuddly yeti woman who now has you in her arms. Her pleased rumbling as she holds you close to her bosom and nuzzles at your hair is music to your ears and you nuzzle back at her. She smiles at your adoring and lusty expression and mhmms, then grasps your body lower and lifts you up. It takes a few moments to realize what she's doing as you're taken away from the warmth of her tits and raised over her, but as she lines your feet up with her breast you see her nipple flex and realize what she's intending..feed you to her magnificent breasts?
+		</text>		
+		<choice destination="breastvore0" text="yes please!" />
+		<choice destination="struggleCheck" text="no thanks?"/>
+	</page>
+	
+	<page ID="breastvore0">
+	<text>
+	You smile down at her as she presses your toes against that voracious nipple. The orifice flexing and numming up your feet as you start to sink into that soft warm and milky confinement. You can think of nothing sexier than feeding her breasts and being milk for the motherly yeti to use. You wriggle your feet but don't resist as she feeds you in, rumbling in delight as more and more of you slips into the confines of her tit. You see your feet nudge out the underside of that massive mammary, bulging the orb with their print as your hips slide inside...
+	</text>
+	<choice destination="breastvore1" text="so warm"/>
+	</page>
+	
+	<page ID="breastvore1">
+	<text>
+	Gradually your body disappears into her stretching nipple, bulging her breast with the shape of your legs curling within the round softness. The yeti starting to look lopsided as one tit now bulges with the shape of your lower body and then more and more of your upper body as you slip inside. You slide your hands into the nipple helpfully as you more and more disappear into her hungry boob, only your head and shoulders left now and soon even those will be devoured. Most of your body is immersed in the hot milky confines inside of the yeti boob, proof against the vicious cold that still perturbs part of you.
+	</text>
+	<choice destination="breastvore2" text="in completely"/>
+	</page>
+	
+	<page ID="breastvore2">
+	<text>
+	Your face is exposed to the bitter cold for only a few seconds more as you feel her hands slide down one to support her weighed down and bulging breast and the other plants atop your head. Her hand giving you a send off, shoving you into her nipple with a schlurp. All of you now confined in the hot depths of her boob, cradled by soft milk producing flesh, surrounded by fatty tissues and shielded further by her snow white fur. You feel her tenderly massaging the shape of you and supporting you as she walks. Where she walks, you do not know.. But as milk soaks into you and you find yourself turning softer..creamier, sinking into the warm nutritious fluids..you find it hard to...care.
+	</text>
+	<choice destination="breastvoreGO" text="...slosh"/>
+	</page>
+	
+	<gameover ID="breastvoreGO">
+	<text>
+	As the yeti walked to its well hidden lair your form gradually softens inside that bloated tit. The bulges rounding out as you're sloshed down into gallons of nutritious and protein rich milk. The yeti's breasts starting to even out as your liquid mass is redistributed. By the time she crawls into that cosy nest of hers not a hint of you remains, all is sloshy goodness in her now slightly heftier breasts. You're not around to feel it as eager young mouths latch onto those well fed nipples and drink their fill of you, but perhaps if you knew you would not be displeased about your fate.
+	</text>
+	</gameover>
+
+	<check ID="struggleCheck">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="success" />
+		<outcome destination="struggle0" />
+	</check>	
+
+	<page ID="success">
+	<text>
+	You're aboard for cuddling but find it in yourself to reject her oh so inviting offer of being turned into milk inside yeti boobs. So when she presses your feet against her breast you rear back and deliver a hard kick to the soft and vulnerable flesh she's trying to shove you into. The yeti letting out a pained winded yelp. You follow up by wriggling out of her grip as she staggers back and holds one furred arm protectively across her ample bosom to protect it. IT's gonna take the big girl a lil bit to recover, perhaps its best you were somewhere else when she did.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear." />	
+	</page>
+	
+	<page ID="struggle0">
+	<text>
+	You're aboard for cuddling but find it in yourself to reject her oh so inviting offer of being turned into milk inside yeti boobs. So when she presses your feet against her breast you rear back and deliver a hard kick to the soft and vulnerable flesh she's trying to shove you into. But your attempt comes to a halt as she latches a hand around your calf and stalls your blow with ease, only to shove both your feet into her breast as you try to wriggle free of her unbreakable grip. The mighty yeti starting to feed you past her voracious nipple despite your struggles and deaf to your protests, your squirming legs slipping deeper into those milky confines as she wedges your thighs and hips within her.
+	</text>
+	<choice destination="struggle1" text="*try to break free*"/>
+	</page>
+	
+	<page ID="struggle1">
+	<text>
+	You fail to give her discomfort as you kick at the inside of her breast to try and stop your body sinking further and further inside. The slick insides yielding to the stretching force far more than the compression of blows from without it seems. The yeti growling as she forcibly feeds you into her tit, restraining your arms and forcing them in until she's shoving your head and shoulders inside. The yeti now sporting a lopsided rack with one tit frantically jostling around while being lumpier and larger than the other.
+	</text>
+	<choice destination="struggle2" text="*can't escape...*"/>
+	</page>
+	
+	<page ID="struggle2">
+	<text>
+	The yeti uses one hand to support her breast and the other to hold over her nipple, forcing you to stay inside as you jostle and struggle and start to succumb. Her milk is merciless, the hot warmth seeping into you as you bath and marine in her nutritious cream. There's no escape for you, nothing except the inevitability of being rendered down into warm creamy goodness for whatever need she wanted her tits topped up for...
+	</text>
+	<choice destination="struggle3" text="...burble"/>
+	</page>
+
+	<gameover ID="struggle3">
+	<text>
+	As the yeti walked to its well hidden lair your form gradually softens inside that bloated tit and goes still. The bulges rounding out as you're sloshed down into gallons of nutritious and protein rich milk, unable to struggle against her any more. The yeti's breasts starting to even out as your liquid mass is redistributed. By the time she crawls into that cosy nest of hers not a hint of you remains, all is sloshy goodness in her now slightly heftier breasts. You're not around to feel it as eager young mouths latch onto those well fed nipples and drink their fill of you, but perhaps if you knew you would not be displeased about your fate.	
+	</text>
+	</gameover>
+	
+</Conversation>

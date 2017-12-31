@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<shop profitratio="1.25">
+<shop profitratio="1.25" useCredits="true">
 	<inventoryitem name="space meal" probability="100"
 		quantity="20" />
 	<inventoryitem name="space meal" probability="50"

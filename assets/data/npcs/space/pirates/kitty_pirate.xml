@@ -43,6 +43,7 @@
 			</hitText>
 		</combatMove>	
 	</rpg>
+	<crew skill="GUNNERY" value="2"/>
 	<defeated conversation="space/pirates/kitty_pirate/defeat" />
 	<seduced conversation="space/pirates/kitty_pirate/seduced" />
 	<victory conversation="space/pirates/kitty_pirate/victory" />

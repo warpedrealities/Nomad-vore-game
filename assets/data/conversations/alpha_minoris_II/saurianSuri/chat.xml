@@ -2,6 +2,7 @@
 <Conversation>
 
 	<page ID="start">
+
 		<condition evaluate="LOCALFLAG" operator="equals" value="0"
 			flag="talked" />
 		<!-- first time -->
@@ -16,6 +17,8 @@
 		<effect type="setlocalflag" flag="talked" value="1" />
 		<choice destination="unbirthA0" text="sure, sounds fun">
 			<preference fetish="unbirth" />
+					<preference fetish="demis" />
+			<preference fetish="females" />	
 		</choice>
 		<choice destination="end" text="not interested" />
 	</page>
@@ -34,6 +37,8 @@
 		</text>
 		<choice destination="unbirthA0" text="yeah i changed my mind">
 			<preference fetish="unbirth" />
+						<preference fetish="demis" />
+			<preference fetish="females" />
 		</choice>
 		<choice destination="end" text="no I havent" />
 	</page>

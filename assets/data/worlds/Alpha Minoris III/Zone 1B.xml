@@ -26,6 +26,40 @@
 			<pairedportal sprite="3" destination="Cave 1B" x="3" y="3"
 				ID="11">a tunnel into the depths</pairedportal>
 		</preloadprefab>
+			<randprefab width="7" height="7">
+				<row>3333333</row>
+				<row>3133313</row>
+				<row>3133313</row>
+				<row>3133313</row>
+				<row>3133313</row>
+				<row>3111113</row>				
+				<row>3333333</row>
+				<placeWidget x="0" y="0" name="SPRITE" width="7" height="7"
+					file="snowcrash" />
+				<placeWidget x="1" y="0" name="DESCRIBER">
+				A spaceship, Its innards are open to the elements and every inch is coated in thick ice or buried by a blanket of snow.
+				</placeWidget>		
+				<placeWidget x="2" y="4" name="cargocontainer">
+				<lootTable>
+						<loot item="fuel canister(poor)" chance="1.0" />
+						<loot item="fuel canister(poor)" chance="1.0" />
+						<loot item="fuel canister(poor)" chance="1.0" />
+						<loot item="fuel canister(poor)" chance="0.5" />
+						<loot item="frag rocket" chance="1.0" />
+						<loot item="frag rocket" chance="0.5" />			
+					<lootSubTable chance="0.5" file="resource_tier_1" />		
+					<lootSubTable chance="0.5" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="consumable_tier_1" />
+				</lootTable>
+			</placeWidget>	
+				<placeItem x="3" y="0">
+						<item itemname="RocketLauncher" energy="0" />
+						<item itemname="frag rocket" />
+						<item itemname="frag rocket" />
+						<item itemname="frag rocket" />
+				</placeItem>		
+				<placeWidget x="3" y="4" name="craftingtable"/>	
+			</randprefab>		
 		<perlin>
 			<band low="-1.0" high="-0.8">
 				<floodfill tile="4" />
@@ -45,6 +79,8 @@
 		</perlin>
 		<noise tile="3" scarcity="10" />
 		<floodfill tile="1" />
+		<SeedNPCs min="6" max="8" name="AlphaMinoris_III/yeti">
+		</SeedNPCs>		
 		<walloff wall="3" sides="northeastsouth" />
 	</mapgen>
 

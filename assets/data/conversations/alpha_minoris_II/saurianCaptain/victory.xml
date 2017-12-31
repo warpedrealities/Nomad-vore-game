@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text>
+		<preference fetish="demis" />
+				<text>
 		The saurian captain takes a moment to congratulate her fellows on their victory afore approaching you, passing off her crossbow "You fought well, for a filthy elf lover." she says as she looms over you "How does it feel to lose to us traveller?" she asks resting one booted foot victoriously upon you and looking down at you with a smirk.
 		</text>
 		<choice destination="oralvore0" text="*say nothing*">
 				<preference fetish="oralvore" />	
+				
 		</choice>
 		<choice destination="cockvore0" text="$degrading">
 				<preference fetish="cockvore" />	
+			<preference fetish="herms" />	
 		</choice>		
 	</page>
 	

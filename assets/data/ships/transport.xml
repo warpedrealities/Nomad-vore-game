@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<Ship width="5" height="9" sprite="transport">
+
+	<shipstats>
+		<movecost value="24" />
+		<hullpoints value="50" />
+		<thrustcost value="3.0" />
+
+	</shipstats>
+
+	<emitters>
+		<weapon x="0" y="0.4" />
+		<engine x="-0.0" y="-0.4" />
+	</emitters>
+
+	<layout width="16" height="16" spriteset="ship.png">
+		<tileset>
+			<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+			<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+		</tileset>
+		<description>The ship is stained, but rugged and serviceable.</description>
+		<mapgen>
+			<prefab positionX="0" positionY="0" width="7">
+				<row>1111111</row>
+				<row>1122211</row>
+				<row>1222221</row>
+				<row>1122211</row>
+				<row>1112111</row>
+				<row>0122210</row>
+				<row>0122210</row>
+				<row>0222220</row>
+				<row>0122210</row>		
+				<row>0122210</row>					
+				<row>0112110</row>
+				<row>1122211</row>	
+				<row>1222221</row>
+				<row>1221221</row>
+				<row>1122211</row>
+				<row>0111110</row>				
+			</prefab>
+			<pairedportal x="1" y="7" sprite="1" ID="-101" facing="2">
+				Exterior hatch </pairedportal>
+			<pairedportal x="5" y="7" sprite="1" ID="-102" facing="6">
+				Exterior hatch </pairedportal>
+			<placeWidget x="2" y="1" name="slot" />
+			<placeWidget x="3" y="1" name="slot"/>
+			<placeWidget x="4" y="1" name="slot"/>
+			<placeWidget x="1" y="2" name="slot">
+				<contains name="modules/fueltank">
+					<resource type="FUEL" value="0" />
+				</contains>	
+			</placeWidget>
+			<placeWidget x="5" y="2" name="slot"/>				
+
+			<placeWidget x="3" y="7" name="modules/cargobay">
+				<lootTable>
+					<loot item="blue crystal" chance="1.0" />
+					<loot item="blue crystal" chance="1.0" />
+					<loot item="blue crystal" chance="1.0" />
+					<loot item="blue crystal" chance="1.0" />
+					<loot item="blue crystal" chance="1.0" />
+				</lootTable>						
+			</placeWidget>		
+			
+			<placeWidget x="1" y="12" name="slot" />
+			<placeWidget x="5" y="12" name="slot"/>
+			<placeWidget x="1" y="13" name="slot" />
+			<placeWidget x="5" y="13" name="slot"/>		
+			
+			<placeWidget x="3" y="12" name="slot">
+				<contains name="modules/navconsole" />
+				<widgetItem>nav console</widgetItem>	
+			</placeWidget>
+			<placeWidget x="3" y="14" name="hardpoint">
+				<facing value="0" />
+			</placeWidget>	
+			
+			<placeItem x="2" y="2">
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+			</placeItem>
+			<placeItem x="4" y="3">
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+			</placeItem>
+			<placeItem x="2" y="6">
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+				<item itemname="scrap metal" />
+			</placeItem>
+
+		</mapgen>
+	</layout>
+	<exterior width="5">
+		<row>01110</row>
+		<row>01110</row>
+		<row>01110</row>
+		<row>01110</row>
+		<row>00100</row>
+		<row>01110</row>
+		<row>01110</row>
+		<row>01110</row>
+		<row>01110</row>		
+		<pairedportal x="1" y="4" sprite="1" ID="-101"
+			destination="prospector" facing="6"> a ship hatch </pairedportal>
+		<pairedportal x="4" y="4" sprite="1" ID="-102"
+			destination="prospector" facing="2"> a ship hatch </pairedportal>
+	</exterior>
+</Ship>

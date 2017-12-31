@@ -2,6 +2,9 @@
 <Conversation>
 
 	<page ID="start">
+				<preference fetish="demis" />
+			<preference fetish="females" />
+			<preference fetish="oralvore" />
 		<text>
 			You have fallen before the saurian warrior. Licking her lips she
 			stands
@@ -17,7 +20,7 @@
 			<condition operator="greaterthan" evaluate="FACTIONFLAG"
 				flag="allegiance" value="-1" />
 		</choice>
-		<choice destination="oralvore0" text="please dont?" />
+		<choice destination="oralvore0" text="please dont?"/>
 	</page>
 
 	<page ID="amends0">

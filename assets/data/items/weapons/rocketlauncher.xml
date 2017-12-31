@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ItemWeapon name="RocketLauncher" weight="12" value="500">
+	<description>
+		A man portable rocketlauncher, its hefty tube is fed from a three shot cylinder and it has rudimentary sights. Might be a bit overkill, but you could do with some of that in your life right? does 16-32 thermokinetic damage to all those near the target.
+	</description>
+	<modifier>
+
+	</modifier>
+	<combatMove name="shoot" ammoCost="1" pattern="BOMB"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-2"
+		actionCost="4" basicAction="true" moveType="FIGHT">
+		<effectDamage type="THERMAL" minValue="8" maxValue="16"
+			modifier="NONE" />
+		<effectDamage type="KINETIC" minValue="8" maxValue="16"
+			modifier="NONE" />			
+		<missText count="1">
+			<text>TARGET evades the blast </text>
+		</missText>
+		<hitText count="1">
+			<text>TARGET is caught by the rocket blast for VALUE thermokinetic damage</text>
+		</hitText>
+	</combatMove>
+
+	<energy refill="frag rocket" efficiency="1"
+		capacity="3" />
+</ItemWeapon>

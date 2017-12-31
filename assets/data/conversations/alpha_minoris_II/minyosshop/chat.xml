@@ -18,6 +18,8 @@
 		<choice destination="shop" text="ask to buy things" />
 		<choice destination="know" text="ask to know more about her people">
 			<preference fetish="analvore" />
+				<preference fetish="demis" />
+			<preference fetish="females" />			
 		</choice>
 		<choice destination="lands" text="ask about the surrounding lands" />
 		<choice destination="end" text="ask for nothing" />

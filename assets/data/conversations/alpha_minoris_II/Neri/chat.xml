@@ -71,6 +71,8 @@
 
 	<page ID="start">
 		<preference fetish="cockvore" />
+			<preference fetish="demis" />
+		<preference fetish="herms" />			
 		<condition evaluate="LOCALFLAG" operator="equals" value="0"
 			flag="talked" />
 		<text>

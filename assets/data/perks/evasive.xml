@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<perk name="evasive">
+	<description> Since coming here you've had to by necessity become light on your feet, lest you become heavy on the hips of someone else.
+		+1 to dodge, +1 to parry.</description>
+	<modifier affects="DODGE" value="1" type="ATTRIBUTE" />
+	<modifier affects="PARRY" value="1" type="ATTRIBUTE" />
+	<maxrank value="1" />
+
+</perk>

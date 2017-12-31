@@ -13,7 +13,9 @@
 			anyone would mind right.
 		</text>
 		<choice destination="pet0" text="pet the doggy" />
-		<choice destination="peek0" text="peek under her loincloth" />
+		<choice destination="peek0" text="peek under her loincloth">
+		<preference fetish="herms" />	
+		</choice>
 		<choice destination="end" text="leave the doggy alone" />
 	</page>
 
@@ -90,7 +92,10 @@
 			your arms into the warm, soft depths of her cleavage
 		</text>
 		<choice destination="boobsorbEscape" text="pull back" />
-		<choice destination="boobsorb" text="relax" />
+		<choice destination="boobsorb" text="relax">
+		<preference fetish="absorption" />
+		<preference fetish="demis" />			
+		</choice>
 	</page>
 
 	<page ID="boobsorbEscape">
@@ -264,6 +269,8 @@
 		<choice destination="sex5" text="You got stuff to do" />
 		<choice destination="ctf0" text="get comfortable">
 			<preference fetish="cocktransformation" />
+		<preference fetish="herms" />
+		<preference fetish="demis" />					
 		</choice>
 	</page>
 

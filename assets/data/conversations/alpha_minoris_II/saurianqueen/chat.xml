@@ -593,6 +593,7 @@
 	</page>
 
 	<page ID="respect1">
+		<preference fetish="herms" />	
 		<text>
 			Laurisse off on a pretty girl kneeling submissively to her turns
 			out to be
@@ -608,6 +609,13 @@
 		<choice destination="talk" text="*a look is enough, stand*" />
 	</page>
 
+	<page ID="respect1">
+	<text>
+	Laurisse smiles as you pay your respects, you give it a few more moments afore gesturing for you to rise.
+	</text>
+		<choice destination="talk" text="*stand*" />	
+	</page>
+	
 	<page ID="respect2">
 		<text>
 			Laurisse smirks at where your gaze is resting, and as you
@@ -643,6 +651,7 @@
 		</text>
 		<choice destination="blowjob0" text="worship it" />
 		<choice destination="cockvore0" text="feed it">
+		<preference fetish="demis" />		
 			<preference fetish="cockvore" />
 		</choice>
 	</page>

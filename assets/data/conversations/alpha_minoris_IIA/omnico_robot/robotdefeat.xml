@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="subverted"
+			value="1" />	
+	<text>
+	Some safeguard system must of tripped when the robot shut down again, overloading its power systems and charring its internals into a mass of scorched and ruined slag. You'll get nothing from this robot now.
+	</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="darn!" />	
+	</page>
+	
+	<page ID="start">
+		<text>
+			You have defeated the robot. Now disabled, it slumps into a heap of tangled
+			robotic limbs and actuators.
+		</text>
+		<choice destination="subvertCheck" text="attempt to use a computation valve to subvert the robot">
+					<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="computation valve" />
+		<condition evaluate="CRAFTINGTOKEN" value="1" operator="greaterthan"
+			token="roboticist" />				
+		</choice>
+		<choice destination="extractComputer"
+			text="Try to remove its computational components." />
+		<choice destination="extractOptics" text="Try to remove something from its weapon system." />
+		<choice destination="extractPower" text="Try to remove the power unit"/> 
+		<choice destination="end" text="Do nothing." />
+	</page>
+
+	<check ID="subvertCheck">
+		<test what="TECH" DC="11" />
+		<outcome destination="subvertSuccess" />
+		<outcome destination="subvertFailure" />
+	</check>	
+	
+	<page ID="subvertSuccess">
+	<text>
+	You program the valve then replace one of the ones inside the robot and attempt to turn it on.	The robot powers up, going through a lengthy self boot sequence full of enigmatic clicks and beeps as it loads algorithms from its set of valves including your replacement one. After a couple of dozen seconds it jolts into life, turning to track you with its optics but making no move to attack. Seems you might have made a friend, roboticist style!
+	</text>
+			<special effect="changeFaction" faction="player" />
+			<effect type="setlocalflag" flag="subverted" value="1" />		
+		<effect type="removeitem" item="computation valve" value="1" />	
+			<special effect="healnpc" />	
+		<choice destination="end" text="I really am good aren't I"/>
+	</page>
+	
+	<page ID="subvertFailure">
+	<text>
+	You program the valve then replace one of the ones inside the robot and attempt to turn it on.
+	The robot powers up, running some kind of self boot with a series of clicks and beeps as it loads algorithms. Then it makes an alarming boop and there's a series of pops and small explosions, the interior of the robot turning into useless slag in a series of overloads that have you hastily backing away to avoid electrocution or burns.
+	</text>
+		<effect type="removeitem" item="computation valve" value="1" />	
+			<special effect="removenpc" />	
+		<choice destination="end" text="damnit, least i didn't get hurt"/>
+	</page>
+	
+	<check ID="extractComputer">
+		<test what="TECH" DC="11" />
+		<outcome destination="computerSuccess" />
+		<outcome destination="computerFail" />
+	</check>
+
+	<page ID="computerFail">
+		<text>
+			You attempt to extract the computational parts of the robot intact but
+			your lack of skill just leads to you breaking them in an inept attempt
+			to rip them out. They're useless now, but at least you have a few
+			wires and chunks of the robot's casing as a souvenir. Or maybe it'll serve can as a paperweight, or raw material for future use.
+		</text>
+		<effect type="giveitem" value="1" item="scrap metal" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Ah well, better luck next time." />
+	</page>
+
+	<page ID="computerSuccess">
+		<text>
+			You attempt to extract the delicate computation valves. The devices take
+			a careful touch to extract from the surrounding systems but your steady
+			your hands and manage to successfully extract a computation valve
+			from the robot's brain, so to speak. To celebrate, you dismantle some of its
+			wiring and casing for some additional raw material.
+		</text>
+		<effect type="giveitem" value="1" item="computation valve" />
+		<effect type="giveitem" value="1" item="scrap metal" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Excellent!" />
+	</page>
+
+	<check ID="extractOptics">
+		<test what="TECH" DC="13" />
+		<outcome destination="opticsSuccess" />
+		<outcome destination="opticsFail" />
+	</check>
+
+	<page ID="opticsFail">
+		<text>
+			You think you should try and extract the robot's weapon system, 'cause everything is
+			better with lasers. Alas you're not as capable of that as you think you are
+			and the robot's combination sensor and laser focusing optics is reduced
+			to uselessness by your fumbling.
+		</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="Damn it!" />
+	</page>
+
+	<page ID="opticsSuccess">
+		<text>
+			Looking at the robot's head, it's probably not possible to
+			extract the laser system whole-cloth in any fashion that would be
+			convenient or even possible to weild, but some elements may
+			still be valuable. You set about dismounting the optical lenses and mirrors
+			from inside the robot's otherwise empty head and soon enough, you have
+			some relatively intact optical components for future use.
+		</text>
+		<effect type="giveitem" value="1" item="optics" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Well, at least these might come in handy." />
+	</page>
+	<check ID="extractPower">
+		<test what="TECH" DC="15" />
+		<outcome destination="powerSuccess" />
+		<outcome destination="powerFail" />
+	</check>
+	
+	<page ID="powerFail">
+		<text>
+			You set about attempting to extricate the power supply from deep inside the machine. Alas somewhere in trying to disengage it you must of done something wrong, there's a flash of arcing as something shorts out in a spectacular fashion. The device now emanates a sickly aroma of burnt plastics and fried electronics..yeah, you might of bungled this.
+		</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="Damn it!" />
+	</page>
+
+	<page ID="powerSuccess">
+		<text>
+			You delicately remove the power supply from deep within the robot's innards. Having to disengage various damaged electrical circuits from it and unhook it from the chassis takes a good deal of skill but such you have in ample amounts. You've acquired a battery from the robot's guts, huzzah.
+		</text>
+		<effect type="giveitem" value="1" item="battery" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Excellent." />
+	</page>
+</Conversation>

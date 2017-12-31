@@ -41,7 +41,7 @@
 	<choice destination="sex1" text="*get screwing*"/>
 	<choice destination="ctf0" text="*inject her with cockmerge first*">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
-				item="cockmerge injection" />
+				item="Cockmerge injection" />
 	</choice>
 	</page>
 

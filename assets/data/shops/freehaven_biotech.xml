@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<shop profitratio="1.25">
+<shop profitratio="1.25" useCredits="true">
 	<inventoryitem name="mutagen" probability="100"
 		quantity="2" />
 	<inventoryitem name="mutagen" probability="50"
@@ -17,13 +17,13 @@
 	<inventoryitem name="staid" probability="50" quantity="5" />
 	<inventoryitem name="psyche" probability="100" quantity="2" />
 	<inventoryitem name="psyche" probability="100" quantity="2" />
-	<inventoryitem name="bounce" probability="50"
+	<inventoryitem name="Bounce" probability="50"
 		quantity="2" />	
-	<inventoryitem name="squeeze" probability="50"
+	<inventoryitem name="Squeeze" probability="50"
 		quantity="1" />	
-	<inventoryitem name="binder" probability="50"
+	<inventoryitem name="Binder" probability="50"
 		quantity="2" />	
-	<inventoryitem name="citrullus mammatus" probability="50"
+	<inventoryitem name="Citrullus mammatus" probability="50"
 		quantity="2" />	
 	
 </shop>

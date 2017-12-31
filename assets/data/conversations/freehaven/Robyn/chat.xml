@@ -9,6 +9,9 @@
 	<choice destination="questions" text="$Can I ask you some questions?"/>
 	<choice destination="pill0" text="$So, why do you keep these shrink pills in stock? you get many buyers?">
 	<condition evaluate="HASITEM" operator="greaterthan" value="1" item="shrink pill" />	
+	<preference fetish="females" />	
+	<preference fetish="demis" />	
+	<preference fetish="oralvore" />		
 	</choice>
 	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
 	</page>

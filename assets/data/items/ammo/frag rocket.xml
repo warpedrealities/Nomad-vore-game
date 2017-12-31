@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="frag rocket" weight="2" value="250.0">
+	<description>
+	Frag rocket, used by common manportable rocketlaunchers.
+	</description>
+	<energy capacity="1" />
+</ItemAmmo>

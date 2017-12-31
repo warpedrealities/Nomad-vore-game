@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
+				<preference fetish="demis" />
 		<condition evaluate="LOCALFLAG" operator="equals" value="0"
 			flag="gender" />
 		<text>
@@ -11,9 +12,11 @@
 			hem of her armoured tunic and you see...
 		</text>
 		<choice destination="genderF" text="a hungry snatch">
+				<preference fetish="females" />
 			<preference fetish="unbirth" />
 		</choice>
 		<choice destination="genderH" text="a girthy cock">
+				<preference fetish="herms" />
 			<preference fetish="cockvore" />
 		</choice>
 		<choice destination="gameover" text="a fate too terrible to contemplate">
@@ -36,6 +39,7 @@
 
 	<page ID="start">
 		<!--female -->
+						<preference fetish="demis" />
 		<condition evaluate="LOCALFLAG" operator="equals" value="-1"
 			flag="gender" />
 		<text>
@@ -304,6 +308,7 @@
 	</page>
 
 	<page ID="start">
+					<preference fetish="demis" />
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
 			flag="gender" />
 		<!--herm -->

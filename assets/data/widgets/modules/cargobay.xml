@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<widgetcontainer sprite="55" name="cargo bay"
+	health="999" capacity="800">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>a hatch connecting to a cargobay integrated into the ship</description>
+	<resistance resists="THERMAL" strength="999"></resistance>
+	<resistance resists="SHOCK" strength="999"></resistance>
+</widgetcontainer>
