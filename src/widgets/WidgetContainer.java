@@ -30,7 +30,8 @@ public class WidgetContainer extends WidgetBreakable {
 	private int maxWeight = 100;
 	private List<Item> containedItems;
 	private float containedWeight;
-
+	private boolean opened;
+	
 	public WidgetContainer(int sprite, String description, String name, Item[] contains, int hp, int[] resistances) {
 		super(sprite, description, name, contains, hp, resistances);
 
@@ -192,7 +193,7 @@ public class WidgetContainer extends WidgetBreakable {
 	@Override
 	public boolean Interact(Player player) {
 		// open container view
-
+		opened=true;
 		ViewScene.m_interface.setScreen(new ContainerScreen(this));
 
 		return true;
@@ -212,6 +213,7 @@ public class WidgetContainer extends WidgetBreakable {
 			dstream.writeInt(0);
 		}
 		dstream.writeInt(maxWeight);
+		dstream.writeBoolean(opened);
 	}
 
 	public WidgetContainer(DataInputStream dstream) throws IOException {
@@ -227,6 +229,7 @@ public class WidgetContainer extends WidgetBreakable {
 		}
 		maxWeight=dstream.readInt();
 		CalcWeight();
+		opened=dstream.readBoolean();
 
 	}
 
@@ -260,6 +263,18 @@ public class WidgetContainer extends WidgetBreakable {
 			containedWeight+=w;
 		}
 		containedItems.sort(null);
+	}
+	
+	public String getDescription() {
+		if (opened)
+		{
+			if (containedWeight==0)
+			{
+				return widgetDescription+"(empty)";				
+			}
+			return widgetDescription+"(opened)";			
+		}
+		return widgetDescription;
 	}
 
 }

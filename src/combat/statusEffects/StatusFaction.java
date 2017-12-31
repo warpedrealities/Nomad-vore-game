@@ -61,8 +61,11 @@ public class StatusFaction implements StatusEffect {
 	}
 
 	@Override
-	public void remove(Actor_RPG subject) {
-		ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));		
+	public void remove(Actor_RPG subject, boolean suppressMessages) {
+		if (ViewScene.m_interface!=null && !suppressMessages)
+		{
+			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));				
+		}	
 	}
 
 	@Override

@@ -67,9 +67,9 @@ public class Status_Stealth implements StatusEffect {
 	}
 
 	@Override
-	public void remove(Actor_RPG subject) {
+	public void remove(Actor_RPG subject, boolean suppressMessages) {
 
-		if (subject.getActor().getVisible()) {
+		if (subject.getActor().getVisible() && !suppressMessages) {
 			ViewScene.m_interface.DrawText(subject.getName() + " is no longer stealthy");
 		}
 

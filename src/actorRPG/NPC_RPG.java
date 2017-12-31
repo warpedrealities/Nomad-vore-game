@@ -108,7 +108,7 @@ public class NPC_RPG implements Actor_RPG {
 
 	@Override
 	public int getAbilityMod(int ability) {
-		return (statBlock.getAbility(ability) - 10) / 2;
+		return getAbility(ability)-5;
 	}
 
 	@Override
@@ -297,7 +297,6 @@ public class NPC_RPG implements Actor_RPG {
 
 	@Override
 	public Actor getActor() {
-		// TODO Auto-generated method stub
 		return actor;
 	}
 

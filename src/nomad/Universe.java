@@ -482,6 +482,8 @@ public class Universe extends GameManager
 		FactionLibrary.getInstance().clean();
 		//remove flags from player
 		player.getFlags().clear();
+		player.getEncyclopedia().generateEntries();
+		new CompanionTool().removeAllCompanions(player);
 		//move player to the first area.
 		Document doc=ParserHelper.LoadXML("assets/data/start.xml");
 		Element root=doc.getDocumentElement();

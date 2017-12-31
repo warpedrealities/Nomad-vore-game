@@ -179,7 +179,11 @@ public class EffectProcessor {
 			String filename = node.getAttribute("file");
 			ViewScene.m_interface.createNPC(filename, m_player.getPosition(),false);
 		}
-		
+		if (str.equals("changeFaction")) {
+			String faction = node.getAttribute("faction");
+			m_npc.setActorFaction(FactionLibrary.getInstance().getFaction(faction));
+		}
+				
 		if (str.equals("spaceCombat"))
 		{
 			new SpaceCombatInitializer((Spaceship)Universe.getInstance().getCurrentEntity(),ship).run();

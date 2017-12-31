@@ -94,11 +94,11 @@ public class Status_SubAbilityMod implements StatusEffect {
 	}
 
 	@Override
-	public void remove(Actor_RPG subject) {
+	public void remove(Actor_RPG subject, boolean suppressMessages) {
 		for (int i = 0; i < modifiers.length; i++) {
 			((Player_RPG) subject).modSubAbility(modifiers[i].attribute, modifiers[i].modifier * -1);
 		}
-		if (ViewScene.m_interface != null) {
+		if (ViewScene.m_interface != null && !suppressMessages) {
 			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		}
 	}

@@ -1,9 +1,11 @@
 package actor.player;
 
 import item.Item;
+import item.ItemAmmo;
 import item.ItemHasEnergy;
 import item.handlers.StackHandler;
 import item.instances.ItemBlueprintInstance;
+import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
 import item.instances.ItemStack;
@@ -313,6 +315,15 @@ public class Inventory {
 	}
 
 	public void sort() {
+		for (int i=0;i<m_items.size();i++)
+		{
+			if (ItemAmmo.class.isInstance(m_items.get(i)))
+			{
+				ItemAmmo item=(ItemAmmo)m_items.get(i);
+				m_items.remove(i);
+				m_items.add(new ItemDepletableInstance(item));
+			}
+		}
 		m_items.sort(null);
 	}
 

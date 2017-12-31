@@ -19,8 +19,12 @@ public class ActorLoader {
 			Temp_NPC temp=new Temp_NPC();
 			temp.Load(dstream);
 			return temp;
+		case 3:
+			//ranked npc
 		}
 
+			
+			
 		return null;
 	}
 

@@ -55,6 +55,7 @@ import zone.TileDef.TileMovement;
 import zone.Zone;
 import actor.Actor;
 import actor.player.Player;
+import actor.ranked.RankedNPC;
 import actor.npc.NPC;
 import actor.npc.Temp_NPC;
 import actor.player.CompanionTool;
@@ -1488,7 +1489,15 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		}
 		else
 		{
-			npc=new NPC(n, p, file);
+			if (n.getTagName().equals("rankedNPC"))
+			{
+				npc=new RankedNPC(n, p, file);		
+			}
+			else
+			{
+				npc=new NPC(n, p, file);		
+			}
+
 		}
 		npc.setCollisioninterface(Universe.getInstance().getCurrentZone());
 		npc.setSense(sceneController);

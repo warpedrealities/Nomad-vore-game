@@ -113,12 +113,12 @@ public class Status_AttribMod implements StatusEffect {
 	}
 
 	@Override
-	public void remove(Actor_RPG subject) {
+	public void remove(Actor_RPG subject,boolean suppressMessage) {
 
 		for (int i = 0; i < modifiers.length; i++) {
 			subject.modAttribute(modifiers[i].attribute, modifiers[i].modifier * -1);
 		}
-		if (ViewScene.m_interface != null) {
+		if (ViewScene.m_interface != null && !suppressMessage) {
 			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		}
 

@@ -149,4 +149,11 @@ public class CompanionTool {
 			}
 		}
 	}
+
+	public void removeAllCompanions(Player m_player) {
+		NPC[] list = m_player.companionSlots;
+		for (int i = 0; i < list.length; i++) {
+				list[i] = null;
+		}
+	}
 }

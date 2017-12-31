@@ -154,6 +154,11 @@ public class NPC_RPG_statblock {
 
 		return moveList.get(index);
 	}
+	
+	public int getNumCombatMoves()
+	{
+		return moveList.size();
+	}
 
 	public boolean getTagged(String tag) {
 		if (statusTags == null) {

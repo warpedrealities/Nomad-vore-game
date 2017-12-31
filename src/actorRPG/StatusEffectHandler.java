@@ -44,7 +44,7 @@ public class StatusEffectHandler {
 				if (statusEffects.get(i).maintain()==true)
 				{
 					statusDefences.remove(statusEffects.get(i));
-					statusEffects.get(i).remove(actor);
+					statusEffects.get(i).remove(actor,false);
 					statusEffects.remove(i);
 				}
 			}
@@ -116,7 +116,7 @@ public class StatusEffectHandler {
 			{
 				if (replace)
 				{
-					statusEffects.get(i).remove(subject);
+					statusEffects.get(i).remove(subject,true);
 					statusDefences.remove(statusEffects.get(i));
 					statusEffects.remove(i);
 					r=true;
@@ -185,7 +185,7 @@ public class StatusEffectHandler {
 				{
 					sb.getOrigin().addBusy(2);
 				}
-				sb.remove(rpg);
+				sb.remove(rpg,false);
 				statusEffects.remove(sb);
 			}		
 		}	
@@ -212,13 +212,13 @@ public class StatusEffectHandler {
 		}
 	}
 	
-	public void clearStatusEffects(Actor actor, Actor_RPG rpg)
+	public void clearStatusEffects(Actor actor, Actor_RPG rpg, boolean messages)
 	{
 		if (statusEffects.size()>0)
 		{
 			for (int i=statusEffects.size()-1;i>=0;i--)
 			{
-					statusEffects.get(i).remove(rpg);
+					statusEffects.get(i).remove(rpg,messages);
 					statusEffects.remove(i);
 					if (Player_RPG.class.isInstance(actor))
 					{
@@ -234,7 +234,7 @@ public class StatusEffectHandler {
 		{
 			if (statusEffects.get(i).getUID()==uid)
 			{
-				statusEffects.get(i).remove(rpg);
+				statusEffects.get(i).remove(rpg,false);
 				statusEffects.remove(i);
 				break;
 			}
@@ -273,7 +273,7 @@ public class StatusEffectHandler {
 		{
 			if (remove)
 			{
-				status.remove(actor);
+				status.remove(actor,false);
 				statusEffects.remove(stealthState);
 				stealthState=-1;				
 			}

@@ -4,6 +4,10 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import org.w3c.dom.Element;
+
+import shared.ParserHelper;
+
 public class Crew {
 
 	public enum Skill {
@@ -19,7 +23,13 @@ public class Crew {
 	}
 
 	public Crew(DataInputStream dstream) throws IOException {
-		// TODO Auto-generated constructor stub
+		skill=Skill.valueOf(ParserHelper.LoadString(dstream));
+		rank=dstream.readInt();
+	}
+
+	public Crew(Element enode) {
+		skill=Skill.valueOf(enode.getAttribute("skill"));
+		rank=Integer.parseInt(enode.getAttribute("value"));
 	}
 
 	public Skill getSkill() {
@@ -31,8 +41,8 @@ public class Crew {
 	}
 
 	public void save(DataOutputStream dstream) throws IOException {
-		// TODO Auto-generated method stub
-
+		ParserHelper.SaveString(dstream, skill.toString());
+		dstream.writeInt(rank);
 	}
 
 }

@@ -859,6 +859,7 @@ public class InventoryScreen extends Screen implements Callback {
 					}
 					else
 					{			
+						
 						ItemDepletableInstance instance=(ItemDepletableInstance)m_player.getInventory().getItem(i);
 						if (instance.getEnergy()>0)
 						{

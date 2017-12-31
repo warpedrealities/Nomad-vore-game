@@ -27,7 +27,8 @@ public class CraftingRecipe implements Comparable {
 	private boolean unlocked;
 
 	private int requiredSkill;
-
+	private int requiredScience=-1;
+	
 	private ArrayList<CraftingIngredient> ingredients;
 	private ArrayList<CraftingIngredient> tokenRequirements;
 	private Item result;
@@ -71,6 +72,9 @@ public class CraftingRecipe implements Comparable {
 				if (Enode.getTagName() == "tokenRequirement") {
 					tokenRequirements.add(new CraftingIngredient(Enode));
 				}
+				if (Enode.getTagName() == "scienceRequirement") {
+					requiredScience=Integer.parseInt(Enode.getAttribute("value"));
+				}
 			}
 		}
 	}
@@ -89,6 +93,10 @@ public class CraftingRecipe implements Comparable {
 
 	public int getRequiredSkill() {
 		return requiredSkill;
+	}
+
+	public int getRequiredScience() {
+		return requiredScience;
 	}
 
 	public ArrayList<CraftingIngredient> getIngredients() {

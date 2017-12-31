@@ -17,7 +17,7 @@ public interface StatusEffect {
 
 	public void update(Actor_RPG subject);
 
-	public void remove(Actor_RPG subject);
+	public void remove(Actor_RPG subject, boolean messages);
 
 	public boolean maintain();
 

@@ -54,12 +54,12 @@ public class MapScreen extends Screen {
 						v=8+Universe.m_random.nextInt(3);
 						if (t.getDefinition().getBlockVision())
 						{
-							v=5+Universe.m_random.nextInt(3);
+							v=5+Universe.m_random.nextInt(4);
 						}
 					}
 					else if (v==0)
 					{
-						v+=Universe.m_random.nextInt(3);
+						v+=Universe.m_random.nextInt(4);
 					}
 				}
 				vgrid[i][j]=v;

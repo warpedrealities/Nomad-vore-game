@@ -264,33 +264,46 @@ public class CraftingScreen extends Screen implements Callback {
 			}
 			else
 			{
-				java.util.List <CraftingIngredient> l=recipe.getUnmetRequirements(tokenHandler.getMap());
-				if (l!=null)
+				if (recipe.getRequiredScience()>player.getRPG().getAttribute(Actor_RPG.SCIENCE))
 				{
-					for (int i=0;i<l.size();i++)
-					{
-						requirements[0].setTint(1, 0, 0);	
-						requirements[0].setString("requires "+l.get(i).getName()+" "+l.get(i).getQuantity());		
-					}
 					canMake = false;
+					requirements[0].setTint(1, 0, 0);	
+					requirements[0].setString("requires science of "+recipe.getRequiredSkill());	
+					for (int i=1;i<8;i++)
+					{
+						requirements[i].setString("");		
+					}			
 				}
 				else
-				{					
-					for (int i=0; i < 8; i++) {
-						if (recipe.getIngredients().size() <= i) {
-							requirements[i].setString("");
-						} else {
-							requirements[i].setString(recipe.getIngredients().get(i).getName() + " x"
-									+ recipe.getIngredients().get(i).getQuantity());
-	
-							if (hasIngredient(recipe.getIngredients().get(i))) {
-								requirements[i].setTint(1, 1, 1);
-							} else {
-								canMake = false;
-								requirements[i].setTint(1, 0, 0);
-							}
+				{
+					java.util.List <CraftingIngredient> l=recipe.getUnmetRequirements(tokenHandler.getMap());
+					if (l!=null)
+					{
+						for (int i=0;i<l.size();i++)
+						{
+							requirements[0].setTint(1, 0, 0);	
+							requirements[0].setString("requires "+l.get(i).getName()+" "+l.get(i).getQuantity());		
 						}
-					}	
+						canMake = false;
+					}
+					else
+					{					
+						for (int i=0; i < 8; i++) {
+							if (recipe.getIngredients().size() <= i) {
+								requirements[i].setString("");
+							} else {
+								requirements[i].setString(recipe.getIngredients().get(i).getName() + " x"
+										+ recipe.getIngredients().get(i).getQuantity());
+		
+								if (hasIngredient(recipe.getIngredients().get(i))) {
+									requirements[i].setTint(1, 1, 1);
+								} else {
+									canMake = false;
+									requirements[i].setTint(1, 0, 0);
+								}
+							}
+						}	
+					}			
 				}
 			}
 

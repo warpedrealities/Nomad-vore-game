@@ -319,7 +319,7 @@ public class Player_RPG implements Actor_RPG {
 		{
 			stats[ACTION]+=statMax[ACTION];	
 		}	
-		statusEffectHandler.clearStatusEffects(actor, this);
+		statusEffectHandler.clearStatusEffects(actor, this,false);
 		for (int i=0;i<stats.length;i++)
 		{
 			if (stats[i]>statMax[i])
@@ -355,7 +355,7 @@ public class Player_RPG implements Actor_RPG {
 		{
 			stats[ACTION]+=statMax[ACTION];	
 		}
-		statusEffectHandler.clearStatusEffects(actor, this);
+		statusEffectHandler.clearStatusEffects(actor, this,false);
 		for (int i=0;i<stats.length;i++)
 		{
 			if (stats[i]>statMax[i])
@@ -713,7 +713,6 @@ public class Player_RPG implements Actor_RPG {
 			abilities[i]=5;
 		}
 		
-//		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
 		busy=dstream.readInt();
 		//load exp
 		playerExperience=dstream.readInt();

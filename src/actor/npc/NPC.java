@@ -54,24 +54,24 @@ import zone.Zone_int;
 
 public class NPC extends Actor implements Controllable {
 
-	Controller controllerScript;
+	protected Controller controllerScript;
 	VoreScript voreScript;
 	
-	int uid;
-	int attackIndex;
-	int controllermemory[];
+	protected int uid;
+	protected int attackIndex;
+	protected int controllermemory[];
 	Path actorPath;
 
-	int clock;
-	RespawnControl respawnController;
+	protected int clock;
+	protected RespawnControl respawnController;
 	Sense senseInterface;
 
-	String conversations[];
+	protected String conversations[];
 
-	boolean peace;
-	boolean isCompanion;
+	protected boolean peace;
+	protected boolean isCompanion;
 	boolean isBusy;
-	FlagField npcFlags;
+	protected FlagField npcFlags;
 
 	static public final int CONVERSATIONDEFEAT = 0;
 	static public final int CONVERSATIONSEDUCED = 1;
@@ -80,8 +80,8 @@ public class NPC extends Actor implements Controllable {
 	static public final int CONVERSATIONTALK = 4;
 	static public final int CONVERSATIONCAPTIVE = 5;
 
-	ScriptPackage scripts;
-	Crew crewSkill;
+	protected ScriptPackage scripts;
+	protected Crew crewSkill;
 
 	public Crew getCrewSkill() {
 		return crewSkill;
@@ -131,6 +131,7 @@ public class NPC extends Actor implements Controllable {
 		}
 		actorFaction = npc.actorFaction;
 		peace = npc.peace;
+		crewSkill=npc.crewSkill;
 	}
 
 	public boolean isPeace() {
@@ -210,6 +211,9 @@ public class NPC extends Actor implements Controllable {
 				}
 				if (Enode.getTagName().equals("peacebond")) {
 					peace = true;
+				}
+				if (Enode.getTagName().equals("crew")) {
+					crewSkill=new Crew(Enode);
 				}
 			}
 		}
@@ -467,6 +471,7 @@ public class NPC extends Actor implements Controllable {
 	public void Defeat(Actor victor, boolean resolve) {
 		if (victor.getActorFaction().getFilename().equals("player") && isHostile(victor.getActorFaction().getFilename())) {
 			((Player_RPG) Universe.getInstance().getPlayer().getRPG()).addEXP(((NPC_RPG) actorRPG).getExpValue());
+			actorRPG.getStatusEffectHandler().clearStatusEffects(this, actorRPG,true);
 		}
 
 		clock = 100;
@@ -483,7 +488,7 @@ public class NPC extends Actor implements Controllable {
 		
 		voreScript=null;
 		
-		actorRPG.getStatusEffectHandler().clearStatusEffects(this, actorRPG);
+		actorRPG.getStatusEffectHandler().clearStatusEffects(this, actorRPG,true);
 		if (respawnController != null) {
 
 			if (respawnController.Canrespawn() == true) {

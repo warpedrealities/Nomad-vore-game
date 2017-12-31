@@ -89,6 +89,7 @@ public class Player extends Actor {
 				}
 			}
 		}
+		calcMove();
 	}
 
 	public boolean isFreeCompanion() {
@@ -103,11 +104,12 @@ public class Player extends Actor {
 		return false;
 	}
 
+	@Override
 	protected int getMoveCost() {
 		if (actorRPG.getStarving()) {
 			return moveCost * 2;
 		}
-		return playerInventory.getEncumbrance() + 1;
+		return moveCost;
 	}
 
 	public void setActorName(String name) {
@@ -343,7 +345,7 @@ public class Player extends Actor {
 	}
 
 	public void calcMove() {
-		moveCost = (int) (playerInventory.getEncumbrance() + ((Player_RPG) actorRPG).getSubAbility(Actor_RPG.MOVECOST));
+		moveCost = (int) (Math.pow(playerInventory.getEncumbrance(),2) + ((Player_RPG) actorRPG).getSubAbility(Actor_RPG.MOVECOST));
 	}
 
 	public Item Equip(int slot, Item item) {

@@ -195,9 +195,9 @@ public class Status_DoT implements StatusEffect {
 	}
 
 	@Override
-	public void remove(Actor_RPG subject) {
+	public void remove(Actor_RPG subject, boolean suppressMessages) {
 
-		if (ViewScene.m_interface != null) {
+		if (ViewScene.m_interface != null && suppressMessages) {
 			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		}
 	}

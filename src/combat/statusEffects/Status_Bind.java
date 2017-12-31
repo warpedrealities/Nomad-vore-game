@@ -170,7 +170,7 @@ public class Status_Bind extends Status_AttribMod {
 	}
 
 	@Override
-	public void remove(Actor_RPG subject) {
+	public void remove(Actor_RPG subject,boolean suppressMessage) {
 		for (int i = 0; i < modifiers.length; i++) {
 			subject.modAttribute(modifiers[i].attribute, modifiers[i].modifier * -1);
 		}
@@ -178,7 +178,11 @@ public class Status_Bind extends Status_AttribMod {
 		{
 			origin.addBusy(2);
 		}
-		ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
+		if (ViewScene.m_interface!=null && !suppressMessage)
+		{
+			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));		
+		}
+	
 		subject.setBindState(-1);
 	}
 
