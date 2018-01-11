@@ -5,7 +5,7 @@
 	<name>automated turret</name>
 	<description>An automated turret, a drumlike body bolted to the floor and bisected to allow the top half with the weapons and sensors to rotate freely. It's seen better days, but it looks functional and above all dangerous.</description>
 	<rpg>
-		<experiencevalue value="15" />
+		<experiencevalue value="100" />
 		<ability ability="STRENGTH" value="15" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

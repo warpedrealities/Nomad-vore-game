@@ -345,7 +345,15 @@ public class Player extends Actor {
 	}
 
 	public void calcMove() {
-		moveCost = (int) (Math.pow(playerInventory.getEncumbrance(),2) + ((Player_RPG) actorRPG).getSubAbility(Actor_RPG.MOVECOST));
+		if (playerInventory!=null)
+		{
+			moveCost = (int) (Math.pow(playerInventory.getEncumbrance(),2) + ((Player_RPG) actorRPG).getSubAbility(Actor_RPG.MOVECOST));
+				
+		}
+		else
+		{
+			moveCost=2;
+		}	
 	}
 
 	public Item Equip(int slot, Item item) {

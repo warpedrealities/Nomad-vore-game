@@ -8,13 +8,13 @@
 		<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="facefuck0" text="$I'm gonna use your mouth, and you're gonna like it">
-		<condition operator="lessthan" evaluate="BODYVALUE"
-					bodypart="penis" partvalue="length" value="30" />	
+		<!-- <condition operator="lessthan" evaluate="BODYVALUE" -->
+					<!-- bodypart="penis" partvalue="length" value="30" />	 -->
 		<assertion evaluate="haspart" part="penis"/>	
 		</choice>
 		<choice destination="sex0" text="$Well, it starts with your legs spread and ends with you yowling for joy">
-		<condition operator="lessthan" evaluate="BODYVALUE"
-					bodypart="penis" partvalue="length" value="30" />		
+		<!-- <condition operator="lessthan" evaluate="BODYVALUE" -->
+					<!-- bodypart="penis" partvalue="length" value="30" />		 -->
 			<assertion evaluate="haspart" part="penis"/>	
 		</choice>
 		<choice destination="devour" text="devour her">
@@ -107,7 +107,7 @@
 	<text>
 	You can't tell if she heard you, but it doesn't matter as the horny kitty writhes and your member swallows more of her up. Her shoulders becoming a pleasing bulge in your member as she slips deeper inside and you thrust your tip down over her chest. Overpowering lust coursing through the kitty as she courses through your shaft inch by inch and steadily starts to slip into your sack, a muffled myah audible as her head slips into the cummy depths of your loins.
 	</text>
-	<choice destination="cockvore4" text="*keep going*"/>
+	<choice destination="cockvore5" text="*keep going*"/>
 	</page>
 	
 	<page ID="cockvore5">

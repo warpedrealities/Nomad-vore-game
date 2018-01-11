@@ -4,7 +4,7 @@
 	<name>pirate drone</name>
 	<description>A lashed together robot floating on a humming propulsion unit. Haphazard plates providing a modicum of protection to its cobbled together components. A few emitters and nozzles protrude from the underside beneath its sensor array. </description>
 	<rpg>
-		<experiencevalue value="20" />
+		<experiencevalue value="40" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

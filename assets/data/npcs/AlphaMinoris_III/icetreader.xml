@@ -14,7 +14,7 @@
 		that splay to grip the treacherous footing under her.
 	</description>
 	<rpg>
-		<experiencevalue value="70" />
+		<experiencevalue value="80" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

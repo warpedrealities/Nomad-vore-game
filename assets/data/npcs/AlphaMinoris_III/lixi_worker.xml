@@ -12,7 +12,7 @@
 		her body.
 	</description>
 	<rpg>
-		<experiencevalue value="80" />
+		<experiencevalue value="90" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

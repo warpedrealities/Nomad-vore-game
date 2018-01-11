@@ -64,6 +64,7 @@
 	</text>
 	<effect type="giveitem" value="1" item="questItem" addendum="zorrCalamity"/>
 	<effect type="setlocalflag" flag="amulet" value="0" />	
+	<effect type="incrementglobalflag" flag="zorrDoor" value="-1" />		
 	<choice destination="end" text="leave it be" />	
 	</page>		
 	

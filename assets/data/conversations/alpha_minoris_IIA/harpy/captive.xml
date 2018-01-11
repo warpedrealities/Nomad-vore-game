@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<text>
+		You decant the harpy from containment and she lets out a confused chirp, looking around and seeing there's no way for her to fly away from you in these confines. So I suppose the question is what you want to do with the harpy. Course you could just admire the luster of her feathers, containment comes with a basic hygiene module that the harpy is yet to have appreciated.
+		</text>
+		<choice destination="lick0" text="*lick that harpy pussy*"/>
+		<choice destination="unbirth0" text="*crawl into her nethers*">
+			<preference fetish="unbirth" />		
+		</choice>
+		<choice destination="end" text="*return her to containment*"/>
+	</page>
+
+	<!-- <page ID="lick0"> -->
+	<!-- <condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition" -->
+		<!-- value="1" />	 -->
+	<!-- <text> -->
+	
+	<!-- </text> -->
+	
+	<!-- </page> -->
+	
+	<page ID="lick0">	
+	<text>
+	The harpy lets out a confused chirp as you grab ahold of her and pull her hips out from under her. The birdy squirming around as you part her thighs and then give her something to really chirp about as you delve your face in between her legs, nuzzling and licking against her fragrant honeypot, the delicious flavours of moist harpy nethers coating your tongue as you lick into her and she lets out a delighted moan.
+	</text>
+	<choice destination="lick1A" text="keep licking"/>
+	</page>
+	
+	<page ID="lick1A">
+	<text>
+	The harpy's misgivings seem to fade rapidly under the ministrations you're forcing upon her. You keep her clutched tight by her hips as you delve your tongue through her folds, each lick bringing delighting spasms and moans from the harpy you have under your sway. Her honey flowing freely to drip down off her thighs as you pleasure her, feeling her getting closer and closer to her peak.
+	</text>
+	<choice destination="lick2A" text="mhmm, good pet"/>
+	</page>
+	
+	<page ID="lick2A">
+	<text>
+	You feel her thighs tensing to either side of your head and lets out desperate gasping moans. You can feel she's not far off at all now and redouble your efforts, a pleasured pet is a good pet after all..and soon your new pet is gushing over your face, her body spasming with her orgasm as she lets out a blissful shriek of orgasm. Your pet clenching your head tight between her thighs until her orgasm is finally spent, the panting and cooing harpy letting you up and watching you with a dazed look on her face as you stand up and comport yourself.
+	</text>
+	<effect type="incrementlocalflag" flag="disposition" value="1" />	
+	<choice destination="end" text="return her to containment"/>
+	</page>
+	
+	<page ID="unbirth0">
+	<!-- feetfirst -->
+	<text>
+	
+	</text>
+	
+	</page>
+
+</Conversation>

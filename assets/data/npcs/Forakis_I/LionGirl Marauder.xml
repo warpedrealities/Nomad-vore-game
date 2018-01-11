@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="lionGirl marauder.png" />
+	<name>LionGirl Marauder</name>
+	<description>
+	The desert trekking feline towers some eight feet tall and with skin of darkest ebony. Yet the untamed mane of hair framing her face and spilling down her back is purest straw blonde, the fur of her feline ears and long tuft tipped tail almost match the tone of her hair with their bleached tan hue. Were she not fully clad in a pale Chlamys or mantle draped over her shoulders and a similar hued skirt you could tell if the carpet matches the drapes as it were. And if her size and predatorily assessing gaze wasn't enough of a menace then the fact she has a rifle in her hands and several bullet laden pockets on her belt.
+	</description>
+	<rpg>
+		<experiencevalue value="100" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="6" />
+		<attribute attribute="PARRY" value="2" />		
+		<attribute attribute="WILLPOWER" value="4" />		
+		<combatMove name="shoot" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<missText count="2">
+				<text>The raptor girl fails to claw TARGET</text>
+				<text>The raptor girl's kick does not connect with TARGET </text>
+			</missText>
+			<hitText count="2">
+				<text>The raptor girl claws TARGET for VALUE damage</text>
+				<text>The raptor girl kicks TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="rifle butt" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0" threatening="true">
+			<effectDamage type="KINETIC" minValue="4" maxValue="10"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>TARGET manages to deflect the rifle butt jab of the liongirl</text>
+				<text>TARGET evades the swing of the liongirl</text>
+			</missText>
+			<hitText count="2">
+				<text>The liongirl smacks TARGET for VALUE damage</text>
+				<text>The liongirl thumps TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>		
+		<itemDrop chance="20" item="Longneck breachloader" />
+		<itemDrop chance="100" item="rifle round" />
+		<itemDrop chance="50" item="rifle round" />
+		<itemDrop chance="50" item="rifle round" />		
+		<itemDrop chance="50" item="rifle round" />
+		<itemDrop chance="50" item="rifle round" />
+		<itemDrop chance="50" item="rifle round" />				
+		<itemDrop chance="50" item="gourd" />		
+	</rpg>
+	<defeated conversation="Forakis_I/LionGirl marauder/defeat" />
+	<seduced conversation="Forakis_I/LionGirl marauder/seduced" />
+	<victory conversation="Forakis_I/LionGirl marauder/victory" />
+	<seducer conversation="Forakis_I/LionGirl marauder/victory" />
+	<controller AI="guntotingAI" />
+	<faction value="Forakhan_marauders" />
+</NPC>

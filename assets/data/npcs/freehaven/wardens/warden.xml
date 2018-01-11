@@ -5,7 +5,7 @@
 	<name>station warden</name>
 	<description>The bunny girl would be cute with her long grey ears and bobble of grey floof for a tail. But she's no defenceless innocent as she keeps a watchful eye and ear out for trouble. Her fit and athletic body is clad in a blue uniform jumpsuit, a simple silver shield on her breast as a mark of allegiance. She's got a technologically enhanced baton and a pistol at her belt.</description>
 	<rpg>
-		<experiencevalue value="100" />
+		<experiencevalue value="120" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

@@ -22,6 +22,10 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
+				<choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>
 		<choice destination="end" text="do nothing" />
 	</page>
 	<page ID="start">
@@ -46,6 +50,10 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
+						<choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>
 		<choice destination="end" text="do nothing" />
 	</page>
 	<page ID="start">
@@ -69,9 +77,20 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
+						<choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>
 		<choice destination="end" text="do nothing" />
 	</page>
+	<page ID="capture">
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<special effect="captureNPC" />
+		<text>Yoink. The device worked.</text>
 
+		<choice destination="end" text="Carry on." />
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured her in some unspecified, unelaborated on yet

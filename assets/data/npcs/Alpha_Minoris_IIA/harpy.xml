@@ -40,6 +40,7 @@
 	<seduced conversation="alpha_minoris_IIA/harpy/harpySeduced" />
 	<victory conversation="alpha_minoris_IIA/harpy/harpyvictory" />
 	<seducer conversation="alpha_minoris_IIA/harpy/harpyvictory" />
+	<captive conversation="alpha_minoris_IIA/harpy/captive" />	
 	<controller AI="harpy_adv" />
 	<faction value="harpy" />
 </Harpy>

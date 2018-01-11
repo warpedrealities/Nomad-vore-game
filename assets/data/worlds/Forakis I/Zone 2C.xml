@@ -26,7 +26,7 @@
 				<floodfill tile="3" />
 			</band>				
 	</perlin>	
-			<SeedNPCs min="3" max="3" name="Forakis I/deathworm">
+			<SeedNPCs min="3" max="3" name="Forakis_I/deathworm">
 			</SeedNPCs>		
 		<walloff wall="2" sides="south" />	
 	</mapgen>

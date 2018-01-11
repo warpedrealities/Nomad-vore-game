@@ -5,7 +5,7 @@
 	<name>commander Frei</name>
 	<description>A tall and uncompromising bunny girl, even if you discount her stark white bunny ears she caps 6 feet tall easily. She's clad in a form fitting blue uniform jumpsuit that serves nicely to emphasize her bust, a gold shield on her chest as a badge. She watches you calculatingly, clearly she's not someone you'd want to try and fool. Judging by the equipment at her belt she has ways of dealing with those who try.</description>
 	<rpg>
-		<experiencevalue value="15" />
+		<experiencevalue value="120" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

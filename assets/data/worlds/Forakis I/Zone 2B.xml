@@ -43,7 +43,7 @@
 				<floodfill tile="3" />
 			</band>				
 	</perlin>	
-			<SeedNPCs min="3" max="3" name="Forakis I/deathworm">
+			<SeedNPCs min="3" max="3" name="Forakis_I/deathworm">
 			</SeedNPCs>			
 		<auditpaths carve="3" replace="1" />	
 		<auditpaths carve="2" replace="1" />		

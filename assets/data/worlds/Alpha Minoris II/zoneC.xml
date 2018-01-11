@@ -36,15 +36,15 @@
 					<row>22</row>
 					<placeNPC name="minoris2_saurian/saurianCaptain" x="9"
 						y="9">
-					<script spawn="elf_campaign_0" death="elf_campaign_0_kill" />
+					<script spawn="AM_campaign/elf_campaign_0" death="AM_campaign/elf_campaign_0_kill" />
 					</placeNPC>
 					<placeNPC name="minoris2_saurian/saurianFootlizard" x="9"
 						y="8">
-					<script spawn="elf_campaign_0"/>		
+					<script spawn="AM_campaign/elf_campaign_0"/>		
 					</placeNPC>
 					<placeNPC name="minoris2_saurian/saurianFootlizard" x="8"
 						y="9">
-					<script spawn="elf_campaign_0"/>
+					<script spawn="AM_campaign/elf_campaign_0"/>
 					</placeNPC>
 		<placeWidget x="0" y="0" name="SPAWNER">
 			<radius value="8" />
@@ -98,15 +98,15 @@
 					<row>22</row>
 					<placeNPC name="minoris2_elves/elfChampion" x="57"
 						y="57">
-					<script spawn="saurian_campaign_0" death="saurian_campaign_0_kill" />
+					<script spawn="AM_campaign/saurian_campaign_0" death="AM_campaign/saurian_campaign_0_kill" />
 					</placeNPC>
 					<placeNPC name="minoris2_elves/elfArcher" x="57"
 						y="56">
-					<script spawn="saurian_campaign_0"/>		
+					<script spawn="AM_campaign/saurian_campaign_0"/>		
 					</placeNPC>
 					<placeNPC name="minoris2_elves/elfArcher" x="56"
 						y="57">
-					<script spawn="saurian_campaign_0"/>
+					<script spawn="AM_campaign/saurian_campaign_0"/>
 					</placeNPC>
 		<placeWidget x="0" y="0" name="SPAWNER">
 			<radius value="8" />
