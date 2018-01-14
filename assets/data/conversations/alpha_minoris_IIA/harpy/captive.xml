@@ -1,26 +1,66 @@
 <?xml version="1.0"?>
 <Conversation>
+	
+	<page ID="start">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="gushed"
+		 value="1" />
+	<text>
+	You decant the harpy from containment and she looks around, then her eyes widen at you. She seems surprised that you aren't gushed despite her remembering gushing you. But that being said she seems to be proactive now in attempting to correct this problem. The harpy leaping up and then down at you, heading crotchfirst for your head!
+	</text>
+	<choice destination="unbirthA0" text="*do nothing*"/>
+	<choice destination="unbirthAEnd" text="*fight her off*"/>
+	</page>
+	
+	<page ID="unbirthA0">
+	<text>
+	For whatever reason you don't resist as she leaps, planting herself over the top of your head. The harpy letting out a gasping coo as her nethers easily encompass your entire head in one go, her netherlips hotly and wetly suckling on your neck as her hips are planted atop your shoulders. The harpy wriggling about and then tugging in your shoulders as well, schlorping you up even more as she sets about turning you into a womb meal for her to enjoy and gush out.
+	</text>
+	<choice destination="unbirthA1" text="*naughty harpy pet..so good and naughty*"/>
+	</page>
+	
+	<page ID="unbirthA1">
+	<text>
+	You stumble a bit as you feel her weight shifting above you. The harpy wriggles around to work down over your chest and down towards your waist, cooing in delight as her middle bulges out to contain more and more of her seemingly willing victim. Her thighs rubbing against your sides and her toes pointing and unpointing as they get closer and closer to the ground. Your hips finally vanishing between her thighs leaving only your legs protruding between her own as she stands and carries on her consumption of your till now standing form. Won't be long now.
+	</text>
+	<choice destination="unbirthA2" text="*all the way in, schlorp*"/>
+	</page>
+	
+	<page ID="unbirthA2">
+	<text>
+	The harpy lets out a delighted chirrup as she straightens her legs and lifts your feet clear of the ground. One feathery wing rubbing down against her snatch and against your body as she pulls your legs past her netherlips. Your form eagerly and easily packed away imprisoned in her womb by your lusty predatory pet. Your toes twitching afore they vanish between her netherlips and all that's teasing her sex now is her own sopping wet flight feathers as she rubs against her sex eagerly with one wing and brushes the other against the shape of her curled up wombfodder doming her out gravidly.
+	</text>
+	<choice destination="unbirthA3" text="*and then..the gushing*"/>
+	</page>
+	
+	<gameover ID="unbirthA3">
+	<text>
+	Within the lusty confines of your predatory pet you shiver knowing what's to come, fear? anticipation? lust? the harpy cares naught, happily performing her duties it seems by turning her owner now captive into a molten orgasm. Blissful pleasure consuming you literally as she masturbates and closes her eyes, her wing frigging herself frantically as you turn soft and indistinct within her lewd depths. The harpy's womb clenching down on you and making you yield and confirm until nothing but condensed pleasure fluids remain within her, which she's only too happy to use to irrigate the ship floor with said naughty juices...using your pet recreationally this way might lead to a lot of clean up in your future. But surely such is a small price to pay for such debauched liquidations on demand.
+	</text>
+	</gameover>
+	
+	<page ID="unbirthAEnd">
+	<text>
+	Nope, you don't want her to get the wrong idea. And a quick shove sends her sprawling down onto the ground. The harpy letting out a whimper as she's smacked down, but least she seems to be no longer intent on forcing you into her nethers. Sometimes you need to take a firm hand with pets who get uppity about taking the initiative.
+	</text>
+	<effect type="setlocalflag" flag="gushed" value="0" />		
+		<choice destination="lick0" text="*lick that harpy pussy*"/>
+		<choice destination="unbirth0" text="*slide into her nethers*">
+			<preference fetish="unbirth" />		
+		</choice>
+		<choice destination="end" text="*return her to containment*"/>	
+	</page>
 
 	<page ID="start">
 		<text>
 		You decant the harpy from containment and she lets out a confused chirp, looking around and seeing there's no way for her to fly away from you in these confines. So I suppose the question is what you want to do with the harpy. Course you could just admire the luster of her feathers, containment comes with a basic hygiene module that the harpy is yet to have appreciated.
 		</text>
 		<choice destination="lick0" text="*lick that harpy pussy*"/>
-		<choice destination="unbirth0" text="*crawl into her nethers*">
+		<choice destination="unbirth0" text="*slide into her nethers*">
 			<preference fetish="unbirth" />		
 		</choice>
 		<choice destination="end" text="*return her to containment*"/>
 	</page>
 
-	<!-- <page ID="lick0"> -->
-	<!-- <condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition" -->
-		<!-- value="1" />	 -->
-	<!-- <text> -->
-	
-	<!-- </text> -->
-	
-	<!-- </page> -->
-	
 	<page ID="lick0">	
 	<text>
 	The harpy lets out a confused chirp as you grab ahold of her and pull her hips out from under her. The birdy squirming around as you part her thighs and then give her something to really chirp about as you delve your face in between her legs, nuzzling and licking against her fragrant honeypot, the delicious flavours of moist harpy nethers coating your tongue as you lick into her and she lets out a delighted moan.
@@ -46,9 +86,57 @@
 	<page ID="unbirth0">
 	<!-- feetfirst -->
 	<text>
-	
+	You only captured the harpy for one reason, and that's to use her womb as a sleeping bag. Course, she might need a bit of coaxing..making out with her eagerly and hearing her let out her conflicted chirps as your lips press together with her, her flush and squirms under your ministrations soon becoming a good deal more compliant. Next after that you lean back, brushing your feet playfully up between her thighs to rub over her nethers. The harpy letting out a coo and spreading her thighs slowly as she watches you at play, only to let out another surprised chirp as you decide it's time to take it to the next level and push your feet into her moist and welcoming snatch. 
 	</text>
-	
+	<choice destination="unbirth1" text="*push on in*"/>
 	</page>
 
+	<page ID="unbirth1">
+	<text>
+	You wriggle your feet in the snug warmth of her birthing channel and ease them deeper, up into the harpy's womb. She lets out a little gasp as you do so, but seems willing to let you slide in without resistance from her. Though it's clear she's not used to people just pushing themselves in of their own accord she clenches and helps tug you deeper and deeper, helping you work your way in. Your knees and then thighs slipping past her stretching netherlips and into her blessed warmth.
+	</text>
+	<choice destination="unbirth2" text="*all the way in*"/>
+	</page>
+	
+	<page ID="unbirth2">
+	<text>
+	Eagerly you worm your hips past her sexlips, hearing her coo and feeling her clench around you as you curl your legs in the snug confines of her womb. Her belly bulging and stretching out as you work your way in, soon you're chest deep in harpy sex and the scent of her arousal overpowers your nose. More importantly it's a bit tricky to work yourself further into her at this point, luckily your pet wants you in pretty bad as well at this point. Her thighs coming together as she clenches, dragging your body inside herself with a delighted moan and rubbing a feathered wing against her slit once your fingers have waggled goodbye to the world between them. Now entirely in cased in her womb you have the thrill of being utterly within the power of your pet, the snug walls all around you pressing firmly as she coos and shifts position.
+	</text>
+	<choice destination="unbirth3" text="*and she decides...*"/>
+	</page>
+	<page ID="unbirth3">
+	<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition" 
+	value="2" />
+	<!--holding-->
+	<text>
+	Within the cozy confines of her womb you squirm to get comfortable. Her fleshy walls holding you nicely but doing no more as they softly cradle you. Seems you've convinced her to treat you as more than an opportunity for a pleasantly wet orgasm. The harpy resting comfortably in your ship as you rest comfortably within her, dozing off slowly in this wonderful sleeping bag.
+	</text>
+	<effect type="heal" value="1.00" />	
+	<choice destination="unbirth4Endo" text="zzz"/>
+	</page>
+	
+	<page ID="unbirth4Endo">
+	<text>
+	Gradually you stir and rouse within the harpy. Your contented sleep inside her as left you feeling distinctly refreshed and rejuvenated, just the thing you needed. You nudge at the insides of her womb. Moving about to stretch and push out against the insides of her body and hearing her chirp and shift around you. Finally the harpy takes the hint, parting her thighs and gradually pushing you back out. Your form emerging wetly into the ships confines, the harpy looking at you with a flush and a coo as you slip free completely. She waits a few moments then leans in and gives you a lick, lapping the fluid off of your form as you get back to your feet.
+	</text>
+	<choice destination="end" text="having a harpy pet was one of your better ideas, return her to containment"/>
+	</page>
+	
+	<page ID="unbirth3">
+	<condition operator="lessthan" evaluate="LOCALFLAG" flag="disposition" 
+	value="2" />
+	<!--sploosh-->
+	<text>
+	You squirm to get comfortable, and feel her womb walls clench around you..kneading at your form and getting wetter as digestive fluids soak you and she coos and chirs, rubbing her thighs together. Seems you've gone and crawled into her cauldron and now she's planning to brew up a batch of femcum. Well, you could hardly be surprised she might feel this way about you. The harpy's womb pressing against you as you soften in orgasmic bliss, the pleasurable liquidation making you writhe even as the powerful walls confine and compress your movements. 
+	</text>
+	<effect type="setlocalflag" flag="gushed" value="1" />	
+	<choice destination="unbirth4GO" text="*melting*"/>
+	</page>
+	
+	<gameover ID="unbirth4GO">
+	<text>
+	You can hear the harpy rubbing at herself, chirping and moaning as she shifts around and masturbates. But the sounds and sensations from outside are drowned out by the sloshing and burbles and the feeling of your form liquidating inside her. Your last moments racked with a pleasurable dissolution, orgasming yourself apart into fluids. Moments later your pet harpy reaches her own, stirred on by your lustful disentegration within her she climaxes. Your ship interior covered in a puddling splatter of your liquidated remains as she gushes you back out at her feet. Well, that may or may not have gone according to your plan...
+	</text>
+	</gameover>
+	
 </Conversation>
