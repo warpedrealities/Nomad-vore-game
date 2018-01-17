@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<text>
+	The long grass rustles noisily just ahead, a large tuft wobbling in a way that has nothing to do with the breeze...
+	</text>
+	<choice destination="cockvore0" text="*investigate*"/>
+	<choice destination="flee" text="*RUNAWAY!*"/>
+	</page>
+	
+	<page ID="flee">
+	<text>
+	Oh my god you got away just in time. If you'd of stayed there you could of...come down with hay fever?
+	</text>
+		<special effect="transition" x="32" y="32" destination="island" />	
+		<choice destination="end" text="Whew"/>
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	This dense thicket of stems will yield up its secrets to your draconic snout, that much is clear. The reason for its rustling will be revealed, you shove your nose deep into the depths of the cluster. However, you can find nothing suspicious except some footprints..as if the thicket was vacated swiftly before your arrival, but where could the leaf rustler of gotten to and what is that sensation as if your tail is caught in something hot, tight and sticky and...
+	</text>
+	<choice destination="cockvore1" text="ohdear *glance back*"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	The raptor cocks his head to one side looking back at you unafraid and perhaps with a hint of mischief in his eyes. The bipedal saurian using his forelimbs to help guide more of your tail into his clenching and schlurping cocktip. Seems like you've been tricked and surprised, and it seems you're about to be far more than just that. His length rippling to tug back as you attempt to pull your tail out, to no avail as he continues schlorping you deeper into his length. The raptor letting out a delighted hissing chir as your tailtip pokes into his sack.
+	</text>
+	<choice destination="cockvore2" text="*nuuu*"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	The Raptor makes a sorta coughing chirp at your struggles, seemingly laughing at your struggles as he clenches his tip around your hindquarters and pins your rear legs against your slender, flexible and remarkably easy to schlurp down body. The raptor's sack starting to bloat out as your tail is stuffed inside, forcing him to spread his legs and try to balance atop that growing beanbag of dragonfilled sack in a way that'd be comical if it weren't for the way he was so adroitly stuffing you down into there. You're probably not long for this world outside his loins that you'd be enjoying till now, but on the plus side he's enjoying putting your manytimes larger body into his balls a great deal.
+	</text>
+	<choice destination="cockvore3" text="his enjoyment is no kinda plus side, nuuu"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	Your forelimbs are pinned to your flanks by his encroaching sack, the raptor resting atop the bulk of your curling form as he drags your head and neck into his tip with remarkable ease. Your last view of the outside sealed over by a voracious cocktip while your last unmuffled sounds are his chirrs of decadent delight as you vanish entirely into his balls, curled up helplessly under his rubbing claws and stewing within his hot seed. The raptor half lidding his eyes and wriggling to get comfortable, knowing he'll be going nowhere until you're AAAALLL done.
+	</text>
+	<choice destination="cockvore4" text="*helplessly melted by a cunning raptor*"/>
+	</page>
+	
+	<page ID="cockvore4">
+	<text>
+	The raptor continues to decadently fondle himself as you writhe within the churns of his taut and distended sack. The contours of your head arm limbs well defined and visible when they push out his balls, but your squirms seem to avail you nought. No escape as your form gradually begins to soften, turning into gooey cream as you melt within his balls. That sack of his turning rounder and less lumpy with a series of magnificent gurgles and glorps. Your movements eventually turning entirely still as you become more goo than dragon, spreading out and losing every definition and contour of your body. You once were a mighty dragon, now you're a massive cumload for the tricksy raptor.
+	</text>
+	<choice destination="cockvore5" text="*splorsh*"/>
+	</page>
+	
+	<gameover ID="cockvore5">
+	<text>
+	The raptor rubs a leg against his sack and feels naught but sloshy goo yielding under him..oh yes, it's time. He strokes off yet more vigorously, jerking his dragonfed schlong as he closes his eyes, gasping and chirring in delight as he revels in your churning form fluidly moving in his sack and how easily you were tricked into a state where he could schlurp you up. The raptor's length erupting as he lets out a snarl of delight, splattering out your remnants in a decadently long orgasm that gives him yet more to revel in. Your form spurting out of his length shot by shot to form a massive lake of jizz, matting and saturating down the long grass until a reeking mire of flattened stems and goopy cum marks your fate. His virility and cunning proven the raptor disappears back into the concealing grass strands, to lurk and perhaps await further easily tricked and schlurped up dragons.
+	</text>
+	
+	</gameover>
+	
+	
+</Conversation>
