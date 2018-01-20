@@ -358,6 +358,7 @@
 		</text>
 		<special effect="mutation">
 			<mutation part="penis" variable="length" modifier="6">
+			<proportional ratio="0.05"/>
 			</mutation>
 		</special>
 		<choice destination="cocker4" text="finish it" />

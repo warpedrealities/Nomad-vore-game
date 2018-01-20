@@ -41,11 +41,11 @@ function stationKeeping(controllable)
 		a=pos.x
 	end
 	if (b==0) then
-		a=pos.y
+		b=pos.y
 	end
 	
 	controllable:setValue(0,a)
-	controllable:setValue(0,b)
+	controllable:setValue(1,b)
 	
 	if ( not a==pos.x and not b==pos.y ) then
 		if controllable:HasPath() then

@@ -871,6 +871,7 @@
 		</text>
 		<special effect="mutation">
 			<mutation part="penis" modifier="3" variable="length">
+			<proportional ratio="0.05"/>
 			</mutation>
 		</special>
 		<choice destination="cockmerge2"
@@ -889,7 +890,7 @@
 			to be her face, and her skull changes into a glans just in time for a
 			second load of jizz to gush from your balls to the tip of your
 			swollen shaft. It quickly falls limp, but you saw you had at least
-			three more inches on it since last time you looked. That brings you
+			<result/> more inches on it since last time you looked. That brings you
 			to
 			<measurement part="penis" variable="length" />
 			inches. You do not regret stopping by that derelict at all.

@@ -17,13 +17,30 @@ function attack(controllable,sense,pos,hostile)
 	end
 end
 
+function harmCheck(controllable)
+	a=controllable:getRPG():getStatMax(0);
+	b=controllable:getRPG():getStat(0);
+	if (b<a) then
+		controllable:getRPG():removeStatus(23)	
+	end
+	a=controllable:getRPG():getStatMax(1);
+	b=controllable:getRPG():getStat(1);
+	if (b<a) then
+		controllable:getRPG():removeStatus(23)	
+	end
+end
+
 function combat(controllable,sense,pos,hostile)
 		if (controllable:getRPG():hasStatus(23)==false) then
 		attack(controllable, sense,pos,hostile)
 	
-		elseif (pos:getDistance(hostile:getPosition())<2) then
+		else 
+			if (pos:getDistance(hostile:getPosition())<2) then
 			controllable:getRPG():removeStatus(23)
 			attack(controllable, sense,pos,hostile)
+			else
+			harmCheck(controllable)
+			end
 		end
 end	
 

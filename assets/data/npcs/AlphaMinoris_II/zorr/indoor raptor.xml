@@ -42,6 +42,7 @@
 	<seduced conversation="alpha_minoris_II/raptor/seduced" />
 	<victory conversation="alpha_minoris_II/raptor/victory" />
 	<seducer conversation="alpha_minoris_II/raptor/victory" />
+	<captive conversation="alpha_minoris_II/raptor/captive" />		
 	<controller AI="indoor_raptor" />
 	<faction value="monster" />
 </NPC>

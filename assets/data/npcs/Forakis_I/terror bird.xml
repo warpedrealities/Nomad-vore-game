@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="icetreader.png" />
+	<name>terror bird</name>
+	<description>
+	A flightless bird, but not exactly a pitiable or pathetic one. With long powerful legs, a vicious hooked beak and a body that stands taller than a woman this avian predator is hardly a joke. It has the air of a predator, binocular vision locked onto you without any complicating empathy or higher thought to cloud the clarity of its intent. As it moves its yellow and teal feathers flick and rustle as it bounds, moving closer as it steps from one viciously claw tipped foot to another without fear or hesitation.
+	</description>
+	<rpg>
+		<experiencevalue value="100" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="PARRY" value="6" />		
+		<attribute attribute="TEASE" value="12" />		
+		<combatMove name="shoot" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<missText count="4">
+				<text>Terror bird fails to claw TARGET</text>
+				<text>Terror bird's kick does not connect with TARGET </text>
+				<text>TARGET avoids a furious peck from a terror bird</text>
+				<text>TARGET narrowly avoids the terror bird's kick </text>	
+			</missText>
+			<hitText count="4">
+				<text>Terror bird pecks TARGET for VALUE damage</text>
+				<text>Terror bird bites TARGET for VALUE damage</text>
+				<text>Terror bird kicks TARGET for VALUE damage</text>
+				<text>TARGEt is struck for VALUE damage by a terror bird</text>		
+			</hitText>
+		</combatMove>
+		<combatMove name="leap" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="8" pattern="RANGED" actionCost="2" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>terror bird fails to leap towards TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>terror bird leaps towards TARGET</text>
+			</hitText>
+		</combatMove>	
+		
+	</rpg>
+	<defeated conversation="Forakis_I/terror bird/defeat" />
+	<seduced conversation="Forakis_I/terror bird/defeat" />
+	<victory conversation="Forakis_I/terror bird/victory" />
+	<seducer conversation="Forakis_I/terror bird/victory" />
+	<controller AI="leaper" />
+	<faction value="monster" />
+</NPC>

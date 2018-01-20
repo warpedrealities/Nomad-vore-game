@@ -24,12 +24,12 @@
 			<effectDamage type="KINETIC" minValue="6" maxValue="12"
 				modifier="NONE" />
 			<missText count="2">
-				<text>The raptor girl fails to claw TARGET</text>
-				<text>The raptor girl's kick does not connect with TARGET </text>
+				<text>The liongirl shoots at TARGET and misses</text>
+				<text>TARGET evades a bullet fired by the liongirl </text>
 			</missText>
 			<hitText count="2">
-				<text>The raptor girl claws TARGET for VALUE damage</text>
-				<text>The raptor girl kicks TARGET for VALUE damage</text>
+				<text>The liongirl shoots TARGET for VALUE damage</text>
+				<text>TARGET is shot by a liongirl for VALUE damage</text>
 			</hitText>
 		</combatMove>
 		<combatMove name="rifle butt" pattern="MELEE" bonusAttribute="MELEE"

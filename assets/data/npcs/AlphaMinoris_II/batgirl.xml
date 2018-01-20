@@ -16,7 +16,7 @@
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
 		<stat stat="HEALTH" value="25" />
-		<stat stat="RESOLVE" value="20" />
+		<stat stat="RESOLVE" value="25" />
 		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="2" threatening="true">
 			<effectDamage type="KINETIC" minValue="1" maxValue="6"
