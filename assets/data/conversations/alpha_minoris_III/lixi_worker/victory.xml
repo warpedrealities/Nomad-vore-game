@@ -2,25 +2,30 @@
 <Conversation>
 
 	<page ID="start">
-		<preference fetish="tailvore" />
-		<preference fetish="demis" />
-		<preference fetish="females" />
+		<preference fetish="demi" />
+		<preference fetish="female" />
 		<text>
 			The worker glares down at you and lets out a threatening hiss afore
 			hauling you easily up in front of her. Your feet dangle in the air as
 			she hisses and scrutinizes you. Her antenna flicking forwards to
 			brush against your head and shoulders as she completes her
 			assessment. But she doesn't seem to have much trouble thinking of a
-			way of dealing with this particular intruder into their tunnels. You
-			feel something glomming around your feet and glance down to find that
+			way of dealing with this particular intruder into their tunnels.
+		</text>
+		<choice destination="tailvore0" text="being eaten by a tail" />
+		<choice destination="bugbooty" text="being eaten by an ass" />
+	</page>
+<page ID="tailvore0">
+		<preference fetish="tailvore" />
+		<text>
+			 You feel something glomming around your feet and glance down to find that
 			flexible tail of hers curled up beside her thigh, the tip parting
 			into a segmented maw to wrap firmly around your ankles. It would seem
 			that her tail is capable of gobbling you up, will wonders never
 			cease.
 		</text>
-		<choice destination="tailvore1" text="being eaten by a tail" />
-	</page>
-
+		<choice destination="tailvore1" text="slurped up the tail" />
+		</page>
 	<page ID="tailvore1">
 		<text>
 			The big armoured bug girl follows your gaze and grin wickedly,
@@ -169,5 +174,94 @@
 			to only be expected.
 		</text>
 	</gameover>
+	<page ID="bugbooty">
+	<preference fetish="analvore" />
+		<text>
+			The Lixi seems to giggle a bit, cunny drippng in anticipation before shoving
+			you on your back and sitting down on your face, rubbing it's warm ass cheeks
+			against your head, the rather soft chitin flexing over you as she chirred in pleasure.
+			Soon your vision goes dark as you are shoved into the bug girl's tight walls and
+			squished about lewdly.
+		</text>
+		<choice destination="analvore1" text="Slurped up deeper" />
+</page>
+		<page ID="analvore1">
+		<text>
+			You feel yourself getting squished up further and further into the tight confines
+			of the bug girl's ass, the intestines squishing and squeezing over your body. The oppressively
+			hot and tight walls squishing over you, pressing you deeper and deeper, eager to get you pressed
+			into her stomach. 
+		</text>
+		<choice destination="analvore2" text="dumped into the stomach" />
+</page>
+		<page ID="analvore2">
+		<text>
+			After what felt like hours and hours of being squeezed through the bug girls's intestines, you finally
+			arrive in her stomach, finding it much less cramped compared to the intestines, but now there was the 
+			threat of stomach acids slowly seeping in, if you didn't try to escape soon, you'd be bug food!
+		</text>
+		<choice destination="analvorestruggle1" text="wiggle and squirm" />
+		<choice destination="analvoresubmit1" text="submit" />
+</page>
+
+<check ID="analvorestruggle1">
+		<test what="STRUGGLE" DC="10" />
+		<outcome destination="struggleanalEscape" />
+		<outcome destination="struggleanalBelly" />
+	</check>
+	
+<page ID="struggleanalEscape">
+		<text>
+			You do your best to try and escape, squirming and struggling as hard as you can, causing great discomfort
+			for the bug, enough to make her lean forward and start hacking and coughing, before finally spiting you back
+			out on the floor, covered in the bug girls stomach juices, you better run before she recovers enough to try
+			and eat you again!
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+</page>
+<page ID="struggleanalBelly">
+		<text>
+			Despite your best efforts, pounding your fists against the walls and struggling as hard as you can,
+			but the bug's walls were quite tough, the chitin helping keep you locked in and stuck as your body was slowly
+			melted down, the bug warrior chittering happily with her triumph over your body, obviously quite stronger then
+			you. Eventually though, your energy runs out, and you submit to the bug girl's stomach, getting melted down
+			into goop for her to use.
+		</text>
+		<choice destination="digested" text="absorbed" />
+		<choice destination="disposal" text="squeezed out">
+		<preference fetish="disposal" />		
+		</choice>
+</page>
+<page ID="analvoresubmit1">
+		<text>
+			A few wiggles, and then you realize that getting digested wouldn't be so bad, after all, you invaded their home
+			after all, and since you got caught, it's only fair that you help strengthen the hive with your body, relaxing back
+			in her stomach, letting the stomach acids pool up over you, the bug girl smiling and laying down, rubbing over her gut
+			as your body was melted down into goop for the bug to use.
+		</text>
+		<choice destination="digested" text="absorbed" />
+		<choice destination="disposal" text="squeezed out">
+		<preference fetish="disposal" />		
+		</choice>
+</page>
+		<gameover ID="digested">
+		<text>
+			Your goopy form is flushed back down through the bug girls intestines, getting absorbed into her body slowly
+			adding to her body, filling the bug girl's belly and ass, adding to her lovely curves and helping give her the
+			energy to help protect her hive... and maybe gobble down more tasty intruders.
+		</text>
+		</gameover>
+		<gameover ID="disposal">
+		<preference fetish="disposal" />
+		<text>
+			After hours of slow numbing digestion, your body is finally absorbed by the
+			bug girl, who chitters happily with pleasure as it felt it's ass get nice and round
+			from absorbing you. Soon, there was nothing left but a lovely pressure in her ass, as
+			she squatted down and started to squeeze you out, nothing more then a few steaming logs 
+			of bug poop and a nice round ass, your remains left steaming in the caves.
+		</text>
+		</gameover>
 
 </Conversation>

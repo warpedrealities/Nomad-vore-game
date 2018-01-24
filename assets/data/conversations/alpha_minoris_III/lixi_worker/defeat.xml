@@ -93,6 +93,9 @@
 			with your enzymes.
 		</text>
 		<choice destination="devour4" text="and soon, she will yield" />
+		<choice destination="devour5" text="and soon, she will be waste">
+		<preference fetish="disposal" />	
+		</choice>
 	</page>
 
 	<page ID="devour4">
@@ -111,6 +114,32 @@
 			naught remains but your feeling of satisfaction and your belly at its
 			normal proportions, armour, muscles and all she was no match your
 			stomach.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	<page ID="devour5">
+
+		<text>
+			The insectoid's squirms provide pleasing pressure pushing out against
+			the relentless pressure of your belly. She seems to be trying to find
+			a way of pushing back out thinking that you're unable to digest her
+			and impatient to be let out. But then her armour began to crack, her
+			weakening armour dissolving and splitting leaving her defenceless in
+			a pool of frothing enzymes that break her down with furious vigour.
+			Your innards seemingly in over drive from having to break her armour
+			down her softer parts do not survive for very long, her despairing
+			hiss swiftly fading to nothing and being replaced with vigorous
+			gurgles and churns. The mighty insect warrior's shape soon turning
+			soft and round within you, digesting away and diminishing. Eventually,
+			you can feel a pressure in your ass, the bug girl's remains ready to be
+			let back out, as you squatted down in a corner and grunted softly
+			quickly taking your clothes off and sighing in relief, thick brown
+			logs laced with bits of white chitin and bone laced in the waste as you
+			relive the bug girl's remains out in their own home, soon leaving her as 
+			a big steaming pile of your shit.
+			
 		</text>
 		<effect type="feed" value="95" />
 		<special effect="removenpc" />

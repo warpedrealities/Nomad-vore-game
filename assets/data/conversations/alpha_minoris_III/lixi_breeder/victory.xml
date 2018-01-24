@@ -1,18 +1,22 @@
 <?xml version="1.0"?>
 <Conversation>
-
 	<page ID="start">
-		<preference fetish="cocktransformation" />
-		<preference fetish="demis" />
-		<preference fetish="herms" />
 		<text>
 			Weakened by poison you've fallen before your diminutive opponent,
 			ending up in an undignified sprawl on your front. The horny bug girl
 			fluttering and bounding eagerly, landing in a squat over you.
 			<conditional>
 				<assertion evaluate="slothasitem" slot="2" />
-				yanking off your clothing and exposing your hips to the air before
+				yanking off your clothing and exposing your body to the air before
 			</conditional>
+			grabbing her shaft seeming to pause to consider what to do to you.
+		</text>
+		<choice destination="cocked" text="Get fucked" />
+		<choice destination="cockvore0" text="shoved against the slit" />
+	</page>
+	<page ID="cocked">
+		<text>
+			The eager bug girl, thrilled by her victory against you
 			grabbing her shaft and stroking, eagerly and vigorously jerking
 			herself to hardness as she uses her other hand to keep you from
 			wriggling away even as she transitions into rubbing that cock of hers
@@ -348,5 +352,82 @@
 			and well used dick.
 		</text>
 	</gameover>
-
+	<page ID="cockvore0">
+		<text>
+			The horny hermy bug girl was pressing her cock right against your face, 
+			a musky scent filling you senses as you struggled to break away, but you
+			were far too weak to try and get away, getting pulled in head first, with your
+			shoulders and chest slipping in next, sucking you down the bug's warm, tight, and 
+			squishy cock. Feeling your body being massaged by the hot walls was managing to 
+			turn you on as you were sucked in.
+		</text>
+		<choice destination="cockvore1" text="slurped down to balls" />
+</page>
+<page ID="cockvore1">
+		<text>
+			With a content chitter, the bug girl pulled her cock back, sitting down and watching
+			your legs get shlorped down the shaft, now completely tucked away inside the intimate organ.
+			Slow and happy moans fill the caves as she pulled you down further and further just with
+			the strength of her shaft, pulling you into her tight balls, already filled to the brim with
+			the bug's virile cum, eager to start melting your body down.
+		</text>
+		<choice destination="cockvorepleasure1" text="magic hands" />
+		<choice destination="cockvoresubmit" text="lay back and melt" />
+</page>
+<page ID="cockvorepleasure1">
+		<text>
+			Despite the cramped quarters of the sac, your arms and hands had some movement room, 
+			and you put that to good use trying to rub and pleasure the bug herm, rubbing at the
+			sac walls to try and pleasure them into cumming you out before you are digested
+			to nothing but sticky seed, using every pleasure technique you know to try and please her.
+		</text>
+		<choice destination="pleasurecheck" text="rub away" />
+</page>
+<check ID="pleasurecheck">
+		<test what="PLEASURE" DC="8" />
+		<outcome destination="pleasureescape" />
+		<outcome destination="pleasuremelt" />
+	</check>
+	<page ID="pleasureescape">
+		<text>
+			Thankfully, you managed to pleasure the bug girl so much, she couldn't resist
+			cumming, and luckily for you, you were still mostly solid when she did, the bug
+			squirting you out on to the cold cave floor, absolutely drenched in her fluids.
+			you better get away before she tries to do something to you again!
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
+	<page ID="pleasuremelt">
+		<text>
+			Even though you used everything you could to try and please the horny bug girl, you 
+			just couldn't escape. Feeling your body getting melted down into goop as her balls 
+			churned over you, feeling everything getting broken down, even your 
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				<readequipment slot="2" />
+				managing to be broken down into more cum for the bug girl.
+			</conditional> before finally you were no more.
+		</text>
+		<choice destination="digested" text="glorped" />
+	</page>
+<page ID="cockvoresubmit">
+		<text>
+			That bug girl slurping you up was so cute, you wouldn't really mind helping 
+			insure there are even more of them, as you relax in the sac and feel your body melt
+			away, soon becoming loads upon loads of hefty virile cum for the breeder to use to
+			expand her hive.
+		</text>
+		<choice destination="digested" text="melted" />
+</page>
+		<gameover ID="digested" noReform="true">
+		<text>
+			With balls full of your sloshy form, the breeder is able to skitter around a bit 
+			before finding another breeder, and mounting them, thrusting away into their cunny and 
+			eagerly cumming, already full of pleasure from all the stimulation you gave them, 
+			filling them up with your spunky remains. After several more quick fucks from the breeder
+			the next generation of lixi's were soon going to be having your eyes.
+		</text>
+		</gameover>
 </Conversation>
