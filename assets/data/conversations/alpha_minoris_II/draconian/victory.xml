@@ -2,7 +2,6 @@
 <Conversation>
 
 	<page ID="start">
-		<preference fetish="demis" />		
 		<text>
 			The draconian looms over you in all her sexy yet intimidating glory
 			and looks down upon you with a smirk
@@ -14,7 +13,6 @@
 		</text>
 		<choice destination="cockvore0" text="#all you're good for is to sate my lust">
 			<preference fetish="cockvore" />
-			<preference fetish="herms" />			
 		</choice>
 		<choice destination="analvore0" text="#you deserve to die without dignity">
 			<preference fetish="analvore" />
@@ -461,7 +459,11 @@
 			grin and chuckles, settling down on the ground, no way out for you
 			now.
 		</text>
-		<choice destination="struggleDigestAVGO" text="gurgle" />
+		<choice destination="struggleDigestAVGO" text="gurgled into pudge">
+		</choice>
+		<choice destination="struggleDigestAVdisposalGO" text="gurgled into poop">
+			<preference fetish="disposal" />
+			</choice>
 	</page>
 
 	<gameover ID="struggleDigestAVGO">
@@ -490,6 +492,39 @@
 			taking to the air, the draconian undefeated and supreme.
 		</text>
 	</gameover>
+	
+	<gameover ID="struggleDigestAVdisposalGO">
+		<text>
+			The draconian mhmms softly as she rubs over her belly,
+			indulgently
+			stroking the bulge you make as you start to succumb.
+			Despite your
+			struggles there seems to be no way of forcing your way
+			out of her
+			gurgling belly, that steaming fleshy cauldron pressing all
+			over you
+			and steadily grinding you down into mush. The relentless
+			power of her
+			innards working you over until your struggles still and
+			fade to
+			whimper, and then to fluid glorps, and finally to stillness as
+			you're
+			entirely liquidated. The draconian contently dozing, smug in
+			her
+			belief none would dare disturb her, and soon even the bulge you
+			make
+			in her fades away. The draconian smirking softly as her tummy
+			flattens and her booty fattens with the last of you "Mhmm, assfat is
+			the best use for weaklings such as you." she says and chuckles before
+			feeling a pressure in her ass, grinning some as she simply squatted down
+			her tail raising up into the air, as she started to let out thick brown
+			log of dragon poop, your stinky remains slipping out of her ass and plopping 
+			on to the ground in an undignified steaming pile of her shit, as she chuckled to
+			her self. "Mmmmm, seems you're place as my waste is clear." She then started
+			taking to the air, the draconian undefeated and supreme, with your remains
+			steaming in a field.
+		</text>
+	</gameover>
 
 	<page ID="submitAV">
 		<text>
@@ -508,7 +543,11 @@
 			gradually ease up into her belly, where your inferior form will break
 			down in order to feed that of your superior and devourer.
 		</text>
-		<choice destination="submitAVGO" text="gurgle" />
+		<choice destination="submitAVGO" text="gurgled into pudge">
+		</choice>
+		<choice destination="submitAVdisposalGO" text="gurgled into poop">
+		<preference fetish="disposal" />
+		</choice>
 	</page>
 
 	<gameover ID="submitAVGO">
@@ -530,6 +569,30 @@
 			satisfied "If only all inferiors would accept their place like you,
 			you look good on me weakling." she says with a glance down at her
 			curves, then takes to the skies.
+		</text>
+	</gameover>
+	
+	<gameover ID="submitAVdisposalGO">
+		<text>
+			The draconian mhmms and patpats the bulge you make as you submit
+			to her
+			body. Your form entirely contained within her belly now as it
+			gurgles
+			and sloshes slowly, your rubbing out against her hands helping
+			her
+			work you down and making her chuckle indulgently. Gradually your
+			surrender to the draconian becomes more than will and a matter of
+			physicality as she breaks you down. Your form softening and
+			diminishing, your movements weakening and going still as you become a
+			part of the voracious and magnificent draconian. Soon enough nought
+			remains of you except a slight pudge around her middle,and a pressure
+			in her lower gut, eventually she squats down and sighs, letting out a
+			wet fart, grinning and letting loose, thick brown logs of dragon 
+			scat plopping out of her rear, piling up on to the ground with wet
+			squelches, soon nothing left of you but a steaming pile of dragon
+			shit, as she chuckled and flew off, your remains a testament to
+			the efficiency of her gut, with not even a bone sticking out of the 
+			steaming pile of dragon shit.
 		</text>
 	</gameover>
 

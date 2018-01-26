@@ -42,16 +42,16 @@ import item.instances.ItemStack;
 
 public class EffectProcessor {
 
-	Widget widget;
-	NPC m_npc;
-	Spaceship ship;
-	FlagField flags;
-	Faction faction;
+	private Widget widget;
+	private NPC m_npc;
+	private Spaceship ship;
+	private FlagField flags;
+	private Faction faction;
+	private int result;
+	private Player m_player;
 	
-	Player m_player;
-	
-	SceneController controller;
-	Scene_Int scene;
+	private SceneController controller;
+	private Scene_Int scene;
 	
 	public EffectProcessor(Player player, SceneController controller, Scene_Int scene) {
 		m_player = player;
@@ -144,7 +144,7 @@ public class EffectProcessor {
 		}
 		if (str.equals("mutation")) {
 			Effect_Mutator mutator = new Effect_Mutator(node);
-			mutator.applyEffect(m_player, m_player, false);
+			result=mutator.applyEffect(m_player, m_player, false);
 		}
 		if (str.equals("marktime")) {
 			m_npc.getFlags().setFlag("CLOCK", (int) (Universe.getClock() / 100));
@@ -337,6 +337,10 @@ public class EffectProcessor {
 
 	public void endConversation() {
 		scene.replaceScreen(null);
+	}
+
+	public int getResult() {
+		return result;
 	}
 
 }

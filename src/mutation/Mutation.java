@@ -7,6 +7,7 @@ import java.io.StringReader;
 import java.util.Scanner;
 
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import actor.player.Player_LOOK;
 import description.BodyPart;
@@ -20,6 +21,8 @@ public class Mutation {
 	int modifierValue;
 	boolean setVariable;
 
+	ProportionalEffect proportional;
+	
 	enum BodyMod {
 		BM_NONE, BM_ADD, BM_REMOVE
 	};
@@ -48,11 +51,22 @@ public class Mutation {
 				bodyMod = BodyMod.BM_REMOVE;
 			}
 		}
+		NodeList children=element.getChildNodes();
+		
+		if (children.getLength()>0)
+		{
+			Element e=(Element)children.item(0);
+			if (e.getTagName().equals("proportional"))
+			{
+				proportional=new ProportionalEffect(Float.parseFloat(e.getAttribute("ratio")));
+			}
+		}
 	}
 
-	public void processMutation(Player_LOOK look, StringBuilder builder) {
+	public int processMutation(Player_LOOK look, StringBuilder builder) {
 		// do the mutation
 		// handle body part addition
+		int result=0;
 		if (!bodyMod.equals(bodyMod.BM_NONE)) {
 			if (bodyMod.equals(bodyMod.BM_REMOVE)) {
 				look.removeBodyPart(bodyPart);
@@ -65,7 +79,14 @@ public class Mutation {
 			if (setVariable == true) {
 				look.getPart(bodyPart).setValue(partVariable, modifierValue);
 			} else {
+				int mod=modifierValue;
+
 				int v = look.getPart(bodyPart).getValue(partVariable);
+				if (proportional!=null)
+				{
+					mod=proportional.getMod(v);
+				}
+				result=mod;
 				v = v + modifierValue;
 				look.getPart(bodyPart).setValue(partVariable, v);
 			}
@@ -91,6 +112,7 @@ public class Mutation {
 			}
 		}
 		input.close();
+		return result;
 	}
 
 }
