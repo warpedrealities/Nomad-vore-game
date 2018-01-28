@@ -9,7 +9,7 @@
 		crystalline stubby horns and crystalline nodes along her spine from
 		neck to tailtip have something to do with it.</description>
 	<rpg>
-		<experiencevalue value="30" />
+		<experiencevalue value="35" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

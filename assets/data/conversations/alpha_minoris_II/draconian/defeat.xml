@@ -24,6 +24,11 @@
 		<choice destination="cockvore0" text="$Oh your indignity won't stop with that">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
+	<choice destination="ctf0" text="$Yes, i have proven myself worthy to join with you (CTF warning)">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="Cockmerge injection" />	
+			<preference fetish="cocktransformation" />	
+	</choice>				
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -36,6 +41,19 @@
 			text="$And yet it happened, think on that for a while" />
 	</page>
 
+	<page ID="ctf0">
+	<text>
+	Well, she certainly didn't see that coming. She has a confused look on her face, even as you come closer and wrap one hand around her length and rub along it. She lets out a pleased rumble, but remains perplexed by what you mean by that...though wary as you produce the syringe.
+	</text>
+	<choice destination="ctf1" text="$I have wanted to become one with you since the moment i saw you, this will let it happen"/>
+	</page>
+	
+	<page ID="ctf1">
+	<text>
+	The draconian blinks and glances down at her length as you give it a squeeze. The dragon herm catching on as to what part of her you want to be one with "And why should I permit you to become my cock lesser creature. Even if such a debauched fate where possible, and desirable to one such as you."
+	</text>
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

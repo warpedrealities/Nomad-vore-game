@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="dungeon.png">
 	<tileset count-x="8" count-y="4">
-		<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
-		<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
-		<tile sprite="18" vision="0" movement="1"> liquid water</tile>
-		<tile sprite="19" vision="1" movement="2"> a strange statue</tile>
+		<tile sprite="17" vision="0" movement="0">a stone floor </tile>
+		<tile sprite="1" vision="1" movement="2" smart="true">a stone wall</tile>
+		<tile sprite="18" vision="0" movement="1">liquid water</tile>
+		<tile sprite="19" vision="1" movement="2">a strange statue</tile>
+		<tile sprite="20" vision="1" movement="2">ornate stone panel</tile>
+		<tile sprite="21" vision="1" movement="2">ornate stone panel</tile>		
 	</tileset>
 	<description>The sigils above the archway are partially worn away, only
 		the phonetic remnant 'zorr' is still legible, a relic of some great
@@ -166,13 +168,13 @@
 				<loot item="questItem" chance="1.0" unique="3" addendum="zorrCrown" />
 				<loot item="questItem" chance="1.0" unique="3" addendum="zorrLament" />	
 			</lootTable>
-
+			<npcType value="Alpha_Minoris_II/zorr/Arachne" />
 		</blockDungeon>
-		
+		<!--
 		<SeedNPCs min="8" max="16" name="AlphaMinoris_II/zorr/indoor raptor" />
 		<SeedNPCs min="4" max="8" name="AlphaMinoris_II/zorr/gold raptor" />
 		<SeedNPCs min="6" max="10" name="AlphaMinoris_II/zorr/raijin" />
-		
+		-->
 	</mapgen>
 
 </zone>

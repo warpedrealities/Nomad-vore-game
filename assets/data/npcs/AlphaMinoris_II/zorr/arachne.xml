@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="arachne.png" />
+	<name>Arachne</name>
+	<description>
+	A creature of contrasts and menacing power. The arachne is a volumptous dark skinned woman from the waist up, bared breasts on proud display and framed by the errant locks of her platinum blonde hair that flows untamed to midback in length. While from the waist down she is an arachnid, six legs carrying a thorax and abdomen through the darkness.Glistening hints of silvery highlights visible on the coal black exoskeleton of her tauric half. As if sensing herself under observation she glides a hand down beneath the join, brushing it over a moist and hungering gash.
+	</description>
+	<rpg>
+		<experiencevalue value="45" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="THERMAL" value="2" />
+		<attribute attribute="KINETIC" value="2" />		
+		<attribute attribute="WILLPOWER" value="2" />			
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2" threatening="true">
+			<effectDamage type="KINETIC" minValue="4" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>TARGET evades a leg jab from arachne</text>
+				<text>arachne flails at TARGET without effect</text>
+			</missText>
+			<hitText count="2">
+				<text>arachne claws TARGET for VALUE damage</text>
+				<text>arachne skewers TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+	<combatMove name="web" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<missText count="1">
+				<text>arachne launches webbing at TARGET but fails to
+					hit</text>
+			</missText>
+			<hitText count="1">
+				<text>arachne hits TARGET with webbing </text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is now trapped by webbing.</applyText>
+				<statusBind uid="20" icon="4" numModifiers="2">
+					<removeText> TARGET has escaped from the webbing.</removeText>
+					<effect attribute="RANGED" modifier="-2" />
+					<effect attribute="MELEE" modifier="-2" />
+					<bind strength="15" originDependent="true" />
+					<struggle count="2">
+						<text>TARGET struggles to try and get out of the webbing
+						</text>
+						<text>TARGET tries to get out of the webbing to no avail
+						</text>
+					</struggle>
+				</statusBind>
+
+			</effectStatus>
+		</combatMove>		
+	</rpg>
+	<defeated conversation="alpha_minoris_II/arachne/defeat" />
+	<seduced conversation="alpha_minoris_II/arachne/defeat" />
+	<victory conversation="alpha_minoris_II/arachne/victory" />
+	<seducer conversation="alpha_minoris_II/arachne/victory" />	
+	<controller AI="arachne" />
+	<faction value="monster" />
+</NPC>
