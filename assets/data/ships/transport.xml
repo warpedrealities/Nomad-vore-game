@@ -10,7 +10,8 @@
 
 	<emitters>
 		<weapon x="0" y="0.4" />
-		<engine x="-0.0" y="-0.4" />
+		<engine x="-0.2" y="-0.4" />
+		<engine x="0.2" y="-0.4" />		
 	</emitters>
 
 	<layout width="16" height="16" spriteset="ship.png">
@@ -25,8 +26,7 @@
 				<row>1122211</row>
 				<row>1222221</row>
 				<row>1122211</row>
-				<row>1112111</row>
-				<row>0122210</row>
+				<row>0112110</row>
 				<row>0122210</row>
 				<row>0222220</row>
 				<row>0122210</row>		
@@ -38,9 +38,9 @@
 				<row>1122211</row>
 				<row>0111110</row>				
 			</prefab>
-			<pairedportal x="1" y="7" sprite="1" ID="-101" facing="2">
+			<pairedportal x="1" y="6" sprite="1" ID="-101" facing="2">
 				Exterior hatch </pairedportal>
-			<pairedportal x="5" y="7" sprite="1" ID="-102" facing="6">
+			<pairedportal x="5" y="6" sprite="1" ID="-102" facing="6">
 				Exterior hatch </pairedportal>
 			<placeWidget x="2" y="1" name="slot" />
 			<placeWidget x="3" y="1" name="slot"/>
@@ -52,7 +52,7 @@
 			</placeWidget>
 			<placeWidget x="5" y="2" name="slot"/>				
 
-			<placeWidget x="3" y="7" name="modules/cargobay">
+			<placeWidget x="3" y="6" name="modules/cargobay">
 				<lootTable>
 					<loot item="blue crystal" chance="1.0" />
 					<loot item="blue crystal" chance="1.0" />
@@ -62,16 +62,16 @@
 				</lootTable>						
 			</placeWidget>		
 			
+			<placeWidget x="1" y="11" name="slot" />
+			<placeWidget x="5" y="11" name="slot"/>
 			<placeWidget x="1" y="12" name="slot" />
-			<placeWidget x="5" y="12" name="slot"/>
-			<placeWidget x="1" y="13" name="slot" />
-			<placeWidget x="5" y="13" name="slot"/>		
+			<placeWidget x="5" y="12" name="slot"/>		
 			
-			<placeWidget x="3" y="12" name="slot">
+			<placeWidget x="3" y="11" name="slot">
 				<contains name="modules/navconsole" />
 				<widgetItem>nav console</widgetItem>	
 			</placeWidget>
-			<placeWidget x="3" y="14" name="hardpoint">
+			<placeWidget x="3" y="13" name="hardpoint">
 				<facing value="0" />
 			</placeWidget>	
 			
@@ -94,7 +94,7 @@
 		</mapgen>
 	</layout>
 	<exterior width="5">
-		<row>01110</row>
+		<row>00000</row>
 		<row>01110</row>
 		<row>01110</row>
 		<row>01110</row>
@@ -102,10 +102,10 @@
 		<row>01110</row>
 		<row>01110</row>
 		<row>01110</row>
-		<row>01110</row>		
+		<row>00000</row>		
 		<pairedportal x="1" y="4" sprite="1" ID="-101"
-			destination="prospector" facing="6"> a ship hatch </pairedportal>
-		<pairedportal x="4" y="4" sprite="1" ID="-102"
-			destination="prospector" facing="2"> a ship hatch </pairedportal>
+			destination="transport" facing="6"> a ship hatch </pairedportal>
+		<pairedportal x="3" y="4" sprite="1" ID="-102"
+			destination="transport" facing="2"> a ship hatch </pairedportal>
 	</exterior>
 </Ship>

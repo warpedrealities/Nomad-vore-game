@@ -52,7 +52,89 @@
 	<text>
 	The draconian blinks and glances down at her length as you give it a squeeze. The dragon herm catching on as to what part of her you want to be one with "And why should I permit you to become my cock lesser creature. Even if such a debauched fate where possible, and desirable to one such as you."
 	</text>
+	<choice destination="ctf2" text="$Because I've beaten you, and because you don't have any choice"/>
 	</page>
+	
+	<page ID="ctf2">
+	<text>
+	The draconian shivers at the realization that she has no choice in the matter..but at the same time stiffens as she realizes you're using such power to permanently subordinate yourself to her. Once your little game of dominance is done she'll have your power in her loins, your strength used to spurt her seed "Fine then, do it..make yourself my cock, show the world what you really are." she taunts, thinking that you might back away from the edge and that she could force you not to carry through with your debauched plan.
+	</text>
+	<choice destination="ctf3" text="$gladly my host, gladly *inject her*"/>
+	</page>
+	
+	<page ID="ctf3">
+	<text>
+	The draconian lets out a snarl as you drive the injector into her <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				and you undress, stripping naked in preparation for what's to come
+			</conditional>. She growls as you grope over her shaft and position yourself over her, but she doesn't resist as you inflict your depraved merging desires on her "get on with it then dick." she says as you grind yourself against her tip, her clawed hands flexing as she considers grabbing you and forcing you down. But before she can do so you make the decision for her, sliding yourself down over her thick shaft with a mhmm and stretching yourself out.
+	</text>
+	<choice destination="ctf4" text="$it feels better than i could of imagined, mhmm i'm gonna make you BIG"/>
+	</page>
+	
+	<page ID="ctf4">
+	<text>
+	"Or maybe you won't you insignificant cock addition." she retorts tauntingly, then lets out a growl "-what." she shudders, feeling her body acting without her will. Her clawed hands clutching around your hips and pushing in shock, but already you are rooting to her crotch. The veins of the mighty draconian intermingling with your flesh as she groans in new found delight. Not that her groans do anything to match your heedless hedonism as you stroke over your body and wriggle to feel your newly sensitive skin stretch and then untense as you worm around.
+	</text>
+	<choice destination="ctf5" text="$oh yes..yes, make me yours, make me your cock"/>
+	</page>
+	
+	<page ID="ctf5">
+	<text>
+	"Depraved slut." she growls. Her hands now stroking and grasping your sides rather than pushing as she groans, feeling and hearing as your rear end spreads out against her crotch. Soon it's less hips and more a cock base under her hands as your ass curves and the join between your body and hers turns into a veiny cylinder. Her hands and your own now running along her new cock, helping you as you start to throb and the taste of pre floods your mouth.
+	</text>
+	<choice destination="ctf6" text="$so go'mpph' so good"/>
+	</page>
+	
+	<page ID="ctf6">
+	<text>
+	"You're nearly mhmm, cock..i hope you're happy slut. you might of bested me..but now you're mine." she says revelling in her dominance and never you mind that it was your choice to submit yourself to being a body part for her. The draconian's hands stroke over your flanks as you find yourself unable to stroke yourself, your arms sinking and merging into your sides as your bones and internal organs devolve into dickmeat and cumtube inside your torso. It won't be long now as you feel her precum flowing freely up through you and your face and neck swell out into glans and foreskin.
+	</text>
+	<choice destination="ctf6" text="yes yours, your di--mpphhh"/>
+	</page>
+	
+	<page ID="ctf7">
+	<text>
+	You don't even get to finish your sentence as your power of speech is taken away from you. Your vocal cords, your mouth..devolving as a burst of precum spews up through your lips and those self same lips turn around to become vertical. Your eyes are the last things to go, sealing over and sealing you into darkness. All that's left is your ability to her words as you calls you her depraved dick..and the heavenly sensations of her hands stroking over her new and magnificent cock. You can certainly feel how she enjoys her new girth and the realization brings you deep satisfaction...you have found your place you are... cumming, your thoughts wash out for several seconds in indescribable bliss as you spurt her hot seed forth into the air to splatter before her.
+	</text>
+	<choice destination="ctfGO" text="*blissful completion"/>
+	<choice destination="postctf0" text="*hungry throbbing*">
+		<preference fetish="cockvore" />
+	</choice>
+	</page>
+	
+	<gameover ID="ctfGO" noreform="true">
+	<text>
+	The draconian subsides into a rumbling contentment as you soften in her palm. She holds your form loosely admiring your weight and length jutting from her hips for a few moments. Finally though she rises, feeling her cock hang lower now between her thighs "mhmm..i hope you're happy slut, your dragoncock now." she says and then grudgingly adds as you twitch "though, you do make for a fine cock." she says and takes flight, perhaps to show you off somewhere. Though such lofty thoughts that do not involve throbbing and spurting seem eminently unimportant to you.
+	</text>
+	</gameover>
+	
+	<page ID="postctf0">
+	<text>
+	The draconian feels you throb needily between her legs and growls, but she knows what her cock needs.. her cock needs, to feed. she took the skies. You're aware of flowing wind and her shifting posture for a time as she hunts. But soon enough she swoops down and seizes up some hapless thing. You hear the protesting prey and can feel your owner shifting as she restrains the meal for her cock. Breath washes against your tip delightfully afore you feel the girl's head mashed against your maw, a morsel you happily suckle upon her features and draw her head inside "Yes...mhmm, good" the draconian proclaims, whether of your performance or the sensation of the prey sliding into your pulsating channel is unclear. And as you feel yourself stretching around the prey's shoulders and then chest you find you cannot care about anything except the feeling of devouring this one and feeding them down into the draconian's balls for her to melt away.
+	</text>
+	<choice destination="postctf1" text="*devour her*"/>
+	</page>
+	
+	<page ID="postctf1">
+	<text>
+	The draconian growls as she grabs the hips of her cockfood and shoves her down "my cock is ravenous for you meat." she taunts the squirmy girl and then bucks her hips to push you more and more over her cockfood. The pleasure of being the cock that's being fed is beyond compare as you stretch around her entire upper body and feel the morsel spilling into your...her, sack..the protests and splutters from deep in the draconian's loins garnering no mercy from either of you as you ripple and swallow up more and more of the girl, working her legs down steadily until the last of her vanishes past your ravenous tip...and if there was any doubt in your mind about your choice by this point, it ends here..it's fucking amazing being a cock.
+	</text>
+	<choice destination="postctf2" text="*churn her for your owner*"/>
+	</page>
+	
+	<page ID="postctf2">
+	<text>
+	You soon finish pulling down the meal into her sack, feeling the draconian stroking along your length whether in approval or self gratification you do not care to say. The sensations of that girl squirming in the sack beneath you as you start to churn her up for the draconian is all you care about "Nothing but worthless cum to me, and cum for my new dick to squirt out" the prey makes a muffled confused sound, but is too busy being melted down into nutbutter to really inquire...and soon her movements and sounds subside as you render her down into a thick goop, and feel the draconian's wondrous hand jacking up and down your length redouble its vigor. As the draconian prepares to waste the morsel on the ground.
+	</text>
+	<choice destination="postctf3" text="*be a good cock*"/>
+	</page>
+	
+	<gameover ID="postctf3" noreform="true">
+	<text>
+	You feel the last twitch of the morsel beneath you as you revel in your owner's touch, throbbing and pulsing hard beneath her palm as she strokes up and down your length vigorously. In what may be mere moments or an eternity your draconian host lets out a bellow of lustful triumph as you erupt. The pleasure overflowing and flowing through you, gushing out the voluminous remnants of your prey to splatter in a thick goopy mass. The draconian growling softly in pleasure as you spurt your last and soften against her thighs "mhmm, you're an unruly cock..always hungry.." she says and then chuckles "but perhaps, i will accomodate you." she says and then laughs, taking flight...and indeed, over the rest of her life you ended a great many lives by churning them into goop for her pleasure. Now this is the kind of life you signed up for!
+	</text>
+	</gameover>
 	
 	<page ID="devour">
 		<text>

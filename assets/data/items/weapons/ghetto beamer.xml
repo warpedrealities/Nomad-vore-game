@@ -24,7 +24,7 @@
 	</combatMove>
 	<combatMove name="primary beam" ammoCost="5" pattern="RANGED"
 		bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="0"
-		cooldown="20" icon="7" actionCost="3" moveType="FIGHT">
+		cooldown="20" icon="7" actionCost="6" moveType="FIGHT">
 		<effectDamage type="THERMAL" minValue="12" maxValue="36"
 			modifier="NONE" />
 		<missText count="2">
@@ -38,7 +38,7 @@
 	</combatMove>
 	<combatMove name="beam sweep" cooldownName="primary beam"
 		ammoCost="5" pattern="CONE" bonusAttribute="RANGED" timeCost="2"
-		rangedbias="4" bonusToHit="0" cooldown="20" icon="8" actionCost="3"
+		rangedbias="4" bonusToHit="0" cooldown="20" icon="8" actionCost="6"
 		moveType="FIGHT">
 		<effectDamage type="THERMAL" minValue="4" maxValue="10"
 			modifier="NONE" />

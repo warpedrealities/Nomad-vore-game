@@ -2,10 +2,78 @@
 <Conversation>
 
 	<page ID="start">
+				<preference fetish="demis" />
+				<preference fetish="females" />	
+		<preference fetish="unbirth" />
 		<text>
-		
+		The spider taur chitters to herself in delight and uses her forelegs to lash a few more threads of spidersilk around your fallen body. Not enough she's defeated you but she seems to want to make thoroughly sure you won't be able to struggle away from her. She looms over you and mhmms as she strokes one hand over her broad and sopping wet nethers. She seems to linger on the action as she sees how your gaze shifts down to her pussy placed pride of place just beneath the joint of her two halves.. but then she uses a foreleg and her other hand to snag the strand looped onto your body and start to guide it into her snatch, you feel a tugging sensation as her voracious nethers claim the thread...
 		</text>
-
+		<choice destination="unbirth0" text="*tied up and schlurped inside*"/>
 	</page>
+	
+	<page ID="unbirth0">
+	<text>
+	You find yourself dragged feetfirst into her snatch as the spidersilk threads are tugged into her ravenous womb. The arachne moaning, cheeks flushed as she looks down at your squirming body steadily being drawn into her needy nethers. That birth canal of hers seeming to plunge unnaturally deep, sliding through her thorax and into her abdomen as she reaches down and uses her hands and forelegs to lift up your body and work you deeper inside. 
+	</text>
+	<choice destination="unbirth1" text="*in to the hips*"/>
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	The arachne lets out a pronounced and delighted groan as she engulfs your hips, plunging you fully halfway into your snatch and reaching down to grab ahold of you and help shove you down inside of herself. Not that her ravenous channel wasn't doing a wonderful job of kneading and tugging your body into her heat. You feel your feet push through into her womb deep in her abdomen behind her and redouble your squirms, but to no avail. Your arms steadily vanish into her nether reaches and her hands soon cover your head to push that in as well. Your form vanishing utterly into the lusty depths of the tauric spider.
+	</text>
+	<choice destination="unbirth2" text="*curled up and confined*"/>
+	</page>
+	
+	<page ID="unbirth2">
+	<text>
+	You feel yourself being pulled down that deep channel and compacted in the lewd depths of her womb. Your form becoming curled up into a snug package within her heat. The arachne rubbing a rear leg against the bulge where her rear segment hangs lower and heavier with your shape and moans in delight, clearly she's enjoying having you inside her. The spider woman rubbing her hands against her nethers a little as her womb begins to clench and knead at you..
+	</text>
+	<choice destination="unbirthSubmit" text="*let the slosh take you*"/>
+	<choice destination="pleasurecheck" text="*try to coax her into letting you go"/>
+	</page>
+	
+	<page ID="unbirthSubmit">
+	<text>
+	It already feels like it'd be too much work to worm your way out of her naughty depths..and besides, this feels amazing. You can hear her moaning as she fingers her broad snatch and rocks herself back and forth rthythmically. And as you are rocked and squeezed over you feel yourself beginning to soften, to melt into blissful fluids. The hot depths of the womb clenching and compressing you as you start to slosh apart, her movements starting to send ripples through your gooey form...you can feel yourself going...nearly, ah...
+	</text>
+	<choice destination="unbirthSubmitGO" text="*splorsh*"/>
+	</page>
+	
+	<gameover ID="unbirthSubmitGO">
+	<text>
+	The arachne lets out a screech of delight as her pleasure overwhelms her, her abdomen contracting sending a blasting jet of femcum rocketing out of her nethers. your form reduced into a streaming splatter of semi clear goo that stains the ground in front of them. The arachne takes a moment to just pantingly survey her handiwork and dip her fingers into her drooling nethers afore sampling the flavour, then continues on in satisfaction. Your fate was truly delightful to her, one only hopes you had as much fun.
+	</text>
+	</gameover>
 
+	
+	<check ID="pleasurecheck">
+		<test what="PLEASURE" DC="14" />
+		<outcome destination="escape" />
+		<outcome destination="digest" />
+	</check>
+	
+	<page ID="escape">
+	<text>
+	You're not madly keen on being an orgasm for the spider, and so deep inside her crawling out of that powerful pussy by main force sounds like a losing prospect. So you set about to stroke at her insides, rubbing at the sensitive flesh of her cavernous womb. The arachne letting out a delighted moan and shuddering, shifting around and redoubling her self gratification. The spider letting out a delighted cry, groping her breasts now as she climaxes and shudders...she's even too dazed by her afterglow to put up resistance as you writhe your way out of her momentarily relaxed and un resisting folds. Back in the open air you can only assume the arachne wants to put you back there.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="*back up*" />
+	</page>
+	
+	<page ID="digest">
+	<text>
+	You're not madly keen on being an orgasm for the spider, and so deep inside her crawling out of that powerful pussy by main force sounds like a losing prospect. So you set about to stroke at her insides, rubbing at the sensitive flesh of her cavernous womb. The arachne letting out a delighted moan and shuddering, shifting around and redoubling her self gratification. The spider letting out a delighted cry, groping her breasts now as she comes close to her orgasm. But too little too late as you find your motions impaired, your form softening...and you can already feel she's so very close, the womb trembling around your softened form.
+	</text>
+	<choice destination="digestGO" text="$oh de-"/>
+	</page>
+	
+	<gameover ID="digestGO">
+	<text>
+	The arachne's orgasm hits, her womb clamping and squeezing down on you. And like a lemon in a vice your juices gush forth, your form instantly mashed to liquid lust and send splattering and gushing out of her nethers in a torrent. The jet of liquidated explorer blasting out in front of her to stain the floors as she cries out and pants with her bliss. The arachne takes a moment to just pantingly survey her handiwork and dip her fingers into her drooling nethers afore sampling the flavour, then continues on in satisfaction. Your fate was truly delightful to her, one only hopes you had as much fun.
+	</text>
+	</gameover>
+	
+	
 </Conversation>

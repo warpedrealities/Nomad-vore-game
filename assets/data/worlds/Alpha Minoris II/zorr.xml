@@ -170,11 +170,11 @@
 			</lootTable>
 			<npcType value="Alpha_Minoris_II/zorr/Arachne" />
 		</blockDungeon>
-		<!--
+		
 		<SeedNPCs min="8" max="16" name="AlphaMinoris_II/zorr/indoor raptor" />
 		<SeedNPCs min="4" max="8" name="AlphaMinoris_II/zorr/gold raptor" />
 		<SeedNPCs min="6" max="10" name="AlphaMinoris_II/zorr/raijin" />
-		-->
+		
 	</mapgen>
 
 </zone>
