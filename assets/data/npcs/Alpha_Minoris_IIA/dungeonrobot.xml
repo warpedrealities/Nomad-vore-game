@@ -38,6 +38,6 @@
 	</rpg>
 	<respawn delay="4000" />
 	<defeated conversation="alpha_minoris_IIA/omnico_robot/robotdefeat" />
-	<controller AI="robot__omnico_roamer" />
+	<controller AI="robot_omnico_roamer" />
 	<faction value="omnicofactory_robot" />
 </NPC>

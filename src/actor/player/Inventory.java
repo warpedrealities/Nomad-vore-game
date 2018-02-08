@@ -67,52 +67,7 @@ public class Inventory {
 
 	boolean Stack(Item item) {
 		return StackHandler.handleStacking(item, m_items);
-		/*
-		if (ItemExpositionInstance.class.isInstance(item)) {
-			return false;
-		}
-		if (ItemKeyInstance.class.isInstance(item)) {
-			return false;
-		}
-		if (ItemBlueprintInstance.class.isInstance(item)) {
-			return false;
-		}
-		int count = 1;
-		if (ItemStack.class.isInstance(item)) {
-			count = ((ItemStack) item).getCount();
 
-		}
-		if (ItemHasEnergy.class.isInstance(item.getItem()) == true) {
-			ItemHasEnergy it = (ItemHasEnergy) item.getItem();
-			if (it.getEnergy() != null) {
-				return false;
-			}
-		}
-		// detect if an item is identical
-		Item c = null;
-		for (int i = 0; i < m_items.size(); i++) {
-			if (m_items.get(i).getClass().getName().contains("Stack")) {
-				ItemStack stack = (ItemStack) m_items.get(i);
-				if (stack.getItem().equals(item.getItem())) {
-
-					// add to stack
-					stack.setCount(stack.getCount() + count);
-					return true;
-				}
-			} else {
-				if (m_items.get(i).getItem() == item.getItem()) {
-					m_items.remove(i);
-					ItemStack stack = new ItemStack(item, 1 + count);
-					m_items.add(stack);
-					return true;
-					// remove this item
-					// then build a stack with 2 blocks
-				}
-			}
-
-		}
-		return false;
-		*/
 	}
 
 	public Item RemoveItemStack(Item item) {

@@ -64,7 +64,6 @@
 	<seduced conversation="alpha_minoris_II/elfChampion/defeat" />
 	<victory conversation="alpha_minoris_II/elfChampion/victory" />
 	<seducer conversation="alpha_minoris_II/elfChampion/victory" />
-	<talk conversation="alpha_minoris_II/elfChampion/chat" />
 	<controller AI="elf_champion0" />
 	<faction value="minyos" />
 </NPC>

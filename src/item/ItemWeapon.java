@@ -59,4 +59,8 @@ public class ItemWeapon extends ItemEquip {
 		return tagSet;
 	}
 
+	public boolean canStack()
+	{
+		return stackEquip;
+	}
 }
