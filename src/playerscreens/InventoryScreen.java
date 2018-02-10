@@ -81,6 +81,7 @@ public class InventoryScreen extends Screen implements Callback {
 	
 	public InventoryScreen(int frame,int list, int button, int buttonalt,Player player, int tint,ModelController_Int callback)
 	{
+		player.getInventory().sort();
 		screenAlive=true;
 		m_callback=callback;
 		m_control=1;

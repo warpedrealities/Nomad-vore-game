@@ -3,17 +3,17 @@
 	<tagSet value="A" />
 	<description>
 		A complex jumble of wires and framework surrounding a blue crystalline
-		core. Its business end consists of a pair of stubby prongs. Does 1-6
+		core. Its business end consists of a pair of stubby prongs. Does 3-10
 		shock damage. (A)
 	</description>
 	<modifier>
 
 	</modifier>
 	<combatMove name="shoot" ammoCost="1" pattern="RANGED"
-		bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="2"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="3"
 		basicAction="true" moveType="FIGHT">
 
-		<effectDamage type="SHOCK" minValue="1" maxValue="8"
+		<effectDamage type="SHOCK" minValue="3" maxValue="10"
 			modifier="NONE" />
 
 		<missText count="1">

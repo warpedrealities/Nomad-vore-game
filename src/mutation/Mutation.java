@@ -53,10 +53,11 @@ public class Mutation {
 				bodyMod = BodyMod.BM_REMOVE;
 			}
 		}
-		NodeList children=element.getChildNodes();
+		NodeList children=element.getElementsByTagName("proportional");
 		
 		if (children.getLength()>0 && children.item(0).getNodeType()==Node.ELEMENT_NODE)
 		{
+			
 			Element e=(Element)children.item(0);
 			if (e.getTagName().equals("proportional"))
 			{

@@ -369,6 +369,9 @@
 			contentment you relax and exhale, letting her work you down.
 		</text>
 		<choice destination="submitGO" text="*gurgle*" />
+		<choice destination="submitGOdisposal" text="*gurgle, squelch*">
+		<preference fetish="disposal" />
+		</choice>
 	</page>
 
 	<page ID="struggledigest">
@@ -384,6 +387,9 @@
 			curls and nuzzles at its gut to feel you steadily moosh.
 		</text>
 		<choice destination="struggleGO" text="*Gurgle*" />
+		<choice destination="struggleGOdisposal" text="*gurgle, squelch*">
+		<preference fetish="disposal" />
+		</choice>
 	</page>
 
 	<gameover ID="submitGO">
@@ -405,6 +411,24 @@
 			to meet an end inside of it.
 		</text>
 	</gameover>
+	<gameover ID="submitGOdisposal">
+		<text>
+			Gradually and without resisting you melt away inside the
+			serpent. Your form
+			breaking down into a stew of former girl and fed
+			down into her guts.
+			That bulge in the serpent's belly flattening out
+			steadily as your
+			form, 'freely' given, goes to nourish your large and magnificent
+			predator. The serpent slithering slowly back into the
+			shadows of the
+			mine, your remains starting to pile up in the serpent's rear
+			as the creature hissed in delight, finding a secluded corner of
+			the mines to let you back out, huffing a bit as your remains
+			come streaming out of it's anal slit as a single long and unbroken
+			log of serpent shit, sealing your fate as nothing more then their food.
+		</text>
+	</gameover>
 
 	<gameover ID="struggleGO">
 		<text>
@@ -421,6 +445,24 @@
 			the shadows of the mine.
 		</text>
 	</gameover>
+	<gameover ID="struggleGOdisposal">
+		<text>
+			Gradually the lump in the serpent's tail disappears as you
+			dissolve. Your form
+			turning to a thick goopy mass of liquidated person
+			and fed through
+			the depths of its body as it rests there in the depths
+			of the mine.
+			Soon enough not a trace of you remains but for the smile
+			on the
+			serpent's muzzle and a lovely pressure in it's body. After a 
+			few hours of your form sliding though the serpent and nourishing it,
+			you eventually reach the end of your journey, squeezed out of the snake's 
+			ass a single long loaf of snake scat, your struggles and trials amounting to
+			nothing more then another meal for the hungry reptile.
+		</text>
+	</gameover>
+	
 
 	<gameover ID="gameover">
 		<text>

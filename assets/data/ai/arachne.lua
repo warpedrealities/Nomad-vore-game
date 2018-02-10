@@ -29,7 +29,7 @@ function movement(controllable,sense,script,pos)
 		controllable:move(c);	
 	else
 		b=controllable:getValue(1)		
-		if (pos.x==a) and pos.y==b) then
+		if (pos.x==a) and (pos.y==b)then
 		controllable:setValue(0,0)
 		controllable:setValue(1,0)	
 		else

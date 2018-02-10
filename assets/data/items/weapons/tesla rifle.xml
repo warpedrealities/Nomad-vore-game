@@ -6,17 +6,17 @@
 		batteries that in turn feed into a crystalline core located just ahead
 		of the trigger, after which a complex series of electrical channels,
 		baffles and focusing apparati form a long barrel pleasingly vernian in
-		its complexity that terminates in a pair of jutting prongs. does 4-8
+		its complexity that terminates in a pair of jutting prongs. does 6-10
 		lightning damage. (A)
 	</description>
 	<modifier>
 
 	</modifier>
 	<combatMove name="shoot" ammoCost="1" pattern="RANGED"
-		bonusAttribute="RANGED" timeCost="2" rangedbias="4" actionCost="2"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="4" actionCost="4"
 		basicAction="true" moveType="FIGHT">
 
-		<effectDamage type="SHOCK" minValue="4" maxValue="10"
+		<effectDamage type="SHOCK" minValue="6" maxValue="12"
 			modifier="NONE" />
 
 		<missText count="1">
@@ -26,6 +26,6 @@
 			<text>you shock TARGET with a blast of lightning for VALUE damage</text>
 		</hitText>
 	</combatMove>
-	<energy refill="ENERGY E-cell power-cell" efficiency="1"
+	<energy refill="ENERGY E-cell power-cell" efficiency="2"
 		capacity="24" />
 </ItemWeapon>
