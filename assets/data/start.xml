@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <start>
-	<system value="Alpha Minoris" />
-	<world value="Alpha Minoris II" />
-	<zone value="zoneE" />
-	<position x="2" y="2" />
+	<system value="Avior" />
+	<world value="Avior II" />
+	<zone value="Avian Village" />
+	<position x="32" y="32" />
 	<item value="laser pistol" />
 	<item value="Knife" />
 	<item value="jumpsuit" />
 	<item value="medkit" />
-	<item value="space meal" />			
+	<item value="space meal" />				
 	<appearance>
 		<bodypart partname="body">
 			<partvalue variablename="height" value="60" />

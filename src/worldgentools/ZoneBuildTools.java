@@ -552,6 +552,11 @@ public class ZoneBuildTools {
 						grid = CloneOverlay(grid);
 						NextPhase(Enode,new NodeMapGenerator(Enode).run(m_zone,grid).getGrid());
 					}
+					if (Enode.getTagName().equals("circles"))
+					{
+						grid = CloneOverlay(grid);
+						NextPhase(Enode,new CircleTool(Enode).run(m_zone,grid).getGrid());
+					}		
 				}
 
 			}
@@ -864,6 +869,11 @@ public class ZoneBuildTools {
 				{
 					grid = GenOverlay();
 					NextPhase(Enode,new NodeMapGenerator(Enode).run(m_zone,grid).getGrid());
+				}
+				if (Enode.getTagName().equals("circles"))
+				{
+					grid = GenOverlay();
+					NextPhase(Enode,new CircleTool(Enode).run(m_zone,grid).getGrid());
 				}
 			}
 

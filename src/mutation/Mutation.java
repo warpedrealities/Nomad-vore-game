@@ -6,6 +6,8 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.util.Scanner;
 
+import javax.xml.soap.Node;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
@@ -53,7 +55,7 @@ public class Mutation {
 		}
 		NodeList children=element.getChildNodes();
 		
-		if (children.getLength()>0)
+		if (children.getLength()>0 && children.item(0).getNodeType()==Node.ELEMENT_NODE)
 		{
 			Element e=(Element)children.item(0);
 			if (e.getTagName().equals("proportional"))

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="forest0.png">
+	<landingsite x="32" y="32" />
+	<zonerules ruleset="avianvillage" />	
+	<tileset count-x="8" count-y="8">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="0" movement="0"> wooden platform </tile>
+		<tile sprite="2" vision="1" movement="2"> tree trunk</tile>
+		<tile sprite="3" vision="1" movement="2"> wooden wall</tile>		
+		<tile sprite="4" vision="0" movement="1"> void</tile>
+	</tileset>
+
+	<description></description>
+
+	<mapgen>
+		<partition xmin="24" xmax="40" ymin="24" ymax="40">
+			<floodfill tile="1">
+
+			</floodfill>
+		</partition>		
+			<towngrid minhouses="12" maxhouses="20" tile="3" path="1"
+				registerRooms="true">
+				<floodfill tile="1">
+				<SeedNPCs min="16" max="32" name="avians/avianVillager">
+				</SeedNPCs>
+				</floodfill>
+			</towngrid>
+		<circles min="1" max="5" minCircles="64" maxCircles="64">
+			<floodfill tile="2">
+			</floodfill>		
+		</circles>
+		<floodfill tile="4">
+		</floodfill>	
+
+		<auditpaths carve="4" replace="1" />	
+	</mapgen>
+
+</zone>

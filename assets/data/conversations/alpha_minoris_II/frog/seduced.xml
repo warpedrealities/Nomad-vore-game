@@ -13,10 +13,10 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-		<choice destination="study" text="study her">
+	<!-- 	<choice destination="study" text="study her">
 			<assertnot evaluate="hasEntry" entry="lifeforms/froggirl.xml" />
 			<assertnot evaluate="hasResearch" research="frog-girl" />
-		</choice>
+		</choice> -->
 		<choice destination="end" text="darn" />
 	</page>
 

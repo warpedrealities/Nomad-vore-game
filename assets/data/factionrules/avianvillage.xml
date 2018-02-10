@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<rules>
+	<superRule subject="avian" level="2" violation="ATTACK">
+		<factionRelationship faction="avian" mod="-10" />
+	</superRule>
+	<witness name="avian" />	
+</rules>

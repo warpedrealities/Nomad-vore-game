@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<world>
+	<entitysprite filename="greenmoon" size="1.0" />
+	<zone x="0" y="0" type="SURFACE">Avian Village</zone>
+</world>

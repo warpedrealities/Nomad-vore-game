@@ -213,6 +213,7 @@ public class Player_RPG implements Actor_RPG {
 		statMax=new int[4];
 		attributes=new int[21];
 		subAbilities=new float[6];
+		moveChoice=0;
 		for (int i=0;i<21;i++)
 		{
 			attributes[i]=0;
@@ -275,6 +276,7 @@ public class Player_RPG implements Actor_RPG {
 	{
 		int pl=playerLevel+1;
 		return pl*(5*(pl*5));
+		
 	}
 	
 	
@@ -703,6 +705,7 @@ public class Player_RPG implements Actor_RPG {
 		statMax=new int[4];
 		subAbilities=new float[6];
 		attributes=new int[21];
+		moveChoice=0;
 		for (int i=0;i<14;i++)
 		{
 			attributes[i]=0;

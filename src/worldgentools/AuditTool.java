@@ -27,6 +27,10 @@ public class AuditTool {
 	}
 
 	private void createPoints(boolean widgets, boolean npcs, boolean pointsOfInterest, int exclude,int replace) {
+		if (zone.getLandingSite()!=null)
+		{
+			points.add(new Vec2i((int)zone.getLandingSite().x,(int)zone.getLandingSite().y));
+		}
 		if (widgets == true) {
 			for (int i = 0; i < zone.getWidth(); i++) {
 				for (int j = 0; j < zone.getHeight(); j++) {

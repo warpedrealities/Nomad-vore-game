@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<System>
+	<Star x="0" y="0" sprite="star" intensity="15" />
+	<World x="6" y="-6">Avior II</World>	
+	<spawnRules>
+	<spawn script="pirates"/>
+	</spawnRules>
+</System>

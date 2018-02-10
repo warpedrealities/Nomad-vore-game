@@ -7,8 +7,7 @@
 			value="2" attribute="TECH" />
 		<text>This pile of rocks and dirt looks substantial. It'd take ages to clear using manual labour, luckily manual labour doesn't sit well with you and you happen to have the technical know how to blast the dirt away with a controlled explosion.
 		</text>
-		<condition evaluate="LOCALFLAG" operator="equals" value="1"
-			flag="FIRST" />
+		<special effect="blueprint" ID="high explosive" />
 		<choice destination="bomb" text="controlled demolition">
 			<condition evaluate="HASITEM" operator="greaterthan" value="2"
 				item="high explosive" />
@@ -26,9 +25,11 @@
 		<text>
 		You set the explosives, set their fuses...and then run like hell, you don't want to be anywhere near this when the bombs go off. As you've bolting out of the valley you hear the immense earth shaking rumble of a hopefully controlled demolition blasting dirt free of that ship.
 		</text>
+		<effect type="setglobalflag" flag="hauntedValley" value="7" />	
 		<special effect="transition" x="8" y="60" destination="zoneNW" />		
 		<effect type="removeitem" item="high explosive" value="2" />
-		<special effect="worldScript" script="restoreShip" />		
+		<special effect="worldScript" script="restoreShip" />	
+		<special effect="destroywidget" />		
 		<choice destination="end" text="exit" />
 	</page>
 

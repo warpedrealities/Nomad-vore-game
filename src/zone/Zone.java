@@ -534,22 +534,7 @@ public class Zone implements ILosBoard, Zone_int {
 	}
 
 	public void RegenZone() {
-		for (int i = zoneActors.size() - 1; i >= 0; i--) {
-			if (zoneActors.get(i) != null) {
-				if (zoneActors.get(i).Respawn(GameManager.getClock())) {
-					zoneActors.remove(i);
-				}
-				else
-				{
-					if (getTile((int) zoneActors.get(i).getPosition().x, (int) zoneActors.get(i).getPosition().y) != null) {
-						zoneTileGrid[(int) zoneActors.get(i).getPosition().x][(int) zoneActors.get(i).getPosition().y]
-								.setActorInTile(zoneActors.get(i));
-					}
-				}
-			}
-
-		}
-
+		
 		for (int i = 0; i < zoneWidth; i++) {
 			for (int j = 0; j < zoneHeight; j++) {
 				if (zoneTileGrid[i][j] != null) {
@@ -560,9 +545,30 @@ public class Zone implements ILosBoard, Zone_int {
 					{
 						zoneTileGrid[i][j].setThreat(null);
 					}
+					zoneTileGrid[i][j].setActorInTile(null);
 				}
+				
 			}
 		}
+		
+		for (int i = zoneActors.size() - 1; i >= 0; i--) {
+			if (zoneActors.get(i) != null) {
+				if (zoneActors.get(i).Respawn(GameManager.getClock())) {
+					zoneActors.remove(i);
+				}
+				else
+				{
+					zoneActors.get(i).setPosition(new Vec2f((int)zoneActors.get(i).getPosition().x,(int)zoneActors.get(i).getPosition().y));
+					if (getTile((int) zoneActors.get(i).getPosition().x, (int) zoneActors.get(i).getPosition().y) != null) {
+						zoneTileGrid[(int) zoneActors.get(i).getPosition().x][(int) zoneActors.get(i).getPosition().y]
+								.setActorInTile(zoneActors.get(i));
+					}
+				}
+			}
+
+		}
+
+
 	}
 
 	public void Save(DataOutputStream dstream) throws IOException {

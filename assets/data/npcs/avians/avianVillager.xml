@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="avianVillager.png" />
+	<name>avian</name>
+	<description></description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="30" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="4" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the avians's claws fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the avian hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+	<flying />
+	<respawn delay="2000" />
+	<talk conversation="avior_II/avianVillager/chat" />
+	<controller AI="avianVillager" />
+	<faction value="avian" />
+</NPC>

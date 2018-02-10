@@ -57,17 +57,21 @@ public class Effect_Damage extends Effect {
 			break;
 			
 		case Actor_RPG.SHOCK:
-			target.addBusy(strength);
+			target.addBusy(strength/2);
 			break;
 			
 		case Actor_RPG.TEASE:
 			target.addBusy(strength/2);		
 			break;
 		case Actor_RPG.PHEREMONE:
-			target.addBusy(strength/2);		
+			if (strength<1)
+			{
+				strength=1;
+			}
+			strength=strength*2;
 			break;
 		case Actor_RPG.PSYCHIC:
-			target.addBusy(strength/2);		
+			strength=maxValue-target.getRPG().getAttribute(damageType)+bonus;	
 			break;
 		}		
 		return strength;
