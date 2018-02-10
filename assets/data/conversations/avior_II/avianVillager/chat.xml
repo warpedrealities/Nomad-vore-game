@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<text>
+		"Greetings stranger" the harpy chirps and smiles "Welcome to our village."
+		</text>
+		<choice destination="end" text="$Well met birdy"/>
+	</page>
+
+</Conversation>

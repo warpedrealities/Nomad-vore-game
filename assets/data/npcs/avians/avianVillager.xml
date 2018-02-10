@@ -2,7 +2,7 @@
 <NPC>
 	<sprite value="avianVillager.png" />
 	<name>avian</name>
-	<description></description>
+	<description>This harpy's decorated her hair with beads, those shoulder length locks well tended as are her reddish feathers. She looks your way a smile of faint bemusement, seemingly unhurried in what errand she's about. Taking advantage of the moment your gaze drifts past her bared curvaceous breasts and down to her skirted loins and magnificent birdthighs that taper into toned calves and finally end in dexterous clawed feet. She might be more civilized than ones you've seen prior, but she could still be dangerous.</description>
 	<rpg>
 		<experiencevalue value="25" />
 		<ability ability="STRENGTH" value="8" />
