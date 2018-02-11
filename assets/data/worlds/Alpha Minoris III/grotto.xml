@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"?>
+<zone width="16" height="16" spriteset="geothermal.png">
+	<tileset count-x="8" count-y="8">
+		<tile sprite="9" vision="1" movement="2"> rock wall</tile>
+		<tile sprite="1" vision="0" movement="0"> dusty cave floor </tile>
+		<tile sprite="2" vision="0" movement="1"> broken ground </tile>
+		<tile sprite="3" vision="0" movement="0"> cracked </tile>
+		<tile sprite="10" vision="0" movement="0"> web covered cave floor </tile>		
+		<tile sprite="4" vision="1" movement="2"> stalagmite </tile>
+			
+	</tileset>
+
+	<description>This chamber's unique smell and copious webbing makes you realize you may have intruded on the nest of something dangerous</description>
+
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="16">
+			<row>1111111211111111</row>
+			<row>1111111211111111</row>			
+			<row>1111111211111111</row>
+			<row>1111552225511511</row>
+			
+			<row>1115222222651251</row>	
+			<row>1115222222652251</row>	
+			<row>1115222222655251</row>	
+			<row>1115222222655251</row>	
+			
+			<row>1115222222252251</row>			
+			<row>1111522222511251</row>	
+			<row>1111156655112251</row>	
+			<row>1111115512222511</row>	
+			
+			<row>1115222222225111</row>		
+			<row>1115522222555111</row>		
+			<row>1111155555111111</row>
+			<row>1111111111111111</row>				
+		</prefab>
+			<conditionalportal sprite="3" x="7" y="0"
+				destination="Cave 2B" ID="12" facing="0">
+				<description>
+					A web covered tunnel
+				</description>
+				<forbidtext>
+					The way is blocked, you cannot escape this way
+				</forbidtext>
+				<condition flag="ARACHNE_BOSSFIGHT" operator="lessthan" value="1" />
+			</conditionalportal>	
+			<placeWidget x="7" y="2" name="SCRIPTEDEVENT">arachneMatronBossFight</placeWidget>		
+				<placeWidget x="13" y="3" name="crystaloutcrop"/>
+				<placeWidget x="12" y="5" name="crystaloutcrop"/>
+				<placeWidget x="12" y="8" name="crystaloutcrop"/>	
+				<placeWidget x="4" y="13" name="crystaloutcrop"/>
+				<placeWidget x="7" y="14" name="crystaloutcrop"/>
+				<placeWidget x="10" y="13" name="crystaloutcrop"/>	
+				<placeWidget x="12" y="12" name="crystaloutcrop"/>
+				<placeWidget x="14" y="10" name="crystaloutcrop"/>				
+	</mapgen>
+
+</zone>

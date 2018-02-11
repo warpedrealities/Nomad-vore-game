@@ -27,7 +27,12 @@ public class WidgetHarvestable extends Widget {
 
 	public WidgetHarvestable(Element node) {
 		widgetSpriteNumber = Integer.parseInt(node.getAttribute("sprite"));
-		isVisionBlocking = false;
+		isVisionBlocking = false;	
+		if (node.getAttribute("blocksVision").equals("true"))
+		{
+			isVisionBlocking = true;	
+		}
+
 		isWalkable = false;
 		NodeList children = node.getChildNodes();
 		for (int i = 0; i < children.getLength(); i++) {

@@ -440,6 +440,9 @@ public class ZoneBuildTools {
 						ngrid = CloneOverlay(grid);
 						Floodfill(Enode, ngrid);
 					}
+					if (Enode.getTagName() == "conditionalportal") {
+						new WidgetPlacer(m_zone).placeConditionalPortal(Enode, 0, 0);
+					}
 					if (Enode.getTagName() == "perlin") {
 						ngrid = CloneOverlay(grid);
 						PerlinFramework.useFramework(ngrid, Enode, this);
@@ -713,6 +716,9 @@ public class ZoneBuildTools {
 					}
 					tool.runPathCarver(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
 							widgetselection);
+				}
+				if (Enode.getTagName() == "conditionalportal") {
+					new WidgetPlacer(m_zone).placeConditionalPortal(Enode, 0, 0);
 				}
 				if (Enode.getTagName() == "auditpathsthroughvoid") {
 					AuditTool tool = new AuditTool(m_zone, pointsOfInterest);

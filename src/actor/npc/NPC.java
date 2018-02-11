@@ -215,6 +215,14 @@ public class NPC extends Actor implements Controllable {
 				if (Enode.getTagName().equals("crew")) {
 					crewSkill=new Crew(Enode);
 				}
+				if (Enode.getTagName() == "scripts") {
+					String death=null;
+					if (Enode.getAttribute("death").length()>0)
+					{
+						death=Enode.getAttribute("death");
+					}
+					scripts=new ScriptPackage(null,death);
+				}
 			}
 		}
 

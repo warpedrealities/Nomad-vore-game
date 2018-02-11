@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="improvised fuel canister" requiredskill="3" startunlocked="false">
+	<description>
+		An improvised fuel canister, compacts fuel to make it easier to carry in a more condensed form.
+	</description>
+	<ingredient item="blue crystal" quantity="8" />
+	<ingredient item="scrap metal" quantity="2" />
+	<result item="improvised fuel canister" />
+</recipe>

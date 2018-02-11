@@ -9,7 +9,9 @@
 		<tile sprite="5" vision="1" movement="2"> stalagmites </tile>
 		<tile sprite="6" vision="0" movement="2"> steam vent </tile>
 		<tile sprite="7" vision="0" movement="2"> steam vent </tile>
+		<tile sprite="10" vision="0" movement="0"> web covered cave floor </tile>			
 		<tile sprite="8" vision="0" movement="1"> covered magma </tile>
+
 	</tileset>
 
 	<description>The tunnels are dark, hot wet air wafts past your face
@@ -30,20 +32,31 @@
 		</preloadprefab>
 		<cavegen iterations="2" tile="0" threshold="35" bounds="100"
 			minfloor="0.5">
-
+			<randprefab width="5" height="5">
+					<row>91119</row>
+					<row>91919</row>
+					<row>99999</row>
+					<row>29992</row>
+					<row>22922</row>								
+					<pairedportal sprite="3" destination="grotto" x="2"
+						y="1" ID="12">a web covered tunnel deeper into the depths</pairedportal>
+					<placeWidget x="2" y="3" name="DESCRIBER">
+						The tunnel descending deeper is covered in webbing, a flow of warmer air being drawn into it produces an unsettling sound that only adds to your unease as everything about this screams danger to your primal self.
+					</placeWidget>			
+				</randprefab>
 			<noise tile="2" scarcity="32" />
 			<noise tile="3" scarcity="32" />
 			<noise tile="4" scarcity="32" />
 			<noise tile="5" scarcity="32" />
 			<noise tile="6" scarcity="32" />
 			<noise tile="7" scarcity="32" />
-			<noise tile="8" scarcity="32" />
+			<noise tile="9" scarcity="32" />
 			<floodfill tile="1">
 				<Seedwidgets min="6" max="12" name="crystaldeposit" />
-				<SeedNPCs min="4" max="8" name="AlphaMinoris_III/lixi_breeder">
+<!-- 				<SeedNPCs min="4" max="8" name="AlphaMinoris_III/lixi_breeder">
 				</SeedNPCs>
 				<SeedNPCs min="6" max="10" name="AlphaMinoris_III/lixi_worker">
-				</SeedNPCs>
+				</SeedNPCs> -->
 			</floodfill>
 		</cavegen>
 		<recordEdges zone="Cave 1B" preloadID="2" side="north" />

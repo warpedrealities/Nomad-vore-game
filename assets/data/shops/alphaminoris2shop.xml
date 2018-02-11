@@ -21,6 +21,7 @@
 		quantity="1" />
 	<inventoryitem name="mysterious bottle" probability="100"
 		quantity="1" />
+	<inventoryitem name="feathered fan" probability="100" quantity="1" />		
 	<inventoryitem name="war axe" probability="100" quantity="1" />
 	<inventoryitem name="zymonite" probability="100"
 		quantity="1" cost="400" />

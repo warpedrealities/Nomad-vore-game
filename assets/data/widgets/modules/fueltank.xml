@@ -8,6 +8,9 @@
 		<resourceConversion itemName="volatile crystal" value="2.0" />
 		<resourceConversion itemName="fuel canister(poor)"
 			value="3.0" />
+		<resourceConversion itemName="isotope" value="3.0" />			
+		<resourceConversion itemName="improvised fuel canister"
+			value="8.0" />		
 		<resourceConversion itemName="isotope" value="3.0" />
 	</shipResource>
 

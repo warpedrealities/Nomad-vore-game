@@ -112,9 +112,8 @@ public class Effect_Reinforce extends Effect {
 
 	}
 	
-	private Vec2f getPosition(Vec2f origin)
+	private Vec2f getPositionForDirection(Vec2f origin,int d)
 	{
-		int d=getDirection();
 		
 		Vec2f p=ZoneInteractionHandler.getPos(d*2, new Vec2f(0,0));
 		Vec2f c=origin.replicate();
@@ -129,6 +128,23 @@ public class Effect_Reinforce extends Effect {
 			}
 		}
 		return null;
+	}
+	
+	private Vec2f getPosition(Vec2f origin)
+	{
+		int d=getDirection();
+		Vec2f r=getPositionForDirection(origin,d);
+		int failsafe=0;
+		while (r==null && failsafe<4)
+		{
+			d++;
+			failsafe++;
+			if (d>3){
+				d=0;
+			}
+			r=getPositionForDirection(origin,d);
+		}
+		return r;
 	}
 
 	@Override

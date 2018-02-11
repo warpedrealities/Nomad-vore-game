@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="arachneMatron.png" />
+	<name>Arachne Matron</name>
+	<description>
+	A full figured dark skinned woman whose curvaceous figure transitions with her broad hips into an arachnid exoskeleton clad lower body. Her bone white hair extends as far as this join at her waist and she confidently brushes it away from her face. Her powerful body looms as she strides forwards. Her lower half alone is large and imposing, her six walking legs are tipped in spiked feet and covered in long silvery hairs stained with some form of no doubt dangerous secretions. As she advances her hand drifts down to her netherlips, hinting at the fate that awaits you should you fall into her clutches.
+	</description>
+	<rpg>
+		<experiencevalue value="150" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="100" />
+		<stat stat="RESOLVE" value="100" />
+		<attribute attribute="THERMAL" value="2" />
+		<attribute attribute="KINETIC" value="2" />		
+		<attribute attribute="WILLPOWER" value="2" />			
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2" threatening="true">
+			<effectDamage type="KINETIC" minValue="6" maxValue="10"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>TARGET evades a leg jab from arachne</text>
+				<text>arachne flails at TARGET without effect</text>
+			</missText>
+			<hitText count="2">
+				<text>arachne claws TARGET for VALUE damage</text>
+				<text>arachne skewers TARGET for VALUE damage</text>
+			</hitText>
+		<effectStatus probability="40">
+				<probabilityModifier value="ENDURANCE" />
+				<statusTag tag="poison" />
+				<applyText>TARGET has been poisoned.</applyText>
+				<statusDoT uid="51" icon="7" duration="120" numModifiers="1">
+					<removeText> TARGET is no longer poisoned.</removeText>
+					<affectText> TARGET is poisoned and loses VALUE resolve</affectText>
+					<resist strength="15" tag="poison" test="ENDURANCE" />
+					<effect stat="RESOLVE" modifier="4" />
+				</statusDoT>
+			</effectStatus>			
+		</combatMove>
+	<combatMove name="web" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<missText count="1">
+				<text>arachne launches webbing at TARGET but fails to
+					hit</text>
+			</missText>
+			<hitText count="1">
+				<text>arachne hits TARGET with webbing </text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is now trapped by webbing.</applyText>
+				<statusBind uid="20" icon="4" numModifiers="2">
+					<removeText> TARGET has escaped from the webbing.</removeText>
+					<effect attribute="RANGED" modifier="-2" />
+					<effect attribute="MELEE" modifier="-2" />
+					<bind strength="15" originDependent="true" />
+					<struggle count="2">
+						<text>TARGET struggles to try and get out of the webbing
+						</text>
+						<text>TARGET tries to get out of the webbing to no avail
+						</text>
+					</struggle>
+				</statusBind>
+
+			</effectStatus>
+		</combatMove>		
+	</rpg>
+	<defeated conversation="alpha_minoris_III/arachneMatron/defeat" />
+	<seduced conversation="alpha_minoris_III/arachneMatron/defeat" />
+	<victory conversation="alpha_minoris_III/arachneMatron/victory" />
+	<seducer conversation="alpha_minoris_III/arachneMatron/seducer" />	
+	<controller AI="arachneMatron" />
+	<faction value="monster" />
+	<scripts death="arachneMatronDeath"/>
+</NPC>

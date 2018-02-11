@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="metabolic accelerant" requiredskill="0" startunlocked="false">
+	<description>
+	A small injection of mutagens programmed to accelerate the metabolism. Doubles food requirements but increases strength and agility by 1
+	</description>
+	<ingredient item="mutagen" quantity="1" />
+	<result item="metabolic accelerant" />
+</recipe>

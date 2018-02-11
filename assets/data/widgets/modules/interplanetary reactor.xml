@@ -9,6 +9,8 @@
 		<resourceConversion itemName="fuel cell(poor)"
 			value="3.0" />
 		<resourceConversion itemName="isotope" value="3.0" />	
+		<resourceConversion itemName="improvised fuel canister"
+			value="8.0" />			
 	</shipResource>
 	<shipModifier uid="1" modifies="FUEL_EFFICIENCY"
 		modification="0.5" />
