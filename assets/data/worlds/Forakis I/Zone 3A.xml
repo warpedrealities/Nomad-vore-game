@@ -16,6 +16,18 @@
 	<transition direction="west">Zone 2A</transition>	
 	<transition direction="south">Zone 3B</transition>
 	<mapgen>
+			
+		<prefab positionX="28" positionY="28" width="9">
+			<row>220777022</row>
+			<row>277777772</row>
+			<row>077777770</row>
+			<row>777777777</row>
+			<row>777777777</row>	
+			<row>777777777</row>
+			<row>077777770</row>
+			<row>277777772</row>			
+			<row>200777022</row>
+		</prefab>	
 	<placeWidget x="28" y="28" name="SPAWNER">
 		<radius value="28" />
 		<spawnLimit value="16" />
@@ -27,18 +39,7 @@
 			<data npc="Forakis_I/terror bird" min="1" max="3"
 					chance="50" />							
 		</spawns>
-	</placeWidget>			
-		<prefab positionX="28" positionY="28" width="9">
-			<row>000777000</row>
-			<row>077777770</row>
-			<row>077777770</row>
-			<row>777777777</row>
-			<row>777777777</row>	
-			<row>777777777</row>
-			<row>077777770</row>
-			<row>077777770</row>			
-			<row>200777000</row>
-		</prefab>	
+	</placeWidget>		
 	<partition xmin="16" xmax="48" ymin="16" ymax="48">		
 	<perlin>
 			<band low="-1.0" high="-0.5">
@@ -63,9 +64,10 @@
 			</band>
 			<band low="0.0" high="1.0">	
 				<noise tile="4" scarcity="16" />
-				<noise tile="8" scarcity="16" />					
-				<floodfill tile="2" />
-			</band>					
+				<noise tile="7" scarcity="16" />					
+				<floodfill tile="2">
+				</floodfill>
+				</band>					
 		</perlin>	
 	</partition>
 		<noise tile="4" scarcity="16" />	

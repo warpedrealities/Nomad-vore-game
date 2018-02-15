@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="nav computer" requiredskill="0" startunlocked="true">
+	<description>
+		An advanced computational engine capable of using kilohertz of processing power to provide navigational and piloting assistance. provides +2 navigation to the ship.
+	</description>
+	<ingredient item="computation valve" quantity="10" />
+<tokenRequirement item="roboticist" quantity="1" />	
+	<result item="nav computer" />
+</recipe>

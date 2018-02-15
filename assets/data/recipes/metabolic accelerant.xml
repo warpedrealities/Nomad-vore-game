@@ -4,5 +4,5 @@
 	A small injection of mutagens programmed to accelerate the metabolism. Doubles food requirements but increases strength and agility by 1
 	</description>
 	<ingredient item="mutagen" quantity="1" />
-	<result item="metabolic accelerant" />
+	<result item="metabolic accelerant injection" />
 </recipe>

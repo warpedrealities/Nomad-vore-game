@@ -62,6 +62,9 @@ public class WidgetSystem extends WidgetBreakable {
 				if (Enode.getTagName() == "shipFTL") {
 					systemAbilities.add(new ShipFTL(Enode, m_name));
 				}
+				if (Enode.getTagName() == "shipSimCrew") {
+					systemAbilities.add(new ShipSimCrew(Enode, m_name));
+				}
 			}
 		}
 	}
@@ -120,6 +123,8 @@ public class WidgetSystem extends WidgetBreakable {
 				break;
 			case SA_FTL:
 				systemAbilities.add(new ShipFTL(dstream, m_name));		
+			case SA_CREW:
+				systemAbilities.add(new ShipSimCrew(dstream, m_name));				
 			}
 
 		}

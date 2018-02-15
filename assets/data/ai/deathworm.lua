@@ -18,7 +18,7 @@ function wormBehaviour(controllable,sense)
 		if (distance<12) then
 			move(controllable,x,y)			
 		end
-		messageBehaviour(distance,controllable)
+		messageBehaviour(sense,distance,controllable)
 	end
 end
 
@@ -26,7 +26,7 @@ function move(controllable,x,y)
 	x0=controllable:getValue(1)
 	y0=controllable:getValue(2)	
 
-	if not (x==x0) or not (y==y0)
+	if not (x==x0) or not (y==y0) then
 		if controllable:HasPath() then
 		controllable:FollowPath()
 		else
@@ -40,7 +40,7 @@ function move(controllable,x,y)
 	controllable:setValue(1,y0)	
 end
 
-function messageBehaviour(distance,controllable)
+function messageBehaviour(sense,distance,controllable)
 	c=controllable:getValue(3)
 	c=c+1
 
@@ -62,16 +62,20 @@ end
 function combat(controllable,sense,script)
 	pos=controllable:getPosition()
 	hostile=sense:getHostile(controllable,10,true)
-	if pos:getDistance(hostile:getPosition())<2 then
-	--if in melee range attack
-	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-	else
-	--if not move towards player
-		if controllable:HasPath() then
-		controllable:FollowPath()
+	if not (hostile == nil) then 
+		if pos:getDistance(hostile:getPosition())<2 then
+		--if in melee range attack
+		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 		else
-		controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+		--if not move towards player
+			if controllable:HasPath() then
+			controllable:FollowPath()
+			else
+			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+			end
 		end
+	else
+		start(controllable)
 	end
 end
 

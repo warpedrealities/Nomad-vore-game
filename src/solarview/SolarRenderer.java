@@ -8,12 +8,15 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
 import nomad.StarSystem;
+import nomad.Universe;
 import particlesystem.ParticleEmitterAdvanced;
 import rendering.Sprite;
 import rendering.SpriteBatch;
 import rendering.SpriteManager;
 import rendering.SpriteRotatable;
+import shared.Geometry;
 import shared.Vec2f;
+import shared.Vec2i;
 
 public class SolarRenderer extends SpriteManager {
 
@@ -93,7 +96,28 @@ public class SolarRenderer extends SpriteManager {
 			addSprite(sprite, currentSystem.getEntities().get(i).getSprite() + ".png");
 			// attach to entity
 			currentSystem.getEntities().get(i).setSpriteObj(sprite);
-
+		}
+		
+		
+	}
+	
+	public void generateWarpHelpers(float distance, Universe universe)
+	{
+		for (int i=0;i<8;i++)
+		{
+			Vec2i p=Geometry.getPos(i, 0, 0);
+			StarSystem system=universe.getSystem(p.x, p.y);
+			if (system!=null)
+			{
+				
+				Vec2f pos=new Vec2f (p.x*1,p.y*-1);
+				pos.normalize();
+				pos.x*=40;
+				pos.y*=40;
+				Sprite sprite= new Sprite(pos,2,1);
+				sprite.setVisible(true);
+				addSprite(sprite,"warpTarget"+".png");
+			}
 		}
 	}
 

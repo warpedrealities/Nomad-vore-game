@@ -20,6 +20,7 @@ import shipsystem.ShipFTL;
 import shipsystem.ShipModifier;
 import shipsystem.ShipResource;
 import shipsystem.ShipShield;
+import shipsystem.ShipSimCrew;
 import shipsystem.WidgetDamage;
 import shipsystem.WidgetSystem;
 import widgets.WidgetAccomodation;
@@ -112,6 +113,11 @@ public class SpaceshipAnalyzer {
 										}
 										ftl+=f;
 										driveCount++;
+										break;
+									case SA_CREW:
+										ShipSimCrew sim=(ShipSimCrew)system.getShipAbilities().get(k);
+										stats.getCrewStats().addCrewSkill(sim.getCrew());
+										
 										break;
 									default:
 										break;

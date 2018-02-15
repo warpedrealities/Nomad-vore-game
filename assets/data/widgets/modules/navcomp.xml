@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<shipsystem sprite="56" name="nav computer" health="30">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>An advanced computational engine capable of using kilohertz of processing power to provide navigational and piloting assistance. provides +2 navigation to the ship.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipSimCrew skill="NAVIGATION" value="2" />
+</shipsystem>

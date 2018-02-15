@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="nav computer" weight="10" value="1000">
+	<description>An advanced computational engine capable of using kilohertz of processing power to provide navigational and piloting assistance. provides +2 navigation to the ship.</description>
+	<placeditem widget="modules/navcomp" />
+</ItemWidget>

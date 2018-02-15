@@ -97,7 +97,11 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		starscape.setCurrentPosition(playerShip.getPosition());
 		((SpriteRotatable) (playerShip.getSpriteObj())).setFacing(r);
 		warpRenderer=new WarpController(renderer.getParticleEmitter(),playerShip);
-	
+		if (spaceship.getShipStats().getCrewStats().getNavigation()>=1)
+		{
+			generateWarpHelpers();
+		}
+		
 		if (warp)
 		{
 			int dir=(int) Geometry.getAngle(0, 0, playerShip.getPosition().x,playerShip.getPosition().y*-1);
@@ -107,6 +111,11 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		}
 	}
 
+	private void generateWarpHelpers()
+	{
+		renderer.generateWarpHelpers(40, Universe.getInstance());
+	}
+	
 	@Override
 	public void Update(float dt) {
 

@@ -13,6 +13,7 @@ end
 
 
 function main(controllable, sense, script)  
+	pos=controllable:getPosition()
 	hostile=sense:getHostile(controllable,10,true)
 	if not (hostile == nil ) then
 	--combat ai here

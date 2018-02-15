@@ -450,7 +450,7 @@ public class CombatMove {
 				// apply effect to target
 				boolean critical = false;
 				boolean visible = getVisible(target.getPosition());
-				if (r >= def + 10 && r < 100 && Player.class.isInstance(origin) && Actor.class.isInstance(target)) {
+				if (r > def + 10 && r < 100 && Player.class.isInstance(origin) && Actor.class.isInstance(target)) {
 					critical = true;
 				}
 				for (int i = 0; i < effects.size(); i++) {

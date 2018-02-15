@@ -1,10 +1,26 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text>
-		
-		</text>
-
+		<preference fetish="demis" />
+		<preference fetish="females" />	
+		<preference fetish="unbirth" />		
+	<text>
+	The arachne matron mhmms as you fall before her, smirking an indulgent and taunting smirk as she looms over you. She only takes a few moments to indulge in the revel that is her victory before moving over into indulging in you however. Loops of thread cast out by her to grab ahold of your legs afore she hauls them up, dangling you upside down in front of her.. Your weak struggles and attempts to strike at her only result in her laughing as you jostle her breasts, but soon after she's shoving you down and this time into herself. The spider femme cramming you headfirst into her insatiable nether reaches. Her thick pussy drool coating your shoulders and chest as she forces you down into herself with a delighted and resonant moan.
+	</text>
+	<choice destination="unbirth0" text="*fed to that ravenous arachne snatch*"/>
+	</page>
+	
+	<page ID="unbirth0">
+	<text>
+	You kick your legs around to try and dislodge her grasp but seemingly to no avail. What few blows you do manage to land she seems to shrug off her bountiful pillows with a laugh as she pushes you deeper in. The arachne rearing herself up so she can more easily force you down through her abyssal birthcanal and into the sticky embrace of her womb. You can feel the floor pushing up at you through the abdomen wall as she forces more of you to curl inside of her, shoving your hips and thighs into her nethers despite your best efforts.
+	</text>
+	<choice destination="unbirth1" text="*you're no match for this mighty spider"/>
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	
+	</text>
 	</page>
 
 </Conversation>

@@ -7,7 +7,10 @@
 		<tile sprite="1" vision="0" movement="0"> wooden platform </tile>
 		<tile sprite="2" vision="1" movement="2"> tree trunk</tile>
 		<tile sprite="3" vision="1" movement="2"> wooden wall</tile>		
-		<tile sprite="4" vision="0" movement="1"> void</tile>
+		<tile sprite="4" vision="0" movement="1"> a perilous drop</tile>
+		<tile sprite="5" vision="0" movement="1"> forest floor, far below</tile>
+		<tile sprite="6" vision="0" movement="1"> the distant ground</tile>
+		<tile sprite="7" vision="0" movement="1"> a long way down</tile>		
 	</tileset>
 
 	<description></description>
@@ -29,6 +32,9 @@
 			<floodfill tile="2">
 			</floodfill>		
 		</circles>
+		<noise tile="5" scarcity="22" />
+		<noise tile="6" scarcity="22" />
+		<noise tile="7" scarcity="22" />		
 		<floodfill tile="4">
 		</floodfill>	
 

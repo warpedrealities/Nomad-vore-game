@@ -4,7 +4,7 @@
 	<name>Scarab</name>
 	<description>
 	This robotic beetle looks weathered and worn, its armoured carapace pitted and scoured by the sand. Yet somehow the machine functions after all this time in this inhospitable environment, perhaps clues lie in the signs of repair work here and there on its limbs and the myriad small tool tipped manipulater limbs tucked under its armoured body. The scarab is clearly some kind of repair bot, perhaps having no purpose but to maintain its existence for all these years of wandering.
-	<description>
+	</description>
 	<rpg>
 		<experiencevalue value="100" />
 		<ability ability="STRENGTH" value="5" />

@@ -8,7 +8,7 @@
 		<text>
 		A sharp, almost stunning pain suddenly skewers you, impacting you hard enough to cause you to stagger and fall to your knees, your arm instinctively reaching to hold the injury. You attempt to get back to your feet and stumble, unable to stand. Getting away is no longer an option, and the marauder that shot you quickly catches up, grinning smugly at her prey. “You’re gonna make a good snack, scrub!” She reaches down and grabs you by the ankle, yanking your leg upwards. The violent jolt cause you even more pain, and your vision blurs from the pain. You’re now held upside down over the lioness’ head like a dying animal, a description you’re a good match for, courtesy of her bullets. The lioness opens up, showing off the ravenous maw, letting you have a good look at her wide-open maw and hungry throat, the tongue already sliding out to start lapping at you.
 		</text>
-		<choice destination="persuadeCheck" text="$Please, don’t eat me.”/>
+		<choice destination="persuadeCheck" text="$Please don’t eat me " />
 		<choice destination="oralvore0B" text="*do nothing*"/>
 	</page>	
 

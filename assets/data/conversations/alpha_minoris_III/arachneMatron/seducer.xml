@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
+		<preference fetish="demis" />
+		<preference fetish="females" />	
+		<preference fetish="unbirth" />		
 		<text>
 		
 		</text>

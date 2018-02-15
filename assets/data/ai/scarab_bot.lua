@@ -22,7 +22,7 @@ function melee(controllable,sense,hostile)
 
 end
 
-function combat(controllable,sense,hostile)
+function combat(controllable,sense,hostile,pos)
 	if (controllable:getFlag("overdrive")==1) and (controllable:getValue(0)==0)then
 		controllable:useSelfMove(3)
 		controllable:setValue(0,1)	
@@ -38,13 +38,14 @@ function combat(controllable,sense,hostile)
 end
 
 function main(controllable, sense, script)  
+	pos=controllable:getPosition()
 	if controllable:HasPath() then
 		controllable:FollowPath()
 	else
 		hostile=sense:getHostile(controllable,10,true)
 		if not (hostile == nil ) and not controllable:isPeace() then
 		--combat ai here
-		combat(controllable,sense,hostile)
+		combat(controllable,sense,hostile,pos)
 		else
 		robot(controllable,sense)
 		end

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<preference fetish="cockvore" />
+		
 		<text>
 			The zetamorph looms over you, grinning as she reaches one of her
 			arms
@@ -17,7 +17,12 @@
 			fate
 			at her hands.
 		</text>
-		<choice destination="prelude" text="at her mercy" />
+		<choice destination="prelude" text="at her cock's mercy">
+		<preference fetish="cockvore" />
+		</choice>
+		<choice destination="unbirth0" text="at her loin's mercy">
+		<preference fetish="unbirth" />
+		</choice>
 	</page>
 	<page ID="prelude">
 		<text>
@@ -265,6 +270,7 @@
 		</text>
 	</gameover>
 	<gameover ID="submitGO">
+	
 		<text>
 			The zetamorph feels the last of you slosh away as she jerks off,
 			a hand
@@ -280,6 +286,102 @@
 			made for her out of her dick..then turns away, ultimately while the
 			pleasure of being melted into spunk had been the capstone of your
 			existence..you were just another orgasm to her.
+		</text>
+	</gameover>
+	<page ID="unbirth0">
+	<text>
+			With a grin, she grabs your head with one hand, shoving you underneath her cock
+			and balls, squishing you against a musky smelling slit, as she moaned loudly
+			squirming a bit as she shoved your entire head into her cunny, huffing out as your 
+			vision goes dark. With a few more pushes and shoves, your shoulders and chest manage to
+			slip in next, the zetamorph's body shaking in joy as her cock oozed pre from the pleasure
+			of using your entire body like a dildo.
+			<choice destination="unbirth1" text="deeper" />
+		</text>
+		<choice destination="unbirth1" text="deeper" />
+		</page>
+
+		<page ID="unbirth1">
+		<text>
+			A few more wet shlicks, and almost your entire body was inside the alien, only your legs sticking out
+			kicking rather helplessly in the air as the zetamorph started to jerk off properly, grabbing her cock with
+			two of her hands and massaging and rubbing it, all the while enjoying the squirms you made,sending waves
+			of pleasure through her body, making her moan loudly as she came, squirting out thick ropes of cum all over the 
+			walls and floor, the pleasure of which caused her cunt's walls to clench harder, pulling you in all the way.
+		</text>
+		<choice destination="wombed" text="wombed" />
+		</page>
+		<page ID="wombed">
+	<text>
+			The inside of the zeta was warm, tight and quite wet, the soft walls undulating around you
+			as your body was squelched and squished around, the slowly rising pool of cum already starting 
+			to tingle and soften you up!			
+			
+		</text>
+		<choice destination="UBsubmit" text="surrender" />
+		<choice destination="UBstrugglecheck" text="try and force your way out" />
+		</page>
+		
+		<page ID="UBsubmit">
+	<text>
+			Relaxing in the wetness, you closed your eyes and started to play with yourself
+			enjoying the feeling of your entire body melting down into goop, squishing around and
+			slopping about, your body and mind fading away into wetness.
+			
+		</text>
+		<choice destination="UBsubmitGO" text="*glorp*" />
+		</page>
+		
+		<gameover ID="UBsubmitGO">
+		<text>
+			The zetamorph feels the last of you slosh away as she 
+			starts to rubb at her cunny with two of her hands, knowing that
+			you submitted to her whims making it all that much more sensual.
+			With a few more rubs, she finally spread her lower lips apart, as 
+			she started to gush you out, her entire body shuddering in orgasm
+			as you came splattering out, forming a massive lake of cum underneath her
+			and managing to stain her thighs and the floor with your goopy remains.
+			With a smirk, she sauntered off, your goopy remains left there with a bit of steam
+			coming off of them, but soon that would cool and your life as a alien's cumstain
+			would begin.
+		</text>
+	</gameover>
+	<check ID="UBstrugglecheck">
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="UBstruggleescape" />
+		<outcome destination="UBstruggledigest" />
+	</check>
+	
+	<page ID="UBstruggleescape">
+	<text>
+			Managing to grab a hold of the lower folds with your hands, you force her open
+			making the alien moan in pleasure as you crawl out, being birthed out of the 
+			alien quite forcefully as a still solid and quite wet and sticky explorer.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+		</page>
+		
+		<page ID="UBstruggledigest">
+	<text>
+			Despite your best efforts, the alien was far too strong for you, the powerful thighs clenching around you,
+			the tight walls squishing and squeezing over your form and forcing you to curl up into a tight ball inside 
+			the alien womb. Warm wet liquid sloshed around you, starting to tingle and fill you with a pleasant
+			warmth as your body was slowly melted down by the zetamorph. A loud and content hiss of delight came out of 
+			the zetamoprh as it clenched one last time, and with a wet shlorp, you were mush.
+		</text>
+		<choice destination="UBstruggleGO" text="*glorp*" />
+		</page>
+		
+	<gameover ID="UBstruggleGO">
+		<text>
+			Still barely aware of your wet and sloshy form inside the zetamorph, you feel the alien sit down against a 
+			wall and spread her legs apart, starting to rub at her clit with one hand, stroking her cock with another, and 
+			rubbing over both her breasts with the rest of her hands, moaning and wiggling in pleasure as they cried out!
+			Your sloppy wet form came gushing otu of their cunny, all the while her cock shot ropes of cum into the air. 
+			With a satisfied, knowing smirk, the zetamorph slowly got back up, and walked away, as your consciousness faded, 
+			leaving you as nothing but a wet puddle of pleasure purree.
 		</text>
 	</gameover>
 </Conversation>

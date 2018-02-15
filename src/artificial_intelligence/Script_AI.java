@@ -66,6 +66,7 @@ public class Script_AI implements Controller {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (LuaError e) {
+			System.err.println("script name"+m_name);
 			e.printStackTrace();
 		}
 	}
@@ -88,7 +89,8 @@ public class Script_AI implements Controller {
 			} else {
 				System.out.println("Lua function not found");
 			}
-		} catch (LuaError e) {
+		} catch (LuaError e) {			
+			System.err.println("script name"+m_name);			
 			e.printStackTrace();
 		}
 
