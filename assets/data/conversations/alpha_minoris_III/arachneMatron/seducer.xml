@@ -5,9 +5,16 @@
 		<preference fetish="females" />	
 		<preference fetish="unbirth" />		
 		<text>
-		
+		this scene isn't written yet, sorry.
 		</text>
-
+		<choice destination="gameover" text="i guess you're still gonna kill me anyway though arent you?"/>
 	</page>
+	
+	<gameover ID="gameover" noReform="true">
+	<text>
+	YEP!
+	</text>
+	
+	</gameover>
 
 </Conversation>

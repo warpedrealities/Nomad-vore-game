@@ -53,10 +53,10 @@
 			<noise tile="9" scarcity="32" />
 			<floodfill tile="1">
 				<Seedwidgets min="6" max="12" name="crystaldeposit" />
-<!-- 				<SeedNPCs min="4" max="8" name="AlphaMinoris_III/lixi_breeder">
+				<SeedNPCs min="4" max="8" name="AlphaMinoris_III/lixi_breeder">
 				</SeedNPCs>
 				<SeedNPCs min="6" max="10" name="AlphaMinoris_III/lixi_worker">
-				</SeedNPCs> -->
+				</SeedNPCs>
 			</floodfill>
 		</cavegen>
 		<recordEdges zone="Cave 1B" preloadID="2" side="north" />

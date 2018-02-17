@@ -19,8 +19,22 @@
 	
 	<page ID="unbirth1">
 	<text>
-	
+	The mighty arachnid rubs her abdomen and the bulge of you against the ground and steadily she finishes shoving you down inside of her. Her hands on your ankles sliding your legs steadily out of view into her nether reaches. Those sideways lips sealing up with a schlurk behind your toes as she lets out a deep and abiding mmmph of delight. Your squirming legs joining you trapped curled up deep within the depths of her womb. The powerful birth canal with all its length and musculature sealing tight behind you leaving you trapped and helpless at her mercy. And you suspect such mercy will not be forthcoming as she fondles her bountiful chest and grinds her abdomen against the dirt.
 	</text>
+	<choice destination="unbirth2" text="*dissolution*"/>
 	</page>
-
+	
+	<page ID="unbirth2">
+	<text>
+	The womb walls press around you and despite your struggles you can feel her inner secretions soaking into your form and changing you. Your form softening inside her, your gasps and pants subsiding into wet squelches until you liquidate entirely to the sound of her moans and your own sloppy movements. Your last moments a spasm of hot lustrous sensations afore she claims you entirely, a brew of life giving thick fluid filling her womb now where once an unlucky adventure had been.
+	</text>
+	<choice destination="unbirth3" text="*gestation*"/>
+	</page>
+	
+	<gameover ID="unbirth3" noReform="true">
+	<text>
+	Within her womb your form steadily starts to re-coalesce, not as one oh no. Your life being repurposed, soft shelled eggs forming in a multitudinous mass. Dozens of eggs being made from what once was you and is now to be her future progeny. The arachnid matron crooning in delight as she feels the last glop of life fluid soak into the eggs now forming a lumpy mass within her. Her hands going to her nether reaches as she groans and starts to disgorge a new generation of spiders...plop..plop..egg after egg emerges, handled carefully and set down...she can already tell the intruder will help her produce a virile brood...such ends your tale, but the end of all things is the start of something new.
+	</text>
+	</gameover>
+	
 </Conversation>

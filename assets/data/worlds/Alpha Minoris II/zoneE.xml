@@ -64,7 +64,7 @@
 		
 			<SeedNPCs min="12" max="32" name="AlphaMinoris_II/raptor">
 			</SeedNPCs>
-			<Seedwidgets min="16" max="32" name="dekubush" />
+			<Seedwidgets min="8" max="16" name="dekubush" />
 		</floodfill>
 
 		<auditpaths carve="7" />

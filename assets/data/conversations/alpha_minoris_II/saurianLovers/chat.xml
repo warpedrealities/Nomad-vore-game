@@ -233,7 +233,7 @@
 	<text>
 	"OH thankyou!" Myrai says with a delighted smile after accepting the herb. Oshy rather more physical in her thanks as she gives you a soft and emphatic hug that makes one faintly envious of Myrai. When she disentangles she gives Oshy a snug "I can't wait to see what this can do. Comeon Myrai." she says. Myrai pushes on the chest of her lover for a moment "We gotta reward our friend first." she says. Oshy looks impatient and eager but lets Myrai hand you a bag of coin "It's not much, but it's all I can manage." she says uncertainly, before practically having Oshy jump her bones. 
 	</text> 
-		<effect type="givegold" value="300" />
+		<effect type="givegold" value="600" />
 		<effect type="experience" value="400" />	
 	<effect type="setlocalflag" flag="help" value="2" />		
 	<effect type="setlocalflag" flag="busy" value="1" />	
