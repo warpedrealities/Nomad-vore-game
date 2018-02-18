@@ -99,7 +99,7 @@
 	"Word travels swiftly friend. Their captain has been defeated, their will has been broken..and many of their warriors have vanished into quendi rears as we routed their forces. They will regroup, but you have won us a great victory today."
 	</text>
 	<effect type="setglobalflag" flag="AM_ELF_MISSION0" value="3" />		
-	<effect type="experience" value="400" />	
+	<effect type="experience" value="500" />	
 	<choice destination="end" text="$I am pleased to hear it"/>
 	</page>	
 	
@@ -582,7 +582,7 @@
 		<effect type="setfactionflag" flag="friendship" value="1" />
 		<effect type="removeitem" item="elf statue" value="1" />
 		<effect type="setlocalflag" flag="quest" value="2" />
-		<effect type="givegold" value="100" />
+		<effect type="givegold" value="200" />
 		<effect type="experience" value="100" />
 		<choice destination="end" text="you're welcome" />
 	</page>

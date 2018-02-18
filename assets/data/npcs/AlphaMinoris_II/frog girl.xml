@@ -73,6 +73,7 @@
 	<seduced conversation="alpha_minoris_II/frog/seduced" />
 	<victory conversation="alpha_minoris_II/frog/victory" />
 	<seducer conversation="alpha_minoris_II/frog/seducer" />
+	<captive conversation="alpha_minoris_II/frog/captive" />
 	<controller AI="frog" />
 	<respawn delay="2000" />
 	<faction value="monster" />

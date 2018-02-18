@@ -171,7 +171,7 @@
 	"I have received the report already. You have done well my knight, my trust in your skills was well placed. Already my soldiers drive them back, their surety has been shaken. I suspect it will be more so when they realize how many of their warriors our soldiers devoured during this latest bout of fighting."
 	</text>
 	<effect type="setglobalflag" flag="AM_SAURIAN_MISSION0" value="3" />		
-	<effect type="experience" value="400" />	
+	<effect type="experience" value="500" />	
 	<choice destination="end" text="$I am pleased to hear it"/>
 	</page>		
 	<page ID="talk">

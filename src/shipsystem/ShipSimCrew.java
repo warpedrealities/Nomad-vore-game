@@ -14,7 +14,7 @@ public class ShipSimCrew extends ShipAbility {
 	private Crew crew;
 	
 	public ShipSimCrew(Element node, String name) {
-		
+		abilityType=AbilityType.SA_CREW;
 		crew=new Crew(node);
 	}
 	

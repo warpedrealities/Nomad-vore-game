@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			You open the containment and look at the frog girl inside, who croaks quietly and submissively as you look over them. 
+			They seem to be rather content for now, although she seems a bit nervous. Now, what do you have planned for your captive
+			frog girl?
+		</text>
+		<choice destination="oralvore0" text="*eat her*">
+		<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>		
+		<choice destination="end" text="*put her back*"/>
+	</page>
+	
+	<page ID="oralvore0">
+		<text>
+			Roughly grabbing her head, you yank her against your mouth, which starts to open up wide, starting to swallow her head down! Your 
+			tongue slathered and suckled over her form, making sure to sample that delightful slimy texture as you started to shove the frog 
+			girl's shoulders in, her body not yet struggling, still in shock at the suddenness of your assault. With a few more swallows, you 
+			get down to her breasts, suckling and slurping over them, as the poor frog girl let out a little croak of pleasure, slowly starting 
+			to squirm and resist.
+		</text>
+		<choice destination="oralvore1" text="*swallow down those succulent breasts*"/>
+	</page>
+	
+	<page ID="oralvore1">
+		<text>
+			Making sure your mouth opened wide, you swallowed down her breasts, gulping them down and filling out your throat quite a bit, as she started to 
+			struggle even more, although at this point there was little point, you had already decided she was gonna feed you! With a few more gulps, you were 
+			working down her belly, licking over it a few times as you struggled for a second to start fitting her wide hips into your maw, but after a few 
+			seconds, you were able to shove them in.
+		</text>
+		<choice destination="oralvore2" text="*Tease that snatch, then finish her off*"/>
+	</page>
+	
+	<page ID="oralvore2">
+		<text>
+			With a lewd smirk, you shove your tongue into her snatch, licking and slurping around inside of it, thrusting back and forth and tasting the frog girl's heavenly arousal, teasing and rubbing at every inch of the succulent inner folds, before you felt her hips bucking and squirming even harder, before she finally came, shooting thick globs of femcum down your throat, as you eagerly gulped that down, along with her legs, wet shlorps sounding out as you gulped down the last of the frog girl's body, sending her sliding down your throat and into your stomach.
+		</text>
+		<choice destination="oralvore3" text="She's belly fodder now."/>
+	</page>
+	
+	<page ID="oralvore3">
+		<text>
+			LEtting out a long, wet, satisfied belch, you sit down in a nearby chair and relax, rubbing over your gut and feeling the frog girl struggling weakly inside of you, barely making little indents where she pressed out. "Mmmmppphhhhhh absolutely delicious." You moaned quietly to yourself as your gut got to work digesting her, slowly melting her down into nothing but nutrient soup for you to absorb.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removeCaptive" />
+		<choice destination="end" text="All yours."/>
+	</page>
+	
+</Conversation>

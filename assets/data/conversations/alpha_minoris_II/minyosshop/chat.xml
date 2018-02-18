@@ -57,7 +57,7 @@
 			of coin for
 			your troubles.
 		</text>
-		<effect type="givegold" value="400" />
+		<effect type="givegold" value="500" />
 		<effect type="experience" value="300" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
 

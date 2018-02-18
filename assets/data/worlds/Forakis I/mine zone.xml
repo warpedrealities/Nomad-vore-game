@@ -23,7 +23,6 @@
 				<noise tile="2" scarcity="5" />
 				<floodfill tile="1">
 					<Seedwidgets min="8" max="16" name="crystaldeposit" />
-					</SeedNPCs>
 				</floodfill>
 			</cavegen>
 		</walloff>

@@ -31,13 +31,9 @@
 	<placeWidget x="28" y="28" name="SPAWNER">
 		<radius value="28" />
 		<spawnLimit value="16" />
-		<spawns count="1">
+		<spawns count="3">
 			<data npc="Forakis_I/scarab" min="1" max="1"
-					chance="50" />
-			<data npc="Forakis_I/LionGirl Marauder" min="1" max="3"
-					chance="50" />
-			<data npc="Forakis_I/terror bird" min="1" max="3"
-					chance="50" />							
+					chance="50" />						
 		</spawns>
 	</placeWidget>		
 	<partition xmin="16" xmax="48" ymin="16" ymax="48">		
@@ -60,12 +56,17 @@
 	<partition xmin="8" xmax="56" ymin="8" ymax="56">		
 	<perlin>
 			<band low="-1.0" high="-0.0">
-				<floodfill tile="1" />
+				<floodfill tile="1">
+					<SeedNPCs min="4" max="8" name="Forakis_I/terror bird">
+					</SeedNPCs>					
+				</floodfill>
 			</band>
 			<band low="0.0" high="1.0">	
 				<noise tile="4" scarcity="16" />
 				<noise tile="7" scarcity="16" />					
 				<floodfill tile="2">
+							<SeedNPCs min="4" max="8" name="Forakis_I/LionGirl Marauder">
+					</SeedNPCs>			
 				</floodfill>
 				</band>					
 		</perlin>	

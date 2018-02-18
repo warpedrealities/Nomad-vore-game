@@ -48,6 +48,8 @@
 		</combatMove>	
 		
 	</rpg>
+
+	<respawn delay="2000" />	
 	<defeated conversation="Forakis_I/terror bird/defeat" />
 	<seduced conversation="Forakis_I/terror bird/defeat" />
 	<victory conversation="Forakis_I/terror bird/victory" />

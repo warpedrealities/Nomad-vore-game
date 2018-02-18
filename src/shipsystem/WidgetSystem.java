@@ -123,8 +123,10 @@ public class WidgetSystem extends WidgetBreakable {
 				break;
 			case SA_FTL:
 				systemAbilities.add(new ShipFTL(dstream, m_name));		
+				break;
 			case SA_CREW:
-				systemAbilities.add(new ShipSimCrew(dstream, m_name));				
+				systemAbilities.add(new ShipSimCrew(dstream, m_name));			
+				break;
 			}
 
 		}

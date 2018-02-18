@@ -12,6 +12,10 @@
 		<choice destination="oralvore0" text="she'll make an ample meal">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+		<choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -20,7 +24,7 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-		<choice destination="end" text="mhmm, time to be merciful this time" />
+		<choice destination="end" text="mhmm, time to be merciful this time" />	
 	</page>
 
 	<page ID="devour">
@@ -32,7 +36,12 @@
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>
+<page ID="capture">
+		<special effect="captureNPC" />
+		<text>Yoink. The device worked.</text>
 
+		<choice destination="end" text="Carry on." />
+	</page>
 	<page ID="oralvore0">
 		<text>
 			She looks sexily curvaceous sprawled out like that. But a big gal

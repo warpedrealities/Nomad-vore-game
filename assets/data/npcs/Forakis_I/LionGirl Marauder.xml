@@ -54,10 +54,12 @@
 		<itemDrop chance="50" item="rifle round" />				
 		<itemDrop chance="50" item="gourd" />		
 	</rpg>
-	<defeated conversation="Forakis_I/LionGirl marauder/defeat" />
-	<seduced conversation="Forakis_I/LionGirl marauder/seduced" />
-	<victory conversation="Forakis_I/LionGirl marauder/victory" />
-	<seducer conversation="Forakis_I/LionGirl marauder/victory" />
+
+	<respawn delay="2000" />	
+	<defeated conversation="Forakis_I/LionGirl_marauder/defeat" />
+	<seduced conversation="Forakis_I/LionGirl_marauder/seduced" />
+	<victory conversation="Forakis_I/LionGirl_marauder/victory" />
+	<seducer conversation="Forakis_I/LionGirl_marauder/victory" />
 	<controller AI="guntotingAI" />
 	<faction value="Forakhan_marauders" />
 </NPC>
