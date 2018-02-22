@@ -135,7 +135,8 @@
 			</lootTable>
 
 			<lootTable identity="specialchest">
-				<loot item="questItem" chance="1.0" unique="3" addendum="zorrRejuvenator" />			
+				<loot item="questItem" chance="1.0" unique="3" addendum="zorrRejuvenator" />		
+				<loot item="questItem" chance="1.0" unique="3" addendum="zorrShinyLute" />					
 				<lootSubTable chance="1" file="resource_tier_1" />
 				<lootSubTable chance="0.5" file="resource_tier_1" />
 				<lootSubTable chance="1" file="consumable_Tier_1" />

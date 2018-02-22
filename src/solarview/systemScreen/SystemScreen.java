@@ -14,6 +14,7 @@ import shared.Screen;
 import shared.Vec2f;
 import shared.Vec2i;
 import shipsystem.ShipConverter;
+import solarview.SolarScene;
 import spaceship.Spaceship;
 import spaceship.stats.WarpHandler;
 import view.ZoneInteractionHandler;
@@ -112,6 +113,7 @@ public class SystemScreen extends Screen implements MyListener {
 				{
 				case 22:
 					ship.setWarpHandler(new WarpHandler(data.destination,data.stress));
+					SolarScene.getInterface().updateGUI();
 					((SpriteRotatable)ship.getSpriteObj()).setFacing(data.facing);
 					callback.Callback();	
 					break;

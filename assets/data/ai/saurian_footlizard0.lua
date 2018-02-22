@@ -18,8 +18,8 @@ end
 
 function patrol(controllable,sense,script)
 
-	var_x=script:getShared()getValue(2)
-	var_y=script:getShared()getValue(3)
+	var_x=script:getShared():getValue(2)
+	var_y=script:getShared():getValue(3)
 	if controllable:HasPath() then
 		controllable:FollowPath()
 	else

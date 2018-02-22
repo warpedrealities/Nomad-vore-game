@@ -126,6 +126,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		} else {
 			shipController.controlUpdate(dt);
 			if (clock <= 0) {
+				
 				if (shipController.canAct()) {
 					if (shipController.control(playerShip)) {
 						GUI.update();
@@ -264,6 +265,11 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 			screen.discard(mouseHook);
 			screen = null;
 		}
+	}
+
+	@Override
+	public void updateGUI() {
+		GUI.update();
 	}
 
 }

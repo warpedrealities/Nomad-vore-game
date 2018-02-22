@@ -28,6 +28,6 @@
 			<text>you hit TARGET with a burst of sound for VALUE kinetic damage</text>
 		</hitText>
 	</combatMove>
-	<energy refill="ENERGY E-cell power-cell" efficiency="5"
+	<energy refill="ENERGY E-cell advanced power-cell" efficiency="5"
 		capacity="25" />
 </ItemWeapon>

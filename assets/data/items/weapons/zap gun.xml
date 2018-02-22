@@ -23,6 +23,6 @@
 			<text>you zap TARGET with a nasty jolt for VALUE damage</text>
 		</hitText>
 	</combatMove>
-	<energy refill="ENERGY E-cell power-cell" efficiency="2"
+	<energy refill="ENERGY E-cell advanced power-cell" efficiency="2"
 		capacity="24" />
 </ItemWeapon>

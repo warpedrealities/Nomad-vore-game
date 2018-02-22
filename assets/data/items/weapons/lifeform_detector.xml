@@ -18,5 +18,5 @@ A device the size of a phonebook with a frontage of mysterious electronic dials,
 <range min="2" bonus="2"/>
 </effectScan>
 </combatMove>	
-<energy refill="ENERGY E-cell power-cell" efficiency="2" capacity="10" />
+<energy refill="ENERGY E-cell advanced power-cell" efficiency="2" capacity="10" />
 </ItemWeapon>

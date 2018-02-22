@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="advanced power-cell" weight="1" value="750">
+	<description>
+		A sophisticated power cell, capable of storing unusually large amounts of energy within an ion matrix.
+	</description>
+	<energy refill="ENERGY" efficiency="1" capacity="20" />
+</ItemAmmo>

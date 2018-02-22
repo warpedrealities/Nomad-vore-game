@@ -34,7 +34,8 @@ public class SolarGUI {
 	String[] resourceStrings;
 
 	Text globalPosition;
-
+	Text messages;
+	
 	public SolarGUI() {
 		m_GUImatrix = Game.sceneManager.getConfig().getMatrix();
 
@@ -78,10 +79,13 @@ public class SolarGUI {
 			window.add(resourceTexts[i]);
 		}
 
-		globalPosition = new Text(new Vec2f(0.2F, 2.5F),
+		globalPosition = new Text(new Vec2f(0.2F, 3.5F),
 				"X:" + playerShip.getPosition().x + " Y:" + playerShip.getPosition().y, 0.8F, 0);
 		window.add(globalPosition);
+		messages = new Text(new Vec2f(-15.2F, 0.2F),"", 0.8F, 0);
 
+		window.add(messages);
+		
 		// add buttons
 		Button[] buttons = new Button[4];
 
@@ -101,7 +105,7 @@ public class SolarGUI {
 		GL20.glUniformMatrix4fv(viewMatrix, false, matrix44Buffer);
 
 		window.Draw(matrix44Buffer, objmatrix);
-
+		
 	}
 
 	public void update() {
@@ -117,6 +121,20 @@ public class SolarGUI {
 						+ playerShip.getShipStats().getResource(resourceStrings[i]).getResourceCap());
 			}
 
+		}
+		globalPosition.setString("X:" + playerShip.getPosition().x + " Y:" + playerShip.getPosition().y);
+		handleMessages();
+	}
+	
+	public void handleMessages()
+	{
+		if (playerShip.getWarpHandler()!=null)
+		{
+			messages.setString("establishing warp bubble, do not move, press space");
+		}		
+		else
+		{
+			messages.setString("");
 		}
 	}
 

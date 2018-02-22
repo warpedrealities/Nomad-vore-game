@@ -53,6 +53,7 @@ public class NPCPlacer {
 			NPC npc = new NPC(n, new Vec2f(x, y), name);
 			npc.setScripts(script);
 			npc.setCollisioninterface(zone);
+			zone.getTile(x, y).setActorInTile(npc);
 			zone.getActors().add(npc);
 			if (script != null) {
 				npc.Respawn(Universe.getClock());

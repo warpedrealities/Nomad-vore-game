@@ -52,6 +52,6 @@
 				damage</text>
 		</hitText>
 	</combatMove>
-	<energy refill="ENERGY E-cell power-cell" efficiency="2"
+	<energy refill="ENERGY E-cell advanced power-cell" efficiency="2"
 		capacity="30" />
 </ItemWeapon>
