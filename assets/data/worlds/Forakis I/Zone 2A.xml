@@ -22,7 +22,7 @@
 	<placeWidget x="32" y="32" name="SPAWNER">
 		<radius value="32" />
 		<spawnLimit value="16" />
-		<spawns count="2">
+		<spawns count="1">
 			<data npc="Forakis_I/scarab" min="1" max="1"
 					chance="50" />					
 		</spawns>
