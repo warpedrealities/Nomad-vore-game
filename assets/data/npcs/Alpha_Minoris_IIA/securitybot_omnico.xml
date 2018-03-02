@@ -22,7 +22,7 @@
 		<stat stat="RESOLVE" value="20" />
 		<combatMove name="laser" pattern="RANGED" bonusAttribute="RANGED"
 			timeCost="2" bonusToHit="0" rangedbias="2">
-			<effectDamage type="THERMAL" minValue="1" maxValue="6"
+			<effectDamage type="THERMAL" minValue="2" maxValue="7"
 				modifier="NONE" />
 			<missText count="1">
 				<text>The roboguard fires off its handlasers at TARGET but misses</text>
@@ -39,7 +39,7 @@
 		</statusTags>
 	</rpg>
 
-	<flying />
+	<respawn delay="4000" />
 	<disposition value="25" />
 	<defeated conversation="alpha_minoris_IIA/robot/robotdefeat" />
 	<controller AI="securitybot" />

@@ -38,6 +38,7 @@ import widgets.WidgetScriptPortal;
 import widgets.WidgetScripted;
 import widgets.WidgetSlot;
 import widgets.WidgetSprite;
+import widgets.capsules.WidgetCapsuleSystem;
 import widgets.scriptedEvents.WidgetScriptedEvent;
 import widgets.spawner.WidgetSpawner;
 import zone.Tile;
@@ -303,6 +304,9 @@ public class WidgetPlacer {
 		}
 		if (root.getTagName().contains("capture")) {
 			widget = new WidgetCapture(root);
+		}
+		if (root.getTagName().contains("capsuleSystem")) {
+			widget = new WidgetCapsuleSystem(root);		
 		}
 		if (root.getTagName().contains("scripted")) {
 			WidgetScripted scripted = new WidgetScripted(n);

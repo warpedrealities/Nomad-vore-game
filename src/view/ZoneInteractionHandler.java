@@ -151,6 +151,10 @@ public class ZoneInteractionHandler {
 	}
 
 	public void Interact(Vec2f p, Player player) {
+		if (!m_zone.contains((int)p.x, (int)p.y))
+		{
+			return;
+		}
 		if (m_zone.zoneTileGrid[(int) p.x][(int) p.y] == null) {
 			return;
 		}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="capsule system" requiredskill="0" startunlocked="false">
+<description>
+A compact capsule system for strictly short range orbit to surface travel.
+</description>
+<ingredient item="scrap metal" quantity="20"/>
+<result item="capsule system"/>
+</recipe>

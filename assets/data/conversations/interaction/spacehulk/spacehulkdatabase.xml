@@ -16,11 +16,13 @@
 			SOLAR POWER PLANT LBREAK
 			SPECIMEN CONTAINMENT SYSTEM LBREAK
 			CAPTURE DEVICE LBREAK
+			SURFACE TO ORBIT CAPSULE LBREAK
 			SELECT FILE
 		</text>
 		<choice destination="solar" text="access file, solar power plant" />
 		<choice destination="containment" text="access file, specimen containment system" />
 		<choice destination="capture" text="access file, capture device" />
+		<choice destination="capsule" text="access file, surface to orbit capsule"/>
 		<choice destination="end" text="logout" />
 	</page>
 
@@ -65,4 +67,13 @@
 		<choice destination="databank" text="back" />
 		<choice destination="end" text="logout" />
 	</page>
+	
+	<page ID="capsule">
+		<text>
+			The images linked to this design briefly come across to you as comedic. The vessel appears to be entirely cabin for the cramped transfer of at most a few people across short distances using a pair of engines bolted onto the capsules sides. One assumes it's more practical than its appearance would suggest however as the operational notes indicate its for use to send personnel to a nearby planet and then return them.
+		</text>
+		<special effect="blueprint" ID="capsuleSystem" />
+		<choice destination="databank" text="back" />
+		<choice destination="end" text="logout" />
+	</page>	
 </Conversation>

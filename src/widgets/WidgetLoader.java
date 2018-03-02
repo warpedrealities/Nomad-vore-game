@@ -11,6 +11,8 @@ import shared.ParserHelper;
 import shipsystem.WidgetDamage;
 import shipsystem.WidgetNavConsole;
 import shipsystem.WidgetSystem;
+import widgets.capsules.WidgetCapsule;
+import widgets.capsules.WidgetCapsuleSystem;
 import widgets.scriptedEvents.WidgetScriptedEvent;
 import widgets.spawner.WidgetSpawner;
 import widgets.traps.Widget_Trap;
@@ -72,6 +74,10 @@ public class WidgetLoader {
 			return new WidgetScripted(dstream);
 		case 23:
 			return new WidgetReformer(dstream);
+		case 24:
+			return new WidgetCapsule(dstream);	
+		case 25:
+			return new WidgetCapsuleSystem(dstream);				
 		}
 		return null;
 	}
@@ -128,6 +134,12 @@ public class WidgetLoader {
 			widget = new WidgetSlot(root);
 			WidgetSlot ws = (WidgetSlot) widget;
 
+		}
+		if (root.getTagName().contains("capsuleSystem")) {
+			widget = new WidgetCapsuleSystem(root);
+		}
+		if (root.getTagName().contains("capsule")) {
+			widget = new WidgetCapsule(root);
 		}
 		return widget;
 	}

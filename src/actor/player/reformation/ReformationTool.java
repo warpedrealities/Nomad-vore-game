@@ -6,6 +6,7 @@ import actor.player.Player;
 import item.Item;
 import item.ItemCoin;
 import nomad.Entity;
+import nomad.StarSystem;
 import nomad.Universe;
 import shared.Vec2f;
 import view.ZoneInteractionHandler;
@@ -65,9 +66,18 @@ public class ReformationTool {
 	
 	private boolean checkReform()
 	{
+		if (checkEntity(entity))
+		{
+			return true;
+		}
+		return checkNearbyEntities();
+	}
+	
+	private boolean checkEntity(Entity e)
+	{
 		for (int i=0;i<handler.getMachines().size();i++)
 		{
-			Zone z=entity.getZone(handler.getMachines().get(i).getZoneName());
+			Zone z=e.getZone(handler.getMachines().get(i).getZoneName());
 			if (z!=null)
 			{
 				//find the actual machine
@@ -76,6 +86,23 @@ public class ReformationTool {
 				{
 					destination=p;
 					zone=z;
+					return true;
+				}
+			}
+		}		
+		return false;
+	}
+	
+	private boolean checkNearbyEntities()
+	{
+		StarSystem system=Universe.getInstance().getcurrentSystem();
+		Vec2f p=entity.getPosition();
+		for (int i=0;i<system.getEntities().size();i++)
+		{
+			if (system.getEntities().get(i)!=entity && system.getEntities().get(i).getPosition().getDistance(p)<1.5F)
+			{
+				if (checkEntity(system.getEntities().get(i)))
+				{
 					return true;
 				}
 			}

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<capsuleSystem sprite="88" name="capsule system" health="20">
+	<contains minimum="1" maximum="4">scrap metal</contains>
+	<description>A compact capsule for short range surface to orbit travel. Open the pod bay doors hal.</description>
+	<capsuleMechanics fuelUse="2.0" sprite="87"/>
+	<resistance resists="KINETIC" strength="4"></resistance>
+</capsuleSystem>

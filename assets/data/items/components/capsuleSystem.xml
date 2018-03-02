@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="capsule system" weight="20" value="2000">
+	<description>A compact capsule system for strictly short range orbit to surface travel.</description>
+	<placeditem widget="modules/capsuleSystem" />
+</ItemWidget>

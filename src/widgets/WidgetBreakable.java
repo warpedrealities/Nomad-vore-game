@@ -168,7 +168,6 @@ public class WidgetBreakable extends Widget implements Attackable {
 	}
 
 	public WidgetBreakable(DataInputStream dstream) throws IOException {
-		// TODO Auto-generated constructor stub
 		commonLoad(dstream);
 		load(dstream);
 	}

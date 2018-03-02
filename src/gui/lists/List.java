@@ -111,7 +111,19 @@ public class List extends GUIBase implements Callback {
 					slider.setIndex(m_offset);
 				}
 			}
+			if (input.Keyboard.isKeyDown(GLFW.GLFW_KEY_UP)) {
+				if (m_select < m_strings.length - 1) {
+					m_select++;
+					m_delay = 0.2F;
+				}
 
+			}
+			if (input.Keyboard.isKeyDown(GLFW.GLFW_KEY_DOWN)) {
+				if (m_select > 0) {
+					m_select--;
+					m_delay = 0.2F;
+				}
+			}
 		} else {
 			m_delay -= DT;
 		}

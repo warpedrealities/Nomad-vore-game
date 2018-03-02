@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<capsule sprite="89" name="capsule" health="20">
+	<contains minimum="1" maximum="4">scrap metal</contains>
+	<description>A compact capsule for short range surface to orbit travel. Currently landed on a planet.</description>
+	<resistance resists="KINETIC" strength="4"></resistance>
+</capsule>
