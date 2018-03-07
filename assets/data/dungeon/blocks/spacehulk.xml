@@ -1,5 +1,36 @@
 <?xml version="1.0"?>
 <blocks>
+
+	<block name="hall">
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>22211222</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>21111112</row>
+		<row>21111112</row>
+		<row>22211222</row>
+
+	</block>
+	<block name="wide loop">
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>11111111</row>
+		<row>11111111</row>
+		<row>11122111</row>
+		<row>11222211</row>
+		<row>11222211</row>
+		<row>11122111</row>
+		<row>11111111</row>
+		<row>11111111</row>
+
+	</block>	
 	<block name="NS corridor">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />

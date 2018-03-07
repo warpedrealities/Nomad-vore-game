@@ -62,7 +62,7 @@ public class TestScene extends SceneBase {
 		GL20.glUniform4f(m_variables[0], 1.0F, 1.0F, 1.0F, 1);
 		int tex = GL20.glGetUniformLocation(Game.m_pshader, "texture_diffuse");
 		GL20.glUniform1i(tex, 0);
-		testsquare.Draw(m_variables[2], m_variables[0], matrix44Buffer);
+		testsquare.draw(m_variables[2], m_variables[0], matrix44Buffer);
 		m_GUImatrix.store(matrix44Buffer);
 		matrix44Buffer.flip();
 		GL20.glUniformMatrix4fv(m_variables[1], false, matrix44Buffer);
@@ -85,7 +85,7 @@ public class TestScene extends SceneBase {
 	public void end() {
 		// TODO Auto-generated method stub
 		CleanTextures();
-		testsquare.Discard();
+		testsquare.discard();
 		text.discard();
 		window.discard();
 		textinput.discard();

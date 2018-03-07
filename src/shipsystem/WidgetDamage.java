@@ -31,7 +31,7 @@ public class WidgetDamage extends Widget {
 		widgetSpriteNumber=24;
 		
 		damageValue=dstream.readInt();
-		widgetDescription="A rent in the interior caused by hull damage to the ship. represents"+damageValue+" hull damage";	
+		widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";	
 	}
 	
 	@Override
@@ -47,7 +47,7 @@ public class WidgetDamage extends Widget {
 
 	public void setDamageValue(int damageValue) {
 		this.damageValue = damageValue;
-		widgetDescription="A rent in the interior caused by hull damage to the ship. represents"+damageValue+" hull damage";	
+		widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";	
 	}
 
 	private void repair(Player player)
@@ -64,11 +64,12 @@ public class WidgetDamage extends Widget {
 		}
 		damageValue-=r;
 
-		ViewScene.m_interface.DrawText("conducting hull repairs, 2 scrap used to recover"+r+" hull points");	
+		ViewScene.m_interface.DrawText("conducting hull repairs, 2 scrap used to recover "+r+" hull points");	
 		if (damageValue<=0)
 		{
 			ViewScene.m_interface.RemoveWidget(this);
 		}	
+		widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";	
 	}
 	
 	public boolean Interact(Player player)

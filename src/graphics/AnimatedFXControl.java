@@ -6,21 +6,24 @@ import java.util.Queue;
 
 import org.lwjgl.util.vector.Vector4f;
 
+import graphics.rays.Ray;
 import rendering.SquareRenderer;
+import rendering.Square_Int;
 import shared.Vec2f;
 
 public class AnimatedFXControl {
 
 	Queue<FX> visualEffects;
 	FX currentVisualEffect;
-	SquareRenderer[] m_squares;
+	Square_Int[] m_squares;
 
 	public AnimatedFXControl() {
 		visualEffects = new LinkedList<FX>();
 
-		m_squares = new SquareRenderer[2];
+		m_squares = new Square_Int[3];
 		m_squares[0] = new SquareRenderer(255, new Vec2f(0, 0), new Vector4f(1, 0, 0, 1));
 		m_squares[1] = new SquareRenderer(254, new Vec2f(0, 0), new Vector4f(1, 0, 0, 1));
+		m_squares[2] = new Ray(253, new Vec2f(0, 0), new Vector4f(1, 0, 0, 1));		
 	}
 
 	public void Update() {
@@ -33,6 +36,7 @@ public class AnimatedFXControl {
 					m_squares[currentVisualEffect.getIndex()].reposition(currentVisualEffect.getPosition());
 					m_squares[currentVisualEffect.getIndex()].setColour(currentVisualEffect.getRed(),
 							currentVisualEffect.getGreen(), currentVisualEffect.getBlue());
+					currentVisualEffect.update(m_squares[currentVisualEffect.getIndex()]);
 				} else {
 					currentVisualEffect = null;
 				}
@@ -43,7 +47,7 @@ public class AnimatedFXControl {
 
 	public void Draw(int matrixloc, int tint, FloatBuffer matrix44fbuffer) {
 		if (currentVisualEffect != null) {
-			m_squares[currentVisualEffect.getIndex()].Draw(matrixloc, tint, matrix44fbuffer);
+			m_squares[currentVisualEffect.getIndex()].draw(matrixloc, tint, matrix44fbuffer);
 		}
 
 	}
@@ -70,7 +74,7 @@ public class AnimatedFXControl {
 
 	public void discard() {
 		for (int i = 0; i < m_squares.length; i++) {
-			m_squares[i].Discard();
+			m_squares[i].discard();
 		}
 
 	}

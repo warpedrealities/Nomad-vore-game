@@ -257,4 +257,10 @@ public class Sprite implements Square_Int,Renderable {
 	{
 		return this.batch;
 	}
+
+	@Override
+	public void setColour(float r, float g, float b) {
+		// TODO Auto-generated method stub
+		
+	}
 }

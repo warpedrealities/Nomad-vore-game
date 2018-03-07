@@ -2,6 +2,9 @@ package combat.effect;
 
 import nomad.Universe;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -46,13 +49,14 @@ public class Effect_Status extends Effect {
 	int probability;
 	int probabilityModifier = -1;
 	float rangedDecay = 0;
-	StatusEffect effect;
+	List <StatusEffect> effects;
 	String applyText;
 	String statusTag;
 	boolean inverseTag;
 	boolean replaceStatus;
 
 	public Effect_Status(Element element) {
+		effects=new ArrayList<StatusEffect>();
 		probability = Integer.parseInt(element.getAttribute("probability"));
 
 		if (element.getAttribute("rangedDecay").length() > 0) {
@@ -83,35 +87,35 @@ public class Effect_Status extends Effect {
 					applyText = e.getTextContent();
 				}
 				if (e.getTagName().equals("statusAttribMod")) {
-					effect = new Status_AttribMod(e);
+					effects.add(new Status_AttribMod(e));
 				}
 				if (e.getTagName().equals("statusStun")) {
-					effect = new Status_Stun(e);
+					effects.add(new Status_Stun(e));
 				}
 				if (e.getTagName().equals("statusBind")) {
-					effect = new Status_Bind(e);
+					effects.add(new Status_Bind(e));
 				}
 				if (e.getTagName().equals("statusSubAbilityMod")) {
-					effect = new Status_SubAbilityMod(e);
+					effects.add(new Status_SubAbilityMod(e));
 				}
 				if (e.getTagName().equals("statusStealth")) {
-					effect = new Status_Stealth(e);
+					effects.add(new Status_Stealth(e));
 				}
 				if (e.getTagName().equals("statusDefence")) {
-					effect = new Status_Defence(e);
+					effects.add( new Status_Defence(e));
 				}
 				if (e.getTagName().equals("statusDoT")) {
-					effect = new Status_DoT(e);
+					effects.add(new Status_DoT(e));
 				}
 				if (e.getTagName().equals("statusFaction")) {
-					effect = new StatusFaction(e);
+					effects.add(new StatusFaction(e));
 				}
 			}
 		}
 	}
 
 	public Effect_Status() {
-
+		effects=new ArrayList<StatusEffect>();
 	}
 
 	@Override
@@ -133,40 +137,54 @@ public class Effect_Status extends Effect {
 		// probability
 		if (modprob >= 100) {
 			// apply
-			StatusEffect clone = effect.cloneEffect();
-
-			float d = origin.getPosition().getDistance(target.getPosition());
-			if (d > 2 && rangedDecay > 0) {
-				float decay = d * rangedDecay;
-				clone.modifyStrength(decay, false);
-
-				if (!clone.isEffective()) {
-					return 0;
+			boolean affect=false;
+			for (int i=0;i<effects.size();i++)
+			{
+				
+			
+				StatusEffect clone = effects.get(i).cloneEffect();
+	
+				float d = origin.getPosition().getDistance(target.getPosition());
+				if (d > 2 && rangedDecay > 0) {
+					float decay = d * rangedDecay;
+					clone.modifyStrength(decay, false);
+	
+					if (!clone.isEffective()) {
+						return 0;
+					}
+	
 				}
-
+	
+				if (proportionalEffect != null) {
+	
+					float m = target.getRPG().getStatMax(proportionalEffect.stat);
+					float v = target.getRPG().getStat(proportionalEffect.stat);
+					float p = v / m;
+					float fr = 1 - proportionalEffect.proportion;
+					clone.modifyStrength((p * proportionalEffect.proportion) + fr, true);
+	
+				}
+	
+				if (Status_Bind.class.isInstance(clone)) {
+					Status_Bind bind = (Status_Bind) clone;
+					bind.setOrigin(origin);
+				}
+				boolean b = false;
+				if (target.getRPG().hasStatus(clone.getUID())) {
+					b = true;
+				}
+				if (target.getRPG().applyStatus(clone, replaceStatus)) {
+					clone.setOrigin(origin);
+					if (!b)
+					{
+						affect=true;	
+					}
+					
+				}
 			}
-
-			if (proportionalEffect != null) {
-
-				float m = target.getRPG().getStatMax(proportionalEffect.stat);
-				float v = target.getRPG().getStat(proportionalEffect.stat);
-				float p = v / m;
-				float fr = 1 - proportionalEffect.proportion;
-				clone.modifyStrength((p * proportionalEffect.proportion) + fr, true);
-
-			}
-
-			if (Status_Bind.class.isInstance(clone)) {
-				Status_Bind bind = (Status_Bind) clone;
-				bind.setOrigin(origin);
-			}
-			boolean b = false;
-			if (target.getRPG().hasStatus(clone.getUID())) {
-				b = true;
-			}
-			if (target.getRPG().applyStatus(clone, replaceStatus)) {
-				clone.setOrigin(origin);
-				if (applyText.length() > 0 && !b) {
+			if (affect)
+			{
+				if (applyText.length() > 0) {
 					// write apply text
 					if (applyText.contains("TARGET")) {
 						ViewScene.m_interface.DrawText(applyText.replace("TARGET", target.getName()));
@@ -175,20 +193,23 @@ public class Effect_Status extends Effect {
 					}
 				}
 			}
-
 			return 0;
 		} else {
 			int r = Universe.m_random.nextInt(100);
 			if (r < modprob) {
-				StatusEffect clone = effect.cloneEffect();
-				clone.setOrigin(origin);
-				if (Status_Bind.class.isInstance(clone)) {
-					Status_Bind bind = (Status_Bind) clone;
-
-				}
-				// apply
-				if (target.getRPG().applyStatus(clone, replaceStatus)) {
-					ViewScene.m_interface.DrawText(applyText.replace("TARGET", target.getName()));
+				for (int i=0;i<effects.size();i++)
+				{
+					StatusEffect clone = effects.get(i).cloneEffect();
+					clone.setOrigin(origin);
+					if (Status_Bind.class.isInstance(clone)) {
+						Status_Bind bind = (Status_Bind) clone;
+	
+					}
+					// apply
+					if (target.getRPG().applyStatus(clone, replaceStatus)) {
+						ViewScene.m_interface.DrawText(applyText.replace("TARGET", target.getName()));
+					}
+				
 				}
 				return 0;
 			}
@@ -197,8 +218,8 @@ public class Effect_Status extends Effect {
 		return 0;
 	}
 
-	public StatusEffect getEffect() {
-		return effect;
+	public List<StatusEffect> getEffects() {
+		return effects;
 	}
 
 	@Override
@@ -209,7 +230,10 @@ public class Effect_Status extends Effect {
 		statusEffect.probabilityModifier = probabilityModifier;
 		statusEffect.rangedDecay = rangedDecay;
 		statusEffect.replaceStatus = replaceStatus;
-		statusEffect.effect = effect.cloneEffect();
+		for (int i=0;i<effects.size();i++)
+		{
+			statusEffect.effects.add(effects.get(i).cloneEffect());
+		}
 
 		statusEffect.applyText = applyText;
 		statusEffect.statusTag = statusTag;

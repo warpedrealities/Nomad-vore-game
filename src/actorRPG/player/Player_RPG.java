@@ -39,6 +39,7 @@ import item.instances.ItemStack;
 import actor.Actor;
 
 import actor.Modifier;
+import actor.Modifier_Element;
 import actor.player.Inventory;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
@@ -557,9 +558,18 @@ public class Player_RPG implements Actor_RPG {
 
 	@Override
 	public void RemoveModifier(Modifier modifier) {
-		for (int i=0;i<modifier.getNumModifiers();i++)
+		for (int i=0;i<modifier.numModifiers();i++)
 		{
-			attributes[i]-=modifier.getModifier(i);
+			Modifier_Element element=modifier.getModifier(i);
+			switch(element.getType())
+			{
+			case 0:
+				attributes[element.getIndex()]-=element.getValue();
+				break;
+			case 1:
+				subAbilities[element.getIndex()]-=element.getValue();
+				break;
+			}
 		}
 	}
 
@@ -567,11 +577,20 @@ public class Player_RPG implements Actor_RPG {
 
 	@Override
 	public void AddModifier(Modifier modifier) {
-		for (int i=0;i<modifier.getNumModifiers();i++)
+		for (int i=0;i<modifier.numModifiers();i++)
 		{
-			attributes[i]+=modifier.getModifier(i);
+			Modifier_Element element=modifier.getModifier(i);
+			switch(element.getType())
+			{
+			case 0:
+				attributes[element.getIndex()]+=element.getValue();
+				break;
+			case 1:
+				subAbilities[element.getIndex()]+=element.getValue();
+				break;
+			}
 		}
-		
+
 	}
 
 

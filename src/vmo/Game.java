@@ -103,11 +103,11 @@ public class Game implements SceneManager {
 
 		sceneManager = this;
 		graphicsConfiguration = new Config();
-		
-		  try { System.setErr(new PrintStream(new
-		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
-		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
-		
+//		
+//		  try { System.setErr(new PrintStream(new
+//		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
+//		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
+//		
 		
 		// Initialize GLFW. Most GLFW functions will not work before doing this.
 		if (!glfwInit())
@@ -326,12 +326,9 @@ public class Game implements SceneManager {
 	public void Update(double dt) {
 		// update
 		m_currentscene.Update((float) dt);
-
-		// m_gman.Update((float)dt);
-
 		glfwPollEvents();
-		// render
 		mouseInput.update();
+		// render
 		Draw();
 	}
 

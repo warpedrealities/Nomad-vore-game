@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="harness" requiredskill="0" startunlocked="true">
+	<description>
+	A pocketed harness designed to distribute weight more evenly and increase carrying capacity.
+	</description>
+	<ingredient item="fabric" quantity="6" />
+	<result item="harness" />
+</recipe>

@@ -63,6 +63,7 @@
 		<floodfill tile="3">
 		
 			<SeedNPCs min="12" max="32" name="AlphaMinoris_II/raptor">
+			<script death="raptordeath" />
 			</SeedNPCs>
 			<Seedwidgets min="8" max="16" name="dekubush" />
 		</floodfill>
@@ -80,6 +81,11 @@
 				<data npc="AlphaMinoris_II/draconian" min="1" max="1" chance="25" />
 			</spawns>
 		</placeWidget>
+		<partition xmin="0" xmax="64" ymin="32" ymax="4">
+			<SeedNPCs min="6" max="12" name="AlphaMinoris_II/raptorHuntress">
+			<script spawn="huntressSpawn" death="huntressHunt" />
+			</SeedNPCs>
+		</partition>		
 	</mapgen>
 
 </zone>

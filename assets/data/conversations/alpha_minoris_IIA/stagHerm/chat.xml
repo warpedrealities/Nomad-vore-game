@@ -6,134 +6,62 @@
 		<!--first meeting -->
 		<text>
 			The stag demi looks both at once innocent and shameless. You can see
-			she's unfamiliar with her surroundings and you, her inexperience in
-			her eyes. But on the other hand, she has no shame to cover that shaft
-			of hers and flaunts it dangling from her hips as she looks down at
-			you "....hello?" she asks uncertainly, reaching out one hand to touch
-			you.
+			she's unfamiliar with her surroundings and with you, her inexperience clear in
+			her eyes. But on the other hand with that innocence she has no shame to cover that shaft
+			of hers. Your new pet flaunting that hefty dangling length as she looks down at
+			you "....hello?" she asks uncertainly, reaching out one hand to touch your face as if to confirm this is a real world.
 		</text>
 		<choice destination="initial0"
 			text="$hello, I am PNAME and I brought you into this world." />
 		<effect type="setlocalflag" flag="talked" value="1" />
 	</page>
-
+	
 	<page ID="initial0">
-		<text>
-			"Your name is PNAME " the stag herm smiles "and you made me" she says,
-			seeming to accept this unconditionally, though then a thought occurs
-			"but if your name is PNAME then what is my name?"
-		</text>
-		<choice destination="initial1"
-			text="$I think I will call you Eve, it seems fitting" />
+	<text>
+	"You made me, but i have memories..or at they dreams.." luckily the stagherm seems to disregard any remnants of her life as a fawn. She smiles uncertainly "You are PNAME and you made me, but what did you make me for?"
+	</text>
+	<choice destination="initial0A" text="$To see if it could be done mainly, though now you're here I'm sure you'll prove good to have around"/>
+	<choice destination="initial0B" text="$I want some company on my travels, a companion so I'm not alone on my journey"/>
+	<choice destination="initial0C" text="$I want a sexy and well hung playmate to have fun with"/>
+	</page>
+	
+	
+	<page ID="initial0A">
+	<text>
+	"OH, well.. I see." she seems uncertain how to react to an explaination like that "Well, I'm glad you'll want to keep me around now. I'm sure I can be good." she says and then headtilts "Though if you're PNAME ? then who am I?" she asks, leaning forward intently.
+	</text>
+	<choice destination="initial1" text="$well, let me think. I'll call you eve"/>
+	</page>
+	
+	<page ID="initial0B">
+	<text>
+	"OH, well. I wouldn't want to be all alone." she smiles "I can keep you company." she says and then asks "Though if your name is PNAME ? then what is mine?"
+	</text>
+	<choice destination="initial1" text="$well, let me think. I'll call you eve"/>
+	</page>
+
+	<page ID="initial0C">
+	<text>
+	"oh umm, well. I don't know much about how to play..that way." she says and then follows how you're looking at her "but maybe you'll teach me?" she says before adding "But i don't want to just be called playmate.. you have a name, can i have a name?"
+	</text>
+	<choice destination="initial1" text="$well, let me think. I'll call you eve"/>
 	</page>
 
 	<page ID="initial1">
-		<text>
-			"Eve...eve? I like it." Eve says, after thinking a bit about the moniker you'd
-			given her. "What happens now?" she asks squatting down, cock bobbing
-			with the motion
-		</text>
-		<choice destination="initial2"
-			text="$Now I think you need some more time to get your bearings, but after that...well, with a tool like that I think it'd be best I teach you how we can have fun together" />
+	<text>
+	
+	</text>
+	
 	</page>
-
-	<page ID="initial2">
-		<text>
-			"What tool?" asks the innocent Eve and looking around without looking down. Unaware it seems of your roving gaze.
-		</text>
-		<choice destination="initial3"
-			text="$That member of yours, down between your legs." />
-	</page>
-
-	<page ID="initial3">
-		<text>
-			She looks down and seems to notice that hefty cock of hers for the first time, reaching down to stroke over it and then look to you "oh, you like this part of me?"
-		</text>
-		<choice destination="end"
-			text="$yes, very much, and I look forward to our lessons and playtime together Eve. For now, just try and get used to being you." />
-	</page>
-
+		
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
 			value="1" />
 		<!--subsequent meetings -->
 		<text>
-			"PNAME, you want something?" Eve asks as you approach, smiling at her tutor
-			and playmate.
-		</text>
-		<choice destination="lessons"
-			text="$yes it's time to teach you another lesson Eve" />
-
-		<choice destination="well" text="$just wanted to make sure you're well Eve" />
-		<choice destination="end" text="$No eve, but maybe later" />
-	</page>
-
-	<page ID="well">
-		<text>
-			"I'm okay PNAME, thanks for asking. You're good to me." she says and
-			smiles as she touches you gently with her hand. She's gentle for one
-			so large.
-		</text>
-		<choice destination="end" text="$Yes, I'll check back later" />
-	</page>
-
-	<page ID="lessons">
-		<text>
-			"Oh goody, what am I going to learn today?" asks Eve, a look of
-			eagerness on her face as she looks down at you expectantly.
-		</text>
-
-		<choice destination="CTF0"
-			text="$I think it's time you learned a special lesson today Eve">
-			<preference fetish="cocktransformation" />
-			<assertion evaluate="haspart" part="vagina" />
-			<assertion evaluate="hasEntry" entry="lifeforms/zetamorph.xml" />
-		</choice>
-		<choice destination="end"
-			text="$actually on second thoughts I can't think of anything to teach you" />
-		<choice destination="end"
-			text="$actually can we wait and give you another lesson later" />
-	</page>
-
-	<page ID="CTF0">
-		<text>
-			"A special lesson? more special than any of the others?" asks the big
-			herm and then blushes as you caress her shaft and slip in closer to
-			her.
-		</text>
-		<choice destination="CTF1"
-			text="$oh yes, see I've been wanting to teach you this one for a while, ever since I saw how you flaunted this thing" />
-	</page>
-
-	<page ID="CTF1">
-		<text>
-			"Ah, what's the lesson and why now?" asks Eve as her shaft begins to firm
-			up, that magnificent organ starting to rise to attention as you
-			stroke it and lay a kiss on the rising tip.
-		</text>
-		<choice destination="CTF2"
-			text="$The lesson, is how to turn your friend PNAME into your magnificent cock" />
-	</page>
-
-	<page ID="CTF2">
-		<text>
-			"I can do that?" the herm blushes heavily and looks down at you, seeing
-			you nod she bites her lip and looks thoughtful "but won't that mean
-			you like, won't be around to teach me anymore?" she asks, apparently
-			catching on even with the distraction of you stroking over that organ
-			you're planning to become on your sexy pet herm.
-		</text>
-		<choice destination="CTF3"
-			text="$I'll be hanging between your legs silly, i'll always be with you" />
-	</page>
-
-	<page ID="CTF3">
-		<text>
 
 		</text>
 
 	</page>
-
-	<choice destination="CTF4" text="$hush up and turn me into your dick Eve" />
 
 </Conversation>

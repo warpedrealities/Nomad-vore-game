@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="improvised fuel canister" requiredskill="3" startunlocked="false">
+<recipe name="improvised fuel canister" requiredskill="2" startunlocked="true">
 	<description>
 		An improvised fuel canister, compacts fuel to make it easier to carry in a more condensed form.
 	</description>

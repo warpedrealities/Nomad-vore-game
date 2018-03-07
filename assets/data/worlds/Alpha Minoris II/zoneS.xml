@@ -67,7 +67,9 @@
 		<floodfill tile="2">
 			<Seedwidgets min="2" max="3" name="goldherb_bush" />	
 			<Seedwidgets min="16" max="32" name="herb bush" />
-			<SeedNPCs min="8" max="16" name="AlphaMinoris_II/gator" />
+			<SeedNPCs min="8" max="16" name="AlphaMinoris_II/gator">
+				<script death="gatorDeath" />
+			</SeedNPCs>
 			<SeedNPCs min="6" max="12" name="AlphaMinoris_II/frog girl" />		
 		</floodfill>
 		<degrade chance="10" degradethis="7" replacewith="4" />

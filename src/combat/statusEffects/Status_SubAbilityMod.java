@@ -4,6 +4,8 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import javax.swing.Icon;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -17,7 +19,7 @@ import view.ViewScene;
 public class Status_SubAbilityMod implements StatusEffect {
 
 	int uid;
-	int spriteIcon;
+	int spriteIcon=-1;
 	int duration;
 	String removeText;
 	AttribMod[] modifiers;
@@ -28,7 +30,10 @@ public class Status_SubAbilityMod implements StatusEffect {
 
 	public Status_SubAbilityMod(Element e) {
 		uid = Integer.parseInt(e.getAttribute("uid"));
-		spriteIcon = Integer.parseInt(e.getAttribute("icon"));
+		if (e.getAttribute("icon").length()>0)
+		{
+			spriteIcon = Integer.parseInt(e.getAttribute("icon"));			
+		}
 		if (e.getAttribute("duration").length() > 0) {
 			duration = Integer.parseInt(e.getAttribute("duration"));
 		}
@@ -98,7 +103,7 @@ public class Status_SubAbilityMod implements StatusEffect {
 		for (int i = 0; i < modifiers.length; i++) {
 			((Player_RPG) subject).modSubAbility(modifiers[i].attribute, modifiers[i].modifier * -1);
 		}
-		if (ViewScene.m_interface != null && !suppressMessages) {
+		if (removeText!=null && ViewScene.m_interface != null && !suppressMessages) {
 			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		}
 	}

@@ -35,7 +35,7 @@
 			<effectDamage type="KINETIC" minValue="2" maxValue="12"
 				modifier="STRENGTH" />
 		</combatMove>
-
+		<itemDrop chance="10" item="pearl" />	
 	</rpg>
 
 	<respawn delay="1000" />

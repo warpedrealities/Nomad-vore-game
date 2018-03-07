@@ -29,7 +29,7 @@ a=script:getValue(0)
 b=controllable:getHealth()
 c=controllable:getValue(0)
 c=c+1
-controllable:setValue(0)
+controllable:setValue(0,c)
 a=a+1
 script:setValue(0,a)
 if (a>3 or b<20 or c>10) then
@@ -64,5 +64,10 @@ a=script:getValue(0)
 if (a>0) then
 	a=a-1
 	script:setValue(0,a)
+end
+if (a==0) then
+	script:getShared():setValue(0,0)
+else
+	script:getShared():setValue(0,1)
 end
 end

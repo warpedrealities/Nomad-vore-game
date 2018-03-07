@@ -9,8 +9,20 @@
 			"Greetings immortal, what can I do for you today?" she says pausing her
 			exercises to turn and face you once more
 		</text>
+		<choice destination="offer0" text="Well I have a confession" />
+		<choice destination="hunting0" text="As one warrior to another, do you have any tasks that would be a worthy challenge?">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="0" />
+		</choice>
+		<choice destination="hunting1" text="Can we discuss the matter of the hunt?">
+			<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="1" />
+			<condition operator="lessthan" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="5" />		
+		</choice>		
 		<choice destination="end" text="nothing, but I just wanted to say hi" />
 	</page>
+
 
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
@@ -44,9 +56,92 @@
 			exercises to turn and face you once more.
 		</text>
 		<choice destination="offer0" text="Well I have a confession" />
+		<choice destination="hunting0" text="As one warrior to another, do you have any tasks that would be a worthy challenge?">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="0" />
+		</choice>
+		<choice destination="hunting1" text="Can we discuss the matter of the hunt?">
+			<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="1" />
+			<condition operator="lessthan" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="5" />		
+		</choice>
 		<choice destination="end" text="nothing, but I just wanted to say hi" />
 	</page>
-
+	<page ID="hunting1">
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="4" />			
+	<text>
+	"Indeed, how goes the hunt? have you bested three of these experienced hunters yet? or has your courage and skill proven inadequate for the task?"	
+	</text>
+	<choice destination="hunting1Complete" text="Yes in fact, I've defeated these raptors."/>
+	</page>
+	
+	<page ID="hunting1Complete">
+	<text>
+	"Indeed? very well, then here is your reward. And more than that, I recognize your achievement. You came to me seeming weak and soft, now I see that you have a hidden well of strength. May your hunts be fruitful and your belly ever full traveller."
+	</text>
+	<effect type="givegold" value="750" />
+	<effect type="setglobalflag" flag="minyos_monsterhunt_0" value="5" />		
+	<choice destination="end" text="It's about time, farewell Awari and may your belly be ever full as well"/>
+	</page>
+	
+	<page ID="hunting1">
+	<condition operator="lessthan" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="4" />			
+	<text>
+	"Indeed, how goes the hunt? have you bested three of these experienced hunters yet? or has your courage and skill proven inadequate for the task?"	
+	</text>
+	<choice destination="end" text="Not yet, but that doesn't mean I'm giving up, i will return"/>
+	</page>
+	
+	<page ID="hunting0">
+			<condition operator="greaterthan" evaluate="GLOBALFLAG"
+				flag="raptorsKilled" value="10" />
+	<text>
+	"Hmm, you seek a worthy task? very well, I have heard word that once more the yellowbacks have been seen in the valley. These raptors are more fierce than their fellows but they seldom stray so close to our village. Something might of riled them up. Slay 3 of them and return, I will reward you and these hunters will know to keep their distance from our homes."
+	</text>
+	<choice destination="hunting0Accept" text="I accept this challenge Awari"/>
+	<choice destination="hunting0Refuse" text="I don't have time for this"/>
+	</page>
+	
+	<page ID="hunting0Accept">
+	<text>
+	"They are fierce, but if you feel confident you are their match... very well, they have not come too close to the village yet. You may have to trek further south than you are used to in order to seek them out. I look forward to hearing of your triumph, or your defeat..whichever the fates have in store for you"
+	</text>
+	<effect type="setglobalflag" flag="minyos_monsterhunt_0" value="1" />	
+	<choice destination="end" text="I will return soon and triumphant Awari, don't you worry about that"/>
+	</page>
+	
+	<page ID="hunting0Refuse">
+	<text>
+	"And yet you came to me asking for a challenge, why ask for an opportunity at proving only to shirk the doing. Begone if that is your attitude"
+	</text>
+	<choice destination="end" text="Has anyone ever told you you're a difficult person? fine i'm leaving"/>
+	</page>
+	
+	<page ID="hunting0">
+		<condition operator="lessthan" evaluate="GLOBALFLAG"
+			flag="raptorsKilled" value="10" />
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="rockscleared"
+			value="0" />				
+	<text>
+	"I cannot think of anything traveller, perhaps I will have work for you 'nother time."
+	</text>
+		<choice destination="end" text="very well, farewell awari" />
+	</page>
+	
+	<page ID="hunting0">
+		<condition operator="lessthan" evaluate="GLOBALFLAG"
+			flag="raptorsKilled" value="10" />
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="rockscleared"
+			value="1" />		
+	<text>
+	"Are there not enough challenges facing the evil of our ancient foe traveller? get ye hence to bring the fight to the saurians if you think yourself still untested. I can think of no task I myself would place upon you, perhaps another time this will change but for now, get ye hence."
+	</text>
+	<choice destination="end" text="very well, farewell awari" />
+	</page>
+	
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
 			value="1" />

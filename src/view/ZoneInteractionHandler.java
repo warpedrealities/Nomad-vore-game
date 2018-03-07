@@ -167,14 +167,16 @@ public class ZoneInteractionHandler {
 					// check for widget to interact with
 					if (m_zone.zoneTileGrid[(int) p.x][(int) p.y].getWidgetObject() != null) {
 						m_zone.zoneTileGrid[(int) p.x][(int) p.y].getWidgetObject().Interact(player);
-						player.TakeAction();
-						if (WidgetBreakable.class
-								.isInstance(m_zone.zoneTileGrid[(int) p.x][(int) p.y].getWidgetObject())) {
-							WidgetBreakable w = (WidgetBreakable) m_zone.zoneTileGrid[(int) p.x][(int) p.y]
-									.getWidgetObject();
-							violationCheck(w.getName(), p, ViolationType.Interact);
+						if (m_zone.contains((int)p.x, (int)p.y))
+						{
+							player.TakeAction();
+							if (WidgetBreakable.class
+									.isInstance(m_zone.zoneTileGrid[(int) p.x][(int) p.y].getWidgetObject())) {
+								WidgetBreakable w = (WidgetBreakable) m_zone.zoneTileGrid[(int) p.x][(int) p.y]
+										.getWidgetObject();
+								violationCheck(w.getName(), p, ViolationType.Interact);
+							}
 						}
-
 					}
 				}
 			} else {

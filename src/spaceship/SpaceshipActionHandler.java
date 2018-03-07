@@ -1,6 +1,7 @@
 package spaceship;
 
 import shared.Vec2f;
+import shipsystem.WidgetDamage;
 import solarview.SolarScene;
 import spaceship.Spaceship.ShipState;
 import view.ViewScene;
@@ -9,6 +10,7 @@ import vmo.Game;
 import widgets.WidgetPortal;
 import worldgentools.ZoneBuildTools;
 import zone.Landing;
+import zone.Tile;
 import zone.Zone;
 import zone.Zone.zoneType;
 import landingScreen.LandingScreen;
@@ -224,6 +226,27 @@ public class SpaceshipActionHandler {
 		removePortalLinks(ship);
 		removePortalLinks(host);
 		host.setDockedShip(null);
+	}
+
+	public void heal(Spaceship ship) {
+		if (ship.getZone(0)!=null)
+		{
+			Zone z=ship.getZone(0);
+			for (int i=0;i<z.getWidth();i++)
+			{
+				for (int j=0;j<z.getHeight();j++)
+				{
+					Tile t=z.getTile(i, j);
+					if (t!=null)
+					{
+						if (WidgetDamage.class.isInstance(t.getWidgetObject()))
+						{
+							t.setWidget(null);
+						}
+					}
+				}
+			}
+		}
 	}
 
 }

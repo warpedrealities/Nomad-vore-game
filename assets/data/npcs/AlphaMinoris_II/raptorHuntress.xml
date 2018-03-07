@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="raptorHuntress.png" />
+	<name>raptor huntress</name>
+	<description>The raptor huntress casts her gaze over you and sizes you up, she seems a cut above the regular raptors. She shares their sleek athletic physique, though maybe has an inch or two in height over the younger sort. Her body is mostly covered in reddish brown scales though she's daubed herself in places with smears of some yellow substance giving her a few streaks on her scales and a more tribal air. She retains the exposure of her tanned skin on her hands, feet and much of the front of her torso and the insides of her thighs. And of course, no raptor would be complete without that reptilian tail and a set of prominent claws which you can only assume she knows how to use. She seems to cock her head to the side as she finishes her assessment of you around the time you do yours, letting out a chirping call that is answered by other voices nearby..this cannot bode well.</description>
+	<rpg>
+		<experiencevalue value="50" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="2" />
+		<attribute attribute="PARRY" value="2" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2" threatening="true">
+			<effectDamage type="KINETIC" minValue="2" maxValue="7"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>The huntress fails to claw TARGET</text>
+				<text>The huntress's kick does not connect with TARGET </text>
+			</missText>
+			<hitText count="2">
+				<text>The huntress claws TARGET for VALUE damage</text>
+				<text>The huntress kicks TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+	<combatMove name="buff" pattern="CIRCLE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="10">
+			<statusAttribMod uid="17" icon="12" duration="40"
+				numModifiers="2">
+				<statusTag tag="raptor" inverse="true" />
+				<applyText>TARGET has become frenzied</applyText>
+				<removeText> TARGET is no longer frenzied</removeText>
+				<effect attribute="MELEE" modifier="2" />			
+				<effect attribute="WILLPOWER" modifier="2" />			
+			</statusAttribMod>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatMove>		
+		<itemDrop chance="10" item="fruit" />
+		<itemDrop chance="10" item="deku nut" />
+		<statusTags count="1">
+			<tag>raptor</tag>
+		</statusTags>		
+	</rpg>
+	<defeated conversation="alpha_minoris_II/raptor/defeat" />
+	<seduced conversation="alpha_minoris_II/raptor/seduced" />
+	<victory conversation="alpha_minoris_II/raptor/victory" />
+	<seducer conversation="alpha_minoris_II/raptor/victory" />
+	<captive conversation="alpha_minoris_II/raptor/captive" />	
+	<controller AI="raptorHuntress" />
+	<respawn delay="2000" />
+	<faction value="monster" />
+</NPC>

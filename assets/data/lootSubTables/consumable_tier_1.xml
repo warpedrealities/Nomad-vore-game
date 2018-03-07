@@ -7,6 +7,7 @@
 	<loot item="bullets" chance="4" />
 	<loot item="frag rocket" chance="2" />	
 	<loot item="staid" chance="2" />
+	<loot item="mule" chance="2" />		
 	<loot item="isotope" chance="1" />
 	<loot item="Sublime" chance="1" />
 	<loot item="Meek" chance="1" />

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ItemConsumable name="mule" weight="1" value="300">
+	<description>Mule. This drug increases your ability to bear heavy loads through a muscular stimulant and a pain deadening narcotic. However, this addles the mind and slows reactions limiting ones defences. +4 to carry capacity multiplier, -4 to will, parry and dodge.
+	</description>
+	<effectstatus probability="100">
+		<statusTag tag="pharma" />
+		<applyText>TARGET is now under the effect of mule</applyText>
+		<statusAttribMod uid="24" icon="16" duration="200"
+			numModifiers="3">
+			<effect attribute="WILLPOWER" modifier="-4" />
+			<effect attribute="PARRY" modifier="-4" />
+			<effect attribute="DODGE" modifier="-4" />				
+			<removeText>mule has worn off
+			</removeText>
+		</statusAttribMod>
+		<statusSubAbilityMod uid="25" duration="200" numModifiers="1">
+		<effect attribute="CARRY" modifier="4"/>
+		</statusSubAbilityMod>
+	</effectstatus>
+
+</ItemConsumable>

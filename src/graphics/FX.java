@@ -1,6 +1,8 @@
 package graphics;
 
+import rendering.SpriteBeam;
 import rendering.SquareRenderer;
+import rendering.Square_Int;
 import shared.Vec2f;
 
 public class FX {
@@ -63,9 +65,8 @@ public class FX {
 		lifeSpan = 20;
 	}
 
-	public void update(SquareRenderer square) {
+	public void update(Square_Int square) {
 		this.lifeSpan--;
-
 	}
 
 }

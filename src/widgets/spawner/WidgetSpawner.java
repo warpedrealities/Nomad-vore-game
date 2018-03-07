@@ -18,6 +18,7 @@ import org.w3c.dom.NodeList;
 
 import actor.Actor;
 import actor.npc.NPC;
+import actor.npc.ScriptPackage;
 import faction.FactionLibrary;
 import nomad.Universe;
 import shared.ParserHelper;
@@ -186,12 +187,12 @@ public class WidgetSpawner extends Widget {
 			Element n = (Element) doc.getFirstChild();
 			NPC npc = new NPC(n, new Vec2f(0, 0), data.getFilename());
 			for (int i = 0; i < count; i++) {
-				placeNPC(zone, npc, p);
+				placeNPC(zone, npc, p,data.getDeathScript());
 			}
 		}
 	}
 
-	private void placeNPC(Zone zone, NPC npc, Vec2i p) {
+	private void placeNPC(Zone zone, NPC npc, Vec2i p, String deathScript) {
 		while (true) {
 
 			int x = Universe.m_random.nextInt(radius * 2) - radius + p.x;
@@ -201,6 +202,10 @@ public class WidgetSpawner extends Widget {
 			if (zone.getTile(x, y) != null && zone.getTile(x, y).getDefinition().getMovement() == TileMovement.WALK) {
 				NPC nunpc = new NPC(npc, new Vec2f(x, y));
 				zone.getActors().add(nunpc);
+				if (deathScript!=null)
+				{
+					nunpc.setScripts(new ScriptPackage(null,deathScript));
+				}
 				nunpc.setCollisioninterface(zone);
 				for (int i = 0; i < spawnIDs.length; i++) {
 					if (spawnIDs[i] == -1) {

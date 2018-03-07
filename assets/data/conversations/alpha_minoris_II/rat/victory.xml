@@ -1,141 +1,71 @@
 <?xml version="1.0"?>
 <Conversation>
 
-	<page ID="start">
-		<preference fetish="analvore" />
-				<preference fetish="demis" />
-		<preference fetish="females" />		
-		<text>
-			You fall and sprawl out in front of the grinning rat girl. She
-			happily
-			squeaks and right away flops on top of your head. You can feel
-			her
-			soft, warm buttocks wiggle and rub against you, slowly spreading
-			wider apart. The ratgirl is smaller than you, so attempts to stuff
-			you inside will be just silly, but that doesn't stop her and you can
-			feel how the tight pucker slowly stretches wider and wider, until
-			suddenly it rolls all over your head. The greedy girl squeaks out and
-			moans with pleasure, now sitting on your shoulders.
-		</text>
-		<choice destination="analvore0" text="impossible voyage" />
-	</page>
+<page ID="start">
+<preference fetish="analvore"/>
+<text>
+You fall and sprawl out in front of the grinning rat girl. She happily squeaks and right away flops on top of your head. You can feel her soft, warm buttocks wiggle and rub against you, slowly spreading wider apart. The ratgirl is smaller than you, so attempts to stuff you inside will be just silly, but that doesn't stop her and you can feel how the tight pucker slowly stretches wider and wider, until suddenly it rolls all over your head. The greedy girl squeaks out and moans with pleasure, now sitting on your shoulders.
+</text>
+<choice destination="analvore0" text="impossible voyage"/>
+</page>
 
-	<page ID="analvore0">
-		<text>
-			Her insides are hot and really tight for you, especially as the
-			girl
-			leads your hands in between of her buttocks. Barely she’ll fit
-			more,
-			but still you can feel new pressure forcing your shoulders to
-			slide
-			in. Your face is easily visible on her tummy as the rat girl
-			continues squirming around and tugging at the large prey. Her slimy
-			bowels slowly stretch to fit more of your body, forcing you to curl
-			through the fleshy tunnels.
-		</text>
-		<choice destination="analvore1" text="drawn deeper" />
-	</page>
+<page ID="analvore0">
+<text>
+Her insides are hot and really tight for you, especially as the girl leads your hands in between of her buttocks. Barely she’ll fit more, but still you can feel new pressure forcing your shoulders to slide in. Your face is easily visible on her tummy as the rat girl continues squirming around and tugging at the large prey. Her slimy bowels slowly stretch to fit more of your body, forcing you to curl through the fleshy tunnels.
+</text>
+<choice destination="analvore1" text="drawn deeper"/>
+</page>
 
-	<page ID="analvore1">
-		<text>
-			You can only move your legs as the greedy rodent packs all of
-			your torso
-			inside, going to slow down and relax. After all bigger part
-			of her
-			prey is already tucked in tight and not going to leave any time
-			soon.
-			You can feel her tail poke and tickle at your feet, making you
-			struggle more as she teasingly slow pushes your legs into herself.
-			The thick, long outline of your body continues moving in her abdomen,
-			filling more and more of the bowels, until finally the rat manages to
-			shove even your toes into herself.
-		</text>
-		<choice destination="strugglecheck" text="struggle" />
-		<choice destination="submit" text="submit" />
-	</page>
+<page ID="analvore1">
+<text>
+You can only move your legs as the greedy rodent packs all of your torso inside, going to slow down and relax. After all bigger part of her prey is already tucked in tight and not going to leave any time soon. You can feel her tail poke and tickle at your feet, making you struggle more as she teasingly slow pushes your legs into herself. The thick, long outline of your body continues moving in her abdomen, filling more and more of the bowels, until finally the rat manages to shove even your toes into herself.
+</text>
+<choice destination="strugglecheck" text="struggle"/>
+<choice destination="submit" text="submit"/>
+</page>
 
-	<check ID="strugglecheck">
-		<test what="STRUGGLE" DC="8" />
-		<outcome destination="struggleescape" />
-		<outcome destination="struggledigest" />
-	</check>
+<check ID="strugglecheck">
+<test what="STRUGGLE" DC="8"/>
+<outcome destination="struggleescape"/>
+<outcome destination="struggledigest"/>
+</check>
 
-	<page ID="struggleescape">
-		<text>
-			The ratgirl squeeks in distress as sooner after disappearing
-			inside you
-			recover your second wind and shove your way back out. She
-			squirms
-			helplessly on the ground as you extricate yourself, worming
-			back out
-			until you finally pop free a bit smellier and a whole lot
-			less
-			dignified.
-		</text>
-		<effect type="heal" value="0.1" />
-		<effect type="stunnpc" value="10" />
-		<choice destination="end" text="get clear" />
-	</page>
+<page ID="struggleescape">
+<text>
+The ratgirl squeeks in distress as sooner after disappearing inside you recover your second wind and shove your way back out. She squirms helplessly on the ground as you extricate yourself, worming back out until you finally pop free a bit smellier and a whole lot less dignified.
+</text>
+<effect type="heal" value="0.1"/>
+<effect type="stunnpc" value="10"/>
+<choice destination="end" text="get clear"/>
+</page>
 
-	<page ID="struggledigest">
-		<text>
-			Impossibly, you can't escape her rear. Clenched inside the
-			rodentgirl's tight
-			innards you cannot escape her little body, barely
-			able to move you're
-			forced to suffer the indignities of digestions as
-			her body gets to
-			work on making you hers. Enzymic slime coating your
-			skin as she rolls
-			forwards onto her massive belly, your shape well
-			defined and outlined
-			in her globular gut as you stretch it so greatly
-			with your larger
-			form. And she settles in to digest.
-		</text>
-		<choice destination="digestGO" text="gurgle" />
-	</page>
+<page ID="struggledigest">
+<text>
+Impossibly, you can't escape her rear. Clenched inside the rodentgirl's tight innards you cannot escape her little body, barely able to move you're forced to suffer the indignities of digestions as her body gets to work on making you hers. Enzymic slime coating your skin as she rolls forwards onto her massive belly, your shape well defined and outlined in her globular gut as you stretch it so greatly with your larger form. And she settles in to digest.
+</text>
+<choice destination="digestGO" text="gurgle"/>
+<choice destination="disposal" text="gurgle (scat)"/>
+</page>
 
-	<gameover ID="digestGO">
-		<text>
-			The ratgirl can't move, but doesn't let that bother her. Dozing
-			off
-			resting atop her gut as the hours begin to tick by, that mass
-			turning
-			rounder underneath her as she digests away your body. Still
-			more time
-			passes and her pillow belly full of softening glop is now
-			shrinking
-			down. Some twelve hours later her middle shrinks down to
-			nothing but
-			a lingering layer of pudge as she rests now on the ground
-			again. The
-			chubbier ratgirl waking up and letting out a delighted
-			squeek as she
-			feels over herself, your profound indignity has been a
-			profound gain
-			for the rodent.
-		</text>
-	</gameover>
+<gameover ID="disposal">
+<text>
+The ratgirl can't move, but she doesn't let that bother her. Dozing off resting atop her gut as the hours begin to tick by, that mass turning rounder underneath her as she digests away your body. Still more time passes and her pillow belly full of softening glop is now shrinking down. Some twelve hours later her middle shrinks down to little more than a lingering layer of pudge as she rests now on the ground again. All that remains of your existence is a slight bulge in the Ratgirl's intenstines, the pitiful remains of a second-rate adventurer coiling deep inside her.At least your body was put to good use, with the noticeably chubbier ratgirl waking up and letting out a delighted squeek as she feels her thicker arse. While rubbing the new layer of fat that her merciless stomach had melted you into, she feels a familiar tightness in her bowels. Squatting over the cold floor, she lifts her pink tail as her lethal arsehole puckers and breaks wind. The stench of your remains is revolting, but despite herself the ratgirl can't help but feel aroused at her body's domination of the interloper. Her folds start to glisten and drip on the cobblestones even as you enter her bowels, ready to be freed from the pint-sized predator. A pained expression suddenly came across her face as she began to push out a thick log of 'processed human', steaming in the cold of the cellar. The stream of brown waste and bone fragments contained a few partially digested items, but the ratgirl showed no interest as your remains piled on top of each other. After 30 seconds of straining, the last clumps of shit joined the pile. As she squatted over you for the last time, the curvy ratgirl had a wide grin on her face.
+</text>
+</gameover>
 
-	<page ID="submit">
-		<text>
-			You can barely move in the tight innards of the rodent and can
-			hear her
-			enzymes gurgle around you. The rat letting out pleased
-			squeeks and
-			murs as she shes over the only parts of her massive belly
-			she can
-			reach, she must be adorable. and it's too much bother to try
-			and
-			escape, you settle in to be food for the little rodent..closing
-			your
-			eyes as her insides start to ooze more digestive slime over your
-			body
-			and starts to break you down.
-		</text>
-		<choice destination="digestGO" text="gurgle" />
-	</page>
+<gameover ID="digestGO">
+<text>
+The ratgirl can't move, but doesn't let that bother her. Dozing off resting atop her gut as the hours begin to tick by, that mass turning rounder underneath her as she digests away your body. Still more time passes and her pillow belly full of softening glop is now shrinking down. Some twelve hours later her middle shrinks down to nothing but a lingering layer of pudge as she rests now on the ground again. The chubbier ratgirl waking up and letting out a delighted squeek as she feels over herself, your profound indignity has been a profound gain for the rodent.
+</text>
+</gameover>
+
+<page ID="submit">
+<text>
+You can barely move in the tight innards of the rodent and can hear her enzymes gurgle around you. The rat letting out pleased squeeks and murs as she shes over the only parts of her massive belly she can reach, she must be adorable. and it's too much bother to try and escape, you settle in to be food for the little rodent..closing your eyes as her insides start to ooze more digestive slime over your body and starts to break you down.
+</text>
+<choice destination="digestGO" text="gurgle"/>
+<choice destination="disposal" text="gurgle (scat)"/>
+</page>
 
 
 </Conversation>

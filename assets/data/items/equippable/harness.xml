@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ItemEquip name="harness" weight="2" slot="BODY" value="250">
+	<description>
+	A pocketed harness designed to distribute weight more evenly and increase carrying capacity. Adds +2 to capacity multiplier.
+	</description>
+	<modifier>
+		<CARRY value="2" />
+	</modifier>
+</ItemEquip>

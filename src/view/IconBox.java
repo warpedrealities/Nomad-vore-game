@@ -48,8 +48,15 @@ public class IconBox extends GUIBase {
 			if (i >= statusEffects.size()) {
 				sprites[i].setVisible(false);
 			} else {
-				sprites[i].setVisible(true);
-				sprites[i].setImage(statusEffects.get(i).getStatusIcon());
+				if (statusEffects.get(i).getStatusIcon()!=-1)
+				{
+					sprites[i].setVisible(true);
+					sprites[i].setImage(statusEffects.get(i).getStatusIcon());				
+				}
+				else
+				{
+					sprites[i].setVisible(false);
+				}
 			}
 		}
 	}

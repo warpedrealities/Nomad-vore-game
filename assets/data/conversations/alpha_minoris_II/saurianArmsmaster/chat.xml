@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<Conversation>
+
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="talked" />		
+		<text>
+		"Greetings again <conditional>
+				<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance" value="1" />
+				ser knight
+			</conditional>
+			<conditional>
+				<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance" value="0" />
+				traveller
+			</conditional> what do you seek with me today?" she asks with a smile.	
+		</text>
+		<choice destination="training0" text="I am interested in having my first lesson">
+			<preference fetish="herms" />	
+			<preference fetish="demis" />		
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="7" />	
+		</choice>
+		<choice destination="job1" text="About those gators">
+		<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="1" />
+		<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="7" />		
+		</choice>
+		<choice destination="aboutTraining" text="Do you train all your soldiers the same way?">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="trainingKnown" value="1" />		
+		</choice>
+		<choice destination="job0" text="I was curious if you had any work for me?">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="0" />		
+		</choice>
+		<choice destination="end" text="Nothing, at the moment..but perhaps later"/>
+	</page>
+	
+	<page ID="aboutTraining">
+	<text>
+	"Maybe I do. Or maybe, maybe you're special and I've singled out to be trained like this. And maybe it'd spoil the fun if you knew which was which, just pick whichever answer you find more pleasant."
+	</text>
+	<choice destination="end" text="That is no kind of answer, but i suspect its all i'm going to get"/>
+	</page>
+	
+	<page ID="training0">
+	<text>
+	"Excellent, when you're ready we can begin" she says and smiles. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />"Though of course, a soldier has no other identity, you'll need to take off your clothes for your training" she says and waits for you to undress before they could get started.
+			</conditional>
+	"Now, a soldier must bring even their breathing into obedience. Sit down..close your eyes, and focus." she says, you hear her moving to stand in front of you as you obey. "now, breath in, breath out...slow deep breaths." she continues, letting you focus on the exercise for about a minute before adding "now, breath in, then open wide as you breath out."
+	</text>
+		
+	<choice destination="training0A" text="*open wide*"/>
+	<choice destination="training0Refuse" text="*disobey*"/>
+	</page>
+
+	<page ID="training0A">
+	<text>
+	You open wide as instructed, exhaling only to find something abruptly filling your mouth as she continues quickly "A soldier must accept the unexpected, and in all things keep in mind what will please her superiors" says Varliss, as she slides more of her thick length past your lips and reaches a hand down to stroke through your hair. Your training taking a not unexpected lewd turn as your tongue is flooded with the musky taste of her shaft.
+	</text>
+	<effect type="setlocalflag" flag="trainingKnown" value="1" />	
+	<choice destination="training0B" text="*suck her off like a good soldier*"/>
+	</page>
+	
+	<page ID="training0B">
+	<text>
+	Varliss seems to enjoy your obedience, or maybe just your tongue action, as a full throated moan emanates from deep within her and she rocks her hips, thrusting her length in and out of your mouth "Yes, I can see you understand the importance of serving to the..best of your abilities.." she says and then shivers a little and smirks "you really are quite good at this, or maybe you're just eager" she says as she grabs ahold of the back of your head and ploughs your throat.
+	</text>
+	<choice destination="training0C" text="*mhmmph!*"/>
+	</page>
+	
+	<page ID="training0C">
+	<text>
+	Varliss thrusts into your mouth firmly, vigorously using your lips and holding your head in place as she does so. Her hefty sack bumping up against your chin with each thrust she takes as her moans become louder and more delighted. As she feels her balls clench she speaks up again "A soldier must accept her reward readily when her superiors deem it fitting." she says, a warning of what's cumming soon.
+	</text>
+	<choice destination="training0D" text="narrator has terrible puns"/>
+	</page>
+	<page ID="training0D">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="training" value="0" />			
+	<text>
+	Forwarned you swallow as you feel her length pulse and pump the first thick wad of seed into your throat. Varliss groaning as she continues thrusting, spasming her hips and then finally stopping and just holding her dick deep in your mouth as she pumps out her seed. Only when she's pumped out her last spurt of seed does she pull out and smile "mhmm, obedient..I'll make a 'soldier' out of you yet." she says and helps you up "Training is over soldier, but come back again any time."
+	</text>
+	<effect type="setlocalflag" flag="training" value="1" />		
+	<choice destination="end" text="Mhmm, well that was much more enjoyable than expected, I might do that"/>	
+	<choice destination="end" text="Ah yes, i'll come back if i need..training, again"/>
+	</page>
+		
+	<page ID="training0D">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="training" value="1" />			
+	<text>
+	Forwarned you swallow as you feel her length pulse and pump the first thick wad of seed into your throat. Varliss groaning as she continues thrusting, spasming her hips and then finally stopping and just holding her dick deep in your mouth as she pumps out her seed. Only when she's pumped out her last spurt of seed does she pull out and smile "mhmm, obedient..I'll make a 'soldier' out of you yet." she says and helps you up "Training is over soldier, but come back again any time."	
+	</text>
+	<choice destination="end" text="I'll do that mistress"/>	
+	<choice destination="end" text="I'll do that Varliss"/>	
+	</page>
+	
+	<page ID="training0Refuse">
+	<text>
+	Varliss tut tuts, but doesn't bring it up directly. she continues the breathing exercises for a time and then simply calls an end to it and as you get up smiles and chidingly taps you on the nose "Remember, a soldier, is obedient. No matter what" she says and then shoo's you off.
+	</text>
+	<choice destination="end" text="huh."/>
+	</page>
+	
+	<page ID="job1">
+	<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="6" />	
+	<text>
+	"I can tell from your bearing, something about your stance. You haven't done it yet have you?" Varliss says with a soft hmm, looking you over and seeming to sense that you haven't yet slain that which is your task to slay.
+	</text>
+	<choice destination="bodylanguage" text="How on earth can you tell that from just how I stand?"/>
+	<choice destination="end" text="you're right, I'll come back when I'm done"/>
+	</page>
+	
+	<page ID="bodylanguage">
+	<text>
+	"How does one know where the blade will fall if you cannot read the intent of the wielder? And a keen eye can serve even when no weapon is drawn."
+	</text>
+	<choice destination="end" text="I see, I think. I'll come back when I'm done"/>	
+	</page>
+
+	<page ID="job1">
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="6" />	
+	<text>
+	"Ah, you have returned eager for training? or merely hungry for gold." she smiles and looks you over "You have killed the beasts?"
+	</text>
+	<choice destination="job1Reward" text="Yes, but you seem to already know that"/>
+	</page>
+	
+	<page ID="job1Reward">
+	<text>
+	"Of course, I know the air of victory when I see it. That confidence that's born of triumph in the face of adversity." she says and smiles "So here is your reward...and soldier, if you need training...ask. I'm sure I could find a way for you to better serve."
+	</text>
+		<effect type="givegold" value="500" />
+		<effect type="setglobalflag" flag="Varless_monsterhunt0" value="7" />	
+		<choice destination="end" text="The way you talk of this training intrigues me, i might very well take you up on that"/>
+		<choice destination="end" text="It's just the gold I'm interested in, when we speak again it'll be on the subject of more work."/>
+	</page>
+	
+	<page ID="job0">
+	<text>
+	"So you have a desire to serve? Very good, very interesting. And very well, there are things I need to have done. We'll see how you fair, gators have strayed into the village of late. Thin their numbers to stop this happening. Kill five and I'll be satisfied." she says and then leans in "And of course, do this and there will be a reward...and perhaps i could train you to be a soldier?" she says suggestively.
+	</text>
+	<choice destination="job0Accept" text="Sure, I can do that"/>
+	<choice destination="job0Refuse" text="Are you kidding? those things are bloody lethal"/>
+	</page>
+	
+	<page ID="job0Accept">
+	<effect type="setglobalflag" flag="Varless_monsterhunt0" value="1" />			
+	<text>
+	"Excellent, I look forward to an opportunity to train you. Return with word of your accomplishment, and soon." she says with a smile.
+	</text>
+	<choice destination="end" text="Of course. I'll try to hurry back."/>
+	</page> 
+	
+	<page ID="job0Refuse">
+	<text>
+	"A soldier needs more than obedience, courage is also required. And were they not dangerous there would hardly be a reward, return should you change your mind."
+	</text>
+	<choice destination="end" text="Yeah if I want to pick fights with more gators I'll come calling"/>
+	</page>
+	
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="talked" />	
+		<text>
+		The warrior gives you a nod at your approach "Greetings <conditional>
+				<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance" value="1" />
+				ser knight
+			</conditional>
+			<conditional>
+				<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance" value="0" />
+				traveller
+			</conditional> I am Varless, you may of course address me as mistress." she says and smiles a little "For I am master of arms here and commander of the queen's soldiers."
+		</text>
+		<effect type="setlocalflag" flag="talked" value="1" />			
+		<choice destination="greeting0" text="$it's good to meet you Varless"/>
+		<choice destination="greeting1" text="$It's good to meet you mistress"/>
+	</page>
+	
+	<page ID="greeting0">
+	<text>
+	Varless grins "Too soon? don't worry, I've dealt with that before." she says with a chuckle "But come, i doubt you came here purely for that reason."
+	</text>
+	<choice destination="job0" text="I was curious if you had any work for me?"/>
+	<choice destination="end" text="no, I merely wanted to make your acquaintance"/>
+	</page>
+	
+	<page ID="greeting1">
+	<text>
+	Varless grins "Promising, I think I like you." she says and then leans back with a chuckle "But come, I doubt you came here purely for that reason."
+	</text>
+	<choice destination="job0" text="I was curious if you had any work for me?"/>	
+	<choice destination="end" text="no, i merely wanted to make your acquaintance"/>	
+	</page>
+	
+</Conversation>

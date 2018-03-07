@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<recipe name="spacebar" requiredskill="3" startunlocked="true">
+	<description>
+		A tool for levering up and safely dismantling modules allowing them to
+		be removed from their slot without destroying them. Alas, the bar does
+		not survive the process for re-use.
+	</description>
+	<ingredient item="scrap metal" quantity="6" />
+	<ingredient item="computation valve" quantity="1" />	
+	<ingredient item="battery" quantity="1" />	
+	<result item="spacebar" />
+</recipe>

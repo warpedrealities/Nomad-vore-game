@@ -192,6 +192,10 @@ public class EffectProcessor {
 		{
 			new SpaceshipActionHandler().join((Spaceship)Universe.getInstance().getCurrentEntity(),ship);
 		}
+		if (str.equals("healShip"))
+		{
+			new SpaceshipActionHandler().heal(ship);
+		}
 		if (str.equals("toView"))
 		{
 			Game.sceneManager.SwapScene(new ViewScene());
@@ -240,6 +244,9 @@ public class EffectProcessor {
 		}
 		if (str.equals("givegold")) {
 			m_player.getInventory().setPlayerGold(m_player.getInventory().getPlayerGold() + (int) value);
+		}
+		if (str.equals("givecredits")) {
+			m_player.getInventory().setPlayerCredits(m_player.getInventory().getPlayerCredits() + (int) value);
 		}
 		if (str.equals("removestatus")) {
 			((Player_RPG) m_player.getRPG()).removeStatus(Integer.parseInt(node.getAttribute("value")));

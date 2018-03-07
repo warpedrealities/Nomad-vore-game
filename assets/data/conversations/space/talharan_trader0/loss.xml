@@ -18,6 +18,7 @@
 			matter. We are transferring the FTL device over to you now."
 		</text>
 		<effect type="giveitem" value="1" item="space warper" />
+		<special effect="healShip"/>
 		<choice destination="end" text="finally" />
 	</page>
 

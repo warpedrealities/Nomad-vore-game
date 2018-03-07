@@ -14,12 +14,17 @@ public class Spawn_Data {
 	private int minCount;
 	private int maxCount;
 	private int chance;
+	private String deathScript;
 
 	public Spawn_Data(Element element) {
 		filename = element.getAttribute("npc");
 		minCount = Integer.parseInt(element.getAttribute("min"));
 		maxCount = Integer.parseInt(element.getAttribute("max"));
 		chance = Integer.parseInt(element.getAttribute("chance"));
+		if (element.getAttribute("deathScript").length()>0)
+		{
+			deathScript=element.getAttribute("deathScript");
+		}
 	}
 
 	public Spawn_Data() {
@@ -31,6 +36,15 @@ public class Spawn_Data {
 		dstream.writeInt(minCount);
 		dstream.writeInt(maxCount);
 		dstream.writeInt(chance);
+		if (deathScript!=null)
+		{
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, deathScript);
+		}
+		else
+		{
+			dstream.writeBoolean(false);
+		}
 	}
 
 	public void load(DataInputStream dstream) throws IOException {
@@ -38,6 +52,10 @@ public class Spawn_Data {
 		minCount = dstream.readInt();
 		maxCount = dstream.readInt();
 		chance = dstream.readInt();
+		if (dstream.readBoolean())
+		{
+			deathScript=ParserHelper.LoadString(dstream);
+		}
 	}
 
 	public String getFilename() {
@@ -54,6 +72,10 @@ public class Spawn_Data {
 
 	public int getChance() {
 		return chance;
+	}
+
+	public String getDeathScript() {
+		return deathScript;
 	}
 
 }

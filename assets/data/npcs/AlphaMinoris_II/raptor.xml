@@ -37,6 +37,9 @@
 		</combatMove>
 		<itemDrop chance="5" item="fruit" />
 		<itemDrop chance="5" item="deku nut" />	
+		<statusTags count="1">
+			<tag>raptor</tag>
+		</statusTags>				
 	</rpg>
 	<defeated conversation="alpha_minoris_II/raptor/defeat" />
 	<seduced conversation="alpha_minoris_II/raptor/seduced" />

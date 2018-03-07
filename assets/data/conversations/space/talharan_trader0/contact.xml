@@ -8,9 +8,19 @@
 			League, do for you today?"
 		</text>
 		<choice destination="trade" text="I would like to see your wares" />
-		<choice destination="want" text="Is there anything you'd pay a decent amount?">
+		<choice destination="want0" text="Is there anything you'd pay a decent amount?">
 		<condition evaluate="LOCALFLAG" operator="equals" value="0"
 			flag="asked" />		
+		</choice>
+		<choice destination="want1" text="Is there anything else you'd be willing to pay good money for?">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="asked" />		
+		</choice>
+		<choice destination="zymonite" text="I have the zymonite you requested">
+		<condition evaluate="LOCALFLAG" operator="equals" value="2"
+			flag="asked" />		
+		<condition evaluate="HASITEM" operator="greaterthan" value="5"
+			item="zymonite" />			
 		</choice>
 		<choice destination="approach"
 			text="I've had enough of your shit, I'm taking what I need" />
@@ -23,7 +33,60 @@
 		<special effect="shop" ID="talharan_trader0" />
 	</page>
 
-	<page ID="want">
+	<page ID="zymonite">
+	<text>
+	"Your performance has yet again given us need to re-assess your capabilities""We thought you'd die down there""Transfer the material and we will credit your account""It has been gratifying to work with a competent agent""There may be more need of the services of a proven agent in future."
+	</text>
+	<effect type="setlocalflag" flag="asked" value="3" />	
+	<effect type="removeitem" item="zymonite" value="5" />	
+	<effect type="givecredits" value="20000" />	
+	<choice destination="trade" text="Thankyou, now lets see what you have for sale"/>	
+	<choice destination="end" text="Thankyou, I may be back later to spend this money"/>
+	</page>
+	
+	<page ID="want1">
+	<effect type="setlocalflag" flag="asked" value="2" />	
+	<text>
+	"An inquisitive sort aren't you.""Some would take your questioning as unwelcome.""But not us, as by this means we can utilize your services.""Indeed?""Indeed, we have a minor errand we would like you to perform. We will reward you for your services.""We have a need of Zymonite, while we could procure this material at a later date your services here will simplify our future plans." "our enigmatic plans.""So bring us five units of zymonite and we will reward you with an appropriate sum of credits."
+	</text>
+	<choice destination="reward1" text="And how much is an appropriate sum of credits?"/>
+	<choice destination="whereFind1" text="And where might I find this zymonite?"/>
+	<choice destination="whatIs1" text="And what exactly is zymonite?"/>
+	<choice destination="trade" text="I would like to see your wares before I go"/>	
+	<choice destination="end" text="very well i will find this zymonite for you"/>
+	</page>
+	
+	<page ID="reward1">
+	<text>
+	"Very well.""You are more astute than we had anticipated.""indeed, as such we will inform you that for a bulk delivery of five units of zymonite will give you 20,000 credits.""A price considerably above the going rate to properly value your services in this matter."
+	</text>
+	<choice destination="whereFind1" text="And where might I find this zymonite?"/>
+	<choice destination="whatIs1" text="And what exactly is zymonite?"/>
+	<choice destination="trade" text="I would like to see your wares before I go"/>	
+	<choice destination="end" text="very well i will find this zymonite for you"/>	
+	</page>
+	
+	<page ID="whereFind1">
+	<text>
+	"You will find it underground.""On a specific planet in this system.""indeed, you will need to travel to the third planet in the system located at coordinates -8,18""You are advised that despite its cold exterior the world has significant geothermal activity and as such may be host to dangerous lifeforms.""But you are almost certainly capable of surviving the rigours the world has to offer."
+	</text>
+	<choice destination="reward1" text="And how much is an appropriate sum of credits?"/>
+	<choice destination="whatIs1" text="And what exactly is zymonite?"/>
+	<choice destination="trade" text="I would like to see your wares before I go"/>	
+	<choice destination="end" text="very well i will find this zymonite for you"/>	
+	</page>
+	
+	<page ID="whatIs1">
+	<text>
+	"It's a substance with certain resonant energetic properties.""Very useful properties""Useful for creation of energetic effects such as forcefields and action at a distance.""We have a need for the substance due to these properties.""And with your help we can procure the substance without a detour."
+	</text>
+	<choice destination="reward1" text="And how much is an appropriate sum of credits?"/>
+	<choice destination="whereFind1" text="And where might I find this zymonite?"/>
+	<choice destination="trade" text="I would like to see your wares before I go"/>	
+	<choice destination="end" text="very well i will find this zymonite for you"/>	
+	</page>
+	
+	<page ID="want0">
 	<text>
 	"Your implication that our valuation of your inventory is in some way indecent is predictable.""And unfair""Nevertheless we will answer your question by saying that there is a high probability that on the more hospitable of the two worlds there is a high probability of the presence of a cellular rejuvenator. Retrieve such, and will reward you suitably for your effort."
 	</text>

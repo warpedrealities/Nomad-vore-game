@@ -512,7 +512,7 @@ public class CombatMove {
 		for (int i = 0; i < effects.size(); i++) {
 			if (Effect_Status.class.isInstance(effects.get(i))) {
 				Effect_Status effect = (Effect_Status) effects.get(i);
-				if (target.getRPG().hasStatus(effect.getEffect().getUID())) {
+				if (target.getRPG().hasStatus(effect.getEffects().get(0).getUID())) {
 					return true;
 				}
 			}
@@ -526,8 +526,8 @@ public class CombatMove {
 			for (int i = 0; i < effects.size(); i++) {
 				if (Effect_Status.class.isInstance(effects.get(i))) {
 					Effect_Status effect = (Effect_Status) effects.get(i);
-					if (origin.getRPG().hasStatus(effect.getEffect().getUID())) {
-						origin.getRPG().removeStatus(effect.getEffect().getUID());
+					if (origin.getRPG().hasStatus(effect.getEffects().get(0).getUID())) {
+						origin.getRPG().removeStatus(effect.getEffects().get(0).getUID());
 					}
 				}
 

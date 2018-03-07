@@ -258,7 +258,7 @@ public class SquareRenderer implements Square_Int {
 		Matrix4f.translate(vec, m_matrix, m_matrix);
 	}
 
-	public void Draw(int objmatrix, int tintvar, FloatBuffer matrix44fbuffer) {
+	public void draw(int objmatrix, int tintvar, FloatBuffer matrix44fbuffer) {
 		// set tint
 
 		if (m_flash > 0) {
@@ -298,7 +298,7 @@ public class SquareRenderer implements Square_Int {
 		}
 	}
 
-	public void Discard() {
+	public void discard() {
 		if (m_VAO != -1) {
 			GL30.glBindVertexArray(m_VAO);
 			GL20.glDisableVertexAttribArray(0);

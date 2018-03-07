@@ -317,5 +317,11 @@ public class SpriteBeam implements Renderable, Square_Rotatable_Int {
 		this.width=width;
 	}
 
+	@Override
+	public void setColour(float r, float g, float b) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }

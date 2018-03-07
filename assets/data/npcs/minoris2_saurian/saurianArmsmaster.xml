@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="saurianArmsmaster.png" />
+	<name>Varliss</name>
+	<description>
+	This saurian is clearly of some import and clearer still of a martial bent. She has the calluses and scars of an experienced warrior and the bearing of one used to command. She stands some six and a half feet tall, straight and proud and with one hand resting comfortably by the pommel of her sword. Her tunic appears comfortable and well made permitting a great deal of movement for her firm bodied feminine form, casting your gaze back up to meet her own you are struck by the pale whisps in her auburn hair, which is tied back into a ponytail..and by the way her icey blue eyes regard you, seemingly always on alert.
+	</description>
+	<rpg>
+		<experiencevalue value="80" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="60" />
+		<stat stat="RESOLVE" value="60" />
+		<attribute attribute="KINETIC" value="2" />
+		<attribute attribute="RANGED" value="2" />			
+		<attribute attribute="PARRY" value="2" />
+		<attribute attribute="DODGE" value="2" />		
+		<attribute attribute="WILLPOWER" value="2" />
+		<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>Varliss's mace doesn't connect with TARGET</text>
+				<text>Varliss attempts to pummel TARGET but the blow doesn't
+					connect</text>
+			</missText>
+			<hitText count="2">
+				<text>Varliss hits TARGET for VALUE points of damage</text>
+				<text>Varliss hammers TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+	<talk conversation="alpha_minoris_II/saurianArmsmaster/chat" />	
+	<controller AI="village_sentry" />
+	<faction value="saurian" />
+</NPC>

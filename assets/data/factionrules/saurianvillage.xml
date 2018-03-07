@@ -15,7 +15,12 @@
 	<superRule subject="Laurisse" level="4" violation="ATTACK">
 		<factionRelationship faction="saurian" mod="-20" />
 	</superRule>
+	<superRule subject="Varliss" level="4" violation="ATTACK">
+		<factionRelationship faction="saurian" mod="-20" />
+	</superRule>
 
 	<witness name="peasant" />
+	<witness name="Laurisse" />
 	<witness name="warrior" />
+	<witness name="Varliss" />	
 </rules>

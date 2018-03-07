@@ -1,6 +1,6 @@
 package graphics;
 
-import rendering.SquareRenderer;
+import rendering.Square_Int;
 import shared.Vec2f;
 
 public class FX_projectile extends FX {
@@ -8,16 +8,19 @@ public class FX_projectile extends FX {
 	private Vec2f velocity;
 
 	public FX_projectile(int index, Vec2f position, Vec2f velocity, float r, float g, float b) {
-		super(index, position, r, g, b);
-		this.velocity = new Vec2f(velocity.x / 20, velocity.y / 20);
-
+		super(index, position, r, g, b,5);
+		this.velocity = velocity;
+		
 	}
 
 	@Override
-	public void update(SquareRenderer square) {
-		position.x += velocity.x;
-		position.y += velocity.y;
+	public void update(Square_Int square) {
 		square.reposition(position);
+		square.repositionF(velocity);	
 		this.lifeSpan--;
+		if (this.lifeSpan==0)
+		{
+			square.repositionF(null);
+		}
 	}
 }

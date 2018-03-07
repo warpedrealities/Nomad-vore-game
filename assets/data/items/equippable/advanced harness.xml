@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ItemEquip name="advanced harness" weight="2" slot="BODY" value="500">
+	<description>
+		A sophisticated pocketed harness designed to distribute weight more evenly using ergonomic theories. Adds +4 to capacity multiplier.
+	</description>
+	<modifier>
+		<CARRY value="4" />
+	</modifier>
+</ItemEquip>
