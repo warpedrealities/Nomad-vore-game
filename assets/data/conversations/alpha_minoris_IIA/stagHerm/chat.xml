@@ -49,19 +49,47 @@
 
 	<page ID="initial1">
 	<text>
-	
+	"Eve? Eve...I like it." says the newly christened Eve and breaks out into a smile of happyness at having her name. 
 	</text>
-	
+	<choice destination="initial1Hug" text="$I'm glad, now why don't ya give me a hug"/>
+	<choice destination="initial1ForNow" text="$I'm glad, for now just try to get comfortable in your own skin"/>
 	</page>
-		
+	
+	<page ID="initial1Hug">
+	<text>
+	Eve blinks and then uncertainly moves forwards to embrace you, wrapping you in the warmth of her arms. When you snug her back she loses any hesitancy and mhmms, pulling you closer and pressing her soft breasts and her girth against your body happily "MHmm, I think I like you." she says with a smile, holding you tight for a minute afore you disentangle yourself from her.
+	</text>
+	<choice destination="end" text="$And I like you as well, I'll be back later to talk to you more"/>
+	</page>
+	
+	<page ID="initial1ForNow">
+	<text>
+	Eve looks around then looks down at her magnificent body then back to you and nods uncertainly "If you say so..i remember being, small." she says and shifts posture obliviously setting that length asway.
+	</text>
+	<choice destination="end" text="$Yes, you have a lot to get used to. I think I'll give you time to do so."/>
+	</page>
+	
+	<page ID="start">
+		<assertion evaluate="isCompanion" />
+		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
+			value="1" />
+		<!--subsequent meetings -->
+		<text>
+		She looks to you "Yes?" she seems a bit less carefree while travelling alongside you. But that's fairly carefree all the same.
+		</text>
+
+		<choice destination="end" text="nothing, lets travel on"/>
+	</page>
+	
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
 			value="1" />
 		<!--subsequent meetings -->
 		<text>
-
+		She smiles "Hello PNAME " she says cheerfully. She seems at ease at the moment.
 		</text>
 
+		<choice destination="end" text="Hello, I hope you're well, just passing by"/>
 	</page>
 
 </Conversation>

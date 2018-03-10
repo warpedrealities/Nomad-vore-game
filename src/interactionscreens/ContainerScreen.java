@@ -52,7 +52,7 @@ public class ContainerScreen extends Screen implements Callback {
 
 	@Override
 	public void discard(MouseHook mouse) {
-
+		player.calcMove();
 		for (int i = 0; i < 2; i++) {
 			mouse.Remove(itemLists[i]);
 			itemLists[i].discard();

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="blueM.png" />
+	<name>Mothran</name>
+	<description>
+	A pale and seemingly beautiful and slender girl. Her eyes are a glistening pitch black, her skin holds a pale alabaster lustre that glistens and glimmers as if with the glint of glitter or tiny scales. Her blue hued hair has two antenna each 2 feet long that crest up and back behind her. Her dainty feet do not touch the ground, and her form is clad as if shrouded in diaphanous blue wings, one smaller set seemingly co-mingled with her arms clutched around herself while the other larger pair form a delicate cloak like shape enfolding her, curling about her shoulders and down her flanks. The unmoving wings do nothing to explain her levitation, but much to add an air of mystique to this already unusual female.
+	</description>
+	<rpg>
+		<experiencevalue value="100" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="6" />	
+		<attribute attribute="WILLPOWER" value="6" />		
+		<combatMove name="psi bolt" pattern="RANGED" bonusAttribute="SEDUCTION"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="PSYCHIC" minValue="1" maxValue="12"
+				modifier="NONE" />
+			<missText count="2">
+				<text>TARGET shrugs off disorientation</text>
+				<text>TARGET resists mental influence </text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET lose VALUE resolve from the Mothran's influence</text>
+				<text>TARGET finds their resolve reduced by VALUE through psychic domination</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="mesmerize" pattern="MELEE" bonusAttribute="SEDUCTION"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<missText count="2">
+				<text>TARGET looks away from the hypnotic effect of the mothran's wings as she unfurls them</text>
+				<text>Mothran spreads wide her radiant wings but fails to hypnotize TARGET</text>
+			</missText>
+			<hitText count="2">
+				<text>Mothran opens her wings, TARGET cannot look away</text>
+				<text>Mothran spreads her wings wide as colours spread over them, the display draws the gaze of TARGET</text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is now mesmerized </applyText>
+				<statusStun uid="9" duration="10">
+					TARGET has shaken off their mesmerization.
+				</statusStun>
+			</effectStatus>			
+		</combatMove>		
+	</rpg>
+	<flying />
+	<respawn delay="2000" />	
+	<defeated conversation="Forakis_II/mothran/defeat" />
+	<seduced conversation="Forakis_II/mothran/seduced" />
+	<victory conversation="Forakis_II/mothran/seducer" />
+	<seducer conversation="Forakis_II/mothran/victory" />
+	<controller AI="mothran" />
+	<faction value="monster" />
+</NPC>

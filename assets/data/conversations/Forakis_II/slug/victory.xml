@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="ferals" />
+		<preference fetish="absorbtion" />
+		<text>
+			Unable to resist the constant force any longer, your legs give way under the slug's weight and you fall to the ground as the creature begins to slither onto your body, your feet quickly getting stuck under the wobbly, goop-covered noodle.
+		</text>
+		<choice destination="absorb0" text="Get ran over" />
+	</page>
+
+	<page ID="absorb0">
+		<text>
+			You aren't given much time to recover, and by the time the shock wears off, you realize the slug's entire body weight is now pressing you to the dirt. Your body starts quickly soaking in the slime, simply due to its abundance around you. The sticky, warm sludge makes moving around pretty difficult, especially with the snail's watery underside threatning to crush you if it was any fatter.
+		</text>
+		<choice destination="absorb1" text="Squished in" />
+	</page>
+
+	<page ID="absorb1">
+		<text>
+			The slug's form starts pressing further down, making your body numb due to the pressure. The slug's slime being all around you probably doesn't help. All you know is that it started moving around you, its unsolid figure trying to simultaneously keep you down, pinned to the floor and pick you up, and that there's this... weird goop everywhere, ground and pushed into every nook and cranny of your body.
+		</text>
+		<choice destination="absorb2" text="Into the slug with ye!" />
+	</page>
+
+	<page ID="absorb2">
+		<text>
+			Finally, the pressure lets up. Your body is filled with a brisk, tingling sensation as blood returns to your veins. The slug's body moves again and your body is jerked, slamming against its insides. You realize that its slime is everywhere around you, and you probably won't have much time before it fills up your lungs and kills you. Thnakfully, you're now inside the slug, rather than outside, this might be your only chance! But there was also sometihng new, something weird going on... The slime around you started feeling welcoming and familiar... This might be a good sign.
+		</text>
+		<choice destination="absorbStruggle" text="Fight your way out!" />
+		<choice destination="absorbSubmit" text="Let's be friends!" />
+	</page>
+
+	<check ID="absorbStruggle">
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="absorbEscape" />
+		<outcome destination="absorbDigest" />
+	</check>
+
+	<page ID="absorbEscape">
+		<text>
+			You throw and thrash around inside the snail, fighting against both the squishy walls and the sticky slime all around you. Thnakfully, your squirming pays off - you manage to make an opening and the liquid starts spewing from a small space, and you immediately take advantage, forcing yourself into the current and pushing out with all your might. You feel the ground under your palms again and start crawling under the heavy weight of the slug, making a miraculous escape from under the creature. You quickly shake yourself off of as much of the liquid as you can while the slug's primitive brain attempts to work out what just happened.
+		</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="Todo: Buy a laundromat." />
+	</page>
+
+	<page ID="absorbDigest">
+		<text>
+			You throw and thrash around inside the snail, fighting against both the squishy walls and the sticky slime all around you. However, nothing seems to come from it, and even though you bat and kick and flail, you're still stuck in a watery, rough baloon filled with liquid. Eventually, you exhaust yourself, depraved of air, rest, or even room, and the only thing you CAN do is float there, your own skin starting to feel rough and bloated.
+		</text>
+		<choice destination="absorbDigestGO" text="Turn into a slug" />
+	</page>
+
+	<gameover ID="absorbDigestGO">
+		<text>
+			As time went by, your body started to swell, soaked fully with the slug's liquid sludge. Trying to give one last squirm in failing hopes of escape, you realize you can't move your arms. As you curl up to try and feel them with your legs, you realize the only thing you can feel is more snail. You squirm around and brush up against the walls of your "host". It felt normal. At least, on the outside. On the inside, you're pretty sure you still had your organs... for now... Wait, what was I thinking about again... who was i? Oh yeah, you're a slug. Thinking is something your brain simply couldn't do anymore. Not that you had a problem with it - that was also beyond your mental capacity.
+		</text>
+	</gameover>
+
+	<page ID="absorbSubmit">
+		<text>
+			This could not possibly be a bad thing, right? The sweet slime around you made perfect suspension fluid! In fact, all of this felt rather... pleasant! You began wondering what it would feel like to have it all inside you, and begin "harvesting" it into your sensitive bits, loving every second of it! The goop did indeed tingle inside, and only moreso as your hands helped rub it in. Overwhelmed with pleasure, you begin flailing to amplify it! And just as you're about to orgasm...
+		</text>
+		<choice destination="absorbSubmitGO" text="Is anyone even reading these?" />
+	</page>
+
+	<gameover ID="absorbSubmitGO">
+		<text>
+				Your body ripples, something it couldn't do before. You don't feel anything come out, either... but it was OK. For some reason, you didn't mind. You didn't mind the lack of arms and legs either. But you WERE hungry, and inside another slug. You patiently waited for release, and when it came, you slithered on the ground, secreting your own slime, in the search of food. To hunt and grow, now were your only thoughts...
+		</text>
+	</gameover>
+
+</Conversation>

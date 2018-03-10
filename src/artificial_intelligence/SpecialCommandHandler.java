@@ -2,11 +2,13 @@ package artificial_intelligence;
 
 import pathfinder.Path;
 import shared.Vec2f;
+import view.ViewScene;
 import view.ZoneInteractionHandler;
 import nomad.Universe;
 import zone.Tile;
 import zone.Zone_int;
 import zone.TileDef.TileMovement;
+import actor.Actor;
 import actor.npc.NPC;
 import artificial_intelligence.pathfinding.Pathfinder_Flee;
 
@@ -36,6 +38,19 @@ public class SpecialCommandHandler {
 	}
 
 	private boolean performRetreat(NPC npc, Zone_int zone) {
+
+		Actor hostile=ViewScene.m_interface.getSceneController().getHostile(npc, 10, true);
+		if (hostile!=null)
+		{
+			Vec2f p = hostile.getPosition();
+			Pathfinder_Flee pathfinder = new Pathfinder_Flee(zone);
+			artificial_intelligence.pathfinding.Path path = pathfinder.findPath(npc.getPosition(), p, 8, npc.getFlying());
+			if (path != null) {
+				npc.setActorPath(path);
+				npc.FollowPath();
+				return true;
+			}			
+		}
 
 		return false;
 	}

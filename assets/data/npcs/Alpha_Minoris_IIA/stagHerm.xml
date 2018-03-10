@@ -10,7 +10,7 @@
 		short life so far.</description>
 	<rpg>
 
-		<ability ability="STRENGTH" value="5" />
+		<ability ability="STRENGTH" value="7" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />
 		<ability ability="ENDURANCE" value="5" />
@@ -19,8 +19,18 @@
 
 		<stat stat="HEALTH" value="50" />
 		<stat stat="RESOLVE" value="50" />
-		<attribute attribute="DODGE" value="2" />
-		<attribute attribute="PARRY" value="2" />
+		<combatMove name="blow" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<effectDamage type="KINETIC" minValue="3" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Eve fails to punch TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Eve punches TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		
 	</rpg>
 	<defeated conversation="alpha_minoris_IIA/stagHerm/defeat" />
 	<seduced conversation="alpha_minoris_IIA/stagHerm/defeat" />

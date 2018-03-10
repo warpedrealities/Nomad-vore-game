@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="demis" />
+		<preference fetish="females" />	
+		<preference fetish="oralvore" />
+		<text>
+		You approach the floating moth eagerly at her silent command. You step close and feel her slender arms and soft inner wings embrace your form as you press yourself close to her. Her pale warm form pressed against your own as her antenna flick around to caress and stroke over you and her tongue darts out to touch your face, daintily sampling your flavour. Finally she gives you another imperative that you find yourself happily obeying, raising your hands as she stretches apart her lips.
+		</text>
+		<choice destination="oralvore0" text="*feed yourself to her*"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	You raise your fingers to her lips and thrust them in. The enigmatic regard of her eyes seemingly approving as she licks around your hands and then takes a soft swallow. The moth just working enough to let you progress but clearly wanting you to do the majority of the work of feeding yourself down into her trim middle. Steadily you work your arms down her throat as she keeps you snuggled tight in the embrace of her wings, the moth tasting you with her tongue and her antenna as you slide yourself deeper into her delicate form.
+	</text>
+	<choice destination="oralvore" text="*deeper, be good food*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The moth hums in appreciation around your head and shoulders as you slip yourself deeper into her. Finally she takes some charge of your movements as you perch up on tippy toes to try and ease more of your upper body past her lips. A strange force lifting you up as the moth with antenna aglow straightens up, your legs now swaying out in the open yet supported as she works her lips down to your waist. Her snug little belly stretched out and bulging around your form as you're partway crammed into her guts now. Soon your predator will have entirely engulfed your compelled and controlled self.
+	</text>
+	<choice destination="oralvore2" text="*eaten entirely"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	You remain an obedient meal as she works you down, curling and using your arms to help situate yourself in her increasingly gravid and distended gut as she swallows you up. Gravity and your own efforts helping her easily devour you entirely, your calves and then feet tasted over by her antenna and tongue as they pass through her lips. Finally it seems she's done and swallows you down completely, humming contently to herself as you're turned into a bulging immense gut on her slender body. Her strange flight ability seemingly unaffected by the extra weight of your <macro ID="body_weight_desc" /> form.
+	</text>
+	<choice destination="struggleCheck" text="*break the conditioning*"/>
+	<choice destination="submit" text="*embrace your purpose*"/>
+	</page>
+	
+	<check ID="struggleCheck">
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="escape" />
+		<outcome destination="digest" />
+	</check>	
+
+	<page ID="escape">
+	<text>
+	The thought occurs to you that perhaps you're not meant to be her food. And so you start to struggle, first to claim back your own will and secondly to escape her stomach. The moth letting out a distressed meep as her gut begins to jostle around. Then a good deal more as you prove too much of an unruly meal for her delicate sensibilities. The floating moth doubling over pushing on her belly as it recedes and she horks you up and out into the open air. You emerge swiftly, landing with a splat as your wet saliva soaked body ends up in a heap in front of the distressed and disorientated mothgirl.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
+	
+	<page ID="digest">
+	<text>
+	The thought occurs to you that perhaps you're not meant to be her food. And so you start to struggle, first to claim back your own will and secondly to escape her stomach. The moth letting out a distressed meep as her gut begins to jostle around. She sways around as you struggle inside her, but your freedom of will doesn't seem to transition into freedom of the body. The humming moth girl bobbing in the air and stroking on her jostling belly as you try in vain to escape her, but all you achieve is tiredness and to excite her stomach acids to start to work you down. Her digestive fluids are vigorous and her tight stomach walls clench all the tighter around you now.
+	</text>
+	<choice destination="digestGO" text="*digested*"/>
+	</page>
+	
+	<gameover ID="digestGO">
+	<text>
+	The mothgirl continues her contented and obnoxious humming as you start to digest. (Un)Luckily for you that sound is soon replaced in your ears by the gurgles and glorps of said digestion, your world contracting to the sounds and sensations of a tight gut squeezed around your curled up form. The mothgirl reducing you steadily down into a soupy mass, softening and rounding out the contours of her belly before contracting them down steadily. Your form now a slurry that her body swiftly compacts and absorbs. <conditional><assertion evaluate="slothasitem" slot="2" />Her gut soon reduced to a chubby bulge and no more as the last of you is absorbed and with that she glances down, then retches and horks up a soaked mass consisting of your <readequipment slot="2" /> as a final remnant of her meal.
+			</conditional>
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	The mothgirl seems to be happy enough as you don't shake off her control. You remain her good meal, perfectly obedient and curled up comfortably in her belly with no movements on your part to upset her. The mothgirl running a hand over her belly as she begins to gurgle and grind you down, her digestive processes proving vigorous for so slight a girl as her enzymes soak over you and her stomach kneads at your shape.
+	</text>	
+	</choice destination="digestGO" text="*glorp*"/>
+	</page>
+	
+	
+	
+	
+</Conversation>

@@ -306,6 +306,7 @@ public class InventoryScreen extends Screen implements Callback {
 		popup.discard();
 		popupBig.discard();
 		screenAlive=false;
+		m_player.calcMove();
 	}
 
 
@@ -844,6 +845,7 @@ public class InventoryScreen extends Screen implements Callback {
 		}
 	
 	}
+
 	
 	boolean CanReload(ItemHasEnergy item)
 	{
@@ -852,23 +854,25 @@ public class InventoryScreen extends Screen implements Callback {
 		{
 			if (ItemAmmo.class.isInstance(m_player.getInventory().getItem(i).getItem()))
 			{
-				if (item.getEnergy().getRefill().contains(m_player.getInventory().getItem(i).getItem().getName()))
-				{
-					if (ItemStack.class.isInstance(m_player.getInventory().getItem(i)))
-					{
-						return true;
-					}
-					else
-					{			
-						
-						ItemDepletableInstance instance=(ItemDepletableInstance)m_player.getInventory().getItem(i);
-						if (instance.getEnergy()>0)
-						{
-							return true;					
-						}					
-					}
 
-				}
+					if (item.getEnergy().getRefill().contains(m_player.getInventory().getItem(i).getItem().getName()))
+					{
+						if (ItemStack.class.isInstance(m_player.getInventory().getItem(i)))
+						{
+							return true;
+						}
+						else
+						{			
+							
+							ItemDepletableInstance instance=(ItemDepletableInstance)m_player.getInventory().getItem(i);
+							if (instance.getEnergy()>0)
+							{
+								return true;					
+							}					
+						}
+
+					}					
+
 			}
 		}
 		return false;

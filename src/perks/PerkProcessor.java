@@ -57,7 +57,7 @@ public class PerkProcessor {
 			break;
 
 		case SUBABILITY:
-			subAbilities[modifier.getIndex()] += ((float) (modifier.getValue())) / 100;
+			subAbilities[modifier.getIndex()] += ((float) (modifier.getValue()*perkRank)) / 100;
 			break;
 		}
 	}

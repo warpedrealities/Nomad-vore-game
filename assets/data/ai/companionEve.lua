@@ -1,10 +1,14 @@
 
 
 function combat(controllable,sense,pos,hostile)
-	if controllable:HasPath() then
-		controllable:FollowPath()
+	if (hostile:getPosition().getDistance(pos)<2) then
+		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
 	else
-		controllable:specialCommand("flee")
+		if controllable:HasPath() then
+			controllable:FollowPath()
+		else
+			controllable:specialCommand("retreat")
+		end
 	end
 end
 

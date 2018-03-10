@@ -95,6 +95,7 @@ public class CraftingScreen extends Screen implements Callback {
 
 	@Override
 	public void discard(MouseHook mouse) {
+		player.calcMove();
 		mouse.Remove(root);
 		root.discard();
 		mouse.Remove(possibleCrafts);

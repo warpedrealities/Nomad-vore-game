@@ -55,29 +55,7 @@ public class WidgetContainer extends WidgetBreakable {
 
 	private boolean stack(Item item) {
 		return StackHandler.handleStacking(item, containedItems);
-		/*
-		if (ItemResource.class.isInstance(item) || ItemConsumable.class.isInstance(item)) {
-			Item id = item.getItem();
-			for (int i = 0; i < containedItems.size(); i++) {
-				if (containedItems.get(i).getItem() == id) {
-					if (ItemStack.class.isInstance(containedItems.get(i))) {
-						ItemStack stack = (ItemStack) containedItems.get(i);
-						stack.setCount(stack.getCount() + 1);
-						containedWeight += item.getWeight();
-						return true;
-					} else {
-						ItemStack stack = new ItemStack(containedItems.get(i).getItem(), 2);
-						containedItems.remove(i);
-						containedItems.add(stack);
-						containedWeight += item.getWeight();
-						return true;
-					}
-				}
-			}
-		}
 
-		return false;
-		*/
 	}
 
 	public boolean addItem(Item item) {
@@ -92,6 +70,10 @@ public class WidgetContainer extends WidgetBreakable {
 			if (stack(item) == false) {
 				containedItems.add(item);
 				containedWeight += item.getWeight();
+			}
+			else
+			{
+				containedWeight += item.getWeight();	
 			}
 			return true;
 
@@ -116,8 +98,7 @@ public class WidgetContainer extends WidgetBreakable {
 			if (ItemStack.class.isInstance(item)) {
 				ItemStack stack = (ItemStack) item;
 
-				Item it = stack.getItem();
-				stack.setCount(stack.getCount() - 1);
+				Item it = stack.takeItem();
 				if (stack.getCount() <= 0) {
 					containedItems.remove(index);
 				}

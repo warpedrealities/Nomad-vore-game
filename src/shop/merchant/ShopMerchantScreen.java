@@ -71,6 +71,7 @@ public class ShopMerchantScreen extends Screen implements Callback {
 
 	@Override
 	public void discard(MouseHook mouse) {
+		player.calcMove();
 		for (int i = 0; i < itemLists.length; i++) {
 			mouse.Remove(itemLists[i]);
 		}
