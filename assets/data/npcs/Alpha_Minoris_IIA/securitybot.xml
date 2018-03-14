@@ -38,8 +38,6 @@
 			<tag>life</tag>		
 		</statusTags>
 	</rpg>
-
-	<flying />
 	<disposition value="25" />
 	<defeated conversation="alpha_minoris_IIA/robot/robotdefeat" />
 	<controller AI="securitybot" />

@@ -21,11 +21,13 @@
 		<ability ability="ENDURANCE" value="5" />
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
-		<stat stat="HEALTH" value="40" />
-		<stat stat="RESOLVE" value="40" />
-
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="WILLPOWER" value="2" />
+		<attribute attribute="PARRY" value="2" />
+		<attribute attribute="DODGE" value="2" />		
 		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
-			timeCost="2" bonusToHit="4" threatening="true">
+			timeCost="2" bonusToHit="6" threatening="true">
 			<missText count="2">
 				<text>The ice treader misses TARGET</text>
 				<text>The ice treader swipes at TARGET but doesn't hit</text>

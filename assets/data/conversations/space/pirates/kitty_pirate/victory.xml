@@ -146,7 +146,7 @@
 	<check ID="sexCheck">
 		<test what="PLEASURE" DC="14" />
 		<outcome destination="sexSuccess" />
-		<outcome destination="SexFailure" />	
+		<outcome destination="sexFailure" />	
 	</check>
 	
 	<page ID="sexSuccess">

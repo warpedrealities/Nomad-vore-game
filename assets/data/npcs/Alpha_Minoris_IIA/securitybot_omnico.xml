@@ -40,7 +40,6 @@
 	</rpg>
 
 	<respawn delay="4000" />
-	<disposition value="25" />
 	<defeated conversation="alpha_minoris_IIA/robot/robotdefeat" />
 	<controller AI="securitybot" />
 	<faction value="omnicofactory_robot" />

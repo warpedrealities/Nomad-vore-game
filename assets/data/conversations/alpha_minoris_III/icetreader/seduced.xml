@@ -236,6 +236,7 @@
 		<special effect="nonhostile" />
 		<effect type="heal" value="0.1" />
 		<special effect="healnpc" />
+			<effect type="incrementglobalflag" flag="ICETREADER_DEFEAT" value="1" />	
 		<choice destination="cockvoreEndo4" text="sometime later" />
 	</page>
 

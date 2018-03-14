@@ -90,8 +90,8 @@
 		<choice destination="fuck0" text="fuck her hard">
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
-		<!-- <choice destination="transform" text="inject catalyst"> <assertion 
-			evaluate="hasEntry" entry="lifeforms/fawn.xml" /> </choice> -->
+		<choice destination="transform" text="inject catalyst"> <assertion 
+			evaluate="hasEntry" entry="lifeforms/fawn.xml" /> </choice>
 		<choice destination="end" text="return her to containment" />
 	</page>
 
@@ -111,9 +111,9 @@
 		<choice destination="sex0" text="have sex with her">
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
-		<!-- <choice destination="transform" text="inject catalyst"> <assertion 
+		<choice destination="transform" text="inject catalyst"> <assertion 
 			evaluate="hasEntry" entry="lifeforms/fawn.xml" /> <condition operator="equals" 
-			evaluate="GLOBALFLAG" flag="stagherm" value="0" /> </choice> -->
+			evaluate="GLOBALFLAG" flag="stagherm" value="0" /> </choice>
 		<choice destination="end" text="return her to containment" />
 	</page>
 

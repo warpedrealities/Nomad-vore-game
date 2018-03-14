@@ -245,6 +245,7 @@
 		<special effect="nonhostile" />
 		<effect type="heal" value="0.1" />
 		<special effect="healnpc" />
+				<effect type="incrementglobalflag" flag="ICETREADER_DEFEAT" value="1" />
 		<choice destination="end" text="good way to keep warm, bit sticky though" />
 	</page>
 
@@ -345,6 +346,7 @@
 		<special effect="nonhostile" />
 		<effect type="heal" value="0.1" />
 		<special effect="healnpc" />
+			<effect type="incrementglobalflag" flag="ICETREADER_DEFEAT" value="1" />	
 		<choice destination="end" text="she seemed to take this well, get going" />
 	</page>
 
@@ -363,6 +365,7 @@
 		<special effect="nonhostile" />
 		<effect type="heal" value="0.1" />
 		<special effect="healnpc" />
+		<effect type="incrementglobalflag" flag="ICETREADER_DEFEAT" value="1" />
 		<choice destination="end"
 			text="who'd of thought a snuggle was all you needed to make friends here" />
 	</page>

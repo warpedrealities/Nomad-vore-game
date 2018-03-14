@@ -75,21 +75,39 @@
 			value="1" />
 		<!--subsequent meetings -->
 		<text>
-		She looks to you "Yes?" she seems a bit less carefree while travelling alongside you. But that's fairly carefree all the same.
+		She looks to you "Yes?" she seems perfectly at ease travelling alongside you. As if believing that everything will be okay simply because she's with you, regardless of her surroundings.
 		</text>
-
+		<choice destination="leave" text="I think you should stay here" />
 		<choice destination="end" text="nothing, lets travel on"/>
 	</page>
+	
+	<page ID="leave">
+		<text>
+			"Okay, but you'll come back soon right?" says Eve as she settles in to wait for you.
+		</text>
+		<special effect="removecompanion" />
+		<choice destination="end" text="I'll be back later" />
+	</page>	
 	
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
 			value="1" />
 		<!--subsequent meetings -->
 		<text>
-		She smiles "Hello PNAME " she says cheerfully. She seems at ease at the moment.
+		She smiles "Hello PNAME " she says cheerfully.
 		</text>
-
+		<choice destination="join" text="i want you to travel with me again">
+			<assertion evaluates="companionSlotFree" />
+		</choice>
 		<choice destination="end" text="Hello, I hope you're well, just passing by"/>
 	</page>
 
+	<page ID="join">
+		<text>
+			"I enjoy travelling with you." Eve straightens as she prepares to follow you.
+		</text>
+		<special effect="makecompanion" />
+		<choice destination="end" text="lets go" />
+	</page>	
+	
 </Conversation>

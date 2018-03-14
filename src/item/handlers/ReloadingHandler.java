@@ -24,6 +24,10 @@ public class ReloadingHandler {
 					if (ItemStack.class.isInstance(inventory.get(i)))
 					{
 						ammo=(ItemDepletableInstance) ((ItemStack)inventory.get(i)).takeItem();
+						if (((ItemStack)inventory.get(i)).getCount()<1)
+						{
+							inventory.remove(i);
+						}
 					}
 					else
 					{

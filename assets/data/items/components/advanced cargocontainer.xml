@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="advanced cargo container" weight="10" value="400.0">
+	<description>A sophisticated storage solution using an electronic control system to organize its contents to maximize its ability to contain supplies or equipment.</description>
+	<placeditem widget="modules/advanced_cargocontainer" />
+</ItemWidget>

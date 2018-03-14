@@ -36,7 +36,6 @@
 			timeCost="2" bonusToHit="4" rangedbias="2">			
 		<effectStatus probability="80">
 			<probabilityModifier value="ENDURANCE" />		
-			<statusTag tag="life"/>
 			<applyText>TARGET 's nervous system has been disrupted, attack and defence is more difficult</applyText>
 			<statusAttribMod uid="17" icon="12" duration="60"
 				numModifiers="5">

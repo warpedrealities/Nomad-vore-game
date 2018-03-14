@@ -82,7 +82,7 @@
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="crown amulet" />
 		</choice>		
-		<choice destination="useCrown" text="insert lament amulet">
+		<choice destination="useLament" text="insert lament amulet">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="lament amulet" />
 		</choice>	
@@ -101,16 +101,7 @@
 		<effect type="setlocalflag" flag="amulet" value="1" />	
 		<choice destination="end" text="leave it there for now" />		
 	</page>
-	
-	<page ID="useCalamity">
-	<text>
-		You slot the amulet into the slot, it looks like it fits. The blazing circle is nestled nicely into the hole. 
-	</text>
-		<effect type="removeitem" item="calamity amulet" value="1" />
-				<effect type="incrementglobalflag" flag="zorrDoor" value="1" />	
-		<effect type="setlocalflag" flag="amulet" value="3" />	
-		<choice destination="end" text="leave it there for now" />		
-	</page>
+
 	
 	<page ID="useCrown">	
 	<text>

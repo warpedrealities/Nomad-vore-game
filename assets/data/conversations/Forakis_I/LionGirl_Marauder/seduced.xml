@@ -5,7 +5,7 @@
 		<text>
 			You see the lioness kneeling in the sands, with her face all red and her hands by the nether regions, she’s obviously trying not to masturbate in front of you. Her eyes blink shut for extended periods of time, and it seems she’s not fully here. 		
 		</text>
-		<choice destination="lust0" text="$Wanna see if we can cool eachother down?”/>
+		<choice destination="lust0" text="$Wanna see if we can cool eachother down?"/>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />

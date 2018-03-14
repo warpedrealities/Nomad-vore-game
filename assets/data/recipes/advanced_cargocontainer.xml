@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="advanced cargocontainer" requiredskill="2" startunlocked="true">
+<description>
+A sophisticated storage solution using an electronic control system to organize its contents to maximize its ability to contain supplies or equipment.
+</description>
+<ingredient item="scrap metal" quantity="8"/>
+<ingredient item="computation valve" quantity="4"/>
+<result item="advanced cargo container"/>
+</recipe>

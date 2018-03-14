@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgetcontainer sprite="90" name="advanced cargo container"
+	health="20" capacity="300">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>A sophisticated storage solution using an electronic control system to organize its contents to maximize its ability to contain supplies or equipment.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+</widgetcontainer>
