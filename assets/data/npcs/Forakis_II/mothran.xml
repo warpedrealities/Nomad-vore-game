@@ -54,7 +54,7 @@
 	<defeated conversation="Forakis_II/mothran/defeat" />
 	<seduced conversation="Forakis_II/mothran/seduced" />
 	<victory conversation="Forakis_II/mothran/seducer" />
-	<seducer conversation="Forakis_II/mothran/victory" />
+	<seducer conversation="Forakis_II/mothran/seducer" />
 	<controller AI="mothran" />
 	<faction value="monster" />
 </NPC>

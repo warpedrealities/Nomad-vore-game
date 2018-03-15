@@ -40,7 +40,7 @@
 			<noise tile="8" scarcity="32" />
 			<floodfill tile="1">
 				<Seedwidgets min="6" max="12" name="crystaldeposit" />
-				<SeedNPCs min="6" max="10" name="Forakis_I/slug">
+				<SeedNPCs min="6" max="10" name="Forakis_II/slug">
 				</SeedNPCs>
 			</floodfill>
 		</cavegen>
