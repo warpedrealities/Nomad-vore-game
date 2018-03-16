@@ -142,6 +142,6 @@ public class RPG_Helper {
 		if (string.equals("MOVEAPCOST")) {
 			return Actor_RPG.MOVEAPCOST;
 		}
-		return 0;
+		return -1;
 	}
 }
