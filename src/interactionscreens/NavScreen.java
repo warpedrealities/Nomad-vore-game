@@ -10,9 +10,8 @@ import java.util.Iterator;
 
 import actor.player.CompanionTool;
 import nomad.Station;
-import nomad.Universe;
 import nomad.World;
-
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

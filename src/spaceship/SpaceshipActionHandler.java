@@ -15,8 +15,8 @@ import zone.Zone;
 import zone.Zone.zoneType;
 import landingScreen.LandingScreen;
 import nomad.Station;
-import nomad.Universe;
 import nomad.World;
+import nomad.universe.Universe;
 import rendering.SpriteManager;
 
 public class SpaceshipActionHandler {

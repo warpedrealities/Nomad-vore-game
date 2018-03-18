@@ -20,10 +20,33 @@
 			<condition operator="lessthan" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
 				value="5" />		
 		</choice>		
+		<choice destination="protein0" text="A lot of your warriors are quite built, what do you eat?"/>		
 		<choice destination="end" text="nothing, but I just wanted to say hi" />
 	</page>
 
-
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
+			value="4" />
+		<!--digested once again after training, skips question -->
+		<text>
+		Awari turns to welcome you, adopting a combat stance with a knowing glint in her eye.
+		"Greetings immortal, do you want to help out with my workout once again?"
+		</text>
+		<choice destination="hunting0" text="No, do you have any tasks that would be a worthy challenge?">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="0" />
+		</choice>
+		<choice destination="hunting1" text="Can we discuss the matter of the hunt?">
+			<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="1" />
+			<condition operator="lessthan" evaluate="GLOBALFLAG" flag="minyos_monsterhunt_0"
+				value="5" />		
+		</choice>			
+		<choice destination="protein4a" text="You know I'm ready to go!" />
+		<choice destination="protein4b" text="I'm not fighting you!" />
+		<choice destination="end" text="Not today, just saying hi" />
+	</page>	
+	
 	<page ID="start">
 		<condition operator="equals" evaluate="LOCALFLAG" flag="eaten"
 			value="2" />
@@ -37,6 +60,240 @@
 			text="...you're talking this remarkably in stride" />
 	</page>
 
+	<page ID="protein0">
+		<!--content written by alpha shows -->
+		<text>
+		Frowning slightly, Awari answers the question "Well... Our warriors main diet is mostly deku nuts and fruit,
+		the food here is high in protein and makes us strong." she flexes a little, showing of her toned body
+		"Of course without such a rigourous training schedule, we wouldn't be much of a match for the wildlife."
+		Sizing you up, she adds "Why do you ask? Surely you have no need for my help any longer?"
+		</text>
+		<choice destination="protein1" text="I was thinking more along the lines of 'helping' you">
+		<preference fetish="demis" />
+		<preference fetish="females" />
+		</choice>
+		<choice destination="end" text="You're right, I was merely curious"/>
+	</page>
+	
+	<page ID="protein1">
+		<effect type="setlocalflag" flag="eaten" value="4" />
+		<text>
+		Hearing your alluring tone, Awari quickly gathers your meaning and smirks dropping her staff.
+		"I see. Well we do have another prominently featured meal in our diet you know?"
+		You look at her in faked quizzicality and her smile widens. "Yes and it's certainly more protein rich than some fruits.."
+		You make a comically puzzled face, bringing your hand to your chin looking up and away from her.	
+		</text>
+		<choice destination="protein2" text="You mean... The raptors?" />
+	</page>
+	
+	<page ID="protein2">
+		<text>
+		Smiling seductively, Awari closes in on you. "While you are right, I was thinking of something closer to home."
+		Having fun with your little game, you exaggeratedly point towards the busty shopkeeper's store before looking back expectantly at Awari.
+		The stern warrior elf almost loses her composure with a snort and grabs your hand gently.
+		"An immortal traveller from the stars and yet, you act like a child.." Putting her arm around your waist and pulling you in,
+		she moves your arm up to her face. "Going to tease me like this as some sort of revenge for gurgling you earlier?" 
+		</text>
+		<choice destination="protein3" text="No, I'm going to be a big protein filled meal for a real warrior.." />
+	</page>
+	
+	<page ID="protein3">
+		<text>
+		Awari uses your hand to caress her face and sucks on your finger a little. "Oohh, getting too riled up to continue the act huh?"
+		Opening her mouth wide, she slowly closes in until you can almost see down her throat. Closing your eyes in anticipation you wait...
+		Wait... ...Opening an eye you see her smugly grinning. "You thought you could just tease me and be in control? No, we're doing it my way."
+		She lets go of your waist and walks to the center of the room, picking up her staff and pointing to the ones on the wall. 
+		Brandishing her weapon towards you, she adopts a fighting stance.  "Come. Show me just how much you want to 'help' me."
+		</text>
+		<choice destination="protein4a" text="Fight to prove you're serious" />
+		<choice destination="protein4b" text="Refuse to fight" />
+	</page>
+	
+	<check ID="protein4a">
+		<test what="MELEE" DC="16" />
+		<outcome destination="protein4win" />
+		<outcome destination="protein4lose" />
+	</check>
+	
+	<page ID="protein4win">
+		<text>
+		Picking up a staff of your own, you vow to yourself to beat her senseless and force yourself down her unconscious throat.
+		Or something like that. Slowly circling around you block a quick strike from Awari and return a low sweep.
+		Jumping back she then lunges forward with a thrust, ducking you try to knock her off balance by pushing into her chest from underneath.
+		Not expecting you to dodge her thrust she tries to block but takes the brunt of the hit and is almost thrown backwards off her feet.
+		"Now that's more like it!" Awari excitedly yells, face flushed. Getting more and more into the fight, you trade blows back and forth,
+		sweating and breathing deeply from exertion, almost dancing across the floor of the training hut. Sensing you have the upper hand,
+		you push forward with quicker strikes before throwing your staff away and bodily tackling her into the wall. 
+		Stunned from the impact, you rip her staff from her hands and pin her, looking down at her in triumph.
+		Panting into each other, chests touching slightly, she suddenly jumps up and mashes her lips into yours frantically,
+		tongue probing roughly in your mouth.
+		<conditional>
+			<assertion evaluate="slothasitem" slot="2" />
+			You both clumsily strip each other, passion taking hold of your rational thought as you make out with the elfin babe.
+		</conditional>
+		Pulling away for breath, you see the desire in her expression and know it's time. Still slumped against the wall she outstreches her arms.
+		</text>
+		<choice destination="protein4win2" text="Take your 'prize'" />
+	</page>
+	
+	<page ID="protein4win2">
+		<text>
+		Knowing she won't resist anymore, you accept her embrace and tease your tongue around her bare breasts. 
+		Earning a few jolts of pleasure from the beaten warrior woman, running your hands across her firm abs you nod and close your eyes.
+		Hearing only her heartbeat and panting, a loud hungry gurgle sounds out.
+		This time there is no teasing from her and you hear her lips part breathily and a warm wet sensation over your head.
+		Gulping fairly hurriedly, you feel her powerful experienced throat muscles pull you further down into her gullet.
+		You feel her warmth from inside and know her acids are already broiling in anticipation. She caresses your form and squeezes your 
+		<macro ID="butt_size_desc"/> butt, pulling you in moaning all the while. With every moan, her esophagus ripples, 
+		combining with the heat to massage all your fatigue away... 
+		<conditional> <assertion evaluate="haspart" part="vagina"/>
+		As she makes her way down your body she stops at your dripping folds, thrusting her tongue straight in, roving your depths.
+		It doesn't take long and you're bucking into her, losing yourself in the pleasure and crying out from within her in orgasm.
+		Satisfied at the extra flavour, she continues to savour you and pulls you in deeper.
+		</conditional>
+		</text>
+		<choice destination="protein4win3" text="Almost there.." />
+	</page>
+	
+	<page ID="protein4win3">
+		<text>
+		Awari's tight body stretches out to contain you, and you curl inside the bubbling pool snugly. Feeling the last of the outside world,
+		you wiggle your toes in the back of her throat and earn a deeper moan. Finally reaching your destination, you lay in happiness as the
+		muscles rock you to and fro. "Okay, maybe your way was the right way..." Awari gasps out, still slumped on the floor caressing her swollen middle
+		She sighs happily, stroking her belly "...Delectable... Meals are hardly ever as good as this one was.. Are you ready to become slurry, my preyish star warrior?"
+		Feeling her gut convulse and compact around you, you're not sure you have a choice.
+		</text>
+		<choice destination="protein4winGO" text="Use me.." />
+	</page>
+	
+	<gameover ID="protein4winGO">
+		<text>
+		Almost without waiting for an answer, Awari's squirming stomach kicks into overdrive, and you feel yourself become sluggish, 
+		losing form within the confines of your predator. Awari leisurely sits against the wall, revelling in the sensual warmth of digestion,
+		watching her gut rounding out gradually. The thick protein shake that you once were sloshes about inside her, as the sexy green
+		woman unsteadily gets to her feet. Draining away into her intestines, your body is absorbed steadily as she cleans up the room and resumes her training.
+		The stern woman breaking her tough image, bounces around joyously and hums softly while going through her routine.
+		Finishing up her exercise as the last of you joins with her she feels herself up, taking note of the extra weight you've added to her powerful body.
+		As she leaves for the night, she turns to look back at where you were consumed. Smiling softly, she whispers to no one in particular.
+		"The best part of all of this is... I know you'll be back..."
+		</text>
+		
+	</gameover>
+	
+	<page ID="protein4lose">
+		<text>
+		Picking up a staff of your own, you vow to yourself to beat her senseless and force yourself down her unconscious throat.
+		Or something like that at least. Slowly circling around you block a quick strike and try to return with a wild swing.
+		Side-stepping your broad swing she thrust her staff forward, striking you painfully in the abdomen. 
+		Wincing you try another wide swing which she deftly parries and raps you on the wrist. "Come on, I know you can do better than that!"
+		Awari berates as she swings her staff with practiced precision. Doing the best you can to minimize damage,
+		you try again and again to land a decisive blow. You are worn down over time and your movements become sluggish.
+		With a quick and precise strike from Awari, you hear a clacking on the ground. Turning to look you see a staff falling on the ground,
+		before realising it was the one previously in your hands. Panting, you rush towards her in a last ditch attempt to win.
+		</text>
+		<choice destination="protein4lose2" text="Charge!" />
+	</page>
+	
+	<page ID="protein4lose2">
+		<text>
+		Barrelling forward, arms outstretched you prepare to swat her staff and tackle her. Awari ducks and with a sweep of her leg, the world
+		spins. Laying dazed, face down on the mat, you know you've lost this one. Rolling over you see Awari standing over you, chest puffed smugly.
+		"Just like always, food put in it's place." She reaches for your feet and begins to lift you up. 
+		<conditional>
+			<assertion evaluate="slothasitem" slot="2" />
+			Stripping you of your <readequipment slot="2"/> she sets it aside gently and continues.
+		</conditional>
+		"Now be a good girl and feed yourself to me."
+		Holding you up to her mouth but doing no more, the triumphant redhead waits patiently for you to move. "This is what you wanted, right?"
+		You wearily flex and begin to push up into her mouth, her lips parting to accept both feet at once. She moans in satisfaction,
+		her supremacy proven over you once again. Awari makes no effort to swallow you down, but tickles you as she tastes her meal with vigor.
+		</text>
+		<choice destination="protein4lose3" text="Feed yourself in.." />
+	</page>
+	
+	<page ID="protein4lose3">
+		<text>
+		Straining your tired body, you lift yourself off the ground in a sort of handstand to force yourself deeper.
+		When you reach the point you no longer can, you stop, arms shaking and look pleadingly towards Awari. She looks down at you quizzically,
+		as if to say "This is the extent of your desire?" Seeing she is going to lord her superiority until the end,
+		you work yourself up and push off the ground with the last of your energy. Satisfied, Awari then begins to swallow.
+		Feeling your toes push through into her stomach, the warmth spreads through you as the muscles ripple around your form.
+		As the light from outside fades, her lips close into a smirk and you find yourself inside your objective.
+		"Good girl. Now don't make any more fuss, I'd hate for you to give me gas."
+		</text>
+		<choice destination="protein4loseGO" text="O-okay, I'll be good.." />
+	</page>
+	
+	<gameover ID="protein4loseGO">
+		<text>
+		"I didn't want a reply, food." She says matter of factly and slaps her struggling belly softly to discipline you.
+		Her belly gurgles around you as it shakes, the acid stirred up from her actions. You yelp a little in surprise, but quietly accept
+		your fate. You feel her stomach shudder as it begins the big job, rumbling happily,
+		breaking down your body into nutrients to supply to it's owner.
+		You are happy to let it do just that, and are lulled away by the rhythm of the organ rippling and squeezing around you. 
+		Awari sits down to rub her distended middle, glad she didn't have to leave the training hall for a nice meal.
+		After a brief nap, she rises ready to continue her workout. All that's left of your body 
+		just an added kilo or two and some more jiggle, until it's inevitably worked off later that day.
+		</text>
+	</gameover>
+	
+	<page ID="protein4b">
+		<text>
+		Awari frowns and stands tall. "You don't want to fight me?" Circling around you like a shark, she barks "You think you had a choice?"
+		With a thwack you feel a sharp pain, as she spanks your <macro ID="butt_size_desc"/> ass. "Hmm... What to do with a disobedient girl?"
+		Another hit and you yelp in pain and surprise. "Time for a bit of punishment I think.. One of my warriors would face something much worse.."
+		With every sentence that trails off, her staff swings, finding its mark on your buttocks. "I can't NOT eat you... 
+		But... Just giving you what you wanted... And so easily..."	When you try to rub the sore spot, you find
+		a new one on the back of your hand. Yipping you stand as still as you can, squirming as you take the repeated hits. 
+		<conditional>
+			<assertion evaluate="slothasitem" slot="2" />
+			She strips you of your <readequipment slot="2"/> throwing it aside, as she continues to dole out your punishment.
+		</conditional>
+		"Just think... If you sparred with me... Like I wanted... You wouldn't be facing this now! ...Maybe you like this better?"	
+		</text>
+		<choice destination="protein4b2" text="N-no, stop!" />
+	</page>
+	
+	<page ID="protein4b2">
+		<text>
+		"I never said you could speak, Meat!" Awari snaps, sweeping your feet out from under you with her staff.
+		You land roughly on the hard matted floor, thankfully not on your punished ass. Dropping the staff and advancing on you,
+		Awari looks quite menacing from this angle. Her posture almost feral, not the practiced efficiency of a trained warrior.
+		"I'll show you the same respect a beast would show a hunk of meat, because for all anyone is concerned, that's what you are now."
+		Grabbing you roughly and hefting you up, you're helpless as she stuffs your head into her open mouth.
+		Being true to her word, she gives you no real pleasure as she forcefully swallows, gobbling you greedily down.
+		Eating sloppily, her saliva covers you and the pressure from her insides is almost unbearable.
+		Making progress down your body, she gives one last slap to your red <macro ID="butt_size_desc"/> butt that rings out with a tremendous sound.
+		</text>
+		<choice destination="protein4b3" text="Meal for a warrior" />
+	</page>
+	
+	<page ID="protein4b3">
+		<text>
+		With big gulps, she slurps you down and you're relieved as you fall into the wider space that stretches to accommodate you.
+		Finishing her up with her meal, she bends back as your thighs go down, one last gulp and you're done.
+		"Ahhh... You really were a delicious piece of meat, I hope you know that." Awari sits and lounges, cradling her burbling gut.
+		As you lay inside her, in pain from the beating, the bubbling enzymes actually soothe your red raw skin.
+		Soothe it by numbing the nerves as they dissolve. At least you aren't being clamped down on anymore.
+		"Well you did want to be eaten after all, I'm not sure how much of a punishment this really was.."
+		Awari sighs and raps her fingers across her bulging midsection.
+		</text>
+		<choice destination="protein4bGO" text="It was.. The best kind.." />
+	</page>
+	
+	<gameover ID="protein4bGO">
+		<!--end of new scenes -->
+		<text>
+		"Hmph. I'll have to think of something else to try." Awari rubs her gut and flexes, hastening the digestive process.
+		You let the 'soothing' acids take you, closing your eyes and flexing your muscles, feeling each of your extremities slowly lose form.
+		"Next time, do try to fight me. Though with your tendencies I'm sure you'll end up in me either way."
+		As your body is gradually turned into a soupy mess, you silently agree. Even with the rough treatment you can't deny how sexy she is, 
+		it certainly may not be the last time you are curled up in here... "Mmmm, I'm going to have to double my training to keep my figure.
+		Especially if you return as much as I expect." Her sloshing belly rounds out as you complete your transformation and she returns
+		to her routine with fervor. Pausing mid swing, just for a moment, she looks at her receding pudge. "Immortality must be such a curse!" 
+		</text>
+	</gameover>	
+	
 	<page ID="stride">
 		<effect type="setlocalflag" flag="eaten" value="3" />
 		<text>

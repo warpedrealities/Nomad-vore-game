@@ -9,14 +9,13 @@ import gui.Window;
 import gui.lists.List;
 import input.Keyboard;
 import input.MouseHook;
+import nomad.universe.Universe;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.FloatBuffer;
 
 import org.lwjgl.glfw.GLFW;
-
-import nomad.Universe;
 
 import shared.Callback;
 import shared.FileTools;

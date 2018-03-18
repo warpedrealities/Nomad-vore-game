@@ -1,7 +1,5 @@
 package combat.effect;
 
-import nomad.Universe;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +18,8 @@ import combat.statusEffects.Status_DoT;
 import combat.statusEffects.Status_Stealth;
 import combat.statusEffects.Status_Stun;
 import combat.statusEffects.Status_SubAbilityMod;
+import combat.statusEffects.Status_Transformed;
+import nomad.universe.Universe;
 import actor.Actor;
 import actorRPG.RPG_Helper;
 
@@ -109,6 +109,9 @@ public class Effect_Status extends Effect {
 				}
 				if (e.getTagName().equals("statusFaction")) {
 					effects.add(new StatusFaction(e));
+				}
+				if (e.getTagName().equals("statusTransformed")) {
+					effects.add(new Status_Transformed(e));
 				}
 			}
 		}

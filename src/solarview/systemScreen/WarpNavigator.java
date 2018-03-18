@@ -1,7 +1,7 @@
 package solarview.systemScreen;
 
 import nomad.StarSystem;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Geometry;
 import shared.Vec2f;
 import shared.Vec2i;

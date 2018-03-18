@@ -7,12 +7,12 @@ import gui.lists.List;
 import input.MouseHook;
 import item.Item;
 import item.ItemCoin;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
 import actor.player.Player;
-import nomad.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

@@ -8,8 +8,7 @@ import java.util.Map;
 
 import actor.Actor;
 import actor.npc.NPC;
-import nomad.Universe;
-
+import nomad.universe.Universe;
 import shipsystem.ShipAbility;
 import shipsystem.ShipAbility.AbilityType;
 import shipsystem.weapon.ShipWeapon;

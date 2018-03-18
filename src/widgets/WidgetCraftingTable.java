@@ -8,11 +8,11 @@ import org.w3c.dom.Element;
 
 import actor.player.Player;
 import crafting.CraftingScreen;
-import nomad.Universe;
 import shared.ParserHelper;
 import view.ViewScene;
 import interactionscreens.ContainerScreen;
 import item.Item;
+import nomad.universe.Universe;
 
 public class WidgetCraftingTable extends WidgetBreakable {
 

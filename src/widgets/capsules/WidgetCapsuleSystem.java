@@ -9,7 +9,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actor.player.Player;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import spaceship.Spaceship;
 import view.ViewScene;

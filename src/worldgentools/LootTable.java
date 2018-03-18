@@ -5,10 +5,9 @@ import item.ItemCoin;
 import item.handlers.StackHandler;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
+import nomad.universe.Universe;
 
 import java.util.ArrayList;
-
-import nomad.Universe;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

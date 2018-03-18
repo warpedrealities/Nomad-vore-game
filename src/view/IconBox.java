@@ -3,8 +3,6 @@ package view;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
-import nomad.Universe;
-
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 
@@ -14,6 +12,7 @@ import rendering.Sprite;
 import shared.Tools;
 import shared.Vec2f;
 import gui.GUIBase;
+import nomad.universe.Universe;
 
 public class IconBox extends GUIBase {
 

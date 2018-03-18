@@ -45,7 +45,7 @@ public class FX {
 		this.colour[2] = b;
 		this.position = position;
 		this.index = index;
-		lifeSpan = 20;
+		lifeSpan = 10;
 	}
 
 	public FX(int index, Vec2f position, float r, float g, float b, int lifeSpan) {
@@ -62,10 +62,11 @@ public class FX {
 		this.colour = colour;
 		this.position = position;
 		this.index = index;
-		lifeSpan = 20;
+		lifeSpan = 10;
 	}
 
-	public void update(Square_Int square) {
+	public void update(Square_Int[] squares) {
+		squares[index].setVisible(true);
 		this.lifeSpan--;
 	}
 

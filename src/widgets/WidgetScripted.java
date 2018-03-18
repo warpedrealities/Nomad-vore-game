@@ -12,7 +12,7 @@ import org.luaj.vm2.lib.jse.CoerceLuaToJava;
 import org.luaj.vm2.lib.jse.JsePlatform;
 import org.w3c.dom.Element;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import zone.Zone;
 

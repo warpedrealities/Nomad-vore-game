@@ -18,7 +18,7 @@ import org.w3c.dom.NodeList;
 import faction.Faction;
 import faction.FactionLibrary;
 import nomad.FlagField;
-import nomad.Universe;
+import nomad.universe.Universe;
 import rendering.SpriteRotatable;
 import shared.ParserHelper;
 import shared.Vec2f;

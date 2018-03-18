@@ -20,7 +20,7 @@ import actor.Actor;
 import actor.npc.NPC;
 import actor.npc.ScriptPackage;
 import faction.FactionLibrary;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;

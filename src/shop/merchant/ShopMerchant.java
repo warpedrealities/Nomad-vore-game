@@ -9,8 +9,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import nomad.Universe;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -18,6 +16,7 @@ import org.w3c.dom.NodeList;
 
 import dialogue.evaluation.OutEvaluator;
 import item.Item;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Screen;
 import shop.ShopData;

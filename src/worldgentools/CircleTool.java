@@ -2,7 +2,7 @@ package worldgentools;
 
 import org.w3c.dom.Element;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import worldgentools.nodeMapGenerator.NodeMapGenerator;
 import zone.Zone;
 

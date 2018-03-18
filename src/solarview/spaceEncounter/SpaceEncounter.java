@@ -5,7 +5,7 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 
 import input.MouseHook;
-import nomad.Universe;
+import nomad.universe.Universe;
 import rendering.SpriteBeam;
 import shared.SceneBase;
 import shared.Vec2f;

@@ -7,11 +7,10 @@ import gui.Text;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
-
-import nomad.Universe;
 
 import perks.Perk;
 import perks.PerkLibrary;

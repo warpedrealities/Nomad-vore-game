@@ -26,7 +26,7 @@ import perks.PerkLoader;
 import perks.PerkProcessor;
 
 import nomad.GameOver;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.SceneBase;
 import view.ViewScene;

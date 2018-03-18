@@ -5,11 +5,10 @@ import gui.TextParagrapher;
 import gui.Textwindow;
 import gui.Window;
 import input.MouseHook;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
-
-import nomad.Universe;
 
 import description.AppearanceParser;
 

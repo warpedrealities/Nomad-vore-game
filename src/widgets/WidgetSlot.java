@@ -3,7 +3,7 @@ package widgets;
 import interactionscreens.SlotScreen;
 import item.Item;
 import item.ItemLibrary;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

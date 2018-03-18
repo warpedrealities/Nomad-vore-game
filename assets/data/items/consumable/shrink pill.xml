@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 <ItemConsumable name="shrink pill" weight="0.1" value="500">
 	<description>A pill, meant to reduce your size drastically but temporarily when imbibed. You're not sure how useful becoming bite sized is to you in this dangerously vorish galaxy. But maybe being bitesize is your idea of fun. </description>
-
+	<effectstatus probability="100">
+		<statusTag tag="shrink" />
+		<applyText>TARGET has been SHRUNK!</applyText>
+		<statusAttribMod uid="90" icon="17" duration="60"
+			numModifiers="3">	
+			<removeText>TARGET is now back to normal size
+			</removeText>
+		</statusAttribMod>
+	</effectstatus>
 </ItemConsumable>

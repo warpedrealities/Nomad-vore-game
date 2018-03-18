@@ -8,8 +8,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import nomad.Universe;
-
 import shared.ParserHelper;
 import shared.Vec2f;
 import view.ViewScene;
@@ -19,6 +17,7 @@ import actor.Attackable;
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
 import item.Item;
+import nomad.universe.Universe;
 import combat.effect.Effect;
 import combat.effect.Effect_Damage;
 

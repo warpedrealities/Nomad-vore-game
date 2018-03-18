@@ -1,7 +1,7 @@
 package combat;
 
 import actor.Actor;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2f;
 import view.ViewScene;
 import zone.Tile;

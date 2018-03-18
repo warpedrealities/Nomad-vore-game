@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.w3c.dom.Element;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Geometry;
 import shared.Vec2i;
 import zone.Zone;

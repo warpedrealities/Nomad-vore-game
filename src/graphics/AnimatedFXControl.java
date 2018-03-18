@@ -28,15 +28,13 @@ public class AnimatedFXControl {
 
 	public void Update() {
 		if (currentVisualEffect != null) {
-			currentVisualEffect.update(m_squares[currentVisualEffect.getIndex()]);
+			currentVisualEffect.update(m_squares);
 
 			if (currentVisualEffect.getLifeSpan() == 0) {
 				if (visualEffects.size() > 0) {
 					currentVisualEffect = visualEffects.poll();
-					m_squares[currentVisualEffect.getIndex()].reposition(currentVisualEffect.getPosition());
-					m_squares[currentVisualEffect.getIndex()].setColour(currentVisualEffect.getRed(),
-							currentVisualEffect.getGreen(), currentVisualEffect.getBlue());
-					currentVisualEffect.update(m_squares[currentVisualEffect.getIndex()]);
+					initEffect(currentVisualEffect);
+					currentVisualEffect.update(m_squares);
 				} else {
 					currentVisualEffect = null;
 				}
@@ -47,18 +45,34 @@ public class AnimatedFXControl {
 
 	public void Draw(int matrixloc, int tint, FloatBuffer matrix44fbuffer) {
 		if (currentVisualEffect != null) {
-			m_squares[currentVisualEffect.getIndex()].draw(matrixloc, tint, matrix44fbuffer);
+			for (int i=0;i<3;i++)
+			{
+				if (m_squares[i].getVisible())
+				{
+					m_squares[i].draw(matrixloc, tint, matrix44fbuffer);		
+				}
+			}
+
 		}
 
 	}
 
+	private void initEffect(FX effect)
+	{
+		for(int i=0;i<3;i++)
+		{
+			m_squares[i].setColour(currentVisualEffect.getRed(),
+					currentVisualEffect.getGreen(), currentVisualEffect.getBlue());		
+			m_squares[i].setVisible(false);
+		}
+		m_squares[effect.getIndex()].reposition(currentVisualEffect.getPosition());
+
+	}
+	
 	public void addEffect(FX effect) {
 		if (currentVisualEffect == null) {
 			currentVisualEffect = effect;
-			m_squares[currentVisualEffect.getIndex()].reposition(currentVisualEffect.getPosition());
-			m_squares[currentVisualEffect.getIndex()].setColour(currentVisualEffect.getRed(),
-					currentVisualEffect.getGreen(), currentVisualEffect.getBlue());
-
+			initEffect(effect);
 		} else {
 			visualEffects.add(effect);
 		}

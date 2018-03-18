@@ -3,7 +3,7 @@ package spaceship.npcShips;
 import faction.Faction;
 import nomad.FlagField;
 import nomad.StarSystem;
-import nomad.Universe;
+import nomad.universe.Universe;
 import spaceship.PlayerShipController;
 import spaceship.Spaceship;
 import spaceship.boarding.BoardingHelper;

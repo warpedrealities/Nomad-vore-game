@@ -18,7 +18,7 @@ import actorRPG.player.Player_RPG;
 import dialogue.MalformedDialogException;
 import faction.Faction;
 import nomad.FlagField;
-import nomad.Universe;
+import nomad.universe.Universe;
 import perks.PerkInstance;
 import perks.PerkQualifier;
 import spaceship.Spaceship;
@@ -145,7 +145,22 @@ public class OutEvaluator {
 				return false;
 			}
 		}
-
+		if (E.getTagName().equals("transformed")) {
+			if (!m_player.getRPG().getStatusEffectHandler().isTransformed()) {
+				return false;
+			}
+			else
+			{
+				if (m_player.getRPG().getStatusEffectHandler().getTransformedState().getUID()==Integer.parseInt(E.getAttribute("value")))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
 		if (E.getTagName().equals("condition")) {
 			String eval = E.getAttribute("evaluate");
 

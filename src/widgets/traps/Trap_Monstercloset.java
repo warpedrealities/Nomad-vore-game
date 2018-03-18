@@ -8,7 +8,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import actor.Actor;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import view.ViewScene;
 import widgets.WidgetDoor;

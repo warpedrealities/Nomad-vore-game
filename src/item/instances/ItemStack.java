@@ -6,7 +6,7 @@ import java.io.IOException;
 import shared.ParserHelper;
 import item.Item;
 import item.Item.ItemUse;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 public class ItemStack extends Item {
 

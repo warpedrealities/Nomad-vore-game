@@ -5,7 +5,7 @@ import actor.player.Inventory;
 import actor.player.Player;
 import item.instances.ItemCaptureInstance;
 import nomad.Entity;
-import nomad.Universe;
+import nomad.universe.Universe;
 import view.ViewScene;
 import widgets.WidgetCapture;
 import widgets.WidgetSlot;

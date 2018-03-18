@@ -8,7 +8,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import item.Item;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 
 public class LootSubTable extends LootEntry {

@@ -6,11 +6,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import actor.player.Player;
-import nomad.Universe;
 import view.ViewScene;
 
 import item.Item;
 import item.ItemCoin;
+import nomad.universe.Universe;
 
 public class WidgetItemPile extends Widget {
 

@@ -4,8 +4,6 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import nomad.Universe;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -15,6 +13,7 @@ import view.ViewScene;
 
 import actor.Actor;
 import actorRPG.Actor_RPG;
+import nomad.universe.Universe;
 
 public class Status_Bind extends Status_AttribMod {
 

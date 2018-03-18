@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 
 import actor.player.Player;
 import actorRPG.Actor_RPG;
-import nomad.Universe;
+import nomad.universe.Universe;
 import view.ViewScene;
 import widgets.Widget;
 

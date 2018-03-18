@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import nomad.Entity_Int;
-import nomad.Universe;
 import nomad.World;
+import nomad.universe.Universe;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;

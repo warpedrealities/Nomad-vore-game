@@ -9,7 +9,7 @@ import gui.Window;
 import input.MouseHook;
 import interactionscreens.subscreens.ComputerPedia;
 import interactionscreens.subscreens.ComputerResearch;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

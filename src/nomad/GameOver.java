@@ -8,6 +8,7 @@ import gui.TextView;
 import gui.Window;
 import input.MouseHook;
 import menu.Menu;
+import nomad.universe.Universe;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;

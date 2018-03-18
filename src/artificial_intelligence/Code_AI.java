@@ -3,7 +3,7 @@ package artificial_intelligence;
 import actor.Actor;
 import actor.npc.NPC;
 import artificial_intelligence.detection.Sense;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 public class Code_AI implements Controller {
 

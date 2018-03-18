@@ -2,7 +2,7 @@ package worldgentools.preload;
 
 import java.util.ArrayList;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 
 public class GuaranteePathsFindPosition {
 

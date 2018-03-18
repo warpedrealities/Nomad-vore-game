@@ -14,7 +14,7 @@ import gui.Text;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

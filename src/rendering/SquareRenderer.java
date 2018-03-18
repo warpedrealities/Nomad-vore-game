@@ -317,6 +317,7 @@ public class SquareRenderer implements Square_Int {
 		}
 	}
 
+	@Override
 	public boolean getVisible() {
 		return m_visible;
 	}

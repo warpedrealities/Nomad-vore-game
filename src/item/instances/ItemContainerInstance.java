@@ -11,7 +11,7 @@ import item.ItemConsumable;
 import item.ItemContainer;
 import item.ItemResource;
 import item.Item.ItemUse;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 
 public class ItemContainerInstance extends Item {

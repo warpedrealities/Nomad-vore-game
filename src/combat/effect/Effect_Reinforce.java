@@ -6,7 +6,7 @@ import org.w3c.dom.NodeList;
 
 import actor.Actor;
 import actor.npc.NPC;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2f;
 import view.ViewScene;
 import view.ZoneInteractionHandler;

@@ -5,7 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 import nomad.FlagField;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

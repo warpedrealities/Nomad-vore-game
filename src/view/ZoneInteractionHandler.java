@@ -1,8 +1,8 @@
 package view;
 
-import nomad.Universe;
 import faction.violation.FactionListener;
 import faction.violation.FactionRule.ViolationType;
+import nomad.universe.Universe;
 import rlforj.los.ILosBoard;
 import shared.Vec2f;
 import shared.Vec2i;
@@ -151,6 +151,10 @@ public class ZoneInteractionHandler {
 	}
 
 	public void Interact(Vec2f p, Player player) {
+		if (canAct(player))
+		{
+			return;
+		}
 		if (!m_zone.contains((int)p.x, (int)p.y))
 		{
 			return;
@@ -309,8 +313,20 @@ public class ZoneInteractionHandler {
 		this.factionListener = factionListener;
 	}
 
+	private boolean canAct(Player player)
+	{
+		if (player.getRPG().getStatusEffectHandler().isTransformed())
+		{
+			return true;
+		}
+		return false;
+	}
+	
 	public void attack(Vec2f p, Player player) {
-
+		if (canAct(player))
+		{
+			return;
+		}
 		// use first attack on location
 		if (!useMove(0, p, player)) {
 			Player_RPG rpg = (Player_RPG) player.getRPG();
@@ -320,6 +336,10 @@ public class ZoneInteractionHandler {
 
 	public boolean special(Vec2f p, Player player) {
 		// use numbered attack on the location
+		if (canAct(player))
+		{
+			return false;
+		}		
 		return useMove(player.getSpecialMove(), p, player);
 	}
 

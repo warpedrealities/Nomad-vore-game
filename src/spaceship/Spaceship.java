@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 import nomad.Entity;
 import nomad.Station;
-import nomad.Universe;
 import nomad.World;
+import nomad.universe.Universe;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -71,6 +71,15 @@ public class Spaceship extends Entity {
 		}
 		NodeList children = n.getChildNodes();
 
+	}
+
+	public void setUID(int uID) {
+		
+		String s=Integer.toString(uID);
+		String o=Integer.toString(this.UID);
+		entityName= entityName.replace(o, s);
+		interiorZone.zoneName=entityName;
+		UID = uID;
 	}
 
 	@Override

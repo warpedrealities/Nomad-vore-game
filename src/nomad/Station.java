@@ -14,6 +14,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import spaceship.Spaceship;

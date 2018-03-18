@@ -4,8 +4,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import nomad.StarSystem;
-import nomad.Universe;
 import nomad.World;
+import nomad.universe.Universe;
 import shared.Geometry;
 import shared.ParserHelper;
 import shared.Vec2i;

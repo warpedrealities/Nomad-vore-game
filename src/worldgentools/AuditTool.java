@@ -2,7 +2,7 @@ package worldgentools;
 
 import java.util.ArrayList;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import worldgentools.auditing.CarvingPathfinder;
 import worldgentools.auditing.FloodPathfinder;
 import worldgentools.auditing.VoidPathfinder;

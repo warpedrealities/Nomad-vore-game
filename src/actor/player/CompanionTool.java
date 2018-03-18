@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import actor.Actor;
 import actor.npc.NPC;
 import actorRPG.Actor_RPG;
-
-import nomad.Universe;
-
+import nomad.universe.Universe;
 import shared.Vec2f;
 import shared.Vec2i;
 import spaceship.Spaceship;

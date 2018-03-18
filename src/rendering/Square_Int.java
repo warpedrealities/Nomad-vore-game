@@ -12,6 +12,8 @@ public interface Square_Int {
 	public void setVisible(boolean visible);
 
 	public void setFlashing(int bool);
+	
+	public boolean getVisible();
 
 	public void setImage(int value);
 	

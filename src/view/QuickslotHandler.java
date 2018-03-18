@@ -10,7 +10,7 @@ import item.ItemHasEnergy;
 import item.ItemWeapon;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 public class QuickslotHandler {
 

@@ -1,11 +1,10 @@
 package actorRPG;
 
 import combat.CombatMove;
-
+import nomad.universe.Universe;
 import shared.Vec2f;
 import view.ModelController_Int;
 import vmo.GameManager;
-import nomad.Universe;
 import actor.Actor;
 import actor.Attackable;
 

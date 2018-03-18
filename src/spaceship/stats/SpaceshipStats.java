@@ -10,8 +10,7 @@ import java.util.Set;
 
 import actor.npc.NPC;
 import actorRPG.Actor_RPG;
-import nomad.Universe;
-
+import nomad.universe.Universe;
 import shipsystem.ShipConverter;
 import spaceship.SpaceshipResource;
 

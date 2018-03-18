@@ -6,7 +6,7 @@ import gui.Text;
 import gui.Window;
 import input.MouseHook;
 import menu.preferenceControls.PreferencesScreen;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;

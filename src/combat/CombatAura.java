@@ -5,7 +5,7 @@ import actor.Attackable;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import faction.violation.FactionRule.ViolationType;
-import nomad.Universe;
+import nomad.universe.Universe;
 import rlforj.los.ConePrecisePremisive;
 import rlforj.los.IConeFovAlgorithm;
 import rlforj.los.PrecisePermissive;

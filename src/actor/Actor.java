@@ -12,9 +12,7 @@ import combat.CombatMove;
 import combat.statusEffects.StatusEffect;
 import combat.statusEffects.StatusFaction;
 import faction.Faction;
-
-import nomad.Universe;
-
+import nomad.universe.Universe;
 import actorRPG.Actor_RPG;
 import actorRPG.RPGActionHandler;
 

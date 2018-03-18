@@ -10,7 +10,7 @@ import actor.Actor;
 import actor.npc.NPC;
 import actorRPG.NPC_RPG;
 import actorRPG.RPG_Helper;
-import nomad.Universe;
+import nomad.universe.Universe;
 import view.ViewScene;
 
 public class Effect_Scan extends Effect {

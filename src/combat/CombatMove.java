@@ -2,8 +2,6 @@ package combat;
 
 import java.util.ArrayList;
 
-import nomad.Universe;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -17,6 +15,7 @@ import combat.effect.Effect_Submit;
 import combat.effect.analyze.Effect_Analyze;
 import combat.effect.map.Effect_Map;
 import combat.statusEffects.StatusEffect;
+import nomad.universe.Universe;
 import combat.effect.Effect_Recover;
 import combat.effect.Effect_Reinforce;
 import combat.effect.Effect_Scan;
@@ -416,9 +415,7 @@ public class CombatMove {
 			int def = CombatLookup.getBaseDefence(distance, defAttribute) + target.getAttribute(defAttribute);
 			// get attack bonus
 			int bonus = attackBonus + origin.getRPG().getAttribute(bonusAttribute);
-			if (distance >= 2 && attackPattern != AttackPattern.P_CONE && moveType!=MoveType.MOVEMENT) {
-				ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
-						new Vec2f(origin.getPosition().x, origin.getPosition().y), 0);
+			if (distance >= 2) {
 				def -= rangedBias;
 			} else {
 				def += rangedBias;
@@ -440,7 +437,8 @@ public class CombatMove {
 			if (attackPattern == AttackPattern.P_CONE) {
 				return CombatAura.doCone(this, origin, target);
 			}
-
+			boolean visible = getVisible(target.getPosition());
+			
 			if (def <= r) {
 				if (Game.sceneManager.getConfig().isVerboseCombat() && r < 100 && origin.getVisible()) {
 					ViewScene.m_interface.DrawText(origin.getName() + " attacks " + target.getName() + " " + (r - bonus)
@@ -449,7 +447,7 @@ public class CombatMove {
 				int value = 0;
 				// apply effect to target
 				boolean critical = false;
-				boolean visible = getVisible(target.getPosition());
+		
 				if (r > def + 10 && r < 100 && Player.class.isInstance(origin) && Actor.class.isInstance(target)) {
 					critical = true;
 				}
@@ -484,7 +482,14 @@ public class CombatMove {
 						} else {
 							if (ViewScene.m_interface!=null)
 							{
-								ViewScene.m_interface.Flash(target.getPosition(), 0);			
+								if (distance >= 2 && attackPattern != AttackPattern.P_CONE && moveType!=MoveType.MOVEMENT) {
+									ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
+											new Vec2f(origin.getPosition().x, origin.getPosition().y), 0);
+								}
+								else
+								{
+									ViewScene.m_interface.Flash(target.getPosition(), 0);					
+								}
 							}
 				
 						}
@@ -502,6 +507,10 @@ public class CombatMove {
 				String text = missText[GameManager.m_random.nextInt(missText.length)];
 				String str = text.replace("TARGET", target.getName());
 				ViewScene.m_interface.DrawText(str);
+				if (visible && distance >= 2 && attackPattern != AttackPattern.P_CONE && moveType!=MoveType.MOVEMENT) {
+					ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
+							new Vec2f(origin.getPosition().x, origin.getPosition().y), 2);
+				}
 				return true;
 			}
 		}

@@ -1,7 +1,5 @@
 package font;
 
-import nomad.Universe;
-
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
@@ -16,6 +14,7 @@ import shared.Vec2f;
 import shared.Vertex;
 import vmo.Game;
 import font.IOUtil;
+import nomad.universe.Universe;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

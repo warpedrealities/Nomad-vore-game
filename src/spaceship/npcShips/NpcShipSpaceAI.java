@@ -16,7 +16,7 @@ import nomad.Entity;
 import nomad.FlagField;
 import nomad.GameOver;
 import nomad.StarSystem;
-import nomad.Universe;
+import nomad.universe.Universe;
 import rendering.SpriteRotatable;
 import shared.SceneBase;
 import shared.Vec2f;

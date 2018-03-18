@@ -1,6 +1,6 @@
 package worldgentools.nodeMapGenerator;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2i;
 import worldgentools.nodeMapGenerator.BridgingTool.BridgingTool;
 

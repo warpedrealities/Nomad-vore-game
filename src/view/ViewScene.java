@@ -20,7 +20,7 @@ import input.MouseHook;
 import item.Item;
 import menu.Menu;
 import nomad.GameOver;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
@@ -1224,13 +1224,17 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		switch (type) {
 		case 0:
 			// FXanimationControl.addEffect(new FX(0,p,1,0,0));
-			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 0));
+			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 0,true));
 			break;
 
 		case 1:
 			// FXanimationControl.addEffect(new FX(0,p,1,0,1));
-			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 1));
+			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 1,true));
 			break;
+		case 2:
+			// FXanimationControl.addEffect(new FX(0,p,1,0,1));
+			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 1,false));
+			break;			
 		}
 	}
 
@@ -1365,29 +1369,6 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		}
 	}
 
-	@Override
-	public boolean BeatPlayer(NPC npc) {
-
-		if (m_screen == null) {
-			if (sceneController.getUniverse().player.getRPG().getStat(Actor_RPG.HEALTH) <= 0) {
-				// move npc adjacent
-				MoveToPlayer(npc);
-				if (npc.getConversation(NPC.CONVERSATIONVICTORY) != null) {
-					StartConversation(npc.getConversation(NPC.CONVERSATIONVICTORY), npc, true);
-				}
-				return true;
-			}
-			if (sceneController.getUniverse().player.getRPG().getStat(Actor_RPG.RESOLVE) <= 0) {
-				// move npc adjacent
-				MoveToPlayer(npc);
-				if (npc.getConversation(NPC.CONVERSATIONSEDUCER) != null) {
-					StartConversation(npc.getConversation(NPC.CONVERSATIONSEDUCER), npc, true);
-				}
-				return true;
-			}
-		}
-		return false;
-	}
 
 	public void PlayerBeaten(NPC npc, boolean resolve) {
 		if (m_screen == null) {

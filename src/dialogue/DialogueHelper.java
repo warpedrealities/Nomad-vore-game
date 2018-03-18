@@ -1,6 +1,6 @@
 package dialogue;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import view.ViewScene;
 import widgets.Widget;
 import widgets.WidgetDoor;

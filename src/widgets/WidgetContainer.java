@@ -7,6 +7,7 @@ import item.ItemConsumable;
 import item.ItemResource;
 import item.handlers.StackHandler;
 import item.instances.ItemStack;
+import nomad.universe.Universe;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -19,8 +20,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actor.player.Player;
-import nomad.Universe;
-
 import shared.ParserHelper;
 import view.ViewScene;
 import actorRPG.RPG_Helper;

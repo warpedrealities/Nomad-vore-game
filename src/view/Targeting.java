@@ -2,11 +2,10 @@ package view;
 
 import actor.Actor;
 import input.Keyboard;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
-
-import nomad.Universe;
 
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;

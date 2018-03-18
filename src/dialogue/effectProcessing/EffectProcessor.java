@@ -2,7 +2,7 @@ package dialogue.effectProcessing;
 
 import mutation.Effect_Mutator;
 import nomad.FlagField;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import javax.xml.soap.Node;
 

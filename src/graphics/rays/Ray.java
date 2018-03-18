@@ -10,6 +10,7 @@ import shared.Vec2f;
 
 public class Ray implements Square_Int {
 
+	private boolean visible;
 	private SquareRenderer [] lineMarkers;
 	private int length;
 	private Vec2f position;
@@ -58,7 +59,7 @@ public class Ray implements Square_Int {
 	
 	@Override
 	public void setVisible(boolean visible) {
-		// TODO Auto-generated method stub
+		this.visible=visible;
 
 	}
 
@@ -95,6 +96,11 @@ public class Ray implements Square_Int {
 		for (int i = 0; i < lineMarkers.length; i++) {
 			lineMarkers[i].discard();
 		}
+	}
+
+	@Override
+	public boolean getVisible() {
+		return visible;
 	}
 
 }

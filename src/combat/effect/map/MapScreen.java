@@ -9,7 +9,7 @@ import gui.Button;
 import gui.TextParagrapher;
 import gui.Window;
 import input.MouseHook;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Tools;

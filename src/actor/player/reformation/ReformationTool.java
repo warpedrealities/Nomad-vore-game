@@ -7,7 +7,7 @@ import item.Item;
 import item.ItemCoin;
 import nomad.Entity;
 import nomad.StarSystem;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2f;
 import view.ZoneInteractionHandler;
 import widgets.Widget;

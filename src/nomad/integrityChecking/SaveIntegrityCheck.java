@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nomad.StarSystem;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 public class SaveIntegrityCheck {
 

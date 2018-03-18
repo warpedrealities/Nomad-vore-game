@@ -53,7 +53,7 @@
 
 	<page ID="releaseSubject">
 		<effect type="setglobalflag" flag="stagherm" value="1" />
-		<special effect="createNPC" file="Alpha_Minoris_IIA/stagHerm.xml" />
+		<special effect="createNPC" file="Alpha_Minoris_IIA/stagHerm" />
 		<special effect="removeCaptive" />
 		<text>
 			You trigger the system to release your new creation. The big herm's eyes

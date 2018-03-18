@@ -4,12 +4,11 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import nomad.Universe;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shipsystem.ShipAbility.AbilityType;
 import spaceship.Spaceship;

@@ -3,7 +3,7 @@ package worldgentools.preload;
 import org.w3c.dom.Element;
 
 import nomad.Entity;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2i;
 import worldgentools.PointsOfInterest;
 import zone.Tile;

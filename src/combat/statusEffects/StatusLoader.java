@@ -43,6 +43,10 @@ public class StatusLoader {
 			e= new StatusFaction();
 			e.load(dstream);
 			return e;
+		case 8:
+			e= new Status_Transformed();
+			e.load(dstream);
+			return e;
 		}
 		return null;
 	}

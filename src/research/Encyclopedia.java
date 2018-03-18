@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 
 public class Encyclopedia {

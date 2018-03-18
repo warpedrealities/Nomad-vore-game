@@ -8,6 +8,7 @@ import gui.Text;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 
@@ -19,8 +20,6 @@ import org.lwjgl.util.vector.Matrix4f;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.player.Player_RPG;
-import nomad.Universe;
-
 import shared.Callback;
 import shared.MyListener;
 import shared.SceneBase;

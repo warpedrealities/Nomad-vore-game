@@ -14,6 +14,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import nomad.universe.Universe;
 import rendering.SpriteBatch;
 import shared.ParserHelper;
 import shared.Vec2f;
@@ -25,9 +26,9 @@ import spaceship.npcShips.NpcShipController;
 
 public class StarSystem {
 
-	ArrayList<Entity> entitiesInSystem;
-	String systemName;
-	Vec2i systemPosition;
+	public ArrayList<Entity> entitiesInSystem;
+	public String systemName;
+	public Vec2i systemPosition;
 
 	public StarSystem(String name, int x, int y) {
 		systemName = name;

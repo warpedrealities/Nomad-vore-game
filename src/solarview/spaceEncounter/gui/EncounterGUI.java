@@ -17,7 +17,7 @@ import gui.TextColoured;
 import gui.Window;
 import input.Keyboard;
 import input.MouseHook;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.MyListener;
 import shared.SceneBase;
 import shared.Screen;

@@ -11,7 +11,7 @@ import static org.lwjgl.glfw.GLFW.GLFW_KEY_W;
 import nomad.Entity;
 import nomad.Star;
 import nomad.StarSystem;
-import nomad.Universe;
+import nomad.universe.Universe;
 import rendering.SpriteRotatable;
 
 import org.lwjgl.glfw.GLFW;

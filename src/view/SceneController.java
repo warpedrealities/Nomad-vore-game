@@ -1,6 +1,5 @@
 package view;
 
-import nomad.Universe;
 import shared.Vec2f;
 import vmo.GameManager;
 import zone.TileDef;
@@ -16,6 +15,7 @@ import artificial_intelligence.senseCriteria.CriteriaRepository;
 import artificial_intelligence.senseCriteria.Sense_Criteria;
 import item.Item;
 import item.ItemWeapon;
+import nomad.universe.Universe;
 
 public class SceneController implements Sense {
 

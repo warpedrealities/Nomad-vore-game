@@ -2,7 +2,7 @@ package combat;
 
 import actor.player.Player;
 import item.Item;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2f;
 import view.ViewScene;
 import widgets.WidgetItemPile;

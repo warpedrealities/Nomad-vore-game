@@ -13,7 +13,8 @@ import combat.statusEffects.StatusLoader;
 import combat.statusEffects.Status_Bind;
 import combat.statusEffects.Status_Defence;
 import combat.statusEffects.Status_Stealth;
-import nomad.Universe;
+import combat.statusEffects.Status_Transformed;
+import nomad.universe.Universe;
 import view.ViewScene;
 
 public class StatusEffectHandler {
@@ -23,9 +24,11 @@ public class StatusEffectHandler {
 	int bindState;
 	int stealthState;
 	private int factionState;
+	private boolean transformed;
 	
 	public StatusEffectHandler()
 	{
+		transformed=false;
 		bindState=-1;
 		stealthState=-1;
 		factionState = -1;
@@ -43,12 +46,21 @@ public class StatusEffectHandler {
 				statusEffects.get(i).update(actor);
 				if (statusEffects.get(i).maintain()==true)
 				{
-					statusDefences.remove(statusEffects.get(i));
+					handleRemoval(statusEffects.get(i));
 					statusEffects.get(i).remove(actor,false);
 					statusEffects.remove(i);
 				}
 			}
 		}		
+	}
+	
+	private void handleRemoval(StatusEffect effect)
+	{
+		statusDefences.remove(effect);
+		if (Status_Transformed.class.isInstance(effect))
+		{
+			transformed=false;
+		}
 	}
 	
 	public void save(DataOutputStream dstream) throws IOException {
@@ -69,6 +81,10 @@ public class StatusEffectHandler {
 			if (factionState==-1 && StatusFaction.class.isInstance(statusEffects.get(i))) {
 				factionState = i;
 			}
+			if (Status_Transformed.class.isInstance(statusEffects.get(i)))
+			{
+				transformed=true;
+			}
 		}
 		dstream.writeInt(bindState);	
 		dstream.writeInt(stealthState);
@@ -85,6 +101,10 @@ public class StatusEffectHandler {
 				statusEffects.add(effect);
 				if (Status_Defence.class.isInstance(effect)) {
 					statusDefences.add((Status_Defence) effect);
+				}
+				if (Status_Transformed.class.isInstance(effect))
+				{
+					transformed=true;
 				}
 			}
 		}
@@ -146,6 +166,10 @@ public class StatusEffectHandler {
 		if (Status_Defence.class.isInstance(effect))
 		{
 			statusDefences.add((Status_Defence)effect);
+		}
+		if (Status_Transformed.class.isInstance(effect))
+		{
+			transformed=true;
 		}
 		return true;	
 	}
@@ -234,6 +258,9 @@ public class StatusEffectHandler {
 		{
 			if (statusEffects.get(i).getUID()==uid)
 			{
+				if (Status_Transformed.class.isInstance(statusEffects.get(i))){
+					transformed=false;
+				}
 				statusEffects.get(i).remove(rpg,false);
 				statusEffects.remove(i);
 				break;
@@ -308,6 +335,23 @@ public class StatusEffectHandler {
 			damage=statusDefences.get(i).runDefence(damage, damageType);
 		}
 		return damage;
+	}
+
+
+	public boolean isTransformed() {
+		return transformed;
+	}
+
+
+	public Status_Transformed getTransformedState() {
+		for (int i=0;i<statusEffects.size();i++)
+		{
+			if (Status_Transformed.class.isInstance(statusEffects.get(i)))
+			{
+				return (Status_Transformed)statusEffects.get(i);
+			}
+		}
+		return null;
 	}
 	
 }

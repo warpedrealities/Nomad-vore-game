@@ -16,7 +16,7 @@ import org.w3c.dom.Element;
 
 import actor.npc.NPC;
 import actor.npc.Temp_NPC;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;

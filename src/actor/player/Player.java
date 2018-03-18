@@ -20,8 +20,7 @@ import java.nio.ByteBuffer;
 
 import nomad.FlagField;
 import nomad.GameOver;
-import nomad.Universe;
-
+import nomad.universe.Universe;
 import perks.Perk;
 import perks.PerkLibrary;
 import research.Encyclopedia;

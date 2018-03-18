@@ -1,9 +1,8 @@
 package actorRPG;
 
-import nomad.Universe;
-
 import org.w3c.dom.Element;
 
+import nomad.universe.Universe;
 import shared.Vec2f;
 import view.ViewScene;
 import widgets.Widget;

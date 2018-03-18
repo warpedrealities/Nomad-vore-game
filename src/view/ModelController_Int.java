@@ -31,8 +31,6 @@ public interface ModelController_Int {
 
 	public void projectile(Vec2f target, Vec2f origin, int type);
 
-	public boolean BeatPlayer(NPC npc);
-
 	public void PlayerBeaten(NPC npc, boolean resolve);
 
 	public void UpdateInfo();

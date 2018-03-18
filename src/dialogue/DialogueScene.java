@@ -6,7 +6,7 @@ import org.lwjgl.opengl.GL20;
 
 import gui.TextView;
 import input.MouseHook;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.SceneBase;
 import shared.Scene_Int;

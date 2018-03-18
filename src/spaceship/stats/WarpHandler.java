@@ -4,7 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2i;
 import shipsystem.ShipResource;
 import spaceship.Spaceship;

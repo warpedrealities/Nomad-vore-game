@@ -2,10 +2,9 @@ package worldgentools.blockdungeon;
 
 import java.util.ArrayList;
 
+import nomad.universe.Universe;
 import zone.Tile;
 import zone.Zone;
-
-import nomad.Universe;
 
 public class BlockDungeonHelper {
 

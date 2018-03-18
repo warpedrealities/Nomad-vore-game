@@ -9,14 +9,13 @@ import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
 import item.instances.ItemStack;
+import nomad.universe.Universe;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import nomad.Universe;
 
 public class Inventory {
 

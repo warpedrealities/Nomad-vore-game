@@ -11,7 +11,7 @@ import org.lwjgl.opengl.GL30;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import rendering.Sprite;
 import shared.Vec2f;
 import shared.Vec2i;

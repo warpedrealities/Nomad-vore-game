@@ -16,12 +16,12 @@ import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
 import item.instances.ItemStack;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
 import actor.player.Player;
-import nomad.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

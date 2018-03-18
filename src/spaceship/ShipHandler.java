@@ -1,7 +1,7 @@
 package spaceship;
 
-import nomad.Universe;
 import item.ItemWidget;
+import nomad.universe.Universe;
 import shared.Vec2f;
 import view.ViewScene;
 import widgets.Widget;

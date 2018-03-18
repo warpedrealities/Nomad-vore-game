@@ -9,7 +9,7 @@ import gui.ScrollableMultiLineText;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
-import nomad.Universe;
+import nomad.universe.Universe;
 import research.Encyclopedia;
 import research.Entry;
 import shared.Callback;

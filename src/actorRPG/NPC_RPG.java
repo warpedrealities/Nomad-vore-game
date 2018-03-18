@@ -12,7 +12,7 @@ import combat.statusEffects.StatusEffect;
 import combat.statusEffects.StatusLoader;
 import combat.statusEffects.Status_Bind;
 import faction.Faction;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import view.ViewScene;
 

@@ -20,7 +20,7 @@ import artificial_intelligence.Code_AI;
 import artificial_intelligence.Script_AI;
 import faction.FactionLibrary;
 import nomad.FlagField;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 

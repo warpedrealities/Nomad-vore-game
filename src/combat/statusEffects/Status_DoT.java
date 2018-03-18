@@ -12,7 +12,7 @@ import org.w3c.dom.NodeList;
 import actor.Actor;
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import view.ViewScene;
 import vmo.GameManager;

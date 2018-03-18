@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import actor.player.Player_LOOK;
 import actorRPG.RPG_Helper;
 import actorRPG.player.Player_RPG;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 public class PerkQualifier {
 

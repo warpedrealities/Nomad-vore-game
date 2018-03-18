@@ -3,7 +3,7 @@ package combat.effect;
 import org.w3c.dom.Element;
 
 import actor.Actor;
-import nomad.Universe;
+import nomad.universe.Universe;
 import view.ViewScene;
 
 public class Effect_Spawn extends Effect {

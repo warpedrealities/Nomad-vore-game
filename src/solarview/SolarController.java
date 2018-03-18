@@ -1,7 +1,7 @@
 package solarview;
 
 import nomad.StarSystem;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 public class SolarController {
 

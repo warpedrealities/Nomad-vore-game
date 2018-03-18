@@ -4,7 +4,7 @@ import item.Item;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

@@ -9,12 +9,12 @@ import item.Item;
 import item.ItemCoin;
 import item.ItemContainer;
 import item.instances.ItemContainerInstance;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
 import actor.player.Player;
-import nomad.Universe;
 import playerscreens.InventoryScreen;
 import shared.Callback;
 import shared.Screen;

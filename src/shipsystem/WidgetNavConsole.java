@@ -4,12 +4,11 @@ import interactionscreens.NavScreen;
 import interactionscreens.SystemScreen;
 import interactionscreens.WarpScreen;
 import item.Item;
+import nomad.universe.Universe;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-
-import nomad.Universe;
 
 import org.w3c.dom.Element;
 

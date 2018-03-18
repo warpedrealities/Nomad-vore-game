@@ -3,7 +3,7 @@ package chargen;
 import java.util.ArrayList;
 
 import menu.Menu;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;

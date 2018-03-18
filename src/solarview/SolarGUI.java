@@ -1,14 +1,13 @@
 package solarview;
 
 import input.MouseHook;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 
 import gui.Button;
 import gui.Text;
 import gui.Window;
-
-import nomad.Universe;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;

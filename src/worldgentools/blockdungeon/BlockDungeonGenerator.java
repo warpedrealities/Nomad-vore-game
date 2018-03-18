@@ -2,14 +2,13 @@ package worldgentools.blockdungeon;
 
 import java.util.ArrayList;
 
-import nomad.Universe;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actor.npc.NPC;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;

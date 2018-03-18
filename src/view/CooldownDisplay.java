@@ -9,7 +9,7 @@ import actor.player.Player;
 import actorRPG.player.Player_RPG;
 import combat.CooldownHandler;
 import gui.GUIBase;
-import nomad.Universe;
+import nomad.universe.Universe;
 import rendering.Sprite;
 import shared.Tools;
 import shared.Vec2f;

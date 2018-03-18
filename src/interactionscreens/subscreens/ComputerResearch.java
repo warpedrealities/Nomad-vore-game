@@ -10,7 +10,7 @@ import gui.Button;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
-import nomad.Universe;
+import nomad.universe.Universe;
 import playerscreens.Popup;
 import research.Encyclopedia;
 import research.Research;

@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import nomad.Universe;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -19,6 +17,7 @@ import actorRPG.player.Player_RPG;
 import shared.ParserHelper;
 
 import item.Item;
+import nomad.universe.Universe;
 
 public class CraftingRecipe implements Comparable {
 

@@ -13,6 +13,7 @@ import item.Item;
 import item.ItemAmmo;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
@@ -20,7 +21,6 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import actor.player.Player;
-import nomad.Universe;
 import actorRPG.Actor_RPG;
 import actorRPG.player.Player_RPG;
 import crafting.helpers.CraftingTokenHandler;

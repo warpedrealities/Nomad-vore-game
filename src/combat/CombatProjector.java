@@ -4,7 +4,7 @@ import actor.Actor;
 import actor.Attackable;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
-import nomad.Universe;
+import nomad.universe.Universe;
 import rlforj.los.ILosBoard;
 import shared.Vec2f;
 import view.ViewScene;

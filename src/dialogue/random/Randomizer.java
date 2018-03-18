@@ -5,7 +5,7 @@ import javax.xml.soap.Node;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 
 public class Randomizer {
 

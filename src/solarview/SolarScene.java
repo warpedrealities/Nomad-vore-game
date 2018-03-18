@@ -6,7 +6,7 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
 import nomad.StarSystem;
-import nomad.Universe;
+import nomad.universe.Universe;
 import particlesystem.particleEffectors.ParticleDraw;
 import input.MouseHook;
 import rendering.SpriteBatch;

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import nomad.FlagField;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LuaValue;

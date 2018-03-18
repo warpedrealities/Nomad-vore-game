@@ -1,12 +1,11 @@
 package combat.effect;
 
-import nomad.Universe;
-
 import org.w3c.dom.Element;
 
 import actor.Actor;
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
+import nomad.universe.Universe;
 
 public class Effect_Damage extends Effect {
 

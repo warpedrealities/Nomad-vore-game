@@ -1,11 +1,10 @@
 package worldgentools;
 
 import item.Item;
+import nomad.universe.Universe;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-import nomad.Universe;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

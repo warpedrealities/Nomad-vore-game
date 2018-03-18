@@ -11,7 +11,7 @@ import input.MouseHook;
 import java.nio.FloatBuffer;
 
 import nomad.GameOver;
-import nomad.Universe;
+import nomad.universe.Universe;
 
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL20;

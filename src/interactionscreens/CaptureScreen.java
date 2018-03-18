@@ -11,7 +11,7 @@ import gui.lists.List;
 import input.MouseHook;
 import item.instances.ItemCaptureInstance;
 import nomad.Entity;
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

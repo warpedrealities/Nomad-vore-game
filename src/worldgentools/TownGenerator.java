@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.lwjgl.util.Rectangle;
 import org.w3c.dom.Element;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2f;
 import shared.Vec2i;
 import view.ZoneInteractionHandler;

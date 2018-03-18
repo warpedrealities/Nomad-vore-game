@@ -1,6 +1,6 @@
 package faction.violation;
 
-import nomad.Universe;
+import nomad.universe.Universe;
 import shared.Vec2f;
 
 public class FactionViolation {

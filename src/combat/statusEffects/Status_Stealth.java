@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
-import nomad.Universe;
+import nomad.universe.Universe;
 import view.ViewScene;
 
 public class Status_Stealth implements StatusEffect {

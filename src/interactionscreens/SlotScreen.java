@@ -11,12 +11,12 @@ import item.ItemHasEnergy;
 import item.ItemWidget;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
+import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
 import actor.player.Player;
-import nomad.Universe;
 import shared.Callback;
 import shared.ProportionBar;
 import shared.Screen;

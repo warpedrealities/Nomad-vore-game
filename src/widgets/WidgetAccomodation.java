@@ -3,6 +3,7 @@ package widgets;
 import interactionscreens.BedScreen;
 import interactionscreens.ContainerScreen;
 import item.Item;
+import nomad.universe.Universe;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -16,8 +17,6 @@ import org.w3c.dom.NodeList;
 import actor.player.Player;
 import view.ViewScene;
 import actorRPG.RPG_Helper;
-
-import nomad.Universe;
 
 public class WidgetAccomodation extends WidgetBreakable {
 	int capacity = 0;
