@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ItemWeapon name="scrambler" weight="1" value="150">
+	<description>
+		A scrambler is a device to electronically interfere with and damage robotic enemies. Simply throw it and hope it attaches.
+	</description>
+	<combatMove name="boom" ammoCost="1" pattern="SHORT"
+		bonusAttribute="RANGED" timeCost="2" bonusToHit="4" actionCost="2"
+		basicAction="true" moveType="FIGHT">
+	<effectStatus probability="100">
+			<probabilityModifier value="INTELLIGENCE" />
+				<statusTag tag="radio" inverse="true" />
+				<applyText>TARGET 's ai has been scrambled</applyText>
+				<statusFaction uid="22" duration="240" faction="psycho">
+					TARGET 's ai is no longer scrambled
+				</statusFaction>
+			</effectStatus>
+		<effectStatus probability="100">
+				<statusTag tag="radio" inverse="true" />
+				<applyText>TARGET is being shocked.</applyText>
+				<statusDoT uid="50" icon="7" duration="240" numModifiers="1">
+					<removeText> TARGET is no longer being shocked.</removeText>
+					<affectText> TARGET is zapped</affectText>
+					<resist strength="15" tag="shock" test="ENDURANCE" />
+					<effect stat="HEALTH" modifier="2" />
+				</statusDoT>
+			</effectStatus>
+		<missText count="1">
+			<text>the scrambler bounces off TARGET </text>
+		</missText>
+		<hitText count="1">
+			<text>TARGET now has a scrambler latched onto them</text>
+		</hitText>
+		<energySource value="stack" />
+	</combatMove>
+	<stackEquip value="true" />
+</ItemWeapon>

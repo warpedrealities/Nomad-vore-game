@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="hydraulic spike" requiredskill="2" startunlocked="false">
+	<description>
+	A heavy arm mounted tool that pistons a spike outwards to pulverize things. can be used as a terrible weapon. AP 4, 6-12 kinetic damage.  (P)
+	</description>
+	<ingredient item="scrap metal" quantity="8" />
+	<ingredient item="precision mechanisms" quantity="1" />
+	<ingredient item="battery" quantity="1" />	
+	<result item="hydraulic spike"/>
+</recipe>

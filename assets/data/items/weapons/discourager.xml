@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ItemWeapon name="discourager" weight="4" value="1250">
+<description>
+A small machinepistol capable of truly phenomenal rates of fire. It's a 'little' hard to control but if unleashing this on someone won't discourage them from trying to make a meal of you probably nothing will. (fires 12 round burst, each shot that hits does 1-6 damage)
+</description>
+<modifier>
+
+</modifier>
+<combatMove name="shoot" ammoCost="12" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" bonusToHit="-2" multiAttack="12" rangeDecay="1" rangedbias="2" actionCost="4" basicAction="true" moveType="FIGHT">
+<effectDamage type="KINETIC" minValue="1" maxValue="6" modifier="NONE"/>
+<missText count="1">
+<text>you hit TARGET with your gunfire</text>
+</missText>
+<hitText count="1">
+<text>you hose down TARGET with gunfire for VALUE kinetic damage</text>
+</hitText>
+</combatMove>
+<energy refill="bullets" efficiency="1" capacity="12"/>
+</ItemWeapon>

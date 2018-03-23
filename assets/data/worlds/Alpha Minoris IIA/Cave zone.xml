@@ -35,9 +35,8 @@
 						there and if you descend you may not be able to resist its allure.
 					</placeWidget>
 				</randprefab>
-				<auditpaths carve="0" />
 				<noise tile="2" scarcity="5" />
-
+				<auditpathsthroughvoid replace="1" carve="2" />	
 
 
 				<floodfill tile="1">

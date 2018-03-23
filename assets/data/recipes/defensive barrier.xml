@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="defensive barrier" requiredskill="6" startunlocked="true">
+<recipe name="defensive barrier" requiredskill="4" startunlocked="true">
 	<description>
 		A spaceship defensive system based on the defensive shielding units of
 		the Heinlein but built using alien materials.

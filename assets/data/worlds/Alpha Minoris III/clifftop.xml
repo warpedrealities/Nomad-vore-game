@@ -49,6 +49,20 @@
 					<widget x="4" y="4" name="mechanism" info="interaction/AMIII/sonic"
 						variable="73" />
 				</keyBlock>
+			<keyBlock heat="3">
+				<!--treasure room -->
+					<row>00000000</row>
+					<row>02222220</row>
+					<row>22111122</row>
+					<row>11111112</row>
+					<row>11111112</row>
+					<row>22111122</row>
+					<row>02222220</row>
+					<row>00000000</row>
+					<edge value="WEST" />
+				<widget x="6" y="4" name="chest" info="specialchest" />
+			</keyBlock>
+				
 				<lootTable identity="normalchest">
 					<loot item="note" chance="1.0" addendum="mar1" unique="3" />
 					<loot item="note" chance="1.0" addendum="mar3" unique="3" />
@@ -60,6 +74,16 @@
 					<lootSubTable chance="0.15" file="mutators_tier_1" />
 					<lootSubTable chance="0.25" file="consumable_tier_1" />
 				</lootTable>
+				<lootTable identity="specialchest">
+					<lootSubTable chance="1" file="blueprint_tier_1" />
+					<lootSubTable chance="1" file="prospector_outpost_special" />							
+					<lootSubTable chance="1" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="consumable_tier_1" />
+					<lootSubTable chance="0.25" file="moon_ruins_special" />
+					<lootSubTable chance="0.15" file="mutators_tier_1" />
+					<lootSubTable chance="0.25" file="consumable_tier_1" />
+				</lootTable>				
 			</blockDungeon>
 		</partition>
 		<noise tile="5" scarcity="10" />

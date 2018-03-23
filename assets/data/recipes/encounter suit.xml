@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="encounter suit" requiredskill="6" startunlocked="false">
+<recipe name="encounter suit" requiredskill="4" startunlocked="false">
 	<description>
 		A full body outfit of alien design. While it contains defensive
 		technologies and armoured inserts it's clear that aesthetics have not

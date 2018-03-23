@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<shipsystem sprite="57" name="targeting computer" health="30">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>A sophisticated combat computer. Capable of both providing a recreational game of missile command and, perhaps more importantly, take over operating ship weapons. provides +2 to gunnery skill for the ship. </description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipSimCrew skill="GUNNERY" value="2" />
+</shipsystem>

@@ -177,6 +177,10 @@ public class SpaceshipStats {
 	}
 
 	public SpaceshipResource getResource(String type) {
+		if (type.equals("NOTHING"))
+		{
+			return new SpaceshipResource("NOTHING",100,100,true);
+		}
 		return resources.get(type);
 	}
 

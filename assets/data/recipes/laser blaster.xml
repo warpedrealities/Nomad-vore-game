@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<recipe name="laser blaster" requiredskill="1" startunlocked="true">
+	<description>
+		By rebuilding the laser pistol with additional components you can increase its firepower to the maximum its heat tolerances will allow.
+	</description>
+	<ingredient item="laser pistol" quantity="1" />		
+	<ingredient item="scrap metal" quantity="2" />	
+	<ingredient item="optics" quantity="4" />
+	<ingredient item="precision mechanisms" quantity="2" />
+	<tokenRequirement item="gadgeteer" quantity="1" />	
+	<result item="laser blaster"/>
+</recipe>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="metal spikes" requiredskill="1" startunlocked="false">
+	<description>
+		two metal spikes, aerodynamic'ly shaped so as to perform as projectiles.
+	</description>
+	<ingredient item="scrap metal" quantity="1" />
+	<result item="metal spike" count="2" />
+</recipe>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="ghetto armour" requiredskill="1" startunlocked="false">
+	<description>
+		A suit of armour made of scrap metal. It's heavy, but it provides decent kinetic protection. +5
+		kinetic, -2 shock, -4 seduction.
+	</description>
+	<ingredient item="scrap metal" quantity="12" />
+	<ingredient item="fabric" quantity="4" />	
+	<result item="ghetto armour" />
+</recipe>

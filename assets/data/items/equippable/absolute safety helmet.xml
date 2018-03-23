@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ItemEquip name="absolute safety helmet" weight="8" slot="HEAD" value="1000">
+	<description>
+		Within this large spherical helm are a combination of sophisticated computational and sensing devices detect threats and utilize a series of weighted momentum arms to direct the wearer out of harms way. Alas, wearing it makes one look like a complete and utter tool. +2 to dodge, +2 to parry, -8 to seduction.
+	</description>
+	<modifier>
+		<parry value="2" />
+		<dodge value="2" />
+		<seduction value="-8" />	
+	</modifier>
+</ItemEquip>

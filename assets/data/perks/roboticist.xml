@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="roboticist">
 	<requirement count="1">
-		<req>SKILLTECH3</req>
+		<req>SKILLTECH2</req>
 	</requirement>
 	<description> Servos and circuits, actuators and algorithms. Your
 		ability to make craft autonomous robots can only come in handy in

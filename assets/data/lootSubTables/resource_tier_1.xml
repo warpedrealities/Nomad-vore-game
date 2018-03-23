@@ -5,4 +5,5 @@
 	<loot item="fabric" chance="2" />
 	<loot item="battery" chance="2" />
 	<loot item="optics" chance="1" />
+	<loot item="precision mechanisms" chance="1" />	
 </lootTable>

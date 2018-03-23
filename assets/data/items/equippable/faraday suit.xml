@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="faraday suit" weight="6" slot="BODY" value="750">
+	<description>
+		A mesh suit designed to distribute and diffuse electrical discharges that would otherwise harm the wearer. +1
+		kinetic, +5 shock,-2 seduction.
+	</description>
+	<modifier>
+		<kinetic value="1" />
+		<shock value="5" />
+		<seduction value="-2" />
+	</modifier>
+</ItemEquip>

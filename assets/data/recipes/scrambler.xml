@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="scrambler grenade" requiredskill="1" startunlocked="true">
+	<description>
+		A scrambler is a device to electronically interfere with and damage robotic enemies. Simply throw it and hope it attaches.
+	</description>
+	<ingredient item="scrap metal" quantity="1" />
+	<ingredient item="computation valve" quantity="1" />
+	<tokenRequirement item="gadgeteer" quantity="1" />
+	<result item="scrambler"/>
+</recipe>

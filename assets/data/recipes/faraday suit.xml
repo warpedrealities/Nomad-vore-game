@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="faraday suit" requiredskill="1" startunlocked="false">
+	<description>
+		A mesh suit designed to distribute and diffuse electrical discharges that would otherwise harm the wearer.
+	</description>
+	<ingredient item="fabric" quantity="4" />
+	<ingredient item="scrap metal" quantity="4" />
+	<tokenRequirement item="gadgeteer" quantity="1" />
+	<result item="faraday suit" />
+</recipe>

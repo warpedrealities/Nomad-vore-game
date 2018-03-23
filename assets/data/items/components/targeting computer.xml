@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="targeting computer" weight="15" value="1000">
+	<description>A sophisticated combat computer. Capable of both providing a recreational game of missile command and, perhaps more importantly, take over operating ship weapons. provides +2 to gunnery skill for the ship.</description>
+	<placeditem widget="modules/targeting computer" />
+</ItemWidget>

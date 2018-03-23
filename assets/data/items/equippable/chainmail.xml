@@ -5,7 +5,7 @@
 		links and under
 		garment seem to provide decent physical protection. +2
 		kinetic, +1
-		thermal, -2 shock.
+		thermal, -2 shock,-2 seduction.
 	</description>
 	<modifier>
 		<kinetic value="2" />

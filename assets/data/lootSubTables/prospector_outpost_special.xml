@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<lootTable>
+	<loot item="horned emblem" chance="1" addendum="0" />
+	<loot item="absolute safety helmet" chance="1" addendum="0" />
+	<loot item="discourager" chance="1" />
+</lootTable>

@@ -16,6 +16,14 @@
 	<description></description>
 
 	<mapgen>
+		<prefab positionX="30" positionY="0" width="5">
+			<row>04240</row>
+			<row>24242</row>
+			<row>24242</row>	
+			<row>22222</row>			
+				<pairedportal x="2" y="0" sprite="3" ID="16"
+					destination="Zone 1B" facing="0"> a descending walkway </pairedportal>
+		</prefab>			
 		<partition xmin="24" xmax="40" ymin="24" ymax="40">
 			<floodfill tile="1">
 
@@ -32,13 +40,16 @@
 			<floodfill tile="2">
 			</floodfill>		
 		</circles>
+		<auditpathsthroughvoid replace="1" carve="5" />	
+		<auditpathsthroughvoid replace="1" carve="6" />	
+		<auditpathsthroughvoid replace="1" carve="7" />		
 		<noise tile="5" scarcity="22" />
 		<noise tile="6" scarcity="22" />
 		<noise tile="7" scarcity="22" />		
 		<floodfill tile="4">
 		</floodfill>	
 
-		<auditpaths carve="4" replace="1" />	
+	
 	</mapgen>
 
 </zone>

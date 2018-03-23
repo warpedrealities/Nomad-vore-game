@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="spike gun" requiredskill="1" startunlocked="false">
+	<description>
+		A vicious scratch built rifle firing high velocity metal spikes. Accuracy suffers at longer ranges but the weighty projectiles can be quite effective.
+	</description>
+	<ingredient item="scrap metal" quantity="7" />
+	<ingredient item="precision mechanisms" quantity="3" />
+	<attachedRecipe value="metal spike"/>
+	<result item="spike gun"/>
+</recipe>

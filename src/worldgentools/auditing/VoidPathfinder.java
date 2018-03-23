@@ -54,6 +54,12 @@ public class VoidPathfinder {
 								zone.getZoneTileLibrary().getDef(replace), zone, zone.getZoneTileLibrary());
 					}
 				}
+				else
+				{
+					zone.getTiles()[(int) path[i].m_position.x][(int) path[i].m_position.y] = new Tile(
+							(int) path[i].m_position.x, (int) path[i].m_position.y,
+							zone.getZoneTileLibrary().getDef(replace), zone, zone.getZoneTileLibrary());					
+				}
 			}
 
 		}

@@ -7,5 +7,5 @@
 	<ingredient item="scrap metal" quantity="1" />
 	<ingredient item="volatile crystal" quantity="1" />
 	<tokenRequirement item="gadgeteer" quantity="1" />
-	<result item="explosive grenade" />
+	<result item="explosive grenade" count="2"/>
 </recipe>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<lootTable>
+	<loot item="blueprint" chance="2" addendum="ghetto armour" />
+	<loot item="blueprint" chance="2" addendum="spike gun" />
+	<loot item="blueprint" chance="2" addendum="hydraulic spike" />	
+	<loot item="blueprint" chance="2" addendum="the wounding bird" />	
+	<loot item="blueprint" chance="1" addendum="magma spike gun" />	
+</lootTable>

@@ -45,7 +45,7 @@ public class ReloadingHandler {
 							device.setEnergy(device.getEnergy()+Eavailable);
 							if (DisposeAmmo((ItemHasEnergy)ammo.getItem()))
 							{	
-								if (!ammo.equals(inventory.get(i)))
+								if (ammo.equals(inventory.get(i)))
 								{
 									inventory.remove(i);
 								}

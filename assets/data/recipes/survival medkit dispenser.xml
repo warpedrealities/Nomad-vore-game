@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="survival medkit dispenser" requiredskill="2" startunlocked="true">
+	<description>
+		The survival medkit dispenser is a self contained system that can synthesize medical supplies with no external input.
+	</description>
+	<ingredient item="scrap metal" quantity="10" />
+	<ingredient item="protein synthesizer" quantity="1" />
+	<ingredient item="computation valve" quantity="6" />
+	<tokenRequirement item="gadgeteer" quantity="2" />	
+	<result item="survival medkit dispenser" />
+</recipe>

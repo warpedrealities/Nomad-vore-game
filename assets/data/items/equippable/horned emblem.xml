@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="horned emblem" weight="1" slot="ACCESSORY"
+	value="750">
+	<description>
+		By fire, blood, scream and metal you will be avenged! +2 to
+		melee
+	</description>
+	<modifier>
+		<melee value="2" />
+
+	</modifier>
+</ItemEquip>

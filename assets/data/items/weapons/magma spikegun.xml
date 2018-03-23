@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ItemWeapon name="magma spike gun" weight="6" value="1000">
+	<tagSet value="A" />
+	<description>
+		A truly dangerous scratch built rifle firing high velocity metal spikes. Accuracy suffers at longer ranges but it fires superheated metal spikes which is undoubtedly quite effective. AP 3 7-18 thermokinetic damage. Can additionally fire two barrels at once for 4 AP (A)
+	</description>
+	<modifier>
+
+	</modifier>
+	<combatMove name="shoot" ammoCost="1" pattern="RANGED"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-2"
+		actionCost="3" basicAction="true" moveType="FIGHT" rangeDecay="0.25">
+		<effectDamage type="KINETIC" minValue="6" maxValue="12"
+			modifier="NONE" />
+		<effectDamage type="THERMAL" minValue="1" maxValue="6"
+			modifier="NONE" />			
+		<missText count="1">
+			<text>you fail to shoot TARGET</text>
+		</missText>
+		<hitText count="1">
+			<text>you shoot TARGET for VALUE thermokinetic damage</text>
+		</hitText>
+	</combatMove>
+	<combatMove name="double shot" ammoCost="2" pattern="RANGED" multiAttack="2"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="4" bonusToHit="-4"
+		actionCost="4" basicAction="true" moveType="FIGHT" rangeDecay="0.25">
+		<effectDamage type="KINETIC" minValue="6" maxValue="12"
+			modifier="NONE" />
+		<effectDamage type="THERMAL" minValue="1" maxValue="6"
+			modifier="NONE" />			
+		<missText count="1">
+			<text>you fail to shoot TARGET</text>
+		</missText>
+		<hitText count="1">
+			<text>you shoot TARGET for VALUE thermokinetic damage</text>
+		</hitText>
+	</combatMove>	
+	<energy refill="metal spike" efficiency="1" capacity="6" />
+</ItemWeapon>

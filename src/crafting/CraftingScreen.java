@@ -134,11 +134,15 @@ public class CraftingScreen extends Screen implements Callback {
 		generate(filterMissingTokens,filterTech);
 	}
 	
+	
+	
 	private void buildItem() {
-
+		
+	
 		// check item can be made
 		if (canMake) {
 			CraftingRecipe recipe = craftables.get(selection);
+			int startingEnergy=calcStartingEnergy(recipe);		
 			// remove required items
 			for (int i = 0; i < recipe.getIngredients().size(); i++) {
 				player.getInventory().removeItems(recipe.getIngredients().get(i).getName(),
@@ -147,12 +151,11 @@ public class CraftingScreen extends Screen implements Callback {
 			// add new item
 			if (recipe.getResultCount() == 1) {
 				Item item = Universe.getInstance().getLibrary().getItem(recipe.getResult().getItem().getName());
-				chargeCheck(item);
+				chargeCheck(item,startingEnergy);
 				player.getInventory().AddItem(item);
 			} else {
 
 				Item item = Universe.getInstance().getLibrary().getItem(recipe.getResult().getItem().getName());
-				chargeCheck(item);
 				ItemStack stack = new ItemStack(item, recipe.getResultCount());
 				player.getInventory().AddItem(stack);
 			}
@@ -166,17 +169,43 @@ public class CraftingScreen extends Screen implements Callback {
 			buildRequirements();
 		}
 	}
+	
+	private Item findItem(String name)
+	{
+		for (int i=0;i<player.getInventory().getNumItems();i++)
+		{
+			if (player.getInventory().getItem(i).getName().equals(name))
+			{
+				return player.getInventory().getItem(i);
+			}
+		}
+		return null;
+	}
 
-	private void chargeCheck(Item item) {
+	private int calcStartingEnergy(CraftingRecipe craftingRecipe) {
+		
+		Item it=findItem(craftingRecipe.getIngredients().get(0).getName());
+		if (it!=null)
+		{
+			if (ItemDepletableInstance.class.isInstance(it))
+			{
+				ItemDepletableInstance idi=(ItemDepletableInstance)it;
+				return idi.getEnergy();
+			}
+		}
+		return 0;
+	}
+
+	private void chargeCheck(Item item, int startingEnergy) {
 		if (ItemDepletableInstance.class.isInstance(item)) {
 			ItemDepletableInstance ie = (ItemDepletableInstance) item;
 			if (ItemAmmo.class.isInstance(ie.getItem())) {
 				ItemAmmo ia = (ItemAmmo) ie.getItem();
 				if (ia.getEnergy().getRefill().length() > 0) {
-					ie.setEnergy(0);
+					ie.setEnergy(startingEnergy);
 				}
 			} else {
-				ie.setEnergy(0);
+				ie.setEnergy(startingEnergy);
 			}
 
 		}

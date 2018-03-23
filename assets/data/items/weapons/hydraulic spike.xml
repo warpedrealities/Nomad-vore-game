@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ItemWeapon name="hydraulic spike" weight="7" value="500">
+	<tagSet value="PM" />
+	<description>
+		A heavy arm mounted industrial tool that pistons a spike outwards to hammer, pierce and pulverize things. can be used as a terrible weapon. AP 4, 6-12 kinetic damage.  (P)
+	</description>
+	<modifier>
+		<parry value="1" />
+	</modifier>
+	<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE"
+		timeCost="2" actionCost="4" basicAction="true" moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="6" maxValue="12"
+			modifier="STRENGTH" />
+		<missText count="1">
+			<text>you fail to smash TARGET .</text>
+		</missText>
+		<hitText count="1">
+			<text>you piledrive TARGET for VALUE kinetic damage</text>
+		</hitText>
+	</combatMove>
+</ItemWeapon>

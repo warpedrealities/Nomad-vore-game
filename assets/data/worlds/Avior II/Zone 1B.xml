@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="forest.png">
+	<zonerules ruleset="harpy" />
+	<tileset count-x="4" count-y="4">
+		<tile sprite="3" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="3" vision="0" movement="0"> dirt </tile>
+		<tile sprite="2" vision="0" movement="0"> strange grass</tile>
+		<tile sprite="4" vision="1" movement="2"> an alien tree</tile>
+		<tile sprite="5" vision="0" movement="1"> water</tile>
+		<tile sprite="6" vision="1" movement="2"> a twisted alien tree</tile>
+		<tile sprite="7" vision="1" movement="2"> a rocky cliff</tile>
+		<tile sprite="9" vision="0" movement="0"> a wooden wall</tile>		
+	</tileset>
+	<description></description>
+
+	<mapgen>
+
+		<perlin>
+			<band low="-1.0" high="-0.5">
+				<floodfill tile="1" />
+			</band>
+			<band low="-0.5" high="-0.4">
+				<floodfill tile="5" />
+			</band>
+			<band low="-0.4" high="-0.1">
+				<floodfill tile="2">
+					<Seedwidgets min="16" max="32" name="fruitbush" />
+					<Seedwidgets min="8" max="16" name="gourdbush" />
+				</floodfill>
+			</band>
+			<band low="-0.1" high="0.0">
+				<floodfill tile="3" />
+			</band>
+			<band low="0.0" high="0.2">
+				<floodfill tile="2" />
+			</band>
+			<band low="0.2" high="0.7">
+				<floodfill tile="1" />
+			</band>
+
+			<band low="0.7" high="1.0">
+				<floodfill tile="3" />
+			</band>
+		</perlin>
+		<walloff wall="3" sides="southeastwestnorth" />
+	<prefab positionX="30" positionY="61" width="5">
+			<row>88888</row>
+			<row>87878</row>
+			<row>07870</row>			
+				<pairedportal x="2" y="2" sprite="3" ID="16"
+					destination="Avian Village" facing="4"> an ascending walkway </pairedportal>
+	</prefab>				
+		<overlayTrees base="5" top="7" />
+	</mapgen>
+
+</zone>

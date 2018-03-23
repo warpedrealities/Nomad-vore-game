@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="ghetto armour" weight="20" slot="BODY" value="750">
+	<description>
+		A suit of armour made of scrap metal. It's heavy, but it provides decent kinetic protection. +5
+		kinetic, -2 shock, -4 seduction.
+	</description>
+	<modifier>
+		<kinetic value="5" />
+		<shock value="-2" />
+		<seduction value="-4" />
+	</modifier>
+</ItemEquip>

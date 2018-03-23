@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ItemWeapon name="force projector" weight="4" value="200">
+	<description>
+		A device that creates a powerful force wave capable of flinging back hostile lifeforms in a broad cone in front of the user. It requires significant care in its operation however (8 AP to fire)
+	</description>
+	<modifier>
+
+	</modifier>
+	<combatMove name="shoot" ammoCost="1" pattern="CONE"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="2" bonusToHit="6"
+		actionCost="8" moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="0" maxValue="1"
+			modifier="NONE" />
+			<effectMovement moveType="TARGET_AWAY" distance="4"
+				abilityMod="STRENGTH" />
+			<effectStatus probability="25">
+				<applyText>TARGET is flung back and now reeling</applyText>
+				<statusStun uid="9" duration="10">
+					TARGET is no longer stunned
+				</statusStun>
+			</effectStatus>			
+		<missText count="1">
+			<text>you fail to catch TARGET with your force wave </text>
+		</missText>
+		<hitText count="1">
+			<text>you hit TARGET with the force wave for VALUE kinetic damage</text>
+		</hitText>
+	</combatMove>
+	<energy refill="ENERGY E-cell advanced power-cell" efficiency="1"
+		capacity="10" />
+</ItemWeapon>

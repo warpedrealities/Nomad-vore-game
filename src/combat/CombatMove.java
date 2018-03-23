@@ -66,7 +66,8 @@ public class CombatMove {
 	};
 
 	private String moveName,overrideCooldown;
-	private int ammoCost, timeCost, moveCooldown, attackBonus, bonusAttribute, rangedBias, icon;
+	private int ammoCost, timeCost, moveCooldown, attackBonus, bonusAttribute, rangedBias, icon, multiAttack;
+	private float rangeDecay;
 	private AttackPattern attackPattern;
 	private MoveType moveType;
 	private ArrayList<Effect> effects;
@@ -115,6 +116,9 @@ public class CombatMove {
 		if (Enode.getAttribute("actionCost").length() > 0) {
 			actionCost = Integer.parseInt(Enode.getAttribute("actionCost"));
 		}
+		if (Enode.getAttribute("multiAttack").length() > 0) {
+			multiAttack = Integer.parseInt(Enode.getAttribute("multiAttack"));
+		}
 		// ammocost
 		if (Enode.getAttribute("ammoCost").length() > 0) {
 			ammoCost = Integer.parseInt(Enode.getAttribute("ammoCost"));
@@ -132,6 +136,9 @@ public class CombatMove {
 		}
 		if (Enode.getAttribute("rangedbias").length() > 0) {
 			rangedBias = Integer.parseInt(Enode.getAttribute("rangedbias"));
+		}
+		if (Enode.getAttribute("rangedDecay").length() > 0) {
+			rangeDecay = Float.parseFloat(Enode.getAttribute("rangedDecay"));
 		}
 		if (Enode.getAttribute("toggledability").length() > 0) {
 			toggleAbility = true;
@@ -270,6 +277,8 @@ public class CombatMove {
 		move.icon = icon;
 		move.attackPattern = attackPattern;
 		move.moveType = moveType;
+		move.multiAttack = multiAttack;
+		move.rangeDecay = rangeDecay;
 
 		for (int i = 0; i < effects.size(); i++) {
 			move.effects.add(effects.get(i).clone());
@@ -417,6 +426,10 @@ public class CombatMove {
 			int bonus = attackBonus + origin.getRPG().getAttribute(bonusAttribute);
 			if (distance >= 2) {
 				def -= rangedBias;
+				if (rangeDecay>0)
+				{
+					bonus-=rangeDecay*distance;
+				}
 			} else {
 				def += rangedBias;
 			}
@@ -439,12 +452,18 @@ public class CombatMove {
 			}
 			boolean visible = getVisible(target.getPosition());
 			
+			if (multiAttack>1)
+			{
+				return multiAttackHandler.handle(this, origin, target, def, bonus,distance, visible);
+			}
+			
 			if (def <= r) {
 				if (Game.sceneManager.getConfig().isVerboseCombat() && r < 100 && origin.getVisible()) {
 					ViewScene.m_interface.DrawText(origin.getName() + " attacks " + target.getName() + " " + (r - bonus)
 							+ "+" + bonus + " DC:" + def + "=hit");
 				}
 				int value = 0;
+				
 				// apply effect to target
 				boolean critical = false;
 		
@@ -640,6 +659,10 @@ public class CombatMove {
 	public String getOverrideCooldown() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public int getMultiAttack() {
+		return multiAttack;
 	}
 
 }

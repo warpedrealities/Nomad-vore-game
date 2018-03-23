@@ -21,12 +21,8 @@
 		</hitText>
 	</combatMove>
 	<combatMove name="burst" ammoCost="3" pattern="RANGED"
-		bonusAttribute="RANGED" timeCost="2" rangedbias="2" bonusToHit="-2"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="2" bonusToHit="-2" multiAttack="3" rangeDecay="0.5"
 		actionCost="2" basicAction="true" moveType="FIGHT">
-		<effectDamage type="KINETIC" minValue="3" maxValue="6"
-			modifier="NONE" />
-		<effectDamage type="KINETIC" minValue="3" maxValue="6"
-			modifier="NONE" />
 		<effectDamage type="KINETIC" minValue="3" maxValue="6"
 			modifier="NONE" />
 		<missText count="1">

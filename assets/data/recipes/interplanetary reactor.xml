@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="interplanetary reactor" requiredskill="4"
+<recipe name="interplanetary reactor" requiredskill="3"
 	startunlocked="false">
 	<description>
 		A reactor that increases the fuel efficiency of spaceship engines.

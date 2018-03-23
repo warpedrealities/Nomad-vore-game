@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="the wounding bird" requiredskill="1" startunlocked="false">
+	<description>
+		This blueprint shows how to convert a six shooter into what is termed 'the wounding bird' a sophisticated revolver more accurate and powerful than the weapon it's built from.
+	</description>
+	<ingredient item="six shooter" quantity="1" />		
+	<ingredient item="scrap metal" quantity="1" />	
+	<ingredient item="precision mechanisms" quantity="4" />
+	<result item="the wounding bird"/>
+</recipe>

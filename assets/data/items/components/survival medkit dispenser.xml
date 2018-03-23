@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="survival medkit dispenser" weight="10" value="1000">
+	<description>The survival medkit dispenser is a self contained system that can synthesize medical supplies with no external input.</description>
+	<placeditem widget="modules/survival medkit dispenser" />
+</ItemWidget>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="targeting computer" requiredskill="1" startunlocked="true">
+	<description>
+		A sophisticated combat computer. Capable of both providing a recreational game of missile command and, perhaps more importantly, take over operating ship weapons. provides +2 to gunnery skill for the ship.
+	</description>
+	<ingredient item="computation valve" quantity="15" />
+<tokenRequirement item="roboticist" quantity="2" />	
+	<result item="targeting computer" />
+</recipe>

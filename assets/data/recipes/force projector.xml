@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<recipe name="force projector" requiredskill="2" startunlocked="false">
+	<description>
+		A device to create an impulse of intangible force to blast away objects and lifeforms.
+	</description>
+	<ingredient item="battery" quantity="1" />
+	<ingredient item="scrap metal" quantity="4" />
+	<ingredient item="optics" quantity="4" />
+	<ingredient item="zymonite" quantity="1" />	
+	<tokenRequirement item="gadgeteer" quantity="2" />
+	<result item="force projector" />
+</recipe>

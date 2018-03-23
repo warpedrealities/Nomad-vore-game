@@ -107,6 +107,10 @@ public class CraftingLibrary {
 		CraftingRecipe r=craftables.get(name + ".xml");
 		if (!r.getUnlocked())
 		{
+			if (r.getAttachedRecipe()!=null)
+			{
+				unlockRecipe(r.getAttachedRecipe());
+			}
 			sortedCraftables.add(r);
 		}
 		r.setUnlocked(true);

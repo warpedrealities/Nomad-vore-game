@@ -3,16 +3,20 @@ function ranged(controllable,sense,pos,script,hostile)
 	if controllable:HasPath() then
 		controllable:FollowPath()
 	else
-		a=controllable:getValue(1)
-		if (a == 0) then
-			controllable:setAttack(2)
-			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-			a=4
+		if hostile:getRPG():hasStatus(90) then
+			controllable:startConversation()
 		else
-			a=a-1
-			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+			a=controllable:getValue(1)
+			if (a == 0) then
+				controllable:setAttack(2)
+				controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+				a=4
+			else
+				a=a-1
+				controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+			end
+			controllable:setValue(1,a)
 		end
-		controllable:setValue(1,a)
 	end
 	
 

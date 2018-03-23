@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="magma spike gun" requiredskill="2" startunlocked="false">
+	<description>
+		A truly dangerous scratch built rifle firing high velocity metal spikes. Accuracy suffers at longer ranges but it fires superheated metal spikes which is undoubtedly quite effective.
+	</description>
+	<ingredient item="spike gun" quantity="1" />		
+	<ingredient item="scrap metal" quantity="2" />	
+	<ingredient item="battery" quantity="2" />
+	<ingredient item="precision mechanisms" quantity="2" />
+	<result item="magma spike gun"/>
+</recipe>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="metal spike" weight="0.25" value="10.0">
+	<description>
+	an aerodynamic'ly stabilized metal spike suitable for use as a projectile.
+	</description>
+	<energy capacity="1" />
+</ItemAmmo>
