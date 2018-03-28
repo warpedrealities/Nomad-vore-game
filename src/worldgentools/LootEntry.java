@@ -66,7 +66,7 @@ public class LootEntry {
 			ItemKeyInstance iki = (ItemKeyInstance) item;
 			iki.setLock(addendum);
 		}
-		if (ItemBlueprintInstance.class.isInstance(item)) {
+		if (ItemBlueprintInstance.class.isInstance(item) && addendum!=null) {
 			ItemBlueprintInstance ibi = (ItemBlueprintInstance) item;
 			ibi.setRecipe(addendum);
 		}

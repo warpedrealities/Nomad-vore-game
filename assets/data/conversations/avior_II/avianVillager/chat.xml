@@ -2,6 +2,43 @@
 <Conversation>
 
 	<page ID="start">
+		<condition operator="lessthan" evaluate="DICEROLL" value="5" />	
+		<text>
+		The harpy mhmms and bounds over into your personal space "Well hello stranger, welcome to our village"
+		</text>
+		<choice destination="prelude0" text="$ah and this is a welcome?"/>
+		<choice destination="end" text="$ah, yes thanks.."/>
+	</page>
+	
+	<page ID="prelude0">
+	<text>
+	The avian presses up against, you encircling her wings around you and rubbing her bared breasts against you "Not yet? but it can be, I'd love to welcome you properly. Visitors to our village can be a lot of fun." she says and darts her head in to lick your ear "It's the fingers you see."
+	</text>
+	<choice destination="prelude1" text="$fingers..sounds fun."/>
+	</page>
+	
+	<page ID="prelude1">
+	<text>
+	"Mhmm lets see you use them" she coos in your ear "Tongue too" she strokes her wings over your back and flushes fluffing herself up afore nibbling your ear lightly and letting you trace your hands ways down her body, starting at those wonderful breasts..the softness of her flesh, the perkyness of her nipples. Only to trace further down as she nibbles on your ear some more, your hands reaching her hips and hooking to her skirt and easing it downwards.
+	</text>
+	<choice destination="prelude2" text="*keep exploring*"/>
+	</page>
+	
+	<page ID="prelude2">
+	<text>
+	The harpies skirt flutters down beneath her claws as she plants a kiss upon your cheek "that's it." she says and mhmms "I can tell, you want to please me." she coos hotly and strokes her wings over your shoulders as your fingers slide up between her thighs. Your hand caressing from one inside thigh to another before reaching her mound, delving into her hot and sopping wet netherlips. She's already aroused by the time you get to her and you hear her gasp in delight as you finger her, then begin to slowly slip down onto your knees.
+	</text>
+	<choice destination="prelude3" text="*taste of honey*"/>
+	</page>
+	
+	<page ID="prelude3">
+	<text>
+	
+	</text>
+	
+	</page>
+
+	<page ID="start">
 		<text>
 		"Greetings stranger" the harpy chirps and smiles "Welcome to our village."
 		</text>

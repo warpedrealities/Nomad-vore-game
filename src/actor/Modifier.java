@@ -33,11 +33,13 @@ public class Modifier {
 		if (index!=-1)
 		{
 			modifiers.add(new Modifier_Element(0,index,value));
+			return;
 		}
 		index=RPG_Helper.subAttributeFromString(tag);
 		if (index!=-1)
 		{
 			modifiers.add(new Modifier_Element(1,index,value));		
+			return;	
 		}
 		if (index==-1)
 		{

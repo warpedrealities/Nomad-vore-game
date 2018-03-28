@@ -43,6 +43,7 @@ public class LootSubTable extends LootEntry {
 
 	}
 
+	
 	private Item pickLoot() {
 		int r = Universe.m_random.nextInt((int) range);
 
@@ -50,7 +51,9 @@ public class LootSubTable extends LootEntry {
 
 		for (int i = 0; i < loot.size(); i++) {
 			if (r > lrange && r <= lrange + loot.get(i).getChance()) {
-				return Universe.getInstance().getLibrary().getItem(loot.get(i).getItem());
+				Item item=Universe.getInstance().getLibrary().getItem(loot.get(i).getItem());
+				loot.get(i).runCommon(item);
+				return item;
 			} else if (r > lrange) {
 				lrange += loot.get(i).getChance();
 			}

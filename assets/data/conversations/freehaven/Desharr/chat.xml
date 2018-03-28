@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="talked" />
+	<text>
+	"Welcome back to Deshy's what can I get for ya?" she asks, tails swaying as she cleans a mug.
+	</text>
+	<effect type="setlocalflag" flag="intoxication" value="0" />	
+	<choice destination="name" text="$Deshy's, why's it called that?"/>
+	<choice destination="drink" text="$something to drink"/>
+	<choice destination="food" text="$do you serve food?"/>
+	<choice destination="cutie0" text="$how about a cute fox to eat?"/>
+	<choice destination="information" text="$information would be good"/>
+	<choice destination="end" text="$Nothing, I'll let you get on"/>				
+	</page>
+			
+	<page ID="start">
+	<text>
+	Desharr glances your way, hands busy with the business of the bar and her tails languidly swaying back and forth behind her "Howdy stranger, Welcome to Deshy's what can I get ya?"
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />	
+	<effect type="setlocalflag" flag="intoxication" value="0" />	
+	<choice destination="name" text="$Deshy's, why's it called that?"/>
+	<choice destination="drink" text="$something to drink"/>
+	<choice destination="food" text="$do you serve food?"/>
+	<choice destination="cutie0" text="$how about a cute fox to eat?"/>
+	<choice destination="information" text="$information would be good"/>
+	<choice destination="end" text="$Nothing, I'll let you get on"/>
+	</page>
+	
+	<page ID="name">
+	<text>
+	"Because my name is Desharr and i am the owner and proprietor. So I get to name it after myself" she says with a grin "Now what can I get ya?"
+	</text>
+	<choice destination="name0" text="$So can I call you Deshy?"/>
+	<choice destination="drink" text="$something to drink"/>
+	<choice destination="food" text="$do you serve food?"/>
+	<choice destination="cutie0" text="$how about a cute fox to eat?"/>
+	<choice destination="information" text="$information would be good"/>	
+	<choice destination="end" text="$interesting, that's all i wanted to know though"/>
+	</page>
+	
+	<page ID="name0">
+		<condition evaluate="LOCALFLAG" operator="greaterthan" value="5" flag="disposition" />	
+	<text>
+	"Sure, if you like. But only if you keep buying." says Desharr thoughtfully and then smiles "So what can I get ya?"
+	</text>
+	<choice destination="drink" text="$something to drink"/>
+	<choice destination="food" text="$do you serve food?"/>
+	<choice destination="cutie0" text="$how about a cute fox to eat?"/>
+	<choice destination="information" text="$information would be good"/>
+	<choice destination="end" text="$nothing right now"/>	
+	</page>
+	
+	<page ID="food">
+	<text>
+	"Sure, we ain't a restuarant. But we get all sorts, and it pays to be able to whip up a plate. 450 credits. you down?"
+	</text>
+	<choice destination="meal" text="$sure">
+		<condition evaluate="CREDITS" operator="greaterthan" value="450"/>	
+	</choice>	
+	<choice destination="drink" text="$actually i'd like something to drink"/>
+	<choice destination="cutie0" text="$actually i'd prefer a cute fox to eat"/>
+	<choice destination="information" text="$actually i'd like some information"/>	
+	<choice destination="end" text="$not right now"/>
+	</page>
+	
+	<page ID="meal">
+	<text>
+	Desharr takes your money and goes to the back to yell at someone, within a short time a plate of food is brought out and she plonks it down in front of you. Strange meats and ersatz vegetables are nevertheless tastey and filling when cooked and smothered in flavoursome sauces. Soon enough you've demolished the entirety of the plate.
+	</text>
+		<effect value="100" type="givefood"/>
+		<effect type="givecredits" value="-450" />		
+			<choice destination="drink" text="$now i want something to drink"/>
+			<choice destination="cutie0" text="$that was a good starter, but I'd prefer to follow that up with a cute fox"/>	
+			<choice destination="information" text="$delicious, now i was wondering"/>		
+		<choice destination="end" text="$delicious, thanks for that"/>
+	</page>
+	
+	<page ID="cutie0">
+	<text>
+	"Mhmm I've heard that one before. I'm not on the menu however, do you a house special?" asks Desharr as her tails flick back and forth. 
+	</text>
+	<choice destination="housespecial0" text="$sure how much?"/>
+	<choice destination="solace" text="$actually i'll pass, gimme a regular">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="end" text="$Actually, I think I'll pass entirely."/>
+	</page>
+		
+	<page ID="information">
+	<text>
+	"Mhmm?" Desharr queries, cocking an ear in your direction as she goes about her business.
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="you" text="$I'd like to know about you"/>
+	<choice destination="wardens" text="$What do you know about the wardens?"/>
+	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
+	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>
+	</page>
+	
+	<page ID="you">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="disposition" />		
+	<text>
+	<random id="desharr_dismissal" />
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="you" text="$I'd like to know about you"/>
+	<choice destination="wardens" text="$What do you know about the wardens?"/>
+	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
+	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>	
+	</page>
+	
+	<page ID="you">
+	<condition evaluate="LOCALFLAG" operator="greaterthan" value="1" flag="disposition" />		
+		<effect type="incrementlocalflag" flag="disposition" value="-1" />		
+	<text>
+	"Me? Not much to tell. my name is Desharr, I own this here establishment hence my name on the banner. And 
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="you" text="$I'd like to know about you"/>
+	<choice destination="wardens" text="$What do you know about the wardens?"/>
+	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
+	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>	
+	</page>
+	
+	<page ID="drink">
+	<text>
+	"Come to the right place, but you knew that." she says with a soft smile "Solace is 200 credits. Soulkicker is 500 if you want something stronger"
+	</text>
+	<choice destination="solace" text="$I'll have a solace please">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="soulkicker" text="$give me the soulkicker">
+		<condition evaluate="CREDITS" operator="greaterthan" value="500"/>	
+	</choice>
+	<choice destination="end" text="$Actually I'll come back later"/>
+	</page>
+
+	<page ID="solace">
+	<text>
+	"Right you are." Desharr fills the mug and passes it to you. Tastes frothy but nice and zesty and not too strong, just helps you get buzzed and relaxed as you take your fill of it.
+	</text>
+		<effect type="incrementlocalflag" flag="disposition" value="1" />	
+		<effect type="givecredits" value="-200" />	
+		<choice destination="solace" text="$Give me another">
+			<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+		</choice>		
+		<choice destination="information" text="$So I was wondering"/>
+		<choice destination="end" text="$whew, just what I needed"/>
+	</page>
+	
+	<page ID="soulkicker">
+		<preference fetish="cockvore" />	
+	<condition evaluate="LOCALFLAG" operator="equals" value="2" flag="intoxication" />		
+		<effect type="givecredits" value="-500" />	
+	<text>
+	"Coming up." she says and plants the shotglass down, pouring out a measure from a bottle she produces from under the counter as if by measure. She nudges it towards you. Desharr smiles benignly as you knock back the fiery mixture, it tastes like the end of sobriety crossed with being hit by a comet.	
+	</text>
+	<choice destination="toomuch0" text="$...why are there two of you.."/>
+	</page>
+	
+	<page ID="toomuch0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="soulkicker">
+	<text>
+	"Coming up." she says and plants the shotglass down, pouring out a measure from a bottle she produces from under the counter as if by measure. She nudges it towards you. Desharr smiles benignly as you knock back the fiery mixture, it tastes like the end of sobriety crossed with being hit by a comet.
+	</text>
+			<effect type="incrementlocalflag" flag="intoxication" value="1" />	
+			<effect type="incrementlocalflag" flag="disposition" value="3" />
+		<effect type="givecredits" value="-500" />	
+		<choice destination="soulkicker" text="$give me another">
+			<condition evaluate="CREDITS" operator="greaterthan" value="500"/>	
+		</choice>		
+		<choice destination="information" text="$So I was wondering"/>
+		<choice destination="end" text="$i think i might..need a minute"/>
+	</page>
+
+	<page ID="
+	
+</Conversation>

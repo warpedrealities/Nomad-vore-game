@@ -67,5 +67,5 @@ end
 
 function main(controllable, sense, script)  
 	pos=controllable:getPosition()
-	control(controllable,sense,script)
+	control(controllable,sense,pos,script)
 end  

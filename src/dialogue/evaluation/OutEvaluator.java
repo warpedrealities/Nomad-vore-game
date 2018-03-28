@@ -283,6 +283,13 @@ public class OutEvaluator {
 					return false;
 				}
 			}
+			if (eval.equals("CREDITS")) {
+				String operator = E.getAttribute("operator");
+				int value = Integer.parseInt(E.getAttribute("value"));
+				if (ConditionCheck(value, operator, m_player.getInventory().getPlayerCredits()) == false) {
+					return false;
+				}
+			}
 			if (eval.equals("TIMEPASSED")) {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));
