@@ -253,11 +253,17 @@ public class UniverseStateChanger {
 					universe.setCurrentZone(universe.getCurrentEntity().getZone(Enode.getAttribute("value")));
 					universe.getCurrentZone().LoadZone();	
 				}
-				if (Enode.getTagName().equals("position"))
+				if (!worldOnly && Enode.getTagName().equals("position"))
 				{
 					//set starting coordinates		
 					universe.setPlayer(new Player(new Vec2f(Integer.parseInt(Enode.getAttribute("x")),
 							Integer.parseInt(Enode.getAttribute("y")))));
+				}
+				if (worldOnly && Enode.getTagName().equals("position"))
+				{
+					//set starting coordinates		
+					universe.getPlayer().setPosition(new Vec2f(Integer.parseInt(Enode.getAttribute("x")),
+							Integer.parseInt(Enode.getAttribute("y"))));
 				}
 				if (!worldOnly && Enode.getTagName().equals("item"))
 				{
