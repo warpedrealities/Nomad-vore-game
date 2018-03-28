@@ -103,8 +103,65 @@
 	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
 	<choice destination="end" text="$Actually, I'll come back later"/>
 	</page>
+
+	<page ID="wardens">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="disposition" />		
+	<text>
+	<random id="desharr_dismissal" />
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="you" text="$I'd like to know about you"/>
+	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
+	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>	
+	</page>
+	<page ID="wardens">
+	<condition evaluate="LOCALFLAG" operator="greaterthan" value="1" flag="disposition" />		
+		<effect type="incrementlocalflag" flag="disposition" value="-1" />		
+	<text>
+	"Best thing to happen to the station. Used to be a lot rougher, then we get a brigade of bunnies in a damaged warship and commander Frei. Word is they turned renegade from some space warlord. Point is they cleared this place up, keep the peace and I only need to keep ONE shotgun under this counter. Fair trade for the deck fees all told."
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="you" text="$I'd like to know about you"/>	
+	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
+	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>	
+	</page>
 	
-	<page ID="you">
+	<page ID="jehari">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="disposition" />		
+	<text>
+	<random id="desharr_dismissal" />
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="you" text="$I'd like to know about you"/>
+	<choice destination="wardens" text="$What do you know about the wardens?"/>
+	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>	
+	</page>
+	
+	<page ID="jehari">
+	<condition evaluate="LOCALFLAG" operator="greaterthan" value="1" flag="disposition" />		
+		<effect type="incrementlocalflag" flag="disposition" value="-1" />		
+	<text>
+	"She's not like the other Valk if that's what you're wondering. The rest of her species are vat grown clone soldiers genetically engineered by, someone. They ain't around no more to ask, either they're extinct, the plague got'em or they're in hiding. Point is, your average Valk is bad news. But Jehari ain't average, she can't hurt anyone. The worst she'll do is ramble on a bit. Frei gives her a discount on deck fees out of the kindness of her heart, I'm not gonna grumble though..be the highest cruelty to turf her out onto the lower decks, she'd not make it a week down there."
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="you" text="$I'd like to know about you"/>	
+	<choice destination="wardens" text="$What do you know about the wardens?"/>	
+	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>	
+	</page>	
+	
+<page ID="robynn">
 	<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="disposition" />		
 	<text>
 	<random id="desharr_dismissal" />
@@ -115,6 +172,34 @@
 	<choice destination="you" text="$I'd like to know about you"/>
 	<choice destination="wardens" text="$What do you know about the wardens?"/>
 	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>	
+	</page>
+	<page ID="robynn">
+	<condition evaluate="LOCALFLAG" operator="greaterthan" value="1" flag="disposition" />		
+		<effect type="incrementlocalflag" flag="disposition" value="-1" />		
+	<text>
+	"She says she's a respectable businesswoman now. But lets not beat around the bush, few years back she was a pirate. Not sure how good she was, but she ain't titfat so she must not'a been terrible at it. Rumour is she might have sisters who haven't given up the pirate lifestyle. I wouldn't know, if anyone's run into them out in the black they haven't shown up here to tell their tales. Anyway, keep an eye on her. I ain't sure she's all the way on the level no matter what she says."
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="you" text="$I'd like to know about you"/>	
+	<choice destination="wardens" text="$What do you know about the wardens?"/>	
+	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
+	<choice destination="end" text="$Actually, I'll come back later"/>	
+	</page>	
+		
+	
+	<page ID="you">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0" flag="disposition" />		
+	<text>
+	<random id="desharr_dismissal" />
+	</text>
+	<choice destination="solace" text="$I'll have another drink">
+		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
+	</choice>
+	<choice destination="wardens" text="$What do you know about the wardens?"/>
+	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
 	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>
 	<choice destination="end" text="$Actually, I'll come back later"/>	
 	</page>
@@ -123,12 +208,11 @@
 	<condition evaluate="LOCALFLAG" operator="greaterthan" value="1" flag="disposition" />		
 		<effect type="incrementlocalflag" flag="disposition" value="-1" />		
 	<text>
-	"Me? Not much to tell. my name is Desharr, I own this here establishment hence my name on the banner. And 
+	"Me? Not much to tell. my name is Desharr, I own this here establishment hence my name on the banner. And I've owned it since I inherited it from my mam. I ain't one for going a'roaming the stars. Not to say I don't got a few tales, this station used to be a lot rougher. But this ain't the time for those"
 	</text>
 	<choice destination="solace" text="$I'll have another drink">
 		<condition evaluate="CREDITS" operator="greaterthan" value="200"/>	
 	</choice>
-	<choice destination="you" text="$I'd like to know about you"/>
 	<choice destination="wardens" text="$What do you know about the wardens?"/>
 	<choice destination="jehari" text="$What do you know about the lizard in the labcoat?"/>
 	<choice destination="Robynn" text="$What do you know about the catgirl store owner?"/>

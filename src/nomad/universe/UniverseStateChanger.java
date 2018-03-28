@@ -39,6 +39,7 @@ public class UniverseStateChanger {
 	
 	public void LoadUniverse()
 	{
+		universe.getStarSystems().clear();
 		Document doc=ParserHelper.LoadXML("assets/data/universe.xml");
 		//read through the top level nodes
 		Element root=doc.getDocumentElement();

@@ -87,7 +87,8 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		playerShip = spaceship;
 		shipController = new PlayerShipController(Universe.getInstance().getSystem());
 		playerShip.setShipController(shipController);
-		Universe.getInstance().getcurrentSystem().systemEntry();
+		StarSystem system=Universe.getInstance().getcurrentSystem();
+		system.systemEntry();
 		renderer = new SolarRenderer(Universe.getInstance().getSystem());
 		controller = new SolarController(Universe.getInstance().getSystem());
 		GUI = new SolarGUI();
