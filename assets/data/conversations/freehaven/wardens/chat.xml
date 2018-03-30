@@ -5,7 +5,8 @@
 	"Visitor. What can I do to help you?" the warden seems friendly enough, willing to stop her patrol amicably to talk to you.
 	</text>
 	<choice destination="oralvore0" text="$I've committed a crime and need to be punished!">
-		<assertion evaluate="hasperk" perk="oralvore" />	
+	<preference fetish="oralvore" />	
+	<preference fetish="females" />	
 	</choice>
 	<choice destination="end" text="$Nothing at the moment, just wanted to say hello."/>
 	</page>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<text>
+	The bunny girl whimpers and tries to get back to her feet. But she's helpless before you as her leg gives out under her sending her whumping back to the ground with a pained yelp.
+	</text>
+		<choice destination="oralvore0" text="O feel like having lapine in my diet">
+			<assertion evaluate="hasperk" perk="oralvore" />	
+		</choice>
+		<choice destination="devour" text="Devour her.">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>	
+	</page>
+	
+	<page ID="oralvore0">
+	<!-- feetfirst-->
+	<text>
+	You lick your lips at the thought of relieving her of the need to run away from predators..by taking her into yourself and digesting her of course. And she seems to sense your intentions and start to pull away but not fast enough to avoid as you grab ahold of her feet by the ankles. You bring her feet up to your lips as she squirms, drinking in the sight of her shapely athletic legs extending up away from you. Her legs a nice starter leading to the main dish of her upper body. Your mouth waters and you start to lick over her tastey feet, lapping over her soles and toes and savouring her afore you begin devouring her. Plopping her feet into your mouth and swallowing, turning them into a bulge in your throat as you start to gobble her calves up.
+	</text>
+	<choice destination="oralvore1" text="*delicious bunny*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The bunny squeels and whimpers, squirming around, but she can't escape your hunger. Your throat rippling to drag her down with powerful gulps and swallows that drags her deeper and further into you. You can feel her toes twitching and her feet pressing against the inside of your stomach lining as you work over her thighs. Her hands go to try and shove at your face, but all she does is bring them where you can easily grab them and feed them into your mouth alongside the rest of your meal. The bunny's struggles becoming more and more confined as you devour her hips and then abs.
+	</text>
+	<choice destination="oralvore2" text="*devour her entirely*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	You lick over the bared skin of your delicious meal and feel her legs curling within you, stretching out your belly, bulging your gut, satisfying you. Soon all of her will be within you and the thought stirs you on, her whimpers redoubled at your mhmms of appreciation as you encroach on her breasts. You linger for a few moments on those soft petite orbs of deliciousness before you resume devouring her. Not much left and even that vanishes as well, her vision of this world becoming framed by your lips as you engulf her shoulders..and then at last her head. You take a final swallow, schlurping up her bunny ears and feeling her form snugly contained within you now, all yours..yours to have, to hold..
+	</text>
+	<choice destination="oralvore3" text="*And to Digest"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	You stroke your hands over your belly and feel her push out from inside of you and whimper. But she's yours now and you let your enzymes have her. Your grinding stomach walls pressing against her, kneading her flesh and constraining her struggles as she's gradually broken down. Your gut jostling around with her vigorous attempts to escape but all too soon she's tiring and softening within your hungry belly. Her form going still and your belly going from bumpy to smooth to shrunk down and compact as she's liquidated and absorbed. Soon nought remains of her but the sensation of langorous satisfaction instilled into your being in afterglow of digesting the cute bunny...and, perhaps, the desire to have another one as a meal sometime soon.
+	</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="delicious." />	
+	</page>
+	
+	<page ID="devour">
+		<text>
+			You have devoured her in some unspecified and unelaborated-on, yet surely satisfying way.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Carry on." />
+	</page>
+
+	
+</Conversation>

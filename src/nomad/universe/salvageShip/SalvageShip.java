@@ -18,7 +18,7 @@ public class SalvageShip {
 		boolean capableShip=ship.getUnusableState()==null;
 		boolean hasNavigation=false;
 		boolean noEnemies=true;
-		boolean noController=ship.getShipController()!=null;
+		boolean noController=ship.getShipController()==null;
 		
 		Zone z=ship.getZone(0);
 		for (int i=0;i<z.getActors().size();i++)

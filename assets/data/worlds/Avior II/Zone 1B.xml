@@ -32,7 +32,10 @@
 				<floodfill tile="3" />
 			</band>
 			<band low="0.0" high="0.2">
-				<floodfill tile="2" />
+				<floodfill tile="2">
+				<SeedNPCs min="16" max="32" name="Avior_II/bunnygirl">
+				</SeedNPCs>	
+				</floodfill>
 			</band>
 			<band low="0.2" high="0.7">
 				<floodfill tile="1" />

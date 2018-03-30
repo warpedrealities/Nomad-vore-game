@@ -11,7 +11,10 @@
 	<choice destination="name" text="$Deshy's, why's it called that?"/>
 	<choice destination="drink" text="$something to drink"/>
 	<choice destination="food" text="$do you serve food?"/>
-	<choice destination="cutie0" text="$how about a cute fox to eat?"/>
+	<choice destination="cutie0" text="$how about a cute fox to eat?">
+	<preference fetish="oralvore" />	
+	<preference fetish="females" />		
+	</choice>
 	<choice destination="information" text="$information would be good"/>
 	<choice destination="end" text="$Nothing, I'll let you get on"/>				
 	</page>
@@ -25,7 +28,10 @@
 	<choice destination="name" text="$Deshy's, why's it called that?"/>
 	<choice destination="drink" text="$something to drink"/>
 	<choice destination="food" text="$do you serve food?"/>
-	<choice destination="cutie0" text="$how about a cute fox to eat?"/>
+	<choice destination="cutie0" text="$how about a cute fox to eat?">
+		<preference fetish="oralvore" />	
+	<preference fetish="females" />		
+	</choice>
 	<choice destination="information" text="$information would be good"/>
 	<choice destination="end" text="$Nothing, I'll let you get on"/>
 	</page>
@@ -37,7 +43,10 @@
 	<choice destination="name0" text="$So can I call you Deshy?"/>
 	<choice destination="drink" text="$something to drink"/>
 	<choice destination="food" text="$do you serve food?"/>
-	<choice destination="cutie0" text="$how about a cute fox to eat?"/>
+	<choice destination="cutie0" text="$how about a cute fox to eat?">
+		<preference fetish="oralvore" />	
+	<preference fetish="females" />		
+	</choice>
 	<choice destination="information" text="$information would be good"/>	
 	<choice destination="end" text="$interesting, that's all i wanted to know though"/>
 	</page>
@@ -62,7 +71,10 @@
 		<condition evaluate="CREDITS" operator="greaterthan" value="450"/>	
 	</choice>	
 	<choice destination="drink" text="$actually i'd like something to drink"/>
-	<choice destination="cutie0" text="$actually i'd prefer a cute fox to eat"/>
+	<choice destination="cutie0" text="$actually i'd prefer a cute fox to eat">
+		<preference fetish="oralvore" />	
+	<preference fetish="females" />		
+	</choice>
 	<choice destination="information" text="$actually i'd like some information"/>	
 	<choice destination="end" text="$not right now"/>
 	</page>
@@ -89,7 +101,49 @@
 	</choice>
 	<choice destination="end" text="$Actually, I think I'll pass entirely."/>
 	</page>
-		
+	
+	<page ID="housespecial0">
+	<text>
+	"For you on the house."
+	</text>
+	<choice destination="housespecial1" text="$Sure, hit me up with a house special"/>
+	<choice destination="end" text="$That's very kind, but I'll pass"/>
+	</page>
+	
+	<page ID="housespecial1">
+	<text>
+	"Only for the deserving" says Desharr and turns her back for a few seconds as she mixes the drink then backs around "drink up" she says planting the glass down in front of you. The mixture is zesty and tingles going down. It makes you feel all warm and fuzzy like you're floating on a cloud. Desharr leans forwards conspiratorially, her smile slipping afore her lips come alongside your ear "I get your type all the time, but most are not so full of themselves they think the proprietor is on the menu." she whispers menacingly. You try to pull back from her but instead you slump forwards, your body oddly unresponsive "Don't worry though, soon I'll be full of you as well...and yes, you've been drugged."
+	</text>
+	<choice destination="oralvore0" text="$mwuh wuh suh"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	"Don't be silly, yah can't talk or struggle like this. No one is going to think yah not my willing little meal, and anyone else isn't going to make a big deal out of it. So Hush ya self, and remember..yah could of kept ya dumb mouth shut and ain't none of this would'ah happened." Desharr murmurs in your ear while supporting you with one hand, afore sliding that hand of hers down behind your head and holding your limp form steady as she works her lips over your face. Seems the bartender is about to make a snack of you on the job, and all cause you wanted a snack of your own. Her tongue laps over your face, her saliva smears your hair and coats your features as she starts draws you in and takes her first swallows.
+	</text>
+	<choice destination="oralvore1" text="*muffled incoherent protests*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You twitch and shift around weakly as she draws you down her throat. Your little objections muffled and smothered by the insides of her body they do little to disturb bystanders or attract warden attention. The bartender swallowing up her meal in peace, cramming your chest past her lips and sliding her hands down to grab ahold of your ass and haul you up off your stool. Your weight resting on the counter and shifting into the hot and snug embrace of her insides as you start to fill her belly.
+	</text>
+	<choice destination="oralvore2" text="*try to squirm*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Desharr mmphs as her gut stretches to contain your form and she wraps her lips around your ass. Her belly pressing against the counter squishing your form curling up inside her as she devours your legs inch by inch. Your twitching feet getting closer and closer to her lips, all you can manage to do to resist her in your helpless and drugged state. All too soon she's polishing you off completely, gulping your feet down and wiping her lips with the back of her arm before smiling and patting her gut "Mhmm, filling. Almost makes up for yah being a jackass." she says and chuckles as you squirm in her belly, trying to fight first the drugs and the snug embrace of her stomach walls.
+	</text>
+	<choice destination="oralvore3" text="*digested for your transgressions*"/>
+	</page>
+	
+	<gameover ID="oralvore3">
+	<text>
+	Desharr's enzymes turn their attention to you even as she turns her own attention towards her other customers. The fox serving drinks and chatting, but mainly serving drinks, as you begin to digest away inside her gurgling guts. Your occasional struggles and murmurs inside her only attracting amused pats from her and good natured commentary from her patrons. By the time the drugs wore off you weren't in any state to convince people you weren't the willing meal she was passing you off as. Desharr's belly turning still and round and soft as you're digested away. In an hour or two more nothing remains but a compact bit of chub on her middle as your remnants are absorbed by the predatory bartender.
+	</text>
+	</gameover>
+	
 	<page ID="information">
 	<text>
 	"Mhmm?" Desharr queries, cocking an ear in your direction as she goes about her business.
@@ -257,10 +311,72 @@
 	
 	<page ID="toomuch0">
 	<text>
-	
+	Desharr's blurry visage smiles and whirls in front of your gaze "Guess you misjudged yourself...one moment" she says and goes to the other end of the bar to tend to a customer even as you topple off the barstool and land on the floor. It's surprisingly comfortable down there as everything fades in and out and then finally goes black.
 	</text>
-	
+	<choice destination="cockvore0" text="*unconscious in a club might not be a good thing to be*"/>
 	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	You rouse to the sensation of hot sticky flesh throbbing around you, musky scents overpowering your senses as you're schlurped deeper in and hear someone moaning above you. Your head pushing through into a fleshy chamber of hot and sticky cream as your predator strokes you down. Your legs still protruding out into the open air from her shaft but not for much longer as she carries on schlurping you up even as you recover consciousness. Seems a patron took a liking to you as cockfood while you were out of it.
+	</text>
+	<choice destination="cockvore1" text="*squirm*"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	You hear her chuckle and stroke over her bulging shaft as you begin to move around "mhmm it's so good of you to squirm as if this wasn't your idea cockfood." she says cheerfully. Your head is dunked under her gooey cum then as she schlurps more of you inside, working your legs inside steadily as you wave them around but are unable to contradict her. Your hands pushing out against the inside of her sack nonetheless as you splutter and gasp trying to get above the level of her jizz. You're forced to curl making her sack sag and bulge with your form as she finishes pulling your legs inside. The patron stroking her hand along the bulges of your legs swelling out her sack for a few moments, tracing them down as they settle into her balls along with the rest of you.
+	</text>
+	<choice destination="protestCV" text="$This isn't my idea, let me out."/>
+	<choice destination="submitCV" text="$it's nice and sticky in here"/>
+	</page>
+	
+	<page ID="protestCV">
+	<text>
+	"No you're silly, this was your idea." the patron shifts about, seemingly uneasy for a moment and after a moment you realize why as she replies to an undistinguishable voice "She's just roleplaying, she's totally into being cockfood and spunked. She's really willing in there. You can carry on with your patrol ma'am." she says and then you hear the voice reply to her again, you can't tell what she's saying but it sounds interrogative. If only your ears weren't full of jizz.
+	</text>
+	<choice destination="protestCheck" text="$She's lying, I don't want to be cockfood and she schlurped me up against my will. get me out of here"/>
+	<choice destination="submitCV" text="$She's right, it's nice in here, i love getting churned up"/>
+	</page>
+	
+	<check ID="protestCheck">
+		<test what="PERSUADE" DC="10" />
+		<outcome destination="protestEscape" />
+		<outcome destination="protestFail" />	
+	</check>
+	
+	<page ID="protestEscape">
+	<text>
+	"You're such a joker. She's just pretending." your predator counters, but then pauses and you feel her straighten up and groan "Okay fine" she says in answer to the voice of what must be a warden. You feel her straighten up and take several swaying steps away from the bar and then start stroking off. You feel her hot seed slosh around you but soon enough you feel her climax, launching you back out of her cock and into the open air to land in an ignoble heap in front of a warden. Said bunny hmms, and then helps you up before glaring past you at the patron "Now don't let me catch you breaking our laws again." she says to the patron who wastes no time making herself scare. The warden takes a few moments to make sure you're steady on your feet though does nothing to cleanse you of your gooey seed coating and then returns to her patrol.
+	</text>
+	<choice destination="end" text="*A fortunate escape*"/>
+	</page>
+	
+	<page ID="protestFail">
+	<text>
+	"You're such a joker. She's just pretending." your predator counters and then chuckles "Yeah, thanks for being understanding" she says in response to something the warden says and then seemingly your would be rescuer goes away leaving the patron to grumble and squeeze with her legs against her sack "Time to melt you up afore you cause any more trouble." she says as she starts to churn you up. Her hot cum soaking over your form as for your punishment she speeds your inevitable demise.
+	</text>
+	<choice destination="protestFailGO" text="*liquidated*"/>
+	</page>
+	
+	<gameover ID="protestFailGO">
+	<text>
+	She gets comfortable as you rapidly get less so. The tight and churning depths of her sack a truly unforgiving environment, you find yourself melting and softening like butter in the sweltering heat of her balls. The patron rubbing her thighs against the softening bulges in her sack and idly unwrapping a condom over her length as she feels you getting gooey inside her balls. With a cavalier attitude to any eyes on her the patron starts to stroke off as she feels you about to expire, her balls contracting and evening out into smooth round orbs as she churns you down the rest of the way. With that done it takes her not very long at all to climax, ejaculating you out to fill the condom and put you to use as her good time. The patron discarding the filled sack into the trash where it belongs on her way out.
+	</text>	
+	</gameover>
+	
+	<page ID="submitCV">
+	<text>
+	The patron seems to pause in surprise a moment then rally "Of course, so glad you enjoy it. I'll just be..mhmm, churning you into spunk..now" she says and fondles herself as her balls get to work on your form. Hot cum oozing over you and being kneaded into your shape by the walls of her sack as she lewdly pleasures herself and you're happily cumgested.
+	</text>
+	<choice destination="submitCVGO" text="$ah yes"/>
+	</page>
+	
+	<gameover ID="submitCVGO">
+	<text>
+	Your unexpected predator gets comfortable at the bar, drink in one hand and her other caressing her length idly. You can feel her shift around on her seat initially but gradually your perceptions contract until her churning balls become your entire world. Your form softening, turning creamy and gooey and starting to spread out as her balls round out. The bar patron's ears perk and her toes curl as she hears an exquisite burble from her bloated sack that tells her the last of you has been liquidated. Excusing herself from the bar she pulls out a condom, rolling it down over her shaft afore starting to stroke off in earnest. Both hands working over her shaft, letting out groans and gasps of delight until she finally peaks and relieves that insistent pressure. Your form erupting from her shaft into the condom, weighing down the tip and ballooning it out into a hot and turgid sack. She admires her handiwork a moment, then ties it off and leaves the bloated cumbag in the trash without a second thought.
+	</text>
+	</gameover>
 	
 	<page ID="soulkicker">
 	<text>

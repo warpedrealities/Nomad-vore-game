@@ -676,6 +676,10 @@ public class Player extends Actor {
 		}
 		CombatMove move = ((Player_RPG) actorRPG).getCombatMove(number);
 		CooldownHandler handler=((Player_RPG) actorRPG).getCooldownHandler();
+		if (attackable!=this && move.getAttackPattern()==AttackPattern.P_SELF)
+		{
+			return false;
+		}
 		if (move.getOverrideCooldown()==null && handler.moveIsUnusable(move.getMoveName())) {
 			ViewScene.m_interface.DrawText("move " + move.getMoveName() + " isn't usable right now");
 			return false;

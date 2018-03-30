@@ -69,7 +69,10 @@ public class Status_SubAbilityMod implements StatusEffect {
 			modifiers[i] = new AttribMod();
 			modifiers[i].load(dstream);
 		}
-		removeText = ParserHelper.LoadString(dstream);
+		if (dstream.readBoolean())
+		{
+			removeText = ParserHelper.LoadString(dstream);			
+		}	
 	}
 
 	@Override
@@ -82,7 +85,12 @@ public class Status_SubAbilityMod implements StatusEffect {
 		for (int i = 0; i < modifiers.length; i++) {
 			modifiers[i].save(dstream);
 		}
-		ParserHelper.SaveString(dstream, removeText);
+		if (removeText!=null)
+		{
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, removeText);
+		}
+
 	}
 
 	@Override

@@ -30,7 +30,7 @@
 						x="1" y="1" ID="15">a tunnel to the depths</pairedportal>
 				</randprefab>
 				<auditpaths carve="1" replace="3" />
-				<noise tsile="2" scarcity="6" />
+				<noise tile="2" scarcity="6" />
 				<auditpathsthroughvoid replace="1" carve="2" />	
 
 

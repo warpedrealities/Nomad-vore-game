@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="lowercaseB.png" />
+	<name>bunny girl</name>
+	<description>The lithe and sexy dame has a wild mane of black hair spilling down her back and wonderfully tanned skin entirely devoid of bikini marks as befits a feral demi such as herself. Atop her head half flopped pale grey bunny ears extend ready to catch the sound of threats and send that athletic form of hers a-running. Anyone seeing her in retreat getting a gander of her twitching grey floof ball of a bunny tail above her cute derriere.</description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<combatMove name="kick" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="8"
+				modifier="STRENGTH" />
+			<effectMovement moveType="TARGET_AWAY" distance="4"
+				abilityMod="STRENGTH" />	
+			<missText count="2">
+				<text>bunny girl fails to kick TARGET</text>
+				<text>bunny girl's kick misses TARGET</text>
+			</missText>
+			<hitText count="2">
+				<text>bunny girl launches TARGET for VALUE damage</text>
+				<text>bunny girl kicks TARGET back with VALUE damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<respawn delay="2000" />
+	<flying />
+	<defeated conversation="avior_II/bunnygirl/defeat" />
+	<controller AI="bunny_AI" />
+	<faction value="monster" />
+</Harpy>

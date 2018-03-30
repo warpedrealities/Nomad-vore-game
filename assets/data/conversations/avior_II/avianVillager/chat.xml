@@ -33,9 +33,23 @@
 	
 	<page ID="prelude3">
 	<text>
-	
+	You breathe in deep the scent of her nethers as you come to face with her intimate treasures. The scent and her delighted cooing draws you in, your tongue flicking out to lap over her netherlips. Her gasp urging your hands up to grasp and grope her rear as you delve deeper into her flavoursome and naughty parts. She rubs over the top of your head eagerly as you pleasure her.
 	</text>
+	<choice destination="prelude4" text="*slick endeavours*"/>
+	</page>
 	
+	<page ID="prelude4">
+	<text>
+	You lick deeper into her nethers and hear her gasp wonderfully above you, her sexual folds yielding up more lustful fluids to coat your tongue and slather your chin. You can feel her tensing and flexing in a way that heralds her impending orgasm as you work expertly down over her crotch with your lips and tongue. Won't be long, won't be long at all now as you hear her utter "Oh yes..you're good at this...you belong there."
+	</text>
+	<choice destination="prelude5" text="*sticky finishes*"/>
+	</page>
+	
+	<page ID="prelude5">
+	<text>
+	The harpy's gasping coos are coming closer and closer together. And before you know it she lets out a screech of bliss, wrapping her thighs around your skull and holding you in place as her nethers erupt with gushes of pleasure. The clear sticky lovejuice coating your face and splattering down over your chest as she shudders over the top of you.
+	</text>
+	<page ID="prelude6" text="*she lets you up*"/>
 	</page>
 
 	<page ID="start">
