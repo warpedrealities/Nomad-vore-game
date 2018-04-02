@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<text>
+			The black grief lays on the ground, no longer having the strength to
+			hold itself up. It swipes at you, but then goes limp soon enough. It
+			should be out for a while at least, even if you just leave it here,
+			yet there is no doubt in your mind that it would still be dangerous
+			to get close if you weren't careful.
+		</text>
+		<choice destination="meal0" text="Well... it would be filling...">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="end" text="leave it be for now" />
+	</page>
+	<page ID="meal0">
+		<text>
+			After some hesitation you quickly reach down and grab its arms, doing
+			your best to pin its claws before it can do any damage to you. Then you
+			lift the thing up as best you can, before shoving it head and arms first 
+			into your mouth in a rush. The taste is unpleasant, and the carapace feels
+			weird in your mouth, but you forge on anyway, this is going to be a real
+			challenge.
+		</text>
+		<choice destination="meal1" text="meet the challenge head on" />
+	</page>
+
+	<page ID="meal1">
+		<text>
+			Its long legs twitch as you awkwardly begin to shove the enormous bug down
+			your gullet. It's strange really, it was far more active just moments
+			ago. Oh well, just makes it easier for you to force the whole thing in.
+			You feel the creatures head and arms reach your gut, and then realize why,
+			it was waiting, far less constricted in your rather elastic stomach, it
+			moves one of its claws to press outwards, hard.
+		</text>
+		<choice destination="holdinthere" text="ignore the pain, swallow harder" />
+	</page>
+	<check ID="holdinthere">
+		<test what="STRENGTH" DC="15" />
+		<outcome destination="meal2" />
+		<outcome destination="justafleshwound" />
+	</check>
+	<page ID="meal2">
+		<text>
+			You do your best to push through the pain, instead trying to swallow hard
+			and squeeze the strength out of the grief. You hear a faint crunch as your
+			throat contracts hard around the creatures torso, and the pressure stops.
+			it continues wriggling as you force more of its body into your mouth, but
+			it seems to no longer have the strength to properly fight back. The first
+			pair of legs is forced most of the way down, and your belly is already
+			rather large from the size of your "meal".
+		</text>
+		<choice destination="meal3" text="finish it off" />
+	</page>
+
+	<gameover ID="justafleshwound">
+		<text>
+			You do your best to push through the pain, instead trying to swallow hard
+			and squeeze the strength out of the grief. The insect stops pushing on
+			your stomach wall, but only for a moment, then the pressure comes back
+			even harder, your attempt to exhaust the thing only motivating it more.
+			Then, there's a sharp pain in your chest, you feel something warm running 
+			down your body, and everything goes black...
+
+			The monstrous arthropod crawls out of its fleshy prison easily now that all
+			effort to stop it has been ceased. Your attempt at consuming the black grief
+			has only proven why it is at the top of this lands food chain. To be an apex
+			predator is not just to eat all others, but to not be eaten yourself.
+		</text>
+	</gameover>
+
+	<page ID="meal3">
+		<text>
+			Onward you forge, swallowing more and more of the smooth shelled creature.
+			Finally, you reach the tip of its tail, and will soon be able to wash this
+			taste from your mouth. You reach out to tug at the stinger, popping it from
+			the tail easily, and drop it to the ground. You have every bet that thing
+			would have still done serious damage if you'd swallowed it. Then you gulp the
+			thing down along with the rest of the back legs, you've done it, you didn't
+			enjoy it, but you've eaten the creature.
+		</text>
+		<choice destination="meal4"
+			text="well, no moving until this is gone." />
+	</page>
+
+	<page ID="meal4">
+		<text>
+			It takes quite some time and gives you indigestion, but eventually the black 
+			grief is gone. Lost to the power of your now flattened belly. Does this mean 
+			you're an apex predator? You might have already been one by this point.
+			Either way, you stand up.
+		</text>
+		<effect type="feed" value="130" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+</Conversation>

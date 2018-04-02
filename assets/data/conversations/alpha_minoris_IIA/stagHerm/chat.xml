@@ -77,6 +77,7 @@
 		<text>
 		She looks to you "Yes?" she seems perfectly at ease travelling alongside you. As if believing that everything will be okay simply because she's with you, regardless of her surroundings.
 		</text>
+		<choice destination="training" text="it's time for a lesson Eve"/>
 		<choice destination="leave" text="I think you should stay here" />
 		<choice destination="end" text="nothing, lets travel on"/>
 	</page>
@@ -96,6 +97,7 @@
 		<text>
 		She smiles "Hello PNAME " she says cheerfully.
 		</text>
+		<choice destination="training" text="I need to teach you something Eve"/>
 		<choice destination="join" text="i want you to travel with me again">
 			<assertion evaluates="companionSlotFree" />
 		</choice>
@@ -109,5 +111,35 @@
 		<special effect="makecompanion" />
 		<choice destination="end" text="lets go" />
 	</page>	
+	
+	<page ID="training">
+	<text>
+	Eve smiles and perks up "Oh, I like learning things.. what are we learning today?" she says, straightening up more attentively.
+	</text>
+	<choice destination="cockvoreTraining0" text="$You need to learn to properly cockvore your mistress the way she likes it">
+		<preference fetish="cockvore" />
+	</choice>
+	<choice destination="end" text="On second thoughts, no lesson right now"/>
+	</page>
+	
+	<page ID="cockvoreTraining0">
+	<text>
+		<conditional>	
+		<condition operator="equals" evaluate="LOCALFLAG" flag="cockvore"
+			value="0" />
+		Eve listens, blushing as you explain about how you want her to devour you with her cock and take you into her balls.
+		</conditional>
+		The stag reaches down to get herself ready, stroking over her length as she looks to you. She knows she needs herself nice and big and hard before you'll be able to fit in and soon that prodigious shaft of hers is firming up, rising to attention. That massive thick third leg of hers jutting upwards as the big, powerful and eager to please herm looks to you "So how do I properly cockvore you?" she asks earnestly. 
+	</text>
+	<choice destination="cockvoreTraining1A" text="$You should force me in, pick me up, push me down, show me my place is in your balls"/>
+	<choice destination="cockvoreTraining1B" text="$You should be gentle, let me slide in at my own pace, help me in and welcome me into your sack"/>
+	</page>
+	
+	<page ID="cockvoreTraining1A">
+	<text>
+	Eve listens and looks uncertain a moment, then smiles and picks you up with seeming ease
+	</text>
+	
+	</page>
 	
 </Conversation>

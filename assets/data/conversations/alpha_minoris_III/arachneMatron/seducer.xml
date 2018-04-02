@@ -1,20 +1,73 @@
 <?xml version="1.0"?>
 <Conversation>
+
 	<page ID="start">
-		<preference fetish="demis" />
+	<preference fetish="demis" />
 		<preference fetish="females" />	
-		<preference fetish="unbirth" />		
-		<text>
-		this scene isn't written yet, sorry.
-		</text>
-		<choice destination="gameover" text="i guess you're still gonna kill me anyway though arent you?"/>
+		<preference fetish="unbirth" />			
+	<text>
+	The Arachne sees your defiance crumble and your lust rise and settles her lethal legs down beneath her as she spreads her arms to welcome you. An invitation you're happy to accept as you step towards her and feel her embrace you, lifting you up and pressing you against her bountiful breasts. She lavishes your head with kisses and grinds her gaping wet netherlips against your legs. The period of doting affection for your eager self gradually comes to an end however and she urges you down to your knees in front of her, your eyes beholding before you now another invitation. You lick at her broad slit, able to hear her moan but then she reaches down and pushes on the back of your head and you realize she wants something more out of you. And you can already tell what that is she wants you inside of her.<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				You eagerly strip off, rendering yourself naked for your impending plunge.
+			</conditional>
+			Her scent washes over you as you stare into her moist and fleshy abyss...
+	</text>
+	<choice destination="unbirth0" text="*into the spider womb*"/>
 	</page>
 	
-	<gameover ID="gameover" noReform="true">
+	<page ID="unbirth0">
 	<text>
-	YEP!
+	The broad fleshy lips encompass your face as you press forwards, into the darkness of her nethers. That voracious snatch of hers stretching and parting around you easily before clenching and rippling, tugging your shoulders and chest inside her wonderfully hot and deep birth canal. A channel that seems to run right through her arachnid thorax into the depths of her abdomen as it seems to go on and on around you. You hear her moan and answer it with pleasured sounds of your own as the tight channel massages over you rthythmically and you feel her rocking back and forth. Your upper body squelching further into her with these motions and your own eager wriggles into the maternal depths of this wonderful monster.
 	</text>
+	<choice destination="unbirth1" text="*deeper, need deeper*"/>
+	</page>
 	
+	<page ID="unbirth1">
+	<text>
+	Her moans and the flexing schlurping of her wondrously soft nethers around your upper body fill your world as she gradually draws you of the harshness of the outside world. The arachne treating you with nothing but tenderness as slides her hands down to stroke over your legs and lift them up so they can in turn follow your upper body between her welcoming folds. Won't be long until you're entirely vanished into the spider taur's body, her hands gently guiding your feet closer.
+	</text>
+	<choice destination="unbirth2" text="*all the way*"/>
+	</page>
+	
+	<page ID="unbirth2">
+	<text>
+	With a final slick noise she pushes your feet past her netherlips. All of you vanished into her depths now as she rocks her body back and forth and clenches to tug you further and further into her womb. The hot fleshy embrace of her womb cradling and cuddling you as you're curled up in her abdomen, a warm bulge held deep within her. The sexy arachne providing a nice snuggly place to rest inside her body.
+	</text>
+	<choice destination="ubtf0" text="*so snuggly*"/>
+	</page>
+	
+	<page ID="ubtf0">
+	<text>
+	The Arachne resumes resting in her lair as you get comfortable settled within her. Listening to the rthythms of her body you start to become lulled into a doze and then a slumber within her. You feel a faint momentary sensation like a painless bite at your belly but pay it no mind as you drift off into slumber.
+	</text>
+	<choice destination="ubtf1" text="*how long?*"/>
+	</page>
+	
+	<page ID="ubtf1">
+	<text>
+	You rouse and stir after an indeterminable time only to find you're still within her and it seems for a while longer. Some sort of life giving cord connects your body to hers now, you squirm around only to feel her rubbing at the bulge in her abdomen from outside with a hind leg. The entrance back out of her womb unyielding as you probe at it, and the cord tying you into her body fills you with pain when you try and yank it loose. With a clear head you realize, you're trapped..trapped inside this spider taur, your struggles and squirms doing nothing to discourage her from keeping you inside and you find sleep claiming you again.
+	</text>
+	<choice destination="ubtf2" text="*longer*"/>
+	</page>
+	
+	<page ID="ubtf2">
+	<text>
+	You rouse again, later though you don't know how much time later, to feel over yourself and find you have begun to change. Your legs fused together, their skin aberrant and strange under your fingers and strange nubs protruding from where once your hips existed. She's changing you, she's making you into one of her kind. And there's nothing you can do as your body is suborned and subverted by her own, alien DNA flowing through the placenta to overwrite your own. With a sense of futility you let sleep claim you once again.
+	</text>
+	<choice destination="unbtf3" text="*still longer*"/>
+	</page>
+	
+	<page ID="ubtf3">
+	<text>
+	You shift around, your legs are nearly done..long, delicately furred.. protruding from your thorax, soon mother will let you out...to hunt, to pleasure, to feed. At long last to feel the outside world and make your mother proud, you can imagine the bulge you make, distending her abdomen greatly with your curled up bulky shape. Soon, soon you'll be let out..but for now, you rest.
+	</text>
+	<choice destination="ubtf4" text="*reborn from mama*"/>
+	</page>
+	
+	<gameover ID="ubtf4" noReform="true">
+	<text>
+	The arachne matron rises, feeling the strong intruder's worthy form now stirring within her in a way that makes her know that she's ready to come out. Her bloated abdomen starting to contract as she presses it against the floor of the cave, squeezing out her new arachne daughter into the open air. Slick juices covering your body as you emerge and rise steadily to your feet, no memories of your prior life remains, no goals higher than to devour and to reproduce left within your mind. With a contented smile you snuggle up to the arachne, feeling her kiss the top of your head dotingly and stroke over your back. As soon as your carapace dries you'll go out to hunt, you can hardly wait...
+	</text>
 	</gameover>
 
 </Conversation>

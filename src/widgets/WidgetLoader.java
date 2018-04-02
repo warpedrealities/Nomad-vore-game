@@ -135,10 +135,10 @@ public class WidgetLoader {
 			WidgetSlot ws = (WidgetSlot) widget;
 
 		}
-		if (root.getTagName().contains("capsuleSystem")) {
+		if (root.getTagName().equals("capsuleSystem")) {
 			widget = new WidgetCapsuleSystem(root);
 		}
-		if (root.getTagName().contains("capsule")) {
+		if (root.getTagName().equals("capsule")) {
 			widget = new WidgetCapsule(root);
 		}
 		return widget;

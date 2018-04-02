@@ -3,5 +3,6 @@
 	<entitysprite filename="bluePurple" size="1.0" />
 	<zone x="0" y="1" type="SURFACE">Zone 1A</zone>
 	<zone x="0" y="0" type="SURFACE">Zone 1B</zone>	
+	<zone x="1" y="0" type=SURFACE">Zone 2A</zone>
 	<zone x="0" y="0" type="CLOSED">Cave 1A</zone>
 </world>

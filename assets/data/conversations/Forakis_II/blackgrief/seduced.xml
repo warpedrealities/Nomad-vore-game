@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<text>
+			The creature seems to shudder for a moment, before going mostly still.
+			It still twitches around in that normal insectoid manner, but it 
+			doesn't seem to be trying to kill you anymore at least. You faintly
+			notice a clear liquid dripping from the end of its tail.
+		</text>
+		<choice destination="meal1"
+			text="Maybe you can eat it?">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="UBtail0" text="What is that stuff?">
+						<preference fetish="ferals" />
+					<preference fetish="unbirth" />
+				<preference fetish="tailvore" />		
+		</choice>
+		<choice destination="leave" text="Well, at least it's calmed down." />
+	</page>
+
+	<page ID="meal1">
+		<text>
+			Its long legs twitch as you awkwardly begin to shove the enormous bug down
+			your gullet. The creature now oddly passive, even though you're eating it
+			alive. Oh well, just makes it easier for you to force the whole thing in.
+			You feel the creatures head and arms reach your gut, and then whatever sort
+			of effect you had on it wears off. The grief is now fully awake and aware,
+			and it's still at full strength. You feel it press a claw out against your
+			stomach wall, hard.
+		</text>
+		<choice destination="holdinthere" text="ignore the pain, swallow harder" />
+	</page>
+
+	<check ID="holdinthere">
+		<test what="STRENGTH" DC="17" />
+		<outcome destination="meal2" />
+		<outcome destination="justafleshwound" />
+	</check>
+
+	<page ID="meal2">
+		<text>
+			You do your best to push through the pain, instead trying to swallow hard
+			and squeeze the strength out of the grief. You hear a faint crunch as your
+			throat contracts hard around the creatures torso, and the pressure stops.
+			it continues wriggling as you force more of its body into your mouth, but
+			it seems to no longer have the strength to properly fight back. The first
+			pair of legs is forced most of the way down, and your belly is already
+			rather large from the size of your "meal".
+		</text>
+		<choice destination="meal3" text="finish it off" />
+	</page>
+
+	<gameover ID="justafleshwound">
+		<text>
+			You do your best to push through the pain, instead trying to swallow hard
+			and squeeze the strength out of the grief. The insect stops pushing on
+			your stomach wall, but only for a moment, then the pressure comes back
+			even harder, your attempt to exhaust the thing only motivating it more.
+			Then, there's a sharp pain in your chest, you feel something warm running 
+			down your body, and everything goes black...
+
+			The monstrous arthropod crawls out of its fleshy prison easily now that all
+			effort to stop it has been ceased. Your attempt at consuming the black grief
+			has only proven why it is at the top of this lands food chain. To be an apex
+			predator is not just to eat all others, but to not be eaten yourself.
+		</text>
+	</gameover>
+
+	<page ID="meal3">
+		<text>
+			Onward you forge, swallowing more and more of the smooth shelled creature.
+			Finally, you reach the tip of its tail, and will soon be able to wash this
+			taste from your mouth. You reach out to tug at the stinger, popping it from
+			the tail easily, and drop it to the ground. You have every bet that thing
+			would have still done serious damage if you'd swallowed it. Then you gulp the
+			thing down along with the rest of the back legs, you've done it, you didn't
+			enjoy it, but you've eaten the creature.
+		</text>
+		<choice destination="meal4"
+			text="well, no moving until this is gone." />
+	</page>
+
+	<page ID="meal4">
+		<text>
+			It takes quite some time and gives you indigestion, but eventually the black 
+			grief is gone. Lost to the power of your now flattened belly. Does this mean 
+			you're an apex predator? You might have already been one by this point.
+			Either way, you stand up.
+		</text>
+		<effect type="feed" value="130" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+	<page ID="UBtail0">
+		<text>
+			Curious of the nature of the strange fluids dripping from the insects
+			tail, you circle around it to see what it is. Approaching its tip, you
+			see something that you didn't quite notice while it was trying to impale
+			you on it. There's a thin slit just under the stinger, made all the more
+			visible by the moisture dripping from it.
+		</text>
+		<choice destination="UBtail1" text="is, is that its...?" />
+	</page>
+
+	<page ID="UBtail1">
+		<text>
+			Yes, yes it is. That is apparently the alien bug monster equivalent of a
+			vagina as you son realize when you go to poke it and the whole creature 
+			shudders as your hand slips inside. It's moist and warm from your wrist
+			up. You aren't sure you wanted to know this...
+		</text>
+		<choice destination="leave" text="you pull your hand back out" />
+		<choice destination="UBtail2" text="push further in" />
+	</page>
+
+	<page ID="UBtail2">
+		<text>
+			Oddly interested in this whole thing, you push on further into the giant 
+			bugs nethers, inserting your other hand and pressing both of your arms
+			in up to the elbows. It gets tigher as you do so, and you quickly find
+			yourself hitting something further in. The alien vagina clenched around
+			you in such a way that you aren't sure you can pull back anymore, so
+			instead you choose to go further.
+		</text>
+		<choice destination="UBtail3" text="into the unknown" />
+	</page>
+
+	<page ID="UBtail3">
+		<text>
+			You continue pushing, shoving yourself all the way in up to your shoulders,
+			the creature, for its part, pushes back, thrusting its tail backwards, its
+			cervix opens in front of you, and you find yourself forced through, stuck
+			in up to your waist. Its tail lifts up, taking you with it, holding your legs
+			in the air. It seems the rest is up to it now, the creatures womb pulls you
+			forward, and you are forced to curl up inside of it, creating a large bulge
+			at the base of the griefs tail.
+		</text>
+		<choice destination="UBtail4" text="relax" />
+	</page>
+
+	<page ID="UBtail4">
+		<text>
+			After wiggling about for a few moments to find a better position, you start
+			to relax. In stark contrast to the creature you are contained within, the
+			womb itself seem remarkably safe. The insect starts moving again, and you
+			feel your confines shift noticeably a few times as it does so, seemingly
+			from the grief moving over large rocks in its path. Eventually, you feel it
+			come to a stop, and it lowers towards the ground in what is presumably a
+			safe area, at which point it immediately goes still. Taking a note from the
+			bug, you let yourself drift off to sleep. When you wake up, you find that
+			the creature is still sleeping, and you work your way out.
+		</text>
+		<effect type="heal" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="best be off now" />
+	</page>
+
+	<page ID="leave">
+		<text>
+			You seem to have definitely calmed the raging insect down, but you aren't
+			sure you want to stick around to see how long that really lasts, and you
+			aren't comfortable being close to those claws for any longer than you
+			have to be.
+		</text>
+		<special effect="nonhostile" />
+		<special effect="healnpc" />
+		<choice destination="end" text="back away slowly... no wait, quickly is better" />
+	</page>
+</Conversation>

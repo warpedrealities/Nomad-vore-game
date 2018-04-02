@@ -4,10 +4,9 @@
 	<effectstatus probability="100">
 		<statusTag tag="shrink" />
 		<applyText>TARGET has been SHRUNK!</applyText>
-		<statusAttribMod uid="90" icon="17" duration="60"
-			numModifiers="3">	
+		<statusTransformed uid="90" icon="17" duration="60">	
 			<removeText>TARGET is now back to normal size
 			</removeText>
-		</statusAttribMod>
+		</statusTransformed>
 	</effectstatus>
 </ItemConsumable>

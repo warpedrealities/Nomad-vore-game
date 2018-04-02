@@ -2,14 +2,16 @@
 function melee(controllable,sense,pos,hostile)
 
 	a=controllable:getValue(0)
-	if (a==1) then
+	if (a==1) and not hostile:getRPG():hasStatus(20) then 
 	controllable:setAttack(2);
 	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
 	a=2
 	controllable:setValue(0,a)	
 	else
 	controllable:setAttack(0);
-	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
+	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+	a=math.random(5)
+	controllable:setValue(0,a)	
 	end
 
 end
@@ -17,7 +19,7 @@ end
 function ranged(controllable,sense,pos,hostile)
 
 	a=controllable:getValue(0)
-	if (a==0) and pos:getDistance(hostile:getPosition())<4 then
+	if (a==0) and pos:getDistance(hostile:getPosition())<4 and pos:getDistance(hostile:getPosition())>1 then
 	controllable:setAttack(1);
 	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
 	a=1
@@ -29,13 +31,7 @@ function ranged(controllable,sense,pos,hostile)
 		controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
 		end	
 	end
-	if (a>1) then
-		a=a+1
-		if (a==5) then
-			a=0
-		end
-		controllable:setValue(0,a)			
-	end
+	
 end
 
 function combat(controllable,sense,pos,hostile)
@@ -50,26 +46,6 @@ function combat(controllable,sense,pos,hostile)
 
 end
 
-function passive(controllable,sense, script)
-	b=controllable:getValue(0)	
-	if (b<100) then
-		b=b+1
-		
-		a=math.random(0,8)
-		controllable:move(a);	
-		controllable:setValue(1,b)
-	else
-		if controllable:HasPath() then
-		controllable:FollowPath()
-		else
-		player= sense:getPlayer()
-		controllable:Pathto(player:getPosition().x,player:getPosition().y,16)
-		end		
-	
-	end
-
-end
-
 function main(controllable, sense, script)  
 	pos=controllable:getPosition()
 	hostile=sense:getHostile(controllable,10,true)
@@ -77,6 +53,7 @@ function main(controllable, sense, script)
 	--combat ai here
 	combat(controllable,sense,pos,hostile)
 	else
-		passive(controllable,sense,script)
+	a=math.random(0,8)
+	controllable:move(a);
 	end
 end  

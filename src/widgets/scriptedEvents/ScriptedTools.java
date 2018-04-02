@@ -3,6 +3,8 @@ package widgets.scriptedEvents;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import actor.npc.NPC;
+import actor.npc.ScriptPackage;
 import shared.ParserHelper;
 import shared.Vec2f;
 import view.ViewScene;
@@ -34,8 +36,13 @@ public class ScriptedTools {
 		zone.getTile(x, y).setWidget(widget);
 	}
 	
-	public void placeNPC(int x, int y, String filename,boolean temp)
+	public NPC placeNPC(int x, int y, String filename,boolean temp)
 	{
-		ViewScene.m_interface.createNPC(filename, new Vec2f(x,y), temp);
+		return ViewScene.m_interface.createNPC(filename, new Vec2f(x,y), temp);
+	}
+	
+	public ScriptPackage genNpcScripts(String spawn, String death)
+	{
+		return new ScriptPackage(spawn,death);
 	}
 }

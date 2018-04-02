@@ -14,21 +14,8 @@
 	<description>The world is covered in unusual blue hue'd stone and
 		exotic purple foliage that shifts and rustles even when the wind does
 		not blow.</description>
-	<transition direction="south">Zone 1B</transition>
-	<transition direction="east">Zone 2B</transition>	
+	<transition direction="west">Zone 1A</transition>
 	<mapgen>
-	<preloadprefab width="7" height="7" preloadID="4">
-			<row>2222222</row>
-			<row>2255522</row>
-			<row>2555552</row>
-			<row>2552552</row>
-			<row>2552552</row>
-			<row>2252522</row>
-			<row>2222222</row>
-			<recordVector x="3" y="3" ID="4" zone="Cave 1A" />
-			<pairedportal sprite="3" destination="Cave 1A" x="3" y="3"
-				ID="11">a tunnel into the depths</pairedportal>
-		</preloadprefab>
 		<perlin>
 			<band low="-1.0" high="-0.5">
 				<floodfill tile="7" />
@@ -38,7 +25,10 @@
 				<noise tile="2" scarcity="20" />
 				<noise tile="3" scarcity="20" />
 				<floodfill tile="1">
-					<SeedNPCs min="16" max="32" name="Forakis_II/formic">
+					<SeedNPCs min="8" max="16" name="Forakis_II/formic">
+					</SeedNPCs>
+					<SeedNPCs min="3" max="6"
+name="Forakis_II/blackgrief">
 					</SeedNPCs>
 				</floodfill>
 			</band>
@@ -53,7 +43,7 @@
 			</band>
 		</perlin>
 
-		<walloff wall="7" sides="northwesteast" />
+		<walloff wall="7" sides="northsoutheast" />
 	</mapgen>
 
 </zone>

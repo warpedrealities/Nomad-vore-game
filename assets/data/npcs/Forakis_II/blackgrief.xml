@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="blackgrief.png" />
+	<name>black grief</name>
+	<description> The insectoids carapace is pitch black, and separated in enough 
+	places that it looks like it could fold in half. It stands eight feet tall, most 
+	of which is its four legs, and the legs themselves are still as thick as a mans arm, 
+	and end in beetle like hooked feet. A long tail extends out behind its body like the 
+	demented hybrid of a dragonfly and a wasp. Moving your eyes towards the front 
+	of its body you see a pair of almost mantid like fore-limbs, each with a thick 
+	scything claw. Then you reach its head, a pair of large, deep-purple compound eyes
+	sit atop it on either side, and on the front it almost has a face, with two small
+	non-compound eyes of the same shade where they would be on a normal face, but
+	the mouth stretches open to reveal a set of four large inward curved fangs, and
+	the lower jaw splits open, stretching its maw out horizontally as well. You look
+	into its eyes, and you see hunger, but behind that, you see cruelty, this thing
+	doesn't just want to eat, it wants to cause harm.</description>
+	<rpg>
+		<experiencevalue value="45" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="25" />
+		<attribute attribute="TEASE" value="12" />
+		<attribute attribute="DODGE" value="3" />
+		<attribute attribute="KINETIC" value="6" />
+		<combatMove name="maul" pattern="MELEE" multiAttack="2"
+		bonusAttribute="MELEE" timeCost="2" bonusToHit="2">
+			<effectDamage type="KINETIC" minValue="4" maxValue="12"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>TARGET narrowly dodges the griefs scything claws</text>
+			</missText>
+			<hitText count="2">
+				<text>the griefs claw punctures TARGET for VALUE kinetic damage</text>
+				<text>the griefs tail pierces TARGET for VALUE kinetic damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="lunge" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="8" pattern="RANGED" actionCost="2" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>grief can't get a foothold to leap at TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>grief leaps towards TARGET</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="pin" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="6" pattern="MELEE" actionCost="2">
+			<effectDamage type="KINETIC" minValue="4" maxValue="14"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>grief attempts to pin TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the grief pins TARGET to the ground inflicting VALUE
+					damage from the impact</text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is pinned by a grief</applyText>
+				<statusBind uid="20" icon="4" numModifiers="2">
+					<removeText> TARGET has escaped the grief's pin</removeText>
+					<effect attribute="RANGED" modifier="-2" />
+					<effect attribute="MELEE" modifier="-2" />
+					<bind strength="10" originDependent="true" />
+					<struggle count="2">
+						<text>TARGET struggles to escape from under the grief
+						</text>
+						<text>TARGET tries to escape the grief but fails
+						</text>
+					</struggle>
+				</statusBind>
+			</effectStatus>
+		</combatMove>
+	</rpg>
+
+	<respawn delay="2000" />
+	<defeated conversation="Forakis_II/blackgrief/defeat" />
+	<seduced conversation="Forakis_II/blackgrief/seduced" />
+	<victory conversation="Forakis_II/blackgrief/victory" />
+	<seducer conversation="Forakis_II/blackgrief/victory" />
+	<controller AI="blackgrief" />
+	<faction value="Grief" />
+</NPC>

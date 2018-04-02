@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<faction>
+	<factionRelationship ID="monster" value="0" />
+	<defaultRelationship value="20" />
+</faction>
