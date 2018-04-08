@@ -17,6 +17,7 @@ import actorRPG.Actor_RPG;
 import actorRPG.RPGActionHandler;
 
 import rendering.Square_Int;
+import shared.Geometry;
 import shared.Vec2f;
 import view.ViewScene;
 import view.ModelController_Int;
@@ -72,8 +73,6 @@ public abstract class Actor implements Attackable {
 			{
 				t.setActorInTile(this);
 			}
-		
-
 		}
 		actorPosition = position;	
 		if (spriteInterface != null) {
@@ -138,170 +137,6 @@ public abstract class Actor implements Attackable {
 		return spriteInterface;
 	}
 
-	boolean Move0() {
-		if (collisionInterface.passable((int) actorPosition.x, (int) actorPosition.y + 1, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
-			t.setActorInTile(null);
-			actorPosition.y += 1;
-			spriteInterface.reposition(actorPosition);
-			if (t.getDefinition().getMovement()==TileMovement.SLOW)
-			{
-				actorRPG.addBusy(getMoveCost()*4);		
-			}
-			else
-			{
-				actorRPG.addBusy(getMoveCost());			
-			}
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-			return true;
-		}
-		return false;
-	}
-
-	boolean Move1() {
-		if (collisionInterface.passable((int) actorPosition.x + 1, (int) actorPosition.y + 1, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
-			t.setActorInTile(null);
-			actorPosition.y += 1;
-			actorPosition.x += 1;
-			spriteInterface.reposition(actorPosition);
-			if (t.getDefinition().getMovement()==TileMovement.SLOW)
-			{
-				actorRPG.addBusy(getMoveCost()*4);		
-			}
-			else
-			{
-				actorRPG.addBusy(getMoveCost());			
-			}
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-			return true;
-		}
-		return false;
-	}
-
-	boolean Move2() {
-		if (collisionInterface.passable((int) actorPosition.x + 1, (int) actorPosition.y, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
-			t.setActorInTile(null);
-			actorPosition.x += 1;
-			spriteInterface.reposition(actorPosition);
-			if (t.getDefinition().getMovement()==TileMovement.SLOW)
-			{
-				actorRPG.addBusy(getMoveCost()*4);		
-			}
-			else
-			{
-				actorRPG.addBusy(getMoveCost());			
-			}
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-			return true;
-		}
-		return false;
-	}
-
-	boolean Move3() {
-		if (collisionInterface.passable((int) actorPosition.x + 1, (int) actorPosition.y - 1, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
-			t.setActorInTile(null);
-			actorPosition.y -= 1;
-			actorPosition.x += 1;
-			spriteInterface.reposition(actorPosition);
-			if (t.getDefinition().getMovement()==TileMovement.SLOW)
-			{
-				actorRPG.addBusy(getMoveCost()*4);		
-			}
-			else
-			{
-				actorRPG.addBusy(getMoveCost());			
-			}
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-			return true;
-		}
-		return false;
-	}
-
-	boolean Move4() {
-		if (collisionInterface.passable((int) actorPosition.x, (int) actorPosition.y - 1, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
-			t.setActorInTile(null);
-			actorPosition.y -= 1;
-			spriteInterface.reposition(actorPosition);
-			if (t.getDefinition().getMovement()==TileMovement.SLOW)
-			{
-				actorRPG.addBusy(getMoveCost()*4);		
-			}
-			else
-			{
-				actorRPG.addBusy(getMoveCost());			
-			}
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-			return true;
-		}
-		return false;
-	}
-
-	boolean Move5() {
-		if (collisionInterface.passable((int) actorPosition.x - 1, (int) actorPosition.y - 1, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
-			t.setActorInTile(null);
-			actorPosition.y -= 1;
-			actorPosition.x -= 1;
-			spriteInterface.reposition(actorPosition);
-			if (t.getDefinition().getMovement()==TileMovement.SLOW)
-			{
-				actorRPG.addBusy(getMoveCost()*4);		
-			}
-			else
-			{
-				actorRPG.addBusy(getMoveCost());			
-			}
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-			return true;
-		}
-		return false;
-	}
-
-	boolean Move6() {
-		if (collisionInterface.passable((int) actorPosition.x - 1, (int) actorPosition.y, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
-			t.setActorInTile(null);
-			actorPosition.x -= 1;
-			spriteInterface.reposition(actorPosition);
-			if (t.getDefinition().getMovement()==TileMovement.SLOW)
-			{
-				actorRPG.addBusy(getMoveCost()*4);		
-			}
-			else
-			{
-				actorRPG.addBusy(getMoveCost());			
-			}
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-			return true;
-		}
-		return false;
-	}
-
-	boolean Move7() {
-		if (collisionInterface.passable((int) actorPosition.x - 1, (int) actorPosition.y + 1, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
-			t.setActorInTile(null);
-			actorPosition.y += 1;
-			actorPosition.x -= 1;
-			spriteInterface.reposition(actorPosition);
-			if (t.getDefinition().getMovement()==TileMovement.SLOW)
-			{
-				actorRPG.addBusy(getMoveCost()*4);		
-			}
-			else
-			{
-				actorRPG.addBusy(getMoveCost());			
-			}
-			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-			return true;
-		}
-		return false;
-	}
-
 	protected int getMoveCost() {
 		if (actorRPG.getStarving()) {
 			return moveCost * 2;
@@ -309,32 +144,72 @@ public abstract class Actor implements Attackable {
 		return moveCost;
 	}
 
+	private boolean swapPlaces(int x0, int y0, int x1, int y1)
+	{
+		Actor actor=collisionInterface.getActor(x1, y1);
+		if (actor!=null && !actor.getAttackable())
+		{
+			actor.setPosition(new Vec2f(x0,y0));
+			actorPosition.x=x1;
+			actorPosition.y=y1;
+			if (spriteInterface!=null)
+			{
+				spriteInterface.reposition(actorPosition);
+			}	
+			Tile t=collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y);
+			if (t!=null)
+			{
+				t.setActorInTile(this);
+			}
+			
+			actorRPG.addBusy(4);
+			return true;
+		}
+		return false;
+	}
+	
 	public boolean move(int direction) {
 		if (actorRPG.getBindState() > -1) {
 			actorRPG.struggle();
 
 			return true;
 		}
-		switch (direction) {
-		case 0:
-			return Move0();
-		case 1:
-			return Move1();
-		case 2:
-			return Move2();
-		case 3:
-			return Move3();
-		case 4:
-			return Move4();
-		case 5:
-			return Move5();
-		case 6:
-			return Move6();
-		case 7:
-			return Move7();
-
+		Vec2f p=Geometry.getPos(direction, actorPosition);
+		if (collisionInterface.passable((int) p.x, (int) p.y, getFlying())) {
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);	
+			if (!swapPlaces((int)actorPosition.x,(int)actorPosition.y,(int)p.x,(int)p.y))
+			{
+				t.setActorInTile(null);		
+				actorPosition=p;
+				
+				spriteInterface.reposition(actorPosition);
+				if (t.getDefinition().getMovement()==TileMovement.SLOW)
+				{
+					actorRPG.addBusy(getMoveCost()*4);		
+				}
+				else
+				{
+					actorRPG.addBusy(getMoveCost());			
+				}
+				collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
+				
+				return true;
+			}
+			else
+			{
+				spriteInterface.reposition(actorPosition);
+				if (t.getDefinition().getMovement()==TileMovement.SLOW)
+				{
+					actorRPG.addBusy(getMoveCost()*4);		
+				}
+				else
+				{
+					actorRPG.addBusy(getMoveCost());			
+				}
+				return true;
+			}
+			
 		}
-
 		return false;
 	}
 

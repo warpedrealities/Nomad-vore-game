@@ -78,6 +78,10 @@
 		She looks to you "Yes?" she seems perfectly at ease travelling alongside you. As if believing that everything will be okay simply because she's with you, regardless of her surroundings.
 		</text>
 		<choice destination="training" text="it's time for a lesson Eve"/>
+		<choice destination="cockvore0" text="Cockvore me Eve">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="cockvore"
+			value="1" />		
+		</choice>
 		<choice destination="leave" text="I think you should stay here" />
 		<choice destination="end" text="nothing, lets travel on"/>
 	</page>
@@ -98,12 +102,127 @@
 		She smiles "Hello PNAME " she says cheerfully.
 		</text>
 		<choice destination="training" text="I need to teach you something Eve"/>
+		<choice destination="cockvore0" text="Cockvore me Eve">
+				<condition operator="equals" evaluate="LOCALFLAG" flag="cockvore"
+			value="1" />
+		</choice>
 		<choice destination="join" text="i want you to travel with me again">
 			<assertion evaluates="companionSlotFree" />
 		</choice>
 		<choice destination="end" text="Hello, I hope you're well, just passing by"/>
 	</page>
 
+	<page ID="cockvore0">
+	<!--forceful-->
+				<condition operator="equals" evaluate="LOCALFLAG" flag="CVTYPE"
+			value="1" />	
+	<text>
+	Eve smiles, seemingly having anticipated your suggestion as she's already at half mast. One hand goes to stroke over her shaft as the other grabs ahold of your head, pushing you down onto your knees in front of her as she gets fully hard and ready for you. <conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="1" /><random id="eve_intro_taunt" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="2" /><random id="eve_intro_tease" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="3" /><random id="eve_intro_respect" /></conditional> she says afore she shoves you forwards and into her length, her cumslit parting and stretching around your head as she stuffs you in. Your wonderful stag grabbing ahold of you just under your arms to force you deeper into her now bulging girl swollen shaft, swollen of course with you. Her length rippling possessively around you as more of you is devoured by her voracious length. <conditional><assertion evaluate="slothasitem" slot="2" />Eve schlurping you up <readequipment slot="2" /> and all. </conditional>
+	</text>
+	<choice destination="cockvore1A" text="*forcefully cockvored*"/>
+	</page>
+	
+	<page ID="cockvore1A">
+	<text>
+	<conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="1" /><random id="eve_midpoint_taunt" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="2" /><random id="eve_midpoint_tease" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="3" /><random id="eve_midpoint_respect" /></conditional> she says with a tone of lust as she shoves you ever deeper into her length. That powerful shaft does ripple to draw you deeper in but the majority of the effort to engulf more of you comes from her hands grabbing your ass and pushing you down her cock all the way down to your waist. You can smell the scent of her seed emanating from just beyond the base of her shaft as you feel her shift her grip onto your legs and prepares to push you down into her balls. You feel her tense, and then shove.. your head popping through a tighter spot into the comparatively stretchy and accomodating insides of her cumfilled sack.
+	</text>
+	<choice destination="cockvore2A" text="*all the way*"/>
+	</page>
+	
+	<page ID="cockvore2A">
+	<text>
+	You can hear her moaning and groaning in delight now as she lets go of your legs entirely and transfers her hands to her cock, stroking you down creating rippling waves of pressure running back and forth along your body as she works you down. Your legs sliding steadily entirely into her cocktip as she finishes cockvoring you, the bulge of your feet tracing along the underside of her cock until it joins the rest of you in curling up deep within her balls. <conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="1" /><random id="eve_end_taunt" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="2" /><random id="eve_end_tease" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="3" /><random id="eve_end_respect" /></conditional> she says with satisfaction, reaching one hand to stroke over her engorged balls and feeling your shape pleasingly contained within her loins.
+	</text>
+	<choice destination="cockvore3" text="*And then, just as you taught her*"/>
+	</page>
+	
+	
+	<page ID="cockvore0">
+	<!--gentle-->
+				<condition operator="equals" evaluate="LOCALFLAG" flag="CVTYPE"
+			value="2" />	
+	<text>
+	Eve blushes but nods, getting herself ready by stroking her way to hardness. That mighty girth of hers rising and firming as she becomes aroused <conditional>and watches you undress<assertion evaluate="slothasitem" slot="2" /></conditional>. Soon enough you take your position in front of her, kneeling and raising your hands to her ready and eager cocktip. The scent of her arousal filling your nose as she looks down at you, strokes her shaft and says <conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="1" /><random id="eve_intro_taunt" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="2" /><random id="eve_intro_tease" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="3" /><random id="eve_intro_respect" /></conditional> And with that said you're only too willing to begin, plunging your fingers into her welcoming cumslit. Her cock starting to bulge wonderfully around your hands as you slip them steadily in and feel her shaft rippling snugly around your hand in time with her slow strokes.
+	</text>
+	<choice destination="cockvore1B" text="*feed yourself to her cock*"/>
+	</page>	
+	
+	<page ID="cockvore1B">
+	<text>
+	Your wonderful stag moans out as you start to push your arms down her length, swelling her length around their shape as you slide them inside past your elbows. The hot pre and throbbing cock providing an exquisite foretaste of the sensations that are about to ensue when you reach her sack. Eve looks at the expression on your face and shudders, stroking along her bulging shaft <conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="1" /><random id="eve_midpoint_taunt" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="2" /><random id="eve_midpoint_tease" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="3" /><random id="eve_midpoint_respect" /></conditional> she says, insistent to have you inside but letting you take things at your own pace. Your obedient herm friend's mighty shaft rippling only gently where it could be voraciously schlurping and tugging you inside. You duck your head down and steadily feed more of yourself down her shaft, sliding your chest and midriff slowly past her cocktip as you push up off the ground. Halfway inside you can't push your way deeper in, and only now do you start to feel Eve begin schlurping you down in earnest. Her cock rippling to draw your ass inside.
+	</text>
+	<choice destination="cockvore2B" text="*all the way in*"/>
+	</page>
+	
+	<page ID="cockvore2B">
+	<text>
+	You steadily and quite quickly disappear when your eager Eve takes charge. Her stroking hands and powerfully rippling shaft drawing your legs down her shaft as you pile into her sack. The stag's sack starting to swell and bulge with the shape of your arms, head, shoulders and ass as you're fed in to the cummy depths of her balls. Eve letting out a delighted moan as your feet finally vanish into her tip <conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="1" /><random id="eve_end_taunt" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="2" /><random id="eve_end_tease" /></conditional><conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTALK" value="3" /><random id="eve_end_respect" /></conditional> she says, fondling her sack with one hand and her shaft with the other as she enjoys feeling you curled up in the gooey depths of her. Her balls sagging low and massive to contain your form as she smiles and adjusts her stance to accomodate the mass between her thighs..
+	</text>
+	<choice destination="cockvore3" text="*And then, just as you taught her*"/>	
+	</page>
+	
+	<page ID="cockvore3">
+				<condition operator="equals" evaluate="LOCALFLAG" flag="CVEND"
+			value="2" />		
+	<!--mess-->
+	<text>
+	You hear Eve moan and fondle herself happily. The herm rubbing her thighs up against her bloated sack as you begin to feel her cum burble and churn around your form. The hot sticky cum soaking into your body and softening your form wonderfully as you squirm. Eve's lumpy bulging sack starting to turn rounder and your shape steadily less defined. You're being made to conform to your surroundings rather than the other way around, and soon..soon you'll be an utterly conforming load of thick jizz for Eve to waste on the ground...
+	</text>
+	<choice destination="cockvore4Mess" text="*to be a mess*"/>
+	</page>
+	
+	<gameover ID="cockvore4Mess">
+	<text>
+	Your bliss becomes all consuming as hot cum soaks into and through your form. Gradually all difference between you and the goo vanishes away as you spread out and intermingle with Eve's load, becoming thick creamy seed within her balls as they round out completely. Eve letting out a delighted groan and stroking more vigorously as the last ounce of your solidity is slopped away within her. Her self indulgence soon reaching an explosive climax in all senses of the word as she cries out and her cock erupts. Your gooey remnants splattering out in front of her as a sticky mess, puddling seed spreading out in front of her.<conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTYPE"
+			value="1" />
+				<assertion evaluate="slothasitem" slot="2" />
+				The flow slackening for a few moments before a bulge flows up her shaft and your
+				<readequipment slot="2" />
+				erupts out to land amidst the rest of the load she's made from you.
+			</conditional> 
+	</text>
+	</gameover>
+
+	<page ID="cockvore3">
+				<condition operator="equals" evaluate="LOCALFLAG" flag="CVEND"
+			value="3" />		
+	<!--condom-->
+	<text>
+	You feel Eve reach down and grope over the shape of your curled up form in her sack. Her motions kneading the cum into your body as it begins to tingle pleasurably and , of course, soften and melt. Eve continuing to fondle her sack as she feels your shape starting to yield beneath her hand's gentle pressure. She only stops when her prodding palm elicits a load gurgle and a notable reduction in the volume of your moans. Eve shivering and then starting to tear open a condom in anticipation as you get more and more fluid inside her, your body seemingly more cum than a person now as you're ground down.
+	</text>
+	<choice destination="cockvore4Condom" text="*to fill a condom*"/>
+	</page>	
+	
+	<gameover ID="cockvore4Condom">
+	<text>
+	Eve knows that there's not long to go now, and closes her eyes as she hastily draws the condom down over her length and starts to stroke off. Her moans doing nothing to keep her from hearing the exquisite glorps and gurgles of her balls as you lose your shape within her. Your limbs and torso gradually losing their definition, losing the distinctiveness between you and the surrounding cum until with a final burble you melt away entirely. Your form utterly cummified within Eve's balls now and soon to be let out as she strokes up and down her length frenetically. Her vigor soon yielding up most wonderfully sticky results as she shudders and orgasms, ejaculating your remnants into the condom. The stretchy balloon at the tip bulging and hanging lower and rounder as you're pumped into it. <conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTYPE"
+			value="1" />
+				<assertion evaluate="slothasitem" slot="2" />
+				The flow slackening for a few moments before a bulge flows up her shaft and your
+				<readequipment slot="2" />
+				erupts out to form a floating mass amidst the cream.
+			</conditional> 
+			Finally Eve's orgasm slackens off and she pants, though soon remembers her last task and ties off the condom so she can set it aside. A hot sack of gooey cum remaining as a tastament to your lewd fate within her balls.
+	</text>
+	</gameover>
+
+	<page ID="cockvore3">
+				<condition operator="equals" evaluate="LOCALFLAG" flag="CVEND"
+			value="1" />		
+	<!--endo-->
+	<text>
+	You get comfortable as you feel her hand stroking over the outside of her sack and rubbing at your shape within her. The mixture of lust and affection you take from that gesture makes you smile and wriggle about a bit more to get comfortable inside of her. Your darling Eve leaning back to get comfortable sprawled out with the ample bulges of your shape swelling out her sack as she gets ready to settle there for a time. And in time you doze off within her...
+	</text>
+	<choice destination="cockvore4Endo" text="*time to come out*"/>
+	</page>
+
+	<page ID="cockvore4Endo">
+	<text>
+	you spend a fair amount of time curled up in the sticky depths of your Eve's sack, but in time you rouse from your doze amidst her cum and coax her into letting you out. Eve obediently starting to stroke off, her hands running up and down her prodigious girth as you feel the sack flex and tense around you and her cum slosh about. These processes finally coming to fruition as you come rocketing back up her shaft along with the rest of her orgasm. You land whole and rather sticky amidst the splatter, coated further with her seed as she pumps a few more wads out after you before being spent.
+	</text>
+	<choice destination="end" text="*might need to get cleaned up, but so worth it*"/>
+	</page>
+	
 	<page ID="join">
 		<text>
 			"I enjoy travelling with you." Eve straightens as she prepares to follow you.
@@ -135,11 +254,151 @@
 	<choice destination="cockvoreTraining1B" text="$You should be gentle, let me slide in at my own pace, help me in and welcome me into your sack"/>
 	</page>
 	
-	<page ID="cockvoreTraining1A">
+	<page ID="cockvoreTraining1B">
+		<effect type="setlocalflag" flag="CVTYPE" value="2" />	
+			<effect type="setlocalflag" flag="cockvore" value="1" />	
 	<text>
-	Eve listens and looks uncertain a moment, then smiles and picks you up with seeming ease
+<conditional><assertion evaluate="slothasitem" slot="2" />
+				Presented with her magnificent length you do your best to contain your eagerness, instead taking your time in stripping out of your
+				<readequipment slot="2" />
+				and showing off your naked body in front of Eve.
+			</conditional> You settle onto your back and motion for her to angle that wondrous tool of hers further forwards and down as opposed to straight up. One of her hands stroking over her shaft as you bend your knees, and raise your feet up towards her tip. Her welcoming cumslit parting around your toes as you slide your feet into her cock and hear her moan in delight from the sensations, you wriggle around your feet in her tip a little and she looks down at you and asks "Is..is there something I'm supposed to say while you're doing this?"
 	</text>
-	
+	<choice destination="cockvoreTrainingB2A" text="$You should taunt me, treat me as if I'm only cockfood"/>
+	<choice destination="cockvoreTrainingB2B" text="$Tease me, tell me i'm a slut who loves it"/>
+	<choice destination="cockvoreTrainingB3C" text="$just tell me how much you hope I enjoy it, be respectful"/>	
 	</page>
+	
+	<page ID="cockvoreTrainingB2A">
+		<effect type="setlocalflag" flag="CVTALK" value="1" />	
+	<text>
+	"Seems a bit mean, but..I can do it if it makes you happy. When we do this, you'll be just cockfood to me." she says and blushes as you delve your legs deeper into her cock. You take a moment to revel in the sensation of her throbbing cock around your legs and then try to pull back your legs, only to find her length rippling and schlurping to tug you deeper in. Eve's shaft unwilling to let you go and in fact pulling you a bit further in. So you lift your rear up so that her shaft can work over your thighs and then hips. As you get halfway in you feel your feet slipping into her sack, twitching your feet around in her gooey cum as she moans and strokes over her shaft.
+	</text>
+	<choice destination="cockvoreTrainingB3" text="$mhmm, schlurp me up Eve"/>
+	</page>
+	
+	<page ID="cockvoreTrainingB2B">
+		<effect type="setlocalflag" flag="CVTALK" value="2" />	
+	<text>
+	"I can do that.." she says and blushes "Do you like being called a cockslut?" she asks and blushes as you delve your legs deeper into her cock. You take a moment to revel in the sensation of her throbbing cock around your legs and then try to pull back your legs, only to find her length rippling and schlurping to tug you deeper in. Eve's shaft unwilling to let you go and in fact pulling you a bit further in. So you lift your rear up so that her shaft can work over your thighs and then hips. As you get halfway in you feel your feet slipping into her sack, twitching your feet around in her gooey cum as she moans and strokes over her shaft.
+	</text>
+	<choice destination="cockvoreTrainingB3" text="$Yes Eve"/>	
+	</page>
+	
+	<page ID="cockvoreTrainingB2C">
+		<effect type="setlocalflag" flag="CVTALK" value="3" />	
+	<text>
+	"Yes Mistress, I hope being curled up in my balls is pleasing to you. I hope you enjoy bathing in my cum." she says and blushes as you delve your legs deeper into her cock. You take a moment to revel in the sensation of her throbbing cock around your legs and then try to pull back your legs, only to find her length rippling and schlurping to tug you deeper in. Eve's shaft unwilling to let you go and in fact pulling you a bit further in. So you lift your rear up so that her shaft can work over your thighs and then hips. As you get halfway in you feel your feet slipping into her sack, twitching your feet around in her gooey cum as she moans and strokes over her shaft. 
+	</text>
+	<choice destination="cockvoreTrainingB3" text="$Yes Eve, I think I will"/>	
+	</page>
+		
+	<page ID="cockvoreTrainingB3">
+	<text>
+	You feel the power of her cock lifting your shoulders clear of the ground as she strokes and her shaft throbs around your midriff. Eve watching you slide into her with a lusty expression and many a moan that makes you smile and tuck your arms in against your sides. Your chest steadily vanishing past her cumslit now as you savor the look on the herm's face as she naughtily draws you inside. But all things must come to an end and soon enough you're tucked out of view, her cocktip sliding up over your head and robbing you of that sight. Instead you're immersed in the sensations as she strokes you down the dark throbbing interior of her cock. Soon enough you're piling into her balls entirely, curling up as a lumpy bulge making her sack hang low and large around you. "Mhmm that was nice. What do I do now?" asks Eve, stroking her cock. 
+	</text>
+	<choice destination="cockvoreTraining4Endo" text="$Just hold me in here for a while and let me out later"/>
+	<choice destination="cockvoreTraining4Mess" text="$Melt me into cum and then masturbate me out as a sticky puddle on the ground or floor"/>
+	<choice destination="cockvoreTraining4Condom" text="$Turn me into your next load, then masturbate me out into a condom"/>	
+	</page>
+	
+	<page ID="cockvoreTraining1A">
+		<effect type="setlocalflag" flag="CVTYPE" value="1" />	
+			<effect type="setlocalflag" flag="cockvore" value="1" />		
+	<text>
+	Eve listens and looks uncertain a moment, then grins and picks you up with seeming ease. Holding you aloft with both hands your feet dangle over her broad cocktip and she reaches down with one hand to press your feet together, pushing your feet into her cumslit as her cock twitches up eagerly to meet its meal. She lets out a little gasp of pleasure as her tip stretches and her shaft nums up around your calves, her length rippling to tug on your legs as she pushes you deeper in "Is..is there something I'm supposed to say while doing this?"
+	</text>
+	<choice destination="cockvoreTraining2A" text="$You should taunt me, treat me as if I'm only cockfood"/>
+	<choice destination="cockvoreTraining2B" text="$Tease me, tell me i'm a slut who loves it"/>
+	<choice destination="cockvoreTraining3C" text="$just tell me how much you hope I enjoy it, be respectful"/>
+	</page>
+	
+	<page ID="cockvoreTraining2A">
+		<effect type="setlocalflag" flag="CVTALK" value="1" />	
+	<text>
+	"Seems, derogatory to belittle you mistress." she says with a blush, then continues "But if it's what you wants, I'll try to think of lots of ways of calling you cockfood." She says with a smile as she shifts her hands up to grip around your chest and continue feeding you into her cock. That voracious shaft of hers bulging nicely around your legs as she crams your hips down past her cocktip and lets out a moan "Feels good, I can't wait to have you in my balls, cockfood." she tells you as she shifts one hand down to stroke over her bulging length and begins to feed your upper body into her loins as well.
+	</text>
+	<choice destination="cockvoreTraining3" text="$yes, good..treat me as food for your cock"/>
+	</page>
+
+	<page ID="cockvoreTraining2B">
+		<effect type="setlocalflag" flag="CVTALK" value="2" />	
+	<text>
+	"Mhmm, I can do that I think. You do seem to love it. I don't know if that makes you a slut for my cock though." She says with a smile as she shifts her hands up to grip around your chest and continue feeding you into her cock. That voracious shaft of hers bulging nicely around your legs as she crams your hips down past her cocktip and lets out a moan "Feels good, I can't wait to have you in my balls slut." she tells you as she shifts one hand down to stroke over her bulging length and begins to feed your upper body into her loins as well.
+	</text>
+	<choice destination="cockvoreTraining3" text="$yes, you're doing well eve"/>	
+	</page>
+	
+	<page ID="cockvoreTraining2C">
+		<effect type="setlocalflag" flag="CVTALK" value="3" />	
+	<text>
+	"Yes mistress, i hope being stuffed into my cock pleases you?" She says with a smile as she shifts her hands up to grip around your chest and continue feeding you into her cock. That voracious shaft of hers bulging nicely around your legs as she crams your hips down past her cocktip and lets out a moan "Feels good, I hope you enjoy it when you're entirely inside my balls mistress." she tells you as she shifts one hand down to stroke over her bulging length and begins to feed your upper body into her loins as well.
+	</text>
+	<choice destination="cockvoreTraining3" text="$I think I will pet"/>	
+	</page>	
+
+	<page ID="cockvoreTraining3">
+	<text>
+	Steadily Eve feeds you deeper into her hungry shaft, moaning out loud without inhibition from the sensations you bring as you squirm in her length and slip feetfirst into her sack. Her hot cum squelching around your toes as you're fed into that gooey bath. You can feel her balls stretching and bulging around the shape of your feet as you press them against the underside of her balls. You can only imagine how her sack will look with all of you curled up inside of her. Least you won't have to wait long as she crams your <macro id="breast_size_desc" /> breasts into her tip and places her hand atop your head. Her other stroking along her bulging cock vigorously as she gives you a lusty look, then shoves you down into her shaft. Your shape no doubt sexily bulging her length as your upper body slips down to join the rest of you curled up in her sack "Mhmm that was nice. What do I do now?" asks Eve, stroking her cock.
+	</text>
+	<choice destination="cockvoreTraining4Endo" text="$Just hold me in here for a while and let me out later"/>
+	<choice destination="cockvoreTraining4Mess" text="$Melt me into cum and then masturbate me out as a sticky puddle on the ground or floor"/>
+	<choice destination="cockvoreTraining4Condom" text="$Turn me into your next load, then masturbate me out into a condom"/>
+	</page>
+	
+	<page ID="cockvoreTraining4Endo">
+			<effect type="setlocalflag" flag="CVEND" value="1" />	
+	<text>
+	"You feel good in there." she replies and nods at your request. Eve shifting to get suitably comfortable as you wriggle to curl up snug and naughty in the depths of her gooey warmth. The hot cum soaking your body as you bath in her thick seed, letting yourself marinate in her jizz as she occasionally fondles herself but mostly just lets you use her balls as your lewd hammock.
+	</text>
+	<choice destination="cockvoreTrainining5Endo" text="$I'd like to be let out now Eve"/>
+	</page>
+	
+	<page ID="cockvoreTraining5Endo">
+	<text>
+	Eve mhmms "Oh okay" she says and shifts, straightening up and stroking her cock more vigorously now. You feel her sack walls press around you as her pleasure rises and you squirm around to get ready to slide back up her shaft. Your wonderful hermy stag closing her eyes and moaning as she strokes off and works herself to her peak. A peak that has her orgasming and ejaculating you back out into the open air amidst a gush of her seed as she cries out in pleasure. She looks down at you laying there in a puddle of her jizz and blushes panting as the last spurts of her orgasm gush out to splatter over you, seemingly at a loss for words.
+	</text>
+	<choice destination="end" text="That was fun"/>
+	</page>
+	
+	<page ID="cockvoreTraining4Mess">
+			<effect type="setlocalflag" flag="CVEND" value="2" />	
+	<text>
+	"You want me to melt you and, pump you out onto the ground?" she asks and blushes "I'll try" she says and strokes her shaft mhmming to herself as she focuses inwardly. And as she does so you feel her wonderful balls starting to churn and burble around you. The fleshy walls kneading and rubbing over you and her cum starts to make your body tingle hotly and soften. She's really doing it, your wonderful Eve is melting you and turning you into cum. Eve starts to stroke off a bit more firmly as she begins to hear you moaning and softening amidst her gurgling seed.
+	</text>
+	<choice destination="cockvoreTraining5Mess" text="*melt away*"/>
+	</page>
+	
+	<gameover ID="cockvoreTraining5Mess">
+	<text>
+	Knowing you'll be wasted as an orgasm on the ground for her pleasure you squirm to rub yourself against the inside of her sack. But all too soon your motions still. Your form subsiding into the motions of her glorping balls as you become less and less girl and more and more just cum. Her sack rounding out and making her shiver with delight as she realizes not a solid trace of your form remains. The stagherm closing her eyes and jerking off with redoubled vigor, peaking messily as she lets out a groan and starts to splatter and splurt your remnants out into a sticky puddle in front of her.<conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTYPE"
+			value="1" />
+				<assertion evaluate="slothasitem" slot="2" />
+				Your 
+				<readequipment slot="2" />
+				forming a sticky heap amidst the gooey remnants of your form as a testament to how this particular cumload of hers was sourced.
+			</conditional>
+	</text>
+	</gameover>
+	
+	<page ID="cockvoreTraining4Condom">
+			<effect type="setlocalflag" flag="CVEND" value="3" />		
+	<text>
+	"You want me to make you seed and put you in a...is that what these are for?" she asks holding up the packet you'd given her earlier. She blushes examining the condom then smiles and nods "I'll figure it out" she says and starts to undo the packet as her balls slowly begin to churn around your body. Your darling Eve's wonderfully hefty and full balls now working over your body in earnest, how they're meant to work you over. You can feel yourself turning tingly, hot and soft and the feeling makes you moan. But you know there's something still to do before you let her loins have their way with their meal.
+	</text>
+	<choice destination="cockvoreTraining5Condom" text="$You put it over your dick Eve, put it on the tip, roll it down over your length..and fill it with me"/>
+	</page>
+	
+	<gameover ID="cockvoreTraining5Condom">
+	<text>
+	Eve oohs and replies, but you don't hear her say anything intelligible over the goopy cum in your ears and churning around you. The leisurely burbles nonetheless drowning out the outside world. You feel her shift around as she wrestles with the condom, finally succeeding in unrolling it over her length as you get softer and less coherent inside her, both in your sounds and your shape. Her hand now returns to stroking off as the gurgling in her balls intensify. Your form spreading out blissfully into her surrounding spunk as she prepares to release you. The herm reaching climax just as you finish melting, moaning as she pumps spurt after spurt of your gooey remnants into the condom. The cumfilled sack soon hanging low and heavy and turgid with cum made of your form.<conditional><condition operator="equals" evaluate="LOCALFLAG" flag="CVTYPE"
+			value="1" />
+				<assertion evaluate="slothasitem" slot="2" />
+				Your 
+				<readequipment slot="2" />
+				floating at the top of the full condom as a testament to how this particular load of nutbatter was made.
+			</conditional>
+	</text>
+	</gameover>
 	
 </Conversation>

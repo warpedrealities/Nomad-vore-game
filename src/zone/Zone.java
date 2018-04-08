@@ -475,7 +475,7 @@ public class Zone implements ILosBoard, Zone_int {
 		if (zoneTileGrid[x][y] == null) {
 			return false;
 		}
-		if (getActor(x, y) != null) {
+		if (getActor(x, y) != null && getActor(x,y).getAttackable()) {
 			return false;
 		}
 		if (zoneTileGrid[x][y].getWidgetObject() != null) {

@@ -497,7 +497,14 @@ public class CombatMove {
 					if (attackPattern == AttackPattern.P_MELEE || attackPattern == AttackPattern.P_RANGED
 							|| attackPattern == AttackPattern.P_SHORT||attackPattern == AttackPattern.P_REACH) {
 						if (isNonViolent()) {
-							ViewScene.m_interface.Flash(target.getPosition(), 1);
+							if (distance >= 2 && attackPattern != AttackPattern.P_CONE && moveType!=MoveType.MOVEMENT) {
+								ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
+										new Vec2f(origin.getPosition().x, origin.getPosition().y), 1);
+							}
+							else
+							{
+								ViewScene.m_interface.Flash(target.getPosition(), 1);					
+							}
 						} else {
 							if (ViewScene.m_interface!=null)
 							{
@@ -527,8 +534,17 @@ public class CombatMove {
 				String str = text.replace("TARGET", target.getName());
 				ViewScene.m_interface.DrawText(str);
 				if (visible && distance >= 2 && attackPattern != AttackPattern.P_CONE && moveType!=MoveType.MOVEMENT) {
-					ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
-							new Vec2f(origin.getPosition().x, origin.getPosition().y), 2);
+					if (isNonViolent())
+					{
+						ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
+								new Vec2f(origin.getPosition().x, origin.getPosition().y), 3);					
+					}
+					else
+					{
+						ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
+								new Vec2f(origin.getPosition().x, origin.getPosition().y), 2);					
+					}
+
 				}
 				return true;
 			}

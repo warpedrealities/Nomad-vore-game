@@ -1233,8 +1233,12 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			break;
 		case 2:
 			// FXanimationControl.addEffect(new FX(0,p,1,0,1));
-			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 1,false));
+			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 0,false));
 			break;			
+		case 3:
+			// FXanimationControl.addEffect(new FX(0,p,1,0,1));
+			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 1,false));
+			break;				
 		}
 	}
 

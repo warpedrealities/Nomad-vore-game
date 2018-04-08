@@ -84,9 +84,8 @@ public class ZoneInteractionHandler {
 		}
 
 		// check for actor in tile
-		if (m_zone.zoneTileGrid[(int) p.x][(int) p.y] != null
-				&& m_zone.zoneTileGrid[(int) p.x][(int) p.y].getActorInTile() != null) {
-			if (m_zone.zoneTileGrid[(int) p.x][(int) p.y].getActorInTile().getVisible()) {
+		if (m_zone.getActor((int)p.x,(int)p.y)!=null) {
+			if (m_zone.getActor((int)p.x,(int)p.y).getVisible()) {
 				m_view.DrawText(m_zone.zoneTileGrid[(int) p.x][(int) p.y].getActorInTile().getDescription());
 
 				return false;
