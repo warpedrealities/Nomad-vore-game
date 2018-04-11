@@ -112,6 +112,11 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		}
 	}
 
+	public SolarScene(int direction, Spaceship ship, int i) {
+		this(direction,ship);
+		warpRenderer.warpBurst();
+	}
+
 	private void generateWarpHelpers()
 	{
 		renderer.generateWarpHelpers(40, Universe.getInstance());

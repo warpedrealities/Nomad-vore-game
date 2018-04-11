@@ -54,11 +54,12 @@
 			</hitText>
 			<effectStatus probability="100">
 				<applyText>TARGET is pinned by the rumbler</applyText>
-				<statusBind uid="20" icon="4" numModifiers="2">
+				<statusBind uid="20" icon="4" numModifiers="3">
 					<removeText> TARGET has escaped the rumbler's pin</removeText>
 					<effect attribute="RANGED" modifier="-4" />
 					<effect attribute="MELEE" modifier="-4" />
-					<bind strength="10" originDependent="true" />
+					<effect attribute="SEDUCTION" modifier="-4" />
+					<bind strength="12" originDependent="true" />
 					<struggle count="2">
 						<text>TARGET struggles against the rumbler's pinning forepaws
 						</text>

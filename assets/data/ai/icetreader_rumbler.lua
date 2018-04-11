@@ -52,7 +52,7 @@ end
 
 function passive(controllable,sense, script)
 	b=controllable:getValue(0)	
-	if (b<100) then
+	if (b<50) then
 		b=b+1
 		
 		a=math.random(0,8)

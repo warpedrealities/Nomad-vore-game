@@ -14,6 +14,7 @@ import shared.Vec2f;
 import solarview.spaceEncounter.EncounterLogic.GameState;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
+import solarview.spaceEncounter.retreatHandler.RetreatHandler;
 import spaceship.ShipController.scriptEvents;
 import actorRPG.player.Player_RPG;
 
@@ -75,7 +76,7 @@ public class Screen_Recap extends Screen implements MyListener {
 					ships[1].getShip().getShipController().event(scriptEvents.victory);
 				break;
 				case retreat:
-				
+					new RetreatHandler().run(ships[0]);
 				break;			
 			}
 		}

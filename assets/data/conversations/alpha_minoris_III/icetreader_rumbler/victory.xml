@@ -85,7 +85,7 @@
 	</page>
 
 
-	<check ID="oralStruggle">
+	<check ID="oralStruggleCheck">
 		<test what="STRUGGLE" DC="17" />
 		<outcome destination="oralStruggleEscape" />
 		<outcome destination="oralStruggleDigest" />

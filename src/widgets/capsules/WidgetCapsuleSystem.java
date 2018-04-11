@@ -63,9 +63,10 @@ public class WidgetCapsuleSystem extends WidgetBreakable {
 	}
 
 	public boolean Interact(Player player) {
+		CapsuleBehaviour behaviour=new CapsuleBehaviour(this,(Spaceship)Universe.getInstance().getCurrentEntity());
 		if (!deployed)
 		{
-			CapsuleBehaviour behaviour=new CapsuleBehaviour(this,(Spaceship)Universe.getInstance().getCurrentEntity());
+	
 			if (behaviour.sufficientFuel())
 			{
 				if (behaviour.canLaunch())

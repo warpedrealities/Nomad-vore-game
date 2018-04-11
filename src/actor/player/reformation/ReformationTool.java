@@ -195,6 +195,7 @@ public class ReformationTool {
 		Universe.getInstance().getCurrentZone().getTile((int)origin.x,(int)origin.y).setActorInTile(null);;
 		Universe.getInstance().getPlayer().setPosition(new Vec2f(destination.x,destination.y));
 		Universe.getInstance().setZone(zone);
+		Universe.getInstance().setCurrentEntity(zone.getZoneEntity());
 		//set health, resolve and satiation to 50%
 		for (int i=0;i<3;i++)
 		{

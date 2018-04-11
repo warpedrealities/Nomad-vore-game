@@ -16,11 +16,13 @@ public class EncounterLogic {
 	private EffectHandler effectHandler;
 	public enum GameState{playing,victory,defeat,retreat};
 	private GameState gameState;
+	private EncounterWarpHandler warpHandler;
 	
 	public EncounterLogic(EncounterShip[] ships) {
 		shipList = ships;
 		effectHandler=new EffectHandler();
 		gameState=GameState.playing;
+		warpHandler=new EncounterWarpHandler(shipList[0]);
 	}
 
 	public EncounterShip[] getShipList() {
@@ -28,9 +30,12 @@ public class EncounterLogic {
 	}
 
 	public void startTurn() {
-		for (int i=0;i<shipList.length;i++)
+		if (warpHandler.getWarpLevel()<warpHandler.MAXIMUMCHARGE)
 		{
-			shipList[i].runAi(shipList,effectHandler);
+			for (int i=0;i<shipList.length;i++)
+			{
+				shipList[i].runAi(shipList,effectHandler);
+			}			
 		}
 		turn = 1;
 	}
@@ -39,7 +44,7 @@ public class EncounterLogic {
 		for (int i = 0; i < shipList.length; i++) {
 			shipList[i].update(dt,effectHandler);
 		}
-		
+
 		effectHandler.update(dt);
 		trailControl.update(dt);
 		
@@ -51,6 +56,7 @@ public class EncounterLogic {
 	}
 
 	private void turnEnd() {
+		warpHandler.update();
 		for (int i = 0; i < shipList.length; i++) {
 			shipList[i].updateResources(effectHandler);
 		}
@@ -67,8 +73,17 @@ public class EncounterLogic {
 		{
 			resolveVictory();
 		}
+		
+		if (warpHandler.getWarpLevel()>warpHandler.MAXIMUMCHARGE && warpHandler.isJumping())
+		{
+			resolveRetreat();
+		}
 	}
 	
+	private void resolveRetreat() {
+		gameState=GameState.retreat;
+	}
+
 	private void resolveDefeat()
 	{
 		//decomposeStats();
@@ -116,6 +131,10 @@ public class EncounterLogic {
 
 	public GameState getGameState() {
 		return gameState;
+	}
+
+	public EncounterWarpHandler getWarpHandler() {
+		return warpHandler;
 	}
 
 	public void start() {

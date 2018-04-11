@@ -79,8 +79,18 @@ public class SpaceEncounter extends SceneBase {
 				Universe.AddClock(1);
 				gui.updateUI();
 				targetingControl.Recalc(targetingControl.getIndex());
+				renderer.getWarpEffect().setLevel(logic.getWarpHandler().getWarpLevel());
+				if (logic.getWarpHandler().getWarpLevel()>logic.getWarpHandler().MAXIMUMCHARGE)
+				{
+					renderer.getWarpEffect().discharge();	
+					logic.getShipList()[0].getSprite().setVisible(false);
+				}
+
 			}
 			renderer.position(logic.getShipList()[0].getPosition(), logic.getShipList()[0].getHeading());
+				renderer.getWarpEffect().update(dt);
+
+			
 		} else {
 			gui.update(dt);
 			targeting.update(dt);

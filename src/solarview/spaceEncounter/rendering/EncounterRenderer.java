@@ -6,6 +6,8 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 
+import particlesystem.ParticleEmitter;
+import particlesystem.ParticleEmitterAdvanced;
 import rendering.SpriteManager;
 import rendering.SpriteRotatable;
 import shared.Vec2f;
@@ -25,6 +27,8 @@ public class EncounterRenderer {
 	
 	private EffectHandler effectHandler;
 	
+	private WarpEffect warpEffect;
+	
 	public EncounterRenderer(EncounterShip[] ships) {
 		spriteManager = new SpriteManager("assets/art/solar/");
 		m_viewMatrix = new Matrix4f();
@@ -35,6 +39,8 @@ public class EncounterRenderer {
 		trailControl=new TrailControl(ships);
 		circle=new CircleHandler();
 		circle.setWidth(8);
+		
+		warpEffect=new WarpEffect(ships[0].getPosition());
 	}
 
 	private void buildSprites(EncounterShip[] ships) {
@@ -66,6 +72,8 @@ public class EncounterRenderer {
 
 	
 		background.draw(viewMatrix, objmatrix, tintvar, matrix44Buffer);
+
+		warpEffect.draw(viewMatrix, objmatrix, tintvar, matrix44Buffer);
 		GL20.glUniform4f(tintvar, 1, 1, 1, 1);
 		spriteManager.draw(objmatrix, tintvar, matrix44Buffer);
 		GL20.glUniform4f(tintvar, 1, 1, 1, 1);
@@ -84,6 +92,7 @@ public class EncounterRenderer {
 	
 		background.update(position);
 		circle.setPosition(position);
+		warpEffect.setPosition(position);
 	}
 
 	public void discard() {
@@ -93,6 +102,7 @@ public class EncounterRenderer {
 		trailControl.discard();
 		circle.discard();
 		effectHandler.discard();
+		warpEffect.discard();
 	}
 
 	public TrailControl getTrailControl() {
@@ -106,7 +116,11 @@ public class EncounterRenderer {
 	public void setEffectHandler(EffectHandler effectHandler) {
 		this.effectHandler = effectHandler;
 	}
-	
+
+	public WarpEffect getWarpEffect() {
+		return warpEffect;
+	}
+
 	
 	
 }

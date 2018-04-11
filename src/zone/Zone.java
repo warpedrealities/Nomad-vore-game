@@ -5,6 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import nomad.Entity;
 import nomad.Entity_Int;
 import nomad.World;
 import nomad.universe.Universe;
@@ -82,7 +83,7 @@ public class Zone implements ILosBoard, Zone_int {
 
 	public String adjacentZoneNames[];
 
-	public Entity_Int zoneEntity;
+	public Entity zoneEntity;
 
 	public ModelController_Int viewInterface;
 
@@ -107,13 +108,13 @@ public class Zone implements ILosBoard, Zone_int {
 		return zoneRules;
 	}
 
-	public Zone(String filename, int x, int y, zoneType type, Entity_Int entityint) {
+	public Zone(String filename, int x, int y, zoneType type, Entity entity) {
 		adjacentZoneNames = new String[4];
 		zoneName = filename;
 		this.type = type;
 		zonePosition = new Vec2f(x, y);
 		zoneActors = new ArrayList<Actor>();
-		zoneEntity = entityint;
+		zoneEntity = entity;
 	}
 
 	public boolean isVisited() {
@@ -730,7 +731,7 @@ public class Zone implements ILosBoard, Zone_int {
 		}
 	}
 
-	public Entity_Int getZoneEntity() {
+	public Entity getZoneEntity() {
 		return zoneEntity;
 	}
 

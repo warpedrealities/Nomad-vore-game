@@ -42,6 +42,7 @@ public class EncounterGUI implements MyListener {
 	private String[] resourceStrings;
 	private Button2[] buttons;
 	private Text[] shieldTexts;
+	private Text warpText;
 	private MultiLineButton[] weaponButtons;
 	private EncounterLogic logic;
 	private CircleHandler circle;
@@ -100,6 +101,14 @@ public class EncounterGUI implements MyListener {
 			windows[1].add(button);
 		}
 
+		if (encounterShip.getShip().getShipStats().getFTL()>0)
+		{
+			warpText = new Text(new Vec2f(0.2F, 3.5F), "warp ready", 0.6F, 0);	
+			windows[1].add(warpText);		
+			Button button = new Button(new Vec2f(0.1F, 4.4F), new Vec2f(5.9F, 2), textureIds[1], this, "retreat", 15);
+			windows[1].add(button);	
+		}
+		
 		rangeText = new TextColoured(new Vec2f(3.2F, 0.7F), "text", 1.6F, SceneBase.getVariables()[0]);	
 		rangeText.setTint(1,0,0);
 		windows[0].add(rangeText);
@@ -280,6 +289,17 @@ public class EncounterGUI implements MyListener {
 				}
 			}
 		}	
+		if (encounterShip.getShip().getShipStats().getFTL()>0)
+		{
+			if (logic.getWarpHandler().isCharging())
+			{
+				warpText.setString("warp "+ logic.getWarpHandler().getWarpLevel()+"/20");			
+			}
+			else
+			{
+				warpText.setString("warp ready");
+			}
+		}
 	}
 	
 	private void writeShieldStatus() {
@@ -463,6 +483,17 @@ public class EncounterGUI implements MyListener {
 				break;
 			case 14:
 				logic.startTurn();
+				break;
+			case 15:
+				logic.getWarpHandler().toggleCharging();
+				if (logic.getWarpHandler().isCharging())
+				{
+					warpText.setString("warp "+logic.getWarpHandler().getWarpLevel()+"/20");
+				}
+				else
+				{
+					warpText.setString("warp ready");
+				}
 				break;
 			}
 			if (ID >= 20) {

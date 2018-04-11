@@ -88,6 +88,7 @@
 				<contains name="modules/cargocontainer_ship">
 					<lootTable>
 						<loot item="explosive grenade" chance="1.0" />
+						<loot item="capture device" chance="1.0" />	
 						<loot item="explosive grenade" chance="1.0" />
 					</lootTable>				
 				</contains>

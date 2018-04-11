@@ -134,6 +134,16 @@ public class WarpController {
 
 	}
 
+	public void warpBurst() {
+		particleEmitter.setPosition(ship.getPosition().replicate().add(new Vec2f(0.5F,0.5F)));
+		particleEmitter.SpawnParticles(128);
+		clock=0;
+		warpMode=null;
+		particleEmitter.Update(0.1F);
+		sprite.setCentered(false);
+		particleEmitter.runEffector(new ParticleDraw(ship.getPosition().replicate().add(new Vec2f(0.5F,0.5F)),-8));	
+	}
+
 
 	
 }
