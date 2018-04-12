@@ -85,6 +85,6 @@
 	<seduced conversation="Forakis_II/blackgrief/seduced" />
 	<victory conversation="Forakis_II/blackgrief/victory" />
 	<seducer conversation="Forakis_II/blackgrief/victory" />
-	<controller AI="blackgrief" />
+	<controller AI="grief" />
 	<faction value="Grief" />
 </NPC>

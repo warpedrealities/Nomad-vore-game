@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ItemWidget name="protective shield" weight="10" value="3000">
+	<description>An energy shield module for your ship. takes 0.2 energy per tick. 20HP,1 regen, 4DEF,40 tick
+		restart. </description>
+	<placeditem widget="modules/protective shield" />
+</ItemWidget>

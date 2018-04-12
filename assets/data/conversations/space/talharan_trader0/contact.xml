@@ -88,7 +88,7 @@
 	
 	<page ID="want0">
 	<text>
-	"Your implication that our valuation of your inventory is in some way indecent is predictable.""And unfair""Nevertheless we will answer your question by saying that there is a high probability that on the more hospitable of the two worlds there is a high probability of the presence of a cellular rejuvenator. Retrieve such, and will reward you suitably for your effort."
+	"Your implication that our valuation of your inventory is in some way indecent is predictable.""And unfair""Nevertheless we will answer your question by saying that there is a high probability that on the more hospitable of the two worlds there is device known as a cellular rejuvenator. Retrieve such, and will reward you suitably for your effort."
 	</text>
 	<effect type="setlocalflag" flag="asked" value="1" />		
 	<choice destination="whatIs" text="what exactly is a cellular rejuvenator"/>

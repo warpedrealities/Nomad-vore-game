@@ -53,7 +53,7 @@
 			</band>
 		</perlin>
 
-		<walloff wall="7" sides="northwesteast" />
+		<walloff wall="7" sides="northwest" />
 	</mapgen>
 
 </zone>

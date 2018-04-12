@@ -50,8 +50,8 @@
 			</placeWidget>
 
 			<placeWidget x="3" y="4" name="slot">
-				<contains name="modules/generator">
-					<resource type="ENERGY" value="25" />
+				<contains name="modules/fueltank">
+					<resource type="FUEL" value="25" />
 				</contains>
 			</placeWidget>
 

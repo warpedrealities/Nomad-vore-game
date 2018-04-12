@@ -6,6 +6,7 @@
 	Laesha smiles "Hello again, what can I do for you today?"
 	</text>
 	<choice destination="shop" text="$I have need of your services"/>
+	<choice destination="shopModules" text="$I would like to buy some ship equipment"/>	
 	<choice destination="questions" text="$Can I ask you some questions?"/>	
 	<choice destination="end" text="$nothing, i think i must of gotten lost, i'll be going now"/>
 	</page>
@@ -20,9 +21,10 @@
 	
 	<page ID="services">
 	<text>
-	"You came here on a ship right? I run the most trustworthy servicing operation here. Need refuelling, need someone to fix up some holes. Me and mine got you covered."
+	"You came here on a ship right? I run the most trustworthy servicing operation here. Need refuelling, need someone to fix up some holes? Me and mine got you covered. And besides that I can offer you a few ship components."
 	</text>
 	<choice destination="shop" text="$excellent, show me what you're offering"/>
+	<choice destination="shopModules" text="$excellent, show me the ship components"/>	
 	<choice destination="questions" text="$Can I ask you some questions?"/>
 	<choice destination="end" text="$good to know, i'll look you up if i need your services"/>
 	</page>
@@ -64,4 +66,9 @@
 		<special effect="shop" ID="freehaven_services" />	
 	</page>
 	
+	<page ID="shopModules">
+	<text>
+	</text>
+		<special effect="shop" ID="freehaven_modules" />	
+	</page>	
 </Conversation>

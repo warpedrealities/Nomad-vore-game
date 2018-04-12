@@ -13,13 +13,15 @@ function aggressive(controllable,sense,pos,hostile)
 		usedScream=controllable:getValue(1)
 			if (usedScream==0) then
 				--if in melee range attack
-				controllable:setValue(1,1)
+				controllable:setValue(1,40)
 				sense:drawText("the huntress lets out a battle scream")
-				controllable:setAttack(0)			
+				controllable:setAttack(1)			
 				controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 			else			
-				controllable:setAttack(1)	
-				controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)		
+				controllable:setAttack(0)	
+				controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
+				usedScream=usedScream-1
+				controllable:setValue(1,usedScream)
 			end
 		else
 		--if not move towards player
