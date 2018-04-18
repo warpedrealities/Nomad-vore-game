@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<NPC>
+<sprite value="elf champion.png"/>
+<name>catgirl</name>
+<description>
+A kitty girl barely five feet tall, pale skinned but with her face and arms reddened by a tan. Her head crowned with a pair of reddish furr'd kitty ears and her butt adorned with a cute tail equally furry and often aswish. She's clad in a louse blouse and an earth toned skirt. Perhaps she works here?
+</description>
+<rpg>
+<experiencevalue value="20"/>
+<ability ability="STRENGTH" value="5" />
+<ability ability="AGILITY" value="5" />
+<ability ability="DEXTERITY" value="5" />
+<ability ability="ENDURANCE" value="5" />
+<ability ability="CHARM" value="5" />
+<ability ability="INTELLIGENCE" value="5" />
+<stat stat="HEALTH" value="25"/>
+<stat stat="RESOLVE" value="25"/>
+</rpg>
+<respawn delay="1000"/>
+<flying />
+<talk conversation="island/catgirl/chat" />
+<controller AI="staystill"/>
+<faction value="monster"/>
+</NPC>

@@ -42,6 +42,18 @@
 	<placeNPC name="Alpha_Minoris_IIA/raptor" x="8"
 						y="8" />	
 </randprefab>
+<randprefab width="8" height="8">
+	<row>33333333</row>
+	<row>34444443</row>
+	<row>34222243</row>
+	<row>32222243</row>	
+	<row>34222243</row>
+	<row>34444443</row>
+	<row>33333333</row>
+	<row>33333333</row>		
+	<placeNPC name="Alpha_Minoris_IIA/catgirl" x="6"
+						y="6" />	
+</randprefab>
 
 <partition xmin="8" xmax="56" ymin="8" ymax="56">
 <town minsize="5" maxsize="9" minhouses="24" maxhouses="32" tile="3" gap="1" registerRooms="true">
