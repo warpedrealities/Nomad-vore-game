@@ -65,14 +65,15 @@
 				<noise tile="4" scarcity="16" />
 				<noise tile="7" scarcity="16" />					
 				<floodfill tile="2">
-							<SeedNPCs min="4" max="8" name="Forakis_I/LionGirl Marauder">
-					</SeedNPCs>			
+		
 				</floodfill>
 				</band>					
 		</perlin>	
 	</partition>
 		<noise tile="4" scarcity="16" />	
 		<floodfill tile="2" />	
+		<SeedNPCs min="4" max="8" name="Forakis_I/LionGirl Marauder">
+		</SeedNPCs>		
 		<walloff wall="7" sides="northeast" />	
 	</mapgen>
 

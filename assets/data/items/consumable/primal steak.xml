@@ -3,7 +3,7 @@
 	tag="1">
 	<description>A well cooked and cured lump of meat. Its provinence is uncertain, but it should keep you going.</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
-		modvalue="80" modifies="SATIATION">
+		modvalue="120" modifies="SATIATION">
 		It takes some chewing, clearly the chef believed any job is worth doing well done. But it's a servicable portion of meat and something to keep you going for a while longer.
 	</effectrecover>
 </ItemConsumable>

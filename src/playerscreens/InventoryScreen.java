@@ -479,7 +479,8 @@ public class InventoryScreen extends Screen implements Callback {
 					m_player.setBusy(4);		
 					break;
 			}
-
+			
+			calculateWarning();
 		}
 		m_control=0;
 		m_list.setSelect(-1);

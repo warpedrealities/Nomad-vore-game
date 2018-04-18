@@ -109,7 +109,7 @@ public class UniverseStateChanger {
 				LoadUniverse();
 				ship.setUID(-1);
 				
-				startGame(false);
+				startGame(true);
 				
 				universe.setCurrentEntity(ship);
 				universe.setCurrentZone(ship.getZone(0));

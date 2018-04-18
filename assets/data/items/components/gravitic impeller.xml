@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="gravitic impeller" weight="30" value="1500">
+	<description>This device uses gravity waves to help move the ship. This increases fuel efficiency by 25%</description>
+	<placeditem widget="modules/gravitic impeller" />
+</ItemWidget>

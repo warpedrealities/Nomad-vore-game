@@ -52,8 +52,11 @@ public class TownGenerator {
 		int maxhouses = Integer.parseInt(element.getAttribute("maxhouses"));
 		int tile = Integer.parseInt(element.getAttribute("tile"));
 		int gap = Integer.parseInt(element.getAttribute("gap"));
-		int housecount = GameManager.m_random.nextInt(maxhouses - minhouses) + minhouses;
-		BuildHouses(housecount, minsize, maxsize, tile);
+		int houseCount = minhouses;
+		if (maxhouses>minhouses) {
+			houseCount=GameManager.m_random.nextInt(maxhouses - minhouses);
+		}
+		BuildHouses(houseCount, minsize, maxsize, tile);
 		BuildDoors(gap);
 		if (element.getAttribute("registerRooms").length() > 0) {
 			registerPointsOfInterest();

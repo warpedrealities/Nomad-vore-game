@@ -73,7 +73,7 @@
 					chance="50" />
 			</spawns>
 		</placeWidget>	
-			<SeedNPCs min="12" max="24" name="Forakis_I/desert viper">
+			<SeedNPCs min="8" max="16" name="Forakis_I/desert viper">
 			</SeedNPCs>		
 	</mapgen>
 

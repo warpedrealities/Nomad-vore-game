@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<shipsystem sprite="92" name="gravitic impeller" health="20">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>This device uses gravity waves to help move the ship. This increases fuel efficiency by 25%</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipModifier uid="10" modifies="FUEL_EFFICIENCY"
+		modification="0.25" />
+</shipsystem>

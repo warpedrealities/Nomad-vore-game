@@ -183,7 +183,7 @@ public abstract class Actor implements Attackable {
 				actorPosition=p;
 				
 				spriteInterface.reposition(actorPosition);
-				if (t.getDefinition().getMovement()==TileMovement.SLOW)
+				if (t.getDefinition().getMovement()==TileMovement.SLOW && !getFlying())
 				{
 					actorRPG.addBusy(getMoveCost()*4);		
 				}

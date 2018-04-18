@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<text>
+	The bunnygirl is disgorged from containment and looks to you fearfully, she seems uncertain what you have in store for her. But she's far from looking forward to it.
+	</text>
+	<choice destination="oralvore0" text="she's going to be a snack">
+				<assertion evaluate="hasperk" perk="oralvore" />	
+	</choice>
+	<choice destination="end" text="return her to containment"/>
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+</Conversation>

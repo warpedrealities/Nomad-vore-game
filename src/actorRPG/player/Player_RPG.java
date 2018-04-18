@@ -568,6 +568,7 @@ public class Player_RPG implements Actor_RPG {
 				break;
 			case 1:
 				subAbilities[element.getIndex()]-=element.getValue();
+				calcInventoryCapacity();
 				break;
 			}
 		}
@@ -587,10 +588,16 @@ public class Player_RPG implements Actor_RPG {
 				break;
 			case 1:
 				subAbilities[element.getIndex()]+=element.getValue();
+				calcInventoryCapacity();
 				break;
 			}
 		}
 
+	}
+	
+	private void calcInventoryCapacity()
+	{
+		playerInventory.setCapacity((int) (10+(abilities[STRENGTH]*subAbilities[CARRY])));		
 	}
 
 

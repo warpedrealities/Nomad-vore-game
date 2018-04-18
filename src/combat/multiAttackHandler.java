@@ -90,7 +90,7 @@ public class multiAttackHandler {
 					}
 
 				}
-			}			
+			}		
 		}
 		else
 		{
@@ -104,10 +104,8 @@ public class multiAttackHandler {
 				ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
 						new Vec2f(origin.getPosition().x, origin.getPosition().y), 2);
 			}
-			return true;		
 		}
-		
-		return false;
+		return true;
 	}
 
 }

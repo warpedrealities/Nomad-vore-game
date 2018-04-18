@@ -83,7 +83,7 @@
 	<text>
 	Desharr takes your money and goes to the back to yell at someone, within a short time a plate of food is brought out and she plonks it down in front of you. Strange meats and ersatz vegetables are nevertheless tastey and filling when cooked and smothered in flavoursome sauces. Soon enough you've demolished the entirety of the plate.
 	</text>
-		<effect value="100" type="givefood"/>
+		<effect value="150" type="givefood"/>
 		<effect type="givecredits" value="-450" />		
 			<choice destination="drink" text="$now i want something to drink"/>
 			<choice destination="cutie0" text="$that was a good starter, but I'd prefer to follow that up with a cute fox"/>	

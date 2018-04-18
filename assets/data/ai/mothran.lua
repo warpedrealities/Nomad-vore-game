@@ -19,7 +19,7 @@ function aggressive(controllable,sense,pos,hostile)
 			controllable:specialCommand("flee")
 		end
 			a=a-1
-			controllable:setvalue(0)
+			controllable:setvalue(0,a)
 		end
 	end
 

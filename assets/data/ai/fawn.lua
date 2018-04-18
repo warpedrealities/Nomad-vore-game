@@ -1,12 +1,16 @@
 
 function combat(controllable,sense,pos)
-	
-	if controllable:HasPath() then
-		controllable:FollowPath()
+	if hostile:getRPG():hasStatus(90) then
+		if pos:getDistance(hostile:getPosition())<2 then
+			controllable:startConversation()
+		end	
 	else
-		controllable:specialCommand("flee")
+		if controllable:HasPath() then
+			controllable:FollowPath()
+		else
+			controllable:specialCommand("flee")
+		end
 	end
-
 end
 
 

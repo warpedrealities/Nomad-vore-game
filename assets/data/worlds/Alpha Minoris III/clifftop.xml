@@ -49,7 +49,7 @@
 					<widget x="4" y="4" name="mechanism" info="interaction/AMIII/sonic"
 						variable="73" />
 				</keyBlock>
-			<keyBlock heat="3">
+			<keyBlock heat="1">
 				<!--treasure room -->
 					<row>00000000</row>
 					<row>02222220</row>

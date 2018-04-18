@@ -33,15 +33,15 @@
 			<band low="-0.4" high="0.4">
 				<noise tile="4" scarcity="8" />	
 				<floodfill tile="1">
-					<SeedNPCs min="8" max="16" name="Forakis_I/LionGirl Marauder">
-					</SeedNPCs>							
+				
 				</floodfill>
 			</band>		
 			<band low=".4" high="1.0">
 				<floodfill tile="3" />
 			</band>				
 	</perlin>	
-	
+					<SeedNPCs min="4" max="8" name="Forakis_I/LionGirl Marauder">
+					</SeedNPCs>				
 		<walloff wall="2" sides="north" />
 	</mapgen>
 

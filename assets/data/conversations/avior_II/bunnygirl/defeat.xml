@@ -16,6 +16,18 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>	
+		<choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>
+		<choice destination="end" text="leave her be"/>
+	</page>
+	
+	<page ID="capture">
+		<special effect="captureNPC" />
+		<text>Yoink. The device worked.</text>
+
+		<choice destination="end" text="Carry on." />
 	</page>
 	
 	<page ID="oralvore0">
