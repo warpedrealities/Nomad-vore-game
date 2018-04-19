@@ -2,6 +2,7 @@ package zone;
 
 import rlforj.los.ILosBoard;
 import actor.Actor;
+import actor.player.Player;
 import artificial_intelligence.pathfinding.Path;
 import widgets.Widget;
 
@@ -14,6 +15,12 @@ public interface Zone_int {
 	public boolean passable(int x, int y, boolean fly);
 
 	public ILosBoard getBoard();
+	
+	public float getMovementMultiplier();
+	
+	public float getVisionMultiplier();
+	
+	public void updateZoneEnvironment(Player player);
 
 	public int getWidth();
 

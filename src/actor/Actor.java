@@ -141,7 +141,7 @@ public abstract class Actor implements Attackable {
 		if (actorRPG.getStarving()) {
 			return moveCost * 2;
 		}
-		return moveCost;
+		return (int) (moveCost*collisionInterface.getMovementMultiplier());
 	}
 
 	private boolean swapPlaces(int x0, int y0, int x1, int y1)

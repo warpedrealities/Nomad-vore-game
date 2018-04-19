@@ -92,6 +92,7 @@ public class SceneController implements Sense {
 			}
 
 		}
+		activeZone.update();
 		interactionHandler.update();
 	}
 

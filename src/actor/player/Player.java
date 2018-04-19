@@ -593,7 +593,7 @@ public class Player extends Actor {
 		Player_RPG rpg = (Player_RPG) actorRPG;
 		rpg.levelUp(perk);
 		rpg.genMoveList();
-
+		collisionInterface.updateZoneEnvironment(this);
 	}
 
 	@Override

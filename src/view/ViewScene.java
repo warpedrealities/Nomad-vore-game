@@ -429,7 +429,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 								sceneController.getActiveZone().ClearVisibleTiles();
 								GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 										(int) sceneController.getUniverse().player.getPosition().x,
-										(int) sceneController.getUniverse().player.getPosition().y, 10);
+										(int) sceneController.getUniverse().player.getPosition().y, 
+										(int)(10.0F*sceneController.getActiveZone().getVisionMultiplier()));
 								m_view.vision(sceneController.getActiveZone(),
 										sceneController.getActiveZone().zoneActors,
 										sceneController.getUniverse().player.getPosition());
@@ -552,6 +553,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		}
 
 		sceneController.getActiveZone().viewInterface = this;
+		zone.updateZoneEnvironment(sceneController.getUniverse().getPlayer());
 		Vec2f v = sceneController.getActiveZone().getPortal(id);
 		sceneController.getUniverse().player.setPosition(new Vec2f(v.x, v.y));
 		// add player if player isnt already added
@@ -568,7 +570,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 10);
+				(int) sceneController.getUniverse().player.getPosition().y, 
+				(int)(10.0F*sceneController.getUniverse().getCurrentZone().getVisionMultiplier()));
 		m_view.End();
 		// reset the view
 
@@ -616,7 +619,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			sceneController.getActiveZone().setVisited(true);
 		}
 		// m_handler.setZone(sceneController.getActiveZone());
-
+		sceneController.getUniverse().getCurrentZone().updateZoneEnvironment(sceneController.getUniverse().getPlayer());
 		sceneController.getActiveZone().viewInterface = this;
 
 		// add player if player isnt already added
@@ -655,7 +658,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		sceneController.getActiveZone().ClearVisibleTiles();
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 10);
+				(int) sceneController.getUniverse().player.getPosition().y, 
+				(int) (10.0F*sceneController.getUniverse().getCurrentZone().getVisionMultiplier()));
 		m_view.End();
 		// reset the view
 
@@ -735,6 +739,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			sceneController.getActiveZone().setVisited(true);
 		}
 
+		sceneController.getActiveZone().updateZoneEnvironment(sceneController.getUniverse().getPlayer());
 		sceneController.getActiveZone().viewInterface = this;
 
 		// add player if player isnt already added
@@ -751,7 +756,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		sceneController.getActiveZone().ClearVisibleTiles();
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 10);
+				(int) sceneController.getUniverse().player.getPosition().y, 
+				(int)(10.0F*sceneController.getActiveZone().getVisionMultiplier()));
 		m_view.End();
 		// reset the view
 

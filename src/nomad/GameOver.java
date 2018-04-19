@@ -102,6 +102,10 @@ public class GameOver extends SceneBase implements MyListener {
 		}
 	}
 
+	public GameOver(String gameOver) {
+		this(null,gameOver,null,false);
+	}
+
 	void SetupTextures() {
 		m_textureIds = new int[4];
 		// first is square

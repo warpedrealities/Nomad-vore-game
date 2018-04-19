@@ -28,6 +28,7 @@ import item.instances.ItemContainerInstance;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemStack;
+import nomad.universe.Universe;
 import playerscreens.subscreens.ItemContainerScreen;
 import crafting.CraftingIngredient;
 import java.io.IOException;
@@ -537,6 +538,7 @@ public class InventoryScreen extends Screen implements Callback {
 			m_player.calcMove();
 			m_player.getInventory().sort();
 			m_callback.Remove();
+			Universe.getInstance().getCurrentZone().updateZoneEnvironment(m_player);
 			break;
 
 		case 12:

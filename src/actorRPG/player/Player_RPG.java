@@ -63,6 +63,7 @@ public class Player_RPG implements Actor_RPG {
 	String quickAction;
 	
 	private CombatMove[] defaultMoves;
+	private List <String> conditionImmunities;
 
 	private int regenDelay;
 	int moveChoice;
@@ -226,7 +227,8 @@ public class Player_RPG implements Actor_RPG {
 		}
 		
 		playerPerks=new ArrayList<PerkInstance>();
-		
+		conditionImmunities=new ArrayList<String>();
+	
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
@@ -244,6 +246,7 @@ public class Player_RPG implements Actor_RPG {
 	
 	private void defaultStats()
 	{
+		conditionImmunities.clear();
 		for (int i=0;i<21;i++)
 		{
 			attributes[i]=0;
@@ -426,6 +429,7 @@ public class Player_RPG implements Actor_RPG {
 
 	void Calcstats()
 	{		
+
 		defaultStats();
 		statMax[0]=10+(abilities[ENDURANCE]*4);
 		statMax[1]=10+(abilities[INTELLIGENCE]*4);
@@ -572,6 +576,11 @@ public class Player_RPG implements Actor_RPG {
 				break;
 			}
 		}
+		if (modifier.getImmunity()!=null)
+		{
+			conditionImmunities.remove(modifier.getImmunity());
+		
+		}
 	}
 
 
@@ -591,6 +600,11 @@ public class Player_RPG implements Actor_RPG {
 				calcInventoryCapacity();
 				break;
 			}
+		}
+		if (modifier.getImmunity()!=null)
+		{
+			conditionImmunities.add(modifier.getImmunity());
+		
 		}
 
 	}
@@ -782,7 +796,9 @@ public class Player_RPG implements Actor_RPG {
 			{
 				playerPerks.add(p);		
 			}
-		}
+		}		
+		conditionImmunities=new ArrayList<String>();
+
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
 		cooldownHandler=new CooldownHandler();
@@ -1185,6 +1201,17 @@ public class Player_RPG implements Actor_RPG {
 			}
 		}
 		return v;
+	}
+
+	public boolean isConditionImmune(String identity) {
+		for (int i=0;i<conditionImmunities.size();i++)
+		{
+			if (conditionImmunities.get(i).contains(identity))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	

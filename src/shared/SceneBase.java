@@ -32,7 +32,10 @@ abstract public class SceneBase implements Scene {
 	}
 
 	public SceneBase(int variables[]) {
-		m_variables = variables;
+		if (variables!=null)
+		{
+			m_variables = variables;			
+		}
 		m_viewmatrix = new Matrix4f();
 		m_viewmatrix.m00 = 0.05F;
 		m_viewmatrix.m11 = 0.0625F;

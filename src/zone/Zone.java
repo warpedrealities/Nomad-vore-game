@@ -795,4 +795,37 @@ public class Zone implements ILosBoard, Zone_int {
 			}
 		}	
 	}
+
+	@Override
+	public float getMovementMultiplier() {
+		if (this.zoneConditions!=null)
+		{
+			return this.zoneConditions.getMovementMultiplier();
+		}
+		return 1;
+	}
+
+	@Override
+	public void updateZoneEnvironment(Player player) {
+		if (this.zoneConditions!=null)
+		{
+			this.zoneConditions.update(player);
+		}
+	}
+
+	@Override
+	public float getVisionMultiplier() {
+		if (this.zoneConditions!=null)
+		{
+			return this.zoneConditions.getVisionMultiplier();
+		}
+		return 1;
+	}
+
+	public void update() {
+		if (this.zoneConditions!=null)
+		{
+			this.zoneConditions.run(Universe.getInstance().getPlayer());
+		}
+	}
 }

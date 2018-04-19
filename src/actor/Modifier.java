@@ -12,6 +12,7 @@ import actorRPG.RPG_Helper;
 
 public class Modifier {
 
+	String conditionImmunity;
 	List<Modifier_Element> modifiers;
 	public Modifier(Element Mnode) {
 		modifiers=new ArrayList<Modifier_Element>();
@@ -20,9 +21,16 @@ public class Modifier {
 			Node node = children.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element Enode = (Element) node;
-				String tag=Enode.getTagName();
-				float value=Float.parseFloat(Enode.getAttribute("value"));
-				buildModifier(tag.toUpperCase(),value);
+				if (Enode.getTagName().equals("conditionImmune"))
+				{
+					conditionImmunity=Enode.getAttribute("value");
+				}
+				else
+				{
+					String tag=Enode.getTagName();
+					float value=Float.parseFloat(Enode.getAttribute("value"));
+					buildModifier(tag.toUpperCase(),value);				
+				}
 			}
 		}
 	}
@@ -56,4 +64,8 @@ public class Modifier {
 		return modifiers.get(i);
 	}
 
+	public String getImmunity()
+	{
+		return conditionImmunity;
+	}
 }
