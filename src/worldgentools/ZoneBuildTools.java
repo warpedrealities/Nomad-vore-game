@@ -383,14 +383,23 @@ public class ZoneBuildTools {
 				if (Enode.getTagName() == "row") {
 					String row = Enode.getTextContent();
 					// load each value
-					for (int j = 0; j < width; j++) {
-						if (grid[x + j][yindex] == true && (m_tiles[x + j][yindex] == null || override)) {
-							int value = Integer.parseInt(row.substring(j, j + 1));
-							if (value > 0) {
-								m_tiles[x + j][yindex] = new Tile(x + j, yindex, m_library.getDef(value - 1), m_zone,
-										m_library);
-							}
+					int index=0, read=0;
+					while (index<width && read<row.length())
+					{
+						char c=row.charAt(read);
+						read++;
+						if (Character.isDigit(c))
+						{
+							if (grid[x + index][yindex] == true && (m_tiles[x + index][yindex] == null || override)) {
+								int value = Character.getNumericValue(c);
+								if (value > 0) {
+									m_tiles[x + index][yindex] = new Tile(x + index, yindex, m_library.getDef(value - 1), m_zone,
+											m_library);
+								}
+							}	
+							index++;
 						}
+						
 					}
 					yindex++;
 				}

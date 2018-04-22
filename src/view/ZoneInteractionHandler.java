@@ -132,6 +132,10 @@ public class ZoneInteractionHandler {
 	}
 
 	public boolean CanTalk(Player player) {
+		if (m_zone.getZoneConditions()!=null && m_zone.getZoneConditions().getDanger())
+		{
+			return false;
+		}
 		for (int i = 0; i < m_zone.getActors().size(); i++) {
 			Actor actor = m_zone.getActors().get(i);
 			if (actor.getClass().getName().contains("NPC")) {
@@ -140,9 +144,7 @@ public class ZoneInteractionHandler {
 					if (npc.isHostile(player.getActorFaction().getFilename()) == true) {
 						return false;
 					}
-
 				}
-
 			}
 
 		}

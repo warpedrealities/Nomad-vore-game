@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<zone width="32" height="32" spriteset="tropical.png">
+	<landingsite x="16" y="16" />	
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="0" movement="0"> scrub ground </tile>
+		<tile sprite="2" vision="0" movement="0"> sand</tile>	
+		<tile sprite="3" vision="0" movement="0"> beach</tile>		
+		<tile sprite="4" vision="0" movement="1"> boulder</tile>
+		<tile sprite="6" vision="0" movement="2"> cliff</tile>
+		<tile sprite="5" vision="0" movement="2"> water</tile>
+
+	</tileset>
+
+	<description>A vast ocean extends in all directions to the horizon and beyond</description>
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="32">
+			<row>00000000 06666664 66666660 00000000</row>
+			<row>00000006 63333333 33333336 60000000</row>
+			<row>00000063 33222222 22222233 36000000</row>
+			<row>00000633 22222222 22222222 33600000</row>
+
+			<row>00000632 22222222 22222222 23300000</row>
+			<row>00000335 22222222 22222222 23300000</row>
+			<row>00000322 22222222 22222222 52300000</row>
+			<row>00006322 22222222 22222222 22300000</row>
+
+			<row>00003325 22222222 22222222 22300000</row>
+			<row>00003322 22222222 22222222 22300000</row>
+			<row>00003322 22222222 22222222 52300000</row>
+			<row>00003322 22222222 22222222 22300000</row>
+			
+			<row>00000322 22222222 22222222 22300000</row>
+			<row>00000322 22222222 22222222 22300000</row>
+			<row>00000322 22222222 22222222 22300000</row>
+			<row>00000325 22222222 22222222 22300000</row>	
+	
+			<row>00000322 22222222 22222222 22300000</row>
+			<row>00000322 22222222 22222222 52300000</row>
+			<row>00000332 22222222 22222222 23300000</row>
+			<row>00000032 22222222 22222222 23000000</row>
+
+			<row>00000033 25225222 22522222 33000000</row>
+			<row>00000003 33222222 22222233 30000000</row>
+			<row>00000000 03333333 33333330 00000000</row>
+			<row>00000000 00000000 00000000 00000000</row>		
+		</prefab>	
+		<pairedportal sprite="10" destination="Zone 2C" x="15" y="0"
+			ID="22" facing="0"></pairedportal>		
+		<floodfill tile="6"/>
+	</mapgen>
+
+</zone>

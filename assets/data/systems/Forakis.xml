@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <System>
 	<Star x="0" y="0" sprite="brightStar" intensity="25" />
-	<World x="-6" y="-9">Forakis I</World>
+	<World x="-6" y="-5">Forakis I</World>
 	<World x="4" y="-8">Forakis II</World>
+	<World x="7" y="7">Forakis III</World>	
 	<spawnRules>
 	<spawn script="pirates"/>
 	</spawnRules>

@@ -43,6 +43,8 @@
 		quantity="1" />		
 	<inventoryitem name="lifeform detector" probability="100"
 		quantity="1" />	
+	<inventoryitem name="oxygen mask" probability="100"
+		quantity="1" />			
 	<inventoryitem name="shrink pill" probability="100"
 		quantity="100" />			
 </shop>

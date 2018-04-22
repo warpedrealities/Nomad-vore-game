@@ -108,7 +108,7 @@ public class Player extends Actor {
 		if (actorRPG.getStarving()) {
 			return moveCost * 2;
 		}
-		return moveCost;
+		return (int) (moveCost*collisionInterface.getMovementMultiplier());
 	}
 
 	public void setActorName(String name) {

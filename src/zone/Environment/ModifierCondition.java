@@ -74,4 +74,9 @@ public class ModifierCondition implements EnvironmentalCondition {
 		return active;
 	}
 
+	@Override
+	public boolean getDangerous() {
+		return false;
+	}
+
 }

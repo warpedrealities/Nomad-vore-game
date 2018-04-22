@@ -228,7 +228,7 @@ public class SlotScreen extends Screen implements Callback {
 			resource = new Text(new Vec2f(1.0F, 5.5F), "hardpoint facing " + facingToStr(slot.getFacing()), 1.0F,
 					textures[4]);
 		} else {
-			resource = new Text(new Vec2f(1.0F, 5.5F), "system slot ready, please put in a module", 1.0F, textures[4]);
+			resource = new Text(new Vec2f(1.0F, 5.5F), "system slot ready, please put in a module", 0.8F, textures[4]);
 		}
 
 		window.add(resource);

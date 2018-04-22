@@ -294,6 +294,10 @@ public class Zone implements ILosBoard, Zone_int {
 					if (Enode.getTagName() == "zonerules") {
 						zoneRules = Enode.getAttribute("ruleset");
 					}
+					if (Enode.getTagName() == "zoneConditions")
+					{
+						zoneConditions=new EnvironmentalConditions(Enode);
+					}
 					if (Enode.getTagName() == "description") {
 						zoneDescription = Enode.getTextContent();
 					}
@@ -828,4 +832,10 @@ public class Zone implements ILosBoard, Zone_int {
 			this.zoneConditions.run(Universe.getInstance().getPlayer());
 		}
 	}
+
+	public EnvironmentalConditions getZoneConditions() {
+		return zoneConditions;
+	}
+	
+	
 }

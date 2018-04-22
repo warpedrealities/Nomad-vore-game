@@ -54,7 +54,7 @@ public class TownGenerator {
 		int gap = Integer.parseInt(element.getAttribute("gap"));
 		int houseCount = minhouses;
 		if (maxhouses>minhouses) {
-			houseCount=GameManager.m_random.nextInt(maxhouses - minhouses);
+			houseCount+=GameManager.m_random.nextInt(maxhouses - minhouses);
 		}
 		BuildHouses(houseCount, minsize, maxsize, tile);
 		BuildDoors(gap);

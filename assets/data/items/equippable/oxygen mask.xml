@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ItemEquip name="oxygen mask" weight="2" slot="HEAD" value="500">
+	<description>
+		An oxygen mask that provides breathable air while you're underwater.
+	</description>
+	<modifier>
+	<conditionImmune value="underwater"/>
+	</modifier>
+</ItemEquip>

@@ -4,6 +4,11 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import javax.xml.soap.Node;
+
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import nomad.GameOver;
@@ -19,7 +24,29 @@ public class DamagingCondition implements EnvironmentalCondition {
 	private int damage;
 
 	public DamagingCondition() {
-		
+		active=false;
+	}
+
+	public DamagingCondition(Element e) {
+		active=false;
+		identifier=e.getAttribute("ID");
+		damage=Integer.parseInt(e.getAttribute("damage"));
+		NodeList children=e.getChildNodes();
+		for (int i=0;i<children.getLength();i++)
+		{
+			if (children.item(i).getNodeType()==Node.ELEMENT_NODE)
+			{
+				Element element=(Element)children.item(i);
+				if (element.getTagName().equals("message"))
+				{
+					message=element.getTextContent();
+				}
+				if (element.getTagName().equals("gameOver"))
+				{
+					gameOver=element.getTextContent();
+				}
+			}
+		}
 	}
 
 	@Override
@@ -66,6 +93,11 @@ public class DamagingCondition implements EnvironmentalCondition {
 	@Override
 	public boolean getActive() {
 		return active;
+	}
+
+	@Override
+	public boolean getDangerous() {
+		return true;
 	}
 
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="reef.png">	
+	<tileset count-x="8" count-y="8">
+		<tile sprite="1" vision="0" movement="0" smart="true"> reef</tile>
+		<tile sprite="17" vision="0" movement="0"> sand </tile>
+		<tile sprite="18" vision="0" movement="0"> boulder</tile>	
+		<tile sprite="19" vision="1" movement="3"> kelp</tile>		
+		<tile sprite="20" vision="1" movement="2"> cliff</tile>
+	</tileset>
+	<zoneConditions>
+	<damagingCondition ID="underwater" damage="2">
+	<message>
+	PNAME is suffocating due to being underwater
+	</message>
+	<gameOver>
+	You have drowned
+	</gameOver>
+	</damagingCondition>
+	<modifierCondition ID="swimming" movement="2.0" />
+	</zoneConditions>
+	<description>You are adventuring beneath the water now</description>
+	<mapgen>
+	<perlin>
+		<band low="-1.0" high="-0.4">
+				<floodfill tile="0" />
+			</band>
+
+			<band low="-0.4" high="0.0">
+				<noise tile="2" scarcity="12" />
+				<floodfill tile="1">
+					<SeedNPCs min="8" max="16" name="Forakis_III/cetan">
+					</SeedNPCs>		
+				</floodfill>
+			</band>
+			<band low="0.0" high="0.1">
+				<floodfill tile="3" />
+				
+			</band>
+			<band low="0.1" high="0.5">
+				<noise tile="2" scarcity="12" />
+				<floodfill tile="1" />
+			</band>
+			<band low="0.4" high="1.0">
+				<floodfill tile="3" />
+			</band>
+
+		</perlin>
+	
+		<walloff wall="4" sides="southnorth" />	
+			<prefab positionX="30" positionY="61" width="5">
+			<row>22222</row>
+			<row>25252</row>
+			<row>55555</row>			
+				<pairedportal x="2" y="2" sprite="3" ID="22"
+					destination="island" facing="4"> a way up out of the water </pairedportal>
+		</prefab>	
+	</mapgen>
+
+</zone>

@@ -21,4 +21,6 @@ public interface EnvironmentalCondition {
 	void setActive(boolean active);
 	
 	boolean getActive();
+	
+	boolean getDangerous();
 }

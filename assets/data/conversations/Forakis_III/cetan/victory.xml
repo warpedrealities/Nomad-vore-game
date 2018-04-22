@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="demis" />
+		<preference fetish="females" />		
+		<assertion evaluate="operatorOr">
+			<preference fetish="oralvore" />	
+			<preference fetish="cockvore" />								
+		</assertion>	
+		<text> 
+		That last assault left you reeling, it's all you can do to re-orientate yourself. As you do the cetan swiftly circles back around, a predatory gleam in her eye. She lets out a pleased rumble as she approaches and grabs ahold of you, weakened and in the hands of this powerful aquatic predator your fate is truly hers to decide.
+		</text>
+		<choice destination="oralvore0" text="*she licks her lips*">
+			<preference fetish="oralvore" />	
+		</choice>
+		<choice destination="cockvore0" text="*stirrings down below*">
+			<preference fetish="cockvore" />	
+		</choice>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	You see her tongue run along her lips, then dart out as she draws you in close in order to taste over your form. The saliva diffusing into the surrounding water afore she shifts her grip firmly down around your chest and upper arms and nomphs over the top of your head. The warmth of the cetan's mouth encompassing you swiftly down to your shoulders as she pushes you in hungrily, swallowing you up like the meal you are to her. Her hands sliding down to your waist to help feed your squirming, but not meaningfully resisting, body down her throat.
+	</text>
+	<choice destination="oralvore1" text="*meal for the mer*"/>
+	</page>
+
+	<page ID="oralvore1">
+	<text>
+	Her lips slide down around your waist and she straightens her body letting go of your scissoring legs to ease your passage down into her body. Her middle bulging around your upper body as you slip steadily down her throat, the mer having no forestomach for you to curl in as instead you just slide deeper towards her tail. You can hear her moans at your flavour mingled with the pulsing throb and flow of her insides as you travel deeper and deeper inside her body. You can feel yet more of your body slide out of the cooler waters into the hot tightness of her body as her lips encroach up your legs. Soon you'll be entirely devoured.
+	</text>
+	<choice destination="oralvore2" text="*into the belly*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	You find yourself plunging into the depths of the cetan's gut as she swallows up your feet, gulping you down entirely with a rumbling moan. Your form becoming a bulge squished down in her tail, not curled to curl you can straighten yourself freely but this fleshy hammock is no safe place to rest. You feel your body forced to undulate with her motions as she begins to swim, tail flexing around you and forcing you to move with her as enzymes begin to seep into your heated prison.
+	</text>
+	<choice destination="oralvoreStruggle" text="*get out of here*"/>
+	<choice destination="oralvoreSubmit" text="*accept your fate*"/>
+	</page>
+	
+	<check ID="oralvoreStruggle">
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="oralvoreEscape" />
+		<outcome destination="oralvoreDigest" />
+	</check>
+	
+	<page ID="oralvoreEscape">
+	<text>
+	You're not about to just stay here and get digested. Time to get out of here, it'll be difficult to crawl back up that flexing and undulating throat but the struggle is preferable to ending up fat on her thick ass tail. You turn yourself around, curling in on yourself and then straightening and shoving your hands up her throat. The cetan letting out a distressed rumble as she finds you pushing off against the inside of her slick innards and shoving your way up her throat. The sensations most disagreeable for her as she tries to swallow you back down, but to no avail as you haul yourself back up out of her mouth. The cetan now drifting and twitching a bit in the aftermath of you forcing your way out into the open ocean again.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />	
+	</page>
+	
+	<page ID="oralvoreDigest">
+	<text>
+		You're not about to just stay here and get digested. Time to get out of here, it'll be difficult to crawl back up that flexing and undulating throat but the struggle is preferable to ending up fat on her thick ass tail. You turn yourself around, curling in on yourself and then straightening and shoving your hands up her throat. The cetan letting out a distressed rumble as she finds you attempting to push off against the inside of her slick innards and shoving your way up her throat. The sensations most disagreeable to her as she has to swallow you back down into that enzyme rich belly of hers. The cetan too powerful to resist as she responds to your repeated attempts to get back up her throat by simply forcing you back down into her belly as it becomes increasingly inhospitable in its digestive vigor.
+	</text>
+	<choice destination="oralvoreGO" text="*futility*"/>
+	</page>
+	
+	<gameover ID="oralvoreGO">
+	<text>
+	The cetan swims on, unmindful of the helpless squirmings occuring deep within that contoured and shifting bulge her tail sports. Your body softening within her gut, the undulating walls massaging you down into a formless mass and from thence into a glob of undifferentiated fluid. This thick soup of former adventurer proves only too readily absorbed, your remnants flowing down through her insides to be sopped up and used to nourish and fuel the aquatic predator. Perhaps a subnautical adventure was not the life you were meant for. But no matter your mistakes you're now nought but a layer of fat padding her tail as the mer swims on.
+	</text>
+	</gameover>
+	
+	<page ID="oralvoreSubmit">
+	<text>
+	If you ignore the certain knowledge that this belly you're in is about to digest you you can learn to appreciate the feeling of this hot stomach and its sticky fluids coating your form as the cetan undulates rthythmically. Or perhaps that certain knowledge is something you're comfortable with as you feel her enzymes soak into your body, coating your flesh and seeping through your pores and permeating your body to the core. You can feel it, the slow and inexorable break down of your form into something more fitting for you as the Cetan's meal..perhaps you even welcome it.
+	</text>
+	<choice destination="oralvoreGO" text="*digested*"/>
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+	The Cetan keeps ahold of you with one hand as she reaches down with the other. A genital slit opening up at her crotch, a girthy cock and hefty sack squeeze out into the open water. That thick pink length of hers rising to arousal as she strokes one hand over her it and rumbles in pleasure. All too soon she is at full erection, her tip agape as she grabs ahold of your legs and shove them together so she can feed you feetfirst into her shaft. The hot tightness of her length squeezing your feet, rippling and schlurping hungrily on you as she sets about making you into cockfood.
+	</text>
+	<choice destination="cockvore1" text="*unexpectedly lewd fates*"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	Your predator seems pleased as she thrusts your legs deeper into her shaft, both hands on your squirmy upper body as she works you inside. Her tail undulating forcefully to work to thrust her shaft up over your hips. Your feet plunging into the pliant and stretchy depths of her sack. Those hanging exposed balls proving more than apt to contain you as she slides her hands up to your shoulders and shoves more of you in to ease the hunger of her loins.
+	</text>
+	<choice destination="cockvore2" text="*all the way*"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+</Conversation>

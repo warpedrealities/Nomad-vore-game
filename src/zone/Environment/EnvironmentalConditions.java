@@ -19,6 +19,7 @@ public class EnvironmentalConditions {
 	private EnvironmentModifiers modifiers;
 	private List<EnvironmentalCondition> conditions;
 	private int interval;
+	private boolean dangerous;
 	
 	public EnvironmentalConditions()
 	{
@@ -41,11 +42,11 @@ public class EnvironmentalConditions {
 				Element e=(Element)children.item(i);
 				if (e.getTagName().equals("damagingCondition"))
 				{
-					
+					conditions.add(new DamagingCondition(e));
 				}
 				if (e.getTagName().equals("modifierCondition"))
 				{
-					
+					conditions.add(new ModifierCondition(e));
 				}
 			}
 
@@ -55,6 +56,7 @@ public class EnvironmentalConditions {
 	
 	public void update(Player player)
 	{
+		dangerous=false;
 		modifiers.reset();
 		Player_RPG rpg=(Player_RPG)player.getRPG();
 		for (int i=0;i<conditions.size();i++)
@@ -67,6 +69,10 @@ public class EnvironmentalConditions {
 			{
 				conditions.get(i).setActive(true);
 				conditions.get(i).modEnvironment(modifiers);
+				if (conditions.get(i).getDangerous())
+				{
+					dangerous=true;
+				}
 			}
 		}
 	}
@@ -115,5 +121,9 @@ public class EnvironmentalConditions {
 	public float getVisionMultiplier()
 	{
 		return modifiers.visionModifier;
+	}
+
+	public boolean getDanger() {
+		return dangerous;
 	}
 }

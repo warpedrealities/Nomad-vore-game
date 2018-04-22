@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="cetan.png" />
+	<name>Cetan</name>
+	<description>
+	An aquatic predator, her body monochromatic with smooth black skin over her back and much of her limbs and white along her belly, underside and face. Her upper half feels like it belongs to a tall woman, her chest buxom and yet she has webbed fingers. The curves of her hips transition into a long and powerful tail, mer-like and ending in a broad horizontal fluke. An additional pair of fins protrude just below her hips. She's clearly at home in her aquatic environment, and might prove dangerous to those interlopers who are less well adapted to her domain.
+	</description>
+	<rpg>
+		<experiencevalue value="100" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="PARRY" value="4" />		
+		<attribute attribute="WILLPOWER" value="4" />		
+		<combatMove name="charge" pattern="SHORT" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4" >
+						<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<effectDamage type="KINETIC" minValue="8" maxValue="14"
+				modifier="NONE" />
+			<missText count="2">
+				<text>Cetan charges at TARGET but misses</text>
+				<text>TARGET evades the charging cetan </text>
+			</missText>
+			<hitText count="2">
+				<text>Cetan mauls TARGET for VALUE damage</text>
+				<text>TARGET is mauled by a Cetan for VALUE damage</text>
+			</hitText>
+			<effectStatus probability="50">
+				<probabilityModifier value="ENDURANCE" />
+				<applyText>TARGET is stunned </applyText>
+				<statusStun uid="9" duration="4">
+					TARGET has recovered from stunning
+				</statusStun>
+			</effectStatus>			
+		</combatMove>		
+	</rpg>
+
+	<respawn delay="2000" />	
+	<defeated conversation="Forakis_III/cetan/defeat" />
+	<seduced conversation="Forakis_III/cetan/seduced" />
+	<victory conversation="Forakis_III/cetan/victory" />
+	<seducer conversation="Forakis_III/cetan/victory" />
+	<controller AI="cetan" />
+	<faction value="monster" />
+</NPC>
