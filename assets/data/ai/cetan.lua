@@ -3,8 +3,18 @@
 function attack(controllable,sense,pos,hostile)
 	attack=controllable:getValue(1)
 	if (attack<=0) and (pos:getDistance(hostile:getPosition())>=2) then
-		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-		attack=6
+		if (pos:getDistance(hostile:getPosition())>4) then
+			if controllable:HasPath() then
+				controllable:FollowPath()
+			else
+				controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y)
+				controllable:FollowPath()	
+			end	
+		else
+			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+			attack=6	
+		end
+
 	else
 		attack=attack-1
 		if controllable:HasPath() then
@@ -43,6 +53,7 @@ function main(controllable, sense, script)
 		b=controllable:getValue(0);
 		if (b>0) then
 			controllable:setValue(0,b-1);
+			controllable:setValue(1,0)		
 		end
 		a=math.random(0,16)
 		if (a<8) then

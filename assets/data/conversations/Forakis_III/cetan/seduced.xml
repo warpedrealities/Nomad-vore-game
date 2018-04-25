@@ -2,10 +2,42 @@
 <Conversation>
 	<page ID="start">
 		<text> 
+		The cetan lets out a rumble, swimming closer with a flesh visible on her pale white skin as she looks at you with ardent desire. You came into her domain, now you've filled her with desire. It's clear she is under your sway even if you are a strange visitor from the realm above the waves... what will you do with such a bountiful mer's attraction to you?
 		</text>
-
-		<choice destination="end" text="" />
+		<choice destination="analvore0" text="*i will invite her, into my ass*">
+			<assertion evaluate="hasperk" perk="analvore" />		
+		</choice>
+		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="analvore0">
+	<text>
+	You do your best to strike a pose while floating in front of her, tracing your hands down to your rump to draw her gaze to it afore placing a hand on each cheek and parting them in front of her as she approaches. The cetan letting out a pleased rumble as she places her hands on your thighs and leans in to lick at your pucker, she's accepting your invitation or so she thinks. But you want more than just a bit of tongue from her.
+	</text>
+	<choice destination="analvore1" text="*press her head inside*"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	You slide your hand down behind her skull and press her against your pucker, the cetan letting out a pleased rumble that vibrates your sphincter. Only for her to squirm in surprise as you push more insistently, sliding her head into your ass with a schlorp and clenching the tight grip of your bowels around her, tugging on her in a way that lets her know you want her inside of you. The cetan seems uncertain for a few moments, but then seems to acquiesce as she rumbles and starts to swim forwards. You're forced to grab ahold of something as an anchor so as not to be pushed forwards and now instead you feel her shoulders and chest squeezing into your rear. 
+	</text>
+	<choice destination="analvore2" text="*accept all of her*"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	The aquatic mer is lustily feeding herself to your ass now. You clench to tug her in but by and large let her do the work of getting her upper body inside, her hips sliding between your cheeks and only that immense tail of hers left protruding from your body as more and more of her luscious curves and powerful frame curls up within your ever more expansive gut. Those contours making you crave to stroke over your belly with a compulsion you cannot deny. As your hands caress her shape you feel her rumble within you as you clench to tug her tail inside, tucking the cetan away completely within yourself. She seems remarkably pleased to have been food for your ass like this.
+	</text>
+	<choice destination="analvore3" text="*finish the job*"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	You feel her squirm as your first enzymes seep in. but she doesn't struggle as you soak her in digestive juices and start to make her one with you. The cetan seemingly going along with the digestion in her heat of the moment, giving herself over to your hunger as she rumbles and squirms rthyhmically within you. Slowly the rumbles subside into gurgles and the squirms fade into sloshy glorps as her hefty body is broken down into nourishment for your form. Your gut turning compact and round as you digest her away, soon not a trace will be left of the mer but for your profound satisfaction and fond memories.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
 	
 </Conversation>

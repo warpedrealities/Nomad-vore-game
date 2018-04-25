@@ -1,0 +1,12 @@
+Recovered partial logs from ship computer: 
+Crew status report: Sutrene, condition green, Marsha, condition green, Ella, condition green, Tessa, condition green LBREAK
+warning: "Ship entering planetary gravity well, pilot Sutrene to controls, evasive action required" LBREAK
+Error: no pilot input LBREAK
+warning: "Ship approaching atmosphere, any crew to controls, immediate evasive action required" LBREAK
+Error: no pilot input LBREAK
+warning: "Ship entering atmosphere, hull temperature unsafe, immediate action required, any crew to controls" LBREAK
+Error: no pilot input LBREAK
+warning: "ten thousand feet, impact imminent, immediate action required" LBREAK
+Error: no pilot input LBREAK
+Crew status update: Sutrene, condition red, Marsha, condition red, Ella, condition red, Tessa, condition red LBREAK
+engine offline, sensors offline, comm syst3m 0ffp0w3rl1n31.... LBREAK

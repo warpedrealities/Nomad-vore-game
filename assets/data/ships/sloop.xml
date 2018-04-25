@@ -75,7 +75,26 @@
 			<placeWidget x="3" y="9" name="slot">
 			<contains name="modules/cargocontainer_ship">
 				<lootTable>
+					<lootSubTable chance="0.75" file="spacehulk_resources" />
+					<lootSubTable chance="0.75" file="spacehulk_consumables" />
+					<lootSubTable chance="0.75" file="spacehulk_resources" />
+					<lootSubTable chance="0.75" file="spacehulk_consumables" />
+					<lootSubTable chance="0.50" file="spacehulk_resources" />
+					<lootSubTable chance="0.50" file="spacehulk_consumables" />
+					<lootSubTable chance="1" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="resource_tier_1" />
+					<lootSubTable chance="1" file="consumable_Tier_1" />
+					<lootSubTable chance="0.1" file="resource_tier_1" />
+					<lootSubTable chance="0.1" file="consumable_Tier_1" />
+					<lootSubTable chance="0.5" file="mutators_tier_1" />
+					<lootSubTable chance="0.1" file="mutators_tier_1" />
+					<loot item="gold" chance="0.4" addendum="100" />
+					<loot item="gold" chance="0.4" addendum="250" />	
 					<loot item="Phallifungi" chance="1.0" />
+					<loot item="space meal" chance="1.0" />
+					<loot item="space meal" chance="1.0" />
+					<loot item="space meal" chance="1.0" />
+					<loot item="space meal" chance="1.0" />					
 				</lootTable>		
 			</contains>
 			</placeWidget>	

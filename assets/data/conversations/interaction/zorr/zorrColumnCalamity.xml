@@ -91,7 +91,7 @@
 	
 	<page ID="useCalamity">
 	<condition operator="equals" evaluate="GLOBALFLAG" flag="zorrDoor"
-			value="2" />		
+			value="2" />
 	<text>
 		You slot the amulet into the slot, it looks like it fits. The blazing circle is nestled nicely into the hole. As you fit it in there's a series of clicks from all the columns and a grinding noise as the door opens.
 	</text>
@@ -102,6 +102,15 @@
 		<choice destination="end" text="leave it there for now" />		
 	</page>
 
+	<page ID="useCalamity">
+	<text>
+		You slot the amulet into the slot, it looks like it fits. The blazing circle is nestled nicely into the hole.
+	</text>
+		<effect type="removeitem" item="calamity amulet" value="1" />
+			<effect type="incrementglobalflag" flag="zorrDoor" value="1" />	
+		<effect type="setlocalflag" flag="amulet" value="1" />	
+		<choice destination="end" text="leave it there for now" />		
+	</page>
 	
 	<page ID="useCrown">	
 	<text>

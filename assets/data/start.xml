@@ -9,6 +9,7 @@
 	<item value="jumpsuit" />
 	<item value="medkit" />	
 	<item value="space meal" />		
+		<item value="oxygen mask" />		
 	<appearance>
 		<bodypart partname="body">
 			<partvalue variablename="height" value="60" />

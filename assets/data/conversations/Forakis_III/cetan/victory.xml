@@ -91,9 +91,50 @@
 	
 	<page ID="cockvore2">
 	<text>
-	
+	The cetan lets out a pleased echoing call as she shoves your head and shoulders past her tip and finishes forcing you into her shaft. Your upper body bulging out her length briefly before piling in to join the rest of you in curling up in her heavy sack. The cetan undulating to slowly keep position as she strokes over her shaft and mhmms, her bloated balls clearly too much of an impediment to smooth swimming for her. But equally clearly, oh so very satisfying for her as you stew in a thick and gooey bath of her hot seed.
 	</text>
+	<choice destination="cockvorePleasure" text="*attempt to coax her to let you out*"/>
+	<choice destination="cockvoreSubmit" text="*submit to her balls*"/>
+	</page>
 	
+	<check ID="cockvorePleasure">
+		<test what="PLEASURE" DC="15" />
+		<outcome destination="cockvoreEscape" />
+		<outcome destination="cockvoreDigest" />
+	</check>	
+	
+	<page ID="cockvoreEscape">
+	<text>
+	You feel your predator's leisurely and self indulgent gratification and wonder if you can help her along. After all if she cums before you melt in her burbling sack then you can get out of here. Otherwise well, you'll still get out. But in a considerably less solid form. Not wanting such a fate you set about stroking at the inside of her sack with a will, hearing her pleased rumbles that indicate you're on the right track as well as feeling the more vigorous pace of her hands stroking up and down her shaft. Her rumbling moans becoming louder and her actions more unrestrained until you finally seem to accomplish your goal, the cetan climaxing and her cock erupting sending you back out into the water amidst a gushing cloud of seed that momentarily obscures everything in a milky hazy. When your vision clears you see the cetan slowly starting to recover from her orgasm, probably best not to be around when she recovers. One trip into her loins was quite enough.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />		
+	</page>
+	
+	<page ID="cockvoreDigest">
+	<text>
+	You feel your predator's leisurely and self indulgent gratification and wonder if you can help her along. After all if she cums before you melt in her burbling sack then you can get out of here. Otherwise well, you'll still get out. But in a considerably less solid form. Not wanting such a fate you set about stroking at the inside of her sack with a will, hearing her pleased rumbles that indicate you're on the right track as well as feeling the more vigorous pace of her hands stroking up and down her shaft. Her balls are reacting energetically to your efforts as well, burbling and squeezing around you as she masturbates...and your form starts to rapidly soften, your ability to pleasure her by stroking the inside of her sack waning though happily for her your melting form pleasures her in a different way.
+	</text>
+	<choice destination="cockvoreGO" text="*failed to avoid becoming an orgasm*"/>
+	</page>
+	
+	<gameover ID="cockvoreGO">
+	<text>
+	The cetan's lumpy sack starts to round out as you're compacted and cummified within her. Your form turning, soft, creamy and then liquid as her balls turn you into just another delicious load of seed within them. The aquatic predator stroking off more vigorously still as the last lumps of your form dissipate into cum in her balls with a resounding sloshy burble. The mer reaching orgasm soon after, pumping out a massive burst of hot cum spurt by spurt that clumps together for a few moments before beginning to spread out into the surrounding water. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				your 
+				<readequipment slot="2" />
+				left drifting and floating amidst the milky cloud of seed.
+			</conditional>
+	</text>
+	</gameover>
+	
+	<page ID="cockvoreSubmit">
+	<text>
+	Within the gooey confines of her sack you get comfortable and let the wonderfully goopy process have its way with you. Squirming only lightly  to get more comfortable in her burbling sack as she strokes over her shaft and you feel yourself beginning to soften and turn into cum. Hot pleasurable tingles permeating your every inch as you marinate and steadily melt inside of your predator's loins.
+	</text>
+	<choice destination="cockvoreGO" text="*get melted*"/>
 	</page>
 	
 </Conversation>

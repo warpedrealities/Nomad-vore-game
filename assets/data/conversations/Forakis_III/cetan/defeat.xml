@@ -2,10 +2,42 @@
 <Conversation>
 	<page ID="start">
 		<text> 
+		In the aftermath of your attacks the cetan appears stunned, dazed and drifting. Her tail twitching back and forth only weakly as she tries to recover. You have a perfect opportunity here, least if you like your babes aquatic and legless.
 		</text>
-
-		<choice destination="end" text="" />
+		<choice destination="analvore0" text="actually i like my mer babes up my ass">
+					<assertion evaluate="hasperk" perk="analvore" />	
+		</choice>
+		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="analvore0">
+	<text>
+	You grab ahold of the cetan by her head and stop her slow tumble in the water. Her hands start to reach up to grab ahold of your arms so you don't waist any time, tucking your legs upwards as you guide her smooth head towards your ass cheeks. Her hands pleasingly brushing against your rump as her eyes widen in fear of your voracious pucker, but she's too slow and weak to stop you cramming her headfirst into your ass. Your bowels squeezing tightly around her head, you can't help but let out an unladylike grunt as you clench and drag in her shoulders, her arms starting to become more frantic in their attempts to push against your thighs as she starts to slide in.
+	</text>
+	<choice destination="analavore1" text="*nice smooth easily sucked in assfodder*"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	You clench and drag her arms down against her sides as you force her into yourself, proving your superiority with every flex of your rump cheeks. Her breasts are squeezed tight against her chest by your capable sphincter as her long cetan tail begins to thrash and flex helplessly back and forth. The mer struggling and protesting her trip into your rear end, but to no avail as more of her sine waving tail vanishes between your cheeks and more of her body is packed away as a bulge in your middle.
+	</text>
+	<choice destination="analvore2" text="*finish her*"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	Her writhing form is being helplessly packed away despite her struggles, and the sensations of her form curling up in your ever more bloated belly fill you with a deep satisfaction. Her tail gradually becoming unable to flail back and forth and being squeezed up past your rumpcheeks. Soon she vanishes completely into you, her form packed away tightly within you. Her rumbles and whines of protest as she pushes out at the insides of your gut delight you. The handprints attracting your own hands to rub possessively over her. But the delight of holding her is next to nothing compared to the delight you'll get from digesting her away.
+	</text>
+	<choice destination="analvore3" text="*digest your big meal*"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	Your gut gurgles and your meal lets out a growl of protest thrashing around. But really there's nothing she can do to stop you digesting away every bit of her body with the utmost of satisfaction. Floating out there treading water as your massive gut keeps you from swimming even as it provides you nourishment for body and soul. The squirming of the cetan turning slow and weak as her body turns soft and yielding. The mighty predatory mer no match for either your self or your insides as your gut rounds out and shrinks back down. Every single bit of her breaking down and being absorbed to fuel you. Considering how tiring swimming is she really did hit the spot, maybe you'll have another sometime.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
 	
 </Conversation>
