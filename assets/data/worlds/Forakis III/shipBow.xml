@@ -4,8 +4,18 @@
 		<tile sprite="1" vision="1" movement="2">a metal wall</tile>
 			<tile sprite="2" vision="0" movement="0">a metal floor</tile>
 	</tileset>
-
-	<description>A vast ocean extends in all directions to the horizon and beyond</description>
+<zoneConditions>
+	<damagingCondition ID="underwater" damage="2">
+	<message>
+	PNAME is suffocating due to being underwater
+	</message>
+	<gameOver>
+	You have drowned
+	</gameOver>
+	</damagingCondition>
+	<modifierCondition ID="swimming" movement="2.0" />
+	</zoneConditions>
+	<description>The ships interior is flooded and corroded</description>
 	<mapgen>
 	<prefab positionX="0" positionY="0" width="10">
 			<row>1111 1111 11</row>
