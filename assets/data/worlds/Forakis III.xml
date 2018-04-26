@@ -2,5 +2,6 @@
 <world>
 	<entitysprite filename="waterplanet" size="3.0" />
 	<zone x="1" y="1" type="SURFACE">island</zone>
-	<zone x="1" y="1" type="CLOSED">Zone 2C</zone>	
+	<zone x="1" y="0" type="CLOSED">Zone 2C</zone>	
+	<zone x="1" y="0" type="CLOSED">shipBow</zone>		
 </world>

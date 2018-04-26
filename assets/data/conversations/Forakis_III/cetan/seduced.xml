@@ -7,9 +7,26 @@
 		<choice destination="analvore0" text="*i will invite her, into my ass*">
 			<assertion evaluate="hasperk" perk="analvore" />		
 		</choice>
+					<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>		
 		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>			
+	
 	<page ID="analvore0">
 	<text>
 	You do your best to strike a pose while floating in front of her, tracing your hands down to your rump to draw her gaze to it afore placing a hand on each cheek and parting them in front of her as she approaches. The cetan letting out a pleased rumble as she places her hands on your thighs and leans in to lick at your pucker, she's accepting your invitation or so she thinks. But you want more than just a bit of tongue from her.

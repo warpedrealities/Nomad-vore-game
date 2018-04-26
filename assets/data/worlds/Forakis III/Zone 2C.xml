@@ -20,6 +20,21 @@
 	</zoneConditions>
 	<description>You are adventuring beneath the water now</description>
 	<mapgen>
+		<prefab positionX="32" positionY="1" width="5">
+			<row>22222</row>
+			<row>22222</row>
+			<row>22222</row>
+			<row>22222</row>
+			<row>22222</row>
+			<placeWidget x="0" y="0" name="SPRITE" width="5" height="5"
+				file="sunkenWreckFront" />
+			<placeWidget x="1" y="1" name="DESCRIBER">
+				A spacecraft or at least the bow of one as it comes to a jagged end abruptly towards the rear, it clearly crashed some time ago for how plantlife has anchored to its flanks.
+			</placeWidget>
+			<pairedportal x="0" y="2" sprite="10" ID="33"
+					destination="shipBow" facing="4">a way into the shipwreck </pairedportal>	
+		</prefab>
+	
 	<perlin>
 		<band low="-1.0" high="-0.4">
 				<floodfill tile="0" />
@@ -28,8 +43,8 @@
 			<band low="-0.4" high="0.0">
 				<noise tile="2" scarcity="12" />
 				<floodfill tile="1">
-					<SeedNPCs min="8" max="16" name="Forakis_III/cetan">
-					</SeedNPCs>		
+					<SeedNPCs min="8" max="16" name="Forakis_III/cetan"/>
+					
 				</floodfill>
 			</band>
 			<band low="0.0" high="0.1">

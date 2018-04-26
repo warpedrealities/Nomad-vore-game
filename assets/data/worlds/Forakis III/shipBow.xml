@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<zone width="16" height="16" spriteset="shipbrown.png">	
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="1" movement="2">a metal wall</tile>
+			<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+	</tileset>
+
+	<description>A vast ocean extends in all directions to the horizon and beyond</description>
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="10">
+			<row>1111 1111 11</row>
+			<row>1222 2212 21</row>
+			<row>2222 2222 21</row>
+			<row>1222 2212 21</row>		
+			<row>1111 1111 11</row>				
+		</prefab>	
+	<breakable name="ruined console" x="8" y="2" sprite="23" hp="10"
+			items="1">
+			<description>A ruined navigation console</description>
+			<resistance resists="KINETIC" strength="2"></resistance>
+			<Item>scrap metal</Item>
+		</breakable>		
+			<placeItem x="8" y="3">
+				<item itemname="disc" exposition="nos0" />
+			</placeItem>	
+	<placeWidget x="3" y="3" name="cargocontainer">
+			<lootTable>
+				<lootSubTable chance="1" file="resource_tier_1" />
+				<lootSubTable chance="0.5" file="mutators_tier_1" />
+				<lootSubTable chance="1" file="consumable_Tier_1" />
+				<lootSubTable chance="0.5" file="mutators_Tier_1" />
+				<lootSubTable chance="0.1" file="resource_tier_1" />
+				<lootSubTable chance="0.1" file="mutators_Tier_1" />
+				<lootSubTable chance="1" file="special_tier_1" />
+				<lootSubTable chance="1" file="blueprint_tier_1" />	
+			</lootTable>
+	</placeWidget>			
+	<pairedportal x="0" y="2" sprite="10" ID="33"
+		destination="shipBow" facing="2">a way out of the shipwreck</pairedportal>		
+	</mapgen>
+
+</zone>

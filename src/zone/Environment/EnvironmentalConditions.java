@@ -97,6 +97,8 @@ public class EnvironmentalConditions {
 	}
 	
 	public EnvironmentalConditions(DataInputStream dstream) throws IOException {
+		conditions=new ArrayList<EnvironmentalCondition>();
+		modifiers=new EnvironmentModifiers();
 		int count=dstream.readInt();
 		EnvironmentalConditionLoader loader=new EnvironmentalConditionLoader();
 		for (int i=0;i<count;i++)
