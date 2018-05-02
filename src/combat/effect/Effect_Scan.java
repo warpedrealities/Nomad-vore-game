@@ -8,8 +8,8 @@ import org.w3c.dom.NodeList;
 
 import actor.Actor;
 import actor.npc.NPC;
-import actorRPG.NPC_RPG;
 import actorRPG.RPG_Helper;
+import actorRPG.npc.NPC_RPG;
 import nomad.universe.Universe;
 import view.ViewScene;
 

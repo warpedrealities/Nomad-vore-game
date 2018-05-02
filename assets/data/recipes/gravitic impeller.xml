@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="gravitic impeller" requiredskill="2"
+	startunlocked="false">
+	<description>
+		This device uses gravity waves to help move the ship. This increases fuel efficiency by 25%
+	</description>
+	<ingredient item="scrap metal" quantity="5" />
+	<ingredient item="zymonite" quantity="5" />
+	<ingredient item="computation valve" quantity="10" />
+	<result item="gravitic impeller" />
+</recipe>

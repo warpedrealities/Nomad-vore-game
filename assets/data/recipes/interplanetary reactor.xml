@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<recipe name="gravitic impeller" requiredskill="2"
+<recipe name="interplanetary reactor" requiredskill="4"
 	startunlocked="false">
 	<description>
-		This device uses gravity waves to help move the ship. This increases fuel efficiency by 25%
+		A reactor that increases the fuel efficiency of spaceship engines.
 	</description>
-	<ingredient item="scrap metal" quantity="5" />
-	<ingredient item="zymonite" quantity="5" />
-	<ingredient item="computation valve" quantity="10" />
-	<result item="gravitic impeller" />
+	<ingredient item="scrap metal" quantity="10" />
+	<ingredient item="heavy plate" quantity="5" />
+	<ingredient item="computation valve" quantity="5" />
+	<result item="interplanetary reactor" />
 </recipe>

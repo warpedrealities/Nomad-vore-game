@@ -114,6 +114,7 @@ public class Status_SubAbilityMod implements StatusEffect {
 		if (removeText!=null && ViewScene.m_interface != null && !suppressMessages) {
 			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		}
+		((Player_RPG) subject).calcInventoryCapacity();
 	}
 
 	@Override

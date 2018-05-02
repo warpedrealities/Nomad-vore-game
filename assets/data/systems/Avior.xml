@@ -5,4 +5,5 @@
 	<spawnRules>
 	<spawn script="pirates"/>
 	</spawnRules>
+
 </System>

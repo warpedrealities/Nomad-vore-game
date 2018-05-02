@@ -5,6 +5,7 @@ import view.ZoneInteractionHandler;
 import vmo.GameManager;
 import widgets.WidgetPortal;
 import widgets.WidgetReformer;
+import widgets.WidgetSlot;
 import zone.TileDef.TileMovement;
 import zone.Zone;
 
@@ -45,6 +46,16 @@ public class BoardingHelper {
 				{
 					WidgetReformer r=(WidgetReformer)z.getTile(i, j).getWidgetObject();
 					r.setSuppressed(true);
+				}
+				if (z.getTile(i, j)!=null && 
+						WidgetSlot.class.isInstance(z.getTile(i, j).getWidgetObject()))
+				{
+					WidgetSlot ws=(WidgetSlot)z.getTile(i, j).getWidgetObject();
+					if (WidgetReformer.class.isInstance(ws.getWidget()))
+					{
+						WidgetReformer r=(WidgetReformer)ws.getWidget();
+						r.setSuppressed(true);		
+					}
 				}
 			}
 			

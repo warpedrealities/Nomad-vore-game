@@ -14,6 +14,7 @@ import org.w3c.dom.Element;
 import shared.ParserHelper;
 import shop.merchant.ShopMerchant;
 import shop.services.ShopServices;
+import shop.slaveTrader.ShopSlaveTrader;
 
 public class ShopList {
 
@@ -55,6 +56,10 @@ public class ShopList {
 		{
 			return new ShopServices(shopname);
 		}	
+		if ("slaveTrader".equals(check))
+		{
+			return new ShopSlaveTrader(shopname);
+		}
 		return null;
 	}
 	
@@ -83,6 +88,9 @@ public class ShopList {
 			break;
 			case 1:
 			data=new ShopServices(str,dstream);
+			break;
+			case 2:
+			data=new ShopSlaveTrader(str,dstream);
 			break;
 		}
 		return data;

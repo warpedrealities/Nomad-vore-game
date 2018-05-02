@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="talked" value="1" />
+	<text>
+		"Ah yes, visitor, hello. Welcome back, you have business with Celune"
+	</text>
+	<choice destination="shop" text="I would like to discuss 'tasties' ">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="slavetrader" value="1" />
+			<condition evaluate="HASITEM" operator="greaterthan" value="1" item="capture device" />	
+	</choice>
+	<choice destination="help" text="So how am I supposed to be your 'friend' again?">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="slavetrader" value="0" />
+	</choice>
+	<choice destination="bunnies" text="What do you need the bunnygirls for?">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="slavetrader" value="1" />
+	</choice>
+	<choice destination="end" text="actually no, but i will come back if i do"/>	
+	</page>
+
+	<page ID="shop">
+		<text>
+		</text>
+		<special effect="shop" ID="avian_slavetrader" />
+	</page>
+	
+	<page ID="start">
+	<text>
+	Celune's gaze snaps to you at your approach with an unsettlingly predatory abruptness "Ah, visitor? from offworld? has a ship yes? welcome. I am Celune, I welcome you. Perhaps we should be friends? friends do things for eachother yes?" she smiles and scrutinizes you closer. 
+	</text>
+		<effect type="setlocalflag" flag="talked" value="1" />	
+	<choice destination="help" text="What sort of things?"/>
+	<choice destination="end" text="Yes, friends. But I just realized I have somewhere else I need to be."/>
+	</page>
+	
+	<page ID="help">
+	<condition evaluate="HASITEM" operator="greaterthan" value="1" item="capture device" />
+	<text>
+	"You can get tasties for me. You have the right technology, find bunny girls, capture them, I can use your device to get them out of your ship. I will buy them off you."
+	</text>
+		<effect type="setlocalflag" flag="slavetrader" value="1" />	
+	<choice destination="bunnies" text="what do you need the bunnygirls for?"/>
+	<choice destination="end" text="I see, I'll consider it"/>
+	</page>
+	
+	<page ID="bunnies">
+	<text>
+	"Not me, other birds as well. Sometimes birdies don't want to go hunting themselves. So I help, you help me help. I give you shiny gold, everyone happy yes yes?"
+	</text>
+	<choice destination="end" text="Thanks for telling me"/>
+	</page>
+	
+	<page ID="help">
+	<text>
+	"Oh get tasties, but no. nono. you Don't have one do you? no no this is no good. Maybe we can't be friends."
+	</text>
+	<choice destination="captureDevice" text="Have a one what?"/>
+	<choice destination="end" text="that's a shame...I really need to go."/>
+	</page>
+	
+	<page ID="captureDevice">
+	<text>
+	"Capture device. Need it to get your captured tasties, then I give you shiny gold pieces. Yes, yes. Get capture device, get containment on your ship, come back, capture tasties and sell them to me and then we can be friends."
+	</text>
+	<choice destination="end" text="I see, I'll go do that"/>
+	<choice destination="end" text="yeah, I think not..bye"/>
+	</page>
+</Conversation>

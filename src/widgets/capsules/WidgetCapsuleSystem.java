@@ -83,7 +83,18 @@ public class WidgetCapsuleSystem extends WidgetBreakable {
 		}
 		else
 		{
-			ViewScene.m_interface.DrawText("capsule already deployed");
+			ViewScene.m_interface.DrawText("capsule recall signal transmitted");
+			if (behaviour.retrieve())
+			{
+				deployed=false;
+				ViewScene.m_interface.redraw();
+				ViewScene.m_interface.DrawText("capsule retrieved");
+			}
+			else
+			{
+				ViewScene.m_interface.DrawText("no capsule retrieved");
+			}
+		
 			return false;
 		}
 	}

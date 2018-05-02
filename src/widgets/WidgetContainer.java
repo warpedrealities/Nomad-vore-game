@@ -57,6 +57,24 @@ public class WidgetContainer extends WidgetBreakable {
 
 	}
 
+	public boolean addStack(ItemStack stack)
+	{
+		if (stack.getWeight() + containedWeight > maxWeight) {
+			return false;
+		} else {
+			if (!stack(stack)) {
+				containedItems.add(stack);
+				containedWeight += stack.getWeight();
+			}
+			else
+			{
+				containedWeight += stack.getWeight();	
+			}
+			return true;
+
+		}		
+	}
+	
 	public boolean addItem(Item item) {
 		if (ItemCoin.class.isInstance(item)) {
 			if (addToCoins((ItemCoin) item)) {
@@ -228,6 +246,10 @@ public class WidgetContainer extends WidgetBreakable {
 		for (int i = 0; i < generateLoot.size(); i++) {
 			addItem(generateLoot.get(i));
 		}
+	}
+
+	public void setContainedWeight(float containedWeight) {
+		this.containedWeight = containedWeight;
 	}
 
 	public int getMaxWeight() {

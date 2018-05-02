@@ -46,7 +46,7 @@
 			</lootTable>
 	</placeWidget>			
 	<pairedportal x="0" y="2" sprite="10" ID="33"
-		destination="shipBow" facing="2">a way out of the shipwreck</pairedportal>		
+		destination="Zone 2C" facing="2">a way out of the shipwreck</pairedportal>		
 	</mapgen>
 
 </zone>

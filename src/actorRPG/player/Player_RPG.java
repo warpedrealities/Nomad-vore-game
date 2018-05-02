@@ -609,7 +609,7 @@ public class Player_RPG implements Actor_RPG {
 
 	}
 	
-	private void calcInventoryCapacity()
+	public void calcInventoryCapacity()
 	{
 		playerInventory.setCapacity((int) (10+(abilities[STRENGTH]*subAbilities[CARRY])));		
 	}
@@ -903,7 +903,7 @@ public class Player_RPG implements Actor_RPG {
 	{
 		if (statusEffectHandler.applyStatus(effect,replace,this))
 		{
-			
+			calcInventoryCapacity();	
 			ViewScene.m_interface.UpdateInfo();
 			return true;
 		}
@@ -1024,7 +1024,7 @@ public class Player_RPG implements Actor_RPG {
 	public void removeStatus(int uid) {
 	
 		statusEffectHandler.removeStatus(uid,this);
-	
+
 	}
 
 

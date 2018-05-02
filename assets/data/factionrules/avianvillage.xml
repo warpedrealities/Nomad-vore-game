@@ -3,5 +3,9 @@
 	<superRule subject="avian" level="2" violation="ATTACK">
 		<factionRelationship faction="avian" mod="-10" />
 	</superRule>
+	<superRule subject="Celune" level="2" violation="ATTACK">
+		<factionRelationship faction="avian" mod="-10" />
+	</superRule>
 	<witness name="avian" />	
+	<witness name="Celune" />	
 </rules>

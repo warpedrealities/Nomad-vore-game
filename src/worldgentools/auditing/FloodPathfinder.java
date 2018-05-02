@@ -2,6 +2,7 @@ package worldgentools.auditing;
 
 import java.util.ArrayList;
 
+import nomad.universe.Universe;
 import shared.Vec2i;
 import view.ZoneInteractionHandler;
 
@@ -14,8 +15,10 @@ public class FloodPathfinder {
 	Zone zone;
 	ArrayList<Vec2i> openList;
 	Boolean[][] grid;
+	int tilesReached;
 
 	public FloodPathfinder(Zone zone) {
+		tilesReached=0;
 		this.zone = zone;
 		openList = new ArrayList<Vec2i>();
 
@@ -44,9 +47,8 @@ public class FloodPathfinder {
 						Tile t = zone.getTile(p.x, p.y);
 						if (t.getDefinition().getMovement() == TileMovement.WALK && !extant(p)) {
 							openList.add(p);
+							tilesReached++;
 						}
-					} else if (extant(p)) {
-						openList.add(p);
 					}
 				}
 			}
@@ -58,14 +60,13 @@ public class FloodPathfinder {
 			if (openList.get(i).x == p.x && openList.get(i).y == p.y) {
 				return true;
 			}
-
 		}
 		return false;
 	}
 
 	public ArrayList<Vec2i> runFlood(ArrayList<Vec2i> points) {
 		updateOpenList(points.get(0));
-
+		
 		while (openList.size() > 0) {
 			updateOpenList(openList.get(0));
 		}
@@ -76,7 +77,7 @@ public class FloodPathfinder {
 				unreachable.add(points.get(i));
 			}
 		}
-
+		System.out.println("tiles reached "+tilesReached+" unreachable positions "+unreachable.size());
 		return unreachable;
 	}
 

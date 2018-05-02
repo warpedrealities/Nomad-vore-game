@@ -32,19 +32,20 @@
 				A spacecraft or at least the bow of one as it comes to a jagged end abruptly towards the rear, it clearly crashed some time ago for how plantlife has anchored to its flanks.
 			</placeWidget>
 			<pairedportal x="0" y="2" sprite="10" ID="33"
-					destination="shipBow" facing="4">a way into the shipwreck </pairedportal>	
+					destination="shipBow" facing="6">a way into the shipwreck </pairedportal>	
 		</prefab>
 	
 	<perlin>
 		<band low="-1.0" high="-0.4">
-				<floodfill tile="0" />
+				<floodfill tile="0">
+					<Seedwidgets min="12" max="24" name="gourdbush" />
+				</floodfill>
 			</band>
 
 			<band low="-0.4" high="0.0">
 				<noise tile="2" scarcity="12" />
 				<floodfill tile="1">
-					<SeedNPCs min="8" max="16" name="Forakis_III/cetan"/>
-					
+					<SeedNPCs min="8" max="16" name="Forakis_III/cetan"/>					
 				</floodfill>
 			</band>
 			<band low="0.0" high="0.1">
@@ -66,7 +67,7 @@
 			<row>22222</row>
 			<row>25252</row>
 			<row>55555</row>			
-				<pairedportal x="2" y="2" sprite="3" ID="22"
+				<pairedportal x="2" y="1" sprite="3" ID="22"
 					destination="island" facing="4"> a way up out of the water </pairedportal>
 		</prefab>	
 	</mapgen>

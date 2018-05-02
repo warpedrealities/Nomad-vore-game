@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<widgetbreakable sprite="67" name="slave containment" health="20">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>Slave containment unit.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+</widgetbreakable>

@@ -26,13 +26,9 @@ import org.w3c.dom.NodeList;
 
 import actor.player.CompanionTool;
 import actor.player.Player;
+import actorRPG.npc.NPCStatblockLibrary;
 import description.BodyLoader;
 import faction.FactionLibrary;
-
-
-import actorRPG.NPCStatblockLibrary;
-
-
 import shared.FileTools;
 import shared.ParserHelper;
 import shared.Vec2f;

@@ -15,7 +15,7 @@
 		exotic purple foliage that shifts and rustles even when the wind does
 		not blow.</description>
 	<transition direction="south">Zone 1B</transition>
-	<transition direction="east">Zone 2B</transition>	
+	<transition direction="east">Zone 2A</transition>	
 	<mapgen>
 	<preloadprefab width="7" height="7" preloadID="4">
 			<row>2222222</row>

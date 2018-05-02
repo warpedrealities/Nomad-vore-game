@@ -78,6 +78,9 @@
 			that she’s pleasuring herself inside you.
 		</text>
 		<choice destination="oralvore2" text="digest her" />
+		<choice destination="oralvore2disposal" text="waste her">
+		<preference fetish="disposal" />
+		</choice>
 		<choice destination="oralvore2Endo" text="let her finish, then let her out" />
 	</page>
 
@@ -91,6 +94,28 @@
 			you. You churn and grind her body until your bulgy stomach begins to
 			smooth and round out, your prey liquefying until she’s nothing but
 			digestive mush, her body used up to fuel yours.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="delicious, moving on" />
+	</page>
+	
+	<page ID="oralvore2disposal">
+		<text>
+			You sit back and begin to work her down. The moans only get louder as
+			your stomach fills with deadly digestive acids. She kicks and writhes
+			and cries out in ecstasy. You see bulges form on your stomach where
+			her legs and elbows push out. Her moans reach a peak as the acids
+			begin to eat away at her scales. Soon, she’s no longer moving inside
+			you. You churn and grind her body until your bulgy stomach begins to
+			smooth and round out, your prey liquefying into a mushy soup of nutrients
+			that slid down through your bowels, nourishing and fueling your body, helping
+			expand your curves in all the right ways, before finally reaching the end of her
+			journey through your gut, collecting in your ass as a pressing need to poop.
+			With a sigh, you squat down next to a nearby bush, your ass cheeks spreading apart
+			as you started squeezing out several logs of brown muck, the thick turds laced with 
+			bits of the raptor girl's scales and bones, soon to be washed away and used to fertilize
+			the lands.
 		</text>
 		<effect type="feed" value="95" />
 		<special effect="removenpc" />

@@ -43,6 +43,9 @@
 	The elf's moans emanate from deep inside your ass now as her shoulders and chest squeeze past your ravenous sphincter. That green skinned curvaceous beauty sliding smoothly past your rear cheeks as you press down over her and she presses up against your lowering hips, willingly feeding herself into your sexy insides without any seeming hesitation. Such a preyslut. In seemingly no time at all you're pressing her own ample behind through your ass, the sensations making you both groan as those curves are squeezed into you and her body slides deeper and still deeper. It won't be long until all of her is inside, mere food for your ass.
 	</text>
 	<choice destination="analvore3" text="$mhmm, my ass has never had an easier meal"/>
+	<choice destination="analvore3Disposal" text="$mhmm, you're going to make a massive dump">
+	<preference fetish="disposal" />		
+	</choice>
 	</page>
 	
 	<page ID="analvore3">
@@ -55,6 +58,22 @@
 	<page ID="analvore4">
 	<text>
 	The elf lets out a moan at that "mhmm, yes...add me to your ass you sexy thing you..." she utters as she squirms around and feels your hot enzymes flow in and soak every inch of her. Your insides gurgling and grinding over her hungrily, steadily processing and churning her down into goop. She writhes and moans but eventually sloshes and blorps instead as you liquidate her, absorbing her body into yourself to pad your attributes that had won you this meal in the first place. Sometimes, it's good to be you.
+	</text>
+		<effect type="feed" value="110" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
+	<page ID="analvore3Disposal">
+	<text>
+	The teasing about being a future bowel movement seems to make the elf gasp and moan, muffledly responding with "I don't do this with just anyone you know...obviously" she makes a sound that might be a giggle from deep inside you as you steadily schlorp in her legs, her toes twitching afore they disappear past your pucker. The elf entirely claimed as buttfood now, forced to curl and compact inside you as you trace one hand over your bulging middle. The elf feels so good there, only thing that could be better is to feel her digest, and then slide back out of your ass.
+	</text>
+	<choice destination="analvore4Disposal" text="$Obviously not, as you'd of been helping fertilize fields, like you're going to be shortly."/>
+	</page>
+	
+	<page ID="analvore4Disposal">
+	<text>
+	The elf lets out a moan at that "mhmm, yes...add me to your ass you sexy thing you... I want to be nothing but your poop!" she utters as she squirms around and feels your hot enzymes flow in and soak every inch of her. Your insides gurgling and grinding over her hungrily, steadily processing and churning her down into goop. She writhes and moans but eventually sloshes and blorps instead as you liquidate her, absorbing her body into yourself to pad your attributes that had won you this meal in the first place. After a bit longer of your curves getting filled out by the digested elf's body, you go and squat next to a nearby bush, grunting and blushing heavily as you start squeezing out thick brown logs of the cute warrior who had so eagerly submitted themselves to you, despite the end result being them slipping out of your ass as nothing but waste.
 	</text>
 		<effect type="feed" value="110" />
 		<special effect="removenpc" />

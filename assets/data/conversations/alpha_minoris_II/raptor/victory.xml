@@ -130,8 +130,8 @@
 		<effect type="heal" value="0.1" />
 		<effect type="stunnpc" value="10" />
 	</page>
-
-	<gameover ID="struggledigest">
+	
+	<page ID="struggledigest">
 		<text>
 			The raptor starts to look more and more distressed as you shove
 			at her
@@ -145,11 +145,42 @@
 			struggle, your body getting increasingly broken down by her gurgling
 			gut. In time you can't even twitch, being digested down entirely as
 			her gut rounds out into a smooth massive dome full of soupified
-			remnants. The raptor girl chirring in delight and running her hands
+			remnants.
+		</text>
+		<choice destination="struggledigestGO" text="raptor belly stew" />
+		<choice destination="struggledigestGOdisposal" text="raptor belly stew (scat)" >
+		<preference fetish="disposal" />
+		</choice>
+	</page>
+
+	<gameover ID="struggledigestGO">
+		<text>
+			The raptor girl chirred in delight and running her hands
 			over the mass as her belly starts to compact and shrink down again,
-			absorbing your nourishment and letting it course through her body.
+			absorbing your nourishment and letting it course through her body. 
+			After only a few short hours, your body belonged to the raptor, 
+			your strength unable to save you, and in return, making the raptor 
+			girl even more powerful a predator.
 		</text>
 	</gameover>
+	
+	<gameover ID="struggledigestGOdisposal">
+		<text>
+			The raptor girl chirring in delight and running her hands
+			over the mass as her belly starts to compact and shrink down again,
+			absorbing your nourishment and letting it course through her body.
+			After drawing away all of your pitiful strength from the goopy chyme 
+			that use to be you into herself, the raptor girl was a bit chubbier, 
+			and feeling a strong pressure in her rump, grunting softly to herself 
+			as she bent her legs, hiked her tail up, and started to push, grunting 
+			and moaning softly as your steaming brown remains came splattering out of 
+			her ass, giving her more of a fight now then you did then when you were in 
+			her belly. After one last push, your skull, embedded with brown scat, plopped 
+			down on to the pile, the triumphant raptor trotting away, leaving you as a 
+			steaming mess of reptile poop.
+		</text>
+	</gameover>
+	
 
 	<page ID="pleasure">
 		<text>
@@ -222,6 +253,9 @@
 			walls has left you unable to escape, you're in for the long haul now.
 		</text>
 		<choice destination="pleasureGO" text="get digested" />
+		<choice destination="pleasureGOdisposal" text="get digested (disposal)">
+		<preference fetish="disposal" />
+		</choice>
 	</page>
 
 	<gameover ID="pleasureGO">
@@ -245,6 +279,37 @@
 			was before. All that will be left to remember you by is a saucy
 			memory and a tingle of past pleasure for the raptor girl who'd
 			claimed you.
+		</text>
+	</gameover>
+	
+	<gameover ID="pleasureGOdisposal">
+		<text>
+			You tried. You failed. But at least you gave the raptor demi a
+			pleasing
+			orgasm to remember you by as you succumb inside her. The
+			raptor girl
+			closing her eyes, resting her hands on the bulge of your
+			diminishing
+			form. Your shape steadily breaking down, gurgling away
+			into soup
+			inside her as she relaxes in afterglow. The raptor able to
+			cherish
+			the drawn out pleasurable sensations of her afterglow and the
+			pleasure of digesting you as she lays there. Your form soon entirely
+			liquid, compacting her belly under her fingers as you're absorbed
+			into her. Her belly making little gurgles and burbles quietly as it
+			trims back down, until you're utterly digested and not a trace of you
+			remains, not even a bit of pudge on her middle that's as slim as it
+			was before. With a content sigh, the reptilian got up and walked 
+			about for a few hours, before feeling the need to let you back out. 
+			Finding a good bush to crouch down next to, the raptor girl lifted her 
+			tail up and squatted down, her tight pink pucker flexing open as she let out
+			a long moan, a your body giving her one last bit of pleasure as she squeezed 
+			your shitty remains out of her rump, wetly plopping down against the grassy 
+			ground, with only a few bits of bones sticking out of pile of raptor poop to 
+			identify you. Your predator, satisfied with what her gut has done to you, 
+			walks off to go finger herself to the pleasurable thoughts of eating, digesting, 
+			and dumping out more cuteys like you.
 		</text>
 	</gameover>
 
@@ -273,6 +338,9 @@
 			apart layer by layer.
 		</text>
 		<choice destination="submitGO" text="get digested" />
+		<choice destination="submitGO" text="get digested (disposal)">
+		<preference fetish="disposal" />
+		</choice>
 	</page>
 
 	<gameover ID="submitGO">
@@ -294,6 +362,33 @@
 			perhaps the end that you could of foreseen, but it's
 			the end you
 			chose in the end.
+		</text>
+	</gameover>
+	
+	<gameover ID="submitGOdisposal">
+		<text>
+			The raptor girl remained seated and stroking, both of you losing
+			track
+			of time. Probably she can't put a finger on when you
+			transitioned
+			from digesting prey to nourishing soup within her but it
+			happens all
+			the same as your relaxed form breaks down and sloshes
+			about. Her gut
+			gradually turning round and smooth instead of bulgy and
+			contoured and
+			it shrinks back down. Your body given to her utterly,
+			nothing more
+			than fuel to nourish and sustain the predatory femme
+			lizard. The lazy raptor girl eventually fell asleep, laying 
+			back on the ground as her body used up all of the slurry you 
+			had become, leaving only solid fecal matter collecting in her anus.
+			Without even getting up, just scooting her tail to the side as her pucker 
+			flexed and started to squeeze out a single long brown log of reptilian scat, 
+			plopping down into a thick and steaming pile right under her ass. After basking 
+			in the glow of the pleasurable release of you, the lazy raptor girl got up, kicking 
+			some dirt over the pile of waste, and walking away.
+			
 		</text>
 	</gameover>
 

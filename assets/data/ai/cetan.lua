@@ -30,7 +30,7 @@ end
 function combat(controllable,sense,pos,hostile)
 	a=controllable:getValue(0)
 	b=controllable:getHealth()
-	if (a>15 or b<40) then
+	if (a>s or b<40) then
 		attack(controllable,sense,pos,hostile)
 		
 	else		
@@ -51,7 +51,7 @@ function main(controllable, sense, script)
 
 	else
 		b=controllable:getValue(0);
-		if (b>0) then
+		if (b>0 and b<15) then
 			controllable:setValue(0,b-1);
 			controllable:setValue(1,0)		
 		end

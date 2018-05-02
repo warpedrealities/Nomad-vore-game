@@ -90,6 +90,8 @@
 						<loot item="explosive grenade" chance="1.0" />
 						<loot item="capture device" chance="1.0" />	
 						<loot item="explosive grenade" chance="1.0" />
+						<loot item="mule" chance="1.0" />		
+						<loot item="harness" chance="1.0" />		
 					</lootTable>				
 				</contains>
 			</placeWidget>
@@ -99,7 +101,7 @@
 			</placeWidget>
 
 			<placeWidget x="1" y="1" name="slot">
-				<contains name="modules/fueltank">
+				<contains name="modules/interplanetary reactor">
 					<resource type="FUEL" value="150" />
 				</contains>
 			</placeWidget>

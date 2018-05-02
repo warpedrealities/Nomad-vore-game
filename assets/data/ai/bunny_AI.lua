@@ -1,6 +1,6 @@
 
-function combat(controllable,sense,pos)
-	if (hostile:getPosition().getDistance(pos)<2) then
+function combat(controllable,sense,pos,hostile)
+	if (hostile:getPosition():getDistance(pos)<2) then
 		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
 	else
 		if controllable:HasPath() then

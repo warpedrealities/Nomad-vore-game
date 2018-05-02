@@ -45,6 +45,7 @@ public class NpcShipControllerSense {
 	
 	public void spawnBoarders(String [] filenames)
 	{
+		
 		new BoardingHelper(getPlayer()).addNPCs(filenames);
 	}
 	

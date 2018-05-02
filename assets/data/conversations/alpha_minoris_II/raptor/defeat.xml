@@ -220,6 +220,9 @@
 			a condescending pat for her from you her conqueror.
 		</text>
 		<choice destination="meal3" text="she's a meal, and meals get digested" />
+		<choice destination="meal3disposal" text="she's a meal, and meals get digested into crap">
+		<preference fetish="disposal" />
+		</choice>
 	</page>
 
 	<page ID="meal3">
@@ -231,6 +234,25 @@
 			meal. All her strength now going to fuel your future exploits as your
 			belly softens, rounds out and then slowly shrunk down to nothing.
 			Every sign of the raptor erased or secreted in your veins now.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	
+	<page ID="meal3disposal">
+		<text>
+			The raptor's noisome protests at being made a part of a superior
+			predator amount to naught as they did when she was being consumed.
+			And gradually those fade until the only noise from your middle is the
+			gurgles, churns and glurps of a stomach busily digesting a large
+			meal. All her strength now going to fuel your future exploits as your
+			belly softens, rounds out and then slowly shrunk down to nothing. After a 
+			bit longer, everything that the raptor was and ever will be is pressing up 
+			against your pucker, making you groan and squat down in the open, looking 
+			around with a light blush and hoping nobody sees you as you start to squeeze 
+			the raptor girl back out into the world as several steaming logs of shit, plopping 
+			down into a neat little pile.
 		</text>
 		<effect type="feed" value="95" />
 		<special effect="removenpc" />

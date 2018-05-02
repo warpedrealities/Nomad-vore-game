@@ -5,7 +5,9 @@ import actor.player.Inventory;
 import actor.player.Player;
 import item.instances.ItemCaptureInstance;
 import nomad.Entity;
+import nomad.StarSystem;
 import nomad.universe.Universe;
+import spaceship.Spaceship;
 import view.ViewScene;
 import widgets.WidgetCapture;
 import widgets.WidgetSlot;
@@ -35,10 +37,34 @@ public class CaptureHandler {
 	private Zone getZone(ItemCaptureInstance item) {
 		if (item.getShip() != null) {
 			Zone zone = entity.getZone(item.getShip());
+			
 			if (zone != null) {
 				return zone;
 			}
+			else
+			{
+				return zone=getZoneNearby(item.getShip());
+			}
+				
 		}
+		return null;
+	}
+	
+	private Zone getZoneNearby(String shipName)
+	{
+		StarSystem system=Universe.getInstance().getCurrentStarSystem();
+		Entity entity=Universe.getInstance().getCurrentEntity();
+		for (int i=0;i<system.getEntities().size();i++)
+		{
+			if (system.getEntities().get(i).getName().equals(shipName) &&
+				system.getEntities().get(i).getPosition().getDistance(entity.getPosition())<2)
+			{
+				if (Spaceship.class.isInstance(system.getEntities().get(i)))
+				{
+					return system.getEntities().get(i).getZone(shipName);
+				}
+			}
+		}	
 		return null;
 	}
 

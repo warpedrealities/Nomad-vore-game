@@ -84,7 +84,6 @@ public class Inventory {
 		// check if item is a stack
 		if (item.getClass().getName().contains("Stack")) {
 			Item it = RemoveItemStack(item);
-			// m_weight-=it.getWeight();
 			return it;
 		} else {
 			m_items.remove(item);
@@ -175,6 +174,7 @@ public class Inventory {
 
 		playerCredits = dstream.readInt();
 		playerGold = dstream.readInt();
+
 		recalc();
 	}
 

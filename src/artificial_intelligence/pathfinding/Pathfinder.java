@@ -57,7 +57,7 @@ public class Pathfinder {
 	}
 
 	protected PathNode UpdateClosedList() {
-		float comp = 64;
+		float comp = 999;
 		PathNode p = null;
 		for (int i = 0; i < m_openlist.size(); i++) {
 			if (m_openlist.get(i).m_h < comp) {
@@ -65,6 +65,10 @@ public class Pathfinder {
 				p = m_openlist.get(i);
 
 			}
+		}
+		if (p==null)
+		{
+			System.out.println("failed to add pathnode to closed list"+comp);
 		}
 		return p;
 	}
@@ -111,6 +115,7 @@ public class Pathfinder {
 			}
 			return directions;
 		}
+		System.out.println("no path found");
 		return null;
 	}
 

@@ -470,7 +470,7 @@ public class ZoneBuildTools {
 					}	
 					if (Enode.getTagName() == "auditpathsthroughvoid") {
 						AuditTool tool = new AuditTool(m_zone, pointsOfInterest);
-						int replace = 0;
+						int replace = 0; boolean random=false;
 						if (Enode.getAttribute("replace").length() > 0) {
 							replace = Integer.parseInt(Enode.getAttribute("replace"));
 						}
@@ -478,8 +478,11 @@ public class ZoneBuildTools {
 						if (Enode.getAttribute("exclude").equals("impassable")) {
 							widgetselection = 1;
 						}
+						if (Enode.getAttribute("random").equals("true")) {
+							random=true;
+						}
 						tool.runMakePath(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
-								widgetselection);
+								widgetselection,random);
 					}	
 					if (Enode.getTagName() == "noise") {
 						ngrid = CloneOverlay(grid);
@@ -731,6 +734,7 @@ public class ZoneBuildTools {
 				if (Enode.getTagName() == "auditpathsthroughvoid") {
 					AuditTool tool = new AuditTool(m_zone, pointsOfInterest);
 					int replace = 0;
+					boolean random=false;
 					if (Enode.getAttribute("replace").length() > 0) {
 						replace = Integer.parseInt(Enode.getAttribute("replace"));
 					}
@@ -738,8 +742,11 @@ public class ZoneBuildTools {
 					if (Enode.getAttribute("exclude").equals("impassable")) {
 						widgetselection = 1;
 					}
+					if (Enode.getAttribute("random").equals("true")) {
+						random=true;
+					}
 					tool.runMakePath(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
-							widgetselection);
+							widgetselection,random);
 				}
 				if (Enode.getTagName() == "blockDungeon") {
 					new BlockDungeonGenerator(m_zone, m_tiles).run(Enode);

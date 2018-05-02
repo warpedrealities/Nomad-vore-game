@@ -28,7 +28,7 @@ import actor.npc.NPC;
 import actor.player.CompanionTool;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
-import actorRPG.NPC_RPG;
+import actorRPG.npc.NPC_RPG;
 import actorRPG.player.Player_RPG;
 import dialogue.DialogueHelper;
 import dialogue.worldscript.WorldScript;

@@ -20,7 +20,7 @@
 		<attribute attribute="PARRY" value="4" />		
 		<attribute attribute="WILLPOWER" value="4" />		
 		<combatMove name="charge" pattern="SHORT" bonusAttribute="MELEE"
-			timeCost="4" bonusToHit="4" >
+			timeCost="4" bonusToHit="6" >
 						<effectMovement moveType="SELF_TOWARDS" distance="4"
 				abilityMod="AGILITY" />
 			<effectDamage type="KINETIC" minValue="8" maxValue="14"

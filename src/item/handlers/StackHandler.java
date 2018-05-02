@@ -9,6 +9,11 @@ public class StackHandler {
 
 	public static boolean handleStacking(Item item, List<Item> items)
 	{
+		int amount=1;
+		if (ItemStack.class.isInstance(item))
+		{
+			amount=((ItemStack)item).getCount();
+		}
 		if (item.canStack())
 		{
 			Item c = null;
@@ -18,14 +23,15 @@ public class StackHandler {
 					ItemStack stack = (ItemStack) items.get(i);
 					if (stack.getItem().equals(item.getItem())) {
 
+						
 						// add to stack
-						stack.setCount(stack.getCount() + 1);
+						stack.setCount(stack.getCount() + amount);
 						return true;
 					}
 				} else {
 					if (items.get(i).getItem() == item.getItem()) {
 						items.remove(i);
-						ItemStack stack = new ItemStack(item.getItem(), 1 + 1);
+						ItemStack stack = new ItemStack(item.getItem(), 1 + amount);
 						items.add(stack);
 						return true;
 						// remove this item

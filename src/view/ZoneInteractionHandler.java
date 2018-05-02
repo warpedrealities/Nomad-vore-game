@@ -200,14 +200,15 @@ public class ZoneInteractionHandler {
 							}
 						}
 					} else {
-						widget.Interact(player);
-						player.TakeAction();
 						if (WidgetBreakable.class
 								.isInstance(m_zone.zoneTileGrid[(int) p.x][(int) p.y].getWidgetObject())) {
 							WidgetBreakable w = (WidgetBreakable) m_zone.zoneTileGrid[(int) p.x][(int) p.y]
 									.getWidgetObject();
 							violationCheck(w.getName(), p, ViolationType.Interact);
 						}
+						widget.Interact(player);
+						player.TakeAction();
+
 					}
 
 				} else {

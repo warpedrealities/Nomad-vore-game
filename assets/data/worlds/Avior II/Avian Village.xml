@@ -43,13 +43,18 @@
 		<auditpathsthroughvoid replace="1" carve="5" />	
 		<auditpathsthroughvoid replace="1" carve="6" />	
 		<auditpathsthroughvoid replace="1" carve="7" />		
+		<auditpathsthroughvoid replace="1" carve="5" random="true" />	
+		<auditpathsthroughvoid replace="1" carve="6" random="true"/>	
+		<auditpathsthroughvoid replace="1" carve="7" random="true"/>		
 		<noise tile="5" scarcity="22" />
 		<noise tile="6" scarcity="22" />
 		<noise tile="7" scarcity="22" />		
 		<floodfill tile="4">
 		</floodfill>	
-
-	
+		<POINPC name="avians/avianSlaver" />
+		<POICornerDecorate floor="1">
+			<widgetplacer name="slaveContainment" />
+		</POICornerDecorate>
 	</mapgen>
 
 </zone>

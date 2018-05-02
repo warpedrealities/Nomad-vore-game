@@ -4,13 +4,17 @@ import gui.Button;
 import gui.Text;
 import gui.Window;
 import gui.lists.List;
+import input.Keyboard;
 import input.MouseHook;
 import item.Item;
 import item.ItemCoin;
+import item.instances.ItemStack;
 import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
+
+import org.lwjgl.glfw.GLFW;
 
 import actor.player.Player;
 import shared.Callback;
@@ -43,7 +47,6 @@ public class ContainerScreen extends Screen implements Callback {
 
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc) {
-		// TODO Auto-generated method stub
 		window.Draw(buffer, matrixloc);
 		for (int i = 0; i < 2; i++) {
 			itemLists[i].Draw(buffer, matrixloc);
@@ -90,18 +93,78 @@ public class ContainerScreen extends Screen implements Callback {
 		resetList();
 	}
 
+
+	private void takeStack() {
+		int index = itemLists[1].getSelect();
+
+		if (index < container.getItems().size()) {
+			if (ItemStack.class.isInstance(container.getItems().get(index)))
+			{
+				ItemStack stack=(ItemStack)container.getItems().get(index);
+				container.setContainedWeight(container.getContainedWeight()-stack.getWeight());
+				container.getItems().remove(index);
+				//add to player inventory
+				player.getInventory().AddItem(stack);
+			}
+			else
+			{
+				take();
+			}
+			
+		}
+		
+		resetList();
+	}
+
+	private void putStack() {
+		int index = itemLists[0].getSelect();
+		if (index < player.getInventory().getNumItems()) {
+			if (ItemStack.class.isInstance(player.getInventory().getItem(index)))
+			{
+				ItemStack stack=(ItemStack)player.getInventory().getItems().get(index);
+				player.getInventory().setWeight(player.getInventory().getWeight()-stack.getWeight());
+				player.getInventory().getItems().remove(index);
+				//add to container inventory
+				container.addStack(stack);
+			}
+			else
+			{
+				put();
+			}
+
+		}
+		
+		resetList();
+	}
+	
+	
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-		// TODO Auto-generated method stub
 		switch (ID) {
 
 		case 1:
 			// put
-			put();
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT)||Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT))
+			{
+				putStack();
+			}
+			else
+			{
+				put();		
+			}
+
 			break;
 		case 2:
 			// take
-			take();
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT)||Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT))
+			{
+				takeStack();
+			}
+			else
+			{
+				take();			
+			}
+
 			break;
 		case 3:
 			container.sort();
@@ -159,7 +222,7 @@ public class ContainerScreen extends Screen implements Callback {
 		// 2 button
 		// 3 is button alt
 		// 4 tint
-		window = new Window(new Vec2f(-3, -16), new Vec2f(6, 15), textures[1], true);
+		window = new Window(new Vec2f(-3, -14.4F), new Vec2f(6, 13.4F), textures[1], true);
 
 		itemLists = new List[2];
 		// build inventory left
@@ -189,12 +252,15 @@ public class ContainerScreen extends Screen implements Callback {
 
 		weightValues = new Text[2];
 
-		weightValues[0] = new Text(new Vec2f(-6, 0.2F), "encumbrance", 0.7F, textures[4]);
-		weightValues[1] = new Text(new Vec2f(6, 0.2F), "encumbrance", 0.7F, textures[4]);
+		weightValues[0] = new Text(new Vec2f(-8.4F, -0.5F), "encumbrance", 0.7F, textures[4]);
+		weightValues[1] = new Text(new Vec2f(10, -0.5F), "encumbrance", 0.7F, textures[4]);
 
 		for (int i = 0; i < 2; i++) {
 			window.add(weightValues[i]);
 		}
+		
+		Text text=new Text(new Vec2f(-6.0F, -0.5F), "hold shift to move stacks", 0.7F, textures[4]);
+		window.add(text);
 		resetList();
 	}
 

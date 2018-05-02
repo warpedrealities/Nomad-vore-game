@@ -32,8 +32,8 @@ import faction.FactionLibrary;
 import faction.violation.FactionRule.ViolationType;
 
 import actorRPG.Actor_RPG;
-import actorRPG.NPC_RPG;
 import actorRPG.RPGActionHandler;
+import actorRPG.npc.NPC_RPG;
 import actorRPG.player.Player_RPG;
 import artificial_intelligence.BrainBank;
 import artificial_intelligence.Code_AI;
@@ -388,7 +388,8 @@ public class NPC extends Actor implements Controllable {
 			LuaValue factionlibrary = CoerceJavaToLua.coerce(FactionLibrary.getInstance());
 			LuaValue player = CoerceJavaToLua.coerce(Universe.getInstance().getPlayer());
 			LuaValue mainFunc = globals.get("main");
-			mainFunc.call(factionlibrary, player);
+			LuaValue view=CoerceJavaToLua.coerce(ViewScene.m_interface);
+			mainFunc.call(factionlibrary, player,view);
 
 		} catch (Exception e) {
 			e.printStackTrace();

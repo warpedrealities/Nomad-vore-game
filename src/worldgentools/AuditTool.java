@@ -114,13 +114,17 @@ public class AuditTool {
 		}
 	}
 	public void runMakePath(int tunneledTile, boolean widgets, boolean npcs, boolean pointsOfInterest, int replace,
-			int exclude) {
+			int exclude, boolean random) {
 		createPoints(widgets, npcs, pointsOfInterest, exclude,replace);
 		ArrayList<Vec2i> unreachedpoints = new FloodPathfinder(zone).runFlood(points);
 		if (unreachedpoints.size() > 0) {
 			ArrayList<Vec2i> reachable = new ArrayList<Vec2i>(points);
 			reachable.removeAll(unreachedpoints);
-			new VoidPathfinder(zone, tunneledTile).run(reachable, unreachedpoints, replace);
+			new VoidPathfinder(zone, tunneledTile).run(reachable, unreachedpoints, replace,random);
+			unreachedpoints= new FloodPathfinder(zone).runFlood(points);
+			if (unreachedpoints.size() > 0) {
+				new VoidPathfinder(zone, tunneledTile).run(reachable, unreachedpoints, replace,random);			
+			}
 		}
 	}
 }

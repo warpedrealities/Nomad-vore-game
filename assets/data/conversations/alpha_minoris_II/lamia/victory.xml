@@ -174,6 +174,9 @@
 			body, and those digestive fluids get to work.
 		</text>
 		<choice destination="gameover" text="digested" />
+		<choice destination="gameoverDisposal" text="disposed" >
+		<preference fetish="disposal" />		
+	</choice>
 	</page>
 
 	<page ID="submit">
@@ -200,6 +203,9 @@
 			low oxygen supply.
 		</text>
 		<choice destination="gameover" text="digested" />
+		<choice destination="gameoverDisposal" text="disposed" >
+		<preference fetish="disposal" />		
+	</choice>
 	</page>
 
 	<gameover ID="gameover">
@@ -214,6 +220,19 @@
 			nutrients,
 			set to become a part of something much greater than you
 			once were.
+		</text>
+	</gameover>
+	
+	<gameover ID="gameoverDisposal">
+		<text>
+			Your new identity as a lump was short lived, and in a few quick
+			hours,
+			your body digested away into nutrients for the lamia, and any
+			sign of
+			a meal in her tail was long gone. The lamia was free to fight
+			another
+			day, with you being nothing more than a pool of delicious
+			nutrients, your body getting absorbed into her and becoming a part of her coils. Soon, she lifted her tail, and anal slit located near the end of her tail flexing open as she started to let loose, all the bits of your form she couldn't absorb getting squeezed out as a single steaming log of poop, curling up into a neat pile as she sighed contently and slithered away, your body going from being coiled up by her tail, to a coil of poop squeezed out of her tail.
 		</text>
 	</gameover>
 

@@ -83,6 +83,9 @@
 		your control and within your power.
 		</text>
 		<choice destination="analvore3" text="Digest her, of course."/>
+		<choice destination="analvore3Disposal" text="Absorb her directly into your ass..">
+		<preference fetish="disposal" />		
+	</choice>
 	</page>
 	
 	<page ID="analvore3">
@@ -94,6 +97,15 @@
 			her body softens then eventually melts and smoothens out into a nice, nourishing soup within you which
 			shall fuel you as her body works back the way she came, seeping through your innards and being absorbed 
 			gradually yet efficiently into your being.
+		</text>
+		<effect type="feed" value="80" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Carry on." />	
+	</page>
+	
+	<page ID="analvore3Disposal">
+		<text>
+			With the fawn girl still wiggling and squirming inside of your intestines, you moan and clench them tighter and tighter, feeling her body getting softer and softer, squishing quite lewdly inside of you as her form began to lose shape and definition, instead starting to become more cylindrical and brown, her struggles slowing, then stopping, as you patted your belly a few times, grinning to yourself as you felt your ass successfully convert half of the cute doe into nutrients for your body, and the other half directly into a turd for you to squeeze out of your ass. After a few minutes, you squat down and grunt softly, starting to feel your pucker spread back open as the fawn's shitty remains slip back out, plopping into a steaming uniform pile on the ground.
 		</text>
 		<effect type="feed" value="80" />
 		<special effect="removenpc" />
@@ -238,15 +250,35 @@
 			is the natural order of things.
 		</text>
 		<choice destination="oralvore3" text="Let her become one with her superior." />
+		<choice destination="oralvore3Disposal" text="Let her become a dump for her superior.">
+		<preference fetish="disposal" />		
+	</choice>
 	</page>
 
 	<page ID="oralvore3">
 		<text>
 			She resists your digestive system about as well as she resisted your
-			other plans for her. Pitiful fussing cedes to deigestion in record time
+			other plans for her. Pitiful fussing cedes to digestion in record time
 			as your churning stomach breaks her down. The bulge of her darling
 			form softens up and rounds out before shrinking away as she takes
 			her rightful place as your food.
+		</text>
+		<effect type="feed" value="80" />
+		<special effect="removenpc" />
+		<choice destination="end" text="What a delicious snack." />
+	</page>
+	
+	<page ID="oralvore3Disposal">
+		<text>
+			She resists your digestive system about as well as she resisted your
+			other plans for her. Pitiful fussing cedes to digestion in record time
+			as your churning stomach breaks her down. The bulge of her darling
+			form softens up and rounds out before shrinking away as she takes
+			her rightful place as your food. After a bit longer, you find a good 
+			grassy spot to let the fawn back out, thrusting your ass out as your ass 
+			cheeks spread open and the fawn's remains slide out and plop on to the forest 
+			floor, fertilizing it with your waste and ensuring more fawns will be able to eat 
+			and grow up to be consumed by you, continuing the cycle.
 		</text>
 		<effect type="feed" value="80" />
 		<special effect="removenpc" />

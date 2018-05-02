@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<intro count="6">
+<intro count="7">
 	<text>
 		Your health bar (red, topmost) is your resistance to being taken
 		as
@@ -99,6 +99,13 @@
 		page 5 (d or right to move to next page, a or left to move to the
 		prior
 		page)
+	</text>
+	<text>
+	In combat there are six damage types in total. 3 of them affect health, 3 affect seduction. 
+	LBREAK
+	Kinetic, thermal and shock damage affect health
+	LBREAK
+	tease, pheremone and psychic affect resolve
 	</text>
 	<text>
 		In space mode you can move using similar controls to on the

@@ -14,7 +14,7 @@
 			</removeText>
 		</statusAttribMod>
 		<statusSubAbilityMod uid="25" duration="200" numModifiers="1">
-		<effect attribute="CARRY" modifier="4"/>
+		<effect attribute="CARRY" modifier="400"/>
 		</statusSubAbilityMod>
 	</effectstatus>
 

@@ -2,12 +2,12 @@
 <perk name="mighty boot">
 	<description>
 		By judicious application of the mighty boot you can send your foes
-		flying away from you with a mighty kick. Be mighty!
+		flying away from you with a mighty kick. Be mighty! 6AP to use
 	</description>
 	<move count="1">
 		<combatmove name="mighty boot" bonusAttribute="MELEE"
-			timeCost="2" bonusToHit="4" cooldown="100" icon="5" pattern="MELEE"
-			actionCost="4" moveType="MOVEMENT">
+			timeCost="2" bonusToHit="4" cooldown="50" icon="5" pattern="MELEE"
+			actionCost="6" moveType="MOVEMENT">
 			<missText count="1">
 				<text>you fail to land a mighty kick on TARGET .</text>
 			</missText>

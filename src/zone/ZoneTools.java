@@ -49,7 +49,7 @@ public class ZoneTools {
 			Vec2f p = new Vec2f(landingSite.x - (sw / 2), landingSite.y - (sh / 2));
 			if (zone.getTiles() != null) {
 				if (LandingLocationSizeCheck(width, height, (int) p.x, (int) p.y, zone)) {
-					return new Vec2f(zone.getLandingSite().x, zone.getLandingSite().y);
+					return new Vec2f(p.x, p.y);
 				}
 			} else {
 				return new Vec2f(zone.getLandingSite().x, zone.getLandingSite().y);

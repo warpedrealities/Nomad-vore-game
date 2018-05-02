@@ -14,6 +14,7 @@ import spaceship.Spaceship.ShipState;
 import spaceship.stats.SpaceshipAnalyzer;
 import view.ViewScene;
 import vmo.Game;
+import widgets.Widget;
 import zone.Zone;
 import zone.TileDef.TileMovement;
 import zone.Zone.zoneType;
@@ -202,5 +203,54 @@ public class CapsuleBehaviour {
 
 	public WidgetCapsuleSystem getCapsule() {
 		return capsule;
+	}
+
+	public boolean retrieve() {
+		if (inRange() && inSpace())
+		{
+			if (findCapsule())
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean findCapsule()
+	{
+		for (int i=0;i<world.getNumZones();i++)
+		{
+			if (world.getZone(i)!=null && world.getZone(i).getTiles()!=null)
+			{
+				if (findCapsule(world.getZone(i)))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	private boolean findCapsule(Zone zone) {
+		for (int i=0;i<zone.getWidth();i++)
+		{
+			for (int j=0;j<zone.getHeight();j++)
+			{
+				if (zone.getTile(i, j)!=null && zone.getTile(i, j).getWidgetObject()!=null)
+				{
+					Widget w=zone.getTile(i, j).getWidgetObject();
+					if (WidgetCapsule.class.isInstance(w))
+					{
+						WidgetCapsule wc=(WidgetCapsule)w;
+						if (wc.getSpaceship().equals(spaceship.getshipName()))
+						{
+							zone.getTile(i, j).setWidget(null);
+							return true;
+						}
+					}
+				}
+			}
+		}
+		return false;
 	}
 }
