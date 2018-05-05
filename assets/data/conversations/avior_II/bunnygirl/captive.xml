@@ -5,17 +5,40 @@
 	<text>
 	The bunnygirl is disgorged from containment and looks to you fearfully, she seems uncertain what you have in store for her. But she's far from looking forward to it.
 	</text>
-<!-- 	<choice destination="oralvore0" text="she's going to be a snack">
+	<choice destination="oralvore0" text="she's going to be a snack">
 				<assertion evaluate="hasperk" perk="oralvore" />	
-	</choice> -->
+	</choice>
 	<choice destination="end" text="return her to containment"/>
 	</page>
 
 	<page ID="oralvore0">
 	<text>
-	
+	The bunnygirl sees your licking lips and looks around furtively. But her only way out of here is through you, and she's not going to make that trip intact. So as she lunges past you you make it a point to quickly snag her arms, guiding her hands to your lips as you get between her and what she thinks is freedom. The bunnygirl's momentum such that by the time she lets out a yelp and tries to struggle back away from you she's already forearm deep in your mouth, her hands squeezed over and tugged on by your hungry throat. The tastey flavour of your sexy bunny meal flooding your mouth as her squirmings rub her arms back and forth over your tongue and you take your first proper swallows of her.
 	</text>
+	<choice destination="oralvore1" text="*gobble her up*"/>
+	</page>
 	
+	<page ID="oralvore1">
+	<text>
+	The delicious bunnygirl finds herself hoisted up off the floor as you grab her around her tastey hips and toned derriere and lift her up. Her petite breasts and trim middle are things you make fast work of as you eat her alive. Her mouthwateringly delectible thighs flex ahead of you as her legs kick about in the air in a way that is as futile as it is pleasing. Her upper body serving to stretch out your belly with her struggling shape as you work more and more of her down. Her honeypot like the rest of her proving yours to sample and savour as you please, her confused, aroused and distressed squeels that such an act elicits adding to your enjoyment of her flavour.
+	</text>
+	<choice destination="oralvore2" text="*completely devour her*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Your hearty swallows work the bunny down your throat and constrain her kicking legs. Only able to kick from the knees down now as you swallow up her wonderful thighs. Her hands shoving out at your insides meanwhile are simply delightful, her struggles serving only to heighten your satisfaction as you work to finish her off. Your gut bulging and stretching and filling until its a nice lumpy roundness for you to trace your hands over. The bunny utterly entrapped within you now, her limbs pressing against the insides of your belly as you rub over her shape possessively from the outside.
+	</text>
+	<choice destination="oralvore3" text="*and now, to digest her*"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	With such a delightful meal you really can't help but make her entirely yours. The bunny girl lets out a squeel as you start to work her over with your digestive enzymes. Her squirms only stimulating your digestive processes as you break down her struggling form. Her jostling movements eventually settling down as you digest away her ability to struggle. Her form turning soft and liquid as you melt her up until you can set about absorbing her. The bunny girl proving a fitting meal for you, just the sort of thing you needed.
+	</text>
+		<effect type="feed" value="100" />
+		<special effect="removeCaptive" />
+		<choice destination="end" text="Carry on." />
 	</page>
 	
 </Conversation>
