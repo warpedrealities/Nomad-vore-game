@@ -176,6 +176,46 @@ public class List extends GUIBase implements Callback {
 		return false;
 	}
 
+	@Override
+	public boolean scrollEvent(Vec2f pos, double scroll)
+	{
+
+		if (m_strings != null) {
+			// figure out position
+			if (pos.x > m_corner.x && pos.x < m_corner.x + (m_size.x * 0.7F)) {
+				if (pos.y > m_corner.y && pos.y < m_corner.y + m_size.y) {
+
+					if (scroll>0)
+					{
+						m_offset+=scroll;
+						if (m_offset>m_strings.length-1)
+						{
+							m_offset=m_strings.length-1;
+						}		
+						GenFonts();
+						m_delay = 0.2F;
+						slider.setIndex(m_offset);
+					
+					}
+					else
+					{
+						m_offset+=scroll;
+						if (m_offset<0)
+						{
+							m_offset=0;
+						}
+						GenFonts();
+						m_delay = 0.2F;
+						slider.setIndex(m_offset);
+				
+					}
+					return true;
+				}
+			}
+		}
+		return false;		
+	}
+	
 	public void GenList(String[] strings) {
 		m_strings = strings;
 

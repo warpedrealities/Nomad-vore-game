@@ -113,7 +113,7 @@
 			<spawnLimit value="6" />
 			<script value="alphaminorisbattlespawns" />
 			<spawns count="1">
-				<data npc="minoris2_elves/elfraider" min="2" max="4"
+				<data npc="minoris2_elves/elfraider" min="3" max="5"
 					chance="50" />
 			</spawns>
 		</placeWidget>						

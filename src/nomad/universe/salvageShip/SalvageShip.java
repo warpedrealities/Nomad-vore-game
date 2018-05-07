@@ -8,6 +8,7 @@ import java.io.IOException;
 import shared.ParserHelper;
 import shipsystem.WidgetNavConsole;
 import spaceship.Spaceship;
+import widgets.WidgetReformer;
 import widgets.WidgetSlot;
 import zone.Zone;
 
@@ -37,10 +38,18 @@ public class SalvageShip {
 						&& WidgetSlot.class.isInstance(z.getTile(i, j).getWidgetObject()))
 				{
 					WidgetSlot ws=(WidgetSlot)z.getTile(i, j).getWidgetObject();
-					if (ws.getWidget()!=null && WidgetNavConsole.class.isInstance(ws.getWidget()))
+					if (ws.getWidget()!=null)
 					{
-						hasNavigation=true;
-						break;
+						if (WidgetNavConsole.class.isInstance(ws.getWidget()))
+						{
+							hasNavigation=true;
+							
+						}
+						if (WidgetReformer.class.isInstance(ws.getWidget()))
+						{
+							WidgetReformer wr=(WidgetReformer)ws.getWidget();
+							wr.setActive(false);
+						}
 					}
 				}
 			}

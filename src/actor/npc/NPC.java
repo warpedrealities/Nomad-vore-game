@@ -883,6 +883,7 @@ public class NPC extends Actor implements Controllable {
 				LuaValue returnVal = mainFunc.call(factionlibrary, player);
 				evaluatedScriptValue = (boolean) CoerceLuaToJava.coerce(returnVal, Boolean.class);
 			} catch (Exception e) {
+				System.out.println("script name"+ scripts.getIsSpawnable());
 				e.printStackTrace();
 			}
 			if (evaluatedScriptValue == true) {

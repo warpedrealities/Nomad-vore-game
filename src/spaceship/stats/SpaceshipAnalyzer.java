@@ -267,6 +267,7 @@ public class SpaceshipAnalyzer {
 						shipres.get(j).setAmountContained(shipres.get(j).getContainedCapacity());
 					} else {
 						shipres.get(j).setAmountContained(v);
+						v=0;
 					}
 				}
 			}

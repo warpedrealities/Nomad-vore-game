@@ -9,6 +9,7 @@ import nomad.Entity;
 import nomad.StarSystem;
 import nomad.universe.Universe;
 import shared.Vec2f;
+import spaceship.Spaceship;
 import view.ZoneInteractionHandler;
 import widgets.Widget;
 import widgets.WidgetItemPile;
@@ -195,7 +196,8 @@ public class ReformationTool {
 		Universe.getInstance().getCurrentZone().getTile((int)origin.x,(int)origin.y).setActorInTile(null);;
 		Universe.getInstance().getPlayer().setPosition(new Vec2f(destination.x,destination.y));
 		Universe.getInstance().setZone(zone);
-		Universe.getInstance().setCurrentEntity(zone.getZoneEntity());
+		//Universe.getInstance().setCurrentEntity(zone.getZoneEntity());
+		setEntity();
 		//set health, resolve and satiation to 50%
 		for (int i=0;i<3;i++)
 		{
@@ -205,5 +207,17 @@ public class ReformationTool {
 			}
 		}
 
+	}
+	
+	private void setEntity()
+	{
+		if (Spaceship.class.isInstance(zone.getZoneEntity()))
+		{
+			Universe.getInstance().setCurrentEntity(Universe.getInstance().getCurrentWorld((Spaceship)zone.getZoneEntity()));
+		}
+		else
+		{
+			Universe.getInstance().setCurrentEntity(zone.getZoneEntity());		
+		}
 	}
 }

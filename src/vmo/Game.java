@@ -176,10 +176,9 @@ public class Game implements SceneManager {
 		m_currentscene = new Menu(var);
 		SceneBase.setVariables(var);
 
-		mouseInput = new MouseHook(openGLWindow);
-		glfwSetCursorPosCallback(openGLWindow, mouseInput);
 		GL11.glDepthFunc(GL_LEQUAL);
 		mouseInput = new MouseHook(openGLWindow);
+		GLFW.glfwSetScrollCallback(openGLWindow, mouseInput.getScroll());
 		glfwSetCursorPosCallback(openGLWindow, mouseInput);
 		GL11.glDepthFunc(GL_LEQUAL);
 		m_currentscene.start(mouseInput);

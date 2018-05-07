@@ -29,24 +29,30 @@ end
 
 function victimize(controllable,victim)
 	if pos:getDistance(victim:getPosition())<2 then
+		print("devour")
 		controllable:startVoreScript("elf_raider_saurian_raider_OV", victim)
+		script:setValue(4,50)	
 	else
 			if controllable:HasPath() then
 				controllable:FollowPath()
+				print("haspath")
 			else
 				controllable:Pathto(victim:getPosition().x,victim:getPosition().y,8)
+				print("pathto")
 			end		
 	end
 
 end
 
 function shouldPatrol(controllable,sense,script)
-	a=script:getValue(3)
-	if not (a>0) then
+	waitTime=script:getValue(3)
+	voreChance=script:getValue(4)
+	if not (waitTime>0) then
 		patrol(controllable,sense,script)
-	else if (math.random(10)==0) then
-		victim=sense:getVictim(controllable,8,true,"elf warrior",false)
+	else if (voreChance==0) then
+		victim=sense:getVictim(controllable,8,true,"saurian warrior",false)
 		if not (victim==nil) then
+			print("victimize")
 			victimize(controllable,victim)	
 		end
 	end
@@ -58,9 +64,9 @@ function patrol(controllable,sense,script)
 	var_time=var_time+1
 	var_x=script:getValue(1)
 	var_y=script:getValue(2)
-	if (var_time>300) then
-		x=math.random(0,64)
-		y=math.random(0,64)
+	if (var_time>300) or (var_time==0) then
+		x=math.random(0,63)
+		y=math.random(0,63)
 		if sense:CanWalk(x,y) then
 			var_x=x
 			var_y=y
@@ -71,28 +77,35 @@ function patrol(controllable,sense,script)
 		script:getShared():setValue(1,var_y)		
 		var_time=0
 	else
-		if controllable:HasPath() then
-		controllable:FollowPath()
-		else
-		controllable:Pathto(var_x,var_y)
+		if (var_x>0) then
+			if controllable:HasPath() then
+			controllable:FollowPath()
+			else
+			controllable:Pathto(var_x,var_y)
+			end
 		end
-	
 	end
 	
 	script:setValue(0,var_time)
 end
 
 function tick(script)
-	a=script:getValue(0)
-	a=a+1
-	script:setValue(0,a)
+	var_time=script:getValue(0)
+	var_time=var_time+1
+	script:setValue(0,var_time)
 	
-	a=script:getValue(3)
-	if (a>0) then
-	a=a-1
-	script:setValue(0,a)		
+	waitTime=script:getValue(3)
+	if (waitTime>0) then
+	waitTime=waitTime-1
+	script:setValue(3,waitTime)		
 	end
 
+	voreTime=script:getValue(4)
+	if (voreTime>0) then
+	voreTime=voreTime-1
+	script:setValue(4,voreTime)		
+	end		
+	
 end
 
 function main(controllable, sense, script)  

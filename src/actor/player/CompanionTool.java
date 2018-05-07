@@ -127,6 +127,7 @@ public class CompanionTool {
 	}
 
 	public static void removePassenger(NPC npc, Spaceship ship) {
+		ship.getZone(0).getTile((int)npc.getPosition().x,(int)npc.getPosition().y).setActorInTile(null);
 		WidgetPortal portal = ship.getZone(0).getPortalWidget(-101);
 		if (portal.getTarget() != null) {
 			Zone zone = Universe.getInstance().getCurrentEntity().getZone(portal.getTarget());

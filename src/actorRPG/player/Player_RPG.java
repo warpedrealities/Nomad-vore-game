@@ -302,6 +302,15 @@ public class Player_RPG implements Actor_RPG {
 
 	public void rest(int duration) {
 
+		if (regenDelay>0)
+		{
+			duration-=regenDelay;
+			if (duration<=0)
+			{
+				return;
+			}
+		}
+		
 		stats[SATIATION]-=subAbilities[METABOLISM]*duration;
 		if (stats[SATIATION]<=0)
 		{
@@ -404,14 +413,15 @@ public class Player_RPG implements Actor_RPG {
 					stats[SATIATION]-=REGENCOST;		
 				}			
 			}		
+			if (stats[RESOLVE]<statMax[RESOLVE])
+			{
+				float bonus=((float)statMax[RESOLVE])/30;
+				stats[RESOLVE]+=0.05F*bonus;	
+			}
 		}
 
 
-		if (stats[RESOLVE]<statMax[RESOLVE])
-		{
-			float bonus=((float)statMax[RESOLVE])/30;
-			stats[RESOLVE]+=0.05F*bonus;	
-		}
+
 		statusEffectHandler.update(1, this);
 		
 		cooldownHandler.update(1);

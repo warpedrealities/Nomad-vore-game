@@ -4,7 +4,7 @@
 		<tile sprite="1" vision="1" movement="2"> rock wall</tile>
 		<tile sprite="2" vision="0" movement="0"> dusty cave floor </tile>
 		<tile sprite="3" vision="1" movement="2"> a rock boulder</tile>
-		<tile sprite="4" vision="0" movement="0"> path</tile>	
+		<tile sprite="2" vision="0" movement="0"> dusty cave floor</tile>	
 	</tileset>
 
 	<description>The air is stale, the caves are poorly lit and alive with

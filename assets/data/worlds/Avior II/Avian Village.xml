@@ -53,7 +53,7 @@
 		</floodfill>	
 		<POINPC name="avians/avianSlaver" />
 		<POICornerDecorate floor="1">
-			<widgetplacer name="slaveContainment" />
+			<widgetplacer name="specimenContainmentFake" />
 		</POICornerDecorate>
 	</mapgen>
 

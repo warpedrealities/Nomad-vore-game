@@ -453,9 +453,17 @@ public class Zone implements ILosBoard, Zone_int {
 	public void AddPlayer(Player player) {
 		boolean b = true;
 		for (int i = 0; i < zoneActors.size(); i++) {
-			if (zoneActors.get(i) == player) {
-				b = false;
-				break;
+			if (Player.class.isInstance(zoneActors.get(i))) {
+				if (player.equals(zoneActors.get(i)))
+				{
+					b = false;
+					break;	
+				}
+				else
+				{
+					zoneActors.remove(i);
+					break;			
+				}
 			}
 		}
 		if (b == true) {

@@ -77,7 +77,7 @@ public class FloodPathfinder {
 				unreachable.add(points.get(i));
 			}
 		}
-		System.out.println("tiles reached "+tilesReached+" unreachable positions "+unreachable.size());
+
 		return unreachable;
 	}
 

@@ -71,9 +71,9 @@
 		<row>00111100</row>
 		<row>00000000</row>
 		<pairedportal x="2" y="1" sprite="1" ID="-101"
-			destination="heavycomplete" facing="4"> ship hatch </pairedportal>
+			destination="heavyComplete" facing="4"> ship hatch </pairedportal>
 		<pairedportal x="5" y="1" sprite="1" ID="-102"
-			destination="heavycomplete" facing="4"> ship hatch </pairedportal>
+			destination="heavyComplete" facing="4"> ship hatch </pairedportal>
 
 	</exterior>
 </Ship>

@@ -6,6 +6,7 @@ import static org.lwjgl.glfw.GLFW.glfwGetMouseButton;
 import java.util.Vector;
 
 import org.lwjgl.glfw.GLFWCursorPosCallback;
+import org.lwjgl.glfw.GLFWScrollCallbackI;
 
 import shared.Clickable;
 import shared.Vec2f;
@@ -20,7 +21,8 @@ public class MouseHook extends GLFWCursorPosCallback {
 	private Vec2f lastPosition;
 	private Vec2f mouseDelta;
 	private long openGLWindow;
-
+	private ScrollHandler scrollHandler;
+	
 	static public MouseHook getInstance() {
 		return instance;
 	}
@@ -36,6 +38,7 @@ public class MouseHook extends GLFWCursorPosCallback {
 		m_position = new Vec2f(0, 0);
 		mouseDelta = new Vec2f(0, 0);
 		lastPosition = new Vec2f(0, 0);
+		scrollHandler=new ScrollHandler();
 	}
 
 	public Vec2f getPosition() {
@@ -92,6 +95,15 @@ public class MouseHook extends GLFWCursorPosCallback {
 		} else {
 			m_clickenabled = true;
 		}
+		if (scrollHandler.isScrolled())
+		{
+			for (int i = 0; i < m_clickables.size(); i++) {
+				if (m_clickables.get(i).scrollEvent(m_position,scrollHandler.getScroll())) {
+					scrollHandler.setScroll(0);
+					break;
+				}
+			}		
+		}
 	}
 
 	public boolean IsEnabled() {
@@ -115,6 +127,10 @@ public class MouseHook extends GLFWCursorPosCallback {
 			return true;
 		}
 		return false;
+	}
+
+	public ScrollHandler getScroll() {
+		return scrollHandler;
 	}
 
 }

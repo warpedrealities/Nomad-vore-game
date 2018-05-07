@@ -15,7 +15,7 @@
 	<description>
 
 	</description>
-	<transition direction="west">Zone 2C</transition>	
+	<transition direction="east">Zone 2C</transition>	
 	<mapgen>
 		<partition xmin="24" xmax="40" ymin="24" ymax="40">
 			<floodfill tile="1">
@@ -45,7 +45,7 @@
 		</perlin>			
 		<noise tile="4" scarcity="12" />		
 		<floodfill tile="1" />		
-		<walloff wall="6" sides="northwesteast" />	
+		<walloff wall="6" sides="northwestsouth" />	
 	</mapgen>
 
 </zone>

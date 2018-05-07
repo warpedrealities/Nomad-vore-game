@@ -1,6 +1,7 @@
 package gui;
 
 import input.Keyboard;
+import input.MouseHook;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
@@ -117,7 +118,20 @@ public class TextView extends GUIBase {
 
 				keyTimer = 0.2F;
 			}
-
+		}
+		if (MouseHook.getInstance().getScroll().isScrolled())
+		{
+			textScrollOffset+=MouseHook.getInstance().getScroll().getScroll();
+			if (textScrollOffset > displayStrings.size() - 16) {
+				textScrollOffset=displayStrings.size() - 16;;
+			}
+			if (textScrollOffset < 0) {
+				textScrollOffset=0;
+			
+			}
+			
+			BuildStrings();
+			MouseHook.getInstance().getScroll().setScroll(0);
 		}
 		if (keyTimer > 0) {
 			keyTimer -= DT;
