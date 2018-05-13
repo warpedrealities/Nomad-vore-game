@@ -9,7 +9,16 @@
 	<item value="jumpsuit" />
 	<item value="medkit" />	
 	<item value="space meal" />		
-	
+	<item value="explosive grenade" />	
+	<item value="explosive grenade" />		
+	<item value="explosive grenade" />	
+	<item value="explosive grenade" />	
+	<item value="explosive grenade" />	
+	<item value="explosive grenade" />	
+	<item value="explosive grenade" />	
+	<item value="explosive grenade" />	
+	<item value="explosive grenade" />	
+	<item value="explosive grenade" />	
 	<appearance>
 		<bodypart partname="body">
 			<partvalue variablename="height" value="60" />

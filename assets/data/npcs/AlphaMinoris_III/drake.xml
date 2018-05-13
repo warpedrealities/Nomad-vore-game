@@ -41,6 +41,7 @@
 	<seduced conversation="alpha_minoris_III/drake/defeat" />
 	<victory conversation="alpha_minoris_III/drake/victory" />
 	<seducer conversation="alpha_minoris_III/drake/victory" />
+	<talk conversation="alpha_minoris_III/drake/microvore" />		
 	<controller AI="drake" />
 	<faction value="monster" />
 </NPC>

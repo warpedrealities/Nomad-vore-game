@@ -25,6 +25,7 @@ import shipsystem.ShipConverter;
 import shipsystem.ShipDispenser;
 import shipsystem.ShipResource;
 import shipsystem.WidgetSystem;
+import shipsystem.resourceConversion.ResourceConversionHandler;
 import widgets.WidgetContainer;
 
 public class SystemScreen extends Screen implements Callback {
@@ -151,35 +152,31 @@ public class SystemScreen extends Screen implements Callback {
 						resetList();
 					}
 				}
-
 			}
 		}
-
 	}
 
 	private boolean trythis(Item item) {
 		// check if item is a conversion
-		if (resourceObj.getResourceConversions().size() > 0) {
-			for (int i = 0; i < resourceObj.getResourceConversions().size(); i++) {
-				if (resourceObj.getResourceConversions().get(i).getItemName().equals(item.getItem().getName())) {
-					// remove item
-					if (ItemDepletableInstance.class.isInstance(item)) {
-						ItemDepletableInstance idi = (ItemDepletableInstance) item;
-						ItemHasEnergy ihe = (ItemHasEnergy) idi.getItem();
-
-						float ratio = (float) idi.getEnergy() / ihe.getEnergy().getMaxEnergy();
-						resourceObj.addResource(resourceObj.getResourceConversions().get(i).getItemValue() * ratio);
-					} else {
-						resourceObj.addResource(resourceObj.getResourceConversions().get(i).getItemValue());
-					}
-
-					player.getInventory().RemoveItem(item);
-					return true;
-
-				}
+		ResourceConversionHandler handler=ResourceConversionHandler.getInstance();
+		if (handler.canConvert(resourceObj.getContainsWhat(), item.getItem().getName()))
+		{
+			if (resourceObj.getAmountContained()>=resourceObj.getContainedCapacity())
+			{
+				return false;
 			}
+			if (ItemDepletableInstance.class.isInstance(item)) {
+				ItemDepletableInstance idi = (ItemDepletableInstance) item;
+				ItemHasEnergy ihe = (ItemHasEnergy) idi.getItem();
 
+				float ratio = (float) idi.getEnergy() / ihe.getEnergy().getMaxEnergy();
+				resourceObj.addResource(((float)handler.conversionValue(resourceObj.getContainsWhat(), item.getItem().getName())) * ratio);
+			} else {
+				resourceObj.addResource(handler.conversionValue(resourceObj.getContainsWhat(), item.getItem().getName()));
+			}		
+			return true;
 		}
+	
 		// check if resource is energy and the item is a rechargeable
 		if (resourceObj.getContainsWhat().equals("ENERGY") && ItemDepletableInstance.class.isInstance(item)) {
 			ItemDepletableInstance it = (ItemDepletableInstance) item;

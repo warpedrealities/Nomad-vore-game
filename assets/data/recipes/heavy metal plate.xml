@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="heavy metal plate" requiredskill="2" startunlocked="true">
+	<description>
+		Through application of pressure, percussive force, rolling and a variety of other brute means its possible to create heavy plates out of scrap metal.
+	</description>
+	<ingredient item="scrap metal" quantity="10" />
+	<result item="heavy plate" count="1" />
+</recipe>

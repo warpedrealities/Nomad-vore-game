@@ -326,10 +326,20 @@ public class EffectProcessor {
 			m_player.getInventory().removeItems(item, (int) value);
 		}
 		if (str.equals("imprison")) {
+			boolean suppress=node.getAttribute("suppress").equals("true");
+			
+			int h=m_player.getRPG().getStat(Actor_RPG.HEALTH);
+			int r=m_player.getRPG().getStat(Actor_RPG.RESOLVE);
 			for (int i = 0; i < value; i++) {
 				m_player.Update();
 			}
 			Universe.AddClock((int) value);
+			if (suppress)
+			{
+				m_player.getRPG().setStat(Actor_RPG.HEALTH, h);
+				m_player.getRPG().setStat(Actor_RPG.RESOLVE, r);	
+			}
+
 		}
 		if (str.equals("giveEnergy")) {
 			new RechargeHelper(m_player).run((int) value);

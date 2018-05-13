@@ -30,11 +30,11 @@ end
 
 function combat(controllable,sense,pos,hostile)
 	--find a kitty pirate with less than 50% resolve
-	mistTarget=sense:getActor(controllable,10,true,sense:getCriteria("resolveBelow,0.5,name,pirate kitty"));
+	mistTarget=sense:getActor(controllable,10,false,sense:getCriteria("resolveBelow,0.5,name,pirate kitty"));
 	if not (mistTarget ==nil) then
 		mist(controllable,sense,pos,mistTarget)
 	else
-		shieldTarget=sense:getActor(controllable,10,true,sense:getCriteria("hasNotStatus,16,name,pirate kitty"));
+		shieldTarget=sense:getActor(controllable,10,false,sense:getCriteria("hasNotStatus,16,name,pirate kitty"));
 		if not (shieldTarget==nil) then
 			shield(controllable,sense,pos,shieldTarget)
 		end
@@ -43,12 +43,14 @@ end
 
 function main(controllable, sense, script)  
 	pos=controllable:getPosition()
-	hostile=sense:getHostile(controllable,10,false)
-	if not (hostile == nil ) and not controllable:isPeace() then
+	active=script:getShared():getValue(7)
+	if (active>0) then
 	--combat ai here
 	combat(controllable,sense,pos,hostile)
-
 	else
-	
+		a=math.random(0,10)
+		if (a<8) then
+			controllable:move(a);
+		end
 	end
 end  

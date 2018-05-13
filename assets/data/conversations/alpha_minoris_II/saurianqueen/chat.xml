@@ -180,10 +180,14 @@
 			with me?"
 		</text>
 		<choice destination="campaign0" text="$My queen, tell me..how goes the war against the elf?">
+			<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
+				value="1" />
 		<condition operator="equals" evaluate="LOCALFLAG" flag="campaignDiscussion"
 			value="0" />			
 		</choice>
 		<choice destination="campaign1" text="$My queen, let us discuss the war">
+				<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
+				value="1" />	
 		<condition operator="equals" evaluate="LOCALFLAG" flag="campaignDiscussion"
 			value="1" />			
 		</choice>		

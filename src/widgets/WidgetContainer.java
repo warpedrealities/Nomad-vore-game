@@ -278,5 +278,12 @@ public class WidgetContainer extends WidgetBreakable {
 		}
 		return widgetDescription;
 	}
-
+	
+	@Override
+	public void handleDismantle(WidgetItemPile pile) {
+		while(!containedItems.isEmpty())
+		{
+			pile.AddItem(takeItem(0));
+		}
+	}
 }

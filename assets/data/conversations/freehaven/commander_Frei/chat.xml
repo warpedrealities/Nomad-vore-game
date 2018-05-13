@@ -24,10 +24,60 @@
 
 	<page ID="offerCV">
 	<text>
-	
+	Frei chuckles "Not particularly, but I can always make room to accomodate guests to the station. Specially ones who decide to take a shine to me." she says and adjusts her uniform trousers over the first stirrings of firmness from her crotch "You're gonna have to sneak yourself under my desk first though, think you can do that for me hun?" she says as she loosens those pants of hers.
 	</text>
-	
+	<choice destination="offerCV0" text="$Sure, anything to slip into that dick"/>
 	</page>
+	
+	<page ID="offerCV0">
+	<text>
+	"That's the spirit." she says as you slide out of view into the space under her desk "Got a nice, big, hungry bunny commander cock for you to feed." she says, her trousers slipping down to expose her shaft. That nice looking girth of hers already at half chub as you admire it and see her trousers pool around her ankles, one of her hands stroking over it afore she says "You know, i ain't going to do all the work here."
+	</text>
+	<choice destination="offerCV1" text="$right away ma'am"/>
+	</page>
+	
+	<page ID="offerCV1">
+	<text>
+	Frei groans and shifts about scooting her hips forwards on her seat as you get to work stroking over her cock, working her to full hardness. That hefty girth of herm shaft filling your nose with the scent of her musky arousal even as the tip parts invitingly. And that invite you find impossible to resist, tracing your hands up along her length before thrusting your fingers into her tip and hearing a moan emanating from above you.
+	"You know, it might surprise you, but it's not every day I get someone wanting to feed my dick." she says as your hands disappear into her shaft, bulging her length out around your arms as you feed them into the lewd tightness of the commander's throbbing shaft.
+	</text>
+	<choice destination="offerCV2" text="$They're missing out, its a wonderful hungry cock"/>
+	</page>
+	
+	<page ID="offerCV3">
+	<text>
+	"Glad you think so hun, now..mhmm, get in me" she insists, thrusting forwards and rolling the chair with her so that her cock encompasses your head with a schlorp. The wonderful throbbing heat of her dick encompassing your chest as more of her delightful pre pulses up from the depths of her loins to lubricate and cover your upper body further. Commander Frei moaning as she steadily draws you deeper into her rippling shaft, that proud length hanging low with the weight of your protruding legs even as you're head and arms dive through into her sack to make her balls hang low and bulging and full.
+	</text>
+	<choice destination="offerCV4" text="*get schlurped up completely*"/>
+	</page>
+	
+	<page ID="offerCV4">
+	<text>
+	"Mhmm maybe I should make this part of station policy for new arrivals..." says Frei blissfully as more and more of your body is packed away in her balls and her shaft works on tucking your legs away. Frei moaning and then letting out a lewd gasp and shivering in pleasure as your feet slip past her cocktip "On second thoughts, that's a silly idea. 'Hi welcome to the station now get in my cock' who'd say yes to that?" she says as she strokes her shaft and feels the last of your body curling up in the creamy depths of her sack. A pleased flush on her face as she adjusts her position to accomdate the hefty weight between her legs and scoots her chair forwards to keep her sack and lack of pants out of view beneath the desk.
+	</text>
+	<choice destination="offerCV5" text="$you'd be surprised"/>
+	<choice destination="offerCV5" text="*say nothing*"/>
+	</page>
+	
+	<page ID="offerCV5">
+	<text>
+	Frei mhmms and turns her attention back to her datapad "You feel very good down there, but duty calls. So be good cockfood and keep quiet while you turn into cum alright hun?" she says as you feel her cum ooze over every inch of your body and glorp loudly around your ears. 
+	</text>
+	<choice destination="offerCV6" text="it'll be hard not to moan"/>
+	</page>
+	
+	<page ID="offerCV6">
+	<text>
+	You do your best to be quiet as her cum churns around you. Your form softening inside her sack as she in turn seemingly spends most of her time pre-occupied with reports and writing on her computer, only occasionally glancing down or reaching to give your softening form a fondle. Even when a warden comes in to report they act like nothing is out of the ordinary, even with you moaning and gurgling loudly in an awkward pause neither comments on the matter. Perhaps Frei churning folks isn't quite as rare as you thought, but thinking itself becomes harder and harder as your form gets sloshier. Any moment you'll just, spread out and become one with the cum around you as your body becomes less and less distinguishable from her seed.
+	</text>
+	<choice destination="offerCVGO" text="*burble*"/>
+	</page>
+	
+	<gameover ID="offerCVGO">
+	<text>
+	Frei dismisses the warden "Good work, now get some R and R I have something I need to..take care of." she says, the warden saluting and making her exit as Frei gets out from behind the desk. Frei taking a moment to savour and admire the sloshing weight of her bloated cumfilled balls as she gets out a condom from a draw on her desk, slipping it down over her shaft and stroking herself to hardness, and from hardness..to orgasm. Frei's length spurting voluminous blasts of your hot gooey remnants into the bag. The condom's tip hanging low and round and bloated as Frei spends her latest load into it. The commander smiling as she eyes her handiwork and ties it off "Spunk is a good look on you hun, you should do it more often. Though I'm guessing I don't need to tell you that." she says and then chuckles "not that it can do any good" she says as she disposes of the filled bag, returning to her desk and her work. Just another day for the commander of the wardens it seems.
+	</text>
+	</gameover>
 	
 	<page ID="start">
 	<!--not agreed-->
@@ -99,9 +149,9 @@
 	Frei chuckles "Then I suppose we'll let it slide. Sides, some traders are kinda into that sorta thing. And the smart ones of those have reformers. So yeah, we see any signs of a struggle or a cry for help and we'll come running and angry. Beyond that, have fun."
 	</text>
 	<choice destination="agree" text="very well, i agree to abide by your rules"/>
-	<!--
+	
 	<choice destination="preyslut" text="well, seen as you bring it up.. I am kinda into getting into people"/>
-	-->
+	
 	<choice destination="end" text="let me think about this"/>
 	</page>
 	
@@ -109,9 +159,9 @@
 	<text>
 	Frei smirks a bit "Didn't have you pegged for one of those. You gonna leave it there or tell me more?"
 	</text>
-	<choice destination="preyslutOV" text="Well, i have a thing for bellies, for instance..sexy bunny commander bellies">
+<!-- 	<choice destination="preyslutOV" text="Well, i have a thing for bellies, for instance..sexy bunny commander bellies">
 		<preference fetish="oralvore" />
-	</choice>
+	</choice> -->
 	<choice destination="preyslutCV" text="Well, i like the idea of churning around in a gooey sack. And the idea of being cum for an authority figure makes it all the hotter">
 		<preference fetish="cockvore" />
 	</choice>

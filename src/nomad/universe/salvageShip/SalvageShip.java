@@ -3,6 +3,7 @@ package nomad.universe.salvageShip;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import shared.ParserHelper;
@@ -61,33 +62,41 @@ public class SalvageShip {
 		return false;
 	}
 	
-	public Spaceship salvageShip(String filename) throws IOException
+	public Spaceship salvageShip(String filename)
 	{
-		File file=new File("saves/"+filename+"/"+"verse.sav");
-		if (file.exists()==false)
-		{
-			
-				file.createNewFile();
-	
-		}
-		FileInputStream fstream=new FileInputStream(file);
-		DataInputStream dstream=new DataInputStream(fstream);
-		dstream.readInt();		
-		dstream.readLong();
-		dstream.readBoolean();
-		dstream.readBoolean();
-		String s=ParserHelper.LoadString(dstream);
-		StubSystem stubSystem=new StubSystem();
-		stubSystem.load(filename,s);
-		String e=ParserHelper.LoadString(dstream);
-		Spaceship ship=stubSystem.getShip(e);
-		if (ship!=null)
-		{
-			if (shipEligible(ship))
+
+		FileInputStream fstream;
+		try {
+			File file=new File("saves/"+filename+"/"+"verse.sav");
+			if (file.exists()==false)
 			{
-				return ship;
+				
+					file.createNewFile();
+		
 			}
+			fstream = new FileInputStream(file);
+			DataInputStream dstream=new DataInputStream(fstream);
+			dstream.readInt();		
+			dstream.readLong();
+			dstream.readBoolean();
+			dstream.readBoolean();
+			String s=ParserHelper.LoadString(dstream);
+			StubSystem stubSystem=new StubSystem();
+			stubSystem.load(filename,s);
+			String e=ParserHelper.LoadString(dstream);
+			Spaceship ship=stubSystem.getShip(e);
+			if (ship!=null)
+			{
+				if (shipEligible(ship))
+				{
+					return ship;
+				}
+			}			
+		} catch (IOException e1) {
+			e1.printStackTrace();
+			return null;
 		}
+
 		
 		return null;
 	}

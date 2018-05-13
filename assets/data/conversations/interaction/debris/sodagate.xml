@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>A sturdy blastdoor with "supply room, supply-management only" written on it.
+		It can be only unlocked with a small keypad... If you know the password
+		
+		Whoever operates this ship does not joke around with food theft.
+		</text>
+		<choice destination="password" text="You might know the password...">
+			<condition operator="equals" evaluate="GLOBALFLAG" flag="sodasupply" value="2" />
+		</choice>
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="password">
+		<text>
+			You remember seeing the password in one of the event logs, you type in
+			"83391" and the door swings open, revealing the hidden treasures!
+		</text>
+		<special effect="destroywidget" />
+		<choice destination="end" text="Why are there so many cans?" />
+	</page>
+
+</Conversation>

@@ -289,6 +289,7 @@ public class SaveLoad extends Screen implements Callback {
 			}
 		} catch (IOException e) {
 			text.setString("load failure");
+			e.printStackTrace();
 		}
 	}
 

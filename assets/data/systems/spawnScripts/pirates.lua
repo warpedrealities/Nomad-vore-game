@@ -11,11 +11,7 @@ function main(tools)
 				tools:spawn("sloop","pirateGalleon")
 			end
 		else 
-			if (a>7) then
-				if (tools:countShips("sloop")>0) then
-					tools:deSpawn("sloop")
-				end	
-			end
+			
 		end
 	end  
 end

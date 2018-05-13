@@ -1198,6 +1198,12 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	}
 
 	@Override
+	public AnimatedFXControl getFX()
+	{
+		return FXanimationControl;
+	}
+	
+	@Override
 	public void Flash(Vec2f p, int type) {
 
 		switch (type) {
@@ -1221,6 +1227,12 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		case 5:
 			FXanimationControl.addEffect(new FX(0, p, 0, 1, 0, 10));
 			break;	
+		case 6:
+			FXanimationControl.CompileEffect(0, p, 1, 0, 1, 5);
+			break;
+		case 7:
+			FXanimationControl.CompileEffect(0, p, 0, 1, 0, 10);
+			break;
 		}
 	}
 

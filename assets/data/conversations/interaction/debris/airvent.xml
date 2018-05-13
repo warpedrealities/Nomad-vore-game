@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>This ventilation hatch is sealed for good!
+			using brute force would be too dangerous here, some kind of
+			tool might be able to help.
+		</text>
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="FIRST" />
+		<choice destination="plasmacut" text="use the multitool">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="multitool" />
+		</choice>
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="plasmacut">
+		<text>
+			You muster the metal plating in front of you, there are no visible screws you could remove.
+			You turn the multitool and press the plasma cutters end at the seal. After activating the tool you
+			melt the metal like butter while tracing the edges of the seal. Suddenly the entire room 
+			around you shifts, it seems like something large is grabbing the air vent with crushing force. The
+			metal around you creaks as it gets slowly squished like a tin can.
+			In a moment of shock, you drop the multitool. As it hits the bottom of the air vent, all you can do is 
+			watch the device bounce around in the shifting metal, cutting a small hole and vanishing out of sight.
+			Once again, you feel the metal around you shaking again. In an act of desperation you try to crawl backwards as the 
+			air vent bends forward and shifts downward.
+		</text>
+		<effect type="removeitem" item="multitool" value="1" />
+		<special effect="destroywidget" />
+		<choice destination="out1" text="brace yourself!" />
+	</page>
+
+	<page ID="out1">
+		<text>You brace yourself as gravity forces you to slide uncontrollable towards the damaged 
+			containment seal. There is nothing you can do as you hit it face first. A dull pain fills your body 
+			as you hit the abused metal, providing the required force to finally crack the seal.
+			You shift uncomfortable as your surroundings screak and hit the ground catapulting you out of your
+			entrapment.
+		</text>
+		<special effect="transition" x="21" y="4" destination="debrisF2" />
+		<choice destination="end" text="Recover" />
+	</page>
+	
+	<page ID="start">
+		<text>A ventilation hatch is blocking your way.
+			You can see the other side of the spaceship through the metal bars.
+			Some kind of science room with strange tubes filled with strange green goo
+		</text>
+		<effect type="setlocalflag" flag="FIRST" value="1" />
+
+		<choice destination="rem1" text="try removing it" />
+	</page>
+	
+		<page ID="rem1">
+		<text>You try pushing the ventilation hatch... With no avail
+		</text>
+		<choice destination="rem2" text="try punching it!" />
+	</page>
+	
+		<page ID="rem2">
+		<text>Annoyed by the stubborn contraption, you swing your fist and punch it with brute force... 
+		Your hand hurts, but something has budged.
+		</text>
+		<choice destination="rem3" text="try kicking it" />
+	</page>
+	
+		<page ID="rem3">
+		<text>You shift around in the tight air vent and kick the hatch with both legs. 
+		The metal creaks as the hatch flies off, success! You try to slip out of the 
+		air vent as a sudden rumble seals it again. You just triggered the emergency containment seal...
+		</text>
+		<choice destination="end" text="damn" />
+	</page>
+</Conversation>

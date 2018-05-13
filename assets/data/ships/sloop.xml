@@ -94,7 +94,11 @@
 					<loot item="space meal" chance="1.0" />
 					<loot item="space meal" chance="1.0" />
 					<loot item="space meal" chance="1.0" />
-					<loot item="space meal" chance="1.0" />					
+					<loot item="space meal" chance="1.0" />			
+					<loot item="fuel canister" chance="1.0" />
+					<loot item="fuel canister" chance="1.0" />
+					<loot item="fuel canister" chance="1.0" />
+					<loot item="fuel canister" chance="1.0" />				
 				</lootTable>		
 			</contains>
 			</placeWidget>	

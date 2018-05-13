@@ -9,20 +9,57 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import nomad.universe.Universe;
 import shared.ParserHelper;
+import widgets.WidgetItemPile;
 
 public class ShipResource extends ShipAbility {
 
+	private class ResourceExtraction
+	{
+		public String itemName;
+		public int ratio;
+		public float destroyValue,dismantleValue;
+		
+		private void save(DataOutputStream dstream) throws IOException
+		{
+			ParserHelper.SaveString(dstream, itemName);
+			dstream.writeInt(ratio);
+			dstream.writeFloat(destroyValue);
+			dstream.writeFloat(dismantleValue);
+		}
+		
+		private void load(DataInputStream dstream) throws IOException
+		{
+			itemName=ParserHelper.LoadString(dstream);
+			ratio=dstream.readInt();
+			destroyValue=dstream.readFloat();
+			dismantleValue=dstream.readFloat();
+		}
+		
+		private ResourceExtraction()
+		{
+			
+		}
+		
+		private ResourceExtraction(Element enode)
+		{
+			itemName=enode.getAttribute("item");
+			ratio=Integer.parseInt(enode.getAttribute("ratio"));
+			destroyValue=Float.parseFloat(enode.getAttribute("destroy"));
+			dismantleValue=Float.parseFloat(enode.getAttribute("dismantle"));
+		}
+	}
+	
 	private float amountContained;
 	private int containedCapacity;
 	private String containsWhat;
-	private ArrayList<ResourceConversion> resourceConversions;
 	private boolean nonCombat;
+	private ResourceExtraction extraction;
 	
 	public ShipResource(Element node) {
 		abilityType = AbilityType.SA_RESOURCE;
 		NodeList children = node.getChildNodes();
-		resourceConversions = new ArrayList<ResourceConversion>();
 		amountContained = 00;
 		containedCapacity = Integer.parseInt(node.getAttribute("capacity"));
 		containsWhat = node.getAttribute("resource");
@@ -35,8 +72,9 @@ public class ShipResource extends ShipAbility {
 			if (N.getNodeType() == Node.ELEMENT_NODE) {
 				Element Enode = (Element) N;
 				// run each step successively
-				if (Enode.getTagName() == "resourceConversion") {
-					resourceConversions.add(new ResourceConversion(Enode));
+				if (Enode.getTagName().equals("resourceExtraction"))
+				{
+					extraction=new ResourceExtraction(Enode);
 				}
 			}
 		}
@@ -49,15 +87,11 @@ public class ShipResource extends ShipAbility {
 		amountContained = dstream.readFloat();
 		containedCapacity = dstream.readInt();
 		nonCombat=dstream.readBoolean();
-		resourceConversions = new ArrayList<ResourceConversion>();
-
-		int count = dstream.readInt();
-		if (count > 0) {
-			for (int i = 0; i < count; i++) {
-				resourceConversions.add(new ResourceConversion(dstream));
-			}
+		if (dstream.readBoolean())
+		{
+			extraction=new ResourceExtraction();
+			extraction.load(dstream);
 		}
-
 	}
 
 	@Override
@@ -67,11 +101,15 @@ public class ShipResource extends ShipAbility {
 		dstream.writeFloat(amountContained);
 		dstream.writeInt(containedCapacity);
 		dstream.writeBoolean(nonCombat);
-		dstream.writeInt(resourceConversions.size());
-		for (int i = 0; i < resourceConversions.size(); i++) {
-			resourceConversions.get(i).save(dstream);
+		if (extraction!=null)
+		{
+			dstream.writeBoolean(true);
+			extraction.save(dstream);
 		}
-
+		else
+		{
+			dstream.writeBoolean(false);
+		}
 	}
 
 	public float getAmountContained() {
@@ -84,10 +122,6 @@ public class ShipResource extends ShipAbility {
 
 	public String getContainsWhat() {
 		return containsWhat;
-	}
-
-	public ArrayList<ResourceConversion> getResourceConversions() {
-		return resourceConversions;
 	}
 
 	public void addResource(float itemValue) {
@@ -103,6 +137,31 @@ public class ShipResource extends ShipAbility {
 
 	public boolean isNonCombat() {
 		return nonCombat;
+	}
+
+	public void extractResources(WidgetItemPile pile, boolean dismantle) {
+		if (extraction==null)
+		{
+			return;
+		}
+		float amount=amountContained;
+		if (dismantle)
+		{
+			amount=amount*extraction.dismantleValue;
+		}
+		else
+		{
+			amount=amount*extraction.destroyValue;
+		}
+		int count=(int)amount/extraction.ratio;
+		if (count<=0)
+		{
+			return;
+		}
+		for (int i=0;i<count;i++)
+		{
+			pile.AddItem(Universe.getInstance().getLibrary().getItem(extraction.itemName));
+		}	
 	}
 
 }

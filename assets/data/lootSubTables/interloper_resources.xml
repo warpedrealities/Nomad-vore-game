@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<lootTable>
+	<loot item="scrap metal" chance="1" />
+	<loot item="ration" chance="1" />
+	<loot item="battery" chance="1" />
+	<loot item="computation valve" chance="1" />
+	<loot item="heavy plate" chance="1" />
+	<loot item="fuel canister(poor)" chance="1" />	
+	<loot item="optics" chance="1" />	
+</lootTable>

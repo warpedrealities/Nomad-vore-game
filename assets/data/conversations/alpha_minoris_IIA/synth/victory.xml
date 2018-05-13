@@ -298,7 +298,7 @@
 			questionaire at the information office." she says placing a towel
 			next to you afore stepping away seemingly done with you.
 		</text>
-		<effect type="imprison" value="400" />
+		<effect type="imprison" value="400" suppress="true" />
 		<special effect="nonhostile" />
 		<effect type="heal" value="0.1" />
 		<choice destination="end" text="get up" />
@@ -319,7 +319,7 @@
 			feedback questionaire at the information office." she says placing a
 			towel next to you afore stepping away seemingly done with you.
 		</text>
-		<effect type="imprison" value="100" />
+		<effect type="imprison" value="100" suppress="true" />
 		<special effect="nonhostile" />
 		<effect type="heal" value="0.1" />
 		<choice destination="end" text="get up" />
@@ -622,7 +622,7 @@
 			Omnico
 			apologizes for the inconvenience."
 		</text>
-		<effect type="imprison" value="400" />
+		<effect type="imprison" value="400" suppress="true" />
 		<special effect="nonhostile" />
 		<effect type="heal" value="0.1" />
 		<choice destination="end" text="get up" />
@@ -654,7 +654,7 @@
 			and then looks around and adds "we seem to be out of towels at the
 			moment, Omnico apologizes for the inconvenience."
 		</text>
-		<effect type="imprison" value="100" />
+		<effect type="imprison" value="100" suppress="true"/>
 		<special effect="nonhostile" />
 		<effect type="heal" value="0.1" />
 		<choice destination="end" text="get up" />

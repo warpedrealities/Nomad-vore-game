@@ -5,4 +5,7 @@
 	<description>An outcropping that exposes crystals high in energy, possibly usable as
 		fuel</description>
 	<regeneration regentime="6000" />
+	<skillCheck item="blue crystal" dc="20" attribute="SCIENCE" min="3" max="6">
+	You have successfully increased the yield of crystals from this deposit with SCIENCE!
+	</skillCheck>	
 </widgetharvestable>

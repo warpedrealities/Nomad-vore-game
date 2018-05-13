@@ -6,8 +6,7 @@
 		typically used for perimeter security on warships.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipResource capacity="12" resource="dagger missile">
-		<resourceConversion itemName="dagger missile"
-			value="1.0" />
+		<resourceExtraction item="dagger missile" ratio="1" destroy="0.5" dismantle="0.75" />
 	</shipResource>
 	<shipWeapon>
 		<damage min="8" max="12" falloff="0" />

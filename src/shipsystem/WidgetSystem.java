@@ -20,6 +20,7 @@ import shipsystem.ShipAbility.AbilityType;
 import shipsystem.weapon.ShipWeapon;
 import view.ViewScene;
 import widgets.WidgetBreakable;
+import widgets.WidgetItemPile;
 
 public class WidgetSystem extends WidgetBreakable {
 
@@ -157,5 +158,42 @@ public class WidgetSystem extends WidgetBreakable {
 		return hardpoint;
 	}
 	
+	@Override
+	protected void destroy()
+	{
+		if (slottedWidget == false) {
+			if (m_contains != null) {
+				WidgetItemPile Pile = new WidgetItemPile(2, "a pile of items containing ", m_contains[0]);
+				if (m_contains.length > 1) {
+					for (int j = 1; j < m_contains.length; j++) {
+						Pile.AddItem(m_contains[j]);
+					}					
+				}
+				for (int i=0;i<systemAbilities.size();i++)
+				{
+					if (ShipResource.class.isInstance(systemAbilities.get(i)))
+					{
+						ShipResource sr=(ShipResource)systemAbilities.get(i);
+						sr.extractResources(Pile,false);
+					}
+				}	
+				ViewScene.m_interface.ReplaceWidget(this, Pile);
+			} else {
+				ViewScene.m_interface.RemoveWidget(this);
+			}
+		}	
+		
+		
+	}
 	
+	public void handleDismantle(WidgetItemPile pile) {
+		for (int i=0;i<systemAbilities.size();i++)
+		{
+			if (ShipResource.class.isInstance(systemAbilities.get(i)))
+			{
+				ShipResource sr=(ShipResource)systemAbilities.get(i);
+				sr.extractResources(pile,true);		
+			}
+		}
+	}	
 }

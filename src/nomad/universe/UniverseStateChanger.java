@@ -100,27 +100,22 @@ public class UniverseStateChanger {
 	}
 		
 	
-	private boolean salvageShip(String filename) {
-		try {
-			SalvageShip salvager=new SalvageShip();
-			Spaceship ship=salvager.salvageShip(filename);
-			if (ship!=null)
-			{
-				LoadUniverse();
-				ship.setUID(-1);
-				
-				startGame(true);
-				
-				universe.setCurrentEntity(ship);
-				universe.setCurrentZone(ship.getZone(0));
-				ship.setPosition(new Vec2f(0,-20));
-				universe.getCurrentStarSystem().getEntities().add(ship);
-				
-				return true;
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	private boolean salvageShip(String filename) throws IOException {
+		SalvageShip salvager=new SalvageShip();
+		Spaceship ship=salvager.salvageShip(filename);
+		if (ship!=null)
+		{
+			LoadUniverse();
+			ship.setUID(-1);
+			
+			startGame(true);
+			
+			universe.setCurrentEntity(ship);
+			universe.setCurrentZone(ship.getZone(0));
+			ship.setPosition(new Vec2f(0,-20));
+			universe.getCurrentStarSystem().getEntities().add(ship);
+			
+			return true;
 		}
 		return false;
 	}

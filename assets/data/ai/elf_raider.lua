@@ -27,7 +27,7 @@ function combat(controllable,sense,script,hostile)
 	end
 end
 
-function victimize(controllable,victim)
+function victimize(controllable,victim,script)
 	if pos:getDistance(victim:getPosition())<2 then
 		print("devour")
 		controllable:startVoreScript("elf_raider_saurian_raider_OV", victim)
@@ -53,7 +53,7 @@ function shouldPatrol(controllable,sense,script)
 		victim=sense:getVictim(controllable,8,true,"saurian warrior",false)
 		if not (victim==nil) then
 			print("victimize")
-			victimize(controllable,victim)	
+			victimize(controllable,victim,script)	
 		end
 	end
 	end 

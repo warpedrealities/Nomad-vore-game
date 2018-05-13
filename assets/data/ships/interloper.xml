@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Ship width="7" height="7" sprite="interloper">
+
+	<shipstats>
+		<movecost value="18" />
+		<hullpoints value="35" />
+		<thrustcost value="2.0" />
+		<manouver value="2" />
+	</shipstats>
+
+	<emitters>
+		<weapon x="-0.1" y="0.4" />	
+		<weapon x="0.1" y="0.4" />
+		<engine x="-0.1" y="-0.4" />
+		<engine x="0.1" y="-0.4" />
+	</emitters>
+
+	<layout width="16" height="16" spriteset="darkship.png">
+		<tileset count-x="8" count-y="4">
+			<tile sprite="1" vision="1" movement="2" smart="true">a metal wall</tile>
+			<tile sprite="17" vision="0" movement="0">a metal floor</tile>
+		</tileset>
+		<description>The ship smells of long abandonment and broken promises, its lifeless decks are cold and dark</description>
+		<mapgen>
+			<prefab positionX="0" positionY="0" width="11">
+				<row>00011 1 11000</row>
+				<row>11112 2 21111</row>
+				<row>12222 2 22221</row>
+				<row>12222 2 22221</row>
+				<row>12212 1 21221</row>
+				<row>12212 2 21221</row>
+				<row>12211 2 11221</row>
+				<row>12211 0 11221</row>
+				<row>11211 0 11211</row>
+				<row>01111 0 11110</row>				
+			</prefab>
+			<pairedportal x="5" y="6" sprite="1" ID="-101" facing="0">
+				Exterior hatch </pairedportal>
+			<placeWidget x="5" y="1" name="slot" />
+			<placeWidget x="4" y="1" name="slot" />
+			<placeWidget x="6" y="1" name="slot" />					
+			<placeWidget x="5" y="3" name="slot">
+				<contains name="modules/navconsole" />
+				<widgetItem>nav console</widgetItem>	
+			</placeWidget>
+			<placeWidget x="4" y="2" name="DAMAGE" value="20" />
+			<placeItem x="5" y="2">
+				<lootTable>
+					<lootSubTable chance="1" file="interloper_resources" />	
+					<lootSubTable chance="1" file="interloper_resources" />
+					<lootSubTable chance="1" file="interloper_resources" />	
+				</lootTable>		
+			</placeItem>			
+			<placeWidget x="1" y="2" name="slot" />
+			<placeWidget x="9" y="2" name="slot" />	
+			<placeItem x="8" y="4">
+				<lootTable>
+					<lootSubTable chance="1" file="interloper_resources" />	
+					<lootSubTable chance="1" file="interloper_resources" />
+					<lootSubTable chance="1" file="interloper_resources" />	
+				</lootTable>		
+			</placeItem>		
+			<placeItem x="1" y="3">
+				<lootTable>
+					<lootSubTable chance="1" file="interloper_resources" />	
+					<lootSubTable chance="1" file="interloper_resources" />
+					<lootSubTable chance="1" file="interloper_resources" />	
+				</lootTable>		
+			</placeItem>				
+			<placeWidget x="8" y="5" name="DAMAGE" value="15" />		
+			<placeWidget x="2" y="8" name="hardpoint">
+				<facing value="0" />
+			</placeWidget>
+			<placeWidget x="8" y="8" name="hardpoint">
+				<facing value="0" />
+			</placeWidget>
+		</mapgen>
+	</layout>
+	<exterior width="7">
+		<row>0000000</row>
+		<row>0111110</row>
+		<row>0111110</row>
+		<row>0110110</row>
+		<row>0110110</row>
+		<row>0010100</row>
+		<row>0000000</row>
+		<pairedportal x="3" y="3" sprite="1" ID="-101"
+			destination="prospector" facing="4"> a ship hatch </pairedportal>
+	</exterior>
+</Ship>

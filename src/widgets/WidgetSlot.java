@@ -204,6 +204,7 @@ public class WidgetSlot extends Widget {
 				if (Effect_Dismantle.class.isInstance(combatMove.getEffects().get(i)))
 					{
 						WidgetItemPile Pile = new WidgetItemPile(2, "a pile of items containing ", Universe.getInstance().getLibrary().getItem(widgetItem));
+						this.widget.handleDismantle(Pile);
 						Vec2f p = ViewScene.m_interface.getSceneController().getActiveZone().getWidgetPosition(this);
 						ViewScene.m_interface.placeWidget(Pile, (int) p.x, (int) p.y, true);
 						widget = null;

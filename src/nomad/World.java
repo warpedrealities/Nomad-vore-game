@@ -334,7 +334,10 @@ public class World extends Entity {
 			tools.AddShip(l);
 			ship.Generate();
 			ship.getZone(0).getPortalWidget(-101).setDestination(zone.getName(), -101);
-			ship.getZone(0).getPortalWidget(-102).setDestination(zone.getName(), -102);
+			if (ship.getZone(0).getPortalWidget(-102)!=null)
+			{
+				ship.getZone(0).getPortalWidget(-102).setDestination(zone.getName(), -102);
+			}
 			return true;
 		}
 

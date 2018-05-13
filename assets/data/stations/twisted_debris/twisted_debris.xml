@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="stationblue2.png"> <!-- Twisted debris by Null_Gravity v.1-->
+	<tileset count-x="8" count-y="8">
+		<tile sprite="1" vision="1" movement="2" smart="true">A sturdy titanium wall, keeps specimen in and space out</tile><!-- 1-->
+		<tile sprite="17" vision="0" movement="0" smart="true">Some kind of Plasteel-nano-weave common for science ships</tile><!-- 2-->
+		<tile sprite="33" vision="1" movement="2" smart="true">These titanium platings are badly damaged</tile><!-- 3-->
+		<tile sprite="41" vision="1" movement="2" smart="true">These titanium platings are badly damaged</tile><!-- 4-->
+		<tile sprite="57" vision="1" movement="2">Seems like planetary readings... The system must be malfunctioning, this data makes no sense.</tile><!-- 5-->
+		<tile sprite="58" vision="1" movement="2">Containment pods, the content is unknown and sealed for good.</tile><!-- 6-->
+		<tile sprite="59" vision="1" movement="2">Breached containment pods, whatever was inside, didn't liked being trapped.</tile><!-- 7-->
+		<tile sprite="60" vision="0" movement="0">Air vent platings</tile><!-- 8-->
+		<tile sprite="61" vision="0" movement="2">table</tile><!-- 9-->
+	</tileset>
+
+	<description>You hear a female AI voice as you leave the airlock.
+	"Welcome..undefined visitor.. zero...two.. aboard RSV Lyssa.
+	this science vessel is currently under...lockdown...code
+	nine..gamma..red..unknown breach detected please 
+	remain within area grssssszzz." Before the AI can finish
+	its instructions it's quickly replaced by a strange deep voice;
+	I CAN SENSE YOU LOST ONE. COME...SEE MEE.</description>
+
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="32">
+		<row>11111111111111111111111111111111</row>
+		<row>11121111111111111111111111111111</row>
+		<row>11222211111616161612221122221111</row>
+		<row>11222211112222222222222222221111</row>
+		<row>11122111112522261622221122221111</row>
+		<row>11222211112222222222222111111111</row>
+		<row>11222211112222261622222111111111</row>
+		<row>11222211112222222222221122221111</row>
+		<row>11222221112522261622222222221112</row>
+		<row>11122222222222222222221122221112</row>
+		<row>11112222222222222222222111111112</row>
+		<row>00011111111111111111211111111111</row>
+		<row>00001111111112212222222222222222</row>
+		<row>00000000011112222222222222222222</row>
+		<row>00000000011112212222222222222222</row>
+		<row>00000000001111111111111111111111</row>
+	</prefab>
+	<prefab positionX="32" positionY="0" width="32">
+		<row>11111111111111111111111111111100</row>
+		<row>11111111111111111111111111111100</row>
+		<row>11111616522616526666666211111100</row>
+		<row>11112262222262222222222288881100</row>
+		<row>11122222222222222222222211181100</row>
+		<row>11222666222666226666666211181100</row>
+		<row>12222222222222222222222211181100</row>
+		<row>66626666222222222222222211181100</row>
+		<row>22222222221111144422211111181100</row>
+		<row>66626662111444114422214422181100</row>
+		<row>22222221112222221422224222881100</row>
+		<row>11121111422222221142244224181100</row>
+		<row>22222211224722424222241121181100</row>
+		<row>22222211222222224242244427181100</row>
+		<row>22222211222222222242414222484400</row>
+		<row>11111111114441111144411114484400</row>
+	<!-- portal-->
+			<pairedportal sprite="11" destination="debrisF2" x="27" y="15"
+				ID="140" facing="4">The air vent exit</pairedportal>
+			<placeWidget x="27" y="14" name="invincible" info="interaction/debris/airvent"
+				variable="81" />
+	</prefab>
+	<!-- doors-->
+			<pairedportal x="3" y="1" sprite="7" ID="-101" facing="0"> airlock </pairedportal>
+			<placeWidget x="4" y="4" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- left airlock-->
+		</placeWidget>
+			<placeWidget x="3" y="4" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- right airlock-->
+		</placeWidget>
+			<placeWidget x="22" y="3" name="panelH">
+			<lock key="screwyoubloodydoor" strength="10" /> <!-- crew room 1-->
+		</placeWidget>
+			<placeWidget x="22" y="8" name="panelH">
+			<lock key="screwyoubloodydoor" strength="10" /> <!-- crew room 2-->
+		</placeWidget>
+			<placeWidget x="15" y="13" name="invincible_door">
+			<lock key="Janitor" strength="99" /> <!-- bobs door-->
+		</placeWidget>
+			<placeWidget x="20" y="11" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- first entry door-->
+		</placeWidget>
+			<placeWidget x="35" y="11" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- second entry door-->
+		</placeWidget>
+			<placeWidget x="48" y="14" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- goodragon door-->
+		</placeWidget>
+			<placeWidget x="56" y="3" name="ventdoor"> 
+			<lock key="C1" strength="99" />
+		</placeWidget>
+	<!-- talky stuff-->
+		<placeWidget x="35" y="10" name="DESCRIBER">
+			This seems like a large cargo room... It’s filled with hundreds containment pods...
+			They all seem filled with various creatures, the displays show countless planets and creature 
+			descriptions. What is the purpose of this?
+		</placeWidget>
+		<placeWidget x="57" y="3" name="DESCRIBER">
+			You can see a long and reinforced ventilation shaft; the ships machinery is humming faintly in the 
+			background, but the ventilation appears to be offline. The passage is large enough to 
+			crawl through it. However, this also applies for whatever might lurks inside.
+		</placeWidget>
+	<!-- loot-->
+				<placeWidget x="13" y="14" name="cargocontainer"><!-- janitor room-->
+					<lootTable>
+						<lootSubTable chance="1" file="debris_resources" />
+						<lootSubTable chance="0.85" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="13" y="12" name="cargocontainer"><!-- janitor room-->
+					<lootTable>
+						<lootSubTable chance="1" file="debris_resources" />
+						<lootSubTable chance="0.85" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="27" y="2" name="cargocontainer">
+					<lootTable>
+						<loot item="medicine" chance="0.5" />
+						<loot item="medicine" chance="1.0" />
+						<loot item="space meal" chance="0.5" />
+						<loot item="space meal" chance="1.0" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="47" y="10" name="cargocontainer"><!-- goo dragon room-->
+					<lootTable>
+						<lootSubTable chance="1" file="debris_resources" />
+						<lootSubTable chance="0.85" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="56" y="9" name="cargocontainer"><!-- hidden airventroom-->
+					<lootTable>
+						<lootSubTable chance="1" file="debris_resources" />
+						<lootSubTable chance="0.85" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+					</lootTable>
+				</placeWidget>
+				<placeItem x="42" y="11">
+						<item itemname="Magnet Keycard" lock="C1" />
+				</placeItem>
+				<placeItem x="56" y="14">
+						<item itemname="computation valve" />
+						<item itemname="Magnet Keycard" lock="Janitor" />
+				</placeItem>
+				<placeItem x="14" y="12">
+						<item itemname="multitool" />
+				</placeItem>
+				<placeWidget x="27" y="7" name="cargocontainer">
+					<lootTable>
+						<loot item="medicine" chance="0.5" />
+						<loot item="medicine" chance="1.0" />
+						<loot item="space meal" chance="0.5" />
+						<loot item="space meal" chance="1.0" />
+					</lootTable>
+				</placeWidget>
+	<!-- misc items-->
+		<placeWidget x="27" y="3" name="modules/bunk bed" />
+		<placeWidget x="27" y="8" name="modules/bunk bed" />
+	<!-- feature items-->
+		<placeWidget x="20" y="2" name="chargingstation">
+			<resource type="ENERGY" value="810" />
+		</placeWidget>
+	<!-- research computer-->
+	<placeWidget x="45" y="15" name="console" info="interaction/debris/eventlog1"
+		variable="57" />
+	<placeWidget x="8" y="11" name="console" info="interaction/debris/eventlog0"
+		variable="57" />
+	<!-- this is bob, say hallo to bob-->
+		<placeNPC name="debris/bob" x="14" y="13" />
+	<!-- 3 peacemaker-->
+		<placeNPC x="26" y="13" name="debris/peacemaker" />
+		<placeNPC x="38" y="6" name="debris/peacemaker" />
+		<placeNPC x="49" y="6" name="debris/peacemaker" />
+	<!-- 2 goo dragons-->
+		<placeNPC x="45" y="14" name="debris/goodragon" />
+		<placeNPC x="56" y="10" name="debris/goodragon" />
+	</mapgen>
+
+</zone>

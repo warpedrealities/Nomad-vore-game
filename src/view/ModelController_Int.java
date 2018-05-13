@@ -1,6 +1,7 @@
 package view;
 
 import actor.npc.NPC;
+import graphics.AnimatedFXControl;
 import item.Item;
 import shared.Screen;
 import shared.Vec2f;
@@ -56,5 +57,7 @@ public interface ModelController_Int {
 	void screenFade(float duration);
 
 	NPC createNPC(String file, Vec2f position, boolean temp);
+
+	AnimatedFXControl getFX();
 
 }

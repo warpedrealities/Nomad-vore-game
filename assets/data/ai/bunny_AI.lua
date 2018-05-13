@@ -1,8 +1,11 @@
 
 function combat(controllable,sense,pos,hostile)
-	if (hostile:getPosition():getDistance(pos)<2) then
+	a=controllable:getValue(0)
+	if (hostile:getPosition():getDistance(pos)<2) and a==0 then
 		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
+		controllable:setValue(0,5);
 	else
+		controllable:setValue(0,a-1);
 		if controllable:HasPath() then
 			controllable:FollowPath()
 		else

@@ -252,4 +252,8 @@ public class WidgetBreakable extends Widget implements Attackable {
 		return -20;
 	}
 
+	public void handleDismantle(WidgetItemPile pile) {
+
+	}
+
 }

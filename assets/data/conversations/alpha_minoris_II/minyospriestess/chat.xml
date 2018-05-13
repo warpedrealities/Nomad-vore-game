@@ -9,10 +9,14 @@
 		"Greetings again friend." the priestess gives you a smile, though is no longer so guarded you can't tell she's troubled.
 		</text>
 		<choice destination="campaign0" text="$What troubles you priestess?">
+					<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
+				value="1" />
 		<condition operator="equals" evaluate="LOCALFLAG" flag="campaignDiscussion"
 			value="0" />		
 		</choice>
 		<choice destination="campaign1" text="$Lets discuss the war against the enemy">
+					<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
+				value="1" />
 		<condition operator="equals" evaluate="LOCALFLAG" flag="campaignDiscussion"
 			value="1" />		
 		</choice>		

@@ -31,7 +31,9 @@
 				<noise tile="2" scarcity="22" />	
 				<noise tile="3" scarcity="22" />				
 				<floodfill tile="1">
-				<SeedNPCs min="8" max="12" name="AlphaMinoris_II/TyrantLizard"/>
+				<SeedNPCs min="8" max="12" name="AlphaMinoris_II/TyrantLizard">
+					<script death="tyrantLizardDeath" />
+				</SeedNPCs>
 				<SeedNPCs min="16" max="24" name="AlphaMinoris_II/Salamander"/>							
 				</floodfill>
 			</band>			

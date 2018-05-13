@@ -5,6 +5,7 @@ import actor.Attackable;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import faction.violation.FactionRule.ViolationType;
+import graphics.CompiledFX;
 import nomad.universe.Universe;
 import rlforj.los.ConePrecisePremisive;
 import rlforj.los.IConeFovAlgorithm;
@@ -94,34 +95,36 @@ public class CombatAura {
 
 	static public boolean doExplosion(CombatMove move, Actor origin, Attackable target, boolean center) {
 
+		CompiledFX explosion=new CompiledFX();
 		Zone zone = Universe.getInstance().getCurrentZone();
 
 		if (move.isNonViolent()) {
-
+			explosion.setRGB(1,0,1);
 			if (center) {
-				ViewScene.m_interface.Flash(target.getPosition(), 4);
+				explosion.addPosition(target.getPosition());
 				explodeTile(zone, (int) target.getPosition().x, (int) target.getPosition().y, move, origin);
 			}
 
 			for (int i = 0; i < 8; i++) {
 				Vec2f p = ZoneInteractionHandler.getPos(i, target.getPosition());
 				explodeTile(zone, (int) p.x, (int) p.y, move, origin);
-				ViewScene.m_interface.Flash(p, 4);
+				explosion.addPosition(p);
 
 			}
 		} else {
-
+			explosion.setRGB(1,0,0);
 			if (center) {
-				ViewScene.m_interface.Flash(target.getPosition(), 3);
+				explosion.addPosition(target.getPosition());
 				explodeTile(zone, (int) target.getPosition().x, (int) target.getPosition().y, move, origin);
 			}
 			for (int i = 0; i < 8; i++) {
 				Vec2f p = ZoneInteractionHandler.getPos(i, target.getPosition());
 				explodeTile(zone, (int) p.x, (int) p.y, move, origin);
-				ViewScene.m_interface.Flash(p, 3);
+				explosion.addPosition(p);
 
 			}
 		}
+		ViewScene.m_interface.getFX().addEffect(explosion);
 		return true;
 	}
 

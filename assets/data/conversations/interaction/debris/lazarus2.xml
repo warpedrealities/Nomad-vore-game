@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			LAZARUS MAINFRAME ONLINE
+			BOOTING SUBROUTINES
+			PLEASE AUTHENTIFY
+		</text>
+			<choice destination="lazarus1" text="$Place your hand on the Authentificator">
+				<condition operator="equals" evaluate="GLOBALFLAG" flag="lazarus1" value="2" />
+			</choice>
+		<choice destination="end" text="exit" />
+	</page>
+
+	
+		<page ID="lazarus1">
+		<text>
+			WELCOME LYSSA PERSONNEL 308
+			INITIATING MATERIAL ASSEMBLY...
+			LITHIUM LEVEL - OK
+			COPPER LEVEL - OK
+			NANO CARBON - OK
+			RAW IRON - MISSING
+			PLEASE REFILL MATERIAL TO PROCEED
+			You see a hatch for iron containing raw 
+			material open behind you
+			It seems like Lazarus can create you nearly
+			everything with a bit of iron and
+			the right subrotine.
+		</text>
+			<choice destination="lazarus2" text="$1 Battery for 7 scrap metal">
+	<condition evaluate="HASITEM" operator="greaterthan" value="7"
+				item="scrap metal" />	
+			</choice>
+			<choice destination="lazarus3" text="$1 Heavy plating for 8 Scrap metal">
+		<condition evaluate="HASITEM" operator="greaterthan" value="8"
+				item="scrap metal" />	
+			</choice>
+			<choice destination="lazarus4" text="$1 Optic for 5 Scrap metal">
+		<condition evaluate="HASITEM" operator="greaterthan" value="5"
+				item="scrap metal" />	
+			</choice>
+			<choice destination="lazarus5" text="$1 Computation valve for 6 Scrap metal">
+		<condition evaluate="HASITEM" operator="greaterthan" value="6"
+				item="scrap metal" />	
+			</choice>
+		<choice destination="end" text="back away" />
+	</page>
+
+	<page ID="lazarus2">
+	<text>
+	You place your scrap metal into the hatch behind you, after a short while another hatch opens, containing a battery
+	</text> 
+		<effect type="giveitem" value="1" item="battery" />	
+		<effect type="removeitem" item="scrap metal" value="7" />	
+		<choice destination="lazarus1" text="$Produce something else"/>
+		<choice destination="end" text="$Leave"/>
+	</page>
+
+	<page ID="lazarus3">
+	<text>
+	You place your scrap metal into the hatch behind you, after a short while another hatch opens, containing a heavy plate
+	</text> 
+		<effect type="giveitem" value="1" item="heavy plate" />	
+		<effect type="removeitem" item="scrap metal" value="8" />	
+		<choice destination="lazarus1" text="$Produce something else"/>
+		<choice destination="end" text="$Leave"/>
+	</page>
+
+	<page ID="lazarus4">
+	<text>
+	You place your scrap metal into the hatch behind you, after a short while another hatch opens, containing a single optic unit
+	</text> 
+		<effect type="giveitem" value="1" item="optics" />	
+		<effect type="removeitem" item="scrap metal" value="5" />	
+		<choice destination="lazarus1" text="$Produce something else"/>
+		<choice destination="end" text="$Leave"/>
+	</page>
+
+	<page ID="lazarus5">
+	<text>
+	You place your scrap metal into the hatch behind you, after a short while another hatch opens, containing a computation valve
+	</text> 
+		<effect type="giveitem" value="1" item="computation valve" />	
+		<effect type="removeitem" item="scrap metal" value="6" />	
+		<choice destination="lazarus1" text="$Produce something else"/>
+		<choice destination="end" text="$Leave"/>
+	</page>
+</Conversation>

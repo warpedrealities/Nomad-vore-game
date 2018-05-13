@@ -13,17 +13,18 @@ import shared.Vec2f;
 
 public class AnimatedFXControl {
 
-	Queue<FX> visualEffects;
-	FX currentVisualEffect;
-	Square_Int[] m_squares;
-
+	private Queue<FX> visualEffects;
+	private FX currentVisualEffect;
+	private Square_Int[] m_squares;
+	
 	public AnimatedFXControl() {
 		visualEffects = new LinkedList<FX>();
 
-		m_squares = new Square_Int[3];
+		m_squares = new Square_Int[4];
 		m_squares[0] = new SquareRenderer(255, new Vec2f(0, 0), new Vector4f(1, 0, 0, 1));
 		m_squares[1] = new SquareRenderer(254, new Vec2f(0, 0), new Vector4f(1, 0, 0, 1));
 		m_squares[2] = new Ray(253, new Vec2f(0, 0), new Vector4f(1, 0, 0, 1));		
+		m_squares[3] = new SquareCollection();
 	}
 
 	public void Update() {
@@ -45,28 +46,27 @@ public class AnimatedFXControl {
 
 	public void Draw(int matrixloc, int tint, FloatBuffer matrix44fbuffer) {
 		if (currentVisualEffect != null) {
-			for (int i=0;i<3;i++)
+			for (int i=0;i<4;i++)
 			{
 				if (m_squares[i].getVisible())
 				{
 					m_squares[i].draw(matrixloc, tint, matrix44fbuffer);		
 				}
 			}
-
 		}
 
 	}
 
 	private void initEffect(FX effect)
 	{
-		for(int i=0;i<3;i++)
+		for(int i=0;i<4;i++)
 		{
 			m_squares[i].setColour(currentVisualEffect.getRed(),
 					currentVisualEffect.getGreen(), currentVisualEffect.getBlue());		
 			m_squares[i].setVisible(false);
 		}
-		m_squares[effect.getIndex()].reposition(currentVisualEffect.getPosition());
-
+		//m_squares[effect.getIndex()].reposition(currentVisualEffect.getPosition());
+		currentVisualEffect.initializeEffect(m_squares[effect.getIndex()]);
 	}
 	
 	public void addEffect(FX effect) {
@@ -91,5 +91,10 @@ public class AnimatedFXControl {
 			m_squares[i].discard();
 		}
 
+	}
+
+	public void CompileEffect(int index, Vec2f p, int r, int g, int b, int lifespan) {
+		// TODO Auto-generated method stub
+			
 	}
 }

@@ -15,11 +15,11 @@
 
 
 				<randprefab width="3" height="3">
-					<row>111</row>
-					<row>121</row>
 					<row>222</row>
+					<row>121</row>
+					<row>111</row>
 					<pairedportal sprite="3" destination="Cave zone" x="1"
-						y="1" ID="15">a tunnel to the surface</pairedportal>
+						y="1" ID="15" facing="4">a tunnel to the surface</pairedportal>
 				</randprefab>
 
 				<noise tile="2" scarcity="6" />

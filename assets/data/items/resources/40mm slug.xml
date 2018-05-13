@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ItemResource name="40mm slug" weight="0.5" value="25">
+	<description>A ferrous solid shot projectile used by ship to ship slug throwers.
+	</description>
+
+</ItemResource>

@@ -18,8 +18,15 @@
 		<choice destination="training0" text="I am interested in having my first lesson">
 			<preference fetish="herms" />	
 			<preference fetish="demis" />		
+			
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="7" />	
 		</choice>
+			<choice destination="training1" text="I am interested in having another lesson">
+			<preference fetish="herms" />	
+			<preference fetish="demis" />		
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="training" value="1" />				
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="5" />	
+		</choice>	
 		<choice destination="job1" text="About those gators">
 		<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="1" />
 		<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="7" />		
@@ -30,6 +37,10 @@
 		<choice destination="job0" text="I was curious if you had any work for me?">
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="0" />		
 		</choice>
+		<choice destination="job2" text="I was curious if you had any more work for me?">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="7" />		
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="0" />		
+		</choice>	
 		<choice destination="end" text="Nothing, at the moment..but perhaps later"/>
 	</page>
 	
@@ -38,6 +49,77 @@
 	"Maybe I do. Or maybe, maybe you're special and I've singled out to be trained like this. And maybe it'd spoil the fun if you knew which was which, just pick whichever answer you find more pleasant."
 	</text>
 	<choice destination="end" text="That is no kind of answer, but i suspect its all i'm going to get"/>
+	</page>
+	
+	<page ID="training1">
+	<text>
+	"Mhmm, excellent. I think you know how this needs to go." she says <conditional>
+				<assertion evaluate="slothasitem" slot="2" />and indeed you do, Varliss likes to give her training to naked trainees. So you undress in preparation to begin.
+			</conditional> "Today we'll work on your stance, after all, a soldier should know how to handle a sword." she says with a smile "now, keep your gaze straight ahead of you. arm out in front of you like so. One foot behind you, other forwards, now..lean forwards..no not like that, let me help you" she says as you obey her instructions and assume the position as she slips up behind you. Varliss reaching one hand out to your arm to adjust your position, but as she does..
+	</text>
+	<choice destination="training1A" text="*you feel something prodding against your behind*"/>
+	</page>
+	
+	<page ID="training1A">
+	<assertion evaluate="haspart" part="vagina" />	
+	<text>
+	You feel her tip lining up with your netherlips as she guides her shaft right where she wants it. "Now, lets see how you can really handle a sword" she says and then adds "Don't flinch, don't move." as a command as she thrusts into you, her shaft stretching you out as she plunges her length deep into your body. Her hips soon flush against your rear and her breasts smooshed against your back warmly as she penetrates you.
+	</text>
+	<choice destination="training1BA" text="*this, this is fine*"/>
+	</page>
+	
+	<page ID="training1BA">
+	<text>
+	"Keep your stance, a real soldier wouldn't let a little something like this spoil their poise." she says as she begins to thrust "Although, it IS a big something. Wouldn't you agree?" she asks as her hips move back and forth, slapping against your own as she pounds away at your sex, embracing you from behind and keeping one hand on your arm and the other on your hips as she fucks you.
+	</text>
+	<choice destination="training1CA" text="it's...big"/>
+	</page>
+	
+	<page ID="training1CA">
+	<text>
+	Finally between her moans Varliss gives you permission "At ease, soldier" she tells you, and you untense, easing and relaxing into the fucking you're receiving. Leaning further forwards and planting your hands on your thighs as your moans join her own as you screw with all the more vigor now you can properly enjoy it.
+	</text>
+	<choice destination="training1DA" text="*almost..almost*"/>
+	</page>
+	
+	<page ID="training1DA">
+	<text>
+	Varliss's vigorous pace picks up, rocking you back and forth. She keeps both hands on your hips to steady you as her shaft pumps in and out of your nethers "Don't you dare fall" Varliss demands before letting out a lustful cry as her cock spasms, pumping hot seed deep into your womb as she bottoms out against your hips. Varliss waiting till she's shot her last spurt of cum deep into your snatch before pulling her cock out of you, smiling as she gives your rump a pat "You handle a sword well soldier. I enjoy training you, return should you need..a repeat lesson."
+	</text>
+	<effect type="incrementlocalflag" flag="training" value="1" />		
+	<choice destination="end" text="I might very well, one never knows when ones swordswomanship might need checking"/>	
+	<choice destination="end" text="Perhap, or maybe I'll just stick to fighting monsters"/>
+	</page>
+	
+	<page ID="training1A">
+	<assertnot evaluate="haspart" part="vagina" />
+	<text>
+	You feel her tip prodding between your rumpcheeks as she guides her shaft right where she wants it. "Now, lets see how you can really handle a sword" she says and then adds "Don't flinch, don't move." as a command as she thrusts into you, her shaft stretching you out as she plunges her length deep into your body. Her hips soon flush against your rear and her breasts smooshed against your back warmly as she penetrates you.
+	</text>
+		<choice destination="training1BB" text="*this, this is fine*"/>
+	</page>
+	
+	<page ID="training1BB">
+	<text>
+	"Keep your stance, a real soldier wouldn't let a little something like this spoil their poise." she says as she begins to thrust "Although, it IS a big something. Wouldn't you agree?" she asks as her hips move back and forth, slapping against your own as she pounds away at your rear end, embracing you from behind and keeping one hand on your arm and the other on your hips as she ploughs your back passsage.	
+	</text>
+	<choice destination="training1CB" text="it's...big"/>	
+	</page>
+	
+	<page ID="training1CB">
+	<text>
+	Finally between her moans Varliss gives you permission "At ease, soldier" she tells you, and you untense, easing and relaxing into ass reaming you're in the process of receiving. Leaning further forwards and planting your hands on your thighs as your moans join her own as rock your hips back to meet her thrusts. Getting more into the buttfucking now you can properly enjoy it.
+	</text>
+		<choice destination="training1DB" text="*almost..almost*"/>
+	</page>
+	
+	<page ID="training1DB">
+	<text>
+	Varliss's vigorous pace picks up, rocking you back and forth. She keeps both hands on your hips to steady you as she ploughs your rear end. "Don't you dare fall" Varliss demands before letting out a lustful cry as her cock spasms, pumping hot seed deep into your bowels as she bottoms out against your asscheeks. Varliss waiting till she's shot her last spurt of cum deep into your rear before pulling her cock out of you, smiling as she gives your rump a pat "You handle a sword well soldier. I enjoy training you, return should you need..a repeat lesson."
+	</text>
+	<effect type="incrementlocalflag" flag="training" value="1" />		
+	<choice destination="end" text="I might very well, one never knows when ones swordswomanship might need checking"/>	
+	<choice destination="end" text="Perhap, or maybe I'll just stick to fighting monsters"/>
 	</page>
 	
 	<page ID="training0">
@@ -98,6 +180,55 @@
 	</text>
 	<choice destination="end" text="huh."/>
 	</page>
+	
+	<page ID="job2">
+	<text>
+	"You hunger for further challenge? or perhaps for further tutelage. Good. Prove yourself. There are fearsome beasts in the mountains north of here, their muscles are like rock and their teeth are like iron. If you have the mettle then go and defeat these tyrant lizards. Three should prove an apt task for you, face them without fear."
+	</text>
+	<choice destination="job2Accept" text="Sure, I can do that"/>
+	<choice destination="job2Refuse" text="These things sound scary, I'd rather not"/>	
+	</page>
+	
+	<page ID="job2Accept">
+	<effect type="setglobalflag" flag="Varless_monsterhunt1" value="1" />			
+	<text>
+	"Excellent, return triumphant and perhaps I will continue your training if you are ready." she says with a smile.
+	</text>
+	<choice destination="end" text="Training, and a reward."/>
+	</page> 
+	
+	<page ID="job2Refuse">
+	<text>
+	"Perhaps I misjudged you. Many others fear to travel into the mountains as you do. There is no shame in the unexceptional. But perhaps if you wish to prove yourself apart, come to me and we will see whether you have the heart for it."
+	</text>
+	<choice destination="end" text="You have a strange philosophy, but if i change my mind I'll come back"/>
+	</page>	
+	
+<page ID="job3">
+	<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="4" />	
+	<text>
+	"Come now. You cannot return without wisdom. All things have a purpose, and though the death of the lizards will help my people the challenge is in itself a lesson for you." 
+	</text>
+	<choice destination="end" text="A lesson, well I suppose I should get on with it"/>
+	</page>
+
+	<page ID="job3">
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="4" />	
+	<text>
+	"Ah, you have returned eager for more training? Or perhaps you simply want the gold for your service to the people of Dammath." she smiles and looks you over "You have bested the lizards?"
+	</text>
+	<choice destination="job3Reward" text="Yes, they proved less fearsome than their appearance suggested"/>
+	</page>
+	
+	<page ID="job3Reward">
+	<text>
+	"And that is the lesson, surface is nothing but a mask. All things have hidden depths, to probe, to explore, to understand. Inside everyone are facets of their personality that even they might not be aware of. Do not trust first impressions, seek the truth in all things. As I will should I train you further." she says and rewards you with gold your efforts, gold and a side order of philosophy.
+	</text>
+		<effect type="givegold" value="1000" />
+		<effect type="setglobalflag" flag="Varless_monsterhunt1" value="5" />	
+		<choice destination="end" text="Further training? well, i'm sure that will be interesting"/>
+		<choice destination="end" text="I'm only interested in gold Varliss, gold and nothing else."/>
+	</page>	
 	
 	<page ID="job1">
 	<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="6" />	

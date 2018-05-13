@@ -1,7 +1,5 @@
 package graphics;
 
-import rendering.SpriteBeam;
-import rendering.SquareRenderer;
 import rendering.Square_Int;
 import shared.Vec2f;
 
@@ -38,6 +36,11 @@ public class FX {
 		return colour[2];
 	}
 
+	public FX()
+	{
+		
+	}
+	
 	public FX(int index, Vec2f position, float r, float g, float b) {
 		this.colour = new float[3];
 		this.colour[0] = r;
@@ -68,6 +71,10 @@ public class FX {
 	public void update(Square_Int[] squares) {
 		squares[index].setVisible(true);
 		this.lifeSpan--;
+	}
+
+	public void initializeEffect(Square_Int square) {
+		square.reposition(getPosition());
 	}
 
 }

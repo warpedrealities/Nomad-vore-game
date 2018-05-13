@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			A mission terminal, this one controls function of a research satellite called "Lazarus". 
+			It seems like someone was working on some kind of authorization process and stopped in the middle of it. 
+			The terminal asks you to place your hand on a scan device to proceed.
+		</text>
+		<choice destination="lock" text="Place your hand on the device" />
+		<choice destination="end" text="exit" />
+	</page>
+
+	
+		<page ID="lock">
+		<text>
+			You place your flat palm on the device as instructed and wait for a reaction. 
+			Suddenly you feel your hand heat up, you try to remove it but an invisible forcefield keeps it in place. 
+			Before you get the chance to panic, you feel the heat vanishing again, as the contraption releases your palm.
+			The screen shows you that you just gained access to some of Lazarus subroutines.
+		</text>
+	<effect type="setglobalflag" flag="lazarus1" value="2" />
+		<choice destination="end" text="back away" />
+	</page>
+
+</Conversation>

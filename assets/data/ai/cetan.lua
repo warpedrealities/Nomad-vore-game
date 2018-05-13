@@ -30,7 +30,7 @@ end
 function combat(controllable,sense,pos,hostile)
 	a=controllable:getValue(0)
 	b=controllable:getHealth()
-	if (a>s or b<40) then
+	if (a>15 or b<40) then
 		attack(controllable,sense,pos,hostile)
 		
 	else		

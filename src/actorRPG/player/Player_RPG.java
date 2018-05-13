@@ -311,7 +311,7 @@ public class Player_RPG implements Actor_RPG {
 			}
 		}
 		
-		stats[SATIATION]-=subAbilities[METABOLISM]*duration;
+		stats[SATIATION]-=calcMetabolism()*duration;
 		if (stats[SATIATION]<=0)
 		{
 			stats[HEALTH]-=0.25F*duration;
@@ -346,7 +346,7 @@ public class Player_RPG implements Actor_RPG {
 	}
 	public void sleep(int duration)
 	{
-		stats[SATIATION]-=subAbilities[METABOLISM]*duration;
+		stats[SATIATION]-=calcMetabolism()*duration;
 		
 		if (stats[SATIATION]<=0)
 		{
@@ -380,6 +380,15 @@ public class Player_RPG implements Actor_RPG {
 		}
 		cooldownHandler.update(duration);
 	}
+	
+	private float calcMetabolism()
+	{
+		float minor=subAbilities[METABOLISM]*0.5F;
+		float major=subAbilities[METABOLISM]*0.5F;
+		float karma=(karmaMeter/100);
+		return minor+(major*karma);
+		
+	}
 	@Override
 	public void update()
 	{
@@ -388,7 +397,7 @@ public class Player_RPG implements Actor_RPG {
 			busy--;
 		}
 		//satiation
-		stats[SATIATION]-=subAbilities[METABOLISM];
+		stats[SATIATION]-=calcMetabolism();
 
 		if (stats[SATIATION]<=0)
 		{

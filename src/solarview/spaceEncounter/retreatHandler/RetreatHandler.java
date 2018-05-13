@@ -26,8 +26,8 @@ public class RetreatHandler {
 		while(p==null) {
 			Vec2f c=Geometry.getPos(Universe.m_random.nextInt(8), new Vec2f(0,0));
 			c.normalize();
-			c.x=c.x*8;
-			c.y=c.y*8;
+			c.x=c.x*16;
+			c.y=c.y*16;
 			if (suitableSpot(c,system))
 			{
 				p=c;

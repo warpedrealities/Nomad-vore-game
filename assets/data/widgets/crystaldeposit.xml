@@ -5,4 +5,7 @@
 	<description>A deposit of crystals high in energy, possibly usable as
 		fuel</description>
 	<regeneration regentime="2000" />
+	<skillCheck item="blue crystal" dc="20" attribute="SCIENCE" min="1" max="2">
+	You have successfully increased the yield of crystals from this deposit with SCIENCE!
+	</skillCheck>
 </widgetharvestable>

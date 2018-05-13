@@ -19,7 +19,7 @@
 		<attribute attribute="PHEREMONE" value="99" />	
 		<attribute attribute="PSYCHIC" value="99" />			
 		<combatMove name="mist" pattern="MELEE"
-			bonusAttribute="MELEE" timeCost="2" bonusToHit="12">
+			bonusAttribute="MELEE" timeCost="4" bonusToHit="12">
 			<effectrecover modifier="INTELLIGENCE" modstrength="0.2"
 				modvalue="10" modifies="RESOLVE" />
 			<missText count="2">
@@ -32,10 +32,10 @@
 			</hitText>
 		</combatMove>
 		<combatMove name="project shield" pattern="MELEE"
-			bonusAttribute="MELEE" timeCost="2" bonusToHit="99">
+			bonusAttribute="MELEE" timeCost="4" bonusToHit="99">
 			<effectStatus probability="100">
 			<applyText>TARGET is now surrounded by a deflective forcefield</applyText>
-			<statusDefence uid="16" icon="1" duration="20"
+			<statusDefence uid="16" icon="1" duration="40"
 				numModifiers="2">
 				<strength value="10" />
 				<effect attribute="KINETIC" modifier="6" />
@@ -50,6 +50,12 @@
 				<text></text>
 			</hitText>
 		</combatMove>	
+				<statusTags count="4">
+			<tag>psychic</tag>
+			<tag>radio</tag>
+			<tag>seduction</tag>
+			<tag>life</tag>		
+		</statusTags>
 	</rpg>
 	<controller AI="pirate_drone" />
 	<faction value="pirate" />

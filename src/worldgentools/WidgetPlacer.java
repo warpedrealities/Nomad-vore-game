@@ -6,6 +6,8 @@ import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
 import nomad.universe.Universe;
 
+import java.util.List;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -76,6 +78,14 @@ public class WidgetPlacer {
 				if (node.getNodeType() == Node.ELEMENT_NODE) {
 					Element Enode = (Element) node;
 
+					if (Enode.getTagName().equals("loot table")) {
+						LootTable lootTable=new LootTable(Enode);
+						List<Item> items= lootTable.generateLoot();
+						for (int j=0;j<items.size();j++)
+						{
+							pile.AddItem(items.get(j));
+						}
+					}
 					if (Enode.getTagName() == "item") {
 						Item item = Universe.getInstance().getLibrary().getItem(Enode.getAttribute("itemname"));
 						if (ItemExpositionInstance.class.isInstance(item)) {

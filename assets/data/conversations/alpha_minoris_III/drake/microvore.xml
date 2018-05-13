@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+			<preference fetish="ferals" />
+		<text>
+		The drake flutters down to land in front of you and nose you with its snout knocking you over. The beasty might be merely dog sized, but to you its like being faced with a dragon right out of mythology. The drake looming over you in a way it looms over very little else, then flicking its tongue out to taste you and let its steaming hot breath wash over you in equal measure. The drake runs its tongue along its jaws and stretches them apart a moment as if considering your flavour.
+		</text>
+		<choice destination="oralvore0" text="*and finds it good*"/>
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	Before you can consider anything as preposterous as trying to run away on your tiny legs the drake noses forwards again. The lizard scooping your upper body into its jaws as its lower lip butts against your thighs knocking you forwards onto its palate. Its jaws coming down to hold tightly around your legs as its tongue comes out to lap and lick around your upper body, covering you in the beast's hot saliva as its breath wafts around you more intensely and its throat undulates ahead of you. The drake tipping its head back and angling your legs up into the air but not letting you slip into its throat just yet as it savours you.
+	</text>
+	<choice destination="oralvore1" text="*sampled, then swallowed*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The beasties tongue swirls around you for a few moments and then seemingly it tires of such things and you feel its grip on your legs loosen as it knocks its head back in a sharp birdlike movement. Your upper body slipping down the drake's throat, bulging out its neck and then slipping deeper still as it repeats the movement and all traces of your legs vanish into its mouth. The drake proving an apt predator for you as you're soon entirely entrapped within the tight and undulating passage of its throat. And then, soon after, the roomier confines of its belly.
+	</text>
+	<choice destination="oralvore2" text="*food for the lil drake*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The steaming depths of the drake are roomy enough for you to extend your arms. But despite this accomodation the fact remains you've been swallowed whole by the small dragonlike reptile and now judging by the oozing fleshy walls around you you're about to end up digested. The drake bounding into the air sending you jostling and bouncing around before you get your bearings, the lizard flying as you find yourself covered in tingling enzymes and sloshed around in the rising stomach fluids.
+	</text>
+	<choice destination="oralvore3" text="*digested*"/>
+	</page>
+	
+	<gameover ID="oralvore3">
+	<text>
+	You flail and squirm as best you can inside the drake as you're pushed around, form a jostling lump in the flying lizard's midsection. But your struggles do you no good as the drake's enzymes don't take long to digest a body as small as yours. Your form softening, sloshing and melting away as your movements still. Soon not a trace of you is left, your remnants flowing into the beast to power its body as it flies. You truly were a nice snack for the lil creature.
+	</text>
+	</gameover>
+	
+
+</Conversation>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<conversion>
+<conversion item="blue crystal" value="1"/>
+<conversion item="volatile crystal" value="2"/>
+<conversion item="fuel canister(poor)" value="3"/>
+<conversion item="fuel canister" value="12"/>
+<conversion item="isotope" value="3"/>
+<conversion item="improvised fuel canister" value="8"/>
+
+</conversion>

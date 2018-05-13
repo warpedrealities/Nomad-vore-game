@@ -33,6 +33,7 @@
 	<respawn delay="2000" />
 	<flying />
 	<defeated conversation="avior_II/bunnygirl/defeat" />
+	<seduced conversation="avior_II/bunnygirl/seduced" />
 	<captive conversation="avior_II/bunnygirl/captive" />	
 	<controller AI="bunny_AI" />
 	<faction value="monster" />

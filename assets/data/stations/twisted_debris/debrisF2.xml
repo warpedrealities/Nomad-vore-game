@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="stationblue3.png">
+	<tileset count-x="8" count-y="12">
+		<tile sprite="1" vision="1" movement="2" smart="true">A badly damaged titanium wall, it seems like some kind of organic lifeform grows within...</tile><!-- 1-->
+		<tile sprite="17" vision="0" movement="0" smart="true">Some kind of Plasteel-nano-weave common for science ships</tile><!-- 2-->
+		<tile sprite="33" vision="0" movement="2">Containment pods, the content is unknown and sealed for good.</tile><!-- 3-->
+		<tile sprite="34" vision="0" movement="0">Air vent platings</tile><!-- 4-->
+		<tile sprite="41" vision="1" movement="2" smart="true">A sturdy titanium wall, keeps specimen in and space out</tile><!-- 5-->
+		<tile sprite="35" vision="0" movement="2">Nanocoated high security glass, common for science class ships</tile><!-- 6-->
+		<tile sprite="57" vision="0" movement="0" smart="true">Artificially re-created biosphere platings</tile><!-- 7-->
+		<tile sprite="36" vision="0" movement="2">Artificially re-created plants, certainly not edible</tile><!-- 8-->
+		<tile sprite="37" vision="0" movement="2">This looks like some kind of operation table, those restrainers don't look like they were designed for cooperative patients.</tile><!-- 9-->
+	</tileset>
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="32"><!-- Left room entrance-->
+		<row>00001111155551111100111105111111</row>
+		<row>00001111155551111111141155115511</row>
+		<row>00005578878788755124242222111221</row>
+		<row>00005577777777755112224422222222</row>
+		<row>00005588722228850122222242211222</row>
+		<row>00005588222228851155551115511221</row>
+		<row>00005588222278851121011100115222</row>
+		<row>00005115512115115555555115111212</row>
+		<row>00005511222222222222222222222222</row>
+		<row>00005511122212222222222222215222</row>
+		<row>00005555512255666615555125511222</row>
+		<row>00005511172217777777522222211221</row>
+		<row>00005511172777777777622222255222</row>
+		<row>00005511777277777777622222215222</row>
+		<row>00005577777777778777622222211222</row>
+		<row>00005577777777777777566666515222</row>
+		<row>00005577877777777777777777711222</row>
+		<row>00005577777777777777777177755222</row>
+		<row>00005577777777777777777777715222</row>
+		<row>00005577177787771177778777715222</row>
+		<row>00005577777777777777777777711222</row>
+		<row>00005577777777777777717757615222</row>
+		<row>00005577877777777777777762272221</row>
+		<row>00005177777777777777777767215511</row>
+		<row>00001177777777777787771772711551</row>
+		<row>00001177777717777777777712255151</row>
+		<row>00005171777777777777778711715111</row>
+		<row>00005577777777777777777777715122</row>
+		<row>00005517778777771777777777144212</row>
+		<row>00005511777777777777777777444222</row>
+		<row>00005511551115555511555555114221</row>
+		<row>00005555555555555555555555511122</row>
+	<pairedportal x="21" y="1" sprite="11" ID="140"
+		destination="twisted_debris" facing="0"> Space ship main floor airvent </pairedportal>
+	</prefab>
+	<prefab positionX="32" positionY="0" width="32"><!-- Right room large containment & science room-->
+		<row>11155555555555555555555555555500</row>
+		<row>11155555555555555555555555555500</row>
+		<row>22115555555555555555555555555500</row>
+		<row>22152222222552222222552333325500</row>
+		<row>22552929292552929292553222235500</row>
+		<row>22512222222552222222552122225500</row>
+		<row>22512222222552222222553222235500</row>
+		<row>22512929292552929292512222225500</row>
+		<row>22151222222552222222512222215500</row>
+		<row>22111555525555555525555114225500</row>
+		<row>21541515525111555525551142225500</row>
+		<row>22224211122211222222222212225500</row>
+		<row>22241222112222222222222222225500</row>
+		<row>21555141555112222122555511555500</row>
+		<row>21151111177762722222677777775500</row>
+		<row>11557777771777227222677771775500</row>
+		<row>21517777777772222272777777775500</row>
+		<row>22557787777716711666577787175500</row>
+		<row>22557777777777777777777777775500</row>
+		<row>22157777777771777777777777775500</row>
+		<row>22157777777777777777777717775500</row>
+		<row>11117777877777777877777777775500</row>
+		<row>15557777777777777717777777775500</row>
+		<row>21557177777777777777777777775500</row>
+		<row>22441777777777777777777777775500</row>
+		<row>22247777778777777777777717775500</row>
+		<row>22227717777777777778777777115500</row>
+		<row>22247711777777777777771727225500</row>
+		<row>21447777777771777777777712725500</row>
+		<row>22114771777777777777777122225500</row>
+		<row>22151115555555555555551155555500</row>
+		<row>22155555555555555555555555555500</row>
+	</prefab>
+	<prefab positionX="0" positionY="32" width="32"><!-- Crew rooms & elevator more in V.2-->
+		<row>00000000000000000000000005555552</row>
+		<row>00000000000000000000000005555222</row>
+		<row>00000000000000000000000552222222</row>
+		<row>00000000000000000000000552222222</row>
+		<row>00000000000000555555555552222222</row>
+		<row>00000000000000055222255222222255</row>
+		<row>00000000000000055222222222222252</row>
+		<row>00000000000000055222255222222222</row>
+		<row>00000000000000555555555552222222</row>
+		<row>00000000000000000000000552222222</row>
+		<row>00000000000000000000000552222222</row>
+		<row>00000000000000000000000555555222</row>
+		<row>00000000000000000000000555555222</row>
+		<row>00000000000000000000000522255552</row>
+		<row>00000000000000000000000522222222</row>
+		<row>00000000000000000000000555555555</row>
+	</prefab>
+	<prefab positionX="32" positionY="32" width="32"><!-- Crew rooms & elevator-->
+		<row>55555500000000000000000000000000</row>
+		<row>22555500000000000000000000000000</row>
+		<row>22222255555555555000000000000000</row>
+		<row>22222255555555555000000000000000</row>
+		<row>22222255552222255000000000000000</row>
+		<row>52222222552242255000000000000000</row>
+		<row>52222222222444255000000000000000</row>
+		<row>22222222552252255000000000000000</row>
+		<row>22222255552222255000000000000000</row>
+		<row>22222255055555555000000000000000</row>
+		<row>22222255000000000000000000000000</row>
+		<row>22555500000000000000000000000000</row>
+		<row>22555500000000000000000000000000</row>
+		<row>55000000000000000000000000000000</row>
+		<row>55000000000000000000000000000000</row>
+		<row>55000000000000000000000000000000</row>
+	</prefab>
+	<!-- doors-->
+			<placeWidget x="28" y="3" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- First room door-->
+		</placeWidget>
+			<placeWidget x="10" y="7" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- Biosphere cultivation room door-->
+		</placeWidget>
+			<placeWidget x="28" y="8" name="panelH">-
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- Biosphere main door-->
+		</placeWidget>
+			<placeWidget x="28" y="22" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- Biosphere observation room-->
+		</placeWidget>
+			<placeWidget x="31" y="32" name="invincible_door">
+			<lock key="G1-employee" strength="99" /> <!-- v2 door-->
+		</placeWidget>
+			<placeWidget x="41" y="10" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- Testroom1-->
+		</placeWidget>
+			<placeWidget x="50" y="10" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- Testroom2-->
+		</placeWidget>
+			<placeWidget x="40" y="38" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- Lazarus control-->
+		</placeWidget>
+			<placeWidget x="31" y="45" name="panelH">
+			<lock key="screwyoubloodydoor" strength="0" /> <!-- Warproom-->
+		</placeWidget>
+	<!-- talky stuff-->
+		<placeWidget x="30" y="21" name="DESCRIBER">
+			The path in front of you is badly damaged, parts walls have collapsed and now render the narrow way inaccessible. Whatever happened to this ship, it must have been a disaster.
+		</placeWidget>
+		<placeWidget x="28" y="4" name="DESCRIBER">
+			*Ding* TO ALL EMPLOYEES PLEASE RESTRAIN FROM
+			INTERACTING WITH...RESEARCH SPECIMEN...OF ALL CATOGARIES
+			STAY SAFE, STAY PRODUCTIVE
+		</placeWidget>
+		<placeWidget x="16" y="16" name="DESCRIBER">
+			*Ding* THIS FACILITY HAS EXPERIENCED *static* ZERO
+			CASUALTIES IN THE PAST NINE*ZZZZRRRZZ* DAYS
+			STAY SAFE, STAY PRODUCTIVE
+		</placeWidget>
+		<placeWidget x="35" y="26" name="DESCRIBER">
+			*Ding* PLEASE REMEMBER, SEXUAL INTERCOURSE
+			IS ONLY ALLOWED DURING ASSED BREAK AND LEISURE TIMES
+			STAY SAFE, STAY PRODUCTIVE
+		</placeWidget>
+		<placeWidget x="24" y="10" name="DESCRIBER">
+			*Ding* REMEMBER, EDIBLE FOOD IS CLEARLY
+			LABELED AS EDIBLE. PLEASE DO NOT CONSUME
+			ANYTHING, OR ANYONE NOT CLEARLY LABELED AS FOOD
+			STAY SAFE, STAY PRODUCTIVE
+		</placeWidget>
+		<placeWidget x="50" y="8" name="DESCRIBER">
+			A room filled with operation tables and various tools, most of them appear used. You can also register a faint sour smell that drills unpleasantly into your nose every time you breath in
+		</placeWidget>
+	<!-- Sodadoor-->
+			<placeWidget x="22" y="38" name="invincible" info="interaction/debris/sodagate"
+				variable="1" />
+	<!-- Phasegate-->
+	<placeWidget x="44" y="39" name="console" info="interaction/debris/Phasegate"
+		variable="58" />
+	<!-- Lazarus terminal 1-->
+	<placeWidget x="25" y="47" name="console" info="interaction/debris/lazarus1"
+		variable="57" />
+	<!-- loot-->
+				<placeWidget x="9" y="4" name="cargocontainer"><!-- plant room-->
+					<lootTable>
+						<lootSubTable chance="1" file="debris_resources" />
+						<lootSubTable chance="0.85" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="36" y="3" name="cargocontainer"><!-- research room L-->
+					<lootTable>
+						<lootSubTable chance="1" file="debris_resources" />
+						<lootSubTable chance="0.85" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="54" y="8" name="cargocontainer"><!-- research room R-->
+					<lootTable>
+						<loot item="medicine" chance="0.5" />
+						<loot item="medicine" chance="1.0" />
+						<loot item="space meal" chance="0.5" />
+						<loot item="space meal" chance="1.0" />
+							<loot item="key" chance="1.0" unique="2" addendum="G1-employee" />
+					</lootTable>
+				</placeWidget>
+				<!-- space cola stash-->
+				<placeWidget x="17" y="37" name="cargocontainer"><!-- hidden juice1-->
+					<lootTable>
+						<lootSubTable chance="1" file="debris_resources" />
+						<lootSubTable chance="0.85" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+						<lootSubTable chance="0.75" file="debris_resources" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="18" y="37" name="cargocontainer"><!-- hidden juice2-->
+					<lootTable>
+						<lootSubTable chance="0.5" file="debris_resources2" />
+						<lootSubTable chance="0.85" file="debris_resources2" />
+						<lootSubTable chance="0.75" file="debris_resources2" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="19" y="37" name="cargocontainer"><!-- hidden juice3-->
+					<lootTable>
+						<lootSubTable chance="0.5" file="debris_resources2" />
+						<lootSubTable chance="0.85" file="debris_resources2" />
+						<lootSubTable chance="0.75" file="debris_resources2" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="20" y="37" name="cargocontainer"><!-- hidden juice4-->
+					<lootTable>
+						<lootSubTable chance="0.5" file="debris_resources2" />
+						<lootSubTable chance="0.85" file="debris_resources2" />
+						<lootSubTable chance="0.75" file="debris_resources2" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="17" y="39" name="cargocontainer"><!-- hidden juice5-->
+					<lootTable>
+						<lootSubTable chance="0.5" file="debris_resources2" />
+						<lootSubTable chance="0.85" file="debris_resources2" />
+						<lootSubTable chance="0.75" file="debris_resources2" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="18" y="39" name="cargocontainer"><!-- hidden juice6-->
+					<lootTable>
+						<lootSubTable chance="0.5" file="debris_resources2" />
+						<lootSubTable chance="0.85" file="debris_resources2" />
+						<lootSubTable chance="0.75" file="debris_resources2" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="19" y="39" name="cargocontainer"><!-- hidden juice7-->
+					<lootTable>
+						<lootSubTable chance="0.5" file="debris_resources2" />
+						<lootSubTable chance="0.85" file="debris_resources2" />
+						<lootSubTable chance="0.75" file="debris_resources2" />
+					</lootTable>
+				</placeWidget>
+				<placeWidget x="20" y="39" name="cargocontainer"><!-- hidden juice8-->
+					<lootTable>
+						<lootSubTable chance="0.5" file="debris_resources2" />
+						<lootSubTable chance="0.85" file="debris_resources2" />
+						<lootSubTable chance="0.5" file="debris_resources2" />
+					</lootTable>
+				</placeWidget>
+	<!-- research computer-->
+	<placeWidget x="20" y="10" name="console" info="interaction/debris/eventlog2"
+		variable="57" /> <!-- first log-->
+	<placeWidget x="47" y="9" name="console" info="interaction/debris/eventlog3"
+		variable="57" /> <!-- second log-->
+	<!-- Gulp wolves-->
+		<placeNPC x="10" y="4" name="debris/gulpwolf" />
+		<placeNPC x="14" y="18" name="debris/gulpwolf" />
+		<placeNPC x="14" y="19" name="debris/gulpwolf" />
+		<placeNPC x="14" y="20" name="debris/gulpwolf" />
+		<placeNPC x="48" y="13" name="debris/gulpwolf" />
+		<placeNPC x="48" y="12" name="debris/gulpwolf" />
+		<placeNPC x="45" y="25" name="debris/gulpwolf" />
+		<placeNPC x="45" y="24" name="debris/gulpwolf" />
+	<!-- Peacemaker-->
+		<placeNPC x="47" y="3" name="debris/peacemaker" />
+		<placeNPC x="38" y="5" name="debris/peacemaker" />
+	<!-- Panther taur for v2-->
+	<!-- Halluzination scene after entering v2-->
+	</mapgen>
+
+</zone>

@@ -40,9 +40,20 @@ function checkBoarded(script,sense)
 	end
 end
 
+function checkTime(script,sense)
+	currentTime=sense:getTime()/100;
+	arrivalTime=sense:getFlags():getFlag("ARRIVAL")
+	if (arrivalTime==0) then
+	sense:getFlags():setFlag("ARRIVAL",currentTime)	
+	else if (currentTime>arrivalTime+50) then
+		script:removeShip()	
+	end
+
+end
+
 function main(script,sense)  
 
 	checkBoarding(script,sense)
 	checkBoarded(script,sense)
-
+	checkTime(script,sense)
 end  

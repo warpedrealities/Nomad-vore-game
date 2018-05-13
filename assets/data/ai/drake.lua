@@ -1,16 +1,31 @@
 
 function aggressive(controllable,sense,pos,hostile)
-	if controllable:HasPath() then
-		controllable:FollowPath()
-	else
-		if pos:getDistance(hostile:getPosition())>2 then
-		--if in melee range attack
-		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 	
+	if hostile:getRPG():hasStatus(90) then
+		if pos:getDistance(hostile:getPosition())<2 then
+			controllable:startConversation()
 		else
+			if controllable:HasPath() then
+				controllable:FollowPath()
+			else
+				controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y)
+				controllable:FollowPath()	
+			end	
+		end
+	else
+	
+		if controllable:HasPath() then
+			controllable:FollowPath()
+		else
+			if pos:getDistance(hostile:getPosition())>2 then
+			--if in melee range attack
+			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 		
-			if not controllable:HasPath() then
-			controllable:specialCommand("flee")
+			else
+			
+				if not controllable:HasPath() then
+				controllable:specialCommand("flee")
+				end
 			end
 		end
 	end

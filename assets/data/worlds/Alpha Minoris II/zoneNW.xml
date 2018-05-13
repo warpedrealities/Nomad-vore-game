@@ -16,30 +16,32 @@
 		you ill won't be able to sneak up on you.</description>
 
 	<mapgen>
-
-		<randprefab width="3" height="3">
-			<row>222</row>
-			<row>222</row>
-			<row>222</row>
-			<placeWidget x="1" y="1" name="cargocontainer">
-				<lootTable>
-					<lootSubTable chance="1" file="cargodrops_primary" />
-					<lootSubTable chance="1" file="cargodrops_secondary" />
-					<lootSubTable chance="0.5" file="resource_tier_1" />
-					<lootSubTable chance="0.5" file="consumable_tier_1" />
-				</lootTable>
-			</placeWidget>
-		</randprefab>
-		<randprefab width="5" height="6">
-			<row>22222</row>
-			<row>26762</row>
-			<row>66766</row>
-			<row>66766</row>
-			<row>66666</row>
-			<row>26662</row>
-			<pairedportal sprite="3" destination="Cave zone" x="2"
-				y="3" ID="11" facing="4">A cavern entrance</pairedportal>
-		</randprefab>
+		<partition xmin="2" xmax="62" ymin="4" ymax="60">
+			<randprefab width="3" height="3">
+				<row>222</row>
+				<row>222</row>
+				<row>222</row>
+				<placeWidget x="1" y="1" name="cargocontainer">
+					<lootTable>
+						<lootSubTable chance="1" file="cargodrops_primary" />
+						<lootSubTable chance="1" file="cargodrops_secondary" />
+						<lootSubTable chance="0.5" file="resource_tier_1" />
+						<lootSubTable chance="0.5" file="consumable_tier_1" />
+					</lootTable>
+				</placeWidget>
+			</randprefab>
+			<randprefab width="5" height="6">
+				<row>22222</row>
+				<row>26762</row>
+				<row>66766</row>
+				<row>66766</row>
+				<row>66666</row>
+				<row>26662</row>
+				<pairedportal sprite="3" destination="Cave zone" x="2"
+					y="3" ID="11" facing="4">A cavern entrance</pairedportal>
+			</randprefab>
+		</partition>
+	
 		<perlin>
 			<band low="-1.0" high="-0.7">
 
