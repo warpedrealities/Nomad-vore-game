@@ -4,7 +4,7 @@
 	<name>eye eye</name>
 	<description>A floating spherical robot. A single glowing red optical sensor constantly jitters around intermittently focusing on hostiles as the device bobs along. Its surface is covered in sparking metal spikes that give it the appearance and very likely the disposition of a sea mine.</description>
 	<rpg>
-		<experiencevalue value="60" />
+		<experiencevalue value="180" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

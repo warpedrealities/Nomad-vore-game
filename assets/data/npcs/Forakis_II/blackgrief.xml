@@ -16,7 +16,7 @@
 	into its eyes, and you see hunger, but behind that, you see cruelty, this thing
 	doesn't just want to eat, it wants to cause harm.</description>
 	<rpg>
-		<experiencevalue value="45" />
+		<experiencevalue value="300" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

@@ -173,7 +173,8 @@ public class SystemScreen extends Screen implements Callback {
 				resourceObj.addResource(((float)handler.conversionValue(resourceObj.getContainsWhat(), item.getItem().getName())) * ratio);
 			} else {
 				resourceObj.addResource(handler.conversionValue(resourceObj.getContainsWhat(), item.getItem().getName()));
-			}		
+			}	
+			player.getInventory().RemoveItem(item);
 			return true;
 		}
 	

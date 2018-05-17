@@ -6,7 +6,7 @@
 	A flightless bird, but not exactly a pitiable or pathetic one. With long powerful legs, a vicious hooked beak and a body that stands taller than a woman this avian predator is hardly a joke. It has the air of a predator, binocular vision locked onto you without any complicating empathy or higher thought to cloud the clarity of its intent. As it moves its yellow and teal feathers flick and rustle as it bounds, moving closer as it steps from one viciously claw tipped foot to another without fear or hesitation.
 	</description>
 	<rpg>
-		<experiencevalue value="100" />
+		<experiencevalue value="300" />
 		<ability ability="STRENGTH" value="6" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

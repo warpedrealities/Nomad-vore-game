@@ -135,7 +135,7 @@ public class ComputerResearch implements Callback, MyListener {
 			} else {
 				popup.setClock(10);
 				popup.setText("you have failed to reach meaningful conclusions on the topic of " + research
-						+ "you need more data");
+						+ " you need more data");
 			}
 			e.getResearchList().remove(research);
 			genList();

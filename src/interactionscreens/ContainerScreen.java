@@ -253,7 +253,7 @@ public class ContainerScreen extends Screen implements Callback {
 		weightValues = new Text[2];
 
 		weightValues[0] = new Text(new Vec2f(-8.4F, -0.5F), "encumbrance", 0.7F, textures[4]);
-		weightValues[1] = new Text(new Vec2f(10, -0.5F), "encumbrance", 0.7F, textures[4]);
+		weightValues[1] = new Text(new Vec2f(8, -0.5F), "encumbrance", 0.7F, textures[4]);
 
 		for (int i = 0; i < 2; i++) {
 			window.add(weightValues[i]);

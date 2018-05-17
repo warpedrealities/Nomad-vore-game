@@ -3,11 +3,11 @@
 	<tagSet value="SM" />
 	<description>
 		A cylindrical sword hilt from which projects on demand a radiant blade.
-		1AP does 4-9 thermal damage. (S)
+		2AP does 4-9 thermal damage. (S)
 	</description>
 
 	<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE"
-		timeCost="2" ammoCost="1" actionCost="1" basicAction="true" moveType="FIGHT">
+		timeCost="2" ammoCost="1" actionCost="2" basicAction="true" moveType="FIGHT">
 		<effectDamage type="THERMAL" minValue="4" maxValue="9"
 			modifier="STRENGTH" />
 		<missText count="1">

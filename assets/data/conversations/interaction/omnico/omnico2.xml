@@ -14,6 +14,7 @@
 			partial mailbox contents recovered LBREAK
 			select message LBREAK
 		</text>
+		<choice destination="email9" text="access 812"/>	
 		<choice destination="email5" text="access 1051" />
 		<choice destination="email6" text="access 1199" />
 		<choice destination="email7" text="access 1622" />
@@ -75,5 +76,18 @@
 		<choice destination="mailbox" text="return to mailbox" />
 		<choice destination="end" text="exit" />
 	</page>
+	
+	<page ID="email9">
+	<text>
+	From: GalCo shipping LBREAK
+	to: Reshi LBREAK
+	RE: Your order LBREAK
+	
+	We regret to inform you that your current location is in fact outside of our delivery area. As such we cannot deliver your order of 'Zetarra Galaxy Princess Season 9' to the specified address. Please provide alternate shipping instructions to a location within our delivery area to receive your purchase.
+	</text>
+	<choice destination="mailbox" text="return to mailbox" />
+	<choice destination="end" text="exit" />
+	</page>
+	
 
 </Conversation>

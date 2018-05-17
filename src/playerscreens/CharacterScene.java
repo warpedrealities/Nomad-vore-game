@@ -17,6 +17,8 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
+import actor.Actor;
+import actor.npc.NPC;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.player.Player_RPG;
@@ -27,7 +29,8 @@ import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
 import view.ViewScene;
-import vmo.Game;;
+import vmo.Game;
+import zone.Zone;;
 
 public class CharacterScene extends SceneBase implements Callback, MyListener {
 
@@ -207,13 +210,34 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		// buttons[3]=new Button(Vec2f pos, Vec2f size, int texture, int font,
 		// MyListener listener,String string, int ID, float s);
 		buttons[3] = new Button(new Vec2f(24, 28), new Vec2f(8, 2), button, this, "levelup", 3, 0.8F);
-		if (playerRPG.getPlayerExperience() < playerRPG.getNextLevel()) {
+		if ((playerRPG.getPlayerExperience() < playerRPG.getNextLevel()) ||
+			tooDangerous()){
 			buttons[3].setActive(false);
 		}
 
 		for (int i = 0; i < 4; i++) {
 			window.add(buttons[i]);
 		}
+	}
+
+	private boolean tooDangerous() {
+		Zone m_zone=Universe.getInstance().getCurrentZone();
+		if (m_zone.getZoneConditions()!=null && m_zone.getZoneConditions().getDanger())
+		{
+			return true;
+		}
+		for (int i = 0; i < m_zone.getActors().size(); i++) {
+			Actor actor = m_zone.getActors().get(i);
+			if (actor.getClass().getName().contains("NPC")) {
+				NPC npc = (NPC) actor;
+				if (npc.getVisible() == true && npc.getRPGHandler().getActive() == true) {
+					if (npc.isHostile(player.getActorFaction().getFilename()) == true) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
 	}
 
 	private void genExperienceNotes(int font, int tint) {

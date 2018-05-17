@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="protein vat" requiredskill="3" startunlocked="false">
+	<description>
+		The system uses microbial life in a growth vat to provide raw materials for molecular assembly of nourishing food items.
+	</description>
+	<ingredient item="protein synthesizer" quantity="1" />
+	<ingredient item="algae cultivator" quantity="1" />
+	<ingredient item="computation valve" quantity="10" />
+	<result item="protein vat" />
+</recipe>

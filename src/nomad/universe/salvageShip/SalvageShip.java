@@ -92,7 +92,7 @@ public class SalvageShip {
 					return ship;
 				}
 			}			
-		} catch (IOException e1) {
+		} catch (Exception e1) {
 			e1.printStackTrace();
 			return null;
 		}

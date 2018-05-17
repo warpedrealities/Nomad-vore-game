@@ -13,7 +13,7 @@
 		inches from its jaws. It's clearly a mean critter.
 	</description>
 	<rpg>
-		<experiencevalue value="70" />
+		<experiencevalue value="140" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

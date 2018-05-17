@@ -9,7 +9,7 @@
 		sharp teeth and long antenna. One can only hope it doesn't share ants
 		swarming behaviour.</description>
 	<rpg>
-		<experiencevalue value="45" />
+		<experiencevalue value="135" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

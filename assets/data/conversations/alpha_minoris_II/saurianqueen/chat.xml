@@ -195,6 +195,8 @@
 			text="$I would like to talk to you about something I found in a valley far to the north">
 			<condition operator="greaterthan" evaluate="GLOBALFLAG"
 				flag="hauntedValley" value="1" />
+				<condition operator="lessthan" evaluate="GLOBALFLAG" flag="hauntedValley"
+				value="5" />			
 		</choice>
 		<choice destination="crashRecovery0"
 			text="$I would like to talk to you about digging up the ship">

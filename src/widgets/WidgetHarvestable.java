@@ -68,7 +68,7 @@ public class WidgetHarvestable extends Widget {
 	int m_min, m_max;
 	int m_recharge;
 	boolean m_picked;
-	long m_timepicked;
+	long m_timepicked=0;
 	String m_use;
 	HarvestSkillCheck skillCheck;
 	
@@ -191,6 +191,7 @@ public class WidgetHarvestable extends Widget {
 		dstream.writeInt(m_recharge);
 		dstream.writeLong(m_timepicked);
 		ParserHelper.SaveString(dstream, m_use);
+		dstream.writeBoolean(m_picked);
 		if (skillCheck!=null)
 		{
 			dstream.writeBoolean(true);
@@ -210,6 +211,7 @@ public class WidgetHarvestable extends Widget {
 		m_recharge = dstream.readInt();
 		m_timepicked = dstream.readLong();
 		m_use = ParserHelper.LoadString(dstream);
+		m_picked=dstream.readBoolean();
 		if (dstream.readBoolean())
 		{
 			skillCheck=new HarvestSkillCheck();

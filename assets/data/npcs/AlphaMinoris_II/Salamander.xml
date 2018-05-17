@@ -16,8 +16,9 @@
 		<stat stat="HEALTH" value="20" />
 		<stat stat="RESOLVE" value="20" />
 		<attribute attribute="THERMAL" value="4" />		
+		<attribute attribute="WILLPOWER" value="2" />		
 		<combatMove name="flames" pattern="RANGED" bonusAttribute="RANGED"
-			timeCost="2" bonusToHit="0">
+			timeCost="2" bonusToHit="2">
 			<missText count="2">
 				<text>The salamander launches a blast of fire at TARGET but misses</text>
 				<text>TARGET evades the fire blast of the salamander</text>
@@ -26,7 +27,7 @@
 				<text>TARGET is blasted with fire by the salamander for VALUE damage</text>
 				<text>The salamander scorches TARGET for VALUE damage</text>
 			</hitText>
-			<effectDamage type="THERMAL" minValue="4" maxValue="6"
+			<effectDamage type="THERMAL" minValue="4" maxValue="10"
 				modifier="NONE" />
 		</combatMove>
 		<combatMove name="kick" pattern="MELEE" bonusAttribute="RANGED"

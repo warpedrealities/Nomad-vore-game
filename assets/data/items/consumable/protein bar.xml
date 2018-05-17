@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ItemConsumable name="protein bar" weight="0.5" value="40"
+	tag="1">
+	<description>A brown cakelike mass containing lumps of protein. Despite its consistency this is a savoury product that while entirely synthetic is nevertheless rich in nutrition.</description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="60" modifies="SATIATION">
+		The bar has a sticky consistency that really should come with a degree of sweetening to make it more palatable. Nevertheless despite its juxtaposition of cake texture and savoury nutty flavours the bar is quite filling and should help keep you going.
+	</effectrecover>
+</ItemConsumable>

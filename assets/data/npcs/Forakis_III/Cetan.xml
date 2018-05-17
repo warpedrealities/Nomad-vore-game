@@ -6,7 +6,7 @@
 	An aquatic predator, her body monochromatic with smooth black skin over her back and much of her limbs and white along her belly, underside and face. Her upper half feels like it belongs to a tall woman, her chest buxom and yet she has webbed fingers. The curves of her hips transition into a long and powerful tail, mer-like and ending in a broad horizontal fluke. An additional pair of fins protrude just below her hips. She's clearly at home in her aquatic environment, and might prove dangerous to those interlopers who are less well adapted to her domain.
 	</description>
 	<rpg>
-		<experiencevalue value="100" />
+		<experiencevalue value="300" />
 		<ability ability="STRENGTH" value="6" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

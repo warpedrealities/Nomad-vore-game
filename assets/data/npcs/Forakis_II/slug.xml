@@ -6,7 +6,7 @@
 	flesh that oozed with slime. The massive creature had no visible eyes or even a mouth, 
 	just a pair of antenna that twitched and turned to almost point at your direction.</description>
 	<rpg>
-		<experiencevalue value="55" />
+		<experiencevalue value="165" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

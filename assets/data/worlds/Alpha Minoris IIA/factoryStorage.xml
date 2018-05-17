@@ -67,6 +67,7 @@
 				<clean value="2" />
 				<lootTable identity="normalchest">
 					<loot item="protein synthesizer" chance="0.4" unique="3" />
+					<loot item="blueprint" chance="0.4" unique="3" addendum="protein vat" />	
 					<lootSubTable chance="1" file="resource_tier_1" />
 					<lootSubTable chance="0.5" file="resource_tier_1" />
 					<lootSubTable chance="0.5" file="consumable_tier_1" />

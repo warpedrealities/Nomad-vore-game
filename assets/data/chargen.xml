@@ -71,7 +71,7 @@
 
 		<mutation name="Curvy" descriptor="Your assets are larger than most.">
 			<effect>
-				<mutation part="butt" variable="size" set="8">
+				<mutation part="butt" variable="size" set="9">
 				</mutation>
 			</effect>
 			<effect>
@@ -86,7 +86,7 @@
 
 		<mutation name="Chubby" descriptor="You've got some real softness to your form.">
 			<effect>
-				<mutation part="butt" variable="size" set="8">
+				<mutation part="butt" variable="size" set="10">
 				</mutation>
 			</effect>
 			<effect>
@@ -101,7 +101,7 @@
 
 		<mutation name="Big" descriptor="You've definitely got meat on your bones.">
 			<effect>
-				<mutation part="butt" variable="size" set="10">
+				<mutation part="butt" variable="size" set="11">
 				</mutation>
 			</effect>
 			<effect>
@@ -117,7 +117,7 @@
 
 		<mutation name="Fat" descriptor="You really fill your form.">
 			<effect>
-				<mutation part="butt" variable="size" set="12">
+				<mutation part="butt" variable="size" set="13">
 				</mutation>
 			</effect>
 			<effect>

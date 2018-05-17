@@ -17,6 +17,7 @@
 		<choice destination="email0" text="access 713" />
 		<choice destination="email2" text="access 811" />
 		<choice destination="email4" text="access 1041" />
+		<choice destination="email8" text="access 1127" />	
 		<choice destination="end" text="exit" />
 	</page>
 
@@ -166,6 +167,18 @@
 		</text>
 		<choice destination="mailbox" text="return to mailbox" />
 		<choice destination="end" text="exit" />
+	</page>
+	
+	<page ID="email8">
+	<text>
+	From: mgr. Asbel LBREAK
+	to:	all LBREAK
+	RE: reprogramming synths LBREAK
+	
+	I'm addressing this to all rather than the specific person responsible, and yes, i know exactly who you are. No one else shares your taste in vids and the sooner you realize that the better. Nevertheless it must be stated that despite the lack of traffic here it is not permitted to attempt to modify proprietory omnico software running on the synth units as a way to pass the time. Not only is it meddling with company policy, not only are none of you properly certified, but having the synths randomly spouting lines of dialogue from that inane show is insufferable. Revert them to factory settings and do not attempt this chicanery again.
+	</text>
+	<choice destination="mailbox" text="return to mailbox" />
+	<choice destination="end" text="exit" />	
 	</page>
 
 </Conversation>

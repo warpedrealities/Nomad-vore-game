@@ -54,7 +54,7 @@
 			<condition evaluate="HASITEM" operator="greaterthan" value="2"
 				item="scrap metal" />
 		</choice>
-		<choice destination="ened"
+		<choice destination="end"
 			text="I don't have anything to use as parts right now.">
 			<condition evaluate="HASITEM" operator="lessthan" value="2"
 				item="scrap metal" />

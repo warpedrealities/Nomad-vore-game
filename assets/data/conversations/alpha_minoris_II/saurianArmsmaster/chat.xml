@@ -27,6 +27,10 @@
 		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="training" value="1" />				
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="5" />	
 		</choice>	
+		<choice destination="job3" text="About those monsters">
+		<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="1" />
+		<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="5" />		
+		</choice>	
 		<choice destination="job1" text="About those gators">
 		<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="1" />
 		<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt0" value="7" />		

@@ -6,7 +6,7 @@
 	This fully scaled humanoid stands some seven feet tall with a muscular physique and an air of menace yet maintains many elements of a feminine build especially in the form of finescaled mammary glands and curved hips and buttocks. But yet her head is that of some primordial predator, with a tooth filled jaw stretching outwards and able to gape like great doors when called upon to bellow or bite. Coupled with the monsters claws this makes it look all the more formidable.
 	</description>
 	<rpg>
-		<experiencevalue value="35" />
+		<experiencevalue value="60" />
 		<ability ability="STRENGTH" value="6" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />
@@ -15,18 +15,35 @@
 		<ability ability="INTELLIGENCE" value="5" />
 		<stat stat="HEALTH" value="60" />
 		<stat stat="RESOLVE" value="60" />
+		<attribute attribute="PARRY" value="2" />	
+		<attribute attribute="WILLPOWER" value="2" />		
 		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"
-			timeCost="4" bonusToHit="0" threatening="true">
+			timeCost="4" bonusToHit="2" threatening="true">
 			<missText count="2">
-				<text>The tyrant lizard tries to claw TARGET but is fended off</text>
+				<text>The tyrant lizard tries to crush TARGET but is fended off</text>
 				<text>TARGET evades the tyrant lizard's attack </text>
 			</missText>
-			<hitText count="2">
-				<text>TARGET is clawed by the tyrant lizard for VALUE damage</text>
-				<text>The tyrant lizard bites TARGET for VALUE damage</text>
+			<hitText count="3">
+				<text>TARGET is struck by the tyrant lizard for VALUE damage</text>
+				<text>The tyrant lizard claws TARGET for VALUE damage</text>
+				<text>TARGET is battered by the tyrant lizard for VALUE damage</text>	
 			</hitText>
-			<effectDamage type="KINETIC" minValue="4" maxValue="6"
+			<effectDamage type="KINETIC" minValue="4" maxValue="8"
 				modifier="STRENGTH" />
+			<effectStatus probability="25">
+				<probabilityModifier value="ENDURANCE" />
+				<applyText>TARGET is staggered</applyText>
+			<statusAttribMod uid="17" icon="12" duration="8"
+				numModifiers="5">
+				<removeText> TARGET is no longer staggered</removeText>
+				<effect attribute="RANGED" modifier="-4" />
+				<effect attribute="MELEE" modifier="-4" />			
+				<effect attribute="PARRY" modifier="-4" />
+				<effect attribute="DODGE" modifier="-4" />	
+				<effect attribute="SEDUCTION" modifier="-4" />				
+			</statusAttribMod>
+			</effectStatus>	
+			
 		</combatMove>
 	</rpg>
 

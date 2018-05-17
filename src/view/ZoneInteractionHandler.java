@@ -91,16 +91,7 @@ public class ZoneInteractionHandler {
 				return false;
 			}
 		}
-		/*
-		 * for (int i=0;i<m_zone.zoneActors.size();i++) {
-		 * 
-		 * int x1=(int)m_zone.zoneActors.get(i).getPosition().x; int
-		 * y1=(int)m_zone.zoneActors.get(i).getPosition().y; if (x0==x1 &&
-		 * y0==y1 && m_zone.zoneActors.get(i).getVisible()==true) { //post
-		 * m_view.DrawText(m_zone.zoneActors.get(i).getDescription());
-		 * 
-		 * return false; } }
-		 */
+	
 		if (m_zone.zoneTileGrid[x0][y0].getWidgetObject() != null) {
 			String str = m_zone.zoneTileGrid[x0][y0].getWidgetObject().getDescription();
 			if (str == null) {
@@ -146,7 +137,6 @@ public class ZoneInteractionHandler {
 					}
 				}
 			}
-
 		}
 		return true;
 	}

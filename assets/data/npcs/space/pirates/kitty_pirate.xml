@@ -4,7 +4,7 @@
 	<name>pirate kitty</name>
 	<description>Some five feet of catgirl stands ready to pillage and plunder t'would seem. A tricorn hat perched atop her head somehow without covering either of her white furred ears, the kitty is garbed further down in a long jacket that extends down past her belt with gleaming buttons double rowed along it and a slit for her white furred tail to move freely behind her. The ensemble ends in tall boots and is more than complimented by a high tech rapier and a pair of simple energy pistols tucked into her belt.</description>
 	<rpg>
-		<experiencevalue value="100" />
+		<experiencevalue value="300" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

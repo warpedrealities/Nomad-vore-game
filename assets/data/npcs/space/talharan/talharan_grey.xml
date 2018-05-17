@@ -9,7 +9,7 @@
 		to reveal what they look like under it. She can be seen to be wielding
 		a plasma pistol.</description>
 	<rpg>
-		<experiencevalue value="50" />
+		<experiencevalue value="150" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

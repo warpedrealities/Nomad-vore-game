@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="protein vat" weight="10" value="1500">
+	<description>The system uses microbial life in a growth vat to provide raw materials for molecular assembly of nourishing food items.</description>
+	<placeditem widget="modules/protein vat" />
+</ItemWidget>

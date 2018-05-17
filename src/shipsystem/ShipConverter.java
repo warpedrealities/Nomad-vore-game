@@ -137,6 +137,10 @@ public class ShipConverter extends ShipAbility {
 	private void runSolar(SpaceshipStats stats) {
 		int time = 1;
 		SpaceshipResource to = stats.getResource(convertTo);
+		if (to.getResourceAmount()>=to.getResourceCap())
+		{
+			return;
+		}
 		float max = stats.getSolar();
 		if (max > conversionEfficiency) {
 			max = conversionEfficiency;

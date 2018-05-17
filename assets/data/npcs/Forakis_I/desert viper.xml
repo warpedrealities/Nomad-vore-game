@@ -6,7 +6,7 @@
 	This threatening serpent blends easily into the surrounding rock and sands, its scales a mix of tan and pale ochre along its entire 12 foot length. It's shovel shaped head is flanked by pitiless black eyes and its jaws flex to reveal long and dripping fangs. Not only is this serpent FAR too big, it's venomous.
 	</description>
 	<rpg>
-		<experiencevalue value="80" />
+		<experiencevalue value="240" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

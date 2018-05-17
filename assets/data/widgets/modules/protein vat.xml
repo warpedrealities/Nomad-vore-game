@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<shipsystem sprite="93" name="protein vat" health="10">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>The system uses microbial life in a growth vat to provide raw materials for molecular assembly of nourishing food items.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="40" resource="PROTEIN" nonCombat="true">
+	</shipResource>
+	<shipConverter>
+		<convertFrom value="ENERGY" />
+		<convertTo value="PROTEIN" />
+		<conversionEfficiency value="1" />
+		<conversionRate value="0.005" />
+	</shipConverter>
+	<!--dispenser goes here -->
+	<shipDispenser>
+		<input value="PROTEIN" />
+		<cost value="4" />
+		<output value="protein bar" />
+	</shipDispenser>
+</shipsystem>

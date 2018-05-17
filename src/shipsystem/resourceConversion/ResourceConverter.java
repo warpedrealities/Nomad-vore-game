@@ -16,7 +16,7 @@ public class ResourceConverter {
 	
 	public ResourceConverter(String resourceName) {
 		conversionMap=new HashMap<String,Integer>();
-		Document doc = ParserHelper.LoadXML("assets/data/resourceConversion/" + resourceName);
+		Document doc = ParserHelper.LoadXML("assets/data/resourceConversion/" + resourceName+".xml");
 		Element root = doc.getDocumentElement();
 		Element n = (Element) doc.getFirstChild();
 		NodeList children=n.getChildNodes();

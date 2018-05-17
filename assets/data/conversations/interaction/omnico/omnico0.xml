@@ -1,5 +1,15 @@
 <?xml version="1.0"?>
 <Conversation>
+
+	<page ID="start">
+		<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_MALWARE"
+					operator="equals" value="1" />
+		<text>
+			workstation locked, please contact your systems administrator. LBREAK
+		</text>
+		<choice destination="end" text="exit" />
+	</page>
+
 	<page ID="start">
 		<text>
 			workstation online. LBREAK
@@ -16,8 +26,8 @@
 		</text>
 		<choice destination="email0" text="access 713" />
 		<choice destination="email1" text="access 749" />
-
 		<choice destination="email3" text="access 1025" />
+		<choice destination="email10" text="access 1623" />	
 		<choice destination="end" text="exit" />
 	</page>
 
@@ -83,4 +93,28 @@
 		<choice destination="end" text="exit" />
 	</page>
 
+	<page ID="email10">
+	<text>
+	From: cousin Buenice LBREAK
+	To: T.Velas LBREAK
+	subject: Read me for huge penass
+	
+	Do you want huge penas? you want huge penas, yu deserv huge penas open atachment for yor chance to win big
+	Dont delaye only so many priz to won
+	
+	</text>
+	<choice destination="attachment" text="open attachment"/>
+	<choice destination="mailbox" text="return to mailbox" />
+	<choice destination="end" text="exit" />	
+	</page>
+	
+	<page ID="attachment">
+	<text>
+	you open the attachment and a dozen flashing and strobing images in windows pop up all over the screen before the workstation flickers and replaces all of that with a big red warning message. LBREAK
+			workstation locked, please contact your systems administrator. LBREAK	
+	</text>
+	<effect type="setglobalflag" flag="OMNICO_IIA_MALWARE" value="1" />
+	<choice destination="end" text="exit" />		
+	</page>
+	
 </Conversation>
