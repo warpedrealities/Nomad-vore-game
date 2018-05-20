@@ -8,14 +8,13 @@
 		<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="facefuck0" text="$I'm gonna use your mouth, and you're gonna like it">
-		<!-- <condition operator="lessthan" evaluate="BODYVALUE" -->
-					<!-- bodypart="penis" partvalue="length" value="30" />	 -->
 		<assertion evaluate="haspart" part="penis"/>	
 		</choice>
 		<choice destination="sex0" text="$Well, it starts with your legs spread and ends with you yowling for joy">
-		<!-- <condition operator="lessthan" evaluate="BODYVALUE" -->
-					<!-- bodypart="penis" partvalue="length" value="30" />		 -->
 			<assertion evaluate="haspart" part="penis"/>	
+		</choice>
+		<choice destination="CTF0" text="$I'm going to add your sexy body to my member, you're going to be extra inches on my dick">
+			<assertion evaluate="hasperk" perk="cockmerging" />
 		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
@@ -28,6 +27,12 @@
 		<choice destination="end" text="darn"/>
 	</page>
 
+	<page ID="CTF0">
+	<text>
+	
+	</text>
+	
+	</page>
 	
 	<page ID="oralvoreA0">
 	<!--oralvore after sex, feetfirst-->

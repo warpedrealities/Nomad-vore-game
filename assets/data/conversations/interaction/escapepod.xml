@@ -17,9 +17,27 @@
 		<choice destination="atmosphere" text="atmospheric readings" />
 		<choice destination="signals" text="perform signal scan" />
 		<choice destination="scan" text="replay descent sensor logs" />
+		<choice destination="survival_supplies" text="survival supplies" />		
 		<choice destination="end" text="exit" />
 	</page>
 
+	<page ID="survival_supplies">
+	<text>
+	SURVIVAL EQUIPMENT LBREAK
+	STANDARD ISSUE UTILITY KNIFE LBREAK
+	CLASS-2 SELF DEFENCE LASER PISTOL LBREAK
+	HEINLEIN STANDARD ISSUE JUMPSUIT LBREAK
+	SURVIVAL MEDKIT LBREAK
+	x1 SPACEFORCE ISSUE MEALPACK LBREAK
+	NOTE: LBREAK
+	ITEMS ALREADY RETRIEVED FROM STORAGE CHECK PERSONAL INVENTORY TO VERIFY CONDITION LBREAK
+	WARNING: LBREAK
+	MANIFEST MISMATCH MISSING FULL ALLOCATION OF SPACEFORCE ISSUE MEALPACKS LBREAK
+	</text>
+		<choice destination="start" text="back" />
+		<choice destination="end" text="exit" />	
+	</page>
+	
 	<page ID="atmosphere">
 		<text>
 			OXYGEN NITROGEN MIX OKAY LBREAK

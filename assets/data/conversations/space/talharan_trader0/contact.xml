@@ -190,7 +190,7 @@
 			important is that we can sell you one for an equitable price."
 		</text>
 		<choice destination="trade" text="I would like to look at your wares" />
-		<choice destination="want" text="Is there anything you'd pay a decent amount?">
+		<choice destination="want0" text="Is there anything you'd pay a decent amount?">
 		<condition evaluate="LOCALFLAG" operator="equals" value="0"
 			flag="asked" />		
 		</choice>		

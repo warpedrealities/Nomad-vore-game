@@ -7,6 +7,9 @@
 		<choice destination="oralvore0" text="$should of thought of that before you found yourself about to be eaten">
 				<assertion evaluate="hasperk" perk="oralvore" />		
 		</choice>
+		<choice destination="fuck0" text="fair? what's fair, your ass is mine (fuck her)">
+			<assertion evaluate="haspart" part="penis"/>
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -18,6 +21,52 @@
 		<choice destination="end" text="darn"/>
 	</page>
 
+	<paage ID="fuck0">
+	<text>
+	"what? no, nyah!" she protests trying to fend you off as you grab her legs and spread them, pulling her towards you. The kitty weakly shoving against your chest as you yank her skirt out of the way and stroke your shaft to hardness. The kitty unable to pull herself away as you shift your grip to her hip and press your tip against her nethers, grinding against her "You can't do this!" she protests further as you prepare to violate her.
+	</text>
+	<choice destination="fuck1" text="quiet, fuckmeat doesn't get to talk"/>
+	</page>
+	
+	<page ID="fuck1">
+	<text>
+	The kitty's cheeks redden at that command, her further disobedient utterances though are interrupted as you thrust into her. The kitty letting out a gasp as she's stretched around your <macro ID="penis_size_desc" /> shaft. You press over her, pinning her down, as you thrust the rest of the way into her. The neko's body forced to accept more and more of your shaft, filling her with as much of your cock as you can before pulling back for your first stroke. Stealing a kiss from her as you thrust back into her, forcing your lips against hers as she mewls underneath you and has no choice but to accept your desires.
+	</text>
+	<choice destination="fuck2" text="*keep fucking her*"/>
+	</page>
+	
+	<page ID="fuck2">
+	<text>
+	You find your rthythm, her hands weakly shoving or beating against your chest for a time but soon under your relentless thrusts she's forced to submit to your will. The cute kitty letting out mewls and whimpers underneath you as you drive yourself repeatedly deep inside of her and plunder the delights of this pirate. Your pace picking up with pleasure and vigor as you use her and prepare to pump her full of gooey cum.
+	</text>
+	<choice destination="fuck3" text="*fill her with your seed*"/>
+	</page>
+	
+	<page ID="fuck3">
+	<text>
+	The kitty sees the look in your eyes and yowls muffledly against your lips, clenching in anticipation as you near and then crest your peak. Your shaft erupting deep inside her, making her accept your seed as you pump spurt after spurt deep inside of her body. The neko shuddering and squirming and spasming under you as she's filled with every drop of your cream. She looks up at you sourly, face flushed, her spirit dour and humiliated as she feels your seed as a gooey warmth deep inside of her.
+	</text>
+	<choice destination="CTF0" text="*own her completely, make her your dick">
+	<assertion evaluate="hasperk" perk="cockmerging" />
+	</choice>
+	<choice destination="fuck4" text="*pull out, you're done with her*"/>
+	</page>
+	
+	<page ID="CTF0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="fuck4">
+	<text>
+	You pull your cock out of the kitty and give her a swat on the thigh "I'm done with you meat" you tell her, and humiliated and violated she can muster nothing further and retreats. The kitty giving you an impotent glare afore she slips away to try and salve her wounded pride.
+	</text>
+		<special effect="removenpc" />	
+	<choice destination="end" text="carry on" />	
+	</page>
+	
 	<page ID="oralvore0">
 	<text>
 	"Nyah what that's not..." she starts to protest, silly really..were positions reversed she'd not hesitate, so you don't. Grabbing ahold of her and pulling her close before licking and slurping over her face, tasteing her and having her mewl and whine in distress at being sampled and treated as food. Still she can't muster the strength to thwart your desires as you yank her jacket off and then start eating her alive. One of your hands sliding up to grab ahold of the back of her head and then shoving her in.

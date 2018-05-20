@@ -19,6 +19,7 @@ import shared.Screen;
 import shared.Vec2f;
 import shared.Vec2i;
 import solarBackdrop.StarScape;
+import solarBackdrop.decorations.DecorationLayer;
 import solarview.systemScreen.SystemScreen;
 import spaceship.PlayerShipController;
 import spaceship.Spaceship;
@@ -44,6 +45,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 	float clock;
 	Screen screen;
 	StarScape starscape;
+	DecorationLayer decorationLayer;
 	float incrementCounter;
 	
 	private boolean warpCheck(Spaceship spaceship)
@@ -94,8 +96,10 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		GUI = new SolarGUI();
 		GUI.generate(spaceship, this);
 		starscape = new StarScape();
+		decorationLayer=new DecorationLayer(Universe.getInstance().getSystem().getName());
 		renderer.setCurrentPosition(playerShip.getPosition());
 		starscape.setCurrentPosition(playerShip.getPosition());
+		decorationLayer.setCurrentPosition(playerShip.getPosition());
 		((SpriteRotatable) (playerShip.getSpriteObj())).setFacing(r);
 		warpRenderer=new WarpController(renderer.getParticleEmitter(),playerShip);
 		if (spaceship.getShipStats().getCrewStats().getNavigation()>=1)
@@ -138,6 +142,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 						GUI.update();
 						renderer.setCurrentPosition(playerShip.getPosition());
 						starscape.setCurrentPosition(playerShip.getPosition());
+						decorationLayer.setCurrentPosition(playerShip.getPosition());
 						clock += 0.025F;
 					}
 					// clicking control
@@ -182,7 +187,9 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		matrix44Buffer.flip();
 		GL20.glUniform1fv(m_variables[1], matrix44Buffer);
 		starscape.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
-
+		GL20.glUniform1fv(m_variables[1], matrix44Buffer);	
+		GL20.glUniform4f(m_variables[0], 1.0F, 1.0F, 1.0F, 1);
+		decorationLayer.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
 		GL20.glUniform4f(m_variables[0], 1.0F, 1.0F, 1.0F, 1);
 		renderer.solarDraw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
 		GL20.glUniform4f(m_variables[0], 1.0F, 1.0F, 1.0F, 1);
@@ -214,6 +221,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		solarInt = null;
 
 		starscape.discard();
+		decorationLayer.discard();
 	}
 
 	@Override
@@ -231,6 +239,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 			if (renderer.getScale() > 1) {
 				renderer.setScale(renderer.getScale() / 2);
 				starscape.setScale(renderer.getScale() / 2);
+				decorationLayer.setScale(decorationLayer.getScale() / 2);
 			}
 			break;
 
@@ -239,6 +248,7 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 			if (renderer.getScale() < 8) {
 				renderer.setScale(renderer.getScale() * 2);
 				starscape.setScale(renderer.getScale() * 2);
+				decorationLayer.setScale(decorationLayer.getScale() * 2);	
 			}
 			break;
 		case 3:

@@ -26,6 +26,10 @@
 	<inventoryitem name="spacebar" probability="50" quantity="5" />
 	<inventoryitem name="blueprint" tag="space warper"
 		probability="100" quantity="1" cost="2500" />
+	<inventoryitem name="book" tag="faster than light"
+		probability="100" quantity="1" cost="50" />
+	<inventoryitem name="book" tag="faster than light advanced guide"
+		probability="100" quantity="1" cost="100" />		
 	<inventoryitem name="space warper" probability="100"
 		quantity="1" />
 	<buymodifier name="Cellular Rejuvenator" cost="7500" />		

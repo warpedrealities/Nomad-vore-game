@@ -124,6 +124,14 @@
 	<choice destination="freehaven" text="Very well Frei, could you tell me more about FreeHaven?"/>
 	</page>
 	
+	<page ID="wardens">
+	<text>
+	"The wardens are my people. We enforce order on this station. It's because of us that trade can go smoothly and people can go to sleep without either a gun under their pillow or ending up padding someones tits the following morning."
+	</text>
+		<choice destination="eye2eye" text="Very well Frei, and what do you want us to see eye to eye on?"/>
+		<choice destination="freehaven" text="Very well Frei, could you tell me more about FreeHaven?"/>
+	</page>
+	
 	<page ID="eye2eye">
 	<text>
 	"Fairly simple, just cause this is a free port and we got no one in charge doesn't mean we got no laws. No stealing, no assault, no grabbing someone and scarfing them down. Make no trouble and there's a place for you, make trouble and well..there's a different place for you and you ain't gonna like it." she says and glances down meaningfully possibly indicating her belly or possibly something lower.

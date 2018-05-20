@@ -19,17 +19,27 @@ import shared.Vec2f;
 public class StarScape extends SpriteManager {
 
 	protected Matrix4f backdropMatrix;
-	float viewScale;
-	Vec2f currentPosition;
-
+	protected float viewScale;
+	protected Vec2f currentPosition;
+	protected float FAKE_PARALLAX=0.1F;
+	
 	public StarScape() {
 		super("assets/art/solar/");
 		currentPosition = new Vec2f(0, 0);
 		backdropMatrix = new Matrix4f();
 		viewScale = 4;
 		setMatrix();
-
+		FAKE_PARALLAX=0.1F;
 		generate();
+	}
+
+	public StarScape(String spriteFolder) {
+		super(spriteFolder);
+		currentPosition = new Vec2f(0, 0);
+		backdropMatrix = new Matrix4f();
+		viewScale = 4;
+		FAKE_PARALLAX=0.1F;
+		
 	}
 
 	public Matrix4f getBackdropMatrix() {
@@ -67,6 +77,7 @@ public class StarScape extends SpriteManager {
 		setMatrix();
 	}
 
+	
 	public void draw(int viewMatrix, int objmatrix, int tintvar, FloatBuffer matrix44Buffer) {
 
 		backdropMatrix.store(matrix44Buffer);
@@ -88,7 +99,7 @@ public class StarScape extends SpriteManager {
 		}
 	}
 
-	private void setMatrix() {
+	protected void setMatrix() {
 		Matrix4f.setIdentity(backdropMatrix);
 		backdropMatrix.m00 = 0.025F * viewScale;
 		backdropMatrix.m11 = 0.03125F * viewScale;
@@ -96,8 +107,8 @@ public class StarScape extends SpriteManager {
 		backdropMatrix.m33 = 1.0F;
 		float xscale = 1 / (0.025F * viewScale);
 		float yscale = 1 / (0.03125F * viewScale);
-		backdropMatrix.m30 = ((currentPosition.x * -0.1F) / xscale) - 0.32F;
-		backdropMatrix.m31 = ((currentPosition.y * -0.1F) / yscale) + 0.125F;
+		backdropMatrix.m30 = ((currentPosition.x * -FAKE_PARALLAX) / xscale) - 0.32F;
+		backdropMatrix.m31 = ((currentPosition.y * -FAKE_PARALLAX) / yscale) + 0.125F;
 
 	}
 

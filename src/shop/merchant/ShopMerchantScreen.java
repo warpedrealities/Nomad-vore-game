@@ -80,6 +80,10 @@ public class ShopMerchantScreen extends Screen implements Callback {
 	}
 
 	private void buy(int slotNum) {
+		if (slotNum>=shopList.size())
+		{
+			return;
+		}
 		ShopLineItem item = shopList.get(slotNum);
 		// check player currency
 		int c = player.getInventory().getPlayerGold();
@@ -137,6 +141,7 @@ public class ShopMerchantScreen extends Screen implements Callback {
 	}
 
 	private void sell(int slotNum) {
+
 		// figure out how much money to give the player
 		if (player.getInventory().getItem(slotNum) == null) {
 			return;

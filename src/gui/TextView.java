@@ -172,6 +172,7 @@ public class TextView extends GUIBase {
 			}
 
 		}
+		scanner.close();
 		displayStrings.add(builder.toString());
 		highlightedLine++;
 	}

@@ -32,7 +32,8 @@ public class NPC_RPG implements Actor_RPG {
 	int busy;
 	// int bindState;
 	StatusEffectHandler statusEffectHandler;
-
+	
+	
 	public NPC_RPG(NPC_RPG RPG, Actor actor) {
 		// bindState=-1;
 		statusEffectHandler = new StatusEffectHandler();
@@ -184,6 +185,11 @@ public class NPC_RPG implements Actor_RPG {
 		return statBlock.getExpValue();
 	}
 
+	public int calcExpValue(int level)
+	{
+		return statBlock.getExpValue();
+	}
+	
 	public String getSpriteName() {
 		// TODO Auto-generated method stub
 		return statBlock.getSpriteName();

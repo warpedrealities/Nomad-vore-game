@@ -7,5 +7,14 @@
 	<spawnRules>
 	<spawn script="pirates"/>
 	</spawnRules>
-
+	<decorations>
+	<decoration x="-10" y="-10" size="0.5" sprite="rock0"/>	
+	<decoration x="9" y="-8" size="0.5" sprite="rock1"/>	
+	<decoration x="-11" y="9" size="0.5" sprite="rock2"/>	
+	<decoration x="11" y="12" size="0.5" sprite="rock3"/>		
+	<decoration x="-8" y="-11" size="0.5" sprite="rock3"/>	
+	<decoration x="11" y="-6" size="0.5" sprite="rock2"/>	
+	<decoration x="-12" y="7" size="0.5" sprite="rock1"/>	
+	<decoration x="6" y="13" size="0.5" sprite="rock0"/>		
+	</decorations>
 </System>

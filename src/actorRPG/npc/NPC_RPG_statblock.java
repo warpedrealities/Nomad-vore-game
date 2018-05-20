@@ -22,6 +22,7 @@ public class NPC_RPG_statblock {
 	private int[] abilities;
 	private int[] attributes;
 	private int[] statMaximum;
+	private int challengeLevel;
 	// private Attack []attackPool;
 	private int expValue;
 	private NPCItemDrop itemDrop;
@@ -49,7 +50,9 @@ public class NPC_RPG_statblock {
 			Node N = children.item(i);
 			if (N.getNodeType() == Node.ELEMENT_NODE) {
 				Element Enode = (Element) N;
-
+				if (Enode.getTagName() == "challengeLevel") {
+					challengeLevel=Integer.parseInt(Enode.getAttribute("value"));
+				}
 				if (Enode.getTagName() == "ability") {
 					abilities[RPG_Helper.abilityFromString(Enode.getAttribute("ability"))] = Integer
 							.parseInt(Enode.getAttribute("value"));
@@ -224,5 +227,10 @@ public class NPC_RPG_statblock {
 
 	public Value_Calculator getValueCalculator() {
 		return valueCalculator;
+	}
+	
+	public int getChallengeLevel()
+	{
+		return challengeLevel;
 	}
 }
