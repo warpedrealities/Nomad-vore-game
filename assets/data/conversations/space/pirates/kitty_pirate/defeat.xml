@@ -46,7 +46,7 @@
 	<text>
 	The kitty sees the look in your eyes and yowls muffledly against your lips, clenching in anticipation as you near and then crest your peak. Your shaft erupting deep inside her, making her accept your seed as you pump spurt after spurt deep inside of her body. The neko shuddering and squirming and spasming under you as she's filled with every drop of your cream. She looks up at you sourly, face flushed, her spirit dour and humiliated as she feels your seed as a gooey warmth deep inside of her.
 	</text>
-	<choice destination="CTF0" text="*own her completely, make her your dick">
+	<choice destination="CTF0" text="*own her completely, make her part of your dick">
 	<assertion evaluate="hasperk" perk="cockmerging" />
 	</choice>
 	<choice destination="fuck4" text="*pull out, you're done with her*"/>
@@ -54,11 +54,38 @@
 	
 	<page ID="CTF0">
 	<text>
-	
+	You hold your shaft within her and feel her squirm underneath you as you refuse to pull out. It seems to confuse the kitty as she wonders what else you have in store for her after ravaging her. But as you groan and she feels hot tingling sensations threading out from your cock she myahs and her eyes widen, her hands snapping down to her hips to feel veiny flesh over encroaching over her "NO! no no i don't, i don't wanna be cock. stoppit" she pleads, trying to pull away from your hips but finding herself rooted to your crotch and still pinned underneath you as you change her.
 	</text>
-	
+	<choice destination="CTF1" text="$You're gonna be such a good addition to my dick, don't try and fight it"/>
 	</page>
 	
+	<page ID="CTF1">
+	<text>
+	"No no no!" she repeats hearing your words, but deep down she already knows she's doomed. She can feel your body claiming hers, your veins conquering her flesh as she's anchored thoroughly to your groin and finds herself being steadily re-made. Her legs writhe under you trying to scrabble for purchase, only for her feet to curl upwards towards your sack and her thighs stick to her calves. The kitty girl's body starting to diminish and regress into an addition to your shaft and sack "let me go" she begs, only to cough and then splutter up a stream of precum that drools from her lips.
+	</text>
+	<choice destination="CTF2" text="$no, a cock enhancement like you doesn't get to walk away"/>
+	</page>
+	
+	<page ID="CTF2">
+	<text>
+	She whimpers as you drive the point home, that all she is to you is a way to make your dick bigger. Her hands drum futilely against your body afore you pin them to her sides. Her arms sinking into her form as she diminishes under you, becoming tubular as her writhing motions are more and more diminished. Her bones, her muscles, all turning into throbbing dickmeat under your palm as you stroke over her and feel the final batch of changes beginning. 
+	</text>
+		<special effect="mutation">
+			<mutation part="penis" variable="length" modifier="6">
+			<proportional ratio="0.05"/>
+			</mutation>
+		</special>
+	<choice destination="CTF3" text="$soon, you'll be what you were always meant to be"/>
+	</page>
+	
+	<page ID="CTF3">
+	<text>
+	Your new member shrinks down under your stroking hand, her arms and curves subsuming into a turgid rod throbbing between your legs. Her pleas and protests silent now as she drools precum and her head turns into a sensitive glans, belling out into the tip of the shaft she will now be. The former pirate now truly a prized possession of yours as the last of her fades away, eyes, facial features, all turning into pink hot cocktip as you redouble your efforts to stroke along your now <measurement part="penis" variable="length" /> inch shaft. The kitty consummated in her new role as you spurt hot cum up through her body, having no choice but to serve you this way as your cock and indeed no choices at all now. You take a moment to wipe off the mess and admire your new size before continuing on your way, pleased to have a little extra heft between your legs now and perhaps more pleased to know her consciousness is still in there somewhere...helpless to do ought but experience her fate.
+	</text>
+		<special effect="removenpc" />	
+	<choice destination="end" text="$she'll get used to it, or not, doesn't matter either way"/>
+	</page>
+
 	<page ID="fuck4">
 	<text>
 	You pull your cock out of the kitty and give her a swat on the thigh "I'm done with you meat" you tell her, and humiliated and violated she can muster nothing further and retreats. The kitty giving you an impotent glare afore she slips away to try and salve her wounded pride.
