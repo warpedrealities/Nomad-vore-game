@@ -127,10 +127,23 @@
 			<condition evaluate="LOCALFLAG" operator="equals" value="1"
 				flag="sackslut" />
 		</choice>
+		<choice destination="reformation" text="$Actually, I did something for you, I fixed the reformer in your basement for you">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="1"
+			flag="NERI_BASEMENT" />		
+		</choice>
 		<choice destination="question0" text="I'm not sure that's the official greeting" />
 		<choice destination="end" text="well bye" />
 	</page>
 
+	<page ID="reformation">
+	<text>
+	"A reformer?" she asks perplexed, but it doesn't take her long to figure it out "You mean that thing that lets you come back from being gurgled? ooh ah, well thanks." she blushes softly as some of the possibilities appear to occur to her "I'll be sure to make use of it."
+	</text>
+	<effect type="setglobalflag" flag="NERI_BASEMENT" value="2" />
+	<special effect="addRespawn" time="2000"/>		
+	<choice destination="end" text="you're welcome Neri"/>
+	</page>
+	
 	<page ID="offerCockvore0">
 		<text>
 			Neri blushes and giggles at your brazen request "Ancestors you're such a

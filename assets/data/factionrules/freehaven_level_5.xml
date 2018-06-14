@@ -27,6 +27,9 @@
 		<superRule subject="Desharr" level="2" violation="ATTACK">
 		<factionRelationship faction="freehaven_wardens" mod="-10" />
 	</superRule>	
+	<superRule subject="prostitute" level="2" violation="ATTACK">
+		<factionRelationship faction="freehaven_wardens" mod="-10" />
+	</superRule>	
 	<witness name="commander Frei" />
 	<witness name="station warden" />
 	<witness name="Robyn" />

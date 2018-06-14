@@ -112,10 +112,10 @@ public class ComputerResearch implements Callback, MyListener {
 		Encyclopedia e = Universe.getInstance().getPlayer().getEncyclopedia();
 		Research r = e.getResearchList().get(research);
 		if (r != null) {
-			for (int i = 0; i < 200; i++) {
+			for (int i = 0; i < 500; i++) {
 				((Player_RPG) Universe.getInstance().getPlayer().getRPG()).update();
 			}
-			Universe.AddClock(200);
+			Universe.AddClock(500);
 			callback.Callback();
 
 			int diceroll = Universe.m_random.nextInt(20)

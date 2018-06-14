@@ -22,6 +22,12 @@ public class RespawnControl {
 		respawnTime = Integer.parseInt(node.getAttribute("delay"));
 	}
 
+	public RespawnControl(int time, Vec2f position)
+	{
+		respawnTime=time;
+		startPosition=position.replicate();
+	}
+	
 	public RespawnControl(RespawnControl respawn, Vec2f position) {
 
 		startPosition = new Vec2f(position.x, position.y);

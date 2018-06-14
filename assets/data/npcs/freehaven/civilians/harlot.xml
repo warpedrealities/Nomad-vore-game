@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Harpy>
-	<sprite value="blueTurret.png" />
+	<sprite value="harlot.png" />
 
-	<name></name>
+	<name>Harlot</name>
 	<description></description>
 	<rpg>
 		<experiencevalue value="15" />
@@ -28,11 +28,7 @@
 	</rpg>
 
 	<respawn delay="2000" />
-	<flying />
-	<defeated conversation="" />
-	<seduced conversation="" />
-	<victory conversation="" />
-	<seducer conversation="" />
-	<controller AI="turret" />
-	<faction value="freehaven_civilian" />
+	<talk conversation="freehaven/harlot/chat" />
+	<controller AI="staystill" />
+	<faction value="freehaven_civilians" />
 </Harpy>

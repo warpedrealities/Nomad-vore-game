@@ -930,6 +930,16 @@ public class NPC extends Actor implements Controllable {
 		return tile.getVisible();
 	}
 
+	
+	
+	public RespawnControl getRespawnController() {
+		return respawnController;
+	}
+
+	public void setRespawnController(RespawnControl respawnController) {
+		this.respawnController = respawnController;
+	}
+
 	public void attackOfOpportunity(Actor target) {
 		if (!RPGHandler.getActive()||isPeace())
 		{

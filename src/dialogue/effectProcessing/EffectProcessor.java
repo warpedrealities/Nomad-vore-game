@@ -25,6 +25,7 @@ import widgets.WidgetCapture;
 import widgets.WidgetConversation;
 import worldgentools.WidgetPlacer;
 import actor.npc.NPC;
+import actor.npc.RespawnControl;
 import actor.player.CompanionTool;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
@@ -184,6 +185,11 @@ public class EffectProcessor {
 			m_npc.setActorFaction(FactionLibrary.getInstance().getFaction(faction));
 		}
 				
+		if (str.equals("addRespawn"))
+		{
+			m_npc.setRespawnController(new RespawnControl(
+					Integer.parseInt(node.getAttribute("time")),m_npc.getPosition()));
+		}
 		if (str.equals("spaceCombat"))
 		{
 			new SpaceCombatInitializer((Spaceship)Universe.getInstance().getCurrentEntity(),ship).run();

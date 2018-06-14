@@ -29,9 +29,58 @@
 
 	<page ID="CTF0">
 	<text>
-	
+	Her eyes widen, her tail twitches and a little shiver runs through her. She clearly didn't expect you to say THAT, she's simultaneously fearful...and aroused. Her gaze drifts down to your crotch almost of its own accord, and you're nice enough to show off what she's about to add to. Your hand stroking along your shaft as her eyes drink in the sight "You'd really, do that to me.." she asks, blushing hotly at the debasing thought you consider her a mere addition to your hermhood.
 	</text>
+	<choice destination="CTF1" text="$Yes, now..bend over"/>
+	</page>
 	
+	<page ID="CTF1">
+	<text>
+	The kitty flushes again at your command, and hesitates..part of her perhaps wanting to cling onto the silly notion she's anything but a few extra inches for you to add onto your dick. But in the end she's too horny for you to care and she presents herself, raising her skirt and her tail as she turns around and bends over to allow you to have your way with her. The kitty pirate about to be plundered and possessed and judging by the purr, she has no regrets. She lets out a mewl as you enter her, delighted at the feeling of your dick as you slide it into her.
+	</text>
+	<choice destination="CTF2" text="$sluts like you are best put to good use as cockmeat"/>
+	</page>
+	
+	<page ID="CTF2">
+	<text>
+	She might be the sort to get off on debasing teasing like that as she lets out a mrowl as you tell her her purpose in life. But more likely it was just the feel as you thrust your shaft fully inside of her, filling out her nethers and stretching her to the core with your shaft that you'll soon make her a part of. You place your hands on her ass and dig your fingers into her petite derriere as you thrust in and out of her, teasing her with some regular fucking before you'll start to change her.
+	</text>
+	<choice destination="CTF3" text="*and then, the transformation"/>
+	</page>
+	
+	<page ID="CTF3">
+	<text>
+	You thrust into her and let the change begin, the kitty letting out a gasping moan as she feels herself rooting to your hips. Her sex merging to your crotch, her body beginning to be overtaken and subsumed by your own "I can...feels so good, I'm gonna be your cock..." she exclaims lustily as her legs go limp and soft and her tail begins to recede. Her weight now resting on your hips as her cute ass conjoins smoothly to you and becomes a cylindrical cock base.
+	</text>
+	<choice destination="CTF4" text="$yes, and you're gonna be a good cock"/>
+	</page>
+	
+	<page ID="CTF4">
+	<text>
+	"Good...cooock" she manages to agree, spluttering up a glob of precum as her insides begin to simplify, organs converting into a simple tube surrounded by throbbing cockflesh. Her limbs are starting to fade away, her legs diminishing and sticking and flowing into your sack while her arms weaken. As veiny flesh overtakes her body she desperately strokes over her now more sensitive form only to have her hands and arms stick and sink into her flanks "STROKE MEEE!" she pleads as more and more of her is converted into your shaft.
+	</text>
+	<choice destination="CTF5" text="$you even sound like a cock"/>
+	</page>
+	
+	<page ID="CTF5">
+	<text>
+	"Stroke me!" is her only reply, reiterating insistently and then spluttering and gasping as her lungs devolve. But you oblige your needy dick, stroking your hands over her as she diminishes into a throbbing length between your thighs. Her head the only thing that's let of her former self now, and even that is losing definition. Her hair falling away and her ears receding as her head bulges out into a hot and pulsating glans, her lips drooling pre as they still and turn vertical..she's almost, gone...just a little more and she'll be nothing but your cock, you can feel yourself coming to the edge of orgasm at the mere thought of it.	
+	</text>
+		<special effect="mutation">
+			<mutation part="penis" variable="length" modifier="6">
+			<proportional ratio="0.05"/>
+			</mutation>
+		</special>	
+	<choice destination="CTF6" text="*cum through her*"/>
+	</page>
+	
+	<page ID="CTF6">
+	<text>
+	You feel as the last parts of her change, her tongue fading away and her eyes sealing over leaving her throbbing and pulsing needily at your waist as nothing but a cock now. The kitty pirate now just extra meat on your shaft giving you a good 
+	<measurement part="penis" variable="length" /> inches between your legs. The thought is enough to push you over the edge, hot cum spurting up through your newly enhanced member to splatter the floor in front of you. She was such a delightful kitty, but she makes an even better cock.
+	</text>
+		<special effect="removenpc" />	
+	<choice destination="end" text="carry on"/>	
 	</page>
 	
 	<page ID="oralvoreA0">

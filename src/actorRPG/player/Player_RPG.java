@@ -232,7 +232,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=0;
+		playerExperience=100;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -311,7 +311,7 @@ public class Player_RPG implements Actor_RPG {
 			}
 		}
 		
-		stats[SATIATION]-=calcMetabolism()*duration;
+		stats[SATIATION]-=calcMetabolism(subAbilities[METABOLISM])*duration;
 		if (stats[SATIATION]<=0)
 		{
 			stats[HEALTH]-=0.25F*duration;
@@ -323,7 +323,7 @@ public class Player_RPG implements Actor_RPG {
 		
 		if (stats[HEALTH]<statMax[HEALTH])
 		{
-			stats[HEALTH]+=subAbilities[REGENERATION]*duration; stats[SATIATION]-=subAbilities[REGENERATION]*2*duration;				
+			stats[HEALTH]+=subAbilities[REGENERATION]*duration; stats[SATIATION]-=calcMetabolism(REGENCOST)*2*duration;				
 		}
 
 		if (stats[RESOLVE]<statMax[RESOLVE])
@@ -346,7 +346,7 @@ public class Player_RPG implements Actor_RPG {
 	}
 	public void sleep(int duration)
 	{
-		stats[SATIATION]-=calcMetabolism()*duration;
+		stats[SATIATION]-=calcMetabolism(subAbilities[METABOLISM])*duration;
 		
 		if (stats[SATIATION]<=0)
 		{
@@ -359,7 +359,7 @@ public class Player_RPG implements Actor_RPG {
 		
 		if (stats[HEALTH]<statMax[HEALTH])
 		{
-			stats[HEALTH]+=subAbilities[REGENERATION]*duration*4; stats[SATIATION]-=REGENCOST*duration;				
+			stats[HEALTH]+=subAbilities[REGENERATION]*duration*4; stats[SATIATION]-=calcMetabolism(REGENCOST)*duration;				
 		}
 
 		if (stats[RESOLVE]<statMax[RESOLVE])
@@ -381,11 +381,11 @@ public class Player_RPG implements Actor_RPG {
 		cooldownHandler.update(duration);
 	}
 	
-	private float calcMetabolism()
+	private float calcMetabolism(float v)
 	{
-		float minor=subAbilities[METABOLISM]*0.5F;
-		float major=subAbilities[METABOLISM]*0.5F;
-		float karma=(karmaMeter/100);
+		float minor=v*0.5F;
+		float major=v*0.5F;
+		float karma=(((float)karmaMeter)/100);
 		return minor+(major*karma);
 		
 	}
@@ -397,7 +397,7 @@ public class Player_RPG implements Actor_RPG {
 			busy--;
 		}
 		//satiation
-		stats[SATIATION]-=calcMetabolism();
+		stats[SATIATION]-=calcMetabolism(subAbilities[METABOLISM]);
 
 		if (stats[SATIATION]<=0)
 		{
@@ -419,7 +419,7 @@ public class Player_RPG implements Actor_RPG {
 				{
 					float bonus=((float)statMax[HEALTH])/30;
 					stats[HEALTH]+=subAbilities[REGENERATION]*bonus; 
-					stats[SATIATION]-=REGENCOST;		
+					stats[SATIATION]-=calcMetabolism(REGENCOST);		
 				}			
 			}		
 			if (stats[RESOLVE]<statMax[RESOLVE])

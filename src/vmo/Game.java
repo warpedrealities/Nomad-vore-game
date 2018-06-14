@@ -103,12 +103,12 @@ public class Game implements SceneManager {
 
 		sceneManager = this;
 		graphicsConfiguration = new Config();
-		
-		  try { System.setErr(new PrintStream(new
-		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
-		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
-		
-		
+//		
+//		  try { System.setErr(new PrintStream(new
+//		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
+//		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
+//		
+//		
 		// Initialize GLFW. Most GLFW functions will not work before doing this.
 		if (!glfwInit())
 			throw new IllegalStateException("Unable to initialize GLFW");

@@ -175,6 +175,9 @@ public abstract class Actor implements Attackable {
 			return true;
 		}
 		Vec2f p=Geometry.getPos(direction, actorPosition);
+		p.x=(int)p.x;
+		p.y=(int)p.y;
+		
 		if (collisionInterface.passable((int) p.x, (int) p.y, getFlying())) {
 			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);	
 			if (!swapPlaces((int)actorPosition.x,(int)actorPosition.y,(int)p.x,(int)p.y))

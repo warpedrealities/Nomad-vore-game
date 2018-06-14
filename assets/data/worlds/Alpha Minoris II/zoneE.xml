@@ -81,8 +81,8 @@
 				<data npc="AlphaMinoris_II/draconian" min="1" max="1" chance="25" />
 			</spawns>
 		</placeWidget>
-		<partition xmin="0" xmax="64" ymin="32" ymax="64">
-			<SeedNPCs min="6" max="12" name="AlphaMinoris_II/raptorHuntress">
+		<partition xmin="0" xmax="64" ymin="0" ymax="32">
+			<SeedNPCs min="6" max="12" name="AlphaMinoris_II/raptorHuntress" minDistance="12" >
 			<script spawn="huntressSpawn" death="huntressHunt" />
 			</SeedNPCs>
 		</partition>		

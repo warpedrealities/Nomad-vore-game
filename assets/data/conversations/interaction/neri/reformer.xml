@@ -15,7 +15,7 @@
 	You flick the switch, turning on the reformation device. You see the power levels stabilize and a flicker of activity from the capsule sharing the basement. Then, to indicate the device is truly online the reformation device emits a badly distorted corporate jingle that was probably banal and tuneless even before the speaker was left in a basement for several centuries.
 	</text>
 		<effect type="setglobalflag" flag="NERI_BASEMENT" value="1" />
-	<special effect="replaceWidget" name="modules/reformer"/>		
+	<special effect="replaceWidget" name="reformer_invincible"/>		
 	<choice destination="end" text="success"/>
 	</page>
 		

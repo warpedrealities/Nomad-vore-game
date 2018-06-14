@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<text>
+	The sune gives you a well practiced smile "Howdy stranger, you looking for a little loving? or maybe a lot?" she strokes a hand down her side, starting at her breast and down to her hip "If you got the creds, i got the time."
+	</text>
+	<choice destination="services" text="I'm interested in what you have to offer"/>
+	<choice destination="end" text="not right now"/>
+	</page>
+	
+	<page ID="services">
+	<text>
+	The sune licks her lips "Sure thing hun, what can I do for ya?" she asks, stepping closer to let you smell her perfume and feel her warmth as she lays a hand against your thigh.
+	</text>
+	<choice destination="blowjob0" text="I'd like my dick sucked">
+	<assertion evaluate="haspart" part="penis" />	
+	</choice>
+	<choice destination="oralsex0" text="I'd like my pussy licked">
+	<assertion evaluate="haspart" part="vagina" />	
+	</choice>	
+	<choice destination="end" text="on second thoughts, I'll be on my way"/>
+	</page>
+	
+	<page ID="oralsex0">
+	<text>
+	"Need some tender loving? Ya came to the right place hun, 100 credits and I'll make you SING" she says with a mischevious gleam in her eyes as she smiles and slides her hand down to rest on your thigh. 
+	</text>
+		<choice destination="oralsex1" text="$Sounds good, here's the money">
+			<condition evaluate="CREDITS" operator="greaterthan" value="100"/>	
+	</choice>
+	<choice destination="end" text="$a hundred for a little tongue action? yeah no thanks."/>
+	</page>
+	
+	<page ID="oralsex1">
+	<text>
+	The sune mhmms "you won't regret it, now lets see what i have to work with." she says and slides down, tails swaying back and forth in a slow and hypnotic fashion. Her hands tracing down your thighs, then sliding back up the inside to trace around the outline of your nethers without touching them. She murrs and seemingly just admires your sacred parts for a few seconds "Wonderful" she compliments before bringing her face in close to your crotch and darting her tongue out to lick over the length of your slit. Her tongue working up and then down your netherlips repeatedly before flicking out to press against your clit.
+	</text>
+	<choice destination="oralsex2" text="*not...bad*"/>
+	</page>
+	
+	<page ID="oralsex2">
+	<text>
+	Her licks turn more naughty and works deeper into your folds, her hands spreading your lower lips so she can better seek out your most sensitive inner spots. Her mhmms at your hot fluids and flavours vibrating your sensitive parts as she nuzzles against your nethers and delves deeper and deeper into you with relentless enthusiasm and consummate skill. 
+	</text>
+	<choice destination="oralsex3" text="*getting...close*"/>
+	</page>
+	
+	<page ID="oralsex3">
+	<text>
+	She grips your thighs now, nestled deep in she licks repeatedly over your most pleasurable intimates and nuzzles her nose up against your hooded clit. Your body shuddering with impending orgasm as she squeezes your legs and then with a final lick works you over the edge. Your shudder turning into a full body spasm and a cry of bliss as your nethers clench and spurt to coat her face with lusty juices. The Sune waiting a dozen seconds supporting you with her hands before starting to clean you off. Her tongue working methodically over and around your nethers until you're clean of your juices and glistening with her saliva. The harlot letting go and getting up, wiping her lip and smiling "Told ya. Come back anytime."
+	</text>
+		<choice destination="end" text="$Will do slut, till next time"/>
+	</page>
+	
+	<page ID="blowjob0">
+	<text>
+	The Sune chuckles and reaches down to stroke seductively over the part in question "Sure, got 100 credits?" she says and then smiles "You won't regret it I promise, I got a degree on gettin' on my knees." she says and licks her lips before doing something, interesting, with her tongue.
+	</text>
+	<choice destination="blowjob1" text="$Sounds good, here's the money">
+			<condition evaluate="CREDITS" operator="greaterthan" value="100"/>	
+	</choice>
+	<choice destination="end" text="$a hundred for a blowjob? yeah no thanks."/>
+	</page>
+	
+	<page ID="blowjob1">
+	<text>
+	The harlot chuckles and takes the money "mhmm now what am I working with" she says and drops to her knees right then and there to service you in the street, her tails aswishing back and forth as she admires and fondles your <macro ID="penis_size_desc" /> shaft. Her hands stroking along your length as she leans in and licks over your tip, playing her tongue expertly around your glans and teasing the corona around the edge of your cock delightfully. Your tip slick now with her saliva as she strokes and massages over your balls with one hand, then forms her lips into an O and brings her mouth down around your shaft. 
+	</text>
+	<effect type="givecredits" value="-100" />
+	<choice destination="blowjob2" text="*let her do her job*"/>
+	</page>
+	
+	<page ID="blowjob2">
+	<text>
+	She lets out a mhmmpth as she encompasses your cock entirely, throat flexing as she inhales your shaft and nuzzles her nose into your crotch. Her throat massaging around your girth now as she nuzzles in and lets out pleased muffled mhmms as she squeezes your rear urging you on, her gaze looking up at you. In her eyes you can read her assent, and you reach your hand down behind her head to knot your fingers through her hair...who are you to refuse an invitation from a foxy who might like a bit of the rough stuff.
+	</text>
+	<choice destination="blowjob3" text="*take charge*"/>
+	</page>
+	
+	<page ID="blowjob3">
+	<text>
+	You grip her head firmly and start to thrust into her mouth, hearing her glucking around your dick each time you bottom out with your balls slapping against her chin. Her head bobbing obediently to follow your guiding hand as you start to use her mouth in earnest, your shaft plunging repeatedly into the mouth of this whore as you feel your pleasure build and your needed relief fast approaching.
+	</text>
+	<choice destination="blowjob4" text="*finish in her mouth*"/>
+	</page>
+	
+	<page ID="blowjob4">
+	<text>
+	The foxy harlot seems to sense your impending climax and bobs her head all the faster, alternating with powerful suction around your dick while nuzzled into your crotch. The expertise of her timing driving you up and over the crest of the mountain that is your pleasure. Your cock erupting down her throat as she swallows every gooey drop. The sune closing her eyes until she's felt the last spurt and throb of your cock before opening her eyes and pulling up off of it. She wipes her lips as your cock pops free of her mouth "Mhmm, come back anytime Hun. Ya know how to treat a girl right." she says giving your shaft a fondle as she gets back up onto her feet.
+	</text>
+	<choice destination="end" text="$Will do slut, till next time"/>
+	</page>
+	
+</Conversation>

@@ -159,7 +159,11 @@ public class CraftingScreen extends Screen implements Callback {
 				ItemStack stack = new ItemStack(item, recipe.getResultCount());
 				player.getInventory().AddItem(stack);
 			}
-
+			int count=recipe.getRequiredSkill()*100;
+			for (int i = 0; i < count; i++) {
+				((Player_RPG) Universe.getInstance().getPlayer().getRPG()).update();
+			}
+			Universe.AddClock(count);
 			player.calcMove();
 			// create prompt to the player that the item has been made
 

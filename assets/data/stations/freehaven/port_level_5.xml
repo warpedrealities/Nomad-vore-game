@@ -106,6 +106,9 @@
 	<placeNPC name="freehaven/wardens/warden_commander" x="16" y="3" />	
 	<placeNPC name="freehaven/civilians/robyn" x="25" y="9" />		
 	<placeNPC name="freehaven/civilians/Jehari" x="8" y="8" />	
+	<placeNPC name="freehaven/civilians/prostitute" x="4" y="19" />	
+	<placeNPC name="freehaven/civilians/prostitute" x="4" y="12" />
+	<placeNPC name="freehaven/civilians/prostitute" x="27" y="12" />	
 	<placeWidget name="craftingtable" x="8" y="7" />		
 	<placeNPC name="freehaven/civilians/Laesha" x="23" y="23" />		
 	<placeNPC name="freehaven/civilians/Desharr" x="16" y="29" />	
