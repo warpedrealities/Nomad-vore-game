@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="brightsword(unfinished)" requiredskill="1" startunlocked="false">
+	<description>
+	An ancient seraphic weapon partially rebuilt from a reforged blade of celestial steel and an improvised hilt that lacks the technological enhancements of the fabled weapon.
+	</description>
+	<ingredient item="brightsword tip" quantity="1" />
+	<ingredient item="brightsword blade" quantity="1" />	
+	<ingredient item="scrap metal" quantity="3" />	
+	<result item="brightsword(unfinished)" />
+</recipe>

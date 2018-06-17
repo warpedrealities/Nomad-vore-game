@@ -561,7 +561,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		// place player at coordinates
 		// m_handler.setZone(sceneController.getActiveZone());
 
-
+		
 		// run vision algorithm
 		sceneController.getActiveZone().RegenZone();
 		CompanionTool.moveCompanions(sceneController.getUniverse().getPlayer(), sceneController.getActiveZone());

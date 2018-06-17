@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<zone width="32" height="32" spriteset="dungeon.png">
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
+		<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
+		<tile sprite="18" vision="0" movement="1"> liquid water</tile>
+		<tile sprite="19" vision="1" movement="2"> a strange statue</tile>
+	</tileset>
+	<description></description>
+	<mapgen>
+		<prefab positionX="0" positionY="0" width="32">
+			<row>0000 0000 0000 0002 2200 0000 0000 0000</row>
+			<row>0000 0000 0002 2222 1222 2200 0000 0000</row>
+			<row>0022 2222 2002 1111 1111 1200 2222 2220</row>
+			<row>0021 1111 2222 1141 1141 1222 2111 1120</row>
+			
+			<row>0021 1111 1331 1111 1111 1133 1111 1120</row>
+			<row>0021 1111 1331 1111 1111 1133 1111 1120</row>
+			<row>0021 1111 2222 1141 1141 1222 2111 1120</row>
+			<row>0021 1111 1331 1111 1111 1133 1111 1120</row>
+
+			<row>0021 1111 1331 1111 1111 1133 1111 1120</row>
+			<row>0021 1111 2222 1141 1141 1222 2111 1120</row>
+			<row>0021 1111 1331 1111 1111 1133 1111 1120</row>
+			<row>0021 1111 1331 1111 1111 1133 1111 1120</row>
+
+			<row>0021 1111 1222 1141 1141 1222 2211 1120</row>
+			<row>0022 1122 2202 1111 1111 1200 0221 1220</row>
+			<row>0002 1120 0002 1111 1111 1200 0021 1200</row>
+			<row>0002 1120 0002 1141 1141 1200 0021 1200</row>			
+			
+			<row>0022 1122 0002 1111 1111 1200 0221 1220</row>
+			<row>0021 1112 0002 1111 1111 1200 0211 1120</row>
+			<row>0021 1112 0002 1141 1141 1200 0211 1120</row>
+			<row>0021 1112 0002 1111 1111 1200 0211 1120</row>
+
+			<row>0021 1112 0002 1111 1111 1200 0211 1120</row>
+			<row>0022 1122 0002 1141 1141 1200 0221 1220</row>
+			<row>0002 1120 0002 1111 1111 1200 0021 1200</row>
+			<row>0002 1120 0002 1111 1111 1200 0021 1200</row>			
+			
+			<row>0022 1122 2002 1141 1141 1200 2221 1220</row>
+			<row>0021 1111 2222 1111 1111 1222 2111 1120</row>
+			<row>0021 1111 1111 1111 1111 1111 1111 1120</row>
+			<row>0021 1111 1111 1111 1111 1111 1111 1120</row>
+
+			<row>0021 1111 2222 1111 1111 1222 2111 1120</row>
+			<row>0022 2222 2002 1141 1141 1200 2222 2220</row>
+			<row>0000 0000 0002 1111 1111 1200 0000 0000</row>
+			<row>0000 0000 0002 2222 2222 2200 0000 0000</row>			
+		</prefab>
+
+
+		<pairedportal sprite="3" destination="zoneW" x="16" y="1"
+			ID="22" facing="0">tunnel up</pairedportal>
+		<placeNPC name="AlphaMinoris_II/crownedTyrant_1" x="16" y="26">
+				<script death="crownedTyrantDeath" />
+		</placeNPC>
+		
+		<placeWidget x="3" y="3" name="chest">
+			<lootTable>
+				<loot item="blueprint" chance="1.0" addendum="brightsword" />		
+				<lootSubTable chance="1" file="consumable_tier_1" />
+				<lootSubTable chance="0.5" file="resource_tier_1" />
+				<lootSubTable chance="0.5" file="consumable_tier_1" />
+				<lootSubTable chance="0.15" file="mutators_tier_1" />
+				<lootSubTable chance="0.25" file="consumable_tier_1" />
+				<loot item="gold" chance="0.4" addendum="10" />
+				<loot item="gold" chance="0.4" addendum="25" />	
+			</lootTable>
+		</placeWidget>	
+	
+		<placeWidget x="29" y="3" name="chest">
+			<lootTable>	
+				<loot item="questItem" chance="1.0" addendum="brightsword tip" />		
+				<lootSubTable chance="1" file="consumable_tier_1" />
+				<lootSubTable chance="0.5" file="resource_tier_1" />
+				<lootSubTable chance="0.5" file="consumable_tier_1" />
+				<lootSubTable chance="0.15" file="mutators_tier_1" />
+				<lootSubTable chance="0.25" file="consumable_tier_1" />
+				<loot item="gold" chance="0.4" addendum="10" />
+				<loot item="gold" chance="0.4" addendum="25" />	
+			</lootTable>
+		</placeWidget>		
+	
+		<placeWidget x="3" y="6" name="chest">
+			<lootTable>		
+				<lootSubTable chance="1" file="consumable_tier_1" />
+				<lootSubTable chance="0.5" file="resource_tier_1" />
+				<lootSubTable chance="0.5" file="consumable_tier_1" />
+				<lootSubTable chance="0.15" file="mutators_tier_1" />
+				<lootSubTable chance="0.25" file="consumable_tier_1" />
+				<loot item="gold" chance="0.4" addendum="10" />
+				<loot item="gold" chance="0.4" addendum="25" />	
+			</lootTable>
+		</placeWidget>	
+	
+		<placeWidget x="29" y="6" name="chest">
+			<lootTable>		
+				<lootSubTable chance="1" file="consumable_tier_1" />
+				<lootSubTable chance="0.5" file="resource_tier_1" />
+				<lootSubTable chance="0.5" file="consumable_tier_1" />
+				<lootSubTable chance="0.15" file="mutators_tier_1" />
+				<lootSubTable chance="0.25" file="consumable_tier_1" />
+				<loot item="gold" chance="0.4" addendum="10" />
+				<loot item="gold" chance="0.4" addendum="25" />	
+			</lootTable>
+		</placeWidget>		
+	
+		<placeWidget x="3" y="9" name="chest">
+			<lootTable>		
+				<lootSubTable chance="1" file="consumable_tier_1" />
+				<lootSubTable chance="0.5" file="resource_tier_1" />
+				<lootSubTable chance="0.5" file="consumable_tier_1" />
+				<lootSubTable chance="0.15" file="mutators_tier_1" />
+				<lootSubTable chance="0.25" file="consumable_tier_1" />
+				<loot item="gold" chance="0.4" addendum="10" />
+				<loot item="gold" chance="0.4" addendum="25" />	
+			</lootTable>
+		</placeWidget>	
+	
+		<placeWidget x="29" y="9" name="chest">
+			<lootTable>		
+				<lootSubTable chance="1" file="consumable_tier_1" />
+				<lootSubTable chance="0.5" file="resource_tier_1" />
+				<lootSubTable chance="0.5" file="consumable_tier_1" />
+				<lootSubTable chance="0.15" file="mutators_tier_1" />
+				<lootSubTable chance="0.25" file="consumable_tier_1" />
+				<loot item="gold" chance="0.4" addendum="10" />
+				<loot item="gold" chance="0.4" addendum="25" />	
+			</lootTable>
+		</placeWidget>			
+	</mapgen>
+
+</zone>

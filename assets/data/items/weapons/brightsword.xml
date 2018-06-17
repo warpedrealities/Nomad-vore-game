@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ItemWeapon name="brightsword" weight="8" value="2000">
+	<tagSet value="SM" />
+	<description>
+		A rebuilt weapon of the Seraphic people. This claymore has a blade forged of celestial steel and has an ornate technological hilt capable of sheathing the weapon in a coruscating aura of destructive energies. 3AP Does
+		6-14 kinetic damage. 12-28 thermokinetic damage if ignited. (S)
+	</description>
+	<modifier>
+	</modifier>
+	<combatMove name="strike" pattern="MELEE" bonusAttribute="MELEE"
+		timeCost="2" actionCost="3" basicAction="true" moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="6" maxValue="14"
+			modifier="STRENGTH" />
+		<missText count="1">
+			<text>you fail to strike the TARGET .</text>
+		</missText>
+		<hitText count="1">
+			<text>you strike TARGET for VALUE kinetic damage</text>
+		</hitText>
+	</combatMove>
+
+	<combatMove name="smite" pattern="MELEE" bonusAttribute="MELEE"
+		timeCost="2" ammoCost="1" actionCost="3" moveType="FIGHT">
+		<effectDamage type="THERMAL" minValue="6" maxValue="14"
+			modifier="STRENGTH" />
+		<effectDamage type="KINETIC" minValue="6" maxValue="14"
+			modifier="STRENGTH" />			
+		<missText count="1">
+			<text>you fail to smite TARGET</text>
+		</missText>
+		<hitText count="1">
+			<text>you smite TARGET for VALUE thermokinetic damage</text>
+		</hitText>
+	</combatMove>	
+	<energy refill="ENERGY" efficiency="2" capacity="25" />	
+</ItemWeapon>

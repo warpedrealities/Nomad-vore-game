@@ -5,7 +5,9 @@
 		<tile sprite="1" vision="0" movement="0"> rocky ground </tile>
 		<tile sprite="3" vision="0" movement="1"> boulder</tile>	
 		<tile sprite="21" vision="0" movement="1"> shrub</tile>		
-		<tile sprite="5" vision="1" movement="2" smart="true"> mountain rocks</tile>			
+		<tile sprite="5" vision="1" movement="2" smart="true"> mountain rocks</tile>
+		<tile sprite="22" vision="0" movement="0"> masonry floor</tile>		
+		<tile sprite="23" vision="1" movement="2"> masonry wall</tile>			
 	</tileset>
 	<description>
 	You've entered the mountains, narrow clefts and steep cliffs all about you in a perilous jumble. It'll be tricky to navigate, and its wind swept rocky ground is harsh and unfertile.
@@ -23,7 +25,22 @@
 				<data npc="AlphaMinoris_II/draconian" min="1" max="1" chance="25" />
 			</spawns>
 		</placeWidget>	
-	<perlin>
+	<partition xmin="2" xmax="62" ymin="32" ymax="60">
+			<randprefab width="5" height="6">
+				<row>22222</row>
+				<row>76667</row>
+				<row>76667</row>
+				<row>77677</row>
+				<row>77777</row>
+				<row>77777</row>
+				<pairedportal sprite="3" destination="outpost" x="2"
+					y="3" ID="22" facing="4">a tunnel entrance</pairedportal>
+			</randprefab>
+					<SeedNPCs min="1" max="1" name="AlphaMinoris_II/crownedTyrant_2">
+			<script spawn="crownedTyrantSpawn" />
+		</SeedNPCs>
+		</partition>
+		<perlin>
 			<band low="-1.0" high="-0.3">
 				<floodfill tile="4" />
 			</band>

@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="anthros" />
+		<preference fetish="herms" />	
+		<text>
+		That last blow from the crowned tyrant took the remaining bit of strength you had, ploughing you over onto the ground as easily as a cardboard cutout. Your head slammed against the floor, leaving you dazed and confused as the lizard begin looming over you. By the time you came to your senses and were able to see more than a colourful collection of stars, you saw and felt your feet being stuck in…	
+		</text>
+		<choice destination="oralvore0" text="her mouth">
+		<preference fetish="oralvore" />		
+		</choice>	
+		<choice destination="cockvore0" text="her shaft">
+		<preference fetish="cockvore" />		
+		</choice>			
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	Her mouth! You felt her sharp teeth grazing over your feet as she slid them in, her jaws clamping tight around your ankles. You tried to struggle the best you could, but you were still quite incoherent from that last blow, and when you did try to wiggle yourself out, the crowned tyrant suddenly grabbed you at your sides, nearly digging her claws into your flesh...even her grip felt overpowering, as if she could just crush you like a grape if she wanted to. You could feel her gross, slimy tongue working over your feet and legs, lubricating them and taking in your flavour before a wet *gllrrruk!* suddenly tugged you a few inches forward. It felt like her throat had a firm grasp on your legs, and that was the true signal that you were going nowhere but deeper into her... 
+	</text>
+	<choice destination="oralvore1" text="continue"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	With her throat having a tight grip on your calves, the crowned tyrant relaxed her grip a little. But at the same time, she lifted you up, eventually standing you up inside her throat. You had nowhere to look but down; and that was a perfect vista for you to see the lizard open her jaws wide, grinning in both corners of her mouth as gravity funnelled you down her throat. She didn't even need to clamp her jaws down, she could just swallow a few times and see the fruits of her labour disappear down her hungry gullet. In no time at all, your waist disappeared past those jaws, being funnelled right into her throat and stopped up just like any other part of you. In a fit of desperation you tried to wiggle out of the grip she had on your sides, but her throat kept your legs from moving at all and in response to your thrashing on the outside, the crowned tyrant simply grunted before gulping down again, your  hands now stuck in her throat, keeping your arms pinned to your sides. All you could do was watch in horror as her jaws worked their way over your head, the lizard putting both of her hands at her throat and feeling the bulge you made sink further and further into her gullet…
+	</text>
+	<choice destination="oralvore2" text="no choice but to be devoured"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Her jaws closed around the back of your head, cutting off all light to the inside of her mouth. You could already feel your feet poking out into the lizard's stomach, giving them a little bit of wiggle room at least! Although that was a small caveat to being eaten whole and alive, especially considering that you felt her tight throat clenching around your neck, the precursor to her final swallow. It was messy and loud and disorienting, and by the time it finished, your surroundings had been replaced with the tight, unyielding walls of her throat. Those flashy walls squished up right against your face as they contracted, pushing you down, down, down into the depths of the beast with every swallow. Most of your legs were wiggling around in the lizard’s belly at this point, and you could hear and feel the splashing of stomach juices as they tried to find footing. Eventually, enough of you was pushed on inside the chamber that you had to curl up, your feet pressing up against the back of her stomach with nowhere to go but up. A few more rippling swallows and the sphincter parted around your head, leaving your head to splash down into the belly juices that had already started to collect in your new home.
+	</text>
+	<choice destination="oralvore3" text="devoured completely"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	The lizard's stomach was as tight, loud, and abrasive as you thought it would be, the walls constantly massaging you from all sides, working those digestive fluids deep into your skin. You could feel the crowned tyrant rubbing on you from both sides, the lizard leaning forward and using its swollen belly as a bed of sorts. It was humiliating! First, you were devoured by this overgrown lizard, and now it was using you as a cushion! You were so angry, but you weren't sure if you could work up the strength to try and fight your way out of this belly…
+	</text>
+	<choice destination="oralvoreStruggle" text="*attempt to escape*"/>
+	<choice destination="oralvoreSubmit" text="*submit to your fate*"/>
+	</page>
+	
+	<check ID="oralvoreStruggle">
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="oralvoreStruggleEscape" />
+		<outcome destination="oralvoreStruggleDigest" />
+	</check>
+	
+	<page ID="oralvoreStruggleEscape">
+	<text>
+	You figured you might as well give struggling a try. Even though you felt so wasted, it was better than giving up and melting away in this lizards belly! You scrabbled around the stomach walls for a bit, looking for the sphincter you had been squeezed out of minutes ago. Eventually, you found it and, after taking a deep breath, pried the fleshy ring open with all your strength! It resisted quite powerful, but eventually, it gave way, allowing you to stick your head back up the throat. You could hear the lizard starting to heave and gasp, and felt her throat rippling around you as it tried to push you back inside, but you weren't giving up. You climbed your way out of the throat, taking big handfuls of the flesh surrounding you and literally dragging yourself out of its stomach. Eventually, you lodged yourself so far up its throat that the crowned tyrant could only watch as you crawled out of her mouth, momentarily dazed and nauseated from the sensation of something literally climbing out of its stomach. It took you a while, especially with her tongue still trying to keep you inside of her, but you soon pushed yourself out of its mouth, landing in a pile of stomach juices and drool next to a quite sick lizard. You figured you should escape before anything else tried to swallow you up…
+
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />		
+	</page>
+	
+	<page ID="oralvoreStruggleDigest">
+	<text>
+	You figured you might as well give struggling a try. Even though you felt so wasted, it was better than giving up and melting away in this lizards belly! You scrabbled around the stomach walls for a bit, looking for the sphincter you had been squeezed out of minutes ago. Eventually, you found it and, after taking a deep breath, pried the fleshy ring open with all your strength! It resisted quite powerful, In fact, a lot more powerful than you thought. You gave it all the energy you possibly could, but it wouldn't pry open more than a couple of inches, not nearly wide enough for you to force anything up inside of it. Defeated, and completely sapped of energy, you slumped back in the stomach, feeling a tingle starting to spread over your body as the lizard's got really started to get to work. She laid on it as it melted you away, the defined bulges in her belly gradually rounding out and softening as you went from a solid lump of food to a thick, nutritious sludge, ready to be absorbed by the rest of her system. 
+	</text>
+	<choice destination="oralvoreGO" text="gurgle"/>
+	</page>
+	
+	<page ID="oralvoreSubmit">
+	<text>
+	Your energy was simply too tapped out for you to even consider trying to fight your way out of here. All you could really do was accept your fate as food at this point. And that was exactly what you did, lying back in the stomach, trying to enjoy the sensations surrounding you. The tingling spreading all over your body felt a bit weird, but the massaging of the stomach walls actually felt quite nice if you closed your eyes and ignored where you were. Eventually, that tingling claimed your whole body as the lizard's got really started to get to work. She laid on it as it melted you away, the defined bulges in her belly gradually rounding out and softening as you went from a solid lump of food to a thick, nutritious sludge, ready to be absorbed by the rest of her system. 
+	</text>
+	<choice destination="oralvoreGO" text="gurgle"/>	
+	</page>
+	
+	<gameover ID="oralvoreGO">
+	<text>
+	The crowned tyrant dozed off after her meal, content with the feeling of her belly becoming softer and rounder as it finished working on you. Eventually, there was nothing in her gut but a thick sludge, which quickly funnelled through her intestines and distributed its nutrients, and most importantly its fat, all over her body. By the time the reptile awoke the next day, the only sign that she had defended her dungeon from an intruder was a new layer of plush, soft chub on her belly and ass, something that would work rather well to attract meals in the future….
+	</text>	
+	</gameover>
+
+	<page ID="cockvore0">
+	<text>
+	Her...cock!? Yes, it seems this beast was packing heat as well, a dopey expression of pleasure spreading over her face as she jammed your feet down her length. The tight, grabbing walls of the cock felt much like a throat, but with even less wiggle room, somehow...you were still so dazed from her attack that you could only watch as she slid you deeper into her length, her clawed hands grasped firmly on your thighs, pulling you deeper into her embrace as her hungry rod clenched down anything it could touch. You heard a bit of panting coming from above, and you swore you could see and feel a little bit of pre already dribbling out of her tip...it seems like she very much enjoyed the idea of turning you into a lovely mating session! 
+	</text>
+	<choice destination="cockvore1" text="schlurped up"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	In only a minute or so, the hungry length had swallowed you up all the way to your knees. You were very much not into the idea of being an amazing session yourself, and as you gradually gathered your strength back, you tried to fight back against the overgrown lizard; but with the position you were in, your blows barely landed, and they only seem to anger the lizard. After a few attempts at sliding yourself out, the reptile casually reached her clawed hands down, getting a firm grip on your shoulders and, before you could try and fight back, *shoved* you further down her cock! You went from knee deep in lizard cock to waist deep, if not more; you could see her tongue hanging out of her mouth as she continued to gobble you up, completely lost in her pleasure. It was possible that she didn't even feel your blows, even though you were putting all the strength you could gather into them...that wasn't exactly the best thing to think about while you were chest deep in lizard dick, though.	
+	</text>
+	<choice destination="cockvore2" text="continue"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	Thankfully, you already felt your feet poking out into the dangling pair of balls you had seen earlier, so your time spent in this almost painfully tight shaft would be short-lived. Every rippling contraction around you felt so strong, though, each one of them pushing you a few inches deeper into the tyrant’s loins. You could feel her stroking along her length as you slipped further into her, her clawed hands outlining the bulge you made as you slipped deeper into her length. It was...degrading as hell, actually. Being used as nothing but pleasure and mating for this overgrown gecko! She riled you up; but it was so tight inside the shaft that you could barely even move, let alone make a coherent attempt to escape. No, you would have to wait until you were dumped out into her balls entirely; thankfully that was coming, your waist sliding out into the chamber, letting you feel exactly how much cream was already inside. It was quite a lot.
+	</text>
+	<choice destination="cockvore3" text="the sticky depths"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	Eventually, the last of you was clenched out into the crowned tyrant’s sack, your head dropping a few inches to splash down in a pool of hot jizz. It felt like a sauna in here, but in the worst possible way! You weren't sure if you were covered in sweat or cum as you tried to find your footing in this chamber, the stretchy walls around you almost skin tight to your form, allowing no solid ground for you to catch your balance. The whole situation was incredibly disorienting, and as the heat rose in the chamber from the mounting lust of the lizard, it was only going to get more disorienting as time went on... 	
+	</text>
+	<choice destination="cockvorePleasure" text="*try to get out*"/>
+	<choice destination="cockvoreSubmit" text="*submit to her loins*"/>
+	</page>
+	
+	<check ID="cockvorePleasure">
+		<test what="PLEASURE" DC="15" />
+		<outcome destination="cockvoreEscape" />
+		<outcome destination="cockvoreDigest" />
+	</check>	
+	
+	<page ID="cockvoreEscape">
+	<text>
+	No. You were not about to be a big load of cream for some lizard. You were going to get out of here, and you were going to do it right now. You figured in such a sensitive, deep place in the body, struggling would only pleasure the crowned tyrant even more, so that was your MO. You started to wiggle and thrash about inside as hard as possible, putting all your strength into your escape. You could feel the heat starting to rise in the chamber, and you thought you felt the lizard stroking along her shaft even faster to the struggles she was feeling inside of her. It was so oppressive, draining your strength quite quickly, but you had to see it through to the end; even as that tingling sensation started to spread all over your body. You swore that the cream you were basting in was bubbling by the time you felt everything clench around you like a vice grip, squeezing you out into the only place you could go. It seems like the lizard was going to blow her load, and thankfully, you were still intact inside of it. That clenching pushed you right out into her shaft, along with a copious amount of cream, forcing you to hold your breath as you saw daylight straight ahead of you. The lizard spurted you out like just another shot of jizz, throwing you surprisingly far and landing you in a pool of her cream! At least it was better than when you were bathing in it earlier. You took the opportunity of the lizard being stuck in post-orgasm bliss to make your escape, lucky to have survived an encounter with such a dangerous and lewd creature…
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />		
+	</page>
+	
+	<page ID="cockvoreDigest">
+	<text>
+	No. You were not about to be a big load of cream for some lizard. You were going to get out of here, and you were going to do it right now. You figured in such a sensitive, deep place in the body, struggling would only pleasure the crowned tyrant even more, so that was your MO. You started to wiggle and thrash about inside as hard as possible, putting all your strength into your escape. You could feel the heat starting to rise in the chamber, and you thought you felt the lizard stroking along her shaft even faster to the struggles she was feeling inside of her. It was so oppressive, draining your strength quite quickly, but you had to see it through to the end; even as that tingling sensation started to spread all over your body. You felt your strength starting to fade even faster, the tingling taking over your body as your legs started to melt into the cream surrounding you. 
+	</text>
+	<choice destination="cockvoreDigestGO" text="fading into batter"/>
+	</page>
+	
+	<gameover ID="cockvoreDigestGO">
+	<text>
+	You could tell the lizard was getting close to an orgasm, but it seemed like you were too late to the punch. You fought bravely until the end, but by the time you felt the sack clench as the lizard prepared to orgasm, you were no different than the rest of the splooge rocketing up her shaft, being shot out into the world in sticky globs of white cream splattering all over the dungeon wetly. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />That was, except for your <readequipment slot="2" />, which bulged its way up her shaft and was practically spat out onto the floor,</conditional> the lizard not even noticing that she had disposed of you so quickly inside of her. To her, it was just a wonderful, quite voluminous orgasm...she left you cooling in a puddle on the ground as she resumed her prowling.
+	</text>
+	</gameover>
+	
+	<page ID="cockvoreSubmit">
+	<text>
+	There really was no point in struggling. You realized that a few minutes after you wiggled around inside the lizard´s ball sack. The environment around you was just so overpowering, there was no hope of you getting out of it in any form other than a big, musky load of jizz. If you really wanted to get out of here, you shouldn’t have been defeated by the crowned tyrant in the first place. You slumped back against the sack walls around you, defeated, feeling the tingling sensation from the cream starting to spread throughout your entire body. It became harder to focus and feel things as more and more of your body started to melt into the pool of cream surrounding you, the water level in the chamber continuing to rise as you contributed to it…
+	</text>
+	<choice destination="cockvoreSubmitGO" text="burble"/>
+	</page>
+	
+	<gameover ID="cockvoreSubmitGO">
+	<text>
+	The crowned tyrant couldn't really tell when you stopped wiggling in there. She was massaging and rubbing at her sac with one clawed hand, stroking up and down her shaft with the other as she steadily brought herself to orgasm. When the characteristic burbling of a sack finished with its meal came from down below, she barely paid attention to it. All she cared about was cumming, and now that you were finished, that would happen quite quickly. She continued to stroke herself off, until that surging feeling of orgasm erupted out of her, her fresh jizz being shot out into the world in sticky globs of white cream, splattering all over the dungeon wetly. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />That was, except for your <readequipment slot="2" />, which bulged its way up her shaft and was practically spat out onto the floor,</conditional> the lizard not even noticing that she had disposed of you so quickly inside of her. To her, it was just a wonderful, quite voluminous orgasm...she left you cooling in a puddle on the ground as she resumed her prowling.
+	</text>
+	</gameover>
+	
+</Conversation>

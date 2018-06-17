@@ -13,7 +13,7 @@
 		<tile sprite="7" vision="0" movement="1"> a long way down</tile>		
 	</tileset>
 
-	<description></description>
+	<description>The village is strung out between trees. The various wooden homes are lashed to trees and linked with narrow wooden walkways that run high above the forest floor without any handrails. It's a dangerous seeming place for one such as you, but the winged inhabitants hardly need to fear a fall down to the ground. Speaking of whom, while their demeanour is civilized and friendly there's an undercurrent of predatory interest in the looks they're stealing your way.</description>
 
 	<mapgen>
 		<prefab positionX="30" positionY="0" width="5">
@@ -24,12 +24,22 @@
 				<pairedportal x="2" y="0" sprite="3" ID="16"
 					destination="Zone 1B" facing="0"> a descending walkway </pairedportal>
 		</prefab>			
+		
 		<partition xmin="24" xmax="40" ymin="24" ymax="40">
 			<floodfill tile="1">
 
 			</floodfill>
 		</partition>		
-			<towngrid minhouses="12" maxhouses="20" tile="3" path="1"
+		<prefab positionX="40" positionY="40" width="5">
+			<row>22222</row>			
+			<row>24442</row>
+			<row>24242</row>
+			<row>24242</row>	
+			<row>22222</row>			
+				<pairedportal x="2" y="2" sprite="3" ID="16"
+					destination="Avian Undertown" facing="0"> A ladder leading down </pairedportal>
+		</prefab>					
+			<towngrid minsize="3" maxsize="5" minhouses="12" maxhouses="20" tile="3" path="1"
 				registerRooms="true">
 				<floodfill tile="1">
 				<SeedNPCs min="16" max="32" name="avians/avianVillager">
@@ -51,10 +61,7 @@
 		<noise tile="7" scarcity="22" />		
 		<floodfill tile="4">
 		</floodfill>	
-		<POINPC name="avians/avianSlaver" />
-		<POICornerDecorate floor="1">
-			<widgetplacer name="specimenContainmentFake" />
-		</POICornerDecorate>
+	
 	</mapgen>
 
 </zone>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="POWER" />
+		<text>
+			PR1M4RY P0W3R 0FF1_1N3 LBREAK
+			R3S3RV3 P0W3R 4V41L4BL3
+		</text>
+		<choice destination="lights" text="restore lights" />		
+		<choice destination="sensors" text="direct power to primary sensor array" />
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="lights">
+		<text>
+			D1R3CT1NG R3S3RV3 P0W3R T0 L1GHT SYST3M
+		</text>
+		<special effect="worldScript" script="spacehulk_lights" />
+		<effect type="setlocalflag" flag="POWER" value="1" />
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="sensors">
+		<text>
+			D1R3CT1NG R3S3RV3 P0W3R T0 PR1M4RY S3NS0R 4RR4Y
+		</text>
+		<effect type="setglobalflag" flag="SPACEHULK_SENSORS" value="1" />	
+		<effect type="setlocalflag" flag="POWER" value="1" />
+		<choice destination="end" text="exit" />
+	</page>
+	
+	
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="POWER" />
+		<text>
+			PR1M4RY P0W3R 0FF1_1N3 LBREAK
+			R3S3RV3 P0W3R D1V3RT3D
+		</text>
+		<choice destination="end" text="exit" />
+	</page>
+
+</Conversation>

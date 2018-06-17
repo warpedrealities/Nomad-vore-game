@@ -13,6 +13,7 @@ import org.w3c.dom.NodeList;
 
 import actor.player.Player;
 import actorRPG.player.Player_RPG;
+import nomad.universe.Universe;
 
 public class EnvironmentalConditions {
 
@@ -127,5 +128,17 @@ public class EnvironmentalConditions {
 
 	public boolean getDanger() {
 		return dangerous;
+	}
+
+	public void removeCondition(String condition) {
+		for (int i=0;i<conditions.size();i++)
+		{
+			if (conditions.get(i).getIdentity().equals(condition))
+			{
+				conditions.remove(i);
+				break;
+			}
+		}
+		update(Universe.getInstance().getPlayer());
 	}
 }

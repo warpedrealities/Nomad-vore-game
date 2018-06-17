@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="crownedTyrant.png" />
+	<name>Crowned tyrant</name>
+	<description>
+	This humanoid anthropomorphic dinosaur looms eight feet tall not even including her horns. Her long and broad jawed toothsome head is crowned with six spreading horns that curve upwards from her skull. Her snout having the air of a tyranosaur more than an alligator and constantly those door like jaws are resting agape as she breathes. Her body itself is a mix of the primal and alluring, built with a broad and muscular frame that speaks of unstoppable power she nonetheless has a magnificent rack and full thighs. Her entire form from claws to tail is covered in scales that range from thin over her front to thick and broad on her back and across her limbs. 
+	</description>
+	<rpg>
+		<experiencevalue value="180" />
+		<ability ability="STRENGTH" value="7" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="90" />
+		<stat stat="RESOLVE" value="90" />
+		<attribute attribute="KINETIC" value="2" />		
+		<attribute attribute="PARRY" value="4" />	
+		<attribute attribute="WILLPOWER" value="4" />		
+		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4" threatening="true">
+			<missText count="2">
+				<text>The tyrant lizard tries to crush TARGET but is fended off</text>
+				<text>TARGET evades the tyrant lizard's attack </text>
+			</missText>
+			<hitText count="3">
+				<text>TARGET is struck by the tyrant lizard for VALUE damage</text>
+				<text>The tyrant lizard claws TARGET for VALUE damage</text>
+				<text>TARGET is battered by the tyrant lizard for VALUE damage</text>	
+			</hitText>
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="STRENGTH" />
+			<effectStatus probability="35">
+				<probabilityModifier value="ENDURANCE" />
+				<applyText>TARGET is staggered</applyText>
+			<statusAttribMod uid="17" icon="12" duration="8"
+				numModifiers="5">
+				<removeText> TARGET is no longer staggered</removeText>
+				<effect attribute="RANGED" modifier="-4" />
+				<effect attribute="MELEE" modifier="-4" />			
+				<effect attribute="PARRY" modifier="-4" />
+				<effect attribute="DODGE" modifier="-4" />	
+				<effect attribute="SEDUCTION" modifier="-4" />				
+			</statusAttribMod>
+			</effectStatus>	
+		</combatMove>
+	</rpg>
+
+	<respawn delay="4000" />
+
+	<defeated conversation="alpha_minoris_II/crowned tyrant/defeat" />
+	<seduced conversation="alpha_minoris_II/crowned tyrant/defeat" />
+	<victory conversation="alpha_minoris_II/crowned tyrant/victory1" />
+	<seducer conversation="alpha_minoris_II/crowned tyrant/victory1" />
+	<controller AI="aggressiveMelee" />
+	<faction value="monster" />
+</Harpy>

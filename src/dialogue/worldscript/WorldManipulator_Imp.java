@@ -44,6 +44,11 @@ public class WorldManipulator_Imp implements WorldManipulator {
 			}
 		}
 	}
+	@Override
+	public void removeCondition(String condition) {
+		zone.getZoneConditions().removeCondition(condition);
+		
+	}
 
 	
 }

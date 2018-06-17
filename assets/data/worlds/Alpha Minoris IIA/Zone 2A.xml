@@ -77,7 +77,7 @@
 			<town minsize="5" maxsize="9" minhouses="24" maxhouses="32"
 				tile="3" gap="1" registerRooms="true">
 				<floodfill tile="1">
-					<SeedNPCs min="8" max="16" name="Alpha_Minoris_IIA/robot"
+					<SeedNPCs min="8" max="12" name="Alpha_Minoris_IIA/robot"
 						minDistance="12" />
 					<Seedwidgets min="12" max="24" name="machinery" />
 					<Seedwidgets min="12" max="24" name="chest">
@@ -90,6 +90,7 @@
 							<lootSubTable chance="1" file="resource_tier_1" />
 							<lootSubTable chance="0.5" file="resource_tier_1" />
 							<lootSubTable chance="0.5" file="consumable_tier_1" />
+							<lootSubTable chance="0.25" file="moon_ruins_special" />
 							<lootSubTable chance="0.25" file="moon_ruins_special" />
 							<lootSubTable chance="0.15" file="mutators_tier_1" />
 							<lootSubTable chance="0.25" file="consumable_tier_1" />

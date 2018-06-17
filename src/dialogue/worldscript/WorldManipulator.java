@@ -7,5 +7,7 @@ public interface WorldManipulator {
 	void removeWidget(int x, int y);
 
 	void RestoreShip(String shipName, int x, int y);
+	
+	void removeCondition(String condition);
 
 }

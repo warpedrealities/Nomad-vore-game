@@ -97,7 +97,7 @@ public class CombatAura {
 
 		CompiledFX explosion=new CompiledFX();
 		Zone zone = Universe.getInstance().getCurrentZone();
-
+		ViewScene.m_interface.getFX().addEffect(explosion);
 		if (move.isNonViolent()) {
 			explosion.setRGB(1,0,1);
 			if (center) {
@@ -124,7 +124,7 @@ public class CombatAura {
 
 			}
 		}
-		ViewScene.m_interface.getFX().addEffect(explosion);
+
 		return true;
 	}
 

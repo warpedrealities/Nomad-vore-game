@@ -4,4 +4,5 @@
 	<loot item="repulsor band" chance="2" />
 	<loot item="dissipator band" chance="2" />	
 	<loot item="explosive grenade" chance="2" />
+	<loot item="emp grenade" chance="2" />	
 </lootTable>

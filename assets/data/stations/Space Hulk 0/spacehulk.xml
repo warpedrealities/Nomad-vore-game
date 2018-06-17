@@ -10,7 +10,9 @@
 			machinery</tile>
 		<tile sprite="21" vision="0" movement="0"> a dried creamy stain</tile>
 	</tileset>
-
+	<zoneConditions>
+	<modifierCondition ID="darkness" vision="0.5" />
+	</zoneConditions>
 	<description>The air is cold and stale, the halls dark. Broken wiring
 		dangles from the overheads and broken machinery is interspersed with
 		pitted steel.</description>
@@ -55,6 +57,38 @@
 					info="interaction/spacehulk/spacehulkcomputer" variable="31" />
 			</keyBlock>
 
+			<keyBlock heat="1">
+				<row>02222220</row>
+				<row>02551520</row>
+				<row>22111122</row>
+				<row>11111111</row>
+				<row>11111111</row>
+				<row>22111122</row>
+				<row>02555520</row>
+				<row>02222220</row>
+				<edge value="WEST" />
+				<edge value="EAST" />				
+				<widget x="4" y="1" name="console"
+					info="interaction/spacehulk/spacehulkpower" variable="31" />
+			</keyBlock>			
+	
+
+			<keyBlock heat="1">
+				<row>02222220</row>
+				<row>02441420</row>
+				<row>22111122</row>
+				<row>11111111</row>
+				<row>11111111</row>
+				<row>22222222</row>
+				<row>00000000</row>
+				<row>00000000</row>
+				<edge value="WEST" />
+				<edge value="EAST" />				
+				<widget x="4" y="1" name="console"
+					info="interaction/spacehulk/spacehulksensors" variable="31" />
+			</keyBlock>			
+			
+	
 			<keyBlock heat="2">
 				<row>00222200</row>
 				<row>02244220</row>

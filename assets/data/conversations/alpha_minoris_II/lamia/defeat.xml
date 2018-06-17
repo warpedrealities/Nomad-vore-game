@@ -11,6 +11,9 @@
 		<choice destination="cockvore0" text="cockvore her">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
+		<choice destination="analvore0" text="shove her up your ass">
+				<assertion evaluate="hasperk" perk="analvore" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -20,6 +23,39 @@
 			</assertion>
 		</choice>
 		<choice destination="end" text="not interested right now" />
+	</page>
+	
+	<page ID="analvore0">
+	<text>
+	The desire is naughty and yet thrilling as you consider how it'd feel to have all of this snakey woman sliding up your rear. The look on your face makes the lamia shrink back and hiss warningly as she seems to intuit what you're about to do. 		<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				She feels no reassurance as you expose your ass to her and approach.
+			</conditional> The lamia lets out a threatening hiss as you grab her by her shoulder and head and squat over her. But the warning comes across as more amusing to you than anything else as you press your <macro ID="butt_size_desc" /> rear end into her face. Your ass muffling her protesting noises and humiliating her judging by the warmth of her cheeks. Her hands come up to shove at your hips and end this demeaning experience, but you're having none of that and indeed you've barely started on her..your hand curls round the back of her scalp and, shoves.... the lamia's head sliding into your rear with a schlurp and a redoubling of her squirming underneath you.
+	</text>
+	<choice destination="analvore1" text="*take her...in*"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	You clench, and feel her shudder and thrash as you drag her head deeper into you. Her shoulders vanishing into your stretched pucker and her arms constrained by your hungry behind. She can grab your rear still, but no longer apply any force and soon she won't even be able to do that much as you drag her into your rear with muscular contractions alone. The lamia continuing to struggle around as she finds you dominating her with naught but your ass. Her breasts providing a pleasing bit of extra stretching to you as they slide on inside. Her tail is now thrashing and curling back and forth now, her writhing scaled shape spasming around energetically but without managing to stop you shoving the entirety of her feminine half into your ass. Soon that tail will join the rest of her inside of you.
+	</text>
+	<choice destination="analvore2" text="*all the way*"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	Your gut swells out steadily as you cram her inside. Her upper body squished deep within you and her hands pushing out at the inside of your belly forming bulges that cannot help but make you moan. Her powerful tail no match for your hungers as you continue dragging her in with rippling clenches, squeezing her body underneath the coils of her tail as your gut begins to bulge out massively with her compacted form. The last few feet of her tail twitching around and sliding up your rear end as you finish her off, her last few inches of tail pleasingly flicking back and forth against your rumpcheeks before it vanishes inside you. Every inch of her impressive form now squeezed and compacted within your belly. Her struggles and writhing coils making you groan in delight at being so stretched and filled by her.
+	</text>
+	<choice destination="analvore3" text="*and then you digested her*"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	Your gut knows just what to do with your ass meal. The serpent femme squirming around furiously as your insides gurgle and grind, taut stomach walls pressing hard over her body. Gradually you make headway, her struggles tiring and her form starting to soften and wear down. She lets out a whimper as the contours of her body in your belly start to lose their tight definition. And after that her digestion is comparatively rapid, her body suffused with enzymes she breaks down and starts to yield more and more to the pressure of your belly. Your gut rounding out and compacting, her noises silenced and overcome by your belly's hearty gurgles as she's mooshed down and absorbed. The lamia soon naught but a pleasant memory and even more pleasant sensation of strength and nourishment coursing through your veins.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
 	</page>
 
 	<page ID="devour">
