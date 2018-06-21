@@ -27,7 +27,7 @@
 	</rpg>
 	<flying />
 	<respawn delay="2000" />
-	<talk conversation="avior_II/avianBathTender/chat" />
+	<talk conversation="avior_II/avianBathAttendant/chat" />
 	<controller AI="bath_attendant" />
 	<faction value="avian" />
 </NPC>
