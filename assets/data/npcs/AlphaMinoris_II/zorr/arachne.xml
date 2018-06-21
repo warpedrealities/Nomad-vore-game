@@ -57,7 +57,8 @@
 				</statusBind>
 
 			</effectStatus>
-		</combatMove>		
+		</combatMove>
+		<itemDrop chance="25" defeatOnly="true" item="arachne silk" />			
 	</rpg>
 	<defeated conversation="alpha_minoris_II/arachne/defeat" />
 	<seduced conversation="alpha_minoris_II/arachne/defeat" />

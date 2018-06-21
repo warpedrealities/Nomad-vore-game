@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition operator="equals" evaluate="LOCALFLAG" flag="talked" value="1" />
+	<text>
+	"Hello again friendly trading partner, what can I do for you today?" Keliya bobs and smiles encouragingly.
+	</text>
+	<choice destination="gushings" text="Could you tell me why you insisted this shop did not involve gushings"/>
+	<choice destination="shop" text="lets see what you have for sale"/>
+	<choice destination="end" text="Nothing, stay friendly"/>
+	</page>
+
+	<page ID="shop">
+		<text>
+		</text>
+		<special effect="shop" ID="avian_trader" />
+	</page>
+	
+	<page ID="start">
+	<text>
+	"Hello I am Keliya, welcome to my shop. It's a friendly shop, focused on friendly trading, absolutely not gushings." she says with a seemingly subconscious headbob.
+	</text>
+		<effect type="setlocalflag" flag="talked" value="1" />	
+		<choice destination="gushings" text="Why would I be worried it involved gushings?"/>
+		<choice destination="shop" text="lets see what you have for sale"/>
+		<choice destination="end" text="...i suddenly think i left my space kettle on"/>
+	</page>
+	
+	<page ID="gushings">
+	<text>
+	"Because some people are lying about us here! they act like if you come to visit you'll have a harpy swoop down on you out of nowhere to cram you up between her legs and turn you into a puddle. Do you have any idea how hard it is to get customers? I mean...okay it happens sometimes, but not all the time. And I'm not going to gush you so it's okay!"
+	</text>
+	<choice destination="shop" text="I see, can i see what you have for sale now?"/>
+	<choice destination="end" text="I see, i'll keep that in mind"/>
+	</page>
+	
+</Conversation>

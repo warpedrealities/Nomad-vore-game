@@ -61,6 +61,7 @@
 				<text>The lamia squeezes TARGET for VALUE damage</text>
 			</hitText>
 		</combatMove>
+		<itemDrop chance="25" defeatOnly="true" item="lamia scale" />	
 	</rpg>
 
 	<respawn delay="2000" />

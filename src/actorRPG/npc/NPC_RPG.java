@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.w3c.dom.Element;
 
@@ -218,8 +219,8 @@ public class NPC_RPG implements Actor_RPG {
 		return false;
 	}
 
-	public NPCItemDrop getItemDrop() {
-		return statBlock.getItemDrop();
+	public List<NPCItemDrop> getItemDrop() {
+		return statBlock.getItemDrops();
 	}
 
 	@Override

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<System>
+	<Star x="0" y="0" sprite="star" intensity="15" />
+	<World x="-5" y="14">Feromedio IIA</World>
+	<spawnRules>
+	<spawn script="pirates"/>
+	</spawnRules>	
+	<decorations>
+	<decoration x="-5" y="-5" size="1" sprite="barrenworld"/>		
+	<decoration x="-6" y="13" size="3" sprite="gasgiant"/>	
+	</decorations>	
+</System>

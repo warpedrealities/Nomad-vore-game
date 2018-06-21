@@ -2,43 +2,84 @@
 <Conversation>
 	<page ID="start">
 		<condition evaluate="LOCALFLAG" operator="equals" value="0"
-			flag="POWER" />
+			flag="SCAN" />
 		<text>
-			PR1M4RY P0W3R 0FF1_1N3 LBREAK
-			R3S3RV3 P0W3R 4V41L4BL3
+			SH1P S3NS0RS R34DY
 		</text>
-		<choice destination="lights" text="restore lights" />		
-		<choice destination="sensors" text="direct power to primary sensor array" />
+		<choice destination="active" text="perform active scan of outer system" />		
+		<choice destination="passive" text="perform passive sweep of outer system">
+			<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="PASSIVE" />	
+		</choice>
 		<choice destination="end" text="exit" />
 	</page>
 
-	<page ID="lights">
-		<text>
-			D1R3CT1NG R3S3RV3 P0W3R T0 L1GHT SYST3M
-		</text>
-		<special effect="worldScript" script="spacehulk_lights" />
-		<effect type="setlocalflag" flag="POWER" value="1" />
-		<choice destination="end" text="exit" />
-	</page>
-
-	<page ID="sensors">
-		<text>
-			D1R3CT1NG R3S3RV3 P0W3R T0 PR1M4RY S3NS0R 4RR4Y
-		</text>
-		<effect type="setglobalflag" flag="SPACEHULK_SENSORS" value="1" />	
-		<effect type="setlocalflag" flag="POWER" value="1" />
-		<choice destination="end" text="exit" />
-	</page>
-	
-	
 	<page ID="start">
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
-			flag="POWER" />
+			flag="SCAN" />
 		<text>
-			PR1M4RY P0W3R 0FF1_1N3 LBREAK
-			R3S3RV3 P0W3R D1V3RT3D
+			SC4N C0MPL3T3
 		</text>
+		<choice destination="results" text="review results"/>
 		<choice destination="end" text="exit" />
 	</page>
-
+	
+	<page ID="results">
+	<text>
+	object detected at coordinates: -32,-28 LBREAK
+	object detected at coordinates: 23,25 LBREAK	
+	</text>
+	<choice destination="end" text="exit"/>
+	</page>
+	
+	<check ID="passive">
+		<test what="SCIENCE" DC="12" />
+		<outcome destination="passiveSuccess" />
+		<outcome destination="passiveFail" />
+	</check>
+	
+	<page ID="passiveSuccess">
+	<text>
+	The passive sensors align for the sweep, producing vast amounts of data. Luckily you're on hand to make sense of this information and can collate your findings into something useful. As you suspected there is something out there.
+	</text>
+	<effect type="setlocalflag" flag="PASSIVE" value="1" />	
+	<choice destination="results" text="view results"/>
+	<choice destination="end" text="exit"/>
+	</page>
+	
+	<page ID="passiveFail">
+	<text>
+	The passive sensors align for the sweep, producing vast amounts of data. However it's such an uncollated mass of raw mathematics you can't make heads or tails of it. Trying to find any reports of objects in the outer system amidst all this would be like looking for a needle in a haystack.
+	</text>
+	<effect type="setlocalflag" flag="PASSIVE" value="1" />	
+	<choice destination="active" text="attempt active scan instead"/>
+	<choice destination="end" text="exit"/>
+	</page>	
+	
+	<page ID="active">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="0"
+			flag="SPACEHULK_SENSORS" />	
+	<text>
+	3RR0R M41N 4RR4Y P0W3R 0FF1_1N3 
+	</text>
+		<choice destination="passive" text="perform passive sweep of outer system">
+			<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="PASSIVE" />	
+		</choice>
+		<choice destination="end" text="exit"/>
+	</page>
+	
+	<page ID="active">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="1"
+			flag="SPACEHULK_SENSORS" />	
+	<text>
+	M41N 4RR4Y P0W3R N0M1N4L LBREAK
+	SC4NN1NG LBREAK
+	SC4N C0MPL3T3
+	</text>
+		<effect type="setlocalflag" flag="SCAN" value="1" />	
+		<choice destination="results" text="review results"/>
+		<choice destination="end" text="exit"/>	
+	</page>
+	
 </Conversation>

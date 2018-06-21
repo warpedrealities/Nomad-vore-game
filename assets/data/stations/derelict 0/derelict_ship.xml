@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<zone width="16" height="32" spriteset="spacehulk.png">
+
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="0" movement="0"> a metal floor</tile>
+		<tile sprite="1" vision="1" movement="2" smart="true"> a metal wall</tile>
+		<tile sprite="18" vision="0" movement="0"> a floor panel</tile>
+		<tile sprite="19" vision="1" movement="2"> an absurdly sturdy console</tile>
+		<tile sprite="20" vision="1" movement="2"> a near invincible bit of
+			machinery</tile>
+	</tileset>
+	<description>The ruined vessel's interior is gloomy and long neglected. The ship's systems are clearly beyond any hope of repair. Yet clearly this wreck is haunted still by danger that could be the end of any fool enough to seek riches in this dead ship.</description>
+
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="16">
+		<row>0222 2222 2222 2220</row>		
+		<row>0213 3522 2253 3120</row>	
+		<row>0253 3111 1113 3520</row>
+		<row>0213 3111 1113 3120</row>
+		
+		<row>0221 1222 2221 1220</row>		
+		<row>0021 1211 1121 1200</row>		
+		<row>0021 1111 1111 1200</row>
+		<row>0021 1111 1111 1200</row>
+		
+		<row>0022 2111 1112 2200</row>	
+		<row>0022 2221 1222 2200</row>	
+		<row>0001 1111 1111 2000</row>	
+		<row>0002 1111 1111 2000</row>	
+		
+		<row>0002 1111 1111 2000</row>	
+		<row>0002 2414 4142 2000</row>
+		<row>0001 2211 1122 0000</row>	
+		<row>0001 1222 2220 0000</row>	
+		<placeWidget x="2" y="1" name="cargocontainer">
+					<lootTable>
+						<lootSubTable chance="0.25" file="moon_ruins_special" />
+						<lootSubTable chance="1" file="consumable_tier_1" />
+						<lootSubTable chance="0.5" file="resource_tier_1" />
+						<lootSubTable chance="0.5" file="consumable_tier_1" />
+						<lootSubTable chance="0.15" file="mutators_tier_1" />
+						<lootSubTable chance="0.25" file="consumable_tier_1" />
+						<lootSubTable chance="0.25" file="spacehulk_consumables" />
+						<lootSubTable chance="0.25" file="spacehulk_resources" />
+						<lootSubTable chance="0.25" file="talharan_tier_1" />							
+					</lootTable>
+				</placeWidget>		
+		<placeWidget x="13" y="1" name="cargocontainer">
+					<lootTable>
+						<lootSubTable chance="0.25" file="moon_ruins_special" />
+						<lootSubTable chance="1" file="consumable_tier_1" />
+						<lootSubTable chance="0.5" file="resource_tier_1" />
+						<lootSubTable chance="0.5" file="consumable_tier_1" />
+						<lootSubTable chance="0.15" file="mutators_tier_1" />
+						<lootSubTable chance="0.25" file="consumable_tier_1" />
+						<lootSubTable chance="0.25" file="spacehulk_consumables" />
+						<lootSubTable chance="0.25" file="spacehulk_resources" />
+						<lootSubTable chance="0.25" file="talharan_tier_1" />							
+					</lootTable>
+				</placeWidget>
+		<placeWidget x="2" y="3" name="cargocontainer">
+					<lootTable>
+						<lootSubTable chance="0.25" file="moon_ruins_special" />
+						<lootSubTable chance="1" file="consumable_tier_1" />
+						<lootSubTable chance="0.5" file="resource_tier_1" />
+						<lootSubTable chance="0.5" file="consumable_tier_1" />
+						<lootSubTable chance="0.15" file="mutators_tier_1" />
+						<lootSubTable chance="0.25" file="consumable_tier_1" />
+						<lootSubTable chance="0.25" file="spacehulk_consumables" />
+						<lootSubTable chance="0.25" file="spacehulk_resources" />
+						<lootSubTable chance="0.25" file="talharan_tier_1" />							
+					</lootTable>
+				</placeWidget>		
+		<placeWidget x="13" y="3" name="cargocontainer">
+					<lootTable>
+						<lootSubTable chance="0.25" file="moon_ruins_special" />
+						<lootSubTable chance="1" file="consumable_tier_1" />
+						<lootSubTable chance="0.5" file="resource_tier_1" />
+						<lootSubTable chance="0.5" file="consumable_tier_1" />
+						<lootSubTable chance="0.15" file="mutators_tier_1" />
+						<lootSubTable chance="0.25" file="consumable_tier_1" />
+						<lootSubTable chance="0.25" file="spacehulk_consumables" />
+						<lootSubTable chance="0.25" file="spacehulk_resources" />
+						<lootSubTable chance="0.25" file="talharan_tier_1" />							
+					</lootTable>
+				</placeWidget>					
+	</prefab>
+	<pairedportal x="3" y="26" sprite="7" ID="-101" facing="2"> airlock </pairedportal>	
+	<SeedNPCs min="3" max="3" minDistance="8" name="space/black_zetamorph"/>
+	</mapgen>
+
+</zone>

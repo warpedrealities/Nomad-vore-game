@@ -76,12 +76,34 @@ function friend(controllable,sense)
 	end
 end 
 
+function combat(controllable,sense, hostile)
+	alternate=controllable:getValue(1)
+	if alternate==0 then
+		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
+	else
+		if pos:getDistance(hostile:getPosition())>2 then
+		--if not move towards player
+			if controllable:HasPath() then
+				controllable:FollowPath()
+			else
+				controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+			end
+		else
+			controllable:addBusy(2)
+		end
+	end
+	alternate=alternate+1
+	if alternate>1 then
+	alternate=0
+	end
+	controllable:setValue(1,alternate)	
+end
 
 function main(controllable, sense, script)  
 	hostile=sense:getHostile(controllable,10,true)
 	if not (hostile == nil ) then
 	--combat ai here
-	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+
 	else
 		if (controllable:getFlag("subverted")==1) then
 			friend(controllable,sense)

@@ -5,6 +5,7 @@ import java.io.DataOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import nomad.FlagField;
 import nomad.universe.Universe;
@@ -33,6 +34,7 @@ import faction.violation.FactionRule.ViolationType;
 
 import actorRPG.Actor_RPG;
 import actorRPG.RPGActionHandler;
+import actorRPG.npc.NPCItemDrop;
 import actorRPG.npc.NPC_RPG;
 import actorRPG.player.Player_RPG;
 import artificial_intelligence.BrainBank;
@@ -303,7 +305,7 @@ public class NPC extends Actor implements Controllable {
 				if (actorRPG.getStat(Actor_RPG.HEALTH) > 0 && actorRPG.getStat(Actor_RPG.RESOLVE) <= 0) {
 					lustRemove();
 				} else {
-					Remove();
+					Remove(true);
 				}
 			}
 		}
@@ -340,8 +342,16 @@ public class NPC extends Actor implements Controllable {
 		clock=0;
 		actorVisibility = false;
 		spriteInterface.setVisible(false);
-		if (((NPC_RPG) actorRPG).getItemDrop() != null) {
-			((NPC_RPG) actorRPG).getItemDrop().useDrop(actorPosition);
+		if (!((NPC_RPG) actorRPG).getItemDrop().isEmpty()) {
+			List<NPCItemDrop> drops=((NPC_RPG) actorRPG).getItemDrop();
+			for (int i=0;i<drops.size();i++)
+			{
+				if (!drops.get(i).isDefeatOnly())
+				{
+					drops.get(i).useDrop(actorPosition);				
+				}
+			}
+
 		}
 		if (collisionInterface != null
 				&& collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y) != null) {
@@ -354,13 +364,21 @@ public class NPC extends Actor implements Controllable {
 		}	
 	}
 	
-	public void Remove() {
+	public void Remove(boolean defeat) {
 
 		clock=0;
 		actorVisibility = false;
 		spriteInterface.setVisible(false);
-		if (((NPC_RPG) actorRPG).getItemDrop() != null) {
-			((NPC_RPG) actorRPG).getItemDrop().useDrop(actorPosition);
+		if (!((NPC_RPG) actorRPG).getItemDrop().isEmpty()) {
+			List<NPCItemDrop> drops=((NPC_RPG) actorRPG).getItemDrop();
+			for (int i=0;i<drops.size();i++)
+			{
+				if (!drops.get(i).isDefeatOnly() || defeat)
+				{
+					drops.get(i).useDrop(actorPosition);				
+				}
+			}
+
 		}
 		if (collisionInterface != null
 				&& collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y) != null) {

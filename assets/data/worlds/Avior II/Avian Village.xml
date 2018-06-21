@@ -38,7 +38,20 @@
 			<row>22222</row>			
 				<pairedportal x="2" y="2" sprite="3" ID="16"
 					destination="Avian Undertown" facing="0"> A ladder leading down </pairedportal>
-		</prefab>					
+		</prefab>
+		<prefab positionX="19" positionY="19" width="7">
+			<row>2222222</row>		
+			<row>2442442</row>
+			<row>2422242</row>
+			<row>2422242</row>	
+			<row>2422242</row>			
+			<row>2444442</row>
+			<row>2222222</row>	
+					<placeNPC name="avians/avianShop" x="3"
+						y="3" />			
+			<placeWidget x="2" y="4" name="chest"/>				
+			<placeWidget x="4" y="4" name="chest"/>			
+		</prefab>			
 			<towngrid minsize="3" maxsize="5" minhouses="12" maxhouses="20" tile="3" path="1"
 				registerRooms="true">
 				<floodfill tile="1">

@@ -32,7 +32,7 @@ public class Temp_NPC extends NPC {
 		lifespan--;
 		if (lifespan<=0)
 		{
-			Remove();
+			Remove(false);
 		}
 		super.Update();
 	}

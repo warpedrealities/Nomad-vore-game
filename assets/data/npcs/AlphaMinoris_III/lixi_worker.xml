@@ -36,6 +36,7 @@
 				modifier="STRENGTH" />
 		</combatMove>
 		<itemDrop chance="10" item="pearl" />	
+			<itemDrop chance="25" defeatOnly="true" item="pearl" />	
 	</rpg>
 
 	<respawn delay="1000" />

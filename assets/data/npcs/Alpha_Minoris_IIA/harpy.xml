@@ -32,6 +32,7 @@
 				<text>The harpy claws TARGET for VALUE damage</text>
 			</hitText>
 		</combatMove>
+			<itemDrop chance="25" defeatOnly="true" item="harpy feather" />		
 	</rpg>
 
 	<respawn delay="2000" />

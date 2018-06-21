@@ -2,6 +2,7 @@ package view;
 
 import shared.Vec2f;
 import vmo.GameManager;
+import widgets.Widget;
 import zone.TileDef;
 import zone.Zone;
 import actor.Actor;
@@ -319,6 +320,10 @@ public class SceneController implements Sense {
 	@Override
 	public Sense_Criteria getCriteria(String properties) {
 		return criteriaRepository.getCriteria(properties);
+	}
+
+	public Widget getWidget(int x, int y) {
+		return activeZone.getWidget(x, y);
 	}
 
 }

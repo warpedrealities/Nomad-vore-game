@@ -65,6 +65,7 @@
 					<lootSubTable chance="1" file="interloper_resources" />	
 					<lootSubTable chance="1" file="interloper_resources" />
 					<lootSubTable chance="1" file="interloper_resources" />	
+					<loot item="blueprint" chance="1" addendum="brightsword_complete" />		
 				</lootTable>		
 			</placeItem>				
 			<placeWidget x="8" y="5" name="DAMAGE" value="15" />		

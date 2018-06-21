@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<shop profitratio="1.25">
+	<inventoryitem name="fruit" probability="100"
+		quantity="20" />
+	<inventoryitem name="fruit" probability="50"
+		quantity="20" />
+	<inventoryitem name="deflector band" probability="100"
+		quantity="10" />
+	<inventoryitem name="deflector band" probability="50"
+		quantity="10" />
+	<inventoryitem name="fuel canister" probability="100"
+		quantity="10" />
+	<inventoryitem name="fuel canister" probability="50"
+		quantity="10" />		
+	<inventoryitem name="net" probability="100"
+		quantity="5" />
+	<inventoryitem name="net" probability="50" quantity="5" />
+	<inventoryitem name="fabric" probability="100"
+		quantity="5" />
+	<inventoryitem name="fabric" probability="50" quantity="5" />	
+</shop>

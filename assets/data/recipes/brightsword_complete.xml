@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<recipe name="brightsword" requiredskill="1" startunlocked="false">
+<recipe name="Brightsword" requiredskill="1" startunlocked="false">
 	<description>
 	An ancient seraphic weapon resurrected for your use. The completed weapon is capable of generating a devastating aura of energy around the blade capable of inflicting even more damage.
 	</description>
-	<ingredient item="brightsword(unfinished)" quantity="1" />
+	<ingredient item="Brightsword(unfinished)" quantity="1" />
 	<ingredient item="flux capacitor" quantity="1" />	
 	<ingredient item="computation valve" quantity="1" />		
 	<ingredient item="battery" quantity="3" />		
 	<ingredient item="scrap metal" quantity="3" />	
-	<result item="brightsword" />
+	<result item="Brightsword" />
 </recipe>

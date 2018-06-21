@@ -3,7 +3,7 @@
 	<sprite value="robot.png" />
 	<name>Robot</name>
 	<description>A corporate robot, its paintwork stripped away, its logo
-		partially worn away. It's servo arms hang limp by its sides but its
+		partially worn away. Its servo arms hang limp by its sides but its
 		head pivots alertly, photoreceptors scanning for intruders.</description>
 	<rpg>
 		<experiencevalue value="15" />
@@ -35,6 +35,7 @@
 			<tag>seduction</tag>
 			<tag>life</tag>		
 		</statusTags>
+		<itemDrop chance="25" defeatOnly="true" item="scrap metal" />			
 	</rpg>
 	<respawn delay="4000" />
 	<defeated conversation="alpha_minoris_IIA/omnico_robot/robotdefeat" />

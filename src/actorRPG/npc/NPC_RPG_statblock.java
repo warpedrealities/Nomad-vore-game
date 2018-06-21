@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -25,7 +26,7 @@ public class NPC_RPG_statblock {
 	private int challengeLevel;
 	// private Attack []attackPool;
 	private int expValue;
-	private NPCItemDrop itemDrop;
+	private List<NPCItemDrop> itemDrops;
 	private Value_Calculator valueCalculator;
 	private ArrayList<CombatMove> moveList;
 	private String[] statusTags;
@@ -37,6 +38,7 @@ public class NPC_RPG_statblock {
 	}
 
 	private void generate(Element rpgnode) {
+		itemDrops=new ArrayList<NPCItemDrop>();
 		abilities = new int[6];
 		statMaximum = new int[2];
 		attributes = new int[13];
@@ -77,7 +79,7 @@ public class NPC_RPG_statblock {
 					genStatusTags(Enode);
 				}
 				if (Enode.getTagName() == "itemDrop") {
-					itemDrop = new NPCItemDrop(Enode);
+					itemDrops.add(new NPCItemDrop(Enode));
 				}
 				if (Enode.getTagName().equals("valueCalculator"))
 				{
@@ -185,8 +187,8 @@ public class NPC_RPG_statblock {
 		threatMove=-1;
 	}
 	
-	public NPCItemDrop getItemDrop() {
-		return itemDrop;
+	public List <NPCItemDrop> getItemDrops() {
+		return itemDrops;
 	}
 
 	public boolean isThreatening(Faction faction)

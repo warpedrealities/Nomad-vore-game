@@ -68,6 +68,7 @@
 			<effectDamage type="PHEREMONE" minValue="2" maxValue="6"
 				modifier="STRENGTH" />
 		</combatMove>	
+		<itemDrop chance="50" defeatOnly="true" item="lamia scale" />			
 	</rpg>
 
 	<respawn delay="2000" />

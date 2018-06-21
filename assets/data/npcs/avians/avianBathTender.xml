@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="blueH.png" />
+	<name>Mel</name>
+	<description>The Harpy is slick with water or at the very least watery fluid. Not wearing a scrap of clothing her luscious curves are bared on full display and gleam. Her platinum hair is also practically radiant, those long strands spilling over her back, shoulders and the curves of her breasts. She runs her grey feathered wings through the water contently. She's clearly as at home here as an avian could ever be and then some.</description>
+	<rpg>
+		<experiencevalue value="25" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="30" />
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2">
+			<effectDamage type="KINETIC" minValue="4" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>the avians's claws fails to connect with TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>the avian hits TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+	<flying />
+	<respawn delay="2000" />
+	<talk conversation="avior_II/avianBathTender/chat" />
+	<controller AI="bath_attendant" />
+	<faction value="avian" />
+</NPC>

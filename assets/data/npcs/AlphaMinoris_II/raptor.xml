@@ -39,7 +39,8 @@
 		<itemDrop chance="5" item="deku nut" />	
 		<statusTags count="1">
 			<tag>raptor</tag>
-		</statusTags>				
+		</statusTags>		
+		<itemDrop chance="25" defeatOnly="true" item="raptor claw" />			
 	</rpg>
 	<defeated conversation="alpha_minoris_II/raptor/defeat" />
 	<seduced conversation="alpha_minoris_II/raptor/seduced" />

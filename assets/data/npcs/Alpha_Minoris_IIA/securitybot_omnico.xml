@@ -37,6 +37,7 @@
 			<tag>seduction</tag>
 			<tag>life</tag>		
 		</statusTags>
+		<itemDrop chance="25" defeatOnly="true" item="scrap metal" />	
 	</rpg>
 
 	<respawn delay="4000" />

@@ -86,7 +86,7 @@
 			</blockDungeon>
 		</partition>
 	
-		<SeedNPCs min="6" max="12" name="Alpha_Minoris_IIA/dungeonrobot">
+		<SeedNPCs min="4" max="8" name="Alpha_Minoris_IIA/atomotron">
 		</SeedNPCs>
 		<SeedNPCs min="6" max="12" name="Alpha_Minoris_IIA/synth">
 		</SeedNPCs>

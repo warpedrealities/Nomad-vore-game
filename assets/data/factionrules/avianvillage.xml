@@ -6,6 +6,14 @@
 	<superRule subject="Celune" level="2" violation="ATTACK">
 		<factionRelationship faction="avian" mod="-10" />
 	</superRule>
+	<superRule subject="Keliya" level="2" violation="ATTACK">
+		<factionRelationship faction="avian" mod="-10" />
+	</superRule>	
+	<superRule subject="Mel" level="2" violation="ATTACK">
+		<factionRelationship faction="avian" mod="-10" />
+	</superRule>		
+	<witness name="Keliya" />		
 	<witness name="avian" />	
-	<witness name="Celune" />	
+	<witness name="Celune" />
+	<witness name="Mel" />		
 </rules>

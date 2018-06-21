@@ -7,7 +7,7 @@
 		<tile sprite="8" vision="0" movement="0"> wooden floor</tile>
 		<tile sprite="7" vision="1" movement="2"> wooden wall</tile>		
 		<tile sprite="6" vision="1" movement="2"> stone wall</tile>
-		<tile sprite="5" vision="0" movement="1"> forest floor, far below</tile>
+		<tile sprite="5" vision="0" movement="1"> water</tile>
 		<tile sprite="6" vision="0" movement="1"> the distant ground</tile>
 		<tile sprite="7" vision="0" movement="1"> a long way down</tile>		
 	</tileset>
@@ -16,7 +16,7 @@
 	</description>
 
 	<mapgen>
-		<walloff wall="4" sides="northeastwest" />	
+		<walloff wall="4" sides="northeastwest" />		
 		<prefab positionX="40" positionY="40" width="5">
 			<row>33333</row>
 			<row>34443</row>
@@ -27,6 +27,23 @@
 					destination="Avian Village" facing="0"> a descending walkway </pairedportal>
 		</prefab>	
 		<partition xmin="16" xmax="48" ymin="16" ymax="48">
+			<randprefab width="11" height="11">
+				<row>55553335555</row>
+				<row>56666666665</row>	
+				<row>56666666665</row>	
+				<row>56666666665</row>	
+				<row>56666666665</row>	
+				<row>56666666665</row>				
+				<row>56666666665</row>	
+				<row>56666666665</row>	
+				<row>56666666665</row>	
+				<row>56666666665</row>
+				<row>55555555555</row>		
+				<placeWidget x="4" y="4" name="DESCRIBER">
+					The bathing area is warm. It's waters are clear and you can see the bottom easily. Though it's clear after even a cursory examination that there's something just a little bit extra enriching this bath. Still, it certainly looks like a good way to get clean and relax.
+				</placeWidget>				
+			</randprefab>
+		
 			<town minsize="5" maxsize="8" minhouses="4" maxhouses="6" tile="3" gap="2"
 				registerRooms="true">
 				<floodfill tile="2">

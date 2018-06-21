@@ -49,7 +49,8 @@
 			</hitText>
 		</combatMove>
 		<itemDrop chance="50" item="bolts" />		
-		<itemDrop chance="50" item="primitive steak" />			
+		<itemDrop chance="50" item="primitive steak" />		
+		<itemDrop chance="25" defeatOnly="true" item="GOLD100" />				
 	</rpg>
 
 	<defeated conversation="alpha_minoris_II/saurianraider/defeat" />
