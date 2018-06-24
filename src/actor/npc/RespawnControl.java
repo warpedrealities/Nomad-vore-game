@@ -39,6 +39,10 @@ public class RespawnControl {
 		timeGone = GameManager.getClock();
 	}
 
+	public Vec2f getStartPosition() {
+		return startPosition;
+	}
+
 	public void Reset() {
 		isGone = false;
 	}
