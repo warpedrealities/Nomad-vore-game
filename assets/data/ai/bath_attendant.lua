@@ -14,7 +14,7 @@ function civilian(controllable,sense,pos)
 		counter=counter-1
 	end
 	
-	if counter>20 then
+	if counter>20 and sense:getPreference("unbirth")==true then
 		if pos:getDistance(player:getPosition())<2 then
 			controllable:startConversation()
 			counter=0
@@ -39,9 +39,10 @@ end
 
 function setPosition(controllable,pos)
 	xpos=controllable:getValue(1)
+	respawnpos=controllable:getRespawnController():getStartPosition()
 	if xpos==0 then	
-		controllable:setValue(1,pos.x)
-		controllable:setValue(2,pos.y)	
+		controllable:setValue(1,respawnpos.x)
+		controllable:setValue(2,respawnpos.y)	
 	end
 
 end

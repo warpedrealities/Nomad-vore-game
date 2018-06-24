@@ -3,9 +3,68 @@
 
 	<page ID="start">
 	<text>
-	
+	The harpy gets right up close to you by way of hello. Bit of an intrusion in your personal space, but on the flip side gorgeous wet naked harpy "Hello grounder. My names Mela, I see you're enjoying the baths." she smiles and flexes and stretches her wings out a bit before settling down again "I help keep the water nice, and warm, just the way we like it." she says and then chirps and seems to look at you differently "I often need the help of grounders to keep the baths nice..would you like to help? least you can do seen as you're enjoying them as well."
 	</text>
-	
+	<choice destination="agree" text="sure what can i do to help?"/>
+	<choice destination="grounder" text="why you calling me a grounder?"/>
+	<choice destination="disagree" text="uh no thanks, I'm good"/>
 	</page>
+	
+	<page ID="grounder">
+	<text>
+	"Well you walk around unable to fly, tied to the ground. What else am I going to call you?" she asks and then chirrs "Now, you going to help me keep the bath nice?"
+	</text>	
+	<choice destination="agree" text="sure what can i do to help?"/>
+	<choice destination="disagree" text="uh no thanks, I'm good"/>	
+	</page>
+	
+	<page ID="agree">
+	<text>
+	"Great, though before we begin. Can you show me you can hold your breath underwater? just for a minute okay." she says with a smile "we harpies really aren't good at that." she says by way of explaination. Still it seems a reasonable request, just dunk your head underwater for a minute to show off to Mela. 
+	</text>
+	<choice destination="agreeUB0" text="*dive under the water*"/>
+	</page>
+	
+	<page ID="agreeUB0">
+	<text>
+	You find her suggestion agreeable enough and take a deep breath before plunging underwater. Everything is hard to distinguish down here underwater, but you can't mistake the abrupt shadows that make everything go dark and intimate that there might be something amiss. This sensation of unease becomes a solid knowing that you have been hoodwinked when you feel her netherlips against your face and her wing mashing you headfirst into her sex. So that's how she keeps the water feeling so nice, still you can't help but feel that being a bath oil is not what you want out of this. But her thighs are already clenching around your shoulders and her sex clenching to tug you deeper inside.
+	</text>	
+	<choice destination="ub0" text="*struggle*"/>	
+	</page>
+
+	
+	<page ID="disagree">
+	<text>
+	"Eh well I suppose it was a bit much to expect ya to fall for that." she says and suddenly she's upon you, shoving at the back of your head with a wing to dunk you underwater. The sudden immersion is momentarily disorientating, which means you're in no fit state to resist her before you find yourself being pushed facefirst into the embrace of her voracious nethers. So that's how she keeps the water feeling so nice, still you can't help but feel that being a bath oil is not what you want out of this. But her thighs are already clenching around your shoulders and her sex clenching to tug you deeper inside.
+	</text>	
+	<choice destination="ub0" text="*struggle*"/>
+	</page>
+	
+	<page ID="ub0">
+	<text>
+	Her clawed feet grip around your legs as she tugs you deeper in. Her sweltering depths markedly warmer than the waters encompassing you as your slick form is crammed up between her thighs by her lewd hip motions atop you "Oh don't take it personally, this is just a job for me...oh who am I kidding I love gushing grounders like you get in me!" exclaims Mela as your head is shoved up into the silky and possessive embrace of her womb. Hot fluids thicker than water coating your face and matting your hair as she forces you inside herself all the more, taking in your shoulders and chest with a practiced ease that speaks to how many 'grounders' had met the same fate as you.
+	</text>
+	<choice destination="ub1" text="*squirm*"/>
+	</page>
+	
+	<page ID="ub1">
+	<text>
+	Mela is moaning out in glee as she clenches to drag your upper body entirely past her ravenous nether lips. The harpy bath attendant seeming to delight in every inch of you she claims with her ravenous snatch. The bird woman letting go of you with her foot claws and just dragging you inside herself with her clenching and tugging sex alone. In the water it's not like you can find much to grip upon and your slick body slides deeper in, your hands and hips vanishing past her lower lips leaving only your legs writhing around underwater.
+	</text>
+	<choice destination="ub2" text="*pussyfood*"/>
+	</page>
+	
+	<page ID="ub2">
+	<text>
+	The harpy's moans grow more satisfied as her middle domes out with your body curling trapped within the tight embrace of her womb. Every inch of you crammed flesh to flesh tightly or squeezed by her silken walls as she mhmms and strokes a soaked wing over her bulge and you struggle to try and escape her seemingly inescapism depths "Mhmm, you're going to be a good gush grounder, I can tell And I didn't even need to go find you like usual...mhmm keep trying to squirm like that, you're not getting out but it feels sooo good!" she says and you feel your flesh tingle, pleasure soaking into your body as her womb walls start to rthythmically contract.
+	</text>
+	<choice destination="ubGO" text="*gushed*"/>
+	</page>
+	
+	<gameover ID="ubGO">
+	<text>
+	Mela moans "I can...I can feel you melting in there, melt for me, melt in me grounder!" she exhorts as you soften and her womb clenches more vigorously over you. The harpy panting and writhing on the spot "this never ever gets old!" she says as you fade within her. Your body sloshing away into blissful fluids as her orgasm approaches. Your body dissolving until with a screech Mela rolls through her climax. The harpy's womb squishing you down into juices that come squirting out into the bath waters. Your liquidated remnants adding to the silken feeling of the bath waters the harpies so enjoy. And of course, it has to be said that you added greatly to Mela's job satisfaction.
+	</text>
+	</gameover>
 
 </Conversation>

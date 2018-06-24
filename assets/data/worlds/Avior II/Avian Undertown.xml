@@ -41,7 +41,9 @@
 				<row>55555555555</row>		
 				<placeWidget x="4" y="4" name="DESCRIBER">
 					The bathing area is warm. It's waters are clear and you can see the bottom easily. Though it's clear after even a cursory examination that there's something just a little bit extra enriching this bath. Still, it certainly looks like a good way to get clean and relax.
-				</placeWidget>				
+				</placeWidget>	
+				<placeNPC name="avians/avianBathTender" x="4"
+						y="8" />				
 			</randprefab>
 		
 			<town minsize="5" maxsize="8" minhouses="4" maxhouses="6" tile="3" gap="2"
