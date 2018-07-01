@@ -5,17 +5,21 @@ import nomad.StarSystem;
 import nomad.universe.Universe;
 import shared.Geometry;
 import shared.Vec2f;
+import solarview.spawningSystem.SpawnScriptTools;
+import solarview.spawningSystem.SpawningSystem;
 import spaceship.Spaceship;
 
 public class NpcShipControllerSenseDetection {
 	private StarSystem system;
 	private Faction faction;
 	private Spaceship hostile;
+	private SpawnScriptTools spawnScriptTools;
 	
 	public NpcShipControllerSenseDetection(Faction faction,StarSystem system)
 	{
 		this.faction=faction;
 		this.system=system;
+		this.spawnScriptTools=new SpawnScriptTools(system.getEntities(),SpawningSystem.buildEntities(system.getEntities()));
 	}
 	
 	public Spaceship getPlayer(int x, int y, int range)
@@ -63,5 +67,10 @@ public class NpcShipControllerSenseDetection {
 	public int getDirection(Vec2f o,Vec2f p)
 	{
 		return Geometry.getDirection(o, p);
+	}
+	
+	public SpawnScriptTools getSpawnScriptTools()
+	{
+		return spawnScriptTools;
 	}
 }

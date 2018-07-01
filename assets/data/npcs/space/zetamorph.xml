@@ -44,6 +44,7 @@
 					claws of both arms on one side for VALUE damage</text>
 			</hitText>
 		</combatMove>
+		<itemDrop chance="25" defeatOnly="true" item="CREDITS500" />		
 	</rpg>
 	<respawn delay="2000" />
 

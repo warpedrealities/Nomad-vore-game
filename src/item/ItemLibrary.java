@@ -72,7 +72,10 @@ public class ItemLibrary {
 
 	public Item getItem(String name) {
 		if (name.equals("gold")) {
-			return new ItemCoin();
+			return new ItemCoin(false);
+		}
+		if (name.equals("credits")) {
+			return new ItemCoin(true);
 		}
 		if (name.equals("questItem")) {
 			return new QuestItem();
@@ -183,6 +186,7 @@ public class ItemLibrary {
 		if (c == 5) {
 			ItemCoin item = new ItemCoin();
 			item.setCount(dstream.readInt());
+			item.setIsCredits(dstream.readBoolean());
 			return item;
 		}
 		if (c == 6) {

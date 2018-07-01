@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Ship width="7" height="7" sprite="talharan_trader">
+
+	<shipstats>
+		<movecost value="20" />
+		<hullpoints value="35" />
+		<thrustcost value="2" />
+		<manouver value="-1" />
+	</shipstats>
+
+	<emitters>
+		<weapon x="0.0" y="0.4" />
+		<engine x="-0.3" y="-0.4" />
+		<engine x="0.3" y="-0.4" />
+	</emitters>
+
+	<layout width="16" height="16" spriteset="talharan.png">
+		<tileset count-x="8" count-y="4">
+			<tile sprite="1" vision="1" movement="2" smart="true">a metal wall</tile>
+			<tile sprite="17" vision="0" movement="0">a metal floor</tile>
+		</tileset>
+		<description></description>
+		<mapgen>
+			<prefab positionX="0" positionY="0" width="13">
+				<row>1111111111111</row>
+				<row>1221222221221</row>
+				<row>2221222221221</row>
+				<row>1222222222221</row>
+				<row>1111222221111</row>
+				<row>0001222221000</row>
+				<row>0001112111000</row>
+				<row>0001222221000</row>
+				<row>0001122211000</row>
+				<row>0000111110000</row>
+			</prefab>
+			<pairedportal x="0" y="2" sprite="1" ID="-101" facing="2">
+				Exterior hatch </pairedportal>
+
+			<placeWidget x="1" y="1" name="slot">
+				<contains name="modules/interplanetary reactor">
+					<resource type="FUEL" value="150" />
+				</contains>
+			</placeWidget>
+			<placeWidget x="2" y="1" name="slot">
+				<contains name="modules/simple reactor">
+					<resource type="ENERGY" value="25" />
+				</contains>
+			</placeWidget>
+			<placeWidget x="11" y="1" name="slot">
+				<contains name="modules/space warper" />
+			</placeWidget>
+			<placeWidget x="4" y="7" name="slot">
+				<contains name="modules/bunk bed" />
+			</placeWidget>
+			<placeWidget x="8" y="7" name="slot">
+				<contains name="modules/bunk bed" />
+			</placeWidget>
+			<placeWidget x="5" y="8" name="slot">
+				<contains name="modules/navconsole" />
+			</placeWidget>
+			<placeWidget x="7" y="8" name="hardpoint">
+				<facing value="0" />
+				<contains name="shipweapons/plasma pummel gun">
+					<resource type="PLASMA" value="40" />
+				</contains>
+			</placeWidget>
+			<placeWidget x="5" y="4" name="slot">
+				<contains name="modules/advanced_cargocontainer" />
+			</placeWidget>
+			<placeWidget x="7" y="4" name="slot">
+					<contains name="modules/advanced_cargocontainer" />		
+			</placeWidget>
+			
+			<placeNPC name="space/talharan/talharan_grey" x="11" y="3" />
+			<placeNPC name="space/talharan/talharan_grey" x="6" y="7" />
+			<placeNPC name="space/talharan/talharan_grey" x="7" y="7" />			
+		</mapgen>	
+	</layout>
+	<exterior width="7">
+		<row>0000000</row>
+		<row>0111110</row>
+		<row>0011110</row>
+		<row>0011100</row>
+		<row>0011100</row>
+		<row>0011100</row>
+		<row>0001000</row>
+		<pairedportal x="1" y="2" sprite="1" ID="-101"
+			destination="talharan_trader" facing="6"> ship exterior hatch </pairedportal>
+	</exterior>
+</Ship>

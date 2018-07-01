@@ -42,8 +42,15 @@ public class NPCItemDrop {
 	{
 		if (itemName.contains("GOLD"))
 		{
-			ItemCoin coins=new ItemCoin();
+			ItemCoin coins=new ItemCoin(false);
 			String count=itemName.replace("GOLD", "");
+			coins.setCount(Integer.parseInt(count));
+			return coins;
+		}
+		if (itemName.contains("CREDITS"))
+		{
+			ItemCoin coins=new ItemCoin(true);
+			String count=itemName.replace("CREDITS", "");
 			coins.setCount(Integer.parseInt(count));
 			return coins;
 		}

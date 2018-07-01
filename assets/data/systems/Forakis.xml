@@ -6,6 +6,7 @@
 	<World x="7" y="7">Forakis III</World>	
 	<spawnRules>
 	<spawn script="pirates"/>
+	<spawn script="talharans"/>		
 	</spawnRules>
 		<!-- <Spaceship x="2" y="2" file="avenger" /> -->
 	<decorations>

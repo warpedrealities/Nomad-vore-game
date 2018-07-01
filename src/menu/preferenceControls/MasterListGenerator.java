@@ -26,15 +26,12 @@ public class MasterListGenerator {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (XMLStreamException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		
 		return new ArrayList(map.values());
 	}
 	
-	private void scanDirectory(String filename, Map<String,MasterListPref> map) throws FileNotFoundException, XMLStreamException
+	private void scanDirectory(String filename, Map<String,MasterListPref> map) throws FileNotFoundException
 	{
 		File file=new File(filename);
 		File []files= file.listFiles();	
@@ -47,7 +44,12 @@ public class MasterListGenerator {
 			}
 			else if (files[i].getName().contains(".xml"))
 			{
-				scanFile(files[i],map);
+				try {
+					scanFile(files[i],map);
+				} catch (XMLStreamException e) {
+					System.err.println("file:"+filename+files[i].getName());
+					e.printStackTrace();
+				}
 			}
 		}
 	}

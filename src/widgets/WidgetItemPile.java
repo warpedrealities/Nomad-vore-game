@@ -65,7 +65,14 @@ public class WidgetItemPile extends Widget {
 		Item item = m_items.get(0);
 		if (ItemCoin.class.isInstance(item)) {
 			ItemCoin coin = (ItemCoin) item;
-			player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + coin.getCount());
+			if (coin.isCredits())
+			{
+				player.getInventory().setPlayerCredits(player.getInventory().getPlayerCredits() + coin.getCount());		
+			}
+			else
+			{
+				player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + coin.getCount());		
+			}
 		}
 		else
 		{

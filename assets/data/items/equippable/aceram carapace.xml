@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ItemEquip name="Aceram carapace" weight="12" slot="BODY" value="4500">
+	<description>
+		Alien armour seemingly made of thick plates cast from a type of xenoceramic. It provides a durable protection, but its protective properties don't do much to accentuate your physical attributes. +4 omnidefence, -2 seduction
+	</description>
+	<modifier>
+		<kinetic value="4" />
+		<thermal value="4" />
+		<seduction value="-2" />		
+		<shock value="4" />
+	</modifier>
+</ItemEquip>

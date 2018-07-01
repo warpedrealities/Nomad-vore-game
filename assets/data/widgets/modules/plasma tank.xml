@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<shipsystem sprite="94" name="plasma tank" health="10">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>This system stores plasma feed stock by use of ship based plasma weaponry.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="80" resource="PLASMA">
+	</shipResource>
+
+</shipsystem>

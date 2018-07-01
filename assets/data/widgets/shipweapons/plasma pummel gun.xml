@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<shipsystem sprite="78" name="plasma pummel gun" health="30"
+	hardpoint="true">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>A plasma bolt gun mounted on a pivoting weapon mount giving it a wider firing arc at the cost of reduced stability.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="40" resource="PLASMA">
+		<resourceExtraction item="plasma charge" ratio="10" destroy="0.5" dismantle="1.0" />			
+	</shipResource>
+	<shipWeapon>
+		<damage min="6" max="12" falloff="0" />
+		<cooldown value="2" />
+		<special disruption="2" />
+		<effects script="plasma" sheet="plasma" />
+		<range arc="3" range="10" />
+		<weaponCost resource="PLASMA" cost="2" />
+		<weaponCost resource="ENERGY" cost="1" />		
+		<description>
+		</description>
+	</shipWeapon>
+</shipsystem>

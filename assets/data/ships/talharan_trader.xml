@@ -4,7 +4,7 @@
 	<shipstats>
 		<movecost value="20" />
 		<hullpoints value="35" />
-		<thrustcost value="3" />
+		<thrustcost value="2" />
 		<manouver value="-2" />
 	</shipstats>
 
@@ -38,7 +38,7 @@
 
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="modules/interplanetary reactor">
-					<resource type="FUEL" value="40" />
+					<resource type="FUEL" value="100" />
 				</contains>
 			</placeWidget>
 			<placeWidget x="2" y="1" name="slot">

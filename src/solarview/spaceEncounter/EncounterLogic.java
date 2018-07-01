@@ -37,16 +37,16 @@ public class EncounterLogic {
 				shipList[i].runAi(shipList,effectHandler);
 			}			
 		}
-		turn = 1;
+		turn = 2;
 	}
 
 	public void update(float dt) {
 		for (int i = 0; i < shipList.length; i++) {
-			shipList[i].update(dt,effectHandler);
+			shipList[i].update(dt/2,effectHandler);
 		}
 
-		effectHandler.update(dt);
-		trailControl.update(dt);
+		effectHandler.update(dt/2);
+		trailControl.update(dt/2);
 		
 		turn -= dt;
 		if (turn <= 0) {

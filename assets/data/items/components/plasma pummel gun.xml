@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ItemWidget name="plasma pummel gun" weight="10" value="4000">
+	<description>AA plasma bolt gun mounted on a pivoting weapon mount giving it a wider firing arc at the cost of reduced stability.
+		6-12 damage, cooldown 2, 1 energy and 2 plasma to fire.</description>
+	<placeditem widget="shipweapons/plasma pummel gun" />
+</ItemWidget>

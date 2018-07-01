@@ -4,11 +4,11 @@ function main(tools)
 	if (tools:getFactions():getFaction("pirate"):getFactionFlags():readFlag("encounter")==0) then
 		tools:getFactions():getFaction("pirate"):getFactionFlags():setFlag("encounter",1)
 		--spawn pirate
-		tools:spawn("sloop","pirateGalleon")
+		tools:spawn("sloop","pirateSloop")
 	else
 		if (a<2) then
 			if (tools:countShips("sloop")<3) then
-				tools:spawn("sloop","pirateGalleon")
+				tools:spawn("sloop","pirateSloop")
 			end
 		else 
 			

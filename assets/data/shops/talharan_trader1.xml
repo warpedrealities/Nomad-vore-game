@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<shop profitratio="1.5" useCredits="true">
+	<inventoryitem name="space meal" probability="100"
+		quantity="20" />
+	<inventoryitem name="space meal" probability="50"
+		quantity="20" />
+	<inventoryitem name="medkit" probability="100" quantity="20" />
+	<inventoryitem name="medkit" probability="50" quantity="20" />
+	<inventoryitem name="clarity" probability="100" quantity="20" />
+	<inventoryitem name="clarity" probability="50" quantity="20" />
+	<inventoryitem name="stimpack" probability="100"
+		quantity="10" />
+	<inventoryitem name="stimpack" probability="50" quantity="10" />
+	<inventoryitem name="fuel canister" probability="100"
+		quantity="10" />
+	<inventoryitem name="fuel canister" probability="50"
+		quantity="10" />	
+	<inventoryitem name="Aplas carapace" probability="100"
+		quantity="1" />
+	<inventoryitem name="Aceram carapace" probability="100"
+		quantity="1" />		
+	<inventoryitem name="plasma pistol" probability="100"
+		quantity="1" />
+	<inventoryitem name="plasma canister" probability="100"
+		quantity="10" />
+	<inventoryitem name="plasma canister" probability="50"
+		quantity="10" />
+	<inventoryitem name="plasma charge" probability="100"
+		quantity="10" />
+	<inventoryitem name="plasma charge" probability="50"
+		quantity="10" />
+	<inventoryitem name="plasma bolt gun" probability="100"
+		quantity="1" />
+	<inventoryitem name="plasma bolt gun" probability="50"
+		quantity="1" />		
+	<inventoryitem name="plasma pummel gun" probability="100"
+		quantity="1" />
+	<inventoryitem name="plasma pummel gun" probability="50"
+		quantity="1" />				
+	<inventoryitem name="lifeform detector" probability="100"
+	quantity="1" />			
+	<inventoryitem name="spacebar" probability="100"
+		quantity="5" />
+	<inventoryitem name="spacebar" probability="50" quantity="5" />
+
+</shop>

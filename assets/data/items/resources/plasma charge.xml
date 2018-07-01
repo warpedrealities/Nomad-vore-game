@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemResource name="plasma charge" weight="5" value="600.0">
+	<description>A containment tube filled with plasma feed stock for spaceship plasma weaponry.</description>
+
+</ItemResource>

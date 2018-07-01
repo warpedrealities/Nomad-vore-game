@@ -83,7 +83,16 @@ public class ContainerScreen extends Screen implements Callback {
 			Item item = container.takeItem(index);
 			if (ItemCoin.class.isInstance(item)) {
 				ItemCoin coin = (ItemCoin) item;
-				player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + coin.getCount());
+				if (coin.isCredits())
+				{
+					player.getInventory().setPlayerCredits(player.getInventory().getPlayerCredits() + coin.getCount());
+									
+				}
+				else
+				{
+					player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + coin.getCount());
+			
+				}
 			} else {
 				player.getInventory().AddItem(item);
 				player.setBusy(1);

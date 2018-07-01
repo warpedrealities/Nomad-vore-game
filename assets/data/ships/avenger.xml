@@ -85,7 +85,7 @@
 			</placeWidget>
 
 			<placeWidget x="3" y="1" name="slot">
-				<contains name="modules/cargocontainer_ship">
+				<contains name="modules/advanced_cargocontainer">
 					<lootTable>
 						<loot item="explosive grenade" chance="1.0" />
 						<loot item="capture device" chance="1.0" />	
@@ -94,6 +94,7 @@
 						<loot item="harness" chance="1.0" />		
 					</lootTable>				
 				</contains>
+				<widgetItem>advanced cargo container</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="5" y="1" name="slot">

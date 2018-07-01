@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		"Greetings potential customer, you are approaching a vessel of the Talharan Commerce league. You are advised to state your intention to engage in transactions or else cease your approach to this vessel."
+		</text>
+		<choice destination="shop" text="That's exactly why I'm approaching you"/>
+		<choice destination="attack" text="Actually I'm here to plunder your ship, surrender your goods merchant"/>
+		<choice destination="end" text="*move away*"/>
+	</page>
+	
+	<page ID="shop">
+	<text>
+	</text>
+	<special effect="shop" ID="talharan_trader1" />	
+	</page>
+	
+	<page ID="attack">
+	<text>
+	"We warn you that we will defend ourselves with overwhelming force. Your decision is in error and you will reap the consequences of your actions."
+	</text>
+	<choice destination="fight" text="engage"/>
+	</page>
+
+	<page ID="fight">
+		<text>
+			The trade ship is prepared for combat as you close on it.
+		</text>
+		<effect type="modfactiondisposition" value="-25" />
+		<effect type="setlocalflag" flag="fight" value="1" />
+		<special effect="spaceCombat" />
+
+	</page>	
+	
+</Conversation>

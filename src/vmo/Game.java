@@ -57,7 +57,10 @@ import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
+import shared.ParserHelper;
 import shared.Scene;
 import shared.SceneBase;
 import shared.SceneManager;
@@ -172,9 +175,19 @@ public class Game implements SceneManager {
 		var[3] = m_viewvar1;
 		var[4] = m_objvar1;
 
-
-		m_currentscene = new Menu(var);
 		SceneBase.setVariables(var);
+	//	m_currentscene = new Menu(var);
+		universe.Newgame();
+		Spaceship ships[]=new Spaceship[1];
+		ships[0]=new Spaceship("sloop",2,2,ShipState.SPACE);
+		
+		Document doc=ParserHelper.LoadXML("assets/data/shipControllers/pirateSloop.xml");
+		//read through the top level nodes
+		Element root=doc.getDocumentElement();
+			
+		ships[0].setShipController(new NpcShipController(root));
+		m_currentscene = new SpaceEncounter((Spaceship)universe.getCurrentEntity(), ships);
+
 
 		GL11.glDepthFunc(GL_LEQUAL);
 		mouseInput = new MouseHook(openGLWindow);

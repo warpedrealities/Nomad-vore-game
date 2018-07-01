@@ -42,6 +42,7 @@
 				<text>pirate blasts TARGET for VALUE thermokinetic damage with the handweapon they just pulled out </text>	
 			</hitText>
 		</combatMove>	
+		<itemDrop chance="25" defeatOnly="true" item="CREDITS2000" />				
 	</rpg>
 	<crew skill="GUNNERY" value="2"/>
 	<defeated conversation="space/pirates/kitty_pirate/defeat" />

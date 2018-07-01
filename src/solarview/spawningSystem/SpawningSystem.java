@@ -58,20 +58,21 @@ public class SpawningSystem {
 		return true;
 	}
 
-	private void buildEntities(ArrayList<Entity> entitiesInSystem) {
+	public static List<Entity> buildEntities(ArrayList<Entity> entitiesInSystem) {
 
-		systemEntities=new ArrayList<Entity>();
+		List <Entity> entities=new ArrayList<Entity>();
 		for (int i=0;i<entitiesInSystem.size();i++)
 		{
 			if (!Spaceship.class.isInstance(entitiesInSystem.get(i)))
 			{	
-				systemEntities.add(entitiesInSystem.get(i));
+				entities.add(entitiesInSystem.get(i));
 			}
 		}
+		return entities;
 	}
 	
 	public void run(ArrayList<Entity> entitiesInSystem) {
-		buildEntities(entitiesInSystem);
+		systemEntities=SpawningSystem.buildEntities(entitiesInSystem);
 		for (int i=0;i<scripts.size();i++)
 		{
 			scripts.get(i).run(entitiesInSystem,systemEntities);

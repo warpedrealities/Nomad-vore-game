@@ -20,16 +20,16 @@ function launch(script,miss)
 		velocity:normalize()
 		velocity.x=velocity.x*32
 		velocity.y=velocity.y*32
-	angle=script:getAngle(emitter.x,emitter.y,target.x,target.y)
+		angle=script:getAngle(emitter.x,emitter.y,target.x,target.y)
 
 		e=script:getEffect(0)	
 		e:setRotation(-angle)
 		e:setVelocity(velocity.x,velocity.y)
 		e=script:getEffect(1)
-		e:setRotation(angle)
+		e:setRotation(-angle)
 
 
-end
+end	
 
 function fly(script,miss,scriptClock)
 

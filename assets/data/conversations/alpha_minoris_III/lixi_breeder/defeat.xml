@@ -9,6 +9,9 @@
 		<choice destination="unbirth0" text="she'd make a good orgasm">
 			<assertion evaluate="hasperk" perk="unbirthing" />
 		</choice>
+		<choice destination="analvore0" text="it'd be so fitting to shove the bothersome critter up your ass">
+					<assertion evaluate="hasperk" perk="analvore" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -20,6 +23,13 @@
 		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="analvore0">
+	<text>
+	The vicious lil bug had been a pain in your behind. So this really is only fitting, and you can only imagine all that exoskeletal chitin of hers will make her slide in niice and smooth. 
+	</text>
+	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

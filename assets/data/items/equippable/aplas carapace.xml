@@ -3,7 +3,7 @@
 	<description>
 		Armour made out of hardened alien plastics. Its form
 		fitting plates wrap snugly around your body and are remarkably
-		protective all things considered. +3 omnidefence,
+		protective all things considered. +3 omnidefence
 	</description>
 	<modifier>
 		<kinetic value="3" />

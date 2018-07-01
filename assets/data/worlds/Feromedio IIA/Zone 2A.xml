@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="wasteland.png">
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="1" movement="2"> a metal wall</tile>
+		<tile sprite="20" vision="0" movement="1"> ruined fence ending</tile>
+		<tile sprite="21" vision="0" movement="1"> ruined fence</tile>
+		<tile sprite="22" vision="0" movement="1"> ruined fence ending</tile>
+		<tile sprite="23" vision="1" movement="2"> wooden shack wall</tile>		
+		<tile sprite="24" vision="0" movement="0"> wooden shack floor</tile>
+		<tile sprite="17" vision="0" movement="0"> a blasted wasteland</tile>
+		<tile sprite="18" vision="0" movement="1"> a boulder resting in the wasteland</tile>
+		<tile sprite="19" vision="1" movement="2"> a dessicated tree standing vigil over the wasteland</tile>
+		<tile sprite="18" vision="0" movement="1"> boulder</tile>
+		<tile sprite="1" vision="0" movement="0" smart="true"> a dessicated lake bed </tile>
+		<tile sprite="28" vision="1" movement="2"> rock wall</tile>		
+	</tileset>
+	<description>
+		A gust of wind picks up some sand, the coarse bits of dirt crashing against your legs as you step into this dry bit of high ground. The only things of interest here are the small hut nearby, although it might be worth looking around for something.	
+	</description>
+
+	<mapgen>
+	<partition xmin="8" xmax="56" ymin="8" ymax="56">
+			<randprefab width="6" height="10">
+				<row>772347</row>
+				<row>777777</row>
+				<row>777777</row>
+				<row>555655</row>
+				<row>566665</row>
+				
+				<row>566665</row>				
+				<row>566665</row>
+				<row>556555</row>
+				<row>777777</row>	
+				<row>723334</row>				
+				<placeWidget x="1" y="4" name="chest">
+					<lootTable>
+						<loot item="knife" chance="0.5" />
+						<loot item="knife" chance="1.0" />
+						<loot item="knife" chance="0.5" />
+						<loot item="knife" chance="1.0" />
+					</lootTable>
+				</placeWidget>				
+			</randprefab>
+	</partition>
+	
+	<perlin>
+			<band low="-1.0" high="-0.4">
+				<floodfill tile="10" />
+			</band>
+			<band low="-0.4" high="1.0">
+			<noise tile="9" scarcity="12" />		
+			<noise tile="8" scarcity="12" />		
+				<floodfill tile="6" />
+			</band>			
+	</perlin>	
+	<walloff wall="11" sides="northeastwest" />	
+	</mapgen>
+
+</zone>

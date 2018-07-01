@@ -63,6 +63,12 @@ public class WidgetCapsuleSystem extends WidgetBreakable {
 	}
 
 	public boolean Interact(Player player) {
+		
+		if (!Spaceship.class.isInstance(Universe.getInstance().getCurrentEntity()))
+		{
+			ViewScene.m_interface.DrawText("cannot launch capsule while landed");
+			return false;
+		}
 		CapsuleBehaviour behaviour=new CapsuleBehaviour(this,(Spaceship)Universe.getInstance().getCurrentEntity());
 		if (!deployed)
 		{

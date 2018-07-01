@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			You've defeated the talharans, you can choose to board them, or not to risk it.
+		</text>
+			<effect type="setlocalflag" flag="boarded" value="1" />	
+		<choice destination="end"
+			text="leave them be" />
+		<choice destination="boarding"
+			text="board them" />
+	</page>
+
+	<page ID="boarding">
+		<text>
+		You bring your ship in to dock with the talharan trade ship, a series of thunks heralding the connection airlock to airlock. Steel yourself if you must, but you should board them before they compose a pretentious soliloquy about why you should be impressed by them. 
+		</text>	
+		<choice destination="raid" text="time to board"/>
+	</page>
+	<page ID="raid">
+		<text>
+		</text>
+
+		<special effect="dock" />
+	</page>
+</Conversation>

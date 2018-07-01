@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<shipsystem sprite="79" name="plasma bolt gun" health="30"
+	hardpoint="true">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>A plasma bolt gun. The installation provides a stabilized mounting to allow maximum rate of fire.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="40" resource="PLASMA">
+		<resourceExtraction item="plasma charge" ratio="10" destroy="0.5" dismantle="1.0" />			
+	</shipResource>
+	<shipWeapon>
+		<damage min="6" max="12" falloff="0" />
+		<cooldown value="1" />
+		<special disruption="2" />	
+		<effects script="plasma" sheet="plasma" />
+		<range arc="1" range="10" />
+		<weaponCost resource="PLASMA" cost="2" />
+		<weaponCost resource="ENERGY" cost="1" />		
+		<description>
+		</description>
+	</shipWeapon>
+</shipsystem>

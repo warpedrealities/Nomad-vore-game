@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <start>
-	<system value="Avior" />
-	<world value="Avior II" />
-	<zone value="Avian Undertown" />
+	<system value="Alpha Minoris" />
+	<world value="talharan_tradeship1" />
+	<zone value="talharan_tradeship1" />
 	<position x="2" y="2" />
 	<item value="laser pistol" />
 	<item value="Knife" />

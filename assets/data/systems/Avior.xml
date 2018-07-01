@@ -4,6 +4,7 @@
 	<World x="6" y="-6">Avior II</World>	
 	<spawnRules>
 	<spawn script="pirates"/>
+	<spawn script="talharans"/>	
 	</spawnRules>
 
 </System>
