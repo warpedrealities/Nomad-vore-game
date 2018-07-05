@@ -47,7 +47,7 @@
 			<effectDamage type="TEASE" minValue="4" maxValue="10"
 				modifier="CHARM" />
 		</combatMove>
-		<itemDrop chance="25" defeatOnly="true" item="yeti fur" />			
+		<itemDrop chance="25" defeatOnly="true" item="monster fur" />			
 	</rpg>
 	<respawn delay="2000" />
 	<defeated conversation="alpha_minoris_III/yeti/defeat" />

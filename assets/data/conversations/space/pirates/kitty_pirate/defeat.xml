@@ -10,6 +10,9 @@
 		<choice destination="fuck0" text="fair? what's fair, your ass is mine (fuck her)">
 			<assertion evaluate="haspart" part="penis"/>
 		</choice>
+		<choice destination="analvore0" text="$you picked the fight and lost, think about that when you're vanishing into my ass">
+					<assertion evaluate="hasperk" perk="analvore" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -18,9 +21,39 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>	
-		<choice destination="end" text="darn"/>
+		<choice destination="end" text="leave her be"/>
 	</page>
 
+	<page ID="analvore0">
+	<text>
+		"What no you can't do that to me, nyah!" she starts to protest, but of course she can hardly stop you from dropping down into a seated position and grabbing her feet. Her ankles twisting in your hands to try and struggle free, but she can't stop you tugging her towards you. She lets out a mewl followed by a dismayed yowl as her feet are plunged between your asscheeks. Your bowels clenching tightly around her feet and tugging her deeper into your sweltering innards. The kitty grabbing around herself to try and stop herself from being tugged in as she's forced to watch your rear end encroaching up her legs towards her.
+	</text>
+	<choice destination="analvore1" text="*drag her in*"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	"Please don't eat me with your ass. I'm sorry, comeon.." she pleads as she feels herself plunging deeper into your ass. The hot tightness of your innards squeezing over her calves and then engulfing her thighs as you schlorp her deeper and deeper in with a series of grunts and groans in delight from you. The kitty shoving at your ass now in an attempt to stop you dragging her inside, but it certainly doesn't seem to be working.
+	</text>
+	<choice destination="analvore2" text="$you're too cute not to be buttfood kitty"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	"No, that's..that's not how you treat cute kitties." she protests, luckily she's nearing slipping into your ass entirely and her noisome ruckus will soon be nice and muffled within your ass. You run your hand over your belly tauntingly, showing off the bulge of her curled up legs imprisoned within you as she shoves at your ass repeatedly, only to lose grip with each clenching ripple until you're cramming her cute lil breasts in and force those arms of hers to flail pleasingly protruding out of your rear end. Her last muffled protests ending in a schlorp as her face is engulfed and then soon after her hands clutch at your rumpcheeks for a moment before being sucked in. The kitty was a lousy pirate, but she's decent assfodder. You can feel her squirming around helplessly inside you "let me out, please...let me out?"
+	</text>
+	<choice destination="analvore3" text="$I could, or I could digest you, that sounds much more fun for me"/>	
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+		Her pleas fade away gradually as she jostles and sloshes away. Her form no match for the grinding inexorable digestive power of your innards. Her form softening and her mewls being replaced with gurgles until every ounce of kitty is reduced to a smooth and liquid state. You can't help but smirk as you stand and watch your gut compacting and shrinking down. Meal is a much more fitting career for the supposed catgirl pirate really, you're satisfied you were able to help her find her proper place in life.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	
 	<page ID="fuck0">
 	<text>
 	"what? no, nyah!" she protests trying to fend you off as you grab her legs and spread them, pulling her towards you. The kitty weakly shoving against your chest as you yank her skirt out of the way and stroke your shaft to hardness. The kitty unable to pull herself away as you shift your grip to her hip and press your tip against her nethers, grinding against her "You can't do this!" she protests further as you prepare to violate her.

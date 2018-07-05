@@ -49,19 +49,23 @@
 			<placeWidget x="11" y="1" name="slot">
 				<contains name="modules/space warper" />
 			</placeWidget>
+			<placeWidget x="12" y="1" name="slot">
+				<contains name="modules/plasma tank">
+					<resource type="PLASMA" value="40" />		
+				</contains>
+			</placeWidget>			
+			
 			<placeWidget x="4" y="7" name="slot">
 				<contains name="modules/bunk bed" />
 			</placeWidget>
-			<placeWidget x="8" y="7" name="slot">
-				<contains name="modules/bunk bed" />
-			</placeWidget>
+
 			<placeWidget x="5" y="8" name="slot">
 				<contains name="modules/navconsole" />
 			</placeWidget>
 			<placeWidget x="7" y="8" name="hardpoint">
 				<facing value="0" />
 				<contains name="shipweapons/plasma pummel gun">
-					<resource type="PLASMA" value="40" />
+					<resource type="PLASMA" value="20" />
 				</contains>
 			</placeWidget>
 			<placeWidget x="5" y="4" name="slot">

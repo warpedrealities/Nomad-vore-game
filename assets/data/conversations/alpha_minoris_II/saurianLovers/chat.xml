@@ -73,7 +73,37 @@
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
 			flag="cockfood" />		
 		</choice>			
+		<choice destination="CTF0" text="$You know, you really are a sweet couple, can't help but feel a bit envious..">
+			<condition evaluate="LOCALFLAG" operator="greaterthan" value="2"
+			flag="help" />	
+				<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="Cockmerge injection" />	
+			<preference fetish="cocktransformation" />				
+		</choice>
 		<choice destination="end" text="$Hi, i'm just passing by though."/>
+	</page>
+		
+	<page ID="CTF0">
+	<text>
+	Osshy smiles "Envious? ah, well. Myrai is all mine, I'm not sharing." she says and snuggles Myrai who blushes in her girlfriend's possessive embrace but wriggles and raises a hand "Lets hear her out, i mean..what do you mean by that?" 
+	</text>
+	<choice destination="CTF1" text="Well, I do think there's room in your relationship for one more. But it's not either of you I'm jealous of."/>
+	<choice destination="end" text="Nothing more than that, I hope I find someone like you sometime"/>
+	</page>
+	
+	<page ID="CTF1">
+	<text>
+	Osshy and Myrai look confused. Osshy sticks her tongue out "I told you, I don't want to share. Find your own lizard dick." says the busty femme, Myrai mhmms "She says she's not envious of you Osshy, but if you're not envious of either of us. Then uh, where do you see yourself in our relationship?"
+	</text>
+	<choice destination="CTF2" text="*gestures at myrai's crotch* between your legs, i want to make you bigger and better and more sensitive and i want to to be able to feel everything you'll use me for."/>
+	<choice destination="end" text="on second thoughts, maybe I'll not butt in"/>
+	</page>
+	
+	<page ID="CTF2">
+	<text>
+	
+	</text>
+	
 	</page>
 		
 	<page ID="cockvore0A">

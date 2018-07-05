@@ -25,9 +25,35 @@
 
 	<page ID="analvore0">
 	<text>
-	The vicious lil bug had been a pain in your behind. So this really is only fitting, and you can only imagine all that exoskeletal chitin of hers will make her slide in niice and smooth. 
+	The vicious lil bug had been a pain in your behind. So this really is only fitting, and you can only imagine all that exoskeletal chitin of hers will make her slide in niice and smooth. Her eyes widen as you <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				expose your ass and
+			</conditional> twirl around to plant those cheeks right over her face. Her antenna squished and squeezed against the top of her head as you cram her face into your asscrack. The lixi finding herself squeezed between a rock and a soft voracious derriere that proves all the more apt to begin encompassing her as you start to settle down over her. The lil bug girl's hands going up to try and support your weight but unable to get the right leverage to stop your ass from schlorping down over your head. 
 	</text>
+		<choice destination="analvore1" text="*shove her in*"/>
+	</page>
 	
+	<page ID="analvore1">
+	<text>
+	The lil bug girl chitters and squeels muffledly into the depths of your ass as you wriggle your hips atop her shoulders and schlorp the lixi deeper inside. The bug helpless to stop you forcing her up into your hungry behind though that's not to say she isn't putting up a commendable effort. She squirms and struggles and tries to stop your rear from encroaching over her shoulders and petite, hard shelled, breasts and her insectile wings.
+	</text>
+	<choice destination="analvore2" text="*all the way in*"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	You straighten your legs, and in so doing foist the helpless bug up off the ground. Her legs flailing out from where she's embedded hips deep in your ass and then slowly being confined as you drag her inside with rthythmic clenching tugs of your inner muscles. Your hungry behind making it clear she's utterly outmatched as the cute insect demi is schlorped the rest of the way into your ass. Her writhing and squirming feet vanishing into your pucker with a final plop of your rump cheeks smacking back together. So satisfying, you can feel her still struggling about inside you as she's forced to curl up as a hefty bulge in your gut. You can only imagine how satisfying it'll be to grind down that exoskeleton and the rest of her down into nourishing mush.
+	</text>
+	<choice destination="analvore3" text="*conquer her, digest her*"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	She squeels and shoves at your innards, making bulges in your gut and jostling it around. But she can't escape, doomed to digestion but unable to accept it. The lixi's body enduring your enzyme assault, her exoskeleton slowly softening and corroding under your digestive processes. It takes an exquisitely long time as you gurgle her with increasing fury before she final succumbs. But when she does succumb it's with a rolling gurgling slosh as her armour dissolves away and your enzymes permeate and dissolve every inch of her in minutes. The lixi turning soft and still, quiet except for glorps of digestion.
+	</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
 	</page>
 	
 	<page ID="devour">

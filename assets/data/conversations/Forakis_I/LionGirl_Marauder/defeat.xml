@@ -3,11 +3,14 @@
 	<!--written by mikoc5 and edited by darkevilme-->
 	<page ID="start">
 		<text>
-			The Lioness lies before you, defeated and beaten, clutching at her battered form to try and stabilize her body enough to at least attempt an escape at a snail’s pace. But now that you approach, she looks up at you, her eyes begrudgingly admitting defeat but her spirit still defiant despite her broken body.		
+			The Lioness lies before you, defeated and beaten, clutching at her battered form to try and recover enough to at least attempt an escape at a snail’s pace. But now that you approach she knows such is impossible, she looks up at you, her eyes begrudgingly admitting defeat but her spirit still defiant despite her broken body.		
 		</text>
 		<choice destination="oralvore0" text="Let’s see if she’s as good as the candy bars">
 			<assertion evaluate="hasperk" perk="oralvore" />		
 		</choice>
+<!-- 		<choice destination="analvore1" text="your conquest is incomplete, she still must submit to your ass">
+				<assertion evaluate="hasperk" perk="analvore" />	
+		</choice> -->
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -18,6 +21,14 @@
 		</choice>		
 		<choice destination="end" text="leave her be"/>
 	</page>	
+	
+	<page ID="analvore0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet
