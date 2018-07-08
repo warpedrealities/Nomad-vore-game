@@ -28,6 +28,10 @@ public class ParserHelper {
 
 		try {
 			File fXmlFile = new File(filename);
+			if (!fXmlFile.exists())
+			{
+				return null;
+			}
 			if (m_builder == null) {
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 				m_builder = dbFactory.newDocumentBuilder();

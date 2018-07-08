@@ -73,13 +73,13 @@
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
 			flag="cockfood" />		
 		</choice>			
-		<choice destination="CTF0" text="$You know, you really are a sweet couple, can't help but feel a bit envious..">
+<!-- 		<choice destination="CTF0" text="$You know, you really are a sweet couple, can't help but feel a bit envious..">
 			<condition evaluate="LOCALFLAG" operator="greaterthan" value="2"
 			flag="help" />	
 				<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="Cockmerge injection" />	
 			<preference fetish="cocktransformation" />				
-		</choice>
+		</choice> -->
 		<choice destination="end" text="$Hi, i'm just passing by though."/>
 	</page>
 		

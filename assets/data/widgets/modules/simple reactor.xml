@@ -5,10 +5,10 @@
 		energetic reactions to convert fuel into energy at a steady pace.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipResource capacity="25" resource="ENERGY" />
-	<shipConverter boostable="true">
-		<convertFrom value="FUEL" />
-		<convertTo value="ENERGY" />
-		<conversionEfficiency value="5" />
-		<conversionRate value="0.01" />
-	</shipConverter>
+	<shipConverter count="1" boostable="true">
+		<product output="ENERGY" timePerUnit="10">
+		<input resource="FUEL" perUnit="0.1"/>
+		</product>	
+	</shipConverter>		
+
 </shipsystem>

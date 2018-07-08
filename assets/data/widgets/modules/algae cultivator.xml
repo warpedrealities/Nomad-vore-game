@@ -7,12 +7,11 @@
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipResource capacity="40" resource="ALGAE" nonCombat="true">
 	</shipResource>
-	<shipConverter>
-		<convertFrom value="ENERGY" />
-		<convertTo value="ALGAE" />
-		<conversionEfficiency value="1" />
-		<conversionRate value="0.005" />
-	</shipConverter>
+	<shipConverter count="1">
+		<product output="ALGAE" timePerUnit="200">
+		<input resource="ENERGY" perUnit="1"/>
+		</product>		
+	</shipConverter>		
 	<!--dispenser goes here -->
 	<shipDispenser>
 		<input value="ALGAE" />

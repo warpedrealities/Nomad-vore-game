@@ -27,6 +27,14 @@ public class RenderLayer extends Layer {
 		m_matrix = Matrix4f.setIdentity(m_matrix);
 	}
 
+	public float getFudgeFactorX(Tile_Int tile)
+	{
+		return 0.025F/((float)tile.getTileset().getTileCountX());
+	}
+	public float getFudgeFactorY(Tile_Int tile)
+	{
+		return 0.025F/((float)tile.getTileset().getTileCountY());
+	}	
 	public void Create(Tile_Int[][] tiles, int count, int offsetx, int offsety) {
 		// discard elements if they already exist
 		Discard(0);
@@ -46,7 +54,8 @@ public class RenderLayer extends Layer {
 		IntBuffer indiceBuffer = BufferUtils.createIntBuffer(6 * count);
 		int index = 0; // use this to keep track of where we're placing things
 						// in the list
-
+		float fudgeX=0;
+		float fudgeY=0;
 		// build squares, such squares
 		for (int i = 0; i < 16; i++) {
 			for (int j = 0; j < 16; j++) {
@@ -56,23 +65,34 @@ public class RenderLayer extends Layer {
 						Tile_Int tile = tiles[i + offsetx][j + offsety];
 						int tileCountX = tile.getTileset().getTileCountX();
 						int tileCountY = tile.getTileset().getTileCountY();
+						if (fudgeX==0)
+						{
+							fudgeX=getFudgeFactorX(tile);
+						}
+						if (fudgeY==0)
+						{
+							fudgeY=getFudgeFactorY(tile);
+						}
 						float scaleX = 1.0f / tileCountX;
 						float scaleY = 1.0f / tileCountY;
 						// generate square,
+						
 						// precalc UV based on value
 						int V = (tile.getImage() - 1) / tileCountX;
 						int U = (tile.getImage() - 1) % tileCountX;
-						float Uf = U * scaleX;
-						float Vf = V * scaleY;
-
+						float Uf = (U * scaleX)+fudgeX;
+						float Vf = (V * scaleY)+fudgeY;
+						float width=scaleX-(fudgeX*2);
+						float height=scaleY-(fudgeY*2);
+	
 						float lighting = 0.5F;
 						if (tiles[i + offsetx][j + offsety].getVisible() == true) {
 							lighting = 1;
 						}
 						Vertex_ext v[] = new Vertex_ext[4];
-						v[0] = new Vertex_ext(i, j, 0, Uf, Vf + scaleY, lighting);
-						v[1] = new Vertex_ext(i + 1, j, 0, Uf + scaleX, Vf + scaleY, lighting);
-						v[2] = new Vertex_ext(i + 1, j + 1, 0, Uf + scaleX, Vf, lighting);
+						v[0] = new Vertex_ext(i, j, 0, Uf, Vf + height, lighting);
+						v[1] = new Vertex_ext(i + 1, j, 0, Uf + width, Vf + height, lighting);
+						v[2] = new Vertex_ext(i + 1, j + 1, 0, Uf + width, Vf, lighting);
 						v[3] = new Vertex_ext(i, j + 1, 0, Uf, Vf, lighting);
 						for (int k = 0; k < 4; k++) {
 							verticesBuffer.put(v[k].pos);
@@ -117,7 +137,8 @@ public class RenderLayer extends Layer {
 
 		int index = 0; // use this to keep track of where we're placing things
 						// in the list
-
+		float fudgeX=0;
+		float fudgeY=0;
 		// build squares, such squares
 		for (int i = 0; i < 16; i++) {
 			for (int j = 0; j < 16; j++) {
@@ -127,23 +148,34 @@ public class RenderLayer extends Layer {
 						Tile_Int tile = tiles[i + offsetx][j + offsety];
 						int tileCountX = tile.getTileset().getTileCountX();
 						int tileCountY = tile.getTileset().getTileCountY();
+						
+						if (fudgeX==0)
+						{
+							fudgeX=getFudgeFactorX(tile);
+						}
+						if (fudgeY==0)
+						{
+							fudgeY=getFudgeFactorY(tile);
+						}
 						float scaleX = 1.0f / tileCountX;
 						float scaleY = 1.0f / tileCountY;
 						// generate square,
 						// precalc UV based on value
 						int V = (tile.getImage() - 1) / tileCountX;
 						int U = (tile.getImage() - 1) % tileCountX;
-						float Uf = U * scaleX;
-						float Vf = V * scaleY;
+						float Uf = (U * scaleX)+fudgeX;
+						float Vf = (V * scaleY)+fudgeY;
+						float width=scaleX-(fudgeX*2);
+						float height=scaleY-(fudgeY*2);
 
 						float lighting = 0.5F;
 						if (tiles[i + offsetx][j + offsety].getVisible() == true) {
 							lighting = 1;
 						}
 						Vertex_ext v[] = new Vertex_ext[4];
-						v[0] = new Vertex_ext(i, j, 0, Uf, Vf + scaleY, lighting);
-						v[1] = new Vertex_ext(i + 1, j, 0, Uf + scaleX, Vf + scaleY, lighting);
-						v[2] = new Vertex_ext(i + 1, j + 1, 0, Uf + scaleX, Vf, lighting);
+						v[0] = new Vertex_ext(i, j, 0, Uf, Vf + height, lighting);
+						v[1] = new Vertex_ext(i + 1, j, 0, Uf + width, Vf + height, lighting);
+						v[2] = new Vertex_ext(i + 1, j + 1, 0, Uf + width, Vf, lighting);
 						v[3] = new Vertex_ext(i, j + 1, 0, Uf, Vf, lighting);
 						for (int k = 0; k < 4; k++) {
 							verticesBuffer.put(v[k].pos);

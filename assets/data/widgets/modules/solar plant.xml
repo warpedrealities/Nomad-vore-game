@@ -5,10 +5,9 @@
 		its mirrors in space</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipResource capacity="25" resource="ENERGY" />
-	<shipConverter>
-		<convertFrom value="SOLAR" />
-		<convertTo value="ENERGY" />
-		<conversionEfficiency value="5" />
-		<conversionRate value="0.02" />
+	<shipConverter count="1">
+		<product output="ENERGY" timePerUnit="20">
+		<input resource="SOLAR" perUnit="2"/>
+		</product>
 	</shipConverter>
 </shipsystem>

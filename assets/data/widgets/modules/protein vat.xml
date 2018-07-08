@@ -5,11 +5,10 @@
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipResource capacity="40" resource="PROTEIN" nonCombat="true">
 	</shipResource>
-	<shipConverter>
-		<convertFrom value="ENERGY" />
-		<convertTo value="PROTEIN" />
-		<conversionEfficiency value="1" />
-		<conversionRate value="0.005" />
+	<shipConverter count="1">
+		<product output="PROTEIN" timePerUnit="100">
+		<input resource="ENERGY" perUnit="2"/>
+		</product>		
 	</shipConverter>
 	<!--dispenser goes here -->
 	<shipDispenser>

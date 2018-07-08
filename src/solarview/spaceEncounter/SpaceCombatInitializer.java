@@ -4,7 +4,8 @@ import spaceship.Spaceship;
 import spaceship.stats.SpaceshipAnalyzer;
 import vmo.Game;
 import java.util.List;
-import shipsystem.ShipConverter;
+
+import shipsystem.conversionSystem.ShipConverter;
 public class SpaceCombatInitializer {
 
 	private Spaceship player;
@@ -25,7 +26,7 @@ public class SpaceCombatInitializer {
 		List <ShipConverter> list=player.getShipStats().getConverters();
 		for (int i=0;i<list.size();i++)
 		{
-			if (list.get(i).getConvertTo().equals("ENERGY"))
+			if (list.get(i).getProduct().equals("ENERGY"))
 			{
 				list.get(i).setActive(true);			
 			}

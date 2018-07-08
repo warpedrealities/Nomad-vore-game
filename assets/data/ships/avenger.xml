@@ -66,18 +66,18 @@
 
 			<placeWidget x="3" y="5" name="slot">
 				<contains name="modules/generator">
-					<resource type="ENERGY" value="25" />
+					<resource type="ENERGY" value="5" />
 				</contains>
 			</placeWidget>
 
 			<placeWidget x="5" y="5" name="slot">
 				<contains name="modules/generator">
-					<resource type="ENERGY" value="25" />
+					<resource type="ENERGY" value="5" />
 				</contains>
 			</placeWidget>
 
 			<placeWidget x="2" y="3" name="slot">
-				<contains name="modules/capsuleSystem"/>
+				<contains name="modules/protein vat"/>
 			</placeWidget>
 
 			<placeWidget x="6" y="3" name="slot">
@@ -103,7 +103,7 @@
 
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="modules/interplanetary reactor">
-					<resource type="FUEL" value="150" />
+					<resource type="FUEL" value="50" />
 				</contains>
 			</placeWidget>
 

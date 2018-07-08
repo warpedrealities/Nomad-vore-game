@@ -13,7 +13,7 @@ import shared.MyListener;
 import shared.Screen;
 import shared.Vec2f;
 import shared.Vec2i;
-import shipsystem.ShipConverter;
+import shipsystem.conversionSystem.ShipConverter;
 import solarview.SolarScene;
 import spaceship.Spaceship;
 import spaceship.stats.WarpHandler;

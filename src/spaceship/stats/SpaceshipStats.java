@@ -11,7 +11,7 @@ import java.util.Set;
 import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 import nomad.universe.Universe;
-import shipsystem.ShipConverter;
+import shipsystem.conversionSystem.ShipConverter;
 import spaceship.SpaceshipResource;
 
 public class SpaceshipStats {
@@ -31,6 +31,8 @@ public class SpaceshipStats {
 	SpaceshipShield shield;
 	List<SpaceshipWeapon> weapons;
 
+	SpaceshipResource solarResource;
+	SpaceshipResource nothingResource;
 	
 	public SpaceshipStats() {
 		resources = new HashMap<String, SpaceshipResource>();
@@ -39,6 +41,9 @@ public class SpaceshipStats {
 		crewCapacity = 0;
 		crewStats=new CrewStats();
 		setInitialCrewStats();
+		
+		solarResource=new SpaceshipResource("SOLAR",9999,9999,true);
+		nothingResource=new SpaceshipResource("NOTHING",9999,9999,true);
 	}
 	
 	private void setInitialCrewStats()
@@ -179,8 +184,12 @@ public class SpaceshipStats {
 	public SpaceshipResource getResource(String type) {
 		if (type.equals("NOTHING"))
 		{
-			return new SpaceshipResource("NOTHING",100,100,true);
+			return nothingResource;
 		}
+		if (type.equals("SOLAR"))
+		{
+			return solarResource;
+		}		
 		return resources.get(type);
 	}
 

@@ -4,10 +4,9 @@
 	<description>a fuel consuming generator that produces energy.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipResource capacity="25" resource="ENERGY" />
-	<shipConverter boostable="true">
-		<convertFrom value="FUEL" />
-		<convertTo value="ENERGY" />
-		<conversionEfficiency value="5" />
-		<conversionRate value="0.005" />
+	<shipConverter count="1" boostable="true">
+		<product output="ENERGY" timePerUnit="20">
+		<input resource="FUEL" perUnit="0.1"/>
+		</product>	
 	</shipConverter>
 </shipsystem>

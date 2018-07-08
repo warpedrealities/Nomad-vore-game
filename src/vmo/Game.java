@@ -176,17 +176,17 @@ public class Game implements SceneManager {
 		var[4] = m_objvar1;
 
 		SceneBase.setVariables(var);
-	//	m_currentscene = new Menu(var);
-		universe.Newgame();
-		Spaceship ships[]=new Spaceship[1];
-		ships[0]=new Spaceship("sloop",2,2,ShipState.SPACE);
-		
-		Document doc=ParserHelper.LoadXML("assets/data/shipControllers/pirateSloop.xml");
-		//read through the top level nodes
-		Element root=doc.getDocumentElement();
-			
-		ships[0].setShipController(new NpcShipController(root));
-		m_currentscene = new SpaceEncounter((Spaceship)universe.getCurrentEntity(), ships);
+		m_currentscene = new Menu(var);
+	//	universe.Newgame();
+//		Spaceship ships[]=new Spaceship[1];
+//		ships[0]=new Spaceship("sloop",2,2,ShipState.SPACE);
+//		
+//		Document doc=ParserHelper.LoadXML("assets/data/shipControllers/pirateSloop.xml");
+//		//read through the top level nodes
+//		Element root=doc.getDocumentElement();
+//			
+//		ships[0].setShipController(new NpcShipController(root));
+//		m_currentscene = new SpaceEncounter((Spaceship)universe.getCurrentEntity(), ships);
 
 
 		GL11.glDepthFunc(GL_LEQUAL);

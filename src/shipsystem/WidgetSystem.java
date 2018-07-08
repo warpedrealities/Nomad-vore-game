@@ -1,7 +1,7 @@
 package shipsystem;
 
 import interactionscreens.ContainerScreen;
-import interactionscreens.SystemScreen;
+import interactionscreens.systemScreen.SystemScreen;
 import item.Item;
 import nomad.universe.Universe;
 
@@ -17,6 +17,7 @@ import org.w3c.dom.NodeList;
 import actor.player.Player;
 import shared.ParserHelper;
 import shipsystem.ShipAbility.AbilityType;
+import shipsystem.conversionSystem.ShipConverter;
 import shipsystem.weapon.ShipWeapon;
 import view.ViewScene;
 import widgets.WidgetBreakable;

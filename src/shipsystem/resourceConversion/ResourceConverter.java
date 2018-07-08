@@ -17,16 +17,19 @@ public class ResourceConverter {
 	public ResourceConverter(String resourceName) {
 		conversionMap=new HashMap<String,Integer>();
 		Document doc = ParserHelper.LoadXML("assets/data/resourceConversion/" + resourceName+".xml");
-		Element root = doc.getDocumentElement();
-		Element n = (Element) doc.getFirstChild();
-		NodeList children=n.getChildNodes();
-		for (int i=0;i<children.getLength();i++)
+		if (doc!=null)
 		{
-			if (children.item(i).getNodeType()==Node.ELEMENT_NODE)
+			Element root = doc.getDocumentElement();
+			Element n = (Element) doc.getFirstChild();
+			NodeList children=n.getChildNodes();
+			for (int i=0;i<children.getLength();i++)
 			{
-				Element e=(Element)children.item(i);
-				conversionMap.put(e.getAttribute("item"), Integer.parseInt(e.getAttribute("value")));
-			}
+				if (children.item(i).getNodeType()==Node.ELEMENT_NODE)
+				{
+					Element e=(Element)children.item(i);
+					conversionMap.put(e.getAttribute("item"), Integer.parseInt(e.getAttribute("value")));
+				}
+			}		
 		}
 	}
 

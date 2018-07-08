@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="munifactory" requiredskill="2" startunlocked="false">
+	<description>
+		This specialized miniature factory device produces handgun calibre bullets from scrap metal.
+	</description>
+	<ingredient item="scrap metal" quantity="5" />
+	<ingredient item="computation valve" quantity="5" />
+	<ingredient item="precision mechanisms" quantity="10" />
+	<result item="munifactory" />
+</recipe>

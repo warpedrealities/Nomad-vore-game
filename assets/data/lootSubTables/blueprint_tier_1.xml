@@ -4,6 +4,7 @@
 	<loot item="blueprint" chance="2" addendum="spike gun" />
 	<loot item="blueprint" chance="2" addendum="hydraulic spike" />	
 	<loot item="blueprint" chance="2" addendum="the wounding bird" />	
-	<loot item="blueprint" chance="2" addendum="gravitic impeller" />		
+	<loot item="blueprint" chance="2" addendum="gravitic impeller" />
+	<loot item="blueprint" chance="2" addendum="munifactory" />	
 	<loot item="blueprint" chance="1" addendum="magma spike gun" />	
 </lootTable>

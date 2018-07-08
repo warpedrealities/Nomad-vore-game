@@ -1,8 +1,8 @@
 package shipsystem;
 
 import interactionscreens.NavScreen;
-import interactionscreens.SystemScreen;
 import interactionscreens.WarpScreen;
+import interactionscreens.systemScreen.SystemScreen;
 import item.Item;
 import nomad.universe.Universe;
 

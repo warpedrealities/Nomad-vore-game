@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<shipsystem sprite="95" name="munifactory" health="10">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>This specialized miniature factory device produces handgun calibre bullets from scrap metal.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="25" resource="SCRAP" nonCombat="true"/>
+	<shipResource capacity="100" resource="BULLETS" nonCombat="true"/>	
+	<shipConverter count="1" boostable="true">
+		<product output="BULLETS" timePerUnit="10">
+		<input resource="ENERGY" perUnit="0.5"/>
+		<input resource="SCRAP" perUnit="0.1"/>		
+		</product>	
+	</shipConverter>	
+	<shipDispenser>
+		<input value="BULLETS" />
+		<cost value="50" />
+		<output value="bullets" />
+	</shipDispenser>	
+
+
+</shipsystem>

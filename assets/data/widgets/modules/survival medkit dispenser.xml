@@ -3,18 +3,16 @@
 	<contains minimum="2" maximum="4">scrap metal</contains>
 	<description>The survival medkit dispenser is a self contained system that can synthesize medical supplies with no external input.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
-	<shipResource capacity="1" resource="MEDKIT" nonCombat="true">
+	<shipResource capacity="100" resource="MEDKIT" nonCombat="true">
 	</shipResource>
-	<shipConverter>
-		<convertFrom value="NOTHING" />
-		<convertTo value="MEDKIT" />
-		<conversionEfficiency value="1" />
-		<conversionRate value="0.001" />
+	<shipConverter count="1">
+		<product output="MEDKIT" timePerUnit="20">
+		</product>		
 	</shipConverter>
 	<!--dispenser goes here -->
 	<shipDispenser>
 		<input value="MEDKIT" />
-		<cost value="1" />
+		<cost value="100" />
 		<output value="medkit" />
 	</shipDispenser>
 </shipsystem>
