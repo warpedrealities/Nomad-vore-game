@@ -19,7 +19,7 @@ public class NpcShipControllerSenseDetection {
 	{
 		this.faction=faction;
 		this.system=system;
-		this.spawnScriptTools=new SpawnScriptTools(system.getEntities(),SpawningSystem.buildEntities(system.getEntities()));
+	//	this.spawnScriptTools=new SpawnScriptTools(system.getEntities(),SpawningSystem.buildEntities(system.getEntities()));
 	}
 	
 	public Spaceship getPlayer(int x, int y, int range)
@@ -71,6 +71,11 @@ public class NpcShipControllerSenseDetection {
 	
 	public SpawnScriptTools getSpawnScriptTools()
 	{
+		if (spawnScriptTools!=null)
+		{
+			return spawnScriptTools;		
+		}
+		spawnScriptTools=new SpawnScriptTools(system.getEntities(),SpawningSystem.buildEntities(system.getEntities()));
 		return spawnScriptTools;
 	}
 }

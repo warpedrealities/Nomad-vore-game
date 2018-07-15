@@ -37,6 +37,7 @@
 		<statusTags count="1">
 			<tag>seduction</tag>
 		</statusTags>
+		<itemDrop chance="50" defeatOnly="true" item="beast scale" />	
 	</rpg>
 
 	<respawn delay="2000" />

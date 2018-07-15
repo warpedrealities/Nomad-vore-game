@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<shipsystem sprite="101" name="perimeter defence system" health="10">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>A perimeter defence system consists of sophisticated remote control computers and robot maintenance systems. It deploys a pair of defence drones around the ship when it lands.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="8" resource="DRONEPARTS">
+		<resourceExtraction item="drone package" ratio="1" destroy="0.25" dismantle="0.5" />
+	</shipResource>
+	<shipDroneSystem trigger="DT_LANDING">
+	<cost resource="DRONEPARTS" amount="1"/>
+	<drone count="2" filename="temp/defence drone" npcName="defence drone"/>
+	</shipDroneSystem>
+</shipsystem>

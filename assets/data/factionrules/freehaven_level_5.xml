@@ -14,6 +14,9 @@
 	</superRule>		
 	<superRule subject="Laesha" level="2" violation="ATTACK">
 		<factionRelationship faction="freehaven_wardens" mod="-20" />
+	</superRule>	
+	<superRule subject="Tourist" level="2" violation="ATTACK">
+		<factionRelationship faction="freehaven_wardens" mod="-20" />
 	</superRule>		
 	<superRule subject="door" level="2" violation="ATTACK">
 		<factionRelationship faction="freehaven_wardens" mod="-20" />

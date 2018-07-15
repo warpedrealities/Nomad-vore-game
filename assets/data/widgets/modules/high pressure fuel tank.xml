@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<shipsystem sprite="100" name="high pressure fuel tank" health="10">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>A high pressure starship fuel tank.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="300" resource="FUEL">
+		<resourceExtraction item="blue crystal" ratio="1" destroy="0.5" dismantle="0.75" />
+	</shipResource>
+
+</shipsystem>

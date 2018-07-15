@@ -105,6 +105,18 @@ public class OutEvaluator {
 				return false;
 			}
 		}
+		if (eval.equals("hasequipped")) {
+			String itemName=E.getAttribute("item");
+			for (int i=0;i<4;i++)
+			{
+				if (m_player.getInventory().getSlot(i)!=null && 
+					itemName.equals(m_player.getInventory().getSlot(i).getItem().getName()))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
 		if (eval.equals("hasEntry")) {
 			if (!m_player.getEncyclopedia().hasEntry(E.getAttribute("entry"))) {
 				return false;

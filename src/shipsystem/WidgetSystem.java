@@ -18,6 +18,7 @@ import actor.player.Player;
 import shared.ParserHelper;
 import shipsystem.ShipAbility.AbilityType;
 import shipsystem.conversionSystem.ShipConverter;
+import shipsystem.droneSpawning.ShipDroneSystem;
 import shipsystem.weapon.ShipWeapon;
 import view.ViewScene;
 import widgets.WidgetBreakable;
@@ -65,6 +66,9 @@ public class WidgetSystem extends WidgetBreakable {
 				}
 				if (Enode.getTagName() == "shipSimCrew") {
 					systemAbilities.add(new ShipSimCrew(Enode, m_name));
+				}
+				if (Enode.getTagName() == "shipDroneSystem") {
+					systemAbilities.add(new ShipDroneSystem(Enode, m_name));
 				}
 			}
 		}
@@ -127,6 +131,9 @@ public class WidgetSystem extends WidgetBreakable {
 				break;
 			case SA_CREW:
 				systemAbilities.add(new ShipSimCrew(dstream, m_name));			
+				break;
+			case SA_SPAWNER:
+				systemAbilities.add(new ShipDroneSystem(dstream, m_name));
 				break;
 			}
 

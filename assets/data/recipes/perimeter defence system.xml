@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="perimeter defence system" requiredskill="1"
+	startunlocked="true">
+	<description>
+		A perimeter defence system consists of sophisticated remote control computers and robot maintenance systems. It deploys a pair of defence drones around the ship when it lands.
+	</description>
+	<ingredient item="scrap metal" quantity="6" />
+	<ingredient item="computation valve" quantity="10" />
+<tokenRequirement item="roboticist" quantity="1" />	
+	<result item="perimeter defence system" />
+</recipe>

@@ -281,7 +281,7 @@ public class WidgetContainer extends WidgetBreakable {
 	
 	@Override
 	public void handleDismantle(WidgetItemPile pile) {
-		while(!containedItems.isEmpty())
+		while(containedItems!=null && !containedItems.isEmpty())
 		{
 			pile.AddItem(takeItem(0));
 		}

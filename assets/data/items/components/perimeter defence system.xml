@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="perimeter defence system" weight="10" value="2000">
+	<description>A perimeter defence system consists of sophisticated remote control computers and robot maintenance systems. It deploys a pair of defence drones around the ship when it lands. </description>
+	<placeditem widget="modules/perimeter defence system" />
+</ItemWidget>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemResource name="drone package" weight="2" value="250.0">
+	<description>Packaged parts for a drone. The drone assembled from it has no autonomous functions, it can only be used in concert with a ship module capable of remotely controlling it.</description>
+
+</ItemResource>

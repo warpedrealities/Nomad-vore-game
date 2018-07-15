@@ -1,6 +1,8 @@
-package interactionscreens;
+package interactionscreens.navscreen;
 
 import java.nio.FloatBuffer;
+
+import org.lwjgl.opengl.GL11;
 
 import actorRPG.player.Player_RPG;
 import graphics.Screen_Fade;
@@ -23,22 +25,27 @@ public class WarpScreen extends Screen  implements Callback{
 	static final int sleepLength=300;
 	private Spaceship ship;
 	private Text description;
+//	private Vortex_Renderer vortex;
+	
 	
 	public WarpScreen(Spaceship ship) {
 		this.ship=ship;
-		
+	//	vortex=new Vortex_Renderer(new Vec2f(-20, -1),new Vec2f(23,17));
 	}
 
 	@Override
 	public void update(float DT) {
 		screenFade.update(DT);
 		window.update(DT);
+	//	vortex.update(DT);
 	}
 
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc) {
 		window.Draw(buffer, matrixloc);
 		screenFade.draw(matrixloc, buffer);
+	
+	//	vortex.draw(matrixloc, 0, buffer);
 	}
 
 	@Override
@@ -46,6 +53,7 @@ public class WarpScreen extends Screen  implements Callback{
 		mouse.Remove(window);
 		window.discard();
 		screenFade.discard();
+	//	vortex.discard();
 	}
 
 	@Override

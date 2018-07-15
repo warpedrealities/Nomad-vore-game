@@ -17,6 +17,7 @@ import actorRPG.RPG_Helper;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
+import shipsystem.droneSpawning.DroneHandling;
 import vmo.GameManager;
 import widgets.Widget;
 import widgets.WidgetBreakable;
@@ -138,7 +139,7 @@ public class ZoneBuildTools {
 		WidgetSprite sprite = new WidgetSprite(landing.getShip().getSprite(), width, yindex - y);
 		tile.setWidget(sprite);
 		// connect exterior portal
-
+		new DroneHandling().droneDeployment(landing,m_zone);
 	}
 
 	public void RemoveShip(Landing landing) {
@@ -174,6 +175,7 @@ public class ZoneBuildTools {
 		if (m_tiles[x][y] != null) {
 			m_tiles[x][y].setWidget(null);
 		}
+		new DroneHandling().droneRemoval(landing,m_zone);
 	}
 
 	void Floodfill(Element floodnode, boolean[][] grid) {

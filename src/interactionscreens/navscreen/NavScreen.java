@@ -1,4 +1,4 @@
-package interactionscreens;
+package interactionscreens.navscreen;
 
 import gui.Button;
 import gui.Text;
@@ -43,7 +43,6 @@ public class NavScreen extends Screen implements Callback {
 		spaceship = ship;
 		shipStats = new SpaceshipAnalyzer().generateStats(spaceship);
 		setCanLaunch();
-
 	}
 
 	public void setCanLaunch() {

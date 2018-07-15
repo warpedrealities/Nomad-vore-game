@@ -69,6 +69,7 @@
 				</statusBind>
 			</effectStatus>
 		</combatMove>
+		<itemDrop chance="25" defeatOnly="true" item="monster fur" />			
 	</rpg>
 
 	<defeated conversation="alpha_minoris_III/icetreader_rumbler/defeat" />

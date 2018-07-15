@@ -8,7 +8,7 @@ import shared.Vec2f;
 
 public class Window extends GUIBase {
 
-	NinePatch m_patch;
+	public NinePatch m_patch;
 	Vec2f m_pos, m_size;
 	Vector<GUIBase> m_contents;
 	boolean m_active;

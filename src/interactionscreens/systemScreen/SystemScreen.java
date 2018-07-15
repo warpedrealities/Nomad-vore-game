@@ -377,9 +377,10 @@ public class SystemScreen extends Screen implements SystemCallback {
 			if (v < equipThreshold) {
 				return player.getInventory().getItem(v);
 				}
-			} else {
+			 else {
 				return findEquip(v - equipThreshold);
 			}
+		}
 		return null;
 	}
 

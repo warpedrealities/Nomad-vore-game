@@ -107,10 +107,10 @@ public class Game implements SceneManager {
 		sceneManager = this;
 		graphicsConfiguration = new Config();
 		
-//		  try { System.setErr(new PrintStream(new
-//		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
-//		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
-//		
+		  try { System.setErr(new PrintStream(new
+		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
+		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
+		
 		
 		// Initialize GLFW. Most GLFW functions will not work before doing this.
 		if (!glfwInit())
@@ -124,6 +124,7 @@ public class Game implements SceneManager {
 													// resizable
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 		glfwWindowHint(GLFW_RED_BITS, 8);
 		glfwWindowHint(GLFW_GREEN_BITS, 8);
 		glfwWindowHint(GLFW_BLUE_BITS, 8);
@@ -177,7 +178,9 @@ public class Game implements SceneManager {
 
 		SceneBase.setVariables(var);
 		m_currentscene = new Menu(var);
+
 	//	universe.Newgame();
+//		universe.Newgame();
 //		Spaceship ships[]=new Spaceship[1];
 //		ships[0]=new Spaceship("sloop",2,2,ShipState.SPACE);
 //		

@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<text>
+		Your eye has been caught by a lovely, rather voluptuous tiger girl sitting down at the bar, taking a sip from a  rather large drink. You thought about approaching her, but you didn't really know what you would say to this complete stranger without her being an employee here. You were just about to walk away when you heard her voice behind you. “ hey there,  cute thing~” she said, causing you to whirl around almost immediately at the unexpected compliment. Yeah, you! Come over here and tell me your name, sweet stuff.” the flattery she was piling on caught you off-guard,But you were at least enjoying it, so you thought you would humor her advancements at the very least. You grabbed a seat at the stool next to her,Taking in the thick, but pleasant perfume she was wearing  to accent her short skirt.
+	</text>
+	<choice destination="intro0" text="$what brings you here?"/>
+	</page>
+	
+	<page ID="intro0">
+	<text>
+	"Not much. I sort of hop from place to place. This free Haven place is pretty nice, although it's a bit small for my liking. Probably going to hitch a ride on the next ship out of here, hanging out in this bar all day gets boring."
+	</text>
+	<choice destination="intro1" text="$what really brings you here?"/>
+	<choice destination="alt0" text="Sounds fun!"/>
+	<choice destination="exit1" text="$Sounds pretty boring."/>	
+	</page>
+	
+	<page ID="alt0">
+	<text>
+	“Eh, It's Hit or Miss. I've had quite the adventures, but I'm also spent a lot of time sitting around doing nothing... Kind of like this. She responded, taking another sip as she looked at you. “I do have to say though, you're one of the cuter things I've seen on my travels.”
+	</text>
+	<page destination="alt1" text="$Thank you!"/>
+	</page>
+	
+	<page ID="alt1">
+	<text>
+	“the pleasure is all mine when it comes to adorable little specimens like yourself~* " the tiger's quite good at sweet-talking, and you couldn't help but enjoy the bit of flattery she was subjecting you to! the two of you chatted for a little while longer, and you were starting to greatly enjoy her company - and you were  liking the little hints she was dropping as well! you could tell that she was looking for something a bit more than friendship, but it wasn't like you weren't receptive. she was still bleeding, though, and eventually  she dropped the line. “Wanna know what I really do around here?"
+	</text>
+	<choice destination="alt2" text="$YES"/>
+	</page>
+	
+	<page ID="alt2">
+	<text>
+		“Ahah!  I love the enthusiasm. I'm sort of a  culinary tourist, I guess you could say. I hop from planet to planet and see what they've got going on in terms of cuisine. but I don't sample the food, I sampled who makes it! And what I make them into…" She trailed off as she lifted up her skirt, revealing  that she was wearing nothing underneath it. It also revealed that she had quite the sizable cock hidden behind that skirt! The implication was clear.
+	</text>
+	<choice destination="intro2" text="$That seems pretty fun"/>
+	<choice destination="exit2" text="$“...That’s a bit forward.”"/>
+
+	</page>
+	
+	<page ID="exit1">
+	<text>	
+		“Hah! I guess you can say that. I'm certainly agree with you at some point, but overall, it's a rather enjoyable experience... Sad that you would miss out on it.”
+	</text>
+	<choice destination="end" text="make your exit"/>
+	</page>
+	
+	<page ID="exit2">
+	<text>
+	“Mmm, yeah, I can be pretty forward sometimes. If you're not that type, you probably wouldn't get along with me, hun.”
+	</text>
+	<choice destination="end" text="make your exit"/>	
+	</page>
+	
+	<page ID="intro1">
+	<text>
+	The tiger smirked as you said that. "Saw right through me, didn't you? sharp little thing. I bet you have a lot of experience with  the more hungry inside of this system... well, if you want to skip the flattery and flirting, I can't blame you. I'm sort of a  culinary tourist, I guess you could say. I hop from planet to planet and see what they've got going on in terms of cuisine. but I don't sample the food, I sampled who makes it! And what I make them into…" She trailed off as she lifted up her skirt, revealing  that she was wearing nothing underneath it. It also revealed that she had quite the sizable cock hidden behind that skirt! The implication was clear.
+	</text>
+	<choice destination="intro2" text="$That seems pretty fun"/>
+	<choice destination="exit0" text="$to each their own, I guess."/>
+	</page>
+	
+	<page ID="exit0">
+	<text>
+	 "hey, don't judge me. I bet you've been doing the same thing, at least inadvertently..." the tiger quipped as she returned to her drink,seemingly having lost interest in you. for someone that knew exactly what she was doing, you seemed  to have a lot of reservations about becoming part of it!
+	</text>
+	<choice destination="end" text="make your exit"/>
+	</page>
+	
+	<page ID="intro2">
+	<text>
+	"Sure is. shoving them down there, feeling them wiggle around so deep inside of me... And tasting what they make afterwards. Everyone has their own flavor, I say!" She leaned in closer, as if she was sizing you up. "and I bet you taste delicious, cutie~" She teased, taking a deep breath of your scent before moving back to her own seat and taking a sip of her drink, looking at you as you tried to take in what she was saying. "How about it? Want to be part of my vacation?"
+	</text>
+	<choice destination="intro3" text="$That does sound rather nice…"/>
+	</page>
+	
+	<page ID="intro3">
+	<text>
+	"Hey, that's what I wanted to hear! It is very fun, and quite relaxing for you as well." the tiger girl said, before lifting up her skirt again, but this time all the way. "Why don't you poke your head down there and we can get started~" You did ask she said, first getting off the bar stool and getting down on your  knees before slowly getting your head up underneath her skirt. Your nose was pressed right up against her length, which was quickly growing and hardening as this lewd, public situation began to unfold. you took the time to play with her bulge a little bit, taking in the musk and feminine aroma that surrounded it, before you heard her voice again, this time from above you. "Now, are you gonna put that thing in your mouth, or are you going to put yourself in it…?"
+	</text>
+	<choice destination="CTF0" text="I want that in my mouth">
+	<preference fetish="cocktransformation" />
+	</choice>
+		<choice destination="cockvore0" text="$I want to squirm down that">
+	<preference fetish="cockvore" />
+	</choice>
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+		"Want to get right to the point, huh? I don't blame you.It certainly is a nice point to get to~" the tiger teased from above as she felt you starting to play and stretch her tip out in preparation for what you were about to do. “Nnnf,  are you going to shove yourself in it or make out with it?” she joked as you continued playing with her tip a little bit, thinking about how exactly you were going to fit yourself  inside that throbbing shaft. it seemed like your impromptu partner was getting a bit impatient, though, and you wanted to keep this relationship cordial and friendly, So eventually you just went for it. You heard her growl as you stuck your hand in her cock slit,The head of hershaft proving to be surprisingly stretchy and capable of taking things much larger than you would think... Then again, she did say she was experienced with this. You wouldn't be surprised if she had some modifications down here to make it more pleasurable and easier for her!
+	</text>
+	<choice destination="cockvore1" text="Go down the waterslide"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	 it definitely made the process easier and more pleasurable for you at least. as you pressed your hand deeper into that big shaft, you felt it grab hold, tugging you deeper like an impatient child. You had only stuck your hand in up to your thumb, but with that tugging, you watched your whole wrist slip in without much resistance! You could feel quite a bit of lubrication in the shaft already, hinting at the Tigers arousal at the whole situation. “Aaah, There we go, getting nice and deep…” she chimed in from above, somewhat motivating you to go even deeper just to see how she would react! You gradually started pushing your whole arm down the shaft bringing your other hand around to stretch open your head even more and allow your right hand to slip inside... You felt a bit of resistance, but eventually the flesh yielded, and your other hand slid in just as easily,  wet slurping noises coming from the cock  as eagerly whatever you were willing to give it.
+	</text>
+	<choice destination="cockvore2" text="continue"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	with one arm elbow deep already and the other heading in that same direction, there was not much more that you could do besides wait, press, and watch. The flashing around your arms was certainly quite tight and hungry, constantly tugging and pulling you deeper, it wouldn't really be able to pull your whole body like that until It got some leverage on you. Deeper... You heard the tiger moan from above, reaching down underneath her skirt with a hand to press and push at the back of your head. The implication was clear, she wanted you to dive down that shaft, and fast!
+	</text>
+	<choice destination="cockvore3" text="Dive down the shaft"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	 you eagerly took the Tigers go ahead, taking in a deep breath as you continue to push your arms deeper. They were starting to tug on you more and more, and as the hungry shaft approached your shoulders, you knew you would have to make the Deep dive soon. You lower your head down, getting ready before pressing the top of your head against  that slurping cocktip. you felt its sweet fleshy embrace spreading across the top of your head, the flesh of her cock easily  expanding to take in more of you as you  pushed deeper into that ravenous tigerdick. Your vision went dark as the cock moved its way over your face, the squishing and slurping noises becoming a lot louder as they started to surround and Encompass your ears... this was it, there was no going back. As you felt that  familiar tug again, this time on your head, you knew that this would only end one way. 
+	</text>
+	<choice destination="cockvore4" text="continue"/>
+	</page>
+	
+	<page ID="cockvore4">
+	<text>
+	A cacophony of slurps and sucking noises dominated your hearing as the Tigers cock gobble you up, quickly pulling you in past your neck and sliding over your wide shoulders like they were nothing. The tiger was not in the business of hiding what she was doing from the public, loudly moaning and stroking at her length for all to see as the pleasure started to overwhelm her. As she got more and more aroused, her cock clenched harder and harder, sucking you deeper with every moan and stroke of her length. The tight embrace around you prevented you from doing anything with more than wiggling, but you still did just that, trying to push yourself as deep into this life as possible. As well, you knew that the more you wiggled, the more the tiger would get aroused... Her musk was strong, filling your lungs with every breath, only adding to the arousal you we're experiencing,Driving you to slide even further down the shaft. You felt your legs getting picked up off the ground as be hungry tigercock  pull you deeper, the Tight clenches feeling almost like Rippling swallows against your body…
+	</text>
+	<choice destination="cockvore5" text="continue"/>
+	</page>
+	
+	<page ID="cockvore5">
+	<text>
+	You were surprised to have your head poked out into her balls before your feet or even inside; but you certainly weren't complaining. The chamber was tight, stretchy, and had a serviceable amount of tiger jizz sloshing around at the bottom already, and you knew that amount would quickly increase... You could still feel the cock punching tight around your body, that warm, wet feeling spreading across your calves and ankles as your head and chest started to curl up in that tight sack.The walls held their own, but stretched surprisingly far to accommodate you; if a curious Patron was getting a peek at this lewd act, they could probably see every detail of your body as it continued to fill out the chamber!
+	</text>
+	<choice destination="cockvore6" text="get comfy"/>
+	</page>
+	
+	<page ID="cockvore6">
+	<text>
+	The tiger's tongue ruled out of her mouth as her powerful cock finished  packing you away, her drooling tip noisily schlurping up your feet as it continued to push you out into her sack. you could already feel the heat rising in your new home, and a tingling sensation was starting to soak into your legs, which were already immersed in a good amount of Tiger Cream. you wiggled and rubbed up against the walls that contained you, driving the aroused tiger even crazier as she rubbed and stroked at the bulges  you made in her shaft. “Fffuck, you are definitely going to make a great load~” she teased as she ran a paw over your ass, right before it slipped past the point of no return into her hefty, sloshing balls, which were already touching the floor ( and sagging noticeably against it, as well)! Any semblance of a discrete operation was completely lost at this point, the cat mewling in pleasure as the last of you  sunk into her loins, stroking and rubbing at herself in public, although still underneath the table, as if she cared about maintaining and appearance.
+
+	</text>
+	<choice destination="cockvore7" text="continue"/>
+	</page>
+	
+	<page ID="cockvore7">
+	<text>
+	You were hearing was mostly dominated with the bubbling, wet  noises of the sack around you, but not too soon after you were packed tight in her balls, you picked up a bit of a conversation outside. “ I know you're enjoying yourself, but try to keep it down... And don't make a mess.” a voice came from behind you, presumably the bartender at the establishment.the Tigers response rumbled and echoed around you: “Sorry ma’am... maybe you would like to  help me quiet down a little!~” she responded; you couldn't believe she was flirting with the bartender while you actively melted away inside of her!  thinking about the scenario though, you couldn't help but be aroused by the concept of being pumped into someone's womb or bowels... You probably wouldn't be conscious for it, though. speaking of being conscious, the chamber around you were starting to get a lot more active, and your strength was starting to fade as that tingling sensation continued…
+	</text>
+	<choice destination="cockvore8" text="blrrrbl"/>
+	</page>
+	
+	<page ID="cockvore8">
+	<text>
+	 Your last conscious moments were spent in a flurry of pleasure, as you felt your extremities starting to melt away into the Luscious pool of spunk you were bathing in. most of your body had started to become cum; at least, that was the best way you could describe having absolutely no feeling and then, considering more of your body was cum  than anything else at this point! as you enjoyed the sensation, and tiger outside played with herself and enjoyed the feeling of your body melting away, you couldn't help but find it harder to think about anything coherently. the difficulties increased until you slipped into unconsciousness, completely satisfied with the decision you have made to melt in this tiger…
+	</text>
+	<choice destination="cockvoreGO" text="burble"/>
+	</page>
+	
+	<gameover ID="cockvoreGO">
+	<text>
+	 Those of gravid balls made quite the loud, wet noise as the last of you was converted into pure,  potent tiger spunk.  “Oooh,you made so much..” the tiger noted as she reached a hand underneath her balls, feeling they're heavy sloshing in her grasp. Gosh, just touching that's swollen  chamber made her want to shoot it all out... But she knew from experience that cleaning up  these kinds of messages was an absolute pain. it would be better to let you simmer inside of her for a while, until she found a suitable playmate to pump all that cum into...
+	</text>
+	</gameover>
+	
+	<page ID="CTF0">
+	<text>
+		You didn't say anything in response to the Tigers question. You just opened up, slowly teasing the tip of her length with your tongue at first, hearing a soft moan from above. "Ooh, Good choice~" You heard her say as you started to take the head into your mouth, sliding your tongue Underneath the shaft and giving it a good tasting as you gradually slid more of it deeper into your maw. Your mouth made wonderful, wet sounds as you started to slurp along that cock, feeling it Harden even more and start to slowly a throb in your mouth as you gave it quite a lot of love, the back of your tongue raising up against that sensitive tip every now again and making the tiger squirm in arousal. it was clear that she was pent-up from her travels, and needed a bit of release...!
+	</text>
+	<choice destination="CTF1" text="continue"/>
+	</page>
+	
+	<page ID="CTF1">
+	<text>
+	You continued gobbling up that cock, your lips eventually making it all the way to her crotch and that dangling pair of balls. You slipped your tongue underneath to look at them a few times, feeling the shaft in your mouth continuing to throb harder and harder as you continue to working it over. "That's it...take it all~” the tiger huffed out between the moans as you went at her jewels, the Tigers starting to thrust as she got closer and closer to her climax. You weren't too keen on swallowing up everything that was about to come out of that cock, but as you felt her paws start to grab your head as she thrust it in, it was clearly not your choice anymore. You heard a primal growl from above as the Tiger climaxed, hot ropes of seed blasting against the back of your mouth and trickling down your throat, forcing you to make wet *glrk*s To avoid flooding your mouth out. you were right to Guess that she was pent-up, the kitty milk filling up your gut as it gradually slowed to a trickle, a huffing, blushing mess of a tiger a top you." Goodness, I needed that..." she said As the last of her load made its way to the back of your throat. "It's time for some real fun though~"	
+	</text>
+	<choice destination="CTF2" text="oh boy"/>
+	</page>
+	
+	<page ID="CTF2">
+	<text>
+	When the tiger said that you prepared yourself to be shoved into that shaft for a refill, but strangely, she didn't really do anything. Anything besides purr and gravel as she did... Something, anyway! Her cock was still firmly in your mouth, but for some reason it felt... Different. Almost gooey. after about a minute or so of this, you tried to pull her dick out of your jaw's to talk to her, but for some reason, you couldn't! It felt glued in there almost,Like if you tried to pull away from her crotch, it was coming with you! "Oh, wiggling won't do you any good down there, hon. I'm just taking a bit of you home with me~" she teased as she thrust her hips forward, practically spearing your head on her cock. At this point, you figured out that she was planning to add you directly to her length! Just as lovely and idea as being turned into spunk, although you wished that she told you about it directly…. 
+	</text>
+	<choice destination="CTF3" text="continue"/>
+	</page>
+	
+	<page ID="CTF3">
+	<text>
+		You could already feel the throbbing of her length starting to spread throughout your body, although it still continue to be the most intense in and around your mouth. it felt like it was draining your energy  in a way; although not  in a particularly unpleasant or painful way. Although you couldn't move, it felt  more like you just didn't want to; that you were enjoying yourself here, feeling that throbbing and that lust from the tiger slowly spreading  through you. the change over time was subtle, but you appreciated every little difference in how you felt as the tiger went about adding you to her length. you closed your eyes, or maybe you just couldn't see anymore, to take in all of those Sensations without any sort of distractions; relaxing and letting your whole being be absorbed into this amazing, delicious length. when the tiger reached down to stroke her length, you felt Her stroking you; and it felt divine. It felt like she cared about you, like she wanted  to please you, because that would ultimately end in her pleasing herself…
+	</text>
+		<choice destination="CTF4" text="continue"/>
+	</page>
+	
+	<page ID="CTF4">
+	<text>
+	You felt the tiger pick you up from underneath, hefting you up as she continued to absorb you into her length. It was all under the table, but even if anyone were to come by, it was perfectly willing; so they could do nothing about it, really. And you didn't want them to, anyway! Every throb that went through her cock resonated with you, made you feel gradually more whole, gave you intense pleasure. You wanted her to cum, so badly, to spurt her load right out through your mouth... You meant, her tip. Your mind had been starting to cloud with lust,And every throb and thrust just made it even more so…
+	</text>
+	<choice destination="CTF5" text="almost there"/>
+	</page>
+	
+	<page ID="CTF5">
+	<text>
+	“Nnnf,Almost all mine, hun~” you heard the tiger say, all around you, as you felt your Consciousness start to fog even more. You couldn't think about anything else other than being her cock, than throbbing and spurting and making a huge, Lovely Mess. Your whole body was tingling, especially when she rubbed over you. Every Touch of hers felt so intimate, so wonderful, and you simply begged for more…! Especially as you felt something that sliding over you. "sorry, just don't want to make a mess~" she said as you felt latex sliding over your body, wonderfully lubricated and everything. You didn't expect her to break in her new length in such a way, but at this point, everything just felt fantastic…!
+	</text>
+	<choice destination="CTF6" text="continue"/>
+	</page>
+	
+	<page ID="CTF6">
+	<text>
+	You were surprised she had the ability to slip that over her length, since you felt that cream surging out of her just a few seconds later. A sensation coursed through your entire body, spreading a wonderful tingling feeling throughout every single one of your atoms as it splooshed Out into the condom, shot after shot of Muskie Tiger Cream Stacking out the latex without much trouble. It felt indescribably fantastic to be merged with her length, Two Become One with her arousal and stimulation as she had quite an amazing orgasm. If you were still in your own body, you were certain that you would have shivered from the light at all these Sensations! it lasted for what felt like forever, shot after shot of hot jizz splurging out into that condom... It did taper off eventually, though, that condom almost touching the floor with how much it was sagging! You were bathing in the most intense Afterglow you could ever imagine;You couldn't even think of how the tiger felt.
+	</text>
+	<choice destination="CTFG0" text="nothing but tigerdick now"/>
+	</page>
+	
+	<gameover ID="CTFG0" noReform="true">
+	<text>
+	“Hhholy fuck... it was so hard to not cry out in pleasure during that!” she commented as she slipped the condom off of you, holding it up and looking at how much she had created. "Damn, I must have been pent-up~”  the tiger continued as she casually tossed the condom in a trash can, the world around you starting to go dark as she shuffled her panties and pants back up around her hips. You fell to her Pat at the Bulge you made in her loins, before  her voice came again. "I hope you'll enjoy being inches down there... I certainly know I will~”
+	</text>
+	</gameover>
+	
+</Conversation>

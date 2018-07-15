@@ -12,7 +12,8 @@ import org.lwjgl.util.vector.Matrix4f;
 
 public class NinePatch {
 
-	int m_VBO, m_VAO, m_VIO, m_indicecount, m_textureID;
+	int m_VBO, m_VAO, m_VIO, m_indicecount;
+	public int m_textureID;
 	Matrix4f m_matrix;
 	Vec2f m_pos;
 

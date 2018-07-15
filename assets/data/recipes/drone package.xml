@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<recipe name="drone package" requiredskill="1"
+	startunlocked="true">
+	<description>
+		Packaged parts for a drone. The drone assembled from it has no autonomous functions, it can only be used in concert with a ship module capable of remotely controlling it.
+	</description>
+	<ingredient item="scrap metal" quantity="2" />
+	<ingredient item="computation valve" quantity="1" />
+	<ingredient item="battery" quantity="1" />
+	<ingredient item="optics" quantity="2" />	
+<tokenRequirement item="roboticist" quantity="1" />	
+	<result item="drone package" />
+</recipe>

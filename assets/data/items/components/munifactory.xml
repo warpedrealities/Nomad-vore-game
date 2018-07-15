@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemWidget name="munifactory" weight="10" value="4-00">
+<ItemWidget name="munifactory" weight="10" value="800">
 	<description>This specialized miniature factory device produces handgun calibre bullets from scrap metal.. </description>
 	<placeditem widget="modules/munifactory" />
 </ItemWidget>

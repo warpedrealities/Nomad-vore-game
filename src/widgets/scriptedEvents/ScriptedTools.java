@@ -45,4 +45,9 @@ public class ScriptedTools {
 	{
 		return new ScriptPackage(spawn,death);
 	}
+	
+	public void startConversation(String conversation)
+	{
+		ViewScene.m_interface.StartConversation(conversation, null);
+	}
 }
