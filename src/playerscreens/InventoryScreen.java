@@ -216,6 +216,10 @@ public class InventoryScreen extends Screen implements Callback {
 		popupBig.update(DT);
 		if (m_dropdown.getVisible()==false)
 		{
+			if (!m_list.isActive())
+			{
+				m_list.setActive(true);
+			}
 			m_list.update(DT);
 			if (m_hook.buttonDown())
 			{
@@ -885,6 +889,7 @@ public class InventoryScreen extends Screen implements Callback {
 	public void Callback() {
 		if (m_dropdown.getVisible()==false)
 		{
+			m_list.setActive(false);
 			m_control=m_list.getSelect()+1;
 			GenDropDown();		
 		}

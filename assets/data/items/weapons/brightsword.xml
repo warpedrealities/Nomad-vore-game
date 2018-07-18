@@ -20,7 +20,7 @@
 	</combatMove>
 
 	<combatMove name="smite" pattern="MELEE" bonusAttribute="MELEE"
-		timeCost="2" ammoCost="1" actionCost="3" moveType="FIGHT">
+		timeCost="2" ammoCost="1" actionCost="5" moveType="FIGHT">
 		<effectDamage type="THERMAL" minValue="6" maxValue="14"
 			modifier="STRENGTH" />
 		<effectDamage type="KINETIC" minValue="6" maxValue="14"

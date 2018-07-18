@@ -29,9 +29,11 @@ public class List extends GUIBase implements Callback {
 	protected Vec2f m_size;
 	protected Callback m_callback;
 	protected Slider slider;
+	private boolean active;
 
 	public List(Vec2f position, int slots, int texture, int tint, Callback callback) {
 		m_callback = callback;
+		active=true;
 		m_tint = tint;
 		m_offset = 0;
 		m_delay = 0.2F;
@@ -52,6 +54,7 @@ public class List extends GUIBase implements Callback {
 	public List(Vec2f position, int slots, int texture, int tint, Callback callback, float width) {
 		m_callback = callback;
 		m_tint = tint;
+		active=true;
 		m_offset = 0;
 		m_delay = 0.2F;
 		m_select = 0;
@@ -74,6 +77,7 @@ public class List extends GUIBase implements Callback {
 		m_tint = tint;
 		m_offset = 0;
 		m_delay = 0.2F;
+		active=true;
 		m_select = 0;
 		if (genbackground == true) {
 			m_frame = new ConcertinaPatch(position, width, (slots * 0.8F) + 0.5F,0.8F, texture);
@@ -152,28 +156,38 @@ public class List extends GUIBase implements Callback {
 	
 	@Override
 	public boolean ClickEvent(Vec2f pos) {
+		if (active)
+		{
+			if (m_strings != null) {
+				// figure out position
+				if (pos.x > m_corner.x && pos.x < m_corner.x + (m_size.x * 0.7F)) {
+					if (pos.y > m_corner.y && pos.y < m_corner.y + m_size.y) {
 
-		if (m_strings != null) {
-			// figure out position
-			if (pos.x > m_corner.x && pos.x < m_corner.x + (m_size.x * 0.7F)) {
-				if (pos.y > m_corner.y && pos.y < m_corner.y + m_size.y) {
+						// get distance from the top
+						float ytop = m_corner.y + m_size.y - 0.5F;
+						float yd = ytop - pos.y;
+						yd = yd / 0.8F;
+						if ((int) yd + m_offset < m_strings.length) {
+							m_select = (int) yd + m_offset;
+							if (m_callback != null) {
+								m_callback.Callback();
 
-					// get distance from the top
-					float ytop = m_corner.y + m_size.y - 0.5F;
-					float yd = ytop - pos.y;
-					yd = yd / 0.8F;
-					if ((int) yd + m_offset < m_strings.length) {
-						m_select = (int) yd + m_offset;
-						if (m_callback != null) {
-							m_callback.Callback();
-
+							}
 						}
 					}
 				}
-			}
+			}			
 		}
 
 		return false;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	@Override

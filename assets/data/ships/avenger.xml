@@ -105,7 +105,7 @@
 
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="modules/interplanetary reactor">
-					<resource type="FUEL" value="50" />
+					<resource type="FUEL" value="150" />
 				</contains>
 			</placeWidget>
 

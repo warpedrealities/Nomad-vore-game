@@ -480,7 +480,6 @@ public class Player_RPG implements Actor_RPG {
 		attributes[PERSUADE]=getAbilityMod(INTELLIGENCE);
 		attributes[WILLPOWER]=getAbilityMod(INTELLIGENCE);
 		attributes[SCIENCE]=getAbilityMod(INTELLIGENCE);
-		attributes[WILLPOWER]=getAbilityMod(INTELLIGENCE);
 		attributes[TECH]=getAbilityMod(INTELLIGENCE);
 		attributes[LEADERSHIP]=1;
 		attributes[PERCEPTION]=getAbilityMod(INTELLIGENCE);

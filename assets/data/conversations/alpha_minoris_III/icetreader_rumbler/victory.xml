@@ -45,7 +45,7 @@
 	You hear her growl and grunt in pleasure over you. Her massive balls slapping against your thighs and asscheeks each time she hilts her cock through you, her pace vigorous. Your insides stretched and your rear end sore from the perverse and thorough use she put you through you would sigh in relief if able as you feel her cock throb and pulse finally. Her orgasm sending cum jetting first out of her tip, then from your lips as she starts to pull back and draw her cocktip through your abused innards. Her third massive spurt surges up your throat to spill through your mouth and nose and her following wads of seed are pumped deep into your belly as she draws out of you. Finally her cock pops free leaving you to gasp and whimper on the ground underneath her as she rumbles in pleasure and glances down at you laying there leaking her seed into the puddle that surrounds you.
 	</text>
 	<choice destination="oralvore0" text="*and then she eats you*"/>
-	<!-- <choice destination="cockvore0" text="*first you around it, then it around you*"/>	 -->
+	<choice destination="cockvore0" text="*first you around it, then it around you*"/>	
 	</page>
 	
 	<page ID="fuck2B">
@@ -53,15 +53,84 @@
 	The thrusting motions of the taur soon reach a merciful crescendo, that throbbing cock pulsing and splattering your innards with hot seed. Each pulsing ripple of her length felt intimately through your over stretched innards until she's spent and pulls out of your gaping stretched rear end. Her cocktip oozing out a splat of goo onto the slurry of molten snow under your well fucked ass as you hear her purring in satisfaction and shifting her position over you.
 	</text>
 	<choice destination="oralvore0" text="*and then she eats you*"/>
-	<!-- <choice destination="cockvore0" text="*and then she puts you in it*"/> -->
+	<choice destination="cockvore0" text="*and then she puts you in it*"/>
 	</page>
 	
 	<page ID="cockvore0">
 	<text>
+	The icetreader's paws pin you in place as she moves around you. Her weight forcing you down into the snow for a few uncomfortable moment before you suddenly feel a gooey hot tunnel entrapping your feet. The rumbler letting out a pleased growl as her cocktip schlurps up around your feet. In mere moments you attempt to pull your feet back out of her cock, only to find her thrust forwards and tug you in with powerful ripples of her cock to the point where you only end up sliding deeper. Your legs vanishing a few feet into her cock in one smooth voracious movement of hers. It seems the snow bound kitty taur intends to turn you into creamy callbatter.
+	</text>
+	<choice destination="cockvore1" text="*doomed to be a refill*"/>
+	</page>	
 	
+	<page ID="cockvore1">
+	<text>
+	The beast growls and groans in pleasure as she schlorps you deeper into her cock. With her paw on your chest pinning you down and her shaft rippling and stretching around you with each thrust of her powerful hindquarters. More of you encompassed with each schlurp and pulled deeper into her cock and further under her under body. She lifts her paw up off your chest and sets it back down in the snow. This does not free you however as her cock wrapped around your waist at this point is far too strong to escape. Her grunts as she clenches and tugs you deeper in despite your efforts to escape and pull free continuing without hesitation as you prove yourself utterly incapable of slowing her down. Her shaft working up towards your head and shoulders, soon you'll be drawn entirely into her balls and you know too well what will happen to you in there.
+	</text>
+	<choice destination="cockvore2" text="*cockfood, despite your resistance*"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	Your hands go to her cocktip to try and stop her schlurping you up entirely, but she just mhmms and then snorts in pleasure and amusement as you fail to get a grip on the spongey slick cocktip and find yourself plunging inside entirely. Your hands the last to vanish into the rumbler's cock as you are surrounded by her heat and seed and pile into her sack helplessly. The taur rumbling in pleasure as you're crammed into her balls, your curled up form making them sag low and press against her hindlegs in a way she seemingly enjoys a great deal judging by her shifting posture and the burbles of her cum around you.
+	</text>
+	<choice destination="cockvorePleasure" text="*try to pleasure her into letting you go*"/>
+	<choice destination="cockvoreSubmit" text="*submit to being ballbatter*"/>
+	</page>
+	
+
+	<check ID="cockvorePleasure">
+		<test what="PLEASURE" DC="17" />
+		<outcome destination="cockvoreEscape" />
+		<outcome destination="cockvoreDigest" />
+	</check>	
+		
+	<page ID="cockvoreEscape">
+	<text>
+	Being a splatter of cooling spunk amidst the snow is not on your todolist for your visit to this planet. Now you just need to figure out a way out of here, judging by the way she's settled onto her haunches and her forepaws are busy above you plus her groans and growls of pleasure you might be able to get out by hurrying along her orgasm. Best work fast though as you feel her cum churning around you already. With no time to lose you set to work, kneading and stroking and rubbing at the inside of her sack. Her balls bobbing and bulging with your motions as her growls get notably deeper and more lustful, her paws more vigorous running up and down her cock until with a roar she climaxes. Your form blasting up through her cock whole and solid to land in a splatter of seed and be hosed down with the rest of her orgasm. Might want to back up before she recovers, that and you really should find a towel.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />		
+	</page>
+	
+	<page ID="cockvoreDigest">
+	<text>
+	Being a splatter of cooling spunk amidst the snow is not on your todolist for your visit to this planet. Now you just need to figure out a way out of here, judging by the way she's settled onto her haunches and her forepaws are busy above you plus her groans and growls of pleasure you might be able to get out by hurrying along her orgasm. Best work fast though as you feel her cum churning around you already. With no time to lose you set to work, kneading and stroking and rubbing at the inside of her sack. Her balls bobbing and bulging with your motions as her growls get notably deeper and more lustful, her paws more vigorous running up and down her cock as you writhe in her churning seed. Her sack kneading back around you, helping her cum permeate your being. And gradually those bulges and jostles of her balls round out as you melt down into gooey spunk. Despite your efforts you could not escape her desire to melt you down, sloshing in the balls of the lusty kitty taur your last conscious thoughts focus on what will inevitably happen next...
+	</text>
+	<choice destination="cockvoreDigestGO" text="her climax"/>
+	</page>
+	
+	<gameover ID="cockvoreDigestGO">
+	<text>
+	Your escape from her cock was as you had envisioned, but not as you'd hoped. Her cock erupting as she lets out a roar, her climax sending your gooey remains splattering out into the open air. A thick gooey puddle of steaming jizz forming in front of her as her ejaculation goes on and on and she drains you out of her balls. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				Your 
+				<readequipment slot="2" />
+				landing in a goopy heap amidst the mess she's made.
+			</conditional> As her orgasm tapers off and the last of jizz splatter out onto the puddle she settles back onto all fours and takes a satisfied sniff. Her musky smells permeating the air as the cooling puddle melts the snow around it.
+	</text>
+	</gameover>
+	
+	<page ID="cockvoreSubmit">
+	<text>
+	After the thorough fucking she'd put you through the feeling of marinating in her hot cum can't be called unwelcome. The gooey warmth starting to soak through you soothes the roughness of her treatment even as it softens your body and makes you more and more a creamy mass inside of her balls. The icetreader lets out a rumbling purr of pleasure as her balls steadily go from lumpy to round. Your form eased of all tension just melting away into a load of her cum as she strokes along her shaft almost leisurely. The icetreader masturbating to your liquidation inside of her.
+	</text>
+	<choice destination="cockvoreSubmitGO" text="blorp"/>
+	</page>
+	
+	<gameover ID="cockvoreSubmitGO">
+	<text>
+	It seems that you were destined to serve her base desires in more than one way. The icetreader strokes off more vigorously, growing as she uses her forepaws to masturbate her massive shaft into which you'd vanished and from which you soon emerge. The voracious cock erupting as she roars out in pleasure and sends you splattering out into the open air. A thick gooey puddle of steaming jizz forming in front of her as her ejaculation goes on and on and she drains you out of her balls. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				Your 
+				<readequipment slot="2" />
+				landing in a goopy heap amidst the mess she's made.
+			</conditional> As her orgasm tapers off and the last of jizz splatter out onto the puddle she settles back onto all fours and takes a satisfied sniff. Her musky smells permeating the air as the cooling puddle melts the snow around it.
 	</text>
 	
-	</page>	
+	</gameover>
+	
 	
 	<page ID="oralvore0">
 	<text>

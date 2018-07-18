@@ -32,7 +32,13 @@
 	<inventoryitem name="dissipator band" probability="50"
 		quantity="2" />	
 	<inventoryitem name="dissipator band" probability="50"
-		quantity="1" />				
+		quantity="1" />		
+	<inventoryitem name="bullets" probability="100"
+		quantity="5" />	
+	<inventoryitem name="bullets" probability="50"
+		quantity="5" />		
+	<inventoryitem name="bullets" probability="50"
+		quantity="5" />				
 	<inventoryitem name="hazard jacket" probability="100"
 		quantity="1" />	
 	<inventoryitem name="hazard jacket" probability="50"

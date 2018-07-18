@@ -34,7 +34,7 @@
 				<row>11211 0 11211</row>
 				<row>01111 0 11110</row>				
 			</prefab>
-			<pairedportal x="5" y="6" sprite="1" ID="-101" facing="0">
+			<pairedportal x="5" y="6" sprite="1" ID="-101" facing="4">
 				Exterior hatch </pairedportal>
 			<placeWidget x="5" y="1" name="slot" />
 			<placeWidget x="4" y="1" name="slot" />

@@ -131,10 +131,14 @@ public class ContainerScreen extends Screen implements Callback {
 			if (ItemStack.class.isInstance(player.getInventory().getItem(index)))
 			{
 				ItemStack stack=(ItemStack)player.getInventory().getItems().get(index);
-				player.getInventory().setWeight(player.getInventory().getWeight()-stack.getWeight());
-				player.getInventory().getItems().remove(index);
-				//add to container inventory
-				container.addStack(stack);
+				if (stack.getWeight()<container.getMaxWeight()-container.getContainedWeight())
+				{
+					player.getInventory().setWeight(player.getInventory().getWeight()-stack.getWeight());
+					player.getInventory().getItems().remove(index);
+					//add to container inventory
+					container.addStack(stack);		
+				}
+
 			}
 			else
 			{

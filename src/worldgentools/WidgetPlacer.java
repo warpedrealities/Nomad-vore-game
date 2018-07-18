@@ -78,7 +78,7 @@ public class WidgetPlacer {
 				if (node.getNodeType() == Node.ELEMENT_NODE) {
 					Element Enode = (Element) node;
 
-					if (Enode.getTagName().equals("loot table")) {
+					if (Enode.getTagName().equals("lootTable")) {
 						LootTable lootTable=new LootTable(Enode);
 						List<Item> items= lootTable.generateLoot();
 						for (int j=0;j<items.size();j++)

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <Station numDocks="1">
 	<entitysprite filename="derelict_0" size="1.0" />
-	<zone x="0" y="0" surface="0">derelictShip</zone>
+	<zone x="0" y="0" surface="0">derelict_Ship</zone>
 </Station>
