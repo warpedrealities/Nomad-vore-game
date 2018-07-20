@@ -23,9 +23,9 @@
 		<attribute attribute="DODGE" value="2" />
 		<combatMove name="display" pattern="RANGED" bonusAttribute="SEDUCTION"
 			timeCost="2" bonusToHit="-2">
-			<effectDamage type="TEASE" minValue="0" maxValue="3"
+			<effectDamage type="TEASE" minValue="1" maxValue="3"
 				modifier="CHARM" />
-			<effectDamage type="PHEREMONE" minValue="0" maxValue="3"
+			<effectDamage type="PHEREMONE" minValue="1" maxValue="3"
 				modifier="CHARM" />
 			<missText count="1">
 				<text>The gold raptor's display fails to arouse TARGET</text>

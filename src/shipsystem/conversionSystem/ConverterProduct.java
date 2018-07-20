@@ -172,6 +172,10 @@ public class ConverterProduct {
 	private void addOutput(SpaceshipStats stats, int time, float proportion) {
 		SpaceshipResource resource=stats.getResource(outputResource);
 		resource.setResourceAmount(resource.getResourceAmount()+proportion);
+		if (resource.getResourceAmount()>resource.getResourceCap())
+		{
+			resource.setResourceAmount(resource.getResourceCap());
+		}
 	}
 
 	private void subtractResources(SpaceshipStats stats, int time,float proportion) {

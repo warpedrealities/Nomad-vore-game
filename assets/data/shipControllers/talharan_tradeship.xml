@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<controller>
+	<faction value="talharan" />
+	<systemEntry value="talharan_tradeship/talharan_trader_1Entry" />
+	<contact value="talharan_tradeship/talharan_trader_1Contact" />
+	<ai value="talharan_tradeship/talharan_trader_1Ai" />
+	<combat value="talharan_tradeship/talharan_trader_1Combat" />
+	<victory value="talharan_tradeship/talharan_trader_1Victory" />
+	<loss value="talharan_trader_0Loss" />
+	<experienceReward value="200" />	
+</controller>

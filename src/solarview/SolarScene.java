@@ -69,6 +69,8 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 				Vec2f v=new Vec2f(x,y); v.normalize();
 				v.x*=24;
 				v.y*=24;
+				v.x=(int)v.x;
+				v.y=(int)v.y;
 				spaceship.setPosition(v);
 				spaceship.setWarpHandler(null);
 				return true;

@@ -76,6 +76,7 @@
 				<noise tile="7" scarcity="22" />
 				<floodfill tile="2">
 					<SeedNPCs min="8" max="16" name="Alpha_Minoris_IIA/fawn"/>
+					<!-- <SeedNPCs min="8" max="16" name="Alpha_Minoris_IIA/atomotron"/>		 -->
 				</floodfill>
 			</band>
 			<band low="0.0" high="0.1">

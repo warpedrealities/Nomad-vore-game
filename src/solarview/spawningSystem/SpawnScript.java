@@ -17,13 +17,14 @@ import nomad.Entity;
 public class SpawnScript {
 	private Globals m_globals;
 	private LuaValue m_script;
-
+	private String filename;
+	
 	public SpawnScript(Element e) {
 		m_globals = JsePlatform.standardGlobals();
-		String file=e.getAttribute("script");
+		filename=e.getAttribute("script");
 		try {
-			m_script = m_globals.load(new FileReader("assets/data/systems/spawnScripts/" + file + ".lua"), "main.lua");
-
+			m_script = m_globals.load(new FileReader("assets/data/systems/spawnScripts/" + filename + ".lua"), "main.lua");
+			
 		} catch (FileNotFoundException exception) {
 
 			exception.printStackTrace();
@@ -45,6 +46,7 @@ public class SpawnScript {
 				System.out.println("Lua function not found");
 			}
 		} catch (LuaError e) {
+			System.out.println("filename:"+filename);
 			e.printStackTrace();
 		}	
 	}

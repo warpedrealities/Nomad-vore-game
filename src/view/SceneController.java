@@ -54,11 +54,14 @@ public class SceneController implements Sense {
 
 	@Override
 	public boolean CanWalk(int x, int y) {
-		if (activeZone.getTiles()[x][y] != null) {
-			if (activeZone.getTiles()[x][y].getDefinition().getMovement() == TileDef.TileMovement.WALK) {
-				return true;
-			}
+		if (activeZone.contains(x, y))
+		{
+			if (activeZone.getTiles()[x][y] != null) {
+				if (activeZone.getTiles()[x][y].getDefinition().getMovement() == TileDef.TileMovement.WALK) {
+					return true;
+				}
 
+			}		
 		}
 		return false;
 	}

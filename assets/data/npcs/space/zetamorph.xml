@@ -24,7 +24,7 @@
 		<attribute attribute="THERMAL" value="12" />
 		<combatMove name="cuisinart" pattern="MELEE"
 			bonusAttribute="MELEE" timeCost="2" bonusToHit="2" threatening="true">
-			<effectDamage type="KINETIC" minValue="0" maxValue="7"
+			<effectDamage type="KINETIC" minValue="1" maxValue="7"
 				modifier="STRENGTH" />
 			<missText count="3">
 				<text>the lash of the zetamorph's tail fails to connect with TARGET</text>

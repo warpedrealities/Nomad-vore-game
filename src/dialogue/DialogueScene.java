@@ -45,7 +45,7 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 		m_textureIds[1] = Tools.loadPNGTexture("assets/art/textWindow.png", GL13.GL_TEXTURE0);
 		m_textureIds[2] = Tools.loadPNGTexture("assets/art/spritesheet.png", GL13.GL_TEXTURE0);
 		m_textureIds[4] = Tools.loadPNGTexture("assets/art/window.png", GL13.GL_TEXTURE0);
-		m_textureIds[5] = Tools.loadPNGTexture("assets/art/widgets.png", GL13.GL_TEXTURE0);
+		m_textureIds[5] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);
 		m_textureIds[6] = Tools.loadPNGTexture("assets/art/bars.png", GL13.GL_TEXTURE0);
 		m_textureIds[7] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
 		m_textureIds[8] = Tools.loadPNGTexture("assets/art/button1.png", GL13.GL_TEXTURE0);
@@ -135,7 +135,7 @@ public class DialogueScene extends SceneBase implements Callback,Scene_Int {
 		values[2] = m_textureIds[7];
 		values[3] = m_textureIds[8];
 		values[4] = m_variables[0];
-		values[3] = m_textureIds[9];
+		values[5] = m_textureIds[9];
 		if (screen!=null)
 		{
 			screen.initialize(values, this);

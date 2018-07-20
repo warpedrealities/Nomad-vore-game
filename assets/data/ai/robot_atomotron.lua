@@ -103,7 +103,7 @@ function main(controllable, sense, script)
 	hostile=sense:getHostile(controllable,10,true)
 	if not (hostile == nil ) then
 	--combat ai here
-
+		combat(controllable,sense, hostile)
 	else
 		if (controllable:getFlag("subverted")==1) then
 			friend(controllable,sense)

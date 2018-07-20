@@ -31,5 +31,5 @@
 	<flying />
 	<talk conversation="freehaven/TigerTourist/chat" />		
 	<controller AI="staystill" />
-	<faction value="freehaven_civilian" />
+	<faction value="freehaven_civilians" />
 </Harpy>

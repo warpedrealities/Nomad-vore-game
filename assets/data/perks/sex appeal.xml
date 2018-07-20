@@ -14,6 +14,6 @@
 				modifier="CHARM" rangeDecay="0.5" />
 		</change>
 	</moveModifier>
-	<maxrank value="2" />
+	<maxrank value="1" />
 
 </perk>

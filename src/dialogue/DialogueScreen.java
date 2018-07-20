@@ -80,7 +80,7 @@ public class DialogueScreen extends Screen implements Callback {
 		portraitImage = new Image(new Vec2f(-20, -1), new Vec2f(23, 17), "assets/art/portraits/test.png");
 		portraitImage.setVisible(false);
 
-		m_stagnation = 0;
+		m_stagnation = 0.5F;
 
 		choiceLoader = new ChoiceLoader();
 		choiceHandler = new ChoiceHandler(new Vec2f(4, 15.5F), tint, this);
