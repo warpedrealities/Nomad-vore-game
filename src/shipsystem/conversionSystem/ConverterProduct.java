@@ -76,12 +76,14 @@ public class ConverterProduct {
 		float proportion=calcProportionOfUnit(time);
 		
 		time=calcCapacityConstraint(stats,time,proportion);
-		
+
 		for (int i=0;i<inputs.size();i++)
 		{
+			proportion=calcProportionOfUnit(time);
 			time=inputs.get(i).calcResourceConstraint(stats, time, proportion);
 		}
 		return time;
+
 	}
 	
 	private int calcCapacityConstraint(SpaceshipStats stats, int time, float proportion) {
@@ -93,7 +95,7 @@ public class ConverterProduct {
 		else
 		{
 			float adjusted=proportion/freeCapacity;
-			time=(int) (time*adjusted);
+			time=(int) (time/adjusted);
 		}
 		
 		return time;

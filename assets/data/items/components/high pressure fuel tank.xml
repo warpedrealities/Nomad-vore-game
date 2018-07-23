@@ -2,5 +2,5 @@
 <ItemWidget name="high pressure fuel tank" weight="10" value="3000">
 	<description>High pressure fuel containment system. A place to store fuel to make it
 		available to the ship's engines. Can contain up to 300 units of fuel. </description>
-	<placeditem widget="modules/fueltank" />
+	<placeditem widget="modules/high pressure fuel tank" />
 </ItemWidget>

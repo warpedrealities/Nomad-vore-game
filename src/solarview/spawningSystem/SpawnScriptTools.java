@@ -73,7 +73,7 @@ public class SpawnScriptTools {
 			if (Spaceship.class.isInstance(entitiesInSystem.get(i)))
 			{
 				Spaceship s=(Spaceship)entitiesInSystem.get(i);
-				if (s.getShipController()!=null && s.getShipController().getFaction().getFilename().equals("faction"))
+				if (s.getShipController()!=null && s.getShipController().getFaction().getFilename().equals(faction))
 				{
 					count++;
 				}

@@ -4,6 +4,7 @@ import input.MouseHook;
 import nomad.universe.Universe;
 
 import java.nio.FloatBuffer;
+import java.util.Queue;
 
 import gui.Button;
 import gui.Text;
@@ -34,10 +35,11 @@ public class SolarGUI {
 
 	Text globalPosition;
 	Text messages;
+	Queue<String> messageQueue;
 	
-	public SolarGUI() {
+	public SolarGUI(Queue<String> messageQueue) {
 		m_GUImatrix = Game.sceneManager.getConfig().getMatrix();
-
+		this.messageQueue=messageQueue;
 
 		setupTextures();
 
@@ -81,7 +83,7 @@ public class SolarGUI {
 		globalPosition = new Text(new Vec2f(0.2F, 3.5F),
 				"X:" + playerShip.getPosition().x + " Y:" + playerShip.getPosition().y, 0.8F, 0);
 		window.add(globalPosition);
-		messages = new Text(new Vec2f(-15.2F, 0.2F),"", 0.8F, 0);
+		messages = new Text(new Vec2f(-15.2F, 0.2F),"", 0.6F, 0);
 
 		window.add(messages);
 		
@@ -133,7 +135,15 @@ public class SolarGUI {
 		}		
 		else
 		{
-			messages.setString("");
+			if (messageQueue.isEmpty())
+			{
+				messages.setString("");		
+			}
+			else
+			{
+				messages.setString(messageQueue.poll());	
+			}
+
 		}
 	}
 

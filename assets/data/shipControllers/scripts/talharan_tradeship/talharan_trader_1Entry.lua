@@ -7,7 +7,7 @@ end
 function main(script,sense)  
 
 
-	pirates = sense:getDetection():getSpawnScriptTools():countFaction("pirates")
+	pirates = sense:getDetection():getSpawnScriptTools():countFaction("pirate")
 	if (pirates > 0) then
 		script:removeShip()
 	else

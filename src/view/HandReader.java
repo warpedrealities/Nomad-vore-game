@@ -102,8 +102,12 @@ public class HandReader extends GUIBase {
 			slot++;
 		} else {
 			// write new piecemeal assembler
-			index = name.indexOf(" ", 20);
-
+			index = name.indexOf(" ", (name.length()/2)-1);
+			if (index==-1)
+			{
+				index=name.indexOf(" ",0);
+			}
+			index++;
 			m_fonts[slot].setString(name.substring(0, index));
 			slot++;
 			m_fonts[slot].setString(name.substring(index, name.length()));

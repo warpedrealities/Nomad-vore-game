@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<hazards>
+<resourceCost resource="FUEL" min="1" max="50">
+Extensive damage to the ship has resulted in a rupture in the fuel handling system, VALUE fuel has been lost
+</resourceCost>
+<resourceCost resource="ENERGY" min="1" max="100">
+heavy damage to the ship has brought about an uncontrolled power discharge, VALUE energy has been lost
+</resourceCost>
+<injury min="1" max="12">
+<description>
+Depressurization has resulted from the ships poor condition, you suffer VALUE damage from oxygen deprivation
+</description>
+<gameover>
+Depressurization has resulted from the ships poor condition, you do not survive
+</gameover>
+</injury>
+
+</hazards>

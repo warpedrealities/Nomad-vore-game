@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemResource name="repair kit" weight="1" value="300">
+	<description>A specialist toolset for repairing hull damage to spacecraft.</description>
+
+</ItemResource>

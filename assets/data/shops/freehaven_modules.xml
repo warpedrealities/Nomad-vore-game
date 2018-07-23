@@ -19,5 +19,8 @@
 	<inventoryitem name="high pressure fuel tank" probability="50"
 		quantity="1" />	
 	<inventoryitem name="high pressure fuel tank" probability="50"
-		quantity="1" />			
+		quantity="1" />	
+	<inventoryitem name="repair kit" probability="100"
+		quantity="5" />
+	<inventoryitem name="repair kit" probability="50" quantity="5" />			
 </shop>

@@ -42,5 +42,7 @@
 	<inventoryitem name="spacebar" probability="100"
 		quantity="5" />
 	<inventoryitem name="spacebar" probability="50" quantity="5" />
-
+	<inventoryitem name="repair kit" probability="100"
+		quantity="5" />
+	<inventoryitem name="repair kit" probability="50" quantity="5" />	
 </shop>

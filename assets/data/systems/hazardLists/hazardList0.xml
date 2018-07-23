@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<hazards>
+<resourceCost resource="FUEL" min="1" max="10">
+Hull damage has left the ship prone to fuel leaks, VALUE fuel has been lost
+</resourceCost>
+<resourceCost resource="ENERGY" min="1" max="25">
+Damage to the ship has caused a short circuit to develop, VALUE energy has been lost
+</resourceCost>
+<injury min="1" max="12">
+<description>
+The ship's damaged state resulted in an air leak, you suffer VALUE damage from oxygen deprivation
+</description>
+<gameover>
+The ship's damaged state resulted in an air leak, you have succumbed to oxygen starvation
+</gameover>
+</injury>
+</hazards>

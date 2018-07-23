@@ -23,8 +23,8 @@
 			<row>34343</row>	
 			<row>34343</row>	
 			<row>33333</row>			
-				<pairedportal x="2" y="2" sprite="3" ID="16"
-					destination="Avian Village" facing="0"> a descending walkway </pairedportal>
+				<pairedportal x="2" y="2" sprite="3" ID="15"
+					destination="Avian Village" facing="0"> an ascending walkway </pairedportal>
 		</prefab>	
 		<partition xmin="16" xmax="48" ymin="16" ymax="48">
 			<randprefab width="11" height="11">

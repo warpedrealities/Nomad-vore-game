@@ -3,7 +3,7 @@
 	<description>
 	An ancient seraphic weapon resurrected for your use. The completed weapon is capable of generating a devastating aura of energy around the blade capable of inflicting even more damage.
 	</description>
-	<ingredient item="Brightsword(unfinished)" quantity="1" />
+	<ingredient item="Brightsword (incomplete)" quantity="1" />
 	<ingredient item="flux capacitor" quantity="1" />	
 	<ingredient item="computation valve" quantity="1" />		
 	<ingredient item="battery" quantity="3" />		

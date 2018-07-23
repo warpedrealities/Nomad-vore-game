@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="black_zetamorph.png" />
+	<name>Black Zetamorph</name>
+	<description>An imposing yet sexy humanoid figure standing seven feet
+		tall, with her secondary set of arms adding another 2-3 feet atop
+		that. Her skin is coal or void black seeming to drink in the light.
+		Her secondary arms are tipped in razor sharp claws while smaller but
+		no less lethal claws adorn her fingers and toes. Behind her a
+		segmented tail covered in gleaming black carapace shifts restlessly
+		bearing a long blade at its tip. Her feminine curves are accentuated
+		in places by additional segments of armoured carapace, as black as her
+		skin but unlike that voidlike smooth softness her natural armour
+		gleams and glints reflecting the light off its hard surfaces.</description>
+	<rpg>
+		<experiencevalue value="80" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="80" />
+		<stat stat="RESOLVE" value="50" />
+
+		<attribute attribute="PARRY" value="6" />
+		<attribute attribute="THERMAL" value="24" />
+		<combatMove name="cuisinart" pattern="MELEE"
+			bonusAttribute="MELEE" timeCost="2" bonusToHit="6" threatening="true">
+			<effectDamage type="KINETIC" minValue="3" maxValue="9"
+				modifier="STRENGTH" />
+			<missText count="3">
+				<text>the lash of the black zetamorph's tail fails to connect with
+					TARGET</text>
+				<text>a chain of the black zetamorph's claw swipes with all four
+					arms is evaded by TARGET</text>
+				<text>a devastating kick from the black zetamorph fails to connect
+					with TARGET</text>
+			</missText>
+			<hitText count="5">
+				<text>the black zetamorph whirls and her tail slashes TARGET for
+					VALUE damage</text>
+				<text>the black zetamorph slashes TARGET with her claws for VALUE
+					damage</text>
+				<text>the black zetamorph kicks TARGET with a clawed foot for VALUE
+					damage</text>
+				<text>the black zetamorph unleashes a devastating flurry of blows on
+					TARGET for VALUE damage</text>
+				<text>the black zetamorph manages to clutch TARGET and rake them
+					with the claws of both arms on one side for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="web" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="6">
+			<missText count="1">
+				<text>The black zetamorph launches webbing at TARGET but fails to
+					hit</text>
+			</missText>
+			<hitText count="1">
+				<text>The black zetamorph hits TARGET with webbing </text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is now trapped by webbing.</applyText>
+				<statusBind uid="20" icon="4" numModifiers="2">
+					<removeText> TARGET has escaped from the webbing.</removeText>
+					<effect attribute="RANGED" modifier="-2" />
+					<effect attribute="MELEE" modifier="-2" />
+					<bind strength="15" originDependent="true" />
+					<struggle count="2">
+						<text>TARGET struggles to try and get out of the webbing
+						</text>
+						<text>TARGET tries to get out of the webbing to no avail
+						</text>
+					</struggle>
+				</statusBind>
+
+			</effectStatus>
+		</combatMove>
+	</rpg>
+	<defeated conversation="space/black_zetamorph/defeat" />
+	<seduced conversation="space/black_zetamorph/seduced" />
+	<victory conversation="space/black_zetamorph/victory" />
+	<seducer conversation="space/black_zetamorph/victory" />
+	<controller AI="black_zetamorph_AI" />
+	<faction value="monster" />
+</NPC>

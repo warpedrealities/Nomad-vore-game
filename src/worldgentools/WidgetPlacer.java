@@ -213,7 +213,12 @@ public class WidgetPlacer {
 	}
 
 	private Widget genHullDamage(Element enode) {
-		WidgetDamage widget = new WidgetDamage(Integer.parseInt(enode.getAttribute("value")));
+		boolean exterior=false;
+		if ("true".equals(enode.getAttribute("exterior")))
+		{
+			exterior=true;
+		}
+		WidgetDamage widget = new WidgetDamage(Integer.parseInt(enode.getAttribute("value")),exterior);
 		return widget;
 	}
 

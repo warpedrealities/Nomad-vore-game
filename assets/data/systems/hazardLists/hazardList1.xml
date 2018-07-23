@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<hazards>
+<resourceCost resource="HULL" min="1" max="20">
+Your ship's weakened spaceframe groans under stress, a further VALUE hull points are lost
+</resourceCost>
+<invasion count="2">
+<description>
+Due to your ships hull damage...something, has made it aboard
+</description>
+<npc file="space/hazards/black_zetamorph"/>
+<npc file="space/hazards/black_zetamorph"/>
+</invasion>
+<invasion count="3">
+<description>
+Due to your ships hull damage...something, has made it aboard
+</description>
+<npc file="space/hazards/zetamorph"/>
+<npc file="space/hazards/zetamorph"/>
+<npc file="space/hazards/zetamorph"/>
+</invasion>
+</hazards>

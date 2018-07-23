@@ -53,7 +53,7 @@ public class ProductInput {
 		else
 		{
 			float adjusted=rUse/resource;
-			time=(int) (time*adjusted);				
+			time=(int) (time/adjusted);				
 		}
 		return time;
 	}

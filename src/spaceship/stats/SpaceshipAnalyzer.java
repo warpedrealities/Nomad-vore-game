@@ -199,8 +199,8 @@ public class SpaceshipAnalyzer {
 		}
 		// get all hull damage
 		ArrayList<WidgetDamage> damage = new ArrayList<WidgetDamage>();
-		int accounteddamage = 0;
-		int statdamage = (int) ((int) stats.getResource("HULL").getResourceCap()
+		int hullDamage = 0; int systemDamage= 0;
+		int statDamage = (int) ((int) stats.getResource("HULL").getResourceCap()
 				- stats.getResource("HULL").getResourceAmount());
 		for (int i = 0; i < ship.getZone(0).getWidth(); i++) {
 			for (int j = 0; j < ship.getZone(0).getHeight(); j++) {
@@ -238,23 +238,23 @@ public class SpaceshipAnalyzer {
 						}
 					}
 					if (t.getWidgetObject().getClass().getName().contains("WidgetDamage")) {
-						damage.add((WidgetDamage) t.getWidgetObject());
-						accounteddamage += ((WidgetDamage) t.getWidgetObject()).getDamageValue();
+						WidgetDamage d=(WidgetDamage) t.getWidgetObject();
+						damage.add(d);
+						if (d.isExterior()) {
+							hullDamage += d.getDamageValue();
+						}
+						else
+						{
+							systemDamage += d.getDamageValue();	
+						}
+					//	accounteddamage += ((WidgetDamage) t.getWidgetObject()).getDamageValue();
 					}
 				}
 
 			}
 		}
-
-		if (accounteddamage < statdamage) {
-			// create another damage impact holder
-			createDamageWidget(ship, statdamage - accounteddamage);
-		}
-		if (accounteddamage >statdamage)
-		{
-			removeDamageWidgets(ship,accounteddamage-statdamage);
-		}
-		
+		new SpaceshipDamageAnalyzer(damage,ship,hullDamage,systemDamage,statDamage,(int)stats.getResource("HULL").getResourceCap()).run();
+	
 		// convey changes one to the other
 		for (int i = 0; i < resources.size(); i++) {
 			if (!resources.get(i).getResourceName().equals("HULL")) {
@@ -274,56 +274,6 @@ public class SpaceshipAnalyzer {
 		}
 	}
 
-	private void removeDamageWidgets(Spaceship ship, int damage) {
-		// TODO Auto-generated method stub
-		for (int i = 0; i < ship.getZone(0).getWidth(); i++) 
-		{
-			for (int j = 0; j < ship.getZone(0).getHeight(); j++) 
-			{
-				if (damage==0)
-				{
-					return;
-				}
-				// check tile
-				Tile t = ship.getZone(0).getTile(i, j);
-				if (t != null && t.getWidgetObject() != null) 
-				{
-					if (t.getWidgetObject().getClass().getName().contains("WidgetDamage")) 
-					{					
-						WidgetDamage wd=(WidgetDamage)t.getWidgetObject();
-						if (wd.getDamageValue()>damage)
-						{
-							wd.setDamageValue(wd.getDamageValue()-damage);
-							return;
-						}
-						t.setWidget(null);
-						damage-=wd.getDamageValue();
-
-					}
-				}
-			}
-		}
-	}
-
-	private void createDamageWidget(Spaceship ship, int damage) {
-		while (true) {
-			int x = Universe.m_random.nextInt((int) ship.getSize().x);
-			int y = Universe.m_random.nextInt((int) ship.getSize().y);
-			if (ship.getZone(0).getTile(x, y) != null
-					&& ship.getZone(0).getTile(x, y).getDefinition().getMovement() == TileMovement.WALK) {
-				if (ship.getZone(0).getTile(x, y).getWidgetObject() != null) {
-					if (WidgetDamage.class.isInstance(ship.getZone(0).getTile(x, y).getWidgetObject())) {
-						WidgetDamage d = (WidgetDamage) ship.getZone(0).getTile(x, y).getWidgetObject();
-						d.setDamageValue(damage + d.getDamageValue());
-						return;
-					}
-				} else {
-					ship.getZone(0).getTile(x, y).setWidget(new WidgetDamage(damage));
-					return;
-				}
-			}
-		}
-	}
 
 	public int getNumSystems(Spaceship ship) {
 		int count = 0;

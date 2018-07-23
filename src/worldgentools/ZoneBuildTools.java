@@ -409,16 +409,16 @@ public class ZoneBuildTools {
 					PairedPortal(Enode, x, y);
 				}
 				if (Enode.getTagName() == "placeTile") {
-					int tilex = Integer.parseInt(Enode.getAttribute("x")) + xoffset;
-					int tiley = Integer.parseInt(Enode.getAttribute("y")) + yoffset;
+					int tilex = Integer.parseInt(Enode.getAttribute("x")) + x;
+					int tiley = Integer.parseInt(Enode.getAttribute("y")) + y;
 					int tile = Integer.parseInt(Enode.getAttribute("tile"));
 					m_tiles[tilex][tiley] = new Tile(tilex, tiley, m_library.getDef(tile), m_zone, m_library);
 				}
 				if (Enode.getTagName() == "placeNPC") {
-					new NPCPlacer(m_zone, pointsOfInterest).PlaceNPC(Enode, grid, xoffset, yoffset);
+					new NPCPlacer(m_zone, pointsOfInterest).PlaceNPC(Enode, grid, x, y);
 				}
 				if (Enode.getTagName() == "placeItem") {
-					new WidgetPlacer(m_zone).placeItem(Enode, xoffset, yoffset);
+					new WidgetPlacer(m_zone).placeItem(Enode, x, y);
 				}
 				if (Enode.getTagName() == "placeWidget") {
 					m_zone.setZoneTileGrid(m_tiles);

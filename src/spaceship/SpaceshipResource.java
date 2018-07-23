@@ -36,6 +36,10 @@ public class SpaceshipResource {
 
 	public void subtractResourceAmount(float resourceMod) {
 		this.resourceAmount -= resourceMod;
+		if (this.resourceAmount<=0)
+		{
+			this.resourceAmount=0;
+		}
 	}
 
 	public boolean isNonCombat() {

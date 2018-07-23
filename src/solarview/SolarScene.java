@@ -94,8 +94,8 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 		StarSystem system=Universe.getInstance().getcurrentSystem();
 		system.systemEntry();
 		renderer = new SolarRenderer(Universe.getInstance().getSystem());
-		controller = new SolarController(Universe.getInstance().getSystem());
-		GUI = new SolarGUI();
+		controller = new SolarController(Universe.getInstance().getSystem(),playerShip);
+		GUI = new SolarGUI(controller.getMessageQueue());
 		GUI.generate(spaceship, this);
 		starscape = new StarScape();
 		decorationLayer=new DecorationLayer(Universe.getInstance().getSystem().getName());
@@ -210,9 +210,13 @@ public class SolarScene extends SceneBase implements MyListener, Solar_Interface
 
 	@Override
 	public void end() {
-		playerShip.getShipStats().runDecompose();
-		new SpaceshipAnalyzer().decomposeResources(playerShip.getShipStats(), playerShip);
-		playerShip.setShipStats(null);
+		if (playerShip.getShipStats()!=null)
+		{
+			playerShip.getShipStats().runDecompose();
+			new SpaceshipAnalyzer().decomposeResources(playerShip.getShipStats(), playerShip);
+			playerShip.setShipStats(null);		
+		}
+
 		playerShip.setShipController(null);
 		GUI.discard(mouseHook);
 		renderer.end();

@@ -47,7 +47,7 @@
 			</band>
 		</perlin>
 		<walloff wall="3" sides="southeastwest" />
-	<prefab positionX="30" positionY="61" width="5">
+	<prefab positionX="30" positionY="60" width="5">
 			<row>88888</row>
 			<row>87878</row>
 			<row>07870</row>			

@@ -164,7 +164,7 @@
 				<loot item="note" chance="1.0" addendum="zha2" />
 			</lootTable>
 			<lootTable identity="note3">
-				<loot item="questItem" chance="0.5" unique="3" addendum="brightsword blade" />		
+				<loot item="questItem" chance="1.0" unique="3" addendum="brightsword blade" />		
 				<loot item="note" chance="1.0" addendum="zha3" />
 			</lootTable>	
 			<lootTable identity="note4">

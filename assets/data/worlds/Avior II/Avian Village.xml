@@ -36,7 +36,7 @@
 			<row>24242</row>
 			<row>24242</row>	
 			<row>22222</row>			
-				<pairedportal x="2" y="2" sprite="3" ID="16"
+				<pairedportal x="2" y="2" sprite="3" ID="15"
 					destination="Avian Undertown" facing="0"> A ladder leading down </pairedportal>
 		</prefab>
 		<prefab positionX="19" positionY="19" width="7">

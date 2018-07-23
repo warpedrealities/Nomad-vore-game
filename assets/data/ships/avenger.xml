@@ -66,19 +66,19 @@
 
 			<placeWidget x="3" y="5" name="slot">
 				<contains name="modules/generator">
-					<resource type="ENERGY" value="5" />
+					<resource type="ENERGY" value="0" />
 				</contains>
 			</placeWidget>
 
 			<placeWidget x="5" y="5" name="slot">
 				<contains name="modules/generator">
-					<resource type="ENERGY" value="5" />
+					<resource type="ENERGY" value="0" />
 				</contains>
 			</placeWidget>
-
+			<placeWidget x="5" y="4" name="DAMAGE" value="25" exterior="true" />
 			<placeWidget x="2" y="3" name="slot">
-				<contains name="modules/perimeter defence system">
-					<resource type="DRONEPARTS" value="8" />	
+				<contains name="modules/bunk bed">
+	
 				</contains>
 			</placeWidget>
 
