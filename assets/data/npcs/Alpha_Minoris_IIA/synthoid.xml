@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="synthoid.png" />
+	<name>Synthoid</name>
+	<description>The synthoid is a twisted humanoid gynoid. Her artificial skin is torn in numerous places anchor her second set of arms and to allow her limbs to stretch longer than the skin would allow in a way that would give her a stature more than six foot in height if she wasn't squatting and capering about like some kind of ape. Frequently supporting herself on 3 or 4 limbs as she moves around in a disturbingly animalistic and predatory manner.</description>
+	<rpg>
+		<experiencevalue value="100" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<attribute attribute="TEASE" value="10" />
+		<attribute attribute="PHEREMONE" value="10" />
+		<attribute attribute="KINETIC" value="2" />
+		<attribute attribute="SHOCK" value="-2" />
+		<attribute attribute="DODGE" value="4" />	
+		<stat stat="HEALTH" value="60" />
+		<stat stat="RESOLVE" value="60" />
+		<combatMove name="smash" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2" threatening="true" multiAttack="2">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>synthoid fails to batter TARGET</text>
+				<text>TARGET evades the synthoids blows</text>
+			</missText>
+			<hitText count="2">
+				<text>synthoid batters TARGET for VALUE damage</text>
+				<text>synthoid pummels TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+			<combatMove name="leap" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="8" pattern="RANGED" actionCost="2" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>synthoid fails to leap towards TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>synthoid leaps towards TARGET</text>
+			</hitText>
+		</combatMove>
+		<statusTags count="4">
+			<tag>psychic</tag>
+			<tag>radio</tag>
+			<tag>seduction</tag>
+			<tag>life</tag>		
+		</statusTags>
+	</rpg>
+	<defeated conversation="alpha_minoris_IIA/synthoid/defeat" />
+	<seduced conversation="alpha_minoris_IIA/synthoid/defeat" />
+	<victory conversation="alpha_minoris_IIA/synthoid/victory" />
+	<seducer conversation="alpha_minoris_IIA/synthoid/victory" />
+	<controller AI="robot_synthoid" />
+	<faction value="omnicofactory_robot" />
+</NPC>

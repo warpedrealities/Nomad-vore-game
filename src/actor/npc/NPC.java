@@ -570,7 +570,7 @@ public class NPC extends Actor implements Controllable {
 	
 	public void startVoreScript(String filename, Actor target)
 	{
-		voreScript=new VoreScript_Impl(filename,(NPC) target);
+		voreScript=new VoreScript_Impl(filename,(NPC) target, this);
 	}
 
 	@Override

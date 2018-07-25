@@ -8,6 +8,9 @@
 	</text>
 	<choice destination="gushings" text="Could you tell me why you insisted this shop did not involve gushings"/>
 	<choice destination="shop" text="lets see what you have for sale"/>
+	<choice destination="harpies" text="You know, I've met harpies like you before..they didn't talk though">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="AMIIA_HARPIES" value="1" />
+	</choice>
 	<choice destination="end" text="Nothing, stay friendly"/>
 	</page>
 
@@ -17,6 +20,50 @@
 		<special effect="shop" ID="avian_trader" />
 	</page>
 	
+	<page ID="harpies">
+	<text>
+	Keliya nods "Yes yes, sufferers of the plague. Very sad, though perhaps they are happy as they are? But that's what's sad, they don't know any better. Can't know anything better." she says and then chirps and cants her head to the side "We can all talk here though, you don't need to worry...though there are feral harpies elsewhere on the planet...so be careful..but you really don't need to fear much in the village!" she insists.
+	</text>
+	<choice destination="brightfeather" text="There is one amongst them who can talk, calls herself brightfeather..she struck me as a bit lonely though">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="AMIIA_BRIGHTFEATHER" value="1" />
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="0"/>
+	</choice>
+	<choice destination="shop" text="So you insist, now lets see what you have to sell"/>
+	<choice destination="end" text="I see, that's informative"/>
+	</page>
+	
+	<page ID="brightfeather">
+		<condition operator="greaterthan" evaluate="FACTIONFLAG" flag="disposition" value="2" />
+	<text>
+	Keliya pauses "How?" she says and then continues "I mean, I don't know why she'd be unaffected when the others are feral cause of the plague? Nevermind. What's important is she is lonely, the affection of ferals of your own kind probably isn't much comfort. I wouldn't know of course, but I heard..somewhere..anyway, the flock agrees that for someone not a member of the flock you're an alright sort. Perhaps you could act as our agent in this affair...would you, deliver to her an invitation on our behalf?"
+	</text>
+	<choice destination="questAccept0" text="Yes, I would be delighted to give brightfeather her invitation to join you"/>
+	<choice destination="questRefuse0" text="No, I don't have time to help you with this"/>
+	</page>
+	
+	<page ID="questAccept0">
+			<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="1" />	
+	<text>
+	"Good good, go..tell her she is welcome here if she wants to come. You might have to help arrange her transportation yourself though. We don't have our own ships." says Keliya with a smile and a happy little bob bob motion.
+	</text>
+	<choice destination="end" text="I'm pleased to assist"/>
+	</page>
+	
+	<page ID="questRefuse0">
+	<text>
+	"Oh, well..that's okay as well. I mean, I'm not upset or anything. We can still trade and stuff, but with you being who you are..and her being lonely, i thought..nevermind."
+	</text>
+	<choice destination="end" text="I can't solve every problem that I encounter"/>
+	</page>
+	
+	<page ID="brightfeather">
+	<text>
+	Keliya pauses "How?" she says and then continues "I mean, I don't know why she'd be unaffected when the others are feral cause of the plague? Nevermind. What's important is she is lonely, the affection of ferals of your own kind probably isn't much comfort. I wouldn't know of course, but I heard..somewhere..anyway, it's a terrible shame."
+	</text>
+		<choice destination="shop" text="But not one that moves you, so lets see what you have for sale"/>
+	<choice destination="end" text="But not one that moves you, farewell"/>
+	</page>
+	
 	<page ID="start">
 	<text>
 	"Hello I am Keliya, welcome to my shop. It's a friendly shop, focused on friendly trading, absolutely not gushings." she says with a seemingly subconscious headbob.
@@ -24,6 +71,9 @@
 		<effect type="setlocalflag" flag="talked" value="1" />	
 		<choice destination="gushings" text="Why would I be worried it involved gushings?"/>
 		<choice destination="shop" text="lets see what you have for sale"/>
+		<choice destination="harpies" text="You know, I've met harpies like you before..they didn't talk though">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="AMIIA_HARPIES" value="1" />
+		</choice>
 		<choice destination="end" text="...i suddenly think i left my space kettle on"/>
 	</page>
 	

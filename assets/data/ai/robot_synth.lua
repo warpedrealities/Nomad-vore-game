@@ -153,29 +153,55 @@ function chase(controllable,sense,script,pos,x,y)
 
 end
 
+function outbreak(controllable,sense, script)
+	outbreak=sense:getGlobalFlags():readFlag("OMNICO_IIA_MALWARE");
+	if outbreak==0 then
+		return false;
+	end
+	victim=sense:getVictim(controllable,8,true,"synth",false)
+	if (victim==nil) then
+		return false;
+	end
+	
+	if pos:getDistance(victim:getPosition())<2 then
+		controllable:startVoreScript("synth_assimilation", victim)
+		script:setValue(4,50)	
+	else
+		if controllable:HasPath() then
+			controllable:FollowPath()
+		else
+			controllable:Pathto(victim:getPosition().x,victim:getPosition().y,8)
+		end		
+	end	
+
+	return true;
+end
+
 function main(controllable, sense, script)  
 	if not controllable:isPeace() then
 		pos=controllable:getPosition()
 		hostile=sense:getHostile(controllable,10,true)
-		if not (hostile == nil ) then
-		--combat ai here
-		voice(controllable, sense)
-		combat(controllable, sense, pos, hostile)	
-		else
-			x=controllable:getValue(1)
-			y=controllable:getValue(2)
-			a=controllable:getValue(3)
-			if a>0 then
-				a=a-1
-				controllable:setValue(3,a)
-				if a==0 then
-					speakQuery(controllable,sense)
-				end
-			end
-		if not x==0 then
-				chase(controllable,sense,script,pos,x,y)
+		if not (outbreak(controllable,sense,script) then
+			if not (hostile == nil ) then
+			--combat ai here
+			voice(controllable, sense)
+			combat(controllable, sense, pos, hostile)	
 			else
-				robot(controllable,sense,pos)
+				x=controllable:getValue(1)
+				y=controllable:getValue(2)
+				a=controllable:getValue(3)
+				if a>0 then
+					a=a-1
+					controllable:setValue(3,a)
+					if a==0 then
+						speakQuery(controllable,sense)
+					end
+				end
+			if not x==0 then
+					chase(controllable,sense,script,pos,x,y)
+				else
+					robot(controllable,sense,pos)
+				end
 			end
 		end
 	end

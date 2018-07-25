@@ -1,5 +1,18 @@
 <?xml version="1.0"?>
 <Conversation>
+
+<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="special_inventory" />	
+	<condition evaluate="GLOBALFLAG" operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION"/>
+	<text>
+	"Hi super valued customer. Listen, seen as you've decided to spend so much money here I've decided to be super appreciative and I'm going to let you see some of my more dangerous stock. I can't always get as much of it as I'd like. But I figure you'd like it, it's a dangerous galaxy after all."
+	</text>
+	<effect type="setlocalflag" flag="special_inventory" value="1" />	
+	<special effect="restockshop" ID="freehaven_general" />
+	<choice destination="shop" text="$That's great, let me see what you have for sale now"/>
+	<choice destination="end" text="$That's super, but I'll take a look later, I wasn't looking t buy anything just now"/>
+</page>
+
 	<page ID="start">
 	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
 	<text>

@@ -1,5 +1,13 @@
 package actor.npc.observerVore.impl;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+import org.luaj.vm2.Globals;
+import org.luaj.vm2.LuaError;
+import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
+import org.luaj.vm2.lib.jse.JsePlatform;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -14,18 +22,20 @@ import view.ViewScene;
 public class VoreScript_Impl implements VoreScript {
 	
 	private ScriptStage []stages;
+	private String luaScript;
 	private int stageIndex;
 	private boolean blockAI,alive;
-	private NPC target;
+	private NPC target,origin;
 	private int lastDamaged;
 	
-	public VoreScript_Impl(String filename,NPC target)
+	public VoreScript_Impl(String filename,NPC target, NPC origin)
 	{
 		genStages(filename);
 		stageIndex=0;
 		blockAI=true;
 		alive=true;
 		this.target=target;
+		this.origin=origin;
 		target.setBusy(true);
 	}
 	
@@ -53,6 +63,10 @@ public class VoreScript_Impl implements VoreScript {
 				{
 					stages[2]=new FinishStage(Enode);
 				}
+				if (Enode.getTagName().equals("luaScript"))
+				{
+					luaScript=Enode.getAttribute("file");
+				}
 			}
 		}
 	}
@@ -77,7 +91,42 @@ public class VoreScript_Impl implements VoreScript {
 			if (stageIndex>=stages.length ||stages[stageIndex]==null)
 			{
 				alive=false;
+				if (luaScript!=null) {
+					runLuaScript();
+				}
 			}
+		}
+	}
+
+	private void runLuaScript() {
+		// TODO Auto-generated method stub
+		Globals globals;
+		LuaValue script = null;
+		globals = JsePlatform.standardGlobals();
+		try {
+			script = globals.load(new FileReader("assets/data/observer Vore/scripts/" + luaScript + ".lua"), "main.lua");
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (LuaError e) {
+			System.err.println("script name"+luaScript);
+			e.printStackTrace();
+		}
+		try {
+			script.call();
+			
+			LuaValue luacontrollable = CoerceJavaToLua.coerce(origin);
+			LuaValue luaView = CoerceJavaToLua.coerce(ViewScene.m_interface);
+			LuaValue luacontrol = globals.get("main");
+			if (!luacontrol.isnil()) {
+				luacontrol.call(luacontrollable, luaView);
+			} else {
+				System.out.println("Lua function not found");
+			}
+		} catch (LuaError e) {			
+			System.err.println("script name"+luaScript);			
+			e.printStackTrace();
 		}
 	}
 

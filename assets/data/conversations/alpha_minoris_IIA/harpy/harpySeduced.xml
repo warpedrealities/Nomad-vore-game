@@ -61,6 +61,7 @@
 			wing against the sopping cleft between her thighs. Aroused and
 			enthralled she pants submissively at your approach, it's clear what
 			she wants.</text>
+					<effect type="setglobalflag" flag="AMIIA_HARPIES" value="1" />
 		<picture source="harpyportrait"/>			
 		<choice destination="receiveoral" text="get her to pleasure you">
 			<assertion evaluate="haspart" part="vagina" />

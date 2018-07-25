@@ -20,5 +20,8 @@
 	<inventoryitem name="fabric" probability="50" quantity="5" />	
 	<inventoryitem name="repair kit" probability="100"
 		quantity="5" />
-	<inventoryitem name="repair kit" probability="50" quantity="5" />	
+	<inventoryitem name="repair kit" probability="50" quantity="5" />
+<financeFlags faction="avian">
+<flagRelationship isFaction="true" flag="disposition" type="BUY" l1="5000" l2="15000" l3="30000"/>
+</financeFlags>	
 </shop>

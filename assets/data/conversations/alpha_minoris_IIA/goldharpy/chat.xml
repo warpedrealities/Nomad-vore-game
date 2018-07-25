@@ -19,6 +19,7 @@
 		<choice destination="end" text="not right now" />
 	</page>
 	<page ID="start">
+		<effect type="setglobalflag" flag="AMIIA_BRIGHTFEATHER" value="1" />
 		<effect type="setlocalflag" flag="first" value="1" />
 		<text> "Hello, what have we here? you must of made someone happy to
 			have ended up here" The harpy cocks her head to the side and examines

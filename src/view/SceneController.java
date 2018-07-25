@@ -16,6 +16,7 @@ import artificial_intelligence.senseCriteria.CriteriaRepository;
 import artificial_intelligence.senseCriteria.Sense_Criteria;
 import item.Item;
 import item.ItemWeapon;
+import nomad.FlagField;
 import nomad.universe.Universe;
 
 public class SceneController implements Sense {
@@ -217,7 +218,7 @@ public class SceneController implements Sense {
 		Actor hostile = null;
 		float distance = 99;
 		for (int i = 0; i < activeZone.getActors().size(); i++) {
-			if (activeZone.getActors().get(i).isHostile(origin.getActorFaction().getFilename())) {
+			//if (activeZone.getActors().get(i).isHostile(origin.getActorFaction().getFilename())) {
 				Actor target = activeZone.getActors().get(i);
 				float d = target.getPosition().getDistance(origin.getPosition());
 				if (d < 8) {
@@ -237,7 +238,7 @@ public class SceneController implements Sense {
 						}
 					}
 				}
-			}
+			//}
 		}
 		return hostile;
 	}
@@ -327,6 +328,11 @@ public class SceneController implements Sense {
 
 	public Widget getWidget(int x, int y) {
 		return activeZone.getWidget(x, y);
+	}
+
+	@Override
+	public FlagField getGlobalFlags() {
+		return gameUniverse.getPlayer().getFlags();
 	}
 
 }

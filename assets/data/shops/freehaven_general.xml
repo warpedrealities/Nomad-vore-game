@@ -56,5 +56,56 @@
 	<inventoryitem name="oxygen mask" probability="100"
 		quantity="1" />			
 	<inventoryitem name="shrink pill" probability="100"
-		quantity="100" />			
+		quantity="100" />
+
+	<flagRelationship isFaction="false" flag="FREEHAVEN_ROBYNN_DISPOSITION" type="BUY" l1="10000"/>		
+	
+	<inventoryitem name="bullets" probability="25"
+		quantity="10">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>
+	<inventoryitem name="rifle round" probability="25"
+		quantity="3">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>
+	<inventoryitem name="rifle round" probability="25"
+		quantity="3">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>
+	<inventoryitem name="plasma canister" probability="25"
+		quantity="1">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>	
+	<inventoryitem name="plasma canister" probability="25"
+		quantity="1">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>	
+	<inventoryitem name="dagger missile" probability="25"
+		quantity="1">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>	
+	<inventoryitem name="dagger missile" probability="25"
+		quantity="1">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>	
+		<inventoryitem name="plasma charge" probability="25"
+		quantity="1">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>	
+	<inventoryitem name="40mm slug" probability="25"
+		quantity="2">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>	
+	<inventoryitem name="40mm slug" probability="25"
+		quantity="2">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>
+	<inventoryitem name="power-cell" probability="25"
+		quantity="1">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>
+	<inventoryitem name="power-cell" probability="25"
+		quantity="1">	
+		<conditional operator="greaterthan" value="1" flag="FREEHAVEN_ROBYNN_DISPOSITION" />		
+	</inventoryitem>	
 </shop>

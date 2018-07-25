@@ -88,6 +88,9 @@ public class ShopSlaveTraderScreen extends Screen implements Callback {
 			} else {
 				player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + (int) value);
 			}	
+			if (slaveTrader.getFinanceFlags()!=null) {
+				slaveTrader.getFinanceFlags().addSellMoney(value);
+			}
 			playerStock.removeCaptive(item);
 			resetList();
 		}

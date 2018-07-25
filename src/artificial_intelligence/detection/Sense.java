@@ -2,6 +2,7 @@ package artificial_intelligence.detection;
 
 import actor.Actor;
 import artificial_intelligence.senseCriteria.Sense_Criteria;
+import nomad.FlagField;
 import shared.Vec2f;
 
 public interface Sense {
@@ -22,5 +23,7 @@ public interface Sense {
 	public boolean getPreference(String preference);
 
 	public void drawText(String text);
+	
+	public FlagField getGlobalFlags();
 
 }

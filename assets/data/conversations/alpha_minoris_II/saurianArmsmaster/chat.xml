@@ -27,13 +27,13 @@
 		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="training" value="1" />				
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="5" />	
 		</choice>	
-	<!-- 		<choice destination="training2" text="I am interested in having the last lesson">
+			<choice destination="training2" text="I am interested in having the last lesson">
 			<preference fetish="herms" />	
 			<preference fetish="demis" />		
 			<preference fetish="cockvore" />	
 		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="training" value="2" />				
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt2" value="3" />	
-		</choice>	 -->
+		</choice>	
 		<choice destination="job5" text="About the dragon woman">
 		<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt2" value="1" />
 		<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt2" value="3" />		

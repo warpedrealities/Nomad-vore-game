@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <slaveTrader profitratio="1.25">
 <buySlave name="bunny girl" value="1000"/>
+<financeFlags faction="avian">
+<flagRelationship isFaction="true" flag="disposition" type="SELL" l1="2000" l2="6000" l3="12000"/>
+</financeFlags>
 
 </slaveTrader>

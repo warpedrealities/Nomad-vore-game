@@ -15,6 +15,7 @@ import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Screen;
 import shop.ShopData;
+import shop.shopFinanceFlags.FinanceFlags;
 
 public class ShopSlaveTrader implements ShopData {
 
@@ -24,6 +25,7 @@ public class ShopSlaveTrader implements ShopData {
 	private boolean useCredits;		
 	private List<SlaveLineItem> buyList;
 	private List<SlaveLineItem> sellList;
+	private FinanceFlags financeFlags;	
 	
 	private void commonConstruct()
 	{
@@ -80,12 +82,22 @@ public class ShopSlaveTrader implements ShopData {
 				if (Enode.getTagName() == "sellSlave") {
 					sellList.add(new SlaveLineItem(Enode));
 				}
+				if (Enode.getTagName().equals("financeFlags") && financeFlags==null)
+				{
+					financeFlags=new FinanceFlags(Enode);
+				}
 			}
 		}
 	}
 
-	private void loadStore(DataInputStream dstream) {
-		
+	private void loadStore(DataInputStream dstream) throws IOException {
+		shopName=ParserHelper.LoadString(dstream);
+		lastVisited=dstream.readLong();
+		profitRatio=dstream.readFloat();
+		if (dstream.readBoolean()) {
+			financeFlags=new FinanceFlags();
+			financeFlags.load(dstream);
+		}
 		refreshStore();
 	}
 
@@ -94,6 +106,10 @@ public class ShopSlaveTrader implements ShopData {
 		ParserHelper.SaveString(dstream, shopName);
 		dstream.writeLong(lastVisited);
 		dstream.writeFloat(profitRatio);
+		dstream.writeBoolean(financeFlags!=null);
+		if (financeFlags!=null) {
+			financeFlags.save(dstream);
+		}
 	}
 
 	@Override
@@ -111,6 +127,10 @@ public class ShopSlaveTrader implements ShopData {
 
 	public List<SlaveLineItem> getSellList() {
 		return sellList;
+	}
+
+	public FinanceFlags getFinanceFlags() {
+		return financeFlags;
 	}
 	
 

@@ -20,6 +20,7 @@ import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Screen;
 import shop.ShopData;
+import shop.shopFinanceFlags.FinanceFlags;
 import vmo.GameManager;
 
 public class ShopMerchant implements ShopData {
@@ -30,7 +31,8 @@ public class ShopMerchant implements ShopData {
 	private Map<String, ShopLineItem> sellInventory;
 	private Map<String, ShopLineItem> buyModifiers;
 	private float profitRatio; // for buying back unknowns and etcs
-
+	private FinanceFlags financeFlags;
+	
 	private void commonConstruct() {
 		sellInventory = new HashMap<String, ShopLineItem>();
 		buyModifiers = new HashMap<String, ShopLineItem>();
@@ -67,6 +69,10 @@ public class ShopMerchant implements ShopData {
 				}
 				if (Enode.getTagName() == "buymodifier") {
 					addModifier(Enode);
+				}
+				if (Enode.getTagName().equals("financeFlags") && financeFlags==null)
+				{
+					financeFlags=new FinanceFlags(Enode);
 				}
 			}
 		}
@@ -145,6 +151,14 @@ public class ShopMerchant implements ShopData {
 			buyModifiers.get(key).save(dstream);
 		}
 		dstream.writeBoolean(useCredits);
+		if (financeFlags!=null) {
+			dstream.writeBoolean(true);
+			financeFlags.save(dstream);
+		}
+		else
+		{
+			dstream.writeBoolean(false);
+		}
 	}
 
 	public ShopMerchant(String str, DataInputStream dstream) throws IOException {
@@ -164,6 +178,10 @@ public class ShopMerchant implements ShopData {
 			buyModifiers.put(name, item);
 		}
 		useCredits = dstream.readBoolean();
+		if (dstream.readBoolean()) {
+			financeFlags=new FinanceFlags();
+			financeFlags.load(dstream);
+		}
 	}
 
 	public String getName() {
@@ -218,4 +236,10 @@ public class ShopMerchant implements ShopData {
 	public Screen getScreen() {
 		return new ShopMerchantScreen(this);
 	}
+
+	public FinanceFlags getFinanceFlags() {
+		return financeFlags;
+	}
+	
+	
 }

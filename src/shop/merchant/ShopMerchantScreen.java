@@ -120,8 +120,16 @@ public class ShopMerchantScreen extends Screen implements Callback {
 		if (shopData.isUseCredits()) {
 			player.getInventory().setPlayerCredits(
 					(int) (player.getInventory().getPlayerCredits() - (item.getCost() * DEF_CREDIT_TO_GOLD)));
+			if (shopData.getFinanceFlags()!=null) 
+			{
+				shopData.getFinanceFlags().addBuyMoney((int)(item.getCost() * DEF_CREDIT_TO_GOLD));
+			}
 		} else {
 			player.getInventory().setPlayerGold((int) (player.getInventory().getPlayerGold() - item.getCost()));
+			if (shopData.getFinanceFlags()!=null) 
+			{
+				shopData.getFinanceFlags().addBuyMoney((int)(item.getCost()));
+			}
 		}
 		// reduce count of items available in store
 		item.setQuantity(item.getQuantity() - 1);
@@ -153,9 +161,17 @@ public class ShopMerchantScreen extends Screen implements Callback {
 		}
 		if (shopData.isUseCredits()) {
 			v = v * DEF_CREDIT_TO_GOLD;
+			if (shopData.getFinanceFlags()!=null) 
+			{
+				shopData.getFinanceFlags().addSellMoney((int)v);
+			}
 			player.getInventory().setPlayerCredits(player.getInventory().getPlayerCredits() + (int) v);
 		} else {
 			player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + (int) v);
+			if (shopData.getFinanceFlags()!=null) 
+			{
+				shopData.getFinanceFlags().addSellMoney((int)v);
+			}
 		}
 		// remove the item, unless its a stack then reduce it by 1
 		Item it = player.getInventory().getItem(itemLists[0].getSelect());
@@ -165,7 +181,7 @@ public class ShopMerchantScreen extends Screen implements Callback {
 		} else {
 			player.getInventory().RemoveItem(it);
 		}
-
+		
 		// add the item to the shop list, because it matters
 		if (!QuestItem.class.isInstance(it))
 		{
