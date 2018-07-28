@@ -214,6 +214,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		cooldownDisplay.redraw();
 		targeter = new Targeting();
 		screenFade = new Screen_Fade(this);
+		
 	}
 
 	@Override
@@ -326,6 +327,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		cooldownDisplay.redraw();
 		targeter = new Targeting();
 		screenFade = new Screen_Fade(this);		
+		sceneController.getActiveZone().updateZoneEnvironment(sceneController.getUniverse().getPlayer());
 	}
 	
 	public ViewScene() {

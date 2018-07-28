@@ -73,6 +73,7 @@ public class ShopList {
 			ParserHelper.SaveString(dstream, key);
 			dstream.writeInt(shopsRetained.get(key).getType());
 			shopsRetained.get(key).save(dstream);
+			dstream.writeInt(1337);
 		}
 
 	}
@@ -102,6 +103,11 @@ public class ShopList {
 		for (int i = 0; i < s; i++) {
 			String str = ParserHelper.LoadString(dstream);
 			shopsRetained.put(str, loadData(str,dstream));
+			int safety=dstream.readInt();
+			if (safety!=1337)
+			{
+				throw new IOException();
+			}
 		}
 	}
 

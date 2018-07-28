@@ -18,7 +18,73 @@
 	<choice destination="oralsex0" text="I'd like my pussy licked">
 	<assertion evaluate="haspart" part="vagina" />	
 	</choice>	
+	<choice destination="unbirthEndo0" text="I want to curl up in your womb">
+		<preference fetish="females" />	
+	<preference fetish="demis" />	
+	<preference fetish="unbirthing" />
+	</choice>
+		<choice destination="unbirth0" text="I want you to juice me">
+		<preference fetish="females" />	
+	<preference fetish="demis" />	
+	<preference fetish="unbirthing" />
+	</choice>
 	<choice destination="end" text="on second thoughts, I'll be on my way"/>
+	</page>
+	
+	<page ID="unbirthEndo0">
+	<text>
+	"Want to feel all cuddled up and safe mhmm? Well, it kinda keeps me from other custom so 300 credits and the room's yours." she says with a wink and a suggestive cock of her hips, one hand tracing down her front.
+	</text>
+		<choice destination="unbirthEndo1" text="$Sounds good, here's the money">
+			<condition evaluate="CREDITS" operator="greaterthan" value="300"/>	
+	</choice>
+	<choice destination="end" text="$That seems overpriced. No thanks."/>
+	</page>
+	
+	<page ID="unbirthEndo1">
+	<text>
+	The foxgirl takes your money and mhmms, slipping one hand into her pocket to disappear the money and her other hand under her skirt to delve into her nethers "You want to take a look first?" she asks with a mhmm and raises her skirt slowly. You can't help but take her up on her offer, dropping down onto your knees in order to look up at her shaved and soaking wet netherlips as she smiles and looks down at you. She moistens her lips and then uses her fingers to part her netherlips and show off her hungry pink folds "slip yourself in...just as soon as you're ready.."
+	</text>
+	<effect type="givecredits" value="-300" />	
+	<choice destination="unbirthEndo2" text="*slip yourself in*"/>
+	</page>
+	
+	<page ID="unbirthEndo2">
+	<text>
+	The foxy harlot murrs softly as you reach up with your fingers to almost reverently feel around her wet folds. Your fingers tracing her inner lips before pressing together to delve deeper into her "That's it, nice and..warm, for you." she says and smiles, shifting but not moving to coax you in any faster as your wrists slide towards her netherlips and then up into her depths. Her birth canal tight, but yet pliant and stretching to welcome you as you wriggle your hands around and ease them further up into her. As you work more of your arms up into her and probe into her womb you close your eyes, ducking your head down as it nears her netherlips.
+	</text>
+	<choice destination="unbirthEndo3" text="*wonderful warmth*"/>
+	</page>
+	
+	<page ID="unbirthEndo3">
+	<text>
+	Gradually you ease your way into the foxgirl as she moans and gradually takes charge of your passage into her. She goes from passively letting you feed yourself up into her to leaning forwards and then pressing down over your body. The harlot showing a practiced ease with which she crams you up between her legs more and more. Your body starting to curl up in the embrace of her womb. That full body silken snuggle pressing tight yet yielding around your form as your legs begin to disappear up inside of her. Your feet dangling above the floor as she lets out a grunt and clenches, tugging you in with powerful muscles as her middle takes on an intensely gravid and bulging appearance. Soon now every inch of you is cradled within her, your feet having been tucked away with the rest of you "All warm and safe and loved on my lovely, least as much love as credits can buy..hope you enjoy your time in me."
+	</text>
+	<choice destination="unbirthEndo4" text="*enjoy your time*"/>
+	</page>
+	
+	<page ID="unbirthEndo4">
+	<text>
+	The foxgirl hums to herself as she leans against the wall and her hot insides cosily snuggle and contain you. Time passes as you fall into a sort of doze, you're not sure but the foxy harlot might of done a few tricks with you inside. Though clearly nothing that involved her nethers, all you know is her muffled words and her moving around and shifting posture. In time though she drums her fingers on her belly "Okay time to come out lovely, that's as much time as your credits are good for." she warns you before squatting down and casually starts squeezing you back out into the open air of the station concourse. Your body emerging swiftly until you're sprawled slick with her juices on the deck before her "MHmm, do come again lovely. You were a good womb guest. Not like some I get." says the foxgirl as she wipes her nethers with a towel and then adjusts her skirt to properly seat over her thighs.
+	</text>
+	<choice destination="end" text="I might do that..you had a nice womb"/>
+	</page>
+	
+	<page ID="unbirth0">
+	<text>
+	"Mhmm, you want to go sploosh after a trip up between my thighs do ya? you're my kind of customer, mhmm.. still have to charge ya though, 150 credits and i'll leave you a wonderful puddle." she says with a delighted smile and a little wriggle of her hips as if already excited by the prospect.
+	</text>
+		<choice destination="unbirth1" text="$sure, here's the money I don't want to keep you waiting">
+			<condition evaluate="CREDITS" operator="greaterthan" value="300"/>	
+	</choice>
+	<choice destination="end" text="$You get to have that much fun and you charge as well? forget it."/>	
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	
+	</text>
+	<effect type="givecredits" value="-150" />		
 	</page>
 	
 	<page ID="oralsex0">
@@ -35,6 +101,7 @@
 	<text>
 	The sune mhmms "you won't regret it, now lets see what i have to work with." she says and slides down, tails swaying back and forth in a slow and hypnotic fashion. Her hands tracing down your thighs, then sliding back up the inside to trace around the outline of your nethers without touching them. She murrs and seemingly just admires your sacred parts for a few seconds "Wonderful" she compliments before bringing her face in close to your crotch and darting her tongue out to lick over the length of your slit. Her tongue working up and then down your netherlips repeatedly before flicking out to press against your clit.
 	</text>
+	<effect type="givecredits" value="-100" />	
 	<choice destination="oralsex2" text="*not...bad*"/>
 	</page>
 	

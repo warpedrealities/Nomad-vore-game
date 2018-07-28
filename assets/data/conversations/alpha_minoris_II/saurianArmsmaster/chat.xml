@@ -65,14 +65,73 @@
 	
 	<page ID="training2A">
 	<text>
-	
+	<conditional>
+				<assertion evaluate="slothasitem" slot="2" />Knowing the kind of training Varliss gives out you don't bother asking if you should undress or not, simply doing so.
+			</conditional> Varliss is soon ready to give you your 'training' though all things considered she seems to have dismissed most pretense with this one. Varliss telling you to get down on your knees before she turns around, her cock swaying hard and huge out into your view. The tip oozing with precum as she smiles and places one hand on her hip and the other on her alluring girth "Now soldier..lets see how obedient you are...feed yourself, to my cock." she says, eyes alight with anticipation.
 	</text>
-	
+	<choice destination="training2B" text="*obey*"/>
+	<choice destination="training2ARefuse" text="*disobey*"/>
 	</page>
+	
+	<page ID="training2B">
+	<text>
+	Varliss lets out a gasp followed by a delighted chirr as you press your hands followed by your forearms into her greedy cocktip "Mhmm, yes.. you're very obedient, and sexy..you're going to be filling as well." she says approvingly as her cock bulges around your arms and ripples to tug you deeper in. Your head is getting closer to that stretched out drooling tip as she smiles and watches your progress with an avid anticipation that borders on a tad obsessional. You can tell she wants you in badly, perhaps you do as well. That rippling cock of hers sucks and pulls on your arms with a possessive hunger as you duck your head down to let her schlurp your head inside as well.
+	</text>
+		<choice destination="training2C" text="*schlurped up*"/>
+	</page>
+	
+	<page ID="training2C">
+	<text>
+	Varliss lets out a hearty lustful moan as your head and shoulders vanish into her tip. Her hands stroking along her cock as she drags your body inside of her length inch by inch with vigorous ripples and schlurps of her shaft. Your upper body more and more encased in the hot sticky throbbing tunnel of her cock. Your hips getting closer to following the rest of you in disappearing into her tip as your head slips down into her hot cummy sack. 
+	</text>
+	<choice destination="training2D" text="*devoured*"/>
+	</page>
+	
+	<page ID="training2D">
+	<text>
+	"After all you've done...all you've accomplished..you cannot imagine how satisfying this feels for me." Varliss exclaims as she gradually schlurps your legs down her cock, piling more and more of your body into her sack to fill out her balls with your curling form. More and more of you marinating in the fluids of her lust as she finishes off devouring you with her hungry dick. Your feet popping into her tip with a schlurp and a little splatter of lubricating pre before having her trace and stroke down over their passage down into her sack to join the rest of you "You really are an obedient soldier, obedient, capable, accomplished..truly, who could ask for better sack fodder than you..now.." she pauses as if relishing the moment before telling you.
+	</text>
+	<choice destination="training2E_Endo" text="#A Soldier must trust in the orders of her commander"/>
+	<choice destination="training2E" text="#A soldier must hold position until relieved, and endure what may cum"/>
+	</page>
+	
+	<page ID="training2E_Endo">
+	<text>
+	Varliss chuckles "You feel soo good in me. My obedient little soldier.." she says happily, taking a few steps to get used to your weight settled in her sack. Your body jostling and swaying with her motions as she does so. Her cum squelching and sloshing around your body as she savours having you contained within her and fondles her shaft. She seems to get a great deal of satisfaction from this, holding you without melting in the lewd depths of her balls.
+	</text>
+	<choice destination="training2F_Endo" text="*held, then released*"/>
+	</page>
+	
+	<page ID="training2F_Endo">
+	<text>
+	Varliss spends a fair amount of time just enjoying the feeling of your body contained within the naughtiest part of her own as she jostles and sways you around.. Every time you move or jostle with her motions or your own you hear her moan or chir in delight. In time though she seems to tire of containing you and settles to stroke you back out. The saurian sat on a bench and jerking off, working her shaft until with a cry she sends you shooting back up her cock to land in a sticky heap in front of her "Mhmm, I enjoyed that soldier..come back sometime if you'd like to...report for duty, again." she says with a smirk.
+	</text>
+	<choice destination="end" text="that was fun, i might do that"/>	
+	</page>
+	
+	<page ID="training2E">
+	<text>
+	She makes it clear she's not letting you out anytime soon, but before you can question this you get an unmistakable clue as to her intentions as her hot cum tingles and burbles around you “Truly after your last trial did you expect that I do not take delight in the degradation of the most worthy?” she remarks over the loud churns of her sack around your softening body. Varliss moaning and jerking off as she settles onto a bench so she can focus on the joys of masturbating to a worthy soldier being rendered down into cum in her sack.
+	</text>
+	<choice destination="training2F" text="*built up only to be melted down*"/>
+	</page>
+	
+	<page ID="training2F">
+	<text>
+	"Ah, I can feel you melting..I hope you enjoy this..all your accomplishments, all your deeds..and all you amount to..is cockfood." Varliss tells you over the increasingly loud glorping noises of her balls as you get softer and softer. Anything further she says, well...you're too gooey to hear, your motions stilling, your shape rounding out and the blorps of cum taking on a more satisfying tone as you're digested into gallons of sticky cream inside her balls.
+	</text>
+	<choice destination="training2G" text="*splurt splurt*"/>
+	</page>
+	
+	<gameover ID="training2G">
+	<text>
+	Varliss moans out a blissful sounding yes as the last lump disappears from her now round and swollen balls. The lizard rubbing her thighs up against her sack from either side to feel your liquid remains yield and slosh in her balls. And with that sensation she redoubles her masturbatory efforts, closing her eyes as she strokes up and down her cock..only to open them again to witness your eruption from her cock as she cums, sending you out as an arcing stream of cum to splatter against the stones and make a nice big mess for the castle staff to clean up. Of all the accomplishments she'd guided you through, that of becoming her orgasm seems to be the one that brought her the most satisfaction. Hard to be surprised by that really, you really were a magnificent load.
+	</text>
+	</gameover>
 	
 	<page ID="training2ARefuse">
 	<text>
-	"I can see that we'll need to work on your obedience my little soldier." she says and then smirks "But do you really believe that after all that has come before you won't eventually up inside me?" she chuckles "Run along, come back when you realize that some things are inevitable."
+	"I can see that we'll need to work on your obedience my little soldier." she says and then smirks "But do you really believe that after all that has come before you won't eventually end up inside me?" she chuckles "Run along, come back when you realize that some things are inevitable."
 	</text>
 	<choice destination="end" text="You are a crazy lizard, farewell."/>
 	</page>

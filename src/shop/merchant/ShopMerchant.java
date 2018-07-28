@@ -178,7 +178,8 @@ public class ShopMerchant implements ShopData {
 			buyModifiers.put(name, item);
 		}
 		useCredits = dstream.readBoolean();
-		if (dstream.readBoolean()) {
+		boolean d= dstream.readBoolean();
+		if (d) {
 			financeFlags=new FinanceFlags();
 			financeFlags.load(dstream);
 		}

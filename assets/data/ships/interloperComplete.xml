@@ -43,32 +43,12 @@
 				<contains name="modules/navconsole" />
 				<widgetItem>nav console</widgetItem>	
 			</placeWidget>
-			<placeWidget x="4" y="2" name="DAMAGE" value="20" />
-			<placeItem x="5" y="2">
-				<lootTable>
-					<lootSubTable chance="1" file="interloper_resources" />	
-					<lootSubTable chance="1" file="interloper_resources" />
-					<lootSubTable chance="1" file="interloper_resources" />	
-				</lootTable>		
-			</placeItem>			
-			<placeWidget x="1" y="2" name="slot" />
-			<placeWidget x="9" y="2" name="slot" />	
-			<placeItem x="8" y="4">
-				<lootTable>
-					<lootSubTable chance="1" file="interloper_resources" />	
-					<lootSubTable chance="1" file="interloper_resources" />
-					<lootSubTable chance="1" file="interloper_resources" />	
-				</lootTable>		
-			</placeItem>		
-			<placeItem x="1" y="3">
-				<lootTable>
-					<lootSubTable chance="1" file="interloper_resources" />	
-					<lootSubTable chance="1" file="interloper_resources" />
-					<lootSubTable chance="1" file="interloper_resources" />	
-					<loot item="blueprint" chance="1" addendum="brightsword_complete" />		
-				</lootTable>		
-			</placeItem>				
-			<placeWidget x="8" y="5" name="DAMAGE" value="15" />		
+			<placeWidget x="1" y="2" name="slot">
+				<contains name="modules/fueltank">
+					<resource type="FUEL" value="150" />
+				</contains>
+			</placeWidget>
+			<placeWidget x="9" y="2" name="slot" />					
 			<placeWidget x="2" y="8" name="hardpoint">
 				<facing value="0" />
 			</placeWidget>
@@ -86,6 +66,6 @@
 		<row>0010100</row>
 		<row>0000000</row>
 		<pairedportal x="3" y="3" sprite="1" ID="-101"
-			destination="interloper" facing="0"> a ship hatch </pairedportal>
+			destination="interloperComplete" facing="0"> a ship hatch </pairedportal>
 	</exterior>
 </Ship>

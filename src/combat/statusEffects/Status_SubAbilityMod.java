@@ -72,7 +72,6 @@ public class Status_SubAbilityMod implements StatusEffect {
 		boolean b=dstream.readBoolean();
 		if (b)
 		{
-			int c1=dstream.readInt();
 			removeText = ParserHelper.LoadString(dstream);			
 		}	
 	}
