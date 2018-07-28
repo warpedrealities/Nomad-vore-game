@@ -3,7 +3,7 @@
 	<contains minimum="1" maximum="2">scrap metal</contains>
 	<description>a fuel consuming generator that produces energy.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
-	<shipResource capacity="25" resource="ENERGY" />
+	<shipResource capacity="50" resource="ENERGY" />
 	<shipConverter count="1" boostable="true">
 		<product output="ENERGY" timePerUnit="20">
 		<input resource="FUEL" perUnit="0.1"/>

@@ -4,5 +4,5 @@
 	<description>A bank of batteries to provide a reserve of energy for the
 		ship.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
-	<shipResource capacity="50" resource="ENERGY" />
+	<shipResource capacity="100" resource="ENERGY" />
 </shipsystem>

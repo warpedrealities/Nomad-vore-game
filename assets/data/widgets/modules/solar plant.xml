@@ -4,7 +4,7 @@
 	<description>A device to convert sunlight into power, can only unfold
 		its mirrors in space</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
-	<shipResource capacity="25" resource="ENERGY" />
+	<shipResource capacity="50" resource="ENERGY" />
 	<shipConverter count="1">
 		<product output="ENERGY" timePerUnit="20">
 		<input resource="SOLAR" perUnit="2"/>

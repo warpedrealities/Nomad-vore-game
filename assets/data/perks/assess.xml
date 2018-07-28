@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<perk name="assess">
+
+	<description> Use your perceptive skills to assess a targets defences. This will determine which damage types the enemy is most resistant to.
+	</description>
+	<move count="1">
+		<combatmove name="assess" actionCost="8" bonusToHit="8"
+			 timeCost="2" pattern="RANGED" moveType="OTHER">
+				<effectAnalyze control="PERCEPTION">
+					<defence resolve="false" vague="1" detail="3" precise="5"/>
+			</effectAnalyze>					
+			<missText count="1">
+				<text>you attempt to assess TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>TARGET 's is being assessed</text>
+			</hitText>
+		</combatmove>
+	</move>
+	<maxrank value="1" />
+
+</perk>

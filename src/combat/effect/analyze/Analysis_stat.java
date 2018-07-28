@@ -11,11 +11,7 @@ public class Analysis_stat implements Analysis_Type {
 
 	private int stat;
 	private int []thresholds;
-	
-	private final static int VAGUE=0;
-	private final static int DETAIL=1;
-	private final static int PRECISE=2;
-	
+
 	public Analysis_stat(Element e) {
 		thresholds=new int[3]; for (int i=0;i<3;i++){thresholds[i]=-1;}
 		stat=RPG_Helper.statFromString(e.getAttribute("stat"));

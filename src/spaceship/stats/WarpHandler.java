@@ -42,12 +42,12 @@ public class WarpHandler {
 			return false;
 		}
 		
-		if (resource.getResourceAmount()<=0.5F)
+		if (resource.getResourceAmount()<=1.0F)
 		{
 			return false;
 		}
 		
-		resource.setResourceAmount(resource.getResourceAmount()-0.5F);
+		resource.setResourceAmount(resource.getResourceAmount()-1.0F);
 		
 		chargeLevel+=2.5F/stress;
 		

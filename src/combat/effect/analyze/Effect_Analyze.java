@@ -37,6 +37,10 @@ public class Effect_Analyze extends Effect {
 				{
 					actions.add(new Analysis_stat(e));
 				}
+				if (e.getTagName().equals("defence"))
+				{
+					actions.add(new Analysis_Defence(e));
+				}
 			}
 		}
 		
