@@ -1307,6 +1307,10 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 	@Override
 	public void StartConversation(String conversation, NPC npc, boolean badEnd) {
+		if (screenFade.isRunning())
+		{
+			screenFade.stopRunning();
+		}
 		if (m_screen != null) {
 			sceneController.getUniverse().getPlayer().calcMove();
 			UpdateInfo();

@@ -173,4 +173,13 @@ public class Screen_Fade {
 		}
 	}
 
+	public boolean isRunning() {
+		return running;
+	}
+
+	public void stopRunning() {
+		running=false;
+		clock=0;
+	}
+
 }

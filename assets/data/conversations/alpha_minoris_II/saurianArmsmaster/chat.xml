@@ -27,7 +27,7 @@
 		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="training" value="1" />				
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt1" value="5" />	
 		</choice>	
-			<choice destination="training2" text="I am interested in having the last lesson">
+			<choice destination="training2A" text="I am interested in having the last lesson">
 			<preference fetish="herms" />	
 			<preference fetish="demis" />		
 			<preference fetish="cockvore" />	
@@ -161,7 +161,7 @@
 	
 	
 <page ID="job5">
-	<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt2" value="3" />	
+	<condition operator="lessthan" evaluate="GLOBALFLAG" flag="Varless_monsterhunt2" value="2" />	
 	<text>
 	"Did I not tell you to strip one of these haughty dragons of their pride? Go, defeat one. Show her that her arrogance is no match for your worthyness. Then return, I will reward you most well though the task alone should be reward in and of itself."
 	</text>
@@ -169,7 +169,7 @@
 	</page>
 
 	<page ID="job5">
-	<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt2" value="3" />	
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="Varless_monsterhunt2" value="2" />	
 	<text>
 	"Have you done as I asked? yes, I can see it in your eyes. Was her humiliation exquisite? did you heap depredations on her once she was in your power? No matter. Surely with this you have felt the joy of raising yourself up by bringing one low. And when the one brought low falls from high station born of accomplishment and ability, so much the better no?"
 	</text>
@@ -308,7 +308,7 @@
 	</page>
 		
 	<page ID="training0D">
-	<condition operator="equals" evaluate="LOCALFLAG" flag="training" value="1" />			
+	<condition operator="greaterthan" evaluate="LOCALFLAG" flag="training" value="1" />			
 	<text>
 	Forwarned you swallow as you feel her length pulse and pump the first thick wad of seed into your throat. Varliss groaning as she continues thrusting, spasming her hips and then finally stopping and just holding her dick deep in your mouth as she pumps out her seed. Only when she's pumped out her last spurt of seed does she pull out and smile "mhmm, obedient..I'll make a 'soldier' out of you yet." she says and helps you up "Training is over soldier, but come back again any time."	
 	</text>

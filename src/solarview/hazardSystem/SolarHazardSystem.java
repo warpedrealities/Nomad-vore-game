@@ -29,7 +29,7 @@ public class SolarHazardSystem {
 
 	public void update() {
 		clock++;
-		if (clock>100)
+		if (clock>200)
 		{
 			clock=0;
 			runEvent();
@@ -38,6 +38,10 @@ public class SolarHazardSystem {
 
 	private void runEvent() {
 		float baseChance=calcBaseChance();
+		if (baseChance<1)
+		{
+			return;
+		}
 		int roll=Universe.m_random.nextInt(100);
 		if (roll<baseChance)
 		{
@@ -97,7 +101,7 @@ public class SolarHazardSystem {
 	private float calcBaseChance() {
 		SpaceshipResource r=ship.getShipStats().getResource("HULL");
 		float p=r.getResourceAmount()/r.getResourceCap();
-		return p*10;
+		return (1-p)*10;
 	}
 
 	

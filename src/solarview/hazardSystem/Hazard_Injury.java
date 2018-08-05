@@ -44,7 +44,7 @@ public class Hazard_Injury extends Hazard_Base {
 		Universe.getInstance().getPlayer().getRPG().ReduceStat(Actor_RPG.HEALTH, damage);
 		if (Universe.getInstance().getPlayer().getRPG().getStat(Actor_RPG.HEALTH)<=0)
 		{
-			Game.sceneManager.SwapScene(new GameOver(gameover));
+			Game.sceneManager.SwapScene(new GameOver(gameover,true));
 		}
 		else
 		{

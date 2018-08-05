@@ -36,7 +36,7 @@ public class SpaceshipDamageAnalyzer {
 	}
 
 	private void lessDamage() {
-		int reductionAmount=requiredDamage-(systemDamage+hullDamage);
+		int reductionAmount=(systemDamage+hullDamage)-requiredDamage;
 		while (reductionAmount>0) {
 			if (systemDamage>0)
 			{

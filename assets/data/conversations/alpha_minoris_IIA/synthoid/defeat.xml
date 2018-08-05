@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Conversation>
+	
+	<page ID="start">
+		<text> 
+		No interaction to be had with a disabled synthoid.
+		</text>
+		<choice destination="end" text="damn"/>
+	</page>
+
+
+</Conversation>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<preference fetish="cockvore" />
+		<preference fetish="herms" />	
+		<preference fetish="demis" />		
+		<text>
+		The synthoid knocks you to the ground and looms over you, cocking her head to the side with a buzzing snap "me-eat, to enjoy." she intones, her lips barely moving and not in synch with her words as she a glistening black member rises to attention between her thighs. That throbbing prodigious girth aiming at you like some kind of cannon as she looks down at you, then with another cracking snap rights her head and lunges to grab your..
+		</text>
+		<choice destination="facefuck0" text="*head and shoulders*"/>
+		<choice destination="rape0" text="*your legs*">
+			<assertion evaluate="haspart" part="vagina" />
+		</choice>
+	</page>
+	
+	<page ID="facefuck0">
+	<text>
+	The synthoid grabs ahold of your shoulders and wraps one partially uncovered hand around the back of your head. Her lower set of arms easily restraining your own arms as she hipthrusts and jabs you in the face haphazardly with that throbbing hot shaft of hers. Some kind of off white fluid drools from her tip to stain your face and chest as she tries to force that length into your face "pla-aythi-ing" the synthoid insists, before finally adjusting her grip on the back of your head and forcing your jaws apart in order to make you accept her cock. That length pulsing rthythmically against your lips even as she forces it into your mouth and rams it down your throat making you gag from the forceful entry.
+	</text>
+	<choice destination="facefuck1" text="*she uses your mouth*"/>
+	</page>
+	
+	<page ID="facefuck1">
+	<text>
+	"good meat, good meat, good meat." the synthoid chants those two words with each thrust of her cock as she abuses your mouth and throat roughly with her oversized shaft. The well equipped gynoid relentless and mechanical in her pace as her length throbs in your mouth and her weighty black sheathed balls bounce against your chin with each thrust.
+	</text>
+	<choice destination="facefuck2" text="*can a synth cum?*"/>
+	</page>
+	
+	<page ID="facefuck2">
+	<text>
+	The synthoid soon answers your question as it lets out a distorted synthetic scream of bliss and rams its hips hard against your mouth. That thick cock erupting pumping creamy hot fluid down your throat as you're forced to take every drop of the dominative robots love juices. The four armed gynoid not letting go of your head till its shot the last wad of 'seed' down your throat and only then does she she relax and loosen her steely grip on your scalp.
+	</text>
+	<choice destination="strugglecheck0" text="*now is your chance to escape*"/>
+	<choice destination="submit0" text="*just..recover, submit to the synthoid*"/>
+	</page>
+	
+	<check ID="strugglecheck0">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="strugglecheck0Escape" />
+		<outcome destination="strugglecheck0Fail" />
+	</check>
+	
+	<page ID="strugglecheck0Escape">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="strugglecheck0Fail">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="rape0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<gameover ID="gameover">
+	<text>
+	you've met a terrible fate, that will be elaborated on at a later date
+	</text>
+	</gameover>
+
+
+</Conversation>

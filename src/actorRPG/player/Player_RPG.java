@@ -232,7 +232,7 @@ public class Player_RPG implements Actor_RPG {
 		//calculate stats
 
 //		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
-		playerExperience=900;
+		playerExperience=0;
 
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
@@ -404,7 +404,7 @@ public class Player_RPG implements Actor_RPG {
 			stats[HEALTH]-=0.25F;
 			if (stats[Actor_RPG.HEALTH]<0)
 			{
-				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, false));
+				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, true));
 			}
 		}
 	

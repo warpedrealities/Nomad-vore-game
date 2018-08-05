@@ -140,7 +140,8 @@ public class SpaceshipAnalyzer {
 
 		for (int i = 0; i < ship.getZone(0).getActors().size(); i++) {
 			Actor actor = ship.getZone(0).getActors().get(i);
-			if (NPC.class.isInstance(actor) && actor.getRPGHandler().getActive()) {
+			if (ship.getZone(0).contains((int)actor.getPosition().x, (int)actor.getPosition().y) &&
+				NPC.class.isInstance(actor) && actor.getRPGHandler().getActive()) {
 				stats.addCrew((NPC) actor);
 			}
 		}

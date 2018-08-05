@@ -105,6 +105,9 @@ public class GameOver extends SceneBase implements MyListener {
 	public GameOver(String gameOver) {
 		this(null,gameOver,null,false);
 	}
+	public GameOver(String gameOver, boolean suppressReform) {
+		this(null,gameOver,null,suppressReform);
+	}
 
 	void SetupTextures() {
 		m_textureIds = new int[4];

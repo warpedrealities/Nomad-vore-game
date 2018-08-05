@@ -2,7 +2,7 @@
 <System>
 	<Star x="0" y="0" sprite="star" intensity="15" />
 	<Station x="4" y="12">freehaven</Station>
-		<Spaceship x="-4" y="4" file="avenger"/>
+		<!-- <Spaceship x="-4" y="4" file="avenger"/> -->
 	<decorations>
 	<decoration x="6" y="13" size="3" sprite="gasgiant"/>	
 	</decorations>	

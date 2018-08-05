@@ -3,6 +3,7 @@ package actor.player.reformation;
 import java.util.List;
 
 import actor.player.Player;
+import actorRPG.Actor_RPG;
 import item.Item;
 import item.ItemCoin;
 import nomad.Entity;
@@ -10,6 +11,7 @@ import nomad.StarSystem;
 import nomad.universe.Universe;
 import shared.Vec2f;
 import spaceship.Spaceship;
+import spaceship.stats.SpaceshipAnalyzer;
 import view.ZoneInteractionHandler;
 import widgets.Widget;
 import widgets.WidgetItemPile;
@@ -198,17 +200,47 @@ public class ReformationTool {
 		Universe.getInstance().setZone(zone);
 		//Universe.getInstance().setCurrentEntity(zone.getZoneEntity());
 		setEntity();
-		//set health, resolve and satiation to 50%
-		for (int i=0;i<3;i++)
+
+		for (int i=0;i<2;i++)
 		{
-			if (player.getRPG().getStat(i)<player.getRPG().getStatMax(i)/4)
+			if (player.getRPG().getStat(i)<player.getRPG().getStatMax(i))
 			{
-				player.getRPG().setStat(i, player.getRPG().getStatMax(i)/4);		
+				player.getRPG().setStat(i, player.getRPG().getStatMax(i));		
 			}
 		}
-
+		if (!useEnergy(zone))
+		{
+			player.getRPG().setStat(Actor_RPG.SATIATION, player.getRPG().getStat(Actor_RPG.SATIATION)/2);		
+		}
 	}
 	
+	private boolean useEnergy(Zone currentZone) {
+		if (Spaceship.class.isInstance(currentZone.getZoneEntity()))
+		{
+			SpaceshipAnalyzer analyzer=new SpaceshipAnalyzer();
+			Spaceship ship=(Spaceship)currentZone.getZoneEntity();
+			ship.setShipStats(analyzer.generateStats(ship));
+			if (ship.getShipStats().getResource("ENERGY")==null)
+			{
+				analyzer.decomposeResources(ship.getShipStats(), ship);
+				ship.setShipStats(null);
+				return false;
+			}
+			if (ship.getShipStats().getResource("ENERGY").getResourceAmount()<25)
+			{
+				analyzer.decomposeResources(ship.getShipStats(), ship);
+				ship.setShipStats(null);
+				return false;
+			}
+			
+			ship.getShipStats().getResource("ENERGY").subtractResourceAmount(25);
+			analyzer.decomposeResources(ship.getShipStats(), ship);
+			
+			ship.setShipStats(null);
+		}
+		return false;
+	}
+
 	private void setEntity()
 	{
 		if (Spaceship.class.isInstance(zone.getZoneEntity()))

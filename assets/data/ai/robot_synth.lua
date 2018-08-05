@@ -181,7 +181,7 @@ function main(controllable, sense, script)
 	if not controllable:isPeace() then
 		pos=controllable:getPosition()
 		hostile=sense:getHostile(controllable,10,true)
-		if not (outbreak(controllable,sense,script) then
+		if not (outbreak(controllable,sense,script)) then
 			if not (hostile == nil ) then
 			--combat ai here
 			voice(controllable, sense)

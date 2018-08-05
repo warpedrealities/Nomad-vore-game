@@ -24,7 +24,7 @@
 			<row>99299</row>
 			<row>99299</row>
 			<row>99299</row>
-
+			<row>22222</row>
 			<pairedportal sprite="3" destination="zoneS" x="2" y="1"
 				ID="15">a narrow mountain pass</pairedportal>
 			<placeWidget x="2" y="3" name="invincible" info="interaction/rockfall"

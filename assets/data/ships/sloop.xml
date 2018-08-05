@@ -50,7 +50,7 @@
 			</placeWidget>		
 			<placeWidget x="3" y="5" name="slot">	
 			<contains name="modules/simple reactor">
-				<resource type="ENERGY" value="25" />
+				<resource type="ENERGY" value="50" />
 			</contains>
 			</placeWidget>	
 			<placeWidget x="3" y="7" name="slot">

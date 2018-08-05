@@ -174,7 +174,7 @@ public class Inventory {
 
 		playerCredits = dstream.readInt();
 		playerGold = dstream.readInt();
-
+		
 		recalc();
 	}
 
