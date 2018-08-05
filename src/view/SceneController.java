@@ -112,7 +112,7 @@ public class SceneController implements Sense {
 				float d = target.getPosition().getDistance(origin.getPosition());
 				if (d < maxRange) {
 					if (visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
-						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+						if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
 								(int) origin.getPosition().y, (int) target.getPosition().x,
 								(int) target.getPosition().y, true)) {
 							if (distance > d) {
@@ -137,7 +137,7 @@ public class SceneController implements Sense {
 	@Override
 	public Actor getPlayer(Actor origin, boolean visibleOnly) {
 		if (visibleOnly == true) {
-			if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+			if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
 					(int) origin.getPosition().y, (int) gameUniverse.getPlayer().getPosition().x,
 					(int) gameUniverse.getPlayer().getPosition().y, true)) {
 				return gameUniverse.getPlayer();
@@ -190,7 +190,7 @@ public class SceneController implements Sense {
 				float d = target.getPosition().getDistance(origin.getPosition())-target.getThreat().getThreat();
 				if (d < maxRange) {
 					if (visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
-						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+						if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
 								(int) origin.getPosition().y, (int) target.getPosition().x,
 								(int) target.getPosition().y, true)) {
 							if (distance > d && !checkExclude(target,attribute,exValue)) {
@@ -223,7 +223,7 @@ public class SceneController implements Sense {
 				float d = target.getPosition().getDistance(origin.getPosition());
 				if (d < 8) {
 					if (NPC.class.isInstance(target) && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
-						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+						if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
 								(int) origin.getPosition().y, (int) target.getPosition().x,
 								(int) target.getPosition().y, true)) {
 							if (distance > d && isVictim(target,name, seduced)) {
@@ -273,7 +273,7 @@ public class SceneController implements Sense {
 				float d = target.getPosition().getDistance(origin.getPosition());
 				if (d < maxRange) {
 					if (NPC.class.isInstance(target) && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
-						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+						if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
 								(int) origin.getPosition().y, (int) target.getPosition().x,
 								(int) target.getPosition().y, true)) {
 							if (distance > d && target.getName().equals(name)) {
@@ -302,7 +302,7 @@ public class SceneController implements Sense {
 				float d = target.getPosition().getDistance(origin.getPosition());
 				if (d < maxRange) {
 					if (NPC.class.isInstance(target) && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
-						if (GameManager.m_los.existsLineOfSight(activeZone, (int) origin.getPosition().x,
+						if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
 								(int) origin.getPosition().y, (int) target.getPosition().x,
 								(int) target.getPosition().y, true)) {
 							if (distance > d && criteria.checkCriteria(target,origin)) {

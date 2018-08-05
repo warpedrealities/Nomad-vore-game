@@ -2,11 +2,11 @@
 <zone width="16" height="32" spriteset="spacehulk.png">
 
 	<tileset count-x="8" count-y="4">
-		<tile sprite="17" vision="0" movement="0"> a metal floor</tile>
-		<tile sprite="1" vision="1" movement="2" smart="true"> a metal wall</tile>
-		<tile sprite="18" vision="0" movement="0"> a floor panel</tile>
-		<tile sprite="19" vision="1" movement="2"> an absurdly sturdy console</tile>
-		<tile sprite="20" vision="1" movement="2"> a near invincible bit of
+		<tile sprite="17" vision="EMPTY" movement="0"> a metal floor</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2" smart="true"> a metal wall</tile>
+		<tile sprite="18" vision="EMPTY" movement="0"> a floor panel</tile>
+		<tile sprite="19" vision="BLOCKING" movement="2"> an absurdly sturdy console</tile>
+		<tile sprite="20" vision="BLOCKING" movement="2"> a near invincible bit of
 			machinery</tile>
 	</tileset>
 	<description>The ruined vessel's interior is gloomy and long neglected. The ship's systems are clearly beyond any hope of repair. Yet clearly this wreck is haunted still by danger that could be the end of any fool enough to seek riches in this dead ship.</description>

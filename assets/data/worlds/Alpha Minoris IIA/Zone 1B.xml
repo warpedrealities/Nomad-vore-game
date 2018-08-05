@@ -2,13 +2,13 @@
 <zone width="64" height="64" spriteset="forest.png">
 	<zonerules ruleset="harpy" />
 	<tileset count-x="4" count-y="4">
-		<tile sprite="3" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="3" vision="0" movement="0"> dirt </tile>
-		<tile sprite="2" vision="0" movement="0"> strange grass</tile>
-		<tile sprite="4" vision="1" movement="2"> an alien tree</tile>
-		<tile sprite="5" vision="0" movement="1"> water</tile>
-		<tile sprite="6" vision="1" movement="2"> a twisted alien tree</tile>
-		<tile sprite="7" vision="1" movement="2"> a rocky cliff</tile>
+		<tile sprite="3" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="3" vision="EMPTY" movement="0"> dirt </tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> strange grass</tile>
+		<tile sprite="4" vision="BLOCKING" movement="2"> an alien tree</tile>
+		<tile sprite="5" vision="EMPTY" movement="1"> water</tile>
+		<tile sprite="6" vision="BLOCKING" movement="2"> a twisted alien tree</tile>
+		<tile sprite="7" vision="BLOCKING" movement="2"> a rocky cliff</tile>
 	</tileset>
 	<description>To the west over all of this looms an immense mountain,
 		seemingly inaccessable but brooding and cloud shrouded. Nearer at hand

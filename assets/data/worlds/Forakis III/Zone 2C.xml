@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="reef.png">	
 	<tileset count-x="8" count-y="8">
-		<tile sprite="1" vision="0" movement="0" smart="true"> reef</tile>
-		<tile sprite="17" vision="0" movement="0"> sand </tile>
-		<tile sprite="18" vision="0" movement="0"> boulder</tile>	
-		<tile sprite="19" vision="1" movement="3"> kelp</tile>		
-		<tile sprite="20" vision="1" movement="2"> cliff</tile>
+		<tile sprite="1" vision="EMPTY" movement="0" smart="true"> reef</tile>
+		<tile sprite="17" vision="EMPTY" movement="0"> sand </tile>
+		<tile sprite="18" vision="EMPTY" movement="0"> boulder</tile>	
+		<tile sprite="19" vision="BLOCKING" movement="3"> kelp</tile>		
+		<tile sprite="20" vision="BLOCKING" movement="2"> cliff</tile>
 	</tileset>
 	<zoneConditions>
 	<damagingCondition ID="underwater" damage="2">

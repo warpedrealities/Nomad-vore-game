@@ -13,8 +13,6 @@ public interface Zone_int {
 	public Widget getWidget(int x, int y);
 
 	public boolean passable(int x, int y, boolean fly);
-
-	public ILosBoard getBoard();
 	
 	public float getMovementMultiplier();
 	

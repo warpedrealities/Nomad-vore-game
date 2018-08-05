@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="arctic.png">
 	<tileset count-x="8" count-y="8">
-		<tile sprite="2" vision="2" movement="2"> metal wall</tile>
-		<tile sprite="1" vision="0" movement="0"> ice</tile>
-		<tile sprite="2" vision="0" movement="0"> snow</tile>
-		<tile sprite="3" vision="0" movement="2"> snowy boulder</tile>
-		<tile sprite="4" vision="2" movement="2"> frozen wall</tile>
-		<tile sprite="5" vision="0" movement="1"> abyss</tile>
+		<tile sprite="2" vision="BLOCKING" movement="2"> metal wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> ice</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> snow</tile>
+		<tile sprite="3" vision="EMPTY" movement="2"> snowy boulder</tile>
+		<tile sprite="4" vision="BLOCKING" movement="2"> frozen wall</tile>
+		<tile sprite="5" vision="EMPTY" movement="1"> abyss</tile>
 	</tileset>
 	<transition direction="west">Zone 1A</transition>
 	<description>The wind howls between the rocky prominences above you.

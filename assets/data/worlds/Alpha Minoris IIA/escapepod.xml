@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <zone width="16" height="16" spriteset="ship.png">
 	<tileset>
-		<tile sprite="1" vision="1" movement="2">a metal wall</tile>
-		<tile sprite="2" vision="0" movement="0">a metal floor</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2">a metal wall</tile>
+		<tile sprite="2" vision="EMPTY" movement="0">a metal floor</tile>
 	</tileset>
 	<description></description>
 	<mapgen>

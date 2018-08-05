@@ -3,14 +3,14 @@
 	<landingsite x="9" y="9" />
 	<zonerules ruleset="saurianvillage" />
 	<tileset count-x="4" count-y="4">
-		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="1" vision="0" movement="0"> stone cobbles </tile>
-		<tile sprite="3" vision="0" movement="0"> stone floor </tile>
-		<tile sprite="4" vision="1" movement="2"> stone wall </tile>
-		<tile sprite="5" vision="0" movement="0"> dirt </tile>
-		<tile sprite="6" vision="0" movement="2"> plant </tile>
-		<tile sprite="7" vision="0" movement="0"> grass </tile>
-		<tile sprite="8" vision="1" movement="2"> natural stone </tile>
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> stone cobbles </tile>
+		<tile sprite="3" vision="EMPTY" movement="0"> stone floor </tile>
+		<tile sprite="4" vision="BLOCKING" movement="2"> stone wall </tile>
+		<tile sprite="5" vision="EMPTY" movement="0"> dirt </tile>
+		<tile sprite="6" vision="EMPTY" movement="2"> plant </tile>
+		<tile sprite="7" vision="EMPTY" movement="0"> grass </tile>
+		<tile sprite="8" vision="BLOCKING" movement="2"> natural stone </tile>
 	</tileset>
 	<transition direction="north">zoneW</transition>		
 	<transition direction="east">zoneS</transition>

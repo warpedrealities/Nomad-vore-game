@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="forest.png">
 	<tileset count-x="4" count-y="4">
-		<tile sprite="3" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="3" vision="0" movement="0"> dirt </tile>
-		<tile sprite="2" vision="0" movement="0"> strange grass</tile>
-		<tile sprite="4" vision="1" movement="2"> an alien tree</tile>
-		<tile sprite="5" vision="0" movement="1"> water</tile>
-		<tile sprite="6" vision="1" movement="2"> a twisted alien tree</tile>
-		<tile sprite="9" vision="1" movement="2"> a wooden wall</tile>
+		<tile sprite="3" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="3" vision="EMPTY" movement="0"> dirt </tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> strange grass</tile>
+		<tile sprite="4" vision="BLOCKING" movement="2"> an alien tree</tile>
+		<tile sprite="5" vision="EMPTY" movement="1"> water</tile>
+		<tile sprite="6" vision="BLOCKING" movement="2"> a twisted alien tree</tile>
+		<tile sprite="9" vision="BLOCKING" movement="2"> a wooden wall</tile>
 	</tileset>
 	<description>The strange air of an alien world can be felt on your face</description>
 

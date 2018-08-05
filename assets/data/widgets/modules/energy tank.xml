@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<shipsystem sprite="102" name="energy tank" health="10">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>A sophisticated energy storage system that can contain up to 125 energy.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="125" resource="ENERGY" />
+</shipsystem>

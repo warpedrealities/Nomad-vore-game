@@ -3,6 +3,7 @@ package worldgentools.blockdungeon;
 import java.util.ArrayList;
 
 import actor.npc.NPC;
+import worldgentools.blockdungeon.advanced.AdvancedOpening;
 import zone.Tile;
 import zone.Zone;
 

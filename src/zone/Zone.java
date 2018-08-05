@@ -41,10 +41,11 @@ import widgets.spawner.WidgetSpawner;
 import worldgentools.ZoneBuildTools;
 import zone.TileDef.TileMovement;
 import zone.Environment.EnvironmentalConditions;
+import zone.lineOfSight.ZoneSight;
 import zonePreload.ZonePreload;
 import zonePreload.ZonePreloadController;
 
-public class Zone implements ILosBoard, Zone_int {
+public class Zone implements Zone_int {
 
 	public enum zoneType {
 		SURFACE(0), LIMITED(1), CLOSED(2);
@@ -73,7 +74,7 @@ public class Zone implements ILosBoard, Zone_int {
 	public ZonePreloadController preload;
 	private int violationLevel;
 	private EnvironmentalConditions zoneConditions;
-	
+	private ZoneSight[] sightBoard;
 	public void setZoneTileGrid(Tile[][] zoneTileGrid) {
 		this.zoneTileGrid = zoneTileGrid;
 	}
@@ -115,6 +116,7 @@ public class Zone implements ILosBoard, Zone_int {
 		zonePosition = new Vec2f(x, y);
 		zoneActors = new ArrayList<Actor>();
 		zoneEntity = entity;
+		sightBoard=new ZoneSight[2];
 	}
 
 	public boolean isVisited() {
@@ -368,7 +370,7 @@ public class Zone implements ILosBoard, Zone_int {
 		return "tilesets/" + tilesetName;
 	}
 
-	@Override
+
 	public boolean contains(int x, int y) {
 		if (x < 0 || y < 0) {
 			return false;
@@ -379,42 +381,12 @@ public class Zone implements ILosBoard, Zone_int {
 		return true;
 	}
 
-	@Override
-	public boolean isObstacle(int x, int y) {
-		if (x >= 0 && x < zoneWidth) {
-			if (y >= 0 && y < zoneHeight) {
-				if (zoneTileGrid[x][y] != null) {
-					if (zoneTileGrid[x][y].getWidgetObject() != null) {
-						if (zoneTileGrid[x][y].getWidgetObject().BlockVision() == true) {
-							return true;
-						}
-					}
-
-					return zoneTileGrid[x][y].getDefinition().getBlockVision();
-				}
-			}
-		}
-		return false;
-	}
 
 	public void ClearVisibleTiles() {
 		for (int i = 0; i < zoneWidth; i++) {
 			for (int j = 0; j < zoneHeight; j++) {
 				if (zoneTileGrid[i][j] != null) {
 					zoneTileGrid[i][j].Hide();
-				}
-
-			}
-		}
-	}
-
-	@Override
-	public void visit(int x, int y) {
-		if (x >= 0 && x < zoneWidth) {
-			if (y >= 0 && y < zoneHeight) {
-				if (zoneTileGrid[x][y] != null) {
-					zoneTileGrid[x][y].Explore();
-					zoneTileGrid[x][y].Reveal();
 				}
 
 			}
@@ -514,10 +486,21 @@ public class Zone implements ILosBoard, Zone_int {
 		return false;
 	}
 
-	@Override
-	public ILosBoard getBoard() {
-		// TODO Auto-generated met5hod stub
-		return this;
+
+	public ILosBoard getBoard(int index) {
+		if (sightBoard[index]==null)
+		{
+			switch (index)
+			{
+			case 0:
+				sightBoard[index]=new ZoneSight(zoneTileGrid,zoneWidth,zoneHeight,true);
+				break;
+			case 1:
+				sightBoard[index]=new ZoneSight(zoneTileGrid,zoneWidth,zoneHeight,false);		
+				break;
+			}
+		}
+		return sightBoard[index];
 	}
 
 	@Override

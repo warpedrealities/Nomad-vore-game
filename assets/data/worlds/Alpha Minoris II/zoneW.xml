@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="mountains0.png">
 	<tileset count-x="8" count-y="4">
-		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="1" vision="0" movement="0"> rocky ground </tile>
-		<tile sprite="3" vision="0" movement="1"> boulder</tile>	
-		<tile sprite="21" vision="0" movement="1"> shrub</tile>		
-		<tile sprite="5" vision="1" movement="2" smart="true"> mountain rocks</tile>
-		<tile sprite="22" vision="0" movement="0"> masonry floor</tile>		
-		<tile sprite="23" vision="1" movement="2"> masonry wall</tile>			
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> rocky ground </tile>
+		<tile sprite="3" vision="EMPTY" movement="1"> boulder</tile>	
+		<tile sprite="21" vision="EMPTY" movement="1"> shrub</tile>		
+		<tile sprite="5" vision="BLOCKING" movement="2" smart="true"> mountain rocks</tile>
+		<tile sprite="22" vision="EMPTY" movement="0"> masonry floor</tile>		
+		<tile sprite="23" vision="BLOCKING" movement="2"> masonry wall</tile>			
 	</tileset>
 	<description>
 	You've entered the mountains, narrow clefts and steep cliffs all about you in a perilous jumble. It'll be tricky to navigate, and its wind swept rocky ground is harsh and unfertile.

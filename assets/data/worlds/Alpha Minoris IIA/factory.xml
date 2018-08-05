@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="industrial.png">
 	<tileset count-x="8" count-y="4">
-		<tile sprite="17" vision="0" movement="0"> a concrete floor </tile>
-		<tile sprite="1" vision="1" movement="2" smart="true"> a concrete wall</tile>
-		<tile sprite="18" vision="1" movement="2"> immense machinery</tile>
-		<tile sprite="19" vision="1" movement="2"> panel</tile>
-		<tile sprite="20" vision="1" movement="2"> panel</tile>
+		<tile sprite="17" vision="EMPTY" movement="0"> a concrete floor </tile>
+		<tile sprite="1" vision="BLOCKING" movement="2" smart="true"> a concrete wall</tile>
+		<tile sprite="18" vision="BLOCKING" movement="2"> immense machinery</tile>
+		<tile sprite="19" vision="BLOCKING" movement="2"> panel</tile>
+		<tile sprite="20" vision="BLOCKING" movement="2"> panel</tile>
 	</tileset>
 	<description>
 		The halls are gloomy and twist about, guttering light fixtures the only

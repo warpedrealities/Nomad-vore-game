@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="energy tank" weight="10" value="2000">
+	<description>A sophisticated energy storage system that can contain up to 125 energy.</description>
+	<placeditem widget="modules/energy tank" />
+</ItemWidget>

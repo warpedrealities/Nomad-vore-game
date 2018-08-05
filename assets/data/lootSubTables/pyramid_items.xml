@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<lootTable>
+	<loot item="Khopesh" chance="1" />
+	<loot item="carnality necklace" chance="1" />		
+	<loot item="energy tank" chance="1" />			
+	<loot item="medkit" chance="2" />
+	<loot item="clarity" chance="2" />
+	<loot item="stimpack" chance="2" />
+	<loot item="option droid" chance="2" />		
+	<loot item="plasma grenade" chance="4" />
+	<loot item="plasma canister" chance="2" />
+	<loot item="protein bar" chance="4" />	
+</lootTable>

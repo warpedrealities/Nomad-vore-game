@@ -27,6 +27,7 @@ import widgets.WidgetHarvestable;
 import widgets.WidgetPortal;
 import widgets.WidgetSprite;
 import worldgentools.blockdungeon.BlockDungeonGenerator;
+import worldgentools.blockdungeon.advanced.AdvancedBlockDungeonGenerator;
 import worldgentools.decoratingTools.DecoratorTool;
 import worldgentools.nodeMapGenerator.NodeMapGenerator;
 import worldgentools.preload.PreloadTools;
@@ -752,6 +753,9 @@ public class ZoneBuildTools {
 				}
 				if (Enode.getTagName() == "blockDungeon") {
 					new BlockDungeonGenerator(m_zone, m_tiles).run(Enode);
+				}
+				if (Enode.getTagName() == "advancedBlockDungeon") {
+					new AdvancedBlockDungeonGenerator(m_zone, m_tiles).run(Enode);
 				}
 				if (Enode.getTagName() == "noise") {
 					grid = GenOverlay();

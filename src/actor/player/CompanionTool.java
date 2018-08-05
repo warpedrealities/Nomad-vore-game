@@ -11,6 +11,7 @@ import shared.Vec2i;
 import spaceship.Spaceship;
 import view.ZoneInteractionHandler;
 import widgets.WidgetPortal;
+import zone.TileDef.TileMovement;
 import zone.Zone;
 
 public class CompanionTool {
@@ -75,7 +76,8 @@ public class CompanionTool {
 				z = z - 8;
 			}
 			Vec2f p = ZoneInteractionHandler.getPos(z, player.getPosition());
-			if (zone.isObstacle((int) p.x, (int) p.y) == false && zone.getActor((int) p.x, (int) p.y) == null) {
+			if (zone.getTile((int) p.x, (int) p.y).getDefinition().getMovement()==TileMovement.WALK && 
+					zone.getActor((int) p.x, (int) p.y) == null) {
 
 				companion.setPosition(new Vec2f(p.x, p.y));
 				return;
@@ -116,7 +118,8 @@ public class CompanionTool {
 				z = z - 8;
 			}
 			Vec2f p = ZoneInteractionHandler.getPos(z, position);
-			if (zone.isObstacle((int) p.x, (int) p.y) == false && zone.getActor((int) p.x, (int) p.y) == null) {
+			if (zone.getTile((int) p.x, (int) p.y).getDefinition().getMovement()==TileMovement.WALK &&
+					zone.getActor((int) p.x, (int) p.y) == null) {
 
 				npc.setPosition(new Vec2f(p.x, p.y));
 				return true;

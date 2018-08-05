@@ -15,10 +15,10 @@
 
 	<layout width="16" height="16" spriteset="galleon.png">
 		<tileset>
-			<tile sprite="1" vision="1" movement="2">metal wall</tile>
-			<tile sprite="2" vision="0" movement="0">faux plank floor</tile>
-			<tile sprite="3" vision="0" movement="0">metal stairs</tile>
-			<tile sprite="4" vision="0" movement="0">faux plank floor</tile>	
+			<tile sprite="1" vision="BLOCKING" movement="2">metal wall</tile>
+			<tile sprite="2" vision="EMPTY" movement="0">faux plank floor</tile>
+			<tile sprite="3" vision="EMPTY" movement="0">metal stairs</tile>
+			<tile sprite="4" vision="EMPTY" movement="0">faux plank floor</tile>	
 		</tileset>
 		<description></description>
 		<mapgen>

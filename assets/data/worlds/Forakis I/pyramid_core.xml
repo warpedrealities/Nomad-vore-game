@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="pyramid.png">
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="EMPTY" movement="0"> stone tiles</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2" smart="true"> stone wall</tile>		
+		<tile sprite="18" vision="EMPTY" movement="0"> stone floor</tile>
+		<tile sprite="19" vision="TRANSPARENT" movement="2"> window</tile>
+		<tile sprite="20" vision="BLOCKING" movement="2"> statue</tile>
+	</tileset>
+	<description>
+	
+	</description>
+	
+	<mapgen>
+	<advancedBlockDungeon extent="32">
+	<loadBlocks file="pyramid"/>
+		<keyBlock x="4" y="4">
+				<!--entrance -->
+				<row>22211122</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>21244442</row>
+				<row>21111112</row>
+				<row>22222212</row>
+				<edge value="SOUTH" type="1" />
+				<widget x="6" y="7" name="entrance" variable="200" info="Zone 3C" />
+
+			</keyBlock>
+			
+			<lootTable identity="normalchest">
+
+				<lootSubTable chance="1" file="resource_tier_1" />
+				<lootSubTable chance="0.5" file="resource_tier_1" />
+				<lootSubTable chance="0.1" file="resource_tier_1" />				
+				<lootSubTable chance="1" file="consumable_Tier_1" />
+				<lootSubTable chance="0.5" file="resource_tier_1" />
+				<lootSubTable chance="0.1" file="consumable_Tier_1" />		
+				<lootSubTable chance="1" file="pyramid_items" />					
+				<loot item="gold" chance="0.4" addendum="100" />
+				<loot item="gold" chance="0.4" addendum="50" />				
+				<loot item="gold" chance="0.4" addendum="250" />
+			</lootTable>			
+	<clean value="2" />			
+	</advancedBlockDungeon>
+	</mapgen>
+
+</zone>

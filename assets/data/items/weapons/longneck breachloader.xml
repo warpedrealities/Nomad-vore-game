@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemWeapon name="Longneck breachloader" weight="10" value="1000">
+<ItemWeapon name="Longneck breachloader" shortName="breachloader" weight="10" value="1000">
 <tagSet value="A"/>
 <description>
 A long barreled break action rifle. Has iron sights and is suitable for inflicting a significant amount of damage on whoever you choose to fire it at.  (A)

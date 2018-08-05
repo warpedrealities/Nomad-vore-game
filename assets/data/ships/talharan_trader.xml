@@ -16,8 +16,8 @@
 
 	<layout width="16" height="16" spriteset="talharan.png">
 		<tileset count-x="8" count-y="4">
-			<tile sprite="1" vision="1" movement="2" smart="true">a metal wall</tile>
-			<tile sprite="17" vision="0" movement="0">a metal floor</tile>
+			<tile sprite="1" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
+			<tile sprite="17" vision="EMPTY" movement="0">a metal floor</tile>
 		</tileset>
 		<description></description>
 		<mapgen>

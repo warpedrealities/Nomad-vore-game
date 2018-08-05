@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0"?>
 <zone width="16" height="16" spriteset="geothermal.png">
 	<tileset count-x="8" count-y="8">
-		<tile sprite="9" vision="1" movement="2"> rock wall</tile>
-		<tile sprite="1" vision="0" movement="0"> dusty cave floor </tile>
-		<tile sprite="2" vision="0" movement="1"> broken ground </tile>
-		<tile sprite="3" vision="0" movement="0"> cracked </tile>
-		<tile sprite="10" vision="0" movement="0"> web covered cave floor </tile>		
-		<tile sprite="4" vision="1" movement="2"> stalagmite </tile>
+		<tile sprite="9" vision="BLOCKING" movement="2"> rock wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> dusty cave floor </tile>
+		<tile sprite="2" vision="EMPTY" movement="1"> broken ground </tile>
+		<tile sprite="3" vision="EMPTY" movement="0"> cracked </tile>
+		<tile sprite="10" vision="EMPTY" movement="0"> web covered cave floor </tile>		
+		<tile sprite="4" vision="BLOCKING" movement="2"> stalagmite </tile>
 			
 	</tileset>
 

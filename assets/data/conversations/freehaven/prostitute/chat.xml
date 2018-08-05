@@ -23,11 +23,11 @@
 	<preference fetish="demis" />	
 	<preference fetish="unbirthing" />
 	</choice>
-		<choice destination="unbirth0" text="I want you to juice me">
+	<!-- 	<choice destination="unbirth0" text="I want you to juice me">
 		<preference fetish="females" />	
 	<preference fetish="demis" />	
 	<preference fetish="unbirthing" />
-	</choice>
+	</choice> -->
 	<choice destination="end" text="on second thoughts, I'll be on my way"/>
 	</page>
 	

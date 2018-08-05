@@ -2,13 +2,13 @@
 <zone width="32" height="32" spriteset="tropical.png">
 	<landingsite x="16" y="16" />	
 	<tileset count-x="4" count-y="4">
-		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="1" vision="0" movement="0"> scrub ground </tile>
-		<tile sprite="2" vision="0" movement="0"> sand</tile>	
-		<tile sprite="3" vision="0" movement="0"> beach</tile>		
-		<tile sprite="4" vision="0" movement="1"> boulder</tile>
-		<tile sprite="6" vision="0" movement="2"> cliff</tile>
-		<tile sprite="5" vision="0" movement="2"> water</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> scrub ground </tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> sand</tile>	
+		<tile sprite="3" vision="EMPTY" movement="0"> beach</tile>		
+		<tile sprite="4" vision="EMPTY" movement="1"> boulder</tile>
+		<tile sprite="6" vision="EMPTY" movement="2"> cliff</tile>
+		<tile sprite="5" vision="EMPTY" movement="2"> water</tile>
 
 	</tileset>
 

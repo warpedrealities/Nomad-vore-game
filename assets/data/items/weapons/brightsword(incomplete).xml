@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemWeapon name="Brightsword (incomplete)" weight="8" value="1250">
+<ItemWeapon name="Brightsword (incomplete)" shortName="Brightsword" weight="8" value="1250">
 	<tagSet value="SM" />
 	<description>
 		A battlefield claymore made of a metal so reflective it almost seems to glow with an inner light. Cannot be wielded one handed. This weapon is a partial reproduction of a seraphic brightsword and falls short of its full potential.  3AP Does

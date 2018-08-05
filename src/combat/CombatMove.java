@@ -402,7 +402,7 @@ public class CombatMove {
 
 	public boolean useNormalMove(Actor origin, Attackable target) {
 		// check los
-		if (GameManager.m_los.existsLineOfSight(Universe.getInstance().getCurrentZone(), (int) origin.getPosition().x,
+		if (GameManager.m_los.existsLineOfSight(Universe.getInstance().getCurrentZone().getBoard(1), (int) origin.getPosition().x,
 				(int) origin.getPosition().y, (int) target.getPosition().x, (int) target.getPosition().y, false)) {
 			// check range
 			float distance = origin.getPosition().getDistance(target.getPosition());

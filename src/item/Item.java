@@ -8,7 +8,7 @@ import shared.ParserHelper;
 public abstract class Item implements Comparable {
 
 	private int UID;
-	protected String m_name, m_description;
+	protected String m_name, shortName, m_description;
 	protected float m_weight, itemValue;
 	protected int tag;
 	
@@ -39,6 +39,10 @@ public abstract class Item implements Comparable {
 		return m_name;
 	}
 
+	public String getShortName() {
+		return shortName;
+	}
+	
 	public String getDescription() {
 		return m_description;
 	}

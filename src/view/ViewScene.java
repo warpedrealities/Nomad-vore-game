@@ -130,7 +130,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 		sceneController.getActiveZone().AddPlayer(sceneController.getUniverse().player);
 
-		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
+		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 				(int) sceneController.getUniverse().player.getPosition().x,
 				(int) sceneController.getUniverse().player.getPosition().y, 10);
 		m_view = new WorldView();
@@ -240,7 +240,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 		sceneController.getActiveZone().AddPlayer(sceneController.getUniverse().player);
 
-		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
+		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 				(int) sceneController.getUniverse().player.getPosition().x,
 				(int) sceneController.getUniverse().player.getPosition().y, 10);
 		m_view = new WorldView();
@@ -429,7 +429,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 										new Vector2f(-1 * sceneController.getUniverse().player.getPosition().x - 9,
 												-1 * sceneController.getUniverse().player.getPosition().y + 7));
 								sceneController.getActiveZone().ClearVisibleTiles();
-								GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
+								GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 										(int) sceneController.getUniverse().player.getPosition().x,
 										(int) sceneController.getUniverse().player.getPosition().y, 
 										(int)(10.0F*sceneController.getActiveZone().getVisionMultiplier()));
@@ -570,7 +570,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 		sceneController.getActiveZone().ClearVisibleTiles();
 
-		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
+		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 				(int) sceneController.getUniverse().player.getPosition().x,
 				(int) sceneController.getUniverse().player.getPosition().y, 
 				(int)(10.0F*sceneController.getUniverse().getCurrentZone().getVisionMultiplier()));
@@ -658,7 +658,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 		// run vision algorithm
 		sceneController.getActiveZone().ClearVisibleTiles();
-		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
+		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 				(int) sceneController.getUniverse().player.getPosition().x,
 				(int) sceneController.getUniverse().player.getPosition().y, 
 				(int) (10.0F*sceneController.getUniverse().getCurrentZone().getVisionMultiplier()));
@@ -756,7 +756,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 		// run vision algorithm
 		sceneController.getActiveZone().ClearVisibleTiles();
-		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone(),
+		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 				(int) sceneController.getUniverse().player.getPosition().x,
 				(int) sceneController.getUniverse().player.getPosition().y, 
 				(int)(10.0F*sceneController.getActiveZone().getVisionMultiplier()));
