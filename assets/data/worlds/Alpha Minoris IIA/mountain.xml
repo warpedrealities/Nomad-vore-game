@@ -2,9 +2,9 @@
 <zone width="16" height="16" spriteset="mountain.png">
 	<zonerules ruleset="harpy" />
 	<tileset count-x="4" count-y="8">
-		<tile sprite="1" vision="0" movement="0"> dirt</tile>
-		<tile sprite="2" vision="1" movement="2"> rock wall </tile>
-		<tile sprite="5" vision="0" movement="1" smart="true"> abyss</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> dirt</tile>
+		<tile sprite="2" vision="BLOCKING" movement="2"> rock wall </tile>
+		<tile sprite="5" vision="EMPTY" movement="1" smart="true"> abyss</tile>
 	</tileset>
 	<description>You can see for miles from atop this mountain, though your
 		view is partially hidden by drifting clouds. The wind is bracing and

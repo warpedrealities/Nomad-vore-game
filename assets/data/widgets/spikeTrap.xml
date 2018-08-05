@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<trap sprite="10">
+	<discoverSprite value="11" />
+	<DC value="12" />
+	<effect type="COMBAT">
+		<damage amount="12" type="KINETIC">
+			TARGET suffers VALUE spike damage as spikes erupt from the floor.
+		</damage>
+	</effect>
+	<description>
+		A spike trap
+	</description>
+</trap>

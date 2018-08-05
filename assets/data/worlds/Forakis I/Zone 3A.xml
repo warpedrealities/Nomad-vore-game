@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="desert.png">
 	<tileset count-x="4" count-y="4">
-		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="6" vision="0" movement="0"> oasis grass</tile>
-		<tile sprite="2" vision="0" movement="0"> desert sands</tile>
-		<tile sprite="7" vision="0" movement="1"> boulder</tile>
-		<tile sprite="5" vision="0" movement="1"> boulder</tile>
-		<tile sprite="8" vision="1" movement="2"> oasis tree</tile>	
-		<tile sprite="9" vision="0" movement="1"> oasis</tile>	
-		<tile sprite="3" vision="1" movement="2"> high dunes</tile>			
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="6" vision="EMPTY" movement="0"> oasis grass</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> desert sands</tile>
+		<tile sprite="7" vision="EMPTY" movement="1"> boulder</tile>
+		<tile sprite="5" vision="EMPTY" movement="1"> boulder</tile>
+		<tile sprite="8" vision="BLOCKING" movement="2"> oasis tree</tile>	
+		<tile sprite="9" vision="EMPTY" movement="1"> oasis</tile>	
+		<tile sprite="3" vision="BLOCKING" movement="2"> high dunes</tile>			
 	</tileset>
 	<description>
 	This oasis is a balm to the spirit amidst the desert, even the wind seems to have died down. But the calm where one lowers their guard might be the most dangerous time for a threat to strike.

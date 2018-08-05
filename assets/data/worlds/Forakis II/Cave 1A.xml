@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0"?>
 <zone width="64" height="64" spriteset="geothermal.png">
 	<tileset count-x="8" count-y="8">
-		<tile sprite="9" vision="1" movement="2"> rock wall</tile>
-		<tile sprite="1" vision="0" movement="0"> dusty cave floor </tile>
-		<tile sprite="2" vision="0" movement="1"> broken ground </tile>
-		<tile sprite="3" vision="0" movement="0"> cracked </tile>
-		<tile sprite="4" vision="1" movement="2"> stalagmite </tile>
-		<tile sprite="5" vision="1" movement="2"> stalagmites </tile>
-		<tile sprite="6" vision="0" movement="2"> steam vent </tile>
-		<tile sprite="7" vision="0" movement="2"> steam vent </tile>
-		<tile sprite="8" vision="0" movement="1"> covered magma </tile>
+		<tile sprite="9" vision="BLOCKING" movement="2"> rock wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> dusty cave floor </tile>
+		<tile sprite="2" vision="EMPTY" movement="1"> broken ground </tile>
+		<tile sprite="3" vision="EMPTY" movement="0"> cracked </tile>
+		<tile sprite="4" vision="BLOCKING" movement="2"> stalagmite </tile>
+		<tile sprite="5" vision="BLOCKING" movement="2"> stalagmites </tile>
+		<tile sprite="6" vision="EMPTY" movement="2"> steam vent </tile>
+		<tile sprite="7" vision="EMPTY" movement="2"> steam vent </tile>
+		<tile sprite="8" vision="EMPTY" movement="1"> covered magma </tile>
 	</tileset>
 
 	<description>The caves are hot, geothermal currents interacting with

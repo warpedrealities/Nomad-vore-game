@@ -32,6 +32,10 @@ public class ItemEquip extends Item implements ItemHasEnergy {
 
 		m_use = ItemUse.EQUIP;
 		m_name = Inode.getAttribute("name");
+		if (Inode.getAttribute("shortName").length()>1)
+		{
+			shortName = Inode.getAttribute("shortName");			
+		}
 		m_weight = Float.parseFloat(Inode.getAttribute("weight"));
 		itemValue = Float.parseFloat(Inode.getAttribute("value"));
 

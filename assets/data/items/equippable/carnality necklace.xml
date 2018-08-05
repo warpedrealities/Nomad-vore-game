@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ItemEquip name="carnality necklace" weight="1" slot="ACCESSORY"
+	value="1000">
+	<description>
+		A series of provocative carvings made of gleaming black jade form a necklace for you to wear. Certainly helps get someone in the mood. +2 to seduction.
+	</description>
+	<modifier>
+		<seduction value="2" />
+
+	</modifier>
+</ItemEquip>

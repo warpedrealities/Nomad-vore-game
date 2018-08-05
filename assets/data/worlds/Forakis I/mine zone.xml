@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0"?>
 <zone width="32" height="32" spriteset="cave.png">
 	<tileset count-x="4" count-y="4">
-		<tile sprite="1" vision="1" movement="2"> rock wall</tile>
-		<tile sprite="2" vision="0" movement="0"> dusty cave floor </tile>
-		<tile sprite="3" vision="1" movement="2"> a rock boulder</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2"> rock wall</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> dusty cave floor </tile>
+		<tile sprite="3" vision="BLOCKING" movement="2"> a rock boulder</tile>
 	</tileset>
 	<description>
 	

@@ -41,7 +41,15 @@ public class HandReader extends GUIBase {
 		// check item in hand
 		if (m_player.getInventory().getSlot(Inventory.HAND) != null) {
 			m_equip = true;
-			setStrings(m_player.getInventory().getSlot(Inventory.HAND).getItem().getName());
+			if (m_player.getInventory().getSlot(Inventory.HAND).getShortName()!=null)
+			{
+				setStrings(m_player.getInventory().getSlot(Inventory.HAND).getItem().getShortName());	
+			}
+			else
+			{
+				setStrings(m_player.getInventory().getSlot(Inventory.HAND).getItem().getName());	
+			}
+
 			// check for power
 			if (ItemDepletableInstance.class.isInstance(m_player.getInventory().getSlot(Inventory.HAND))) {
 				m_item = (ItemDepletableInstance) m_player.getInventory().getSlot(Inventory.HAND);
@@ -76,7 +84,14 @@ public class HandReader extends GUIBase {
 		}
 
 		if (m_player.getInventory().getSlot(Inventory.QUICK) != null) {
-			setQuickString(m_player.getInventory().getSlot(Inventory.QUICK).getName());
+			if (m_player.getInventory().getSlot(Inventory.QUICK).getShortName()!=null)
+			{
+				setQuickString(m_player.getInventory().getSlot(Inventory.QUICK).getShortName());		
+			}
+			else
+			{
+				setQuickString(m_player.getInventory().getSlot(Inventory.QUICK).getName());		
+			}
 		} else {
 			m_fonts[4].setString("empty");
 		}

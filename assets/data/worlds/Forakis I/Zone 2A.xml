@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="desert.png">
 	<tileset count-x="4" count-y="4">
-		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="2" vision="0" movement="0"> desert sand</tile>
-		<tile sprite="3" vision="1" movement="1"> high dunes</tile>
-		<tile sprite="10" vision="0" movement="3"> sinking sands</tile>
-		<tile sprite="5" vision="0" movement="1"> boulder</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> desert sand</tile>
+		<tile sprite="3" vision="BLOCKING" movement="1"> high dunes</tile>
+		<tile sprite="10" vision="EMPTY" movement="3"> sinking sands</tile>
+		<tile sprite="5" vision="EMPTY" movement="1"> boulder</tile>
 	</tileset>
 	<description>
 	The trackless desert is vast and inhospitable, its climate harsh and its moods pitiless. All you can hear is the sound of wind and shifting sands, and all you can feel is the subtle pervading sensation of threat.

@@ -10,12 +10,16 @@ import shared.ParserHelper;
 
 public class TileDef {
 	int m_sprite;
-	boolean m_blockvision;
+	TileVision vision;
 	boolean m_autoTile;
 	String m_description;
 
 	public enum TileMovement {
 		WALK, FLY, BLOCK,SLOW
+	};
+	
+	public enum TileVision {
+		EMPTY, TRANSPARENT, BLOCKING;
 	};
 
 	int indexID;
@@ -25,12 +29,9 @@ public class TileDef {
 	public TileDef(Element node, int index) {
 		indexID = index;
 		m_sprite = Integer.parseInt(node.getAttribute("sprite"));
-		m_blockvision = false;
 		m_autoTile = false;
 		if (node.getAttribute("vision") != null) {
-			if (Integer.parseInt(node.getAttribute("vision")) > 0) {
-				m_blockvision = true;
-			}
+			vision=TileVision.valueOf(node.getAttribute("vision"));
 		}
 		m_description = node.getTextContent().replace("\n", "");
 
@@ -74,8 +75,12 @@ public class TileDef {
 		return m_sprite;
 	}
 
-	public boolean getBlockVision() {
-		return m_blockvision;
+//	public boolean getBlockVision() {
+//		return m_blockvision;
+//	}
+	
+	public TileVision getVision() {
+		return vision;
 	}
 
 	public String getDescription() {
@@ -92,7 +97,7 @@ public class TileDef {
 
 	public void save(DataOutputStream dstream) throws IOException {
 		dstream.writeInt(m_sprite);
-		dstream.writeBoolean(m_blockvision);
+		dstream.writeInt(vision.ordinal());
 		ParserHelper.SaveString(dstream, m_description);
 		ParserHelper.SaveString(dstream, m_movement.toString());
 
@@ -101,7 +106,7 @@ public class TileDef {
 
 	public TileDef(DataInputStream dstream, int index) throws IOException {
 		m_sprite = dstream.readInt();
-		m_blockvision = dstream.readBoolean();
+		vision=TileVision.values()[dstream.readInt()];
 		m_description = ParserHelper.LoadString(dstream);
 		String s = ParserHelper.LoadString(dstream);
 		m_movement = TileMovement.valueOf(s);
@@ -119,6 +124,10 @@ public class TileDef {
 
 	public ITileBehavior getBehavior() {
 		return m_behavior;
+	}
+
+	public boolean getBlockVision() {
+		return !vision.equals(TileVision.EMPTY);
 	}
 
 }

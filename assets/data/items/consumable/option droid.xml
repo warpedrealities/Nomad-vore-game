@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemConsumable name="option droid" weight="8" value="800">
+	<description>An automated combat robot that's programmed to shoot at your enemies.</description>
+	<effectSpawn value="temp/option_droid">
+		You toss the option droid into the air and it powers, bobbing in the air next to you
+	</effectSpawn>
+</ItemConsumable>

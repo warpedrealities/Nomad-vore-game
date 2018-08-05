@@ -2,12 +2,12 @@
 <zone width="64" height="64" spriteset="desert.png">
 	<landingsite x="32" y="32" />
 	<tileset count-x="4" count-y="4">
-		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="1" vision="0" movement="0"> stonework floor </tile>
-		<tile sprite="2" vision="0" movement="0"> desert sand</tile>
-		<tile sprite="3" vision="1" movement="1"> high dunes</tile>
-		<tile sprite="4" vision="1" movement="2"> stonework wall</tile>
-		<tile sprite="5" vision="0" movement="1"> boulder</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> stonework floor </tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> desert sand</tile>
+		<tile sprite="3" vision="BLOCKING" movement="1"> high dunes</tile>
+		<tile sprite="4" vision="BLOCKING" movement="2"> stonework wall</tile>
+		<tile sprite="5" vision="EMPTY" movement="1"> boulder</tile>
 	</tileset>
 	<description>
 	These buildings are long abandoned, their ruins partially engulfed now by the driving sands of countless years of neglect. No voice or sound of purposeful intent can be heard, only the sound of the driving wind and shifting sands.

@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="wasteland.png">
 	<tileset count-x="8" count-y="4">
-		<tile sprite="17" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="20" vision="0" movement="1"> ruined fence ending</tile>
-		<tile sprite="21" vision="0" movement="1"> ruined fence</tile>
-		<tile sprite="22" vision="0" movement="1"> ruined fence ending</tile>
-		<tile sprite="23" vision="1" movement="2"> wooden shack wall</tile>		
-		<tile sprite="24" vision="0" movement="0"> wooden shack floor</tile>
-		<tile sprite="17" vision="0" movement="0"> a blasted wasteland</tile>
-		<tile sprite="18" vision="0" movement="1"> a boulder resting in the wasteland</tile>
-		<tile sprite="19" vision="1" movement="2"> a dessicated tree standing vigil over the wasteland</tile>
-		<tile sprite="18" vision="0" movement="1"> boulder</tile>
-		<tile sprite="1" vision="0" movement="0" smart="true"> a dessicated lake bed </tile>
-		<tile sprite="28" vision="1" movement="2"> rock wall</tile>		
+		<tile sprite="17" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="20" vision="EMPTY" movement="1"> ruined fence ending</tile>
+		<tile sprite="21" vision="EMPTY" movement="1"> ruined fence</tile>
+		<tile sprite="22" vision="EMPTY" movement="1"> ruined fence ending</tile>
+		<tile sprite="23" vision="BLOCKING" movement="2"> wooden shack wall</tile>		
+		<tile sprite="24" vision="EMPTY" movement="0"> wooden shack floor</tile>
+		<tile sprite="17" vision="EMPTY" movement="0"> a blasted wasteland</tile>
+		<tile sprite="18" vision="EMPTY" movement="1"> a boulder resting in the wasteland</tile>
+		<tile sprite="19" vision="BLOCKING" movement="2"> a dessicated tree standing vigil over the wasteland</tile>
+		<tile sprite="18" vision="EMPTY" movement="1"> boulder</tile>
+		<tile sprite="1" vision="EMPTY" movement="0" smart="true"> a dessicated lake bed </tile>
+		<tile sprite="28" vision="BLOCKING" movement="2"> rock wall</tile>		
 	</tileset>
 	<description>
 		A gust of wind picks up some sand, the coarse bits of dirt crashing against your legs as you step into this dry bit of high ground. The only things of interest here are the small hut nearby, although it might be worth looking around for something.	

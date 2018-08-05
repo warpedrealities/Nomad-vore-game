@@ -49,7 +49,7 @@ public class FactionListener {
 		// if not, check if witnesses can see the location
 		for (int i = 0; i < witnesses.size(); i++) {
 			if (witnesses.get(i).getRPGHandler().getActive()) {
-				if (witnesses.get(i).getPosition().getDistance(p)<10 && GameManager.m_los.existsLineOfSight(Universe.getInstance().getCurrentZone(), (int) p.x, (int) p.y,
+				if (witnesses.get(i).getPosition().getDistance(p)<10 && GameManager.m_los.existsLineOfSight(Universe.getInstance().getCurrentZone().getBoard(0), (int) p.x, (int) p.y,
 						(int) witnesses.get(i).getPosition().x, (int) witnesses.get(i).getPosition().y, true)) {
 					currentViolation = new FactionViolation(violationLevel, p);
 					cooldownClock = 10;

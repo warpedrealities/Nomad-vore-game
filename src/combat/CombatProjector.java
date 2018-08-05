@@ -11,6 +11,7 @@ import view.ViewScene;
 import vmo.Game;
 import vmo.GameManager;
 import zone.Tile;
+import zone.TileDef.TileVision;
 import zone.Zone;
 
 public class CombatProjector implements ILosBoard {
@@ -38,7 +39,7 @@ public class CombatProjector implements ILosBoard {
 
 	@Override
 	public boolean isObstacle(int x, int y) {
-		return zone.isObstacle(x, y);
+		return !zone.getTile(x, y).getDefinition().getVision().equals(TileVision.EMPTY);
 	}
 
 	@Override

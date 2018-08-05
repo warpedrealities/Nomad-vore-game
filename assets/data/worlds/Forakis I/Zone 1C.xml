@@ -2,15 +2,15 @@
 <zone width="64" height="64" spriteset="desert.png">
 	<landingsite x="32" y="32" />	
 	<tileset count-x="4" count-y="4">
-		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="6" vision="0" movement="0"> valley grass</tile>
-		<tile sprite="2" vision="0" movement="0"> desert sands</tile>
-		<tile sprite="7" vision="0" movement="1"> boulder</tile>
-		<tile sprite="8" vision="1" movement="2"> valley tree</tile>	
-		<tile sprite="9" vision="0" movement="1"> water</tile>	
-		<tile sprite="11" vision="1" movement="2"> rock walls</tile>	
-		<tile sprite="4" vision="1" movement="2"> brick wall</tile>
-		<tile sprite="1" vision="0" movement="0"> brick floor </tile>		
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="6" vision="EMPTY" movement="0"> valley grass</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> desert sands</tile>
+		<tile sprite="7" vision="EMPTY" movement="1"> boulder</tile>
+		<tile sprite="8" vision="BLOCKING" movement="2"> valley tree</tile>	
+		<tile sprite="9" vision="EMPTY" movement="1"> water</tile>	
+		<tile sprite="11" vision="BLOCKING" movement="2"> rock walls</tile>	
+		<tile sprite="4" vision="BLOCKING" movement="2"> brick wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> brick floor </tile>		
 	</tileset>
 	<description>
 

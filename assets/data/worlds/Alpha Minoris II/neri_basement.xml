@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <zone width="16" height="16" spriteset="dungeon.png">
 	<tileset count-x="8" count-y="4">
-		<tile sprite="17" vision="0" movement="0"> a stone floor </tile>
-		<tile sprite="1" vision="1" movement="2" smart="true"> a stone wall</tile>
-		<tile sprite="18" vision="0" movement="1"> liquid water</tile>
+		<tile sprite="17" vision="EMPTY" movement="0"> a stone floor </tile>
+		<tile sprite="1" vision="BLOCKING" movement="2" smart="true"> a stone wall</tile>
+		<tile sprite="18" vision="EMPTY" movement="1"> liquid water</tile>
 	</tileset>
 	<description></description>
 	<mapgen>

@@ -32,7 +32,7 @@ public class BlockDungeonHelper {
 		return sublist.get(r);
 	}
 
-	static void cleanup(Tile[][] grid, Zone zone, int wall) {
+	public static void cleanup(Tile[][] grid, Zone zone, int wall) {
 		for (int i = 0; i < zone.getWidth(); i++) {
 			if (grid[i][0] != null) {
 				if (grid[i][0].getDefinition().getBlockVision() == false) {

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <zone width="32" height="32" spriteset="arctic.png">
 	<tileset count-x="8" count-y="8">
-		<tile sprite="6" vision="0" movement="0"> snow covered tiles</tile>
-		<tile sprite="7" vision="2" movement="2"> frozen wall</tile>
-		<tile sprite="8" vision="0" movement="1"> broken window</tile>
-		<tile sprite="1" vision="0" movement="0"> ice</tile>
-		<tile sprite="2" vision="0" movement="0"> snow</tile>
-		<tile sprite="3" vision="0" movement="2"> snowy boulder</tile>
-		<tile sprite="4" vision="2" movement="2"> frozen stonework</tile>
-		<tile sprite="5" vision="0" movement="1"> abyss</tile>
+		<tile sprite="6" vision="EMPTY" movement="0"> snow covered tiles</tile>
+		<tile sprite="7" vision="BLOCKING" movement="2"> frozen wall</tile>
+		<tile sprite="8" vision="EMPTY" movement="1"> broken window</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> ice</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> snow</tile>
+		<tile sprite="3" vision="EMPTY" movement="2"> snowy boulder</tile>
+		<tile sprite="4" vision="BLOCKING" movement="2"> frozen stonework</tile>
+		<tile sprite="5" vision="EMPTY" movement="1"> abyss</tile>
 	</tileset>
 	<description>This outpost has been abandoned though for how long is
 		hard to say, the piled high snow and empty broken windows make any

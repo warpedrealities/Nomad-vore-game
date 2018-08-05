@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="defaultnew.png">
 	<tileset count-x="4" count-y="8">
-		<tile sprite="1" vision="1" movement="2"> a metal wall</tile>
-		<tile sprite="1" vision="0" movement="0"> dirt </tile>
-		<tile sprite="5" vision="0" movement="0"> strange grass</tile>
-		<tile sprite="13" vision="1" movement="2" smart="true"> a rock wall</tile>
-		<tile sprite="10" vision="0" movement="2"> shrub</tile>
-		<tile sprite="9" vision="0" movement="2"> boulder</tile>
-		<tile sprite="6" vision="0" movement="2"> boulder</tile>
-		<tile sprite="7" vision="0" movement="0"> grass</tile>
-		<tile sprite="8" vision="0" movement="0"> grass</tile>
-		<tile sprite="2" vision="0" movement="0"> dirt</tile>
-		<tile sprite="3" vision="0" movement="0"> dirt</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> dirt </tile>
+		<tile sprite="5" vision="EMPTY" movement="0"> strange grass</tile>
+		<tile sprite="13" vision="BLOCKING" movement="2" smart="true"> a rock wall</tile>
+		<tile sprite="10" vision="EMPTY" movement="2"> shrub</tile>
+		<tile sprite="9" vision="EMPTY" movement="2"> boulder</tile>
+		<tile sprite="6" vision="EMPTY" movement="2"> boulder</tile>
+		<tile sprite="7" vision="EMPTY" movement="0"> grass</tile>
+		<tile sprite="8" vision="EMPTY" movement="0"> grass</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> dirt</tile>
+		<tile sprite="3" vision="EMPTY" movement="0"> dirt</tile>
 	</tileset>
 
 	<description>the air smells strange and alien, the world unfamiliar and

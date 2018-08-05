@@ -9,6 +9,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import shared.ParserHelper;
+import worldgentools.blockdungeon.advanced.AdvancedBlock;
+import worldgentools.blockdungeon.advanced.AdvancedStandardBlock;
 
 public class BlockLoader {
 
@@ -25,6 +27,26 @@ public class BlockLoader {
 				// run each step successively
 				if (Enode.getTagName() == "block") {
 					blocks.add(new StandardBlock(Enode));
+				}
+			}
+		}
+
+		return blocks;
+	}
+
+	public static Collection<? extends AdvancedBlock> loadAdvanced(String filename) {
+		ArrayList<AdvancedStandardBlock> blocks = new ArrayList<AdvancedStandardBlock>();
+		Document doc = ParserHelper.LoadXML("assets/data/dungeon/blocks/" + filename + ".xml");
+		Element root = (Element) doc.getFirstChild();
+		NodeList children = root.getChildNodes();
+
+		for (int i = 0; i < children.getLength(); i++) {
+			Node Nnode = children.item(i);
+			if (Nnode.getNodeType() == Node.ELEMENT_NODE) {
+				Element Enode = (Element) Nnode;
+				// run each step successively
+				if (Enode.getTagName() == "block") {
+					blocks.add(new AdvancedStandardBlock(Enode));
 				}
 			}
 		}
