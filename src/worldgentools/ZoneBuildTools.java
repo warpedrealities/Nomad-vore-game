@@ -458,6 +458,10 @@ public class ZoneBuildTools {
 						ngrid = CloneOverlay(grid);
 						PerlinFramework.useFramework(ngrid, Enode, this);
 					}
+					if (Enode.getTagName() == "selectTile") {
+						ngrid = CloneOverlay(grid);
+						selectTile(Enode, ngrid);
+					}
 					if (Enode.getTagName() == "auditpaths") {
 						AuditTool tool = new AuditTool(m_zone, pointsOfInterest);
 						int replace = 0;
@@ -663,6 +667,21 @@ public class ZoneBuildTools {
 		return portal;
 	}
 
+	public void selectTile(Element node, boolean[][] grid) {
+		int tile=Integer.parseInt(node.getAttribute("tile"));
+		boolean nugrid[][] = new boolean[m_width][];
+		for (int i = 0; i < m_width; i++) {
+			nugrid[i] = new boolean[m_height];
+			for (int j = 0; j < m_height; j++) {
+				if (grid[i][j] && m_tiles[i][j]!=null && m_tiles[i][j].getDefinition().getID()==tile)
+				{
+					nugrid[i][j]=true;
+				}
+			}
+		}
+		NextPhase(node, nugrid);
+	}
+	
 	public void Partition(Element node, boolean[][] grid) {
 		boolean nugrid[][] = new boolean[m_width][];
 
@@ -730,6 +749,10 @@ public class ZoneBuildTools {
 					}
 					tool.runPathCarver(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
 							widgetselection);
+				}
+				if (Enode.getTagName() == "selectTile") {
+					grid = GenOverlay();
+					selectTile(Enode, grid);
 				}
 				if (Enode.getTagName() == "conditionalportal") {
 					new WidgetPlacer(m_zone).placeConditionalPortal(Enode, 0, 0);

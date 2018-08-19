@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<preference fetish="demis" />
+		<preference fetish="females" />	
+		<preference fetish="oralvore" />	
+	<text>
+	The doggy girl barks happily as she knocks you down and then pounces atop you. Her hands grabbing your shoulders as she lavishes your face with tasting licks, tailwagging as you try to fend her off by pushing at her. But that only gets you a chance to cop a feel of her pendulous boobs swaying over you and makes her grab your hands instead and lift them up to her face so she can lick over them instead. Soon, too soon, she's done with the foreplay of tasting you and shoves your hands into her mouth and takes a swallow. you see the bulge of your bunched together hands pressing out her throat and sliding through her neck as she starts to gobble you up.
+	</text>
+	<choice destination="oralvore0" text="*beaten and eaten by a doggy*"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	The doggy's tail whup whups back and forth with her eager waggling as she swallows you up. The doggy pulling you closer as she feeds your arms into her throat meaning she presses her ample breasts against your body as she snuggles you tight and devours you. Everything going dark as her stretched jaws part over the top of your head and her tongue laps and slobbers over your face a second time before sending that part of you down her throat after your hands. Said hands already able to feel the groaning and eager depths of her belly and stretching them ahead of your descent.
+	</text>
+	<choice destination="oralvore1" text="*no choice but to get ate*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Your sexy predator works over your shoulders and her hands grope your ass as you struggle ineffectually against her voracious desires. Her throat rippling around your chest, squeezing more and more of you down into her belly as she works her way down to your hips and flailing legs with steady swallows.
+	</text>
+	<choice destination="oralvore2" text="*eaten completely*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	With self indulgent murrs the doggy tips her head back, angling your heads into the air and watching them wave back and forth before she closes her eyes and chugs you down entirely. In moments she's polished you off, cramming you down to curl in her belly as she lets out a burp and giggles. Her hands going down to rub, pat and play with her belly bulge happily. As she does so you hear the first gurgles and feel the first tingles of enzymes around you.
+	</text>
+	<choice destination="struggleCheck" text="*try to get out before you're digested*"/>
+	<choice destination="submit" text="*submit to your sexy predator*"/>
+	</page>	
+	
+	<check ID="struggleCheck">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>
+	
+	<page ID="struggleEscape">
+	<text>
+	S'mexy as this doggy is with her knockers and gams you want out, you set about immediately starting to shove and jostle your way out of the doggy's belly. Said doggy letting out a distressed arf as her gut starts energetically bouncing around, bulges appearing where you're shoving at the inside of her belly. She starts trying to squeeze you tight by giving her belly a hug but she can't manage to restrain your need for freedom. The doggy eventually becoming overcome entirely by her nausea and forced to hork you back up. Distressed arfs, coughs and then with a hurg she regurgitates you back into the open air. Time to escape before she recovers from her illness.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+	S'mexy as this doggy is with her knockers and gams you want out, you set about immediately starting to shove and jostle your way out of the doggy's belly. Said doggy letting out a distressed arf as her gut starts energetically bouncing around, bulges appearing where you're shoving at the inside of her belly. She starts trying to squeeze you tight by giving her belly a hug, your confines suddenly getting a lot tighter as she succeeds in restraining your ability to shove at her insides. Gradually her sensation of sickness eases, and is replaced by the satisfying sensations of her gut gurgling and glorping around you. Her enzymes soaking into your flesh and starting to soften you up.	
+	</text>
+	<choice destination="struggleDigestGO" text="*gurgled*"/>
+	</page>
+	
+	<gameover ID="struggleDigestGO">
+	<text>
+	The doggy keeps on hugging her belly as your struggles subside, the lumps and bumps that shift around with your attempts to upset her tummy now turning still...and smooth. Her gut works your body over thoroughly, turning you soft and liquid and melting you down until all that's left is a kind of soup of former space traveller. And that soup, well...that's quickly soaked up and absorbed, your remains going to pad her ass and thighs and breasts and make her all the more soft and curvaceous and alluring for the next prey to come across her.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	Trapped helplessly in the belly of a busty doggy girl you can't help but feel, that there's no other place you'd rather be. As the enzymes soak your body you mhmm and squirm, lost in the delightful anticipation of being added to her already well padded rump. Your predator giggles and lays out on her back rubbing her belly as she hears your pleasured sounds emanate from within her. Her stomach gurgling around your blissed out form, slowly starting to soften you down.
+	</text>
+	<choice destination="submitGO" text="*gurgled*"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	The doggy keeps on stroking her belly as your moans subside, the lumps and bumps that shift around with your squirms now turning still...and smooth. Her gut works your body over thoroughly, turning you soft and liquid and melting you down until all that's left is a kind of soup of former space traveller. And that soup, well...that's quickly soaked up and absorbed, your remains going to pad her ass and thighs and breasts and make her all the more soft and curvaceous and alluring for the next prey to come across her.	
+	</text>
+	</gameover>
+
+	
+</Conversation>

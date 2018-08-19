@@ -20,16 +20,19 @@
 	<transition direction="north">Cave 1B</transition>
 	<mapgen>
 		<walloff wall="0" sides="southeast" />
-		<preloadprefab width="5" height="5" preloadID="4">
-			<row>22222</row>
-			<row>21112</row>
-			<row>21212</row>
-			<row>21212</row>
-			<row>22222</row>
-			<recordVector x="2" y="2" ID="4" zone="Zone 2B" />
-			<pairedportal sprite="3" destination="Zone 2B" x="2" y="2"
-				ID="11">a tunnel to the surface</pairedportal>
-		</preloadprefab>
+		<partition xmin="24" xmax="40" ymin="24" ymax="40" inverse="true">
+			<preloadprefab width="5" height="5" preloadID="4">
+				<row>22222</row>
+				<row>21112</row>
+				<row>21212</row>
+				<row>21212</row>
+				<row>22222</row>
+				<recordVector x="2" y="2" ID="4" zone="Zone 2B" />
+				<pairedportal sprite="3" destination="Zone 2B" x="2" y="2"
+					ID="11">a tunnel to the surface</pairedportal>
+			</preloadprefab>
+		</partition>
+		
 		<cavegen iterations="2" tile="0" threshold="35" bounds="100"
 			minfloor="0.5">
 			<randprefab width="5" height="5">

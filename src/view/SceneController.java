@@ -335,4 +335,13 @@ public class SceneController implements Sense {
 		return gameUniverse.getPlayer().getFlags();
 	}
 
+	@Override
+	public Actor getActorInTile(int x, int y) {
+		if (activeZone.getActor(x, y)!=null && activeZone.getActor(x, y).getRPGHandler().getActive())
+		{
+			return activeZone.getActor(x, y);
+		}
+		return null;
+	}
+
 }

@@ -9,9 +9,9 @@
 		The synthoid knocks you to the ground and looms over you, cocking her head to the side with a buzzing snap "me-eat, to enjoy." she intones, her lips barely moving and not in synch with her words as she a glistening black member rises to attention between her thighs. That throbbing prodigious girth aiming at you like some kind of cannon as she looks down at you, then with another cracking snap rights her head and lunges to grab your..
 		</text>
 		<choice destination="facefuck0" text="*head and shoulders*"/>
-		<choice destination="rape0" text="*your legs*">
+		<!-- <choice destination="rape0" text="*your legs*">
 			<assertion evaluate="haspart" part="vagina" />
-		</choice>
+		</choice> -->
 	</page>
 	
 	<page ID="facefuck0">
@@ -44,16 +44,39 @@
 	
 	<page ID="strugglecheck0Escape">
 	<text>
-	
+	You sense a chance to escape and choose to take it. You shove hard against the synthoid crouching over you and pull back, knocking the synthoid back onto her ass. She lets out a buzzing distorted cry of "customer is to serv-vice uss." only for you to give her a kick to the face for good measure, pulling back and wiping your mouth clean you only have a little bit of time before she'll get her bearings and be onto you.
 	</text>
-	
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />	
 	</page>
 	
 	<page ID="strugglecheck0Fail">
 	<text>
-	
+	You sense a chance to escape and choose to take it. You shove hard against the synthoid crouching over you and pull back, the synthetic predator stumbles and her shaft pops free of your mouth. But she recovers quickly "Customer is to serve...serve as food for cock." she buzzes out as she grabs ahold of your head and shoves you forwards to meet her hipthrust. Her cockslit stretching and parting around your head with a schlorp, the prodigious black phallus proving quite able to encompass your head. The synthoid groaning "customer meat is good for cockmeat, good food, good cum..will melt customer to satisfaction guaranteed."
 	</text>
+	<choice destination="cockvore1A" text="*schlurped up*"/>
+	</page>
 	
+	<page ID="submit0">
+	<text>
+	"Customer serve now" the synthoid says after a few moments, pulling that black shaft from your lips and stroking it with one of her lower hands. That shaft of hers swelling larger as it re-hardens, becoming a massive tool when it reaches full erection again and the tip gapes open in a clear intimation of what's coming. Your anticipations are realized as she angles her cock towards your face and thrusts forwards, encompassing your head with a schlorp. The synthoid's shaft sticky and hot on the inside from seed like goo and pulsing heat running through it.
+	</text>
+	<choice destination="cockvore1A" text="*schlurped up*"/>	
+	</page>
+	
+	<page ID="cockvore1A">
+	<text>
+	The synthoid uses all four of her arms to stroke over her shaft and stuff you inside "customer creamy goo" she says eagerly as you feel her hands pressing about you as she jacks up and down her bulging cock. The mutated synth letting out buzzing groans of pleasure as you're crammed more and more into her shaft. Her second set of arms maintaining a savagely strong grip on your legs in order to shove them further and further down into her cock. The stretchy balls of the synth starting to bulge out, their smooth rubbery black surface glistening as it stretches and contorts around your upper body being stuffed inside.
+	</text>
+	<choice destination="cockvore2A" text="*entirely cockfood*"/>
+	</page>
+	
+	<page ID="cockvore2A">
+	<text>
+	"Creamy goo, we choose you for our creamy goo needs customer, we hope you enjoy large phallus as much as large phallus enjoys you." she nonsensically informs you as she steadily finishes stuffing you down her cock and packing you away in her balls. The synthoid letting out a distorted humming moan as her cocktip seals up behind your feet with a schlorp and she strokes you steadily down into her balls now. Her hands working one pair on the upper and one on the lower half of her shaft to fondle and push your shape down until every inch of you packed away in her balls as a curled up mass.
+	</text>
+	<choice destination="cockvore3" text="*creamed*"/>
 	</page>
 	
 	<page ID="rape0">
@@ -63,9 +86,16 @@
 	
 	</page>
 	
-	<gameover ID="gameover">
+	<page ID="cockvore3">
 	<text>
-	you've met a terrible fate, that will be elaborated on at a later date
+	"customer, our satisfaction is being guaranteed as you...melt, melt into creamy goo." the synthoid mutters happily as she strokes off and her bloated balls begin to blorb and churn. Synthetic she may be but her cumgestion processes are remarkably natural feeling, your form softening and turning creamier as you marinate in the goo inside her balls and she emits humming and buzzing sounds of delight. Her indomitable mechanized might preventing you from escaping even should you attempt such. At least when you're reduced to a gooey mass of liquid your escape will in a way be assured, though far too late to do any good.
+	</text>
+	<choice destination="cockvore4" text="*splattered*"/>
+	</page>
+	
+	<gameover ID="cockvore4">
+	<text>
+	The bulging rubbery sack of the synthoid turns soft and round, taut with the strain of holding all that cum under high pressure as the last of you is rendered down into mere fluids "Just creamy goo, customer is just creamy goo" the synth utters and strokes off faster, faster and faster until her cock erupts. The synthoid letting out a screech as her shaft spasms and sends splatter after splatter of your goopy remains out to stain the floor. All that you are being rendered down into a worthless puddle of cream by the predatory gynoid.
 	</text>
 	</gameover>
 

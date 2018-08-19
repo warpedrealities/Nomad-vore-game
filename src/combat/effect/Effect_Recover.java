@@ -81,7 +81,10 @@ public class Effect_Recover extends Effect {
 			actor.getRPG().IncreaseStat(Actor_RPG.ACTION, value);
 			break;
 		}
-		ViewScene.m_interface.DrawText(m_description);
+		if (m_description.length()>1)
+		{
+			ViewScene.m_interface.DrawText(m_description);		
+		}
 		return value;
 	}
 

@@ -115,8 +115,13 @@ public class Player_RPG_moveHandler {
 	}
 
 	private void handlePerkBasedMove(ArrayList<CombatMove> moves, int rank, PerkMove perk) {
-		CombatMove move = perk.getMove(rank);
-		// check for identical moves
+		for (int i=0;i<perk.getCount();i++)
+		{
+			handleMove(moves,rank,perk.getMove(i+1));
+		}
+	}
+	
+	private void handleMove(ArrayList<CombatMove> moves, int rank, CombatMove move) {
 		for (int i = 0; i < moves.size(); i++) {
 			if (moves.get(i).getMoveName().equals(move.getMoveName())) {
 				moves.remove(i);
@@ -124,7 +129,7 @@ public class Player_RPG_moveHandler {
 				return;
 			}
 		}
-		addMove(moves, move);
+		addMove(moves, move);		
 	}
 
 	private int getMoveCategoryOffset(int index) {

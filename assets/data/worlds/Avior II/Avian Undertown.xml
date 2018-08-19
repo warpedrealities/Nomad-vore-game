@@ -11,12 +11,13 @@
 		<tile sprite="6" vision="EMPTY" movement="1"> the distant ground</tile>
 		<tile sprite="7" vision="EMPTY" movement="1"> a long way down</tile>		
 	</tileset>
+	<transition direction="east">Zone 2A</transition>	
 	<transition direction="south">Zone 1B</transition>
 	<description> The forest canopy far above and the many other layers between you and the sun's touch cast the floor in gloom which the colours do little to alleviate. Nothing grows down here for obvious reasons. Still, it's clear that parts of the harpy village have spread down into the shadows beneath the rest of their settlement. 
 	</description>
 
 	<mapgen>
-		<walloff wall="4" sides="northeastwest" />		
+		<walloff wall="4" sides="northwest" />		
 		<prefab positionX="40" positionY="40" width="5">
 			<row>33333</row>
 			<row>34443</row>

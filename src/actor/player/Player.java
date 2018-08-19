@@ -369,7 +369,7 @@ public class Player extends Actor {
 			}
 			playerInventory.m_weight -= slotitem.getWeight();
 		}
-		if (ItemEquip.class.isInstance(item)) {
+		if (ItemEquip.class.isInstance(item.getItem())) {
 			ItemEquip equip = (ItemEquip) item.getItem();
 			if (equip.getModifier() != null) {
 				actorRPG.AddModifier(equip.getModifier());

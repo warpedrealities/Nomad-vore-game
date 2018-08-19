@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text> 
+		No interaction to be had with a defeated black guardian.
+		</text>
+		<choice destination="end" text="leave her be"/>	
+	</page>	
+
+	
+</Conversation>

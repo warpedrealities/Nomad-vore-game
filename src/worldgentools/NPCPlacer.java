@@ -28,7 +28,7 @@ public class NPCPlacer {
 		int x = Integer.parseInt(Enode.getAttribute("x")) + xoffset;
 		int y = Integer.parseInt(Enode.getAttribute("y")) + yoffset;
 		Tile tile = zone.getTile(x, y);
-
+		float percentage=1;
 		ScriptPackage script = null;
 		NodeList scripts = Enode.getElementsByTagName("script");
 		if (scripts.getLength() > 0) {
@@ -42,7 +42,13 @@ public class NPCPlacer {
 			}
 			script = new ScriptPackage(spawn, death);
 		}
-
+		NodeList health= Enode.getElementsByTagName("percentage");
+		if (health.getLength()>0)
+		{
+			Element healthElement = (Element) health.item(0);		
+			percentage=Float.parseFloat(healthElement.getAttribute("value"));
+		}
+		
 		if (zone.getTile(x, y) != null && zone.getTile(x, y).getDefinition().getMovement() == TileMovement.WALK) {
 			// npc name
 			String name = Enode.getAttribute("name");
@@ -57,6 +63,8 @@ public class NPCPlacer {
 			if (script != null) {
 				npc.Respawn(Universe.getClock());
 			}
+			float max=npc.getRPG().getStatMax(0);
+			npc.getRPG().setStat(0,(int)(max*percentage));
 		}
 
 	}

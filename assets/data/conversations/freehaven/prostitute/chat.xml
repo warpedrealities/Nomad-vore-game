@@ -31,6 +31,24 @@
 	<choice destination="end" text="on second thoughts, I'll be on my way"/>
 	</page>
 	
+	<page ID="unbirth0">
+	<text>
+	"Mhmm, you want to go sploosh after a trip up between my thighs do ya? you're my kind of customer, mhmm.. still have to charge ya though, 150 credits and i'll leave you a wonderful puddle." she says with a delighted smile and a little wriggle of her hips as if already excited by the prospect.
+	</text>
+		<choice destination="unbirth1" text="$sure, here's the money I don't want to keep you waiting">
+			<condition evaluate="CREDITS" operator="greaterthan" value="300"/>	
+	</choice>
+	<choice destination="end" text="$You get to have that much fun and you charge as well? forget it."/>	
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	
+	</text>
+	<effect type="givecredits" value="-150" />		
+	</page>	
+	
+	
 	<page ID="unbirthEndo0">
 	<text>
 	"Want to feel all cuddled up and safe mhmm? Well, it kinda keeps me from other custom so 300 credits and the room's yours." she says with a wink and a suggestive cock of her hips, one hand tracing down her front.
@@ -69,23 +87,7 @@
 	</text>
 	<choice destination="end" text="I might do that..you had a nice womb"/>
 	</page>
-	
-	<page ID="unbirth0">
-	<text>
-	"Mhmm, you want to go sploosh after a trip up between my thighs do ya? you're my kind of customer, mhmm.. still have to charge ya though, 150 credits and i'll leave you a wonderful puddle." she says with a delighted smile and a little wriggle of her hips as if already excited by the prospect.
-	</text>
-		<choice destination="unbirth1" text="$sure, here's the money I don't want to keep you waiting">
-			<condition evaluate="CREDITS" operator="greaterthan" value="300"/>	
-	</choice>
-	<choice destination="end" text="$You get to have that much fun and you charge as well? forget it."/>	
-	</page>
-	
-	<page ID="unbirth1">
-	<text>
-	
-	</text>
-	<effect type="givecredits" value="-150" />		
-	</page>
+
 	
 	<page ID="oralsex0">
 	<text>

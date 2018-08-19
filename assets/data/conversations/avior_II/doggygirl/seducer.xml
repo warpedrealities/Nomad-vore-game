@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<preference fetish="demis" />
+		<preference fetish="females" />	
+		<preference fetish="oralvore" />		
+	<text>
+	The doggy giggles, planting a smooch on your face as you succumb to her charms and approach. She follows that kiss with lots of sloppy licks, pressing against you and wrapping her arms about your body. Her soft pillowy breasts squeezing against your chest and her belly gurgling audibly with hunger and invitation as she snuggles with you. Such an alluringly sexy doggy, it'll be so good to feed her.
+	</text>
+	<choice destination="oralvore0" text="*offer yourself to the doggy*"/>
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	You grope her titties earning another giggle from her which you silence as you slide your hands up past her rack to press your fingers into her mouth. A delighted murr coming from the puppy as you work your hands over her tongue and into the entrance of her throat. She takes a nice gulp that slides your hands into her throat, the tight grasp of her throat pulling you down to where you want to be as she begins to swallow you down. Her arms still cuddling you nicely as she gobbles up your willing form.
+	</text>
+	<choice destination="oralvore1" text="*slide down her throat*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You can hear her murring loudly around your head as you slide it past her mouth and down her throat. The doggy groping your rear and tailwagging as you feed yourself to her and she happily accepts your body into her own. You can hear her belly gurgling hotly beneath you as you delve deeper and deeper into her body, soon able to greet those gurgles in person as your head slides into her tummy. You can't help but wriggle your rump and legs impatiently outside her lips at the thought of soon being able to curl up entirely in her sexy belly.
+	</text>
+	<choice destination="oralvore2" text="*into the gut*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The doggy helps you in, gulping over your tastey butt and delicious legs as she strokes her hands down over your calves and then strokes instead over her rounded belly as you're packed away inside. The sexy pup shifting as if to pose and show off the delightful sagging dome full of space adventurer she's sporting. You curl up, thrilled to be inside her.. But do your plans differ from hers as her gut gurgles into gear?
+	</text>
+	<choice destination="willCheck" text="*maybe*"/>
+	<choice destination="submit" text="*not a chance*"/>
+	</page>
+	
+	<check ID="willCheck">
+		<test what="WILLPOWER" DC="14" />
+		<outcome destination="willEscape" />
+		<outcome destination="willDigest" />
+	</check>	
+	
+	<page ID="willEscape">
+	<text>
+	You can feel her stomach walls kneading and snuggling around you, lulling you into wanting to just stay and let her sexy gut gurgle you down...warm, sexy tummy....no, no you're getting out of here. You're not going to get turned into fat on her titties, you shake off your lust and start to shove at her insides. The doggy letting out a pained arf as you push out against her stomach walls and jostle her gut about, having relaxed with you seemingly content in her belly she was unprepared to try and keep you down. Soon enough she's letting out a pained coughing sound and lurching upwards, doubling over to hork her disagreeable meal up in a wet heap.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="willDigest">
+	<text>
+	You can feel her stomach walls kneading and snuggling around you, lulling you into wanting to just stay and let her sexy gut gurgle you down...warm, sexy tummy....no, no you're getting out of here. You're not going to get turned into fat on her titties, but maybe you could stay just a little longer as you hear her murring and feel her stomach walls massage your form and her soft innards cradle you so gently. There's no hurry, it's not like it's really that bad..You're vaguely aware of enzymes soaking your body, your form starting to soften, as it becomes more and more prominent a sensation you can't help but moan and forget how you could ever of wanted anything else.
+	</text>
+	<choice destination="willDigestGO" text="*mhmm!*"/>
+	</page>
+	
+	<gameover ID="willDigestGO">
+	<text>
+		The doggy strokes over her moaning belly happily as the bulges of your shape steadily diminish and round out. The happy naked inu patting and kneading at your shape as you go soft and sloshy, digesting away until those moans fade into burbles. With arms wrapped around her belly she feels the bulge diminish, that dome compacting and shrinking away until you're nothing but nourishment flowing through her form. Your remains going to padd her tits and ass to make her even more appealing to the next prey she needs to beguile into being a meal for her.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	This feels wonderful, a nice doggy gurgling you up and you can hardly wait to become a part of her. The pup sprawls onto her back and dotes on her belly with her hands while murring and giggling in delight at having a happy meal. Gradually her stomach begins to work over your form in earnest, pressing all around as wonderful warmth begins to permeate your body and all becomes soft and wet and lovely inside of her...
+	</text>
+	<choice destination="willDigestGO" text="*mhmm!*"/>	
+	</page>
+	
+</Conversation>

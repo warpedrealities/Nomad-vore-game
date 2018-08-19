@@ -8,7 +8,7 @@
 		<tile sprite="20" vision="BLOCKING" movement="2"> statue</tile>
 	</tileset>
 	<description>
-	
+	The ancient stone tunnels beneath the pyramid are covered in mysterious glyphs, alien writing and strange pictographs of a variety of peculiar beings. Nonetheless the place hums with still functioning technology and modern space age materials are interspersed with the stone work in a strange synthesis.
 	</description>
 	
 	<mapgen>
@@ -44,6 +44,24 @@
 			</lootTable>			
 	<clean value="2" />			
 	</advancedBlockDungeon>
+	<placeNPC name="forakis_I/pyramid/black_guardian" x="36" y="35">
+		<percentage value="0.2"/>
+	</placeNPC>
+	<placeItem x="35" y="35">
+		<item itemname="Longneck breachloader" energy="0"/>
+		<item itemname="rifle round" />
+		<item itemname="rifle round" />
+	</placeItem>
+	<placeNPC name="forakis_I/pyramid/pyramid_scarab" x="33" y="33"/>
+
+	<partition xmin="34" xmax="42" ymin="34" ymax="42" inverse="true">
+	<selectTile tile="0">
+	<SeedNPCs min="14" max="18" name="forakis_I/pyramid/black_guardian" minDistance="12" />	
+	</selectTile>
+	<selectTile tile="2">
+	<SeedNPCs min="16" max="20" name="forakis_I/pyramid/pyramid_scarab" minDistance="12" />	
+	</selectTile>	
+	</partition>	
 	</mapgen>
 
 </zone>

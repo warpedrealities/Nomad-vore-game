@@ -70,7 +70,9 @@ public class Status_Stun implements StatusEffect {
 
 	@Override
 	public void remove(Actor_RPG subject, boolean suppressMessages) {
-		ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
+		if (removeText!=null && removeText.length()>1) {
+			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
+		}
 	}
 
 	@Override

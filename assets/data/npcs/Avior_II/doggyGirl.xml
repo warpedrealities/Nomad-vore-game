@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="lowercaseD.png" />
+	<name>doggy girl</name>
+	<description>The doggy girl is a fetchingly curvy one. Her floppy brown ears might mark her as cute, as does her brown tail with its tendency to wag..but physically her shape especially her ample breasts and rounded posterior make her come across as sexy in a feral and predatory way. Her bare skin is only lightly tanned indicating she clearly spends most of the time under the tree canopy, and the way she's regarding you might indicate she'd prefer to spend some of that time with a belly full of you.</description>
+	<rpg>
+		<experiencevalue value="100" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />
+		<combatMove name="melee" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>doggy fails to hit TARGET</text>
+				<text>TARGET evades the doggy's attack</text>
+			</missText>
+			<hitText count="2">
+				<text>doggy bites TARGET for VALUE damage</text>
+				<text>doggy gives TARGET a kick for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="tease" pattern="RANGED" bonusAttribute="SEDUCTION"
+			timeCost="2" bonusToHit="4">
+			<effectDamage type="TEASE" minValue="1" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="4">
+				<text>doggy plays with herself, but TARGET doesn't seem aroused</text>
+				<text>doggy fondles herself, but fails to allure TARGET</text>
+				<text>doggy teases TARGET but doesn't seem to seduce them</text>
+				<text>doggy puts on a show for TARGET but doesn't seem to have any effect on her</text>
+			</missText>
+			<hitText count="4">
+				<text>doggy plays with herself, TARGET loses VALUE resolve</text>
+				<text>doggy fondles herself, causing TARGET to become aroused and lose VALUE resolve</text>
+				<text>doggy puts on a show for TARGET whose resolve diminishes by VALUE</text>
+				<text>doggy shows herself off to TARGET seducing them for VALUE resolve damage</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<respawn delay="2000" />
+	<flying />
+	<defeated conversation="avior_II/doggygirl/defeat" />
+	<seduced conversation="avior_II/doggygirl/defeat" />
+	<victory conversation="avior_II/doggygirl/victory" />
+	<seducer conversation="avior_II/doggygirl/seducer" />	
+	<controller AI="doggy_AI" />
+	<faction value="monster" />
+</Harpy>

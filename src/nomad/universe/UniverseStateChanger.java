@@ -159,11 +159,28 @@ public class UniverseStateChanger {
 				break;
 			}
 		}
+
+		//load current entity name
+		String e=ParserHelper.LoadString(dstream);
+
+
+		//load current zone
+		String z=ParserHelper.LoadString(dstream);
+	
+		//load shops
+		ShopList list=ShopList.getInstance();
+		ShopList.getInstance().load(dstream);
+		int safety=dstream.readInt();
+		//load factions
+		FactionLibrary factions=FactionLibrary.getInstance();
+		factions.load(dstream);	
+		
 		//generate system
 		universe.getCurrentStarSystem().GenerateSystem(false);
 		universe.getCurrentStarSystem().load(filename);
-		//load current entity name
-		String e=ParserHelper.LoadString(dstream);
+		
+		
+		//find current entity
 		StarSystem currentStarSystem=universe.getCurrentStarSystem();
 		for (int i=0;i<currentStarSystem.entitiesInSystem.size();i++)
 		{
@@ -172,22 +189,14 @@ public class UniverseStateChanger {
 				universe.setCurrentEntity(currentStarSystem.entitiesInSystem.get(i));
 				break;
 			}
-		}
-		//find current entity
-		//generate entity
+		}	
+		
+		//generate entity	
 		universe.getCurrentEntity().Generate();
-		//load current zone
-		String z=ParserHelper.LoadString(dstream);
 		universe.setCurrentZone(universe.getCurrentEntity().getZone(z));
 		//generate zone
 		universe.getCurrentZone().LoadZone();
-		//load shops
-		ShopList list=ShopList.getInstance();
-		ShopList.getInstance().load(dstream);
-		int safety=dstream.readInt();
-		//load factions
-		FactionLibrary.getInstance().load(dstream);	
-				
+		
 		//load player
 		universe.setPlayer(new Player());
 		universe.getPlayer().Load(filename);

@@ -210,7 +210,10 @@ public class Effect_Status extends Effect {
 					}
 					// apply
 					if (target.getRPG().applyStatus(clone, replaceStatus)) {
-						ViewScene.m_interface.DrawText(applyText.replace("TARGET", target.getName()));
+						if (applyText!=null && applyText.length()>1)
+						{
+							ViewScene.m_interface.DrawText(applyText.replace("TARGET", target.getName()));		
+						}			
 					}
 				
 				}

@@ -32,6 +32,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import dialogue.DialogueScreen;
+import faction.FactionLibrary;
 import combat.CombatMove;
 import playerscreens.AppearanceScreen;
 import playerscreens.CharacterScene;
@@ -114,6 +115,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	public ViewScene(int[] variables, Universe world) {
 		super(variables);
 
+		FactionLibrary faction=FactionLibrary.getInstance();
 		sceneController = new SceneController();
 		sceneController.setUniverse(world);
 

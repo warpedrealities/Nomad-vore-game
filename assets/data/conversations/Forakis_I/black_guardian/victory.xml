@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<preference fetish="anthros" />	
+		<text> 
+		The guardian picks you up off the floor and lifts you into the air, her lips pulling back from her muzzle in a sneer "Pathetic trespasser, now you will meet the fate of so many others." she licks her lips meaningfully. Held by the towering synthetic guardian you have little say in the matter, though you do attempt to struggle against her grasp which makes her chuckle "Now what to do with you..your fate is in my hands."
+		</text>
+		<choice destination="oralvore0" text="*condemned to be food*">
+		<preference fetish="oralvore" />			
+		</choice>
+		<choice destination="cockvore0" text="*sacrificed to cock*">
+		<preference fetish="cockvore" />			
+		</choice>		
+	</page>	
+
+	<page ID="oralvore0">
+	<text>
+	The guardian runs a long purple tongue over her lips and seems to make her decision as she hoists your struggling form up still higher, over her head. Her jaws starting to gape open revealing ivory teeth lining a long wet and dark plunge past her gums and down her throat. Not wanting to enjoy the view you lash out and manage to deliver a kick to her muzzle but seem to get a sore foot more than seriously hurt the synth "Accept your doom intruder" the guardian snarls and then lunges with her jaws to encompass and entrap your legs. That long broad tongue of hers lapping around your feet and calves up to brush around your knees as she savours you and the warm wet sensations of her maw soak into you. A slightly humming murr emanating from deep within the guardian as she toys with you this way.
+	</text>
+		<choice destination="oralvore1" text="*toyed with, but then swallowed*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The jackal's tongue works further up your legs as your feet are squeezed into her throat. The tight clenching depths tugging forcefully on your calves as her emulated rthythms seek to drag you down into her sweltering wet depths. The jackal unaffected by your struggles or ineffectual strikes at her muzzle as she swallows her way up over and around more and more of you. Her hands shift up around your chest now as she lowers your belly past her jaws with an ever deepening rumble of enjoyment.
+	</text>
+	<choice destination="oralvore2" text="*devoured like a snack by the enormous jackal synth*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The grasp of the jackal on your body is relinquished. But her throat and jaws grasp you tight as you attempt to stop her swallowing you down by gripping the drool slickened jaws of the guardian. But to no avail, as she lets out a chuckle and swallows with an irresistable force. Your arms yanked over your head as you disappear into her mouth. You see the light of the outside world briefly framed by her muzzle before those jaws snap shut past your hands and she swallows. Your body slipping down into the depths of her belly to form a modest bulge. The synthetic muscles of her gut stretching nicely to frame your curled up form. Processing agents start to exude and flow in over the top of you, digestion may be inevitable "You were tastey trespasser, but this was a foregone result." the jackal says, resting a hand on her belly.
+	</text>
+	<choice destination="oralvoreStruggle" text="*try to bust your way out!*"/>
+	<choice destination="oralvoreSubmit" text="*resistance is futile*"/>
+	</page>
+	
+	<check ID="oralvoreStruggle">
+		<test what="STRUGGLE" DC="17" />
+		<outcome destination="oralvoreEscape" />
+		<outcome destination="oralvoreDigest" />
+	</check>		
+	
+	<page ID="oralvoreEscape">
+	<text>
+	As your flesh begins to tingle you realize your only option aside from digestion is to martial your recovered strength and attempt to force your way out. You start to strike at the confines of the stomach, the size of your predator giving you more room than usual to apply your full force. You do not relent for the sake of your sore knuckles and your strikes finally seem to result in something as you feel something yield, so strike there again and feel the guardian topple over. When you re-orientate yourself you find that the guardian clearly isn't moving and force your way back up her throat, pulling out of her jaws before she starts to reset. The guardian's eyes re-igniting as she starts to get to her feet and reach for her halberd "This small triumph shall not last trespasser."
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="oralvoreDigest">
+	<text>
+		As your flesh begins to tingle you realize your only option aside from digestion is to martial your recovered strength and attempt to force your way out. You start to strike at the confines of the stomach, the size of your predator giving you more room than usual to apply your full force. Your knuckles start to ache from attempting to overwhelm the stomach walls, synth flesh not as yielding as its biological equivalent it seems "Determination will not avail you here trespasser." the jackal taunts as the levels of digestive broth fill ever higher around you. You redouble your efforts, but already feel her digestive fluids taking a toll while your attempts to disable her systems from the inside is achieving nothing.
+	</text>
+		<choice destination="oralvoreDigestGo" text="*destiny still arrives*"/>
+	</page>
+	
+	<page ID="oralvoreSubmit">
+	<text>
+		"Yes, there is no point in fighting it intruder. This was inevitable from the moment you set foot in these halls." the jackal says as she strokes her belly and you stop resisting. You don't squirm or struggle and just let the rising level of digestive fluids have you as her stomach gurgles around you. The synth's digestive system no less authentic for not being truly biological, and it will break you down for your nutritional content just the same as any other.
+	</text>
+		<choice destination="oralvoreDigestGO" text="*gurgle*"/>
+	</page>
+	
+	<gameover ID="oralvoreDigestGO">
+	<text>
+		The jackal strokes over her belly as your struggles slow, weaken, and eventually stop. A rumbling murr emanating from the guardian synth as you're broken down, that rounded gut of hers steadily diminishing and compacting as you turn to a slop of fluid within her. Your remnants to be put to an unknowable purpose by the jackal's internal systems.
+	</text>
+	</gameover>
+	
+	<page ID="cockvore0">
+	<text>
+	The jackal reaches down with her other hand down somewhere well below her breasts. 
+	</text>
+	
+	</page>
+	
+</Conversation>

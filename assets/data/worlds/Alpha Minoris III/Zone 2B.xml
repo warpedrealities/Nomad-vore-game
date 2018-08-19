@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="arctic.png">
+	<landingsite x="32" y="32" />
 	<tileset count-x="8" count-y="8">
 		<tile sprite="2" vision="BLOCKING" movement="2"> metal wall</tile>
 		<tile sprite="2" vision="EMPTY" movement="0"> snow</tile>
@@ -30,6 +31,16 @@
 			<noise tile="3" scarcity="10" />
 			<floodfill tile="1" />
 		</cavegen>
+		<placeItem x="32" y="28">
+				<item itemname="scrap metal" />	
+		</placeItem>
+		<placeItem x="30" y="29">
+				<item itemname="scrap metal" />	
+		</placeItem>	
+		<placeItem x="33" y="30">
+				<item itemname="scrap metal" />	
+		</placeItem>			
+		<auditpathsthroughvoid replace="1" carve="5" />	
 		<auditpaths carve="3" replace="2" />
 		<auditpaths carve="4" replace="2" />
 		<auditpaths carve="5" replace="1" />

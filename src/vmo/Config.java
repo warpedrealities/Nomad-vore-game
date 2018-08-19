@@ -18,7 +18,7 @@ public class Config {
 	private boolean verboseCombat;
 	private boolean disableAutosave;
 	protected Matrix4f matrix;
-	public static final int VERSION = 302;
+	public static final int VERSION = 303;
 	
 	public Config() {
 		// open config file

@@ -258,23 +258,6 @@ public class Universe extends GameManager
 		FileTools.copyFolder(temp, newSave);		
 	}
 	
-	
-	void saveCopy(String filename) throws IOException
-	{
-		if (saveName!=null)
-		{
-			if (!saveName.equals(filename))
-			{
-				File oldSave=new File("saves/"+saveName);
-				File newSave=new File("saves/"+filename);
-				
-				//copy all files from savename folder
-				//and copy them to the filename folder
-				FileTools.copyFolderOverwrite(oldSave, newSave);
-			}		
-		}
-	}
-	
 	public String getSaveName()
 	{
 		return saveName;
@@ -435,6 +418,22 @@ public class Universe extends GameManager
 
 	public void setWorldClock(long clock) {
 		worldClock=clock;
+	}
+
+	void saveCopy(String filename) throws IOException
+	{
+		if (saveName!=null)
+		{
+			if (!saveName.equals(filename))
+			{
+				File oldSave=new File("saves/"+saveName);
+				File newSave=new File("saves/"+filename);
+				
+				//copy all files from savename folder
+				//and copy them to the filename folder
+				FileTools.copyFolderOverwrite(oldSave, newSave);
+			}		
+		}
 	}
 	
 	

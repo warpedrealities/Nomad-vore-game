@@ -63,6 +63,21 @@
 
 	</block>
 	
+	<block name="NS openHallway">
+		<edge value="SOUTH" type="1" />
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="1" />
+		<row>22211120</row>
+		<row>33211122</row>
+		<row>23211111</row>
+		<row>23311111</row>
+		<row>23311111</row>
+		<row>23222222</row>
+		<row>33200000</row>
+		<row>22200000</row>
+
+	</block>		
+	
 	<block name="NS chest hallway">
 		<edge value="NORTH" type="1" />
 		<edge value="SOUTH" type="1" />
@@ -141,6 +156,20 @@
 		<widget x="6" y="6" name="spikeTrap" info="" />			
 	</block>	
 	
+	<block name="NE trapped corner">
+		<edge value="NORTH" type="1" />
+		<edge value="EAST" type="1" />
+		<edge value="SOUTH" type="2" />
+		<row>23200232</row>
+		<row>23222232</row>
+		<row>23311111</row>
+		<row>22211111</row>
+		<row>00211111</row>
+		<row>00211122</row>
+		<row>00311120</row>
+		<row>00211120</row>
+		<widget x="1" y="2" name="spikeTrap" info="" />		
+	</block>		
 	
 	<block name="statue hub">
 		<edge value="NORTH" type="1" />
@@ -199,6 +228,36 @@
 		<row>23222232</row>
 
 	</block>
+
+
+	<block name="maze">
+		<edge value="NORTH" type="2" />
+		<edge value="EAST" type="2" />
+		<edge value="SOUTH" type="1" />
+		<row>00211122</row>
+		<row>00211133</row>
+		<row>00211132</row>
+		<row>00211132</row>
+		<row>00211132</row>
+		<row>22232232</row>
+		<row>23333333</row>
+		<row>23222232</row>
+	</block>	
+	
+	
+	<block name="maze">
+		<edge value="WEST" type="1" />
+		<edge value="EAST" type="2" />
+		<edge value="SOUTH" type="2" />
+		<row>23200232</row>
+		<row>23222233</row>
+		<row>11111132</row>
+		<row>11111132</row>
+		<row>11111132</row>
+		<row>22222232</row>
+		<row>00000233</row>
+		<row>00000222</row>
+	</block>	
 	
 	<block name="cross hallway">
 		<edge value="WEST" type="1" />
@@ -283,7 +342,37 @@
 		<row>33320233</row>
 		<row>22220222</row>
 	</block>	
+	
+	<block name="treasure WE">
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="2" />
+		<row>22222222</row>
+		<row>33233233</row>
+		<row>23233232</row>
+		<row>23333332</row>
+		<row>23233232</row>
+		<row>23222232</row>
+		<row>33333333</row>
+		<row>22222222</row>
+		<widget x="3" y="3" name="chest" info="normalchest" />		
+		<widget x="4" y="3" name="chest" info="normalchest" />		
+	</block>		
 
+	<block name="treasure NS">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="2" />
+		<row>23222232</row>
+		<row>23233232</row>
+		<row>23233232</row>
+		<row>23333332</row>
+		<row>23233232</row>
+		<row>23222232</row>
+		<row>23233232</row>
+		<row>23222232</row>
+		<widget x="3" y="1" name="chest" info="normalchest" />		
+		<widget x="4" y="1" name="chest" info="normalchest" />		
+	</block>		
+	
 	<block name="traps WE">
 		<edge value="WEST" type="2" />
 		<edge value="EAST" type="2" />
@@ -369,6 +458,20 @@
 		<row>00211120</row>
 	</block>		
 
+	<block name="tunnel conversion SN">
+		<edge value="SOUTH" type="1" />
+		<edge value="NORTH" type="2" />
+		<row>00211120</row>
+		<row>00211120</row>	
+		<row>22211122</row>	
+		<row>23333332</row>		
+		<row>23333332</row>	
+		<row>23333332</row>	
+		<row>23222232</row>		
+		<row>23200232</row>		
+	</block>		
+	
+	
 	<block name="tunnel conversion WE">
 		<edge value="WEST" type="1" />
 		<edge value="EAST" type="2" />

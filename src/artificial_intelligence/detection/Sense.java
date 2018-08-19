@@ -14,6 +14,7 @@ public interface Sense {
 	public Actor getVictim(Actor origin, int maxrange, boolean visibleOnly, String name, boolean seduced);
 	public Actor getNamedActor(Actor origin, int maxRange, boolean visibleOnly, String name);
 	public Actor getPlayer(Actor origin, boolean visibleOnly);
+	public Actor getActorInTile(int x, int y);
 	public Actor getActor(Actor origin, int maxrange, boolean visibleOnly,Sense_Criteria criteria);
 	public Sense_Criteria getCriteria(String properties);
 	public int getViolationLevel();
