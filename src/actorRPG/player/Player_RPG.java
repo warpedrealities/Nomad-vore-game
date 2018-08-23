@@ -321,12 +321,12 @@ public class Player_RPG implements Actor_RPG {
 			}
 		}
 		
-		if (stats[HEALTH]<statMax[HEALTH])
+		if (stats[HEALTH]<statMax[HEALTH] && regenDelay<=0)
 		{
 			stats[HEALTH]+=subAbilities[REGENERATION]*duration; stats[SATIATION]-=calcMetabolism(REGENCOST)*2*duration;				
 		}
 
-		if (stats[RESOLVE]<statMax[RESOLVE])
+		if (stats[RESOLVE]<statMax[RESOLVE] && regenDelay<=0 )
 		{
 			stats[RESOLVE]+=0.1F*duration;	
 		}

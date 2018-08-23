@@ -54,7 +54,7 @@
 			you will recover, but after deicide can anything truly be the same
 			again?
 		</text>
-		<effect type="experience" value="250" />
+		<effect type="experience" value="1000" />
 		<effect type="setglobalflag" flag="elderThing" value="3" />
 		<effect type="setglobalflag" flag="psychic_potential" value="1" />
 		<special effect="removenpc" />

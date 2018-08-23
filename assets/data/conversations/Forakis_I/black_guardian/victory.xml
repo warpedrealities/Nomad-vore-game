@@ -72,9 +72,78 @@
 	
 	<page ID="cockvore0">
 	<text>
-	The jackal reaches down with her other hand down somewhere well below her breasts. 
+	The jackal reaches down with her other hand down somewhere well below her breasts. Her hand moving up and down rthythmically as she lets out a rumbling mhmmm, a pleased smile on her face as she continues to work. Finally she seems to finish what she was doing and grins as she turns her gaze back towards you "Time for you to serve a greater purpose trespasser." she says and lowers you down, as she does so her shaft comes into view..a thick pulsing length of smooth pliable black cock above a pair of heavy hairless ebony balls. The immense guardian only gives you a little time to get a good look before making you much more firmly acquainted with her shaft, pressing you right up against its thickness, her palm forcing your body to mould against her dickmeat as she starts to jack off again. Only this time you're rubbed up and down her length, adding to her pleasure as she moans. Could this be the greater purpose, really? seems you don't have a choice. 
 	</text>
-	
+	<choice destination="cockvorePleasure" text="*try to stroke her to orgasm*"/>	
+	<choice destination="cockvoreSubmit0" text="*be used for pleasure*"/>
 	</page>
+	
+	<check ID="cockvorePleasure">
+		<test what="PLEASURE" DC="17" />
+		<outcome destination="cockvoreSuccess" />
+		<outcome destination="cockvoreFail" />
+	</check>	
+
+	<page ID="cockvoreSuccess">
+	<text>
+	You figure when in rome, also it might make her let you go. So you wrap your arms and legs willingly around her girth, jacking off the anubian with your entire body and hearing her moan and gasp in delight as you work your magic. Her hand still grinding you up and down her cocklength as her pleasure builds, soon she's thrusting her hips against you, her slightly sterile musk flooding your nose as her pre oozes forth to drip down on you from above before she lets out a lusty growl and thrusts a final time. Her cock erupting above you, sending gushing creamy fluids spurting out to stain the floor in front of her. Sensing your chance you push away, shoving her hand one way and her pulsing schlong the other way and achieving freedom..dropping down onto the floor with a bit of an oomph from the height you look up at her as her orgasm diminishes. A few weak shots of seed succeeding in landing atop you directly as the last of her pleasure is spent, might be time to do a runner before she sends you in for round two.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="cockvoreFail">
+	<text>
+	You figure when in rome, also it might make her let you go. So you wrap your arms and legs willingly around her girth, jacking off the anubian with your entire body and hearing her moan and gasp in delight as you work your magic. Her hand still grinding you up and down her cocklength as her pleasure builds, soon she's thrusting her hips against you, her slightly sterile musk flooding your nose as her pre oozes forth to drip down on you from above before she lets out a lusty growl and thrusts a final time. Her cock erupting above you, sending gushing creamy fluids spurting out to stain the floor in front of her. Sensing your chance you push away you shove against her cock trying to force her still spurting cock away enough for you to slip away out of her hand, only to find her fingers closing around you as she lifts you up "You have my gratitude trespasser, but i shall not spare you." she says and smirks as her cock gradually stops shooting wads of seed and she strokes it up to angle her cocktip towards your feet.
+	</text>
+	<choice destination="cockvore1" text="*fed to cock*"/>
+	</page>
+	
+	<page ID="cockvoreSubmit0">
+	<text>
+	You know its futile to resist, but can't help but try to push yourself away from her cock. But all your struggles seem to do is arouse her further as you fail to find purchase on her smooth and throbbing shaft. The slightly sterile but thick aroma of her musk being rubbed into your body as she grinds your squirming body up and down her cock, jacking off using you to add to the sensation as she does so. The jackal continuing to stroke herself with increasing vigor as you writhe against her cock without being able to stop or even slow her self gratifying degradation of your form.
+	</text>
+	<choice destination="cockvoreSubmit1" text="*cleanup required*"/>
+	</page>
+	
+	<page ID="cockvoreSubmit1">
+	<text>
+	The great and mighty jackal lets out a shuddering cry as she climaxes. Her cock erupting and pulsing against your body as she sends spurt after spurt of seed up and out into the open air. Your face pressed firmly against underside of that potent shaft able to feel each pulse of cum rocketing up her cumtube and into the open air until finally she reaches the end of her orgasm. The guardian lifting you back up in front of her face "And now, the refill" she says as she strokes her shaft and angles it upwards beneath your feet.
+	</text>
+	<choice destination="cockvore1" text="*fed to cock*"/>	
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	The jackal presses you downwards to meet her hip thrusts, that enormous black cock encompassing your feet easily and schlurping up your legs. Leftover cum soaking your legs and smearing around them as she feeds you in with a delighted moan. The guardian synth proving to be enjoying shoving you in a great deal as she continues stroking her shaft with one hand and feeding you in with the other, plunging your hips past her cumslit with a growl of delight and a lewd schlorp. 
+	</text>
+	<choice destination="cockvore2" text="*pushed the rest of the way in*"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	"Mhmm, trespasser..you feel good in me, like for all your intrusion here is where you belong." says the guardian as she slides her hand up over your head, then pushes down. The jackal letting out a moan that's entirely drowned out to your ears by the slurping of her voracious cock rippling up around your disappearing head as she feeds you entirely into her cock. Your body forming a delightful bulge in her shaft, entirely incased in her cock and under her stroking palm. The jackal moaning as she jerks you down into her balls inch by inch, gradually piling you into those gooey confines to bulge out her sack with your form.
+	</text>
+	<choice destination="cockvore3" text="*cockfood, trapped and awaiting the inevitable*"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	"You feel good in me, truly to be cockfood is your destiny trespasser. From long before you chose to intrude upon these forbidden halls." the jackal says, smiling as she gropes her sack and feels your shape jostled about in her balls by her movements. Her balls now hanging heavier and larger and a great deal bulgier as they contain your curled up form, the guardian fondling her sack happily and then slowly sliding her hand up to stroke over her shaft once more. And as she does so you feel her gooey seed start to burble and churn around you, softening and melting your form steadily in the inescapable depths of her loins.
+	</text>
+	<choice destination="cockvore4" text="*burble*"/>
+	</page>
+	
+	<gameover ID="cockvore4">
+	<text>
+	"In all my years, this pleasure never dulls." the jackal exclaims as she strokes off, though you barely hear her over the increasingly loud churning noises of the gooey cum immersing you. Her sack working you over steadily, working you down layer by layer into creamy goo. You feel your extremities melt as you sink into the rising jizz, followed by your limbs..until finally all that's left is your face spreading out into her seed as you sink into her load and become one with it. Every ounce of your form digested into nutbatter by the guardian as she strokes more vigorously and as if on cue climaxes, orgasming out your remnants to form a vast sticky puddle of cum on the floor. 	<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				your cum soaked
+				<readequipment slot="2" />
+				landing with a splat in the gooey mess along with the last few spurts of her orgasm as her climax tapers off.
+			</conditional>
+	</text>
+	</gameover>
 	
 </Conversation>
