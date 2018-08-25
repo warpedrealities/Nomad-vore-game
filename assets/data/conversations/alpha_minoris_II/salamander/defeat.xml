@@ -3,8 +3,11 @@
 
 <page ID="start">
 <text>
-No interactions to be had with a defeated salamander yet.
+ The salamander lets out a steam kettle hiss as she slumps before you, watching you with fiery yellow eyes as you stand over her and assess her. That thick tail of hers definitely might give you some interesting ideas about what to do with her.
 </text>
+	<choice destination="oralvore0" text="that tail will look great sticking out your mouth as you slurp it up">
+		<assertion evaluate="hasperk" perk="oralvore" />	
+	</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -15,6 +18,37 @@ No interactions to be had with a defeated salamander yet.
 		</choice>
 <choice destination="end" text="darn"/>
 </page>
+
+<page ID="oralvore0">
+<text>
+You wonder if that red-orange skin of hers gives her a unique taste. Maybe spicey, or zesty or with other extra flavours. Seeing you salivating hungrily the salamander hisses warningly and shrinks back, but she's unable to pull back far enough to avoid as you lunge downwards, grabbing her shoulders and pulling her forwards so that the crown of her head and all those fiery red-blonde locks of hair can be savoured and slicked down with your saliva. The salamander letting out a mip of protest as your lips encircle her neck and your arms go down to pin her own to her sides. The salamander squirming furiously around sending that thick tail of hers and thick hips wriggling as you take your first swallows and start to gobble her up.
+</text>
+<choice destination="oralvore1" text="*make your way to that delicious arse*"/>
+</page>
+
+<page ID="oralvore1">
+<text>
+The mander hisses and squirms, but her smooth and easily schlurpable body works against her as you well..slurp her up. Your eager swallows tugging her breasts and then belly past your lips and down your throat, the salamander proving unable to resist your hunger as you work her soft body down your throat. Her unique flavours yours to savour as your tongue roams over her belly and your lips encroach on her hips. You slow down to start to take in the curves of her ass with your hungry mouth, but they prove no match for your appetite and soon her rear has been claimed entirely by you. Your lips starting to encroach on her thighs and you watch those shapely legs and that thick tail writhing out beyond your face and lips. Soon she'll be all yours.
+</text>
+<choice destination="oralvore2" text="*swallow her, swallow all of her*"/>
+</page>
+
+<page ID="oralvore2">
+<text>
+You run your hands along those powerful muscular legs as they thrash and squirm around, feeding her in despite her hisses and protests as your gut grows gravid and round and full of delicious spicey mander. The salamander's tail and legs proving a stimulating last course to your meal as they wriggle around and you eventually work down them until you have only the tip and lower part of her tail sticking out of your lips. The mander letting out a frantic cry afore you schlurp her tail up and pack all of her away in the depths of your belly, yours to have and to hold and to digest down into nutrients to feed and please you.
+</text>
+<choice destination="oralvore3" text="*gurgle her*"/>
+</page>
+
+<page ID="oralvore3">
+	<text>
+	Your hands slide down of their own accord to trace possessively over your domed belly as within your digestive processes get to work on your meal. The salamander letting out a series of distressed hisses and cries, but those fade in time along with her struggles into the gurgles of a satisfied belly and the sloshes of a liquidated meal. Your gut turning smoouth, round and still and shrinking down as you absorb every trace of her form into yourself. Her fire now merely a fuel to keep you going.
+	</text>
+	<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+</page>
+
 	<page ID="devour">
 		<text>
 			You have devoured her in some unspecified, unelaborated on yet
