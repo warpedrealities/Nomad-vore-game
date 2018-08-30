@@ -6,6 +6,7 @@ end
 
 function melee(controllable,sense,hostile)
 	if hostile:getRPG():hasStatus(17) then
+		controllable:setValue(2,1)	
 		controllable:specialCommand("hide")
 		if controllable:HasPath() then
 			controllable:FollowPath()
@@ -23,7 +24,7 @@ function combat(controllable,sense,hostile,pos)
 		controllable:useSelfMove(3)
 		controllable:setValue(0,1)	
 	end
-	if pos:getDistance(hostile:getPosition())<2 then
+	if pos:getDistance(hostile:getPosition())<2 and controllable:getValue(2)==0 then
 	--if in melee range attack
 		 melee(controllable,sense,hostile)
 	else
@@ -55,7 +56,7 @@ function repair(controllable,sense)
 	end
 	
 	if not (repairTarget==nil) then
-		if (repairTarget:getRPG():getStat(0)>70) then
+		if (repairTarget:getRPG():getStat(0)>50) then
 
 			repairTarget=nil;
 			controllable:setValue(1,0)	
@@ -70,7 +71,7 @@ function repair(controllable,sense)
 		return true;
 	end
 	
-	repairTarget=sense:getActor(controllable,10,false,sense:getCriteria("healthBelow,0.25,name,Black guardian"));
+	repairTarget=sense:getActor(controllable,10,false,sense:getCriteria("healthBelow,0.25,name,Black guardian","healthAbove",0));
 	if not (repairTarget==nil) then
 		if pos:getDistance(repairTarget:getPosition())<2 then	
 		controllable:setAttack(2)

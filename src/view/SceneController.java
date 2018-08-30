@@ -301,7 +301,7 @@ public class SceneController implements Sense {
 				Actor target = activeZone.getActors().get(i);
 				float d = target.getPosition().getDistance(origin.getPosition());
 				if (d < maxRange) {
-					if (NPC.class.isInstance(target) && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
+					if (NPC.class.isInstance(target) && target.getRPGHandler().getActive() && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
 						if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
 								(int) origin.getPosition().y, (int) target.getPosition().x,
 								(int) target.getPosition().y, true)) {

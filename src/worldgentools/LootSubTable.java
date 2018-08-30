@@ -20,7 +20,8 @@ public class LootSubTable extends LootEntry {
 		super(node);
 
 		loot = new ArrayList<LootStub>();
-		Document doc = ParserHelper.LoadXML("assets/data/lootSubTables/" + node.getAttribute("file") + ".xml");
+		String file=node.getAttribute("file");
+		Document doc = ParserHelper.LoadXML("assets/data/lootSubTables/" + file + ".xml");
 
 		// read through the top level nodes
 

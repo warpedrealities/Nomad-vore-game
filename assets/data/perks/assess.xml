@@ -4,7 +4,7 @@
 	<description> Use your perceptive skills to assess a targets defences. This will determine which damage types the enemy is most resistant to.
 	</description>
 	<move count="1">
-		<combatmove name="assess" actionCost="8" bonusToHit="8"
+		<combatmove name="assess" actionCost="8" bonusToHit="8" bonusAttribute="PERCEPTION"
 			 timeCost="2" pattern="RANGED" moveType="OTHER">
 				<effectAnalyze control="PERCEPTION">
 					<defence resolve="false" vague="1" detail="3" precise="5"/>

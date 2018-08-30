@@ -1,5 +1,7 @@
 
 function combat(controllable,sense,pos,hostile)
+	controllable:setValue(1,hostile:getPosition().x)
+	controllable:setValue(2,hostile:getPosition().y)
 
 	if pos:getDistance(hostile:getPosition())<3 then
 	--if in melee range attack
@@ -52,6 +54,23 @@ function voice(controllable,sense)
 	end
 end
 
+function chase(controllable,sense,script,pos)
+	x=controllable:getValue(1)
+	y=controllable:getValue(2)
+	if (x==pos.x and y==pos.y) then
+		controllable:setValue(1,0)
+		controllable:setValue(2,0)
+	else
+		if controllable:HasPath() then
+		controllable:FollowPath()
+		else
+		controllable:Pathto(x,y,8)
+		end	
+	end
+
+end
+
+
 function main(controllable, sense, script)  
 	pos=controllable:getPosition()
 	hostile=sense:getHostile(controllable,10,true)
@@ -60,10 +79,15 @@ function main(controllable, sense, script)
 	combat(controllable,sense,pos,hostile)
 	voice(controllable, sense)
 	else
-	if (controllable:getRPG():getStat(0)>40) then
-		a=math.random(0,16)
-			if (a<8) then
-			controllable:move(a);
+	if (controllable:getRPG():getStat(0)>30) then
+		x=controllable:getValue(1)
+		if (x>0) then
+			chase(controllable,sense,script,pos)	
+		else
+			a=math.random(0,16)
+				if (a<8) then
+				controllable:move(a);
+				end
 			end
 		end
 	end

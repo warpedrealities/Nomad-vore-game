@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <world>
 	<entitysprite filename="desertplanet" size="3.0" />
-	<zone x="0" y="0" type="SURFACE">Zone 1A</zone>
-	<zone x="1" y="0" type="SURFACE">Zone 2A</zone>
-	<zone x="2" y="0" type="SURFACE">Zone 3A</zone>
+	<zone x="0" y="2" type="SURFACE">Zone 1A</zone>
+	<zone x="1" y="2" type="SURFACE">Zone 2A</zone>
+	<zone x="2" y="2" type="SURFACE">Zone 3A</zone>
 	<zone x="0" y="1" type="SURFACE">Zone 1B</zone>
 	<zone x="1" y="1" type="SURFACE">Zone 2B</zone>
 	<zone x="-1" y="-1" type="CLOSED">mine zone</zone>	
 	<zone x="2" y="1" type="SURFACE">Zone 3B</zone>	
-	<zone x="0" y="2" type="SURFACE">Zone 1C</zone>
-	<zone x="1" y="2" type="SURFACE">Zone 2C</zone>
-	<zone x="2" y="2" type="SURFACE">Zone 3C</zone>		
+	<zone x="0" y="0" type="SURFACE">Zone 1C</zone>
+	<zone x="1" y="0" type="SURFACE">Zone 2C</zone>
+	<zone x="2" y="0" type="SURFACE">Zone 3C</zone>		
 	<zone x="2" y="2" type="CLOSED">pyramid_core</zone>			
 </world>

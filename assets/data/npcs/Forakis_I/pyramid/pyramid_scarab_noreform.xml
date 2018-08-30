@@ -97,8 +97,7 @@
 			<tag>poison</tag>			
 		</statusTags>
 	</rpg>
-
-	<respawn delay="4000" />	
+	
 	<defeated conversation="Forakis_I/scarab/defeat" />	
 	<controller AI="pyramid_scarab_bot" />
 	<faction value="ForakisBots" />
