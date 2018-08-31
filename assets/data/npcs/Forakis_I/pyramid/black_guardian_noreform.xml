@@ -44,7 +44,6 @@
 		</statusTags>
 	</rpg>
 
-	<respawn delay="4000" />
 
 	<defeated conversation="Forakis_I/black_guardian/defeat" />
 	<seduced conversation="Forakis_I/black_guardian/defeat" />

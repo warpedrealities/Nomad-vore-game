@@ -44,7 +44,7 @@
 			</lootTable>			
 	<clean value="2" />			
 	</advancedBlockDungeon>
-	<placeNPC name="forakis_I/pyramid/black_guardian" x="36" y="35">
+	<placeNPC name="forakis_I/pyramid/black_guardian_noreform" x="36" y="35">
 		<percentage value="0.2"/>
 	</placeNPC>
 	<placeItem x="35" y="35">
@@ -52,7 +52,7 @@
 		<item itemname="rifle round" />
 		<item itemname="rifle round" />
 	</placeItem>
-	<placeNPC name="forakis_I/pyramid/pyramid_scarab" x="33" y="33"/>
+	<placeNPC name="forakis_I/pyramid/pyramid_scarab_noreform" x="33" y="33"/>
 
 	<partition xmin="34" xmax="42" ymin="34" ymax="42" inverse="true">
 	<selectTile tile="0">

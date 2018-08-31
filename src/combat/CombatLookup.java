@@ -19,6 +19,9 @@ public class CombatLookup {
 
 		case Actor_RPG.SEDUCTION:
 			return Actor_RPG.WILLPOWER;
+		
+		case Actor_RPG.PERCEPTION:
+			return Actor_RPG.DODGE;
 		}
 		return -1;
 	}

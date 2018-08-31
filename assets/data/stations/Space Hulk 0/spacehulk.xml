@@ -8,7 +8,7 @@
 		<tile sprite="19" vision="BLOCKING" movement="2"> an absurdly sturdy console</tile>
 		<tile sprite="20" vision="BLOCKING" movement="2"> a near invincible bit of
 			machinery</tile>
-		<tile sprite="21" vision="0" movement="0"> a dried creamy stain</tile>
+		<tile sprite="21" vision="EMPTY" movement="0"> a dried creamy stain</tile>
 	</tileset>
 	<zoneConditions>
 	<modifierCondition ID="darkness" vision="0.5" />
