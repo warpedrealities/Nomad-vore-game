@@ -336,7 +336,7 @@ public class ZoneInteractionHandler {
 	}
 
 	private boolean useTargetedMove(int number, int x, int y, Player player) {
-		if (GameManager.m_los.existsLineOfSight((ILosBoard) m_zone, (int) player.getPosition().x,
+		if (GameManager.m_los.existsLineOfSight(m_zone.getBoard(1), (int) player.getPosition().x,
 				(int) player.getPosition().y, x, y, true)) {
 			if (m_zone.zoneTileGrid[x][y].getWidgetObject() != null) {
 				if (Attackable.class.isInstance(m_zone.zoneTileGrid[x][y].getWidgetObject())) {

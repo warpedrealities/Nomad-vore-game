@@ -54,7 +54,7 @@
 	<text>
 		As your flesh begins to tingle you realize your only option aside from digestion is to martial your recovered strength and attempt to force your way out. You start to strike at the confines of the stomach, the size of your predator giving you more room than usual to apply your full force. Your knuckles start to ache from attempting to overwhelm the stomach walls, synth flesh not as yielding as its biological equivalent it seems "Determination will not avail you here trespasser." the jackal taunts as the levels of digestive broth fill ever higher around you. You redouble your efforts, but already feel her digestive fluids taking a toll while your attempts to disable her systems from the inside is achieving nothing.
 	</text>
-		<choice destination="oralvoreDigestGo" text="*destiny still arrives*"/>
+		<choice destination="oralvoreDigestGO" text="*destiny still arrives*"/>
 	</page>
 	
 	<page ID="oralvoreSubmit">

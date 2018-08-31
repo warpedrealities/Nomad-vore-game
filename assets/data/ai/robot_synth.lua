@@ -158,11 +158,12 @@ function outbreak(controllable,sense, script)
 	if outbreak==0 then
 		return false;
 	end
-	victim=sense:getVictim(controllable,8,true,"synth",false)
+	victim=sense:getVictim(controllable,8,true,"Synth",false)
+	
 	if (victim==nil) then
 		return false;
 	end
-	
+	print(victim:getName())
 	if pos:getDistance(victim:getPosition())<2 then
 		controllable:startVoreScript("synth_assimilation", victim)
 		script:setValue(4,50)	
@@ -182,6 +183,7 @@ function main(controllable, sense, script)
 		pos=controllable:getPosition()
 		hostile=sense:getHostile(controllable,10,true)
 		if not (outbreak(controllable,sense,script)) then
+
 			if not (hostile == nil ) then
 			--combat ai here
 			voice(controllable, sense)

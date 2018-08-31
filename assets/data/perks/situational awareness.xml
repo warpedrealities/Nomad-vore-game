@@ -9,7 +9,7 @@
 		of threat awareness that can be maintained for the length of a single
 		fight. Grants dodge boost special move +4.
 	</description>
-	<move count="3">
+	<move count="1">
 		<combatmove name="hyper awareness" timeCost="2" cooldown="300"
 			icon="1" pattern="SELF" bonusAttribute="RANGED" actionCost="2"
 			moveType="FIGHT">

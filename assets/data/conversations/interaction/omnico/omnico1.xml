@@ -18,6 +18,7 @@
 		<choice destination="email2" text="access 811" />
 		<choice destination="email4" text="access 1041" />
 		<choice destination="email8" text="access 1127" />	
+		<choice destination="email11" text="access 1611" />			
 		<choice destination="end" text="exit" />
 	</page>
 
@@ -181,4 +182,16 @@
 	<choice destination="end" text="exit" />	
 	</page>
 
+	<page ID="email11">
+	<text>
+	From: mgr. Asbel LBREAK
+	to:	all LBREAK
+	RE: do not open untrusted attachments! LBREAK
+	
+	I should not have to go over basic IT policy but I will reiterate for those of you who must of spent the job interview under HR's desk instead of in front of it. Do not open attachments from any address other than a confirmed Omnico account. This runs the risk of allowing malware and viruses to infilitrate the network here, and I remind you that the synths have a wireless connection to the network and non omnico approved code has been known to cause them to act in an erratic or unsafe fashion.
+	</text>
+	<choice destination="mailbox" text="return to mailbox" />
+	<choice destination="end" text="exit" />	
+	</page>	
+	
 </Conversation>
