@@ -305,7 +305,7 @@ public class NPC extends Actor implements Controllable {
 				if (actorRPG.getStat(Actor_RPG.HEALTH) > 0 && actorRPG.getStat(Actor_RPG.RESOLVE) <= 0) {
 					lustRemove();
 				} else {
-					Remove(true);
+					Remove(true,false);
 				}
 			}
 		}
@@ -364,12 +364,12 @@ public class NPC extends Actor implements Controllable {
 		}	
 	}
 	
-	public void Remove(boolean defeat) {
+	public void Remove(boolean defeat, boolean noDrops) {
 
 		clock=0;
 		actorVisibility = false;
 		spriteInterface.setVisible(false);
-		if (!((NPC_RPG) actorRPG).getItemDrop().isEmpty()) {
+		if (!noDrops && !((NPC_RPG) actorRPG).getItemDrop().isEmpty()) {
 			List<NPCItemDrop> drops=((NPC_RPG) actorRPG).getItemDrop();
 			for (int i=0;i<drops.size();i++)
 			{

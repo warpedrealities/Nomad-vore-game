@@ -7,7 +7,7 @@
 		<tile sprite="33" vision="BLOCKING" movement="2">metal shelf</tile>
 		<tile sprite="34" vision="BLOCKING" movement="2">a machine</tile>
 		<tile sprite="35" vision="BLOCKING" movement="2">a set of monitors</tile>
-		<tile sprite="36" vision="BLOCKING" movement="0">tiled floor</tile>	
+		<tile sprite="36" vision="EMPTY" movement="0">tiled floor</tile>	
 		<tile sprite="37" vision="EMPTY" movement="2">worktable</tile>	
 		<tile sprite="38" vision="EMPTY" movement="2">counter</tile>	
 		<tile sprite="39" vision="EMPTY" movement="2">table</tile>				

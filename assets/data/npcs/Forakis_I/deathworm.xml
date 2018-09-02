@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Harpy>
+<npc>
 	<sprite value="uppercaseD.png" />
 	<name>Death worm</name>
 	<description>
@@ -60,7 +60,7 @@
 			<tag>seduction</tag>
 		</statusTags>
 	</rpg>
-
+	<flying />
 	<respawn delay="2000" />
 
 	<defeated conversation="Forakis_I/deathworm/defeat" />
@@ -69,4 +69,4 @@
 	<seducer conversation="Forakis_I/deathworm/victory" />
 	<controller AI="deathworm" />
 	<faction value="monster" />
-</Harpy>
+</npc>

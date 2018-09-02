@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <start>
-	<system value="Forakis" />
-	<world value="Forakis I" />
-	<zone value="Zone 3C" />
+	<system value="Auriga" />
+	<world value="avenger0" />
+	<zone value="avenger0" />
 	<position x="2" y="2" />
 	<item value="laser pistol" />
 	<item value="Knife" />

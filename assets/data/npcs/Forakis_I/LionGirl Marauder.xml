@@ -46,13 +46,13 @@
 			</hitText>
 		</combatMove>		
 		<itemDrop chance="20" item="Longneck breachloader" />
-		<itemDrop chance="100" item="rifle round" />
 		<itemDrop chance="50" item="rifle round" />
-		<itemDrop chance="50" item="rifle round" />		
-		<itemDrop chance="50" item="rifle round" />
-		<itemDrop chance="50" item="rifle round" />
-		<itemDrop chance="50" item="rifle round" />				
-		<itemDrop chance="50" item="gourd" />		
+		<itemDrop chance="25" item="rifle round" />
+		<itemDrop chance="25" item="rifle round" />		
+		<itemDrop chance="25" item="rifle round" />
+		<itemDrop chance="25" item="rifle round" />
+		<itemDrop chance="25" item="rifle round" />				
+		<itemDrop chance="25" item="gourd" />		
 	</rpg>
 
 	<respawn delay="2000" />	

@@ -85,7 +85,7 @@ public class VoreScript_Impl implements VoreScript {
 			if (stages[stageIndex].removeTarget())
 			{
 				target.setBusy(false);
-				target.Remove(false);
+				target.Remove(false,true);
 			}
 			stageIndex++;
 			if (stageIndex>=stages.length ||stages[stageIndex]==null)

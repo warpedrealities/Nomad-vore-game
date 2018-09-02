@@ -102,8 +102,14 @@ public class EffectProcessor {
 			CompanionTool.removeCompanion(m_npc, m_player);
 		}
 		if (str.equals("removenpc")) {
-			m_npc.Remove(false);
+			boolean b=false;
+			if (node.getAttribute("noDrops").equals("true"))
+			{
+				b=true;
+			}
+			m_npc.Remove(false,b);
 		}
+
 		if (str.equals("healnpc")) {
 			m_npc.Heal();
 		}
@@ -173,7 +179,7 @@ public class EffectProcessor {
 		if (str.equals("captureNPC")) {
 			CaptureHandler handler = new CaptureHandler(Universe.getInstance().getCurrentEntity(), m_player);
 			if (handler.capture(m_npc)) {
-				m_npc.Remove(false);
+				m_npc.Remove(false,true);
 			}
 		}
 		if (str.equals("createNPC")) {

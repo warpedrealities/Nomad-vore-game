@@ -103,10 +103,11 @@ public class SolarRenderer extends SpriteManager {
 	
 	public void generateWarpHelpers(float distance, Universe universe)
 	{
+		Vec2i origin=Universe.getInstance().getCurrentStarSystem().getPosition();
 		for (int i=0;i<8;i++)
 		{
 			Vec2i p=Geometry.getPos(i, 0, 0);
-			StarSystem system=universe.getSystem(p.x, p.y);
+			StarSystem system=universe.getSystem(origin.x+p.x, origin.y+p.y);
 			if (system!=null)
 			{
 				

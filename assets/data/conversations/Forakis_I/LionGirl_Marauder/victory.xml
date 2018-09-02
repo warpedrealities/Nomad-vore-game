@@ -50,7 +50,7 @@
 		“You jest surely traveller?” She asks, looking around uncertainly, then giving you a questioning look. “I have bested you, at great cost in precious rounds and the struggle. My stomach is already gurgling for you and you are mine, You think I will show mercy merely cause you asked politely?” You nod with sincere eyes, very obviously concerned with your survival. The lion girl gives you an unamused stare and shrugs, dropping you into the sand and looting your pockets for valuables and money, but at least leaving you alive. As she walks away, she remarks “Now shoo, I doubt you’ll catch me in a merciful mood next time.” As you lie there, severely injured but at least still alive, your body eventually stabilizes and allows you to limp away despite your injuries.	
 	</text>
 		<effect type="givegold" value="-100" />	
-		<special effect="removenpc" />		
+		<special effect="removenpc" noDrops="true"/>		
 		<choice destination="end" text="at least you have your life..even if not your dignity"/>
 	</page>
 	

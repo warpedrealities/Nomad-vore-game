@@ -191,18 +191,19 @@ public class SaveLoad extends Screen implements Callback {
 				break;
 			case 1:
 				// save
-				if (m_slots != null) {
-					if (m_list.getSelect() < m_slots.length) {
-						Save(m_slots[m_list.getSelect()]);
+				if (!textEntry) {
+					if (m_slots != null) {
+						if (m_list.getSelect() < m_slots.length) {
+							Save(m_slots[m_list.getSelect()]);
+						} else {
+							// prompt to enter new save name
+							NewSave();
+						}
 					} else {
 						// prompt to enter new save name
 						NewSave();
 					}
-				} else {
-					// prompt to enter new save name
-					NewSave();
 				}
-
 				break;
 			case 2:
 				// load
