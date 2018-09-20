@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ItemConsumable name="nerve purge" weight="0.5" value="100">
+	<description>A potent cocktail of drugs that provide a fast acting purge of unbalances and contagions in your nervous system.</description>
+	<effect_ReduceStatus count="1">
+	<statusId value="17"/>
+	<description>
+	You inject the syringe into your body, the cocktail rebalancing your neural pathways.
+	</description>
+	</effect_ReduceStatus>
+</ItemConsumable>

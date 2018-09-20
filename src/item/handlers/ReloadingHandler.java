@@ -43,7 +43,7 @@ public class ReloadingHandler {
 							//drain ammo entirely
 							ammo.setEnergy(0);
 							device.setEnergy(device.getEnergy()+Eavailable);
-							if (DisposeAmmo((ItemHasEnergy)ammo.getItem()))
+							if (DisposeAmmo((ItemHasEnergy)ammo.getItem()) && inventory.size()>i)
 							{	
 								if (ammo.equals(inventory.get(i)))
 								{

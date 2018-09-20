@@ -34,7 +34,7 @@
 				<text>The lamia wraps TARGET in her coils</text>
 			</hitText>
 			<effectStatus probability="100">
-				<applyText>TARGET is wrapped in snakey coils.</applyText>
+				<applyText>TARGET is wrapped in snakey coils, attack lowered.</applyText>
 				<statusBind uid="20" icon="4" numModifiers="2">
 					<removeText> TARGET has escaped the lamia coils.</removeText>
 					<effect attribute="RANGED" modifier="-2" />

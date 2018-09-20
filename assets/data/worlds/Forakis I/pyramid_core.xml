@@ -37,7 +37,8 @@
 				<lootSubTable chance="1" file="consumable_Tier_1" />
 				<lootSubTable chance="0.5" file="resource_tier_1" />
 				<lootSubTable chance="0.1" file="consumable_Tier_1" />		
-				<lootSubTable chance="1" file="pyramid_items" />					
+				<lootSubTable chance="1" file="pyramid_items" />		
+				<lootSubTable chance="1" file="pyramid_consumables" />				
 				<loot item="gold" chance="0.4" addendum="100" />
 				<loot item="gold" chance="0.4" addendum="50" />				
 				<loot item="gold" chance="0.4" addendum="250" />
@@ -54,7 +55,7 @@
 	</placeItem>
 	<placeNPC name="forakis_I/pyramid/pyramid_scarab_noreform" x="33" y="33"/>
 
-	<partition xmin="34" xmax="42" ymin="34" ymax="42" inverse="true">
+	<partition xmin="30" xmax="44" ymin="30" ymax="44" inverse="true">
 	<selectTile tile="0">
 	<SeedNPCs min="14" max="18" name="forakis_I/pyramid/black_guardian" minDistance="12" />	
 	</selectTile>

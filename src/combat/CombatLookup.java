@@ -23,7 +23,7 @@ public class CombatLookup {
 		case Actor_RPG.PERCEPTION:
 			return Actor_RPG.DODGE;
 		}
-		return -1;
+		return Actor_RPG.DODGE;
 	}
 
 	public static int getBaseDefence(float distance, int defenceAttribute) {

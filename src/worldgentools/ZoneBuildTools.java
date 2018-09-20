@@ -577,7 +577,11 @@ public class ZoneBuildTools {
 					{
 						grid = CloneOverlay(grid);
 						NextPhase(Enode,new CircleTool(Enode).run(m_zone,grid).getGrid());
-					}		
+					}	
+					if (Enode.getTagName() == "preloadprefab") {
+						grid = GenOverlay();
+						preloadPrefab(Enode, grid);
+					}
 				}
 
 			}
