@@ -39,6 +39,7 @@ public class CombatProjector implements ILosBoard {
 
 	@Override
 	public boolean isObstacle(int x, int y) {
+		if (zone.getTile(x, y)==null) {return true;}
 		return !zone.getTile(x, y).getDefinition().getVision().equals(TileVision.EMPTY);
 	}
 
