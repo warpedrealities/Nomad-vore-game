@@ -23,6 +23,7 @@ public class WarpScreen extends Screen  implements Callback{
 	Window window;
 	Screen_Fade screenFade;
 	static final int sleepLength=300;
+	private int currentSleep;
 	private Spaceship ship;
 	private Text description;
 //	private Vortex_Renderer vortex;
@@ -63,12 +64,17 @@ public class WarpScreen extends Screen  implements Callback{
 
 			case 2:
 				// sleep
+				currentSleep=sleepLength;
 				screenFade.run();
 				break;
 			case 3:
 
 				callback.Callback();
 				break;
+			case 4:
+				currentSleep=(int) ship.getWarpHandler().getTimeLeft();
+				screenFade.run();
+				break;		
 			}
 		}
 
@@ -91,10 +97,11 @@ public class WarpScreen extends Screen  implements Callback{
 		description=new Text(new Vec2f(6.5F, 5.0F), generateString(l), 0.7F, textures[4]);
 		
 		window = new Window(new Vec2f(-20, -16), new Vec2f(40, 15), textures[1], true);
-		Button[] buttons = new Button[2];
+		Button[] buttons = new Button[3];
 		buttons[0] = new Button(new Vec2f(33.7F, 0.2F), new Vec2f(6, 1.8F), textures[2], this, "Exit", 3, 1);
 		buttons[1] = new Button(new Vec2f(33.7F, 2.2F), new Vec2f(6, 1.8F), textures[2], this, "wait", 2, 1);
-		for (int i = 0; i < 2; i++) {
+		buttons[3] = new Button(new Vec2f(33.7F, 4.2F), new Vec2f(6, 1.8F), textures[2], this, "skip", 4, 1);		
+		for (int i = 0; i < 3; i++) {
 			window.add(buttons[i]);
 		}
 		this.callback = callback;
@@ -128,8 +135,8 @@ public class WarpScreen extends Screen  implements Callback{
 	
 	@Override
 	public void Callback() {
-		((Player_RPG) Universe.getInstance().getPlayer().getRPG()).rest(sleepLength);
-		Universe.AddClock(sleepLength);
+		((Player_RPG) Universe.getInstance().getPlayer().getRPG()).rest(currentSleep);
+		Universe.AddClock(currentSleep);
 		ViewScene.m_interface.UpdateInfo();
 
 		refresh();
