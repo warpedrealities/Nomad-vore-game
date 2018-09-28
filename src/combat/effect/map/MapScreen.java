@@ -6,7 +6,6 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 
 import gui.Button;
-import gui.TextParagrapher;
 import gui.Window;
 import input.MouseHook;
 import nomad.universe.Universe;
@@ -15,8 +14,8 @@ import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
 import zone.Tile;
-import zone.Zone;
 import zone.TileDef.TileMovement;
+import zone.Zone;
 
 public class MapScreen extends Screen {
 

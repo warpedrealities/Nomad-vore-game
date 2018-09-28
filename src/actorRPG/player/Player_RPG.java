@@ -10,40 +10,31 @@ import java.util.List;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import combat.CombatMove;
-import combat.CombatMove.AttackPattern;
-import combat.CooldownHandler;
-import combat.effect.Effect_Damage;
-import combat.statusEffects.StatusEffect;
-import combat.statusEffects.StatusLoader;
-import combat.statusEffects.Status_Bind;
-
-import perks.Perk;
-import perks.PerkCraftingToken;
-import perks.PerkElement;
-import perks.PerkInstance;
-import perks.PerkLoader;
-import perks.PerkProcessor;
-
-import nomad.GameOver;
-import nomad.universe.Universe;
-import shared.ParserHelper;
-import shared.SceneBase;
-import view.ViewScene;
-import vmo.Game;
-import item.Item;
-import item.ItemEquip;
-import item.ItemWeapon;
-import item.instances.ItemDepletableInstance;
-import item.instances.ItemStack;
 import actor.Actor;
-
 import actor.Modifier;
 import actor.Modifier_Element;
 import actor.player.Inventory;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.StatusEffectHandler;
+import combat.CombatMove;
+import combat.CooldownHandler;
+import combat.statusEffects.StatusEffect;
+import item.Item;
+import item.ItemEquip;
+import item.ItemWeapon;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemStack;
+import nomad.GameOver;
+import perks.Perk;
+import perks.PerkCraftingToken;
+import perks.PerkInstance;
+import perks.PerkLoader;
+import perks.PerkProcessor;
+import shared.ParserHelper;
+import shared.SceneBase;
+import view.ViewScene;
+import vmo.Game;
 
 
 public class Player_RPG implements Actor_RPG {

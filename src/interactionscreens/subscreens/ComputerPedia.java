@@ -1,10 +1,8 @@
 package interactionscreens.subscreens;
 
 import java.nio.FloatBuffer;
-import java.util.Iterator;
 
 import gui.Button;
-import gui.MultiLineText;
 import gui.ScrollableMultiLineText;
 import gui.Window;
 import gui.lists.List;

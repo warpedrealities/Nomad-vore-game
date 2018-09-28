@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import shared.ParserHelper;
 import view.ViewScene;
-import view.ModelController_Int;
 
 public class WidgetDescription extends Widget {
 

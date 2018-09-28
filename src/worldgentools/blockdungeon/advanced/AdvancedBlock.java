@@ -3,9 +3,7 @@ package worldgentools.blockdungeon.advanced;
 import java.util.ArrayList;
 
 import actor.npc.NPC;
-import worldgentools.blockdungeon.Block;
 import worldgentools.blockdungeon.DungeonWidgetLoader;
-import worldgentools.blockdungeon.Opening;
 import zone.Tile;
 import zone.Zone;
 

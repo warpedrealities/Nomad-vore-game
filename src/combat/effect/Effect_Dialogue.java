@@ -3,7 +3,6 @@ package combat.effect;
 import org.w3c.dom.Element;
 
 import actor.Actor;
-import combat.effect.Effect;
 
 public class Effect_Dialogue extends Effect {
 

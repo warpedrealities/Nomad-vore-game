@@ -1,8 +1,8 @@
 package shared;
 
-import gui.GUIBase;
-
 import java.nio.FloatBuffer;
+
+import gui.GUIBase;
 
 public class ColourSwab extends GUIBase {
 

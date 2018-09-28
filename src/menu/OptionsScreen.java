@@ -4,12 +4,9 @@ import java.nio.FloatBuffer;
 
 import gui.Button;
 import gui.Text;
-import gui.Textwindow;
 import gui.Window;
-import gui.lists.List;
 import input.MouseHook;
 import shared.Callback;
-import shared.SceneManager;
 import shared.Screen;
 import shared.Vec2f;
 import vmo.Game;

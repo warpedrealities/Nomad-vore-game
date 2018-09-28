@@ -1,6 +1,5 @@
 package zone;
 
-import rlforj.los.ILosBoard;
 import actor.Actor;
 import actor.player.Player;
 import artificial_intelligence.pathfinding.Path;

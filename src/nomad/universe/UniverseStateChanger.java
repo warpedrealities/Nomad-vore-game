@@ -4,7 +4,6 @@ import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.w3c.dom.Document;
@@ -18,7 +17,6 @@ import actorRPG.npc.NPCStatblockLibrary;
 import description.BodyLoader;
 import faction.FactionLibrary;
 import nomad.StarSystem;
-import nomad.UIDGenerator;
 import nomad.universe.salvageShip.SalvageShip;
 import shared.FileTools;
 import shared.ParserHelper;

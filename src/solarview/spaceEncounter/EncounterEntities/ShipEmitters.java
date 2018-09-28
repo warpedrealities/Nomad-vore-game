@@ -1,13 +1,13 @@
 package solarview.spaceEncounter.EncounterEntities;
 
-import shared.Vec2f;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import shared.Vec2f;
 
 public class ShipEmitters {
 

@@ -1,19 +1,16 @@
 package gui;
 
-import input.Keyboard;
-import input.MouseHook;
-
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.lwjgl.glfw.GLFW;
-
 import org.lwjgl.opengl.GL20;
 
 import font.NuFont;
+import input.Keyboard;
+import input.MouseHook;
 import shared.ConcertinaPatch;
-import shared.NinePatch;
 import shared.Vec2f;
 import vmo.Game;
 

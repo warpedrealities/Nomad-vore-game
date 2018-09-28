@@ -9,7 +9,6 @@ import org.w3c.dom.NodeList;
 import actor.npc.NPC;
 import shared.Vec2f;
 import worldgentools.blockdungeon.DungeonWidgetLoader;
-import worldgentools.blockdungeon.Opening;
 import worldgentools.blockdungeon.SpawnDefinition;
 import worldgentools.blockdungeon.WidgetDefinition;
 import zone.Tile;

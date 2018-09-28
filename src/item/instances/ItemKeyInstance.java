@@ -1,12 +1,10 @@
 package item.instances;
 
-import item.Item;
-import item.ItemKey;
-import item.Item.ItemUse;
-
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import item.Item;
+import item.ItemKey;
 import shared.ParserHelper;
 
 public class ItemKeyInstance extends Item {

@@ -8,12 +8,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import shared.ParserHelper;
-import view.ViewScene;
-
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
-import nomad.universe.Universe;
+import shared.ParserHelper;
+import view.ViewScene;
 
 public class Status_AttribMod implements StatusEffect {
 

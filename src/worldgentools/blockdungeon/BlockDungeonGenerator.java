@@ -12,7 +12,6 @@ import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
-
 import zone.Tile;
 import zone.Zone;
 

@@ -3,8 +3,6 @@ package landingScreen;
 import java.nio.FloatBuffer;
 
 import gui.SpriteImage;
-import rendering.Sprite;
-import rendering.SpriteManager;
 import shared.Vec2f;
 
 public class LandingGridRender {

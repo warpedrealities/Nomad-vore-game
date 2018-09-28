@@ -11,15 +11,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import gui.MultiLineText;
-import gui.Window;
 import input.Keyboard;
 import input.MouseHook;
 import shared.MyListener;
 import shared.ParserHelper;
-import shared.Scene;
 import shared.SceneBase;
 import shared.Vec2f;
-import view.ModelController_Int;
 import view.ViewScene;
 import vmo.Game;
 

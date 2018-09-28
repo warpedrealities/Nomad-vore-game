@@ -10,7 +10,6 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JsePlatform;
 
-import faction.FactionLibrary;
 import nomad.universe.Universe;
 import shared.ParserHelper;
 import view.ViewScene;

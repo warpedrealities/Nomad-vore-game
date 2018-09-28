@@ -1,14 +1,12 @@
 package solarview;
 
-import particlesystem.ParticleEmitter;
 import particlesystem.ParticleEmitterAdvanced;
 import particlesystem.particleEffectors.ParticleDraw;
+import rendering.SpriteRotatable;
 import shared.Vec2f;
-import solarBackdrop.StarScape;
 import spaceship.Spaceship;
 import view.ViewScene;
 import vmo.Game;
-import rendering.SpriteRotatable;
 
 public class WarpController {
 

@@ -2,6 +2,7 @@ package solarview.spaceEncounter.gui;
 
 import java.nio.FloatBuffer;
 
+import actorRPG.player.Player_RPG;
 import gui.Button;
 import gui.Text;
 import gui.Window;
@@ -16,7 +17,6 @@ import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
 import solarview.spaceEncounter.retreatHandler.RetreatHandler;
 import spaceship.ShipController.scriptEvents;
-import actorRPG.player.Player_RPG;
 
 public class Screen_Recap extends Screen implements MyListener {
 

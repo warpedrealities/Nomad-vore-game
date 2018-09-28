@@ -4,7 +4,6 @@ import faction.Faction;
 import nomad.FlagField;
 import nomad.StarSystem;
 import nomad.universe.Universe;
-import spaceship.PlayerShipController;
 import spaceship.Spaceship;
 import spaceship.boarding.BoardingHelper;
 import spaceship.stats.SpaceshipAnalyzer;

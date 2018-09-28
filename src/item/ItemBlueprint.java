@@ -1,14 +1,8 @@
 package item;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
-import item.Item.ItemUse;
-import shared.ParserHelper;
 
 public class ItemBlueprint extends Item {
 

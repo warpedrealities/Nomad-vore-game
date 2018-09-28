@@ -1,5 +1,8 @@
 package playerscreens.subscreens;
 
+import java.nio.FloatBuffer;
+
+import actor.player.Player;
 import gui.Button;
 import gui.Text;
 import gui.Window;
@@ -7,21 +10,13 @@ import gui.lists.List;
 import input.MouseHook;
 import item.Item;
 import item.ItemCoin;
-import item.ItemContainer;
 import item.instances.ItemContainerInstance;
 import nomad.universe.Universe;
-
-import java.nio.FloatBuffer;
-import java.util.ArrayList;
-
-import actor.player.Player;
 import playerscreens.InventoryScreen;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
-import shop.merchant.ShopMerchantScreen;
 import view.ViewScene;
-import widgets.WidgetContainer;
 
 public class ItemContainerScreen extends Screen implements Callback {
 

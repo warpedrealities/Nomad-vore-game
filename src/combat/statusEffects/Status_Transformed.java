@@ -9,7 +9,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actorRPG.Actor_RPG;
-import actorRPG.RPG_Helper;
 import shared.ParserHelper;
 
 public class Status_Transformed implements StatusEffect {

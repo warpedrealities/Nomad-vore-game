@@ -3,11 +3,11 @@ package actorRPG;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import actor.Actor;
+import actor.Modifier;
 import combat.CombatMove;
 import combat.statusEffects.StatusEffect;
 import faction.Faction;
-import actor.Actor;
-import actor.Modifier;
 
 public interface Actor_RPG {
 	public static final int STRENGTH = 0; // melee attack, melee defence, carry

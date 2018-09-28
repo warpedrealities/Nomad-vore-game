@@ -1,5 +1,7 @@
 package worldgentools;
 
+import org.w3c.dom.Element;
+
 import item.Item;
 import item.ItemCoin;
 import item.QuestItem;
@@ -8,8 +10,6 @@ import item.instances.ItemDepletableInstance;
 import item.instances.ItemExpositionInstance;
 import item.instances.ItemKeyInstance;
 import nomad.universe.Universe;
-
-import org.w3c.dom.Element;
 
 public class LootEntry {
 

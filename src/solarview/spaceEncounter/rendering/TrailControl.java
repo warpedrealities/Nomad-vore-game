@@ -7,7 +7,6 @@ import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.CombatManouver;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.EncounterEntities.ShipEmitters;
-import vmo.GameManager;
 
 public class TrailControl {
 

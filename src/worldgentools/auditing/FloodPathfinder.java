@@ -2,10 +2,8 @@ package worldgentools.auditing;
 
 import java.util.ArrayList;
 
-import nomad.universe.Universe;
 import shared.Vec2i;
 import view.ZoneInteractionHandler;
-
 import zone.Tile;
 import zone.TileDef.TileMovement;
 import zone.Zone;

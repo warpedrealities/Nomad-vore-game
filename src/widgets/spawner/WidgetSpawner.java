@@ -25,8 +25,8 @@ import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
 import widgets.Widget;
-import zone.Zone;
 import zone.TileDef.TileMovement;
+import zone.Zone;
 
 public class WidgetSpawner extends Widget {
 

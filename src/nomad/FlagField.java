@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.Set;
 
 import shared.ParserHelper;
-import view.ViewScene;
 
 public class FlagField {
 

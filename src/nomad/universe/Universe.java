@@ -1,6 +1,14 @@
 package nomad.universe;
 
 
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import actor.player.Player;
+import faction.FactionLibrary;
 import item.ItemLibrary;
 import nomad.Entity;
 import nomad.Preferences;
@@ -8,36 +16,13 @@ import nomad.StarSystem;
 import nomad.UIDGenerator;
 import nomad.World;
 import nomad.integrityChecking.SaveIntegrityCheck;
-
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
-
-import org.apache.commons.io.FileUtils;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import actor.player.CompanionTool;
-import actor.player.Player;
-import actorRPG.npc.NPCStatblockLibrary;
-import description.BodyLoader;
-import faction.FactionLibrary;
 import shared.FileTools;
 import shared.ParserHelper;
-import shared.Vec2f;
 import shop.ShopList;
 import spaceship.Spaceship;
 import vmo.Config;
 import vmo.Game;
 import vmo.GameManager;
-import worldgentools.ZoneBuildTools;
 import zone.Zone;
 
 public class Universe extends GameManager 

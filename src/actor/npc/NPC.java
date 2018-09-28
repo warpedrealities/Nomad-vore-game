@@ -4,11 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-
-import nomad.FlagField;
-import nomad.universe.Universe;
 
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LuaValue;
@@ -25,13 +21,6 @@ import actor.ThreatAssessment;
 import actor.npc.observerVore.VoreScript;
 import actor.npc.observerVore.impl.VoreScript_Impl;
 import actor.player.Player;
-import combat.CombatMove;
-import combat.CombatMove.AttackPattern;
-import combat.effect.Effect;
-import combat.statusEffects.StatusEffect;
-import faction.FactionLibrary;
-import faction.violation.FactionRule.ViolationType;
-
 import actorRPG.Actor_RPG;
 import actorRPG.RPGActionHandler;
 import actorRPG.npc.NPCItemDrop;
@@ -45,12 +34,16 @@ import artificial_intelligence.Script_AI;
 import artificial_intelligence.SpecialCommandHandler;
 import artificial_intelligence.detection.Sense;
 import artificial_intelligence.pathfinding.Path;
-
+import combat.CombatMove;
+import combat.CombatMove.AttackPattern;
+import combat.effect.Effect;
+import faction.FactionLibrary;
+import nomad.FlagField;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import view.ViewScene;
 import view.ZoneInteractionHandler;
-import vmo.GameManager;
 import zone.Tile;
 import zone.Zone_int;
 

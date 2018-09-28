@@ -7,7 +7,6 @@ import java.io.IOException;
 import org.w3c.dom.Element;
 
 import actor.npc.Crew;
-import shipsystem.ShipAbility.AbilityType;
 
 public class ShipSimCrew extends ShipAbility {
 	

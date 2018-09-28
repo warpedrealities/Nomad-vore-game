@@ -12,13 +12,9 @@ import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
-import worldgentools.blockdungeon.Block;
 import worldgentools.blockdungeon.BlockDungeonHelper;
 import worldgentools.blockdungeon.BlockLoader;
 import worldgentools.blockdungeon.DungeonWidgetLoader;
-import worldgentools.blockdungeon.KeyBlock;
-import worldgentools.blockdungeon.Opening;
-import worldgentools.blockdungeon.Prefab_Block;
 import zone.Tile;
 import zone.Zone;
 

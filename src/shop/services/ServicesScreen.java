@@ -8,13 +8,13 @@ import gui.Button;
 import gui.Text;
 import gui.Window;
 import input.MouseHook;
+import nomad.Station;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
 import spaceship.Spaceship;
 import spaceship.stats.SpaceshipAnalyzer;
-import nomad.Station;
-import nomad.universe.Universe;
 
 public class ServicesScreen extends Screen {
 

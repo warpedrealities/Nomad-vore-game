@@ -1,14 +1,5 @@
 package widgets;
 
-import interactionscreens.ContainerScreen;
-import item.Item;
-import item.ItemCoin;
-import item.ItemConsumable;
-import item.ItemResource;
-import item.handlers.StackHandler;
-import item.instances.ItemStack;
-import nomad.universe.Universe;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -16,13 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 import actor.player.Player;
-import shared.ParserHelper;
+import interactionscreens.ContainerScreen;
+import item.Item;
+import item.ItemCoin;
+import item.handlers.StackHandler;
+import item.instances.ItemStack;
+import nomad.universe.Universe;
 import view.ViewScene;
-import actorRPG.RPG_Helper;
 
 public class WidgetContainer extends WidgetBreakable {
 

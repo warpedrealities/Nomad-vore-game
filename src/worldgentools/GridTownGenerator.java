@@ -2,13 +2,11 @@ package worldgentools;
 
 import java.util.ArrayList;
 
-import org.lwjgl.util.Rectangle;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import artificial_intelligence.pathfinding.PathNode;
-import nomad.universe.Universe;
 import shared.Vec2i;
 import view.ZoneInteractionHandler;
 import vmo.GameManager;

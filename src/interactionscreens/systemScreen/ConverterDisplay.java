@@ -4,7 +4,6 @@ import gui.Button;
 import gui.Text;
 import gui.Window;
 import input.MouseHook;
-import shared.Callback;
 import shared.Vec2f;
 import shipsystem.conversionSystem.ShipConverter;
 

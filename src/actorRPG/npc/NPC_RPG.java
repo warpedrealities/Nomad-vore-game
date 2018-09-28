@@ -3,25 +3,19 @@ package actorRPG.npc;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.w3c.dom.Element;
-
-import combat.CombatMove;
-import combat.statusEffects.StatusEffect;
-import combat.statusEffects.StatusLoader;
-import combat.statusEffects.Status_Bind;
-import faction.Faction;
-import nomad.universe.Universe;
-import shared.ParserHelper;
-import view.ViewScene;
 
 import actor.Actor;
 import actor.Modifier;
 import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 import actorRPG.StatusEffectHandler;
+import combat.CombatMove;
+import combat.statusEffects.StatusEffect;
+import faction.Faction;
+import shared.ParserHelper;
 
 public class NPC_RPG implements Actor_RPG {
 

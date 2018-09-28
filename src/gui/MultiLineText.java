@@ -3,9 +3,7 @@ package gui;
 import java.nio.FloatBuffer;
 import java.util.Scanner;
 
-import font.FontSupport;
 import font.NuFont;
-
 import shared.Vec2f;
 import vmo.Game;
 

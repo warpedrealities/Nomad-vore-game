@@ -5,7 +5,6 @@ import java.nio.FloatBuffer;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 
-import actor.player.Player;
 import actorRPG.player.Player_RPG;
 import combat.CooldownHandler;
 import gui.GUIBase;

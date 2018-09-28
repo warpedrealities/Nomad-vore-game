@@ -1,10 +1,8 @@
 package shared;
 
-import input.MouseHook;
-
 import java.nio.FloatBuffer;
 
-import gui.Window;
+import input.MouseHook;
 
 public abstract class Screen implements MyListener {
 

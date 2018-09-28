@@ -2,15 +2,13 @@ package item;
 
 import java.util.ArrayList;
 
-import item.Item.ItemUse;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import combat.CombatMove;
 import actor.Modifier;
 import actor.player.Inventory;
+import combat.CombatMove;
 
 public class ItemWeapon extends ItemEquip {
 

@@ -1,5 +1,12 @@
 package crafting;
 
+import java.nio.FloatBuffer;
+import java.util.ArrayList;
+
+import actor.player.Player;
+import actorRPG.Actor_RPG;
+import actorRPG.player.Player_RPG;
+import crafting.helpers.CraftingTokenHandler;
 import gui.Button;
 import gui.Button2;
 import gui.MultiLineText;
@@ -7,23 +14,12 @@ import gui.Text;
 import gui.TextColoured;
 import gui.Window;
 import gui.lists.ColouredList;
-import gui.lists.List;
 import input.MouseHook;
 import item.Item;
 import item.ItemAmmo;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
 import nomad.universe.Universe;
-
-import java.nio.FloatBuffer;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-
-import actor.player.Player;
-import actorRPG.Actor_RPG;
-import actorRPG.player.Player_RPG;
-import crafting.helpers.CraftingTokenHandler;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

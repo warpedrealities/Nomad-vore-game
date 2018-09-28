@@ -1,20 +1,17 @@
 package menu;
 
-import gui.Button;
-import gui.Button2;
-import gui.Text;
-import gui.Window;
-import input.MouseHook;
-import menu.preferenceControls.PreferencesScreen;
-import nomad.universe.Universe;
-
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
 import chargen.PlayerStartScene;
-
+import gui.Button;
+import gui.Text;
+import gui.Window;
+import input.MouseHook;
+import menu.preferenceControls.PreferencesScreen;
+import nomad.universe.Universe;
 import particlesystem.ParticleEmitter;
 import preloader.PreloadReport;
 import shared.Callback;

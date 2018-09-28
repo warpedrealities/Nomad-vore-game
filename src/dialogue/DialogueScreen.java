@@ -1,25 +1,16 @@
 package dialogue;
 
-import gui.Button;
-import gui.Button2;
-import gui.Image;
-import gui.TextView;
-import gui.Window;
-import input.Keyboard;
-import input.MouseHook;
-
 import java.nio.FloatBuffer;
 
-import nomad.GameOver;
-import nomad.universe.Universe;
-
 import org.lwjgl.glfw.GLFW;
-import org.lwjgl.opengl.GL20;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.npc.NPC;
+import actor.player.Player;
+import actorRPG.RPG_Helper;
 import description.MacroLibrary;
 import dialogue.choiceHandler.ChoiceHandler;
 import dialogue.choiceHandler.ChoiceLoader;
@@ -27,10 +18,13 @@ import dialogue.choiceHandler.ChoiceText;
 import dialogue.effectProcessing.EffectProcessor;
 import dialogue.evaluation.OutEvaluator;
 import dialogue.random.Randomizer_Library;
-import actor.npc.NPC;
-import actor.player.Player;
-import actorRPG.RPG_Helper;
-
+import gui.Image;
+import gui.TextView;
+import gui.Window;
+import input.Keyboard;
+import input.MouseHook;
+import nomad.GameOver;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.ParserHelper;
 import shared.SceneBase;
@@ -39,11 +33,9 @@ import shared.Screen;
 import shared.Vec2f;
 import spaceship.Spaceship;
 import view.ViewScene;
-import view.ModelController_Int;
 import vmo.Game;
 import vmo.GameManager;
 import widgets.Widget;
-import widgets.WidgetConversation;
 
 public class DialogueScreen extends Screen implements Callback {
 

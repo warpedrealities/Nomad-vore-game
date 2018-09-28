@@ -1,23 +1,19 @@
 package view;
 
+import actor.Actor;
+import actor.npc.NPC;
+import actorRPG.Actor_RPG;
+import actorRPG.RPG_Helper;
+import artificial_intelligence.detection.Sense;
+import artificial_intelligence.senseCriteria.CriteriaRepository;
+import artificial_intelligence.senseCriteria.Sense_Criteria;
+import nomad.FlagField;
+import nomad.universe.Universe;
 import shared.Vec2f;
 import vmo.GameManager;
 import widgets.Widget;
 import zone.TileDef;
 import zone.Zone;
-import actor.Actor;
-import actor.npc.NPC;
-import actor.player.Inventory;
-import actorRPG.Actor_RPG;
-import actorRPG.RPG_Helper;
-import actorRPG.player.Player_RPG;
-import artificial_intelligence.detection.Sense;
-import artificial_intelligence.senseCriteria.CriteriaRepository;
-import artificial_intelligence.senseCriteria.Sense_Criteria;
-import item.Item;
-import item.ItemWeapon;
-import nomad.FlagField;
-import nomad.universe.Universe;
 
 public class SceneController implements Sense {
 

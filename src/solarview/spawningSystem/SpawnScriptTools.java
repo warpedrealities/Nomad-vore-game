@@ -1,6 +1,5 @@
 package solarview.spawningSystem;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import faction.FactionLibrary;

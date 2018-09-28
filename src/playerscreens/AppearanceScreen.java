@@ -1,17 +1,15 @@
 package playerscreens;
 
+import java.nio.FloatBuffer;
+import java.util.ArrayList;
+
+import description.AppearanceParser;
 import gui.Button;
 import gui.TextParagrapher;
 import gui.Textwindow;
 import gui.Window;
 import input.MouseHook;
 import nomad.universe.Universe;
-
-import java.nio.FloatBuffer;
-import java.util.ArrayList;
-
-import description.AppearanceParser;
-
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

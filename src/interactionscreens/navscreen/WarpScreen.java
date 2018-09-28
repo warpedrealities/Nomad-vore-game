@@ -2,8 +2,6 @@ package interactionscreens.navscreen;
 
 import java.nio.FloatBuffer;
 
-import org.lwjgl.opengl.GL11;
-
 import actorRPG.player.Player_RPG;
 import graphics.Screen_Fade;
 import gui.Button;

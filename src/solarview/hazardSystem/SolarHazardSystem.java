@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Queue;
 
 import nomad.universe.Universe;
-import shipsystem.ShipResource;
 import spaceship.Spaceship;
 import spaceship.SpaceshipResource;
 

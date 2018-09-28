@@ -1,18 +1,30 @@
 package dialogue.effectProcessing;
 
-import mutation.Effect_Mutator;
-import nomad.FlagField;
-import nomad.universe.Universe;
-
 import javax.xml.soap.Node;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import actor.npc.NPC;
+import actor.npc.RespawnControl;
+import actor.player.CompanionTool;
+import actor.player.Player;
+import actorRPG.Actor_RPG;
+import actorRPG.player.Player_RPG;
+import dialogue.DialogueHelper;
+import dialogue.worldscript.WorldScript;
+import dialogue.worldscript.WorldScript_Imp;
+import faction.Faction;
+import faction.FactionLibrary;
+import item.Item;
+import item.QuestItem;
+import item.instances.ItemKeyInstance;
+import mutation.Effect_Mutator;
+import nomad.FlagField;
+import nomad.universe.Universe;
 import perks.PerkLibrary;
 import shared.Scene_Int;
 import shop.ShopList;
-import shop.merchant.ShopMerchantScreen;
 import solarview.spaceEncounter.SpaceCombatInitializer;
 import spaceship.Spaceship;
 import spaceship.SpaceshipActionHandler;
@@ -24,22 +36,6 @@ import widgets.Widget;
 import widgets.WidgetCapture;
 import widgets.WidgetConversation;
 import worldgentools.WidgetPlacer;
-import actor.npc.NPC;
-import actor.npc.RespawnControl;
-import actor.player.CompanionTool;
-import actor.player.Player;
-import actorRPG.Actor_RPG;
-import actorRPG.npc.NPC_RPG;
-import actorRPG.player.Player_RPG;
-import dialogue.DialogueHelper;
-import dialogue.worldscript.WorldScript;
-import dialogue.worldscript.WorldScript_Imp;
-import faction.Faction;
-import faction.FactionLibrary;
-import item.Item;
-import item.QuestItem;
-import item.instances.ItemKeyInstance;
-import item.instances.ItemStack;
 
 public class EffectProcessor {
 

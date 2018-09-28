@@ -1,14 +1,13 @@
 package gui;
 
-import font.NuFont;
-import input.Keyboard;
-import input.MouseHook;
-
 import java.nio.FloatBuffer;
 
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL20;
 
+import font.NuFont;
+import input.Keyboard;
+import input.MouseHook;
 import shared.MyListener;
 import shared.NinePatch;
 import shared.Vec2f;

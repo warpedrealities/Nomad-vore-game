@@ -2,8 +2,6 @@ package worldgentools.blockdungeon;
 
 import org.w3c.dom.Element;
 
-import zone.Zone;
-
 public class KeyBlock extends StandardBlock {
 
 	int keyHeat;

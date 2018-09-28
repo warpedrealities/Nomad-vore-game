@@ -13,7 +13,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import actor.Actor;
 import actor.npc.NPC;
 import actor.npc.observerVore.VoreScript;
 import shared.ParserHelper;

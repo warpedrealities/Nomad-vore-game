@@ -5,7 +5,6 @@ import java.nio.FloatBuffer;
 import gui.GUIBase;
 import landingScreen.LandingElement.LandingClass;
 import nomad.World;
-import rendering.SpriteManager;
 import shared.SceneBase;
 import shared.Vec2f;
 

@@ -1,17 +1,16 @@
 package view;
 
+import java.nio.FloatBuffer;
+
+import actor.player.Inventory;
+import actor.player.Player;
 import font.NuFont;
 import gui.GUIBase;
 import item.ItemHasEnergy;
 import item.ItemWeapon;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
-
-import java.nio.FloatBuffer;
-
 import shared.Vec2f;
-import actor.player.Inventory;
-import actor.player.Player;
 
 public class HandReader extends GUIBase {
 

@@ -1,7 +1,6 @@
 package actor;
 
 import combat.effect.Effect;
-
 import shared.Vec2f;
 
 public interface Attackable {

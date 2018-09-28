@@ -7,12 +7,10 @@ import java.io.InputStream;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
-import org.lwjgl.opengl.ARBDirectStateAccess;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 
 import de.matthiasmann.twl.utils.PNGDecoder;
-
 import shared.Tools;
 
 public class SpriteBatch {

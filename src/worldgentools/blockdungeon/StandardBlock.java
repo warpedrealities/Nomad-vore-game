@@ -6,7 +6,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import actor.Actor;
 import actor.npc.NPC;
 import shared.Vec2f;
 import zone.Tile;

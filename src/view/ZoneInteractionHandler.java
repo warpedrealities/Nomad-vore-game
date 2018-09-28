@@ -1,9 +1,13 @@
 package view;
 
+import actor.Actor;
+import actor.Attackable;
+import actor.npc.NPC;
+import actor.player.Player;
+import actorRPG.player.Player_RPG;
+import combat.CombatMove.AttackPattern;
 import faction.violation.FactionListener;
 import faction.violation.FactionRule.ViolationType;
-import nomad.universe.Universe;
-import rlforj.los.ILosBoard;
 import shared.Vec2f;
 import shared.Vec2i;
 import vmo.GameManager;
@@ -11,13 +15,6 @@ import widgets.Widget;
 import widgets.WidgetBreakable;
 import widgets.WidgetSlot;
 import zone.Zone;
-import actor.Actor;
-import actor.Attackable;
-import actor.npc.NPC;
-import actor.player.Player;
-import actorRPG.Actor_RPG;
-import actorRPG.player.Player_RPG;
-import combat.CombatMove.AttackPattern;
 
 public class ZoneInteractionHandler {
 

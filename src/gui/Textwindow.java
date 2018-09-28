@@ -5,11 +5,10 @@ import java.nio.FloatBuffer;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL20;
 
-import shared.NinePatch;
-import shared.Vec2f;
-
 import font.NuFont;
 import input.Keyboard;
+import shared.NinePatch;
+import shared.Vec2f;
 
 public class Textwindow extends GUIBase {
 	NinePatch m_patch;
