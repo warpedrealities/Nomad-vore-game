@@ -1,13 +1,10 @@
 
 package crafting.helpers;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import actorRPG.player.Player_RPG;
-import crafting.CraftingIngredient;
 import perks.Perk;
 import perks.PerkCraftingToken;
 import perks.PerkInstance;

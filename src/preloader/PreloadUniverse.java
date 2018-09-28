@@ -1,6 +1,5 @@
 package preloader;
 
-import item.ItemLibrary;
 import nomad.universe.Universe;
 
 public class PreloadUniverse implements Runnable {

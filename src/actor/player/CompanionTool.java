@@ -7,7 +7,6 @@ import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 import nomad.universe.Universe;
 import shared.Vec2f;
-import shared.Vec2i;
 import spaceship.Spaceship;
 import view.ZoneInteractionHandler;
 import widgets.WidgetPortal;

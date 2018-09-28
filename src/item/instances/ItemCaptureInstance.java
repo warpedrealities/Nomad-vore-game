@@ -5,7 +5,6 @@ import java.io.IOException;
 
 import item.Item;
 import item.ItemCapture;
-import item.Item.ItemUse;
 import shared.ParserHelper;
 
 public class ItemCaptureInstance extends Item {

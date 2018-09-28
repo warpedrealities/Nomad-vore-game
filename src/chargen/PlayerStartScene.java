@@ -2,9 +2,6 @@ package chargen;
 
 import java.util.ArrayList;
 
-import menu.Menu;
-import nomad.universe.Universe;
-
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
@@ -22,6 +19,8 @@ import gui.Textwindow;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
+import menu.Menu;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.MyListener;
 import shared.ParserHelper;
@@ -29,7 +28,6 @@ import shared.SceneBase;
 import shared.Tools;
 import shared.Vec2f;
 import start.StartIntro;
-import view.ViewScene;
 import vmo.Game;
 
 public class PlayerStartScene extends SceneBase implements MyListener, Callback {

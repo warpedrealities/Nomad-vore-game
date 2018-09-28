@@ -3,8 +3,6 @@ package gui;
 import java.nio.FloatBuffer;
 
 import shared.MyListener;
-import shared.NinePatch;
-import shared.NinePatch_Proportional;
 import shared.ProportionBar;
 import shared.Vec2f;
 

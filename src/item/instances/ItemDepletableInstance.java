@@ -3,11 +3,10 @@ package item.instances;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import shared.ParserHelper;
 import item.Item;
 import item.ItemAmmo;
 import item.ItemHasEnergy;
-import item.Item.ItemUse;
+import shared.ParserHelper;
 
 public class ItemDepletableInstance extends Item {
 

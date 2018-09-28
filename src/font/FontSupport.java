@@ -1,31 +1,14 @@
 package font;
 
+import java.nio.FloatBuffer;
+import java.util.Map;
+
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
-import org.lwjgl.opengl.GL15;
-import org.lwjgl.opengl.GL20;
-import org.lwjgl.opengl.GL30;
-import org.lwjgl.stb.STBTTAlignedQuad;
-import org.lwjgl.stb.STBTTBakedChar;
 
 import shared.Tools;
-import shared.Vec2f;
 import shared.Vertex;
-import vmo.Game;
-import font.IOUtil;
-import nomad.universe.Universe;
-
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.FloatBuffer;
-import java.util.ArrayList;
-import java.util.Map;
-
-import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.stb.STBTruetype.*;
-import static org.lwjgl.system.MemoryUtil.*;
 
 public class FontSupport {
 

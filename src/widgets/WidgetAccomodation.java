@@ -1,22 +1,19 @@
 package widgets;
 
-import interactionscreens.BedScreen;
-import interactionscreens.ContainerScreen;
-import item.Item;
-import nomad.universe.Universe;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actor.player.Player;
-import view.ViewScene;
 import actorRPG.RPG_Helper;
+import interactionscreens.BedScreen;
+import item.Item;
+import nomad.universe.Universe;
+import view.ViewScene;
 
 public class WidgetAccomodation extends WidgetBreakable {
 	int capacity = 0;

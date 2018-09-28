@@ -1,13 +1,8 @@
 package item;
 
-import item.Item.ItemUse;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
-import actor.Modifier;
-import actor.player.Inventory;
 
 public class ItemAmmo extends Item implements ItemHasEnergy {
 

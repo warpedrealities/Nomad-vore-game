@@ -1,8 +1,6 @@
 package solarview.spaceEncounter.effectHandling.effects;
 
-import font.NuFont;
 import rendering.Renderable;
-import rendering.Sprite;
 import rendering.SpriteFont;
 import shared.Vec2f;
 

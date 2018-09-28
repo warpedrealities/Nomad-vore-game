@@ -1,7 +1,6 @@
 package graphics;
 
 import java.nio.FloatBuffer;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.lwjgl.util.vector.Vector4f;

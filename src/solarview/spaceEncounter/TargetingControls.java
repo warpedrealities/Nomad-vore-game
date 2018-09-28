@@ -1,6 +1,5 @@
 package solarview.spaceEncounter;
 
-import gui.Text;
 import gui.TextColoured;
 import input.MouseHook;
 import rendering.SpriteBeam;

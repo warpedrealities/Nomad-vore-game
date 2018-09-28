@@ -1,7 +1,5 @@
 package shared;
 
-import input.MouseHook;
-
 import java.nio.FloatBuffer;
 
 import org.lwjgl.BufferUtils;
@@ -10,8 +8,8 @@ import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
+import input.MouseHook;
 import vmo.Game;
-import vmo.GameManager;
 
 abstract public class SceneBase implements Scene {
 

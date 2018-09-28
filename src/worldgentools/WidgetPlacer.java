@@ -1,11 +1,5 @@
 package worldgentools;
 
-import item.Item;
-import item.instances.ItemDepletableInstance;
-import item.instances.ItemExpositionInstance;
-import item.instances.ItemKeyInstance;
-import nomad.universe.Universe;
-
 import java.util.List;
 
 import org.w3c.dom.Document;
@@ -13,14 +7,17 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import actor.npc.NPC;
+import actorRPG.RPG_Helper;
+import item.Item;
+import item.instances.ItemDepletableInstance;
+import item.instances.ItemExpositionInstance;
+import item.instances.ItemKeyInstance;
+import nomad.universe.Universe;
 import shared.ParserHelper;
-import shared.Vec2f;
 import shared.Vec2i;
 import shipsystem.WidgetDamage;
 import shipsystem.WidgetNavConsole;
 import shipsystem.WidgetSystem;
-import actorRPG.RPG_Helper;
 import widgets.Widget;
 import widgets.WidgetAccomodation;
 import widgets.WidgetBreakable;
@@ -34,7 +31,6 @@ import widgets.WidgetDescription;
 import widgets.WidgetDoor;
 import widgets.WidgetHarvestable;
 import widgets.WidgetItemPile;
-import widgets.WidgetPortal;
 import widgets.WidgetReformer;
 import widgets.WidgetScriptPortal;
 import widgets.WidgetScripted;
@@ -44,8 +40,8 @@ import widgets.capsules.WidgetCapsuleSystem;
 import widgets.scriptedEvents.WidgetScriptedEvent;
 import widgets.spawner.WidgetSpawner;
 import zone.Tile;
-import zone.Zone;
 import zone.TileDef.TileMovement;
+import zone.Zone;
 
 public class WidgetPlacer {
 	Zone zone;

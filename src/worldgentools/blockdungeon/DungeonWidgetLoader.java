@@ -9,7 +9,6 @@ import org.w3c.dom.Element;
 
 import item.Item;
 import shared.ParserHelper;
-
 import widgets.Widget;
 import widgets.WidgetBreakable;
 import widgets.WidgetContainer;

@@ -6,30 +6,28 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import combat.effect.Effect;
-import combat.effect.Effect_Damage;
-import combat.effect.Effect_Dismantle;
-import combat.effect.Effect_Movement;
-import combat.effect.Effect_Status;
-import combat.effect.Effect_Submit;
-import combat.effect.analyze.Effect_Analyze;
-import combat.effect.map.Effect_Map;
-import combat.statusEffects.StatusEffect;
-import nomad.universe.Universe;
-import combat.effect.Effect_Recover;
-import combat.effect.Effect_Reinforce;
-import combat.effect.Effect_Scan;
-import combat.effect.Effect_Spawn;
-import shared.Vec2f;
-import view.ViewScene;
-import view.ZoneInteractionHandler;
-import vmo.Game;
-import vmo.GameManager;
-import zone.Tile;
 import actor.Actor;
 import actor.Attackable;
 import actor.player.Player;
 import actorRPG.RPG_Helper;
+import combat.effect.Effect;
+import combat.effect.Effect_Damage;
+import combat.effect.Effect_Dismantle;
+import combat.effect.Effect_Movement;
+import combat.effect.Effect_Recover;
+import combat.effect.Effect_Reinforce;
+import combat.effect.Effect_Scan;
+import combat.effect.Effect_Spawn;
+import combat.effect.Effect_Status;
+import combat.effect.Effect_Submit;
+import combat.effect.analyze.Effect_Analyze;
+import combat.effect.map.Effect_Map;
+import nomad.universe.Universe;
+import shared.Vec2f;
+import view.ViewScene;
+import vmo.Game;
+import vmo.GameManager;
+import zone.Tile;
 
 public class CombatMove {
 

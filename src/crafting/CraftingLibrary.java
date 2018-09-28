@@ -1,7 +1,5 @@
 package crafting;
 
-import item.Item;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;

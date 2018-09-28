@@ -2,14 +2,12 @@ package interactionscreens;
 
 import java.nio.FloatBuffer;
 
-import actorRPG.player.Player_RPG;
 import graphics.Screen_Fade;
 import gui.Button;
 import gui.Window;
 import input.MouseHook;
 import interactionscreens.subscreens.ComputerPedia;
 import interactionscreens.subscreens.ComputerResearch;
-import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

@@ -6,13 +6,13 @@ import java.io.IOException;
 
 import org.w3c.dom.Element;
 
-import shared.ParserHelper;
-import view.ViewScene;
-import vmo.GameManager;
 import actor.player.Inventory;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import item.instances.ItemKeyInstance;
+import shared.ParserHelper;
+import view.ViewScene;
+import vmo.GameManager;
 
 public class WidgetDoor extends WidgetBreakable {
 

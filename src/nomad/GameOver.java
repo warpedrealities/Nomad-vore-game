@@ -2,14 +2,6 @@ package nomad;
 
 import java.util.ArrayList;
 
-import gui.Button;
-import gui.MultiLineText;
-import gui.TextView;
-import gui.Window;
-import input.MouseHook;
-import menu.Menu;
-import nomad.universe.Universe;
-
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
@@ -17,6 +9,12 @@ import org.lwjgl.util.vector.Matrix4f;
 
 import actor.Actor;
 import actor.player.reformation.ReformationTool;
+import gui.Button;
+import gui.TextView;
+import gui.Window;
+import input.MouseHook;
+import menu.Menu;
+import nomad.universe.Universe;
 import shared.MyListener;
 import shared.SceneBase;
 import shared.Tools;

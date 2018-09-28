@@ -2,15 +2,11 @@ package interactionscreens.navscreen;
 
 import org.lwjgl.opengl.EXTFramebufferObject;
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL14;
 import org.lwjgl.opengl.GL15;
-import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
-import org.lwjgl.opengl.GL32;
 
-import shared.SceneManager;
 import vmo.Game;
 
 public class Vortex_Rendering_Engine {

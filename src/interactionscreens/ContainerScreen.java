@@ -1,5 +1,11 @@
 package interactionscreens;
 
+import java.nio.FloatBuffer;
+import java.util.ArrayList;
+
+import org.lwjgl.glfw.GLFW;
+
+import actor.player.Player;
 import gui.Button;
 import gui.Text;
 import gui.Window;
@@ -10,13 +16,6 @@ import item.Item;
 import item.ItemCoin;
 import item.instances.ItemStack;
 import nomad.universe.Universe;
-
-import java.nio.FloatBuffer;
-import java.util.ArrayList;
-
-import org.lwjgl.glfw.GLFW;
-
-import actor.player.Player;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

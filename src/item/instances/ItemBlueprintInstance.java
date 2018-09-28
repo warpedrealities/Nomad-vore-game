@@ -4,7 +4,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 import item.Item;
-import item.Item.ItemUse;
 import shared.ParserHelper;
 
 public class ItemBlueprintInstance extends Item {

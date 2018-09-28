@@ -1,7 +1,5 @@
 package combat;
 
-import combat.CombatMove.AttackPattern;
-
 import actorRPG.Actor_RPG;
 
 public class CombatLookup {

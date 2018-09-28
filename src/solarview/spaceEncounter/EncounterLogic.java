@@ -3,7 +3,6 @@ package solarview.spaceEncounter;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.rendering.TrailControl;
-import spaceship.ShipController.scriptEvents;
 import spaceship.stats.SpaceshipAnalyzer;
 
 public class EncounterLogic {

@@ -6,10 +6,9 @@ import java.io.IOException;
 
 import org.w3c.dom.Element;
 
+import actorRPG.Actor_RPG;
 import shared.ParserHelper;
 import view.ViewScene;
-
-import actorRPG.Actor_RPG;
 
 public class Status_Stun implements StatusEffect {
 

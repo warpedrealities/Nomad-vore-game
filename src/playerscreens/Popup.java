@@ -1,11 +1,10 @@
 package playerscreens;
 
+import java.nio.FloatBuffer;
+
 import gui.GUIBase;
 import gui.MultiLineText;
 import gui.Window;
-
-import java.nio.FloatBuffer;
-
 import shared.Vec2f;
 
 public class Popup extends GUIBase {

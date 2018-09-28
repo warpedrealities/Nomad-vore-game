@@ -4,7 +4,6 @@ import org.w3c.dom.Element;
 
 import item.Item;
 import item.instances.ItemBlueprintInstance;
-import nomad.universe.Universe;
 
 public class LootStub {
 

@@ -6,7 +6,6 @@ import java.io.IOException;
 import org.w3c.dom.Element;
 
 import shared.Vec2f;
-
 import zone.Zone;
 
 public class Star extends Entity {

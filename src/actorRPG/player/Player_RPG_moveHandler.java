@@ -1,17 +1,15 @@
 package actorRPG.player;
 
-import perks.Perk;
-import perks.PerkElement;
-import perks.PerkInstance;
-import perks.PerkMove;
-import perks.PerkMoveModifier;
-import perks.PerkWeaponMove;
-
 import java.util.ArrayList;
 
 import actor.player.Player;
 import combat.CombatMove;
 import item.ItemWeapon;
+import perks.Perk;
+import perks.PerkInstance;
+import perks.PerkMove;
+import perks.PerkMoveModifier;
+import perks.PerkWeaponMove;
 
 public class Player_RPG_moveHandler {
 

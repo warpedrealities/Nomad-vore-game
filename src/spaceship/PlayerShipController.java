@@ -8,22 +8,21 @@ import static org.lwjgl.glfw.GLFW.GLFW_KEY_RIGHT;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_S;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_UP;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_W;
-import nomad.Entity;
-import nomad.Star;
-import nomad.StarSystem;
-import nomad.universe.Universe;
-import rendering.SpriteRotatable;
 
 import org.lwjgl.glfw.GLFW;
 
 import faction.Faction;
 import faction.FactionLibrary;
+import input.Keyboard;
+import nomad.Entity;
+import nomad.Star;
+import nomad.StarSystem;
+import nomad.universe.Universe;
+import rendering.SpriteRotatable;
 import shared.Vec2f;
 import solarview.SolarActionHandler;
 import solarview.spaceEncounter.EncounterEntities.combatControllers.CombatController;
 import view.ZoneInteractionHandler;
-
-import input.Keyboard;
 
 public class PlayerShipController implements ShipController {
 

@@ -7,7 +7,6 @@ import java.io.IOException;
 import org.w3c.dom.Element;
 
 import actor.player.Player;
-import interactionscreens.ComputerScreen;
 import interactionscreens.ReformerScreen;
 import view.ViewScene;
 

@@ -23,7 +23,6 @@ import perks.PerkInstance;
 import perks.PerkQualifier;
 import spaceship.Spaceship;
 import view.SceneController;
-import view.ViewScene;
 import vmo.GameManager;
 import widgets.Widget;
 import widgets.WidgetConversation;

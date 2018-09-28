@@ -2,11 +2,9 @@ package vmo;
 
 import java.util.Random;
 
-import rlforj.los.BresLos;
 import rlforj.los.IFovAlgorithm;
 import rlforj.los.ILosAlgorithm;
 import rlforj.los.PrecisePermissive;
-import rlforj.los.ShadowCasting;
 
 public class GameManager {
 

@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import nomad.universe.Universe;
 import shared.Vec2i;
-import shipsystem.ShipResource;
 import spaceship.Spaceship;
 import spaceship.SpaceshipResource;
 

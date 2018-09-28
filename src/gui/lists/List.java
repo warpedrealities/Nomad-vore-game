@@ -1,19 +1,15 @@
 package gui.lists;
 
+import java.nio.FloatBuffer;
+
+import org.lwjgl.glfw.GLFW;
+import org.lwjgl.opengl.GL20;
+
 import font.NuFont;
 import gui.GUIBase;
 import gui.subelements.Slider;
-import input.Keyboard;
-
-import java.nio.FloatBuffer;
-
-import org.lwjgl.opengl.GL20;
-import org.lwjgl.glfw.GLFWKeyCallback;
-import org.lwjgl.glfw.GLFW;
-
 import shared.Callback;
 import shared.ConcertinaPatch;
-import shared.NinePatch;
 import shared.Vec2f;
 
 public class List extends GUIBase implements Callback {

@@ -1,6 +1,5 @@
 package shop;
 
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 

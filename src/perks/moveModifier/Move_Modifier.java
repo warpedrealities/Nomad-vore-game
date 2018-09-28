@@ -9,9 +9,6 @@ import org.w3c.dom.NodeList;
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
 import combat.effect.Effect;
-import combat.effect.Effect_Damage;
-import combat.effect.Effect_Recover;
-import combat.effect.Effect_Status;
 import perks.moveModifier.Effect_Change.modifierType;
 
 public class Move_Modifier {

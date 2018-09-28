@@ -2,13 +2,10 @@ package worldgentools.auditing;
 
 import java.util.ArrayList;
 
-import artificial_intelligence.pathfinding.Path;
 import artificial_intelligence.pathfinding.PathNode;
 import artificial_intelligence.pathfinding.Pathfinder;
-
 import shared.Vec2f;
 import shared.Vec2i;
-
 import zone.Tile;
 import zone.Zone;
 

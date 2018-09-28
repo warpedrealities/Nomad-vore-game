@@ -18,16 +18,11 @@ import org.w3c.dom.NodeList;
 import faction.Faction;
 import faction.FactionLibrary;
 import nomad.FlagField;
-import nomad.universe.Universe;
-import rendering.SpriteRotatable;
 import shared.ParserHelper;
-import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.combatControllers.CombatController;
 import solarview.spaceEncounter.EncounterEntities.combatControllers.NpcCombatController;
 import spaceship.ShipController;
 import spaceship.Spaceship;
-import spaceship.ShipController.scriptEvents;
-import view.ZoneInteractionHandler;
 
 public class NpcShipController implements ShipController {
 

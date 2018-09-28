@@ -17,9 +17,7 @@ import solarview.spaceEncounter.EncounterEntities.monitoring.Ship_Monitor;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 import spaceship.Spaceship;
-import vmo.Game;
 import vmo.GameManager;
-import particlesystem.ParticleConeEmitter;
 
 public class EncounterShip {
 

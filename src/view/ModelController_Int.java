@@ -5,9 +5,7 @@ import graphics.AnimatedFXControl;
 import item.Item;
 import shared.Screen;
 import shared.Vec2f;
-import shop.merchant.ShopMerchantScreen;
 import widgets.Widget;
-import widgets.WidgetCapture;
 import widgets.WidgetConversation;
 
 public interface ModelController_Int {

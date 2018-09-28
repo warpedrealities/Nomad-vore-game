@@ -2,11 +2,10 @@ package combat.effect;
 
 import org.w3c.dom.Element;
 
-import perks.PerkLibrary;
-import view.ViewScene;
-
 import actor.Actor;
 import actorRPG.player.Player_RPG;
+import perks.PerkLibrary;
+import view.ViewScene;
 
 public class Effect_Perk extends Effect {
 

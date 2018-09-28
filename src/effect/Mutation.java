@@ -1,9 +1,5 @@
 package effect;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.Reader;
-import java.io.StringReader;
 import java.util.Scanner;
 
 import org.w3c.dom.Element;

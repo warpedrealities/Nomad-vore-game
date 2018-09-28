@@ -1,19 +1,13 @@
 package solarBackdrop;
 
 import java.nio.FloatBuffer;
-import java.util.ArrayList;
 
-import org.lwjgl.BufferUtils;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
-import gui.lists.List;
 import nomad.universe.Universe;
 import rendering.Sprite;
 import rendering.SpriteManager;
-import shared.Tools;
 import shared.Vec2f;
 
 public class StarScape extends SpriteManager {

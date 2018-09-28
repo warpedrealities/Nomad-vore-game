@@ -1,3 +1,4 @@
+
 <?xml version="1.0"?>
 <perk name="mind bolt">
 	<requirement count="1">
@@ -26,5 +27,4 @@
 
 	</move>
 	<maxrank value="1" />
-
 </perk>

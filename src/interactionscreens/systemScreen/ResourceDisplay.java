@@ -9,7 +9,6 @@ import item.ItemEnergy;
 import item.ItemHasEnergy;
 import item.instances.ItemDepletableInstance;
 import nomad.universe.Universe;
-import shared.Callback;
 import shared.ProportionBar;
 import shared.Vec2f;
 import shipsystem.ShipResource;

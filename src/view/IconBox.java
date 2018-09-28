@@ -8,11 +8,11 @@ import org.lwjgl.opengl.GL13;
 
 import actorRPG.player.Player_RPG;
 import combat.statusEffects.StatusEffect;
+import gui.GUIBase;
+import nomad.universe.Universe;
 import rendering.Sprite;
 import shared.Tools;
 import shared.Vec2f;
-import gui.GUIBase;
-import nomad.universe.Universe;
 
 public class IconBox extends GUIBase {
 

@@ -2,10 +2,9 @@ package gui;
 
 import java.nio.FloatBuffer;
 
+import font.NuFont;
 import shared.ProportionBar;
 import shared.Vec2f;
-
-import font.NuFont;
 
 public class BarFrame extends GUIBase {
 

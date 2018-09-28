@@ -2,8 +2,6 @@ package worldgentools.blockdungeon.advanced;
 
 import org.w3c.dom.Element;
 
-import zone.Zone;
-
 public class AdvancedKeyBlock extends AdvancedStandardBlock {
 
 	int keyHeat;

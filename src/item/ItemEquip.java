@@ -1,17 +1,14 @@
 package item;
 
-import item.Item.ItemUse;
-
 import java.util.ArrayList;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import combat.CombatMove;
-import combat.effect.Effect_Recover;
 import actor.Modifier;
 import actor.player.Inventory;
+import combat.CombatMove;
 
 public class ItemEquip extends Item implements ItemHasEnergy {
 

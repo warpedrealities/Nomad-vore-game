@@ -1,34 +1,25 @@
 package interactionscreens;
 
+import java.nio.FloatBuffer;
+
+import actor.player.Player;
 import gui.Button;
 import gui.Text;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
 import item.Item;
-import item.ItemEnergy;
-import item.ItemHasEnergy;
 import item.ItemWidget;
-import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
 import nomad.universe.Universe;
-
-import java.nio.FloatBuffer;
-import java.util.ArrayList;
-
-import actor.player.Player;
 import shared.Callback;
-import shared.ProportionBar;
 import shared.Screen;
 import shared.Vec2f;
-import shipsystem.ShipAbility.AbilityType;
-import shipsystem.ShipResource;
 import shipsystem.WidgetSystem;
 import widgets.Widget;
-import widgets.WidgetContainer;
+import widgets.WidgetBreakable;
 import widgets.WidgetLoader;
 import widgets.WidgetSlot;
-import widgets.WidgetBreakable;
 
 public class SlotScreen extends Screen implements Callback {
 

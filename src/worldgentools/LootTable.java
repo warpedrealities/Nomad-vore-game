@@ -1,17 +1,15 @@
 package worldgentools;
 
-import item.Item;
-import item.ItemCoin;
-import item.handlers.StackHandler;
-import item.instances.ItemExpositionInstance;
-import item.instances.ItemKeyInstance;
-import nomad.universe.Universe;
-
 import java.util.ArrayList;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import item.Item;
+import item.ItemCoin;
+import item.handlers.StackHandler;
+import nomad.universe.Universe;
 
 public class LootTable {
 

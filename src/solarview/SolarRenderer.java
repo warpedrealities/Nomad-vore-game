@@ -1,8 +1,6 @@
 package solarview;
 
 import java.nio.FloatBuffer;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
@@ -11,7 +9,6 @@ import nomad.StarSystem;
 import nomad.universe.Universe;
 import particlesystem.ParticleEmitterAdvanced;
 import rendering.Sprite;
-import rendering.SpriteBatch;
 import rendering.SpriteManager;
 import rendering.SpriteRotatable;
 import shared.Geometry;

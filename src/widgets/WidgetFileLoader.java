@@ -6,7 +6,6 @@ import org.w3c.dom.Element;
 import shared.ParserHelper;
 import shipsystem.WidgetNavConsole;
 import shipsystem.WidgetSystem;
-import worldgentools.LootTable;
 
 public class WidgetFileLoader {
 

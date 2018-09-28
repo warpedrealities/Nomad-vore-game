@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import actor.player.Player;
 import shared.ParserHelper;
-import view.ModelController_Int;
 import zone.Zone;
 
 abstract public class Widget {

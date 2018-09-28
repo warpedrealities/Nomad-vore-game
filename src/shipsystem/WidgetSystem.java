@@ -1,10 +1,5 @@
 package shipsystem;
 
-import interactionscreens.ContainerScreen;
-import interactionscreens.systemScreen.SystemScreen;
-import item.Item;
-import nomad.universe.Universe;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -15,7 +10,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actor.player.Player;
-import shared.ParserHelper;
+import interactionscreens.systemScreen.SystemScreen;
 import shipsystem.ShipAbility.AbilityType;
 import shipsystem.conversionSystem.ShipConverter;
 import shipsystem.droneSpawning.ShipDroneSystem;

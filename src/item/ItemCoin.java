@@ -3,8 +3,6 @@ package item;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import shared.ParserHelper;
-
 public class ItemCoin extends Item {
 
 	int count;

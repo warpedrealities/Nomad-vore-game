@@ -7,7 +7,6 @@ import java.io.IOException;
 import org.w3c.dom.Element;
 
 import shared.ParserHelper;
-import shipsystem.ShipAbility.AbilityType;
 
 public class WeaponCost {
 

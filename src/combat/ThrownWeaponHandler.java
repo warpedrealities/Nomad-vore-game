@@ -1,14 +1,13 @@
 package combat;
 
-import actor.player.Player;
 import item.Item;
 import nomad.universe.Universe;
 import shared.Vec2f;
 import view.ViewScene;
 import widgets.WidgetItemPile;
 import zone.Tile;
-import zone.Zone;
 import zone.TileDef.TileMovement;
+import zone.Zone;
 
 public class ThrownWeaponHandler {
 

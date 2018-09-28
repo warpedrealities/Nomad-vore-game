@@ -1,10 +1,5 @@
 package widgets;
 
-import interactionscreens.SlotScreen;
-import item.Item;
-import item.ItemLibrary;
-import nomad.universe.Universe;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -14,6 +9,9 @@ import org.w3c.dom.Element;
 import actor.player.Player;
 import combat.CombatMove;
 import combat.effect.Effect_Dismantle;
+import interactionscreens.SlotScreen;
+import item.Item;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import view.ViewScene;

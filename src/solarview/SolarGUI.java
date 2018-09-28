@@ -1,14 +1,7 @@
 package solarview;
 
-import input.MouseHook;
-import nomad.universe.Universe;
-
 import java.nio.FloatBuffer;
 import java.util.Queue;
-
-import gui.Button;
-import gui.Text;
-import gui.Window;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
@@ -16,9 +9,12 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
 import actorRPG.Actor_RPG;
-
+import gui.Button;
+import gui.Text;
+import gui.Window;
+import input.MouseHook;
+import nomad.universe.Universe;
 import shared.MyListener;
-import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
 import spaceship.Spaceship;

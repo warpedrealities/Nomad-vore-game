@@ -3,7 +3,6 @@ package solarview;
 import nomad.Entity;
 import nomad.Station;
 import nomad.World;
-import rendering.SpriteManager;
 import spaceship.ShipController.scriptEvents;
 import spaceship.Spaceship;
 import spaceship.SpaceshipActionHandler;

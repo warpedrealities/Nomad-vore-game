@@ -10,17 +10,6 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Nomad/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="slick-util.jar"/>
-	<classpathentry kind="lib" path="luaj-jme-3.0.1.jar"/>
-	<classpathentry kind="lib" path="luaj-jse-3.0.1.jar"/>
-	<classpathentry kind="lib" path="TWL.jar"/>
-	<classpathentry kind="lib" path="rlforj.0.2.jar"/>
-	<classpathentry kind="lib" path="lib">
-		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Nomad/lib"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="lib/lwjgl_util.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-glfw.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-opengl.jar"/>
@@ -31,5 +20,11 @@
 	<classpathentry kind="lib" path="lib/lwjgl-opengles-natives-windows.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-opengl-natives-windows.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl-stb-natives-windows.jar"/>
+	<classpathentry kind="lib" path="lib/luaj-jse-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/luaj-jme-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="lib/rlforj.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/slick-util.jar"/>
+	<classpathentry kind="lib" path="lib/TWL.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -4,14 +4,10 @@ import java.nio.FloatBuffer;
 
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
-import org.lwjgl.util.vector.Vector3f;
 
-import particlesystem.ParticleEmitter;
-import particlesystem.ParticleEmitterAdvanced;
 import rendering.SpriteManager;
 import rendering.SpriteRotatable;
 import shared.Vec2f;
-import solarBackdrop.StarScape;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 

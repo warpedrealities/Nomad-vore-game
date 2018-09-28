@@ -1,17 +1,5 @@
 package playerscreens;
 
-import gui.Button;
-import gui.Button2;
-import gui.MultiLineText;
-import gui.ScrollableMultiLineText;
-import gui.Text;
-import gui.Window;
-import gui.lists.List;
-import input.MouseHook;
-import nomad.universe.Universe;
-
-import java.nio.FloatBuffer;
-
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
@@ -22,6 +10,13 @@ import actor.npc.NPC;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.player.Player_RPG;
+import gui.Button;
+import gui.ScrollableMultiLineText;
+import gui.Text;
+import gui.Window;
+import gui.lists.List;
+import input.MouseHook;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.MyListener;
 import shared.SceneBase;

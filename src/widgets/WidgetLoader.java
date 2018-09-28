@@ -5,7 +5,6 @@ import java.io.IOException;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
 
 import shared.ParserHelper;
 import shipsystem.WidgetDamage;
@@ -16,7 +15,6 @@ import widgets.capsules.WidgetCapsuleSystem;
 import widgets.scriptedEvents.WidgetScriptedEvent;
 import widgets.spawner.WidgetSpawner;
 import widgets.traps.Widget_Trap;
-import worldgentools.LootTable;
 
 public class WidgetLoader {
 

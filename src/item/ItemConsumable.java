@@ -2,21 +2,19 @@ package item;
 
 import java.util.ArrayList;
 
-import mutation.Effect_Mutator;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import combat.effect.Effect;
+import combat.effect.Effect_Dialogue;
 import combat.effect.Effect_Modifier;
 import combat.effect.Effect_Perk;
 import combat.effect.Effect_Recover;
 import combat.effect.Effect_RemoveStatus;
 import combat.effect.Effect_Spawn;
 import combat.effect.Effect_Status;
-import combat.statusEffects.Status_Defence;
-import combat.effect.Effect_Dialogue;
+import mutation.Effect_Mutator;
 
 public class ItemConsumable extends Item {
 	// Effect_Recover m_effect;

@@ -1,11 +1,18 @@
 package playerscreens;
 
-import font.NuFont;
+import java.io.IOException;
+import java.nio.FloatBuffer;
+
+import org.lwjgl.glfw.GLFW;
+
+import actor.player.Inventory;
+import actor.player.Player;
+import actorRPG.Actor_RPG;
+import actorRPG.player.Player_RPG;
+import crafting.CraftingIngredient;
+import crafting.CraftingRecipe;
 import gui.Button;
-import gui.Button2;
 import gui.DropDown;
-import gui.GUIBase;
-import gui.MultiLineText;
 import gui.ScrollableMultiLineText;
 import gui.Text;
 import gui.TextColoured;
@@ -15,14 +22,13 @@ import gui.lists.List;
 import input.Keyboard;
 import input.MouseHook;
 import item.Item;
+import item.Item.ItemUse;
 import item.ItemAmmo;
 import item.ItemConsumable;
 import item.ItemEquip;
 import item.ItemHasEnergy;
 import item.ItemWeapon;
-import item.ItemWidget;
 import item.handlers.ReloadingHandler;
-import item.Item.ItemUse;
 import item.instances.ItemBlueprintInstance;
 import item.instances.ItemContainerInstance;
 import item.instances.ItemDepletableInstance;
@@ -30,27 +36,12 @@ import item.instances.ItemExpositionInstance;
 import item.instances.ItemStack;
 import nomad.universe.Universe;
 import playerscreens.subscreens.ItemContainerScreen;
-import crafting.CraftingIngredient;
-import java.io.IOException;
-import java.nio.FloatBuffer;
-import java.util.Collections;
-
-import org.lwjgl.glfw.GLFW;
-
-
-import actor.player.Inventory;
-import actor.player.Player;
-import actorRPG.Actor_RPG;
-import actorRPG.player.Player_RPG;
-import crafting.CraftingRecipe;
 import shared.Callback;
-import shared.LogWindow;
 import shared.ParserHelper;
 import shared.Rect;
 import shared.SceneBase;
 import shared.Screen;
 import shared.Vec2f;
-import spaceship.ShipHandler;
 import view.ModelController_Int;
 import view.ViewScene;
 

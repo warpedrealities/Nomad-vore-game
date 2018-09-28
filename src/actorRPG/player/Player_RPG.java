@@ -1,3 +1,4 @@
+
 package actorRPG.player;
 
 import java.io.DataInputStream;
@@ -1236,3 +1237,876 @@ public class Player_RPG implements Actor_RPG {
 	
 
 }
+		stats[RESOLVE]+=0.1F*duration;	
+		}
+		if (stats[ACTION]<statMax[ACTION])
+		{
+			stats[ACTION]+=statMax[ACTION];	
+		}
+		statusEffectHandler.clearStatusEffects(actor, this,false);
+		for (int i=0;i<stats.length;i++)
+		{
+			if (stats[i]>statMax[i])
+			{
+				stats[i]=statMax[i];
+			}
+		}
+		cooldownHandler.update(duration);
+	}
+	
+	private float calcMetabolism(float v)
+	{
+		float minor=v*0.5F;
+		float major=v*0.5F;
+		float karma=(((float)karmaMeter)/100);
+		return minor+(major*karma);
+		
+	}
+	@Override
+	public void update()
+	{
+		if (busy>0)
+		{
+			busy--;
+		}
+		//satiation
+		stats[SATIATION]-=calcMetabolism(subAbilities[METABOLISM]);
+
+		if (stats[SATIATION]<=0)
+		{
+			stats[HEALTH]-=0.25F;
+			if (stats[Actor_RPG.HEALTH]<0)
+			{
+				Game.sceneManager.SwapScene(new GameOver(SceneBase.getVariables(),"you have succumbed to starvation", null, true));
+			}
+		}
+	
+		if (regenDelay>0)
+		{
+			regenDelay--;
+		}
+		else
+		{
+			if (stats[HEALTH]<statMax[HEALTH])
+			{
+				if ( stats[SATIATION]>statMax[SATIATION]*subAbilities[REGENTHRESHOLD])
+				{
+					float bonus=((float)statMax[HEALTH])/30;
+					stats[HEALTH]+=subAbilities[REGENERATION]*bonus; 
+					stats[SATIATION]-=calcMetabolism(REGENCOST);		
+				}			
+			}		
+			if (stats[RESOLVE]<statMax[RESOLVE])
+			{
+				float bonus=((float)statMax[RESOLVE])/30;
+				stats[RESOLVE]+=0.05F*bonus;	
+			}
+		}
+
+
+
+		statusEffectHandler.update(1, this);
+		
+		cooldownHandler.update(1);
+		
+		if (regenAction && stats[ACTION]<statMax[ACTION])
+		{
+			stats[ACTION]+=getActionRegen();
+		}
+		if (busy<=0)
+		{
+			regenAction=true;
+		}
+	
+	}
+
+	void Calcstats()
+	{		
+
+		defaultStats();
+		statMax[0]=10+(abilities[ENDURANCE]*4);
+		statMax[1]=10+(abilities[INTELLIGENCE]*4);
+		statMax[2]=50+(abilities[ENDURANCE]*20);
+		statMax[3]=30;
+			
+		float v=(abilities[ENDURANCE]-3)*playerLevel;
+		statMax[0]+=v;
+		v=(abilities[INTELLIGENCE]-3)*playerLevel;
+		statMax[1]+=v;
+		v=(abilities[ENDURANCE]-3)*playerLevel*2;
+		statMax[2]+=v;
+		v=playerLevel*2;
+		statMax[3]+=v;
+		
+		PerkProcessor processor=new PerkProcessor(attributes,statMax,abilities,subAbilities);
+		for (int i=0;i<playerPerks.size();i++)
+		{
+			processor.processPerkPhaseOne(playerPerks.get(i));
+		}
+		
+		attributes[MELEE]=getAbilityMod(STRENGTH);
+		attributes[RANGED]=getAbilityMod(DEXTERITY);	
+		attributes[SEDUCTION]=getAbilityMod(CHARM);	
+		attributes[DODGE]=getAbilityMod(AGILITY);	
+		attributes[PARRY]=getAbilityMod(AGILITY);			
+		attributes[STRUGGLE]=getAbilityMod(STRENGTH);
+		attributes[PLEASURE]=getAbilityMod(DEXTERITY);
+		attributes[PERSUADE]=getAbilityMod(INTELLIGENCE);
+		attributes[WILLPOWER]=getAbilityMod(INTELLIGENCE);
+		attributes[SCIENCE]=getAbilityMod(INTELLIGENCE);
+		attributes[TECH]=getAbilityMod(INTELLIGENCE);
+		attributes[LEADERSHIP]=1;
+		attributes[PERCEPTION]=getAbilityMod(INTELLIGENCE);
+		
+
+		for (int i=0;i<playerPerks.size();i++)
+		{
+			processor.processPerk(playerPerks.get(i));
+		}
+		statusEffectHandler.applyStatusEffects(this);
+		if (playerInventory!=null)
+		{
+			playerInventory.setCapacity((int) (10+(abilities[STRENGTH]*subAbilities[CARRY])));	
+			
+			for (int i=0;i<4;i++)
+			{
+				if (playerInventory.getSlot(i)!=null)
+				{
+					Item item=playerInventory.getSlot(i);
+					if (ItemEquip.class.isInstance(item)) {
+						ItemEquip equip = (ItemEquip) item.getItem();
+						if (equip.getModifier() != null) {
+							actor.getRPG().AddModifier(equip.getModifier());
+						}
+					}
+				}
+			}	
+			attributes[DODGE]-=(playerInventory.getEncumbrance()-1);
+			if (attributes[DODGE]<-1)
+			{
+				attributes[DODGE]=-1;
+			}
+		}
+
+		statusEffectHandler.reApplyStatuses(this);
+		((Player)actor).reCalc();
+	}
+	public void addEXP(int value)
+	{
+		playerExperience+=value;
+		if (ViewScene.m_interface!=null)
+		{
+			if (playerExperience>=getNextLevel())
+			{
+				ViewScene.m_interface.DrawText("you gain "+value+ " experience and can now level up");
+			}
+			else
+			{
+				ViewScene.m_interface.DrawText("you gain "+value+ " experience");
+			}		
+		}		
+	}
+
+	@Override
+	public int getAttribute(int i) {
+		if (i>=0)
+		{
+			return attributes[i];
+		}
+		return 0;
+	}
+
+
+
+	@Override
+	public int getStat(int i) {
+
+		return (int)stats[i];
+	}
+
+
+
+	@Override
+	public int getAbility(int i) {
+
+		return abilities[i];
+	}
+
+	public float getSubAbility(int i)
+	{
+		return subAbilities[i];
+	}
+
+	@Override
+	public int getStatMax(int i) {
+		return statMax[i];
+	}
+
+	public void IncreaseStat(int target, int value) {
+		stats[target]+=value;
+		if (stats[target]>statMax[target])
+		{
+			stats[target]=statMax[target];
+		}
+	}
+
+
+
+	@Override
+	public void RemoveModifier(Modifier modifier) {
+		for (int i=0;i<modifier.numModifiers();i++)
+		{
+			Modifier_Element element=modifier.getModifier(i);
+			switch(element.getType())
+			{
+			case 0:
+				attributes[element.getIndex()]-=element.getValue();
+				break;
+			case 1:
+				subAbilities[element.getIndex()]-=element.getValue();
+				calcInventoryCapacity();
+				break;
+			}
+		}
+		if (modifier.getImmunity()!=null)
+		{
+			conditionImmunities.remove(modifier.getImmunity());
+		
+		}
+	}
+
+
+
+	@Override
+	public void AddModifier(Modifier modifier) {
+		for (int i=0;i<modifier.numModifiers();i++)
+		{
+			Modifier_Element element=modifier.getModifier(i);
+			switch(element.getType())
+			{
+			case 0:
+				attributes[element.getIndex()]+=element.getValue();
+				break;
+			case 1:
+				subAbilities[element.getIndex()]+=element.getValue();
+				calcInventoryCapacity();
+				break;
+			}
+		}
+		if (modifier.getImmunity()!=null)
+		{
+			conditionImmunities.add(modifier.getImmunity());
+		
+		}
+
+	}
+	
+	public void calcInventoryCapacity()
+	{
+		playerInventory.setCapacity((int) (10+(abilities[STRENGTH]*subAbilities[CARRY])));		
+	}
+
+
+
+	@Override
+	public boolean getStarving() {
+
+		if (stats[Actor_RPG.SATIATION]<=0)
+		{
+			return true;
+		}
+		return false;
+	}
+
+
+
+	@Override
+	public int getAbilityMod(int ability) {
+		return abilities[ability]-5;
+	}
+
+
+
+
+
+	@Override
+	public void setStat(int stat, int value) {
+	
+		stats[stat]=value;
+		if (stats[stat]>statMax[stat])
+		{
+			stats[stat]=statMax[stat];
+		}
+	}
+
+
+
+	@Override
+	public void Heal(float amount) {
+		float h=getStatMax(Actor_RPG.HEALTH)*amount;
+		float r=getStatMax(Actor_RPG.RESOLVE)*amount;
+		setStat(Actor_RPG.HEALTH, getStat(Actor_RPG.HEALTH)+(int)h);
+		setStat(Actor_RPG.RESOLVE, getStat(Actor_RPG.RESOLVE)+(int)r);
+	}
+
+
+
+	@Override
+	public void ReduceStat(int stat, int value) {
+		stats[stat]-=value;
+		if (value>0)
+		{
+			regenDelay=40;	
+		}
+		if (stats[stat]<0)
+		{
+			stats[stat]=0;
+		}
+		if (stats[stat]>statMax[stat])
+		{
+			stats[stat]=statMax[stat];
+		}
+	}
+	
+	public ArrayList<PerkInstance> getPlayerPerks()
+	{
+		return playerPerks;
+	}
+	
+	@Override
+	public void save(DataOutputStream dstream) throws IOException {
+
+		dstream.writeInt(busy);
+		//save exp
+		dstream.writeInt(playerExperience);
+		//save level
+		dstream.writeInt(playerLevel);
+		//save abilities
+		for (int i=0;i<abilities.length;i++)
+		{
+			dstream.writeInt(abilities[i]);
+		}
+		//save attributes
+		for (int i=0;i<attributes.length;i++)
+		{
+			dstream.writeInt(attributes[i]);
+		}
+		//save stats
+		for (int i=0;i<stats.length;i++)
+		{
+			dstream.writeFloat(stats[i]);
+		}
+		//save max stats
+		for (int i=0;i<statMax.length;i++)
+		{
+			dstream.writeInt(statMax[i]);
+		}
+		
+		for (int i=0;i<subAbilities.length;i++)
+		{
+			dstream.writeFloat(subAbilities[i]);
+		}
+		
+		dstream.writeInt(playerPerks.size());
+		for (int i=0;i<playerPerks.size();i++)
+		{
+			playerPerks.get(i).save(dstream);
+		}
+		
+		statusEffectHandler.save(dstream);
+		dstream.writeFloat(karmaMeter);
+		
+		cooldownHandler.save(dstream);
+		
+		if (quickAction==null)
+		{
+			dstream.writeBoolean(false);
+		}
+		else
+		{
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, quickAction);
+		}
+	}	
+	
+
+	public Player_RPG(DataInputStream dstream, Actor actor) throws IOException {
+		this.actor=actor;
+		abilities=new int[6];
+		stats=new float[4];
+		statMax=new int[4];
+		subAbilities=new float[6];
+		attributes=new int[21];
+		moveChoice=0;
+		for (int i=0;i<14;i++)
+		{
+			attributes[i]=0;
+		}
+		//set beginner abilities
+		for (int i=0;i<6;i++)
+		{
+			abilities[i]=5;
+		}
+		
+		busy=dstream.readInt();
+		//load exp
+		playerExperience=dstream.readInt();
+		//load level
+		playerLevel=dstream.readInt();
+		//load abilities
+		for (int i=0;i<abilities.length;i++)
+		{
+			abilities[i]=dstream.readInt();
+		}
+		//load attributes
+		for (int i=0;i<attributes.length;i++)
+		{
+			attributes[i]=dstream.readInt();
+		}
+		//load stats
+		for (int i=0;i<stats.length;i++)
+		{
+			stats[i]=dstream.readFloat();
+		}
+		//load max stats
+		for (int i=0;i<statMax.length;i++)
+		{
+			statMax[i]=dstream.readInt();
+		}
+		
+		for (int i=0;i<subAbilities.length;i++)
+		{
+			subAbilities[i]=dstream.readFloat();
+		}
+		
+		playerPerks=new ArrayList<PerkInstance>();
+		int count=dstream.readInt();
+		for (int i=0;i<count;i++)
+		{
+			PerkInstance p=PerkLoader.loadPerk(dstream);
+			if (p!=null)
+			{
+				playerPerks.add(p);		
+			}
+		}		
+		conditionImmunities=new ArrayList<String>();
+
+		genDefaultMoves();
+		moveList=new ArrayList<CombatMove>();
+		cooldownHandler=new CooldownHandler();
+		statusEffectHandler=new StatusEffectHandler();
+		statusEffectHandler.load(dstream);
+		karmaMeter=dstream.readFloat();
+		
+		cooldownHandler.load(dstream);
+		
+		boolean b=dstream.readBoolean();
+		if (b)
+		{
+			quickAction=ParserHelper.LoadString(dstream);
+		}
+	}
+
+	public PerkInstance getPerkInstance(Perk perk) {
+		for (int i=0;i<playerPerks.size();i++)
+		{
+			if (playerPerks.get(i).getPerk()==perk)
+			{
+				return playerPerks.get(i);
+			}
+		}
+		return null;
+	}
+	
+	public PerkInstance getPerkInstance(String name) {
+		for (int i=0;i<playerPerks.size();i++)
+		{
+			if (playerPerks.get(i).getPerk().getName().equals(name) ||
+				name.equals(playerPerks.get(i).getPerk().getAlias()))
+			{
+				return playerPerks.get(i);
+			}
+		}
+		return null;
+	}
+
+	public void addPerk(Perk perk) {
+		//check if an existing is in the list
+		
+		//if so rank up that perk
+		for (int i=0;i<playerPerks.size();i++)
+		{
+			if (playerPerks.get(i).getPerk()==perk)
+			{
+				playerPerks.get(i).setPerkRank(playerPerks.get(i).getPerkRank()+1);
+				Calcstats();
+				return;
+			}
+		}
+		//if not create new perk instance
+		playerPerks.add(new PerkInstance(perk));
+		Calcstats();
+	}
+
+	public int getNumPerks() {
+		return playerPerks.size();
+	}
+	
+	public PerkInstance getPerk(int index)
+	{
+		return playerPerks.get(index);
+	}
+
+	public void levelUp(Perk perk) {
+
+		
+		playerExperience-=getNextLevel();
+		playerLevel++;
+		addPerk(perk);
+		stats[0]=statMax[0];
+		stats[1]=statMax[1];
+		stats[3]=statMax[3];
+	}
+
+	@Override
+	public CombatMove getCombatMove(int index) {
+		return moveList.get(index);
+	}
+	
+	public int getNumMoves()
+	{
+		return moveList.size();
+	}
+
+	public void setMove(int index) {
+		moveChoice=index;	
+	}
+
+	public int getMoveChoice() {
+		return moveChoice;
+	}
+
+	@Override
+	public boolean getTagged(String tag) {
+		return false;
+	}
+
+	public boolean applyStatus(StatusEffect effect,boolean replace)
+	{
+		if (statusEffectHandler.applyStatus(effect,replace,this))
+		{
+			calcInventoryCapacity();	
+			ViewScene.m_interface.UpdateInfo();
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public void modAttribute(int attribute, int modifier) {
+		attributes[attribute]+=modifier;
+	}
+	public String getName()
+	{
+		return actor.getName();
+	}
+	
+	public ArrayList<StatusEffect> getStatusEffects()
+	{
+		return statusEffectHandler.getStatusEffects();
+	}
+
+	@Override
+	public int getBusy() {
+		return busy;
+	}
+
+	@Override
+	public void setBusy(int busy) {
+		this.busy=busy;
+	}
+
+	@Override
+	public void addBusy(int value) {
+		busy+=value;
+	}
+	
+	public int getKarmaMeter()
+	{
+		return (int) karmaMeter;
+	}
+	
+	public void feed(int amount, boolean predatory)
+	{
+		if (predatory==true)
+		{
+			feedPred(amount);
+		}
+		else
+		{
+			feedPrey(amount);
+		}
+	}
+	
+	private void feedPred(float amount)
+	{
+		float modifier=karmaMeter/100;
+		float change=amount/20;
+		amount=amount*modifier;
+		if (amount<1)
+		{
+			amount=1;
+		}
+		stats[Actor_RPG.SATIATION]+=amount;
+		karmaMeter+=change;
+	
+		if (karmaMeter>100)
+		{
+			karmaMeter=100;
+		}
+		if (stats[Actor_RPG.SATIATION]>statMax[Actor_RPG.SATIATION])
+		{
+			stats[Actor_RPG.SATIATION]=statMax[Actor_RPG.SATIATION];
+		}
+	}
+	
+	private void feedPrey(float amount)
+	{
+		float modifier=1-(karmaMeter/100);
+		float change=amount/20;		
+		amount=amount*modifier;	
+		if (amount<1)
+		{
+			amount=1;
+		}
+		stats[Actor_RPG.SATIATION]+=amount;
+		
+		karmaMeter-=change;
+		if (karmaMeter<0)
+		{
+			karmaMeter=0;
+		}
+		if (stats[Actor_RPG.SATIATION]>statMax[Actor_RPG.SATIATION])
+		{
+			stats[Actor_RPG.SATIATION]=statMax[Actor_RPG.SATIATION];
+		}
+	}
+	
+	public boolean hasStatus(int uid)
+	{
+		return statusEffectHandler.hasStatus(uid);
+
+	}
+
+
+
+	@Override
+	public void struggle() {
+		// TODO Auto-generated method stub
+		busy+=2;
+		statusEffectHandler.struggle(this, actor);
+	}
+
+	public boolean stealthCheck(int spot,boolean remove)
+	{
+		
+		return true;
+	}
+
+	public void removeStatus(int uid) {
+	
+		statusEffectHandler.removeStatus(uid,this);
+
+	}
+
+
+
+	@Override
+	public Actor getBindOrigin() {
+		return statusEffectHandler.getBindOrigin();
+
+	}
+
+	public CooldownHandler getCooldownHandler() {
+		return cooldownHandler;
+	}
+
+
+
+	public void modSubAbility(int attribute, int modifier) {
+		float v=((float)modifier)/100;
+		subAbilities[attribute]+=v;
+	}
+	
+
+	@Override
+	public StatusEffectHandler getStatusEffectHandler() {
+		return statusEffectHandler;
+	}
+
+
+
+	@Override
+	public int getStealthState() {
+
+		return statusEffectHandler.getStealthState();
+	}
+
+
+
+	@Override
+	public void setStealthState(int stealthstate) {
+
+		statusEffectHandler.setStealthState(stealthstate);
+	}
+	
+	@Override
+	public Actor getActor() {
+
+		return actor;
+	}
+
+
+
+	public void modKarmaMeter(float value) {
+		this.karmaMeter = karmaMeter+value;
+	}
+
+	private float getActionRegen()
+	{
+		if (stats[SATIATION]>statMax[SATIATION]*0.5F)
+		{
+			return statMax[ACTION]/120.0F;			
+		}
+		return statMax[ACTION]/240.0F;
+	}
+
+	@Override
+	public void recover(int i) {
+
+		if (stats[ACTION]<statMax[ACTION])
+		{
+			stats[ACTION]+=getActionRegen()*2*i;
+			if (stats[ACTION]>statMax[ACTION])
+			{
+				stats[ACTION]=statMax[ACTION];
+			}
+		}	
+		regenAction=false;
+	}
+	public void useAction(int amount)
+	{
+		stats[Actor_RPG.ACTION]-=amount;
+		if (stats[Actor_RPG.ACTION]<=0)
+		{
+			stats[Actor_RPG.ACTION]=0;
+		}
+		regenAction=false;
+	}
+
+	public int getMoveCategoryOffset(int index)
+	{
+		switch (index)
+		{
+			case 0:
+			return 1;
+			
+			case 1:
+				
+			return 1+moveLists[0];
+			
+			case 2:
+				
+			return 1+moveLists[0]+moveLists[1];
+			
+			case 3:
+				
+			return 1+moveLists[0]+moveLists[1]+moveLists[2];
+			case 4:
+				
+			return 1+moveLists[0]+moveLists[1]+moveLists[2]+moveLists[3];
+				
+		}
+		return 0;
+	}
+
+	public int getMoveCategorySize(int index) {
+		return moveLists[index];
+	}
+	
+	public String getQuickAction()
+	{
+		return this.quickAction;
+	}
+	
+	public void setQuickAction(String actionName)
+	{
+		this.quickAction=actionName;
+	}
+	
+	public boolean useQuickMove()
+	{
+		if (quickAction==null)
+		{
+			return false;
+		}
+		for (int i=0;i<moveList.size();i++)
+		{
+			if (moveList.get(i).getMoveName().equals(quickAction))
+			{
+				moveChoice=i;
+				return true;
+			}
+		}
+		
+		quickAction=null;
+		return false;
+	}
+
+	public void removeEquipStatus(int slot) {
+	
+		List<StatusEffect>statusEffects=statusEffectHandler.getStatusEffects();
+		for (int i=0;i<statusEffects.size();i++)
+		{
+			if (statusEffects.get(i).getUID()%10==slot)
+			{
+				statusEffects.remove(i);
+				break;
+			}
+		}
+	}
+
+	public int getCraftingTokenCount(String token) {
+		int v=0;
+		for (int i=0;i<playerPerks.size();i++)
+		{
+			for (int j=0;j<playerPerks.get(i).getPerk().getNumElements();j++)
+			{
+				if (PerkCraftingToken.class.isInstance(playerPerks.get(i).getPerk().getElement(j)))
+				{
+					PerkCraftingToken t=(PerkCraftingToken)playerPerks.get(i).getPerk().getElement(j);
+					if (t.getToken().equals(token))
+					{
+						v+=playerPerks.get(i).getPerkRank();
+					}
+				}
+			}
+		}
+		return v;
+	}
+
+	public boolean isConditionImmune(String identity) {
+		for (int i=0;i<conditionImmunities.size();i++)
+		{
+			if (conditionImmunities.get(i).contains(identity))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	
+
+}
+

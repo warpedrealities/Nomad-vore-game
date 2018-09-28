@@ -1,12 +1,12 @@
 package chargen;
 
-import mutation.Effect_Mutator;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import mutation.Effect_Mutator;
 
 public class ChargenMutator {
 

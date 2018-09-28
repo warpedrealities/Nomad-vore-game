@@ -3,9 +3,9 @@ package effect;
 import org.w3c.dom.Element;
 
 import actor.player.Player;
-import view.ViewScene;
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
+import view.ViewScene;
 
 public class Effect_Recover extends Effect {
 

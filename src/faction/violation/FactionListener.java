@@ -2,12 +2,11 @@ package faction.violation;
 
 import java.util.ArrayList;
 
-import shared.Vec2f;
-import view.ViewScene;
-import vmo.GameManager;
+import actor.Actor;
 import faction.violation.FactionRule.ViolationType;
 import nomad.universe.Universe;
-import actor.Actor;
+import shared.Vec2f;
+import vmo.GameManager;
 
 public class FactionListener {
 

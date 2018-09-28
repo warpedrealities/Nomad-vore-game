@@ -9,8 +9,6 @@ import shared.Vec2f;
 import shared.Vec2i;
 import zone.Tile;
 import zone.Zone;
-import zone.Zone_int;
-import zone.TileDef.TileMovement;
 
 public class VoidPathfinder {
 

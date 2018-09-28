@@ -1,18 +1,15 @@
 package shared;
 
-import gui.GUIBase;
-
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
-import org.lwjgl.util.vector.Matrix4f;
 
+import gui.GUIBase;
 import rendering.ColourMap;
 
 public class Portrait extends GUIBase {
