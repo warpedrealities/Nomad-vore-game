@@ -7,7 +7,7 @@
 		You can lash out at a distance with your mind, using a blast of mental
 		domination to diminish the target's resolve.
 	</description>
-	<move count="3">
+	<move count="1">
 		<combatmove name="mind bolt" timeCost="2" pattern="RANGED"
 			bonusToHit="2" bonusAttribute="WILLPOWER" actionCost="4" moveType="DOMINATE">
 			<effectDamage type="PSYCHIC" minValue="1" maxValue="6"

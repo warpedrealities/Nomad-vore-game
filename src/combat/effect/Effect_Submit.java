@@ -35,14 +35,15 @@ public class Effect_Submit extends Effect {
 				else
 				{
 					ViewScene.m_interface.DrawText("You can't surrender to "+target.getName());
-					ViewScene.m_interface.PlayerBeaten(npc, true);	
+
 				}
 			}
 			if (resolve)
 			{
 				if (npc.getConversation(NPC.CONVERSATIONSEDUCER)!=null)
 				{
-					ViewScene.m_interface.DrawText("You fantasize about and submit to them "+target.getName());					
+					ViewScene.m_interface.DrawText("You fantasize about and submit to them "+target.getName());	
+					ViewScene.m_interface.PlayerBeaten(npc, true);	
 				}
 				else
 				{

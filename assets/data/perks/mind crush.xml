@@ -7,7 +7,7 @@
 		Reach out and crush the mind of your target, suppressing their volition and
 		will temporarily.
 	</description>
-	<move count="3">
+	<move count="1">
 		<combatmove name="mind crush" timeCost="2" pattern="RANGED"
 			bonusAttribute="WILLPOWER" actionCost="4" bonusToHit="2" cooldown="100"
 			icon="6" moveType="DOMINATE">
