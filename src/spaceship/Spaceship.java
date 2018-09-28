@@ -5,27 +5,25 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import nomad.Entity;
-import nomad.Station;
-import nomad.World;
-import nomad.universe.Universe;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import nomad.Entity;
+import nomad.Station;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
 import spaceship.ShipController.scriptEvents;
 import spaceship.npcShips.NpcShipController;
 import spaceship.stats.SpaceshipBaseStats;
 import spaceship.stats.SpaceshipStats;
+import spaceship.stats.WarpHandler;
 import widgets.WidgetPortal;
 import zone.Landing;
 import zone.Zone;
 import zone.Zone.zoneType;
-import spaceship.stats.WarpHandler;
 
 public class Spaceship extends Entity {
 

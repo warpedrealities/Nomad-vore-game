@@ -4,10 +4,7 @@ import java.util.Vector;
 
 import shared.Vec2f;
 import shared.Vec2i;
-
 import view.ZoneInteractionHandler;
-import vmo.Tile_Int;
-import zone.Tile;
 import zone.Zone_int;
 
 public class Pathfinder {

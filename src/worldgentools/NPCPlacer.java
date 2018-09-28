@@ -11,8 +11,8 @@ import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
 import zone.Tile;
-import zone.Zone;
 import zone.TileDef.TileMovement;
+import zone.Zone;
 
 public class NPCPlacer {
 

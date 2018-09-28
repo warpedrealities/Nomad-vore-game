@@ -13,10 +13,9 @@ import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
 import spaceship.stats.SpaceshipAnalyzer;
 import view.ViewScene;
-import vmo.Game;
 import widgets.Widget;
-import zone.Zone;
 import zone.TileDef.TileMovement;
+import zone.Zone;
 import zone.Zone.zoneType;
 
 public class CapsuleBehaviour {

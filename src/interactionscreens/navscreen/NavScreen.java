@@ -1,14 +1,13 @@
 package interactionscreens.navscreen;
 
-import gui.Button;
-import gui.Text;
-import gui.Window;
-import input.MouseHook;
-
 import java.nio.FloatBuffer;
 import java.util.Iterator;
 
 import actor.player.CompanionTool;
+import gui.Button;
+import gui.Text;
+import gui.Window;
+import input.MouseHook;
 import nomad.Station;
 import nomad.World;
 import nomad.universe.Universe;
@@ -18,13 +17,12 @@ import shared.Vec2f;
 import solarview.SolarScene;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
+import spaceship.SpaceshipActionHandler;
+import spaceship.SpaceshipResource;
 import spaceship.stats.SpaceshipAnalyzer;
 import spaceship.stats.SpaceshipStats;
 import spaceship.stats.SpaceshipWeapon;
-import spaceship.SpaceshipActionHandler;
-import spaceship.SpaceshipResource;
 import vmo.Game;
-import vmo.GameManager;
 
 public class NavScreen extends Screen implements Callback {
 

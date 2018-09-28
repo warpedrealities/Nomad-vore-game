@@ -1,10 +1,10 @@
 package worldgentools.auditing;
 
+import artificial_intelligence.pathfinding.Pathfinder;
 import shared.Vec2f;
 import zone.Tile;
-import zone.Zone_int;
 import zone.TileDef.TileMovement;
-import artificial_intelligence.pathfinding.Pathfinder;
+import zone.Zone_int;
 
 public class Pathfinder_carving extends Pathfinder {
 

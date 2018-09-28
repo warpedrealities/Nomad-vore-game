@@ -8,6 +8,7 @@ import gui.Text;
 import gui.Window;
 import input.MouseHook;
 import nomad.universe.Universe;
+import rendering.SpriteRotatable;
 import shared.Callback;
 import shared.MyListener;
 import shared.Screen;
@@ -17,8 +18,6 @@ import shipsystem.conversionSystem.ShipConverter;
 import solarview.SolarScene;
 import spaceship.Spaceship;
 import spaceship.stats.WarpHandler;
-import view.ZoneInteractionHandler;
-import rendering.SpriteRotatable;
 
 public class SystemScreen extends Screen implements MyListener {
 

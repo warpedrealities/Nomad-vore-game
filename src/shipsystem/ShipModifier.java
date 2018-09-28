@@ -6,8 +6,6 @@ import java.io.IOException;
 
 import org.w3c.dom.Element;
 
-import shipsystem.ShipAbility.AbilityType;
-
 public class ShipModifier extends ShipAbility {
 
 	static public final int FUEL_EFFICIENCY = 0;

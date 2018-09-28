@@ -8,12 +8,11 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import shared.ParserHelper;
-import view.ViewScene;
-
 import actor.Actor;
 import actorRPG.Actor_RPG;
 import nomad.universe.Universe;
+import shared.ParserHelper;
+import view.ViewScene;
 
 public class Status_Bind extends Status_AttribMod {
 

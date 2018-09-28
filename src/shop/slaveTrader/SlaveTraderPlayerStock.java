@@ -2,7 +2,6 @@ package shop.slaveTrader;
 
 import java.util.List;
 
-import spaceship.Spaceship;
 import widgets.Widget;
 import widgets.WidgetCapture;
 import widgets.WidgetSlot;

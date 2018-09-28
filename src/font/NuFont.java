@@ -5,7 +5,6 @@ import java.nio.IntBuffer;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
@@ -14,7 +13,6 @@ import org.lwjgl.util.vector.Matrix4f;
 import shared.Vec2f;
 import shared.Vertex;
 import vmo.Game;
-import vmo.GameManager;
 
 public class NuFont {
 	int m_VBO, m_VAO, m_VIO, m_indicecount, m_maxlength, m_textureID;

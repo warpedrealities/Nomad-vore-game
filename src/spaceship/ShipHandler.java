@@ -1,12 +1,7 @@
 package spaceship;
 
 import item.ItemWidget;
-import nomad.universe.Universe;
 import shared.Vec2f;
-import view.ViewScene;
-import widgets.Widget;
-import widgets.WidgetFileLoader;
-import zone.Zone;
 
 public class ShipHandler {
 

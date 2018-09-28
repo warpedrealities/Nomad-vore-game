@@ -3,11 +3,11 @@ package artificial_intelligence;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-import javax.script.Bindings;
-import javax.script.CompiledScript;
-
-import org.luaj.vm2.*;
-import org.luaj.vm2.lib.jse.*;
+import org.luaj.vm2.Globals;
+import org.luaj.vm2.LuaError;
+import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
+import org.luaj.vm2.lib.jse.JsePlatform;
 
 import actor.npc.NPC;
 import artificial_intelligence.detection.Sense;

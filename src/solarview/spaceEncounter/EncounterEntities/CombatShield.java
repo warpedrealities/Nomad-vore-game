@@ -1,7 +1,6 @@
 package solarview.spaceEncounter.EncounterEntities;
 
 import shared.Vec2f;
-import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 import solarview.spaceEncounter.effectHandling.effects.EffectSprite;

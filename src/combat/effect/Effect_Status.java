@@ -7,8 +7,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import view.ViewScene;
-
+import actor.Actor;
+import actorRPG.RPG_Helper;
 import combat.statusEffects.StatusEffect;
 import combat.statusEffects.StatusFaction;
 import combat.statusEffects.Status_AttribMod;
@@ -20,8 +20,7 @@ import combat.statusEffects.Status_Stun;
 import combat.statusEffects.Status_SubAbilityMod;
 import combat.statusEffects.Status_Transformed;
 import nomad.universe.Universe;
-import actor.Actor;
-import actorRPG.RPG_Helper;
+import view.ViewScene;
 
 public class Effect_Status extends Effect {
 

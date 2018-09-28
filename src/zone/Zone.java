@@ -5,16 +5,9 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import nomad.Entity;
-import nomad.Entity_Int;
-import nomad.World;
-import nomad.universe.Universe;
-
-import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
-import org.w3c.dom.Element;
 
 import actor.Actor;
 import actor.ActorLoader;
@@ -23,21 +16,18 @@ import actor.player.Player;
 import actorRPG.Actor_RPG;
 import artificial_intelligence.pathfinding.Path;
 import artificial_intelligence.pathfinding.Pathfinder;
-
+import nomad.Entity;
+import nomad.universe.Universe;
 import rlforj.los.ILosBoard;
-import rlforj.util.BresenhamLine;
 import shared.Geometry;
 import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
-import spaceship.Spaceship;
-import spaceship.Spaceship.ShipState;
 import view.ModelController_Int;
 import view.ZoneInteractionHandler;
 import vmo.GameManager;
 import widgets.Widget;
 import widgets.WidgetPortal;
-import widgets.spawner.WidgetSpawner;
 import worldgentools.ZoneBuildTools;
 import zone.TileDef.TileMovement;
 import zone.Environment.EnvironmentalConditions;

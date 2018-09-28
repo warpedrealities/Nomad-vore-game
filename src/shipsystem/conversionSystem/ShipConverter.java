@@ -11,9 +11,7 @@ import org.w3c.dom.NodeList;
 import nomad.universe.Universe;
 import shared.ParserHelper;
 import shipsystem.ShipAbility;
-import shipsystem.ShipAbility.AbilityType;
 import spaceship.Spaceship;
-import spaceship.SpaceshipResource;
 import spaceship.stats.SpaceshipAnalyzer;
 import spaceship.stats.SpaceshipStats;
 

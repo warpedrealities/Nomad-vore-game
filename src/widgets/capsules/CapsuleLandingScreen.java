@@ -7,13 +7,10 @@ import gui.Window;
 import input.MouseHook;
 import landingScreen.LandingGrid;
 import nomad.World;
-import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
 import spaceship.Spaceship;
-import view.ViewScene;
-import vmo.Game;
 import zone.Zone;
 
 public class CapsuleLandingScreen extends Screen implements Callback {

@@ -10,7 +10,6 @@ import solarview.spaceEncounter.EncounterEntities.CombatAction;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.effectHandling.effects.Effect;
 import solarview.spaceEncounter.effectHandling.effects.EffectText;
-import rendering.SpriteBeam;
 
 public class EffectHandler implements EffectHandler_Interface {
 

@@ -11,7 +11,6 @@ import org.w3c.dom.NodeList;
 import actor.npc.NPC;
 import actor.player.Player;
 import interactionscreens.CaptureScreen;
-import interactionscreens.systemScreen.SystemScreen;
 import view.ViewScene;
 
 public class WidgetCapture extends WidgetBreakable {

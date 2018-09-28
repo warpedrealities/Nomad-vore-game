@@ -4,9 +4,6 @@ import java.nio.FloatBuffer;
 
 import org.lwjgl.opengl.GL11;
 
-import rendering.Renderable;
-import rendering.Sprite;
-import rendering.SpriteBatch;
 import shared.Vec2f;
 
 public class Vortex_Renderer {

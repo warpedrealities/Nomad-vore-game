@@ -1,7 +1,6 @@
 package solarview.spaceEncounter.EncounterEntities;
 
 import shared.Vec2f;
-import shipsystem.ShipResource;
 import spaceship.SpaceshipResource;
 
 public class CombatManouver {

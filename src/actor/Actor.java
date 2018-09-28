@@ -3,29 +3,19 @@ package actor;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-
-import org.lwjgl.util.vector.Vector4f;
 
 import actor.player.Player;
-import combat.CombatMove;
-import combat.statusEffects.StatusEffect;
-import combat.statusEffects.StatusFaction;
-import faction.Faction;
-import nomad.universe.Universe;
 import actorRPG.Actor_RPG;
 import actorRPG.RPGActionHandler;
-
+import combat.CombatMove;
+import combat.statusEffects.StatusFaction;
+import faction.Faction;
 import rendering.Square_Int;
 import shared.Geometry;
 import shared.Vec2f;
-import view.ViewScene;
-import view.ModelController_Int;
-import vmo.GameManager;
-import widgets.WidgetItemPile;
 import zone.Tile;
-import zone.Zone_int;
 import zone.TileDef.TileMovement;
+import zone.Zone_int;
 
 public abstract class Actor implements Attackable {
 

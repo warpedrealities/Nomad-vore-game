@@ -1,29 +1,17 @@
 package worldgentools;
 
-import item.Item;
-import nomad.universe.Universe;
-
 import java.util.ArrayList;
 import java.util.Random;
 
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import actor.npc.NPC;
-import actorRPG.RPG_Helper;
-
-import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
 import shipsystem.droneSpawning.DroneHandling;
 import vmo.GameManager;
-import widgets.Widget;
-import widgets.WidgetBreakable;
-import widgets.WidgetContainer;
 import widgets.WidgetDescription;
-import widgets.WidgetHarvestable;
 import widgets.WidgetPortal;
 import widgets.WidgetSprite;
 import worldgentools.blockdungeon.BlockDungeonGenerator;
@@ -36,7 +24,6 @@ import zone.Landing;
 import zone.Tile;
 import zone.TileDefLibrary;
 import zone.Zone;
-import zone.TileDef.TileMovement;
 import zone.Zone.zoneType;
 import zonePreload.ZonePreloadVector;
 

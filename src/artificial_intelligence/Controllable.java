@@ -1,7 +1,5 @@
 package artificial_intelligence;
 
-import org.luaj.vm2.LuaValue;
-
 import shared.Vec2f;
 
 public interface Controllable {

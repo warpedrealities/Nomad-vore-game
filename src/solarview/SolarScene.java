@@ -3,13 +3,10 @@ package solarview;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
-import org.lwjgl.util.vector.Matrix4f;
 
+import input.MouseHook;
 import nomad.StarSystem;
 import nomad.universe.Universe;
-import particlesystem.particleEffectors.ParticleDraw;
-import input.MouseHook;
-import rendering.SpriteBatch;
 import rendering.SpriteRotatable;
 import shared.Callback;
 import shared.Geometry;

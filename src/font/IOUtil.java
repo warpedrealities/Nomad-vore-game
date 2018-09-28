@@ -4,15 +4,19 @@
  */
 package font;
 
-import org.lwjgl.BufferUtils;
+import static org.lwjgl.BufferUtils.createByteBuffer;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
 import java.nio.channels.ReadableByteChannel;
 
-import static org.lwjgl.BufferUtils.*;
+import org.lwjgl.BufferUtils;
 
 public final class IOUtil {
 

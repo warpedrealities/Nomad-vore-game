@@ -14,9 +14,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actorRPG.npc.NPCStatblockLibrary;
-import shared.ParserHelper;
-
 import nomad.FlagField;
+import shared.ParserHelper;
 
 public class Faction {
 

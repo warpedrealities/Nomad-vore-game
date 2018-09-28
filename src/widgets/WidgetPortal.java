@@ -9,7 +9,6 @@ import org.w3c.dom.Element;
 import shared.ParserHelper;
 import shared.Vec2f;
 import view.ViewScene;
-import view.ModelController_Int;
 
 public class WidgetPortal extends Widget {
 

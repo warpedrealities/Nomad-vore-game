@@ -9,7 +9,6 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JsePlatform;
 
-import solarview.spaceEncounter.EncounterWeaponController;
 import solarview.spaceEncounter.EncounterEntities.CombatAction;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.EncounterEntities.WeaponCheck;

@@ -1,6 +1,5 @@
 package vmo;
 
-import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
@@ -10,7 +9,6 @@ import org.lwjgl.util.vector.Vector4f;
 import gui.Text;
 import gui.Textwindow;
 import gui.Window;
-import input.Keyboard;
 import input.MouseHook;
 import rendering.SquareRenderer;
 import shared.SceneBase;

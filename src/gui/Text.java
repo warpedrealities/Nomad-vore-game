@@ -4,9 +4,8 @@ import java.nio.FloatBuffer;
 
 import org.lwjgl.opengl.GL20;
 
-import shared.Vec2f;
-
 import font.NuFont;
+import shared.Vec2f;
 
 public class Text extends GUIBase {
 

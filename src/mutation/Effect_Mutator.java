@@ -6,15 +6,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.Actor;
+import actor.player.Player;
 import combat.effect.Effect;
 import combat.effect.Effect_Criteria;
 import combat.effect.Effect_Criteria_Assertion;
 import combat.effect.Effect_Criteria_Value;
-
 import view.ViewScene;
-
-import actor.Actor;
-import actor.player.Player;
 
 public class Effect_Mutator extends Effect {
 

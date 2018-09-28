@@ -3,15 +3,14 @@ package worldgentools;
 import java.util.ArrayList;
 
 import nomad.universe.Universe;
+import shared.Vec2i;
+import view.ZoneInteractionHandler;
 import worldgentools.auditing.CarvingPathfinder;
 import worldgentools.auditing.FloodPathfinder;
 import worldgentools.auditing.VoidPathfinder;
-import zone.TileDef.TileMovement;
 import zone.Tile;
-import zone.Zone;
-import shared.Vec2f;
-import shared.Vec2i;
-import view.ZoneInteractionHandler;;
+import zone.TileDef.TileMovement;
+import zone.Zone;;
 
 public class AuditTool {
 

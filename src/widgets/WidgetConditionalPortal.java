@@ -4,15 +4,11 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import org.w3c.dom.Element;
+
 import nomad.FlagField;
 import nomad.universe.Universe;
-
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
 import shared.ParserHelper;
-import shared.Vec2f;
 import view.ViewScene;
 
 public class WidgetConditionalPortal extends WidgetPortal {

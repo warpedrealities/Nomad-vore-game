@@ -10,12 +10,11 @@ import org.w3c.dom.NodeList;
 
 import actor.player.Player;
 import actorRPG.RPG_Helper;
+import nomad.universe.Universe;
 import shared.ParserHelper;
 import view.ViewScene;
 import vmo.GameManager;
 import zone.Zone;
-import item.Item;
-import nomad.universe.Universe;
 
 public class WidgetHarvestable extends Widget {
 

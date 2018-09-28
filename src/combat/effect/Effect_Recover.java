@@ -2,13 +2,11 @@ package combat.effect;
 
 import org.w3c.dom.Element;
 
-import view.ViewScene;
-
 import actor.Actor;
-import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
 import actorRPG.player.Player_RPG;
+import view.ViewScene;
 
 public class Effect_Recover extends Effect {
 

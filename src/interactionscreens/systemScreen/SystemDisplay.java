@@ -1,6 +1,5 @@
 package interactionscreens.systemScreen;
 
-import gui.GUIBase;
 import gui.Window;
 import input.MouseHook;
 import shared.MyListener;

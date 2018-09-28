@@ -4,7 +4,6 @@ import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
 import actor.Actor;
-import actorRPG.Actor_RPG;
 import shared.Vec2f;
 import vmo.Tile_Int;
 import widgets.WidgetSprite;

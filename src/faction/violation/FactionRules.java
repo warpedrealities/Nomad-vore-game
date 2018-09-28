@@ -1,6 +1,5 @@
 package faction.violation;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -12,7 +11,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import faction.violation.FactionRule.ViolationType;
-
 import shared.ParserHelper;
 
 public class FactionRules {

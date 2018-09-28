@@ -1,10 +1,27 @@
 package view;
 
-import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_1;
-import static org.lwjgl.glfw.GLFW.glfwGetMouseButton;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.lwjgl.glfw.GLFW;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL13;
+import org.lwjgl.opengl.GL20;
+import org.lwjgl.util.vector.Matrix4f;
+import org.lwjgl.util.vector.Vector2f;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import actor.Actor;
+import actor.npc.NPC;
+import actor.npc.Temp_NPC;
+import actor.player.CompanionTool;
+import actor.ranked.RankedNPC;
+import actorRPG.player.Player_RPG;
+import artificial_intelligence.BrainBank;
+import combat.CombatMove;
+import dialogue.DialogueScreen;
+import faction.FactionLibrary;
 import graphics.AnimatedFXControl;
 import graphics.FX;
 import graphics.FX_projectile;
@@ -21,19 +38,6 @@ import item.Item;
 import menu.Menu;
 import nomad.GameOver;
 import nomad.universe.Universe;
-
-import org.lwjgl.glfw.GLFW;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL13;
-import org.lwjgl.opengl.GL20;
-import org.lwjgl.util.vector.Matrix4f;
-import org.lwjgl.util.vector.Vector2f;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-
-import dialogue.DialogueScreen;
-import faction.FactionLibrary;
-import combat.CombatMove;
 import playerscreens.AppearanceScreen;
 import playerscreens.CharacterScene;
 import playerscreens.InventoryScreen;
@@ -51,19 +55,8 @@ import vmo.GameManager;
 import widgets.Widget;
 import widgets.WidgetConversation;
 import widgets.WidgetItemPile;
-import zone.TileDef;
 import zone.TileDef.TileMovement;
 import zone.Zone;
-import actor.Actor;
-import actor.player.Player;
-import actor.ranked.RankedNPC;
-import actor.npc.NPC;
-import actor.npc.Temp_NPC;
-import actor.player.CompanionTool;
-import actorRPG.Actor_RPG;
-import actorRPG.player.Player_RPG;
-import artificial_intelligence.BrainBank;
-import artificial_intelligence.detection.Sense;
 
 public class ViewScene extends SceneBase implements ModelController_Int, Scene_Int, MyListener, Callback {
 

@@ -5,7 +5,6 @@ import java.nio.FloatBuffer;
 import font.NuFont;
 import input.MouseHook;
 import shared.MyListener;
-import shared.NinePatch;
 import shared.NinePatch_Alternate;
 import shared.Vec2f;
 

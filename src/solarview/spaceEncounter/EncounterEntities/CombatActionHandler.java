@@ -3,7 +3,6 @@ package solarview.spaceEncounter.EncounterEntities;
 import java.util.ArrayList;
 import java.util.List;
 
-import shipsystem.ShipResource;
 import shipsystem.weapon.WeaponCost;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import spaceship.SpaceshipResource;

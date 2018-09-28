@@ -1,9 +1,5 @@
 package crafting;
 
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -14,10 +10,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actorRPG.player.Player_RPG;
-import shared.ParserHelper;
-
 import item.Item;
 import nomad.universe.Universe;
+import shared.ParserHelper;
 
 public class CraftingRecipe implements Comparable {
 

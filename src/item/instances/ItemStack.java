@@ -3,10 +3,9 @@ package item.instances;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import shared.ParserHelper;
 import item.Item;
-import item.Item.ItemUse;
 import nomad.universe.Universe;
+import shared.ParserHelper;
 
 public class ItemStack extends Item {
 

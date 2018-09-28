@@ -4,7 +4,6 @@ import org.w3c.dom.Element;
 
 import actor.Actor;
 import actorRPG.Actor_RPG;
-import actorRPG.RPG_Helper;
 import view.ViewScene;
 
 public class Analysis_Defence implements Analysis_Type {

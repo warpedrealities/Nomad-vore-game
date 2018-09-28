@@ -13,7 +13,6 @@ import org.w3c.dom.NodeList;
 
 import shared.ParserHelper;
 import shipsystem.ShipAbility;
-import shipsystem.ShipAbility.AbilityType;
 
 public class ShipWeapon extends ShipAbility {
 

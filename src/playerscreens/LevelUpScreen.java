@@ -1,21 +1,18 @@
 package playerscreens;
 
+import java.nio.FloatBuffer;
+import java.util.ArrayList;
+
 import gui.Button;
-import gui.MultiLineText;
 import gui.ScrollableMultiLineText;
 import gui.Text;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
 import nomad.universe.Universe;
-
-import java.nio.FloatBuffer;
-import java.util.ArrayList;
-
 import perks.Perk;
 import perks.PerkLibrary;
 import perks.PerkQualifier;
-
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;

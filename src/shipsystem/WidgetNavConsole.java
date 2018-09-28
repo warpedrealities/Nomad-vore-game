@@ -1,11 +1,5 @@
 package shipsystem;
 
-import interactionscreens.systemScreen.SystemScreen;
-import interactionscreens.navscreen.NavScreen;
-import interactionscreens.navscreen.WarpScreen;
-import item.Item;
-import nomad.universe.Universe;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -13,7 +7,9 @@ import java.io.IOException;
 import org.w3c.dom.Element;
 
 import actor.player.Player;
-import shared.ParserHelper;
+import interactionscreens.navscreen.NavScreen;
+import interactionscreens.navscreen.WarpScreen;
+import nomad.universe.Universe;
 import spaceship.Spaceship;
 import view.ViewScene;
 import widgets.WidgetBreakable;

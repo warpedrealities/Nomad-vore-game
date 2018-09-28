@@ -1,11 +1,11 @@
 package solarview.spaceEncounter;
 
-import spaceship.Spaceship;
-import spaceship.stats.SpaceshipAnalyzer;
-import vmo.Game;
 import java.util.List;
 
 import shipsystem.conversionSystem.ShipConverter;
+import spaceship.Spaceship;
+import spaceship.stats.SpaceshipAnalyzer;
+import vmo.Game;
 public class SpaceCombatInitializer {
 
 	private Spaceship player;

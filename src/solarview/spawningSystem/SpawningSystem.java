@@ -8,11 +8,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import nomad.Entity;
-import nomad.universe.Universe;
-import shared.Geometry;
 import shared.ParserHelper;
-import shared.Vec2f;
-import shared.Vec2i;
 import spaceship.Spaceship;
 
 public class SpawningSystem {

@@ -1,5 +1,16 @@
 package spaceship.boarding;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import actor.npc.NPC;
+import nomad.universe.Universe;
+import shared.ParserHelper;
+import shared.Vec2f;
+import shared.Vec2i;
 import spaceship.Spaceship;
 import view.ZoneInteractionHandler;
 import vmo.GameManager;
@@ -8,19 +19,6 @@ import widgets.WidgetReformer;
 import widgets.WidgetSlot;
 import zone.TileDef.TileMovement;
 import zone.Zone;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-
-import actor.npc.NPC;
-import actor.npc.Temp_NPC;
-import nomad.universe.Universe;
-import shared.ParserHelper;
-import shared.Vec2f;
-import shared.Vec2i;
 
 public class BoardingHelper {
 

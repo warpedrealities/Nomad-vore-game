@@ -10,7 +10,6 @@ import nomad.universe.Universe;
 import rendering.Sprite;
 import shared.ParserHelper;
 import shared.Vec2f;
-import solarBackdrop.BackdropStar;
 import solarBackdrop.StarScape;
 
 public class DecorationLayer extends StarScape {

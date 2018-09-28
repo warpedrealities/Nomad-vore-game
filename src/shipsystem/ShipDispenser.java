@@ -9,7 +9,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import shared.ParserHelper;
-import shipsystem.ShipAbility.AbilityType;
 
 public class ShipDispenser extends ShipAbility {
 

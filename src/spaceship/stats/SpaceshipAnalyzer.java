@@ -8,13 +8,8 @@ import java.util.Map;
 
 import actor.Actor;
 import actor.npc.NPC;
-import nomad.universe.Universe;
 import shipsystem.ShipAbility;
 import shipsystem.ShipAbility.AbilityType;
-import shipsystem.conversionSystem.ShipConverter;
-import shipsystem.weapon.ShipWeapon;
-import spaceship.Spaceship;
-import spaceship.SpaceshipResource;
 import shipsystem.ShipFTL;
 import shipsystem.ShipModifier;
 import shipsystem.ShipResource;
@@ -22,10 +17,13 @@ import shipsystem.ShipShield;
 import shipsystem.ShipSimCrew;
 import shipsystem.WidgetDamage;
 import shipsystem.WidgetSystem;
+import shipsystem.conversionSystem.ShipConverter;
+import shipsystem.weapon.ShipWeapon;
+import spaceship.Spaceship;
+import spaceship.SpaceshipResource;
 import widgets.WidgetAccomodation;
 import widgets.WidgetSlot;
 import zone.Tile;
-import zone.TileDef.TileMovement;
 
 public class SpaceshipAnalyzer {
 

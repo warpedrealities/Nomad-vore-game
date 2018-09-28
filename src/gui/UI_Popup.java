@@ -2,7 +2,6 @@ package gui;
 
 import java.nio.FloatBuffer;
 
-import shared.NinePatch;
 import shared.Vec2f;
 
 public class UI_Popup extends GUIBase {

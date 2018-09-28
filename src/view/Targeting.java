@@ -1,9 +1,5 @@
 package view;
 
-import actor.Actor;
-import input.Keyboard;
-import nomad.universe.Universe;
-
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
@@ -11,13 +7,14 @@ import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 
+import actor.npc.NPC;
+import actor.player.Player;
+import input.Keyboard;
+import nomad.universe.Universe;
 import rendering.Sprite;
-
 import shared.Tools;
 import shared.Vec2f;
 import zone.Zone;
-import actor.npc.NPC;
-import actor.player.Player;
 
 public class Targeting {
 

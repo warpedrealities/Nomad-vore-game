@@ -1,7 +1,5 @@
 package shared;
 
-import java.awt.Font;
-import java.io.InputStream;
 import java.nio.FloatBuffer;
 
 import font.NuFont;

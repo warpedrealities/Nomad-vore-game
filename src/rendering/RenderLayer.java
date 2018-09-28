@@ -12,7 +12,6 @@ import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;
 
 import shared.Vec2f;
-import shared.Vertex;
 import shared.Vertex_ext;
 import vmo.Tile_Int;
 

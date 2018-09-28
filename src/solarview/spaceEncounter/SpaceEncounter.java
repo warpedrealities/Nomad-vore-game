@@ -6,11 +6,9 @@ import org.lwjgl.opengl.GL20;
 
 import input.MouseHook;
 import nomad.universe.Universe;
-import rendering.SpriteBeam;
 import shared.SceneBase;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.EncounterShip;
-import solarview.spaceEncounter.animation.Animator;
 import solarview.spaceEncounter.gui.EncounterGUI;
 import solarview.spaceEncounter.rendering.EncounterRenderer;
 import solarview.spaceEncounter.rendering.Targeting;

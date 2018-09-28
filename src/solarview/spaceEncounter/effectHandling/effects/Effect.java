@@ -1,7 +1,6 @@
 package solarview.spaceEncounter.effectHandling.effects;
 
 import rendering.Renderable;
-import rendering.Sprite;
 import shared.Vec2f;
 
 public interface Effect {

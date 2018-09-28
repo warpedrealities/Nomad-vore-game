@@ -1,33 +1,25 @@
 package interactionscreens.systemScreen;
 
+import java.nio.FloatBuffer;
+import java.util.ArrayList;
+
+import actor.player.Player;
 import gui.Button;
 import gui.Text;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
 import item.Item;
-import item.ItemEnergy;
 import item.ItemHasEnergy;
-import item.ItemLibrary;
 import item.instances.ItemDepletableInstance;
 import nomad.universe.Universe;
-
-import java.nio.FloatBuffer;
-import java.util.ArrayList;
-
-import actor.player.Player;
 import shared.Callback;
-import shared.ProportionBar;
 import shared.Screen;
 import shared.Vec2f;
-import shipsystem.ShipAbility.AbilityType;
-import shipsystem.conversionSystem.ShipConverter;
 import shipsystem.ShipDispenser;
 import shipsystem.ShipResource;
 import shipsystem.WidgetSystem;
-import shipsystem.resourceConversion.ResourceConversionHandler;
-import spaceship.SpaceshipResource;
-import widgets.WidgetContainer;
+import shipsystem.conversionSystem.ShipConverter;
 
 public class SystemScreen extends Screen implements SystemCallback {
 

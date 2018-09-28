@@ -1,16 +1,15 @@
 package artificial_intelligence;
 
-import pathfinder.Path;
-import shared.Vec2f;
-import view.ViewScene;
-import view.ZoneInteractionHandler;
-import zone.Tile;
-import zone.Zone_int;
-import zone.TileDef.TileMovement;
 import actor.Actor;
 import actor.npc.NPC;
 import artificial_intelligence.pathfinding.Pathfinder_Flee;
 import nomad.universe.Universe;
+import shared.Vec2f;
+import view.ViewScene;
+import view.ZoneInteractionHandler;
+import zone.Tile;
+import zone.TileDef.TileMovement;
+import zone.Zone_int;
 
 public class SpecialCommandHandler {
 

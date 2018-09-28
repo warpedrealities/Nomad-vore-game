@@ -7,8 +7,6 @@ import java.io.IOException;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import artificial_intelligence.Script_AI;
-import shared.ParserHelper;
 import shared.Vec2f;
 
 public class Temp_NPC extends NPC {

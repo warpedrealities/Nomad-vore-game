@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.lwjgl.BufferUtils;
 import org.lwjgl.util.vector.Matrix4f;
 
 import font.FontSupport;

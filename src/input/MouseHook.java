@@ -6,7 +6,6 @@ import static org.lwjgl.glfw.GLFW.glfwGetMouseButton;
 import java.util.Vector;
 
 import org.lwjgl.glfw.GLFWCursorPosCallback;
-import org.lwjgl.glfw.GLFWScrollCallbackI;
 
 import shared.Clickable;
 import shared.Vec2f;

@@ -2,7 +2,6 @@ package perks;
 
 import org.w3c.dom.Element;
 
-import combat.CombatMove;
 import perks.moveModifier.Move_Modifier;
 
 public class PerkMoveModifier extends PerkElement {
