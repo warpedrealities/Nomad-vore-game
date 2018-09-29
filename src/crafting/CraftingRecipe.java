@@ -14,7 +14,7 @@ import item.Item;
 import nomad.universe.Universe;
 import shared.ParserHelper;
 
-public class CraftingRecipe implements Comparable {
+public class CraftingRecipe implements Comparable<Object> {
 
 	private String name;
 
