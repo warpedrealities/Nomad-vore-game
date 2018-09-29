@@ -74,20 +74,11 @@ public class Player_RPG_moveHandler {
 		}
 	}
 
-	private boolean checkNameList(ArrayList<String> list, String name) {
-		for (int i = 0; i < list.size(); i++) {
-			if (list.equals(name)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
 	private void handleMoveModifier(ArrayList<CombatMove> moves, moveModifierInstance modifier,
 			ArrayList<String> list) {
 		CombatMove move = pickMove(moves, modifier);
 		// create modifiable move
-		if (!checkNameList(list, move.getMoveName())) {
+		if (!list.contains(move.getMoveName())) {
 			int d = moves.indexOf(move);
 			moves.remove(move);
 			move = move.clone();

@@ -62,7 +62,7 @@ public class FileTools {
 	public static void errorCheck(File origin, File destination) throws IOException {
 		Set<String> originList = new HashSet<String>(Arrays.asList(origin.list()));
 		Set<String> destinationList = new HashSet<String>(Arrays.asList(destination.list()));
-		originList.remove(destinationList);
+		originList.removeAll(destinationList);
 		// compare lists
 		Iterator<String> iterator = originList.iterator();
 		while (iterator.hasNext()) {
