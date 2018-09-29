@@ -75,6 +75,7 @@ public class ParserHelper {
 		while (reader.ready()) {
 			builder.append(reader.readLine());
 		}
+		reader.close();
 
 		return builder.toString();
 	}
