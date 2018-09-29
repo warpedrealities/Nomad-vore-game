@@ -1,6 +1,5 @@
 package actorRPG.npc;
 
-import java.util.Iterator;
 import java.util.TreeMap;
 
 import org.w3c.dom.Element;
@@ -46,11 +45,7 @@ public class NPCStatblockLibrary {
 
 	public void resetThreat()
 	{
-		Iterator it=statBlocks.values().iterator();
-		
-		while (it.hasNext())
-		{
-			NPC_RPG_statblock block=(NPC_RPG_statblock)it.next();
+		for (NPC_RPG_statblock block : statBlocks.values()) {
 			block.resetThreat();
 		}
 	}

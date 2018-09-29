@@ -26,8 +26,7 @@ public class MasterListGenerator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		return new ArrayList(map.values());
+		return new ArrayList<MasterListPref>(map.values());
 	}
 	
 	private void scanDirectory(String filename, Map<String,MasterListPref> map) throws FileNotFoundException

@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import shared.ParserHelper;
 
-public abstract class Item implements Comparable {
+public abstract class Item implements Comparable<Object> {
 
 	private int UID;
 	protected String m_name, shortName, m_description;

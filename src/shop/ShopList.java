@@ -64,7 +64,7 @@ public class ShopList {
 	}
 	
 	public void save(DataOutputStream dstream) throws IOException {
-		Set keyset = shopsRetained.keySet();
+		Set<String> keyset = shopsRetained.keySet();
 		Iterator<String> it = keyset.iterator();
 		int size = keyset.size();
 		dstream.writeInt(size);
