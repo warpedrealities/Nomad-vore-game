@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,7 +19,7 @@ public class CooldownHandler {
 	}
 
 	private MoveCooldown[] getRetainedCooldowns(MoveCooldown[] newMoves) {
-		cooldowns.remove(newMoves);
+		cooldowns.removeAll(Arrays.asList(newMoves));
 		MoveCooldown[] list = new MoveCooldown[cooldowns.size()];
 		int index = 0;
 		for (int i = 0; i < list.length; i++) {
