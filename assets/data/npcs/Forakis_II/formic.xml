@@ -23,7 +23,7 @@
 		<attribute attribute="KINETIC" value="2" />
 		<combatMove name="bite" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2">
-			<effectDamage type="KINETIC" minValue="0" maxValue="12"
+			<effectDamage type="KINETIC" minValue="0" maxValue="12" penetration="1"
 				modifier="STRENGTH" />
 			<missText count="1">
 				<text>TARGET evades a formic's bite</text>

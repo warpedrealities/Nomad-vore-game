@@ -5,13 +5,13 @@
 	</requirement>
 	<description>
 		You're able to unleash a mighty blow with all your force behind it. Reckless
-		it tends to be a tad less accurate though (*2 ap cost, +2 to damage,
+		it tends to be a tad less accurate though (*2 ap cost, +50% damage
 		weapon tag: P)
 	</description>
 	<weaponMove name="powerblow" bonusToHit="0" tag="P"
 		actionCost="2" moveType="FIGHT">
-		<change type="MOD">
-			<effectDamage type="KINETIC" minValue="2" maxValue="2"
+		<change type="MOD" proportionate="true">
+			<effectDamage type="KINETIC" minValue="50" maxValue="50"
 				modifier="STRENGTH" />
 		</change>
 	</weaponMove>

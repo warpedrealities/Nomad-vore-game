@@ -5,10 +5,10 @@
 	</requirement>
 	<description>
 		Sometimes the best way to attack is as frenzied as possible to overwhelm an
-		enemies defences, requires a melee weapon. +4 to hit, but double ap
+		enemies defences, requires a melee weapon. +4 to hit, no criticals, but double ap
 		cost.
 	</description>
-	<weaponMove name="vigorous attack" bonusToHit="4" tag="M"
+	<weaponMove name="vigorous attack" bonusToHit="4" tag="M" noCriticals="true"
 		actionCost="2" moveType="FIGHT">
 	</weaponMove>
 	<maxrank value="1" />
