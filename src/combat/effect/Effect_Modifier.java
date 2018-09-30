@@ -50,7 +50,7 @@ public class Effect_Modifier extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect,int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}

@@ -19,7 +19,7 @@ public class Move_Modifier {
 	int actionCost;
 	boolean basicAction = false;
 	private AttackPattern attackPattern;
-
+	private boolean noCriticals;
 	private ArrayList<Effect_Change> modifiers;
 
 	public Move_Modifier(Element Enode) {
@@ -33,6 +33,9 @@ public class Move_Modifier {
 		}
 		if (Enode.getAttribute("bonusToHit").length() > 0) {
 			attackBonus = Integer.parseInt(Enode.getAttribute("bonusToHit"));
+		}
+		if (Enode.getAttribute("noCriticals").equals("true")) {
+			noCriticals = true;
 		}
 		if (Enode.getAttribute("pattern").length() > 0) {
 			attackPattern = CombatMove.strToPattern(Enode.getAttribute("pattern"));
@@ -67,21 +70,22 @@ public class Move_Modifier {
 		}
 
 		move.setAttackPattern(attackPattern);
-
+		move.setNoCriticals(noCriticals);
 		int index = 0;
 		for (int i = 0; i < modifiers.size(); i++) {
 			if (modifiers.get(i).getType() == modifierType.ADD) {
 				move.getEffects().add(modifiers.get(i).getEffect());
 			} else if (modifiers.get(i).getEffect().getClass().isInstance(move.getEffects().get(index))) {
 
-				applyChange(move.getEffects().get(index), modifiers.get(i).getEffect(),rank);
+				applyChange(move.getEffects().get(index), modifiers.get(i).getEffect(), rank,
+						modifiers.get(i).isProportionate());
 				index++;
 			}
 		}
 	}
 
-	private void applyChange(Effect effect, Effect modifier,int rank) {
-		effect.applyChange(modifier,rank);
+	private void applyChange(Effect effect, Effect modifier, int rank, boolean proportionate) {
+		effect.applyChange(modifier, rank, proportionate);
 	}
 
 }

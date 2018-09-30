@@ -175,7 +175,7 @@ public class Menu extends SceneBase implements MyListener, Callback {
 			case 0:
 				// continue
 				if (Universe.getInstance().getPlaying() == true) {
-					Game.sceneManager.SwapScene(new ViewScene(SceneBase.getVariables(), Universe.getInstance()));
+					Game.sceneManager.SwapScene(new ViewScene());
 				}
 				break;
 			case 1:
@@ -215,7 +215,7 @@ public class Menu extends SceneBase implements MyListener, Callback {
 		int values[] = new int[4];
 		values[0] = m_textureIds[0];
 		values[1] = m_textureIds[1];
-		values[2] = m_textureIds[2];	
+		values[2] = m_textureIds[2];
 		values[3] = SceneBase.getVariables()[0];
 		m_screen.initialize(values, this);
 		m_screen.start(m_hook);

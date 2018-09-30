@@ -142,31 +142,31 @@ public class Effect_Status extends Effect {
 			boolean affect=false;
 			for (int i=0;i<effects.size();i++)
 			{
-				
-			
+
+
 				StatusEffect clone = effects.get(i).cloneEffect();
-	
+
 				float d = origin.getPosition().getDistance(target.getPosition());
 				if (d > 2 && rangedDecay > 0) {
 					float decay = d * rangedDecay;
 					clone.modifyStrength(decay, false);
-	
+
 					if (!clone.isEffective()) {
 						return 0;
 					}
-	
+
 				}
-	
+
 				if (proportionalEffect != null) {
-	
+
 					float m = target.getRPG().getStatMax(proportionalEffect.stat);
 					float v = target.getRPG().getStat(proportionalEffect.stat);
 					float p = v / m;
 					float fr = 1 - proportionalEffect.proportion;
 					clone.modifyStrength((p * proportionalEffect.proportion) + fr, true);
-	
+
 				}
-	
+
 				if (Status_Bind.class.isInstance(clone)) {
 					Status_Bind bind = (Status_Bind) clone;
 					bind.setOrigin(origin);
@@ -179,9 +179,9 @@ public class Effect_Status extends Effect {
 					clone.setOrigin(origin);
 					if (!b)
 					{
-						affect=true;	
+						affect=true;
 					}
-					
+
 				}
 			}
 			if (affect)
@@ -205,16 +205,16 @@ public class Effect_Status extends Effect {
 					clone.setOrigin(origin);
 					if (Status_Bind.class.isInstance(clone)) {
 						Status_Bind bind = (Status_Bind) clone;
-	
+
 					}
 					// apply
 					if (target.getRPG().applyStatus(clone, replaceStatus)) {
 						if (applyText!=null && applyText.length()>1)
 						{
-							ViewScene.m_interface.DrawText(applyText.replace("TARGET", target.getName()));		
-						}			
+							ViewScene.m_interface.DrawText(applyText.replace("TARGET", target.getName()));
+						}
 					}
-				
+
 				}
 				return 0;
 			}
@@ -248,7 +248,7 @@ public class Effect_Status extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect,int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}

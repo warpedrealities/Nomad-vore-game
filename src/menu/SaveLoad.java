@@ -17,7 +17,6 @@ import input.MouseHook;
 import nomad.universe.Universe;
 import shared.Callback;
 import shared.FileTools;
-import shared.SceneBase;
 import shared.Screen;
 import shared.Vec2f;
 import view.ViewScene;
@@ -36,7 +35,7 @@ public class SaveLoad extends Screen implements Callback {
 	private boolean textEntry;
 	private float clock;
 	private TextColoured text;
-	
+
 	public SaveLoad(int frame,int list, int button, int tint, boolean save, Callback callback) {
 		m_callback = callback;
 		clock = 0.5F;
@@ -66,9 +65,9 @@ public class SaveLoad extends Screen implements Callback {
 		text.setTint(1, 0, 0);
 
 		m_window.add(text);
-		
+
 		buildTemp();
-		
+
 		m_subWindow=new Window(new Vec2f(6.5F, -12), new Vec2f(8, 12), frame, true);
 		Button toggle = new Button(new Vec2f(1.5F, 0.25F), new Vec2f(5, 1.5F), button, this, "activate", 4);
 		m_subWindow.add(toggle);
@@ -79,7 +78,7 @@ public class SaveLoad extends Screen implements Callback {
 				+ "the start of the game but retain your perks and inventory"
 				+ " only use if you know what you're doing");
 	}
-	
+
 	void buildTemp()
 	{
 		File file = new File("saves/temp");
@@ -209,7 +208,7 @@ public class SaveLoad extends Screen implements Callback {
 					if (m_list.getSelect() < m_slots.length) {
 						if (!m_slots[m_list.getSelect()].equals("temp"))
 						{
-							Load(m_slots[m_list.getSelect()],false);				
+							Load(m_slots[m_list.getSelect()],false);
 						}
 					}
 				}
@@ -221,17 +220,17 @@ public class SaveLoad extends Screen implements Callback {
 				}
 				break;
 			case 4:
-				if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT) || 
+				if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT) ||
 						Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT))
 				{
 					if (m_slots != null) {
 						if (m_list.getSelect() < m_slots.length) {
 							if (!m_slots[m_list.getSelect()].equals("temp"))
 							{
-								Load(m_slots[m_list.getSelect()],true);				
+								Load(m_slots[m_list.getSelect()],true);
 							}
 						}
-					}				
+					}
 				}
 				break;
 			}
@@ -284,7 +283,7 @@ public class SaveLoad extends Screen implements Callback {
 		try {
 			Universe.getInstance().Load(filename,forceReset);
 			if (Universe.getInstance().getPlaying()) {
-				Game.sceneManager.SwapScene(new ViewScene(SceneBase.getVariables(), Universe.getInstance()));
+				Game.sceneManager.SwapScene(new ViewScene());
 			}
 		} catch (IOException e) {
 			text.setString("load failure");

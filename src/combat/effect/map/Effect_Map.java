@@ -13,8 +13,8 @@ public class Effect_Map extends Effect {
 	private int []thresholds;
 	private final static int VAGUE=0;
 	private final static int DETAIL=1;
-	private final static int PRECISE=2;	
-	
+	private final static int PRECISE=2;
+
 	public Effect_Map(Element e) {
 		attribute=RPG_Helper.AttributefromString(e.getAttribute("skill"));
 		thresholds=new int[3];
@@ -47,8 +47,8 @@ public class Effect_Map extends Effect {
 		}
 		if (strength>0)
 		{
-			
-		ViewScene.m_interface.replaceScreen(new MapScreen(strength));			
+
+			ViewScene.m_interface.replaceScreen(new MapScreen(strength));
 		}
 		else
 		{
@@ -66,7 +66,7 @@ public class Effect_Map extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect, int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}

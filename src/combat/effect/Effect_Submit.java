@@ -62,7 +62,7 @@ public class Effect_Submit extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect, int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}

@@ -17,7 +17,7 @@ import zone.Zone;
 public class Effect_Reinforce extends Effect {
 
 	private String filename;
-	private int min,max;	
+	private int min,max;
 	private char directions;
 	private int distance;
 	public Effect_Reinforce(Element e) {
@@ -63,18 +63,18 @@ public class Effect_Reinforce extends Effect {
 		{
 			number+=GameManager.m_random.nextInt(max-min);
 		}
-		
+
 		for (int i=0;i<number;i++)
 		{
-			Vec2f p=getPosition(origin.getPosition());	
+			Vec2f p=getPosition(origin.getPosition());
 			NPC npc=ViewScene.m_interface.createNPC(filename, p, true);
 			npc.setValue(0, (int)origin.getPosition().x);
 			npc.setValue(1, (int)origin.getPosition().y);
 		}
-		
+
 		return number;
 	}
-	
+
 	private int getDirection()
 	{
 		int r=GameManager.m_random.nextInt(4);
@@ -98,23 +98,23 @@ public class Effect_Reinforce extends Effect {
 				if ((directions & 4) !=0)
 				{
 					return r;
-				}	
+				}
 				break;
 			case 3:
 				if ((directions & 8) !=0)
 				{
 					return r;
 				}
-				break;			
+				break;
 			}
 			r=GameManager.m_random.nextInt(4);
 		}
 
 	}
-	
+
 	private Vec2f getPositionForDirection(Vec2f origin,int d)
 	{
-		
+
 		Vec2f p=ZoneInteractionHandler.getPos(d*2, new Vec2f(0,0));
 		Vec2f c=origin.replicate();
 		Zone z=Universe.getInstance().getCurrentZone();
@@ -129,7 +129,7 @@ public class Effect_Reinforce extends Effect {
 		}
 		return null;
 	}
-	
+
 	private Vec2f getPosition(Vec2f origin)
 	{
 		int d=getDirection();
@@ -154,9 +154,9 @@ public class Effect_Reinforce extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect, int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

@@ -81,7 +81,7 @@ public class Effect_Recover extends Effect {
 		}
 		if (m_description.length()>1)
 		{
-			ViewScene.m_interface.DrawText(m_description);		
+			ViewScene.m_interface.DrawText(m_description);
 		}
 		return value;
 	}
@@ -93,7 +93,7 @@ public class Effect_Recover extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect,int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}

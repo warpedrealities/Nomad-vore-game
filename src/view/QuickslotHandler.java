@@ -16,13 +16,13 @@ public class QuickslotHandler {
 
 	Universe gameUniverse;
 	Player player;
-	
+
 	public QuickslotHandler()
 	{
 		gameUniverse=Universe.getInstance();
 		player=gameUniverse.getPlayer();
 	}
-		
+
 	public void handle() {
 
 		Item item=player.getInventory().getSlot(Inventory.QUICK);
@@ -35,14 +35,14 @@ public class QuickslotHandler {
 			if (ItemConsumable.class.isInstance(item.getItem()))
 			{
 				handleConsumable(item);
-			}		
+			}
 			if (ItemAmmo.class.isInstance(item.getItem()))
 			{
 				handleAmmo(item);
 			}
 		}
-
 	}
+
 	private boolean DisposeAmmo(ItemHasEnergy def)
 	{
 		if (def.getEnergy().getRefill()==null)
@@ -51,18 +51,18 @@ public class QuickslotHandler {
 		}
 		return false;
 	}
-		
+
 	private void handleAmmo(Item item)
 	{
-		if (!ItemDepletableInstance.class.isInstance(item) || 
-			!ItemAmmo.class.isInstance(item.getItem()))
+		if (!ItemDepletableInstance.class.isInstance(item) ||
+				!ItemAmmo.class.isInstance(item.getItem()))
 		{
 			return;
 		}
 		if (ItemDepletableInstance.class.isInstance(player.getInventory().getSlot(Inventory.HAND)))
 		{
 			ItemDepletableInstance idi=(ItemDepletableInstance)player.getInventory().getSlot(Inventory.HAND);
-			
+
 			ItemHasEnergy ihe=(ItemHasEnergy)idi.getItem();
 			if (ihe.getEnergy()!=null && ihe.getEnergy().getMaxEnergy()>idi.getEnergy())
 			{
@@ -74,7 +74,7 @@ public class QuickslotHandler {
 						player.addBusy(1);
 						//drain item to try and replenish that which we're recharging
 						float Eneed=ihe.getEnergy().getMaxEnergy()-idi.getEnergy();
-						float Eavailable=((float)ammo.getEnergy())*ihe.getEnergy().getrefillrate();
+						float Eavailable=(ammo.getEnergy())*ihe.getEnergy().getrefillrate();
 						if (Eneed>=Eavailable)
 						{
 							//drain ammo entirely
@@ -106,16 +106,16 @@ public class QuickslotHandler {
 		player.addBusy(1);
 		ViewScene.m_interface.UpdateInfo();
 	}
-	
+
 	private void handleConsumable(Item item) {
 		if (item.getItem().getClass().getName().contains("Consumable"))
 		{
 			ItemConsumable consumable=(ItemConsumable)item.getItem();
 			for (int i=0;i<consumable.getNumEffects();i++)
 			{
-				player.ApplyEffect(consumable.getEffect(i));	
-			
-			}			
+				player.ApplyEffect(consumable.getEffect(i));
+
+			}
 			player.addBusy(2);
 			player.getInventory().setWeight(player.getInventory().getWeight()-item.getItem().getWeight());
 			if (ItemStack.class.isInstance(item))
@@ -125,9 +125,9 @@ public class QuickslotHandler {
 				if (stack.getCount()<=0)
 				{
 					player.getInventory().setSlot(null, Inventory.QUICK);
-					
+
 				}
-				
+
 			}
 			else
 			{
@@ -137,6 +137,6 @@ public class QuickslotHandler {
 		}
 	}
 
-	
+
 
 }

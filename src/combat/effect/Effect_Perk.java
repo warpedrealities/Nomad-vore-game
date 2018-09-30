@@ -38,7 +38,7 @@ public class Effect_Perk extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect,int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}

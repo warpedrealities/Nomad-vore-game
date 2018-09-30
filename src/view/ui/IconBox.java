@@ -1,4 +1,4 @@
-package view;
+package view.ui;
 
 import java.nio.FloatBuffer;
 import java.util.ArrayList;

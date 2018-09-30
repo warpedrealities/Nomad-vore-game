@@ -17,8 +17,8 @@ public class Config {
 	private boolean verboseCombat;
 	private boolean disableAutosave;
 	protected Matrix4f matrix;
-	public static final int VERSION = 303;
-	
+	public static final int VERSION = 310;
+
 	public Config() {
 		// open config file
 		// read
@@ -70,7 +70,7 @@ public class Config {
 		matrix.m00 = 0.05F;
 		matrix.m11 = 0.0625F*yScale;
 		matrix.m22 = 1.0F;
-		matrix.m33 = 1.0F;	
+		matrix.m33 = 1.0F;
 		matrix.m31 = 0;
 		matrix.m32 = 0;
 	}
@@ -81,7 +81,7 @@ public class Config {
 		Matrix4f.load(matrix, r);
 		return r;
 	}
-	
+
 	public float getScale() {
 		return m_scale;
 	}

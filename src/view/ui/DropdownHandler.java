@@ -1,9 +1,11 @@
-package view;
+package view.ui;
 
 import actor.player.Player;
 import actorRPG.player.Player_RPG;
 import gui.Button2;
-import gui.DropDown;;
+import gui.DropDown;
+import view.ViewScene;
+import view.ViewScene.ViewMode;;
 
 public class DropdownHandler {
 

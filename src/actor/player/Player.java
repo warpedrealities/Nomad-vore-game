@@ -79,7 +79,7 @@ public class Player extends Actor {
 	NPC[] companionSlots;
 
 	private ReformationHandler reformHandler;
-	
+
 	public void reCalc() {
 		if (actorRPG != null) {
 			int leadership = actorRPG.getAttribute(Actor_RPG.LEADERSHIP);
@@ -143,12 +143,12 @@ public class Player extends Actor {
 		actorVisibility = true;
 
 		craftingLibrary = new CraftingLibrary();
-	//	craftingLibrary.load();
+		//	craftingLibrary.load();
 
 		globalFlags = new FlagField();
 
 		actorFaction = FactionLibrary.getInstance().getFaction("player");
-		
+
 		reformHandler=new ReformationHandler();
 	}
 
@@ -224,17 +224,17 @@ public class Player extends Actor {
 
 		return false;
 	}
-	
+
 	@Override
 	public boolean move(int direction) {
-		
+
 		boolean b = false;
 		Vec2f p = ZoneInteractionHandler.getPos(direction, getPosition());
 		Actor actor = Universe.getInstance().getCurrentZone().getActor((int) p.x, (int) p.y);
 		if (actor != null && NPC.class.isInstance(actor)) {
 			if (actor.isBlocking() == false) {
 				actor.setPosition(new Vec2f(actorPosition.x, actorPosition.y));
-				collisionInterface.getTile((int) p.x, (int) p.y).setActorInTile(null);	
+				collisionInterface.getTile((int) p.x, (int) p.y).setActorInTile(null);
 				b = super.move(direction);
 				collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(actor);
 			} else {
@@ -245,18 +245,18 @@ public class Player extends Actor {
 			}
 
 		}
-		//check for threat	
+		//check for threat
 		if (collisionInterface.passable((int) p.x, (int) p.y + 1, getFlying()))
 		{
 			Tile t=collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y);
 			if (t.getThreat()!=null)
 			{
 				((NPC)t.getThreat()).attackOfOpportunity(this);
-			}			
+			}
 		}
 		b = super.move(direction);
 		if (b == true) {
-		
+
 			if (actorRPG.getSubAbility(Actor_RPG.MOVEAPCOST) > 0) {
 				((Player_RPG) actorRPG).useAction((int) actorRPG.getSubAbility(Actor_RPG.MOVEAPCOST));
 				if (actorRPG.getStat(Actor_RPG.ACTION) <= 0) {
@@ -354,12 +354,12 @@ public class Player extends Actor {
 		if (playerInventory!=null)
 		{
 			moveCost = (int) (Math.pow(playerInventory.getEncumbrance(),2) + ((Player_RPG) actorRPG).getSubAbility(Actor_RPG.MOVECOST));
-				
+
 		}
 		else
 		{
 			moveCost=2;
-		}	
+		}
 	}
 
 	public Item Equip(int slot, Item item) {
@@ -370,7 +370,7 @@ public class Player extends Actor {
 				ItemEquip Eitem=(ItemEquip)playerInventory.m_slots[slot].getItem();
 				if (Eitem.getModifier()!=null)
 				{
-					actorRPG.RemoveModifier(Eitem.getModifier());			
+					actorRPG.RemoveModifier(Eitem.getModifier());
 				}
 
 			}
@@ -411,7 +411,7 @@ public class Player extends Actor {
 				Player_RPG rpg = (Player_RPG) actorRPG;
 				rpg.removeEquipStatus(5 + slot);
 				rpg.genMoveList();
-			}		
+			}
 			return r_item;
 		}
 		return null;
@@ -577,7 +577,7 @@ public class Player extends Actor {
 		DataInputStream dstream = new DataInputStream(fstream);
 		Load(dstream);
 		actorDescription = "This, is you.";
-		
+
 		dstream.close();
 		fstream.close();
 
@@ -625,6 +625,11 @@ public class Player extends Actor {
 		rpg.setMove(index);
 	}
 
+	public CombatMove getCurrentMove() {
+		int index = ((Player_RPG) actorRPG).getMoveChoice();
+		return ((Player_RPG) actorRPG).getCombatMove(index);
+	}
+
 	public CombatMove getMove(int index) {
 		if (index < ((Player_RPG) actorRPG).getNumMoves()) {
 			return ((Player_RPG) actorRPG).getCombatMove(index);
@@ -648,12 +653,12 @@ public class Player extends Actor {
 			ViewScene.m_interface.PlayerBeaten((NPC) victor, resolve);
 		} else if (Player.class.isInstance(victor)) {
 			Game.sceneManager
-					.SwapScene(new GameOver(SceneBase.getVariables(), "you have managed to slay yourself somehow",null,false));
+			.SwapScene(new GameOver(SceneBase.getVariables(), "you have managed to slay yourself somehow",null,false));
 		}
 		if (victor==null)
 		{
 			Game.sceneManager
-			.SwapScene(new GameOver(SceneBase.getVariables(), "you have died under mysterious circumstances",null,true));			
+			.SwapScene(new GameOver(SceneBase.getVariables(), "you have died under mysterious circumstances",null,true));
 		}
 	}
 
@@ -733,11 +738,11 @@ public class Player extends Actor {
 		if (b == true) {
 			if (move.getOverrideCooldown()!=null)
 			{
-				handler.useMove(move.getOverrideCooldown());	
+				handler.useMove(move.getOverrideCooldown());
 			}
 			else
 			{
-				handler.useMove(move.getMoveName());			
+				handler.useMove(move.getMoveName());
 			}
 			if (slot == -1) {
 				if (ItemStack.class.isInstance((playerInventory).getSlot(0))) {

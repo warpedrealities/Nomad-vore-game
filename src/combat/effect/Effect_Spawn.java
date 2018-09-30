@@ -12,9 +12,9 @@ public class Effect_Spawn extends Effect {
 	private String description;
 	public Effect_Spawn()
 	{
-		
+
 	}
-	
+
 	public Effect_Spawn(Element e) {
 		filename=e.getAttribute("value");
 		description = e.getTextContent().replace("\n", "");
@@ -37,7 +37,7 @@ public class Effect_Spawn extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect, int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}

@@ -17,6 +17,7 @@ import actorRPG.npc.NPCStatblockLibrary;
 import description.BodyLoader;
 import faction.FactionLibrary;
 import nomad.StarSystem;
+import nomad.universe.actionBar.ActionBarData;
 import nomad.universe.salvageShip.SalvageShip;
 import shared.FileTools;
 import shared.ParserHelper;
@@ -29,19 +30,19 @@ import vmo.Game;
 public class UniverseStateChanger {
 
 	private Universe universe;
-	
+
 	public UniverseStateChanger(Universe universe)
 	{
-		this.universe=universe;	
+		this.universe=universe;
 	}
-	
+
 	public void LoadUniverse()
 	{
 		universe.getStarSystems().clear();
 		Document doc=ParserHelper.LoadXML("assets/data/universe.xml");
 		//read through the top level nodes
 		Element root=doc.getDocumentElement();
-	    Element n=(Element)doc.getFirstChild();
+		Element n=(Element)doc.getFirstChild();
 		NodeList children=n.getChildNodes();
 		for (int i=0;i<children.getLength();i++)
 		{
@@ -56,11 +57,11 @@ public class UniverseStateChanger {
 							Integer.parseInt(Enode.getAttribute("y"))
 							));
 				}
-								
-			}	
+
+			}
 		}
 	}
-	
+
 	private boolean versionCheck(int version)
 	{
 		if (version!=Config.VERSION)
@@ -73,13 +74,14 @@ public class UniverseStateChanger {
 	private void versionShift(String filename) throws IOException
 	{
 		universe.setSaveName(null);
-		
+
 
 		universe.getUIDGenerator().reset();
 		//load player
 		//load player
 		Player player=new Player();
 		universe.setPlayer(player);
+		universe.actionBarData = new ActionBarData();
 		player.Load(filename);
 		FactionLibrary.getInstance().clean();
 		//remove flags from player
@@ -90,14 +92,14 @@ public class UniverseStateChanger {
 		if (!salvageShip(filename))
 		{
 			startGame(true);
-		}		
-		
+		}
+
 		File file=new File("saves/"+filename);
 		FileTools.deleteFolder(file);
 		file.mkdir();
 	}
-		
-	
+
+
 	private boolean salvageShip(String filename) throws IOException {
 		SalvageShip salvager=new SalvageShip();
 		Spaceship ship=salvager.salvageShip(filename);
@@ -105,14 +107,14 @@ public class UniverseStateChanger {
 		{
 			LoadUniverse();
 			ship.setUID(-1);
-			
+
 			startGame(true);
-			
+
 			universe.setCurrentEntity(ship);
 			universe.setCurrentZone(ship.getZone(0));
 			ship.setPosition(new Vec2f(0,-20));
 			universe.getCurrentStarSystem().getEntities().add(ship);
-			
+
 			return true;
 		}
 		return false;
@@ -130,12 +132,12 @@ public class UniverseStateChanger {
 
 
 		//load system list
-		LoadUniverse();	
+		LoadUniverse();
 		//version
 		int version=dstream.readInt();
 		if (versionCheck(version)||forceReset)
 		{
-			versionShift(filename);	
+			versionShift(filename);
 			dstream.close();
 			return;
 		}
@@ -164,20 +166,20 @@ public class UniverseStateChanger {
 
 		//load current zone
 		String z=ParserHelper.LoadString(dstream);
-	
+
 		//load shops
 		ShopList list=ShopList.getInstance();
 		ShopList.getInstance().load(dstream);
 		int safety=dstream.readInt();
 		//load factions
 		FactionLibrary factions=FactionLibrary.getInstance();
-		factions.load(dstream);	
-		
+		factions.load(dstream);
+
 		//generate system
 		universe.getCurrentStarSystem().GenerateSystem(false);
 		universe.getCurrentStarSystem().load(filename);
-		
-		
+
+
 		//find current entity
 		StarSystem currentStarSystem=universe.getCurrentStarSystem();
 		for (int i=0;i<currentStarSystem.entitiesInSystem.size();i++)
@@ -187,32 +189,35 @@ public class UniverseStateChanger {
 				universe.setCurrentEntity(currentStarSystem.entitiesInSystem.get(i));
 				break;
 			}
-		}	
-		
-		//generate entity	
+		}
+
+		//generate entity
 		universe.getCurrentEntity().Generate();
 		universe.setCurrentZone(universe.getCurrentEntity().getZone(z));
 		//generate zone
 		universe.getCurrentZone().LoadZone();
-		
+
 		//load player
 		universe.setPlayer(new Player());
 		universe.getPlayer().Load(filename);
 
-	
+
 		safety=dstream.readInt();
 		CompanionTool.loadCompanions(universe.getPlayer(), universe.getCurrentZone());
 		universe.getUIDGenerator().reset();
-		universe.getUIDGenerator().load(dstream);	
+		universe.getUIDGenerator().load(dstream);
+
+		universe.actionBarData = new ActionBarData(dstream);
+
 		dstream.close();
 		fstream.close();
 	}
-	
+
 	public void startGame(boolean worldOnly)
 	{
 		Document doc=ParserHelper.LoadXML("assets/data/start.xml");
 		Element root=doc.getDocumentElement();
-		Element n=(Element)doc.getFirstChild();	
+		Element n=(Element)doc.getFirstChild();
 		NodeList children=n.getChildNodes();
 
 		List<StarSystem> starSystems=universe.getStarSystems();
@@ -247,23 +252,23 @@ public class UniverseStateChanger {
 							universe.getCurrentEntity().Generate();
 						}
 					}
-					
+
 				}
 				if (Enode.getTagName().equals("zone"))
 				{
 					//set starting zone
 					universe.setCurrentZone(universe.getCurrentEntity().getZone(Enode.getAttribute("value")));
-					universe.getCurrentZone().LoadZone();	
+					universe.getCurrentZone().LoadZone();
 				}
 				if (!worldOnly && Enode.getTagName().equals("position"))
 				{
-					//set starting coordinates		
+					//set starting coordinates
 					universe.setPlayer(new Player(new Vec2f(Integer.parseInt(Enode.getAttribute("x")),
 							Integer.parseInt(Enode.getAttribute("y")))));
 				}
 				if (worldOnly && Enode.getTagName().equals("position"))
 				{
-					//set starting coordinates		
+					//set starting coordinates
 					universe.getPlayer().setPosition(new Vec2f(Integer.parseInt(Enode.getAttribute("x")),
 							Integer.parseInt(Enode.getAttribute("y"))));
 				}
@@ -271,7 +276,7 @@ public class UniverseStateChanger {
 				{
 					//set items
 					String value=Enode.getAttribute("value");
-					universe.getPlayer().getInventory().AddItem(universe.getLibrary().getItem(value));		
+					universe.getPlayer().getInventory().AddItem(universe.getLibrary().getItem(value));
 				}
 				if (!worldOnly && Enode.getTagName().equals("appearance"))
 				{

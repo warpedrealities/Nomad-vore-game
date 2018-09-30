@@ -14,8 +14,8 @@ import nomad.Entity;
 import nomad.Preferences;
 import nomad.StarSystem;
 import nomad.UIDGenerator;
-import nomad.World;
 import nomad.integrityChecking.SaveIntegrityCheck;
+import nomad.universe.actionBar.ActionBarData;
 import shared.FileTools;
 import shared.ParserHelper;
 import shop.ShopList;
@@ -25,11 +25,11 @@ import vmo.Game;
 import vmo.GameManager;
 import zone.Zone;
 
-public class Universe extends GameManager 
+public class Universe extends GameManager
 {
 	private UIDGenerator uidGenerator;
 
-	
+
 	public static Universe universeInstance;
 
 	public ArrayList <StarSystem> starSystems;
@@ -37,19 +37,20 @@ public class Universe extends GameManager
 	private Entity currentEntity;
 	public Zone currentZone;
 	public Player player;
+	ActionBarData actionBarData;
 	String saveName;
-	
+
 	boolean isPlaying;
-	
+
 	ItemLibrary itemLibrary;
-	
+
 	Preferences preferences;
 
 	static public Universe getInstance()
 	{
 		return universeInstance;
 	}
-	
+
 	public UIDGenerator getUIDGenerator() {
 		if (uidGenerator==null)
 		{
@@ -62,7 +63,7 @@ public class Universe extends GameManager
 	{
 		return preferences;
 	}
-	
+
 	public Universe()
 	{
 		universeInstance=this;
@@ -74,12 +75,12 @@ public class Universe extends GameManager
 	{
 		return itemLibrary;
 	}
-	
+
 	public Player getPlayer()
 	{
 		return player;
 	}
-		
+
 	public StarSystem getCurrentStarSystem() {
 		return currentStarSystem;
 	}
@@ -103,6 +104,7 @@ public class Universe extends GameManager
 	@Override
 	public void Newgame()
 	{
+		actionBarData = new ActionBarData();
 		getUIDGenerator().reset();
 		saveName=null;
 		starSystems=new ArrayList<StarSystem>();
@@ -112,14 +114,14 @@ public class Universe extends GameManager
 		stateChanger.LoadUniverse();
 		stateChanger.startGame(false);
 	}
-	
 
-	
+
+
 	public void GameOver()
 	{
 		isPlaying=false;
 	}
-	
+
 	public void setPlaying(boolean isPlaying) {
 		this.isPlaying = isPlaying;
 	}
@@ -128,44 +130,44 @@ public class Universe extends GameManager
 	{
 		return isPlaying;
 	}
-	
+
 	public void setZone(Zone zone)
 	{
 		currentZone=zone;
 	}
-	
+
 	public void setCurrentEntity(Entity entity)
 	{
 		currentEntity=entity;
 	}
-	
+
 	public Entity getCurrentWorld(Spaceship ship)
 	{
 		for (int i=0;i<currentStarSystem.entitiesInSystem.size();i++)
 		{
-				if (currentStarSystem.entitiesInSystem.get(i).getPosition().x==ship.getPosition().x
-						&&
-						currentStarSystem.entitiesInSystem.get(i).getPosition().y==ship.getPosition().y
-						)
+			if (currentStarSystem.entitiesInSystem.get(i).getPosition().x==ship.getPosition().x
+					&&
+					currentStarSystem.entitiesInSystem.get(i).getPosition().y==ship.getPosition().y
+					)
+			{
+				if (currentStarSystem.entitiesInSystem.get(i).getClass().getName().contains("World"))
 				{
-					if (currentStarSystem.entitiesInSystem.get(i).getClass().getName().contains("World"))
-					{
-						return (World)currentStarSystem.entitiesInSystem.get(i);			
-					}
-					if (currentStarSystem.entitiesInSystem.get(i).getClass().getName().contains("Spaceship"))
-					{
-						return currentStarSystem.entitiesInSystem.get(i);			
-					}
-					if (currentStarSystem.entitiesInSystem.get(i).getClass().getName().contains("Station"))
-					{
-						return currentStarSystem.entitiesInSystem.get(i);
-					}
+					return currentStarSystem.entitiesInSystem.get(i);
 				}
+				if (currentStarSystem.entitiesInSystem.get(i).getClass().getName().contains("Spaceship"))
+				{
+					return currentStarSystem.entitiesInSystem.get(i);
+				}
+				if (currentStarSystem.entitiesInSystem.get(i).getClass().getName().contains("Station"))
+				{
+					return currentStarSystem.entitiesInSystem.get(i);
+				}
+			}
 		}
 		return null;
-		
+
 	}
-	
+
 	public Entity getCurrentEntity() {
 		return currentEntity;
 	}
@@ -187,7 +189,7 @@ public class Universe extends GameManager
 			//currentEntity=(Entity)z.zoneEntity;
 			return z;
 		}
-		
+
 		for (int i=0;i<currentStarSystem.entitiesInSystem.size();i++)
 		{
 			if (currentEntity!=currentStarSystem.entitiesInSystem.get(i))
@@ -207,7 +209,7 @@ public class Universe extends GameManager
 						}
 					}
 				}
-	
+
 			}
 		}
 		return null;
@@ -237,17 +239,17 @@ public class Universe extends GameManager
 	{
 		File temp=new File("saves/temp");
 		File newSave=new File("saves/"+filename);
-		
+
 		//copy all files from savename folder
 		//and copy them to the filename folder
-		FileTools.copyFolder(temp, newSave);		
+		FileTools.copyFolder(temp, newSave);
 	}
-	
+
 	public String getSaveName()
 	{
 		return saveName;
 	}
-	
+
 	public char autoSave() throws IOException
 	{
 		if (!Game.sceneManager.getConfig().isDisableAutosave())
@@ -255,7 +257,7 @@ public class Universe extends GameManager
 			File file=new File("saves/autosave");
 			if (!file.exists())
 			{
-				
+
 				file.mkdir();
 			}
 			if (save("autosave"))
@@ -266,11 +268,11 @@ public class Universe extends GameManager
 			{
 				return 1;
 			}
-	
+
 		}
 		return 0;
 	}
-	
+
 	void buildTemp()
 	{
 		File file = new File("saves/temp");
@@ -284,8 +286,8 @@ public class Universe extends GameManager
 
 	private void saveRoutine(String filename) throws IOException
 	{
-	
-		
+
+
 		File file=new File("saves/"+filename+"/verse.sav");
 		if (file.exists()==false)
 		{
@@ -293,7 +295,7 @@ public class Universe extends GameManager
 		}
 		FileOutputStream fstream=new FileOutputStream(file);
 		DataOutputStream dstream=new DataOutputStream(fstream);
-		
+
 		//save version
 		dstream.writeInt(Config.VERSION);
 		//save time
@@ -302,7 +304,7 @@ public class Universe extends GameManager
 		//save config
 		dstream.writeBoolean(Game.sceneManager.getConfig().isVerboseCombat());
 		dstream.writeBoolean(Game.sceneManager.getConfig().isDisableAutosave());
-	
+
 		//save current system name
 		ParserHelper.SaveString(dstream, currentStarSystem.getName());
 		//save current entity name
@@ -314,7 +316,7 @@ public class Universe extends GameManager
 		ShopList.getInstance().save(dstream);
 		//save player
 		player.Save(filename);
-		//save systems		
+		//save systems
 		for (int i=0;i<starSystems.size();i++)
 		{
 			starSystems.get(i).Save(filename);
@@ -322,20 +324,22 @@ public class Universe extends GameManager
 
 		dstream.writeInt(42);
 		//save faction library
-		FactionLibrary.getInstance().save(dstream);		
-		
+		FactionLibrary.getInstance().save(dstream);
+
 		dstream.writeInt(42);
 		//save ship uid
 		uidGenerator.save(dstream);
-		
+
+		actionBarData.save(dstream);
+
 		dstream.close();
 		fstream.close();
 	}
-	
+
 	public boolean save(String filename) throws IOException
 	{
 		buildTemp();
-//		String saveRetain=saveName;
+		//		String saveRetain=saveName;
 		saveRoutine("temp");
 		SaveIntegrityCheck check=new SaveIntegrityCheck("temp",this);
 		if (check.isOkay())
@@ -346,13 +350,13 @@ public class Universe extends GameManager
 				FileTools.deleteFolder(file);
 				if (!file.mkdir())
 				{
-					
+
 					throw new IOException("failed to create new save directory");
 				}
 			}
 			saveCopy(filename);
 			copyTemp(filename);
-			saveName=filename;		
+			saveName=filename;
 			return true;
 		}
 		else
@@ -370,13 +374,15 @@ public class Universe extends GameManager
 		FactionLibrary.getInstance().clean();
 		starSystems=new ArrayList<StarSystem>();
 		saveName=filename;
-		
+
 		//load system list
 		UniverseStateChanger stateChanger=new UniverseStateChanger(this);
 		stateChanger.LoadUniverse();
 		//version
 		stateChanger.loadGame(filename, forceReset);
 		isPlaying=true;
+
+
 	}
 
 	public Zone getCurrentZone() {
@@ -394,7 +400,7 @@ public class Universe extends GameManager
 
 	public StarSystem getcurrentSystem() {
 		return currentStarSystem;
-		
+
 	}
 
 	public void setPlayer(Player player) {
@@ -413,13 +419,16 @@ public class Universe extends GameManager
 			{
 				File oldSave=new File("saves/"+saveName);
 				File newSave=new File("saves/"+filename);
-				
+
 				//copy all files from savename folder
 				//and copy them to the filename folder
 				FileTools.copyFolderOverwrite(oldSave, newSave);
-			}		
+			}
 		}
 	}
-	
-	
+
+	public ActionBarData getActionBarData() {
+		return actionBarData;
+	}
+
 }

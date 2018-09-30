@@ -49,11 +49,8 @@ import static org.lwjgl.opengl.GL11.glViewport;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintStream;
 
 import org.lwjgl.glfw.Callbacks;
 import org.lwjgl.glfw.GLFW;
@@ -92,6 +89,7 @@ public class Game implements SceneManager {
 
 	// public static float m_scale;
 
+	@Override
 	public Config getConfig() {
 		return graphicsConfiguration;
 	}
@@ -104,22 +102,23 @@ public class Game implements SceneManager {
 
 		sceneManager = this;
 		graphicsConfiguration = new Config();
-//		
-		  try { System.setErr(new PrintStream(new
-		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
-		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
-//		
-		
+		//
+		//		  try { System.setErr(new PrintStream(new
+		//		  FileOutputStream(System.getProperty("user.dir")+"/error.log"))); }
+		//		  catch (FileNotFoundException ex) { ex.printStackTrace(); }
+		//
+
 		// Initialize GLFW. Most GLFW functions will not work before doing this.
-		if (!glfwInit())
+		if (!glfwInit()) {
 			throw new IllegalStateException("Unable to initialize GLFW");
+		}
 		// Configure our window
 		glfwDefaultWindowHints(); // optional, the current window hints are
-									// already the default
+		// already the default
 		glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE); // the window will stay hidden
-													// after creation
+		// after creation
 		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE); // the window will be
-													// resizable
+		// resizable
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
@@ -177,17 +176,17 @@ public class Game implements SceneManager {
 		SceneBase.setVariables(var);
 		m_currentscene = new Menu(var);
 
-	//	universe.Newgame();
-//		universe.Newgame();
-//		Spaceship ships[]=new Spaceship[1];
-//		ships[0]=new Spaceship("sloop",2,2,ShipState.SPACE);
-//		
-//		Document doc=ParserHelper.LoadXML("assets/data/shipControllers/pirateSloop.xml");
-//		//read through the top level nodes
-//		Element root=doc.getDocumentElement();
-//			
-//		ships[0].setShipController(new NpcShipController(root));
-//		m_currentscene = new SpaceEncounter((Spaceship)universe.getCurrentEntity(), ships);
+		//	universe.Newgame();
+		//		universe.Newgame();
+		//		Spaceship ships[]=new Spaceship[1];
+		//		ships[0]=new Spaceship("sloop",2,2,ShipState.SPACE);
+		//
+		//		Document doc=ParserHelper.LoadXML("assets/data/shipControllers/pirateSloop.xml");
+		//		//read through the top level nodes
+		//		Element root=doc.getDocumentElement();
+		//
+		//		ships[0].setShipController(new NpcShipController(root));
+		//		m_currentscene = new SpaceEncounter((Spaceship)universe.getCurrentEntity(), ships);
 
 
 		GL11.glDepthFunc(GL_LEQUAL);
@@ -321,7 +320,7 @@ public class Game implements SceneManager {
 			double dt = t - m_lastframe;
 			if (dt > 0.016F) {
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the
-																	// framebuffer
+				// framebuffer
 				Update(dt);
 				m_lastframe = t;
 				glfwSwapBuffers(openGLWindow); // swap the color buffers

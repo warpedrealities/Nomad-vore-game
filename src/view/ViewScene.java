@@ -50,6 +50,11 @@ import shared.Scene_Int;
 import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
+import view.ui.ActionBar;
+import view.ui.CooldownDisplay;
+import view.ui.DropdownHandler;
+import view.ui.HandReader;
+import view.ui.IconBox;
 import vmo.Game;
 import vmo.GameManager;
 import widgets.Widget;
@@ -63,10 +68,10 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	public static ModelController_Int m_interface;
 
 	/*
-	 * booleans determine whether to run the 'handle closure' tool for when the player leaves a selection 
+	 * booleans determine whether to run the 'handle closure' tool for when the player leaves a selection
 	 * screen without clicking an option by moving the mouse outside the window, do not set special(true)
 	 */
-	enum ViewMode {
+	public enum ViewMode {
 		SELECT(true), FIGHT(true), DOMINATE(true), MOVEMENT(true), OTHER(true), LOOK(false), INTERACT(false), ATTACK(
 				false), SPECIAL(false);
 		boolean value;
@@ -102,6 +107,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	boolean m_disabled;
 	IconBox statusDisplay;
 	CooldownDisplay cooldownDisplay;
+	ActionBar actionBar;
 	Targeting targeter;
 	Screen_Fade screenFade;
 
@@ -209,7 +215,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		cooldownDisplay.redraw();
 		targeter = new Targeting();
 		screenFade = new Screen_Fade(this);
-		
+
 	}
 
 	@Override
@@ -244,7 +250,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		Setup();
 
 		m_text = new TextView(m_textureIds[1], new Vec2f(-20, -16.0F), new Vec2f(40, 15), SceneBase.getVariables()[0]);
-		m_window = new Window(new Vec2f(3, -1), new Vec2f(17, 17), m_textureIds[0], true);
+		m_window = new Window(new Vec2f(5, -1), new Vec2f(15, 17), m_textureIds[0], true);
 		if (sceneController.getActiveZone().zoneDescription != null) {
 			m_text.AddText(sceneController.getActiveZone().zoneDescription);
 			m_text.BuildStrings();
@@ -278,10 +284,10 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 				break;
 			}
 
-			m_buttons[i] = new Button2(new Vec2f(8.5F, 6.5F - (i * 2)), new Vec2f(8, 2), m_textureIds[7], this, str1, i,
+			m_buttons[i] = new Button2(new Vec2f(8.5F, 6.5F - (i * 2)), new Vec2f(6, 2), m_textureIds[7], this, str1, i,
 					m_textureIds[8], 1.2F);
 			if (i < 4) {
-				m_bars[i] = new BarFrame(new Vec2f(8.5F, 15.7F - (i * 1.0F)), str,
+				m_bars[i] = new BarFrame(new Vec2f(7.5F, 15.7F - (i * 1.0F)), str,
 						sceneController.getUniverse().player.getRPG().getStat(i),
 						sceneController.getUniverse().player.getRPG().getStatMax(i), 1 + i, m_textureIds[6]);
 				m_window.add(m_bars[i]);
@@ -316,21 +322,23 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		cooldownDisplay = new CooldownDisplay(new Vec2f(1, 11.9F));
 		m_window.add(cooldownDisplay);
 		m_window.add(statusDisplay);
-
+		actionBar = new ActionBar(new Vec2f(2.5F, -1), m_textureIds);
 		redrawBars();
 		LinkSenses();
 		cooldownDisplay.redraw();
 		targeter = new Targeting();
-		screenFade = new Screen_Fade(this);		
+		screenFade = new Screen_Fade(this);
+
+
 		sceneController.getActiveZone().updateZoneEnvironment(sceneController.getUniverse().getPlayer());
 	}
-	
+
 	public ViewScene() {
-		 commonConstruct();
+		commonConstruct();
 	}
 
 	public ViewScene(ArrayList<String> strings) {
-		 commonConstruct();
+		commonConstruct();
 		m_text.AddTexts(strings);
 	}
 
@@ -364,9 +372,10 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_textureIds[6] = Tools.loadPNGTexture("assets/art/bars.png", GL13.GL_TEXTURE0);
 		m_textureIds[7] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
 		m_textureIds[8] = Tools.loadPNGTexture("assets/art/button1.png", GL13.GL_TEXTURE0);
-		m_textureIds[9] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);	
+		m_textureIds[9] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);
 	}
 
+	@Override
 	public void redrawBars() {
 		for (int i = 0; i < 4; i++) {
 			m_bars[i].setValue(sceneController.getUniverse().player.getRPG().getStat(i));
@@ -374,7 +383,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 		statusDisplay.redraw();
 		cooldownDisplay.redraw();
-
+		actionBar.reset();
 	}
 
 	void addTime() {
@@ -415,8 +424,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 						if (sceneController.getUniverse().player.Control() || Click()) {
 							if (TransitionCheck() == false) {
 								sceneController.getActiveZone().zoneTileGrid[(int) sceneController.getUniverse().player
-										.getPosition().x][(int) sceneController.getUniverse().player.getPosition().y]
-												.Step();
+								                                             .getPosition().x][(int) sceneController.getUniverse().player.getPosition().y]
+								                                            		 .Step();
 								m_viewmatrix.m30 = 0;
 								m_viewmatrix.m31 = 0;
 
@@ -426,7 +435,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 								sceneController.getActiveZone().ClearVisibleTiles();
 								GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 										(int) sceneController.getUniverse().player.getPosition().x,
-										(int) sceneController.getUniverse().player.getPosition().y, 
+										(int) sceneController.getUniverse().player.getPosition().y,
 										(int)(10.0F*sceneController.getActiveZone().getVisionMultiplier()));
 								m_view.vision(sceneController.getActiveZone(),
 										sceneController.getActiveZone().zoneActors,
@@ -462,13 +471,23 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		{
 			if (!m_buttons[4].getVisible())
 			{
-				m_buttons[4].setActive(true);						
+				m_buttons[4].setActive(true);
 			}
-			m_window.update(dt);			
+			m_window.update(dt);
+			int actionBarStatus = actionBar.update(dt);
+			if (actionBarStatus == 1) {
+				UpdateInfo();
+				actionBar.setUpdateAction(0);
+			}
+			if (actionBarStatus == 2) {
+				m_mode = ViewMode.SPECIAL;
+				m_buttons[4].setString(sceneController.getUniverse().getPlayer().getCurrentMove().getMoveName());
+				actionBar.setUpdateAction(0);
+			}
 		}
 		else
 		{
-			m_buttons[4].setActive(false);		
+			m_buttons[4].setActive(false);
 		}
 		if (m_dropdown.getVisible() == false && m_mode.getValue()) {
 			m_mode = DropdownHandler.handleClosure(m_mode, Universe.getInstance().getPlayer(), m_buttons[4]);
@@ -531,6 +550,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		return false;
 	}
 
+	@Override
 	public Vec2f Transition(String destination, int id) {
 		BrainBank.getInstance().cleanActives();
 		sceneController.getUniverse().getPlayer().getThreat().reset();
@@ -558,7 +578,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		// place player at coordinates
 		// m_handler.setZone(sceneController.getActiveZone());
 
-		
+
 		// run vision algorithm
 		sceneController.getActiveZone().RegenZone();
 		CompanionTool.moveCompanions(sceneController.getUniverse().getPlayer(), sceneController.getActiveZone());
@@ -567,7 +587,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 
+				(int) sceneController.getUniverse().player.getPosition().y,
 				(int)(10.0F*sceneController.getUniverse().getCurrentZone().getVisionMultiplier()));
 		m_view.End();
 		// reset the view
@@ -602,7 +622,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 	void Transition(int side, String destination) {
 		BrainBank.getInstance().cleanActives();
-		sceneController.getUniverse().getPlayer().getThreat().reset();		
+		sceneController.getUniverse().getPlayer().getThreat().reset();
 		// find zone
 		sceneController.getActiveZone().cleanup();
 		sceneController.setActiveZone(sceneController.getUniverse().getZone(destination));
@@ -626,19 +646,19 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		case 0:
 			// player to south edge
 			sceneController.getUniverse().player
-					.setPosition(new Vec2f(sceneController.getUniverse().player.getPosition().x, 1));
+			.setPosition(new Vec2f(sceneController.getUniverse().player.getPosition().x, 1));
 			break;
 		case 1:
 			// player to the east edge
 			sceneController.getUniverse().player
-					.setPosition(new Vec2f(1, sceneController.getUniverse().player.getPosition().y));
+			.setPosition(new Vec2f(1, sceneController.getUniverse().player.getPosition().y));
 
 			break;
 		case 2:
 			// player to north edge
 			sceneController.getUniverse().player
-					.setPosition(new Vec2f(sceneController.getUniverse().player.getPosition().x,
-							sceneController.getActiveZone().zoneHeight - 2));
+			.setPosition(new Vec2f(sceneController.getUniverse().player.getPosition().x,
+					sceneController.getActiveZone().zoneHeight - 2));
 			break;
 		case 3:
 			// player to west edge
@@ -655,7 +675,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		sceneController.getActiveZone().ClearVisibleTiles();
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 
+				(int) sceneController.getUniverse().player.getPosition().y,
 				(int) (10.0F*sceneController.getUniverse().getCurrentZone().getVisionMultiplier()));
 		m_view.End();
 		// reset the view
@@ -720,9 +740,10 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		}
 	}
 
+	@Override
 	public void Transition(String destination, int x, int y) {
 		BrainBank.getInstance().cleanActives();
-		sceneController.getUniverse().getPlayer().getThreat().reset();	
+		sceneController.getUniverse().getPlayer().getThreat().reset();
 		// find zone
 		sceneController.getActiveZone().cleanup();
 		sceneController.setActiveZone(sceneController.getUniverse().getZone(destination));
@@ -753,7 +774,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		sceneController.getActiveZone().ClearVisibleTiles();
 		GameManager.m_vision.visitFieldOfView(sceneController.getActiveZone().getBoard(0),
 				(int) sceneController.getUniverse().player.getPosition().x,
-				(int) sceneController.getUniverse().player.getPosition().y, 
+				(int) sceneController.getUniverse().player.getPosition().y,
 				(int)(10.0F*sceneController.getActiveZone().getVisionMultiplier()));
 		m_view.End();
 		// reset the view
@@ -867,7 +888,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		GL20.glUniform4f(m_variables[0], 1.0F, 1.0F, 1.0F, 1);
 
 		m_window.Draw(matrix44Buffer, SceneBase.getVariables()[2]);
-
+		actionBar.Draw(matrix44Buffer, SceneBase.getVariables()[2]);
 		if (m_screen == null) {
 			m_text.Draw(matrix44Buffer, SceneBase.getVariables()[2]);
 			GL20.glUniform4f(m_variables[0], 1, 1, 1, 1);
@@ -887,6 +908,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		for (int i = 0; i < 5; i++) {
 			mouse.Register(m_buttons[i]);
 		}
+
+		actionBar.start(mouse);
 		if (m_screen != null) {
 			m_screen.start(m_hook);
 		}
@@ -904,6 +927,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_view.End();
 		m_text.discard();
 		m_window.discard();
+		actionBar.discard();
 
 		if (m_screen != null) {
 			m_screen.discard(m_hook);
@@ -946,9 +970,9 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			case 4:
 				if (!m_dropdown.getVisible())
 				{
-					m_dropdown.setVisible(true);				
+					m_dropdown.setVisible(true);
 					DropdownHandler.genStandardDropdown(m_dropdown, sceneController.getUniverse().player);
-					m_dropdown.AdjustPos(new Vec2f(p.x - 1.0F, p.y - 1.0F));				
+					m_dropdown.AdjustPos(new Vec2f(p.x - 1.0F, p.y - 1.0F));
 				}
 				break;
 			}
@@ -987,7 +1011,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			Game.sceneManager.SwapScene(new Help_Scene());
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F2)) {
-			m_screen = new QuickActionSelector(m_textureIds[0], m_textureIds[7], m_textureIds[8],
+			m_screen = new ActionBarSelector(m_textureIds[0], m_textureIds[9], m_textureIds[7], m_textureIds[8],
 					sceneController.getUniverse().player, m_variables[0], this);
 			m_screen.start(m_hook);
 		}
@@ -1110,7 +1134,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 	@Override
 	public void Remove() {
-
+		m_time = 0.5F;
 		if (m_screen != null) {
 			m_disabled = false;
 			m_screen.discard(m_hook);
@@ -1179,6 +1203,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		}
 	}
 
+	@Override
 	public void ReplaceWidget(Widget widget, Widget replacewith) {
 		for (int i = 0; i < sceneController.getActiveZone().zoneWidth; i++) {
 			for (int j = 0; j < sceneController.getActiveZone().zoneHeight; j++) {
@@ -1199,7 +1224,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	{
 		return FXanimationControl;
 	}
-	
+
 	@Override
 	public void Flash(Vec2f p, int type) {
 
@@ -1223,7 +1248,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			break;
 		case 5:
 			FXanimationControl.addEffect(new FX(0, p, 0, 1, 0, 10));
-			break;	
+			break;
 		case 6:
 			FXanimationControl.CompileEffect(0, p, 1, 0, 1, 5);
 			break;
@@ -1249,11 +1274,11 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		case 2:
 			// FXanimationControl.addEffect(new FX(0,p,1,0,1));
 			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 0,false));
-			break;			
+			break;
 		case 3:
 			// FXanimationControl.addEffect(new FX(0,p,1,0,1));
 			FXanimationControl.addEffect(new FX_projectile(2, origin, velocity, 1, 0, 1,false));
-			break;				
+			break;
 		}
 	}
 
@@ -1267,7 +1292,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			values[2] = m_textureIds[7];
 			values[3] = m_textureIds[8];
 			values[4] = m_variables[0];
-			values[5] = m_textureIds[9];	
+			values[5] = m_textureIds[9];
 			screen.initialize(values, this);
 			m_screen = screen;
 			m_disabled = true;
@@ -1292,7 +1317,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			values[2] = m_textureIds[7];
 			values[3] = m_textureIds[8];
 			values[4] = m_variables[0];
-			values[5] = m_textureIds[9];	
+			values[5] = m_textureIds[9];
 			screen.initialize(values, this);
 			m_screen = screen;
 			m_disabled = true;
@@ -1318,7 +1343,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		if (scr.Load(conversation, npc,this) == false && badEnd) {
 			if (badEnd) {
 				Game.sceneManager
-						.SwapScene(new GameOver(SceneBase.getVariables(), "It seems you've met a terrible fate",npc,true));
+				.SwapScene(new GameOver(SceneBase.getVariables(), "It seems you've met a terrible fate",npc,true));
 			}
 		} else {
 			scr.setTalkingNpc(npc);
@@ -1343,7 +1368,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		if (scr.Load(conversation, npc,this) == false && badEnd) {
 			if (badEnd) {
 				Game.sceneManager
-						.SwapScene(new GameOver(SceneBase.getVariables(), "It seems you've met a terrible fate",npc,true));
+				.SwapScene(new GameOver(SceneBase.getVariables(), "It seems you've met a terrible fate",npc,true));
 			}
 		} else {
 			scr.setTalkingNpc(npc);
@@ -1384,7 +1409,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 					if (sceneController.getActiveZone().passable((int) v.x, (int) v.y, false)) {
 						actor.getSpriteInterface().setVisible(true);
 						actor.setPosition(v);
-					
+
 						break;
 					}
 				}
@@ -1393,6 +1418,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	}
 
 
+	@Override
 	public void PlayerBeaten(NPC npc, boolean resolve) {
 		if (m_screen == null) {
 			MoveToPlayer(npc);
@@ -1405,7 +1431,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 					StartConversation(npc.getConversation(NPC.CONVERSATIONVICTORY), npc, true);
 				} else {
 					Game.sceneManager
-							.SwapScene(new GameOver(SceneBase.getVariables(), "It seems you've met a terrible fate",npc,true));
+					.SwapScene(new GameOver(SceneBase.getVariables(), "It seems you've met a terrible fate",npc,true));
 				}
 			}
 		}
@@ -1460,6 +1486,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		return true;
 	}
 
+	@Override
 	public String getLastMessage() {
 		return m_text.getLastInput();
 	}
@@ -1495,11 +1522,11 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		{
 			if (n.getTagName().equals("rankedNPC"))
 			{
-				npc=new RankedNPC(n, p, file);		
+				npc=new RankedNPC(n, p, file);
 			}
 			else
 			{
-				npc=new NPC(n, p, file);		
+				npc=new NPC(n, p, file);
 			}
 
 		}

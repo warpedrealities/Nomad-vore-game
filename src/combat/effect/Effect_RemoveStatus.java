@@ -10,7 +10,7 @@ public class Effect_RemoveStatus extends Effect {
 
 	private int []statusIds;
 	private String description;
-	
+
 	public Effect_RemoveStatus(Element enode) {
 		statusIds=new int[Integer.parseInt(enode.getAttribute("count"))];
 		NodeList children=enode.getElementsByTagName("statusId");
@@ -46,9 +46,9 @@ public class Effect_RemoveStatus extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect, int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

@@ -14,7 +14,8 @@ public class Effect_Damage extends Effect {
 	private int maxValue;
 	private int modifierAbility;
 	private float rangeDecay;
-	
+	private float penetration;
+
 	public Effect_Damage(int damageType,int minValue, int maxValue,int modifierAbility)
 	{
 		this.damageType=damageType;
@@ -22,13 +23,16 @@ public class Effect_Damage extends Effect {
 		this.maxValue=maxValue;
 		this.modifierAbility=modifierAbility;
 	}
-	
+
 	public Effect_Damage(Element enode)
 	{
 		damageType=RPG_Helper.AttributefromString(enode.getAttribute("type"));
 		minValue=Integer.parseInt(enode.getAttribute("minValue"));
 		maxValue=Integer.parseInt(enode.getAttribute("maxValue"));
 		modifierAbility=RPG_Helper.abilityFromString(enode.getAttribute("modifier"));
+		if (enode.getAttribute("penetration").length() > 0) {
+			penetration = Float.parseFloat(enode.getAttribute("penetration"));
+		}
 		if (enode.getAttribute("rangeDecay").length()>0)
 		{
 			rangeDecay=Float.parseFloat(enode.getAttribute("rangeDecay"));
@@ -46,7 +50,7 @@ public class Effect_Damage extends Effect {
 		case Actor_RPG.THERMAL:
 			strength=maxValue-target.getRPG().getAttribute(damageType)+bonus;
 			break;
-		
+
 		case Actor_RPG.KINETIC:
 			if (strength<1)
 			{
@@ -54,13 +58,13 @@ public class Effect_Damage extends Effect {
 			}
 			strength=strength*2;
 			break;
-			
+
 		case Actor_RPG.SHOCK:
 			target.addBusy(strength/2);
 			break;
-			
+
 		case Actor_RPG.TEASE:
-			target.addBusy(strength/2);		
+			target.addBusy(strength/2);
 			break;
 		case Actor_RPG.PHEREMONE:
 			if (strength<1)
@@ -70,15 +74,15 @@ public class Effect_Damage extends Effect {
 			strength=strength*2;
 			break;
 		case Actor_RPG.PSYCHIC:
-			strength=maxValue-target.getRPG().getAttribute(damageType)+bonus;	
+			strength=maxValue-target.getRPG().getAttribute(damageType)+bonus;
 			break;
-		}		
+		}
 		return strength;
 	}
-	
+
 	@Override
 	public int applyEffect(Actor origin,Actor target, boolean critical) {
-		
+
 		//get bonus from originator
 		int bonus=0;
 		if (modifierAbility!=-1)
@@ -86,7 +90,7 @@ public class Effect_Damage extends Effect {
 			bonus=origin.getRPG().getAbilityMod(modifierAbility);
 		}
 		//roll damage
-		int damage=minValue;
+		int damage = minValue + bonus;
 		if (maxValue>minValue)
 		{
 			damage+=Universe.m_random.nextInt(maxValue-minValue);
@@ -97,18 +101,18 @@ public class Effect_Damage extends Effect {
 		}
 		damage=target.getRPG().getStatusEffectHandler().runDefenceStack(damage, damageType);
 		//reduce damage by damage resistance
-		damage-=target.getRPG().getAttribute(damageType)+bonus;
-		
+		damage -= ((target.getRPG().getAttribute(damageType)) * ((1.0F) - penetration));
+
 		if (rangeDecay>0)
 		{
 			float d=target.getPosition().getDistance(origin.getPosition());
 			if (d>2)
 			{
 				float rd=(d-1)*rangeDecay;
-				damage=damage-(int)rd;		
+				damage=damage-(int)rd;
 			}
 		}
-		
+
 		if (damage<0)
 		{
 			damage=0;
@@ -122,7 +126,7 @@ public class Effect_Damage extends Effect {
 		{
 			damage=applyCritical(target,damage, bonus);
 		}
-		
+
 		//check if physical harm
 		if (damageType<=Actor_RPG.SHOCK)
 		{
@@ -145,9 +149,9 @@ public class Effect_Damage extends Effect {
 				target.Defeat(origin, true);
 			}
 		}
-	
-		
-		
+
+
+
 		return damage;
 	}
 
@@ -167,6 +171,7 @@ public class Effect_Damage extends Effect {
 		return modifierAbility;
 	}
 
+	@Override
 	public boolean harmless() {
 
 		if (damageType>=Actor_RPG.TEASE)
@@ -178,29 +183,45 @@ public class Effect_Damage extends Effect {
 
 	@Override
 	public Effect clone() {
-		
+
 		Effect_Damage effect=new Effect_Damage();
 		effect.damageType=damageType;
-		effect.minValue=minValue;
+		effect.minValue = minValue;
 		effect.maxValue=maxValue;
 		effect.modifierAbility=modifierAbility;
 		effect.rangeDecay=rangeDecay;
+		effect.penetration = penetration;
 		return effect;
 	}
 
 	@Override
-	public void applyChange(Effect effect, int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		if (this.getClass().isInstance(effect))
 		{
 			Effect_Damage ed=(Effect_Damage)effect;
-			this.minValue+=ed.minValue*rank;
-			this.maxValue+=ed.maxValue*rank;
+			if (proportionate) {
+				float min = this.minValue;
+				float max = this.maxValue;
+				float minR = ((float) ed.getMinValue() * rank) / 100;
+				float maxR = ((float) ed.getMaxValue() * rank) / 100;
+				this.minValue += min * minR;
+				this.maxValue += max * maxR;
+			} else {
+				this.minValue += ed.minValue * rank;
+				this.maxValue += ed.maxValue * rank;
+			}
 			if (ed.rangeDecay!=0)
 			{
-				this.rangeDecay*=Math.pow(ed.rangeDecay, rank);	
+				this.rangeDecay*=Math.pow(ed.rangeDecay, rank);
 			}
+			if (this.penetration == 0) {
+				this.penetration = ed.penetration;
+			} else {
+				this.penetration += (ed.penetration * this.penetration);
+			}
+
 		}
 	}
-	
+
 
 }

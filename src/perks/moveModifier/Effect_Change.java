@@ -16,11 +16,15 @@ public class Effect_Change {
 
 	modifierType type;
 
+	boolean proportionate;
+
 	Effect effect;
 
 	public Effect_Change(Element node) {
 		type = strToType(node.getAttribute("type"));
-
+		if (node.getAttribute("proportionate").equals("true")) {
+			proportionate = true;
+		}
 		NodeList children = node.getChildNodes();
 		for (int i = 0; i < children.getLength(); i++) {
 			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
@@ -51,6 +55,10 @@ public class Effect_Change {
 
 	public Effect getEffect() {
 		return effect;
+	}
+
+	public boolean isProportionate() {
+		return proportionate;
 	}
 
 }

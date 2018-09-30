@@ -18,7 +18,7 @@ public class Effect_Analyze extends Effect {
 	private List<Analysis_Type> actions;
 	private int control;
 	private String tag;
-	
+
 	public Effect_Analyze(Element element)
 	{
 		control=RPG_Helper.AttributefromString(element.getAttribute("control"));
@@ -43,9 +43,9 @@ public class Effect_Analyze extends Effect {
 				}
 			}
 		}
-		
+
 	}
-	
+
 	@Override
 	public int applyEffect(Actor origin, Actor target, boolean critical) {
 		if (tag!=null)
@@ -70,7 +70,7 @@ public class Effect_Analyze extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect, int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}

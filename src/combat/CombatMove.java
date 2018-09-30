@@ -77,7 +77,8 @@ public class CombatMove {
 	private int actionCost;
 	private boolean basicAction;
 	private boolean threatening;
-	
+	private boolean noCriticals;
+
 	public CombatMove(Effect effect, AttackPattern pattern, String moveName, String hitText, String missText,
 			int attackBonus, int bonusAttribute) {
 		effects = new ArrayList<Effect>();
@@ -100,7 +101,7 @@ public class CombatMove {
 		{
 			overrideCooldown=Enode.getAttribute("cooldownName");
 		}
-		// bonus			
+		// bonus
 		if (Enode.getAttribute("bonusToHit").length() > 0) {
 			attackBonus = Integer.parseInt(Enode.getAttribute("bonusToHit"));
 		}
@@ -144,6 +145,9 @@ public class CombatMove {
 		if (Enode.getAttribute("throw").equals("true")) {
 			throwWeapon = true;
 		}
+		if (Enode.getAttribute("noCriticals").equals("true")) {
+			noCriticals = true;
+		}
 		// attack pattern
 		if (Enode.getAttribute("pattern").length() > 0) {
 			attackPattern = strToPattern(Enode.getAttribute("pattern"));
@@ -151,7 +155,7 @@ public class CombatMove {
 		if (Enode.getAttribute("bonusAttribute").length() > 0) {
 			bonusAttribute = RPG_Helper.AttributefromString(Enode.getAttribute("bonusAttribute"));
 		}
-		
+
 		if ("true".equals(Enode.getAttribute("threatening")))
 		{
 			threatening=true;
@@ -160,9 +164,9 @@ public class CombatMove {
 		// load effects
 		effects = new ArrayList<Effect>();
 		NodeList list = Enode.getChildNodes();
-		for (int i = 0; i < list.getLength(); i++) 
+		for (int i = 0; i < list.getLength(); i++)
 		{
-			if (list.item(i).getNodeType() == Node.ELEMENT_NODE) 
+			if (list.item(i).getNodeType() == Node.ELEMENT_NODE)
 			{
 				Element e = (Element) list.item(i);
 				if (e.getTagName().equals("effectDamage")) {
@@ -230,7 +234,7 @@ public class CombatMove {
 					}
 				}
 			}
-			
+
 		}
 		for (int i=0;i<effects.size();i++)
 		{
@@ -262,6 +266,7 @@ public class CombatMove {
 		effects = new ArrayList<Effect>();
 	}
 
+	@Override
 	public CombatMove clone() {
 		CombatMove move = new CombatMove();
 		move.moveName = moveName;
@@ -288,6 +293,7 @@ public class CombatMove {
 		move.throwWeapon = throwWeapon;
 		move.energySource = energySource;
 		move.basicAction = basicAction;
+		move.noCriticals = this.noCriticals;
 		return move;
 	}
 
@@ -353,7 +359,7 @@ public class CombatMove {
 			return AttackPattern.P_SELF;
 		}
 		if (string.equals("BOMB")) {
-			return AttackPattern.P_BOMB;			
+			return AttackPattern.P_BOMB;
 		}
 		if (string.equals("REACH")) {
 			return AttackPattern.P_REACH;
@@ -449,23 +455,24 @@ public class CombatMove {
 				return CombatAura.doCone(this, origin, target);
 			}
 			boolean visible = getVisible(target.getPosition());
-			
+
 			if (multiAttack>1)
 			{
 				return multiAttackHandler.handle(this, origin, target, def, bonus,distance, visible);
 			}
-			
+
 			if (def <= r) {
 				if (Game.sceneManager.getConfig().isVerboseCombat() && r < 100 && origin.getVisible()) {
 					ViewScene.m_interface.DrawText(origin.getName() + " attacks " + target.getName() + " " + (r - bonus)
 							+ "+" + bonus + " DC:" + def + "=hit");
 				}
 				int value = 0;
-				
+
 				// apply effect to target
 				boolean critical = false;
-		
-				if (r > def + 10 && r < 100 && Player.class.isInstance(origin) && Actor.class.isInstance(target)) {
+
+				if (!noCriticals && r > def + 10 && r < 100 && Player.class.isInstance(origin)
+						&& Actor.class.isInstance(target)) {
 					critical = true;
 				}
 				for (int i = 0; i < effects.size(); i++) {
@@ -484,7 +491,7 @@ public class CombatMove {
 							{
 								ViewScene.m_interface.DrawText(str);
 							}
-				
+
 						}
 					}
 				}
@@ -501,7 +508,7 @@ public class CombatMove {
 							}
 							else
 							{
-								ViewScene.m_interface.Flash(target.getPosition(), 1);					
+								ViewScene.m_interface.Flash(target.getPosition(), 1);
 							}
 						} else {
 							if (ViewScene.m_interface!=null)
@@ -512,10 +519,10 @@ public class CombatMove {
 								}
 								else
 								{
-									ViewScene.m_interface.Flash(target.getPosition(), 0);					
+									ViewScene.m_interface.Flash(target.getPosition(), 0);
 								}
 							}
-				
+
 						}
 
 					}
@@ -535,12 +542,12 @@ public class CombatMove {
 					if (isNonViolent())
 					{
 						ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
-								new Vec2f(origin.getPosition().x, origin.getPosition().y), 3);					
+								new Vec2f(origin.getPosition().x, origin.getPosition().y), 3);
 					}
 					else
 					{
 						ViewScene.m_interface.projectile(new Vec2f(target.getPosition().x, target.getPosition().y),
-								new Vec2f(origin.getPosition().x, origin.getPosition().y), 2);					
+								new Vec2f(origin.getPosition().x, origin.getPosition().y), 2);
 					}
 
 				}
@@ -677,6 +684,10 @@ public class CombatMove {
 
 	public int getMultiAttack() {
 		return multiAttack;
+	}
+
+	public void setNoCriticals(boolean value) {
+		noCriticals = value;
 	}
 
 }

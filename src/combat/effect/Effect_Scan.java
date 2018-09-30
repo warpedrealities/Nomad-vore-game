@@ -18,7 +18,7 @@ public class Effect_Scan extends Effect {
 	private String statusTag;
 	private int skill,minSkill,minStrength,minRange;
 	private float rangeBonus,strengthBonus;
-	
+
 	public Effect_Scan(Element e)
 	{
 		minSkill=Integer.parseInt(e.getAttribute("minSkill"));
@@ -46,8 +46,8 @@ public class Effect_Scan extends Effect {
 			}
 		}
 	}
-	
-	
+
+
 	public Effect_Scan() {
 	}
 
@@ -60,13 +60,13 @@ public class Effect_Scan extends Effect {
 		}
 		return range;
 	}
-	
+
 	private int getStrength(Actor origin)
 	{
 		return minStrength+(int)(strengthBonus*origin.getRPG().getAttribute(skill));
-		
+
 	}
-	
+
 	private void scan(Actor origin)
 	{
 		List<Actor> actors=Universe.getInstance().getCurrentZone().getActors();
@@ -74,7 +74,7 @@ public class Effect_Scan extends Effect {
 		int strength=getStrength(origin);
 		for (int i=0;i<actors.size();i++)
 		{
-			if (actors.get(i)!=origin && 
+			if (actors.get(i)!=origin &&
 					actors.get(i).getPosition().getDistance(origin.getPosition())<range &&
 					!actors.get(i).getVisible())
 			{
@@ -87,20 +87,20 @@ public class Effect_Scan extends Effect {
 						{
 							if (actors.get(i).getRPG().stealthCheck(strength,false))
 							{
-								ViewScene.m_interface.Flash(actors.get(i).getPosition(), 5);			
+								ViewScene.m_interface.Flash(actors.get(i).getPosition(), 5);
 							}
 						}
 						else
 						{
 							ViewScene.m_interface.Flash(actors.get(i).getPosition(), 5);
-						}					
-					}								
+						}
+					}
 				}
 			}
 		}
 	}
-	
-	
+
+
 	@Override
 	public int applyEffect(Actor origin, Actor target, boolean critical) {
 		if (origin.getRPG().getAttribute(skill)<minSkill)
@@ -126,7 +126,7 @@ public class Effect_Scan extends Effect {
 	}
 
 	@Override
-	public void applyChange(Effect effect, int rank) {
+	public void applyChange(Effect effect, int rank, boolean proportionate) {
 		// TODO Auto-generated method stub
 
 	}
