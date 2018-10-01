@@ -4,6 +4,8 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import shared.ParserHelper;
+
 public class Action {
 
 	public enum ActionBarType {
@@ -22,10 +24,18 @@ public class Action {
 
 	public Action(DataInputStream dstream) throws IOException {
 		type = ActionBarType.values()[dstream.readInt()];
+		active = dstream.readBoolean();
+		if (active) {
+			actionName = ParserHelper.LoadString(dstream);
+		}
 	}
 
 	public void save(DataOutputStream dstream) throws IOException {
 		dstream.writeInt(type.ordinal());
+		dstream.writeBoolean(active);
+		if (active) {
+			ParserHelper.SaveString(dstream, actionName);
+		}
 	}
 
 	public String getActionName() {
