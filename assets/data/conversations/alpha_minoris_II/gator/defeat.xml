@@ -13,6 +13,10 @@
 			text="yes, and I'm hungry enough to eat the whole thing">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+		<choice destination="analvore0"
+			text="This pain in the ass is going up my ass!">
+			<assertion evaluate="hasperk" perk="analvore" />
+		</choice>		
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -24,6 +28,77 @@
 		<choice destination="end" text="nope, no interest at all" />
 	</page>
 
+
+<page ID="analvore0">
+		<text>
+			You take a deep breath. Shoving something this big up your backdoor 
+			is going to give your insides a workout. You 	<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				remove your clothing
+			</conditional>
+			and place the beast's tail near your pucker. The beast tries to
+			squirm away, but it's already too late for that!You proved you
+			were the superior predator and now you are taking in your prize.
+		</text>
+		<choice destination="analvore1" text="get in there!" />
+	</page>
+
+	<page ID="analvore1">
+		<text>
+			You shove the creature's tail into your awaiting pucker. 
+			surprized at the inner warmth of your asshole, the gator
+			hisses and continues to struggle uselessly. Your powerful
+			inards work overtime to pull the rest its tail deeper inside you.
+			You look back to see that your ass has started to pull in the
+			creature's wide stomach area, causing a mix of pain and pleasure
+			for you. "Once a pain, always a pain." You comment as you look
+			towards your own stomach to see the gator's trail protruding out of it.
+		</text>
+		<choice destination="analvore2" text="brings a whole new meaning to the term swamp ass" />
+	</page>
+
+	<page ID="analvore2">
+		<text>
+			A few minutes have passed and the weight of holding a large
+			creature in your stomach have forced you onto your calves
+			and knees. The only part of the gator that hasn't been
+			pulled in by your hungry butt is it's elongated mouth.
+			The creature tries to turn its head in a fasion that will
+			allow it to bite you, but your ass has already claimed
+			its neck. Making its efforts, worthless. You grunt and
+			tense up your glutes, causing your butt to suck
+			in the creature's head. Muffled hisses can be heard from
+			inside you. The creature somehow still believes it has a 
+			fighting chance.
+		</text>
+		<choice destination="analvore3" text="later gator!" />
+	</page>
+
+	<page ID="analvore3">
+		<text>
+			Your intestines have now fully pushed the beast into the
+			harsh eviroment that is your stomach. Your belly, now about twice
+			the size of the rest of your body protrudes in
+			front of you as you sit on the muddy ground, digesting your meal.
+			The beast can no longer resist you as it has wasted all its
+			energy trying to escape when it had no chance of doing so.
+			What feels like hours pass by as you watch your belly digest
+			the once powerful wetland hunter into nothing but fuel 
+			for your next conquest. You pat your now flat stomach
+			and say "Later, gator!" <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				before putting your clothes back
+			on
+			</conditional>, confident that the beast's  strength is better served
+			for your own purposes.
+			
+		</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="pat your ass and carry on" />
+	</page>
+	
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

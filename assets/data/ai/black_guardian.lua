@@ -5,7 +5,15 @@ function combat(controllable,sense,pos,hostile)
 
 	if pos:getDistance(hostile:getPosition())<3 then
 	--if in melee range attack
-	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+		if (controllable:getRPG():getStat(0)<60) and (controllable:getValue(3)==0) then
+		controllable:setValue(3,1)
+		controllable:setAttack(1);
+		controllable:Attack(pos.x,pos.y)	
+		else
+			controllable:setAttack(0);
+			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
+		end
+
 	else
 	--if not move towards player
 		if controllable:HasPath() then

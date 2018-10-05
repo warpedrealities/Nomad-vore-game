@@ -4,9 +4,9 @@
 		<req>PERKpsychic</req>
 	</requirement>
 	<description>
-
+	the mind of your foe becomes as an open book allowing you to sense how close they are to succumbing to the wiles either of you or another.
 	</description>
-	<move count="3">
+	<move count="1">
 		<combatmove name="mind probe" timeCost="2" pattern="RANGED"
 			bonusToHit="16" bonusAttribute="WILLPOWER" actionCost="4" moveType="DOMINATE">
 			<effectAnalyze tag="psychic" control="WILLPOWER">

@@ -21,7 +21,7 @@
 		<ability ability="INTELLIGENCE" value="5" />
 		<stat stat="HEALTH" value="30" />
 		<stat stat="RESOLVE" value="30" />
-		<attribute attribute="KINETIC" value="4" />
+		<attribute attribute="KINETIC" value="6" />
 		<combatMove name="poison" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="4">
 			<missText count="2">

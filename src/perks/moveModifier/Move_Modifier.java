@@ -14,9 +14,9 @@ import perks.moveModifier.Effect_Change.modifierType;
 public class Move_Modifier {
 
 	private String moveName;
-	int timeModifier;
+	float timeModifier;
 	int attackBonus;
-	int actionCost;
+	float actionCost;
 	boolean basicAction = false;
 	private AttackPattern attackPattern;
 	private boolean noCriticals;
@@ -29,7 +29,7 @@ public class Move_Modifier {
 		}
 		// action cost
 		if (Enode.getAttribute("actionCost").length() > 0) {
-			actionCost = Integer.parseInt(Enode.getAttribute("actionCost"));
+			actionCost = Float.parseFloat(Enode.getAttribute("actionCost"));
 		}
 		if (Enode.getAttribute("bonusToHit").length() > 0) {
 			attackBonus = Integer.parseInt(Enode.getAttribute("bonusToHit"));
@@ -41,7 +41,7 @@ public class Move_Modifier {
 			attackPattern = CombatMove.strToPattern(Enode.getAttribute("pattern"));
 		}
 		if (Enode.getAttribute("timeModifier").length() > 0) {
-			timeModifier = Integer.parseInt(Enode.getAttribute("timeModifier"));
+			timeModifier = Float.parseFloat(Enode.getAttribute("timeModifier"));
 		}
 		modifiers = new ArrayList<Effect_Change>();
 		NodeList list = Enode.getChildNodes();
@@ -63,10 +63,10 @@ public class Move_Modifier {
 	public void applyModifier(CombatMove move, int rank) {
 		move.setAttackBonus(move.getAttackBonus() + attackBonus);
 		if (timeModifier > 0) {
-			move.setTimeCost(move.getTimeCost() * timeModifier);
+			move.setTimeCost((int) (move.getTimeCost() * timeModifier));
 		}
 		if (actionCost > 0) {
-			move.setActionCost(move.getActionCost() * actionCost);
+			move.setActionCost((int) (move.getActionCost() * actionCost));
 		}
 
 		move.setAttackPattern(attackPattern);

@@ -24,27 +24,27 @@ public class WarpScreen extends Screen  implements Callback{
 	private int currentSleep;
 	private Spaceship ship;
 	private Text description;
-//	private Vortex_Renderer vortex;
-	
-	
+	//	private Vortex_Renderer vortex;
+
+
 	public WarpScreen(Spaceship ship) {
 		this.ship=ship;
-	//	vortex=new Vortex_Renderer(new Vec2f(-20, -1),new Vec2f(23,17));
+		//	vortex=new Vortex_Renderer(new Vec2f(-20, -1),new Vec2f(23,17));
 	}
 
 	@Override
 	public void update(float DT) {
 		screenFade.update(DT);
 		window.update(DT);
-	//	vortex.update(DT);
+		//	vortex.update(DT);
 	}
 
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc) {
 		window.Draw(buffer, matrixloc);
 		screenFade.draw(matrixloc, buffer);
-	
-	//	vortex.draw(matrixloc, 0, buffer);
+
+		//	vortex.draw(matrixloc, 0, buffer);
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class WarpScreen extends Screen  implements Callback{
 		mouse.Remove(window);
 		window.discard();
 		screenFade.discard();
-	//	vortex.discard();
+		//	vortex.discard();
 	}
 
 	@Override
@@ -72,7 +72,7 @@ public class WarpScreen extends Screen  implements Callback{
 			case 4:
 				currentSleep=(int) ship.getWarpHandler().getTimeLeft();
 				screenFade.run();
-				break;		
+				break;
 			}
 		}
 
@@ -93,12 +93,12 @@ public class WarpScreen extends Screen  implements Callback{
 		// 4 tint
 		long l=ship.getWarpHandler().getTimeLeft();
 		description=new Text(new Vec2f(6.5F, 5.0F), generateString(l), 0.7F, textures[4]);
-		
+
 		window = new Window(new Vec2f(-20, -16), new Vec2f(40, 15), textures[1], true);
 		Button[] buttons = new Button[3];
 		buttons[0] = new Button(new Vec2f(33.7F, 0.2F), new Vec2f(6, 1.8F), textures[2], this, "Exit", 3, 1);
 		buttons[1] = new Button(new Vec2f(33.7F, 2.2F), new Vec2f(6, 1.8F), textures[2], this, "wait", 2, 1);
-		buttons[3] = new Button(new Vec2f(33.7F, 4.2F), new Vec2f(6, 1.8F), textures[2], this, "skip", 4, 1);		
+		buttons[2] = new Button(new Vec2f(33.7F, 4.2F), new Vec2f(6, 1.8F), textures[2], this, "skip", 4, 1);
 		for (int i = 0; i < 3; i++) {
 			window.add(buttons[i]);
 		}
@@ -110,12 +110,12 @@ public class WarpScreen extends Screen  implements Callback{
 
 	private String generateString(long l)
 	{
-		
+
 		String str="warp jump in progress, time left:"+l;
 
 		return str;
 	}
-	
+
 	public void refresh()
 	{
 		long l=ship.getWarpHandler().getTimeLeft();
@@ -128,9 +128,9 @@ public class WarpScreen extends Screen  implements Callback{
 		{
 			description.setString(generateString(l));
 		}
-	
+
 	}
-	
+
 	@Override
 	public void Callback() {
 		((Player_RPG) Universe.getInstance().getPlayer().getRPG()).rest(currentSleep);

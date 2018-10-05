@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="penetrating attack">
 	<requirement count="1">
-		<req>PERKwarrior</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description>
 		By aiming for weak points you can partially bypass enemy defences. Halves enemy soak against your attacks, double AP cost.

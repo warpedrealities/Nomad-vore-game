@@ -52,6 +52,9 @@
 		You sense the serpent's torpor and set about trying to wriggle your way back out. Doing so feetfirst with no room to turn around will be difficult, but notable preferable to several hours of being digested by a dumb snake. So you start to worm your way out, gradually pushing yourself backwards with your hands until your feet push into the open air. and then suddenly you feel pain, and a torpid lassitude flooding up your legs even as the serpent shifts and wriggles to push you back down again by flexing its form. You wait for it to rest only to try again, this time you don't even reach the outside before its twisting in on itself to thwart your progress..again and again you try...and again and again it seems that snakefood is your inevitable fate.
 	</text>	
 	<choice destination="struggleGO" text="this cannot be my fate"/>
+	<choice destination="struggleGOdisposal" text="my fate as snake dung">
+	<preference fetish="disposal" />
+		</choice>
 	</page>
 	
 	<gameover ID="struggleGO">
@@ -60,16 +63,31 @@
 	</text>
 	</gameover>
 	
+	<gameover ID="struggleGOdisposal">
+	<text>
+	You struggle on valiantly but without success, the serpent's stomach inescapable and in time your energies are utterly exhausted. Digestive ooze soaks your skin from every angle now and you can feel yourself beginning to break down, to become unwound as the enzymes seek to melt your weakened and depleted form. You can only twitch and squirm weakly now, your defiance lingering on long past the point of futility and into the long hours of slow inexorable digestion. Your form softening and liquidating until the serpent slims out and you're utterly digested by the snake. Eventually your remains slide the rest of the way through the snake, before finally what was left of you came sliding out of the hungry snake's anal slit. Your filth remains would be left steaming in the desert heat for hours, even days, before crusting over into just another pile of snake poop.
+	</text>
+	</gameover>
+	
 	<page ID="submit">
 	<text>
 	Maybe you have a thing for snakes but for whatever reason you've decided that getting digested by this snake is a good idea. You wriggle to get a bit more comfortable as best you're able in the tight sleeping bag of the serpent's stomach. The vipers enzymes soaking your body gradually as it sets about slowly digesting you in that tightly stretched belly.
 	</text>
 	<choice destination="submitGO" text="get digested"/>
+	<choice destination="submitGOdisposal" text="get squeezed out">
+	<preference fetish="disposal" />
+		</choice>
 	</page>
 	
 	<gameover ID="submitGO">
 	<text>
 	In the depths of the serpent you feel yourself softening and breaking down. The digestive efforts of the serpent taking their slow and inexorable toll on your body as the shape in its tail turns less defined and more a smooth compacting lump. Your body gradually being rendered down over hours into more fuel for its own. In the end the serpent's body returns to its slim shape, shrinking down as you're absorbed into its form to fuel its survival in this arid and desolate environment.
+	</text>
+	</gameover>
+	
+	<gameover ID="submitGOdisposal">
+	<text>
+	In the depths of the serpent you feel yourself softening and breaking down. The digestive efforts of the serpent taking their slow and inexorable toll on your body as the shape in its tail turns less defined and more a smooth compacting lump. Your body gradually being rendered down over hours into more fuel for its own. In the end the serpent's body returns to its slim shape, shrinking down as you're absorbed into its form to fuel its survival in this arid and desolate environment. Eventually your remains slide the rest of the way through the snake, before finally what was left of you came sliding out of the hungry snake's anal slit. Your filth remains would be left steaming in the desert heat for hours, even days, before crusting over into just another pile of snake poop.
 	</text>
 	</gameover>
 

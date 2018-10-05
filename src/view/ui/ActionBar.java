@@ -30,6 +30,7 @@ public class ActionBar implements MyListener {
 	private ActionBarItemHandler itemHandler;
 	private int updateAction;
 	private float clock = 0;
+	private boolean active;
 
 	public ActionBar(Vec2f position, int[] textureIds) {
 		actionBarData = Universe.getInstance().getActionBarData();
@@ -51,6 +52,7 @@ public class ActionBar implements MyListener {
 			}
 		}
 		updateAction = 0;
+		active = true;
 		reset();
 	}
 
@@ -59,6 +61,14 @@ public class ActionBar implements MyListener {
 			Action action = actionBarData.getAction(i);
 			actionBarButtonState.calculate(action, buttons[i], true);
 		}
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	private void setupTextures() {
@@ -73,7 +83,7 @@ public class ActionBar implements MyListener {
 
 	public int update(float DT) {
 		clock -= DT;
-		if (clock <= 0) {
+		if (clock <= 0 && active) {
 			handleKeys();
 		}
 		window.update(DT);
@@ -135,7 +145,7 @@ public class ActionBar implements MyListener {
 
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-		if (ID >= 1000) {
+		if (ID >= 1000 && active) {
 			processAction(ID - 1000);
 		}
 	}

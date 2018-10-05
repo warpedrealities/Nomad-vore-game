@@ -58,7 +58,7 @@ public class DialogueScreen extends Screen implements Callback {
 	Callback callback;
 	float m_stagnation;
 
-	
+
 	static public final int DISPOSITION = 0;
 
 	public DialogueScreen(int frame, int button, int buttonalt, int tint, Player player, TextView textview,
@@ -66,7 +66,7 @@ public class DialogueScreen extends Screen implements Callback {
 		this.callback=callback;
 		m_player = player;
 		m_text = textview;
-		m_window = new Window(new Vec2f(3, -1), new Vec2f(17, 17), frame, true);
+		m_window = new Window(new Vec2f(2.5F, -1), new Vec2f(17.5F, 17), frame, true);
 		m_choices = new String[16];
 
 		portraitImage = new Image(new Vec2f(-20, -1), new Vec2f(23, 17), "assets/art/portraits/test.png");
@@ -89,20 +89,20 @@ public class DialogueScreen extends Screen implements Callback {
 	public boolean Load(String Conversation, NPC npc,Scene_Int scene) {
 		Document doc = ParserHelper.LoadXML("assets/data/conversations/" + Conversation + ".xml");
 		Element n = (Element) doc.getFirstChild();
-		m_root = (Element) n;
+		m_root = n;
 		m_children = m_root.getChildNodes();
-		
+
 		if (ViewScene.m_interface!=null)
 		{
-			m_evaluator = new OutEvaluator(npc, m_player, ViewScene.m_interface.getSceneController());		
+			m_evaluator = new OutEvaluator(npc, m_player, ViewScene.m_interface.getSceneController());
 			m_processor = new EffectProcessor(m_player, ViewScene.m_interface.getSceneController(),scene);
 		}
 		else
 		{
-			m_evaluator = new OutEvaluator(npc, m_player, null);		
-			m_processor = new EffectProcessor(m_player,null,scene);		
+			m_evaluator = new OutEvaluator(npc, m_player, null);
+			m_processor = new EffectProcessor(m_player,null,scene);
 		}
-		
+
 		m_processor.setNPC(npc);
 		if (npc != null) {
 			try {
@@ -116,8 +116,8 @@ public class DialogueScreen extends Screen implements Callback {
 
 	}
 
-	
-	
+
+
 	public void setWidget(Widget widget) {
 		m_processor.setWidget(widget);
 		m_evaluator.setWidget(widget);
@@ -145,7 +145,7 @@ public class DialogueScreen extends Screen implements Callback {
 			}
 		}
 	}
-	
+
 	@Override
 	public void start(MouseHook hook) {
 

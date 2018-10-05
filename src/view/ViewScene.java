@@ -1308,6 +1308,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			m_screen.discard(m_hook);
 			m_reader.UpdateHand();
 			m_screen = null;
+			actionBar.setActive(true);
+			m_time = 0.5F;
 		}
 		if (screen!=null)
 		{
@@ -1322,6 +1324,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			m_screen = screen;
 			m_disabled = true;
 			m_screen.start(m_hook);
+			actionBar.setActive(false);
 		}
 	}
 
@@ -1335,6 +1338,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			sceneController.getUniverse().getPlayer().calcMove();
 			UpdateInfo();
 			m_screen.discard(m_hook);
+			actionBar.setActive(true);
+			m_time = 0.5F;
 			m_screen = null;
 		}
 
@@ -1349,7 +1354,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			scr.setTalkingNpc(npc);
 			m_disabled = true;
 			m_screen = scr;
-
+			actionBar.setActive(false);
 			m_screen.start(m_hook);
 		}
 	}
@@ -1360,6 +1365,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			sceneController.getUniverse().getPlayer().calcMove();
 			UpdateInfo();
 			m_screen.discard(m_hook);
+			actionBar.setActive(true);
+			m_time = 0.5F;
 			m_screen = null;
 		}
 
@@ -1375,7 +1382,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			scr.setWidget(widget);
 			m_disabled = true;
 			m_screen = scr;
-
+			actionBar.setActive(false);
 			m_screen.start(m_hook);
 		}
 	}
@@ -1387,6 +1394,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			UpdateInfo();
 			m_screen.discard(m_hook);
 			m_screen = null;
+			actionBar.setActive(true);
+			m_time = 0.5F;
 		}
 		DialogueScreen scr = new DialogueScreen(m_textureIds[0], m_textureIds[7], m_textureIds[8],
 				SceneBase.getVariables()[0], sceneController.getUniverse().player, m_text, this);
@@ -1396,7 +1405,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			scr.setWidget(widget);
 			m_disabled = true;
 			m_screen = scr;
-
+			actionBar.setActive(false);
 			m_screen.start(m_hook);
 		}
 	}

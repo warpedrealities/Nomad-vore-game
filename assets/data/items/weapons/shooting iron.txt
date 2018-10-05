@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ItemWeapon name="shooting iron" weight="2" value="250">
-<tagSet value="A"/>
+<tagSet value="AH"/>
 <description>
-A dusty revolver, alien script carved into its handle. A servicable six shot weapon inflicting 3-6 kinetic damage per shot. (A)
+A dusty revolver, alien script carved into its handle. A servicable six shot weapon inflicting 3-6 kinetic damage per shot. (AH)
 </description>
 <modifier>
 

@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text> there's no interaction to be had with a defeated viper yet.
+		<text> The viper is laying there stunned and unable to resist you.
 		</text>
+		<choice destination="unbirth0" text="You wonder how they'd feel slithering their way up your cooch.">
+				<assertion evaluate="hasperk" perk="unbirthing" />
+		</choice>
 		<choice destination="devour" text="devour">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -13,6 +16,50 @@
 		</choice>
 		<choice destination="end" text="darn" />
 	</page>
+		
+		<page ID="unbirth0">
+		<text>
+		Grabbing the defeated snake, you close it's maw shut tight and start pushing it up against your snatch, moaning in delight as your hungry love tunnel stretched open to accept the new toy, it's head and neck slipping in nice and smoothly as pleasure courses through your body. "Ahhh ahhhh mmpphhh!" You moan out as the snake starts to slither and squirm, only acting to squeeze them in deeper, your belly starting to stretch out with the squirming bulge the snake made. After a few minutes, you had managed to squeeze the snake in almost half way, but there was so much more, and the pleasure it was causing you threatened to make you gush them out.
+		</text>
+		<choice destination="unbirth1" text="clench hard" />
+		</page>
+		
+		<page ID="unbirth1">
+		<text>
+		You focus and clench down hard as the snake is squished hard between your legs, letting out a pleasured cry of joy as you came, thick gushes of femcum come rocketing out between your legs around the snake, lubing the rest of it up with your femcum. With a content sigh, you grab the snake and start shoving them back in, loosening up to let them slither their way up your snatch, your belly starting to bulge out pleasantly with the squirming meal, soon only the last bit of it's tail sticking out.
+		</text>
+		<choice destination="unbirth2" text="all the way in" />
+		</page>
+		
+		<page ID="unbirth2">
+		<text>
+		With one last clench the predatory viper was sucked all they way into your cunny, their long body having served as an amazing toy to pleasure yourself with, basking back in the sun with your bloated squirming belly, squeezing over it as the snake slowly started to become more active, but it was far too late, your hot tight womb squishing and crushing them, helping mash them up into the thick and creamy femcum, their form softening up and your belly rounding out as it worked to melt the reptile down into your love juices.
+		</text>
+		
+		<choice destination="unbirth3" text="gush them" />
+		</page>
+		
+		<page ID="unbirth3">
+		<condition operator="lessthan" evaluate="DICEROLL" value="10" />
+		<text>
+		After a little bit longer stewing away in your love trap the viper was ready to cum out. Spreading your legs, you reach down to play with your cunny, moaning in delight as you rubbed and teased over your clit, huffing and whining in delight as you feel the pleasure rising, till you let out a loud gasp, shootign out a creamy wave of juicy femcum out, splattering all over the hot desert ground where it would be soaked up into the sand.
+		Inside the puddle you notice a slight glimmer, seeing one of the scales of the snake having survived, picking it up and pocketing it as a reward for your predatory prowess.
+		</text>
+		<effect type="giveitem" value="1" item="fine scale" />
+		
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="lovely orgasm" />
+		</page>
+		
+		<page ID="unbirth3">
+		<text>
+		After a little bit longer stewing away in your love trap the viper was ready to cum out. Spreading your legs, you reach down to play with your cunny, moaning in delight as you rubbed and teased over your clit, huffing and whining in delight as you feel the pleasure rising, till you let out a loud gasp, shootign out a creamy wave of juicy femcum out, splattering all over the hot desert ground where it would be soaked up into the sand.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="lovely orgasm" />
+		</page>
 
 	<page ID="devour">
 		<text>

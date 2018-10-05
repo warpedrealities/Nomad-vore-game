@@ -15,7 +15,7 @@
 		<stat stat="HEALTH" value="40" />
 		<stat stat="RESOLVE" value="40" />
 		<attribute attribute="DODGE" value="2" />
-		<attribute attribute="PARRY" value="2" />
+		<attribute attribute="PARRY" value="6" />
 		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="2" threatening="true">
 			<effectDamage type="KINETIC" minValue="2" maxValue="7"

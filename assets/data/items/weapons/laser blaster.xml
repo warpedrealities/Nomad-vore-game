@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ItemWeapon name="laser blaster" weight="2" value="500">
-	<tagSet value="A" />
+	<tagSet value="AH" />
 	<description>
-		A rebuilt laser pistol designed to increase the weapon's firepower at the expense of its number of shots. Does 1-8 damage but doubles energy consumption. (A)
+		A rebuilt laser pistol designed to increase the weapon's firepower at the expense of its number of shots. Does 1-8 damage but doubles energy consumption. (AH)
 	</description>
 	<modifier>
 

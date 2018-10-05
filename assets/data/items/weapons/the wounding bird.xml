@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ItemWeapon name="the wounding bird" weight="2" value="250">
-<tagSet value="A"/>
+<tagSet value="AH"/>
 <description>
-An elegant weapon for the discerning gunslinger. This revolver inflicts 5-6 kinetic damage and has +2 to acc. (A)
+An elegant weapon for the discerning gunslinger. This revolver inflicts 5-6 kinetic damage and has +2 to acc. (AH)
 </description>
 <modifier>
 

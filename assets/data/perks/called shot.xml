@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="called shot">
 	<requirement count="1">
-		<req>PERKmarksman</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description>
 		Called shots to weak points mean enemy defences cannot fully protect against your firepower. Halves enemy soak against your attacks, double AP cost.

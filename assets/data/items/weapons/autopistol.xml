@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <ItemWeapon name="autopistol" weight="3" value="450">
-	<tagSet value="A" />
+	<tagSet value="AH" />
 	<description>
 		A semi auto handgun but with burst fire capability. inflicts 3-6
-		kinetic damage per shot. Bursts are 3 shots. (A)
+		kinetic damage per shot. Bursts are 3 shots. (AH)
 	</description>
 	<modifier>
 

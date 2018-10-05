@@ -16,6 +16,7 @@
 		<attribute attribute="KINETIC" value="2" />
 		<attribute attribute="SHOCK" value="-2" />
 		<attribute attribute="DODGE" value="4" />	
+		<attribute attribute="PARRY" value="6" />		
 		<stat stat="HEALTH" value="60" />
 		<stat stat="RESOLVE" value="60" />
 		<combatMove name="smash" pattern="MELEE" bonusAttribute="MELEE"

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <ItemWeapon name="zap gun" weight="4" value="400">
-	<tagSet value="A" />
+	<tagSet value="AH" />
 	<description>
 		A complex jumble of wires and framework surrounding a blue crystalline
 		core. Its business end consists of a pair of stubby prongs. Does 3-10
-		shock damage. (A)
+		shock damage. (AH)
 	</description>
 	<modifier>
 

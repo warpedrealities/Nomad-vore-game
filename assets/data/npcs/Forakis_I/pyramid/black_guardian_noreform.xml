@@ -35,6 +35,24 @@
 			<effectDamage type="KINETIC" minValue="5" maxValue="10"
 				modifier="STRENGTH" />	
 		</combatMove>
+		<combatMove name="powerup" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4">
+			<missText count="1">
+				<text></text>	
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET flexes, her body powering up, her synthetic muscles tightening and hardening against physical attack.</applyText>
+				<statusDefence uid="16" icon="1" duration="60"
+					numModifiers="1">
+					<strength value="40" />
+					<effect attribute="KINETIC" modifier="6" />
+					<removeText> TARGET's power up has worn off.</removeText>
+				</statusDefence>
+			</effectStatus>	
+		</combatMove>				
 		<statusTags count="5">
 			<tag>psychic</tag>
 			<tag>life</tag>	
