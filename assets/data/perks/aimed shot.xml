@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <perk name="aimed shot">
 	<requirement count="1">
-		<req>PERKmarksman</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description>
-		Through focus and steady hands you can increase your accuracy, +4 to hit, but
+		Through focus and steady hands you can increase your accuracy, +6 to hit, but
 		double ap cost. weapon tag: (A)
 	</description>
 	<weaponMove name="aimed shot" bonusToHit="4" tag="A"

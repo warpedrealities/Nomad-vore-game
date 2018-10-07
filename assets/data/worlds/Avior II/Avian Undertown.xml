@@ -7,7 +7,7 @@
 		<tile sprite="8" vision="EMPTY" movement="0"> wooden floor</tile>
 		<tile sprite="7" vision="BLOCKING" movement="2"> wooden wall</tile>		
 		<tile sprite="6" vision="BLOCKING" movement="2"> stone wall</tile>
-		<tile sprite="5" vision="EMPTY" movement="1"> water</tile>
+		<tile sprite="5" vision="EMPTY" movement="0"> water</tile>
 		<tile sprite="6" vision="EMPTY" movement="1"> the distant ground</tile>
 		<tile sprite="7" vision="EMPTY" movement="1"> a long way down</tile>		
 	</tileset>

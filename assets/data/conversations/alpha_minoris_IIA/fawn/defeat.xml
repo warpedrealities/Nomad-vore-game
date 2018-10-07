@@ -15,7 +15,10 @@
 			text="Your balls ache at the sight of her.">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
-
+		<choice destination="unbirth0"
+			text="Your nethers tingle with voracious need">
+			<assertion evaluate="hasperk" perk="unbirthing" />
+		</choice>
 		<choice destination="capture" text="Use your capture device.">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="capture device" />
@@ -35,6 +38,36 @@
 		<choice destination="end" text="Feeling merciful." />
 	</page>
 
+	<page ID="unbirthing0">
+	<text>
+	As you look down at the little fawn, a tingle of excitement runs across your lower belly, letting you know exactly where you are going to stuff her. The thought of a squirming little doe plunging deep into your nethers is enough to nearly drive you crazy. The fawn watches in complete embarrassment as you slide your left hand down to your nether lips to let your tunnel know to prepare for her. Unable to wait any longer you grab her right arm and pull her forward then press your wet pussy over her face.
+	</text>
+	<choice destination="unbirthing1" text="oh yes"/>
+	</page>
+	
+	<page Id="unbirthing1">
+	<text>
+	A delighted moan escapes your lips as you feel the stunned fawn squirm against your hungry pussy which was now spreading over her face. With a gentle press forward and down your nethers swallow up her head and tug in more of her soft little body. At this point, the bulge of her head formed a nice outline over your lower belly, which would grow into a nice heavy dome soon. Not waiting for any interruptions, you force more of her in. It was fortunate she was in a kneeling position as this made it nice and simple since she wasn't very strong in resisting and pushing would just speed her to her fate. As she is drawn in, your hands rest against the growing bulge of your womb, you gently played with the nubs of her horns and ears. Eventually, she was nearly claimed as her shoulders, arms and wrists sink into your hungry depths.
+	</text>
+	<choice destination="unbirthing2" text="take her all the way"/>
+	</page>
+	
+	<page ID="unbirthing2">
+	<text>
+	With just a little more to go, you slide more of her in until only her lower legs are sticking out and still kicking. You bring your hips forward and rest your body on the ground with legs spread and bent on either side of you. The last bit of the little fawn travels up your body and curls fully in your hungry womb, finally claiming its little treat. With the fawn curled up inside, you could not help but rub your engorged and squirming stomach. Each bulge shifted under your palms as the fawn both got comfortable as well as pressed for any way out. She would be lucid for quite a while, so you would have more than enough time to enjoy her movements. It was nice to just take a moment and enjoy the environment, with your active midsection.
+	</text>
+	<choice destination="unbirthing3" text="and then the liquidation"/>
+	</page>
+	
+	<page ID="unbirthing3">
+	<text>
+	While your wet and excited pussy still leaked you rested your back against a comfortable rock, and let your body do its magic. As time passed you played with yourself as the fawn was broken down into a wonderful gush of juice and warm liquid pleasure. Soon all bulges faded and left you with a smooth belly that reduced in size as what was left gushed out of your nethers. When you were done you got up ready to continue on with renewed energy.
+	</text>
+		<effect type="feed" value="80" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Carry on." />		
+	</page>
+	
 	<page ID="analvore0">
 		<text>
 		You've made your decision, this cute thing is going up your rear end. She seems uneasy

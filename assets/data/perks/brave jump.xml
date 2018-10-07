@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <perk name="brave jump">
+	<requirement count="1">
+		<req>DEPRECATED</req>
+	</requirement>
 	<description>
 		A leap that carries you with foolhardy courage towards your foes, a
 		reckless jump of 4 or so tiles of distance. 6 AP to use
@@ -17,6 +20,7 @@
 				<text>you leap towards TARGET</text>
 			</hitText>
 		</combatmove>
+		
 	</move>
 	<maxrank value="1" />
 

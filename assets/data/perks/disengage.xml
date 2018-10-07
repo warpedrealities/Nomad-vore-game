@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <perk name="Disengage">
+	<requirement count="1">
+		<req>DEPRECATED</req>
+	</requirement>
 	<description>
 		It's quite easy to get in over your head. And the best way of not dying is
 		to get out of those situations very quickly. This is the act of doing
