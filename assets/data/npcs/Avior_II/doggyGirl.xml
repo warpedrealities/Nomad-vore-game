@@ -50,7 +50,7 @@
 	<respawn delay="2000" />
 	<flying />
 	<defeated conversation="avior_II/doggygirl/defeat" />
-	<seduced conversation="avior_II/doggygirl/defeat" />
+	<seduced conversation="avior_II/doggygirl/seduced" />
 	<victory conversation="avior_II/doggygirl/victory" />
 	<seducer conversation="avior_II/doggygirl/seducer" />	
 	<controller AI="doggy_AI" />

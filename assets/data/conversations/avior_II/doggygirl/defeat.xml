@@ -3,8 +3,12 @@
 
 	<page ID="start">
 	<text>
-		No interaction to be had with defeated doggies yet.
+		The doggy pants and whines, her ample chest heaving as she breathes deeply and tries to regain the strength to get back to her feet. She does her best to give you a pitiable expression as if that will stay your hand. But really, her soft and curvy body is at your mercy. The inumimi yours to enjoy.
 	</text>
+	
+		<choice destination="oralvore0" text="such an ample meal she'll make">
+			<assertion evaluate="hasperk" perk="oralvore" />	
+		</choice>
 		<choice destination="devour" text="Devour her.">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -14,6 +18,36 @@
 			</assertion>
 		</choice>
 		<choice destination="end" text="leave her be"/>		
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	Oh yes, those breasts are going to go to pad your figure..the thought makes your mouth water and the doggy ear splay and whimper at hungry and possessive way you regard her, she shrinks back realizing that there's going to be no to the staying of hands then. Especially as your hands go to grab ahold of her head and breast, groping her as you drag her head despite her struggles up to meet your parting lips. The delicious doggy letting out an agitated bark and wriggling around trying to pull back but doing nothing to stop you from tasting her, sampling her and soaking her cute floppy ears, hair and head with your saliva..letting her know she's yours, your food..and nothing else.
+	</text>
+	<choice destination="oralvore1" text="*eat her up*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Her hands go up to push against you, it's almost quaint how she believes she can resist. You take your swallows, hungrily devouring her and overpowering her resistance almost casually. You have conquered, now you dominate, and consume. She can't stop you as you work your lips down over her shoulders and then cram her soft ample breasts past your lips. Her whimpers and whines are nicely muffled now, and her squirms consistently pleasing as you work your hands down her body to grope her ass and feed her deeper into yourself. Your tummy starting to fill out and bulge around the shape of her as you work her hips in line with your hungry lips. All that's left is her legs now, and then..then she will be food for you. 
+	</text>
+	<choice destination="oralvore2" text="finish her off"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	You can feel her pushing out at your insides as more of her is packed away inside you. As you engulf the curves of her hips and tasteyness of her thighs with your mouth her struggles give you a satisfaction far beyond how fulfilling she is. The whimpering inu soon gobbled up entirely as you tuck her feet past your lips and swallow. Every inch, every ounce, every curve and meaty soft part of her is now within your belly for you to enjoy..and digest, of course.
+	</text>
+	<choice destination="oralvore3" text="*of course*"/>
+	</page>
+	
+	<page Id="oralvore3">
+	<text>
+	You run your hands over the curves made by her breasts, then squeeze the whimpering squirming bulge in your belly..cuddling her with both arms and tightening your stomach walls around her. The fleshy snug confines emphasizing her tits as she tries to squirm and push out at your insides and your enzymes get to work on her. The doggy redoubling her squirms but to no avail, her shape softening and rounding out until nothing but mush remains. Her struggles turning to sloshes and those breasts fading along with the rest of her shape into a smooth soupy form that you can absorb with profound satisfaction. Your gut gradually shrinking away as you get up to continue your adventures.
+	</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Carry on." />	
 	</page>
 	
 	<page ID="devour">

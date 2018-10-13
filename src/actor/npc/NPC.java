@@ -25,6 +25,7 @@ import actorRPG.Actor_RPG;
 import actorRPG.RPGActionHandler;
 import actorRPG.npc.NPCItemDrop;
 import actorRPG.npc.NPC_RPG;
+import actorRPG.npc.conditionalDescription.ConditionalDescription;
 import actorRPG.player.Player_RPG;
 import artificial_intelligence.BrainBank;
 import artificial_intelligence.Code_AI;
@@ -51,7 +52,7 @@ public class NPC extends Actor implements Controllable {
 
 	protected Controller controllerScript;
 	VoreScript voreScript;
-	
+
 	protected int uid;
 	protected int attackIndex;
 	protected int controllermemory[];
@@ -97,7 +98,7 @@ public class NPC extends Actor implements Controllable {
 
 	public NPC(NPC npc, Vec2f p) // clone
 	{
-		threatAssessment=new ThreatAssessment();	
+		threatAssessment=new ThreatAssessment();
 		uid = Universe.getInstance().getUIDGenerator().getnpcUID();
 		moveCost = npc.moveCost;
 		actorPosition = p;
@@ -133,10 +134,12 @@ public class NPC extends Actor implements Controllable {
 		return peace;
 	}
 
+	@Override
 	public boolean getPeace() {
 		return peace;
 	}
 
+	@Override
 	public void setPeace(boolean peace) {
 		this.peace = peace;
 	}
@@ -256,13 +259,13 @@ public class NPC extends Actor implements Controllable {
 		}
 		return false;
 	}
-	
-	
-	
+
+
+
 	@Override
 	public void Update() {
 		super.Update();
-		threatAssessment.update();	
+		threatAssessment.update();
 		actorRPG.update();
 		if (actorRPG.getBusy() == 0 && !isBusy()) {
 			if (voreScript!=null)
@@ -276,18 +279,18 @@ public class NPC extends Actor implements Controllable {
 				{
 					if (RPGHandler.getActive()) {
 						controllerScript.RunAI(this, senseInterface);
-					}				
+					}
 				}
 				if (actorRPG.getBusy()==0)
 				{
-					actorRPG.setBusy(4);			
-				}				
+					actorRPG.setBusy(4);
+				}
 			}
 			else
 			{
 				if (RPGHandler.getActive()) {
 					controllerScript.RunAI(this, senseInterface);
-				}				
+				}
 			}
 		}
 
@@ -316,20 +319,20 @@ public class NPC extends Actor implements Controllable {
 		boolean threat=actorRPG.isThreatening(actorFaction);
 		boolean b = false;
 		Vec2f p = ZoneInteractionHandler.getPos(direction, getPosition());
-		
+
 		int x=(int) actorPosition.x;
 		int y=(int) actorPosition.y;
-		
+
 		b=super.move(direction);
 		if (threat && b)
 		{
 			collisionInterface.removeThreat(x,y,this);
 			collisionInterface.addThreat((int)actorPosition.x,(int)actorPosition.y,this);
-					
+
 		}
 		return b;
 	}
-	
+
 	private void lustRemove()
 	{
 		clock=0;
@@ -341,7 +344,7 @@ public class NPC extends Actor implements Controllable {
 			{
 				if (!drops.get(i).isDefeatOnly())
 				{
-					drops.get(i).useDrop(actorPosition);				
+					drops.get(i).useDrop(actorPosition);
 				}
 			}
 
@@ -354,9 +357,9 @@ public class NPC extends Actor implements Controllable {
 		actorPosition.y = -(actorPosition.y+100);
 		if (respawnController != null) {
 			respawnController.setGone();
-		}	
+		}
 	}
-	
+
 	public void Remove(boolean defeat, boolean noDrops) {
 
 		clock=0;
@@ -368,7 +371,7 @@ public class NPC extends Actor implements Controllable {
 			{
 				if (!drops.get(i).isDefeatOnly() || defeat)
 				{
-					drops.get(i).useDrop(actorPosition);				
+					drops.get(i).useDrop(actorPosition);
 				}
 			}
 
@@ -506,9 +509,9 @@ public class NPC extends Actor implements Controllable {
 
 	@Override
 	public boolean Respawn(long time) {
-		
+
 		voreScript=null;
-		
+
 		actorRPG.getStatusEffectHandler().clearStatusEffects(this, actorRPG,true);
 		if (respawnController != null) {
 
@@ -533,7 +536,7 @@ public class NPC extends Actor implements Controllable {
 				if (actorPosition.x<0)
 				{
 					actorPosition.x = (actorPosition.x-100)*-1;
-					actorPosition.y = (actorPosition.y-100)*-1;	
+					actorPosition.y = (actorPosition.y-100)*-1;
 					if (spriteInterface != null) {
 						spriteInterface.setImage(0);
 					}
@@ -542,7 +545,7 @@ public class NPC extends Actor implements Controllable {
 				actorRPG.setStat(Actor_RPG.RESOLVE, actorRPG.getStatMax(Actor_RPG.RESOLVE));
 			}
 		}
-		checkSpawnable();	
+		checkSpawnable();
 		return false;
 	}
 
@@ -555,12 +558,12 @@ public class NPC extends Actor implements Controllable {
 	public boolean isBusy() {
 		return isBusy;
 	}
-	
+
 
 	public void setBusy(boolean isBusy) {
 		this.isBusy = isBusy;
 	}
-	
+
 	public void startVoreScript(String filename, Actor target)
 	{
 		voreScript=new VoreScript_Impl(filename,(NPC) target, this);
@@ -583,7 +586,7 @@ public class NPC extends Actor implements Controllable {
 			}
 			if (conversations[CONVERSATIONTALK] != null && isHostile(player.getActorFaction().getFilename()) == false) {
 				ViewScene.m_interface.StartConversation(conversations[CONVERSATIONTALK], this, false);
-			}			
+			}
 		}
 	}
 
@@ -678,7 +681,8 @@ public class NPC extends Actor implements Controllable {
 			dstream.writeBoolean(false);
 		}
 	}
-	
+
+	@Override
 	public void setCollisioninterface(Zone_int zinterface) {
 		if (actorRPG.isThreatening(actorFaction))
 		{
@@ -805,7 +809,7 @@ public class NPC extends Actor implements Controllable {
 				int yt = (int) Universe.getInstance().getCurrentZone().zoneActors.get(i).getPosition().y;
 				if (xt == x && yt == y) {
 					// conduct attack
-					Attackable attackable = (Attackable) Universe.getInstance().getCurrentZone().zoneActors.get(i);
+					Attackable attackable = Universe.getInstance().getCurrentZone().zoneActors.get(i);
 					// player.Attack(attackable,m_view);
 					peace = false;
 					return useMove(attackIndex, attackable);
@@ -837,6 +841,7 @@ public class NPC extends Actor implements Controllable {
 		return actorRPG.getCombatMove(attackIndex);
 	}
 
+	@Override
 	public boolean setAttack(int attack) {
 		attackIndex = attack;
 		return true;
@@ -941,8 +946,8 @@ public class NPC extends Actor implements Controllable {
 		return tile.getVisible();
 	}
 
-	
-	
+
+
 	public RespawnControl getRespawnController() {
 		return respawnController;
 	}
@@ -962,9 +967,18 @@ public class NPC extends Actor implements Controllable {
 			if (threat>=0)
 			{
 				senseInterface.drawText("attack of opportunity!");
-				useMove(threat,target);						
-			}	
+				useMove(threat,target);
+			}
 		}
 	}
 
+	@Override
+	public String getDescription() {
+		ConditionalDescription description=((NPC_RPG)actorRPG).getConditionalDescription();
+		if (description != null && description.isActive(getFlags(), actorFaction)) {
+			return description.getText();
+		}
+
+		return actorDescription;
+	}
 }

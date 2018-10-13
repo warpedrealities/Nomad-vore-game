@@ -14,10 +14,30 @@
 			<assertnot evaluate="hasperk" perk="unbirthing" />
 			<assertion evaluate="haspart" part="vagina" />
 		</choice>
+		<choice destination="brightfeatherquest1" text="So I met a group of talking harpies on a world far from here, i told them about you and they want me to invite you to live with them">
+					<condition evaluate="GLOBALFLAG" value="1" operator="equals"
+				flag="BRIGHTFEATHER_QUEST" />
+		</choice>
 		<choice destination="why" text="Why did the harpy carry me up here?" />
 		<choice destination="different" text="you seem different from the others" />
 		<choice destination="end" text="not right now" />
 	</page>
+	
+	<page ID="brightfeatherquest1">
+	<text>
+	Brightfeather's eyes widen "oh? OH! oh oh that's wonderful. I could talk to other harpies? have other harpies to talk to i mean.. i mean." she blinkblinks and ruffles herself a bit afore calming down "That's wonderful news." she says and then seems to consider "but...could i take my friends from here with me as well?" she asks "I know they can't talk? but I'm awful fond of them. They're like family?" she says looking awkward as she makes that suggestion.
+	</text>
+		<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="2" />		
+	<choice destination="brightfeatherquest1A" text="Tell you what I'll go see what they say"/>
+	</page>
+	
+	<page ID="brightfeatherquest1A">
+	<text>
+	"Really? really you would.. ooh i hope they say yes, I'm sorry to be such a bother but. I really can't imagine leaving them behind." she says with an apologetic shrug "I hope to hear back what they said soon."
+	</text>
+	<choice destination="end" text="I'll come back with news"/>
+	</page>
+	
 	<page ID="start">
 		<effect type="setglobalflag" flag="AMIIA_BRIGHTFEATHER" value="1" />
 		<effect type="setlocalflag" flag="first" value="1" />

@@ -4,14 +4,14 @@
 		<edge value="NORTH" type="1" />
 		<edge value="SOUTH" type="1" />
 
+		<row>02211120</row>
+		<row>02511120</row>
+		<row>02211120</row>
 		<row>00211120</row>
 		<row>00211120</row>
-		<row>00211120</row>
-		<row>00211120</row>
-		<row>00211120</row>
-		<row>00211120</row>
-		<row>00211120</row>
-		<row>00211120</row>
+		<row>02211120</row>
+		<row>02511120</row>
+		<row>02211120</row>
 
 	</block>
 
@@ -52,14 +52,14 @@
 		<edge value="NORTH" type="1" />
 		<edge value="SOUTH" type="1" />
 		<edge value="WEST" type="2" />
-		<row>22211120</row>
-		<row>33211120</row>
-		<row>23211120</row>
+		<row>22211122</row>
+		<row>33211152</row>
+		<row>23211122</row>
 		<row>23311120</row>
 		<row>23311120</row>
-		<row>23211120</row>
-		<row>33211120</row>
-		<row>22211120</row>
+		<row>23211122</row>
+		<row>33211152</row>
+		<row>22211122</row>
 
 	</block>
 	
@@ -98,13 +98,13 @@
 		<edge value="WEST" type="1" />
 		<edge value="EAST" type="1" />
 
-		<row>00000000</row>
-		<row>22222222</row>
+		<row>22200222</row>
+		<row>25222252</row>
 		<row>11111111</row>
 		<row>11111111</row>
 		<row>11111111</row>
-		<row>22222222</row>
-		<row>00000000</row>
+		<row>25222252</row>
+		<row>22200222</row>
 		<row>00000000</row>
 	</block>
 	
@@ -625,7 +625,7 @@
 		<row>11111111</row>
 		<row>11111111</row>
 		<row>11111111</row>
-		<row>21111112</row>
+		<row>25111152</row>
 		<row>21111112</row>
 		<row>22222222</row>
 		<widget x="1" y="6" name="chest" info="normalchest" />		
@@ -636,11 +636,11 @@
 	<block name="room E">
 		<edge value="EAST" type="1" />	
 		<row>22222220</row>
-		<row>21111122</row>
+		<row>21111522</row>
 		<row>21111111</row>
 		<row>21111111</row>
 		<row>21111111</row>
-		<row>21111122</row>
+		<row>21111522</row>
 		<row>22222220</row>
 		<row>00000000</row>
 		<widget x="2" y="2" name="chest" info="normalchest" />		
@@ -706,11 +706,11 @@
 	<block name="room W">
 		<edge value="WEST" type="1" />	
 		<row>22222222</row>
-		<row>21111112</row>
+		<row>25111112</row>
 		<row>11111112</row>
 		<row>11111112</row>
 		<row>11111112</row>
-		<row>21111112</row>
+		<row>25111112</row>
 		<row>22222222</row>
 		<row>00000000</row>
 		<widget x="6" y="1" name="chest" info="normalchest" />		
@@ -724,7 +724,7 @@
 		<row>02111112</row>
 		<row>02111112</row>
 		<row>02111112</row>
-		<row>02111112</row>
+		<row>02511152</row>
 		<row>02211122</row>
 		<row>00211120</row>
 		<widget x="2" y="1" name="chest" info="normalchest" />		
@@ -734,7 +734,7 @@
 		<edge value="SOUTH" type="1" />	
 		<row>00211120</row>
 		<row>02211122</row>
-		<row>02111112</row>
+		<row>02511152</row>
 		<row>02111112</row>
 		<row>02111112</row>
 		<row>02111112</row>

@@ -6,7 +6,7 @@
 	<World x="-8" y="18">Alpha Minoris III</World>
 	<Station x="13" y="11">Space Hulk 0</Station>
 	<Spaceship x="2" y="2" file="talharan_trader" controller="talharan_trader0" />
-<!-- 	<Spaceship x="22" y="24" file="avenger"/>	 -->
+	<Spaceship x="22" y="24" file="avenger"/>	
 	<Spaceship x="-32" y="-28" file="interloper"/>
 	<Station x="23" y="25">derelict 0</Station>
 	<decorations>

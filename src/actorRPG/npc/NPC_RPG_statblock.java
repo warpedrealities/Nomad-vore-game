@@ -9,6 +9,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import actorRPG.RPG_Helper;
+import actorRPG.npc.conditionalDescription.ConditionalDescription;
 import combat.CombatMove;
 import faction.Faction;
 import shared.ParserHelper;
@@ -28,8 +29,10 @@ public class NPC_RPG_statblock {
 	private ArrayList<CombatMove> moveList;
 	private String[] statusTags;
 
+	private ConditionalDescription conditionalDescription;
+
 	private int threatMove=-1;
-	
+
 	public String getNPCName() {
 		return NPCName;
 	}
@@ -81,6 +84,9 @@ public class NPC_RPG_statblock {
 				if (Enode.getTagName().equals("valueCalculator"))
 				{
 					valueCalculator=new Value_Calculator(Enode);
+				}
+				if (Enode.getTagName().equals("conditionalDescription")) {
+					conditionalDescription = new ConditionalDescription(Enode);
 				}
 			}
 		}
@@ -161,7 +167,7 @@ public class NPC_RPG_statblock {
 
 		return moveList.get(index);
 	}
-	
+
 	public int getNumCombatMoves()
 	{
 		return moveList.size();
@@ -183,7 +189,7 @@ public class NPC_RPG_statblock {
 	{
 		threatMove=-1;
 	}
-	
+
 	public List <NPCItemDrop> getItemDrops() {
 		return itemDrops;
 	}
@@ -216,9 +222,9 @@ public class NPC_RPG_statblock {
 			return true;
 		}
 		return false;
-		
+
 	}
-	
+
 	public int getThreatMove()
 	{
 		return threatMove;
@@ -227,9 +233,13 @@ public class NPC_RPG_statblock {
 	public Value_Calculator getValueCalculator() {
 		return valueCalculator;
 	}
-	
+
 	public int getChallengeLevel()
 	{
 		return challengeLevel;
+	}
+
+	public ConditionalDescription getConditionalDescription() {
+		return conditionalDescription;
 	}
 }

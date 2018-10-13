@@ -14,7 +14,7 @@ public class WidgetDamage extends Widget {
 
 	private int damageValue;
 	private boolean exterior;
-	
+
 	public WidgetDamage(int value, boolean exterior)
 	{
 		damageValue=value;
@@ -24,39 +24,39 @@ public class WidgetDamage extends Widget {
 		if (exterior)
 		{
 			widgetSpriteNumber=15;
-			widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";	
+			widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";
 
 		}
 		else
 		{
 			widgetSpriteNumber=24;
-			widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";	
-					
+			widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";
+
 		}
 
 	}
-	
+
 	public WidgetDamage(DataInputStream dstream) throws IOException
 	{
 		isWalkable=true;
 		isVisionBlocking=false;
 
-		
+
 		damageValue=dstream.readInt();
 		exterior=dstream.readBoolean();
 		if (exterior)
 		{
 			widgetSpriteNumber=15;
-			widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";	
+			widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";
 
 		}
 		else
 		{
-			widgetDescription="interior damage to the ship systems. represents "+damageValue+" hull damage";	
+			widgetDescription="interior damage to the ship systems. represents "+damageValue+" hull damage";
 			widgetSpriteNumber=24;
 		}
 	}
-	
+
 	@Override
 	public void save(DataOutputStream dstream) throws IOException {
 
@@ -72,12 +72,12 @@ public class WidgetDamage extends Widget {
 	public void setDamageValue(int damageValue) {
 		this.damageValue = damageValue;
 		if (exterior) {
-			widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";	
+			widgetDescription="A rent in the interior caused by hull damage to the ship. represents "+damageValue+" hull damage";
 		}
-		else 
+		else
 		{
-			widgetDescription="interior damage to the ship systems. represents "+damageValue+" hull damage";	
-			 
+			widgetDescription="interior damage to the ship systems. represents "+damageValue+" hull damage";
+
 		}
 	}
 
@@ -95,23 +95,24 @@ public class WidgetDamage extends Widget {
 		}
 		setDamageValue(damageValue-r);
 
-		if (exterior) {
-			ViewScene.m_interface.DrawText("conducting hull repairs, 1 repair kit used to recover "+r+" hull points");	
+		if (!exterior) {
+			ViewScene.m_interface.DrawText("conducting hull repairs, 1 repair kit used to recover "+r+" hull points");
 		}
 		else
 		{
-			ViewScene.m_interface.DrawText("conducting system repairs, 2 scrap used to recover "+r+" hull points");		
+			ViewScene.m_interface.DrawText("conducting system repairs, 2 scrap used to recover "+r+" hull points");
 		}
-	
+
 		if (damageValue<=0)
 		{
 			ViewScene.m_interface.RemoveWidget(this);
-		}	
+		}
 	}
-	
+
+	@Override
 	public boolean Interact(Player player)
 	{
-		if (exterior) {
+		if (!exterior) {
 			if (player.getInventory().countItem("repair kit")>=1)
 			{
 				repair(player);
@@ -120,8 +121,8 @@ public class WidgetDamage extends Widget {
 			}
 			else
 			{
-				ViewScene.m_interface.DrawText("need at least 1 repair kit to repair hull damage");
-			}		
+				ViewScene.m_interface.DrawText("need at least 1 repair kit to repair system damage");
+			}
 		}
 		else
 		{
@@ -133,8 +134,8 @@ public class WidgetDamage extends Widget {
 			}
 			else
 			{
-				ViewScene.m_interface.DrawText("need at least 2 scrap metal to perform system repairs");
-			}		
+				ViewScene.m_interface.DrawText("need at least 2 scrap metal to perform hull repairs");
+			}
 		}
 
 		return false;
@@ -143,5 +144,5 @@ public class WidgetDamage extends Widget {
 	public boolean isExterior() {
 		return exterior;
 	}
-	
+
 }

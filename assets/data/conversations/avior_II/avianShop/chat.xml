@@ -11,9 +11,75 @@
 	<choice destination="harpies" text="You know, I've met harpies like you before..they didn't talk though">
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="AMIIA_HARPIES" value="1" />
 	</choice>
+	<choice destination="brightfeather2" text="So I spoke to Brightfeather, but she wants to take along her feral harpy friends">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="2" />
+	</choice>
+	<choice destination="brightfeather3" text="So about a new home for brightfeather's harpy friends">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="3" />
+	</choice>
 	<choice destination="end" text="Nothing, stay friendly"/>
 	</page>
+	
+	<page ID="brightfeather3">
+	<text>
+	"Yes yes. Southeast of village, is clear? is safe? you looked? is good?" asks Keliya bobbing for emphasis of each question.
+	</text>
+	<choice destination="shop" text="No but I need some supplies first"/>
+	<choice destination="end" text="No not yet, I'll get back to that"/>
+	</page>
 
+	<page ID="brightfeather2">
+	<text>
+	Keliya chirps "I guess they're kinda family to her. But we can't have a bunch of feral harpies in our village. We'll need to find somewhere else for them to make their nests." says the harpy storekeep, bobbing as she thinks in a way that's probably normal for her but a bit disorientating for you.
+	</text>
+	<choice destination="brightfeather2village" text="why can't they just live in the village with you?"/>
+	<choice destination="brightfeather2A" text="so what do you propose we do?"/>
+	<choice destination="end" text="We'll discuss this later"/>
+	</page>
+	
+	<page ID="brightfeather2village">
+	<text>
+	"Because the mental degeneracy breeds true and we don't want to lay eggs that'll hatch into dumb children. Keeping them from mingling at least cuts it down." 
+	</text>
+	<choice destination="brightfeather2A" text="so what do you propose we do?"/>
+	<choice destination="end" text="I see, thanks for telling me, lets pick this topic up later"/>
+	</page>
+	
+	<page ID="brightfeather2A">
+	<text>
+	"We need to find somewhere else for them to live. And by we, I really mean you. I need to mind the store and I'm really not the exploring and adventuring type. But could you go and see if the area south west of the village is safe for harpies? I mean, I'm sure it is. but could you go check it out and make sure?"
+	</text>
+	<choice destination="brightfeather2ADanger" text="Why do you think it might be dangerous?"/>
+	<choice destination="brightfeather2B" text="sure I can do that"/>
+	<choice destination="end" text="not right now."/>
+	</page>
+	
+	<page ID="brightfeather2ADanger">
+	<text>
+	"Well the others sort of avoid it mostly. But I dunno why exactly, i think some harpies went missing there once? but I'm sure it wouldn't be a problem for you though."
+	</text>
+	<choice destination="brightfeather2B" text="Okay I'll do it"/>
+	<choice destination="brightfeather2AProblem" text="Why do you think I'll be okay?"/>
+	<choice destination="end" text="I think I'll pass."/>	
+	</page>
+	
+	<page ID="brightfeather2AProblem">
+	<text>
+	"Mostly cause you have thumbs. Handy things thumbs, especially for wielding weapons. You have no idea how much not having hands makes fighting with weapons difficult. But you have thumbs, so you can use weapons..so you should be fine."
+	</text>
+	<choice destination="brightfeather2B" text="Okay I'll do it"/>
+	<choice destination="end" text="I don't think thumbs are enough to make this safe, maybe later"/>	
+	</page>
+	
+	<page ID="brightfeather2B">
+	<text>
+	"Okay good. Now. I'm fairly sure it's not too dangerous for you. But just in case I got some supplies for you. Make it back safe okay?" says Keliya and then sets a few medkits at your feet.
+	</text>
+	<effect type="giveitem" value="2" item="medkit" />
+	<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="3" />
+	<choice destination="end" text="Thankyou Keliya, I'll come back with news"/>
+	</page>
+	
 	<page ID="shop">
 		<text>
 		</text>
@@ -22,7 +88,7 @@
 	
 	<page ID="harpies">
 	<text>
-	Keliya nods "Yes yes, sufferers of the plague. Very sad, though perhaps they are happy as they are? But that's what's sad, they don't know any better. Can't know anything better." she says and then chirps and cants her head to the side "We can all talk here though, you don't need to worry...though there are feral harpies elsewhere on the planet...so be careful..but you really don't need to fear much in the village!" she insists.
+	Keliya nods "Yes yes, sufferers of the plague. Very sad, though perhaps they are happy as they are? But that's what's sad, they don't know any better. Can't know anything better." she says and then chirps and cants her head to the side "We can all talk here though, you don't need to worry...though there are ferals elsewhere on the planet...so be careful..but you really don't need to fear much in the village!" she insists.
 	</text>
 	<choice destination="brightfeather" text="There is one amongst them who can talk, calls herself brightfeather..she struck me as a bit lonely though">
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="AMIIA_BRIGHTFEATHER" value="1" />

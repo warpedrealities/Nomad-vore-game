@@ -12,6 +12,7 @@ import actor.Modifier;
 import actor.npc.NPC;
 import actorRPG.Actor_RPG;
 import actorRPG.StatusEffectHandler;
+import actorRPG.npc.conditionalDescription.ConditionalDescription;
 import combat.CombatMove;
 import combat.statusEffects.StatusEffect;
 import faction.Faction;
@@ -27,8 +28,8 @@ public class NPC_RPG implements Actor_RPG {
 	int busy;
 	// int bindState;
 	StatusEffectHandler statusEffectHandler;
-	
-	
+
+
 	public NPC_RPG(NPC_RPG RPG, Actor actor) {
 		// bindState=-1;
 		statusEffectHandler = new StatusEffectHandler();
@@ -184,7 +185,7 @@ public class NPC_RPG implements Actor_RPG {
 	{
 		return statBlock.getExpValue();
 	}
-	
+
 	public String getSpriteName() {
 		// TODO Auto-generated method stub
 		return statBlock.getSpriteName();
@@ -206,6 +207,7 @@ public class NPC_RPG implements Actor_RPG {
 		return statBlock.getTagged(tag);
 	}
 
+	@Override
 	public boolean applyStatus(StatusEffect effect, boolean replace) {
 		if (statusEffectHandler.applyStatus(effect, replace, this)) {
 			return true;
@@ -223,6 +225,7 @@ public class NPC_RPG implements Actor_RPG {
 		attributeMods[attribute] += modifier;
 	}
 
+	@Override
 	public String getName() {
 		return actor.getName();
 	}
@@ -262,6 +265,7 @@ public class NPC_RPG implements Actor_RPG {
 		statusEffectHandler.struggle(this, actor);
 	}
 
+	@Override
 	public boolean stealthCheck(int spot,boolean remove) {
 		return statusEffectHandler.stealthCheck(spot, this,remove);
 	}
@@ -313,7 +317,7 @@ public class NPC_RPG implements Actor_RPG {
 	public float getSubAbility(int i) {
 		return 0;
 	}
-	
+
 	@Override
 	public boolean isThreatening(Faction faction)
 	{
@@ -323,9 +327,13 @@ public class NPC_RPG implements Actor_RPG {
 	{
 		return statBlock.getThreatMove();
 	}
-	
+
 	public Value_Calculator getValueCalculator()
 	{
 		return statBlock.getValueCalculator();
+	}
+
+	public ConditionalDescription getConditionalDescription() {
+		return statBlock.getConditionalDescription();
 	}
 }
