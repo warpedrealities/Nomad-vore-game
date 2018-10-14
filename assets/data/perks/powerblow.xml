@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="powerblow">
 	<requirement count="1">
-		<req>PERKwarrior</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description>
 		You're able to unleash a mighty blow with all your force behind it. Reckless
@@ -10,10 +10,7 @@
 	</description>
 	<weaponMove name="powerblow" bonusToHit="0" tag="P"
 		actionCost="2" moveType="FIGHT">
-		<change type="MOD" proportionate="true">
-			<effectDamage type="KINETIC" minValue="50" maxValue="50"
-				modifier="STRENGTH" />
-		</change>
+	
 	</weaponMove>
 	<maxrank value="1" />
 

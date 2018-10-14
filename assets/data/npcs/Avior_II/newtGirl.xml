@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="greenN.png" />
+	<name>newt girl</name>
+	<description>A lizardlike amphibian girl dark green from head to toe and covered in smooth flexible moist looking skin. Her fingers and toes are webbed together and her tail is long, thick and flexible. Her mannerisms despite her cute and slender build are however those of a predator, one with a remarkably long tongue as you see it flick out a little for a moment. </description>
+	<rpg>
+		<experiencevalue value="500" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="PARRY" value="4" />		
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />
+		<combatMove name="melee" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>Newt fails to hit TARGET</text>
+				<text>TARGET evades the newt's attack</text>
+			</missText>
+			<hitText count="2">
+				<text>Newt kicks TARGET for VALUE damage</text>
+				<text>Newt gives TARGET a kick for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="tease" pattern="MELEE" bonusAttribute="SEDUCTION"
+			timeCost="2" bonusToHit="4">
+			<effectDamage type="TEASE" minValue="1" maxValue="8"
+				modifier="STRENGTH" />
+			<effectStatus probability="25" rangedDecay="1">
+				<proportionalEffect stat="RESOLVE" proportion="1" />
+				<probabilityModifier value="INTELLIGENCE" />
+				<statusTag tag="seduction" />
+				<applyText>TARGET is distracted.</applyText>
+				<statusAttribMod uid="50" icon="12" duration="10"
+					numModifiers="2">
+					<removeText> TARGET is no longer distracted.</removeText>
+					<effect attribute="RANGED" modifier="-8" />
+					<effect attribute="MELEE" modifier="-8" />
+				</statusAttribMod>
+			</effectStatus>				
+			<missText count="1">
+				<text>Newt attempts to arouse TARGET unsuccessfully</text>
+			</missText>
+			<hitText count="4">
+				<text>Newt gropes over who TARGET loses VALUE resolve</text>
+				<text>Newt presses up against TARGET to become aroused and lose VALUE resolve</text>
+				<text>Newt squeezes on TARGET whose resolve diminishes by VALUE</text>
+				<text>Newt kisses TARGET seducing them for VALUE resolve damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="tongue" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="4" pattern="RANGED" moveType="MOVEMENT">
+			<missText count="2">
+				<text>Newt girl lashes out her tongue at TARGET, who dodges the
+					biological grappling hook.</text>
+				<text>Newt girl's amazingly long tongue snaps out and flicks
+					harmlessly past TARGET before reeling back in.</text>
+			</missText>
+			<hitText count="2">
+				<text>Newt girl lashes her tongue out at TARGET and manages to wraps it
+					around her and tug her closer.</text>
+				<text>Newt girl nails TARGET with her tongue and yanks them
+					much closer.</text>
+			</hitText>
+			<effectMovement moveType="TARGET_TOWARDS" distance="2"
+				abilityMod="STRENGTH" />
+		</combatMove>		
+		<combatMove name="grapple" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="6" pattern="MELEE" actionCost="2">
+			<missText count="1">
+				<text>Newt attempts to grapple TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Newt grapples TARGET</text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is grappled by the newt</applyText>
+				<statusBind uid="20" icon="4" numModifiers="3">
+					<removeText> TARGET has escaped the newt's grapple</removeText>
+					<effect attribute="RANGED" modifier="-4" />
+					<effect attribute="MELEE" modifier="-4" />
+					<effect attribute="SEDUCTION" modifier="-4" />					
+					<bind strength="10" originDependent="true" />
+					<struggle count="2">
+						<text>TARGET struggles newt's embrace
+						</text>
+						<text>TARGET tries to escape the newt's grasp
+						</text>
+					</struggle>
+				</statusBind>
+			</effectStatus>
+		</combatMove>
+		<combatmove name="disengage" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="12" pattern="MELEE"
+			actionCost="2" moveType="MOVEMENT">
+			<missText count="1">
+				<text>Newt fails to get away from TARGET .</text>
+			</missText>
+			<hitText count="1">
+				<text>Newt leaps away from TARGET</text>
+			</hitText>
+			<effectMovement moveType="SELF_AWAY" distance="4"
+				abilityMod="AGILITY" />
+		</combatmove>		
+		<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusStealth uid="23" icon="5" duration="1000"
+					 strength="18" interval="60">
+				</statusStealth>
+			</effectStatus>
+		</combatMove>
+		<combatmove name="heal"
+			timeCost="2" pattern="SELF" bonusAttribute="WILLPOWER" bonusToHit="20">
+			<effectrecover modifier="INTELLIGENCE" modstrength="0.2"
+				modvalue="10" modifies="HEALTH" />
+			<effectrecover modifier="INTELLIGENCE" modstrength="0.2"
+				modvalue="10" modifies="RESOLVE" />			
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatmove>		
+	</rpg>
+
+	<respawn delay="500" />
+	<flying />
+	<defeated conversation="avior_II/newtGirl/defeat" />
+	<seduced conversation="avior_II/newtGirl/seduced" />
+	<victory conversation="avior_II/newtGirl/victory" />
+	<seducer conversation="avior_II/newtGirl/seducer" />	
+	<controller AI="newt_AI" />
+	<faction value="monster" />
+</Harpy>

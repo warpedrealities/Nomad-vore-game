@@ -690,4 +690,12 @@ public class CombatMove {
 		noCriticals = value;
 	}
 
+	public void setMoveCooldown(int moveCooldown) {
+		this.moveCooldown = moveCooldown;
+	}
+
+	public void setIcon(int icon) {
+		this.icon = icon;
+	}
+
 }

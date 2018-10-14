@@ -4,5 +4,6 @@
 	<zone x="0" y="0" type="SURFACE">Avian Village</zone>
 	<zone x="0" y="0" type="CLOSED">Avian Undertown</zone>		
 	<zone x="0" y="1" type="SURFACE">Zone 1B</zone>	
+	<zone x="1" y="1" type="CLOSED">Zone 2B</zone>		
 	<zone x="1" y="0" type="CLOSED">Zone 2A</zone>		
 </world>

@@ -12,6 +12,7 @@
 		<tile sprite="9" vision="EMPTY" movement="0"> a wooden wall</tile>		
 	</tileset>
 	<transition direction="north">Avian Undertown</transition>	
+	<transition direction="east">Zone 1A</transition>		
 	<description>The forest is thinner here, spreading out into sparse copses of trees that are themselves of less epic stature and letting the breeze stir the air at ground level.</description>
 
 	<mapgen>
@@ -46,7 +47,7 @@
 				<floodfill tile="3" />
 			</band>
 		</perlin>
-		<walloff wall="3" sides="southeastwest" />
+		<walloff wall="3" sides="southwest" />
 	<prefab positionX="30" positionY="60" width="5">
 			<row>88888</row>
 			<row>87878</row>

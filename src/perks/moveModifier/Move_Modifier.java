@@ -17,6 +17,8 @@ public class Move_Modifier {
 	float timeModifier;
 	int attackBonus;
 	float actionCost;
+	private int cooldown;
+	private int icon;
 	boolean basicAction = false;
 	private AttackPattern attackPattern;
 	private boolean noCriticals;
@@ -42,6 +44,12 @@ public class Move_Modifier {
 		}
 		if (Enode.getAttribute("timeModifier").length() > 0) {
 			timeModifier = Float.parseFloat(Enode.getAttribute("timeModifier"));
+		}
+		if (Enode.getAttribute("cooldown").length() > 0) {
+			cooldown = Integer.parseInt(Enode.getAttribute("cooldown"));
+		}
+		if (Enode.getAttribute("icon").length() > 0) {
+			icon = Integer.parseInt(Enode.getAttribute("icon"));
 		}
 		modifiers = new ArrayList<Effect_Change>();
 		NodeList list = Enode.getChildNodes();
@@ -71,6 +79,11 @@ public class Move_Modifier {
 
 		move.setAttackPattern(attackPattern);
 		move.setNoCriticals(noCriticals);
+		if (cooldown > 0) {
+			move.setMoveCooldown(cooldown);
+		}
+		move.setIcon(icon);
+
 		int index = 0;
 		for (int i = 0; i < modifiers.size(); i++) {
 			if (modifiers.get(i).getType() == modifierType.ADD) {
