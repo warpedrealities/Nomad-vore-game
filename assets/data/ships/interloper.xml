@@ -43,7 +43,7 @@
 				<contains name="modules/navconsole" />
 				<widgetItem>nav console</widgetItem>	
 			</placeWidget>
-			<placeWidget x="4" y="2" name="DAMAGE" value="20" />
+			<placeWidget x="4" y="2" name="DAMAGE" value="17" />
 			<placeItem x="5" y="2">
 				<lootTable>
 					<lootSubTable chance="1" file="interloper_resources" />	
@@ -68,7 +68,7 @@
 					<loot item="blueprint" chance="1" addendum="brightsword_complete" />		
 				</lootTable>		
 			</placeItem>				
-			<placeWidget x="8" y="5" name="DAMAGE" value="15" />		
+			<placeWidget x="8" y="5" name="DAMAGE" value="17" exterior="true" />		
 			<placeWidget x="2" y="8" name="hardpoint">
 				<facing value="0" />
 			</placeWidget>

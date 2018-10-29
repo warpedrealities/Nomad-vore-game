@@ -23,7 +23,7 @@
 	<text>
 	“Eh, It's Hit or Miss. I've had quite the adventures, but I'm also spent a lot of time sitting around doing nothing... Kind of like this. She responded, taking another sip as she looked at you. “I do have to say though, you're one of the cuter things I've seen on my travels.”
 	</text>
-	<page destination="alt1" text="$Thank you!"/>
+	<choice destination="alt1" text="$Thank you!"/>
 	</page>
 	
 	<page ID="alt1">

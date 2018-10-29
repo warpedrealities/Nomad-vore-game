@@ -12,7 +12,7 @@
 		<tile sprite="9" vision="EMPTY" movement="0"> a wooden wall</tile>		
 	</tileset>
 	<transition direction="north">Avian Undertown</transition>	
-	<transition direction="east">Zone 1A</transition>		
+	<transition direction="east">Zone 2B</transition>		
 	<description>The forest is thinner here, spreading out into sparse copses of trees that are themselves of less epic stature and letting the breeze stir the air at ground level.</description>
 
 	<mapgen>

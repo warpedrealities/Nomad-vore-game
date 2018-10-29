@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="mind break">
 	<requirement count="1">
-		<req>PERKpsychic</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description> A mind can be bent, or broken. To a broken mind everything around them is a threat, unable to tell friend from foe they lash out in fear.
 	</description>

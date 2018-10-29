@@ -7,9 +7,81 @@
 		<preference fetish="oralvore" />
 		<!--feetfirst-->
 		<text>
-		
+		The Newtgirl flicks out her tongue to taste your cheek as you stagger, then gives you a push and giggles as you fall over. She drops down into a squat as you land and smacks her lips thrice and grabs your feet "not birdygirl, wonder if you taste as good as birdygirl, gonna find out." she says and giggles, her tailtip twitching back and forth with her eagerness as she raises your feet to her lips. She's not overly deterred or hampered by your struggles, but as she slides your feet into the wet warmth of her mouth you really don't see any reason to stop.
 		</text>
-
+		<choice destination="oralvore0" text="Wait you can talk please don't eat me."/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	You hear the newt girl giggle around your ankles and swallow, gulping your feet down into her throat and not relenting in her intent to devour you despite your protests or your pleas. The newt letting out pleased murrs around your calves as she gobbles those up as well and you try to scrabble for a handhold to anchor yourself against the pull of her throat to no avail. Instead you're forced to watch her lips work up over your knees, and then thighs as she eats you alive.
+	</text>
+	<choice destination="oralvore1" text="*pleading doesn't seem to be working*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Her green belly is stretching out, the dark green skin turning thin and faintly translucent as your legs curl inside her gut and she works up around your hips. She sees your clutching hands grasping at roots and seems to smile around your waist at that afore tugging backwards, padding on all fours and brushing her belly on the ground as she drags your hands loose of your anchor and then resumes swallowing you up. She only pauses again to grab your hands as you lunge down to try and push her away, the newt feeding your hands in down by your sides.
+	</text>
+	<choice destination="oralvore2" text="*soon to be eaten*"/>
 	</page>
 
+	<page ID="oralvore2">
+	<text>
+	The Newt sits her ass down with a heavy flump as your weight starts to settle in her gut and she swallows up around your chest, then shoulders..and finally seals her lips over the top of your head and gobbles you up entirely "You're silly, birdies talk as well, i eat them as well. They're tastey, so were you though." she says and smacks her lips a few times and patpats her gut happily as you're squished inside of her belly.
+	</text>
+	<choice destination="struggle" text="Fine then I'll just get out of here anyway."/>
+	<choice destination="persuade" text="Surely there's some way I could persuade you to let me go"/>
+	<choice destination="submit" text="there's really no convincing you otherwise is there?"/>
+	</page>
+	
+	<page ID="persuade">
+	<text>
+	"Nope. I want squirmy food, you are squirmy food. So I'm keeping ya until you go moosh." says the newt and presses against her belly bulge happily with her arms, squeezing you inside her gut. 
+	</text>
+	<choice destination="struggle" text="I'll just get out of here anyway."/>
+	<choice destination="submit" text="there's really no convincing you otherwise is there?"/>	
+	</page>
+	
+	<page ID="submit">
+	<text>
+	"Nope..feel free to keep squirming in there though. It makes me feel gooood." she says with a chir and smacks her lips as she leans back and rubs her belly with one hand as it gets to work on you. Her stomach walls clenching and rubbing around you, squeezing and pressing and glorping and starting to break you down into food for her.
+	</text>
+	<choice destination="submitGO" text="*squirm and gurgle*"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	You press against her stomach walls and hear her chirr  in delight. The newt half lidding her eyes and stroking her gut as you squirm and then eventually soften. The sensations of your movements within her delighting the amphibian until all that's left is sloshyness that fades into a compact and shrinking roundness. It doesn't take long for her to digest and absorb you completely all told, leaving only her smile of satisfaction and a bit more chub around her belly regions.
+	</text>
+	</gameover>
+	
+	<check ID="struggle">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>
+
+	<page ID="struggleEscape">
+	<text>
+	"Oh no you're not getting out..but...mhmm feel free to try, i love it when they struggle." she chirrs and rubs at her gut as you start shoving at her insides. You're intent on being able to squirm your way out of here and perhaps her self indulgent complacency might work to your advantage. She rubs, you struggle, and suddenly she hurks and lets out a disgruntled cough "hey waita-MPH!" she manages, as you shove your hands up through her mouth. The newt letting out distressed and understandably muffled noises around your arms as you push yourself out into the open air. Newt shakes her head and wipes her mouth as you finish getting free "You know I'm just gonna put you right back in me right." she says and then bounds to her feet.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="2" />		
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+	"Oh no you're not getting out..but...mhmm feel free to try, i love it when they struggle." she chirrs and rubs at her gut as you start shoving at her insides. You're intent on being able to squirm your way out of here and perhaps her self indulgent complacency might work to your advantage. She rubs, you struggle, but for all your efforts you cannot seem to escape the clenching tight, and increasingly gooey and churning, confines of her belly. The newt letting out a moan "I love it when they struggle." she says happily, even as your struggles begin to weaken.
+	</text>
+	<choice destination="struggleDigestGO" text="*gurgle*"/>
+	</page>
+	
+	<gameover ID="struggleDigestGO">
+	<text>
+	Gradually you lose your battle against her insides, turning soft and gooey and finally subsiding into a sloshy mass of soup within her as she chirrs "I LOVE it when they struggle." she reiterates and smiles in delight as her belly turns round and soft. Your form compacting and flowing into her with loud gurgles and glorps from her belly as it shrinks down. The newt rubbing her fingers over her belly and giggling at how she feels the liquid mass within displace letting her dimple the skin. But soon even this amusement will pass and she'll return to the trees.
+	</text>
+	</gameover>
+	
 </Conversation>

@@ -40,7 +40,7 @@
 				<floodfill tile="3" />
 			</band>				
 	</perlin>	
-					<SeedNPCs min="4" max="8" name="Forakis_I/LionGirl Marauder">
+					<SeedNPCs min="4" max="6" name="Forakis_I/LionGirl Marauder">
 					</SeedNPCs>				
 		<walloff wall="2" sides="north" />
 	</mapgen>

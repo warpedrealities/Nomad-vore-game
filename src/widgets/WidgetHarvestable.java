@@ -18,29 +18,29 @@ import zone.Zone;
 
 public class WidgetHarvestable extends Widget {
 
-	
+
 	private class HarvestSkillCheck
 	{
 		public int attribute;
 		public String item;
 		public int min,max,dc;
 		public String successText;
-		
+
 		public HarvestSkillCheck()
 		{
-			
+
 		}
-		
+
 		public HarvestSkillCheck(Element enode)
 		{
 			attribute=RPG_Helper.AttributefromString(enode.getAttribute("attribute"));
 			item=enode.getAttribute("item");
 			min=Integer.parseInt(enode.getAttribute("min"));
 			max=Integer.parseInt(enode.getAttribute("max"));
-			dc=Integer.parseInt(enode.getAttribute("dc"));		
+			dc=Integer.parseInt(enode.getAttribute("dc"));
 			successText=enode.getTextContent();
 		}
-		
+
 		public void save(DataOutputStream dstream) throws IOException
 		{
 			ParserHelper.SaveString(dstream, item);
@@ -50,7 +50,7 @@ public class WidgetHarvestable extends Widget {
 			dstream.writeInt(dc);
 			dstream.writeInt(attribute);
 		}
-		
+
 		public void load(DataInputStream dstream) throws IOException
 		{
 			item=ParserHelper.LoadString(dstream);
@@ -60,9 +60,9 @@ public class WidgetHarvestable extends Widget {
 			dc=dstream.readInt();
 			attribute=dstream.readInt();
 		}
-		
+
 	}
-	
+
 	String m_contains;
 	int m_min, m_max;
 	int m_recharge;
@@ -70,14 +70,14 @@ public class WidgetHarvestable extends Widget {
 	long m_timepicked=0;
 	String m_use;
 	HarvestSkillCheck skillCheck;
-	
-	
+
+
 	public WidgetHarvestable(Element node) {
 		widgetSpriteNumber = Integer.parseInt(node.getAttribute("sprite"));
-		isVisionBlocking = false;	
+		isVisionBlocking = false;
 		if (node.getAttribute("blocksVision").equals("true"))
 		{
-			isVisionBlocking = true;	
+			isVisionBlocking = true;
 		}
 
 		isWalkable = false;
@@ -147,7 +147,7 @@ public class WidgetHarvestable extends Widget {
 			ViewScene.m_interface.DrawText(m_use);
 			m_picked = true;
 			m_timepicked = GameManager.getClock();
-			
+
 			if (skillCheck!=null)
 			{
 				int roll=Universe.m_random.nextInt(20)+player.getRPG().getAttribute(skillCheck.attribute);
@@ -163,7 +163,7 @@ public class WidgetHarvestable extends Widget {
 					}
 					ViewScene.m_interface.DrawText(skillCheck.successText);
 				}
-				
+
 			}
 			return true;
 		}
@@ -200,6 +200,11 @@ public class WidgetHarvestable extends Widget {
 		{
 			dstream.writeBoolean(false);
 		}
+	}
+
+	@Override
+	public boolean safeOnly() {
+		return true;
 	}
 
 	public WidgetHarvestable(DataInputStream dstream) throws IOException {

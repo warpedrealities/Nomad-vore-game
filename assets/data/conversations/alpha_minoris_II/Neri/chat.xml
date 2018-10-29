@@ -127,6 +127,9 @@
 			<condition evaluate="LOCALFLAG" operator="equals" value="1"
 				flag="sackslut" />
 		</choice>
+		<choice destination="thankful" text="$Just wanted to test your reformer and make sure it's still working.">
+			<condition evaluate="GLOBALFLAG" operator="equals" value="2" flag="NERI_BASEMENT" />
+		</choice>
 		<choice destination="reformation" text="$Actually, I did something for you, I fixed the reformer in your basement for you">
 		<condition evaluate="GLOBALFLAG" operator="equals" value="1"
 			flag="NERI_BASEMENT" />		
@@ -136,14 +139,137 @@
 	</page>
 
 	<page ID="reformation">
-	<text>
-	"A reformer?" she asks perplexed, but it doesn't take her long to figure it out "You mean that thing that lets you come back from being gurgled? ooh ah, well thanks." she blushes softly as some of the possibilities appear to occur to her "I'll be sure to make use of it."
-	</text>
-	<effect type="setglobalflag" flag="NERI_BASEMENT" value="2" />
-	<special effect="addRespawn" time="2000"/>		
-	<choice destination="end" text="you're welcome Neri"/>
+		<text>
+			"A reformer?" she asks perplexed, but it 
+			doesn't take her long to figure it out "You 
+			mean that thing that lets you come back 
+			from being gurgled? ooh ah, well thanks." 
+			she blushes softly as some of the possibilities 
+			appear to occur to her "I'll be sure to make 
+			use of it."
+		</text>
+		<effect type="setglobalflag" flag="NERI_BASEMENT" value="2" />
+		<special effect="addRespawn" time="2000"/>		
+		<choice destination="end" text="you're welcome Neri"/>
+		<choice destination="thankful" text="$We should make sure it works first">
+			<assertion perk="cockvore" evaluate="hasperk"/>
+		</choice>
 	</page>
 	
+	<page ID="thankful">
+		<text>
+			Neri's blush grows several shades darker as 
+			she catches on to your meaning.  "W-what?  
+			You wanna eat *me*?  B-but... but..." she
+			stammers, squirming nervously.  A small bulge in her 
+			skirt betrays her interest.
+
+			"Oh hun, I've wanted to swallow you down since the 
+			first time I saw you.  I didn't because you're too 
+			damn cute to churn up.  Now I can have my cake 
+			and eat it too!" 
+
+			Neri's mouth opens and closes wordlessly. Her 
+			skirt tightens with every word out of your mouth.
+			Then, she smiles shyly, not used to the tables 
+			getting turned on her.
+
+			"Well... after all the times you've let me eat you...
+			alright!"
+		</text>
+		<choice text="About damn time!" destination="PlayerBlowjob0"/>
+	</page>
+
+	<page ID="PlayerBlowjob0">
+		<text>
+			Neri commited to feeding your balls with the 
+			same wholeheartedness she felt when sucking you 
+			down.  The elfin girl gets on her knees, 
+			hugging your thighs and groping your ass.  She looks up
+			at you with doe eyes, teasing your rapidly hardening cock
+			with slow, wet licks.
+
+			You place a hand on the back of her head, rubbing her pointed
+			ears between your fingers and stroking her hair.  Neri coos
+			happily in response, and kisses the tip of your throbbing cock.
+			Then, she opens her mouth, taking your cock in with a 
+			lusty moan.  Her tight throat ripples around your shaft while 
+			her head bobs up and down your length rapidly.  Somehow, you
+			doubted this was her first time giving head.
+
+		</text>
+		<choice text="Fun, but she belongs in your cock, not the other way around!" destination="PlayerCockvore0"/>
+	</page>
+
+	<page ID="PlayerCockvore0">
+		<text>
+			Neri reluctantly takes your cock out of her mouth, caught
+			between her obvious desire to get churned up in your sac,
+			and her desire to enjoy the taste of your cock.  You place
+			a hand on her head, and settle her dilemma by shoving her face
+			into your cockslit.
+
+			Neri moans loudly, her voice muffled by the tight tunnel that
+			was working on slurping her up.  The greenskinned elf starts
+			pushing her way in deeper, not content to merely be sucked down.
+			Her cute breasts slide down into your tunnel, and you groan erotically
+			as they rub the inside of your shaft.  Your cock takes her in 
+			inch by inch, working it's way down her waist.  Neri wiggles her 
+			hips playfully, her plentiful ASSets jiggling enticingly.
+		</text>
+		<choice text="$Enjoying yourself?" destination="PlayerCockvore1"/>
+	</page>
+
+	<page ID="PlayerCockvore1">
+		<text>
+			"I can see why you like feeding me so much!"  Neri answered happily.
+			Your cock takes in Neri's round ass with ease, the elfgirl's
+			raging boner throbbing as it robbed against the inside of 
+			your cock.  Her ample form makes a delightful bulge along your
+			length, squirming lightly.  Her moans can be heard from inside,
+			obviously enjoying the change of pace.
+
+			Neri's thighs slip inside next, feet and toes jerking lightly.
+			You can hear Neri scream out abruptly, and feel a gooey warmth
+			inside your shaft.  She's definitely enjoying herself!
+
+			Her feet slip inside your shaft, your cockslit sealing around 
+			her toes.  In short order, she's crammed into your tight balls, 
+			curled up and ready for churning.
+		</text>
+		<choice text="NeriCockvoreGO" destination="PlayerCockvore2"/>
+	</page>
+
+	<page ID="PlayerCockVore2">
+		<text>
+			Your balls gurgle and churn loudly, Neri's body slowly gooefying within
+			you.  All the while, Neri cries out with pleasure, jerking herself off
+			with reckless abandon.  Bit by bit, her body softens, becoming a fresh load
+			of nut batter.
+
+			You can't help but to jerk yourself off, lust overwhelming you.  It doesn't
+			take long to reach your climax, your head jerking back as "Neri" sprays out
+			in a thick jet of spunk.
+
+			As you recover from the afterglow of your orgasm, you look forward to see
+			the Minyos shopkeeper standing in the doorway, drenched head to toe in 
+			thick white tar.  She glares at your for a moment, then goes back into
+			her store, muttering under her breath, "I just got these robes cleaned."
+			
+			Oops.
+
+			With nothing of value lost, you head to check on Neri's reformer.  It'd
+			kinda suck if it turned out it didn't actually work, after all.
+
+			When you get to the basement, you find Neri standing in front of her
+			newly repaired reformer, stretching with her arms above her head.
+
+			"No wonder you're such a huge meltslut!  We should do this again sometime!"
+		</text>
+		<choice text="Cheeky elf"  destination="end"/>
+	</page>
+		
+
 	<page ID="offerCockvore0">
 		<text>
 			Neri blushes and giggles at your brazen request "Ancestors you're such a

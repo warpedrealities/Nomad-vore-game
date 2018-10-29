@@ -1,14 +1,7 @@
 
 function move(controllable,sense,script)
-	x=script:getValue(0)
-	y=script:getValue(1)
-	if (x>0) then
-		if controllable:HasPath() then
-		controllable:FollowPath()
-		else
-		controllable:Pathto(x,y,4)
-		end		
-	end
+	a=math.random(0,8)
+	controllable:move(a);
 end
 
 
@@ -25,8 +18,6 @@ function main(controllable, sense, script)
 		controllable:setAttack(0)	
 		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 		end
-	script:setValue(0,hostile:getPosition().x)
-	script:setValue(1,hostile:getPosition().y)
 	else
 	move(controllable,sense,script)
 	end

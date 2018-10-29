@@ -29,6 +29,6 @@
 
 	<respawn delay="2000" />
 	<talk conversation="freehaven/prostitute/chat" />
-	<controller AI="staystill" />
+	<controller AI="staystill_flee" />
 	<faction value="freehaven_civilians" />
 </NPC>

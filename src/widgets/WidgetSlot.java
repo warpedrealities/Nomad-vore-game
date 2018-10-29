@@ -20,7 +20,7 @@ public class WidgetSlot extends Widget {
 
 	private WidgetBreakable widget;
 	private String widgetItem;
-	
+
 	private int facing;
 	private boolean hardpoint;
 
@@ -85,7 +85,7 @@ public class WidgetSlot extends Widget {
 		// load widget
 		if (dstream.readBoolean()) {
 			widget = (WidgetBreakable) WidgetLoader.loadWidget(dstream);
-			
+
 		}
 		if (dstream.readBoolean())
 		{
@@ -117,6 +117,7 @@ public class WidgetSlot extends Widget {
 		this.widgetItem = widgetItem;
 	}
 
+	@Override
 	public String getDescription() {
 		if (widget != null) {
 			return widget.getDescription();
@@ -124,6 +125,7 @@ public class WidgetSlot extends Widget {
 		return widgetDescription;
 	}
 
+	@Override
 	public boolean Walkable() {
 		if (widget != null) {
 			return widget.isWalkable;
@@ -131,6 +133,7 @@ public class WidgetSlot extends Widget {
 		return isWalkable;
 	}
 
+	@Override
 	public boolean BlockVision() {
 		if (widget != null) {
 			return widget.BlockVision();
@@ -138,6 +141,7 @@ public class WidgetSlot extends Widget {
 		return isVisionBlocking;
 	}
 
+	@Override
 	public int getSprite() {
 		if (widget != null) {
 			return widget.getSprite();
@@ -145,6 +149,7 @@ public class WidgetSlot extends Widget {
 		return widgetSpriteNumber;
 	}
 
+	@Override
 	public boolean Interact(Player player) {
 		if (widget != null) {
 			return widget.Interact(player);
@@ -171,6 +176,7 @@ public class WidgetSlot extends Widget {
 						Pile.AddItem(stack[j]);
 					}
 				}
+				this.widget.handleDismantle(Pile);
 				Vec2f p = ViewScene.m_interface.getSceneController().getActiveZone().getWidgetPosition(this);
 				ViewScene.m_interface.placeWidget(Pile, (int) p.x, (int) p.y, true);
 				widget = null;
@@ -194,12 +200,12 @@ public class WidgetSlot extends Widget {
 
 	public boolean checkDismantle(CombatMove combatMove) {
 		if (widget != null) {
-			
+
 			if (widgetItem!=null)
 			{
 				for (int i=0;i<combatMove.getEffects().size();i++)
 				{
-				if (Effect_Dismantle.class.isInstance(combatMove.getEffects().get(i)))
+					if (Effect_Dismantle.class.isInstance(combatMove.getEffects().get(i)))
 					{
 						WidgetItemPile Pile = new WidgetItemPile(2, "a pile of items containing ", Universe.getInstance().getLibrary().getItem(widgetItem));
 						this.widget.handleDismantle(Pile);
@@ -207,10 +213,10 @@ public class WidgetSlot extends Widget {
 						ViewScene.m_interface.placeWidget(Pile, (int) p.x, (int) p.y, true);
 						widget = null;
 						widgetItem=null;
-						ViewScene.m_interface.redraw();		
+						ViewScene.m_interface.redraw();
 						return true;
 					}
-				}			
+				}
 			}
 		}
 		return false;

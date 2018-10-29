@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<perk name="psychic assault">
+	<requirement count="1">
+		<req>PERKpsychic</req>
+	</requirement>
+	<description>
+	The technique lacks finesse, but by smothering and crushing the ego you can stun a thinking foe temporarily or scour and savage their psyche to break their mind and leave them hallucinating and psychotic, prone to lashing out at anyone around them friend or foe until they recover their sense of reality.
+	</description>
+	<move count="2">
+		<combatmove name="mind crush" timeCost="2" pattern="RANGED"
+			bonusAttribute="WILLPOWER" actionCost="4" bonusToHit="2" cooldown="100"
+			icon="6" moveType="DOMINATE">
+			<missText count="2">
+				<text>You attempt to crush TARGET 's mind unsuccessfully</text>
+				<text>You exert your psychic pressure on TARGET but they resist you</text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET 's mind is crushed by your mental assault</text>
+				<text>You suppress the mind of TARGET leaving them an empty headed
+					simpleton</text>
+			</hitText>
+			<effectStatus probability="100">
+				<statusTag tag="psychic" />
+				<applyText>TARGET 's mind is blank</applyText>
+				<statusStun uid="9" duration="40">
+					TARGET recovers their mental faculties.
+				</statusStun>
+			</effectStatus>
+		</combatmove>
+		<combatmove name="mind break" cooldown="100" icon="14"
+			timeCost="2" actionCost="12" pattern="RANGED" bonusAttribute="WILLPOWER" bonusToHit="4"
+			moveType="DOMINATE">
+			<missText count="2">
+				<text>You attempt to penetrate TARGET 's mind unsuccessfully</text>
+				<text>You exert your psychic pressure on TARGET but they resist you</text>
+			</missText>
+			<hitText count="2">
+				<text>You penetrate TARGET 's psyche and attempt to demolish her mind</text>
+				<text>You penetrate TARGET 's mind and attempt to shatter their sense of reality</text>
+			</hitText>
+			<effectStatus probability="50">
+			<probabilityModifier value="INTELLIGENCE" />
+				<statusTag tag="psychic" />
+				<statusTag tag="MC" />
+				<applyText>TARGET 's mind is broken</applyText>
+				<statusFaction uid="22" duration="40" faction="psycho">
+					TARGET recovers their mental faculties.
+				</statusFaction>
+			</effectStatus>
+		</combatmove>
+	</move>
+	<maxrank value="1" />
+</perk>

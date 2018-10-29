@@ -37,8 +37,9 @@ public class Sprite_Rectangle extends Sprite {
 		this.xyRatio = xyRatio;
 	}
 
+	@Override
 	protected void generate(int numFrames) {
-		float sqrt = (float) Math.sqrt((float) numFrames);
+		float sqrt = (float) Math.sqrt(numFrames);
 
 		int U = spriteNum % (int) sqrt;
 		int V = spriteNum / (int) sqrt;
@@ -103,7 +104,7 @@ public class Sprite_Rectangle extends Sprite {
 
 	@Override
 	protected void regen(int select) {
-		float sqrt = (float) Math.sqrt((float) numFrames);
+		float sqrt = (float) Math.sqrt(numFrames);
 
 		int U = select % (int) sqrt;
 		int V = select / (int) sqrt;
@@ -134,8 +135,8 @@ public class Sprite_Rectangle extends Sprite {
 	public void reposition(Vec2f p) {
 		spritePosition.x = (int) p.x;
 		spritePosition.y = (int) p.y;
-		m_matrix.m00 = 1;
-		m_matrix.m11 = 1;
+		m_matrix.m00 = spriteSize;
+		m_matrix.m11 = spriteSize;
 		m_matrix.m22 = 1;
 		m_matrix.m33 = 1;
 		m_matrix.m30 = 1;
@@ -149,5 +150,7 @@ public class Sprite_Rectangle extends Sprite {
 	@Override
 	public void setSpriteSize(float spriteSize) {
 		this.spriteSize = spriteSize;
+		m_matrix.m00 = spriteSize;
+		m_matrix.m11 = spriteSize;
 	}
 }

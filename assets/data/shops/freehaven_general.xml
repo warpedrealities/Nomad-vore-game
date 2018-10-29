@@ -17,6 +17,9 @@
 	<inventoryitem name="clarity" probability="50" quantity="5" />
 	<inventoryitem name="space soda" probability="100" quantity="20" />
 	<inventoryitem name="space soda" probability="50" quantity="20" />
+	<inventoryitem name="pure rock fury" probability="100"
+		quantity="2" />
+	<inventoryitem name="pure rock fury" probability="50" quantity="2" />	
 	<inventoryitem name="stun grenade" probability="100"
 		quantity="10" />	
 	<inventoryitem name="stun grenade" probability="50"

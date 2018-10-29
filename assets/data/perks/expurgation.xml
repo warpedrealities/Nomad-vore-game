@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="expurgation">
 	<requirement count="1">
-		<req>PERKpsychic</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description> Cast out the demons of lust, be resolute in your path as you purge your mind of that which would cause you to falter. Immediately recover 10 resolve through expurgation.
 	</description>

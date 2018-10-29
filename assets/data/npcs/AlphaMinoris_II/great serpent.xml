@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <NPC>
-	<sprite value="greatserpent.png" />
+	<sprite value="greatserpent.png" size="1.5" />
 
 	<name>great serpent</name>
 	<description>A serpentine creature that must be at least 40 feet long

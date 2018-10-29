@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="cleave">
 	<requirement count="1">
-		<req>PERKwarrior</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description>
 		you're able to unleash a broad attack able to hit multiple foes at once so

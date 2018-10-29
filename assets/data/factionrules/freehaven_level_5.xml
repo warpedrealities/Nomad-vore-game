@@ -5,7 +5,10 @@
 	</superRule>
 	<superRule subject="station warden" level="2" violation="ATTACK">
 		<factionRelationship faction="freehaven_wardens" mod="-20" />
-	</superRule>		
+	</superRule>	
+	<superRule subject="station warden" level="2" violation="SEDUCE">
+		<factionRelationship faction="freehaven_wardens" mod="-20" />
+	</superRule>			
 	<superRule subject="Jehari" level="2" violation="ATTACK">
 		<factionRelationship faction="freehaven_wardens" mod="-20" />
 	</superRule>	

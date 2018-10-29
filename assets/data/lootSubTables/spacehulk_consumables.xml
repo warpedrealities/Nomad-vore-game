@@ -5,4 +5,5 @@
 	<loot item="stimpack" chance="2" />
 	<loot item="isotope" chance="2" />
 	<loot item="explosive grenade" chance="2" />
+	<loot item="pure rock fury" chance="1" />	
 </lootTable>

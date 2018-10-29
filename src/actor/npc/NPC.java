@@ -151,6 +151,7 @@ public class NPC extends Actor implements Controllable {
 		actorVisibility = false;
 		attackIndex = 0;
 		String spritename = null;
+		float spriteSize = 1;
 		conversations = new String[6];
 		moveCost = 2;
 		// sprite
@@ -203,6 +204,9 @@ public class NPC extends Actor implements Controllable {
 				}
 				if (Enode.getTagName().equals("sprite")) {
 					spritename = Enode.getAttribute("value");
+					if (Enode.getAttribute("size").length() > 0) {
+						spriteSize = Float.parseFloat(Enode.getAttribute("size"));
+					}
 				}
 				if (Enode.getTagName().equals("faction")) {
 					actorFaction = FactionLibrary.getInstance().getFaction(Enode.getAttribute("value"));
@@ -235,7 +239,7 @@ public class NPC extends Actor implements Controllable {
 
 		RPGHandler = new RPGActionHandler(actorRPG, this);
 		((NPC_RPG) actorRPG).getstatBlock().setSpriteName(spritename);
-
+		((NPC_RPG) actorRPG).getstatBlock().setSpriteSize(spriteSize);
 	}
 
 	public NPC() {
@@ -335,15 +339,14 @@ public class NPC extends Actor implements Controllable {
 
 	private void lustRemove()
 	{
-		clock=0;
+		// clock=0;
+		// spriteInterface.setImage(0);
 		actorVisibility = false;
 		spriteInterface.setVisible(false);
 		if (!((NPC_RPG) actorRPG).getItemDrop().isEmpty()) {
-			List<NPCItemDrop> drops=((NPC_RPG) actorRPG).getItemDrop();
-			for (int i=0;i<drops.size();i++)
-			{
-				if (!drops.get(i).isDefeatOnly())
-				{
+			List<NPCItemDrop> drops = ((NPC_RPG) actorRPG).getItemDrop();
+			for (int i = 0; i < drops.size(); i++) {
+				if (!drops.get(i).isDefeatOnly()) {
 					drops.get(i).useDrop(actorPosition);
 				}
 			}
@@ -353,11 +356,14 @@ public class NPC extends Actor implements Controllable {
 				&& collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y) != null) {
 			collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(null);
 		}
-		actorPosition.x = -(actorPosition.x+100);
-		actorPosition.y = -(actorPosition.y+100);
+		actorPosition.x = -(actorPosition.x + 100);
+		actorPosition.y = -(actorPosition.y + 100);
 		if (respawnController != null) {
 			respawnController.setGone();
 		}
+		// this.setPeace(true);
+		// this.actorRPG.Heal(1);
+
 	}
 
 	public void Remove(boolean defeat, boolean noDrops) {
@@ -980,5 +986,10 @@ public class NPC extends Actor implements Controllable {
 		}
 
 		return actorDescription;
+	}
+
+	@Override
+	public float getSpriteSize() {
+		return ((NPC_RPG) actorRPG).getSpriteSize();
 	}
 }

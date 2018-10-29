@@ -114,7 +114,7 @@
 	<placeNPC name="freehaven/civilians/Desharr" x="16" y="29" />	
 	<placeNPC name="freehaven/civilians/tourist" x="14" y="27" />	
 		<partition xmin="2" xmax="30" ymin="11" ymax="19">
-			<SeedNPCs min="6" max="10" name="freehaven/wardens/warden">
+			<SeedNPCs min="4" max="8" name="freehaven/wardens/warden">
 			</SeedNPCs>
 		</partition>	
 	</mapgen>

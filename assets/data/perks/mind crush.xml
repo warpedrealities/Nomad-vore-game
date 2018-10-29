@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="mind crush">
 	<requirement count="1">
-		<req>PERKpsychic</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description>
 		Reach out and crush the mind of your target, suppressing their volition and

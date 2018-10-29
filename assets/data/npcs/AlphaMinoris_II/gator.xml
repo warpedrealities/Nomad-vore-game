@@ -19,7 +19,7 @@
 		<ability ability="INTELLIGENCE" value="5" />
 		<stat stat="HEALTH" value="40" />
 		<stat stat="RESOLVE" value="40" />
-		<attribute attribute="TEASE" value="6" />
+		<attribute attribute="TEASE" value="12" />
 		<attribute attribute="KINETIC" value="4" />
 		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="2" threatening="true">
@@ -31,7 +31,7 @@
 				<text>The gator bites TARGET for VALUE damage</text>
 				<text>The gator chomps on TARGET for VALUE damage</text>
 			</hitText>
-			<effectDamage type="KINETIC" minValue="3" maxValue="6"
+			<effectDamage type="KINETIC" minValue="3" maxValue="7"
 				modifier="STRENGTH" />
 		</combatMove>
 		<statusTags count="1">

@@ -48,7 +48,7 @@
 				<script death="robotdefeat" />
 			</SeedNPCs>
 
-			<placeWidget x="5" y="3" name="DAMAGE" value="20" />
+			<placeWidget x="5" y="3" name="DAMAGE" value="20" exterior="true"/>
 		</mapgen>
 	</layout>
 	<exterior width="8">

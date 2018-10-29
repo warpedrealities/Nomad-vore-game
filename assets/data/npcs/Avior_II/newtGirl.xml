@@ -13,9 +13,9 @@
 		<ability ability="INTELLIGENCE" value="5" />
 		<stat stat="HEALTH" value="50" />
 		<stat stat="RESOLVE" value="50" />
-		<attribute attribute="PARRY" value="4" />		
-		<attribute attribute="DODGE" value="4" />
-		<attribute attribute="WILLPOWER" value="4" />
+		<attribute attribute="PARRY" value="6" />		
+		<attribute attribute="DODGE" value="6" />
+		<attribute attribute="WILLPOWER" value="6" />
 		<combatMove name="melee" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="4" threatening="true">
 			<effectDamage type="KINETIC" minValue="1" maxValue="8"
@@ -97,8 +97,8 @@
 				</statusBind>
 			</effectStatus>
 		</combatMove>
-		<combatmove name="disengage" bonusAttribute="MELEE"
-			timeCost="2" bonusToHit="12" pattern="MELEE"
+		<combatMove name="disengage" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="12" pattern="RANGED"
 			actionCost="2" moveType="MOVEMENT">
 			<missText count="1">
 				<text>Newt fails to get away from TARGET .</text>
@@ -108,7 +108,7 @@
 			</hitText>
 			<effectMovement moveType="SELF_AWAY" distance="4"
 				abilityMod="AGILITY" />
-		</combatmove>		
+		</combatMove>		
 		<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="2">
 			<hitText count="1">
@@ -124,7 +124,7 @@
 				</statusStealth>
 			</effectStatus>
 		</combatMove>
-		<combatmove name="heal"
+		<combatMove name="heal"
 			timeCost="2" pattern="SELF" bonusAttribute="WILLPOWER" bonusToHit="20">
 			<effectrecover modifier="INTELLIGENCE" modstrength="0.2"
 				modvalue="10" modifies="HEALTH" />
@@ -133,7 +133,7 @@
 			<hitText count="1">
 				<text></text>
 			</hitText>
-		</combatmove>		
+		</combatMove>		
 	</rpg>
 
 	<respawn delay="500" />

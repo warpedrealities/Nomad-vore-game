@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ItemConsumable name="pure rock fury" weight="1" value="200">
+	<description>A hard hitting drink mixed from hallucinogenics, alcohol and scorpiontaur venom. Drinking it will give you a hell of a kick, and make you ready for a great amount of badass ACTION. 
+	</description>
+	<effectstatus probability="100">
+		<statusTag tag="regeneration" />
+		<applyText>You knock the brew back and the world now has a bass track, the guitar in your head is screaming, you are screaming, everything is screaming. GAME ON!</applyText>
+		<statusDoT uid="51" icon="9" duration="60" numModifiers="1">
+			<removeText> woah, that was a rush</removeText>
+			<resist strength="15" tag="poison" test="NONE" />
+			<effect stat="ACTION" modifier="-10" />
+		</statusDoT>
+	</effectstatus>
+</ItemConsumable>

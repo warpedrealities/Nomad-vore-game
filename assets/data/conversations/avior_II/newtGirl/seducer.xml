@@ -2,10 +2,48 @@
 <Conversation>
 
 	<page ID="start">
+		<preference fetish="demis" />
+		<preference fetish="females" />	
+		<preference fetish="unbirthing" />
+	<text>
+	The newt chirps in delight and smooches you on the cheek, cuddling up to you and pressing her soft warm and lithe body against your own as she guides you down into a seated position snuggled up to her on the ground "Oooh, horny are you. How about I snuggle you and squeeze you and press you up inside me and gush you out as a nice hot mess." she suggests, making you gasp in arousal and desire..you don't hesitate at all before answering.
+	</text>
+	<choice destination="unbirth0" text="Yes, that sounds wonderful, gush me up"/>
+	</page>
+	
+	<page ID="unbirth0">
+	<text>
+	"Just what I love to hear" she says squeezing you tight and grinding the wet patch between her legs against your thigh before coaxing you down her wonderfully sexy body till you're face to face with that wetness. Her netherlips wafting naughty smells and delicious heat over your face as you see her sopping wet lips parting in invitation before you. But an invitation she hardly waits for you to accept as her thick tail curls around your hips and she reaches down, using one hand to grasp the back of your scalp and mash you against her nethers. Her sexlips parting and stretching around your head, encompassing your face in her debauched heat as she starts working you inside.
+	</text>
+	<choice destination="unbirth1" text="*willing womb food*"/>
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	"That's it..that's it, going to make you into such a mess." says the amphibian with a delighted chirring moan, squeezing you with her tail and her thighs as she crams you inside. Her hands grasping around your body to heft and shove you deeper in as she lets out a gasp and feels more of you stretching her out. Her wonderfully tight and possessive nethers tugging your head up into the silken depths of her womb as she writhes and works your wriggling form inside.
+	</text>
+	<choice destination="unbirth2" text="*in, in, in*"/>
+	</page>
+	
+	<page ID="unbirth2">
+	<text>
+	"You're fitting..perfectly..." the newt chirrs out as you start to curl up inside her, more and more of your body crammed past her voracious pussylips, her womb welcoming and snugly containing your upper body as she works that inside. Your legs soon following suit as she shoves you in with a delighted series of moans until you're entirely curled within her wet heat. Her womb pressing around your form from all sides, her dark green belly now gravid and pregnant with a delightful domed out. A swell she traces over with one hand while the other traces down between her legs "And now..now you're going ...mhmm..melt..i love this part."
+	</text>
+	<choice destination="unbirth3" text="*love it as well*"/>
+	</page>
+	
+	<page ID="unbirth3">
+	<text>
+	The amphibian's webbed fingers start flicking in and out of her nethers, pleasuring herself as she chirrs and her womb becomes increasingly wet and hot for you. Marinating in the sauna like confines you moan and writhe helplessly, your form starting to soften and liquefy, your motions slowing as she repeats "that's it..that's it...melt.." like a mantra and masturbates. It won't be long now.
+	</text>
+	<choice destination="unbirthGO" text="*melt*"/>
+	</page>
+
+	<gameover ID="unbirthGO">
 	<text>
 	
 	</text>
-
-	</page>
-
+	
+	</gameover>
+	
 </Conversation>

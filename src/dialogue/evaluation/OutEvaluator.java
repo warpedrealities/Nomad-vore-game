@@ -32,10 +32,10 @@ public class OutEvaluator {
 	NPC m_npc;
 	Widget widget;
 	Spaceship ship;
-	
+
 	FlagField flags;
 	Faction faction;
-	
+
 	Player m_player;
 	PerkQualifier qualifier;
 	SceneController controller;
@@ -108,8 +108,8 @@ public class OutEvaluator {
 			String itemName=E.getAttribute("item");
 			for (int i=0;i<4;i++)
 			{
-				if (m_player.getInventory().getSlot(i)!=null && 
-					itemName.equals(m_player.getInventory().getSlot(i).getItem().getName()))
+				if (m_player.getInventory().getSlot(i)!=null &&
+						itemName.equals(m_player.getInventory().getSlot(i).getItem().getName()))
 				{
 					return true;
 				}
@@ -126,6 +126,11 @@ public class OutEvaluator {
 				return false;
 			}
 		}
+		if (eval.equals("hasStatus")) {
+			if (!m_player.getRPG().hasStatus(Integer.parseInt(E.getAttribute("uid")))) {
+				return false;
+			}
+		}
 		return true;
 	}
 
@@ -138,7 +143,7 @@ public class OutEvaluator {
 				Element element=(Element)list.item(i);
 				if (Evalthiscondition(element) == true) {
 					return true;
-				}					
+				}
 			}
 		}
 		return false;
@@ -190,7 +195,7 @@ public class OutEvaluator {
 				if (ConditionCheck(value, operator, dice) == false) {
 					return false;
 				}
-			}	
+			}
 			if (eval.equals("GLOBALFLAGROLL")) {
 				String operator = E.getAttribute("operator");
 				int value=m_player.getFlags().readFlag(E.getAttribute("flag"));
@@ -198,7 +203,7 @@ public class OutEvaluator {
 				if (ConditionCheck(value, operator, dice) == false) {
 					return false;
 				}
-			}				
+			}
 			if (eval.equals("VIOLATION")) {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));
@@ -325,7 +330,7 @@ public class OutEvaluator {
 				if (ConditionCheck(value, operator, v) == false) {
 					return false;
 				}
-			}	
+			}
 		}
 
 		if (E.getTagName().equals("assertion")) {
@@ -375,7 +380,7 @@ public class OutEvaluator {
 		this.widget = widget;
 		if (m_npc==null && WidgetConversation.class.isInstance(widget))
 		{
-			flags=((WidgetConversation)widget).getFlags();		
+			flags=((WidgetConversation)widget).getFlags();
 		}
 	}
 

@@ -3,9 +3,24 @@
 
 	<page ID="start">
 	<text>
-	
+	no interactions with seduced newt girl yet.
 	</text>
-
+		<choice destination="devour" text="Devour her.">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>	
+		<choice destination="end" text="darn"/>
 	</page>
-
+	<page ID="devour">
+		<text>
+			You have devoured her in some unspecified and unelaborated-on, yet surely satisfying way.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Carry on." />
+	</page>
 </Conversation>

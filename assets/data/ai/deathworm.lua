@@ -8,33 +8,32 @@ function wormBehaviour(controllable,sense)
 	hostile=sense:getPlayer(controllable,false)
 	x=hostile:getPosition().x
 	y=hostile:getPosition().y
-	distance=hostile:getPosition():getDistance(pos)
-	
-	if (distance<2) then
-		controllable:getRPG():removeStatus(23)
-		sense:drawText("A deathworm erupts from beneath the sands!")		
-		controllable:setValue(0,2)		
-	else
-		if (distance<12) then
-			move(controllable,x,y)			
-		end
+		
+		move(controllable,x,y,hostile)			
 		messageBehaviour(sense,distance,controllable)
 	end
 end
 
-function move(controllable,x,y)
+function move(controllable,x,y,hostile)
 	x0=controllable:getValue(1)
 	y0=controllable:getValue(2)	
-
+	distance=hostile:getPosition():getDistance(pos)
 	if not (x==x0) or not (y==y0) then
 		if controllable:HasPath() then
 		controllable:FollowPath()
 		else
 		controllable:Pathto(x,y,4)
 		end	
+	
+		if (distance<2) then
+			controllable:getRPG():removeStatus(23)
+			sense:drawText("A deathworm erupts from beneath the sands!")		
+			controllable:setValue(0,2)		
+		end
 	else
 		r=math.random(0,8)
-		controllable:move(r);			
+		controllable:move(r);	
+		
 	end	
 	controllable:setValue(1,x0)
 	controllable:setValue(1,y0)	

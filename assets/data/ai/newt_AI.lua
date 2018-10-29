@@ -12,7 +12,7 @@ function flee(controllable,sense, script)
 end
 
 function stealthattack(pos,controllable,sense,script)
-	hostile=sense:getHostile(controllable,32,false)
+	hostile=sense:getHostile(controllable,64,false)
 	if not (hostile==nil) then
 		if (pos:getDistance(hostile:getPosition())<4) then
 			controllable:getRPG():removeStatus(23)
@@ -50,22 +50,30 @@ function notstealthed(pos,controllable,sense,script)
 		if (health<25) or (resolve<25) then		
 			controllable:setAttack(4)	
 			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
-			controllable:setValue(0,40)			
+			controllable:setValue(0,40)	
+			controllable:specialCommand("flee")			
 		else
-			if (pos:getDistance(hostile:getPosition())<2) then
+			distance=pos:getDistance(hostile:getPosition())
+			if (distance<2) then
 				if (hostile:getRPG():hasStatus(20)) then
-					controllable:setAttack(0)	
+					controllable:setAttack(1)	
 					controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 				else
-					controllable:setAttack(1)	
+					controllable:setAttack(0)	
 					controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	
 				end
 			else
-				if controllable:HasPath() then
-					controllable:FollowPath()
+				r=math.random(8)
+				if (r==0) and (distance<4) then
+					controllable:setAttack(2)	
+					controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)				
 				else
-					controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
-				end	
+					if controllable:HasPath() then
+						controllable:FollowPath()
+					else
+						controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
+					end		
+				end
 			end
 		end
 	else
@@ -79,6 +87,7 @@ function main(controllable, sense, script)
 	if (fleeCounter>0) then
 		fleeCounter=fleeCounter-1
 		controllable:setValue(0,fleeCounter)		
+		flee(controllable,sense,script)
 	else
 		if (controllable:getRPG():hasStatus(23)) then
 			stealth(pos,controllable,sense, script)

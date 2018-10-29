@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<perk name="mind shield">
+<perk name="psi defence">
 	<requirement count="1">
-		<req>DEPRECATED</req>
+		<req>PERKpsychic</req>
 	</requirement>
-	<description> You have mastered the art of forming a fortress of your mind to resist the attacks of other psionic beings. psi barrier has +10 psi absorption.
+	<description> You have mastered the core arts of protecting your mind against attack either by forming a shielded fortress of your mind (+10 psychic defence) or by expurgating influence from your mind (recover 10 resolve)
 	</description>
-	<move count="1">
+	<move count="2">
 		<combatmove name="mind shield" cooldown="100" icon="12"
 			timeCost="2" actionCost="8" pattern="SELF" bonusAttribute="SEDUCTION" bonusToHit="2"
 			moveType="DOMINATE">
@@ -19,6 +19,16 @@
 			</statusDefence>
 		</effectStatus>
 		</combatmove>
+	<combatmove name="expurgation" cooldown="100" icon="15"
+			timeCost="2" actionCost="12" pattern="SELF" bonusAttribute="WILLPOWER" bonusToHit="4"
+			moveType="DOMINATE">
+			<effectrecover modifier="INTELLIGENCE" modstrength="0.2"
+				modvalue="10" modifies="RESOLVE" />
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatmove>		
+		
 	</move>
 	<maxrank value="1" />
 

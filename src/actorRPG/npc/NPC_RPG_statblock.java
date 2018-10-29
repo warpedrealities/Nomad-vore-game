@@ -32,6 +32,7 @@ public class NPC_RPG_statblock {
 	private ConditionalDescription conditionalDescription;
 
 	private int threatMove=-1;
+	private float spriteSize = 1;
 
 	public String getNPCName() {
 		return NPCName;
@@ -52,6 +53,7 @@ public class NPC_RPG_statblock {
 			Node N = children.item(i);
 			if (N.getNodeType() == Node.ELEMENT_NODE) {
 				Element Enode = (Element) N;
+				String name = Enode.getTagName();
 				if (Enode.getTagName() == "challengeLevel") {
 					challengeLevel=Integer.parseInt(Enode.getAttribute("value"));
 				}
@@ -131,6 +133,9 @@ public class NPC_RPG_statblock {
 				}
 				if (Enode.getTagName().equals("sprite")) {
 					spriteName = Enode.getAttribute("value");
+					if (Enode.getAttribute("size").length() > 0) {
+						spriteSize = Float.parseFloat(Enode.getAttribute("size"));
+					}
 				}
 			}
 		}
@@ -161,6 +166,14 @@ public class NPC_RPG_statblock {
 
 	public void setSpriteName(String spriteName) {
 		this.spriteName = spriteName;
+	}
+
+	public float getSpriteSize() {
+		return spriteSize;
+	}
+
+	public void setSpriteSize(float value) {
+		this.spriteSize = value;
 	}
 
 	public CombatMove getCombatMove(int index) {

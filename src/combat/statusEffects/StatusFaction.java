@@ -20,9 +20,9 @@ public class StatusFaction implements StatusEffect {
 	private String removeText;
 	public StatusFaction()
 	{
-		
+
 	}
-	
+
 	public StatusFaction(Element e) {
 		uid = Integer.parseInt(e.getAttribute("uid"));
 		if (e.getAttribute("duration").length() > 0) {
@@ -37,7 +37,7 @@ public class StatusFaction implements StatusEffect {
 		uid=dstream.readInt();
 		duration=dstream.readInt();
 		faction=FactionLibrary.getInstance().getFaction(ParserHelper.LoadString(dstream));
-		removeText = ParserHelper.LoadString(dstream);	
+		removeText = ParserHelper.LoadString(dstream);
 	}
 
 	@Override
@@ -51,7 +51,7 @@ public class StatusFaction implements StatusEffect {
 
 	@Override
 	public void apply(Actor_RPG subject) {
-		
+
 	}
 
 	@Override
@@ -64,8 +64,8 @@ public class StatusFaction implements StatusEffect {
 	public void remove(Actor_RPG subject, boolean suppressMessages) {
 		if (ViewScene.m_interface!=null && !suppressMessages)
 		{
-			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));				
-		}	
+			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
+		}
 	}
 
 	@Override
@@ -81,7 +81,7 @@ public class StatusFaction implements StatusEffect {
 	public StatusEffect cloneEffect() {
 		StatusFaction status = new StatusFaction();
 		status.duration = this.duration;
-
+		status.removeText = this.removeText;
 		status.uid = this.uid;
 		status.faction = faction;
 
@@ -98,18 +98,22 @@ public class StatusFaction implements StatusEffect {
 	public int getUID() {
 		return uid;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		StatusFaction other = (StatusFaction) obj;
-		if (uid != other.uid)
+		if (uid != other.uid) {
 			return false;
+		}
 		return true;
 	}
 

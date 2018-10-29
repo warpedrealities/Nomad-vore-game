@@ -12,4 +12,5 @@
 	<loot item="Sublime" chance="1" />
 	<loot item="Meek" chance="1" />
 	<loot item="spacebar" chance="1" />
+	<loot item="pure rock fury" chance="1" />
 </lootTable>

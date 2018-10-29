@@ -227,7 +227,11 @@ public class Player extends Actor {
 
 	@Override
 	public boolean move(int direction) {
+		if (actorRPG.getBindState() > -1) {
+			actorRPG.struggle();
 
+			return true;
+		}
 		boolean b = false;
 		Vec2f p = ZoneInteractionHandler.getPos(direction, getPosition());
 		Actor actor = Universe.getInstance().getCurrentZone().getActor((int) p.x, (int) p.y);

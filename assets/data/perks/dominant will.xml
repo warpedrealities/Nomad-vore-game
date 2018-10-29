@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <perk name="dominant will">
 	<requirement count="1">
-		<req>PERKmind bolt</req>
+		<req>PERKpsi intrusion</req>
 	</requirement>
 	<description>
 		Your intellectual powers have been honed and can more easily dominant
-		weaker minds. mind bolt does +2 max damage
+		weaker minds. mind bolt does +2 max damage, WILLPOWER +1
 	</description>
 	<moveModifier name="mind bolt">
 		<change type="MOD">
@@ -13,6 +13,7 @@
 				modifier="INTELLIGENCE" />
 		</change>
 	</moveModifier>
+	<modifier affects="WILLPOWER" value="1" type="ATTRIBUTE" />	
 	<maxrank value="3" />
 
 </perk>

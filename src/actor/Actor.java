@@ -38,6 +38,7 @@ public abstract class Actor implements Attackable {
 		return RPGHandler;
 	}
 
+	@Override
 	public Vec2f getPosition() {
 		return actorPosition;
 	}
@@ -64,7 +65,7 @@ public abstract class Actor implements Attackable {
 				t.setActorInTile(this);
 			}
 		}
-		actorPosition = position;	
+		actorPosition = position;
 		if (spriteInterface != null) {
 			spriteInterface.reposition(actorPosition);
 		}
@@ -131,7 +132,7 @@ public abstract class Actor implements Attackable {
 		if (actorRPG.getStarving()) {
 			return moveCost * 2;
 		}
-		return (int) (moveCost);
+		return (moveCost);
 	}
 
 	private boolean swapPlaces(int x0, int y0, int x1, int y1)
@@ -145,19 +146,19 @@ public abstract class Actor implements Attackable {
 			if (spriteInterface!=null)
 			{
 				spriteInterface.reposition(actorPosition);
-			}	
+			}
 			Tile t=collisionInterface.getTile((int)actorPosition.x, (int)actorPosition.y);
 			if (t!=null)
 			{
 				t.setActorInTile(this);
 			}
-			
+
 			actorRPG.addBusy(4);
 			return true;
 		}
 		return false;
 	}
-	
+
 	public boolean move(int direction) {
 		if (actorRPG.getBindState() > -1) {
 			actorRPG.struggle();
@@ -167,25 +168,25 @@ public abstract class Actor implements Attackable {
 		Vec2f p=Geometry.getPos(direction, actorPosition);
 		p.x=(int)p.x;
 		p.y=(int)p.y;
-		
+
 		if (collisionInterface.passable((int) p.x, (int) p.y, getFlying())) {
-			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);	
+			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
 			if (!swapPlaces((int)actorPosition.x,(int)actorPosition.y,(int)p.x,(int)p.y))
 			{
-				t.setActorInTile(null);		
+				t.setActorInTile(null);
 				actorPosition=p;
-				
+
 				spriteInterface.reposition(actorPosition);
 				if (t.getDefinition().getMovement()==TileMovement.SLOW && !getFlying())
 				{
-					actorRPG.addBusy(getMoveCost()*4);		
+					actorRPG.addBusy(getMoveCost()*4);
 				}
 				else
 				{
-					actorRPG.addBusy(getMoveCost());			
+					actorRPG.addBusy(getMoveCost());
 				}
 				collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y).setActorInTile(this);
-				
+
 				return true;
 			}
 			else
@@ -193,15 +194,15 @@ public abstract class Actor implements Attackable {
 				spriteInterface.reposition(actorPosition);
 				if (t.getDefinition().getMovement()==TileMovement.SLOW)
 				{
-					actorRPG.addBusy(getMoveCost()*4);		
+					actorRPG.addBusy(getMoveCost()*4);
 				}
 				else
 				{
-					actorRPG.addBusy(getMoveCost());			
+					actorRPG.addBusy(getMoveCost());
 				}
 				return true;
 			}
-			
+
 		}
 		return false;
 	}
@@ -216,6 +217,7 @@ public abstract class Actor implements Attackable {
 		return actorRPG;
 	}
 
+	@Override
 	public String getName() {
 
 		return actorName;
@@ -272,5 +274,10 @@ public abstract class Actor implements Attackable {
 	public ThreatAssessment getThreat()
 	{
 		return threatAssessment;
+	}
+
+	public float getSpriteSize() {
+		// TODO Auto-generated method stub
+		return 1;
 	}
 }

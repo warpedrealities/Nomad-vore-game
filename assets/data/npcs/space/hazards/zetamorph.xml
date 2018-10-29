@@ -18,7 +18,7 @@
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
 		<stat stat="HEALTH" value="55" />
-		<stat stat="RESOLVE" value="35" />
+		<stat stat="RESOLVE" value="40" />
 		<attribute attribute="MELEE" value="2" />
 		<attribute attribute="PARRY" value="6" />
 		<attribute attribute="THERMAL" value="12" />

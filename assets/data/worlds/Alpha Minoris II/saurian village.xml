@@ -108,7 +108,7 @@
 			<placeWidget x="1" y="1" name="modules/single bed"/>
 			<placeNPC x="0" y="0" name="minoris2_saurian/saurianlovers" />
 		</POIprefab>
-		<placeNPC x="21" y="21" name="minoris2_saurian/saurianSuri" />
+		<placeNPC x="17" y="17" name="minoris2_saurian/saurianSuri" />
 
 		<POINPC name="minoris2_saurian/saurianshopkeep" />
 		<POICornerDecorate floor="2">

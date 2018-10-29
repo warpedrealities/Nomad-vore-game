@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="adrenaline surge">
 	<requirement count="1">
-		<req>LEVEL5</req>
+		<req>DEPRECATED</req>
 	</requirement>
 	<description> Immediately recover 10 AP at the cost of satiation.
 	</description>

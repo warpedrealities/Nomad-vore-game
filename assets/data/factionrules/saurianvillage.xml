@@ -11,6 +11,9 @@
 	</superRule>
 	<superRule subject="warrior" level="2" violation="ATTACK">
 		<factionRelationship faction="saurian" mod="-10" />
+	</superRule>	
+	<superRule subject="warrior" level="2" violation="SEDUCE">
+		<factionRelationship faction="saurian" mod="-10" />
 	</superRule>
 	<superRule subject="Laurisse" level="4" violation="ATTACK">
 		<factionRelationship faction="saurian" mod="-20" />

@@ -336,4 +336,8 @@ public class NPC_RPG implements Actor_RPG {
 	public ConditionalDescription getConditionalDescription() {
 		return statBlock.getConditionalDescription();
 	}
+
+	public float getSpriteSize() {
+		return statBlock.getSpriteSize();
+	}
 }

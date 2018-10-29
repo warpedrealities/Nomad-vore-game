@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <NPC>
-	<sprite value="elder thing.png" />
+	<sprite value="elder thing.png" size="1.5" />
 	<name>elder thing</name>
 	<description>the loathsome dweller in this dank place moves with a
 		hideous lurching half gait half slithering motion. Its skin hanging

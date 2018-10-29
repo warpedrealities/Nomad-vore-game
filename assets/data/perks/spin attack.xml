@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <perk name="spin attack">
 	<requirement count="1">
-		<req>PERKwarrior</req>
+		<req>DEPRECATED</req>
 	</requirement>
+
 	<description>
 		you're able to attack everyone around you with a whirling spin attack,
 		though it completes somewhat slower than a regular attack (*2 AP, *2

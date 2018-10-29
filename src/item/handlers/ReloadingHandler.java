@@ -10,7 +10,7 @@ import item.instances.ItemStack;
 
 public class ReloadingHandler {
 
-	
+
 	public static boolean reload(ItemDepletableInstance device, List<Item> inventory)
 	{
 		ItemHasEnergy item=(ItemHasEnergy)device.getItem();
@@ -37,14 +37,14 @@ public class ReloadingHandler {
 					{
 						//drain item to try and replenish that which we're recharging
 						float Eneed=item.getEnergy().getMaxEnergy()-device.getEnergy();
-						float Eavailable=((float)ammo.getEnergy())*item.getEnergy().getrefillrate();
+						float Eavailable=(ammo.getEnergy())*item.getEnergy().getrefillrate();
 						if (Eneed>=Eavailable)
 						{
 							//drain ammo entirely
 							ammo.setEnergy(0);
 							device.setEnergy(device.getEnergy()+Eavailable);
 							if (DisposeAmmo((ItemHasEnergy)ammo.getItem()) && inventory.size()>i)
-							{	
+							{
 								if (ammo.equals(inventory.get(i)))
 								{
 									inventory.remove(i);
@@ -60,19 +60,63 @@ public class ReloadingHandler {
 							device.setEnergy(item.getEnergy().getMaxEnergy());
 							if (!inventory.get(i).equals(ammo))
 							{
-								inventory.add(ammo);		
+								inventory.add(ammo);
 							}
 							return true;
 						}
 					}
 				}
 			}
-		}			
-		
-		
+		}
+
+
 		return false;
 	}
-	
+
+	public static boolean reload(ItemDepletableInstance device, Item ammunition, List<Item> inventory) {
+		ItemHasEnergy item = (ItemHasEnergy) device.getItem();
+		if (ItemAmmo.class.isInstance(ammunition.getItem())) {
+			if (item.getEnergy().getRefill().contains(ammunition.getItem().getName())) {
+				ItemDepletableInstance ammo = null;
+				if (ItemStack.class.isInstance(ammunition)) {
+					ammo = (ItemDepletableInstance) ((ItemStack) ammunition).takeItem();
+					if (((ItemStack)ammunition).getCount() < 1) {
+						inventory.remove(ammunition);
+					}
+				} else {
+					ammo = (ItemDepletableInstance) ammunition;
+				}
+				if (ammo.getEnergy() > 0) {
+					// drain item to try and replenish that which we're recharging
+					float Eneed = item.getEnergy().getMaxEnergy() - device.getEnergy();
+					float Eavailable = (ammo.getEnergy()) * item.getEnergy().getrefillrate();
+					if (Eneed >= Eavailable) {
+						// drain ammo entirely
+						ammo.setEnergy(0);
+						device.setEnergy(device.getEnergy() + Eavailable);
+						if (DisposeAmmo((ItemHasEnergy) ammo.getItem())) {
+							if (ammo.equals(ammunition)) {
+								inventory.remove(ammunition);
+							}
+							// time tick
+						}
+						return true;
+					} else {
+						float Edrain = Eneed / item.getEnergy().getrefillrate();
+						ammo.setEnergy(ammo.getEnergy() - Edrain);
+						device.setEnergy(item.getEnergy().getMaxEnergy());
+						if (!inventory.contains(ammo)) {
+							inventory.add(ammo);
+						}
+						return true;
+					}
+				}
+			}
+		}
+
+		return false;
+	}
+
 	public static boolean DisposeAmmo(ItemHasEnergy def)
 	{
 		if (def.getEnergy().getRefill()==null)
@@ -81,5 +125,5 @@ public class ReloadingHandler {
 		}
 		return false;
 	}
-	
+
 }

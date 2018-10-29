@@ -85,7 +85,7 @@ public class Player_RPG_moveHandler {
 			moves.add(d, move);
 			list.add(move.getMoveName());
 		} else {
-			addMove(moves, move);
+			// addMove(moves, move);
 		}
 		// apply modifiers over the top of the move
 
@@ -109,7 +109,7 @@ public class Player_RPG_moveHandler {
 			handleMove(moves,rank,perk.getMove(i+1));
 		}
 	}
-	
+
 	private void handleMove(ArrayList<CombatMove> moves, int rank, CombatMove move) {
 		for (int i = 0; i < moves.size(); i++) {
 			if (moves.get(i).getMoveName().equals(move.getMoveName())) {
@@ -118,7 +118,7 @@ public class Player_RPG_moveHandler {
 				return;
 			}
 		}
-		addMove(moves, move);		
+		addMove(moves, move);
 	}
 
 	private int getMoveCategoryOffset(int index) {

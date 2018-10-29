@@ -17,7 +17,27 @@
 	<choice destination="brightfeather3" text="So about a new home for brightfeather's harpy friends">
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="3" />
 	</choice>
+	<choice destination="brightfeather4" text="So about a new home for brightfeather's harpy friends">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="4" />
+	</choice>	
 	<choice destination="end" text="Nothing, stay friendly"/>
+	</page>
+	
+	<page ID="brightfeather4">
+	<text>
+		"Yes yes. Southeast of village, is clear? is safe? you looked? is good?" asks Keliya bobbing for emphasis of each question.
+	</text>
+	<choice destination="brightfeather4A" text="There was a predatory newt lurking about there, I took care of the matter"/>
+	</page>
+	
+	<page ID="brightfeather4A">
+	<text>
+	"Oh? OH! a newt? with like..a tongue..and, lurking? as in sneaking. My that sounds dangerous, but the point is you got rid of it. Good. that is, very..very good. Can't have a newt eating all of Brightfeather's family..that would be very bad. Thankyou for getting rid of it." says Keliya with a smile "Now that the area is safe we could make it more comfortable for Brightfeather's friends maybe." 
+	</text>
+<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="5" />	
+			<effect type="experience" value="500" />
+		<choice destination="shop" text="Yes, but now i need some supplies"/>	
+			<choice destination="end" text="I'm happy to help, I'll come back later"/>
 	</page>
 	
 	<page ID="brightfeather3">
