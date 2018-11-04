@@ -201,7 +201,7 @@ public class UniverseStateChanger {
 		universe.setPlayer(new Player());
 		universe.getPlayer().Load(filename);
 
-
+		universe.getCurrentZone().updateZoneEnvironment(universe.getPlayer());
 		safety=dstream.readInt();
 		CompanionTool.loadCompanions(universe.getPlayer(), universe.getCurrentZone());
 		universe.getUIDGenerator().reset();

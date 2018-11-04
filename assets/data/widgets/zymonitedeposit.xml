@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<widgetharvestable sprite="40">
+<widgetharvestable sprite="40" safeOnly="true">
 	<contains minimum="1" maximum="1">zymonite</contains>
 	<usedescription>You manage to extract a good quality piece of zymonite</usedescription>
 	<description>A fissure containing the alien element zymonite</description>

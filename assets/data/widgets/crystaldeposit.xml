@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<widgetharvestable sprite="34">
+<widgetharvestable sprite="34" safeOnly="true">
 	<contains minimum="2" maximum="3">blue crystal</contains>
 	<usedescription>You mine some blue crystals</usedescription>
 	<description>A deposit of crystals high in energy, possibly usable as

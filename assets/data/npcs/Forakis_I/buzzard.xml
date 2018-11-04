@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="harpy.png" />
+	<name>buzzard harpy</name>
+	<description>
+	An ugly buzzard harpy
+	</description>
+	<rpg>
+		<experiencevalue value="300" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="4" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="35" />
+		<attribute attribute="DODGE" value="4" />		
+		<attribute attribute="TEASE" value="2" />		
+		<combatMove name="shoot" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<missText count="4">
+				<text>Harpy buzzard fails to claw TARGET</text>
+				<text>Harpy buzzard's kick does not connect with TARGET </text>
+				<text>TARGET avoids a furious peck from a Harpy buzzard</text>
+				<text>TARGET narrowly avoids the Harpy buzzard's kick </text>	
+			</missText>
+			<hitText count="4">
+				<text>Harpy buzzard pecks TARGET for VALUE damage</text>
+				<text>Harpy buzzard bites TARGET for VALUE damage</text>
+				<text>Harpy buzzard kicks TARGET for VALUE damage</text>
+				<text>TARGEt is struck for VALUE damage by a Harpy buzzard</text>		
+			</hitText>
+		</combatMove>
+		<combatMove name="swoop" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="8" pattern="RANGED" actionCost="2" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>Harpy buzzard fails to swoop towards TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Harpy buzzard swoops towards TARGET</text>
+			</hitText>
+		</combatMove>	
+		<itemDrop chance="60" defeatOnly="true" item="harpy feather" />	
+		<itemDrop chance="20" defeatOnly="true" item="harpy feather" />	
+	</rpg>
+	<respawn delay="2000" />
+<flying />	
+	<defeated conversation="Forakis_I/buzzard/defeat" />
+	<seduced conversation="Forakis_I/buzzard/defeat" />
+	<victory conversation="Forakis_I/buzzard/victory" />
+	<seducer conversation="Forakis_I/buzzard/victory" />
+	<controller AI="leaper" />
+	<faction value="monster" />
+</NPC>

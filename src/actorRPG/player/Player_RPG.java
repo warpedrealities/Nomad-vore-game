@@ -812,7 +812,7 @@ public class Player_RPG implements Actor_RPG {
 			}
 		}
 		conditionImmunities=new ArrayList<String>();
-
+		buildConditionImmunities(actor);
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
 		cooldownHandler=new CooldownHandler();
@@ -826,6 +826,18 @@ public class Player_RPG implements Actor_RPG {
 		if (b)
 		{
 			quickAction=ParserHelper.LoadString(dstream);
+		}
+	}
+
+	private void buildConditionImmunities(Actor actor) {
+		Inventory inventory = ((Player) actor).getInventory();
+		for (int i = 0; i < 4; i++) {
+			if (inventory.getSlot(i) != null && ItemEquip.class.isInstance(inventory.getSlot(i).getItem())) {
+				ItemEquip item = (ItemEquip) inventory.getSlot(i);
+				if (item.getModifier().getImmunity() != null) {
+					conditionImmunities.add(item.getModifier().getImmunity());
+				}
+			}
 		}
 	}
 

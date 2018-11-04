@@ -88,7 +88,7 @@ public class ZoneInteractionHandler {
 				return false;
 			}
 		}
-	
+
 		if (m_zone.zoneTileGrid[x0][y0].getWidgetObject() != null) {
 			String str = m_zone.zoneTileGrid[x0][y0].getWidgetObject().getDescription();
 			if (str == null) {
@@ -185,6 +185,9 @@ public class ZoneInteractionHandler {
 										.getWidgetObject();
 								violationCheck(w.getName(), p, ViolationType.Interact);
 							}
+						}
+						else {
+							m_view.DrawText("Not safe to do that right now");
 						}
 					} else {
 						if (WidgetBreakable.class
@@ -310,7 +313,7 @@ public class ZoneInteractionHandler {
 		}
 		return false;
 	}
-	
+
 	public void attack(Vec2f p, Player player) {
 		if (canAct(player))
 		{
@@ -328,7 +331,7 @@ public class ZoneInteractionHandler {
 		if (canAct(player))
 		{
 			return false;
-		}		
+		}
 		return useMove(player.getSpecialMove(), p, player);
 	}
 
@@ -349,27 +352,28 @@ public class ZoneInteractionHandler {
 				if (WidgetSlot.class.isInstance(m_zone.zoneTileGrid[x][y].getWidgetObject())) {
 					WidgetSlot ws = (WidgetSlot) m_zone.zoneTileGrid[x][y].getWidgetObject();
 					if (ws.getWidget() != null) {
-						Attackable attackable = (Attackable) ws.getWidget();
+						Attackable attackable = ws.getWidget();
 						if (!ws.checkDismantle(player.getMove(number)))
 						{
 							if (player.useMove(number, attackable)) {
 								ws.handleAttack(player.getMove(number));
 							} else {
 								return false;
-							}	
+							}
 						}
 						else
 						{
+
 							return false;
 						}
-		
+
 					}
 				}
 			}
 			// check for actor in tile
 			if (m_zone.zoneTileGrid[x][y] != null && m_zone.zoneTileGrid[x][y].getActorInTile() != null
 					&& m_zone.zoneTileGrid[x][y].getActorInTile() != player) {
-				Attackable attackable = (Attackable) m_zone.zoneTileGrid[x][y].getActorInTile();
+				Attackable attackable = m_zone.zoneTileGrid[x][y].getActorInTile();
 				// player.Attack(attackable,m_view);
 				if (player.getMove(number).isNonViolent()) {
 					violationCheck(attackable.getName(), new Vec2f(x, y), ViolationType.Seduce);

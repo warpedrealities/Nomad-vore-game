@@ -7,8 +7,7 @@ function combat(controllable,sense,pos,hostile)
 	--if in melee range attack
 		if (controllable:getRPG():getStat(0)<60) and (controllable:getValue(3)==0) then
 		controllable:setValue(3,1)
-		controllable:setAttack(1);
-		controllable:Attack(pos.x,pos.y)	
+			controllable:useSelfMove(1)
 		else
 			controllable:setAttack(0);
 			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)	

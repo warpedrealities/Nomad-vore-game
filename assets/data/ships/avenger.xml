@@ -44,46 +44,55 @@
 				Exterior hatch </pairedportal>
 			<placeWidget x="3" y="10" name="slot">
 				<contains name="modules/datacomputer" />
+				<widgetItem>research computer</widgetItem>
 			</placeWidget>
 			<placeWidget x="4" y="10" name="slot">
 				<contains name="modules/navconsole" />
+				<widgetItem>nav computer</widgetItem>
 			</placeWidget>
 			<placeWidget x="5" y="10" name="slot">
 				<contains name="modules/specimenContainment" />
+					<widgetItem>specimen containment</widgetItem>
 			</placeWidget>
 			<placeWidget x="2" y="8" name="hardpoint">
 				<facing value="7" />
 				<contains name="shipweapons/laser cannon">
-
+							
 				</contains>
+				<widgetItem>laser cannon</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="6" y="8" name="hardpoint">
 				<facing value="1" />
 				<contains name="shipweapons/laser cannon">
 				</contains>
+				<widgetItem>laser cannon</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="3" y="5" name="slot">
 				<contains name="modules/generator">
 					<resource type="ENERGY" value="0" />
 				</contains>
+				<widgetItem>generator</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="5" y="5" name="slot">
 				<contains name="modules/generator">
 					<resource type="ENERGY" value="0" />
 				</contains>
+				<widgetItem>generator</widgetItem>
 			</placeWidget>
 			<placeWidget x="5" y="4" name="DAMAGE" value="25" exterior="true" />
 			<placeWidget x="2" y="3" name="slot">
 				<contains name="modules/bunk bed">
 	
 				</contains>
+				<widgetItem>bunk bed</widgetItem>	
 			</placeWidget>
 
 			<placeWidget x="6" y="3" name="slot">
 				<contains name="modules/defensive barrier" />
+				<widgetItem>defensive barrier</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="3" y="1" name="slot">
@@ -101,16 +110,19 @@
 
 			<placeWidget x="5" y="1" name="slot">
 				<contains name="modules/reformer" />
+				<widgetItem>reformation tube</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="modules/interplanetary reactor">
 					<resource type="FUEL" value="150" />
 				</contains>
+				<widgetItem>interplanetary reactor</widgetItem>	
 			</placeWidget>
 
 			<placeWidget x="7" y="1" name="slot">
 				<contains name="modules/space warper" />
+				<widgetItem>space warper</widgetItem>		
 			</placeWidget>
 
 		</mapgen>

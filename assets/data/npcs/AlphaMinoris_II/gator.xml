@@ -17,8 +17,8 @@
 		<ability ability="ENDURANCE" value="5" />
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
-		<stat stat="HEALTH" value="40" />
-		<stat stat="RESOLVE" value="40" />
+		<stat stat="HEALTH" value="35" />
+		<stat stat="RESOLVE" value="35" />
 		<attribute attribute="TEASE" value="12" />
 		<attribute attribute="KINETIC" value="4" />
 		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"

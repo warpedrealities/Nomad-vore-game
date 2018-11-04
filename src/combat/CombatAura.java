@@ -8,6 +8,8 @@ import faction.violation.FactionRule.ViolationType;
 import graphics.CompiledFX;
 import nomad.universe.Universe;
 import rlforj.los.IConeFovAlgorithm;
+import rlforj.los.IFovAlgorithm;
+import rlforj.los.PrecisePermissive;
 import rlforj.los.ShadowCasting;
 import shared.Vec2f;
 import view.ViewScene;
@@ -22,6 +24,7 @@ public class CombatAura {
 
 	static IConeFovAlgorithm coneAlgorithm;
 
+	static IFovAlgorithm vision;
 	static public boolean doSweep(CombatMove move, Actor origin, Attackable target) {
 		Zone zone = Universe.getInstance().getCurrentZone();
 
@@ -91,6 +94,41 @@ public class CombatAura {
 		return doExplosion(combatMove, origin, origin, false);
 	}
 
+	public static boolean doRadius(CombatMove combatMove, Actor origin, Attackable target) {
+		CompiledFX explosion = new CompiledFX();
+		if (combatMove.isNonViolent()) {
+			explosion.setRGB(1, 0, 1);
+		} else {
+			explosion.setRGB(1, 0, 0);
+		}
+		if (vision == null) {
+			vision = new PrecisePermissive();
+		}
+		CombatProjector projector = new CombatProjector(origin, Universe.getInstance().getCurrentZone(), combatMove);
+		projector.setCompiledEffect(explosion);
+		ViewScene.m_interface.getFX().addEffect(explosion);
+		vision.visitFieldOfView(projector, (int) origin.getPosition().x, (int) origin.getPosition().y, 5);
+		return true;
+	}
+
+	public static boolean doBlast(CombatMove combatMove, Actor origin, Attackable target) {
+		CompiledFX explosion = new CompiledFX();
+
+		if (combatMove.isNonViolent()) {
+			explosion.setRGB(1, 0, 1);
+		} else {
+			explosion.setRGB(1, 0, 0);
+		}
+		if (vision == null) {
+			vision = new PrecisePermissive();
+		}
+		CombatProjector projector = new CombatProjector(origin, Universe.getInstance().getCurrentZone(), combatMove);
+		projector.setCompiledEffect(explosion);
+		ViewScene.m_interface.getFX().addEffect(explosion);
+		vision.visitFieldOfView(projector, (int) target.getPosition().x, (int) target.getPosition().y, 5);
+		return true;
+	}
+
 	static public boolean doExplosion(CombatMove move, Actor origin, Attackable target, boolean center) {
 
 		CompiledFX explosion=new CompiledFX();
@@ -144,7 +182,7 @@ public class CombatAura {
 			if (WidgetSlot.class.isInstance(zone.zoneTileGrid[x][y].getWidgetObject())) {
 				WidgetSlot ws = (WidgetSlot) zone.zoneTileGrid[x][y].getWidgetObject();
 				if (ws.getWidget() != null) {
-					Attackable attackable = (Attackable) ws.getWidget();
+					Attackable attackable = ws.getWidget();
 					ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),
 							new Vec2f(x, y), ViolationType.Attack);
 					attack(origin, move, attackable);
@@ -153,7 +191,7 @@ public class CombatAura {
 		}
 		// check for actor in tile
 		if (zone.zoneTileGrid[x][y] != null && zone.zoneTileGrid[x][y].getActorInTile() != null) {
-			Attackable attackable = (Attackable) zone.zoneTileGrid[x][y].getActorInTile();
+			Attackable attackable = zone.zoneTileGrid[x][y].getActorInTile();
 			if (attackable.getAttackable()) {
 				if (move.isNonViolent()) {
 					ViewScene.m_interface.getSceneController().getHandler().violationCheck(attackable.getName(),

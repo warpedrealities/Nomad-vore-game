@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ItemWidget name="space slug thrower" weight="10" value="700">
+	<description>A magnetic accelerator accelerator cannon firing 40mm slugs intended to be used for space combat.
+		5-9 damage, 1 energy to fire.</description>
+	<placeditem widget="shipweapons/slug thrower" />
+</ItemWidget>

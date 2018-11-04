@@ -29,15 +29,16 @@
 				<text>The huntress kicks TARGET for VALUE damage</text>
 			</hitText>
 		</combatMove>
-	<combatMove name="buff" pattern="CIRCLE" bonusAttribute="MELEE"
+	<combatMove name="buff" pattern="RADIUS" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="10">
 			<statusAttribMod uid="17" icon="12" duration="40"
-				numModifiers="2">
+				numModifiers="3">
 				<statusTag tag="raptor" inverse="true" />
 				<applyText>TARGET has become frenzied</applyText>
 				<removeText> TARGET is no longer frenzied</removeText>
-				<effect attribute="MELEE" modifier="2" />			
-				<effect attribute="WILLPOWER" modifier="2" />			
+				<effect attribute="MELEE" modifier="4" />	
+				<effect attribute="PARRY" modifier="4" />				
+				<effect attribute="WILLPOWER" modifier="4" />			
 			</statusAttribMod>
 			<missText count="1">
 				<text></text>

@@ -38,6 +38,7 @@ public class WidgetHarvestable extends Widget {
 			min=Integer.parseInt(enode.getAttribute("min"));
 			max=Integer.parseInt(enode.getAttribute("max"));
 			dc=Integer.parseInt(enode.getAttribute("dc"));
+
 			successText=enode.getTextContent();
 		}
 
@@ -49,6 +50,7 @@ public class WidgetHarvestable extends Widget {
 			dstream.writeInt(max);
 			dstream.writeInt(dc);
 			dstream.writeInt(attribute);
+
 		}
 
 		public void load(DataInputStream dstream) throws IOException
@@ -59,6 +61,7 @@ public class WidgetHarvestable extends Widget {
 			max=dstream.readInt();
 			dc=dstream.readInt();
 			attribute=dstream.readInt();
+
 		}
 
 	}
@@ -69,6 +72,7 @@ public class WidgetHarvestable extends Widget {
 	boolean m_picked;
 	long m_timepicked=0;
 	String m_use;
+	public boolean safeOnly;
 	HarvestSkillCheck skillCheck;
 
 
@@ -79,7 +83,9 @@ public class WidgetHarvestable extends Widget {
 		{
 			isVisionBlocking = true;
 		}
-
+		if (node.getAttribute("safeOnly").equals("true")) {
+			safeOnly = true;
+		}
 		isWalkable = false;
 		NodeList children = node.getChildNodes();
 		for (int i = 0; i < children.getLength(); i++) {
@@ -200,11 +206,12 @@ public class WidgetHarvestable extends Widget {
 		{
 			dstream.writeBoolean(false);
 		}
+		dstream.writeBoolean(safeOnly);
 	}
 
 	@Override
 	public boolean safeOnly() {
-		return true;
+		return safeOnly;
 	}
 
 	public WidgetHarvestable(DataInputStream dstream) throws IOException {
@@ -221,6 +228,7 @@ public class WidgetHarvestable extends Widget {
 			skillCheck=new HarvestSkillCheck();
 			skillCheck.load(dstream);
 		}
+		safeOnly = dstream.readBoolean();
 	}
 
 }

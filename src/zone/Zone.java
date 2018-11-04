@@ -219,8 +219,8 @@ public class Zone implements Zone_int {
 					if (node.getNodeType() == Node.ELEMENT_NODE) {
 						Element Enode = (Element) node;
 						if (Enode.getTagName() == "landingsite") {
-							fixedLandingSite = new Vec2f((float) Integer.parseInt(Enode.getAttribute("x")),
-									(float) Integer.parseInt(Enode.getAttribute("y")));
+							fixedLandingSite = new Vec2f(Integer.parseInt(Enode.getAttribute("x")),
+									Integer.parseInt(Enode.getAttribute("y")));
 							return fixedLandingSite;
 						}
 					}
@@ -301,8 +301,8 @@ public class Zone implements Zone_int {
 					}
 
 					if (Enode.getTagName() == "landingsite") {
-						fixedLandingSite = new Vec2f((float) Integer.parseInt(Enode.getAttribute("x")),
-								(float) Integer.parseInt(Enode.getAttribute("y")));
+						fixedLandingSite = new Vec2f(Integer.parseInt(Enode.getAttribute("x")),
+								Integer.parseInt(Enode.getAttribute("y")));
 					}
 
 					// layout
@@ -336,6 +336,7 @@ public class Zone implements Zone_int {
 		}
 	}
 
+	@Override
 	public int getHeight() {
 		if (zoneHeight == 0) {
 			Element n = zoneEntity.LoadZone(this);
@@ -348,6 +349,7 @@ public class Zone implements Zone_int {
 		return zoneTileGrid;
 	}
 
+	@Override
 	public int getWidth() {
 		if (zoneWidth == 0) {
 			Element n = zoneEntity.LoadZone(this);
@@ -419,12 +421,12 @@ public class Zone implements Zone_int {
 				if (player.equals(zoneActors.get(i)))
 				{
 					b = false;
-					break;	
+					break;
 				}
 				else
 				{
 					zoneActors.remove(i);
-					break;			
+					break;
 				}
 			}
 		}
@@ -486,7 +488,7 @@ public class Zone implements Zone_int {
 				sightBoard[index]=new ZoneSight(zoneTileGrid,zoneWidth,zoneHeight,true);
 				break;
 			case 1:
-				sightBoard[index]=new ZoneSight(zoneTileGrid,zoneWidth,zoneHeight,false);		
+				sightBoard[index]=new ZoneSight(zoneTileGrid,zoneWidth,zoneHeight,false);
 				break;
 			}
 		}
@@ -520,7 +522,7 @@ public class Zone implements Zone_int {
 	}
 
 	public void RegenZone() {
-		
+
 		for (int i = 0; i < zoneWidth; i++) {
 			for (int j = 0; j < zoneHeight; j++) {
 				if (zoneTileGrid[i][j] != null) {
@@ -533,10 +535,10 @@ public class Zone implements Zone_int {
 					}
 					zoneTileGrid[i][j].setActorInTile(null);
 				}
-				
+
 			}
 		}
-		
+
 		for (int i = zoneActors.size() - 1; i >= 0; i--) {
 			if (zoneActors.get(i) != null) {
 				if (zoneActors.get(i).Respawn(GameManager.getClock())) {
@@ -638,7 +640,7 @@ public class Zone implements Zone_int {
 		}
 		else
 		{
-			dstream.writeBoolean(false);		
+			dstream.writeBoolean(false);
 		}
 	}
 
@@ -713,6 +715,7 @@ public class Zone implements Zone_int {
 		if (dstream.readBoolean())
 		{
 			zoneConditions=new EnvironmentalConditions(dstream);
+
 		}
 	}
 
@@ -778,7 +781,7 @@ public class Zone implements Zone_int {
 					zoneTileGrid[p.x][p.y].setThreat(npc);
 				}
 			}
-		}	
+		}
 	}
 
 	@Override
@@ -817,6 +820,6 @@ public class Zone implements Zone_int {
 	public EnvironmentalConditions getZoneConditions() {
 		return zoneConditions;
 	}
-	
-	
+
+
 }

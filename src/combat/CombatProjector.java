@@ -4,6 +4,7 @@ import actor.Actor;
 import actor.Attackable;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
+import graphics.CompiledFX;
 import nomad.universe.Universe;
 import rlforj.los.ILosBoard;
 import shared.Vec2f;
@@ -19,6 +20,7 @@ public class CombatProjector implements ILosBoard {
 	Zone zone;
 	Actor origin;
 	CombatMove move;
+	CompiledFX compiledEffect;
 
 	public CombatProjector(Actor origin, Zone zone, CombatMove move) {
 		this.origin = origin;
@@ -47,8 +49,12 @@ public class CombatProjector implements ILosBoard {
 	public void visit(int x, int y) {
 
 		Tile t= zone.getTile(x, y);
-		if (zone.getTile(x, y) != null &&t.getActorInTile() != null) {
-			if (t.getActorInTile() != origin && t.getActorInTile().getRPGHandler().getActive()) {
+		if (zone.getTile(x, y) != null) {
+			if (compiledEffect != null) {
+				compiledEffect.addPosition(new Vec2f(x, y));
+			}
+			if (t.getActorInTile() != null && t.getActorInTile() != origin
+					&& t.getActorInTile().getRPGHandler().getActive()) {
 				attack(origin, move, t.getActorInTile());
 			}
 
@@ -122,6 +128,14 @@ public class CombatProjector implements ILosBoard {
 			}
 		}
 
+	}
+
+	public CompiledFX getCompiledEffect() {
+		return compiledEffect;
+	}
+
+	public void setCompiledEffect(CompiledFX compiledEffect) {
+		this.compiledEffect = compiledEffect;
 	}
 
 }

@@ -2,10 +2,58 @@
 <Conversation>
 	<page ID="start">
 		<text> 
-		No interaction to be had with a defeated black guardian.
+		Standing before you is a massive synthetic jackal warrior, defeated by your own power, laying there with no ability to defend against what you have planned.
 		</text>
-		<choice destination="end" text="leave her be"/>	
+		<!--<choice destination="cockvore0" text="Can you even fit them in your shaft?">
+				<assertion evaluate="hasperk" perk="cockvore" />
+		</choice>-->
+		<choice destination="devour" text="devour">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
+		<choice destination="powercore0" text="Try to remove their powercore">
+		<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="1" />
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="powercoreremoved"
+			value="0" />
+		</choice>
+		<choice destination="end" text="darn" />
 	</page>	
-
+		<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="150" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
 	
+	<check ID="powercore0">
+		<test what="TECH" DC="12" />
+		<outcome destination="powercore1" />
+		<outcome destination="powercorefail" />
+	</check>
+	
+	<page ID="powercore1">
+		<text>
+			You manage to carefully remove the powercore from the defeated synth's breast, the glowing bright white orb has no cracks or imperfections, and hums with a powerful energy.
+		</text>
+		<effect type="setglobalflag" flag="powercoreremoved" value="1" />
+		<effect type="giveitem" item="questItem" value="1" addendum="synth_powercore" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	
+	<page ID="powercorefail">
+		<text>
+			Unfortunate, you were unable to extract the power core in a safe manner, and the resulting orb is a dull grey, and worthless as anything, not even a paper weight, since it would roll away.
+		</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="Damn, and I worked so hard to get this one." />
+	</page>
 </Conversation>

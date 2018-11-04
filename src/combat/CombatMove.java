@@ -32,7 +32,8 @@ import zone.Tile;
 public class CombatMove {
 
 	public enum AttackPattern {
-		P_MELEE(0), P_SWEEP(1), P_CIRCLE(2), P_SHORT(3), P_RANGED(4), P_CONE(5), P_BOMB(6), P_REACH(7), P_SELF(-1);
+		P_MELEE(0), P_SWEEP(1), P_CIRCLE(2), P_SHORT(3), P_RANGED(4), P_CONE(5), P_BOMB(6), P_REACH(7), P_RADIUS(8),
+		P_BLAST(9), P_SELF(-1);
 
 		int value;
 
@@ -364,6 +365,12 @@ public class CombatMove {
 		if (string.equals("REACH")) {
 			return AttackPattern.P_REACH;
 		}
+		if (string.equals("RADIUS")) {
+			return AttackPattern.P_RADIUS;
+		}
+		if (string.equals("BLAST")) {
+			return AttackPattern.P_BLAST;
+		}
 		return AttackPattern.P_MELEE;
 	}
 
@@ -447,6 +454,12 @@ public class CombatMove {
 			}
 			if (attackPattern == AttackPattern.P_CIRCLE) {
 				return CombatAura.doCircle(this, origin, target);
+			}
+			if (attackPattern == AttackPattern.P_RADIUS) {
+				return CombatAura.doRadius(this, origin, target);
+			}
+			if (attackPattern == AttackPattern.P_BLAST) {
+				return CombatAura.doBlast(this, origin, target);
 			}
 			if (attackPattern == AttackPattern.P_BOMB) {
 				return CombatAura.doExplosion(this, origin, target, true);

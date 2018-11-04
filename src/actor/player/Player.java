@@ -748,35 +748,7 @@ public class Player extends Actor {
 			{
 				handler.useMove(move.getMoveName());
 			}
-			if (slot == -1) {
-				if (ItemStack.class.isInstance((playerInventory).getSlot(0))) {
-					ItemStack stack = (ItemStack) playerInventory.getSlot(0);
-					stack.setCount(stack.getCount() - move.getAmmoCost());
-					if (move.isThrowWeapon()) {
-						ThrownWeaponHandler.throwWeapon(attackable.getPosition(), playerInventory.getSlot(0));
-					}
-					if (stack.getCount() == 0) {
-
-						UnEquip(0);
-						ViewScene.m_interface.UpdateInfo();
-					} else {
-						playerInventory.setWeight(playerInventory.getWeight() - stack.getItem().getWeight());
-					}
-					ViewScene.m_interface.UpdateInfo();
-				} else {
-					UnEquip(0);
-					ViewScene.m_interface.UpdateInfo();
-				}
-			}
-			if (energy != null) {
-				energy.UseEnergy(move.getAmmoCost());
-				if (move.isThrowWeapon() && energy.getEnergy() <= 0) {
-					UnEquip(0);
-					ViewScene.m_interface.UpdateInfo();
-				}
-			} else {
-
-			}
+			useAmmo(move, attackable, slot, energy);
 			((Player_RPG) actorRPG).useAction(move.getActionCost());
 			if (actionDepleted) {
 				actorRPG.addBusy(move.getTimeCost() * 2);
@@ -786,6 +758,39 @@ public class Player extends Actor {
 
 		}
 		return b;
+	}
+
+	public void useAmmo(CombatMove move, Attackable attackable, int slot, ItemDepletableInstance energy) {
+
+		if (slot == -1) {
+			if (ItemStack.class.isInstance((playerInventory).getSlot(0))) {
+				ItemStack stack = (ItemStack) playerInventory.getSlot(0);
+				stack.setCount(stack.getCount() - move.getAmmoCost());
+				if (move.isThrowWeapon()) {
+					ThrownWeaponHandler.throwWeapon(attackable.getPosition(), playerInventory.getSlot(0));
+				}
+				if (stack.getCount() == 0) {
+
+					UnEquip(0);
+					ViewScene.m_interface.UpdateInfo();
+				} else {
+					playerInventory.setWeight(playerInventory.getWeight() - stack.getItem().getWeight());
+				}
+				ViewScene.m_interface.UpdateInfo();
+			} else {
+				UnEquip(0);
+				ViewScene.m_interface.UpdateInfo();
+			}
+		}
+		if (energy != null) {
+			energy.UseEnergy(move.getAmmoCost());
+			if (move.isThrowWeapon() && energy.getEnergy() <= 0) {
+				UnEquip(0);
+				ViewScene.m_interface.UpdateInfo();
+			}
+		} else {
+
+		}
 	}
 
 	@Override

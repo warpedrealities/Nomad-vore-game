@@ -10,7 +10,7 @@
 	</modifier>
 	<combatMove name="use" ammoCost="1" pattern="MELEE"
 		bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="2"
-		throw="true" actionCost="2" basicAction="true" moveType="FIGHT">
+		actionCost="2" basicAction="true" moveType="FIGHT">
 		<effectDismantle />
 		<missText count="1">
 			<text></text>

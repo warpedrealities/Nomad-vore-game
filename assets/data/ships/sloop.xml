@@ -41,28 +41,34 @@
 			</prefab>
 			<placeWidget x="2" y="1" name="slot">
 				<contains name="modules/bunk bed" />
+				<widgetItem>bunk bed</widgetItem>	
 			</placeWidget>
 			<placeWidget x="4" y="1" name="slot">
 				<contains name="modules/bunk bed" />
+				<widgetItem>bunk bed</widgetItem>	
 			</placeWidget>	
 			<placeWidget x="3" y="3" name="slot">
 			<contains name="modules/navconsole" />
+			<widgetItem>nav computer</widgetItem>			
 			</placeWidget>		
 			<placeWidget x="3" y="5" name="slot">	
 			<contains name="modules/simple reactor">
 				<resource type="ENERGY" value="50" />
 			</contains>
+			<widgetItem>simple reactor</widgetItem>
 			</placeWidget>	
 			<placeWidget x="3" y="7" name="slot">
 			<contains name="modules/interplanetary reactor">
 				<resource type="FUEL" value="40" />
 			</contains>
+				<widgetItem>interplanetary reactor</widgetItem>	
 			</placeWidget>
 			<placeWidget x="5" y="7" name="hardpoint">
 			<facing value="2" />
 			<contains name="shipweapons/slug thrower">
 				<resource type="40mm slug" value="40" />	
 			</contains>
+			<widgetItem>space slug thrower</widgetItem>					
 			</placeWidget>
 			
 			<placeWidget x="1" y="7" name="hardpoint">
@@ -70,6 +76,7 @@
 			<contains name="shipweapons/slug thrower">
 				<resource type="40mm slug" value="40" />	
 			</contains>
+			<widgetItem>space slug thrower</widgetItem>			
 			</placeWidget>	
 			
 			<placeWidget x="3" y="9" name="slot">
@@ -101,9 +108,11 @@
 					<loot item="fuel canister" chance="1.0" />				
 				</lootTable>		
 			</contains>
+			<widgetItem>cargo container</widgetItem>
 			</placeWidget>	
 			<placeWidget x="3" y="13" name="slot">
-			<contains name="modules/space warper" />
+				<contains name="modules/space warper" />
+				<widgetItem>space warper</widgetItem>		
 			</placeWidget>
 
 			<pairedportal x="5" y="12" sprite="1" ID="-101" facing="6">

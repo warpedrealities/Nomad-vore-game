@@ -6,11 +6,14 @@ import java.io.IOException;
 
 import org.w3c.dom.Element;
 
+import actor.player.Inventory;
 import actor.player.Player;
+import actorRPG.Actor_RPG;
 import combat.CombatMove;
 import combat.effect.Effect_Dismantle;
 import interactionscreens.SlotScreen;
 import item.Item;
+import item.instances.ItemDepletableInstance;
 import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
@@ -211,8 +214,34 @@ public class WidgetSlot extends Widget {
 						this.widget.handleDismantle(Pile);
 						Vec2f p = ViewScene.m_interface.getSceneController().getActiveZone().getWidgetPosition(this);
 						ViewScene.m_interface.placeWidget(Pile, (int) p.x, (int) p.y, true);
+						ViewScene.m_interface.DrawText(
+								"You dismantle the device in this spaceship slot so you can re-use the device later");
 						widget = null;
 						widgetItem=null;
+						ItemDepletableInstance energy = null;
+						Actor_RPG actorRPG = Universe.getInstance().getPlayer().getRPG();
+						Inventory playerInventory = Universe.getInstance().getPlayer().getInventory();
+						if (combatMove.getAmmoCost() > 0) {
+							if (combatMove.getEnergySource() == -2) {
+								actorRPG.setStat(Actor_RPG.SATIATION,
+										actorRPG.getStat(Actor_RPG.SATIATION) - combatMove.getAmmoCost());
+							}
+							if (combatMove.getEnergySource() >= 0) {
+								if (playerInventory.getSlot(combatMove.getEnergySource()) != null
+										&& ItemDepletableInstance.class
+										.isInstance(playerInventory.getSlot(combatMove.getEnergySource()))) {
+									energy = (ItemDepletableInstance) playerInventory
+											.getSlot(combatMove.getEnergySource());
+									if (energy.getEnergy() < combatMove.getAmmoCost()) {
+										ViewScene.m_interface
+										.DrawText("insufficent energy to use " + combatMove.getMoveName());
+										return false;
+									}
+								}
+							}
+						}
+						Universe.getInstance().getPlayer().useAmmo(combatMove, null, combatMove.getEnergySource(),
+								null);
 						ViewScene.m_interface.redraw();
 						return true;
 					}
