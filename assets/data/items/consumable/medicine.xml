@@ -4,7 +4,7 @@
 		choice do you have.
 	</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
-		modvalue="6" modifies="HEALTH">
+		modvalue="12" modifies="HEALTH">
 		The medicine makes you feel better, who'd of
 		thought it.
 	</effectrecover>

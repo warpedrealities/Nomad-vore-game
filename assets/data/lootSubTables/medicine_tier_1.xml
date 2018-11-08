@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<lootTable>
+	<loot item="medicine" chance="8" />
+	<loot item="clarity" chance="4" />
+	<loot item="stimpack" chance="4" />
+	<loot item="antidote" chance="4" />	
+	<loot item="nerve purge" chance="4" />	
+</lootTable>

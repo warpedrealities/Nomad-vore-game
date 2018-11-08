@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="cosmic_horror.png" size="1.5" />
+
+	<name>Cosmic horror</name>
+	<description>A terrible otherworldly horror, its form amorpheous and having no earthly analogue outside of the deepest and most inhospitable ocean depths. Innumerable tentacles continously writhing, swelling, diminishing and grasping. Its body if it even has one is hidden behind the constantly shifting mass of tentacles, the tentacles of unfathomable matter reach out ever further with terrible purpose, truly this entity has no place here amidst light and warmth but yet it comes...violating the sanctity of the world you understand.
+	</description>
+	<rpg>
+		<experiencevalue value="1000" />
+		<ability ability="STRENGTH" value="7" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="100" />
+		<stat stat="RESOLVE" value="100" />
+		<attribute attribute="TEASE" value="122" />
+		<attribute attribute="PHEREMONE" value="122" />
+		<attribute attribute="PSYCHIC" value="112" />		
+		<combatMove name="tentacles" pattern="REACH" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="6">
+			<effectDamage type="KINETIC" minValue="5" maxValue="10"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>The cosmic horror attempts to strike TARGET but they evade</text>
+				<text>TARGET evades the cosmic horror's lashing tentacles</text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET is lashed with tentacles by the cosmic horror and loses VALUE points of health</text>
+				<text>the cosmic horror strikes TARGET removing VALUE points of health</text>
+
+			</hitText>
+		</combatMove>
+		<combatMove name="harden" timeCost="2" bonusAttribute="RANGED"
+			icon="2" pattern="SELF">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusAttribMod uid="17" icon="12" duration="40"
+				numModifiers="1">
+				<applyText>TARGET contracts, tentacles becoming narrower and more dense.</applyText>
+				<removeText> TARGET loosens and spreads out, tentacles becoming thicker and less dense.</removeText>
+				<effect attribute="KINETIC" modifier="12" />				
+			</statusAttribMod>
+			</effectStatus>
+		</combatMove>
+			<combatMove name="harden" timeCost="2" bonusAttribute="RANGED"
+			icon="2" pattern="SELF">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusAttribMod uid="17" icon="12" duration="400"
+				numModifiers="1">
+				<applyText>TARGET contracts, tentacles becoming narrower and more dense.</applyText>
+				<removeText> TARGET loosens and spreads out, tentacles becoming thicker and less dense.</removeText>
+				<effect attribute="KINETIC" modifier="20" />				
+			</statusAttribMod>
+			</effectStatus>
+		</combatMove>	
+		<combatMove name="reflect" timeCost="2" bonusAttribute="RANGED"
+			icon="2" pattern="SELF">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusAttribMod uid="18" icon="12" duration="400"
+				numModifiers="1">
+				<applyText>TARGET starts to gleam, the composition of its surface changing and becoming reflective.</applyText>
+				<removeText> TARGET composition changes back to normal</removeText>
+				<effect attribute="THERMAL" modifier="20" />				
+			</statusAttribMod>
+			</effectStatus>
+		</combatMove>	
+		<combatMove name="glow" timeCost="2" bonusAttribute="RANGED"
+			icon="2" pattern="SELF">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusAttribMod uid="19" icon="12" duration="400"
+				numModifiers="1">
+				<applyText>TARGET tentacles begin to glow</applyText>
+				<removeText> TARGET gradually ceases to radiate and its form turns dark again</removeText>
+				<effect attribute="SHOCK" modifier="20" />				
+			</statusAttribMod>
+			</effectStatus>
+		</combatMove>			
+		<statusTags count="1">
+			<tag>seduction</tag>
+		</statusTags>
+	<itemDrop chance="100" item="dark matter" />				
+	</rpg>
+	<victory conversation="space/cosmic_horror/victory" />
+	<seducer conversation="space/cosmic_horror/victory" />
+	<controller AI="cosmic_horror" />
+	<faction value="monster" />
+</NPC>

@@ -418,7 +418,6 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 									sceneController.getUniverse().getPlayer().getPosition());
 							redrawBars();
 							GameManager.AddClock(1);
-
 						}
 					} else {
 						if (sceneController.getUniverse().player.Control() || Click()) {
@@ -1546,6 +1545,14 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_view.vision(sceneController.getActiveZone(), sceneController.getActiveZone().zoneActors,
 				sceneController.getUniverse().player.getPosition());
 		return npc;
+	}
+
+	@Override
+	public void addNPC(NPC npc) {
+		npc.setSense(sceneController);
+		m_view.addActor(npc);
+		m_view.vision(sceneController.getActiveZone(), sceneController.getActiveZone().zoneActors,
+				sceneController.getUniverse().player.getPosition());
 	}
 
 }

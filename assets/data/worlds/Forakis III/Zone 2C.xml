@@ -19,6 +19,7 @@
 	<modifierCondition ID="swimming" movement="2.0" />
 	</zoneConditions>
 	<description>You are adventuring beneath the water now</description>
+	<transition direction="west">Zone 1C</transition>	
 	<mapgen>
 		<prefab positionX="32" positionY="1" width="5">
 			<row>22222</row>

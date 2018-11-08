@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="guardian defence system" weight="10" value="3000">
+	<description>The guardian defence system uses sophisticated remote control systems to operate a pair of defensive drones to secure the perimeter around the ship when it lands. These drones benefit from a broadcast power hub in the module providing more energy for their weapon systems </description>
+	<placeditem widget="modules/guardian defence system" />
+</ItemWidget>

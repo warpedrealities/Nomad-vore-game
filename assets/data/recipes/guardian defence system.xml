@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<recipe name="guardian defence system" requiredskill="1"
+	startunlocked="false">
+	<description>
+		The guardian defence system uses sophisticated remote control systems to operate a pair of defensive drones to secure the perimeter around the ship when it lands. These drones benefit from a broadcast power hub in the module providing more energy for their weapon systems
+	</description>
+	<ingredient item="scrap metal" quantity="6" />
+	<ingredient item="computation valve" quantity="10" />
+	<ingredient item="flux capacitor" quantity="10" />	
+<tokenRequirement item="roboticist" quantity="1" />	
+	<result item="guardian defence system" />
+</recipe>

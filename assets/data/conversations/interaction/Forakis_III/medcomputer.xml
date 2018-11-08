@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		MEDICAL COMPUTER DAMAGED LBREAK
+		SCANNING SYSTEM DISCONNECTED LBREAK
+		TREATMENT SYSTEM OFFLINE LBREAK
+		MEDICAL RECORDS AVAILABLE LBREAK
+		</text>
+		<choice destination="archive" text="access records"/>
+		<choice destination="end" text="exit"/>
+	</page>
+	
+	<page ID="archive">
+	<text>
+	DATA CORRUPTED LBREAK
+	RESTORING LAST SCAN DATA FROM MEMORY LBREAK
+	</text>
+	<choice destination="scan" text="access last scan"/>
+	<choice destination="end" text="exit"/>
+	</page>
+
+	<page ID="scan">
+	<text>
+	Subject crew member Ella LBREAK
+	Heightened temperature, aggressive immune response LBREAK
+	foreign pathogen detected in blood stream, medical treatment attempted LBREAK
+	medical treatment ineffective LBREAK
+	neurological degeneration detected LBREAK
+	key pathways for language and abstract thought deteriorating LBREAK
+	subject prospect: complete mental regression inevitable without more extensive treatment
+	</text>
+	<choice destination="end" text="exit"/>
+	</page>
+
+</Conversation>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="radium excitation drive" weight="30" value="1500">
+	<description>Radioactive substances are the cornerstone of 19th century experimental medicine, 50s science fiction and now of your propulsion system. Using excited radium we are able to increase fuel efficiency by 50% </description>
+	<placeditem widget="modules/radium excitation drive" />
+</ItemWidget>

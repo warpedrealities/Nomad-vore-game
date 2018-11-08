@@ -3,7 +3,10 @@
 	<sprite value="harpy.png" />
 	<name>buzzard harpy</name>
 	<description>
-	An ugly buzzard harpy
+	A part avian girl, similar in visage to a buzzard. She has dark skin fading into the dirty black feathers of
+	her wings at each shoulder. Her slender body seemed quite attractive, but she also radiates an untamed desire for satiation and
+		pleasure. Her head is capped with unruly and untamed wild locks of
+		dark grey hair spilling down her back and framing her face, supported by a rather ugly looking buzzard neck.
 	</description>
 	<rpg>
 		<experiencevalue value="300" />

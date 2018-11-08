@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<zone width="16" height="16" spriteset="shipbrown.png">	
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="BLOCKING" movement="2">a metal wall</tile>
+			<tile sprite="2" vision="EMPTY" movement="0">a metal floor</tile>
+	</tileset>
+<zoneConditions>
+	<damagingCondition ID="underwater" damage="2">
+	<message>
+	PNAME is suffocating due to being underwater
+	</message>
+	<gameOver>
+	You have drowned
+	</gameOver>
+	</damagingCondition>
+	<modifierCondition ID="swimming" movement="2.0" />
+	</zoneConditions>
+	<description>The ships interior is flooded and corroded</description>
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="10">
+			<row>1111 1111 00</row>
+			<row>1222 2221 00</row>
+			<row>1222 2221 00</row>				
+			<row>1222 2221 00</row>
+			<row>1112 1111 11</row>
+			<row>1222 2222 22</row>
+			<row>1112 1111 11</row>
+			<row>1222 2221 00</row>
+			<row>1222 2221 00</row>				
+			<row>1222 2221 00</row>	
+			<row>1111 1111 00</row>				
+		</prefab>	
+	<placeWidget x="2" y="1" name="console" info="interaction/forakis_III/medconsole"
+			variable="31" />		
+	<breakable name="ruined medical equipment" x="3" y="1" sprite="91" hp="10"
+			items="2">
+			<description>ruined medical equipment</description>
+			<resistance resists="KINETIC" strength="2"></resistance>
+			<Item>medkit</Item>
+		</breakable>					
+	<placeWidget x="4" y="1" name="cargocontainer">
+			<lootTable>
+				<lootSubTable chance="1" file="medicine_tier_1" />
+				<lootSubTable chance="0.5" file="medicine_tier_1" />
+				<lootSubTable chance="0.2" file="medicine_tier_1" />				
+			</lootTable>
+	</placeWidget>	
+	<placeWidget x="4" y="9" name="cargocontainer">
+			<lootTable>
+				<loot item="repair kit" chance="1.0" />
+				<loot item="repair kit" chance="1.0" />
+				<loot item="repair kit" chance="1.0" />				
+				<loot item="repair kit" chance="1.0" />
+				<loot item="repair kit" chance="1.0" />
+				<loot item="repair kit" chance="1.0" />						
+				<lootSubTable chance="1" file="engineering_tier_1" />
+				<lootSubTable chance="0.5" file="engineering_tier_1" />
+				<lootSubTable chance="0.5" file="engineering_tier_1" />		
+				<lootSubTable chance="1" file="material_tier_1" />
+				<lootSubTable chance="0.5" file="material_tier_1" />
+				<lootSubTable chance="0.5" file="material_tier_1" />					
+			</lootTable>
+	</placeWidget>			
+	<pairedportal x="9" y="5" sprite="10" ID="33"
+		destination="Zone 2C" facing="6">a way out of the shipwreck</pairedportal>		
+	</mapgen>
+
+</zone>

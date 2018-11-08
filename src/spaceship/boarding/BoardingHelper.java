@@ -12,6 +12,7 @@ import shared.ParserHelper;
 import shared.Vec2f;
 import shared.Vec2i;
 import spaceship.Spaceship;
+import view.ViewScene;
 import view.ZoneInteractionHandler;
 import vmo.GameManager;
 import widgets.WidgetPortal;
@@ -24,7 +25,7 @@ public class BoardingHelper {
 
 	private Spaceship ship;
 	List<Vec2i> entries;
-	
+
 	public BoardingHelper(Spaceship ship)
 	{
 		this.ship=ship;
@@ -34,47 +35,47 @@ public class BoardingHelper {
 		{
 			for (int j=0;j<z.getHeight();j++)
 			{
-				if (z.getTile(i, j)!=null && 
+				if (z.getTile(i, j)!=null &&
 						WidgetPortal.class.isInstance(z.getTile(i, j).getWidgetObject()))
 				{
 					entries.add(new Vec2i(i,j));
 				}
-				if (z.getTile(i, j)!=null && 
+				if (z.getTile(i, j)!=null &&
 						WidgetReformer.class.isInstance(z.getTile(i, j).getWidgetObject()))
 				{
 					WidgetReformer r=(WidgetReformer)z.getTile(i, j).getWidgetObject();
 					r.setSuppressed(true);
 				}
-				if (z.getTile(i, j)!=null && 
+				if (z.getTile(i, j)!=null &&
 						WidgetSlot.class.isInstance(z.getTile(i, j).getWidgetObject()))
 				{
 					WidgetSlot ws=(WidgetSlot)z.getTile(i, j).getWidgetObject();
 					if (WidgetReformer.class.isInstance(ws.getWidget()))
 					{
 						WidgetReformer r=(WidgetReformer)ws.getWidget();
-						r.setSuppressed(true);		
+						r.setSuppressed(true);
 					}
 				}
 			}
-			
+
 		}
 	}
-	
+
 	private Vec2f getAdjacent(Vec2f p)
 	{
 		for (int i=0;i<8;i++)
 		{
 			Vec2f a=ZoneInteractionHandler.getPos(i, p);
 			if (ship.getZone(0).getTile((int)a.x, (int)a.y)!=null &&
-				ship.getZone(0).getTile((int)a.x,(int)a.y).getDefinition().getMovement()==TileMovement.WALK 
-				&& ship.getZone(0).getTile((int)a.x,(int)a.y).getActorInTile()==null)
+					ship.getZone(0).getTile((int)a.x,(int)a.y).getDefinition().getMovement()==TileMovement.WALK
+					&& ship.getZone(0).getTile((int)a.x,(int)a.y).getActorInTile()==null)
 			{
 				return a;
 			}
 		}
 		return null;
 	}
-	
+
 	private Vec2f getPosition()
 	{
 		//pick an entry point
@@ -83,7 +84,7 @@ public class BoardingHelper {
 		{
 			r=GameManager.m_random.nextInt(entries.size());
 		}
-		
+
 		Vec2f p=new Vec2f(entries.get(r).x,entries.get(r).y);
 
 		if (ship.getZone(0).getTile((int)p.x, (int)p.y).getActorInTile()==null)
@@ -92,16 +93,16 @@ public class BoardingHelper {
 		}
 		else
 		{
-				//find adjacent location
+			//find adjacent location
 			p=getAdjacent(p);
 			if (p!=null)
 			{
-				return p;			
+				return p;
 			}
 		}
 		return null;
 	}
-	
+
 	public void addNPCs(String [] filenames)
 	{
 		Vec2f position=getPosition();
@@ -112,9 +113,12 @@ public class BoardingHelper {
 			Element n = (Element) doc.getFirstChild();
 			Vec2f p = Universe.getInstance().getCurrentZone().getEmptyTileNearP(position);
 			position=p;
-			NPC npc =new NPC(n, p.replicate(), filenames[i]);		
+			NPC npc =new NPC(n, p.replicate(), filenames[i]);
 			Universe.getInstance().getCurrentZone().getActors().add(npc);
 			npc.setCollisioninterface(Universe.getInstance().getCurrentZone());
+			if (ViewScene.m_interface != null) {
+				ViewScene.m_interface.addNPC(npc);
+			}
 		}
 	}
 

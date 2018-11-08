@@ -46,23 +46,23 @@ public class EffectProcessor {
 	private Faction faction;
 	private int result;
 	private Player m_player;
-	
+
 	private SceneController controller;
 	private Scene_Int scene;
-	
+
 	public EffectProcessor(Player player, SceneController controller, Scene_Int scene) {
 		m_player = player;
 		this.controller = controller;
 		this.scene=scene;
 	}
-	
+
 	public void setNPC(NPC npc)
 	{
 		this.m_npc=npc;
 		if (this.m_npc!=null)
 		{
 			flags=npc.getFlags();
-			faction=npc.getActorFaction();			
+			faction=npc.getActorFaction();
 		}
 	}
 
@@ -186,7 +186,7 @@ public class EffectProcessor {
 			String faction = node.getAttribute("faction");
 			m_npc.setActorFaction(FactionLibrary.getInstance().getFaction(faction));
 		}
-				
+
 		if (str.equals("addRespawn"))
 		{
 			m_npc.setRespawnController(new RespawnControl(
@@ -235,14 +235,14 @@ public class EffectProcessor {
 		{
 			QuestItem qi=(QuestItem)item;
 			qi.loadFromFile(node.getAttribute("addendum"));
-		}				
+		}
 		if (ItemKeyInstance.class.isInstance(item))
 		{
 			ItemKeyInstance iki=(ItemKeyInstance)item;
 			iki.setLock(node.getAttribute("addendum"));
-		}		
+		}
 	}
-	
+
 	public void ProcessEffect(Element node) {
 		String str = node.getAttribute("type");
 		str = str.toLowerCase();
@@ -279,7 +279,7 @@ public class EffectProcessor {
 			if (value > 1) {
 				for (int i = 0; i < value; i++) {
 					m_player.getInventory()
-							.AddItem(Universe.getInstance().getLibrary().getItem(node.getAttribute("item")));
+					.AddItem(Universe.getInstance().getLibrary().getItem(node.getAttribute("item")));
 				}
 			} else {
 				Item item=Universe.getInstance().getLibrary().getItem(node.getAttribute("item"));
@@ -300,12 +300,12 @@ public class EffectProcessor {
 		}
 		if (str.equals("manipulatefactionflag")) {
 			FactionLibrary.getInstance().getFaction(node.getAttribute("faction")).getFactionFlags()
-					.setFlag(node.getAttribute("flag"), Integer.parseInt(node.getAttribute("value")));
+			.setFlag(node.getAttribute("flag"), Integer.parseInt(node.getAttribute("value")));
 		}
 		if (str.equals("incrementlocalflag")) {
 
 			flags.setFlag(node.getAttribute("flag"),
-			m_npc.getFlags().readFlag(node.getAttribute("flag")) + (int) value);
+					m_npc.getFlags().readFlag(node.getAttribute("flag")) + (int) value);
 
 		}
 		if (str.equals("incrementglobalflag")) {
@@ -335,7 +335,7 @@ public class EffectProcessor {
 		}
 		if (str.equals("imprison")) {
 			boolean suppress=node.getAttribute("suppress").equals("true");
-			
+
 			int h=m_player.getRPG().getStat(Actor_RPG.HEALTH);
 			int r=m_player.getRPG().getStat(Actor_RPG.RESOLVE);
 			for (int i = 0; i < value; i++) {
@@ -345,7 +345,7 @@ public class EffectProcessor {
 			if (suppress)
 			{
 				m_player.getRPG().setStat(Actor_RPG.HEALTH, h);
-				m_player.getRPG().setStat(Actor_RPG.RESOLVE, r);	
+				m_player.getRPG().setStat(Actor_RPG.RESOLVE, r);
 			}
 
 		}
@@ -356,8 +356,10 @@ public class EffectProcessor {
 
 	public void setSpaceship(Spaceship ship) {
 		this.ship=ship;
-		this.flags=ship.getShipController().getflags();
-		this.faction=ship.getShipController().getFaction();
+		if (ship.getShipController() != null) {
+			this.flags = ship.getShipController().getflags();
+			this.faction = ship.getShipController().getFaction();
+		}
 	}
 
 	public void endConversation() {

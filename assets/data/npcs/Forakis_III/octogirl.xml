@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="orangeO.png" />
+	<name>octogirl</name>
+	<description>
+	From the waist up she's a buxom and curvacous tanned woman with a mane of untamed seaweed green hair. Below the waist eight sucker lined tentacles extend and stretch out, curling and writhing to paddling to push her through the water. In the midst of those tentacles can be caught a glimpse of, instead of a beak, a broad feminine slit. For attitude she has a carefree, but hungry and lusty interest in any prey who have no business in the depths of the ocean with her. 
+	</description>
+	<rpg>
+		<experiencevalue value="300" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="PARRY" value="4" />		
+		<attribute attribute="WILLPOWER" value="4" />		
+	<combatMove name="coil" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4">
+			<missText count="1">
+				<text>Octogirl attempts to snare TARGET in their tentacles</text>
+			</missText>
+			<hitText count="1">
+				<text>Octogirl grabs TARGET in her tentacles, binding her up</text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET is wrapped in octogirl tentacles, attack lowered.</applyText>
+				<statusBind uid="20" icon="4" numModifiers="2">
+					<removeText> TARGET has escaped the octogirl's grasp</removeText>
+					<effect attribute="RANGED" modifier="-4" />
+					<effect attribute="MELEE" modifier="-4" />
+					<bind strength="15" originDependent="true" />
+					<struggle count="2">
+						<text>TARGET struggles against the octogirl's tentacles but cannot escape
+						</text>
+						<text>TARGET tries to get out of the octogirl's grasp, but fails
+						</text>
+					</struggle>
+				</statusBind>
+
+			</effectStatus>
+		</combatMove>
+		<combatMove name="crush" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4">
+			<effectDamage type="KINETIC" minValue="4" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Octogirl tries but fails to squeeze squeeze TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Octogirl squeezes TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>		
+	</rpg>
+
+	<respawn delay="2000" />	
+	<defeated conversation="Forakis_III/octogirl/defeat" />
+	<seduced conversation="Forakis_III/octogirl/defeat" />
+	<victory conversation="Forakis_III/octogirl/victory" />
+	<seducer conversation="Forakis_III/octogirl/victory" />
+	<controller AI="lamia" />
+	<faction value="monster" />
+</NPC>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		You find yourself being hailed, when you answer the comm signal you are greeted by the oh so welcome tones of cheerful condension of the Talharans "Greetings distressed space traveller, we have received your signal and have come to offer assistance.""For a price.""Yes, for a price. A reasonable price for an individual of dire straits such as yourself. Being marooned in space is a terrible fate."
+		</text>
+		<choice destination="shop" text="Fine, lets see what you offer"/>
+		<choice destination="end" text="You know what, I don't care. I'll wait for the next person to show up in the hopes they're less of an asshole. go away."/>
+	</page>
+
+	<page ID="shop">
+		<text>
+		</text>
+		<special effect="shop" ID="talharan_services" />
+	</page>
+</Conversation>

@@ -57,7 +57,7 @@
 	<perlin>
 			<band low="-1.0" high="-0.0">
 				<floodfill tile="1">
-					<SeedNPCs min="4" max="8" name="Forakis_I/terror bird">
+					<SeedNPCs min="4" max="6" name="Forakis_I/terror bird">
 					</SeedNPCs>					
 				</floodfill>
 			</band>
@@ -72,8 +72,10 @@
 	</partition>
 		<noise tile="4" scarcity="16" />	
 		<floodfill tile="2" />	
-		<SeedNPCs min="4" max="8" name="Forakis_I/LionGirl Marauder">
+		<SeedNPCs min="4" max="6" name="Forakis_I/LionGirl Marauder">
 		</SeedNPCs>		
+		<SeedNPCs min="4" max="6" name="Forakis_I/buzzard">
+					</SeedNPCs>			
 		<walloff wall="7" sides="northeast" />	
 	</mapgen>
 

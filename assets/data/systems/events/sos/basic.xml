@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<events>
+	<conversation file="space/talharan_trader_sos/contact">
+	<conditions >
+	<factionRelationship faction="talharan" value="25" comparison="greaterthanorequals"/>
+	</conditions>
+	</conversation>
+
+	<boarding count="1">
+	<conditions/>
+	<description>
+	You hear a series of thuds and groans as something impacts the ship and latches on, with mounting dread you hear it shift its mass along the exterior towards the hatch. The airlock letting out a screeching wail of alarms and over burdened mechanisms as something horrifying forces its way aboard.
+	</description>
+	<spawn file="space/hazards/cosmic_horror"/>
+	</boarding>
+
+</events>
+
+

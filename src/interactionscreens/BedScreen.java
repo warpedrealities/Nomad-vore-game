@@ -97,11 +97,14 @@ public class BedScreen extends Screen implements Callback {
 
 	@Override
 	public void Callback() {
-		// TODO Auto-generated method stub
 		((Player_RPG) Universe.getInstance().getPlayer().getRPG()).sleep(sleepLength);
 		Universe.AddClock(sleepLength);
+		ViewScene.m_interface.getSceneController().getUniverse().getEventSystem().update(Universe.getInstance(),
+				sleepLength);
 		sleepLength = 0;
-		ViewScene.m_interface.UpdateInfo();
+		if (ViewScene.m_interface != null) {
+			ViewScene.m_interface.UpdateInfo();
+		}
 	}
 
 }

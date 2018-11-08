@@ -31,7 +31,7 @@ public class Spaceship extends Entity {
 	private SpaceshipBaseStats baseStats;
 
 	public enum ShipState {
-		SPACE, LAND, DOCK, ADRIFT, SHIPDOCK
+		SPACE, LAND, DOCK, ADRIFT, SHIPDOCK, SOS
 	}
 
 	private Zone interiorZone;
@@ -43,9 +43,9 @@ public class Spaceship extends Entity {
 	private SpaceshipStats shipStats;
 	private ShipController shipController;
 	private Spaceship dockedShip;
-	
+
 	private WarpHandler warpHandler;
-	
+
 	public Spaceship(String name, int x, int y, ShipState state) {
 		UID = Universe.getInstance().getUIDGenerator().getShipUID();
 		shipState = state;
@@ -60,8 +60,8 @@ public class Spaceship extends Entity {
 		Element root = doc.getDocumentElement();
 		Element n = (Element) doc.getFirstChild();
 
-		shipSize = new Vec2f((float) Integer.parseInt(n.getAttribute("width")),
-				(float) Integer.parseInt(n.getAttribute("height")));
+		shipSize = new Vec2f(Integer.parseInt(n.getAttribute("width")),
+				Integer.parseInt(n.getAttribute("height")));
 		exteriorSprite = n.getAttribute("sprite");
 		if (n.getAttribute("unusable").length() > 0) {
 			unusableState = n.getAttribute("unusable");
@@ -72,7 +72,7 @@ public class Spaceship extends Entity {
 	}
 
 	public void setUID(int uID) {
-		
+
 		String s=Integer.toString(uID);
 		String o=Integer.toString(this.UID);
 		entityName= entityName.replace(o, s);
@@ -85,10 +85,12 @@ public class Spaceship extends Entity {
 		return super.getName()+UID;
 	}
 
+	@Override
 	public String getSprite() {
 		return exteriorSprite;
 	}
 
+	@Override
 	public void Generate() {
 		Document doc = ParserHelper.LoadXML("assets/data/ships/" + entityName + ".xml");
 
@@ -144,7 +146,7 @@ public class Spaceship extends Entity {
 		{
 		case 0:
 			return interiorZone;
-			
+
 		case 1:
 			return dockedShip.interiorZone;
 		}
@@ -244,6 +246,7 @@ public class Spaceship extends Entity {
 		this.unusableState = unusableState;
 	}
 
+	@Override
 	public void save(DataOutputStream dstream) throws IOException {
 
 		// save type
@@ -299,7 +302,7 @@ public class Spaceship extends Entity {
 		}
 		else
 		{
-			dstream.writeBoolean(false);	
+			dstream.writeBoolean(false);
 		}
 	}
 
@@ -339,8 +342,8 @@ public class Spaceship extends Entity {
 			warpHandler=new WarpHandler();
 			warpHandler.load(dstream);
 		}
-		
-		
+
+
 	}
 
 	public Spaceship() {
@@ -424,7 +427,7 @@ public class Spaceship extends Entity {
 
 	@Override
 	public void update() {
-		
+
 		if (warpHandler!=null)
 		{
 			if (!warpHandler.update(this))
@@ -432,7 +435,7 @@ public class Spaceship extends Entity {
 				warpHandler=null;
 			}
 		}
-		
+
 		if (shipStats != null) {
 			shipStats.run();
 		}
@@ -450,7 +453,7 @@ public class Spaceship extends Entity {
 		this.shipController = shipController;
 		if (shipController!=null)
 		{
-			shipController.setShip(this);			
+			shipController.setShip(this);
 		}
 	}
 
@@ -524,7 +527,7 @@ public class Spaceship extends Entity {
 		}
 	}
 
-	
+
 	public WarpHandler getWarpHandler() {
 		return warpHandler;
 	}

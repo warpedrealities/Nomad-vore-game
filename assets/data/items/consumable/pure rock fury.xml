@@ -5,7 +5,7 @@
 	<effectstatus probability="100">
 		<statusTag tag="regeneration" />
 		<applyText>You knock the brew back and the world now has a bass track, the guitar in your head is screaming, you are screaming, everything is screaming. GAME ON!</applyText>
-		<statusDoT uid="51" icon="9" duration="60" numModifiers="1">
+		<statusDoT uid="51" icon="9" duration="120" numModifiers="1">
 			<removeText> woah, that was a rush</removeText>
 			<resist strength="15" tag="poison" test="NONE" />
 			<effect stat="ACTION" modifier="-10" />

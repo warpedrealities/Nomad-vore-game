@@ -16,6 +16,7 @@ import nomad.StarSystem;
 import nomad.UIDGenerator;
 import nomad.integrityChecking.SaveIntegrityCheck;
 import nomad.universe.actionBar.ActionBarData;
+import nomad.universe.eventSystem.UniverseEventSystem;
 import shared.FileTools;
 import shared.ParserHelper;
 import shop.ShopList;
@@ -37,6 +38,7 @@ public class Universe extends GameManager
 	private Entity currentEntity;
 	public Zone currentZone;
 	public Player player;
+	public UniverseEventSystem eventSystem;
 	ActionBarData actionBarData;
 	String saveName;
 
@@ -69,6 +71,7 @@ public class Universe extends GameManager
 		universeInstance=this;
 		itemLibrary=new ItemLibrary();
 		preferences=new Preferences();
+		eventSystem = new UniverseEventSystem();
 	}
 
 	public ItemLibrary getLibrary()
@@ -113,6 +116,7 @@ public class Universe extends GameManager
 		UniverseStateChanger stateChanger=new UniverseStateChanger(this);
 		stateChanger.LoadUniverse();
 		stateChanger.startGame(false);
+		eventSystem.reset();
 	}
 
 
@@ -381,7 +385,7 @@ public class Universe extends GameManager
 		//version
 		stateChanger.loadGame(filename, forceReset);
 		isPlaying=true;
-
+		eventSystem.reset();
 
 	}
 
@@ -429,6 +433,10 @@ public class Universe extends GameManager
 
 	public ActionBarData getActionBarData() {
 		return actionBarData;
+	}
+
+	public UniverseEventSystem getEventSystem() {
+		return eventSystem;
 	}
 
 }

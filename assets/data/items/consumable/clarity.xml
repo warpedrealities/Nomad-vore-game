@@ -4,7 +4,7 @@
 		dispassionate and lucid thought to those who have lost it.
 	</description>
 	<effectrecover modifier="INTELLIGENCE" modstrength="0.2"
-		modvalue="12" modifies="RESOLVE">
+		modvalue="24" modifies="RESOLVE">
 		Your mind sharpens and clears of some of the
 		lusts, arousals and desires
 		that were permeating it

@@ -22,6 +22,7 @@ import spaceship.SpaceshipResource;
 import spaceship.stats.SpaceshipAnalyzer;
 import spaceship.stats.SpaceshipStats;
 import spaceship.stats.SpaceshipWeapon;
+import view.ViewScene;
 import vmo.Game;
 
 public class NavScreen extends Screen implements Callback {
@@ -45,6 +46,11 @@ public class NavScreen extends Screen implements Callback {
 
 	public void setCanLaunch() {
 		canLaunch = true;
+		if (spaceship.getShipState() == ShipState.SOS) {
+			canLaunch = false;
+			statustext = "SOS beacon activated";
+			return;
+		}
 		if (spaceship.isWrecked() == true) {
 			canLaunch = false;
 			String str = spaceship.getUnusableState();
@@ -114,7 +120,7 @@ public class NavScreen extends Screen implements Callback {
 		if (crewWindow!=null)
 		{
 			crewWindow.update(DT);
-		}		
+		}
 	}
 
 	@Override
@@ -123,11 +129,11 @@ public class NavScreen extends Screen implements Callback {
 		window.Draw(buffer, matrixloc);
 		if (statWindow!=null)
 		{
-			statWindow.Draw(buffer, matrixloc);	
+			statWindow.Draw(buffer, matrixloc);
 		}
 		if (crewWindow!=null)
 		{
-			crewWindow.Draw(buffer, matrixloc);	
+			crewWindow.Draw(buffer, matrixloc);
 		}
 
 	}
@@ -139,13 +145,13 @@ public class NavScreen extends Screen implements Callback {
 		window.discard();
 		if (statWindow!=null)
 		{
-			mouse.Remove(statWindow);	
+			mouse.Remove(statWindow);
 			statWindow.discard();
 		}
 		if (crewWindow!=null)
 		{
 			mouse.Remove(crewWindow);
-			crewWindow.discard();			
+			crewWindow.discard();
 		}
 
 	}
@@ -168,7 +174,16 @@ public class NavScreen extends Screen implements Callback {
 		case 3:
 			previousWeapon();
 			break;
+		case 4:
+			activateSOS();
+			break;
 		}
+	}
+
+	private void activateSOS() {
+		spaceship.setShipState(ShipState.SOS);
+		ViewScene.m_interface.DrawText("SOS distress beacon activated");
+		callback.Callback();
 	}
 
 	private void nextWeapon() {
@@ -303,9 +318,10 @@ public class NavScreen extends Screen implements Callback {
 		window = new Window(new Vec2f(-20, -16), new Vec2f(40, 15), textures[1], true);
 
 		// build buttons
-		Button[] buttons = new Button[2];
+		Button[] buttons = new Button[3];
 
 		buttons[0] = new Button(new Vec2f(34.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "Exit", 0, 1);
+		buttons[2] = new Button(new Vec2f(34.0F, 4.0F), new Vec2f(6, 1.8F), textures[2], this, "SOS", 4, 1);
 
 		switch (spaceship.getShipState()) {
 		case LAND:
@@ -320,14 +336,23 @@ public class NavScreen extends Screen implements Callback {
 			break;
 		case SPACE:
 			buttons[1] = new Button(new Vec2f(34.0F, 2.0F), new Vec2f(6, 1.8F), textures[2], this, "control", 1, 1);
+			if (!canLaunch) {
+				window.add(buttons[2]);
+			}
 			break;
 		case ADRIFT:
 			buttons[1] = new Button(new Vec2f(34.0F, 2.0F), new Vec2f(6, 1.8F), textures[2], this, "control", 1, 1);
-			break;	
+			if (!canLaunch) {
+				window.add(buttons[2]);
+			}
+			break;
 		}
 
+
 		for (int i = 0; i < 2; i++) {
-			window.add(buttons[i]);
+			if (buttons[i] != null) {
+				window.add(buttons[i]);
+			}
 		}
 		// build info texts
 		Text[] texts = new Text[10];
@@ -353,7 +378,7 @@ public class NavScreen extends Screen implements Callback {
 		Text status = new Text(new Vec2f(10.5F, 7.0F), statustext, 0.7F, textures[4]);
 		window.add(status);
 		buildStatWindow(textures);
-		buildCrewWindow(textures);		
+		buildCrewWindow(textures);
 	}
 
 	@Override
@@ -367,7 +392,7 @@ public class NavScreen extends Screen implements Callback {
 
 		// build window
 
-		initNav(textures);	
+		initNav(textures);
 	}
 
 	private void buildCrewWindow(int[] textures) {
@@ -376,24 +401,24 @@ public class NavScreen extends Screen implements Callback {
 		for (int i = 0; i < 4; i++) {
 			texts[i] = new Text(new Vec2f(0.5F, 2.5F - (0.7F * i)), "texts", 0.7F, textures[4]);
 			switch (i) {
-			case 0:	
-				texts[i].setString("nav:" + shipStats.getCrewStats().getNavigation());		
-			break;
-			case 1:	
-				texts[i].setString("gun:" + shipStats.getCrewStats().getGunnery());		
-			break;
-			case 2:	
-				texts[i].setString("eng:" + shipStats.getCrewStats().getEngineer());		
-			break;
-			case 3:	
-				texts[i].setString("tec:" + shipStats.getCrewStats().getTechnician());		
-			break;	
+			case 0:
+				texts[i].setString("nav:" + shipStats.getCrewStats().getNavigation());
+				break;
+			case 1:
+				texts[i].setString("gun:" + shipStats.getCrewStats().getGunnery());
+				break;
+			case 2:
+				texts[i].setString("eng:" + shipStats.getCrewStats().getEngineer());
+				break;
+			case 3:
+				texts[i].setString("tec:" + shipStats.getCrewStats().getTechnician());
+				break;
 			}
 			crewWindow.add(texts[i]);
 		}
-	
+
 	}
-	
+
 	private void buildStatWindow(int[] textures) {
 
 		statWindow = new Window(new Vec2f(3, -1), new Vec2f(17, 17), textures[1], true);
@@ -405,7 +430,7 @@ public class NavScreen extends Screen implements Callback {
 				texts[i].setString("fuel efficiency:" + shipStats.getFuelEfficiency());
 				break;
 			case 1:
-				float speed = ((10.0F / ((float) shipStats.getMoveCost())) * 100);
+				float speed = ((10.0F / (shipStats.getMoveCost())) * 100);
 				speed -= (speed) % 1;
 				texts[i].setString("speed:" + speed);
 				break;
@@ -417,7 +442,7 @@ public class NavScreen extends Screen implements Callback {
 				break;
 			case 4:
 				texts[i].setString("FTL:" + shipStats.getFTL());
-				break;	
+				break;
 			}
 			statWindow.add(texts[i]);
 		}

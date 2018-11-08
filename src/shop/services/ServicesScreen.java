@@ -21,20 +21,25 @@ public class ServicesScreen extends Screen {
 	private ShopServices services;
 	private Window topWindow;
 	private Spaceship ship;
-	private Callback callback;	
+	private Callback callback;
 	private Text [] descriptionLines;
 	private gui.lists.List uiList;
 	private List<ServiceHandler> serviceHandlerList;
-	
+
 	public ServicesScreen(ShopServices services)
 	{
 		this.services=services;
 		serviceHandlerList=new ArrayList<ServiceHandler>();
 		Universe universe=Universe.getInstance();
-		ship=((Station)Universe.getInstance().getCurrentEntity()).getDocked()[0];
+		if (Station.class.isInstance(universe.getCurrentEntity())) {
+			ship = ((Station) universe.getCurrentEntity()).getDocked()[0];
+		}
+		if (Spaceship.class.isInstance(universe.getCurrentEntity())) {
+			ship = (Spaceship) universe.getCurrentEntity();
+		}
 		ship.setShipStats(new SpaceshipAnalyzer().generateStats(ship));
 	}
-	
+
 	@Override
 	public void update(float DT) {
 		// TODO Auto-generated method stub
@@ -66,7 +71,7 @@ public class ServicesScreen extends Screen {
 		case 2:
 			purchase();
 			break;
-			
+
 		case 3:
 			new SpaceshipAnalyzer().decomposeResources(ship.getShipStats(),ship);
 			callback.Callback();
@@ -74,7 +79,7 @@ public class ServicesScreen extends Screen {
 
 		}
 	}
-	
+
 	private void purchase()
 	{
 		ServiceHandler handler=serviceHandlerList.get(uiList.getSelect());
@@ -87,7 +92,7 @@ public class ServicesScreen extends Screen {
 			Universe.getInstance().getPlayer().getInventory().setPlayerCredits(
 					Universe.getInstance().getPlayer().getInventory().getPlayerCredits()-
 					handler.getCost());
-			
+
 			switch (handler.getService().getType())
 			{
 			case refuel:
@@ -97,9 +102,9 @@ public class ServicesScreen extends Screen {
 			case repair:
 				ship.getShipStats().getResource("HULL").setResourceAmount(
 						ship.getShipStats().getResource("HULL").getResourceAmount()+handler.getAmount());
-				break;				
+				break;
 			}
-			
+
 			resetDescription();
 			resetList();
 		}
@@ -123,7 +128,7 @@ public class ServicesScreen extends Screen {
 		descriptionLines[2].setString("player credits:"+
 				Universe.getInstance().getPlayer().getInventory().getPlayerCredits());
 	}
-	
+
 	private void resetList()
 	{
 		serviceHandlerList.clear();
@@ -138,7 +143,7 @@ public class ServicesScreen extends Screen {
 		}
 		uiList.GenList(str);
 	}
-	
+
 	private void addServices(ShipService service)
 	{
 		String stat=null;
@@ -149,7 +154,7 @@ public class ServicesScreen extends Screen {
 			stat="FUEL";
 			prompt="buy $ fuel for £ credits";
 			break;
-			
+
 		case repair:
 			stat="HULL";
 			prompt="repair $ hull for £ credits";
@@ -159,12 +164,12 @@ public class ServicesScreen extends Screen {
 				<
 				ship.getShipStats().getResource(stat).getResourceCap())
 		{
-			
+
 			int difference=(int) (ship.getShipStats().getResource(stat).getResourceCap()-
 					ship.getShipStats().getResource(stat).getResourceAmount());
-			
-			serviceHandlerList.add(new ServiceHandler(difference,service,prompt));			
-			
+
+			serviceHandlerList.add(new ServiceHandler(difference,service,prompt));
+
 			if (ship.getShipStats().getResource(stat).getResourceAmount()
 					<
 					ship.getShipStats().getResource(stat).getResourceCap()-10)
@@ -173,7 +178,7 @@ public class ServicesScreen extends Screen {
 			}
 		}
 	}
-	
+
 	@Override
 	public void initialize(int[] textures, Callback callback) {
 		// TODO Auto-generated method stub
@@ -183,19 +188,19 @@ public class ServicesScreen extends Screen {
 		// 3 is button alt
 		// 4 tint
 		this.callback = callback;
-		topWindow = new Window(new Vec2f(3, -1), new Vec2f(17, 17), textures[1], true);	
+		topWindow = new Window(new Vec2f(3, -1), new Vec2f(17, 17), textures[1], true);
 		Button button = new Button(new Vec2f(0.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "Exit", 3, 1);
 		topWindow.add(button);
 		button=new Button(new Vec2f(6.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "buy", 2, 1);
 		topWindow.add(button);
 		descriptionLines=new Text[3];
-		
+
 		for (int i=0;i<3;i++)
 		{
 			descriptionLines[i]=new Text(new Vec2f(0.2F, 6.2F-(1.8F*i)), "money", 0.7F, textures[4]);
-			topWindow.add(descriptionLines[i]);	
+			topWindow.add(descriptionLines[i]);
 		}
-		
+
 		uiList= new gui.lists.List(new Vec2f(3, -15.2F), 17, textures[5], textures[4], null);
 		resetDescription();
 		resetList();

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<lootTable>
+	<loot item="repair kit" chance="8" />
+	<loot item="spacebar" chance="4" />
+	<loot item="fuel canister(poor)" chance="4" />	
+</lootTable>

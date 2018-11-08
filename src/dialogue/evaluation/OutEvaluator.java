@@ -386,8 +386,10 @@ public class OutEvaluator {
 
 	public void setSpaceship(Spaceship ship) {
 		this.ship=ship;
-		this.flags=ship.getShipController().getflags();
-		this.faction=ship.getShipController().getFaction();
+		if (ship.getShipController() != null) {
+			this.flags = ship.getShipController().getflags();
+			this.faction = ship.getShipController().getFaction();
+		}
 	}
 
 }

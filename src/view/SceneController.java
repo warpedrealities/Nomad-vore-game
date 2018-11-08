@@ -22,7 +22,7 @@ public class SceneController implements Sense {
 	private ZoneInteractionHandler interactionHandler;
 	private QuickslotHandler quickslotHandler = new QuickslotHandler();
 	private CriteriaRepository criteriaRepository;
-	
+
 	public void initializeHandler(ModelController_Int view) {
 		interactionHandler = new ZoneInteractionHandler(null, view);
 		criteriaRepository=new CriteriaRepository();
@@ -58,7 +58,7 @@ public class SceneController implements Sense {
 					return true;
 				}
 
-			}		
+			}
 		}
 		return false;
 	}
@@ -95,6 +95,7 @@ public class SceneController implements Sense {
 		}
 		activeZone.update();
 		interactionHandler.update();
+		gameUniverse.getEventSystem().update(gameUniverse, 1);
 	}
 
 	@Override
@@ -173,7 +174,7 @@ public class SceneController implements Sense {
 		}
 		return false;
 	}
-	
+
 	@Override
 	public Actor getHostile(Actor origin, int maxRange, boolean visibleOnly, String exclude, int exValue) {
 		Actor hostile = null;
@@ -192,7 +193,7 @@ public class SceneController implements Sense {
 							if (distance > d && !checkExclude(target,attribute,exValue)) {
 								distance = d;
 								hostile = target;
-							
+
 							}
 						}
 					} else {
@@ -215,29 +216,29 @@ public class SceneController implements Sense {
 		float distance = 99;
 		for (int i = 0; i < activeZone.getActors().size(); i++) {
 			//if (activeZone.getActors().get(i).isHostile(origin.getActorFaction().getFilename())) {
-				Actor target = activeZone.getActors().get(i);
-				float d = target.getPosition().getDistance(origin.getPosition());
-				if (d < 8) {
-					if (!target.getRPGHandler().getActive() && NPC.class.isInstance(target) ) {
-						if (visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
-							if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
-									(int) origin.getPosition().y, (int) target.getPosition().x,
-									(int) target.getPosition().y, true)) {
-								if (distance > d && isVictim(target,name, seduced)) {
-									distance = d;
-									victim = target;						
-								}
-							}
-						} 
-						else
-						{
-							if (d<distance) {
-								victim=target;
-								distance=d;
+			Actor target = activeZone.getActors().get(i);
+			float d = target.getPosition().getDistance(origin.getPosition());
+			if (d < 8) {
+				if (!target.getRPGHandler().getActive() && NPC.class.isInstance(target) ) {
+					if (visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
+						if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
+								(int) origin.getPosition().y, (int) target.getPosition().x,
+								(int) target.getPosition().y, true)) {
+							if (distance > d && isVictim(target,name, seduced)) {
+								distance = d;
+								victim = target;
 							}
 						}
 					}
+					else
+					{
+						if (d<distance) {
+							victim=target;
+							distance=d;
+						}
+					}
 				}
+			}
 			//}
 		}
 		return victim;
@@ -258,7 +259,7 @@ public class SceneController implements Sense {
 			if (!seduced && target.getRPG().getStat(Actor_RPG.HEALTH)<=0)
 			{
 				return true;
-			}		
+			}
 		}
 		return false;
 	}
@@ -278,7 +279,7 @@ public class SceneController implements Sense {
 								(int) target.getPosition().y, true)) {
 							if (distance > d && target.getName().equals(name)) {
 								distance = d;
-								actor = target;						
+								actor = target;
 							}
 						}
 					} else {
@@ -298,25 +299,25 @@ public class SceneController implements Sense {
 		Actor actor = null;
 		float distance = 99;
 		for (int i = 0; i < activeZone.getActors().size(); i++) {
-				Actor target = activeZone.getActors().get(i);
-				float d = target.getPosition().getDistance(origin.getPosition());
-				if (d < maxRange) {
-					if (NPC.class.isInstance(target) && target.getRPGHandler().getActive() && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
-						if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
-								(int) origin.getPosition().y, (int) target.getPosition().x,
-								(int) target.getPosition().y, true)) {
-							if (distance > d && criteria.checkCriteria(target,origin)) {
-								distance = d;
-								actor = target;						
-							}
-						}
-					} else {
+			Actor target = activeZone.getActors().get(i);
+			float d = target.getPosition().getDistance(origin.getPosition());
+			if (d < maxRange) {
+				if (NPC.class.isInstance(target) && target.getRPGHandler().getActive() && visibleOnly && activeZone.getActors().get(i).getRPG().getStealthState() == -1) {
+					if (GameManager.m_los.existsLineOfSight(activeZone.getBoard(1), (int) origin.getPosition().x,
+							(int) origin.getPosition().y, (int) target.getPosition().x,
+							(int) target.getPosition().y, true)) {
 						if (distance > d && criteria.checkCriteria(target,origin)) {
 							distance = d;
 							actor = target;
 						}
 					}
+				} else {
+					if (distance > d && criteria.checkCriteria(target,origin)) {
+						distance = d;
+						actor = target;
+					}
 				}
+			}
 		}
 		return actor;
 	}

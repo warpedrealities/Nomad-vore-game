@@ -58,4 +58,6 @@ public interface ModelController_Int {
 
 	AnimatedFXControl getFX();
 
+	public void addNPC(NPC npc);
+
 }

@@ -116,8 +116,6 @@ public class DialogueScreen extends Screen implements Callback {
 
 	}
 
-
-
 	public void setWidget(Widget widget) {
 		m_processor.setWidget(widget);
 		m_evaluator.setWidget(widget);
@@ -480,4 +478,5 @@ public class DialogueScreen extends Screen implements Callback {
 
 		ButtonCallback(choiceHandler.getIndex(), null);
 	}
+
 }

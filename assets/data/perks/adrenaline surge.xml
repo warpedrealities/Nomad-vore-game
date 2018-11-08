@@ -3,11 +3,11 @@
 	<requirement count="1">
 		<req>DEPRECATED</req>
 	</requirement>
-	<description> Immediately recover 10 AP at the cost of satiation.
+	<description> Immediately recover 20 AP at the cost of satiation.
 	</description>
 	<move count="1">
 		<combatmove name="adrenaline surge" cooldown="300" icon="3"
-			ammoCost="10" timeCost="2" pattern="SELF" moveType="OTHER">
+			ammoCost="20" timeCost="2" pattern="SELF" moveType="OTHER">
 			<effectrecover modifier="ENDURANCE" modstrength="0.2"
 				modvalue="10" modifies="ACTION" />
 			<hitText count="1">

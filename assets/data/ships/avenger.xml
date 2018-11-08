@@ -84,10 +84,10 @@
 			</placeWidget>
 			<placeWidget x="5" y="4" name="DAMAGE" value="25" exterior="true" />
 			<placeWidget x="2" y="3" name="slot">
-				<contains name="modules/bunk bed">
-	
+				<contains name="modules/perimeter defence system">
+					<resource type="DRONEPARTS" value="8" />
 				</contains>
-				<widgetItem>bunk bed</widgetItem>	
+				<widgetItem>perimeter defence system</widgetItem>	
 			</placeWidget>
 
 			<placeWidget x="6" y="3" name="slot">

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="reef.png">	
+	<tileset count-x="8" count-y="8">
+		<tile sprite="1" vision="EMPTY" movement="0" smart="true"> reef</tile>
+		<tile sprite="17" vision="EMPTY" movement="0"> sand </tile>
+		<tile sprite="18" vision="EMPTY" movement="0"> boulder</tile>	
+		<tile sprite="19" vision="BLOCKING" movement="3"> kelp</tile>		
+		<tile sprite="20" vision="BLOCKING" movement="2"> cliff</tile>
+	</tileset>
+	<zoneConditions>
+	<damagingCondition ID="underwater" damage="2">
+	<message>
+	PNAME is suffocating due to being underwater
+	</message>
+	<gameOver>
+	You have drowned
+	</gameOver>
+	</damagingCondition>
+	<modifierCondition ID="swimming" movement="2.0" />
+	</zoneConditions>
+	<description>The reef is beautiful, but its bright corals hide danger.</description>
+	<transition direction="east">Zone 2C</transition>	
+	<mapgen>
+		<prefab positionX="32" positionY="1" width="5">
+			<row>22222</row>
+			<row>22222</row>
+			<row>22222</row>
+			<row>22222</row>
+			<row>22222</row>
+			<placeWidget x="0" y="0" name="SPRITE" width="5" height="5"
+				file="sunkenWreckRear" />
+			<placeWidget x="1" y="1" name="DESCRIBER">
+			The rear section of a spacecraft that may have broken apart before it even hit the water, the neck of the craft ends abruptly in jagged and twisted metal it clearly crashed some time ago for how plantlife has anchored to its flanks.
+			</placeWidget>
+			<pairedportal x="4" y="2" sprite="10" ID="33"
+					destination="shipRear" facing="6">a way into the shipwreck </pairedportal>	
+		</prefab>
+	
+	<perlin>
+		<band low="-1.0" high="-0.4">
+				<floodfill tile="0">
+					<Seedwidgets min="12" max="24" name="gourdbush" />
+					<floodfill tile="1">
+						<SeedNPCs min="8" max="10" name="Forakis_III/octogirl"/>					
+					</floodfill>					
+				</floodfill>
+			</band>
+
+			<band low="-0.4" high="0.0">
+				<noise tile="2" scarcity="12" />
+				<floodfill tile="1">
+					<SeedNPCs min="8" max="10" name="Forakis_III/cetan"/>					
+				</floodfill>
+			</band>
+			<band low="0.0" high="0.1">
+				<floodfill tile="3" />
+				
+			</band>
+			<band low="0.1" high="0.5">
+				<noise tile="2" scarcity="12" />
+				<floodfill tile="1" />
+			</band>
+			<band low="0.4" high="1.0">
+				<floodfill tile="3" />
+			</band>
+
+		</perlin>
+		<walloff wall="1" sides="north" />
+		<walloff wall="4" sides="southwest" />	
+	</mapgen>
+
+</zone>

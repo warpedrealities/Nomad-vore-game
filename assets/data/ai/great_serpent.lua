@@ -10,7 +10,8 @@ function combat(controllable,sense)
 		--if in melee range attack
 		controllable:setAttack(0)
 		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-
+		script:setValue(2,hostile:getPosition().x)
+		script:setValue(3,hostile:getPosition().y)
 		else
 			--if not move towards player
 			if controllable:HasPath() then
@@ -18,6 +19,16 @@ function combat(controllable,sense)
 			else
 				controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,1)
 			end
+		end
+	else
+		x=script:getValue(0)
+		y=script:getValue(1)
+		if (x>0) then
+			if controllable:HasPath() then
+				controllable:FollowPath()
+			else
+			controllable:Pathto(x,y,4)
+			end		
 		end
 	end
 end

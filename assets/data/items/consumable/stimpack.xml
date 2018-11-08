@@ -9,7 +9,7 @@
 		<statusDoT uid="51" icon="9" duration="120" numModifiers="1">
 			<removeText> TARGET is no longer under the affects of a stimpack.</removeText>
 			<resist strength="15" tag="poison" test="NONE" />
-			<effect stat="HEALTH" modifier="-2" />
+			<effect stat="HEALTH" modifier="-4" />
 		</statusDoT>
 	</effectstatus>
 </ItemConsumable>

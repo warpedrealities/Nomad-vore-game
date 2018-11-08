@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <start>
-	<system value="Forakis" />
-	<world value="Forakis III" />
-	<zone value="island" />
-	<position x="16" y="16" />
+	<system value="Alpha Minoris" />
+	<world value="avenger1" />
+	<zone value="avenger1" />
+	<position x="2" y="2" />
 	<item value="laser pistol" />
 	<item value="Knife" />
 	<item value="jumpsuit" />

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<shipsystem sprite="103" name="guardian defence system" health="10">
+	<contains minimum="2" maximum="4">scrap metal</contains>
+	<description>The guardian defence system uses sophisticated remote control systems to operate defensive drones to secure the perimeter around the ship when it lands. These drones benefit from a broadcast power hub in the module providing more energy for their weapon systems.</description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="8" resource="DRONEPARTS">
+		<resourceExtraction item="drone package" ratio="1" destroy="0.25" dismantle="0.5" />
+	</shipResource>
+	<shipDroneSystem trigger="DT_LANDING">
+	<cost resource="DRONEPARTS" amount="2"/>
+	<drone count="2" filename="temp/guardian drone" npcName="guardian drone"/>
+	</shipDroneSystem>
+</shipsystem>

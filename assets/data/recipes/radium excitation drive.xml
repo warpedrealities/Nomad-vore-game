@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<recipe name="radium excitation drive" requiredskill="2"
+	startunlocked="false">
+	<description>
+	Radioactive substances are the cornerstone of 19th century experimental medicine, 50s science fiction and now of your propulsion system. Using excited radium we are able to increase fuel efficiency by 50%
+	</description>
+	<ingredient item="flux capacitor" quantity="1" />
+	<ingredient item="isotope" quantity="1" />	
+	<ingredient item="scrap metal" quantity="5" />
+	<ingredient item="heavy plate" quantity="5" />
+	<ingredient item="computation valve" quantity="5" />
+	<result item="radium excitation drive" />
+</recipe>

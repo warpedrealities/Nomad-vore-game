@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="high explosive" requiredskill="0" startunlocked="false">
+<recipe name="high explosive" requiredskill="-1" startunlocked="false">
 	<description>
 		A bomb, a very powerful bomb.
 	</description>

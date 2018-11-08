@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="oralvore" />
+		<text>
+		No match for the horror from the deepest dark you are struck down, falling to the floor and desperately attempting to scramble away only to be seized by one of the countless lashing tentacles and dragged back. Your futile struggle is no match for the irresistable strength of the horror and you find yourself being drawn feetfirst into the midst of the tentacular mass. Smooth powerful tentacles pressing around your legs as they plunge into the midst of the terrible mass.
+		</text>
+		<choice destination="oralvore0" text="ohgods!"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	Your feet and legs gradually become wet and warmer as you plunge into the entity, your desperate hands and frightened expression disappearing past the tentacles far in advance of the encroaching of what must be a mouth or some other kind of orifice. The terrible otherworldly horror squeezing your body down what feels like a mouthless, jawless, toothless, throat. The power of the void spawn utterly overwhelming, escape is impossible, all you can do is writhe as you're drawn deeper and deeper within the entity.
+	</text>
+	<choice destination="oralvore1" text="*devoured by cosmic spawn*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The depths of the creature seems infinite, the writhing and undulating throat makes it feel impossible to judge how far through the creature you travel nor for how long in the disorientating depths of the horror. It could be mere feet, or miles, seconds or hours. Finally you seem to reach a more expansive form of confinement, landing in sloshing fluids with a splash amidsst stygian darkness and smothering heat. The very thought of escape is laughable, but the very thought of simply remaining within the horror is unthinkable. As the fluids rise you struggle to escape your fate back the way you came with increasing desperation.
+	</text>
+	<choice destination="oralvore2" text="*no hope*"/>
+	</page>
+
+	<gameover ID="oralvore2" noReform="true">
+	<text>
+	You scrabble against the muscular folds and valves of the entrance to the horror's throat without it yielding in the slightest. You don't register that you're melting until you find your hands start to soften and come apart, your despairing cries of no consequence to the entity as deep within you rapidly dissolve and digest away. Perhaps in time it will return to the inhospitable void, or perhaps it will await others drawn to your vessel's drifting hulk...for the horror is patient, yet ravenous.
+	</text>
+	</gameover>
+	
+</Conversation>
