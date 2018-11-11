@@ -3,6 +3,7 @@
 	<entitysprite filename="desertplanet" size="3.0" />
 	<zone x="0" y="2" type="SURFACE">Zone 1A</zone>
 	<zone x="1" y="2" type="SURFACE">Zone 2A</zone>
+	<zone x="1" y="3" type="CLOSED">ptah_ruins</zone>		
 	<zone x="2" y="2" type="SURFACE">Zone 3A</zone>
 	<zone x="0" y="1" type="SURFACE">Zone 1B</zone>
 	<zone x="1" y="1" type="SURFACE">Zone 2B</zone>

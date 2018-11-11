@@ -44,7 +44,14 @@
 					</SeedNPCs>			
 		<SeedNPCs min="4" max="6" name="Forakis_I/LionGirl Marauder">
 					</SeedNPCs>				
-		<walloff wall="2" sides="north" />
+		<walloff wall="3" sides="north" />
+		<prefab positionX="30" positionY="61" width="5">
+			<row>22222</row>
+			<row>23232</row>
+			<row>33333</row>			
+				<pairedportal x="2" y="1" sprite="3" ID="22"
+					destination="ptah_ruins" facing="4"> a mysterious path leading out of the desert </pairedportal>
+			</prefab>			
 	</mapgen>
 
 </zone>

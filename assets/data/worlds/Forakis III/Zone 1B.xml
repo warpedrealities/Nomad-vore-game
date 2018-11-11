@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="ocean.png">	
+	<tileset count-x="2" count-y="2">
+		<tile sprite="1" vision="EMPTY" movement="0"> vast depths</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> deep water </tile>
+		<tile sprite="3" vision="EMPTY" movement="0"> open ocean</tile>	
+		<tile sprite="4" vision="BLOCKING" movement="2"> cliffs</tile>		
+			
+	</tileset>
+	<zoneConditions>
+	<damagingCondition ID="underwater" damage="2">
+	<message>
+	PNAME is suffocating due to being underwater
+	</message>
+	<gameOver>
+	You have drowned
+	</gameOver>
+	</damagingCondition>
+	<modifierCondition ID="swimming" movement="2.0" />
+	</zoneConditions>
+	<description>You have entered the open ocean, the vast deep extends beneath you in this expanse, barring yourself this area is empty of life but for the faint glimpses of a vast shape moving in the distance</description>
+	<transition direction="south">Zone 1C</transition>	
+	<mapgen>
+	
+	<perlin>
+		<band low="-1.0" high="-0.4">
+				<floodfill tile="0">					
+				</floodfill>
+			</band>
+			<band low="-0.4" high="0.4">
+				<floodfill tile="1">			
+				</floodfill>
+			</band>
+			<band low="0.4" high="1.0">
+				<floodfill tile="2" />
+			</band>
+		</perlin>
+		<walloff wall="3" sides="eastwest" />
+	<placeNPC name="Forakis_III/leviathan" x="32" y="32" />
+	</mapgen>
+
+</zone>

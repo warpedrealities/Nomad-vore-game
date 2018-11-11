@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ItemWeapon name="halberd" weight="8" value="500">
+	<tagSet value="PM" />
+	<description>
+		A large axe blade attatched to a long and somewhat unweildy pole that requires both hands. 3AP Does 6-11 kinetic
+		damage. (S)
+	</description>
+	<modifier>
+		<parry value="1" />
+	</modifier>
+	<combatMove name="bash" pattern="REACH" bonusAttribute="MELEE"
+		timeCost="2" actionCost="3" basicAction="true" moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="6" maxValue="9"
+			modifier="STRENGTH" />
+		<missText count="1">
+			<text>you fail to slash TARGET .</text>
+		</missText>
+		<hitText count="1">
+			<text>you slash TARGET for VALUE kinetic damage</text>
+		</hitText>
+	</combatMove>
+</ItemWeapon>

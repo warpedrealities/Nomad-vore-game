@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="anthros" />	
+		<assertion evaluate="operatorOr">
+			<preference fetish="oralvore" />	
+			<preference fetish="cockvore" />								
+		</assertion>	
+		<text> 
+		The leviathan seizes you in one mighty hand, your struggles and defiance met with only a perfunctory squeeze and thusly was your resistance overcome. The titanic sea monster raises you up towards her face, regarding you curiously with her 3 pairs of eyes...her tongue protruding from amidst her reptilian maw and letting that forked tasting appendage sample your flavours from the water around you without contact...Seeming to make a decision she...
+		</text>
+		<choice destination="oralvore0" text="opens wide">
+			<preference fetish="oralvore"/>
+		</choice>
+		<choice destination="cockvore0" text="strokes her shaft">
+			<preference fetish="cockvore"/>
+		</choice>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	The leviathan's mouth opens like great doors, a current of warm water spilling out around you along with a hungry rumble. The dark depths of her mouth and throat framed by those sharp yellow white teeth and a grim sense of inevitability. She raises you up to her jaws, then releases you in their midst. Your efforts to swim away as futile as all your others to resist the leviathan as her jaws close, caging you within her mouth. Her tongue toying with you, tasting you and rolling you around her mouth before curling and snaring you to drag you towards the back of her mouth and into her throat. And inevitably, the leviathan swallowed, gulping your body down and producing barely any bulge in her neck as you're set on your way descending into her.
+	</text>
+	<choice destination="oralvore1" text="*gulped down*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The throat of the leviathan is as irresistible as any other part of her, handling you roughly and callously as you're squeezed down by rippling tight throat muscles and plunge through her torso and towards her waiting belly. The interminable descent finally coming to an end as you pop through a tight valve and into a more expansive space, falling only to splash down in the depths of her belly. To her you are clearly barely a snack, the stomach fluids soaking into you as you explore the confines of the expansive pool inside her.
+	</text>
+	<choice destination="oralvore2" text="*and then digested*"/>
+	</page>
+	
+	<gameover ID="oralvore2">
+	<text>
+	The leviathan swims on, you can tell from the slow undulations of her body and the shifting slop of stomach juices around you. You're clearly already forgotten, your intrusion on her domain of no further import and any attempt to escape truly the height of absurdity. Not perhaps that such stops you, but it amounts to the same thing in the end..her stomach juices dissolving so small a morsel in short order, turning you into nothing more than froth floating atop her acids before gradually absorbing you entirely.
+	</text>
+	</gameover>
+	
+	<page ID="cockvore0">
+	<text>
+	The leviathan reaches down, one hand wrapping around her hermy length and stroking that immense shaft to hardness. Thicker than a tree and ready for action that girth stands erect and proud from her hips as she lowers you down towards her tip. Her cumslit parting around your feet and legs as she wedges you into herself and lets out a rumbling moan. Her cock rippling tightly around your legs and clenching and tugging, pulling you deeper inside. Hot pre wells up around you, lubricating your body and helping you slip deeper and deeper into her member as lets you go and works to jerk you down into her balls.
+	</text>
+	<choice destination="cockvore1" text="*schlurped down*"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	The leviathan seems to treat this hedonistic indulgence with a casual air, leisurely stroking you down into her shaft as if cockvoring you is as inconsequential an affair as your size would imply. Despite this even her absentminded stroking is enough to make her shaft ripple and overcome your struggles, drawing your body down into her shaft. You disappear from the outside world, consumed by her tip in less than a minute and reduced to a barely perceptible bulge in her length as you're steadily fed down towards her awaiting balls.
+	</text>
+	<choice destination="cockvore2" text="*to the sack you go*"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	Down down you go, it's hard to tell inside the leviathan's prodigious cock how far you've gone and how far you have to go. All is sticky tightness and throbbing and the repetitive additional pressure of her hand passing by first one way and then the other. But finally your trip, but not your ordeal or your confinement, comes to an end as you squeeze through the base of her shaft and into the cummy depths of her balls. You barely make a lump as you plunge inside and are bathed in her hot cum, marinated in the fluids of her lust as she continues to stroke her shaft.
+	</text>
+	<choice destination="cockvore3" text="*and then melted*"/>
+	</page>
+	
+	<gameover ID="cockvore3">
+	<text>
+	Trapped in the balls of the leviathan your squirms can only serve to please the beast as she gratifies herself. But those squirms are short lived. Your ,to her, miniscule form rapidly softening and melting and becoming a mere addition to her lustful load. The leviathan stroking herself to orgasm soon after sending your sticky remnants spurting out her cock along with the rest of her seed to mix with the surrounding water. Yet another intruder on her realm meeting with an ignoble end.
+	</text>
+	
+	</gameover>
+	
+</Conversation>

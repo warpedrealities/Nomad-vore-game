@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text> 
+		No interaction to be had with a defeated black guardian.
+		</text>
+		<choice destination="cockvore0" text="You wonder how they'd feel slithering their way up your cooch.">
+				<assertion evaluate="hasperk" perk="cockvore" />
+		</choice>
+		<choice destination="devour" text="devour">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
+		<choice destination="end" text="darn" />
+	</page>	
+		<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="150" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+</Conversation>

@@ -19,10 +19,59 @@
 
 	<page ID="unbirth1">
 	<text>
-	The octogirl bucks and rocks her hips back and forth as she crams your legs, then your very own hips, into her voracious nethers. Her womb 
+	The octogirl bucks and rocks her hips back and forth as she crams your legs, then your very own hips, into her voracious nethers. Her womb stretching and yet squeezing around your legs as they curl in her hot depths. Her delighted moans felt more than heard against your flesh even through the soft and clenching insides of the octogirl as she works your upper body into herself as well. Your flailing arms unable to grasp at anything that doesn't usher you draw deeper inside.
 	</text>
-	
+	<choice destination="unbirth2" text="*consumed*"/>
 	</page>
 	
+	<page ID="unbirth2">
+	<text>
+	The octogirl lets out a pleased sigh as the last exposed parts of you are sucked up inside herself, her hands tracing down over her gravid middle as you're curled inside her and she savours the sensations. The way her womb clenches rather implying you have a pleasurable and rather sticky end in the offing if you linger inside, her tentacles curling up underneath her and one hand tracing down between them as she settles in to enjoy you thoroughly.
+	</text>
+	<choice destination="check" text="*try to pleasure her into letting you go unmelted*"/>
+	<choice destination="submit" text="*settle in to be enjoyed*"/>
+	</page>
+	
+	<check ID="check">
+		<test what="PLEASURE" DC="15" />
+		<outcome destination="escape" />
+		<outcome destination="digest" />
+	</check>	
+	
+	<page ID="escape">
+	<text>
+	You feel the octogirl writhe and squirms in pleasure around you, one hand buried down between her tentacles and the other grasping her breast. But you're not sticking around for this and writhe and rub at her insides to try and bring her to orgasm prematurely. Or at least before she squeelches you down into climactic lust fluids. The octogirl letting out a delighted moan as she feels you pleasuring her from within. Her own hedonistic efforts redoubling as her womb clenches down around you. The octogirl letting out a cry as she reaches climax. Her nethers spasming, her fluids gushing forth to mix with the surrounding water, seizing the moment you shove yourself out hands first and wriggle free while her tentacles are still twitching and cannot grasp and seize you anew. You're out, and unmelted, but that last part might require some quick swimming away if it's to stay true.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />	
+	</page>
+	
+	<page ID="digest">
+	<text>
+	You feel the octogirl writhe and squirms in pleasure around you, one hand buried down between her tentacles and the other grasping her breast. But you're not sticking around for this and writhe and rub at her insides to try and bring her to orgasm prematurely. Or at least before she squeelches you down into climactic lust fluids. The octogirl letting out a delighted moan as she feels you pleasuring her from within. Her own hedonistic efforts redoubling as her womb clenches down around you. The sweltering lusty depths of her womb repeatedly rippling to press and squeeze over you more and more, soaking you in fluids...you can feel lust permeating your entire world, entire being, everything around and within and throughout you...	
+	</text>
+	<choice destination="digestGO" text="*aaah*"/>
+	</page>
+	
+	<gameover ID="digestGO">
+	<text>
+	The octogirl lets out a cry, her womb clenching down in orgasm as you get the release you craved. In both senses of the word, a white hot flash of pleasure roaring through you even as you're expelled from her nethers..a burst of lusty fluids erupting as you're mashed and melted into gooey femmecum and intermixed into the surrounding water beneath the now blissfully spasming octo.
+	</text>
+	</gameover>
+
+	<page ID="submit">
+	<text>
+	You feel the octogirl writhe and squirms in pleasure around you, one hand buried down between her tentacles and the other grasping her breast. Her womb starting to squeeze and ripple and clench repeatedly around you, soaking you in the juices of her lust and making your body tingle pleasurably. There's really no other option but to roll with the sensations, rubbing at your own body and moaning within the also moaning octo as you feel her womb start to digest and melt you down..
+	</text>
+	<choice destination="submitGO" text="*sploosh*"/>
+	</page>
+	
+	<gameover ID="digestGO">
+	<text>
+	The octogirl continues to masturbate, fingers furiously rubbing and dipping into and pleasuring her netherlips as she writhes and rocks on the spot rthyhmically with pleasure. Finally she crests over the peak of her pleasure and lets out a cry, her womb clenching down in orgasm around you as you liquidate in bliss. A white hot flash of pleasure roaring through you even as you're expelled from her nethers..a burst of lusty fluids erupting as you're mashed and melted into gooey femmecum and intermixed into the surrounding water beneath the now blissfully spasming octo.
+	</text>
+	</gameover>
+
 	
 </Conversation>

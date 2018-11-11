@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="leviathan.png" size="2.0" />
+	<name>Leviathan</name>
+	<description>
+	This sea monster is immense in size and every inch of it covered in dark green scaley skin. Starting at the bottom a vast tail ending in a horizontal fluke leads upwards towards a humanoid torso built to a giantess's scale and adorned with breasts each larger than your entire body, powerful arms ending in webbed fingers and claws able to rend submersibles or battleships alike catch your gaze next before reaching its head. A reptilian head of a saurian cast set with six radiant golden eyes. Truly this beast is an apex predator in its environment, against a foe so immense surely your weapons are useless.
+	</description>
+	<rpg>
+		<experiencevalue value="300" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="99999" />
+		<stat stat="RESOLVE" value="99999" />		
+	
+	</rpg>
+	<talk conversation="Forakis_III/leviathan/chat" />
+	<controller AI="leviathan" />
+	<faction value="monster" />
+</NPC>

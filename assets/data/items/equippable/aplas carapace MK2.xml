@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ItemEquip name="Aplas carapace MK2" weight="10" slot="BODY" value="2000">
+	<description>
+		Armour made out of hardened alien plastics. Its form
+		fitting plates wrap snugly around your body and are remarkably
+		protective all things considered. It has been upgraded and enhanced by the black guardian Ptah to be even better.
+		+4 omnidefence
+	</description>
+	<modifier>
+		<kinetic value="4" />
+		<thermal value="4" />
+		<shock value="4" />
+	</modifier>
+</ItemEquip>

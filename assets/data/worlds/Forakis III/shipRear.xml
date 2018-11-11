@@ -18,17 +18,17 @@
 	<description>The ships interior is flooded and corroded</description>
 	<mapgen>
 	<prefab positionX="0" positionY="0" width="10">
-			<row>1111 1111 00</row>
-			<row>1222 2221 00</row>
-			<row>1222 2221 00</row>				
-			<row>1222 2221 00</row>
+			<row>1111 1110 00</row>
+			<row>1222 2210 00</row>
+			<row>1222 2210 00</row>				
+			<row>1222 2210 00</row>
 			<row>1112 1111 11</row>
 			<row>1222 2222 22</row>
 			<row>1112 1111 11</row>
-			<row>1222 2221 00</row>
-			<row>1222 2221 00</row>				
-			<row>1222 2221 00</row>	
-			<row>1111 1111 00</row>				
+			<row>1222 2210 00</row>
+			<row>1222 2210 00</row>				
+			<row>1222 2210 00</row>	
+			<row>1111 1110 00</row>				
 		</prefab>	
 	<placeWidget x="2" y="1" name="console" info="interaction/forakis_III/medconsole"
 			variable="31" />		
@@ -36,7 +36,7 @@
 			items="2">
 			<description>ruined medical equipment</description>
 			<resistance resists="KINETIC" strength="2"></resistance>
-			<Item>medkit</Item>
+			<Item>medkit</Item>			<Item>medkit</Item>
 		</breakable>					
 	<placeWidget x="4" y="1" name="cargocontainer">
 			<lootTable>
@@ -62,7 +62,7 @@
 			</lootTable>
 	</placeWidget>			
 	<pairedportal x="9" y="5" sprite="10" ID="33"
-		destination="Zone 2C" facing="6">a way out of the shipwreck</pairedportal>		
+		destination="Zone 1C" facing="6">a way out of the shipwreck</pairedportal>		
 	</mapgen>
 
 </zone>

@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<preference fetish="anthros" />	
+		<text> 
+		The guardian picks you up off the floor and lifts you into the air, her lips pulling back from her muzzle in a sneer "Pathetic trespasser, now you will meet the fate of so many others." she licks her lips meaningfully. Held by the towering synthetic guardian you have little say in the matter, though you do attempt to struggle against her grasp which makes her chuckle "Now what to do with you..your fate is in my hands."
+		</text>
+		<choice destination="oralvore0" text="*condemned to be food*">
+		<preference fetish="oralvore" />			
+		</choice>
+		<choice destination="cockvore0" text="*sacrificed to cock*">
+		<preference fetish="cockvore" />			
+		</choice>		
+	</page>	
+
+	<page ID="oralvore0">
+	<text>
+	The guardian runs a long purple tongue over her lips and seems to make her decision as she hoists your struggling form up still higher, over her head. Her jaws starting to gape open revealing ivory teeth lining a long wet and dark plunge past her gums and down her throat. Not wanting to enjoy the view you lash out and manage to deliver a kick to her muzzle but seem to get a sore foot more than seriously hurt the synth "Accept your doom intruder" the guardian snarls and then lunges with her jaws to encompass and entrap your legs. That long broad tongue of hers lapping around your feet and calves up to brush around your knees as she savours you and the warm wet sensations of her maw soak into you. A slightly humming murr emanating from deep within the guardian as she toys with you this way.
+	</text>
+		<choice destination="oralvore1" text="*toyed with, but then swallowed*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The jackal's tongue works further up your legs as your feet are squeezed into her throat. The tight clenching depths tugging forcefully on your calves as her emulated rthythms seek to drag you down into her sweltering wet depths. The jackal unaffected by your struggles or ineffectual strikes at her muzzle as she swallows her way up over and around more and more of you. Her hands shift up around your chest now as she lowers your belly past her jaws with an ever deepening rumble of enjoyment.
+	</text>
+	<choice destination="oralvore2" text="*devoured like a snack by the enormous jackal synth*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The grasp of the jackal on your body is relinquished. But her throat and jaws grasp you tight as you attempt to stop her swallowing you down by gripping the drool slickened jaws of the guardian. But to no avail, as she lets out a chuckle and swallows with an irresistable force. Your arms yanked over your head as you disappear into her mouth. You see the light of the outside world briefly framed by her muzzle before those jaws snap shut past your hands and she swallows. Your body slipping down into the depths of her belly to form a modest bulge. The synthetic muscles of her gut stretching nicely to frame your curled up form. Processing agents start to exude and flow in over the top of you, digestion may be inevitable "You were tastey trespasser, but this was a foregone result." the jackal says, resting a hand on her belly.
+	</text>
+	<choice destination="oralvoreStruggle" text="*try to bust your way out!*"/>
+	<choice destination="oralvoreSubmit" text="*resistance is futile*"/>
+	</page>
+	
+	<check ID="oralvoreStruggle">
+		<test what="STRUGGLE" DC="17" />
+		<outcome destination="oralvoreEscape" />
+		<outcome destination="oralvoreDigest" />
+	</check>		
+	
+	<page ID="oralvoreEscape">
+	<text>
+	As your flesh begins to tingle you realize your only option aside from digestion is to martial your recovered strength and attempt to force your way out. You start to strike at the confines of the stomach, the size of your predator giving you more room than usual to apply your full force. You do not relent for the sake of your sore knuckles and your strikes finally seem to result in something as you feel something yield, so strike there again and feel the guardian topple over. When you re-orientate yourself you find that the guardian clearly isn't moving and force your way back up her throat, pulling out of her jaws before she starts to reset. The guardian's eyes re-igniting as she starts to get to her feet and reach for her halberd "This small triumph shall not last trespasser."
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="oralvoreDigest">
+	<text>
+		As your flesh begins to tingle you realize your only option aside from digestion is to martial your recovered strength and attempt to force your way out. You start to strike at the confines of the stomach, the size of your predator giving you more room than usual to apply your full force. Your knuckles start to ache from attempting to overwhelm the stomach walls, synth flesh not as yielding as its biological equivalent it seems "Determination will not avail you here trespasser." the jackal taunts as the levels of digestive broth fill ever higher around you. You redouble your efforts, but already feel her digestive fluids taking a toll while your attempts to disable her systems from the inside is achieving nothing.
+	</text>
+		<choice destination="oralvoreDigestGO" text="*destiny still arrives*"/>
+		<choice destination="oralvoreDigestGOdisposal" text="you will be processed completely">
+		<preference fetish="disposal" />
+		</choice>
+	</page>
+	
+	<page ID="oralvoreSubmit">
+	<text>
+		"Yes, there is no point in fighting it intruder. This was inevitable from the moment you set foot in these halls." the jackal says as she strokes her belly and you stop resisting. You don't squirm or struggle and just let the rising level of digestive fluids have you as her stomach gurgles around you. The synth's digestive system no less authentic for not being truly biological, and it will break you down for your nutritional content just the same as any other.
+	</text>
+		<choice destination="oralvoreDigestGO" text="*gurgle*"/>
+		<choice destination="oralvoreDigestGOdisposal" text="*gurgle glorp*">
+		<preference fetish="disposal" />
+		</choice>
+	</page>
+	
+	<gameover ID="oralvoreDigestGO">
+	<text>
+		The jackal strokes over her belly as your struggles slow, weaken, and eventually stop. A rumbling murr emanating from the guardian synth as you're broken down, that rounded gut of hers steadily diminishing and compacting as you turn to a slop of fluid within her. Your remnants to be put to an unknowable purpose by the jackal's internal systems.
+	</text>
+	</gameover>
+	
+	<gameover ID="oralvoreDigestGOdisposal">
+	<text>
+		The jackal strokes over her belly as your struggles slow, weaken, and eventually stop. A rumbling murr emanating from the guardian synth as you're broken down, that rounded gut of hers steadily diminishing and compacting as you turn to a slop of fluid within her. The messy stew of what use to be you is pumped through the jackal's winding and efficent bowels, every single useful bit of energy and fuel it could absorb from you getting pulled into the towering synth. After a few hours, the jackal was done with you, only waste remaining as the jackal went towards the back of the pyramid, to a large hole in the ground that served as the resting place of countless treasure hunters before you. The jackal squats down over the hole, their anus opening up as she moaned in delight, a single long black lumpy log of waste sliding out of the jackal's rump. "Mmmmpphhh it always feels so good to push trespassers back out... after they've been propperly processed." The jackal teased to herself, her cock hardening as she started to stroke herself off to the feeling of shitting you out. Finally, with one last plop, the log falls into the hole and joins the pile of waste down there, the jackal walking away already forgeting about you.
+	</text>
+	</gameover>
+	
+	<page ID="cockvore0">
+	<text>
+	The jackal reaches down with her other hand down somewhere well below her breasts. Her hand moving up and down rthythmically as she lets out a rumbling mhmmm, a pleased smile on her face as she continues to work. Finally she seems to finish what she was doing and grins as she turns her gaze back towards you "Time for you to serve a greater purpose trespasser." she says and lowers you down, as she does so her shaft comes into view..a thick pulsing length of smooth pliable black cock above a pair of heavy hairless ebony balls. The immense guardian only gives you a little time to get a good look before making you much more firmly acquainted with her shaft, pressing you right up against its thickness, her palm forcing your body to mould against her dickmeat as she starts to jack off again. Only this time you're rubbed up and down her length, adding to her pleasure as she moans. Could this be the greater purpose, really? seems you don't have a choice. 
+	</text>
+	<choice destination="cockvorePleasure" text="*try to stroke her to orgasm*"/>	
+	<choice destination="cockvoreSubmit0" text="*be used for pleasure*"/>
+	</page>
+	
+	<check ID="cockvorePleasure">
+		<test what="PLEASURE" DC="17" />
+		<outcome destination="cockvoreSuccess" />
+		<outcome destination="cockvoreFail" />
+	</check>	
+
+	<page ID="cockvoreSuccess">
+	<text>
+	You figure when in rome, also it might make her let you go. So you wrap your arms and legs willingly around her girth, jacking off the anubian with your entire body and hearing her moan and gasp in delight as you work your magic. Her hand still grinding you up and down her cocklength as her pleasure builds, soon she's thrusting her hips against you, her slightly sterile musk flooding your nose as her pre oozes forth to drip down on you from above before she lets out a lusty growl and thrusts a final time. Her cock erupting above you, sending gushing creamy fluids spurting out to stain the floor in front of her. Sensing your chance you push away, shoving her hand one way and her pulsing schlong the other way and achieving freedom..dropping down onto the floor with a bit of an oomph from the height you look up at her as her orgasm diminishes. A few weak shots of seed succeeding in landing atop you directly as the last of her pleasure is spent, might be time to do a runner before she sends you in for round two.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="cockvoreFail">
+	<text>
+	You figure when in rome, also it might make her let you go. So you wrap your arms and legs willingly around her girth, jacking off the anubian with your entire body and hearing her moan and gasp in delight as you work your magic. Her hand still grinding you up and down her cocklength as her pleasure builds, soon she's thrusting her hips against you, her slightly sterile musk flooding your nose as her pre oozes forth to drip down on you from above before she lets out a lusty growl and thrusts a final time. Her cock erupting above you, sending gushing creamy fluids spurting out to stain the floor in front of her. Sensing your chance you push away you shove against her cock trying to force her still spurting cock away enough for you to slip away out of her hand, only to find her fingers closing around you as she lifts you up "You have my gratitude trespasser, but i shall not spare you." she says and smirks as her cock gradually stops shooting wads of seed and she strokes it up to angle her cocktip towards your feet.
+	</text>
+	<choice destination="cockvore1" text="*fed to cock*"/>
+	</page>
+	
+	<page ID="cockvoreSubmit0">
+	<text>
+	You know its futile to resist, but can't help but try to push yourself away from her cock. But all your struggles seem to do is arouse her further as you fail to find purchase on her smooth and throbbing shaft. The slightly sterile but thick aroma of her musk being rubbed into your body as she grinds your squirming body up and down her cock, jacking off using you to add to the sensation as she does so. The jackal continuing to stroke herself with increasing vigor as you writhe against her cock without being able to stop or even slow her self gratifying degradation of your form.
+	</text>
+	<choice destination="cockvoreSubmit1" text="*cleanup required*"/>
+	</page>
+	
+	<page ID="cockvoreSubmit1">
+	<text>
+	The great and mighty jackal lets out a shuddering cry as she climaxes. Her cock erupting and pulsing against your body as she sends spurt after spurt of seed up and out into the open air. Your face pressed firmly against underside of that potent shaft able to feel each pulse of cum rocketing up her cumtube and into the open air until finally she reaches the end of her orgasm. The guardian lifting you back up in front of her face "And now, the refill" she says as she strokes her shaft and angles it upwards beneath your feet.
+	</text>
+	<choice destination="cockvore1" text="*fed to cock*"/>	
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	The jackal presses you downwards to meet her hip thrusts, that enormous black cock encompassing your feet easily and schlurping up your legs. Leftover cum soaking your legs and smearing around them as she feeds you in with a delighted moan. The guardian synth proving to be enjoying shoving you in a great deal as she continues stroking her shaft with one hand and feeding you in with the other, plunging your hips past her cumslit with a growl of delight and a lewd schlorp. 
+	</text>
+	<choice destination="cockvore2" text="*pushed the rest of the way in*"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	"Mhmm, trespasser..you feel good in me, like for all your intrusion here is where you belong." says the guardian as she slides her hand up over your head, then pushes down. The jackal letting out a moan that's entirely drowned out to your ears by the slurping of her voracious cock rippling up around your disappearing head as she feeds you entirely into her cock. Your body forming a delightful bulge in her shaft, entirely incased in her cock and under her stroking palm. The jackal moaning as she jerks you down into her balls inch by inch, gradually piling you into those gooey confines to bulge out her sack with your form.
+	</text>
+	<choice destination="cockvore3" text="*cockfood, trapped and awaiting the inevitable*"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	"You feel good in me, truly to be cockfood is your destiny trespasser. From long before you chose to intrude upon these forbidden halls." the jackal says, smiling as she gropes her sack and feels your shape jostled about in her balls by her movements. Her balls now hanging heavier and larger and a great deal bulgier as they contain your curled up form, the guardian fondling her sack happily and then slowly sliding her hand up to stroke over her shaft once more. And as she does so you feel her gooey seed start to burble and churn around you, softening and melting your form steadily in the inescapable depths of her loins.
+	</text>
+	<choice destination="cockvore4" text="*burble*"/>
+	</page>
+	
+	<gameover ID="cockvore4">
+	<text>
+	"In all my years, this pleasure never dulls." the jackal exclaims as she strokes off, though you barely hear her over the increasingly loud churning noises of the gooey cum immersing you. Her sack working you over steadily, working you down layer by layer into creamy goo. You feel your extremities melt as you sink into the rising jizz, followed by your limbs..until finally all that's left is your face spreading out into her seed as you sink into her load and become one with it. Every ounce of your form digested into nutbatter by the guardian as she strokes more vigorously and as if on cue climaxes, orgasming out your remnants to form a vast sticky puddle of cum on the floor. 	<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				your cum soaked
+				<readequipment slot="2" />
+				landing with a splat in the gooey mess along with the last few spurts of her orgasm as her climax tapers off.
+			</conditional>
+	</text>
+	</gameover>
+	
+</Conversation>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <start>
-	<system value="Alpha Minoris" />
-	<world value="avenger1" />
-	<zone value="avenger1" />
+	<system value="Forakis" />
+	<world value="Forakis I" />
+	<zone value="ptah_ruins" />
 	<position x="2" y="2" />
 	<item value="laser pistol" />
 	<item value="Knife" />

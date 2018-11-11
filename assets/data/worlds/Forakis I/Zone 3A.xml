@@ -27,7 +27,14 @@
 			<row>077777770</row>
 			<row>277777772</row>			
 			<row>200777022</row>
+			<placeItem x="8" y="8">
+			<lootTable>
+			<loot item="scrap metal" chance="1.0" />
+			<loot item="questItem" chance="1.0" addendum="synth_arm" />
+		</lootTable>
+	</placeItem>			
 		</prefab>	
+		
 	<placeWidget x="28" y="28" name="SPAWNER">
 		<radius value="28" />
 		<spawnLimit value="16" />

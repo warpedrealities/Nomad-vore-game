@@ -52,6 +52,19 @@
 	The bird may have gotten you down, but not out. And it occurs to you it can hardly avoid a good thrashing from the inside. Confined in its gut you do your best to strike out and upwards, aiming to cause as much pain and discomfort as possible. The terror bird letting out a squawk and shifting its weight from foot to foot as it gut jostles and wobbles with your motions. It tries to squish you down with its belly muscles as enzymes soak your form with a gurgle. Shoving at its insides was a terrible plan! what were you thinking, all you've done is stimulated its digestive processes into overdrive. The bird lets out a few more squawks as your struggles redouble, but the stomach walls are now fully active, pressing and kneading and squishing over you as you find the birdy's digestive fluids are soaking into your flesh.
 	</text>
 	<choice destination="oralvoreStruggleGO" text="*gurgle*"/>
+	<choice destination="oralvoreStruggleGOdisposal" text="*gurgle glorp*">
+	<preference fetish="disposal" />
+	</choice>
+	</page>
+	
+	<page ID="oralvoreSubmit">
+	<text>
+	You have the good sense to know a battle you can't win, and the terror bird had you utterly outmatched from the outset. How much more so now, you don't bother struggling and instead just squirm around to get as comfortable as you can as the creature begins to digest you. The avian predator's innards starting to secrete enzyme rich goop to soak your form, breaking down and melting your shape inch by inch...
+	</text>
+	<choice destination="oralvoreStruggleGO" text="*gurgle*"/>
+	<choice destination="oralvoreStruggleGOdisposal" text="*gurgle glorp*">
+	<preference fetish="disposal" />
+	</choice>
 	</page>
 	
 	<gameover ID="oralvoreStruggleGO">
@@ -70,12 +83,19 @@
 	
 	</gameover>
 	
-	<page ID="oralvoreSubmit">
+	<gameover ID="oralvoreStruggleGOdisposal">
 	<text>
-	You have the good sense to know a battle you can't win, and the terror bird had you utterly outmatched from the outset. How much more so now, you don't bother struggling and instead just squirm around to get as comfortable as you can as the creature begins to digest you. The avian predator's innards starting to secrete enzyme rich goop to soak your form, breaking down and melting your shape inch by inch...
+	The birds stomach turns out to be as lethal as the rest of the beast and offers you just as little mercy. The avian's innards energetically gurgling and grinding you down into mush, melting you away utterly over the following hour as your struggles diminish into weak twitching and then smooth liquid glorping. The terror bird pausing its motions with a soft caw and then cocking its head to the side as it gut finishes compacting away. Your body is absorbed into the bird's gut, adding a hefty layer of soft squishy paunch to it's belly, while everything that wasn't added to the bird's large belly was compacted into it's rear, finding a place near wear it had devoured you. With a happy chirp, it started to grunt and coo in pleasure as it started to squeeze your remains out, the bone encrusted white goopy bird shit plopping down into a large mess, with your skull 
+	<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				and your
+				<readequipment slot="2" />
+				
+			</conditional>
+			landing in the middle of the sloppy pile of bird shit, having been a satisfying and tasty meal for the large voracious bird.
 	</text>
-	<choice destination="oralvoreStruggleGO" text="*gurgle*"/>
-	</page>
+	
+	</gameover>
 	
 	<page ID="cockvore0">
 	<text>
@@ -116,7 +136,7 @@
 	
 	<page ID="cockvorePleasureDigest">
 	<text>
-	You shouldn't find it too hard to pleasure the dumb bird to cumming you out whole. It's not like it's smart enough to figure out your intentions. You set about rubbing against the cum covered walls of the confining sack as if your life literally depends on it. The avian's coos and caws of delight becoming immediately more pronounced as you get to work, its shaft tip bobbing and drooling pre at the sensations as you writhe around. The hot cum you're sharing the space with glorping, gurgling and churning as you writhe around in it. The sack bobbing and contracting rthythmically as you pleasure the bird to no end..and find yourself softening as you've only succeeded in hurrying along your process of melting into bird seed. You find yourself weaker, unable to move with vigor and losing the sense of your extremities. Instead they seem to be replaced with a gooey warm sensation that somehow permeates your extremities.
+	You shouldn't find it too hard to pleasure the dumb bird to cumming you out whole. It's not like it's smart enough to figure out your intentions. You set about rubbing against the cum covered walls of the confining sack as if your life literally depends on it. The avian's coos and caws of delight becoming immediately more pronounced as you get to work, its shaft tip bobbing and drooling pre at the sensations as you writhe around. The hot cum you're sharing the space with glorping, gurgling and churning as you writhe around in it. The sack bobbing and contracting rhythmically as you pleasure the bird to no end..and find yourself softening as you've only succeeded in hurrying along your process of melting into bird seed. You find yourself weaker, unable to move with vigor and losing the sense of your extremities. Instead they seem to be replaced with a gooey warm sensation that somehow permeates your extremities.
 	</text>
 	<choice destination="cockvorePleasureGO" text="MMMPH! SPLSMNPH!"/>	
 	</page>

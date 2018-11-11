@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<Conversation>
+
+<page ID="start">
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="2" />
+	<!--quest finished meeting-->
+	<text>
+	Ptah is standing tall, hammering away at some scrap bits of metal at a workbench, hard at work doing what she does best. Hearing you come in, she turns and waves at you, a big smile on her face. "Why hello my lovely traveler, how can I help you today?"
+	</text>
+	<choice destination="training" text="My reward?">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="trained"
+			value="0" />
+			</choice>
+	<choice destination="smithing" text="Anything you could smith for me?"/>
+	<choice destination="end" text="Goodbye"/>
+	</page>
+	
+	<page ID="start">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
+			value="1" />
+	<!--normal meeting-->
+	<text>
+	In the corner of the building, a large black furred jackal anthro is propped up against the wall. She chuckles a bit and waves at you. "Hello again traveler, have you found this planet... bearable? I jest, of course, this planet has long since seen better days."
+	</text>
+	<choice destination="info" text="Who are you again?"/>
+	<choice destination="questinfo" text="What do I need to do to help you again?">
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="1" />
+			</choice>
+	<choice destination="questfinish" text="I have all the parts you needed">
+	<condition evaluate="HASITEM" operator="equals" value="1"
+			item="synth_leg" />
+			<condition evaluate="HASITEM" operator="equals" value="1"
+			item="synth_arm" />
+			<condition evaluate="HASITEM" operator="equals" value="1"
+			item="synth_powercore" />
+			</choice>
+	<choice destination="end" text="goodbye"/>
+	</page>
+	
+	<page ID="start">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
+			value="0" />
+	<!--first meeting-->
+	<text>
+	In the corner of the building, a large black skinned jackal anthro is propped up against the wall. They look at you, smiling and waving at you with their left hand. You notice the fact that they are missing their right arm, as well as their left leg. "Greetings there traveler. I am called Ptah, nice to meet you."
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />
+	<choice destination="info" text="Who are you?"/>
+	<choice destination="end" text="goodbye"/>
+	</page>
+	
+	
+	<page ID="info">
+	<text>
+	"I am a mighty black guardian, a synthetic being modeled after the people who once lived here, designed to be a workers, guards, companions and more. While they people who made us are long gone, we still function... Well, at least, the other ones do, as you can probably see, I seem to be missing some parts, but I'll manage." She says with a grimace, motioning at their body a bit. "But anyway, I am called Ptah, I was designed to be a smith, and have always found tinkering and metal work to bring me pleasure, although I do not know if it is because I am programmed too, or I enjoy it because of my own will." She then let out a hearty laugh. "But for all my mechanical knowledge, I can't seem to fix myself, seems our creators did not want us to tinker with our own bodies."
+	</text>
+			
+	<choice destination="help" text="Could perhaps I be of assistance in finding your lost parts?">
+	<condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="0" />
+			</choice>
+	
+	<choice destination="end" text="Interesting, but I need to go now."/>
+	</page>
+	
+	<page ID="help">
+	<text>
+	"I would be massively indebted to you if you were to help me with returning to full form, luckily the parts I need aren't too hard to locate, they are all on this planet, and easily accessible... if you were a sixteen foot tall synth like me. For you it will be much harder, since the parts are guarded by quite voracious creatures who will likely eat you alive. But if you wish to risk yourself for my sake, I will reward you well."
+	</text>
+	<choice destination="questaccepted" text="I will try my best to find these parts for you"/>
+	<choice destination="end" text="sounds too hard for me, I'll be on my way"/>
+	</page>
+	
+	<page ID="questaccepted">
+	<text>
+	"Well then brave soul, I need three parts, my left leg was lost in an unfortunate tree climbing accident I had in the south west area, when one of those dumb buzzard girls attacked me and I fell. Since the top of it is shiny, the buzzards have certainly taken it to one of their nests and are hoarding it." The jackal explains, gesturing towards their leg, then pointed at their missing arm. "This one was lost far in the north east, when I was again attacked by birds, this time large flightless beasts. Be warned that even though they can't fly, the raw strength in their legs, combined with their sharp talons was able to detach my arm in a single strong kick." She then points towards her chest, specifically her left breast. "Finally, one of my powercores is faulty, and needs replacing, and the only place I can think to get one is from another black guardian like myself in the pyramid to the south east. be warned that my sisters are quite strong, and will certainly not be as welcoming as I, since you'd be trespassing."
+	</text>
+	<effect type="setglobalflag" flag="ptahquest" value="1" />
+	<choice destination="end" text="That's quite a shopping list, I'll be on my way to do my best."/>
+	</page>
+	
+	<page ID="questinfo">
+	<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="0" />
+	<text>
+	"Forgetful are we? I need three parts, my leg from the south west in the hands of buzzard harpies, my arm in the north east, knocked off by a terror bird, and finally a powercore, which you will need to remove from a black guardian in the pyramid to the south east."
+	</text>
+	<choice destination="end" text="Thanks for reminding me, I'll be on my way."/>
+	</page>
+	
+	<page ID="questfinish">
+	
+	<text>
+	"You really did find all of the parts, that's quite impressive traveler, if you could just reattach them to me, they should easily reconnect." She says, turning a bit so you can access her right shoulder. You reach up and push the joint in, a loud audible snap sounding as it reattaches itself easily, the jackal synth wiggling their arm and rolling it, before pumping it in victory. "Great, now my leg please." She says, scooting over so you can access her left hip. The leg attaches in much the same way, and after a few seconds of stretching, Ptah hops up on both feet, stretching out and showing off the sixteen feet of muscle bound jackal synth, as she flexed a bit, before realizing just how much she towered over you. "Oh sorry, here I'll sit down for this last part." She says, sitting back down, and grabbing at her left breast, pulling at some sort of hidden latch to reveal a glowing white orb similar to the one you had, but hers had cracks all over it, and seemed to be duller. You pop it out and place the new fresh one in, as she closes her breast with an loud click. "I can't believe it, it's been ages since I've felt this good, I feel like a new synth now! Well, thanks for your assistance, I need a minute to fully integrate these parts and then we can talk about rewards."
+	</text>
+	<effect type="removeitem" item="synth_arm" value="1" />
+	<effect type="removeitem" item="synth_leg" value="1" />
+	<effect type="removeitem" item="synth_powercore" value="1" />
+	<effect type="experience" value="1000" />
+	<effect type="setglobalflag" flag="ptahquest" value="2" />
+	<effect type="setlocalflag" flag="energycore" value="1" />
+	<choice destination="end" text="Well you're all functional now!"/>
+	</page>
+	
+	<page ID="training">
+	<text>
+	"Of course, your reward, and a good test of my renewed strength, is to train you, while we synths can't really improve ourselves beyond having more experiences, you organics can, through sheer repetition and work, become better. And with me as a partner with perfect control and unlimited stamina, I'm certain we could have you become just as strong as I am, perhaps with enough work you could wield one of our halberds!" She says, smirking a bit and chuckling to herself. "That last part was a joke, they are far too massive for you, but if you wanna put the work in, I can help push your muscles to the next level." 
+	</text>
+			
+	<choice destination="training1" text="Sounds like a good time, let's do it!"/>
+	<choice destination="training1" text="Compared to the challenge of getting all these parts, this shoudl be easy!"/>
+	<choice destination="end" text="Sounds really tough, I'll come back when I'm ready."/>
+	</page>
+	
+	<page ID="training1">
+	<effect type="setlocalflag" flag="trained" value="1" />
+	<text>
+	You and Ptah train for several hours, and after a short lunch break, train for the rest of the day, by the end of it, you are exhausted and ready to collapse, yet still feel like you could punch a tree down with your bear hands. "Thanks for the training Ptah, it was quite intense!" You say, giving her massive hand a shake as she nods back. "Good to have someone to spend time with, and it's the least I could do for you after you helped repair me."
+	</text>
+	<special effect="giveperk" perk="Ptah strength training" />
+	<choice destination="end" text="Go rest and relax."/>
+	</page>
+	
+	<page ID="smithing">
+	<text>
+	Ptah puts the hammer down, her eyes lighting up with glee as she excitedly turns to look at me. "Well, I can smith you a halberd like we have, only more... your size, so to speak, to do that I need about 15 pieces of scrap metal and about 5 fine scales." She then hmmms a bit, looking around her workshop some more. "I can upgrade aplas armor to be even stronger, but it'll be a bit heavier, for that I need 10 scrap metal, 5 beast scales, 2 heavy plates, and 4 fabric. Just don't forget to take it off before I try and smith it, you do not want to be under my hammer when I'm working." She chuckles. 
+	<conditional> <condition operator="equals" evaluate="LOCALFLAG" flag="energycore" value="1" />
+			"And I think I can reuse my old broken power core to fit with your energy tech, I'll need 5 batteries, 4 computational valves, and 1 flux capacitor."
+			</conditional>
+	</text>
+	<choice destination="smithingH" text="make me a halberd"/>
+	<choice destination="smithingA" text="upgrade my armor.">
+	<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="Aplas carapace" />
+			</choice>
+	<choice destination="smithingP" text="make me a power core.">
+	<condition operator="equals" evaluate="LOCALFLAG" flag="energycore"
+			value="1" />
+			
+			</choice>
+	<choice destination="end" text="nevermind"/>
+	</page>
+	
+	<page ID="smithingH">
+	<text>
+	"Okay so you want a more personally sized halberd then? Good, I need 15 pieces of scrap metal, and 5 fine scales. if you hand those over, I'll get to work right away and have it done within an hour."
+	</text>
+	<choice destination="smithingH1" text="*She gets to work*">
+	<condition evaluate="HASITEM" operator="greaterthan" value="15"
+			item="scrap metal" />
+			<condition evaluate="HASITEM" operator="greaterthan" value="5"
+			item="fine scale" />
+	</choice>
+	<choice destination="end" text="I'll come back when I have the parts."/>
+	</page>
+	
+	<page ID="smithingH1">
+	<text>
+	After about an hour of hard work, Ptah hands you a halberd that is shaped just like hers, but is just the right size for you. "Here you go, knock some dumb birds around with this for me will ya?"
+	</text>
+	<effect type="removeitem" item="scrap metal" value="15" />
+	<effect type="removeitem" item="fine scale" value="5" />
+	<effect type="giveitem" item="halberd" value="1" />
+	<choice destination="end" text="Thanks"/>
+	</page>
+	
+	<page ID="smithingA">
+	<text>
+	"Okay so you want me to upgrade your aplas armor? it'll take a lot of materials to make sure all the bases are covered, but I think you'll love the result." She says, before holding a hand up and counting. "So you'll need to give me 10 scrap metal, 5 beast scales, 2 heavy plates, and 4 fabric, give me all of that and I'll make you the best armor I can."
+	</text>
+	<choice destination="smithingA1" text="*She get to work*">
+	<condition evaluate="HASITEM" operator="greaterthan" value="10"
+			item="scrap metal" />
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="Aplas carapace" />
+			<condition evaluate="HASITEM" operator="greaterthan" value="5"
+			item="beast scale" />
+			<condition evaluate="HASITEM" operator="greaterthan" value="2"
+			item="heavy plate" />
+			<condition evaluate="HASITEM" operator="greaterthan" value="4"
+			item="fabric" />
+	</choice>
+	<choice destination="end" text="I'll come back when I have the parts."/>
+	</page>
+	
+	<page ID="smithingA1">
+	<text>
+	After two hours of work, she had finally finished her enhancements to your armor, showing it off a bit. "So I was able to basically improve all aspects of it's defensive capability, although it is a bit heavier for it, but I think it's worth it."
+	</text>
+	<effect type="removeitem" item="scrap metal" value="10" />
+	<effect type="removeitem" item="Aplas carapace" value="1" />
+	<effect type="removeitem" item="beast scale" value="5" />
+	<effect type="removeitem" item="heavy plate" value="2" />
+	<effect type="removeitem" item="fabric" value="4" />
+	<effect type="giveitem" item="Aplas carapace MK2" value="1" />
+	<choice destination="end" text="Thanks"/>
+	</page>
+	
+	<page ID="smithingP">
+	<text>
+	"So, I was thinking, since I don't need my old power core anymore since you got me a new one, I figured I might be able to convert it to a high capacity power cell for you to carry around and use, it won't be nearly as powerful as it is now, but it'll be lighter and not at risk of exploding like the core is now." She said, chuckling some. "I'm kidding about the exploding part. Maybe. Don't actually know, but I do know I'll probably need 5 batteries, 4 computational valves, and 1 flux capacitor. And I should let you know, I can only make this once, since I don't have any more broken powercores to work with."
+	</text>
+	<choice destination="smithingP1" text="*She gets to work*">
+	<condition evaluate="HASITEM" operator="greaterthan" value="5"
+			item="battery" />
+			<condition evaluate="HASITEM" operator="greaterthan" value="4"
+			item="computation valve" />
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="flux capacitor" />
+	</choice>
+	<choice destination="end" text="I'll come back when I have the parts."/>
+	</page>
+	
+	<page ID="smithingP1">
+	<effect type="setlocalflag" flag="energycore" value="2" />
+	<text>
+	After a few hours, and one near nuclear meltdown, the jackal synth presents you with the powercell that looks to be able to fit into standard energy devices and weapons. "Tada, here you go, now let's not try that again okay?"
+	</text>
+	<effect type="removeitem" item="battery" value="5" />
+	<effect type="removeitem" item="computation valve" value="4" />
+	<effect type="removeitem" item="flux capacitor" value="1" />
+	<effect type="giveitem" item="advanced power-cell" value="1" />
+	<choice destination="end" text="Thanks"/>
+	</page>
+	
+</Conversation>

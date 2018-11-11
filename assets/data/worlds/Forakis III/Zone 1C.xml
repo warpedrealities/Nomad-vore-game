@@ -5,7 +5,8 @@
 		<tile sprite="17" vision="EMPTY" movement="0"> sand </tile>
 		<tile sprite="18" vision="EMPTY" movement="0"> boulder</tile>	
 		<tile sprite="19" vision="BLOCKING" movement="3"> kelp</tile>		
-		<tile sprite="20" vision="BLOCKING" movement="2"> cliff</tile>
+		<tile sprite="21" vision="BLOCKING" movement="2"> cliff</tile>
+		<tile sprite="20" vision="EMPTY" movement="0"> a steep drop off into the abyssal depths</tile>			
 	</tileset>
 	<zoneConditions>
 	<damagingCondition ID="underwater" damage="2">
@@ -20,6 +21,7 @@
 	</zoneConditions>
 	<description>The reef is beautiful, but its bright corals hide danger.</description>
 	<transition direction="east">Zone 2C</transition>	
+	<transition direction="north">Zone 1B</transition>	
 	<mapgen>
 		<prefab positionX="32" positionY="1" width="5">
 			<row>22222</row>
@@ -33,16 +35,14 @@
 			The rear section of a spacecraft that may have broken apart before it even hit the water, the neck of the craft ends abruptly in jagged and twisted metal it clearly crashed some time ago for how plantlife has anchored to its flanks.
 			</placeWidget>
 			<pairedportal x="4" y="2" sprite="10" ID="33"
-					destination="shipRear" facing="6">a way into the shipwreck </pairedportal>	
+					destination="shipRear" facing="2">a way into the shipwreck </pairedportal>	
 		</prefab>
 	
 	<perlin>
 		<band low="-1.0" high="-0.4">
 				<floodfill tile="0">
 					<Seedwidgets min="12" max="24" name="gourdbush" />
-					<floodfill tile="1">
-						<SeedNPCs min="8" max="10" name="Forakis_III/octogirl"/>					
-					</floodfill>					
+					<SeedNPCs min="8" max="10" name="Forakis_III/octogirl"/>						
 				</floodfill>
 			</band>
 
@@ -65,7 +65,7 @@
 			</band>
 
 		</perlin>
-		<walloff wall="1" sides="north" />
+		<walloff wall="5" sides="north" />
 		<walloff wall="4" sides="southwest" />	
 	</mapgen>
 

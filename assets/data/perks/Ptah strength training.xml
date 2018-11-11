@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<perk name="Ptah strength training">
+	<requirement count="1">
+		<req>PLOT</req>
+	</requirement>
+	<description> You've been trained by the black guardian Ptah, a sixteen foot tall jackal synth in the ways of being really strong, +1 to strength.</description>
+	<modifier affects="STRENGTH" value="1" type="ABILITY" />
+	<maxrank value="1" />
+
+</perk>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<zone width="16" height="16" spriteset="desert.png">
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="2" vision="EMPTY" movement="0"> desert sand</tile>
+		<tile sprite="1" vision="EMPTY" movement="0"> stonework floor </tile>
+		<tile sprite="4" vision="BLOCKING" movement="2"> stonework wall</tile>
+		<tile sprite="3" vision="BLOCKING" movement="2"> high dunes</tile>
+	</tileset>
+	<description>
+	The trackless desert is vast and inhospitable, its climate harsh and its moods pitiless. All you can hear is the sound of wind and shifting sands, and all you can feel is the subtle pervading sensation of threat.
+	</description>
+	<transition direction="west">Zone 1A</transition>	
+	<transition direction="east">Zone 3A</transition>
+	<transition direction="south">Zone 2B</transition>
+	<mapgen>
+		<prefab positionX="6" positionY="6" width="7">
+				<row>4444443</row>
+				<row>4333343</row>
+				<row>4333343</row>
+				<row>4333333</row>
+				<row>4333343</row>
+				<row>4333343</row>
+				<row>4444443</row>
+				<placeWidget x="1" y="2" name="chest">
+					<lootTable>
+						<lootSubTable chance="0.5" file="resource_tier_1" />
+						<lootSubTable chance="0.5" file="resource_tier_1" />
+						<lootSubTable chance="0.5" file="resource_tier_1" />
+						<lootSubTable chance="1.0" file="consumable_tier_1" />
+						<lootSubTable chance="0.5" file="consumable_tier_1" />
+						<lootSubTable chance="0.5" file="consumable_tier_1" />
+						<lootSubTable chance="0.5" file="consumable_tier_1" />
+						<lootSubTable chance="1.0" file="blueprint_tier_1" />
+					</lootTable>
+				</placeWidget>
+				
+			<placeNPC name="Forakis_I/defective_black_guardian" x="1" y="1" />
+		</prefab>
+			<floodfill tile="1">			
+			</floodfill>			
+		<walloff wall="4" sides="northwesteastsouth" />
+			<prefab positionX="6" positionY="0" width="5">
+			<row>55555</row>
+			<row>25252</row>
+			<row>22222</row>			
+				<pairedportal x="2" y="1" sprite="3" ID="22"
+					destination="Zone 2A" facing="0"> a way back into the desert </pairedportal>
+			</prefab>			
+	</mapgen>
+
+</zone>
