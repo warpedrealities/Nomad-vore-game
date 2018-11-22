@@ -4,7 +4,7 @@
 	<shipstats>
 		<movecost value="20" />
 		<hullpoints value="35" />
-		<thrustcost value="2" />
+		<thrustcost value="1" />
 		<manouver value="-2" />
 	</shipstats>
 

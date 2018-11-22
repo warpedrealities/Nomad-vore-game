@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<Conversation>
+
+
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
+	<text>
+	You find yourself being hailed "Yarr, you find yourself facing the dread pirate roberta and...I've seen you before, well clearly someone has a death wish. Should of run when you had the chance."
+	</text>
+	<choice destination="bounty" text="$excellent, I've got a job to eliminate you dread pirate roberta">
+		<condition evaluate="GLOBALFLAG" operator="greaterthan" value="1"	flag="piratebounty0" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="topicbounty" />		
+	</choice>
+	<choice destination="fight" text="$if you think I'm scared of you you're mistaken."/>
+	<choice destination="fear" text="$Can't you just pretend I ran away and this didn't happen?"/>
+	</page>
+	
+	<page ID="fight">
+	<text>
+	"I like it when they're feisty. But you know, all my prey end the same way. You really think you're going to be any different?"
+	</text>
+	<choice destination="startfight" text="$bring it"/>
+	</page>
+	
+	<page ID="fear">
+	<text>
+	"No no see that's not how this works, we're pirates. So what we're going to do is beat ya, board your ship, take all your stuff and digest you and your crew. Hope you're ready for a date with my insides."
+	</text>
+	<choice destination="startfight" text="*ulp*"/>
+	</page>
+	
+	<page ID="startfight">
+	<text>
+	
+	</text>
+	<special effect="spaceCombat" />
+	</page>
+	
+	<page ID="start">
+	<text>
+	You find yourself being hailed "Yarr and all of that. You find yourself facing the dread pirate Roberta, scourge of the seven spaceways. Tremble in fear, for you are already at my mercy and I am seldom feeling merciful." 
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />
+	<choice destination="spaceways" text="$what are the seven spaceways?"/>
+	<choice destination="nicemeetingyou" text="$well nice meeting you but i need to be going now"/>
+	<choice destination="bounty" text="$excellent, I've got a job to eliminate you dread pirate roberta">
+		<condition evaluate="GLOBALFLAG" operator="greaterthan" value="1"	flag="piratebounty0" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="topicbounty" />		
+	</choice>
+	<choice destination="mercy" text="$Surely I could persuade you to be merciful?"/>
+	</page>
+	
+	<page ID="spaceways">
+	<text>
+	"It's a saying, I'm not explaining it. Now prepare yourself for being beaten, boarded and eaten ya squab." 
+	</text>
+	<choice destination="startfight" text="well crap"/>
+	</page>
+	
+	<page ID="nicemeetingyou">
+	<text>
+	"You know I'm a pirate right? politeness won't get you out of this. Prepare to be boarded ya squab."
+	</text>
+	<choice destination="startfight" text="worth a try"/>
+	</page>
+
+	<page ID="bounty">
+	<text>
+	"Robynn sent you didn't she? Sis really needs to stop sending people like you, I might take it personally...But seen as you're not the first I'll get this out of the way. Robynn is my sister, used to be we'd sail the spaceways together looking for prey. Least till mom died and Robynn got all responsible. Now she wants to erase her past, even if it means getting rid of her own sister."
+	</text>
+		<effect type="setlocalflag" flag="topicbounty" value="1" />
+		<choice destination="mercy" text="$I'm having second thoughts about this, can you be merciful?"/>
+		<choice destination="bountyhunter" text="$doesn't change a thing, I have a bounty to collect"/>
+	</page>
+	
+	<page ID="bountyhunter">
+	<text>
+	"Not the first to think you'd succeed here, we'll see how confident you are when you're squirming inside me."
+	</text>
+	<choice destination="startfight" text="$We'll see kitty cat, your reign of piracy ends here"/>
+	</page>
+	
+	<page ID="mercy">
+	<text>
+	"I'm a pirate, mercy isn't the game I usually play..but, seen as you asked I might be amenable to letting you live. For say..ten thousand credits. So how's about it, call it mercy or call it a shakedown."
+	</text>
+	<choice destination="payoff" text="$Fine, here's your money please don't eat me">
+		<condition operator="greaterthan" evaluate="CREDITS" value="10000" />
+	</choice>	
+	<choice destination="nomoney" text="$I don't have that kind of money">
+		<condition operator="lessthan" evaluate="CREDITS" value="10000" />
+	</choice>
+	<choice destination="startfight" text="$You might think you're scary, but you're not ten thousand credits worth of scary"/>
+	</page>
+	
+	<page ID="payoff">
+	<text>
+	"Really? you might enjoy it. But fine, pleasure doing business with you, run along now before i change my mind."
+	</text>
+	<effect type="givegold" value="-10000" />
+	<effect type="setlocalflag" flag="boarding" value="1" />	
+	<choice destination="end" text="$...i'll do that"/>
+	</page>
+	
+	<page ID="nomoney">
+	<text>
+	"Oh no, out of luck and out of credits. I'm not a charity here, I'm a pirate. So I guess we're hewing fast to tradition, funny word that..hewing. Anyway, prepare to be boarded ya squab."
+	</text>
+	<choice destination="startfight" text="$worth a try"/>
+	</page>
+	
+</Conversation>

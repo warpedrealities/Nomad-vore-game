@@ -992,4 +992,28 @@ public class NPC extends Actor implements Controllable {
 	public float getSpriteSize() {
 		return ((NPC_RPG) actorRPG).getSpriteSize();
 	}
+
+	public String getFlushScript() {
+		// TODO Auto-generated method stub
+		return ((NPC_RPG) actorRPG).getFlushScript();
+	}
+
+	private void runFlushScript() {
+		Globals globals = JsePlatform.standardGlobals();
+
+		try {
+			LuaValue script = globals.load(
+					new FileReader("assets/data/scripts/" + ((NPC_RPG) actorRPG).getFlushScript() + ".lua"),
+					"main.lua");
+			script.call();
+			LuaValue factionlibrary = CoerceJavaToLua.coerce(FactionLibrary.getInstance());
+			LuaValue player = CoerceJavaToLua.coerce(Universe.getInstance().getPlayer());
+			LuaValue mainFunc = globals.get("main");
+			LuaValue view = CoerceJavaToLua.coerce(ViewScene.m_interface);
+			mainFunc.call(factionlibrary, player, view);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

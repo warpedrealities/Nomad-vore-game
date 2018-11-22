@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <widgetharvestable sprite="42" safeOnly="true" blocksVision="true">
-	<contains minimum="3" maximum="6">blue crystal</contains>
+	<contains minimum="3" maximum="8">blue crystal</contains>
 	<usedescription>You mine some blue crystals</usedescription>
 	<description>An outcropping that exposes crystals high in energy, possibly usable as
 		fuel</description>
 	<regeneration regentime="6000" />
-	<skillCheck item="blue crystal" dc="20" attribute="SCIENCE" min="3" max="6">
+	<skillCheck item="blue crystal" dc="20" attribute="SCIENCE" min="3" max="8">
 	You have successfully increased the yield of crystals from this deposit with SCIENCE!
 	</skillCheck>	
 </widgetharvestable>

@@ -74,7 +74,7 @@
 		<walloff wall="4" sides="southwesteast" />
 		<auditpaths carve="3" replace="2" />
 		<auditpaths carve="4" replace="2" />
-		<SeedNPCs min="12" max="24" name="AlphaMinoris_III/drake">
+		 <SeedNPCs min="12" max="24" name="AlphaMinoris_III/drake"> 
 		</SeedNPCs>
 	</mapgen>
 

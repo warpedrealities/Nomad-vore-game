@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<Ship width="5" height="8" sprite="sloopB">
+
+	<shipstats>
+		<movecost value="24" />
+		<hullpoints value="35" />
+		<thrustcost value="0.8" />
+	</shipstats>
+
+	<emitters>
+		<weapon x="-0.4" y="0.0" />
+		<weapon x="0.4" y="0.0" />	
+		<engine x="0.0" y="-0.4" />
+	</emitters>
+
+	<layout width="16" height="16" spriteset="galleon.png">
+		<tileset>
+			<tile sprite="1" vision="BLOCKING" movement="2">metal wall</tile>
+			<tile sprite="2" vision="EMPTY" movement="0">faux plank floor</tile>
+			<tile sprite="3" vision="EMPTY" movement="0">metal stairs</tile>
+			<tile sprite="4" vision="EMPTY" movement="0">faux plank floor</tile>	
+		</tileset>
+		<description></description>
+		<mapgen>
+			<prefab positionX="0" positionY="0" width="7">
+				<row>1111111</row>
+				<row>1141411</row>
+				<row>1444441</row>
+				<row>1444441</row>
+				<row>1311131</row>
+				<row>1222221</row>
+				<row>1222221</row>
+				<row>1222221</row>
+				<row>1222221</row>
+				<row>1222221</row>
+				<row>1222221</row>	
+				<row>1112111</row>				
+				<row>0122220</row>
+				<row>0122210</row>
+				<row>0011100</row>
+			</prefab>
+			<placeWidget x="2" y="1" name="slot">
+				<contains name="modules/bunk bed" />
+				<widgetItem>bunk bed</widgetItem>	
+			</placeWidget>
+			<placeWidget x="4" y="1" name="slot">
+				<contains name="modules/bunk bed" />
+				<widgetItem>bunk bed</widgetItem>	
+			</placeWidget>	
+			<placeWidget x="3" y="3" name="slot">
+			<contains name="modules/navconsole" />
+			<widgetItem>nav computer</widgetItem>			
+			</placeWidget>		
+			<placeWidget x="3" y="5" name="slot">	
+			<contains name="modules/simple reactor">
+				<resource type="ENERGY" value="50" />
+			</contains>
+			<widgetItem>simple reactor</widgetItem>
+			</placeWidget>	
+			<placeWidget x="3" y="6" name="slot">
+			<contains name="modules/protective shield">
+			</contains>
+				<widgetItem>protective shield</widgetItem>	
+			</placeWidget>			
+			<placeWidget x="3" y="7" name="slot">
+			<contains name="modules/interplanetary reactor">
+				<resource type="FUEL" value="40" />
+			</contains>
+				<widgetItem>interplanetary reactor</widgetItem>	
+			</placeWidget>
+			<placeWidget x="5" y="7" name="hardpoint">
+			<facing value="2" />
+			<contains name="shipweapons/slug thrower">
+				<resource type="40mm slug" value="40" />	
+			</contains>
+			<widgetItem>space slug thrower</widgetItem>					
+			</placeWidget>
+			
+			<placeWidget x="1" y="7" name="hardpoint">
+			<facing value="6" />
+			<contains name="shipweapons/slug thrower">
+				<resource type="40mm slug" value="40" />	
+			</contains>
+			<widgetItem>space slug thrower</widgetItem>			
+			</placeWidget>	
+			
+			<placeWidget x="3" y="9" name="slot">
+			<contains name="modules/cargocontainer_ship">
+				<lootTable>
+					<lootSubTable chance="0.75" file="spacehulk_resources" />
+					<lootSubTable chance="0.75" file="spacehulk_consumables" />
+					<lootSubTable chance="0.75" file="spacehulk_resources" />
+					<lootSubTable chance="0.75" file="spacehulk_consumables" />
+					<lootSubTable chance="0.50" file="spacehulk_resources" />
+					<lootSubTable chance="0.50" file="spacehulk_consumables" />
+					<lootSubTable chance="1" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="resource_tier_1" />
+					<lootSubTable chance="1" file="consumable_Tier_1" />
+					<lootSubTable chance="0.1" file="resource_tier_1" />
+					<lootSubTable chance="0.1" file="consumable_Tier_1" />
+					<lootSubTable chance="0.5" file="mutators_tier_1" />
+					<lootSubTable chance="0.1" file="mutators_tier_1" />
+					<loot item="gold" chance="0.4" addendum="100" />
+					<loot item="gold" chance="0.4" addendum="250" />	
+					<loot item="Phallifungi" chance="1.0" />
+					<loot item="space meal" chance="1.0" />
+					<loot item="space meal" chance="1.0" />
+					<loot item="space meal" chance="1.0" />
+					<loot item="space meal" chance="1.0" />			
+					<loot item="fuel canister" chance="1.0" />
+					<loot item="fuel canister" chance="1.0" />
+					<loot item="fuel canister" chance="1.0" />
+					<loot item="fuel canister" chance="1.0" />				
+				</lootTable>		
+			</contains>
+			<widgetItem>cargo container</widgetItem>
+			</placeWidget>	
+			<placeWidget x="3" y="13" name="slot">
+				<contains name="modules/space warper" />
+				<widgetItem>space warper</widgetItem>		
+			</placeWidget>
+
+			<pairedportal x="5" y="12" sprite="1" ID="-101" facing="6">
+			Exterior hatch </pairedportal>		
+			<placeNPC name="space/pirates/kitty_pirate" x="4" y="2" />
+			<placeNPC name="space/pirates/kitty_pirate" x="2" y="5" />	
+			<placeNPC name="space/pirates/kitty_pirate" x="4" y="5" />
+			<placeNPC name="space/pirates/dreadpirate_roberta" x="2" y="2">
+			<script death="space/roberta_kill" />
+			<placeNPC>
+			<placeNPC name="space/pirates/pirate_drone" x="3" y="6" />				
+		</mapgen>
+	</layout>
+	<exterior width="5">
+		<row>00000</row>
+		<row>01110</row>
+		<row>01110</row>
+		<row>01110</row>
+		<row>01110</row>
+		<row>01100</row>
+		<row>01110</row>
+		<row>00100</row>
+		<pairedportal x="3" y="5" sprite="10" ID="-101"
+			destination="sloop" facing="6"> a ship hatch </pairedportal>
+	</exterior>
+</Ship>

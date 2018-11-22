@@ -340,4 +340,8 @@ public class NPC_RPG implements Actor_RPG {
 	public float getSpriteSize() {
 		return statBlock.getSpriteSize();
 	}
+
+	public String getFlushScript() {
+		return statBlock.getFlushScript();
+	}
 }

@@ -31,7 +31,7 @@ public class EncounterShip {
 	private List<CombatWeapon> weapons;
 	private CombatActionHandler actionHandler;
 	private Monitor monitor;
-	
+
 	public EncounterShip(Spaceship ship, Vec2f position, int heading) {
 		this.ship = ship;
 		monitor=new Ship_Monitor();
@@ -49,9 +49,9 @@ public class EncounterShip {
 		}
 		buildEmitters();
 		manouver = new CombatManouver(this, position, heading);
-		
+
 		actionHandler=new CombatActionHandler(this);
-		
+
 	}
 
 	private void buildEmitters() {
@@ -114,7 +114,7 @@ public class EncounterShip {
 			controller.run(this,allShips,effectHandler);
 		}
 	}
-	
+
 	public void updateResources(EffectHandler handler) {
 		ship.getShipStats().battleRrun();
 		if (shield != null) {
@@ -130,7 +130,7 @@ public class EncounterShip {
 	public ShipEmitters getEmitters() {
 		return emitters;
 	}
-	
+
 	public Vec2f getEmitter(int i)
 	{
 		return emitters.getOffsetWeaponEmitters().get(i);
@@ -158,7 +158,7 @@ public class EncounterShip {
 		//apply shield and get amount of shield resistance
 		if (shield!=null && shield.isActive())
 		{
-			damage=shield.applyDefence(damage, weapon.getDisruption(),effectHandler,this);		
+			damage=shield.applyDefence(damage, weapon.getDisruption(),effectHandler,this);
 		}
 
 		//apply armour
@@ -171,13 +171,14 @@ public class EncounterShip {
 		if (damage>0)
 		{
 			monitor.reportDamage(damage);
-			ship.getShipStats().getResource("HULL").subtractResourceAmount(damage);		
-		}	
+			ship.getShipStats().getResource("HULL").subtractResourceAmount(damage);
+		}
 	}
 
 	public Monitor getMonitor() {
 		return monitor;
 	}
+
 
 	public void setMonitor(Monitor monitor) {
 		this.monitor = monitor;

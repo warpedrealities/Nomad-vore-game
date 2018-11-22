@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="greyW.png" />
+	<name>wolf girl</name>
+	<description>The wolfgirl has an air of profound predatory confidence. Her yellow eyes gleam from under locks of untamed grey hair that spill forth from her greater mane. Dark grey furred ears are perched atop her head, twitching alertly while she sniffs the air and lets out a hungry growl. Her body is pale skinned and clad only in tufts of light grey fur artfully and partways covering her limbs. Her build is alluringly toned and powerful yet svelte and far from bulky. The copious dark grey furred tail she sports never strays to conceal her nudity in the slightest.</description>
+	<rpg>
+		<experiencevalue value="200" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="KINETIC" value="1" />
+		<attribute attribute="SHOCK" value="1" />
+		<attribute attribute="THERMAL" value="1" />		
+		<combatMove name="melee" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="4" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>wolfgirl fails to hit TARGET</text>
+				<text>TARGET evades the wolfgirl's attack</text>
+			</missText>
+			<hitText count="3">
+				<text>wolfgirl bites TARGET for VALUE damage</text>
+				<text>wolfgirl claws TARGET for VALUE damage</text>				
+				<text>wolfgirl gives TARGET a kick for VALUE damage</text>
+			</hitText>
+		</combatMove>
+			<combatMove name="leap" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="8" pattern="RANGED" actionCost="2" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>wolfgirl fails to leap towards TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>wolfgirl leaps towards TARGET</text>
+			</hitText>
+		</combatMove>
+	</rpg>
+
+	<respawn delay="2000" />
+	<flying />
+	<defeated conversation="avior_II/wolfgirl/defeat" />
+	<seduced conversation="avior_II/wolfgirl/seduced" />
+	<victory conversation="avior_II/wolfgirl/victory" />
+	<seducer conversation="avior_II/wolfgirl/victory" />	
+	<controller AI="doggy_AI" />
+	<faction value="monster" />
+</Harpy>

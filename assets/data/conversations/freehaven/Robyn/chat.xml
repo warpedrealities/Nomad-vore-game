@@ -9,6 +9,9 @@
 	</text>
 	<effect type="setlocalflag" flag="special_inventory" value="1" />	
 	<special effect="restockshop" ID="freehaven_general" />
+	<choice destination="job0" text="$Do you have any work you need doing?">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="piratebounty0" />	
+	</choice>	
 	<choice destination="shop" text="$That's great, let me see what you have for sale now"/>
 	<choice destination="end" text="$That's super, but I'll take a look later, I wasn't looking t buy anything just now"/>
 </page>
@@ -26,8 +29,70 @@
 	<preference fetish="demis" />	
 	<preference fetish="oralvore" />		
 	</choice>
+	<choice destination="job0" text="$Do you have any work you need doing?">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="piratebounty0" />	
+	</choice>
 	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
 	</page>
+	
+	<page ID="job0">
+	<text>
+	Robyn grins "Well I do have a few shelves that need stacking.." she says before letting her expression turn mischevious and she giggles "I'm kidding, i'm kidding. I had to see what reaction I'd get though. Let me guess? some sorta space adventurer? mercenary? whatever I suppose if you weren't you wouldn't be asking that kind of question. There actually is something you can help me with if you don't mind a little danger. You interested?"
+	</text>
+	<choice destination="job1" text="$I'm listening kitty"/>
+	<choice destination="job0A" text="$I was kind of hoping you just needed some shelves stacked actually"/>
+	<choice destination="job0B" text="$Not interested I'm afraid."/>
+	</page>
+	
+	<page ID="job1">
+	<text>
+	"Oooh all serious, i like that. Only my friends get to call me kitty though. Anyway. Though I appear a humble shopkeep I have connections, people who can keep me in stock in these adverse times. Trouble is they're off station, and pirates keep on attacking the shipments..also they're eating my potential customers, which is kind of bad for business...anyway, one in particular is particularly bold. Goes by the title of the dread pirate roberta, I'll reward you generously if you get rid of her."
+	</text>
+	<choice destination="job2" text="$And where might I find this dread pirate?"/>
+	<choice destination="job1A" text="$Why this pirate in particular?"/>
+	<choice destination="job1B" text="$I think I'll pass on this one for now"/>
+	</page>
+	
+	<page ID="job2">
+	<text>
+	"You can find her in the Forakis system. It's pretty much a back water, I know a few people who sell guns to the liongirls on the 1st world but otherwise there's not too much of interest to merchants like me. You can get there by heading cosmic east to coordinates (1,1) according to your nav. She'll be easy to spot, she'll be in the darker coloured sloop, something about striking fear into the hearts of her prey or something. Anyway, taking the job?"
+	</text>
+	<choice destination="job3" text="$Yes, I'll get rid of this pirate for you"/>	
+	<choice destination="job2A" text="$No, I'm not interested in this job"/>
+	</page>
+	
+	<page ID="job3">
+	<text>
+	"Excellent. I look forward to hearing of your success." she says and smiles "want to do any shopping before you begin?"
+	</text>
+	<effect type="setglobalflag" flag="piratebounty0" value="1" />	
+	<choice destination="shop" text="$yes, let me browse a little"/>
+	<choice destination="end" text="$thankyou for the offer but I should get started"/>
+	</page>
+	
+	<page ID="job2A">
+	<text>
+	"Oh..well, if you change your mind you know where to find me." Robyn takes this in stride and shrugs, settling back.
+	</text>
+	<choice destination="end" text="$I might, but for now I have other business"/>
+	</page>
+	
+	<page ID="job1A">
+	<text>
+	"Cause she's more dangerous than the others? listen, you're just going to have to trust me I have damned good reasons and go get rid of her. I'm agreeing to pay you to do this after all, thought mercenaries were supposed to be discreet about these sort of things. So you interested or not?"
+	</text>
+	<choice destination="job2" text="$I'm interested, where will i find her?"/>
+	<choice destination="end" text="$I'm going to have to pass on this one Robynn"/>
+	</page>
+	
+	<page ID="job0A">
+	<text>
+	"Yeah?" she says and then bemusedly shakes her head "Well Like I said I was kidding about that, I do all my own stock management and I don't need that kind of help. If you're down on your luck and need credits that bad but don't like danger maybe you can find some other way to make some credits on station though?"
+	</text>
+	<choice destination="shop" text="$maybe, but i'm not so hard up for credits I can't do a little browsing first"/>
+	<choice destination="end" text="$Yeah maybe I'll do that."/>
+	</page>
+	
 	
 	<page ID="pill0">
 	<text>
@@ -112,6 +177,9 @@
 	</text>
 	<effect type="setlocalflag" flag="talked" value="1" />
 	<choice destination="shop" text="$You can show me what you have for sale"/>
+	<choice destination="job0" text="$Do you have any work you need doing?">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="piratebounty0" />	
+	</choice>
 	<choice destination="questions" text="$Can I ask you some questions?"/>
 	<choice destination="end" text="$I'm happy to make your acquaintance, but I'll see what you're selling another time"/>
 	</page>

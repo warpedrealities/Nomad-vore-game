@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="pirate_roberta.png" />
+	<name>Roberta</name>
+	<description>Five foot of confidently swaggering catgirl, peach coloured ears sit amidst auburn blonde hair and a smirk rests on her lips. She's dressed in a fairly typical piratical regalia, her ruffled and buttoned top  under a dark blue shoulder mantle that's matched by the colour of her skirts and contrasts greatly with her tail, which of course matches her ears. She has a pair of plasma pistols to hand and tall leather boots to complete her ensemble. </description>
+	<rpg>
+		<experiencevalue value="600" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="55" />
+		<stat stat="RESOLVE" value="110" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />	
+		<combatMove name="handblaster" pattern="RANGED"
+			bonusAttribute="RANGED" timeCost="2" bonusToHit="4" multiAttack="2">
+			<effectDamage type="THERMAL" minValue="4" maxValue="6" modifier="NONE" />
+			<effectDamage type="KINETIC" minValue="4" maxValue="6" modifier="NONE" />
+			<missText count="2">
+				<text>Roberta fires blasts at TARGET who manages to evade</text>
+				<text>Roberta shoots at TARGET who dodges</text>
+			</missText>
+			<hitText count="2">
+				<text>Roberta blasts TARGET for VALUE thermokinetic damage</text>
+				<text>Roberta hits TARGET for VALUE thermokinetic damage</text>	
+			</hitText>
+		</combatMove>	
+		<itemDrop chance="25" defeatOnly="true" item="CREDITS2000" />				
+		<itemDrop chance="20" item="plasma pistol" />
+		<itemDrop chance="50" item="plasma canister" />
+		<itemDrop chance="20" item="plasma pistol" />
+		<itemDrop chance="50" item="plasma canister" />		
+	</rpg>
+	<crew skill="NAVIGATION" value="2"/>
+	<defeated conversation="space/pirates/roberta/defeat" />
+	<seduced conversation="space/pirates/roberta/seduced" />
+	<victory conversation="space/pirates/roberta/victory" />
+	<seducer conversation="space/pirates/roberta/victory" />
+	<controller AI="pirate_ranged" />
+	<faction value="pirate" />
+</NPC>

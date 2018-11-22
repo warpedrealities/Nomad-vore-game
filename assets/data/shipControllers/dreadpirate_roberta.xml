@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<controller>
+	<faction value="pirate" />
+	<systemEntry value="dreadpirate_roberta_entry" />
+	<contact value="dreadpirate_roberta_contact" />
+	<ai value="pirateAI" />
+	<combat value="broadsider_shielded" />
+	<victory value="pirateSloopVictory" />
+	<loss value="dreadpirate_roberta_loss" />
+	<experienceReward value="600" />	
+</controller>

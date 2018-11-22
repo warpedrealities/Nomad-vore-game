@@ -3,7 +3,7 @@
 	<contains minimum="2" maximum="4">scrap metal</contains>
 	<description>Radioactive substances are the cornerstone of 19th century experimental medicine, 50s science fiction and now of your propulsion system. Using excited radium we are able to increase fuel efficiency by 50% </description>
 	<resistance resists="KINETIC" strength="2"></resistance>
-	<shipResource capacity="200" resource="FUEL">
+	<shipResource capacity="250" resource="FUEL">
 		<resourceExtraction item="blue crystal" ratio="1" destroy="0.25" dismantle="0.75" />
 	</shipResource>
 	<shipModifier uid="2" modifies="FUEL_EFFICIENCY"

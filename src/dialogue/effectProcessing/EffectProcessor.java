@@ -24,6 +24,7 @@ import nomad.FlagField;
 import nomad.universe.Universe;
 import perks.PerkLibrary;
 import shared.Scene_Int;
+import shipsystem.WidgetDamage;
 import shop.ShopList;
 import solarview.spaceEncounter.SpaceCombatInitializer;
 import spaceship.Spaceship;
@@ -108,6 +109,9 @@ public class EffectProcessor {
 
 		if (str.equals("healnpc")) {
 			m_npc.Heal();
+		}
+		if (str.equals("healship")) {
+			healShip();
 		}
 		if (str.equals("clearviolation")) {
 			controller.getHandler().getFactionListener().setViolation(0, null);
@@ -226,6 +230,28 @@ public class EffectProcessor {
 				}
 			}
 			new BoardingHelper((Spaceship)Universe.getInstance().getCurrentEntity()).addNPCs(strings);;
+		}
+	}
+
+	private void healShip() {
+		if (ship.getShipStats() != null) {
+			ship.getShipStats().getResource("HULL")
+			.setResourceAmount(ship.getShipStats().getResource("HULL").getResourceCap());
+			if (ship.getShipStats().getResource("ENERGY") != null) {
+				ship.getShipStats().getResource("ENERGY")
+				.setResourceAmount(ship.getShipStats().getResource("ENERGY").getResourceCap());
+			}
+		}
+		for (int i=0;i<ship.getZone(0).getWidth();i++)
+		{
+			for (int j=0;j<ship.getZone(0).getHeight();j++)
+			{
+				if (ship.getZone(0).getTile(i, j)!=null &&
+						ship.getZone(0).getTile(i, j).getWidgetObject()!=null &&
+						WidgetDamage.class.isInstance(ship.getZone(0).getTile(i, j).getWidgetObject())) {
+					ship.getZone(0).getTile(i, j).setWidget(null);
+				}
+			}
 		}
 	}
 

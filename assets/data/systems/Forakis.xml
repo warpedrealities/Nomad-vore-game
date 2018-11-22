@@ -7,6 +7,7 @@
 	
 	<spawnRules>
 	<spawn script="pirates"/>
+	<spawn script="dreadpirate_roberta"/>	
 	<spawn script="talharans"/>		
 	</spawnRules>
 

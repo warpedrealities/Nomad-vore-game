@@ -16,7 +16,7 @@ public class NpcShipControllerSense {
 	private Faction faction;
 	private StarSystem system;
 	private NpcShipControllerSenseDetection detection;
-	
+
 	public NpcShipControllerSense(FlagField flags, Faction faction) {
 		this.flags=flags;
 		this.faction=faction;
@@ -33,6 +33,10 @@ public class NpcShipControllerSense {
 		return flags;
 	}
 
+	public FlagField getGlobalFlags() {
+		return Universe.getInstance().getPlayer().getFlags();
+	}
+
 	public long getTime()
 	{
 		return Universe.getClock();
@@ -41,20 +45,20 @@ public class NpcShipControllerSense {
 	public Faction getFaction() {
 		return faction;
 	}
-	
+
 	public void spawnBoarders(String [] filenames)
 	{
-		
+
 		new BoardingHelper(getPlayer()).addNPCs(filenames);
 	}
-	
+
 	public void toView()
 	{
 		if (getPlayer().getShipStats()!=null)
 		{
 			new SpaceshipAnalyzer().decomposeResources(getPlayer().getShipStats(), getPlayer());
 			getPlayer().setShipStats(null);
-			getPlayer().setShipController(null);			
+			getPlayer().setShipController(null);
 		}
 		Game.sceneManager.SwapScene(new ViewScene());
 	}
@@ -67,5 +71,5 @@ public class NpcShipControllerSense {
 		return detection;
 	}
 
-	
+
 }

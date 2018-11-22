@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<preference fetish="demis" />
+		<preference fetish="females" />	
+		<preference fetish="oralvore" />
+	<text>
+		The wolfgirl licks her lips and stalks forwards on all fours, tail swishing as she eyes your fallen form hungrily. Your efforts to struggle or get back to your feet are met with only a growl from her, almost playful rather than threatening but not to say it wasn't that as well. In no time at all she's upon you, licking your face and pressing her breasts against you in a way that would otherwise be rather pleasing. The wolf pins you, clearly preparing to do what she goes and does after a few seconds more of savouring licking. The wolfy's mouth stretching wide and wrapping around your head, warm wetness slathering over your face as she mhmms and takes her first swallow.
+	</text>
+		<choice destination="oralvore0" text="*devoured again*"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	Helplessly you find yourself drawn into the predatory wolfgirl's throat, her hands grabbing at your shoulders and helping you in. The wolfgirl letting out a series of moans and growls as she handles her meal, you, capably and swallows her way down over your shoulders and chest. The sounds of her delight and her internal processes rumbling and squelching around you respectively as you take your plunge.
+	</text>
+	<choice destination="oralvore1" text="*gobbled up*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The gurgling tight depths of her stomach welcome you as you're crammed inside, forced to curl as her lips work down over your ass and your predator lets out yet more appreciative growls. Seems she enjoys nibbling and tasting your hips almost as much as the way your shape starts to bloat and stretch out her belly, making it heavy and squish beneath her as she works to gobble up your legs now.
+	</text>
+	<choice destination="oralvore2" text="*entirely wolfchow*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The wolfgirl settles back onto her haunches as she gobbles your legs up, growling now and then and giving your thighs a bit of a gnaw as you slide steadily down her throat. Soon though she's working your calves and feet past her lips, snapping her jaws shut and swallowing with profound satisfaction. Your body now packed away squeezed in her belly as she mhmms, patting and rubbing and in general playing with her full belly you're stuffed inside.
+	</text>
+	<choice destination="struggle" text="*try to get out of here!*"/>
+	<choice destination="submit" text="*be a good meal*"/>
+	</page>
+	
+	<check ID="struggle">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>
+
+	<page ID="struggleEscape">
+	<text>
+	You didn't come this far just to be enjoyed and digested by some primitive wolf girl. Even if she has a nice rack you're not keen on being part of it. You start to struggle, using all the desperate energy of your second wind to try and push your way back out of her. The wolfy seemingly taking your struggles rather playfully at first, letting out a growl and pressing down on her belly against the dirt. The wolfy trying to squish your attempts to escape with her own body weight, but when that fails she lets out a distressed yelp and soon after hacking noises as you force your way back up her throat and into the open air. Playtime might be over, but at least the wolfy will need a few moments to recover before she can try and gobble you up again.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />		
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+	You didn't come this far just to be enjoyed and digested by some primitive wolf girl. Even if she has a nice rack you're not keen on being part of it. You start to struggle, using all the desperate energy of your second wind to try and push your way back out of her. The wolfy seemingly taking your struggles rather playfully at first, letting out a growl and pressing down on her belly against the dirt. The wolfy trying to squish your attempts to escape with her own body weight, an effort that proves all too effective as her gurgling belly presses down tight around you and confines your struggling form still further. The wolf girl letting out pleased growls as you prove feisty, but ultimately unable to escape, and her stomach gets to work digesting you in earnest.
+	</text>
+	<choice destination="struggleGO" text="*digested*"/>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	The wolfy squirms to squish her gut against the dirt some more, feeling you struggle inside her increasingly active and noisy belly. Gradually the movements inside her belly cease and soon after the lumpy solidity propping her up starts to round up and turn soft and pliant..the wolfy letting out a giggle as her gut spreads out and she settles lower, a more ovular roundness under her now. And soon enough even that will disappear, her round gut compacting and shrinking down with steady blorping noises as your gooey remnants are absorbed into her.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	You feel her playing with her belly and blush at how much she's enjoying you. Admittedly, it doesn't hurt the predatory wolfy has a nice rack and caught you fair and square..yeah that's the reason, you're being sporting..it has nothing to do with how the thought of being added as a layer of fat on her tits makes your cheeks red. You squirm around and hear her giggle as she gives your jostling bulge a pat and a possessive grope through the belly walls...it's actually quite nice in here, oh here come the enzymes..how delightful.
+	</text>
+	<choice destination="submitGO" text="*get digested*"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	The wolfy sits there fondling her gut happily, feeling you squirm inside her increasingly active and noisy belly. Gradually the movements and moans from inside her belly cease and soon after the lumpy solidity turns soft and pliant.the wolfy letting out a giggle and pressing her hands against her gut feeling your now soupy form yielding and sloshing under her palm. Her gut now a compact ball containing goopy former space adventure in a more nutritious and satisfying form. And soon enough even that dome will disappear, her round gut compacting and shrinking down with steady blorping noises as your gooey remnants are absorbed into her.
+	</text>
+	</gameover>
+	
+</Conversation>

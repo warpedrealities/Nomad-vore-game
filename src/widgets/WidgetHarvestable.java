@@ -171,6 +171,8 @@ public class WidgetHarvestable extends Widget {
 				}
 
 			}
+			player.getInventory().recalc();
+			player.calcMove();
 			return true;
 		}
 		ViewScene.m_interface.DrawText("Nothing to harvest here");

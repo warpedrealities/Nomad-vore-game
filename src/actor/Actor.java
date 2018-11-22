@@ -277,7 +277,6 @@ public abstract class Actor implements Attackable {
 	}
 
 	public float getSpriteSize() {
-		// TODO Auto-generated method stub
 		return 1;
 	}
 }

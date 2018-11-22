@@ -3,7 +3,7 @@
 	<contains minimum="2" maximum="4">scrap metal</contains>
 	<description>This reactor increases fuel efficiency by 50% </description>
 	<resistance resists="KINETIC" strength="2"></resistance>
-	<shipResource capacity="150" resource="FUEL">
+	<shipResource capacity="200" resource="FUEL">
 		<resourceExtraction item="blue crystal" ratio="1" destroy="0.25" dismantle="0.75" />
 	</shipResource>
 	<shipModifier uid="1" modifies="FUEL_EFFICIENCY"

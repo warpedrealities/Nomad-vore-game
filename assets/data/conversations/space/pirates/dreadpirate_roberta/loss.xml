@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			Dread pirate Roberta's ship is disabled by your weapons, at least for now. You have a chance to try and board her ship and end her reign of terror for good.
+		</text>
+			<effect type="setlocalflag" flag="boarding" value="1" />	
+		<choice destination="flee"
+			text="flee" />
+		<choice destination="boarding"
+			text="board the ship" />
+	</page>
+	
+	<page ID="flee">
+	<text>
+	You decide to flee rather than face her, you've escaped your fate, but you suspect roberta will be back.
+	</text>
+		<special effect="healship" />
+		<choice destination="end" text="flee"/>
+	</page>
+
+	<page ID="boarding">
+		<text>
+		You bring your ship in to dock with the pirate vessel, a series of thunks heralding the connection airlock to airlock. Steel yourself if you must, but the dread pirate roberta awaits.
+		</text>	
+		<choice destination="raid" text="time to board"/>
+	</page>
+	<page ID="raid">
+		<text>
+		</text>
+
+		<special effect="dock" />
+	</page>
+</Conversation>

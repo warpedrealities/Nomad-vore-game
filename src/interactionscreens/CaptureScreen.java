@@ -83,6 +83,9 @@ public class CaptureScreen extends Screen implements Callback {
 	private void flush() {
 		int index = specimenList.getSelect();
 		if (index < widget.getCapacity() && widget.getNPC(index) != null) {
+			if (widget.getNPC(index).getFlushScript() != null) {
+
+			}
 			description.addText("containment chamber:" + index + " has been purged.");
 			widget.setNPC(null, index);
 

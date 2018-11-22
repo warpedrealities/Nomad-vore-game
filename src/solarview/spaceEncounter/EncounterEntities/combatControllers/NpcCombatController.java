@@ -21,7 +21,7 @@ public class NpcCombatController implements CombatController {
 	private NpcCombatControllerSense sense;
 	private EffectHandler effectHandler;
 
-	
+
 	public NpcCombatController(String file) {
 		// load lua file
 		sense=new NpcCombatControllerSense();
@@ -44,7 +44,7 @@ public class NpcCombatController implements CombatController {
 		try {
 			m_script.call();
 			LuaValue luascript = CoerceJavaToLua.coerce(this);
-			LuaValue luaSense = CoerceJavaToLua.coerce(sense);	
+			LuaValue luaSense = CoerceJavaToLua.coerce(sense);
 			LuaValue luacontrol = m_globals.get("main");
 			if (!luacontrol.isnil()) {
 				luacontrol.call(luascript,luaSense);
@@ -55,7 +55,7 @@ public class NpcCombatController implements CombatController {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void setCourse(int heading, int thrust)
 	{
 		byte value=0;
@@ -77,26 +77,32 @@ public class NpcCombatController implements CombatController {
 		}
 		sense.getControlledShip().setCourse(value);
 	}
-	
+
+	public void activateShield() {
+		if (!sense.getControlledShip().getShield().isActive()) {
+			sense.getControlledShip().getShield().toggleStatus();
+		}
+	}
+
 	public void fire(int index, int target)
 	{
 		if (!sense.getControlledShip().getWeapons().get(index).isReady())
 		{
 			return;
 		}
-		
+
 		if (!WeaponCheck.checkRange(sense.getControlledShip(),
-				sense.getShips()[target], 
+				sense.getShips()[target],
 				sense.getControlledShip().getWeapons().get(index)))
 		{
 			return;
 		}
-		if (!WeaponCheck.checkArc(sense.getControlledShip(), 
-				sense.getShips()[target], 
+		if (!WeaponCheck.checkArc(sense.getControlledShip(),
+				sense.getShips()[target],
 				sense.getControlledShip().getWeapons().get(index)))
 		{
 			return;
-		}		
+		}
 		sense.getControlledShip().getActions().add(new CombatAction(sense.getControlledShip().getWeapons().get(index),
 				sense.getShips()[target],index));
 		return;

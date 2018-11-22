@@ -26,8 +26,8 @@
 			<pairedportal sprite="3" destination="Cave 2B" x="3" y="3"
 				ID="11">a tunnel into the depths</pairedportal>
 		</preloadprefab>
-		<cavegen iterations="2" tile="5" threshold="45" bounds="100"
-			minfloor="0.5">
+		<cavegen iterations="3" tile="5" threshold="35" bounds="100"
+			minfloor="0.6">
 			<noise tile="3" scarcity="10" />
 			<floodfill tile="1" />
 		</cavegen>

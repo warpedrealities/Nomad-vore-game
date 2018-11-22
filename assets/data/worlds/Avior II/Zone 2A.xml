@@ -18,6 +18,16 @@
 	<mapgen>
 		<walloff wall="4" sides="northeast" />		
 	<partition xmin="4" xmax="64" ymin="4" ymax="64">
+			<randprefab width="5" height="6">
+				<row>22222</row>
+				<row>25252</row>
+				<row>55255</row>
+				<row>55255</row>
+				<row>55555</row>
+				<row>25552</row>
+				<pairedportal sprite="3" destination="Cave zone" x="2"
+					y="3" ID="11" facing="4">A cavern entrance</pairedportal>
+			</randprefab>	
 		<circles min="1" max="5" minCircles="64" maxCircles="64">
 			<floodfill tile="0">
 			</floodfill>		

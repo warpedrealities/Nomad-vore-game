@@ -28,6 +28,7 @@ public class NPC_RPG_statblock {
 	private Value_Calculator valueCalculator;
 	private ArrayList<CombatMove> moveList;
 	private String[] statusTags;
+	private String flushScript;
 
 	private ConditionalDescription conditionalDescription;
 
@@ -89,6 +90,9 @@ public class NPC_RPG_statblock {
 				}
 				if (Enode.getTagName().equals("conditionalDescription")) {
 					conditionalDescription = new ConditionalDescription(Enode);
+				}
+				if (Enode.getTagName().equals("flushScript")) {
+					flushScript = Enode.getAttribute("value");
 				}
 			}
 		}
@@ -254,5 +258,9 @@ public class NPC_RPG_statblock {
 
 	public ConditionalDescription getConditionalDescription() {
 		return conditionalDescription;
+	}
+
+	public String getFlushScript() {
+		return flushScript;
 	}
 }

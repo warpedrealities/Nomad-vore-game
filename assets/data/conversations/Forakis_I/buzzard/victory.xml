@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<preference fetish="demis" />
+		<preference fetish="analvore" />
+		<text>
+		Despite your best attempts to fight the harpy buzzard off, they manage to swoop down and get your head shoved neatly right between their ass cheeks, their wings wrapping around your head as they start to shove you in.
+		</text>
+		<choice destination="analvore0" text="bird butt food" />
+	</page>
+	
+	<page ID="analvore0">
+	<text>
+	The harpy's ass is already getting squished onto your face, the foul scent filling your nose as you are squished in deeper and deeper, already starting to feel your shoulders getting squished in next. The buzzard squawked loudly in pleasure as it squished down over your shoulders, your chest slipping in with a long wet shlorp, as you are pushed deeper and deeper into the harpy's rather gross intestines. With some more wiggling and squirming, you slide up the harpy's ass like a long dildo, getting pushed all the way up into it's intestines, destined to take the long trip towards it's stomach.
+	</text>
+	<choice destination="analvore1" text="so gross"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	With only your feet wiggling around outside the harpy, it only took a single pleasured moan and a loud squelch, and your body vanished from the world, sucked inside the tight and rank bowels of a dumb desert faring harpy. With a loud groan you felt yourself getting squished in deeper and deeper, getting pressed through the bird's long winding bowels. The bird settled down on to the ground, too tired and full to keep flying, instead relaxing and rubbing over their distended gut full of you.
+	</text>
+	<choice destination="analvore2" text="finally in the stomach"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	After what felt like hours, you finally get squeezed into the harpy's rancid gut, the fleshy sack already full of digestive acids eager to get to work on the meal that has taken it's sweet time getting to it's destination. The bird let out a triumphant caw, then a rather wet belch after the air you displaced in their came out their beak. 
+	</text>
+	<choice destination="struggle" text="try and get out the way you came"/>
+	<choice destination="submit" text="get comfortable, time for digestion"/>
+	</page>
+	
+	<check ID="struggle">
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>
+	
+	<page ID="struggleEscape">
+	<text>
+	You manage to force the bird's sphincter back open, crawling back through their intestines, this time the way food is suppose to travel through it, although it was rather undignifying to be forced back through those long winding musky walls. The fleshy walls were squeezing over you in an attempt to pull you back, but you pushed through, eventually getting to the anal ring, forcing your way out as you came crawling back out of the harpy's rump no worse for wear save the stench.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+		After struggling wiggling and trying to force your way out of the buzzard, all you had to show for it was being exhausted, and a very pleasured bird who was now constantly leaking sexual fluids out of their snatch, your struggles making a very lovely sensation. But you wouldn't be able to appreciate it, since your body was now getting broken down and melted into a thick mush of ex-adventurer, every single part of you getting churned up by the bird's efficient digestive system.
+	</text>	
+	<choice destination="struggleGO" text="food for the buzzards"/>
+	<choice destination="struggleGOdisposal" text="food for the buzzards(scat)">
+	<preference fetish="disposal" />
+		</choice>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	A few hours later, your remains had been absorbed by the buzzard, with all of your body being siphoned away into the bird's thick and luscious rump cheeks, stretching them out to a pleasant plump size. The harpy stopped to turn and look at it's own ass, admiring the curves you had added to and shaking her rump a little bit in a final flaunt, your additions certainly going to help her attract a mate and capture more tasty butt food.
+	</text>
+	</gameover>
+	
+	<gameover ID="struggleGOdisposal">
+	<text>
+	A few hours later, your remains had been absorbed by the buzzard, with all of your body that it could use being siphoned away into the bird's thick and luscious rump cheeks, stretching them out to a pleasant plump size. The harpy stopped to turn and look at it's own ass, admiring the curves you had added to and shaking her rump a little bit in a final flaunt, your additions certainly going to help her attract a mate and capture more tasty butt food. Soon after it had finished basking in that pleasured predatory bliss, it felt a pressure in it's ass, making the bird land and waddle over to a small ditch in the sand, flexing it's ass and preparing to put your new form to work. Grunting, the buzzard harpy started to squeeze you back out of it's ass, your form much worse for wear from your trip through the harpy's digestive system. Your new brown bone encrusted form came slopping out of the bird's backside, plopping down into a single large steaming pile of harpy shit, the buzzard smiling and flying away to leave you to steam in the desert sun.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	You settle in to the bird's stomach, sighing and reaching down to play with your bits lightly, the musky tight confines that you had just traveled through having turned you on quite a bit. Bathing in the bird's thick stomach acids, you relax and slowly get churned away into the stomach, pleasantly relaxing as you get mushed down into bird mush, happy to feed the harpy who had pleasured you so much on your trip to it's stomach.
+	</text>
+	<choice destination="submitGO" text="food for the buzzards"/>
+	<choice destination="submitGOdisposal" text="food for the buzzards(scat)">
+	<preference fetish="disposal" />
+		</choice>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	A few hours later, your remains had been absorbed by the buzzard, with all of your body being siphoned away into the bird's thick and luscious rump cheeks, stretching them out to a pleasant plump size. The harpy stopped to turn and look at it's own ass, admiring the curves you had added to and shaking her rump a little bit in a final flaunt, your additions certainly going to help her attract a mate and capture more tasty butt food.
+	</text>
+	</gameover>
+	
+	<gameover ID="submitGOdisposal">
+	<text>
+	A few hours later, your remains had been absorbed by the buzzard, with all of your body that it could use being siphoned away into the bird's thick and luscious rump cheeks, stretching them out to a pleasant plump size. The harpy stopped to turn and look at it's own ass, admiring the curves you had added to and shaking her rump a little bit in a final flaunt, your additions certainly going to help her attract a mate and capture more tasty butt food. Soon after it had finished basking in that pleasured predatory bliss, it felt a pressure in it's ass, making the bird land and waddle over to a small ditch in the sand, flexing it's ass and preparing to put your new form to work. Grunting, the buzzard harpy started to squeeze you back out of it's ass, your form much worse for wear from your trip through the harpy's digestive system. Your new brown bone encrusted form came slopping out of the bird's backside, plopping down into a single large steaming pile of harpy shit, the buzzard smiling and flying away to leave you to steam in the desert sun.
+	</text>
+	</gameover>
+
+</Conversation>
