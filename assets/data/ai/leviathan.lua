@@ -4,7 +4,7 @@ function main(controllable, sense, script)
 	
 	count=controllable:getValue(0);
 	count=count+1
-	if (count<100 and player:getPosition():getDistance(controllable:getPosition()<8) then
+	if (count<100) and (player:getPosition():getDistance(controllable:getPosition())<8) then
 		count=100;
 	end
 	controllable:setValue(0,count);
@@ -12,7 +12,7 @@ function main(controllable, sense, script)
 	sense:drawText("The Leviathan lets out a bellowing roar of such volume that it could be heard for miles")
 	end
 	if (count>100) then
-		if (player:getPosition():getDistance(controllable:getPosition()<2)) then
+		if (player:getPosition():getDistance(controllable:getPosition())<2) then
 			controllable:startConversation()	
 		else
 			if controllable:HasPath() then

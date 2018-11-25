@@ -1,7 +1,7 @@
 
 function combat(controllable,sense,pos,hostile)
-
-	if pos:getDistance(hostile:getPosition())<2 then
+	distance=pos:getDistance(hostile:getPosition())
+	if distance<2 then
 	--if in melee range attack
 	controllable:setAttack(0)	
 	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
@@ -19,7 +19,11 @@ function combat(controllable,sense,pos,hostile)
 			if controllable:HasPath() then
 				controllable:FollowPath()
 			else
-				controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,2)
+				if (distance>4) then
+					controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,4)
+				else
+					controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,2)	
+				end
 				controllable:FollowPath()	
 			end
 		end
@@ -30,11 +34,16 @@ end
 
 function main(controllable, sense, script)  
 	pos=controllable:getPosition()
-	hostile=sense:getHostile(controllable,10,true)
+	if (controllable:getValue(0)==1) then
+		hostile=sense:getHostile(controllable,10,false)
+	else
+		hostile=sense:getHostile(controllable,10,true)
+	end
+
 	if not (hostile == nil ) and not controllable:getPeace() then
 	--combat ai here
 	combat(controllable,sense,pos,hostile)
-
+	controllable:setValue(0,1)
 	else
 	controllable:Wait()
 	end

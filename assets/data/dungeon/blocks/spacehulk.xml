@@ -14,8 +14,8 @@
 		<row>21111112</row>
 		<row>21111112</row>
 		<row>22211222</row>
-
 	</block>
+	
 	<block name="wide loop">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />
@@ -29,8 +29,155 @@
 		<row>11122111</row>
 		<row>11111111</row>
 		<row>11111111</row>
-
+	</block>
+	
+	<block name="operator hall">
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>22211222</row>
+		<row>21111112</row>
+		<row>21222212</row>
+		<row>11211211</row>
+		<row>11211211</row>
+		<row>21221212</row>
+		<row>21111112</row>
+		<row>22211222</row>
+		<widget x="3" y="3" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
 	</block>	
+	
+	<block name="operator WE">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<row>00222200</row>
+		<row>22211222</row>
+		<row>21211212</row>
+		<row>11221211</row>
+		<row>11111111</row>
+		<row>21111112</row>
+		<row>22222222</row>
+		<row>00000000</row>
+		<widget x="4" y="1" name="cargocontainer" info="normalchest" />		
+		<widget x="3" y="1" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
+	</block>
+	
+	
+	<block name="operator NS">
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<row>02211220</row>
+		<row>02111120</row>
+		<row>02112222</row>
+		<row>02111112</row>
+		<row>02112112</row>
+		<row>02112222</row>
+		<row>02111120</row>
+		<row>02211220</row>
+		<widget x="6" y="4" name="cargocontainer" info="normalchest" />			
+		<widget x="6" y="3" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
+	</block>	
+	
+	<block name="operator SWN">
+		<edge value="WEST" />
+		<edge value="EAST" />
+		<edge value="NORTH" />		
+		<row>00222200</row>
+		<row>22211222</row>
+		<row>21211212</row>
+		<row>11221211</row>
+		<row>11111111</row>
+		<row>21111112</row>
+		<row>22211222</row>
+		<row>00211200</row>
+		<widget x="4" y="1" name="cargocontainer" info="normalchest" />		
+		<widget x="3" y="1" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
+	</block>
+	
+	
+	<block name="operator NSW">
+		<edge value="NORTH" />
+		<edge value="SOUTH" />
+		<edge value="WEST" />		
+		<row>02211220</row>
+		<row>02111120</row>
+		<row>22112222</row>
+		<row>11111112</row>
+		<row>11112112</row>
+		<row>22112222</row>
+		<row>02111120</row>
+		<row>02211220</row>
+		<widget x="6" y="4" name="cargocontainer" info="normalchest" />			
+		<widget x="6" y="3" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
+	</block>	
+
+	<block name="operator SW">
+		<edge value="SOUTH" />
+		<edge value="WEST" />		
+		<row>02211220</row>
+		<row>02111120</row>
+		<row>22111120</row>
+		<row>11112222</row>
+		<row>11111112</row>
+		<row>22222112</row>
+		<row>00002222</row>
+		<row>00000000</row>	
+		<widget x="6" y="4" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
+	</block>	
+
+	<block name="operator NE">
+		<edge value="NORTH" />
+		<edge value="EAST" />		
+		<row>00000000</row>
+		<row>22220000</row>
+		<row>21122222</row>
+		<row>21111111</row>
+		<row>22221111</row>
+		<row>00211122</row>
+		<row>00211120</row>
+		<row>00211220</row>	
+		<widget x="1" y="2" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
+	</block>	
+
+	<block name="operator SE">
+		<edge value="NORTH" />
+		<edge value="EAST" />		
+		<row>00211220</row>
+		<row>00211120</row>
+		<row>00211122</row>
+		<row>22221111</row>
+		<row>21111111</row>
+		<row>21122222</row>
+		<row>22220000</row>
+		<row>00000000</row>	
+		<widget x="1" y="5" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
+	</block>	
+	
+	<block name="operator NW">
+		<edge value="NORTH" />
+		<edge value="WEST" />		
+		<row>00000000</row>
+		<row>02112222</row>
+		<row>22222112</row>
+		<row>11111112</row>
+		<row>11112222</row>
+		<row>22111200</row>
+		<row>02111200</row>
+		<row>02211200</row>	
+		<widget x="6" y="2" name="mechanism"
+						info="interaction/spacehulk/operator_dispenser" variable="105" />		
+	</block>	
+		
+
+	
 	<block name="NS corridor">
 		<edge value="NORTH" />
 		<edge value="SOUTH" />

@@ -20,7 +20,7 @@
 		<stat stat="HEALTH" value="50" />
 		<stat stat="RESOLVE" value="35" />
 		<attribute attribute="MELEE" value="2" />
-		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="PARRY" value="2" />
 		<attribute attribute="THERMAL" value="12" />
 		<combatMove name="cuisinart" pattern="MELEE"
 			bonusAttribute="MELEE" timeCost="2" bonusToHit="2" threatening="true">

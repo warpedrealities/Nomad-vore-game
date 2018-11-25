@@ -20,7 +20,7 @@
 	<mapgen>
 
 
-		<blockDungeon extent="20">
+		<blockDungeon extent="24">
 			<loadBlocks file="spacehulk" />
 
 

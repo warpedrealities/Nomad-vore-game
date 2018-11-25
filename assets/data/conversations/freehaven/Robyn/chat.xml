@@ -32,7 +32,37 @@
 	<choice destination="job0" text="$Do you have any work you need doing?">
 		<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="piratebounty0" />	
 	</choice>
+	<choice destination="job3" text="$About Roberta">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="1"	flag="piratebounty0" />	
+	</choice>
+	<choice destination="job4" text="$About Roberta">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="2"	flag="piratebounty0" />	
+	</choice>	
 	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
+	</page>
+	
+	<page ID="job3">
+	<text>
+	"Yes? what news have you got for me? completed the mission have you?"
+	</text>
+	<choice destination="end" text="$No not yet"/>
+	</page>
+	
+	<page ID="job4">
+	<text>
+	"Yes? what news have you got for me? completed the mission have you?"	
+	</text>
+	<choice destination="job5" text="$yes, Roberta has been dealt with"/>
+	</page>
+	
+	<page ID="job5">
+	<text>
+	"You have.." Robyn seems to pause for a moment, her usual perky cheerfulness seeming to faulter, but she throws herself back into the attitude once again and smiles anew even if the smile seems a bit more brittle than before "Well done, she was a dastardly pirate and you did well to dispose of her. And as I've mentioned there is the reward for it." she says and produces a stack of credit chits for you "Now is there anything else I can do for you?"
+	</text>
+	<effect type="setglobalflag" flag="piratebounty0" value="3" />		
+	<effect type="givecredits" value="25000" />
+	<choice destination="shop" text="$I'd like to spend some of these credits right here and now actually"/>
+	<choice destination="end" text="$no, that's all, have a nice day robyn"/>
 	</page>
 	
 	<page ID="job0">

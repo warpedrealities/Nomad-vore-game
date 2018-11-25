@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="USED" />
+		<text>
+			0P3R4T0R D3PL0M3NT SYST3M 0FFL1N3
+		</text>
+		<choice destination="end" text="exit" />
+	</page>
+	<page ID="start">
+		<text>
+			0P3R4T0R D3PL0M3NT SYST3M R34DY
+		</text>
+		<choice destination="salvage" text="salvage parts from the operator dispenser" />
+		<choice destination="operatorCheck" text="attempt to activate a friendly support operator">
+				<assertnot evaluate="hasperk" perk="roboticist" />
+		</choice>
+		<choice destination="operator" text="use your roboticist skills activate a friendly support operator">
+				<assertion evaluate="hasperk" perk="roboticist" />
+		</choice>
+		<choice destination="end" text="exit" />
+	</page>
+	
+	<check ID="operatorCheck">
+		<test what="TECH" DC="10" />
+		<outcome destination="operatorSuccess" />
+		<outcome destination="operatorFailure" />	
+	</check>
+	
+	<page ID="operatorSuccess">
+	<text>
+	You tinker with the dispenser. Due to you not being a part of the crew it's necessary to use all your technical know how to get it to produce and activate an operator that will assist you.
+	</text>
+		<effect type="setlocalflag" flag="USED" value="1" />
+		<special effect="createNPC" file="spacehulk/friendly_operator" temp="true"/>	
+		<choice destination="end" text="exit"/>
+	</page>
+	
+	<page ID="operatorFailure">
+	<text>
+	You tinker with the dispenser. Due to you not being a part of the crew it's necessary to use all your technical know how to try and get it to produce and activate an operator that will assist you.	
+	</text>
+		<effect type="setlocalflag" flag="USED" value="1" />
+		<special effect="createNPC" file="spacehulk/hostile_operator" temp="true"/>	
+		<choice destination="end" text="exit"/>	
+	</page>
+	
+	<page ID="operator">
+	<text>
+	You use your robotics skills to program the operator under assembly to consider you a part of the crew. As the operator powers on you're struck by how sometimes it pays to have specialist skills.
+	</text>
+		<effect type="setlocalflag" flag="USED" value="1" />
+		<special effect="createNPC" file="spacehulk/friendly_operator" temp="true" />	
+		<choice destination="end" text="exit"/>	
+	</page>
+
+	<page ID="salvage">
+	<text>
+	You strip the dispenser's part trays and material hoppers for usable material. You got a decent haul all told, comp valves, optics, batteries, scrap. But you've pretty much rendered the dispenser unusable for its intended purpose.
+	</text>
+		<effect type="giveitem" value="3" item="computation valve" />	
+		<effect type="giveitem" value="1" item="battery" />			
+		<effect type="giveitem" value="1" item="optics" />		
+		<effect type="giveitem" value="3" item="scrap metal" />	
+		<effect type="setlocalflag" flag="USED" value="1" />
+		<choice destination="end" text="exit"/>	
+	</page>
+	
+	
+</Conversation>
