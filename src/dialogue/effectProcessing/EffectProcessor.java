@@ -184,7 +184,11 @@ public class EffectProcessor {
 		}
 		if (str.equals("createNPC")) {
 			String filename = node.getAttribute("file");
-			ViewScene.m_interface.createNPC(filename, m_player.getPosition(),false);
+			boolean temp = false;
+			if (node.getAttribute("temp").equals("true")) {
+				temp = true;
+			}
+			ViewScene.m_interface.createNPC(filename, m_player.getPosition(), temp);
 		}
 		if (str.equals("changeFaction")) {
 			String faction = node.getAttribute("faction");
