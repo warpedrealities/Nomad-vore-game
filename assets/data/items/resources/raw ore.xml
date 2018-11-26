@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemResource name="raw ore" weight="1" value="100">
+	<description>A lump of unrefined metal ore, it's little use to you in this raw form.</description>
+
+</ItemResource>

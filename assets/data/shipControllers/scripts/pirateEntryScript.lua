@@ -46,8 +46,10 @@ function checkTime(script,sense)
 	if (arrivalTime==0) then
 	sense:getFlags():setFlag("ARRIVAL",currentTime)	
 	else 
-		if (currentTime>arrivalTime+50) and not (hostile=sense:getDetection():getHostile(script:getPosition().x,script:getPosition().y,8) ==nil) then
-			script:removeShip()	
+		if (currentTime>arrivalTime+50) then
+			if not (sense:getDetection():getHostile(script:getPosition().x,script:getPosition().y,8) == nil) then
+			script:removeShip()
+			end
 		end
 	end
 

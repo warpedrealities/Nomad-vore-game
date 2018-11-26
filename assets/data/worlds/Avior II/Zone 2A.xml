@@ -11,6 +11,7 @@
 		<tile sprite="7" vision="EMPTY" movement="1"> a long way down</tile>		
 	</tileset>
 	<transition direction="west">Avian Undertown</transition>
+	<transition direction="south">Zone 2B</transition>	
 	<description> 
 	The forest floor is dark and its shadows oppressive, the space between the trees is rife with vicious thorny plants and amidst the gloom and threat comes the distant sounds of yips, barks and growls.
 	</description>

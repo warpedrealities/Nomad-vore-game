@@ -20,7 +20,69 @@
 	<choice destination="brightfeather4" text="So about a new home for brightfeather's harpy friends">
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="4" />
 	</choice>	
+	<choice destination="brightfeather5" text="Can we move brightfeather's harpy friends over now?">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="5" />
+	</choice>		
+	<choice destination="brightfeather6" text="So about that ore">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="6" />
+	</choice>			
 	<choice destination="end" text="Nothing, stay friendly"/>
+	</page>
+	
+	<page ID="brightfeather5">
+	<text>
+	"Well, uh. not really. I mean, me and the other girls got to talking about it. And we'd quite like to give them a bunch of nesting boxes and stuff up in the trees. Thing is we're kinda, well..we don't have enough metal fasteners for that. Could you get us some ore so we could make more?" she asks smiling in a way that makes it clear at least she's asking a lot.
+	</text>
+	<choice destination="brightfeather5A" text="$that seems a bit much for ferals"/>
+	<choice destination="brightfeather5B" text="$okay where am i going to find this ore?"/>
+	<choice destination="end" text="$you must be joking, i'm out of here"/>
+	</page>
+	
+	<page ID="brightfeather5A">
+	<text>
+	"You think they won't appreciate it? well, maybe. But they'll be safe with lots of places to nest above ground. And we'll appreciate that we did the right thing for them even if they don't. So? help us? please."
+	</text>
+	<choice destination="brightfeather5B" text="$okay where can i find this ore then?"/>
+	<choice destination="end" text="$not sold on this idea, bye"/>
+	</page>
+	
+	<page ID="brightfeather5B">
+	<text>
+	"Oh well, it's underground. There's some caves east of here. We don't get on with caves, no room to fly. So we don't go down there much. But you should be fine, you don't look like you have any problems with caves."
+	</text>
+	<choice destination="brightfeather5C" text="$sure I'll do it"/>
+	<choice destination="end" text="$caves aren't my idea of fun"/>
+	</page>
+	
+	<page ID="brightfeather5C">
+	<text>
+	"Okay good. Just get 5 ore and that should be enough for us to get it done. But be careful, there's wolfgirls in those caves. But I'm sure you'll be fine."
+	</text>
+	<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="5" />
+	<choice destination="end" text="$now you tell me, still I'll be back with the ore"/>
+	</page>
+
+	<page ID="brightfeather6">
+	<text>
+	"Yes? have you got the ore we need?" she asks with a smile, cocking her head to the side.
+	</text>
+	<choice destination="brightfeather6A" text="$Yes I do">
+		<condition evaluate="HASITEM" operator="greaterthan" value="5"
+			item="raw ore" />
+	</choice>
+	<choice destination="shop" text="$not yet but i need to trade for some things"/>
+	<choice destination="end" text="$not yet"/> 
+	</page>
+	
+	<page ID="brightfeather6A">
+	<text>
+	"Oh? oh good. thankyou friend. I'll just take those off you, and here's something for your trouble." she says and and takes the ore, giving you some gold for your work.
+	</text>
+		<effect type="removeitem" item="raw ore" value="5" />
+		<effect type="givegold" value="2000" />
+		<effect type="experience" value="500" />		
+	<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="7" />	
+	<choice destination="end" text="$that's good"/>
 	</page>
 	
 	<page ID="brightfeather4">
@@ -34,7 +96,7 @@
 	<text>
 	"Oh? OH! a newt? with like..a tongue..and, lurking? as in sneaking. My that sounds dangerous, but the point is you got rid of it. Good. that is, very..very good. Can't have a newt eating all of Brightfeather's family..that would be very bad. Thankyou for getting rid of it." says Keliya with a smile "Now that the area is safe we could make it more comfortable for Brightfeather's friends maybe." 
 	</text>
-<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="5" />	
+	<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="5" />	
 			<effect type="experience" value="500" />
 		<choice destination="shop" text="Yes, but now i need some supplies"/>	
 			<choice destination="end" text="I'm happy to help, I'll come back later"/>
