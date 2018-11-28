@@ -10,7 +10,7 @@
 		thing is a primeval terror, and no doubt you now have its attention.
 	</description>
 	<rpg>
-		<experiencevalue value="35" />
+		<experiencevalue value="40" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

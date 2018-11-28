@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <Conversation>
 
-
-	<page ID="start">
+<page ID="start">
 		<condition evaluate="FACTIONFLAG" value="1" operator="equals"
 			flag="allegiance" />
 		<text>
@@ -339,6 +338,11 @@
 			<assertion evaluate="hasperk" perk="analvore" />
 			<assertion evaluate="haspart" part="butt" />	
 		</choice>
+<choice destination="breast1" text="here comes the breast part">
+			<assertion evaluate="hasperk" perk="breastvore" />
+				
+		</choice>
+
 	</page>
 
 	<page ID="analvore0">
@@ -898,6 +902,140 @@
 		<special effect="removenpc" />
 		<choice destination="end" text="-Let's go.-" />
 	</page>
+
+<!--breast vore content written by ConnTheElite -->
+
+
+<page ID="breast1">
+		<text> 
+			You look down and notice the elf staring intently at your breasts. This comes as somewhat of a surprise from
+			a girl raised by a culture that seems to value butts above anything else. "Go on, you may suckle them if you wish."
+			You tell her with a grin across your face. The green-skinned girl gladly acts on this statement and pops your left nipple
+			into her mouth. She uses her tongue to stimulate your nipple as she increases the intensity of her sucking. Suddenly,
+			she removes her mouth from her nipple and looks up at you. "Is there something wrong?" You ask. "N-no." she anwsers with a
+			blush on her face. "I was just thinking of my friend who also enjoys this sort of thing."
+				
+				
+				
+		</text>
+		<choice destination="breast2" text="Double the girls means double the fun." />
+	</page>
+
+<page ID="breast2">
+		<text> 
+			"She's welcome to join. My right breast could do with the attention." You respond with a smile. The elf nods a looks around before
+			waving towards a very similar-looking girl. The second elf quickly runs over to you and exchanges greetings with her friend. She then
+			promptly sticks your right nipple into her mouth and begins mimicking her friend. Not to be outdone, the first elf resumes her task
+			of pleasuring your left breast. Having two girls dedicate themselves to the task of pleasruing you through breast play alone is a new
+			and exhilarating experience.
+
+<conditional><assertion evaluate="hasperk" perk="Lactation"/>
+
+The combined efforts of the elf girls cause you to orgasm. Milk from your breasts fills their waiting mouths. The elves seem surprised by this turn of events
+but continue to suckle your mammaries until they get their fill. The elves eventually detach their mouths from your breasts. "That was the most delicious thing I have
+ever tasted." The first elf compliments you with lust her voice. "Yes! Yes! Please! We want more!" The second elf adds. Apparently, you've not only inherited the mushroom mother's
+ability to produce milk on demand, you've also inherited the ability to make your milk addictive and intoxicating! Enough to make other creatures into boob sluts! The two elves
+eye you with expecting stares. They are now completley at your mercy.
+
+</conditional>	
+
+<conditional><assertnot evaluate="hasperk" perk="Lactation"/>
+
+The combined efforts of the elf girls cause you to orgasm. Your cum leaks out onto the ground below you. The elves detach their mouths from your breasts. 
+"Your breasts are the best I've ever tasted." The first elf compliments you. "I must agree." The second elf adds. "We have to get back to work, but if you happen
+to be in our village again, we can do this again." With a slightly dissapointed sigh, you nod as the elves begin to walk off. Apparently they are not in love with your
+breasts to the point where they would want to become one with them.
+
+</conditional>	
+				
+				
+		</text>
+		<choice destination="breast3" text="Give them what they want.">
+<assertion evaluate="hasperk" perk="Lactation" />
+</choice>
+
+<choice destination="end" text="I better get going." />
+	</page>
+
+
+
+<page ID="breast3">
+		<text>
+			
+		You grin and confidently shake your <macro ID="breast_size_desc" /> breasts at the elves. "Don't keep my girls waiting." You command them with a hand cupped underneath
+each tit. The egar elves resume their breast suckling, but this time your nipples suck back. With one big pull, your breasts swallow the heads of both elves. It is now only a matter of time
+before they are taken in completley. You look at your surroundings and see that you're threesome has gathered a bit of an audience. Several elf villagers and guard watch the torsos of your
+willing prey disappear into your mammaries. None of them raise a finger to stop you. "I guess this really is a girl-eat-girl planet." You think to yourself. "Those who willingly
+give themselves up as food, will be treated as such." When you looks back to your chest, you see that your breasts have worked their way to the elves' rear ends. You would love to give
+those fine asses one last slap for the road, but your breasts have swollen up such a massive size that reaching around them is nearly impossible. You place your hand on the ground and
+angle your chest upwards to let gravity do its thing. You moan as your hungry tiddies quickly eat up the butts and legs of the green-skinned pair. An outline of an elf assuming the fetal position can been
+seen in both of your breasts. Muffled cries of delight can be heard from inside. It is time for them to become one with you.
+
+		</text>
+		<choice destination="breastend1" text="I wonder what elf milk is like?" />
+		<choice destination="breastend2" text="You two will make fine additions to my girls.">
+<condition operator="lessthan" evaluate="BODYVALUE" bodypart="breasts" partvalue="size" value="14" />
+</choice>
+<choice destination="breastend3" text="You two will make fine additions to my girls">
+	<condition operator="greaterthan" evaluate="BODYVALUE" bodypart="breasts" partvalue="size" value="14" />
+</choice>
+
+	</page>
+
+
+<page ID="breastend1">
+		<text>
+
+		They loved your milk, why not use their bodies to make more? You place one hand on top of your left breast as your body begins the process of turing your
+		prey into milk. The heavy weight of your elf-filled breasts begins to lighten as their bodies are broken down into liquid. You use your hands to massage your shrinking
+		breasts. Within the hour, the green elves have become nothing but milk inside your mammaries, fuel that you will use to continue your own adventures. You lick your lips
+		as you position your left nipple near your mouth. You then being you suck the white creamy liquid out of your left breast. "mmm. sweet but also a bit thick. just like
+		like their rear ends." You empty the milk supply in your left breast before giving the right one the same treatment. Your breasts have shruken back down to their usual size
+		and you now have a bit of a beer belly full of soon-to-be digested elf milk. You give your belly a pat before standing back up to resume your adventure.
+			
+		</text>
+		<effect type="feed" value="150" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+<page ID="breastend2">
+<text>
+
+	You decide to break the elves down into nutrients and tit fat. Who knows, maybe more people will willingly give themselves up to you if your assets are larger?
+	With this devious thought in mind, you lie down on the earthy soil and let your body do its work. Your breasts quickly wear down the bodies the of the elves, their
+	figures can no longer been seen from outside. As your breasts begin to shrink, you watch them intently. Surely absorbing TWO girls will increase your cup size.
+	Several minutes pass and your breasts stop shrinking. To your delight, they've increased by one cup size each! You you sit up and pat your right breast with one hand. "I know you
+	two can't hear me anymore, but thank you. You've made fine additions to my body." 
+			
+
+</text>
+<effect type="feed" value="150" />
+		<special effect="removenpc" />
+<special effect="mutation">
+			<mutation part="breasts" modifier="1" variable="size"> </mutation>
+		</special>
+<choice destination="end" text="carry on" />
+</page>
+
+<page ID="breastend3">
+<text>
+
+
+	You decide to break the elves down into nutrients and tit fat. Who knows, maybe more people will willingly give themselves up to you if your assets are larger?
+	With this devious thought in mind, you lie down on the earthy soil and let your body do its work. Your breasts quickly wear down the bodies the of the elves, their
+	figures can no longer been seen from outside. As your breasts begin to shrink, you watch them intently. Surely absorbing TWO girls will increase your cup size.
+	Several minutes pass and your breasts stop shrinking. To your dissapointment, your breasts have returned to the their usual, non-girl-filled size. You sit up with
+	a dissapointed grunt. "At least their nutrients will satisfy the rest of my body... for now."
+		
+		
+	</text>
+<effect type="feed" value="150" />
+		<special effect="removenpc" />
+
+
+		<choice destination="end" text="carry on" />
+</page>
 
 
 	<page ID="info">

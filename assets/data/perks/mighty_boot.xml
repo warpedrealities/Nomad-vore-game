@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <perk name="mighty boot">
-
+	<requirement count="1">
+		<req>DEPRECATED</req>
+	</requirement>
 	<description>
 		By judicious application of the mighty boot you can send your foes
 		flying away from you with a mighty kick. Be mighty! 6AP to use

@@ -10,7 +10,6 @@
 				or your own hunger...
 			</conditional>
 		</text>
-		<effect type="setglobalflag" flag="AMIIA_HARPIES" value="1" />
 		<picture source="harpyportrait"/>		
 		<choice destination="receiveoral" text="Force her to lick you">
 			<assertion evaluate="haspart" part="vagina" />
@@ -22,12 +21,18 @@
 		<choice destination="meal0" text="she'd make a great meal">
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+
+<choice destination="breast1" text="feed her to your tits">
+			<assertion evaluate="hasperk" perk="breastvore" />
+		</choice>
+
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
 				<assertion evaluate="hasperk" perk="cockvore" />
 				<assertion evaluate="hasperk" perk="unbirthing" />
 				<assertion evaluate="hasperk" perk="analvore" />
+<assertion evaluate="hasperk" perk="breastvore" />
 			</assertion>
 		</choice>
 				<choice destination="capture" text="Use you capture device.">
@@ -250,5 +255,80 @@
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>
+
+<page ID="breast1">
+		<text>You walk over to the defeat harpy putting one hand on your
+				<macro ID="breast_size_desc" />
+				breasts. You forcibly push her head into your right nipple.
+				the harpy lets out a few muffled noises in protest, but she is unable to put up a serious effort to resist you.
+				As the unfortunate bird girl gives up her struggles, your nipple opens up and swallows her head.
+				
+		</text>
+		<choice destination="breast2" text="Get in there!" />
+	</page>
+
+
+<page ID="breast2">
+		<text>
+			As your nipple overtakes the harpy, your right breast swells in size to accomedate your prey.
+			Her movements inside you feel astounding. You massage your left breast as your breast swallows up her wings and chest.
+			This extreme stimulation almost brings you to orgasm and before you know it, the harpy's entire body in now trapped inside your right breast.
+		</text>
+		<choice destination="breastend1" text="Milk time!" />
+		<choice destination="breastend2" text="Absorb her completley">
+<condition operator="lessthan" evaluate="BODYVALUE" bodypart="breasts" partvalue="size" value="10" />
+</choice>
+<choice destination="breastend3" text="Absorb her completley">
+	<condition operator="greaterthan" evaluate="BODYVALUE" bodypart="breasts" partvalue="size" value="10" />
+</choice>
+
+	</page>
+
+
+<page ID="breastend1">
+		<text>
+			With the defeated harpy now trapped inside your hungry mammary, you being the process on breaking her down into millk.
+			You let out a pleasured sigh as the harpy's sensual movements cease. Your right breast shrinks in size as your prey's
+			solid form in broken down into liquid. You sit down on the grass and stare down at your still inflated chest. You almost wish
+			another harpy would come around to feed your other tit and that you could keep them this size. You fonndle your right breast and place the nipple into your
+your mouth to begin sucking out the white creamy fluid stored inside. She tastes surprisingly sweet. You wonder how future meals will taste if chose to injest them this way. As you suck out the
+last of the harpy milk, your right breast has returned to it's orginal size. With a belly full of milk, you continue on your way.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+<page ID="breastend2">
+<text>
+
+
+			You sit on the grass as your breasts begin to break the harpy gir down into nutrients. You bounce your right breast up and down
+		to tease the harpy and signify your victory. Your body wastes no time in breaking down your prey as the shape of the harpy girl can no longer be seen in your right breast.
+		as your right breast begins to shrink, you notice your left one begins to grow in size. You now enjoy a permanet size increase for both of your girls!
+
+</text>
+<effect type="feed" value="95" />
+		<special effect="removenpc" />
+<special effect="mutation">
+			<mutation part="breasts" modifier="1" variable="size"> </mutation>
+		</special>
+<choice destination="end" text="carry on" />
+</page>
+
+<page ID="breastend3">
+<text>
+		You sit on the grass as your breasts begin to break the harpy gir down into nutrients. You bounce your right breast up and down
+		to tease the harpy and signify your victory. Your body wastes no time in breaking down your prey as the shape of the harpy girl can no longer be seen in your right breast.
+Your body absorbs the nutrients provided to it by your right tit. You are a bit dissapointed to see that your right breast has shrunk back down to its orginal size and your left one hasn't grown at all either.
+Apparently you are so well endowed that absorbing an entire girl is not enough to improve your cup size.
+		
+	</text>
+<effect type="feed" value="95" />
+		<special effect="removenpc" />
+
+
+		<choice destination="end" text="carry on" />
+</page>
 
 </Conversation>

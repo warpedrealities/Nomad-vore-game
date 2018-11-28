@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ItemWeapon name="shock wand" weight="3" value="750">
+	<tagSet value="PM" />
+	<description>
+		A slender electrical discharge wand used for crowd control, riot suppression and prisoner compliance. has a chance to stun 2AP Does 4-6 shock damage. (P)
+	</description>
+	<modifier>
+		<parry value="1" />
+	</modifier>
+	<combatMove name="shock" pattern="MELEE" ammoCost="1" bonusAttribute="MELEE"
+		timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="6" maxValue="12"
+			modifier="STRENGTH" />
+		<missText count="1">
+			<text>you fail to zap TARGET .</text>
+		</missText>
+		<hitText count="2">
+			<text>you zapp TARGET for VALUE shock damage</text>
+			<text>you jab TARGET with the wand inflicting VALUE shock damage</text>			
+		</hitText>
+		<effectStatus probability="10">
+			<applyText>TARGET is stunned</applyText>
+			<statusStun uid="9" duration="10">
+				TARGET is no longer stunned
+			</statusStun>
+		</effectStatus>		
+	</combatMove>
+	<energy refill="ENERGY E-cell advanced power-cell" efficiency="10"
+		capacity="100" />	
+</ItemWeapon>

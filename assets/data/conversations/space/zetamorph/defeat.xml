@@ -13,6 +13,20 @@
 		<choice destination="sex0" text="I could go for a fuck">
 		<assertion evaluate="haspart" part="vagina" />
 		</choice>
+		<choice destination="predChoices" text="you want to do something predatory"/>
+		<choice destination="study" text="study her">
+			<assertnot evaluate="hasEntry" entry="lifeforms/zetamorph.xml" />
+			<assertnot evaluate="hasResearch" research="zetamorph" />
+		</choice>
+
+		<choice destination="end" text="not interested right now" />
+	</page>
+
+	<page ID="predChoices">
+	<text>
+	So what will it be?
+	</text>
+
 		<choice destination="Pcockvore0" text="cockvore her">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
@@ -25,10 +39,6 @@
 		<choice destination="analvore0" text="she should submit to my ass">
 			<assertion evaluate="hasperk" perk="analvore" />
 		</choice>
-		<choice destination="study" text="study her">
-			<assertnot evaluate="hasEntry" entry="lifeforms/zetamorph.xml" />
-			<assertnot evaluate="hasResearch" research="zetamorph" />
-		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -36,11 +46,9 @@
 				<assertion evaluate="hasperk" perk="unbirthing" />
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
-		</choice>
-		<choice destination="end" text="not interested right now" />
+		</choice>		
+		<choice destination="start" text="on second thoughts"/>
 	</page>
-
-		
 	<page ID="analvore0">
 	<text>
 		You look at your formidable meal but think you're up for the challenge. Besides, she was already a pain in your ass, making her a meal for your ass is just poetic justice. You 

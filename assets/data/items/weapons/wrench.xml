@@ -6,7 +6,7 @@
 		damage. (P)
 	</description>
 	<modifier>
-		<parry value="1" />
+		<parry value="0" />
 	</modifier>
 	<combatMove name="bash" pattern="MELEE" bonusAttribute="MELEE"
 		timeCost="2" actionCost="4" basicAction="true" moveType="FIGHT">

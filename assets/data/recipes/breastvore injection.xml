@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="breastvore injection" requiredskill="0" startunlocked="true">
+	<description>
+	A mutagenic compound injectable into one that adapts one breasts to enable breastvore. 
+	</description>
+	<ingredient item="mutagen" quantity="1" />
+	<result item="breastvore injection" />
+</recipe>

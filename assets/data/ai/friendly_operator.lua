@@ -1,9 +1,18 @@
 
-function combat(controllable,sense,pos,hostile)
+function combat(controllable,sense,pos,hostile,player)
 
 	if pos:getDistance(hostile:getPosition())<2 then
 	controllable:setAttack(0)
 	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+	else 
+		if player:getDistance(hostile:getPosition())<2 then
+			if controllable:HasPath() then
+				controllable:FollowPath()
+			else
+				controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,2)
+				controllable:FollowPath()
+			end		
+		end
 	end
 end
 
@@ -18,7 +27,7 @@ function medical(controllable,player,sense,pos)
 		if controllable:HasPath() then
 			controllable:FollowPath()
 		else
-			controllable:Pathto(actor:getPosition().x,actor:getPosition().y,2)
+			controllable:Pathto(player:getPosition().x,player:getPosition().y,2)
 			controllable:FollowPath()
 		end	
 	
@@ -34,7 +43,7 @@ function main(controllable, sense, script)
 		hostile=sense:getHostile(controllable,10,true)
 		if not (hostile == nil ) then
 			--combat ai here
-			combat(controllable,sense,pos,hostile)
+			combat(controllable,sense,pos,hostile,player)
 		else
 			if controllable:HasPath() then
 			controllable:FollowPath()

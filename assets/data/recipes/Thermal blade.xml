@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<recipe name="Thermal blade" requiredskill="1" startunlocked="false">
+	<description>
+		A modification to the basic knife to superheat the blade to inflict thermal damage.
+	</description>
+	<ingredient item="scrap metal" quantity="3" />
+	<ingredient item="battery" quantity="1" />
+	<tokenRequirement item="gadgeteer" quantity="1" />
+	<result item="Thermal blade" />
+</recipe>

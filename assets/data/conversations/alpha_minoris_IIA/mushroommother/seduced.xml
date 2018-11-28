@@ -6,13 +6,36 @@
 		The mother of these mushrooms lies on her back, overwhelmed
 		by your own seductive retaliation. She thought she'd be the seducer here.
 		</text>
-		<!--<choice destination="sample" text="Take a sample for research purposes." />
+		<choice destination="drink1" text="Drink from the tap." />		
+		<choice destination="breast1" text="If anyone's getting their tits sucked here, it's me.">
+			<assertion evaluate="hasperk" perk="breastvore" />
+		</choice>		
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>			
+		<choice destination="sample" text="Take a sample for research purposes." >
 			<assertnot evaluate="hasEntry" entry="lifeforms/mushroommother.xml"/>
-			<assertnot evaluate="hasResearch" research="mushroommother"/>-->
-		<choice destination="drink1" text="Drink from the tap." />
+			<assertnot evaluate="hasResearch" research="mushroommother"/>
+		</choice>
+
 		<choice destination="end" text="Leave her be." />
 	</page>
 
+	<page ID="devour">
+		<text>
+			You have devoured her in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="150" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>		
+	
 	<page ID="sample">
 		<text>
 		Holding an emptied can of space soda to the mother's nipple, you quickly fill
