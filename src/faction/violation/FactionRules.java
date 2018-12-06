@@ -10,6 +10,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import faction.Faction;
+import faction.FactionLibrary;
 import faction.violation.FactionRule.ViolationType;
 import shared.ParserHelper;
 
@@ -17,6 +19,7 @@ public class FactionRules {
 
 	private Map<String, Map<ViolationType, FactionRule>> ruleHierarchy;
 	private Set<String> witnessNames;
+	private Faction faction;
 
 	public FactionRules(String zoneRules) {
 
@@ -55,6 +58,9 @@ public class FactionRules {
 				if (Enode.getTagName() == "witness") {
 					witnessNames.add(Enode.getAttribute("name"));
 				}
+				if (Enode.getTagName().equals("faction")) {
+					faction = FactionLibrary.getInstance().getFaction(Enode.getAttribute("value"));
+				}
 			}
 		}
 	}
@@ -79,6 +85,10 @@ public class FactionRules {
 			}
 		}
 		return 0;
+	}
+
+	public Faction getFaction() {
+		return faction;
 	}
 
 }

@@ -22,7 +22,7 @@ public class Faction {
 	String filename;
 	Map<String, Integer> factionRelationships;
 	int defaultRelationship;
-
+	int violation;
 	private FlagField factionFlags;
 
 	public Faction() {
@@ -98,6 +98,8 @@ public class Faction {
 		} else {
 			dstream.writeBoolean(false);
 		}
+
+		dstream.writeInt(violation);
 	}
 
 	public void load(DataInputStream dstream) throws IOException {
@@ -116,6 +118,7 @@ public class Faction {
 			factionFlags.load(dstream);
 		}
 
+		violation = dstream.readInt();
 	}
 
 	public String getFilename() {
@@ -148,6 +151,14 @@ public class Faction {
 		alt.factionRelationships.put(filename, v);
 
 		NPCStatblockLibrary.getInstance().resetThreat();
+	}
+
+	public void setViolation(int violationLevel) {
+		violation = violationLevel;
+	}
+
+	public int getViolation() {
+		return violation;
 	}
 
 }

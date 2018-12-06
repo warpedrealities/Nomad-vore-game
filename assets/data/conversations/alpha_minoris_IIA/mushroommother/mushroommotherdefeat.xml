@@ -92,44 +92,4 @@
 		<choice destination="end" text="Time to do some research." />
 	</page>
 
-	<page ID="breast1">
-		<text>You walk over to the mother mushroom and proudly place your
-				<macro ID="breast_size_desc" />
-				breasts in front of her face. She gives you a puzzled look, she's used to being on the giving end
-				of these types of situations. Nevertheless she begins to suckel on your left nipple, which fills you
-				with a sense of accomlishment and sexual pleasure. The large mushroom woman begins to lactate, spilling milk all over the
-				cave floor. She then presses the tip of her mushrrom cap head agianst your left nipple. It's time to take her in.
-				
-		</text>
-		<choice destination="breast2" text="Things are about to get really milky." />
-	</page>
-
-
-	<page ID="breast2">
-		<text>
-			You let out a sensual moan as your left nipple opens up to swallow the mushroom mother. Her mushroom cap tip is not unlike the tip of a cock,
-			but you want more than just the tip. Through the combined efforts of your pulling and her pushing, you take the mushroom mother deeper into your mammary. All the while
-			a waterfall of milk continues to flow out of her own tits. The unreal amounts of stimulation cause you to orgasm and your senses become clouded. You use you
-			right hand to fondle your right breast and your left one continues to devour the mushroom woman.You lay down on the cave floor to let gravity do the rest of the heavy lifting.
-		</text>
-		<choice destination="breastend1" text="Become the new milk mama." />
-
-	</page>
-
-	<page ID="breastend1">
-		<text>
-			Gravity pushes the rest of the mushroom mother's heavy body into your left tit. Having her sealed away inside your mammary has caused it to swell size so much
-			that it is bigger than the rest of youur body. It is outright impossible for your to move like this, so you decide to look up at the cave cieling as your body
-			melts the mushroom mother into mik. In about what feels like an hour, her figure can no longer been seen in your tit and much of its weight has been worn down too.
-			You sit up and decide to sample your own milk. The processed mushroom is very rich in taste. And the taste is addictive too! You quickly suck out the milk
-			the was once the the busty mother mushroom. You give your right tit a quick squeeze and to your surprize, a little squirt of milk comes out.
-			By absorbing the mushroom mother into your tits, youve gained her ability to rapidly produce milk!
-			
-		</text>
-		<effect type="feed" value="95" />
-		<special effect="removenpc" />
-		<special effect="giveperk" perk="Lactation" />
-		<choice destination="end" text="Get going with your newly acquired ability." />
-	</page>
-
 </Conversation>

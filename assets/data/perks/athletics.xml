@@ -7,7 +7,7 @@
 		<combatmove name="adrenaline surge" cooldown="300" icon="3"
 			ammoCost="10" timeCost="2" pattern="SELF" moveType="OTHER">
 			<effectrecover modifier="ENDURANCE" modstrength="0.2"
-				modvalue="10" modifies="ACTION" />
+				modvalue="20" modifies="ACTION" />
 			<hitText count="1">
 				<text></text>
 			</hitText>

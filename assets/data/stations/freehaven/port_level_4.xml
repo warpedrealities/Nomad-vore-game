@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="stationbeatup.png">
+	<zonerules ruleset="freehaven_level_4" />
+	<tileset count-x="8" count-y="8">
+		<tile sprite="1" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
+		<tile sprite="17" vision="EMPTY" movement="0" smart="true">a metal floor</tile>
+		<tile sprite="33" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
+		<tile sprite="49" vision="EMPTY" movement="0" smart="true">a metal floor</tile>				
+	</tileset>
+
+	<description>Beneath the facade of the deck above this deck reeks of spotty maintenance, illicit substances and ill concealed desperation.</description>
+
+	<mapgen>
+	<partition xmin="0" xmax="16" ymin="0" ymax="16" inverse="true">
+		<partition xmin="48" xmax="64" ymin="48" ymax="64" inverse="true">
+			<partition xmin="0" xmax="16" ymin="48" ymax="64" inverse="true">
+				<partition xmin="48" xmax="64" ymin="0" ymax="16" inverse="true">
+					
+				</partition>		
+			</partition>			
+		</partition>		
+	</partition>	
+	</mapgen>
+
+</zone>

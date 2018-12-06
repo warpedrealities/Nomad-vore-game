@@ -269,10 +269,6 @@ public class ZoneBuildTools {
 
 	}
 
-	void Dungeon(Element dungeonnode, boolean[][] grid) {
-
-	}
-
 	boolean[][] CloneOverlay(boolean[][] overlay) {
 		boolean[][] grid = new boolean[m_width][];
 		for (int i = 0; i < m_width; i++) {
@@ -386,10 +382,10 @@ public class ZoneBuildTools {
 									m_tiles[x + index][yindex] = new Tile(x + index, yindex, m_library.getDef(value - 1), m_zone,
 											m_library);
 								}
-							}	
+							}
 							index++;
 						}
-						
+
 					}
 					yindex++;
 				}
@@ -461,7 +457,7 @@ public class ZoneBuildTools {
 						}
 						tool.runPathCarver(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
 								widgetselection);
-					}	
+					}
 					if (Enode.getTagName() == "auditpathsthroughvoid") {
 						AuditTool tool = new AuditTool(m_zone, pointsOfInterest);
 						int replace = 0; boolean random=false;
@@ -477,7 +473,7 @@ public class ZoneBuildTools {
 						}
 						tool.runMakePath(Integer.parseInt(Enode.getAttribute("carve")), true, true, true, replace,
 								widgetselection,random);
-					}	
+					}
 					if (Enode.getTagName() == "noise") {
 						ngrid = CloneOverlay(grid);
 						Noise(Enode, ngrid);
@@ -487,16 +483,14 @@ public class ZoneBuildTools {
 						Clumps(Enode, ngrid);
 					}
 					if (Enode.getTagName() == "partition") {
-						grid = GenOverlay();
+						grid = CloneOverlay(grid);
 						Partition(Enode, grid);
 					}
 					if (Enode.getTagName() == "blockDungeon") {
-						new BlockDungeonGenerator(m_zone, m_tiles).run(Enode);
+						grid = CloneOverlay(grid);
+						new BlockDungeonGenerator(m_zone, m_tiles).run(Enode, grid);
 					}
-					if (Enode.getTagName() == "dungeon") {
-						ngrid = CloneOverlay(grid);
-						Dungeon(Enode, ngrid);
-					}
+
 					if (Enode.getTagName() == "SeedNPCs") {
 						grid = CloneOverlay(grid);
 						new NPCPlacer(m_zone, pointsOfInterest).SeedNPCs(Enode, grid);
@@ -564,7 +558,7 @@ public class ZoneBuildTools {
 					{
 						grid = CloneOverlay(grid);
 						NextPhase(Enode,new CircleTool(Enode).run(m_zone,grid).getGrid());
-					}	
+					}
 					if (Enode.getTagName() == "preloadprefab") {
 						grid = GenOverlay();
 						preloadPrefab(Enode, grid);
@@ -672,7 +666,7 @@ public class ZoneBuildTools {
 		}
 		NextPhase(node, nugrid);
 	}
-	
+
 	public void Partition(Element node, boolean[][] grid) {
 		boolean nugrid[][] = new boolean[m_width][];
 
@@ -766,10 +760,12 @@ public class ZoneBuildTools {
 							widgetselection,random);
 				}
 				if (Enode.getTagName() == "blockDungeon") {
-					new BlockDungeonGenerator(m_zone, m_tiles).run(Enode);
+					grid = GenOverlay();
+					new BlockDungeonGenerator(m_zone, m_tiles).run(Enode, grid);
 				}
 				if (Enode.getTagName() == "advancedBlockDungeon") {
-					new AdvancedBlockDungeonGenerator(m_zone, m_tiles).run(Enode);
+					grid = GenOverlay();
+					new AdvancedBlockDungeonGenerator(m_zone, m_tiles).run(Enode, grid);
 				}
 				if (Enode.getTagName() == "noise") {
 					grid = GenOverlay();
@@ -782,10 +778,6 @@ public class ZoneBuildTools {
 				if (Enode.getTagName() == "perlin") {
 					grid = GenOverlay();
 					PerlinFramework.useFramework(grid, Enode, this);
-				}
-				if (Enode.getTagName() == "dungeon") {
-					grid = GenOverlay();
-					Dungeon(Enode, grid);
 				}
 				if (Enode.getTagName() == "prefab") {
 					grid = GenOverlay();

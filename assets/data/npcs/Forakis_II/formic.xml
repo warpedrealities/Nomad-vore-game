@@ -34,7 +34,7 @@
 		</combatMove>
 	</rpg>
 	<respawn delay="2000" />
-
+	<defeated conversation="Forakis_II/formic/defeat" />
 	<victory conversation="Forakis_II/formic/victory" />
 	<seducer conversation="Forakis_II/formic/victory" />
 	<controller AI="formic_AI" />

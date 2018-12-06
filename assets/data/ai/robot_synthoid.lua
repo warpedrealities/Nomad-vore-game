@@ -41,16 +41,16 @@ function speakQuery(controllable,sense)
 		sense:drawText("synthoid:I could of sworn I saw ...meat, fresh meat")
 	end
 	if (a==2) then
-		sense:drawText("synth:Here at Omnico we value your holes")
+		sense:drawText("synthoid:Here at Omnico we value your holes")
 	end
 	if (a==3) then
-		sense:drawText("synth:we seek we seek")
+		sense:drawText("synthoid:we seek we seek")
 	end
 	if (a==4) then
-		sense:drawText("synth:do not make me run")
+		sense:drawText("synthoid:do not make me run")
 	end
 	if (a==5) then
-		sense:drawText("synth:i will find you")
+		sense:drawText("synthoid:i will find you")
 	end
 end
 

@@ -43,25 +43,11 @@
 				numModifiers="1">
 				<applyText>TARGET contracts, tentacles becoming narrower and more dense.</applyText>
 				<removeText> TARGET loosens and spreads out, tentacles becoming thicker and less dense.</removeText>
-				<effect attribute="KINETIC" modifier="12" />				
+				<effect attribute="KINETIC" modifier="40" />				
 			</statusAttribMod>
 			</effectStatus>
 		</combatMove>
-			<combatMove name="harden" timeCost="2" bonusAttribute="RANGED"
-			icon="2" pattern="SELF">
-			<hitText count="1">
-				<text></text>
-			</hitText>
-			<effectStatus probability="100">
-				<applyText></applyText>
-				<statusAttribMod uid="17" icon="12" duration="400"
-				numModifiers="1">
-				<applyText>TARGET contracts, tentacles becoming narrower and more dense.</applyText>
-				<removeText> TARGET loosens and spreads out, tentacles becoming thicker and less dense.</removeText>
-				<effect attribute="KINETIC" modifier="20" />				
-			</statusAttribMod>
-			</effectStatus>
-		</combatMove>	
+
 		<combatMove name="reflect" timeCost="2" bonusAttribute="RANGED"
 			icon="2" pattern="SELF">
 			<hitText count="1">
@@ -73,7 +59,7 @@
 				numModifiers="1">
 				<applyText>TARGET starts to gleam, the composition of its surface changing and becoming reflective.</applyText>
 				<removeText> TARGET composition changes back to normal</removeText>
-				<effect attribute="THERMAL" modifier="20" />				
+				<effect attribute="THERMAL" modifier="40" />				
 			</statusAttribMod>
 			</effectStatus>
 		</combatMove>	
@@ -88,7 +74,7 @@
 				numModifiers="1">
 				<applyText>TARGET tentacles begin to glow</applyText>
 				<removeText> TARGET gradually ceases to radiate and its form turns dark again</removeText>
-				<effect attribute="SHOCK" modifier="20" />				
+				<effect attribute="SHOCK" modifier="40" />				
 			</statusAttribMod>
 			</effectStatus>
 		</combatMove>			

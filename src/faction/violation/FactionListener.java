@@ -28,6 +28,11 @@ public class FactionListener {
 				}
 			}
 		}
+
+		if (ruleset.getFaction() != null) {
+			currentViolation = new FactionViolation(ruleset.getFaction().getViolation(),
+					Universe.getInstance().getPlayer().getPosition());
+		}
 	}
 
 	public void update() {
@@ -92,8 +97,10 @@ public class FactionListener {
 	}
 
 	public void setViolation(int violationLevel, Vec2f position) {
-		// TODO Auto-generated method stub
-		currentViolation = new FactionViolation(violationLevel, null);
+		currentViolation = new FactionViolation(violationLevel, position);
+		if (ruleset.getFaction() != null) {
+			ruleset.getFaction().setViolation(violationLevel);
+		}
 	}
 
 }

@@ -54,7 +54,7 @@ public class AdvancedBlockDungeonGenerator {
 		}
 	}
 
-	public void run(Element element) {
+	public void run(Element element, boolean[][] grid) {
 
 		NodeList children = element.getChildNodes();
 		extent = Integer.parseInt(element.getAttribute("extent"));
@@ -86,7 +86,7 @@ public class AdvancedBlockDungeonGenerator {
 						int x = Integer.parseInt(Enode.getAttribute("x"));
 						int y = Integer.parseInt(Enode.getAttribute("y"));
 						blockGrid[x][y] = keyBlocks.size() * -1;
-						calculateOpenings(x, y, blockGrid[x][y]);
+						calculateOpenings(x, y, blockGrid[x][y], grid);
 						keyLocations.add(new Vec2i(x, y));
 						keyIndex++;
 						lockedKeys++;
@@ -97,12 +97,12 @@ public class AdvancedBlockDungeonGenerator {
 		}
 
 		while (true) {
-			grow(extent);
+			grow(extent, grid);
 
 			if (keyIndex == keyBlocks.size() && blocksPlaced>=extent/2) {
 				break;
 			} else {
-				reset();
+				reset(grid);
 			}
 
 		}
@@ -112,7 +112,7 @@ public class AdvancedBlockDungeonGenerator {
 		}
 	}
 
-	private void reset() {
+	private void reset(boolean[][] grid) {
 		openings.clear();
 		for (int i = 0; i < blockGrid.length; i++) {
 			for (int j = 0; j < blockGrid[i].length; j++) {
@@ -137,7 +137,7 @@ public class AdvancedBlockDungeonGenerator {
 						int c = (blockGrid[k][j] * -1) - 1;
 						if (c < lockedKeys) {
 							position = new Vec2i(k, j);
-							calculateOpenings(k, j, blockGrid[k][j]);
+							calculateOpenings(k, j, blockGrid[k][j], grid);
 						} else {
 							blockGrid[k][j] = 0;
 						}
@@ -158,7 +158,7 @@ public class AdvancedBlockDungeonGenerator {
 
 	}
 
-	private void grow(int blocksLeft) {
+	private void grow(int blocksLeft, boolean[][] grid) {
 		// pick opening
 		boolean b = false;
 		int r = 0;
@@ -196,13 +196,13 @@ public class AdvancedBlockDungeonGenerator {
 				blockGrid[openings.get(r).position.x][openings.get(r).position.y] = block + 1;
 				AdvancedOpening opening = openings.get(r);
 				blocksPlaced++;
-				calculateOpenings(opening.position.x, opening.position.y, block + 1);
+				calculateOpenings(opening.position.x, opening.position.y, block + 1, grid);
 			}
 			openings.remove(r);
 
 		}
 		if (blocksLeft > 0 && openings.size() > 0) {
-			grow(blocksLeft - 1);
+			grow(blocksLeft - 1, grid);
 		}
 	}
 
@@ -228,11 +228,14 @@ public class AdvancedBlockDungeonGenerator {
 		return null;
 	}
 
-	private boolean isInGrid(int x, int y) {
+	private boolean isInGrid(int x, int y, boolean[][] grid) {
 		if (x < 0 || x >= blockGrid.length) {
 			return false;
 		}
 		if (y < 0 || y >= blockGrid[0].length) {
+			return false;
+		}
+		if (!grid[x * 8][y * 8]) {
 			return false;
 		}
 		return true;
@@ -253,57 +256,61 @@ public class AdvancedBlockDungeonGenerator {
 		} else {
 			opening.edgeValue = opening.edgeValue | value;
 		}
-		
+
 		switch(value)
 		{
 		case 1:
 			opening.type[0]=type;
-			break;		
+			break;
 		case 2:
-			opening.type[1]=type;	
-			break;		
+			opening.type[1]=type;
+			break;
 		case 4:
-			opening.type[2]=type;	
-			break;			
+			opening.type[2]=type;
+			break;
 		case 8:
-			opening.type[3]=type;	
+			opening.type[3]=type;
 			break;
 		}
 	}
 
-	private void calculateOpenings(int x, int y, int value) {
+	private void calculateOpenings(int x, int y, int value, boolean[][] grid) {
 		AdvancedBlock block = getBlock(value);
 
 		// check north
 		if ((block.getEdgeValue() & 1) > 0) {
-			if (isInGrid(x, y + 1))
+			if (isInGrid(x, y + 1, grid)) {
 				if (blockGrid[x][y + 1] == 0) {
 					addOpening(4, x, y + 1, openings, block.getValueSide(0));
 				}
+			}
 		}
 
 		// check east
 		if ((block.getEdgeValue() & 2) > 0) {
-			if (isInGrid(x + 1, y))
+			if (isInGrid(x + 1, y, grid)) {
 				if (blockGrid[x + 1][y] == 0) {
 					addOpening(8, x + 1, y, openings, block.getValueSide(1));
 				}
+			}
 		}
 
 		// check south
 		if ((block.getEdgeValue() & 4) > 0) {
-			if (isInGrid(x, y - 1))
+			if (isInGrid(x, y - 1, grid)) {
 				if (blockGrid[x][y - 1] == 0) {
 					addOpening(1, x, y - 1, openings, block.getValueSide(2));
 				}
+			}
 		}
 
 		// check west
 		if ((block.getEdgeValue() & 8) > 0) {
-			if (isInGrid(x - 1, y))
+			if (isInGrid(x - 1, y, grid)) {
 				if (blockGrid[x - 1][y] == 0) {
 					addOpening(2, x - 1, y, openings, block.getValueSide(3));
 				}
+			}
 		}
 
 	}

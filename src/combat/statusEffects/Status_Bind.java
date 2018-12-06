@@ -66,6 +66,7 @@ public class Status_Bind extends Status_AttribMod {
 		return origin;
 	}
 
+	@Override
 	public void setOrigin(Actor origin) {
 		this.origin = origin;
 	}
@@ -178,15 +179,21 @@ public class Status_Bind extends Status_AttribMod {
 		}
 		if (ViewScene.m_interface!=null && !suppressMessage)
 		{
-			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));		
+			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		}
-	
+
 		subject.setBindState(-1);
 	}
 
 	@Override
 	public boolean maintain() {
-		// TODO Auto-generated method stub
+		if (originDependent) {
+			if (origin != null) {
+				if (origin.getRPG().getStat(Actor_RPG.HEALTH) <= 0 || origin.getRPG().getStat(Actor_RPG.RESOLVE) <= 0) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 

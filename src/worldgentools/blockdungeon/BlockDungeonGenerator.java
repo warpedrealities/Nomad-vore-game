@@ -50,7 +50,7 @@ public class BlockDungeonGenerator {
 		}
 	}
 
-	public void run(Element element) {
+	public void run(Element element, boolean[][] grid) {
 
 		NodeList children = element.getChildNodes();
 		extent = Integer.parseInt(element.getAttribute("extent"));
@@ -256,34 +256,38 @@ public class BlockDungeonGenerator {
 
 		// check north
 		if ((block.getEdgeValue() & 1) > 0) {
-			if (isInGrid(x, y + 1))
+			if (isInGrid(x, y + 1)) {
 				if (blockGrid[x][y + 1] == 0) {
 					addOpening(4, x, y + 1, openings);
 				}
+			}
 		}
 
 		// check east
 		if ((block.getEdgeValue() & 2) > 0) {
-			if (isInGrid(x + 1, y))
+			if (isInGrid(x + 1, y)) {
 				if (blockGrid[x + 1][y] == 0) {
 					addOpening(8, x + 1, y, openings);
 				}
+			}
 		}
 
 		// check south
 		if ((block.getEdgeValue() & 4) > 0) {
-			if (isInGrid(x, y - 1))
+			if (isInGrid(x, y - 1)) {
 				if (blockGrid[x][y - 1] == 0) {
 					addOpening(1, x, y - 1, openings);
 				}
+			}
 		}
 
 		// check west
 		if ((block.getEdgeValue() & 8) > 0) {
-			if (isInGrid(x - 1, y))
+			if (isInGrid(x - 1, y)) {
 				if (blockGrid[x - 1][y] == 0) {
 					addOpening(2, x - 1, y, openings);
 				}
+			}
 		}
 
 	}

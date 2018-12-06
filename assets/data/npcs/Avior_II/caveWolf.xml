@@ -4,7 +4,7 @@
 	<name>wolf girl</name>
 	<description>The wolfgirl has an air of profound predatory confidence. Her yellow eyes gleam from under locks of untamed grey hair that spill forth from her greater mane. Dark grey furred ears are perched atop her head, twitching alertly while she sniffs the air and lets out a hungry growl. Her body is pale skinned and clad only in tufts of light grey fur artfully and partways covering her limbs. Her build is alluringly toned and powerful yet svelte and far from bulky. The copious dark grey furred tail she sports never strays to conceal her nudity in the slightest.</description>
 	<rpg>
-		<experiencevalue value="200" />
+		<experiencevalue value="300" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />

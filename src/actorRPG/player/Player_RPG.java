@@ -429,9 +429,15 @@ public class Player_RPG implements Actor_RPG {
 
 		cooldownHandler.update(1);
 
-		if (regenAction && stats[ACTION]<statMax[ACTION])
-		{
-			stats[ACTION]+=getActionRegen();
+		if (stats[ACTION] < statMax[ACTION]) {
+			if (regenAction)
+			{
+				stats[ACTION] += getActionRegen();
+			}
+			else
+			{
+				stats[ACTION] += getActionRegen() / 2;
+			}
 		}
 		if (busy<=0)
 		{
