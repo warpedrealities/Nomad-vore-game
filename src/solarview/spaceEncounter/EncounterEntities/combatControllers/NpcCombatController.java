@@ -20,7 +20,7 @@ public class NpcCombatController implements CombatController {
 	private LuaValue m_script;
 	private NpcCombatControllerSense sense;
 	private EffectHandler effectHandler;
-
+	private int[] memory;
 
 	public NpcCombatController(String file) {
 		// load lua file
@@ -35,6 +35,7 @@ public class NpcCombatController implements CombatController {
 			e.printStackTrace();
 		}
 
+		memory = new int[8];
 	}
 
 	@Override
@@ -82,6 +83,14 @@ public class NpcCombatController implements CombatController {
 		if (!sense.getControlledShip().getShield().isActive()) {
 			sense.getControlledShip().getShield().toggleStatus();
 		}
+	}
+
+	public void setValue(int index, int value) {
+		memory[index] = value;
+	}
+
+	public int getValue(int index) {
+		return memory[index];
 	}
 
 	public void fire(int index, int target)
