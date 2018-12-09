@@ -27,11 +27,11 @@
 		</text>
 		<choice destination="oralvore" text="set mode: oralvore" />
 		<choice destination="unbirth" text="set mode: unbirth" />
-		<choice destination="disable" text="re-enable digestion prevention safeguard">
+		<choice destination="disable" text="disable digestion prevention safeguard">
 			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY"
 				operator="equals" value="0" />
 		</choice>
-		<choice destination="enable" text="disable digestion prevention safeguard">
+		<choice destination="enable" text="re-enable digestion prevention safeguard">
 			<condition evaluate="GLOBALFLAG" flag="OMNICO_IIA_SAFETY"
 				operator="equals" value="1" />
 		</choice>
