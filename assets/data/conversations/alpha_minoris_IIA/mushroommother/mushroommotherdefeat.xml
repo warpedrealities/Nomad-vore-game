@@ -8,7 +8,9 @@
 			<assertnot evaluate="hasResearch" research="mushroommother"/>
 		</choice>
 		
-		<choice destination="titfuck0" text="Glancing down at her prominent, heaving chest, you certainly got an idea for her. (Milky titfuck)"/>
+		<choice destination="titfuck0" text="Glancing down at her prominent, heaving chest, you certainly got an idea for her. (Milky titfuck)">
+				<assertion evaluate="haspart" part="penis" />	
+		</choice>
 		
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
