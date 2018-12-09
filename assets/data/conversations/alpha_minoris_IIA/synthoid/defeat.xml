@@ -5,7 +5,7 @@
 		<text> 
 		No interaction to be had with a disabled synthoid.
 		</text>
-		<choice destination="devour" text="devour the drake">
+		<choice destination="devour" text="devour the synthoid">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
 				<assertion evaluate="hasperk" perk="cockvore" />
