@@ -11,12 +11,12 @@ public abstract class Item implements Comparable<Object> {
 	protected String m_name, shortName, m_description;
 	protected float m_weight, itemValue;
 	protected int tag;
-	
+
 	public Item()
 	{
-		
+
 	}
-	
+
 	public Item(int UID) {
 		this.UID = UID;
 	}
@@ -42,7 +42,7 @@ public abstract class Item implements Comparable<Object> {
 	public String getShortName() {
 		return shortName;
 	}
-	
+
 	public String getDescription() {
 		return m_description;
 	}
@@ -68,12 +68,12 @@ public abstract class Item implements Comparable<Object> {
 	@Override
 	public int compareTo(Object arg0) {
 		Item item = (Item) arg0;
-		return getItem().getName().compareTo(item.getItem().getName());
+		return getItem().getName().toLowerCase().compareTo(item.getItem().getName().toLowerCase());
 	}
 
 	public int getTag() {
 		return tag;
 	}
 
-	public abstract boolean canStack();	
+	public abstract boolean canStack();
 }

@@ -5,8 +5,8 @@
 		<factionRelationship faction="harpy" mod="-5" />
 	</superRule>
 	<witness name="BrightFeather" />
-	<superRule subject="harpy" level="1" violation="ATTACK">
+	<superRule subject="wild harpy" level="1" violation="ATTACK">
 		<factionRelationship faction="harpy" mod="-5" />
 	</superRule>
-	<witness name="harpy" />
+	<witness name="wild harpy" />
 </rules>

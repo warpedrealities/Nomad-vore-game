@@ -9,8 +9,8 @@
 		Your resolve bar (pink, below) is your
 		resistance to becoming willing
 		prey. LBREAK
-		your satiation bar (green,
-		lowest) inversely represents your level of
+		your satiation bar (green)
+		inversely represents your level of
 		hunger, and is constantly
 		depleting as you need food in order to live.
 		LBREAK
@@ -18,7 +18,7 @@
 		is over 50% you slowly regenerate health, but this
 		results in increased
 		satiation consumption rate so healing items may
-		be a preferable option
+		be a preferable option		
 		LBREAK
 		when your resolve is less than total it automatically recovers
 		regardless
@@ -26,6 +26,8 @@
 		when your satiation level
 		reaches 0 you will begin to rapidly take
 		starvation damage LBREAK
+		Your action bar (orange) indicates your number of AP, AP is spent to use attacks, moves and abilities. AP recovers automatically. AP recovers faster if you're over 50% satiation or if you take no action that would spend AP. Your base rate of AP recovery scales with your maximum AP amount.
+		LBREAK
 		page 1
 		(d or right to move to next page)
 	</text>

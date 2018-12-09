@@ -226,7 +226,7 @@ public class Player_RPG implements Actor_RPG {
 
 		//		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
 
-		playerExperience = 00;
+		playerExperience = 0;
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
 		//		statusEffects=new ArrayList<StatusEffect>();
@@ -289,7 +289,7 @@ public class Player_RPG implements Actor_RPG {
 
 		for (int i=0;i<4;i++)
 		{
-			stats[i]=statMax[i]*1.0F;
+			stats[i] = statMax[i] * 1.0F;
 		}
 	}
 
@@ -436,7 +436,7 @@ public class Player_RPG implements Actor_RPG {
 			}
 			else
 			{
-				stats[ACTION] += getActionRegen() / 2;
+				stats[ACTION] += getActionRegen() / 4;
 			}
 		}
 		if (busy<=0)
@@ -1121,9 +1121,9 @@ public class Player_RPG implements Actor_RPG {
 	{
 		if (stats[SATIATION]>statMax[SATIATION]*0.5F)
 		{
-			return statMax[ACTION]/120.0F;
+			return statMax[ACTION] / 60.0F;
 		}
-		return statMax[ACTION]/240.0F;
+		return statMax[ACTION] / 120.0F;
 	}
 
 	@Override

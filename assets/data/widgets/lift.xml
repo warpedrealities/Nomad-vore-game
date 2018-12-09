@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgetconversation sprite="1" name="lift"
+	health="1000">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>a lift</description>
+	<resistance resists="KINETIC" strength="20"></resistance>
+</widgetconversation>

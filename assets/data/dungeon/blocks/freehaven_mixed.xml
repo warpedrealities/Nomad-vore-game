@@ -1,0 +1,675 @@
+<?xml version="1.0"?>
+<blocks>
+	<block name="clean cross">
+		<edge value="NORTH" type="1" />
+		<edge value="SOUTH" type="1" />
+		<edge value="WEST" type="1" />
+		<edge value="EAST" type="1" />
+		<row>01222100</row>
+		<row>11222111</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>11222111</row>
+		<row>01222100</row>
+		<row>01222100</row>
+	</block>
+
+	<block name="clean cross">
+		<edge value="NORTH" type="1" />
+		<edge value="SOUTH" type="1" />
+		<edge value="WEST" type="3" />
+		<edge value="EAST" type="1" />
+		<row>11222100</row>
+		<row>12222111</row>
+		<row>22222222</row>
+		<row>12222222</row>
+		<row>22222222</row>
+		<row>12222111</row>
+		<row>11222100</row>
+		<row>01222100</row>
+	</block>
+	
+	
+	<block name="dirty cross">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="2" />
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="2" />
+		<row>03444300</row>
+		<row>33444333</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>33444333</row>
+		<row>03444300</row>
+		<row>03444300</row>
+	</block>	
+
+	<block name="transition cross">
+		<edge value="NORTH" type="1" />
+		<edge value="SOUTH" type="2" />
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="2" />
+		<row>03444300</row>
+		<row>33444333</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>44422444</row>
+		<row>33222133</row>
+		<row>01222100</row>
+		<row>01222100</row>
+	</block>
+	
+	<block name="clean NS">
+		<edge value="NORTH" type="1" />
+		<edge value="SOUTH" type="1" />
+		<row>01222100</row>
+		<row>01222100</row>
+		<row>01222100</row>
+		<row>01222100</row>
+		<row>01222100</row>
+		<row>01222100</row>
+		<row>01222100</row>
+		<row>01222100</row>
+	</block>
+
+	<block name="dirty NS">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="2" />
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+	</block>	
+
+	<block name="dirty NS">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="2" />
+		<edge value="EAST" type="4" />		
+		<row>03444330</row>
+		<row>03444433</row>
+		<row>03444444</row>
+		<row>03444443</row>
+		<row>03444444</row>
+		<row>03444433</row>
+		<row>03444330</row>
+		<row>03444300</row>
+	</block>	
+	
+	<block name="dirty NS">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="2" />
+		<edge value="EAST" type="4" />	
+		<edge value="WEST" type="4" />			
+		<row>33444330</row>
+		<row>34444433</row>
+		<row>44444444</row>
+		<row>34444443</row>
+		<row>44444444</row>
+		<row>34444433</row>
+		<row>33444330</row>
+		<row>03444300</row>
+	</block>		
+	
+	<block name="dirty rooms">
+		<edge value="EAST" type="4" />	
+		<edge value="WEST" type="4" />			
+		<row>33333333</row>
+		<row>34444443</row>
+		<row>44444444</row>
+		<row>33333333</row>
+		<row>44444444</row>
+		<row>34444443</row>
+		<row>34444443</row>
+		<row>33333333</row>
+	</block>	
+	
+	<block name="dirty rooms">
+		<edge value="NORTH" type="4" />	
+		<edge value="SOUTH" type="4" />			
+		<row>33434333</row>
+		<row>34434443</row>
+		<row>34434443</row>
+		<row>34434443</row>
+		<row>34434443</row>
+		<row>34434443</row>
+		<row>34434443</row>
+		<row>33434333</row>
+	</block>		
+	
+	<block name="transition NS">
+		<edge value="NORTH" type="1" />
+		<edge value="SOUTH" type="2" />
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03442300</row>
+		<row>03222100</row>
+		<row>01222100</row>
+		<row>01222100</row>
+		<row>01222100</row>
+	</block>
+	
+	
+
+	<block name="transition NS">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="1" />
+		<row>01222100</row>		
+		<row>01222100</row>		
+		<row>01222100</row>		
+		<row>03222100</row>	
+		<row>03442300</row>		
+		<row>03444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+	</block>
+	
+	<block name="clean NS">
+		<edge value="NORTH" type="1" />
+		<edge value="SOUTH" type="1" />
+		<edge value="EAST" type="3" />		
+		<row>01222110</row>
+		<row>01222211</row>
+		<row>01222222</row>
+		<row>01222221</row>
+		<row>01222222</row>
+		<row>01222211</row>
+		<row>01222110</row>
+		<row>01222100</row>
+	</block>	
+	
+	<block name="clean NS">
+		<edge value="NORTH" type="1" />
+		<edge value="SOUTH" type="1" />
+		<edge value="EAST" type="3" />	
+		<edge value="WEST" type="3" />		
+		<row>11222110</row>
+		<row>12222211</row>
+		<row>22222222</row>
+		<row>12222221</row>
+		<row>22222222</row>
+		<row>12222211</row>
+		<row>11222110</row>
+		<row>01222100</row>
+	</block>	
+		
+	
+	<block name="clean WE">
+		<edge value="WEST" type="1" />
+		<edge value="EAST" type="1" />
+		<row>00000000</row>
+		<row>11111111</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>11111111</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="dirty WE">
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="2" />
+		<row>00000000</row>
+		<row>33333333</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>33333333</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="dirty WE">
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="2" />
+		<edge value="SOUTH" type="4" />		
+		<row>33434330</row>
+		<row>34444433</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>33333333</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="dirty WE">
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="2" />
+		<edge value="SOUTH" type="4" />		
+		<edge value="NORTH" type="4" />			
+		<row>33434330</row>
+		<row>34444433</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>44444444</row>
+		<row>34444433</row>
+		<row>33434330</row>
+		<row>03434300</row>
+	</block>
+	
+	<block name="clean WE">
+		<edge value="WEST" type="1" />
+		<edge value="EAST" type="1" />
+		<edge value="SOUTH" type="3" />		
+		<row>11212110</row>
+		<row>12222211</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>11111111</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="clean WE">
+		<edge value="WEST" type="1" />
+		<edge value="EAST" type="1" />
+		<edge value="NORTH" type="3" />			
+		<edge value="SOUTH" type="3" />		
+		<row>11212110</row>
+		<row>12222211</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>12222211</row>
+		<row>11212110</row>
+		<row>01212100</row>
+	</block>	
+	
+	<block name="transition WE">
+		<edge value="WEST" type="1" />
+		<edge value="EAST" type="2" />
+		<row>00000000</row>
+		<row>11133333</row>
+		<row>22244444</row>
+		<row>22224444</row>
+		<row>22244444</row>
+		<row>11333333</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="transition WE">
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="1" />
+		<row>00000000</row>
+		<row>33333111</row>
+		<row>44222222</row>
+		<row>44442222</row>
+		<row>44444222</row>
+		<row>33311111</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+
+	
+	<block name="clean WS">
+		<edge value="WEST" type="1" />
+		<edge value="SOUTH" type="1" />
+		<row>01222100</row>
+		<row>11222100</row>
+		<row>22222100</row>
+		<row>22222100</row>
+		<row>22222100</row>
+		<row>11111100</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>
+
+	<block name="clean WS">
+		<edge value="WEST" type="1" />
+		<edge value="SOUTH" type="1" />
+		<edge value="NORTH" type="3" />		
+		<row>01222100</row>
+		<row>11222100</row>
+		<row>22222100</row>
+		<row>22222100</row>
+		<row>22222100</row>
+		<row>11222100</row>
+		<row>01222100</row>
+		<row>01212100</row>
+	</block>	
+	
+	<block name="transition WN">
+		<edge value="WEST" type="2" />
+		<edge value="SOUTH" type="1" />
+		<row>01222100</row>
+		<row>31222100</row>
+		<row>44422100</row>
+		<row>44442100</row>
+		<row>44442100</row>
+		<row>33311100</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>
+	
+	<block name="transition WN">
+		<edge value="WEST" type="1" />
+		<edge value="NORTH" type="2" />
+		<row>00000000</row>
+		<row>11133300</row>
+		<row>22222300</row>		
+		<row>22224300</row>		
+		<row>22224300</row>		
+		<row>11224300</row>		
+		<row>01244300</row>		
+		<row>03444300</row>
+	</block>
+	
+	<block name="dirty ES">
+		<edge value="SOUTH" type="2" />
+		<edge value="EAST" type="2" />
+		<row>03444300</row>
+		<row>03444333</row>
+		<row>03444444</row>
+		<row>03444444</row>
+		<row>03444444</row>
+		<row>03333333</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+	
+	<block name="dirty ES">
+		<edge value="SOUTH" type="2" />
+		<edge value="EAST" type="2" />
+		<edge value="NORTH" type="4" />		
+		<row>03444300</row>
+		<row>03444333</row>
+		<row>03444444</row>
+		<row>03444444</row>
+		<row>03444444</row>
+		<row>03444333</row>
+		<row>03444300</row>
+		<row>03434300</row>
+	</block>		
+	
+	<block name="dirty WS">
+		<edge value="SOUTH" type="2" />
+		<edge value="WEST" type="2" />
+		<row>03444300</row>
+		<row>33444300</row>
+		<row>44444300</row>
+		<row>44444300</row>
+		<row>44444300</row>
+		<row>33333300</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+	
+	<block name="dirty WS">
+		<edge value="SOUTH" type="2" />
+		<edge value="WEST" type="2" />
+		<edge value="EAST" type="4" />		
+		<row>03444300</row>
+		<row>33444333</row>
+		<row>44444444</row>
+		<row>44444443</row>
+		<row>44444444</row>
+		<row>33333333</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>	
+		
+	
+	<block name="clean EN">
+		<edge value="NORTH" type="1" />
+		<edge value="EAST" type="1" />
+		<row>00000000</row>
+		<row>01111111</row>
+		<row>01222222</row>
+		<row>01222222</row>
+		<row>01222222</row>
+		<row>01222111</row>
+		<row>01222100</row>
+		<row>01222100</row>
+	</block>	
+	
+	<block name="clean EN">
+		<edge value="NORTH" type="1" />
+		<edge value="EAST" type="1" />
+		<edge value="WEST" type="3" />		
+		<row>00000000</row>
+		<row>11111111</row>
+		<row>22222222</row>
+		<row>12222222</row>
+		<row>22222222</row>
+		<row>11222111</row>
+		<row>01222100</row>
+		<row>01222100</row>
+	</block>	
+		
+	
+	<block name="transition SE">
+		<edge value="SOUTH" type="2" />
+		<edge value="EAST" type="1" />	
+		<row>00000000</row>
+		<row>01111111</row>
+		<row>01222222</row>
+		<row>01222222</row>
+		<row>01242222</row>
+		<row>03444111</row>
+		<row>03444300</row>
+		<row>03444300</row>
+	</block>	
+			
+	
+	
+	<block name="clean T">
+		<edge value="WEST" type="1" />
+		<edge value="EAST" type="1" />		
+		<edge value="SOUTH" type="1" />
+		<row>01222100</row>
+		<row>11222111</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>11111111</row>
+		<row>00000000</row>
+		<row>00000000</row>
+	</block>
+
+	<block name="clean T invert">
+		<edge value="NORTH" type="1" />
+		<edge value="WEST" type="1" />		
+		<edge value="EAST" type="1" />
+		<row>00000000</row>
+		<row>11111111</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>22222222</row>
+		<row>11222111</row>
+		<row>01222100</row>
+		<row>01222100</row>
+	</block>		
+	
+	<block name="transition T">
+		<edge value="WEST" type="1" />
+		<edge value="NORTH" type="2" />		
+		<edge value="SOUTH" type="2" />
+		<row>03444300</row>
+		<row>11444300</row>
+		<row>22222100</row>
+		<row>22222100</row>
+		<row>22222100</row>
+		<row>11244300</row>
+		<row>01444300</row>
+		<row>03444300</row>
+	</block>	
+	
+	<block name="dirty T">
+		<edge value="WEST" type="2" />
+		<edge value="NORTH" type="2" />		
+		<edge value="SOUTH" type="2" />
+		<row>03444300</row>
+		<row>33444300</row>
+		<row>44444300</row>
+		<row>44444300</row>
+		<row>44444300</row>
+		<row>33444300</row>
+		<row>03444300</row>
+		<row>03444300</row>
+	</block>
+
+	<block name="dirty T invert">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="2" />		
+		<edge value="EAST" type="2" />
+		<row>03444300</row>
+		<row>03444333</row>
+		<row>03444444</row>
+		<row>03444444</row>
+		<row>03444444</row>
+		<row>03444333</row>
+		<row>03444300</row>
+		<row>03444300</row>
+	</block>		
+	
+	<block name="transition T invert">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="2" />		
+		<edge value="EAST" type="1" />
+		<row>03444300</row>
+		<row>03442111</row>
+		<row>03442222</row>
+		<row>03442222</row>
+		<row>03442222</row>
+		<row>03442111</row>
+		<row>03442100</row>
+		<row>03444300</row>
+	</block>	
+	
+	<block name="dirty T">
+		<edge value="EAST" type="4" />	
+		<edge value="WEST" type="2" />
+		<edge value="NORTH" type="2" />		
+		<edge value="SOUTH" type="2" />
+		<row>03444333</row>
+		<row>33444443</row>
+		<row>44444444</row>
+		<row>44444443</row>
+		<row>44444444</row>
+		<row>33444443</row>
+		<row>03444333</row>
+		<row>03444300</row>
+	</block>
+
+	<block name="dirty T invert">
+		<edge value="NORTH" type="2" />
+		<edge value="SOUTH" type="2" />	
+		<edge value="WEST" type="4" />		
+		<edge value="EAST" type="2" />
+		<row>33444300</row>
+		<row>34444333</row>
+		<row>44444444</row>
+		<row>34444444</row>
+		<row>44444444</row>
+		<row>34444333</row>
+		<row>33444300</row>
+		<row>03444300</row>
+	</block>		
+
+	<block name="clean room N">
+		<edge value="NORTH" type="3" />
+		<row>00000000</row>
+		<row>11111110</row>
+		<row>12222210</row>
+		<row>12222210</row>
+		<row>12222210</row>
+		<row>12222210</row>
+		<row>12222210</row>
+		<row>11212110</row>
+	</block>	
+	
+	<block name="clean room S">
+		<edge value="SOUTH" type="3" />
+		<row>11212110</row>
+		<row>12222210</row>
+		<row>12222210</row>
+		<row>12222210</row>
+		<row>12222210</row>
+		<row>12222210</row>
+		<row>11111110</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="clean room W">
+		<edge value="WEST" type="3" />		
+		<row>11111110</row>
+		<row>12222210</row>
+		<row>22222210</row>
+		<row>12222210</row>
+		<row>22222210</row>
+		<row>12222210</row>
+		<row>11111110</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="clean room E">	
+		<edge value="EAST" type="3" />
+		<row>01111111</row>
+		<row>01222221</row>
+		<row>01222222</row>
+		<row>01222221</row>
+		<row>01222222</row>
+		<row>01222221</row>
+		<row>01111111</row>
+		<row>00000000</row>
+	</block>		
+
+	<block name="dirty room N">
+		<edge value="NORTH" type="4" />
+		<row>00000000</row>
+		<row>33333330</row>
+		<row>34444430</row>
+		<row>34444430</row>
+		<row>34444430</row>
+		<row>34444430</row>
+		<row>34444430</row>
+		<row>33434330</row>
+	</block>	
+	
+	<block name="dirty room S">
+		<edge value="SOUTH" type="4" />
+		<row>33434330</row>
+		<row>34444430</row>
+		<row>34444430</row>
+		<row>34444430</row>
+		<row>34444430</row>
+		<row>34444430</row>
+		<row>33333330</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="dirty room W">
+		<edge value="WEST" type="4" />		
+		<row>33333330</row>
+		<row>34444430</row>
+		<row>44444430</row>
+		<row>34444430</row>
+		<row>44444430</row>
+		<row>34444430</row>
+		<row>33333330</row>
+		<row>00000000</row>
+	</block>	
+
+	<block name="dirty room E">	
+		<edge value="EAST" type="4" />
+		<row>03333333</row>
+		<row>03444443</row>
+		<row>03444444</row>
+		<row>03444443</row>
+		<row>03444444</row>
+		<row>03444443</row>
+		<row>03333333</row>
+		<row>00000000</row>
+	</block>	
+	
+</blocks>

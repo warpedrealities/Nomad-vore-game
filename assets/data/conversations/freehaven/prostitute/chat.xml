@@ -23,11 +23,11 @@
 	<preference fetish="demis" />	
 	<preference fetish="unbirthing" />
 	</choice>
-	<!-- 	<choice destination="unbirth0" text="I want you to juice me">
+		<choice destination="unbirth0" text="I want you to juice me">
 		<preference fetish="females" />	
 	<preference fetish="demis" />	
 	<preference fetish="unbirthing" />
-	</choice> -->
+	</choice>
 	<choice destination="end" text="on second thoughts, I'll be on my way"/>
 	</page>
 	
@@ -43,11 +43,37 @@
 	
 	<page ID="unbirth1">
 	<text>
-	
+	The foxy harlot mhmms and takes your money, pocketing it somewhere with one hand "Alrighty then gush slut, lets get going" she says and grabs your head with one hand and pushes you down in front of her. She raises her skirt only to shove you up underneath, mashing your face against her hot nethers "gawd i love my job." she exclaims followed by a moan as her nethers part around your face. Her hand on the back of your skull shoving you in as you raise your hands to her hips in response to this dominant force "None of that, you're a gush slut and i'mma treat you like one." she says with a laugh, before pushing her hips down over your shoulders to encompass more of you in her clenching heat.
 	</text>
 	<effect type="givecredits" value="-150" />		
+	<choice destination="unbirth2" text="*taken as wombfodder*"/>
 	</page>	
 	
+	<page ID="unbirth2">
+	<text>
+	You squirm at her words, but this only delights her. It seems having submitted to her she's willing to treat you rather roughly, shoving herself down over your body with a moan as she engulfs your upper body within her loins. The foxgirl's womb stretching out, squeezing possessively around you as you're crammed up inside her and forced to curl in her sweltering insides. Soon she's reached your waist and stands there, legs spread wide as she clenches and draws you up with practiced ease "nearly in me gush slut, going to turn you into a..a..puddle..just like you wanted." she says, fondling herself as your feet leave the floor beneath her, her sexual juices flowing copiously to lube your legs and drip down them to the floor below.
+	</text>
+	<choice destination="unbirth3" text="*claimed as a pussysnack entirely*"/>
+	</page>
+	
+	<page ID="unbirth3">
+	<text>
+	The foxgirl lets out a satisfied groan as she draws your legs up between her thighs, turning her middle gravid and bulging with your curled up form as she adeptly packs you away in her womb. The harlot stroking and patting her distended middle as the last of you vanishes up into her nethers and is sealed inside of her "mhmm, i think gush sluts like you are the best part of this job." she says and dips her fingers into her nethers, pleasuring herself as you stew in the sweltering wet heat of her womb and she starts to pleasure herself. That tight wet heat becoming tighter, hotter and even wetter as her womb clenches down and starts to melt you down into blissful fluids.
+	</text>
+	<choice destination="unbirth4" text="*ah just a...orgasm...*"/>
+	</page>
+	
+	<gameover ID="unbirth4">
+	<text>
+	The foxy shamelessly fondles herself unmindful of passerby as she feels you soften. Your body afire with pleasure, writhing in bliss and steadily melting and liquidating. The gooey sensations overwhelming you until with a final ecstatic shudder you come apart into a slosh of fluids within her. The harlot letting out a delighted gasp as she feels that and redoubles her exhibitionist masturbation as her middle compresses..only to reach her peak moments later and send your remnants splattering out onto the floor underneath her. 			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				your fluid soaked
+				<readequipment slot="2" />
+				landing with a splat amidst the puddle that is the rest of you.
+			</conditional>
+	</text>
+	
+	</gameover>
 	
 	<page ID="unbirthEndo0">
 	<text>

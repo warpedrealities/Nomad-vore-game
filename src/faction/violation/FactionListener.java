@@ -41,14 +41,15 @@ public class FactionListener {
 		}
 	}
 
-	private void setViolation(String targetname, Vec2f p, int violationLevel) {
+	private boolean setViolation(String targetname, Vec2f p, int violationLevel) {
 		// check if the violation can be seen
 
 		// if violation is regards a witness of course it can be seen
 		if (ruleset.getWitness(targetname)) {
 			currentViolation = new FactionViolation(violationLevel, p);
+
 			cooldownClock = 10;
-			return;
+			return true;
 		}
 		// if not, check if witnesses can see the location
 		for (int i = 0; i < witnesses.size(); i++) {
@@ -57,25 +58,30 @@ public class FactionListener {
 						(int) witnesses.get(i).getPosition().x, (int) witnesses.get(i).getPosition().y, true)) {
 					currentViolation = new FactionViolation(violationLevel, p);
 					cooldownClock = 10;
-					return;
+					return true;
 				}
 			}
 
 		}
-
+		return false;
 	}
 
 	public boolean checkViolation(String targetname, Vec2f p, ViolationType vtype) {
 		if (cooldownClock == 0) {
-			int v = ruleset.violationLevel(targetname, vtype);
-			if (currentViolation == null) {
-				setViolation(targetname, p, v);
-			} else {
-				if (currentViolation.getViolationLevel() < v) {
-					setViolation(targetname, p, v);
+			FactionRule rule = ruleset.violationLevel(targetname, vtype);
+			if (rule != null) {
+				if (currentViolation == null) {
+					if (setViolation(targetname, p, rule.getViolationLevel())) {
+						rule.violationAction();
+					}
+				} else {
+					if (currentViolation.getViolationLevel() < rule.getViolationLevel()) {
+						if (setViolation(targetname, p, rule.getViolationLevel())) {
+							rule.violationAction();
+						}
+					}
 				}
 			}
-
 		}
 		return false;
 	}

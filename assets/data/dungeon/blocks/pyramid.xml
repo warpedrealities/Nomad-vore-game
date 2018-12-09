@@ -743,6 +743,5 @@
 		<widget x="2" y="6" name="chest" info="normalchest" />		
 		<widget x="6" y="6" name="chest" info="normalchest" />			
 	</block>
-/block> -->
 
 </blocks>

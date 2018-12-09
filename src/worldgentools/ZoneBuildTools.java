@@ -563,6 +563,10 @@ public class ZoneBuildTools {
 						grid = GenOverlay();
 						preloadPrefab(Enode, grid);
 					}
+					if (Enode.getTagName() == "advancedBlockDungeon") {
+						grid = CloneOverlay(grid);
+						new AdvancedBlockDungeonGenerator(m_zone, m_tiles).run(Enode, grid);
+					}
 				}
 
 			}

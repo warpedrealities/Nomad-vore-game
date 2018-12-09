@@ -18,18 +18,18 @@ public class StackHandler {
 		{
 			Item c = null;
 			for (int i = 0; i < items.size(); i++) {
-				if (items.get(i).canStack() && 
+				if (items.get(i).canStack() &&
 						items.get(i).getClass().getName().contains("Stack")) {
 					ItemStack stack = (ItemStack) items.get(i);
 					if (stack.getItem().equals(item.getItem())) {
 
-						
+
 						// add to stack
 						stack.setCount(stack.getCount() + amount);
 						return true;
 					}
 				} else {
-					if (items.get(i).getItem() == item.getItem()) {
+					if (items.get(i).canStack() && items.get(i).getItem() == item.getItem()) {
 						items.remove(i);
 						ItemStack stack = new ItemStack(item.getItem(), 1 + amount);
 						items.add(stack);
@@ -39,9 +39,9 @@ public class StackHandler {
 					}
 				}
 
-			}							
+			}
 		}
 		return false;
 	}
-	
+
 }

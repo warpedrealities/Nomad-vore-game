@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		Freehaven elevator services, select level to travel to	
+		</text>
+		<choice destination="level4" text="head to level 4"/>
+		<choice destination="end" text="remain on level 5"/>
+	</page>
+	
+	<page ID="level4">
+	<text>
+	The lift whisks you swiftly down to level 4
+	</text>
+		<special effect="transition" x="39" y="36" destination="port_level_4" />	
+	<choice destination="end" text="step out"/>
+	</page>
+
+</Conversation>

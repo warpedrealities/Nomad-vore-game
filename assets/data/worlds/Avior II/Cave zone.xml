@@ -27,7 +27,7 @@
 				<noise tile="2" scarcity="6" />
 				<auditpathsthroughvoid replace="1" carve="2" />	
 				<floodfill tile="1">
-					<SeedNPCs min="5" max="8" name="Avior_II/wolfgirl">
+					<SeedNPCs min="5" max="8" name="Avior_II/caveWolf">
 					</SeedNPCs>
 					<Seedwidgets min="8" max="16" name="crystaloutcrop" />
 					<Seedwidgets min="4" max="8" name="ore_deposit" />					

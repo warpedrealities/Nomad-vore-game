@@ -1,11 +1,17 @@
 <?xml version="1.0"?>
-<zone width="64" height="64" spriteset="stationbeatup.png">
+<zone width="64" height="64" spriteset="stationlowerdeck.png">
 	<zonerules ruleset="freehaven_level_4" />
-	<tileset count-x="8" count-y="8">
+	<tileset count-x="8" count-y="10">
 		<tile sprite="1" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
 		<tile sprite="17" vision="EMPTY" movement="0" smart="true">a metal floor</tile>
 		<tile sprite="33" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
-		<tile sprite="49" vision="EMPTY" movement="0" smart="true">a metal floor</tile>				
+		<tile sprite="49" vision="EMPTY" movement="0" smart="true">a metal floor</tile>		
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>	
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>		
+		<tile sprite="72" vision="BLOCKING" movement="2">safety bulkhead</tile>			
 	</tileset>
 
 	<description>Beneath the facade of the deck above this deck reeks of spotty maintenance, illicit substances and ill concealed desperation.</description>
@@ -15,11 +21,40 @@
 		<partition xmin="48" xmax="64" ymin="48" ymax="64" inverse="true">
 			<partition xmin="0" xmax="16" ymin="48" ymax="64" inverse="true">
 				<partition xmin="48" xmax="64" ymin="0" ymax="16" inverse="true">
-					
+					<advancedBlockDungeon extent="48">
+						<loadBlocks file="freehaven_mixed"/>
+						<keyBlock x="4" y="4">
+							<!--entrance -->
+							<row>01222100</row>
+							<row>11222111</row>
+							<row>22222222</row>
+							<row>22222222</row>
+							<row>22222222</row>
+							<row>11222122</row>
+							<row>01222111</row>
+							<row>01222100</row>
+							<edge value="SOUTH" type="1" />
+							<edge value="EAST" type="1" />
+							<edge value="WEST" type="1" />
+							<edge value="NORTH" type="1" />							
+							<widget x="6" y="5" name="console"
+								info="interaction/freehaven/lift_level4" variable="1" />
+							<widget x="7" y="5" name="console"
+								info="interaction/freehaven/lift_level4" variable="1" />								
+						</keyBlock>		
+					<clean value="10" />		
+					</advancedBlockDungeon>
 				</partition>		
 			</partition>			
 		</partition>		
 	</partition>	
+	<selectTile tile="1">
+	<SeedNPCs min="8" max="12" name="freehaven/wardens/warden" minDistance="12" />	
+	</selectTile>
+<!-- 	<selectTile tile="3">
+	<SeedNPCs min="16" max="20" name="forakis_I/pyramid/pyramid_scarab" minDistance="12" />	
+	</selectTile>	 -->	
+	
 	</mapgen>
 
 </zone>

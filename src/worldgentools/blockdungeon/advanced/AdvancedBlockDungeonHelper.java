@@ -22,7 +22,7 @@ public class AdvancedBlockDungeonHelper {
 					}
 					if (exclusiveMask == false) {
 						sublist.add(i);
-					}				
+					}
 				}
 
 			}
@@ -32,6 +32,34 @@ public class AdvancedBlockDungeonHelper {
 			r = Universe.m_random.nextInt(sublist.size());
 		}
 		// then roll dice
+		if (sublist.size() == 0) {
+			return fallback(blocks, mask, exclusiveMask, edgeTypes);
+		}
+
+		return sublist.get(r);
+	}
+
+	private static int fallback(ArrayList<AdvancedBlock> blocks, int mask, boolean exclusiveMask, short[] edgeTypes) {
+		ArrayList<Integer> sublist = new ArrayList<Integer>();
+		for (int i = 0; i < blocks.size(); i++) {
+			if ((blocks.get(i).getEdgeValue() & mask) == mask) {
+				if (exclusiveMask == true && blocks.get(i).getEdgeValue() - mask == 0) {
+					sublist.add(i);
+				}
+				if (exclusiveMask == false) {
+					sublist.add(i);
+				}
+			}
+		}
+		int r = 0;
+		if (sublist.size() > 1) {
+			r = Universe.m_random.nextInt(sublist.size());
+		}
+		// then roll dice
+		if (sublist.size() == 0) {
+			return fallback(blocks, mask, exclusiveMask, edgeTypes);
+		}
+
 		return sublist.get(r);
 	}
 

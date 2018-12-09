@@ -21,7 +21,7 @@
 		<stat stat="RESOLVE" value="20" />
 		<combatMove name="laser" pattern="RANGED" bonusAttribute="RANGED"
 			timeCost="2" bonusToHit="2" rangedbias="2">
-			<effectDamage type="THERMAL" minValue="1" maxValue="12"
+			<effectDamage type="THERMAL" minValue="2" maxValue="13"
 				modifier="NONE" />
 			<missText count="1">
 				<text>guardian drone shoots a blast at TARGET but misses</text>

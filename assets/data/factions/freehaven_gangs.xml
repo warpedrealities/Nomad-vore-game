@@ -2,5 +2,5 @@
 <faction>
 	<factionRelationship ID="freehaven_wardens" value="0" />
 	<factionRelationship ID="freehaven_civilians" value="55" />	
-	<defaultRelationship value="55" />
+	<defaultRelationship value="25" />
 </faction>

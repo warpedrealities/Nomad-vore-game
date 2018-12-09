@@ -9,7 +9,7 @@ public class FactionViolation {
 	private int violationLevel;
 
 	public FactionViolation(int level, Vec2f position) {
-		if (violationPosition != null) {
+		if (position != null) {
 			violationPosition = new Vec2f(position.x, position.y);
 		}
 

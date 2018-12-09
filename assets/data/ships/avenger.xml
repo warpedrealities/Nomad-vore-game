@@ -71,14 +71,14 @@
 
 			<placeWidget x="3" y="5" name="slot">
 				<contains name="modules/generator">
-					<resource type="ENERGY" value="0" />
+					<resource type="ENERGY" value="50" />
 				</contains>
 				<widgetItem>generator</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="5" y="5" name="slot">
 				<contains name="modules/generator">
-					<resource type="ENERGY" value="0" />
+					<resource type="ENERGY" value="50" />
 				</contains>
 				<widgetItem>generator</widgetItem>
 			</placeWidget>
@@ -101,6 +101,7 @@
 						<loot item="explosive grenade" chance="1.0" />
 						<loot item="capture device" chance="1.0" />	
 						<loot item="explosive grenade" chance="1.0" />
+						<loot item="power-cell" chance="1.0" />						
 						<loot item="mule" chance="1.0" />		
 						<loot item="harness" chance="1.0" />		
 					</lootTable>				

@@ -39,7 +39,7 @@ public class Inventory {
 		m_capacity = capacity;
 
 		m_slots = new Item[5];
-
+		playerCredits = 00;
 	}
 
 	public Item getSlot(int i) {
@@ -166,12 +166,12 @@ public class Inventory {
 			{
 				m_items.add(item);
 			}
-		
+
 		}
 
 		playerCredits = dstream.readInt();
 		playerGold = dstream.readInt();
-		
+
 		recalc();
 	}
 

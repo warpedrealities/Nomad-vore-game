@@ -77,7 +77,7 @@ public class SosEvents {
 		}
 
 		int r = Universe.m_random.nextInt(list.size());
-		ship.setShipState(ShipState.ADRIFT);
+		ship.setShipState(ShipState.SPACE);
 		list.get(r).trigger();
 	}
 

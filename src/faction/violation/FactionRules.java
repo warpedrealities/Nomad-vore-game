@@ -73,18 +73,18 @@ public class FactionRules {
 		return false;
 	}
 
-	public int violationLevel(String targetname, ViolationType vtype) {
+	public FactionRule violationLevel(String targetname, ViolationType vtype) {
 
 		Map<ViolationType, FactionRule> ruleset = ruleHierarchy.get(targetname);
 		if (ruleset != null) {
 			FactionRule rule = ruleset.get(vtype);
 			if (rule != null) {
 				rule.violationAction();
-				return rule.getViolationLevel();
+				return rule;
 
 			}
 		}
-		return 0;
+		return null;
 	}
 
 	public Faction getFaction() {
