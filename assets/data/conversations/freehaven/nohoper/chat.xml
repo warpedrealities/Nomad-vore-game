@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<text>
+	The rodent girl looks up at you "Spare any credits stranger?" she asks half heartedly.
+ 	</text>
+	<choice destination="story" text="$So what's your story?"/>
+	<choice destination="offer" text="$I can offer you something better than credits">
+		<preference fetish="females" />	
+		<preference fetish="demis" />	
+		<preference fetish="oralvore" /> 
+	</choice>
+	<choice destination="end" text="$No, goodbye"/>
+	</page>
+	
+	<page ID="offer">
+	<text>
+	The rodent girl looks confused, maybe skeptical "No offence but I really could use the credits. I can get something to eat if i have credits." she says smiling apologetically as she doesn't want to make a kindly soul walk off.
+	</text>
+	<choice destination="oralvore0" text="$Oh so you wouldn't rather eat me then?"/>
+	<choice destination="end" text="$I suppose you're right, I'll be going then"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	"EAT..you?" oh girl that expression on her face is priceless right now, she seems pretty surprised by your offer. But quickly begins to warm to it as she eyes your figure and moistens her lips "Well, you are pretty tastey looking..but..why are you offering?" she asks, genuinely curious <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				even as you start to slip out of your
+				<readequipment slot="2" />
+			</conditional>. 
+	</text>
+	<choice destination="oralvore1" text="$Does it really matter? you clearly want to eat me, and i want to be eaten"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	"Oh well i suppose not I was just curious is all...you're really serious? this isn't like some trick or making fun or something?" says the ratgirl as if she can't believe this is really happening.
+	</text>
+	<choice destination="oralvore2" text="$I'm serious, and if you keep hesitating i'm either going to shove myself down  your throat or see if someone else around here is hungry"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	"Okay okay I..." the ratgirl says quickly and then takes a deep breath "I'd love to eat you, come'ere and get in my belly." she says and puts actions to deeds as she reaches out to take your hands and guide you by them towards her lips. She's notably salivating hungrily for your naked body, one can only imagine how long it's been since she last had a proper filling meal like this. Still she's making the best of it as you feel her slurp your hands into her mouth and then swallow to take them into her throat as well. The rodentgirl letting out a mhmm even as her stomach lets out a hungry insistent growl craving you inside.
+	</text>
+	<choice destination="oralvore3" text="$my you must be starved, I'll be just what you'll be needing, eat up"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	The rodent lets out a delighted but muffled mhmm around your arms in response to your encouragement, swallowing powerfully to make her way up your arms and towards your head. You help her out by ducking down before she reaches that far though, closing your eyes as you feel the heat of her hungry mouth encompassing your head. You're now posed as if diving down the throat of the lil hungry ratgirl, feeling her powerful swallows rippling around you as she works on stretching her jaws around your shoulders. She's such a hungry lil thing that it's clear she's not going to savour you too much and is focused on getting you inside.
+	</text>
+	<choice destination="oralvore4" text="*slide on in*"/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	The ratgirl crams your <macro ID="breast_size_desc" />breasts and then belly past her greedy lips but slows to take your hips in as you pile into her belly. the lil rodent's gut is quite a tight fit for you but stretches to welcome you inside as you wriggle helpfully for her, hearing her belly groan hungrily around you as you're halfway consumed. You can feel her manipulating your legs and hoisting them up with difficulty to let gravity help her cram the rest of you away. You're unable to help with this part but the way her belly snugly bulges around you gives you a certain thrill, especially as you're not all the way inside yet.
+	</text>
+	<choice destination="oralvore5" text="*polished off*"/>
+	</page>
+	
+	<page ID="oralvore5">
+	<text>
+	Finally she gets past your <macro ID="butt_size_desc" /> ass and after that it's smooth sailing down to your feet for the ratty. Or rather, smooth sailing for your feet right down her throat. Her hungry gulps chugging you down in short order until she snaps her jaws shut past your toes and swallows you down "You were delicious..thanks a lot for this, you were a wonderful meal and I really appreciate it."
+	</text>
+	<choice destination="oralvore6" text="$I'm glad, now digest me"/>
+	</page>
+	
+	<page ID="oralvore6">
+	<text>
+	The ratgirl lets out a giggle at that and mhmms, nodding and cradling her belly "Thanks again tastey stranger, i wish more people were like you." she says as her gut gets to work on gurgling you up. The stomach walls clenching and kneading over you as everything gets gooey and sloshy with stomach enzymes. The rodent belly working on digesting her ample and very welcome meal.
+	</text>
+	<choice destination="oralvoreGO" text="*it was for a good cause*"/>
+	</page>
+	
+	<gameover ID="oralvoreGO">
+	<text>
+	The rodent settles into a seated position with her hefty gut resting on her legs. She continues to stroke over and dote upon her gut bulge as within it you squirm, mhmm, soften and gurgle away. Your form turning into sloppy mush inside her leaving her belly compact and rounded as she savours this rare satisfying full feeling and her good luck to have met someone so uncharacteristically generous. The ratgirl's middle soon shrinking away entirely leaving her for once well fed and rejuvenated, you truly are a benevolent sort aren't you..that and one amply nutritious meal.
+	</text>
+	</gameover>
+	
+	<page ID="story">
+	<text>
+	"Oh the usual, came here hoping things could get better..and they didn't."
+	</text>
+		<choice destination="persuade" text="$Sounds like you could do with a way out">
+		
+		</choice>
+		<choice destination="end" text="$That's a pity"/>
+	</page>
+	
+	<page ID="persuade">
+	<text>
+	"A way out? why you licking your lips like that." says the rodent, shifting a tad uneasily.
+	</text>
+	<choice destination="persuadeCheck" text="$well surely it'd be better to go out sexily if you don't have a future. So I thought I'd offer a future in my sexy belly"/>
+	<choice destination="end" text="$no reason at all, forget i said anything"/>
+	</page>
+	
+	<check ID="persuadeCheck">
+		<test what="SEDUCTION" DC="14" />
+		<outcome destination="persuadeSuccess" />
+		<outcome destination="persuadeFail" />
+	</check>
+	
+	<page ID="persuadeSuccess">
+	<text>
+	"Oh umm...really well..really?" she says and blushes, maybe you're just that sexy and seductive cause it looks like she's considering it. Her gaze drifting to your lips, then down to your belly "You're..you're not just saying this to tease me right?"
+	</text>
+	<choice destination="oralpred0" text="$Not at all, i want to make you a part of my curves little rat"/>
+	</page>
+	
+	<page ID="oralpred0">
+	<text>
+	The rodent squeeks "Well...well i guess it's a worthy cause." she says blushing hotly as she eyes your body approvingly and then blushes hotly "I can't believe i'm doing this, but yes..I want this..take me and make me yours." she says and starts to wriggle out of her clothing.
+	</text>
+	<choice destination="oralpred1" text="*hot damn I'm good*"/>
+	</page>
+	
+	<page ID="oralpred1">
+	<text>
+	The rodent girl is soon delightfully naked and ready in front of you, blushing and wiping at herself to make sure she's got not too much in the way of stains marring her body and making her unappealing to you and your hunger for her. "Well, uh..what are you waiting for?" she asks and fidgets "I might change my mind if you wait too long to eat me."
+	</text>
+	<choice destination="oralpred2" text="$Only to hear you say those words, now come'ere lunch"/>
+	</page>
+	
+	<page ID="oralpred2">
+	<text>
+	The ratgirl lets out a giggle and steps closer, closing her eyes as you grab ahold of her possessively. The rodent wriggling a bit but more twitching with nervous excitement as you stroke over her sides and plant a kiss on her face only to follow it up with hungry tasting licks. The ratty not flinching or pulling away as the last moment comes and then goes. Your lips parting and stretching around her head, her flavour yours to sample as you swirl your tongue over her face and then take your first swallow. The ratgirl letting out a little muffled squeek as she starts sliding down your throat, letting herself be swallowed up.
+	</text>
+	<choice destination="oralpred3" text="*gobble her up*"/>
+	</page>
+	
+	<page ID="oralpred3">
+	<text>
+	The ratgirl doesn't struggle and only seems to squirm in excitement as you lick her over and gobble her up. No regrets as she gives herself to the pleasure of you eating her alive. Her tail and butt proving particularly wriggly as you work your way down towards them, gobbling the rodent up hungrily. Soon she's waist deep in your mouth and entering your belly as she was always meant to, you can hardly wait to have all of her inside..especially with her squeeks and moans emanating from within you.
+	</text>
+	<choice destination="oralpred4" text="*finish her off*"/>
+	</page>
+	
+	<page ID="oralpred4">
+	<text>
+	You tip your head back, supporting and toying with her legs and tail with one hand as the other you use to rub your bulging belly and savour the way she's filling you out. The rodent girl squirming her way down your throat in time with your swallows "It's..so warm ...hot, hot in you." she moans out as you polish her off, swallowing her up entirely and smacking your lips in satisfaction as she settles into being a curled up lump in your belly.
+	</text>
+	<choice destination="oralpred5" text="$yes, i hope you're looking forward to being part of me"/>
+	</page>
+	
+	<page ID="oralpred5">
+	<text>
+	"Ah, yes..yes I am..do it...please." she says, the rodent having no regret as you give her a new role in life as your food. The ratgirl not having long to wait as your stomach gets to work on gurgling her and though she squirms and moans in an enjoyable fashion within you it doesn't take long for you to grind her down. Your stomach softening and glorping as she's broken down, and then absorbed. She really did serve better as food for you than anything else she could of done, and you're energized to continue your journey.
+	</text>
+		<effect type="feed" value="75" />	
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on"/>
+	</page>
+	
+	<page ID="persuadeFail">
+	<text>
+	"Ah no, no thanks. See I'm not ready to die just yet, thanks for the offer though? how's about...i got somewhere i need to be." the rodent girl says and scurries off. What a pity.
+	</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="what a pity indeed" />	
+	</page>
+	
+</Conversation>

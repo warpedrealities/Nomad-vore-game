@@ -104,7 +104,7 @@
 	</choice>
 	</page>
 	
-	<gameover ID="ctfGO" noreform="true">
+	<gameover ID="ctfGO" noReform="true">
 	<text>
 	The draconian subsides into a rumbling contentment as you soften in her palm. She holds your form loosely admiring your weight and length jutting from her hips for a few moments. Finally though she rises, feeling her cock hang lower now between her thighs "mhmm..i hope you're happy slut, your dragoncock now." she says and then grudgingly adds as you twitch "though, you do make for a fine cock." she says and takes flight, perhaps to show you off somewhere. Though such lofty thoughts that do not involve throbbing and spurting seem eminently unimportant to you.
 	</text>
@@ -131,7 +131,7 @@
 	<choice destination="postctf3" text="*be a good cock*"/>
 	</page>
 	
-	<gameover ID="postctf3" noreform="true">
+	<gameover ID="postctf3" noReform="true">
 	<text>
 	You feel the last twitch of the morsel beneath you as you revel in your owner's touch, throbbing and pulsing hard beneath her palm as she strokes up and down your length vigorously. In what may be mere moments or an eternity your draconian host lets out a bellow of lustful triumph as you erupt. The pleasure overflowing and flowing through you, gushing out the voluminous remnants of your prey to splatter in a thick goopy mass. The draconian growling softly in pleasure as you spurt your last and soften against her thighs "mhmm, you're an unruly cock..always hungry.." she says and then chuckles "but perhaps, i will accomodate you." she says and then laughs, taking flight...and indeed, over the rest of her life you ended a great many lives by churning them into goop for her pleasure. Now this is the kind of life you signed up for!
 	</text>
@@ -194,13 +194,13 @@
 		<choice destination="GalacticCatastrophy" text="You've Created a Monster, Nay a God of the apocalypse."/>
 	</page>
 	
-	<gameover ID="GalacticCatastrophy" noreform="true">
+	<gameover ID="GalacticCatastrophy" noReform="true">
 		<text>
 			Your Goddess is true to her word, and immediately sets off to make your contribution to her dick imperceptible. First the most deserving with her own girlfriend, she was horrified upon the change but was soon silenced like all the rest, then the entirety her own race, some even willing as they accept her as their God, then on to lower beings, such as the Elves and the Saurians. You are of course unaware or the greater goings on in the world outside the shaft, the atrocities your master now commits with the power granted by you. If you still had your sentience you might think there is a chance that your master won’t be able to fit all that cock of hers in your ship when she’s done, and that she might not even be capable of flying it, but if she can… Well then, you believe your master could do anything,  and it’s only a short trip to the derelict. There she would have room to grow, and new friends to whom she could introduce her cock to. Perhaps civilizations the universe over would come to curse your name if they knew it, but that is up to your mistress, as all you know is silence.		</text>
 	</gameover>
 	
 	
-	<gameover ID="FoolsChoice" noreform="true">
+	<gameover ID="FoolsChoice" noReform="true">
 		<text>
 			Your master is true to her word, and immediately flies off to make your contribution to her dick but a paltry addition. First with her own girlfriend, then even more of her own race, as they are the most deserving, then on to the Elves and the Saurians. When all is said and don’t you were truly insignificant to her, naught but her first stepping stone.
 		</text>

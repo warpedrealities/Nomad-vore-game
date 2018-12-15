@@ -33,7 +33,7 @@ public class NavScreen extends Screen implements Callback {
 	Window window;
 	Window statWindow;
 	Window crewWindow;
-	boolean canLaunch;
+	boolean canLaunch, hostiles;
 	String statustext;
 	private int weaponIndex;
 	private Text[] weaponTexts;
@@ -89,6 +89,7 @@ public class NavScreen extends Screen implements Callback {
 			if (shipStats.getCrewList().get(i).getActorFaction().getRelationship("player")<=50)
 			{
 				canLaunch = false;
+				hostiles = true;
 				statustext = "not safe to take the controls with hostiles aboard";
 				break;
 			}
@@ -336,13 +337,13 @@ public class NavScreen extends Screen implements Callback {
 			break;
 		case SPACE:
 			buttons[1] = new Button(new Vec2f(34.0F, 2.0F), new Vec2f(6, 1.8F), textures[2], this, "control", 1, 1);
-			if (!canLaunch) {
+			if (!canLaunch && !hostiles) {
 				window.add(buttons[2]);
 			}
 			break;
 		case ADRIFT:
 			buttons[1] = new Button(new Vec2f(34.0F, 2.0F), new Vec2f(6, 1.8F), textures[2], this, "control", 1, 1);
-			if (!canLaunch) {
+			if (!canLaunch && !hostiles) {
 				window.add(buttons[2]);
 			}
 			break;

@@ -13,7 +13,7 @@ public class UniverseEventSystem {
 
 	public void update(Universe universe, long clock) {
 		timer += clock;
-		if (timer > 200) {
+		if (timer > 100) {
 			if (Spaceship.class.isInstance(universe.getCurrentEntity())) {
 				fuelEvents.update((Spaceship) universe.getCurrentEntity());
 			}

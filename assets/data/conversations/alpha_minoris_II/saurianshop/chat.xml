@@ -111,8 +111,16 @@
 			while this
 			serpent exists to lure the miners into its gullet."
 		</text>
+		<choice destination="reminder" text="can you remind me where the mine is?"/>
 		<choice destination="beast" text="tell me about this beast" />
 		<choice destination="end" text="I'll get around to killing it" />
+	</page>
+	
+	<page ID="reminder">
+	<text>
+	"The caves are just at the edge of dammath to the north east."
+	</text>
+	<choice destination="end" text="thanks"/>
 	</page>
 
 	<page ID="beast">

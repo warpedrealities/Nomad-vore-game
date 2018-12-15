@@ -125,6 +125,10 @@ public class ActionBar implements MyListener {
 		}
 	}
 
+	public void setClock(float clock) {
+		this.clock = clock;
+	}
+
 	public void setUpdateAction(int value) {
 		updateAction = value;
 	}

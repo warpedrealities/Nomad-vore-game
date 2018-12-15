@@ -14,10 +14,11 @@ import nomad.universe.eventSystem.events.Event;
 import shared.ParserHelper;
 import spaceship.Spaceship;
 import spaceship.Spaceship.ShipState;
+import view.ViewScene;
 public class SosEvents {
 	private int chance;
 	private List<Event> events;
-
+	private List<String> distressStrings;
 	public SosEvents() {
 		chance = 0;
 		generate();
@@ -33,6 +34,29 @@ public class SosEvents {
 		for (int i = 0; i < files.length; i++) {
 			if (files[i].getName().contains(".svn") == false) {
 				Reader(files[i].getName());
+			}
+			if (files[i].getName().contains("distress_strings") == false) {
+				Reader(files[i].getName());
+			} else {
+				readDistressStrings(files[i].getName());
+			}
+		}
+
+	}
+
+	private void readDistressStrings(String name) {
+		distressStrings = new ArrayList<>();
+
+		Document doc = ParserHelper.LoadXML("assets/data/systems/events/sos/" + name);
+		Element root = doc.getDocumentElement();
+		Element n = (Element) doc.getFirstChild();
+		NodeList children = n.getChildNodes();
+		for (int i = 0; i < children.getLength(); i++) {
+			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
+				Element e = (Element) children.item(i);
+				if (e.getTagName().equals("string")) {
+					distressStrings.add(e.getTextContent());
+				}
 			}
 		}
 	}
@@ -62,6 +86,12 @@ public class SosEvents {
 			if (r < chance) {
 				runEvent(ship);
 				chance = 0;
+			}
+			else {
+				if (ViewScene.m_interface != null) {
+					int rand = Universe.m_random.nextInt(distressStrings.size());
+					ViewScene.m_interface.DrawText(distressStrings.get(rand));
+				}
 			}
 		} else if (chance != 0) {
 			chance = 0;

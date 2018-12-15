@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <rules>
 
+	<superRule subject="nohoper" level="2" violation="ATTACK">
+		<factionRelationship faction="freehaven_wardens" mod="-20" />
+	</superRule>	
 	<superRule subject="station warden" level="2" violation="ATTACK">
 		<factionRelationship faction="freehaven_wardens" mod="-20" />
 	</superRule>	

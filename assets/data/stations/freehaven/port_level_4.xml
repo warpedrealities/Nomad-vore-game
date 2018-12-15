@@ -37,9 +37,9 @@
 							<edge value="EAST" type="1" />
 							<edge value="WEST" type="1" />
 							<edge value="NORTH" type="1" />							
-							<widget x="6" y="5" name="console"
+							<widget x="6" y="5" name="lift"
 								info="interaction/freehaven/lift_level4" variable="1" />
-							<widget x="7" y="5" name="console"
+							<widget x="7" y="5" name="lift"
 								info="interaction/freehaven/lift_level4" variable="1" />								
 						</keyBlock>		
 					<clean value="10" />		
@@ -51,9 +51,9 @@
 	<selectTile tile="1">
 	<SeedNPCs min="8" max="12" name="freehaven/wardens/warden" minDistance="12" />	
 	</selectTile>
-<!-- 	<selectTile tile="3">
-	<SeedNPCs min="16" max="20" name="forakis_I/pyramid/pyramid_scarab" minDistance="12" />	
-	</selectTile>	 -->	
+<	<selectTile tile="3">
+	<SeedNPCs min="16" max="20" name="freehaven/civilians/nohoper" />	
+	</selectTile>	
 	
 	</mapgen>
 

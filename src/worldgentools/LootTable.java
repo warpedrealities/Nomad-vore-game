@@ -59,7 +59,6 @@ public class LootTable {
 				if (!(loot.get(i).isUnique() == 3 && oneper)) {
 					// roll to see if its part of this loot batch
 					float chance = loot.get(i).getChance() * 100;
-					int roll = Universe.m_random.nextInt(100);
 					Item item = loot.get(i).genLoot();
 					if (item != null) {
 

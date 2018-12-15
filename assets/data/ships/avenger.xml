@@ -103,7 +103,7 @@
 						<loot item="explosive grenade" chance="1.0" />
 						<loot item="power-cell" chance="1.0" />						
 						<loot item="mule" chance="1.0" />		
-						<loot item="harness" chance="1.0" />		
+						<loot item="credits" chance="1.0" addendum="500000" />		
 					</lootTable>				
 				</contains>
 				<widgetItem>advanced cargo container</widgetItem>
@@ -116,7 +116,7 @@
 
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="modules/interplanetary reactor">
-					<resource type="FUEL" value="150" />
+					<resource type="FUEL" value="0" />
 				</contains>
 				<widgetItem>interplanetary reactor</widgetItem>	
 			</placeWidget>

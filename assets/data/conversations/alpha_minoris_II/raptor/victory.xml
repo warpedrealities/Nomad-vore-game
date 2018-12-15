@@ -338,7 +338,7 @@
 			apart layer by layer.
 		</text>
 		<choice destination="submitGO" text="get digested" />
-		<choice destination="submitGO" text="get digested (disposal)">
+		<choice destination="submitGOdisposal" text="get digested (disposal)">
 		<preference fetish="disposal" />
 		</choice>
 	</page>

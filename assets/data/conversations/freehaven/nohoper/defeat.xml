@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text> 
+		The ratgirl lets out a whimper as you approach, trying to back away. But she can't escape you now, she's down and out and at your mercy, something you can give or not whether you wish to acknowledge her pleas "Please.."
+		</text>
+		<choice destination="oralvore0" text="*lunchtime*">
+				<assertion evaluate="hasperk" perk="oralvore" />		
+		</choice>
+		<choice destination="devour" text="devour">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
+		<choice destination="end" text="*mercy, for now*" />
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	"No please don't-" the rodent manages before you seize her and lift her up, grabbing her head and silencing her pleas for mercy with your own lips wrapping around her head. Your first swallow makes her squirm and spasm, letting out muffled squeeks against the inside of your throat as she starts to slide away into your body, just a meal for you. Her deteriorated attire yields easily to your desire to strip her naked, coming apart under your hands as you work on it and swallow more and more of her up.
+	</text>
+	<choice destination="oralvore1" text="*eat her up*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The rodentgirl is too small and scrawny to put up much of a fight, so soon enough she's sliding down your throat and into your belly as is only fitting. The strong feast, the weak get eaten. And the ratgirl's whimpering form is forced to curl up inside your belly, her outline pleasingly swelling your middle now as you cram her legs away "...don't, don't digest me..please, i don't want to die like this." she manages to plead from your middle now she's crammed away inside you.
+	</text>
+	<choice destination="oralvore2" text="$I don't care."/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+		The ratgirl lets out a squeek at that and the way your stomach walls clench and gurgle around her, her pleas and protests steadily sounding weaker and weaker as you digest her away. Really though you were doing her a favour, she had no future and wasn't going to amount to anything..but now she's amounted to a satisfying meal for you. And you have the soft compacting bellybulge to show for it.
+	</text>
+		<effect type="feed" value="75" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="75" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+</Conversation>

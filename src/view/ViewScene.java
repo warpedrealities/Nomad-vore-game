@@ -1034,6 +1034,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_K)) {
 				m_mode = ViewMode.ATTACK;
 				m_buttons[4].setString("attack");
+				Universe.getInstance().getPlayer().setMove(0);
 				m_time = 0.2F;
 			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_P)) {
@@ -1284,6 +1285,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	@Override
 	public void setScreen(Screen screen) {
 		targeter.setActive(false);
+		actionBar.setClock(1);
 		if (m_screen == null) {
 			int values[] = new int[6];
 			values[0] = m_textureIds[6];
