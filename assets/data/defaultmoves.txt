@@ -13,7 +13,7 @@
  
 <seduce name="seduce" ammoCost="0" pattern="MELEE" bonusAttribute="SEDUCTION" actionCost="2" basicAction="true" moveType="DOMINATE"
  
-timeCost="2">
+timeCost="4">
 <effectDamage type="TEASE" minValue="1" maxValue="6" modifier="CHARM" rangeDecay="1"/>
 <missText count="1">
 <text>you fail to arouse TARGET</text>
