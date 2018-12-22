@@ -27,7 +27,7 @@
 	</text>
 	<choice destination="wistful" text="$you sound envious"/>
 	<choice destination="shop0" text="$You have a point, can you style my hair now?"/>
-	</choice destination="end" text="$I see, I'll take my leave now"/>
+	<choice destination="end" text="$I see, I'll take my leave now"/>
 	</page>
 	
 	<page ID="wistful">
@@ -42,7 +42,7 @@
 	<text>
 	"Hooray, let me get my footstool!" says the shortstack, apparently needing a bit of assistance with her height disadvantage before she can begin.
 	</text>
-	<page ID="shop1" text="$by all means"/>
+	<choice destination="shop1" text="$by all means"/>
 	</page>
 	
 	<page ID="shop1">

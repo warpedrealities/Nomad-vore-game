@@ -29,7 +29,7 @@
 				<text>Ruffian hits TARGET for VALUE damage</text>
 			</hitText>
 		</combatMove>
-		<combatmove name="break guard" bonusAttribute="MELEE"
+		<combatMove name="break guard" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="4" cooldown="50" icon="16" pattern="MELEE"
 			actionCost="6" moveType="FIGHT">
 			<effectDamage type="KINETIC" minValue="4" maxValue="6"
@@ -49,14 +49,14 @@
 					<effect attribute="MELEE" modifier="-4" />
 				</statusAttribMod>
 			</effectStatus>	
-		</combatmove>				
+		</combatMove>				
 	</rpg>
 
 	<respawn delay="4000" />
-	<defeated conversation="freehaven/criminals/defeat" />
-	<seduced conversation="freehaven/criminals/seduced" />
-	<victory conversation="freehaven/criminals/victory" />
-	<seducer conversation="freehaven/criminals/victory" />
+	<defeated conversation="freehaven/ruffian/defeat" />
+	<seduced conversation="freehaven/ruffian/seduced" />
+	<victory conversation="freehaven/ruffian/victory" />
+	<seducer conversation="freehaven/ruffian/victory" />
 	<controller AI="ruffian" />
 	<faction value="freehaven_gangs" />
 </Harpy>

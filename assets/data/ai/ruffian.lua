@@ -9,10 +9,12 @@ function combat(controllable,sense,pos,hostile)
 		else
 			controllable:setAttack(0)
 			result = controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-			if (result.getValue()==1) then
-				controllable:setValue(0,0)	
-			else
-				controllable:setValue(0,controllable:getValue(0)+1)
+			if not (result==nil) then
+				if (result:getValue()==1) then
+					controllable:setValue(0,0)	
+				else
+					controllable:setValue(0,controllable:getValue(0)+1)
+				end
 			end	
 		end
 		
@@ -32,14 +34,13 @@ function victimize(controllable,sense,pos,hostile)
 		end
 	end
 	
-	if (controllable:controllable:getRPG():getStat(0)==controllable:getValue(3) and
-	then
-		(controllable:controllable:getRPG():getStat(1)==controllable:getValue(4)
+	if (controllable:getRPG():getStat(0)==controllable:getValue(3)) and	
+		(controllable:getRPG():getStat(1)==controllable:getValue(4)) then
 		controllable:setValue(1,controllable:getValue(1)+1)	
 	else
 		controllable:setValue(1,0)
-		controllable:setValue(3,controllable:controllable:getRPG():getStat(0))
-		controllable:setValue(4,controllable:controllable:getRPG():getStat(1))	
+		controllable:setValue(3,controllable:getRPG():getStat(0))
+		controllable:setValue(4,controllable:getRPG():getStat(1))	
 		return false;
 	end
 
@@ -60,7 +61,7 @@ function main(controllable,sense,script)
 	pos=controllable:getPosition()
 	hostile=sense:getHostile(controllable,10,true)
 	
-	if not victimize(controllable,sense,pos,hostile) not (hostile == nil ) and not controllable:isPeace() then
+	if (not victimize(controllable,sense,pos,hostile) and not (hostile == nil ) and not controllable:isPeace()) then
 		--combat ai here
 		combat(controllable,sense,pos,hostile)
 

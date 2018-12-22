@@ -24,5 +24,5 @@
 	<talk conversation="freehaven/civilians/nohoper/chat" />
 
 	<controller AI="nohoper" />
-	<faction value="freehaven_civilian" />
+	<faction value="freehaven_civilians" />
 </NPC>

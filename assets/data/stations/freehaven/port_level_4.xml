@@ -54,7 +54,7 @@
 							<row>00333000</row>
 							<edge value="SOUTH" type="4"/>
 							<widget x="3" y="6" name="shop"
-								info="freehaven/guntrader" variable="96" />
+								info="freehaven/guntrader/chat" variable="96" />
 						</keyBlock>			
 						<keyBlock heat="1">
 							<!--hairdresser-->
@@ -66,7 +66,7 @@
 							<row>15555510</row>
 							<row>15555510</row>
 							<row>11111110</row>
-							<edge value="NORTH" type="2"/>
+							<edge value="SOUTH" type="2"/>
 							<spawn x="3" y="5" tag="0" />
 						</keyBlock>										
 					<clean value="10" />	
@@ -79,8 +79,9 @@
 	<selectTile tile="1">
 	<SeedNPCs min="8" max="12" name="freehaven/wardens/warden_level4" minDistance="12" />	
 	</selectTile>
-<	<selectTile tile="3">
+	<selectTile tile="3">
 	<SeedNPCs min="16" max="20" name="freehaven/civilians/nohoper" />	
+	<SeedNPCs min="12" max="16" name="freehaven/criminals/ruffian" minDistance="8" />	
 	</selectTile>	
 	
 	</mapgen>
