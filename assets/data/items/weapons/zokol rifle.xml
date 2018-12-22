@@ -6,7 +6,7 @@ An automatic rifle famed for being simple and rugged. Can survive impact, dirt, 
 <modifier>
 
 </modifier>
-<combatMove name="autofire" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" actionCost="4" basicAction="true" moveType="FIGHT"  multiAttack="3" rangeDecay="0.5">
+<combatMove name="autofire" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" actionCost="4" basicAction="true" moveType="FIGHT"  multiAttack="3" rangeDecay="1">
 <effectDamage type="KINETIC" minValue="6" maxValue="10" modifier="NONE"/>
 <missText count="2">
 <text>TARGET is not hit by your hail of bullets</text>

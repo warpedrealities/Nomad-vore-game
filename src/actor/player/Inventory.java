@@ -39,7 +39,7 @@ public class Inventory {
 		m_capacity = capacity;
 
 		m_slots = new Item[5];
-		playerCredits = 5000;
+		playerCredits = 00;
 	}
 
 	public Item getSlot(int i) {

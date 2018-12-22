@@ -46,7 +46,6 @@
 			timeCost="2" bonusToHit="0">
 			<effectrecover modifier="ENDURANCE" modstrength="0.2"
 				modvalue="6" modifies="HEALTH">
-				The medicine makes you feel better, who'd of thought it.
 			</effectrecover>
 			<missText count="1">
 				<text></text>

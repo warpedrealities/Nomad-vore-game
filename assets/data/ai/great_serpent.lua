@@ -10,8 +10,8 @@ function combat(controllable,sense)
 		--if in melee range attack
 		controllable:setAttack(0)
 		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-		script:setValue(2,hostile:getPosition().x)
-		script:setValue(3,hostile:getPosition().y)
+		controllable:setValue(2,hostile:getPosition().x)
+		controllable:setValue(3,hostile:getPosition().y)
 		else
 			--if not move towards player
 			if controllable:HasPath() then
@@ -21,8 +21,8 @@ function combat(controllable,sense)
 			end
 		end
 	else
-		x=script:getValue(0)
-		y=script:getValue(1)
+		x=controllable:getValue(2)
+		y=controllable:getValue(3)
 		if (x>0) then
 			if controllable:HasPath() then
 				controllable:FollowPath()
@@ -74,7 +74,7 @@ function regenerate(controllable,sense)
 			end
 		end	
 	else
-		a=script:getValue(0)
+		a=controllable:getValue(0)
 		a=a+1
 		if (a==20) then
 			a=0
@@ -90,17 +90,17 @@ function main(controllable, sense, script)
 	
 	a=controllable:getValue(0)
 	b=controllable:getHealth()
-	--if ( b > 30 ) then
+	if ( b >= 30 ) then
 		combat(controllable,sense)
 	
-	--end
+	end
 	
-	--if ( b < 30 ) then
-	--	if ( a==0 ) then
-	--		flee(controllable,sense)
-	--	else
-	--		regenerate(controllable, sense)
-	--	end
-	--end 
+	if ( b < 30 ) then
+		if ( a==0 ) then
+			flee(controllable,sense)
+		else
+			regenerate(controllable, sense)
+		end
+	end 
 	
 end  

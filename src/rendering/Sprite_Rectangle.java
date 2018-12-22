@@ -58,12 +58,12 @@ public class Sprite_Rectangle extends Sprite {
 		// build the four vertexes for the square
 		Vertex v[] = new Vertex[4];
 
-		float height = spriteSize * xyRatio;
+		float height = 1 * xyRatio;
 
-		v[0] = new Vertex(spriteSize * -0.5F, 0, 0, Uf, Vf + (1 / sqrt));
-		v[1] = new Vertex(spriteSize * 0.5F, 0, 0, Uf + (1 / sqrt), Vf + (1 / sqrt));
-		v[2] = new Vertex(spriteSize * 0.5F, 0 + height, 0, Uf + (1 / sqrt), Vf);
-		v[3] = new Vertex(spriteSize * -0.5F, 0 + height, 0, Uf, Vf);
+		v[0] = new Vertex(1 * -0.5F, 0, 0, Uf, Vf + (1 / sqrt));
+		v[1] = new Vertex(1 * 0.5F, 0, 0, Uf + (1 / sqrt), Vf + (1 / sqrt));
+		v[2] = new Vertex(1 * 0.5F, 0 + height, 0, Uf + (1 / sqrt), Vf);
+		v[3] = new Vertex(1 * -0.5F, 0 + height, 0, Uf, Vf);
 
 		for (int k = 0; k < 4; k++) {
 
@@ -113,12 +113,12 @@ public class Sprite_Rectangle extends Sprite {
 		// build the four vertexes for the square
 		Vertex v[] = new Vertex[4];
 		FloatBuffer verticesBuffer = BufferUtils.createFloatBuffer(4 * 6);
-		float height = spriteSize * xyRatio;
+		float height = 1 * xyRatio;
 
-		v[0] = new Vertex(spriteSize * -0.5F, 0, 0, Uf, Vf + (1 / sqrt));
-		v[1] = new Vertex(spriteSize * 0.5F, 0, 0, Uf + (1 / sqrt), Vf + (1 / sqrt));
-		v[2] = new Vertex(spriteSize * 0.5F, 0 + height, 0, Uf + (1 / sqrt), Vf);
-		v[3] = new Vertex(spriteSize * -0.5F, 0 + height, 0, Uf, Vf);
+		v[0] = new Vertex(1 * -0.5F, 0, 0, Uf, Vf + (1 / sqrt));
+		v[1] = new Vertex(1 * 0.5F, 0, 0, Uf + (1 / sqrt), Vf + (1 / sqrt));
+		v[2] = new Vertex(1 * 0.5F, 0 + height, 0, Uf + (1 / sqrt), Vf);
+		v[3] = new Vertex(1 * -0.5F, 0 + height, 0, Uf, Vf);
 
 		for (int k = 0; k < 4; k++) {
 			verticesBuffer.put(v[k].pos);

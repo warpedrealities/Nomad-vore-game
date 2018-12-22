@@ -35,7 +35,7 @@ public class SystemScreen extends Screen implements SystemCallback {
 
 	int equipThreshold;
 	int equipCount;
-	
+
 
 	public SystemScreen(WidgetSystem widgetSystem) {
 		// TODO Auto-generated constructor stub
@@ -47,23 +47,23 @@ public class SystemScreen extends Screen implements SystemCallback {
 		{
 			switch (this.system.getShipAbilities().get(i).getAbilityType())
 			{
-				case SA_RESOURCE:
-					systemDisplays.add(new ResourceDisplay(index, (ShipResource)this.system.getShipAbilities().get(i),this));
-					index++;
+			case SA_RESOURCE:
+				systemDisplays.add(new ResourceDisplay(index, (ShipResource)this.system.getShipAbilities().get(i),this));
+				index++;
 				break;
-			
-				case SA_CONVERTER:
-					systemDisplays.add(new ConverterDisplay(index, (ShipConverter)this.system.getShipAbilities().get(i),this));
-					index++;					
+
+			case SA_CONVERTER:
+				systemDisplays.add(new ConverterDisplay(index, (ShipConverter)this.system.getShipAbilities().get(i),this));
+				index++;
 				break;
-				
-				case SA_DISPENSER:
-					systemDisplays.add(new DispenserDisplay(index, (ShipDispenser)this.system.getShipAbilities().get(i),this));
-					index++;					
+
+			case SA_DISPENSER:
+				systemDisplays.add(new DispenserDisplay(index, (ShipDispenser)this.system.getShipAbilities().get(i),this));
+				index++;
 				break;
 			}
 		}
-		
+
 	}
 
 	@Override
@@ -109,45 +109,46 @@ public class SystemScreen extends Screen implements SystemCallback {
 		// TODO Auto-generated method stub
 		switch (ID) {
 		case 2:
+			player.calcMove();
 			callback.Callback();
 			break;
 
 		case 1:
-	//		put();
+			//		put();
 			break;
 
 		case 3:
-	//		toggleConverter();
+			//		toggleConverter();
 			break;
 		case 4:
-	//		dispenseItem();
+			//		dispenseItem();
 			break;
 		}
 	}
-//
-//	private void dispenseItem() {
-//
-//		if (getNumDispensable() > 0) {
-//
-//			player.getInventory().AddItem(Universe.getInstance().getLibrary().getItem(dispenserObj.getOutputItem()));
-//			resourceObj.setAmountContained(resourceObj.getAmountContained() - dispenserObj.getCost());
-//			resetList();
-//		}
-//	}
-//
-//	private void toggleConverter() {
-//		if (converterObj != null) {
-//			if (converterObj.isActive()) {
-//				toggleButton.setString("turn on");
-//				converterObj.setActive(false);
-//			} else {
-//				toggleButton.setString("turn off");
-//				converterObj.setActive(true);
-//			}
-//
-//		}
-//	}
-//
+	//
+	//	private void dispenseItem() {
+	//
+	//		if (getNumDispensable() > 0) {
+	//
+	//			player.getInventory().AddItem(Universe.getInstance().getLibrary().getItem(dispenserObj.getOutputItem()));
+	//			resourceObj.setAmountContained(resourceObj.getAmountContained() - dispenserObj.getCost());
+	//			resetList();
+	//		}
+	//	}
+	//
+	//	private void toggleConverter() {
+	//		if (converterObj != null) {
+	//			if (converterObj.isActive()) {
+	//				toggleButton.setString("turn on");
+	//				converterObj.setActive(false);
+	//			} else {
+	//				toggleButton.setString("turn off");
+	//				converterObj.setActive(true);
+	//			}
+	//
+	//		}
+	//	}
+	//
 	private Item findEquip(int index) {
 
 		for (int i = 0; i < 4; i++) {
@@ -161,76 +162,76 @@ public class SystemScreen extends Screen implements SystemCallback {
 		}
 		return null;
 	}
-//
-//	private void put() {
-//		if (resourceObj != null) {
-//			int v = itemList.getSelect();
-//			if (v >= 0 && v < player.getInventory().getNumItems() + equipCount) {
-//				if (v < equipThreshold) {
-//					if (trythis(player.getInventory().getItem(v))) {
-//						resetList();
-//					}
-//				} else {
-//					if (trythis(findEquip(v - equipThreshold))) {
-//						resetList();
-//					}
-//				}
-//			}
-//		}
-//	}
-//
-//	private boolean trythis(Item item) {
-//		// check if item is a conversion
-//		ResourceConversionHandler handler=ResourceConversionHandler.getInstance();
-//		if (handler.canConvert(resourceObj.getContainsWhat(), item.getItem().getName()))
-//		{
-//			if (resourceObj.getAmountContained()>=resourceObj.getContainedCapacity())
-//			{
-//				return false;
-//			}
-//			if (ItemDepletableInstance.class.isInstance(item)) {
-//				ItemDepletableInstance idi = (ItemDepletableInstance) item;
-//				ItemHasEnergy ihe = (ItemHasEnergy) idi.getItem();
-//
-//				float ratio = (float) idi.getEnergy() / ihe.getEnergy().getMaxEnergy();
-//				resourceObj.addResource(((float)handler.conversionValue(resourceObj.getContainsWhat(), item.getItem().getName())) * ratio);
-//			} else {
-//				resourceObj.addResource(handler.conversionValue(resourceObj.getContainsWhat(), item.getItem().getName()));
-//			}	
-//			player.getInventory().RemoveItem(item);
-//			return true;
-//		}
-//	
-//		// check if resource is energy and the item is a rechargeable
-//		if (resourceObj.getContainsWhat().equals("ENERGY") && ItemDepletableInstance.class.isInstance(item)) {
-//			ItemDepletableInstance it = (ItemDepletableInstance) item;
-//			int energy = it.getEnergy();
-//			ItemEnergy ie = ((ItemHasEnergy) it.getItem()).getEnergy();
-//			if (ie != null && ie.getRefill() != null && ie.getRefill().contains("ENERGY")
-//					&& energy < ie.getMaxEnergy()) {
-//				int missing = ie.getMaxEnergy() - energy;
-//				// get amount of energy required to completely recharge item
-//				float required = ((float) missing) / ie.getrefillrate();
-//				// if resource energy equal or greater, fully recharge and
-//				// subtract
-//				if (resourceObj.getAmountContained() >= required) {
-//					it.setEnergy(ie.getMaxEnergy());
-//					resourceObj.setAmountContained(resourceObj.getAmountContained() - required);
-//					return true;
-//				}
-//				// if not, recharge partially
-//				else if (resourceObj.getAmountContained() > 0) {
-//					float amount = resourceObj.getAmountContained() * ie.getrefillrate();
-//					it.setEnergy(it.getEnergy() + amount);
-//
-//					resourceObj.setAmountContained(0);
-//					return true;
-//				}
-//			}
-//		}
-//
-//		return false;
-//	}
+	//
+	//	private void put() {
+	//		if (resourceObj != null) {
+	//			int v = itemList.getSelect();
+	//			if (v >= 0 && v < player.getInventory().getNumItems() + equipCount) {
+	//				if (v < equipThreshold) {
+	//					if (trythis(player.getInventory().getItem(v))) {
+	//						resetList();
+	//					}
+	//				} else {
+	//					if (trythis(findEquip(v - equipThreshold))) {
+	//						resetList();
+	//					}
+	//				}
+	//			}
+	//		}
+	//	}
+	//
+	//	private boolean trythis(Item item) {
+	//		// check if item is a conversion
+	//		ResourceConversionHandler handler=ResourceConversionHandler.getInstance();
+	//		if (handler.canConvert(resourceObj.getContainsWhat(), item.getItem().getName()))
+	//		{
+	//			if (resourceObj.getAmountContained()>=resourceObj.getContainedCapacity())
+	//			{
+	//				return false;
+	//			}
+	//			if (ItemDepletableInstance.class.isInstance(item)) {
+	//				ItemDepletableInstance idi = (ItemDepletableInstance) item;
+	//				ItemHasEnergy ihe = (ItemHasEnergy) idi.getItem();
+	//
+	//				float ratio = (float) idi.getEnergy() / ihe.getEnergy().getMaxEnergy();
+	//				resourceObj.addResource(((float)handler.conversionValue(resourceObj.getContainsWhat(), item.getItem().getName())) * ratio);
+	//			} else {
+	//				resourceObj.addResource(handler.conversionValue(resourceObj.getContainsWhat(), item.getItem().getName()));
+	//			}
+	//			player.getInventory().RemoveItem(item);
+	//			return true;
+	//		}
+	//
+	//		// check if resource is energy and the item is a rechargeable
+	//		if (resourceObj.getContainsWhat().equals("ENERGY") && ItemDepletableInstance.class.isInstance(item)) {
+	//			ItemDepletableInstance it = (ItemDepletableInstance) item;
+	//			int energy = it.getEnergy();
+	//			ItemEnergy ie = ((ItemHasEnergy) it.getItem()).getEnergy();
+	//			if (ie != null && ie.getRefill() != null && ie.getRefill().contains("ENERGY")
+	//					&& energy < ie.getMaxEnergy()) {
+	//				int missing = ie.getMaxEnergy() - energy;
+	//				// get amount of energy required to completely recharge item
+	//				float required = ((float) missing) / ie.getrefillrate();
+	//				// if resource energy equal or greater, fully recharge and
+	//				// subtract
+	//				if (resourceObj.getAmountContained() >= required) {
+	//					it.setEnergy(ie.getMaxEnergy());
+	//					resourceObj.setAmountContained(resourceObj.getAmountContained() - required);
+	//					return true;
+	//				}
+	//				// if not, recharge partially
+	//				else if (resourceObj.getAmountContained() > 0) {
+	//					float amount = resourceObj.getAmountContained() * ie.getrefillrate();
+	//					it.setEnergy(it.getEnergy() + amount);
+	//
+	//					resourceObj.setAmountContained(0);
+	//					return true;
+	//				}
+	//			}
+	//		}
+	//
+	//		return false;
+	//	}
 
 	@Override
 	public void start(MouseHook hook) {
@@ -300,15 +301,15 @@ public class SystemScreen extends Screen implements SystemCallback {
 		}
 		itemList.GenList(str);
 		weightValue.setString("weight:" + player.getInventory().getWeight());
-//		if (resourceObj != null) {
-//			resourceBar.setValue((int) resourceObj.getAmountContained());
-//			resource.setString(resourceObj.getContainsWhat() + " " + resourceObj.getAmountContained() + "/"
-//					+ resourceObj.getContainedCapacity());
-//
-//		}
-//		if (dispenserObj != null) {
-//			dispenserText.setString(dispenserObj.getOutputItem() + ":" + Integer.toString(getNumDispensable()));			
-//		}
+		//		if (resourceObj != null) {
+		//			resourceBar.setValue((int) resourceObj.getAmountContained());
+		//			resource.setString(resourceObj.getContainsWhat() + " " + resourceObj.getAmountContained() + "/"
+		//					+ resourceObj.getContainedCapacity());
+		//
+		//		}
+		//		if (dispenserObj != null) {
+		//			dispenserText.setString(dispenserObj.getOutputItem() + ":" + Integer.toString(getNumDispensable()));
+		//		}
 	}
 
 	@Override
@@ -333,7 +334,7 @@ public class SystemScreen extends Screen implements SystemCallback {
 		// build container inventory right
 
 		Button button = new Button(new Vec2f(19.5F, 0.0F), new Vec2f(3, 1.8F), textures[2], this, "Exit", 2, 1);
-	
+
 		// add buttons to move things to and from the container
 
 		window.add(button);
@@ -346,20 +347,20 @@ public class SystemScreen extends Screen implements SystemCallback {
 		window.add(weightValue);
 
 
-//		resource = new Text(new Vec2f(2.0F, 5.5F), "resource text", 1.0F, textures[4]);
+		//		resource = new Text(new Vec2f(2.0F, 5.5F), "resource text", 1.0F, textures[4]);
 
-//		window.add(resource);
-//		resourceBar = new ProportionBar(new Vec2f(8.5F, 12), new Vec2f(16, 2), 40, 40, 5, textures[0]);
-//		window.add(resourceBar);
+		//		window.add(resource);
+		//		resourceBar = new ProportionBar(new Vec2f(8.5F, 12), new Vec2f(16, 2), 40, 40, 5, textures[0]);
+		//		window.add(resourceBar);
 
 		for (int i=0;i<systemDisplays.size();i++)
 		{
 			systemDisplays.get(i).initialize(textures);
 		}
 		resetList();
-//		buildResource();
-//		buildConverter(conversionLabel);
-//		buildDispenser(textures);
+		//		buildResource();
+		//		buildConverter(conversionLabel);
+		//		buildDispenser(textures);
 	}
 
 	@Override
@@ -368,74 +369,74 @@ public class SystemScreen extends Screen implements SystemCallback {
 		if (v >= 0 && v < player.getInventory().getNumItems() + equipCount) {
 			if (v < equipThreshold) {
 				return player.getInventory().getItem(v);
-				}
-			 else {
+			}
+			else {
 				return findEquip(v - equipThreshold);
 			}
 		}
 		return null;
 	}
 
-//	private void buildDispenser(int textures[]) {
-//		if (dispenserObj != null) {
-//			dispenserText = new Text(new Vec2f(2.0F, 1.5F),
-//					dispenserObj.getOutputItem() + ":" + Integer.toString(getNumDispensable()), 1.0F, textures[4]);
-//			window.add(dispenserText);
-//
-//			Button button = new Button(new Vec2f(4.0F, 0.5F), new Vec2f(8, 1.8F), textures[2], this, "dispense item", 4,
-//					0.8F);
-//			window.add(button);
-//		}
-//	}
-//
-//	private int getNumDispensable() {
-//		if (resourceObj != null && resourceObj.getContainsWhat().equals(dispenserObj.getInput())) {
-//			int count=(int)resourceObj.getAmountContained() / dispenserObj.getCost();
-//			return count;
-//		}
-//		return 0;
-//	}
-//
-//	private void buildConverter(Text label) {
-//		if (converterObj != null) {
-//			label.setString(converterObj.getConvertFrom() + "->" + converterObj.getConvertTo());
-//			if (converterObj.isActive()) {
-//				toggleButton.setString("turn off");
-//			} else {
-//				toggleButton.setString("turn on");
-//			}
-//
-//		} else {
-//			label.setString("");
-//			toggleButton.setActive(false);
-//
-//		}
-//	}
-//
-//	private void buildResource() {
-//		// find resource
-//		for (int i = 0; i < system.getShipAbilities().size(); i++) {
-//			if (system.getShipAbilities().get(i).getAbilityType() == AbilityType.SA_RESOURCE) {
-//				resourceObj = (ShipResource) system.getShipAbilities().get(i);
-//
-//			}
-//			if (system.getShipAbilities().get(i).getAbilityType() == AbilityType.SA_CONVERTER) {
-//				converterObj = (ShipConverter) system.getShipAbilities().get(i);
-//				converterObj.runConversion();
-//			}
-//			if (system.getShipAbilities().get(i).getAbilityType() == AbilityType.SA_DISPENSER) {
-//				dispenserObj = (ShipDispenser) system.getShipAbilities().get(i);
-//			}
-//		}
-//		if (resourceObj != null) {
-//			resourceBar.setMax(resourceObj.getContainedCapacity());
-//			resourceBar.setValue((int) resourceObj.getAmountContained());
-//			resource.setString(resourceObj.getContainsWhat() + " " + resourceObj.getAmountContained() + "/"
-//					+ resourceObj.getContainedCapacity());
-//
-//		} else {
-//			resource.setString("");
-//			resourceBar.setVisible(false);
-//		}
-//	}
+	//	private void buildDispenser(int textures[]) {
+	//		if (dispenserObj != null) {
+	//			dispenserText = new Text(new Vec2f(2.0F, 1.5F),
+	//					dispenserObj.getOutputItem() + ":" + Integer.toString(getNumDispensable()), 1.0F, textures[4]);
+	//			window.add(dispenserText);
+	//
+	//			Button button = new Button(new Vec2f(4.0F, 0.5F), new Vec2f(8, 1.8F), textures[2], this, "dispense item", 4,
+	//					0.8F);
+	//			window.add(button);
+	//		}
+	//	}
+	//
+	//	private int getNumDispensable() {
+	//		if (resourceObj != null && resourceObj.getContainsWhat().equals(dispenserObj.getInput())) {
+	//			int count=(int)resourceObj.getAmountContained() / dispenserObj.getCost();
+	//			return count;
+	//		}
+	//		return 0;
+	//	}
+	//
+	//	private void buildConverter(Text label) {
+	//		if (converterObj != null) {
+	//			label.setString(converterObj.getConvertFrom() + "->" + converterObj.getConvertTo());
+	//			if (converterObj.isActive()) {
+	//				toggleButton.setString("turn off");
+	//			} else {
+	//				toggleButton.setString("turn on");
+	//			}
+	//
+	//		} else {
+	//			label.setString("");
+	//			toggleButton.setActive(false);
+	//
+	//		}
+	//	}
+	//
+	//	private void buildResource() {
+	//		// find resource
+	//		for (int i = 0; i < system.getShipAbilities().size(); i++) {
+	//			if (system.getShipAbilities().get(i).getAbilityType() == AbilityType.SA_RESOURCE) {
+	//				resourceObj = (ShipResource) system.getShipAbilities().get(i);
+	//
+	//			}
+	//			if (system.getShipAbilities().get(i).getAbilityType() == AbilityType.SA_CONVERTER) {
+	//				converterObj = (ShipConverter) system.getShipAbilities().get(i);
+	//				converterObj.runConversion();
+	//			}
+	//			if (system.getShipAbilities().get(i).getAbilityType() == AbilityType.SA_DISPENSER) {
+	//				dispenserObj = (ShipDispenser) system.getShipAbilities().get(i);
+	//			}
+	//		}
+	//		if (resourceObj != null) {
+	//			resourceBar.setMax(resourceObj.getContainedCapacity());
+	//			resourceBar.setValue((int) resourceObj.getAmountContained());
+	//			resource.setString(resourceObj.getContainsWhat() + " " + resourceObj.getAmountContained() + "/"
+	//					+ resourceObj.getContainedCapacity());
+	//
+	//		} else {
+	//			resource.setString("");
+	//			resourceBar.setVisible(false);
+	//		}
+	//	}
 }

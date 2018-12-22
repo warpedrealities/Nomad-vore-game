@@ -6,7 +6,7 @@
 		<tile sprite="17" vision="EMPTY" movement="0" smart="true">a metal floor</tile>
 		<tile sprite="33" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
 		<tile sprite="49" vision="EMPTY" movement="0" smart="true">a metal floor</tile>		
-		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>	
+		<tile sprite="68" vision="EMPTY" movement="0">tiled floor</tile>	
 		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
 		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
 		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
@@ -49,14 +49,28 @@
 							<row>34333430</row>
 							<row>34333430</row>
 							<row>34333430</row>
-							<row>34444432</row>
+							<row>34444430</row>
 							<row>33343330</row>
 							<row>00333000</row>
 							<edge value="SOUTH" type="4"/>
 							<widget x="3" y="6" name="shop"
 								info="freehaven/guntrader" variable="96" />
-						</keyBlock>						
-					<clean value="10" />		
+						</keyBlock>			
+						<keyBlock heat="1">
+							<!--hairdresser-->
+							<row>01212100</row>
+							<row>01222100</row>
+							<row>11121110</row>
+							<row>15555510</row>
+							<row>15555510</row>
+							<row>15555510</row>
+							<row>15555510</row>
+							<row>11111110</row>
+							<edge value="NORTH" type="2"/>
+							<spawn x="3" y="5" tag="0" />
+						</keyBlock>										
+					<clean value="10" />	
+					<npcType value="freehaven/civilians/Ulem" />						
 					</advancedBlockDungeon>
 				</partition>		
 			</partition>			

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
+		<text>
+		"Hello Hello. What can I do to you today..do for you today?" she says, correcting herself.
+		</text>
+		<choice destination="shop0" text="$I would like my hair styled"/>
+		<choice destination="hair" text="$What would you know about hair?"/>	
+		<choice destination="end" text="$Nothing right now"/>
+	</page>
+
+	<page ID="start">
+		<text>
+		The girl bounds over to you with a smile, tentacles flapping with her sudden movement "Hello Hello! welcome, welcome to my store. You have entered Ulem's hair dressing salon and boutique. I am Ulem, please tell me you're a customer..you..mhmm." she eyes the top of your head in a way that's just a smidge unsettling as she looks up at you.
+		</text>
+		<effect type="setlocalflag" flag="talked" value="1" />
+		<choice destination="shop0" text="$Yes I am, I would like my hair styled"/>
+		<choice destination="hair" text="$What would you know about hair?"/>
+		<choice destination="end" text="$No I'm not a customer, maybe another time"/>
+	</page>
+	
+	<page ID="hair">
+	<text>
+	"I know lots about hair. Just cause I don't have any myself." she sounds almost wistful a moment "Doesn't mean I can't be an expert."
+	</text>
+	<choice destination="wistful" text="$you sound envious"/>
+	<choice destination="shop0" text="$You have a point, can you style my hair now?"/>
+	</choice destination="end" text="$I see, I'll take my leave now"/>
+	</page>
+	
+	<page ID="wistful">
+	<text>
+	"Well I am kind of, you can do so much expressive things with your hair. Use it to show who you are, and change it..so many changes. These...these can't be really..styled, or cut." says Ulem and winces her tentacles flinching at that last one.
+	</text>
+	<choice destination="shop0" text="$Makes sense, can you style my hair now?"/>
+	<choice destination="end" text="$I see, I'll take my leave now"/>
+	</page>
+	
+	<page ID="shop0">
+	<text>
+	"Hooray, let me get my footstool!" says the shortstack, apparently needing a bit of assistance with her height disadvantage before she can begin.
+	</text>
+	<page ID="shop1" text="$by all means"/>
+	</page>
+	
+	<page ID="shop1">
+	<text></text>
+		<special effect="shop" ID="freehaven_hairdresser" />		
+	</page>
+	
+</Conversation>

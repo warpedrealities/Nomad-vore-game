@@ -42,7 +42,7 @@ public class Effect_Recover extends Effect {
 		m_modifies = ModfromString(Enode.getAttribute("modifies"));
 		m_modstrength = Float.parseFloat(Enode.getAttribute("modstrength"));
 		m_modvalue = Integer.parseInt(Enode.getAttribute("modvalue"));
-		m_description = Enode.getTextContent().replace("\n", "");
+		m_description = Enode.getTextContent().replaceAll("\t", "").replaceAll("\n", "");
 	}
 
 	public int getModifier() {
