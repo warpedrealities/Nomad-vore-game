@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<preference fetish="oralvore" />
+		<preference fetish="demis" />	
+	<text>
+	The lion girl towers over you even more with you sprawled in an undignified and defeated heap "You are not the first outlander to abuse our hospitality. You will not be the last." she says and lays hands on you, lifting you up as she licks her lips "And like them you will meet the same fate. Do you have any final requests outlander?" 
+	</text>
+	<choice destination="oralvore0" text="$Please don't eat me?"/>
+	</page>	
+	
+	<page Id="oralvore0">
+	<text>
+	The liongirl scoffs softly "Denied" she says simply and wraps her lips around your face and swallows. You hear the mighty lioness let out a pleased growling purr around your head as she gulps you steadily down her throat. Her arms proving quite capable of hoisting you up and feeding you into her jaws as your legs kick around futilely. Your shoulders and chest slide into her mouth next and you feel her tongue tracing over and savouring your body before she'll move on to swallowing you up further and pushing you into her belly. That dark skin of her tummy starting to stretch and bulge with the shape of your head, and then shoulders as she swallows up your middle.
+	</text>
+	<choice destination="oralvore1" text="*polished off*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Your legs are tipped upwards towards the sky, steadily disappearing out of the dry heat of the open air to the sweltering wet of her throat and belly. The guard's belly swelling and sagging out with more and more of your body being piled away inside of her, only your legs are left outside her lips and those are rapidly disappearing past her greedy lips. In too short an order those legs are utterly consumed by her, her jaws snapping shut past your toes..her dark skinned belly swollen and sagging and bulging with your shape and the heft of your weight "I have to admit outlander..you were delicious. I am also glad you chose to transgress against us."
+	</text>
+	<choice destination="struggleCheck" text="$I'm getting out here"/>
+	<choice destination="submit" text="$thanks, it's..surprisingly comfortable in here"/>
+	</page>
+	
+		<check ID="struggleCheck">
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="success" />
+		<outcome destination="failure" />
+	</check>
+	
+	<page ID="success">
+	<text>
+	"I would like to see you try outlander. I love it when my meals put up a fight" the lioness remarks even as you start shoving and struggling to try and make her hork you up, the desert dweller's hefty belly jostling and swaying around with your motions. Initially she seems to just rub over her belly happily at how you're giving her a rough internal massage, but you're not someone she should under estimate and soon she's looking uncomfortable, then pained and nauseous and finally with a groan she drops onto all fours and horks you up in a wet heap. The liongirl looking a good deal more poised and unkempt now but she will probably recover quickly.
+	</text>
+		<choice destination="end" text="back away" />
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />	
+	</page>
+	
+	<page ID="failure">
+	<text>
+	"I would like to see you try outlander. I love it when my meals put up a fight" the lioness remarks even as you start shoving and struggling to try and make her hork you up, the desert dweller's hefty belly jostling and swaying around with your motions. The liongirl patting and rubbing her belly and growling in pleasure as you push at her insides "...wait was that it?" asks the liongirl as you tire and slow, she seems disappointed more than anything..but by this point her enzymes are soaking your body and her stomach walls are pressing in, rippling and rubbing over you as digestion is well under way..so really it worked out..least for her. 
+	</text>
+	<choice destination="failureGO" text="*digested*"/>
+	</page>
+	
+	<gameover ID="failureGO">
+	<text>
+	The lion guard continues to rub on her belly as she resumes her patrol, your exhausted and defeated form gradually succumbing to the vigor of the lioness's victorious belly. Her gut turning round and soft as you turn liquid and sloshy. By the time the lion stops for a rest her gut is compacting and shrinking away, your remnants absorbed steadily to fuel her body. The lioness giving her gut a rub and smiling in memory of yet another tastey outlander who she got to punish.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	The lioness chuckles "Really? well, who am I to turn down a meal who knows her place. I hope you don't expect me to not digest you." she says and rubs her belly as it lets out a rather telling glorp around you and she smirks.
+	</text>
+	<choice destination="submitGO" text="$getting digested isn't that bad, go ahead"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	"Not something I plan to experience myself. But very well outlander, I can hardly stop you enjoying yourself." she says as her stomach gets to work on you, steadily gurgling you over as you wriggle and squirm to enjoy the sensations of the lioness digesting you away. Her gut turning round and soft as you turn liquid and sloshy. By the time the lion stops for a rest her gut is compacting and shrinking away, your remnants absorbed steadily to fuel her body. The lioness giving her gut a rub and smiling in memory of yet another tastey outlander who she got to punish.
+	</text>
+	<gameover>
+</Conversation>

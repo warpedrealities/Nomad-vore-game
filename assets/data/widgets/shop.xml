@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgetconversation sprite="96" name="shop"
+	health="1000">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>a shop that does all its trading through an armoured glass partition.</description>
+	<resistance resists="KINETIC" strength="20"></resistance>
+</widgetconversation>

@@ -37,6 +37,7 @@ import artificial_intelligence.detection.Sense;
 import artificial_intelligence.pathfinding.Path;
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
+import combat.CombatMove.MoveResult;
 import combat.effect.Effect;
 import faction.FactionLibrary;
 import nomad.FlagField;
@@ -601,7 +602,7 @@ public class NPC extends Actor implements Controllable {
 	}
 
 	@Override
-	public boolean AttackPlayer(int attackindex) {
+	public MoveResult AttackPlayer(int attackindex) {
 		// TODO Auto-generated method stub
 
 		setAttack(attackindex);
@@ -798,11 +799,13 @@ public class NPC extends Actor implements Controllable {
 
 	public boolean useSelfMove(int move) {
 
-		return useMove(move, this);
+		useMove(move, this);
+		return true;
 	}
 
+
 	@Override
-	public boolean Attack(int x, int y) {
+	public MoveResult Attack(int x, int y) {
 
 		if (actorRPG.getCombatMove(attackIndex).getAttackPattern() == AttackPattern.P_SELF) {
 			return useMove(attackIndex, this);
@@ -823,17 +826,17 @@ public class NPC extends Actor implements Controllable {
 			}
 		}
 
-		return false;
+		return MoveResult.UNUSABLE;
 	}
 
-	private boolean useMove(int attackIndex2, Attackable attackable) {
+	private MoveResult useMove(int attackIndex2, Attackable attackable) {
 		CombatMove move = actorRPG.getCombatMove(attackIndex2);
-		if (move.useMove(this, attackable)) {
+		MoveResult result = move.useMove(this, attackable);
+		if (!result.equals(MoveResult.UNUSABLE)) {
 			actorRPG.addBusy(move.getTimeCost());
 			actorVisibility = true;
-			return true;
 		}
-		return false;
+		return result;
 	}
 
 	@Override

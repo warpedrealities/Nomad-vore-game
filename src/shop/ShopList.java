@@ -13,6 +13,7 @@ import org.w3c.dom.Element;
 
 import shared.ParserHelper;
 import shop.merchant.ShopMerchant;
+import shop.mutator.ShopMutator;
 import shop.services.ShopServices;
 import shop.slaveTrader.ShopSlaveTrader;
 
@@ -45,9 +46,9 @@ public class ShopList {
 	private ShopData genData(String shopname)
 	{
 		Document doc = ParserHelper.LoadXML("assets/data/shops/" + shopname + ".xml");
-		Element root = doc.getDocumentElement();		
+		Element root = doc.getDocumentElement();
 		String check=root.getTagName();
-		
+
 		if ("shop".equals(check))
 		{
 			return new ShopMerchant(shopname);
@@ -55,14 +56,17 @@ public class ShopList {
 		if ("services".equals(check))
 		{
 			return new ShopServices(shopname);
-		}	
+		}
 		if ("slaveTrader".equals(check))
 		{
 			return new ShopSlaveTrader(shopname);
 		}
+		if ("mutator".equals(check)) {
+			return new ShopMutator(shopname);
+		}
 		return null;
 	}
-	
+
 	public void save(DataOutputStream dstream) throws IOException {
 		Set<String> keyset = shopsRetained.keySet();
 		Iterator<String> it = keyset.iterator();
@@ -77,21 +81,24 @@ public class ShopList {
 		}
 
 	}
-	
+
 	private ShopData loadData(String str, DataInputStream dstream) throws IOException
 	{
 		ShopData data=null;
 		int type=dstream.readInt();
 		switch (type)
 		{
-			case 0:
+		case 0:
 			data=new ShopMerchant(str,dstream);
 			break;
-			case 1:
+		case 1:
 			data=new ShopServices(str,dstream);
 			break;
-			case 2:
+		case 2:
 			data=new ShopSlaveTrader(str,dstream);
+			break;
+		case 3:
+			data = new ShopMutator(str, dstream);
 			break;
 		}
 		return data;

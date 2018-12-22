@@ -41,7 +41,21 @@
 								info="interaction/freehaven/lift_level4" variable="1" />
 							<widget x="7" y="5" name="lift"
 								info="interaction/freehaven/lift_level4" variable="1" />								
-						</keyBlock>		
+						</keyBlock>	
+						<keyBlock heat="2">
+							<!--guntrader-->
+							<row>33434330</row>
+							<row>34444430</row>
+							<row>34333430</row>
+							<row>34333430</row>
+							<row>34333430</row>
+							<row>34444432</row>
+							<row>33343330</row>
+							<row>00333000</row>
+							<edge value="SOUTH" type="4"/>
+							<widget x="3" y="6" name="shop"
+								info="freehaven/guntrader" variable="96" />
+						</keyBlock>						
 					<clean value="10" />		
 					</advancedBlockDungeon>
 				</partition>		
@@ -49,7 +63,7 @@
 		</partition>		
 	</partition>	
 	<selectTile tile="1">
-	<SeedNPCs min="8" max="12" name="freehaven/wardens/warden" minDistance="12" />	
+	<SeedNPCs min="8" max="12" name="freehaven/wardens/warden_level4" minDistance="12" />	
 	</selectTile>
 <	<selectTile tile="3">
 	<SeedNPCs min="16" max="20" name="freehaven/civilians/nohoper" />	

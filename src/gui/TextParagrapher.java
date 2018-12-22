@@ -13,10 +13,10 @@ public class TextParagrapher extends GUIBase {
 	int rowsUsed;
 
 	public TextParagrapher(Vec2f p, int lines, int length, float lwidth) {
-		m_length = (int) ((int) length / (Game.sceneManager.getConfig().getTextscale()));
+		m_length = (int) (length / (Game.sceneManager.getConfig().getTextscale()));
 		m_fonts = new NuFont[lines];
 		for (int i = 0; i < lines; i++) {
-			m_fonts[i] = new NuFont(new Vec2f(p.x, p.y - ((float) i * (lwidth + 0.1F))), length, lwidth);
+			m_fonts[i] = new NuFont(new Vec2f(p.x, p.y - (i * (lwidth + 0.1F))), length, lwidth);
 			m_fonts[i].setString("");
 		}
 
@@ -58,6 +58,7 @@ public class TextParagrapher extends GUIBase {
 	}
 
 	public void clean() {
+		rowsUsed = 0;
 		for (int i = 0; i < m_fonts.length; i++) {
 			m_fonts[i].setString("");
 		}

@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<Conversation>
+
+
+
+
+	<page ID="start">
+		<!--unwilling captive -->
+		<condition operator="equals" evaluate="LOCALFLAG" flag="seduced"
+			value="0" />
+		<text>
+			The mushroom mother glares at you from inside the opened containment chamber
+			for a moment as she recognizes you.  Then, in what seems like the blink of an eye,
+			the baleful expression vanishes, becoming an seductive smirk.  The ships computer
+			blare out a biohazard warning, and you can hear the distinct sound of the ventilation
+			system overclocking to filter out what is undoubtedly a surge of pheromones meant to
+			seduce you.
+			
+			Someone's a sore loser.
+		</text>
+		<choice destination="oralvore0A" text="scarf her down">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="pleasure0A" text="sample her milkjugs" />
+		<choice destination="loving0" text="make love to her">
+			<assertion evaluate="haspart" part="penis" />
+		</choice>
+		<choice destination="fuck0" text="fuck her tits">
+			<assertion evaluate="haspart" part="penis" />
+		</choice>
+
+		<choice destination="end" text="return her to containment" />
+	</page>
+
+	<page ID="start">
+		<!--willing captive -->
+		<condition operator="equals" evaluate="LOCALFLAG" flag="seduced"
+			value="1" />
+		<text>
+			The voluptious mushroom woman blinks tiredly as the containment chamber opens.
+			Recongizing you, she smiles fondly, and began humming a gentle, happy tune.
+			A soft, creamy scent fills the air.
+		</text>
+		<choice destination="oralvore0B" text="swallow her up">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="sex0" text="have sex with her">
+			<assertion evaluate="haspart" part="penis" />
+		</choice>
+
+		<choice destination="end" text="return her to containment" />
+	</page>
+
+
+	<page ID="oralvore0A">
+		<!--unwilling vore -->
+		<text>
+			The captive shroomgirl doesn't have a chance to overcome your
+			apparent resistance to her pheromones as you open your mouth wide
+			open and firmly shove her capped head inside.  She weakly struggles
+			against you, her large form built for embracing a victim enthralled by
+			her spores, not overpowering an apex predator fully intent on eating her!
+		</text>
+		<choice destination="oralvore1A" text="eat her up" />
+	</page>
+
+	<page ID="oralvore1A">
+		<text>
+			With your hold on her solidified, you take your time to enjoy her lucious form.
+			You take hold of her milk-heavy breasts, squeezing them even as you began to swallow 
+			them.  The plentiful mounds slide right in, your tight throat squeezing them.  The 
+			mushroom mother's hands weakly bat at you, trying in vain to fend you off.  Soon enough,
+			she's unable to do even that as you finish off her breasts and began taking in her 
+			soft belly.
+			
+			As you began to take in her hips, you tease her surprisingly moist pussy with your tongue.
+			Seems your tight innards are doing their job well!  She struggles intensify as you tease her,
+			but she starts to moan despite herself.
+		</text>
+		<choice destination="oralvore2A" text="polish her off" />
+	</page>
+
+	<page ID="oralvore2A">
+		<text>
+			As much as fun as teasing her is, you're here to fill your stomach, not tease the helpless
+			shroom woman!  You began to take in her legs, eager groans coming from your throat.  Soon 
+			enough, the last of her lucious form disappears down your throat.  Your hapless prey curls up
+			in your stomach, squirming meekly.  The mushroom mother shifts tactics, whimpering slightly and
+			starting to gently rub the inside of your stomach, hoping to earn mercy by pleasuring you.
+		</text>
+		<choice destination="oralvore3A" text="Not good enough" />
+		<choice destination="oralvoreEndo3A" text="Keep her as a belly pet" />
+	</page>
+
+	<page ID="oralvore3A">
+		<text>
+			As enthusiastic as the attempt to please you is, you're hungry, and she's food.  Simple.
+			Your stomach gurgles and groans, quickly going to work on your hard earned meal.  Her squirming
+			intensifies, although at this point, you can't tell if she's struggling to escape, or doubling
+			down on trying to please you.
+
+			It feels like hours, but her struggles die down in the end, and your stomach shrinks down to it's normal
+			size, no trace of the former milk mother remaining.
+		</text>
+		<special effect="removeCaptive" />
+		<effect type="feed" value="150" />
+		<choice destination="end" text="delicious, just what you needed" />
+	</page>
+
+	<page ID="oralvoreEndo3A">
+		<text>
+			You decide to enjoy the Mushroom Mother's attentions.  You start to softly rub
+			your stomach with one hand, groping at the mushroom woman inside.  Encouraged
+			by the distinct lack of digestion going on, her rubbing picks up, and her
+			frightened whimpers turn into affectionate coos.
+
+			Her movements become less eratic, more deliberate.  She nuzzles into your rubs,
+			doing her best to earn your favor.
+		</text>
+		<choice destination="oralvoreEndo4A" text="hold her for a bit" />
+	</page>
+
+	<page ID="oralvoreEndo4A">
+		<effect type="incrementlocalflag" flag="nice" value="1" />
+		<text>
+			Time goes on, and the mushroom mother starts to prod at the entrance
+			to your stomach.  She keeps up her rubbing, but her attempts to get out
+			grow more persistant.  Having better things to do anyways, it's time to let
+			her out.
+		</text>
+		<choice destination="oralvoreEndo5A" text="regurgitation" />
+	</page>
+
+
+	<page ID="oralvoreEndo5A">
+		<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			The Mushroom mother finds herself forced upwards and out of her tight
+			confinement.  She looks at you with a confused expression for a moment,
+			but quickly molds it into a mask of endearment.  If you peer closely,
+			you can still see the wariness in her eyes.
+		</text>
+		<choice destination="end" text="return her to containment" />
+	</page>
+
+	<page ID="oralvoreEndo5A">
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			The Mushroom mother finds herself forced upwards and out of her tight
+			confinement.  She looks back at you with a light blush, with a hesitant
+			expression you haven't seen before.  Shyly, she reaches a hand out to
+			touch your belly.  Then, she gently pulls you into a hug, rubbing her cheek
+			against you.
+
+			She withdraws, smiling and giggling happily at you.  Seems like you've finally
+			won her over.
+		</text>
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<choice destination="end" text="return your new fan to containment" />
+	</page>
+
+	<page ID="oralvore0B">
+		<!--willing vore,head first -->
+		<text>
+			The mushroom mother giggles happily as she recognizes the hunger in your
+			eyes, and she offers her head willingly.  You teasingly lick her face,
+			and place a kiss on her massive chest.  She moans softly, gropping your
+			rear and humming softly.
+			
+			Then, you open your mouth wide open and wrap your lips around her head.
+		</text>
+		<choice destination="oralvore1B" text="swallow" />
+	</page>
+
+	<page ID="oralvore1B">
+		<text>
+			Your pet shroom mother moans eagerly as you take in her head, pushing herself
+			further down your throat.  Her breasts leak her sweet cream.  You waste no time
+			taking in her breasts, enjoying the warm milk dripping out into your mouth.
+
+			You can see her fingering herself lightly as you take in her belly.  Her hips follow
+			soon after, you gulp them down, licking at her every inch of the way.
+		</text>
+		<choice destination="oralvore2B" text="gulp down the eager woman" />
+	</page>
+
+	<page ID="oralvore2B">
+		<text>
+			Her lovely, motherly hips secured in your throat, you hurry up and take in her
+			legs.  She groans loudly, bringing herself to climax as your tight innards rub
+			her curvy body.  The mushroom mother began to curl inside your tight stomach, making
+			you swell up more and more as she fills you.
+		</text>
+		<choice destination="oralvore3B" text="polish her off" />
+	</page>
+
+	<page ID="oralvore3B">
+		<text>
+			You swallow down the last of her with a heary belch, tucking her away where she
+			so clearly wants to be.  She coos happily as she settles in, quickly getting to
+			work rubbing your innards.
+		</text>
+		<choice destination="oralvore4B" text="time to digest her" />
+		<choice destination="oralvoreEndo4B"
+			text="she's too sweet to digest, hold her inside you" />
+	</page>
+
+	<page ID="oralvore4B">
+		<text>
+			It's been fun, but you're hungry.  The Mushroom mother stops abruptly
+			as your stomach began to gurgle and churn.  She prods at your walls
+			questioningly.  As your acids began to go to work, she cries out
+			with alarm, pushing against the walls constraining you and cooing
+			desperately at you.
+
+			Despite her attempts, she falls quiet before long, and your stomach
+			began shrinking down.  By the end of the day, there's no trace was
+			ever there.
+		</text>
+		<special effect="removeCaptive" />
+		<effect type="feed" value="150" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+	<page ID="oralvoreEndo4B">
+		<text>
+			You lean against the wall, settling in and enjoying the affections
+			of your loyal belly pet.  She happily rubs at the inside of your
+			stomach.  She kisses your loving walls, humming a soothing tune to you.
+
+			A warmth fills your stomach, the mushroom mother milking herself and
+			spilling her creamy nectar straight into your innards.  Definitely 
+			a mushroom mother!
+		</text>
+		<effect type="feed" value="10" />
+		<choice destination="oralvoreEndo5B" text="time to let her out" />
+	</page>
+
+	<page ID="oralvoreEndo5B">
+		<text>
+			As pleasant as this is, you can't sit around all day with a belly
+			full of curvy belly mushrooms.  Well, maybe you could, but not more
+			than a day!
+
+			You heave her back up.  She offers you an adoring smile, yanking you
+			into a chesty hug and smothering you in her cleavage for a moment.
+			She lets you go with a playful wink, and settles back into her
+			containment.  
+		</text>
+		<choice destination="end"
+			text="She's back in containment, in the system not your belly" />
+	</page>
+
+	<page ID="pleasure0A">
+		<!--unwilling receive oralsex -->
+		<text>
+			Those massive breasts look so inviting, and you wrap your arms around
+			her chest, burying your face in her cleavage.  She taken aback
+			for a moment, but quickly settles back into her mask and returns the hug.
+
+			Naturally, this is hardly enough, and you latch onto one of her breasts,
+			suckling eagerly.
+		</text>
+		<choice destination="pleasure1A" text="sample her thoroughly" />
+	</page>
+
+	<page ID="pleasure1A">
+		<effect type="incrementlocalflag" flag="nice" value="1" />
+		<text>
+			She gasps out with pleasure, almost unwillingly so, but made no
+			moves to refuse you.  She hesitantly massages your back with her
+			hands, letting you kiss and suckle her breasts.
+
+			You slide a hand down her side, and start to tease her pussy with one
+			hand.  Her moans intensify, and she grinds her hips against you.
+		</text>
+		<choice destination="pleasure2A" text="drink her milk" />
+	</page>
+	<page ID="pleasure2A">
+		<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			The mushroom mother tries to return the favor, but you push her hand
+			back.  This is about her and just how wonderful her curves are!
+			She seems flustered, but doesn't put up a fuss.  You continue
+			suckling her breasts, and she reluctantly gives up some of her
+			creamy milk.
+
+			The scent of her pheromones starts to fill the air.  Looks
+			like the air filters couldn't handle any more.  Sadly,
+			you have to put her back in containment before it really
+			stars affecting you.  As the doors close, you catch a glimpse
+			of a thoughtful expression.
+		</text>
+		<choice destination="end" text="return her to containment" />
+		<effect type="feed" value="5" />
+	</page>
+
+	<page ID="pleasure2A">
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			The milky mushroom maiden starts to finally relax under
+			your attention, laying on her back and laying you on top of her.
+			She lets you do all the work, hugging you close as you pleasure her.
+
+			She closes her eyes, the ship's biohazard warnings cease abruptly.
+			You've finally won her over.  Creamy milk flows readily into your mouth as
+			you suckle her.  She moans softly as you reward her, your hands softly teasing
+			her pussy.
+
+			Before long, she climaxes, crying out with pleasure and hugging you tight.
+		</text>
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<effect type="feed" value="10" />
+		<choice destination="end" text="return her to containment" />
+	</page>
+
+	<page ID="loving0">
+		<!--tender sex -->
+		<text>
+			The mushroom mother watches with careful interest as your cock
+			hardens, revealing your interest in her vuluptious body.  She starts to
+			lean forward and offer your member a kiss, but you push her back instead.
+
+			She hesitates, unsure what to do now that you've rejected the obvious.
+			Taking the lead, you kiss her on the lips softly, and gently massage her
+			heavy breasts.
+		</text>
+		<choice destination="loving1" text="moving on" />
+	</page>
+
+	<page ID="loving1">
+		<text>
+			She hesitates before returning the kiss.  She starts to massage
+			your shaft with one hand, gently stroking your hardening cock.
+
+			You lay the mushroom mother on her back, pressing your
+			<macro ID="penis_size_desc" />
+			cock up against her netherlips.  She shudders slightly at the sensation,
+			and closes her eyes, waiting.
+		</text>
+		<choice destination="loving2" text="penetrate" />
+	</page>
+
+	<page ID="loving2">
+		<text>
+			Your reluctant lover gasps as your cock slides in.  She moans out as
+			you hilt your member in her nether lips.  She tightens her arms around you
+			tense with anticipation.
+		</text>
+		<choice destination="loving3" text="love her good" />
+	</page>
+
+	<page ID="loving3">
+		<effect type="incrementlocalflag" flag="nice" value="1" />
+		<text>
+			You start slowly, moving your hips back and forth at a steady pace.
+			She starts to moan louder, obviously enjoying your attentions despite
+			herself.  You take her chest in your hands, softly massaging them and
+			suckling her breasts.  She arches her back lightly, bucking against you.
+
+			You can feel her start to tense.  Almost there.
+		</text>
+		<choice destination="loving4" text="climax" />
+	</page>
+
+	<page ID="loving4">
+		<condition operator="lessthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			You keep the pace, thrusting yourself in and out at a sedate pace.
+			The shroom mother groans as your cock plows her nethers, and she finally
+			climaxed.  She spills her sweet necter onto your crotch, and she pants heavily.
+
+			You lay on top of her for a few minutes, resting and enjoying her warmth against 
+			yours. You start to smell the scent of her pheromones, the constant release finally
+			overwhelming the ship's air filters, and decide to leave.
+
+			You catch a glimpse of her obedient mask cracking, a confused expresion on her face.
+			You'll win her over eventually.
+		</text>
+		<choice destination="end" text="return her to containment" />
+	</page>
+
+
+	<page ID="loving4">
+		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="nice"
+			value="3" />
+		<text>
+			You keep the pace, drawing out the moments as the mushroom mother moans and bucks
+			to thrust herself against your cock when you thrust it up into her.
+			Her pleasure cresting moments before your own due to your considerate
+			expertise, a squeal emerging from her lips as she clenches down on
+			you and shudders. The spasms of pleasure rolling through her coming
+			even as you climax inside her and fill the fawn with sticky seed.
+			With it all over you slowly pull out of her. The mushroom mother is looking up at
+			you with a flushed panting look of satisfaction and wonder on her
+			face.  She pulls your head into her cleavage, cooing affectionately.  The ship's
+			computer stops blaring it's warnings.
+			
+			You've won her over with the power of dickings!
+		</text>
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<choice destination="end" text="return her to containment" />
+	</page>
+
+	<page ID="fuck0">
+		<!--rough sex -->
+		<text>
+			Time to enjoy what's yours!  You pin her down on the floor, squeezing
+ 			her massive breasts with one hand, and stroking your
+			<macro ID="penis_size_desc" />
+			shaft with the other. Her mask of affection and obedience solidifies, and
+			she cooes "lovingly" at you.  You slide your cock between her breasts,
+			and she presses them together with her hands, rubbing your cock with
+			her breasts of her own accord.
+		</text>
+		<choice destination="fuck1" text="pound the titty mother" />
+	</page>
+
+	<page ID="fuck1">
+		<text>
+			You start to thrust your hips back and forth, and she squeals out with
+			"delight."  Her ample breasts prove the perfect sleave for your shaft,
+			and you quickly find yourself on the edge!
+		</text>
+		<choice destination="fuck2" text="fill her with cream" />
+	</page>
+
+	<page ID="fuck2">
+		<text>
+			Your cock twitches and throbs, and you pull back abruptly.  Then, you 
+			climax, aiming down and spraying your load all over her breasts, face, and
+			mushroom cap.  She catches some in her mouth, making a show of swallowing.
+
+			Your distraction finished, you leave, almost missing the look of resentment behind you.
+		</text>
+		<choice destination="end"
+			text="return her to containment, until next time you need to bust a nut" />
+		<effect type="incrementlocalflag" flag="nice" value="-1" />
+	</page>
+
+	<page ID="sex0">
+		<!--willing sex -->
+		<text>
+			You wave your hardening shaft, and your shroom lover coos.
+
+			She leans over, taking your cock and one hand and kissing the tip
+			softly.  Then, she wraps her breasts around your shaft, happily
+			pleasuring you.  Up and down her breasts go, the mushroom mother making...
+			you'd say doe eyes, but having met actual fawn girls, you're not sure it's
+			a valid expression anymore.
+		</text>
+		<choice destination="sex1" text="down onto the floor" />
+	</page>
+
+	<page ID="sex1">
+		<text>
+			You find yourself suddenly pushed onto the ground, the mushroom mother
+			pinning you down with her body.  You can feel her grinding her moist
+			pussy against your cock.  It seems she's a lot more assertive now
+			that she trusts you!
+
+			She wraps her breasts around your heads, smothering you in her ample
+			assets.  She slides your cock into her nethers, starting to ride you eagerly.
+			Up and down her hips go, bouncing on your crotch with happy cries.
+		</text>
+		<choice destination="sex2" text="and now, screw her" />
+	</page>
+
+	<page ID="sex2">
+		<text>
+			As enjoyable as this is, you can't let her have all the fun!
+			You roll the both of you over, getting yourself back on top.  The mushroom
+			mother smiles up at you, humming lovingly.  You began to thrust your cock into
+			her, moaning softly.
+
+			You latch onto her breasts with your mouth, suckling her milk-heavy breasts eagerly.
+			She just as eagerly gives you her creamy milk.  She climaxes, her nethers clenching around your
+			cock as she spells her nectar onto your crotch and the floor.
+		</text>
+		<choice destination="sex3" text="Revenge of the shroom!" />
+					<effect type="feed" value="10" />
+	</page>
+
+	<page ID="sex3">
+		<text>
+			She's not out of the running yet!  As you slow down to give her a break, she
+			grabs your hips and pulls them up to her head!  You find your cock disappearing into
+			her mouth.  She keeps you seated on her breasts as she starts sucking you off, bobbing
+			her head up and down.  You can just barely make out her mischevious eyes under the brim of
+			the shroom cap on her head.
+		</text>
+		<choice destination="sex4" text="pump it in" />
+	</page>
+
+
+	<page ID="sex4">
+		<text>
+			Already worked up by the titty fuck and pounding her nethers, you don't last long
+			against her skilled tongue and tight throat.  You climax, hard, spilling your load
+			down her throat.  She keeps her lips wrapped tightly around your cock, swallowing each
+			and every last drop.
+
+			You collapse, and the mushroom mother pulls you into a soft embrace.  You find yourself falling
+			asleep soon after in her arms.
+
+			When you awake, you find yourself waking up with a face full of breasts.  You look up to see your
+			lover smiling down at you, petting your hair.  You close your eyes again, enjoying the soft
+			embrace of the mushroom mother, leaning into her breasts.  Unfortunately, you still have things to
+			do today.  Time to go.
+		</text>
+		<choice destination="end" text="return her to containment" />
+	</page>
+
+</Conversation>

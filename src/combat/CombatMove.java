@@ -31,6 +31,20 @@ import zone.Tile;
 
 public class CombatMove {
 
+	public enum MoveResult {
+		UNUSABLE(-1), MISS(0), HIT(1);
+		int value;
+
+		MoveResult(int value) {
+			this.value = value;
+		}
+
+		public int getValue() {
+			return value;
+		}
+
+	};
+
 	public enum AttackPattern {
 		P_MELEE(0), P_SWEEP(1), P_CIRCLE(2), P_SHORT(3), P_RANGED(4), P_CONE(5), P_BOMB(6), P_REACH(7), P_RADIUS(8),
 		P_BLAST(9), P_SELF(-1);
@@ -411,24 +425,24 @@ public class CombatMove {
 		return false;
 	}
 
-	public boolean useNormalMove(Actor origin, Attackable target) {
+	public MoveResult useNormalMove(Actor origin, Attackable target) {
 		// check los
 		if (GameManager.m_los.existsLineOfSight(Universe.getInstance().getCurrentZone().getBoard(1), (int) origin.getPosition().x,
 				(int) origin.getPosition().y, (int) target.getPosition().x, (int) target.getPosition().y, false)) {
 			// check range
 			float distance = origin.getPosition().getDistance(target.getPosition());
 			if (distance > 9) {
-				return false;
+				return MoveResult.UNUSABLE;
 			}
 			if (attackPattern == attackPattern.P_SHORT && distance >= 4) {
-				return false;
+				return MoveResult.UNUSABLE;
 			}
 			if (attackPattern == attackPattern.P_REACH && distance >= 3) {
-				return false;
+				return MoveResult.UNUSABLE;
 			}
 			if ((attackPattern == attackPattern.P_MELEE || attackPattern == attackPattern.P_CIRCLE
 					|| attackPattern == attackPattern.P_SWEEP) && distance >= 2) {
-				return false;
+				return MoveResult.UNUSABLE;
 			}
 			int defAttribute = CombatLookup.getDefenceForAttack(bonusAttribute);
 			// get defence
@@ -541,7 +555,7 @@ public class CombatMove {
 					}
 				}
 
-				return true;
+				return MoveResult.HIT;
 			} else {
 				if (Game.sceneManager.getConfig().isVerboseCombat() && r < 100 && origin.getVisible()) {
 					ViewScene.m_interface.DrawText(origin.getName() + " attacks " + target.getName() + " " + (r - bonus)
@@ -564,10 +578,10 @@ public class CombatMove {
 					}
 
 				}
-				return true;
+				return MoveResult.MISS;
 			}
 		}
-		return false;
+		return MoveResult.UNUSABLE;
 	}
 
 	private boolean checkToggleOff(Actor target) {
@@ -583,7 +597,7 @@ public class CombatMove {
 		return false;
 	}
 
-	public boolean useToggledMove(Actor origin, Attackable target) {
+	public MoveResult useToggledMove(Actor origin, Attackable target) {
 		if (checkToggleOff(origin)) {
 			for (int i = 0; i < effects.size(); i++) {
 				if (Effect_Status.class.isInstance(effects.get(i))) {
@@ -597,7 +611,7 @@ public class CombatMove {
 					Player player = (Player) origin;
 					player.calcMove();
 				}
-				return true;
+				return MoveResult.HIT;
 			}
 		} else {
 			for (int i = 0; i < effects.size(); i++) {
@@ -610,13 +624,13 @@ public class CombatMove {
 					player.calcMove();
 				}
 
-				return true;
+				return MoveResult.HIT;
 			}
 		}
-		return false;
+		return MoveResult.UNUSABLE;
 	}
 
-	public boolean useMove(Actor origin, Attackable target) {
+	public MoveResult useMove(Actor origin, Attackable target) {
 		if (toggleAbility == true) {
 			return useToggledMove(origin, target);
 		} else {

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rules>
+
+	<superRule subject="LionGirl Guard" level="2" violation="ATTACK">
+		<factionRelationship faction="Forakhan_village" mod="-10" />
+	</superRule>
+	<superRule subject="Kesh" level="2" violation="ATTACK">
+		<factionRelationship faction="Forakhan_village" mod="-10" />
+	</superRule>
+
+	<witness name="LionGirl Guard" />
+	<witness name="Kesh" />
+
+</rules>

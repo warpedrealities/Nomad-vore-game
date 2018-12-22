@@ -1,5 +1,6 @@
 package artificial_intelligence;
 
+import combat.CombatMove.MoveResult;
 import shared.Vec2f;
 
 public interface Controllable {
@@ -8,9 +9,9 @@ public interface Controllable {
 
 	public boolean move(int direction);
 
-	public boolean Attack(int x, int y);
+	public MoveResult Attack(int x, int y);
 
-	public boolean AttackPlayer(int attackindex);
+	public MoveResult AttackPlayer(int attackindex);
 
 	public boolean setAttack(int attack);
 

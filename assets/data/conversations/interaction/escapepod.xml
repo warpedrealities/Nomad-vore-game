@@ -17,7 +17,8 @@
 		<choice destination="atmosphere" text="atmospheric readings" />
 		<choice destination="signals" text="perform signal scan" />
 		<choice destination="scan" text="replay descent sensor logs" />
-		<choice destination="survival_supplies" text="survival supplies" />		
+		<choice destination="survival_supplies" text="survival supplies" />	
+
 		<choice destination="end" text="exit" />
 	</page>
 

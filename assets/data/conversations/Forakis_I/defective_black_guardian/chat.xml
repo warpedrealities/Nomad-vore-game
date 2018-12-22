@@ -75,7 +75,7 @@
 	
 	<page ID="questaccepted">
 	<text>
-	"Well then brave soul, I need three parts, my left leg was lost in an unfortunate tree climbing accident I had in the south west area, when one of those dumb buzzard girls attacked me and I fell. Since the top of it is shiny, the buzzards have certainly taken it to one of their nests and are hoarding it." The jackal explains, gesturing towards their leg, then pointed at their missing arm. "This one was lost far in the north east, when I was again attacked by birds, this time large flightless beasts. Be warned that even though they can't fly, the raw strength in their legs, combined with their sharp talons was able to detach my arm in a single strong kick." She then points towards her chest, specifically her left breast. "Finally, one of my powercores is faulty, and needs replacing, and the only place I can think to get one is from another black guardian like myself in the pyramid to the south east. be warned that my sisters are quite strong, and will certainly not be as welcoming as I, since you'd be trespassing."
+	"Well then brave soul, I need three parts, my left leg was lost when i intruded on the settlement of the native people. I was trespassing for good reason but they have reasons to distrust anything in my shape and so chased me out with gunfire and blasted my leg from my body. I can only assume they still possess the limb as a trophy." The jackal explains, gesturing towards their leg, then pointed at their missing arm. "This one was lost far in the north east, when I was attacked by birds, large flightless beasts. Be warned that even though they can't fly, the raw strength in their legs, combined with their sharp talons was able to detach my arm in a single strong kick." She then points towards her chest, specifically her left breast. "Finally, one of my powercores is faulty, and needs replacing, and the only place I can think to get one is from another black guardian like myself in the pyramid to the south east. be warned that my sisters are quite strong, and will certainly not be as welcoming as I, since you'd be trespassing."
 	</text>
 	<effect type="setglobalflag" flag="ptahquest" value="1" />
 	<choice destination="end" text="That's quite a shopping list, I'll be on my way to do my best."/>
@@ -85,7 +85,7 @@
 	<condition operator="greaterthan" evaluate="GLOBALFLAG" flag="ptahquest"
 			value="0" />
 	<text>
-	"Forgetful are we? I need three parts, my leg from the south west in the hands of buzzard harpies, my arm in the north east, knocked off by a terror bird, and finally a powercore, which you will need to remove from a black guardian in the pyramid to the south east."
+	"Forgetful are we? I need three parts, my leg from the south west in the hands of the natives, my arm in the north east, knocked off by a terror bird, and finally a powercore, which you will need to remove from a black guardian in the pyramid to the south east."
 	</text>
 	<choice destination="end" text="Thanks for reminding me, I'll be on my way."/>
 	</page>

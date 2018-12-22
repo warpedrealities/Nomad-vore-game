@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="lionGirl guard.png" />
+	<name>LionGirl Guard</name>
+	<description>
+	Standing eight foot tall and vigilant the lion girl keeps a watchful eye out and one hand on her rifle. Her colours are a study in contrasts, her skin a majestic nubian black juxtaposing with the yellow white blonde of her furred tail, ears and hair. The latter most forming an untamed mane that extends as far as her mid back as if she escaped a hair metal band. She's dressed in a few simple wraps that barely attain modesty. The pale cloth covering her hips and chest and little else. The former cloth at least having an anchor in her belt with its pouches of bullets and other essentials.
+	</description>
+	<rpg>
+		<experiencevalue value="300" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="6" />
+		<attribute attribute="PARRY" value="2" />		
+		<attribute attribute="WILLPOWER" value="4" />		
+		<combatMove name="shoot" pattern="RANGED" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="6" >
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<missText count="2">
+				<text>The liongirl shoots at TARGET and misses</text>
+				<text>TARGET evades a bullet fired by the liongirl </text>
+			</missText>
+			<hitText count="2">
+				<text>The liongirl shoots TARGET for VALUE damage</text>
+				<text>TARGET is shot by a liongirl for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="rifle butt" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="4" maxValue="10"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>TARGET manages to deflect the rifle butt jab of the liongirl</text>
+				<text>TARGET evades the swing of the liongirl</text>
+			</missText>
+			<hitText count="2">
+				<text>The liongirl smacks TARGET for VALUE damage</text>
+				<text>The liongirl thumps TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>		
+		<itemDrop chance="20" item="Longneck breachloader" />
+		<itemDrop chance="50" item="rifle round" />
+		<itemDrop chance="25" item="rifle round" />
+		<itemDrop chance="25" item="rifle round" />		
+		<itemDrop chance="25" item="rifle round" />
+		<itemDrop chance="25" item="rifle round" />
+		<itemDrop chance="25" item="rifle round" />				
+		<itemDrop chance="25" item="gourd" />		
+	</rpg>
+
+	<respawn delay="2000" />	
+	<defeated conversation="Forakis_I/LionGirl_guard/defeat" />
+	<seduced conversation="Forakis_I/LionGirl_guard/seduced" />
+	<victory conversation="Forakis_I/LionGirl_guard/victory" />
+	<seducer conversation="Forakis_I/LionGirl_guard/victory" />
+	<talk conversation="Forakis_I/LionGirl_guard/chat" />	
+	<controller AI="liongirl_guard" />
+	<faction value="Forakhan_village" />
+</NPC>

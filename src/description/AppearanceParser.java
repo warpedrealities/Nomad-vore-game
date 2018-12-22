@@ -67,7 +67,7 @@ public class AppearanceParser {
 					builder.append(N.getNodeValue().replace("\n", ""));
 				}
 			}
-
+			builder.append(" ");
 			return builder.toString();
 		}
 		return null;

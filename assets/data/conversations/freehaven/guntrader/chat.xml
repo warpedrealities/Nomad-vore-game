@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />	
+		<text>
+		"Greetings again customer. Care to buy?"
+		</text>
+		<choice destination="shop" text="$I would like to see what you sell"/>
+		<choice destination="wares" text="$What are you selling?"/>
+		<choice destination="who" text="$Who are you exactly"/>
+		<choice destination="end" text="$Not right now"/>
+	</page>
+
+	<page ID="start">
+		<text>
+		The figure behind the glass can't be easily discerned, the fogging of the thick glass and the metal grating inset into the armoured surface make it only nominally transparent. Still the figure isn't silent
+		"Greetings customer. It is a dangerous galaxy. Care to buy?"
+		</text>
+		<effect type="setlocalflag" flag="talked" value="1" />
+		<choice destination="shop" text="$I would like to see what you sell"/>
+		<choice destination="wares" text="$What are you selling?"/>
+		<choice destination="who" text="$Who are you exactly"/>
+		<choice destination="end" text="$Not right now"/>
+	</page>
+	
+	<page ID="wares">
+	<text>
+	"Dangerous goods for a dangerous galaxy. You look like someone who desires to become more dangerous. Let me show you my wares, I know you will find something suitable."
+	</text>
+	<choice destination="shop" text="$very well, lets see what you're selling"/>
+	<choice destination="end" text="$Interesting, but I don't want to browse right now"/>
+	</page>
+	
+	<page ID="who">
+	<text>
+	"Who I am is not important. What is important is that you are surrounded by danger, everywhere you go. You require dangerous armaments to keep it at bay lest it devour you. I can sell you these dangerous armaments."
+	</text>
+	<choice destination="shop" text="$very well, lets see what you're selling"/>
+	<choice destination="end" text="$Interesting, but I don't want to browse right now"/>	
+	</page>
+	
+	<page ID="shop">
+	<text></text>
+		<special effect="shop" ID="freehaven_guntrader" />		
+	</page>
+	
+</Conversation>

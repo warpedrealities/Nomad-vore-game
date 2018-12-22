@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<mutator useCredits="true">
+<mutator cost="50" name="wavy hair">
+	<mutation part="hair" variable="style" set="0"/>
+</mutator>
+<mutator cost="50" name="straight hair">
+	<mutation part="hair" variable="style" set="1"/>
+</mutator>
+<mutator cost="50" name="curly hair">
+	<mutation part="hair" variable="style" set="2"/>
+</mutator>
+<mutator cost="50" name="kinky hair">
+	<mutation part="hair" variable="style" set="3"/>
+</mutator>
+<mutator cost="50" name="long and wavy hair">
+	<mutation part="hair" variable="style" set="4"/>
+</mutator>
+<mutator cost="50" name="long and straight hair">
+	<mutation part="hair" variable="style" set="5"/>
+</mutator>
+<mutator cost="50" name="long and curly hair">
+	<mutation part="hair" variable="style" set="6"/>
+</mutator>
+<mutator cost="50" name="ponytail">
+	<mutation part="hair" variable="style" set="7"/>
+</mutator>
+<mutator cost="50" name="braided hair">
+	<mutation part="hair" variable="style" set="8"/>
+</mutator>
+<mutator cost="50" name="hair in pigtails">
+	<mutation part="hair" variable="style" set="9"/>
+</mutator>
+<mutator cost="50" name="dreaded hair">
+	<mutation part="hair" variable="style" set="10"/>
+</mutator>
+<mutator cost="50" name="bun hairstyle">
+	<mutation part="hair" variable="style" set="11"/>
+</mutator>
+<mutator cost="50" name="afro hairdo">
+	<mutation part="hair" variable="style" set="12"/>
+</mutator>
+<mutator cost="50" name="crewcut hair">
+	<mutation part="hair" variable="style" set="13"/>
+</mutator>
+<mutator cost="50" name="shaved hair">
+	<mutation part="hair" variable="style" set="14"/>
+</mutator>
+<mutator cost="50" name="messy hair">
+	<mutation part="hair" variable="style" set="15"/>
+</mutator>
+<mutator cost="50" name="tonsure style">
+	<mutation part="hair" variable="style" set="16"/>
+</mutator>
+</mutator>

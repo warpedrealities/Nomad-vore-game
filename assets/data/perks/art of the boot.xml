@@ -30,8 +30,10 @@
 				<text>you fail to land a guard break on TARGET .</text>
 			</missText>
 			<hitText count="1">
-				<text>you deliver a guard breaking kick to TARGET</text>
+				<text>you deliver a guard breaking kick to TARGET and inflicts VALUE damage</text>
 			</hitText>
+			<effectDamage type="KINETIC" minValue="4" maxValue="6"
+				modifier="STRENGTH" />
 			<effectStatus probability="100">
 				<applyText>TARGET defences have been weakened</applyText>
 				<statusAttribMod uid="150" icon="0" duration="20"

@@ -11,19 +11,24 @@
 	</block>
 
 	<block bodypart="hair">
-		your hair is
+		 your hair is
 		<macro ID="hair_colour_desc" />
 		in a
 		<macro ID="hair_style_desc" />
 		style.
 	</block>
+	<block bodypart="ears">
+		 your ears are
+		<macro ID="ear_type_desc" />
+		.
+	</block>	
 	<block bodypart="skin">
-		your skin colour is
+		 your skin colour is
 		<macro ID="skin_colour_desc" />
 		.
 	</block>
 	<block bodypart="scales">
-		You have
+		 You have
 		<macro ID="scale_type_desc" />
 		<macro ID="scale_colour_desc" />
 		scales covering your
@@ -31,28 +36,28 @@
 		.
 	</block>
 	<block bodypart="breasts">
-		Your
+		 Your
 		<macro ID="breast_size_desc" />
 		breasts stick
 		<value ID="size" div="1" />
 		inches away from your chest.
 	</block>
 	<block bodypart="butt">
-		You possess a
+		 You possess a
 		<macro ID="butt_size_desc" />
 		ass.
 	</block>
 	<block bodypart="tail">
-		. You also possess a
+		 You also possess a
 		<macro ID="tail_type_desc" />
 		tail.
 	</block>
 	<pbreak />
 	<block bodypart="vagina">
-		downstairs you currently have a vagina.
+		 downstairs you currently have a vagina.
 	</block>
 	<block bodypart="penis">
-		you are in possession of a
+		 you are in possession of a
 		<macro ID="penis_size_desc" />
 		penis,
 		<value ID="length" div="1" />

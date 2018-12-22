@@ -36,6 +36,7 @@ import actorRPG.RPGActionHandler;
 import actorRPG.player.Player_RPG;
 import combat.CombatMove;
 import combat.CombatMove.AttackPattern;
+import combat.CombatMove.MoveResult;
 import combat.CombatMove.MoveType;
 import combat.CooldownHandler;
 import combat.ThrownWeaponHandler;
@@ -737,9 +738,9 @@ public class Player extends Actor {
 		}
 
 		// use move
-		boolean b = move.useMove(this, attackable);
+		MoveResult result = move.useMove(this, attackable);
 		// remove energy
-		if (b == true) {
+		if (!result.equals(MoveResult.UNUSABLE)) {
 			if (move.getOverrideCooldown()!=null)
 			{
 				handler.useMove(move.getOverrideCooldown());
@@ -755,9 +756,9 @@ public class Player extends Actor {
 			} else {
 				actorRPG.addBusy(move.getTimeCost());
 			}
-
+			return true;
 		}
-		return b;
+		return false;
 	}
 
 	public void useAmmo(CombatMove move, Attackable attackable, int slot, ItemDepletableInstance energy) {

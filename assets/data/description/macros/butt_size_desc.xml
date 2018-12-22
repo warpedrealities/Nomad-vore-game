@@ -1,13 +1,23 @@
 <?xml version="1.0"?>
 <macrorange part="butt" variable="size">
 	<range lowerbound="0" upperbound="2" string="flat" />
-	<range lowerbound="2" upperbound="4" string="petite" />
+	<range lowerbound="2" upperbound="4" string="pathetically small" />
 	<range lowerbound="4" upperbound="6" string="small" />
-	<range lowerbound="6" upperbound="8" string="modest" />
-	<range lowerbound="8" upperbound="10" string="rounded" />
-	<range lowerbound="10" upperbound="12" string="curvy" />
-	<range lowerbound="12" upperbound="14" string="large" />
-	<range lowerbound="14" upperbound="16" string="ample" />
-	<range lowerbound="16" upperbound="18" string="enormous" />
+	<range lowerbound="6" upperbound="8" string="petite"/>
+	<range lowerbound="8" upperbound="10" string="normal sized" />
+	<range lowerbound="10" upperbound="12" string="rounded" />
+	<range lowerbound="12" upperbound="14" string="toned" />	
+	<range lowerbound="14" upperbound="16" string="taught" />	
+	<range lowerbound="16" upperbound="18" string="curvy" />
+	<range lowerbound="18" upperbound="20" string="large" />	
+	<range lowerbound="20" upperbound="22" string="bouncy" />
+	<range lowerbound="24" upperbound="26" string="juicy" />	
+	<range lowerbound="26" upperbound="28" string="ample" />
+	<range lowerbound="28" upperbound="30" string="phat" />	
+	<range lowerbound="30" upperbound="32" string="absolutely packed" />
+	<range lowerbound="32" upperbound="34" string="glorious" />	
+	<range lowerbound="36" upperbound="38" string="enormous" />
+	<range lowerbound="40" upperbound="42" string="showstopping" />	
+	<range lowerbound="42" upperbound="44" string="glorious" />		
 	<range lowerbound="18" upperbound="999" string="unbelievable" />
 </macrorange>

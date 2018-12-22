@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<macrovalue part="ears" variable="type">
+	<translate value="0" string="rounded human ears" />
+</macrovalue>

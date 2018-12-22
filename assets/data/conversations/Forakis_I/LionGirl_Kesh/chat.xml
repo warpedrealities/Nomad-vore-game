@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="talked"
+			value="1" />
+		<text>
+		"Live and drink outlander."
+		</text>
+		<choice destination="leg" text="$I am looking to buy a leg from a guardian">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="1" />
+			<condition operator="equals" evaluate="LOCALFLAG" flag="leg"
+			value="0" />			
+		</choice>		
+		<choice destination="who" text="$Who are you again?"/>
+		<choice destination="end" text="Live and drink"/>
+	</page>
+	
+
+	<page ID="start">
+	<text>
+	"Greetings outlander. What brings you to me?"
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />	
+	<choice destination="leg" text="$I am looking to buy a leg from a guardian">
+<condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="1" />
+<condition operator="equals" evaluate="LOCALFLAG" flag="leg"
+			value="0" />			
+	</choice>
+	<choice destination="who" text="$Who are you?"/>	
+	<choice destination="end" text="nothing at the moment"/>
+	</page>	
+	
+	<page ID="leg">
+	<text>
+	"How lucky for you that we have such a thing. Curious of you to ask for such an unusual item. But we have such a thing in our possession..It is of little use to us, but nonetheless honour demands we request a ransom for this trophy. 2000 gold for this rare prize."
+	</text>
+		<choice destination="buyLeg" text="$here's the money">
+			<condition operator="greaterthan" evaluate="GOLD" value="2000" />
+		</choice>
+		<choice destination="cantAfford" text="$I can't afford that">
+			<condition operator="lessthan" evaluate="GOLD" value="2000" />
+		</choice>		
+		<choice destination="end" text="$I see, I will come back later"/>
+	</page>
+	
+	<page ID="buyLeg">
+	<text>
+	"You must greatly desire this trophy. Some would say it is lessened to possess a trophy not your own. But no matter, it is well to be traded. May you prosper by it."
+	</text>
+	<effect type="giveitem" value="1" item="questitem" addendum="synth_leg" />	
+	<effect type="setlocalflag" flag="leg" value="1" />		
+		<effect type="givegold" value="-2000" />	
+	<choice destination="end" text="$Live and Drink"/>
+	</page>
+	
+	<page ID="cantAfford">
+	<text>
+	"No others wish to buy our trophy. It has no use here but yet was hard won. It will bide till you return with its value in gold."
+	</text>
+	<choice destination="end" text="$very well, i'll come back later then"/>
+	</page>
+	
+	<page ID="who">
+	<text>
+	"I am Kesh, a trader."
+	</text>
+	<choice destination="end" text="$Live and drink Kesh"/>
+	</page>
+	
+	
+	
+</Conversation>

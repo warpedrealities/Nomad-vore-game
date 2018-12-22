@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="magazine(rifle)" weight="3" value="175.0">
+	<description>
+		A rifle magazine, contains rifle rounds, used with rifles.
+	</description>
+	<energy capacity="30" refill="rifle round" efficiency="1" />
+</ItemAmmo>

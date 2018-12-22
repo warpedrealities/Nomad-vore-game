@@ -305,7 +305,9 @@ public class EffectProcessor {
 			Player_RPG rpg = (Player_RPG) m_player.getRPG();
 			rpg.addEXP((int) value);
 		}
+
 		if (str.equals("giveitem")) {
+
 			if (value > 1) {
 				for (int i = 0; i < value; i++) {
 					m_player.getInventory()

@@ -266,7 +266,7 @@
 	</text>
 	<choice destination="cockvoreTrainingB2A" text="$You should taunt me, treat me as if I'm only cockfood"/>
 	<choice destination="cockvoreTrainingB2B" text="$Tease me, tell me i'm a slut who loves it"/>
-	<choice destination="cockvoreTrainingB3C" text="$just tell me how much you hope I enjoy it, be respectful"/>	
+	<choice destination="cockvoreTrainingB2C" text="$just tell me how much you hope I enjoy it, be respectful"/>	
 	</page>
 	
 	<page ID="cockvoreTrainingB2A">

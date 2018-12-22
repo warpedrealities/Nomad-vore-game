@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<preference fetish="analvore" />	
+	<preference fetish="females" />	
+	<preference fetish="demis" />	
+	<text>
+	The wolfgirl lets out a laugh as she knocks you down, swinging her bat leisurely and tossing it up in the air and catching it with a grin before turning her attention to you and sets aside the bat "Good fight, but the best part of any fight..is winning." she says as she undoes her belt, pivoting on the spot that fluffy tail wooshing over your head as she drops her pants. It's like she's going to moon you, except she doesn't linger instead planting her rounded asscheeks on your face and letting out a growl of delight. 
+	</text>
+	<choice destination="analvore0" text="*forced up her ass*"/>
+	</page>
+	
+	<page ID="analvore0">
+	<text>
+	The growling continues as she wriggles her hips, smooching your face against the hot and toned asscheeks of the athletic wolfgirl. But gradually the smooshing turns to schlorping as her ass cleavage parts around your face and her sphincter stretches around the top of your head. Her bowels hotly squeezing and sucking and tugging on your head as you start to slide up her backside. The wolfy leaning back with hands flung out behind her for support as she clenches and tugs your shoulders inside. Your arms becoming pinned as she squeezes you up inside her "Best way to celebrate, it's not the same if I don't beat you first..how's it feel to be assfood loser?" she says as she alternates between self indulgence and taunting as she takes you in.
+	</text>
+	<choice destination="analvore1" text="*not too great, not that you can be heard right now*"/>
+	</page>
+	
+	<page Id="analvore1">
+	<text>
+	"Can't hear you loser, but that's okay..got nothing worth hearing anyway." she says as she squeezes your upper body into her own and tugs you deeper. Her powerful ass steadily devouring your chest, then middle as she lays back now on the deck and squeezes you inside. Her tail brushing against your ass and legs as she slides you waist deep into her rear end and growls in delight. Only your legs are left outside of her and soon those as well slide between her ass cheeks and disappear up inside of her. Her rump sealing up behind your feet with a schlorp leaving you to be conveyed up into her stomach.
+	</text>
+	<choice destination="struggle" text="*try to get back out*"/>
+	<choice destination="pleasure" text="*try to pleasure her into letting you go"/>
+	<choice destination="submit" text="*submit*"/>
+	</page>
+
+	<check ID="struggle">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="struggleEscape" />
+		<outcome destination="struggleDigest" />
+	</check>	
+
+	<check ID="pleasure">
+		<test what="PLEASURE" DC="12" />
+		<outcome destination="pleasureEscape" />
+		<outcome destination="pleasureDigest" />
+	</check>	
+	
+	
+	<page ID="struggleEscape">
+	<text>
+		You muster your second wind before you slip any deeper into her guts, your remaining and recovered energy put to the task of not making all of your body serve as energy and nutrition for this lupine ruffian. You start to squirm and shove at her insides, pushing at the slick walls and making her growl in delight even as you try to make your way back out of her. Her growls become less pleased and more threatening as you shove your feet out, but she doesn't sit down to shove you back inside quick enough and soon your legs and then entire body is spilling back out of her leaving her panting on the floor. Still, though disorientated she seems also somewhat pissed as she growls and lays a hand on her bat.
+	</text>
+	<choice destination="end" text="back away" />
+	<effect type="heal" value="0.1" />
+	<effect type="stunnpc" value="10" />		
+	</page>
+	
+	<page ID="struggleDigest">
+	<text>
+		You muster your second wind before you slip any deeper into her guts, your remaining and recovered energy put to the task of not making all of your body serve as energy and nutrition for this lupine ruffian. You start to squirm and shove at her insides, pushing at the slick walls and making her growl in delight even as you try to make your way back out of her. Her growls become less pleased and more threatening as you shove your feet out, but she rolls forwards into a seated position before you can shove your feet more than an inch or two past her asscheeks, shoving you back inside "Nice try loser, but you're buttfodder, time you acted like it" the wolfgirl says and grins as she clenches and tugs you even deeper inside herself. 
+	</text>
+	<choice destination="struggleDigestGO" text="*doomed to be buttfodder*"/>
+	</page>
+	
+	<gameover ID="struggleDigestGO">
+	<text>
+	You protest muffledly against that statement, but it just makes the wolf girl laugh and pat over her bloated gut. Your form squeezed up and curled inside her belly giving her a nice defined bulge to enjoy. Which as it happens is just what she does, rubbing over her gut with one hand as she sprawls there and digests you. Her stomach kneading over and breaking you down until those defined bulges round out and her belly shrinks down. Your form being liquidated and absorbed utterly by the criminal ruffian to serve as just another meal for her.
+	</text>
+	</gameover>
+	
+	<page ID="pleasureEscape">
+	<text>
+		You don't want to go deeper, but then you are shoved up a wolfgirl's ass so why not take advantage of this to try and persuade her to let you go. After all an orgasm is probably worth your life and failing that you can worm your way out during her afterglow. So you set to work, confident in your magic fingers and ability to writhe pleasingly..and indeed soon enough you hear her let out a startled moan and dig some fingers down between her legs "ooh you're a feisty one, you're..aah" the wolfgirl exclaims as you work on stimulating her...the wolfy letting out a final howling cry as orgasm rocks through her leaving her spasming and writhing on the deck. You don't wait around to ask for permission though and shove yourself back and out of her rear end, the ruffian able to put up no resistance as you slip out of her.
+	<text>
+	<choice destination="end" text="back away" />
+	<effect type="heal" value="0.1" />
+	<effect type="stunnpc" value="10" />		
+	</page>
+	
+	<page ID="pleasureDigest">
+	<text>
+		You don't want to go deeper, but then you are shoved up a wolfgirl's ass so why not take advantage of this to try and persuade her to let you go. After all an orgasm is probably worth your life and failing that you can worm your way out during her afterglow. So you set to work, confident in your magic fingers and ability to writhe pleasingly..and indeed soon enough you hear her let out a startled moan and dig some fingers down between her legs "ooh you're a feisty one, you're..aah" the wolfgirl exclaims as you work on stimulating her...the wolfy letting out a final howling cry as orgasm rocks through her leaving her spasming and writhing on the deck. You try to shove yourself out in her afterglow only to find her clench and force you to stay inside her as she lets out a growl "Nice try buttfood, thanks for the fun times but you're still ass fodder." she says and starts to draw you deeper into her guts.
+	</text>
+		<choice destination="pleasureDigestGO" text="*doomed to be ass fodder*"/>
+	</page>
+	
+	<gameover ID="pleasureDigestGO">
+	<text>
+	The wolfgirl pants a little in the aftermath of her orgasm, but spares no consideration for you as its originator. You're squeezed up into her belly, giving her a nice belly bulge to enjoy. The wolfy's belly gurgling and glorping around you, grinding you down and softening out her gut into a rounded dome. Her pleased growls and moans indulgently satisfied as you liquidate inside and end up absorbed into her body. Soon enough she's pulling her pants back up and hefting her bat up so she can go back to her criminal activities, well fed and well satisfied from your contributions. 
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	You realize as you're sealed inside her ass that you're doomed to be food for this criminal. So you might as well enjoy this if digestion is inevitable, you stop struggling and let her easily draw you up into her gut "mhmm, knowing your place is one thing but i do kind of like squirms." the wolfy says with a pleased growl as you're confined in her belly. The wolfy's stomach already getting to work on you as she hoists her pants back up, imprisoning you within herself and getting on with her day.
+	</text>
+	<choice destination="submitGO" text="*digested*"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	The wolfy wanders, her gut swaying as she walks. Her shirt ridden up and her jacket spread wide open to make room for the bulge of you as she works on steadily digesting you away. The ruffian smiling cheerfully as she grinds you down, her tummy bulges rounding out and softening as the overral dome shrinks and contracts down. It doesn't take her too long to digest you down completely, flattening out her belly and letting her shirt ride back down again over her trim and toned abs.
+	</text>
+	</gameover>
+	
+</Conversation>

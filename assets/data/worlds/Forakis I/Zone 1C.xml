@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <zone width="64" height="64" spriteset="desert.png">
 	<landingsite x="32" y="32" />	
+	<zonerules ruleset="forakhan_village" />	
 	<tileset count-x="4" count-y="4">
 		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
 		<tile sprite="6" vision="EMPTY" movement="0"> valley grass</tile>
@@ -13,7 +14,7 @@
 		<tile sprite="1" vision="EMPTY" movement="0"> brick floor </tile>		
 	</tileset>
 	<description>
-
+	The settlement is barely worthy of the name, a handful of huts nestled in the dip in this somewhat less inhospitable plataeu. Speaking of the lack of inhospitality such is as ever only grudging, you feel the eyes of vigilant watchers upon you. Perhaps though if you keep civil you would be allowed to trade or seek information here.
 	</description>
 	<transition direction="east">Zone 2C</transition>	
 	<mapgen>
@@ -36,7 +37,7 @@
 				<floodfill tile="8">			
 				</floodfill>
 		</town>			
-	
+		<SeedNPCs min="4" max="8" name="Forakis_I/LionGirl Guard" />
 		</partition>	
 		<perlin>
 			<band low="-1.0" high="-0.5">
@@ -46,6 +47,7 @@
 		<noise tile="4" scarcity="12" />		
 		<floodfill tile="1" />		
 		<walloff wall="6" sides="northwestsouth" />	
+		<POINPC name="Forakis_I/LionGirl_Kesh" />		
 	</mapgen>
 
 </zone>

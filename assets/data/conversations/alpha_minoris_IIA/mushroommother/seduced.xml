@@ -22,6 +22,10 @@
 			<assertnot evaluate="hasEntry" entry="lifeforms/mushroommother.xml"/>
 			<assertnot evaluate="hasResearch" research="mushroommother"/>
 		</choice>
+		<choice destination="capture" text="Use your capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>
 
 		<choice destination="end" text="Leave her be." />
 	</page>
@@ -34,7 +38,14 @@
 		<effect type="feed" value="150" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
-	</page>		
+	</page>	
+	<page ID="capture">
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<special effect="captureNPC" />
+		<text>Yoink. The device worked.</text>
+
+		<choice destination="end" text="Carry on." />
+	</page>	
 	
 	<page ID="sample">
 		<text>
@@ -223,13 +234,27 @@
 			right hand to fondle your right breast and your left one continues to devour the mushroom woman.You lay down on the cave floor to let gravity do the rest of the heavy lifting.
 		</text>
 		<choice destination="breastend1" text="Become the new milk mama." />
+		<choice destination="capture2" text="Keep the old milk mama."> 
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>
 
 	</page>
+	<page ID="capture2">
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<special effect="captureNPC" />
+		<text>
+			Gravity pushes the rest of the mushroom mother's heavy body into your left tit. Having her sealed away inside your mammary has caused it to swell size so much
+			that it is bigger than the rest of your body.  Despite the massive burden, you began to struggle to your feet.  You went through a lot of trouble to catch
+			the milky maid, and you wanted the prize!  Somehow, you struggle back to your ship, and spill the mushroom mother into the containment cell.  Not your usual 
+			way of doing things, but hey!  It worked.  For some inexplicable reason, you wander back to the cave where you found her.</text>
 
+		<choice destination="end" text="Mine!" />
+	</page>
 	<page ID="breastend1">
 		<text>
 			Gravity pushes the rest of the mushroom mother's heavy body into your left tit. Having her sealed away inside your mammary has caused it to swell size so much
-			that it is bigger than the rest of youur body. It is outright impossible for your to move like this, so you decide to look up at the cave cieling as your body
+			that it is bigger than the rest of your body. The weight of your breasts proves too troublesome to overcome, so you decide to look up at the cave ceiling as your body
 			melts the mushroom mother into mik. In about what feels like an hour, her figure can no longer been seen in your tit and much of its weight has been worn down too.
 			You sit up and decide to sample your own milk. The processed mushroom is very rich in taste. And the taste is addictive too! You quickly suck out the milk
 			the was once the the busty mother mushroom. You give your right tit a quick squeeze and to your surprize, a little squirt of milk comes out.

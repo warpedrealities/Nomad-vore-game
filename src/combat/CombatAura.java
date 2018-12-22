@@ -4,6 +4,7 @@ import actor.Actor;
 import actor.Attackable;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
+import combat.CombatMove.MoveResult;
 import faction.violation.FactionRule.ViolationType;
 import graphics.CompiledFX;
 import nomad.universe.Universe;
@@ -25,7 +26,8 @@ public class CombatAura {
 	static IConeFovAlgorithm coneAlgorithm;
 
 	static IFovAlgorithm vision;
-	static public boolean doSweep(CombatMove move, Actor origin, Attackable target) {
+
+	static public MoveResult doSweep(CombatMove move, Actor origin, Attackable target) {
 		Zone zone = Universe.getInstance().getCurrentZone();
 
 		int d = ZoneInteractionHandler.getDirection(origin.getPosition(), target.getPosition());
@@ -47,7 +49,7 @@ public class CombatAura {
 				explodeTile(zone, (int) p.x, (int) p.y, move, origin);
 			}
 		}
-		return true;
+		return MoveResult.HIT;
 	}
 
 	static public int getAngle(Vec2f target) {
@@ -70,7 +72,7 @@ public class CombatAura {
 		return degrees;
 	}
 
-	public static boolean doCone(CombatMove combatMove, Actor origin, Attackable target) {
+	public static MoveResult doCone(CombatMove combatMove, Actor origin, Attackable target) {
 		CombatProjector projector = new CombatProjector(origin, Universe.getInstance().getCurrentZone(), combatMove);
 
 		if (coneAlgorithm == null) {
@@ -85,16 +87,16 @@ public class CombatAura {
 		}
 		coneAlgorithm.visitConeFieldOfView(projector, (int) origin.getPosition().x, (int) origin.getPosition().y, 8,
 				angle, finAngle);
-		return true;
+		return MoveResult.HIT;
 
 	}
 
-	public static boolean doCircle(CombatMove combatMove, Actor origin, Attackable target) {
+	public static MoveResult doCircle(CombatMove combatMove, Actor origin, Attackable target) {
 
 		return doExplosion(combatMove, origin, origin, false);
 	}
 
-	public static boolean doRadius(CombatMove combatMove, Actor origin, Attackable target) {
+	public static MoveResult doRadius(CombatMove combatMove, Actor origin, Attackable target) {
 		CompiledFX explosion = new CompiledFX();
 		if (combatMove.isNonViolent()) {
 			explosion.setRGB(1, 0, 1);
@@ -108,10 +110,10 @@ public class CombatAura {
 		projector.setCompiledEffect(explosion);
 		ViewScene.m_interface.getFX().addEffect(explosion);
 		vision.visitFieldOfView(projector, (int) origin.getPosition().x, (int) origin.getPosition().y, 5);
-		return true;
+		return MoveResult.HIT;
 	}
 
-	public static boolean doBlast(CombatMove combatMove, Actor origin, Attackable target) {
+	public static MoveResult doBlast(CombatMove combatMove, Actor origin, Attackable target) {
 		CompiledFX explosion = new CompiledFX();
 
 		if (combatMove.isNonViolent()) {
@@ -126,10 +128,10 @@ public class CombatAura {
 		projector.setCompiledEffect(explosion);
 		ViewScene.m_interface.getFX().addEffect(explosion);
 		vision.visitFieldOfView(projector, (int) target.getPosition().x, (int) target.getPosition().y, 5);
-		return true;
+		return MoveResult.HIT;
 	}
 
-	static public boolean doExplosion(CombatMove move, Actor origin, Attackable target, boolean center) {
+	static public MoveResult doExplosion(CombatMove move, Actor origin, Attackable target, boolean center) {
 
 		CompiledFX explosion=new CompiledFX();
 		Zone zone = Universe.getInstance().getCurrentZone();
@@ -161,7 +163,7 @@ public class CombatAura {
 			}
 		}
 
-		return true;
+		return MoveResult.HIT;
 	}
 
 	static private void explodeTile(Zone zone, int x, int y, CombatMove move, Actor origin) {

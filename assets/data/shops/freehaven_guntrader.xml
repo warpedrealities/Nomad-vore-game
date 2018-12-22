@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<shop profitratio="1.25" useCredits="true">
+	<inventoryitem name="Zokol rifle" probability="100"
+		quantity="2" />
+	<inventoryitem name="Zokol rifle" probability="50"
+		quantity="2" />
+	<inventoryitem name="magazine(rifle)" probability="100"
+		quantity="10" />
+	<inventoryitem name="magazine(rifle)" probability="50"
+		quantity="10" />
+	<inventoryitem name="bullets" probability="100"
+		quantity="10" />
+	<inventoryitem name="bullets" probability="50"
+		quantity="10" />		
+	<inventoryitem name="space slug thrower" probability="100"
+		quantity="1" />		
+	<inventoryitem name="space slug thrower" probability="50"
+		quantity="1" />			
+	<inventoryitem name="40mm slug" probability="100"
+		quantity="10" />
+	<inventoryitem name="40mm slug" probability="50"
+		quantity="10" />
+	<inventoryitem name="explosive grenade" probability="100"
+		quantity="10" />
+	<inventoryitem name="explosive grenade" probability="50"
+		quantity="10" />
+	<inventoryitem name="emp grenade" probability="100"
+		quantity="10" />
+	<inventoryitem name="emp grenade" probability="50"
+		quantity="10" />	
+	<inventoryitem name="fission grenade" probability="100"
+		quantity="1" />
+	<inventoryitem name="fission grenade" probability="50"
+		quantity="1" />				
+</shop>

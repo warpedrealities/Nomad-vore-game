@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<text>
+	"Live and drink outlander." 
+	</text>
+	<choice destination="end" text="not got much to say clearly"/>
+	</page>	
+	
+	
+	
+</Conversation>

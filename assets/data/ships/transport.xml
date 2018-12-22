@@ -49,6 +49,7 @@
 				<contains name="modules/fueltank">
 					<resource type="FUEL" value="0" />
 				</contains>	
+				<widgetItem>fueltank</widgetItem>	
 			</placeWidget>
 			<placeWidget x="5" y="2" name="slot"/>				
 

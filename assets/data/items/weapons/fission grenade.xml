@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ItemWeapon name="fission grenade" weight="1" value="250">
+	<description>
+		On detonation this grenade compresses a few ounces of unstable isotope to create a blast of heat and radiation. Do not throw anywhere nearby due to the blast radius. 2AP Does 12-24 thermokinetic damage.
+	</description>
+	<combatMove name="boom" ammoCost="1" pattern="BLAST"
+		bonusAttribute="RANGED" timeCost="2" bonusToHit="4" actionCost="2"
+		basicAction="true" moveType="FIGHT">
+		<effectDamage type="KINETIC" minValue="6" maxValue="12"
+			modifier="DEXTERITY" />
+		<effectDamage type="THERMAL" minValue="6" maxValue="12"
+			modifier="DEXTERITY" />
+		<missText count="1">
+
+			<text>TARGET is unscathed by the detonation</text>
+		</missText>
+		<hitText count="1">
+			<text>TARGET suffers VALUE damage as they're caught in the blast</text>
+		</hitText>
+		<energySource value="stack" />
+	</combatMove>
+	<stackEquip value="true" />
+</ItemWeapon>

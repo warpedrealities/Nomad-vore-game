@@ -182,6 +182,16 @@ public class Status_DoT implements StatusEffect {
 					return;
 				}
 			}
+			else {
+				if (subject.getStat(Actor_RPG.HEALTH) <= 0) {
+					subject.getActor().Defeat(null, false);
+					return;
+				}
+				if (subject.getStat(Actor_RPG.RESOLVE) <= 0) {
+					subject.getActor().Defeat(null, true);
+					return;
+				}
+			}
 			if (abilityTest != -1) {
 				int m = subject.getAbilityMod(abilityTest);
 				int r = GameManager.m_random.nextInt(20) + m;
@@ -251,15 +261,19 @@ public class Status_DoT implements StatusEffect {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		Status_DoT other = (Status_DoT) obj;
-		if (uid != other.uid)
+		if (uid != other.uid) {
 			return false;
+		}
 		return true;
 	}
 

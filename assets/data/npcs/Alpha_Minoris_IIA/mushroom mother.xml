@@ -70,11 +70,11 @@
 
 	<respawn delay="2000" />
 
-	<disposition value="25" />
 	<defeated conversation="alpha_minoris_IIA/mushroommother/mushroommotherdefeat" />
 	<seduced conversation="alpha_minoris_IIA/mushroommother/seduced" />
 	<victory conversation="alpha_minoris_IIA/mushroommother/mushroommothervictory" />
 	<seducer conversation="alpha_minoris_IIA/mushroommother/mushroommothervictory" />
+	<captive conversation="alpha_minoris_IIA/mushroommother/captive" />		
 	<controller AI="mushroommother" />
 	<faction value="monster" />
 </NPC>
