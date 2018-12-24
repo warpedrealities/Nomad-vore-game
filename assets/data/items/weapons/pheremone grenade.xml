@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ItemWeapon name="pheromone grenade" weight="1" value="100">
+	<description>
+		A gas dispersal grenade. Releases universal pheromones in a heavy cloud to reduce target resolve. 2AP Does 6-18 pheremone damage.
+	</description>
+	<combatMove name="boom" ammoCost="1" pattern="BOMB"
+		bonusAttribute="RANGED" timeCost="2" bonusToHit="4" actionCost="2"
+		basicAction="true" moveType="FIGHT">
+		<effectDamage type="PHEREMONE" minValue="6" maxValue="18"
+			modifier="DEXTERITY" />
+		<missText count="1">
+
+			<text>TARGET is unscathed </text>
+		</missText>
+		<hitText count="1">
+			<text>TARGET loses VALUE resolve</text>
+		</hitText>
+		<energySource value="stack" />
+	</combatMove>
+	<stackEquip value="true" />
+</ItemWeapon>

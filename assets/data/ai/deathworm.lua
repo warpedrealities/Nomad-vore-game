@@ -30,7 +30,7 @@ function move(controllable,x,y,hostile,sense)
 			sense:drawText("A deathworm erupts from beneath the sands!")		
 			controllable:setValue(0,2)		
 		end
-		if (distance<4) then
+		if (distance<6) then
 			controllable:setValue(4,20)	
 		end
 	else

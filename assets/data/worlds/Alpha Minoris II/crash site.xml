@@ -8,6 +8,7 @@
 		<tile sprite="3" vision="EMPTY" movement="1"> boulder</tile>	
 		<tile sprite="2" vision="EMPTY" movement="0"> scour on the ground</tile>		
 		<tile sprite="5" vision="BLOCKING" movement="2" smart="true"> valley walls</tile>
+		<tile sprite="22" vision="EMPTY" movement="0"> scrub grass</tile>		
 	</tileset>
 	<transition direction="south">zoneNW</transition>
 	<description>This valley is all bared rock and churned dirt, a torn
@@ -16,38 +17,38 @@
 
 	<mapgen>
 		<prefab positionX="0" positionY="0" width="16">
-			<row>6666665225226666</row>
-			<row>6666665225226666</row>
-			<row>6666625225222666</row>
-			<row>6666624225222666</row>
-			<row>6666225266222266</row>
-			<row>6666225266242266</row>
-			<row>6662225225222226</row>
-			<row>6662226624222226</row>
-			<row>6662226625222226</row>
-			<row>6662225225266226</row>
-			<row>6662224225266226</row>
-			<row>6662225225422226</row>
-			<row>6666665225266666</row>
-			<row>6666666245222666</row>
-			<row>6666666625222266</row>
-			<row>6666666225422266</row>
+			<row>6666667225276666</row>
+			<row>6666667225276666</row>
+			<row>6666672225227666</row>
+			<row>6666674225227666</row>
+			<row>6666725266222766</row>
+			<row>6666725266242766</row>
+			<row>6667225225222276</row>
+			<row>6667226624222276</row>
+			<row>6667226625222276</row>
+			<row>6667225225266276</row>
+			<row>6667224225266276</row>
+			<row>6667225725422276</row>
+			<row>6666665725766666</row>
+			<row>6666666245227666</row>
+			<row>6666666675222766</row>
+			<row>6666666275422766</row>
 		</prefab>
 		<prefab positionX="0" positionY="16" width="16">
+			<row>6666665725226666</row>
+			<row>6666674225266666</row>
+			<row>6666675225266666</row>
+			<row>6666725245666666</row>
+			<row>6666725225666666</row>
+			<row>6666674225266666</row>
+			<row>6666675224266666</row>
 			<row>6666665225226666</row>
-			<row>6666624225266666</row>
-			<row>6666625225266666</row>
-			<row>6666225245666666</row>
-			<row>6666225225666666</row>
-			<row>6666624225266666</row>
-			<row>6666625224266666</row>
 			<row>6666665225226666</row>
-			<row>6666665225226666</row>
-			<row>6660000000000666</row>
-			<row>6660000000000666</row>
-			<row>6660000000000666</row>
-			<row>6660000000000666</row>
-			<row>6660000000000666</row>
+			<row>6667000000000666</row>
+			<row>6667000000000666</row>
+			<row>6667000000000666</row>
+			<row>6667000000000666</row>
+			<row>6667000000000666</row>
 			<row>6666000000006666</row>
 			<row>6666666666666666</row>
 		</prefab>

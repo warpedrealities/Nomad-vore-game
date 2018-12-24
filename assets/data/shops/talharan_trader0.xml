@@ -15,6 +15,8 @@
 		quantity="1" />
 	<inventoryitem name="plasma pistol" probability="100"
 		quantity="1" />
+	<inventoryitem name="Hypnoray" probability="100"
+		quantity="1" />		
 	<inventoryitem name="plasma canister" probability="100"
 		quantity="10" />
 	<inventoryitem name="plasma canister" probability="50"

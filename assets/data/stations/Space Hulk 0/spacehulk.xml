@@ -161,6 +161,7 @@
 			<lootTable identity="normalchest">
 				<lootSubTable chance="0.75" file="spacehulk_resources" />
 				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.5" file="consumable_advanced_tier_1" />				
 				<lootSubTable chance="0.75" file="spacehulk_resources" />
 				<lootSubTable chance="0.75" file="spacehulk_consumables" />
 				<lootSubTable chance="0.50" file="spacehulk_resources" />

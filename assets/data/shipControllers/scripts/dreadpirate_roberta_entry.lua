@@ -35,7 +35,7 @@ end
 
 function checkBoarded(script,sense)
 	bounty=sense:getGlobalFlags():readFlag("piratebounty0")
-	if (bounty>1)then
+	if (bounty>2)then
 		script:removeShip()
 	end
 end

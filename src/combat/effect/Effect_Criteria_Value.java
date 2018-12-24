@@ -30,7 +30,7 @@ public class Effect_Criteria_Value extends Effect_Criteria {
 			int v = p.getValue(variable);
 			if (lessThan && v < value) {
 				return true;
-			} else if (lessThan == false && v > value) {
+			} else if (lessThan == false && v >= value) {
 				return true;
 			}
 		}

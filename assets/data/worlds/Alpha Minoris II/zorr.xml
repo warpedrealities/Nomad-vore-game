@@ -133,6 +133,7 @@
 				<lootSubTable chance="1" file="consumable_Tier_1" />
 				<lootSubTable chance="0.1" file="resource_tier_1" />
 				<lootSubTable chance="0.1" file="consumable_Tier_1" />
+				<lootSubTable chance="0.5" file="consumable_primitive_tier_1" />				
 				<loot item="gold" chance="0.4" addendum="10" />
 				<loot item="gold" chance="0.4" addendum="25" />
 			</lootTable>
@@ -144,6 +145,7 @@
 				<lootSubTable chance="0.5" file="resource_tier_1" />
 				<lootSubTable chance="1" file="consumable_Tier_1" />
 				<lootSubTable chance="0.5" file="consumable_Tier_1" />
+				<lootSubTable chance="0.5" file="consumable_primitive_tier_1" />	
 				<lootSubTable chance="0.1" file="resource_tier_1" />
 				<lootSubTable chance="0.1" file="consumable_Tier_1" />
 				<lootSubTable chance="1" file="special_tier_1" />

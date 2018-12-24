@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ItemWeapon name="Hypnoray" weight="6" value="2000">
+
+	<description>
+		A mind altering weapon. Creates arousal, desire and weakens resolve and willpower through the use of strange energetic waves. Nicknamed the perv ray or missus feel good by some deviant users. 1-6 psi damage.
+	</description>
+	<modifier>
+
+	</modifier>
+	<combatMove name="shoot" ammoCost="1" pattern="RANGED"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="2" bonusToHit="0"
+		actionCost="4" basicAction="true" moveType="FIGHT">
+		<effectDamage type="PSYCHIC" minValue="1" maxValue="6"
+			modifier="NONE" />
+		<missText count="1">
+			<text>you fail to influence TARGET </text>
+		</missText>
+		<hitText count="1">
+			<text>you influence TARGET for VALUE psi damage</text>
+		</hitText>
+	</combatMove>
+	<energy refill="ENERGY E-cell advanced power-cell" efficiency="3"
+		capacity="60" />
+</ItemWeapon>

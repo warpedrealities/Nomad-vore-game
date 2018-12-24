@@ -127,7 +127,7 @@
 			<placeNPC name="space/pirates/kitty_pirate" x="4" y="5" />
 			<placeNPC name="space/pirates/dreadpirate_roberta" x="2" y="2">
 			<script death="space/roberta_kill" />
-			<placeNPC>
+			</placeNPC>
 			<placeNPC name="space/pirates/pirate_drone" x="3" y="6" />				
 		</mapgen>
 	</layout>

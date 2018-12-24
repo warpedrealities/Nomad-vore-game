@@ -8,7 +8,8 @@
 		<tile sprite="5" vision="BLOCKING" movement="2" smart="true"> mountain rocks</tile>
 		<tile sprite="22" vision="EMPTY" movement="0"> masonry floor</tile>		
 		<tile sprite="23" vision="BLOCKING" movement="2"> masonry wall</tile>			
-	</tileset>
+		<tile sprite="22" vision="EMPTY" movement="0"> scrub grass</tile>			
+		</tileset>
 	<description>
 	You've entered the mountains, narrow clefts and steep cliffs all about you in a perilous jumble. It'll be tricky to navigate, and its wind swept rocky ground is harsh and unfertile.
 	</description>
@@ -41,12 +42,15 @@
 		</SeedNPCs>
 		</partition>
 		<perlin>
-			<band low="-1.0" high="-0.3">
+			<band low="-1.0" high="-0.35">
 				<floodfill tile="4" />
 			</band>
+			<band low="-0.35" high="-0.3">
+				<floodfill tile="7" />
+			</band>			
 			<band low="-0.3" high="0.3">
 				<noise tile="2" scarcity="22" />	
-				<noise tile="3" scarcity="22" />				
+				<noise tile="3" scarcity="22" />						
 				<floodfill tile="1">
 				<SeedNPCs min="8" max="12" name="AlphaMinoris_II/TyrantLizard">
 					<script death="tyrantLizardDeath" />

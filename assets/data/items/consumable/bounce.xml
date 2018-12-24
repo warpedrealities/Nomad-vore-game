@@ -3,7 +3,7 @@
 	<description>A body-sculpting drug to promote the growth of one's posterior, for
 		those who want some more badonk.</description>
 	<effectmutator>
-		<criteriaValue part="butt" variable="size" value="30"
+		<criteriaValue part="butt" variable="size" value="28"
 			lessthan="true" />
 		<mutation part="butt" variable="size" modifier="1">
 			You flick off the cap and inject
@@ -14,7 +14,7 @@
 		</mutation>
 	</effectmutator>
 	<effectmutator>
-		<criteriaValue part="butt" variable="size" value="30" />
+		<criteriaValue part="butt" variable="size" value="28" />
 		<mutation part="butt" variable="size" modifier="0">
 			You flick off the cap and inject
 			some bounce into your ass. But you might be so bountilicious back there that it can't improve you any further. You don't feel any larger

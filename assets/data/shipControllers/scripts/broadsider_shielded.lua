@@ -95,6 +95,6 @@ function main(script,sense)
 		end
 	end
 	
-	sense:activateShield()
+	script:activateShield()
 	
 end  

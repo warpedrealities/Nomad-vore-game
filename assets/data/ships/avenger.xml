@@ -82,7 +82,7 @@
 				</contains>
 				<widgetItem>generator</widgetItem>
 			</placeWidget>
-			<placeWidget x="5" y="4" name="DAMAGE" value="25" exterior="true" />
+			<!-- <placeWidget x="5" y="4" name="DAMAGE" value="25" exterior="true" /> -->
 			<placeWidget x="2" y="3" name="slot">
 				<contains name="modules/perimeter defence system">
 					<resource type="DRONEPARTS" value="8" />
@@ -116,7 +116,7 @@
 
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="modules/interplanetary reactor">
-					<resource type="FUEL" value="0" />
+					<resource type="FUEL" value="200" />
 				</contains>
 				<widgetItem>interplanetary reactor</widgetItem>	
 			</placeWidget>
