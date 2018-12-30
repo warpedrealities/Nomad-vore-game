@@ -12,6 +12,7 @@ import nomad.universe.Universe;
 import shared.Vec2f;
 import vmo.GameManager;
 import widgets.Widget;
+import zone.Tile;
 import zone.TileDef;
 import zone.Zone;
 
@@ -343,6 +344,15 @@ public class SceneController implements Sense {
 			return activeZone.getActor(x, y);
 		}
 		return null;
+	}
+
+	@Override
+	public boolean getTileVisible(int x, int y) {
+		Tile t = activeZone.getTile(x, y);
+		if (t != null && t.getVisible()) {
+			return true;
+		}
+		return false;
 	}
 
 }

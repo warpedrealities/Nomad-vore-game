@@ -10,7 +10,7 @@
 		<resourceExtraction item="40mm slug" ratio="1" destroy="0.5" dismantle="1.0" />			
 	</shipResource>
 	<shipWeapon>
-		<damage min="5" max="9" falloff="0" />
+		<damage min="6" max="9" falloff="0" />
 		<cooldown value="1" />
 		<effects script="slugthrower" sheet="slugthrower" />
 		<range arc="2" range="10" />

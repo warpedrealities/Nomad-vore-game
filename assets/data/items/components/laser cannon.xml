@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ItemWidget name="laser cannon" weight="10" value="1500">
 	<description>A ship mounted laser cannon based on earth technology.
-		6-12 damage, cooldown 5, 4 energy to fire.</description>
+		7-12 damage, cooldown 5, 4 energy to fire.</description>
 	<placeditem widget="shipweapons/laser cannon" />
 </ItemWidget>

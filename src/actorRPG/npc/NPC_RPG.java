@@ -29,6 +29,7 @@ public class NPC_RPG implements Actor_RPG {
 	// int bindState;
 	StatusEffectHandler statusEffectHandler;
 
+	float subAbilities[];
 
 	public NPC_RPG(NPC_RPG RPG, Actor actor) {
 		// bindState=-1;
@@ -40,6 +41,8 @@ public class NPC_RPG implements Actor_RPG {
 		statValues[1] = statBlock.getStatMaximum(Actor_RPG.RESOLVE);
 		// statusEffects=new ArrayList<StatusEffect>();
 		attributeMods = new short[13];
+		subAbilities = new float[4];
+		subAbilities[3] = 2;
 	}
 
 	public NPC_RPG(Element rpgnode, String name, Actor actor) {
@@ -53,6 +56,8 @@ public class NPC_RPG implements Actor_RPG {
 		statValues[1] = statBlock.getStatMaximum(Actor_RPG.RESOLVE);
 		// statusEffects=new ArrayList<StatusEffect>();
 		attributeMods = new short[12];
+		subAbilities = new float[4];
+		subAbilities[3] = 2;
 	}
 
 	@Override
@@ -103,6 +108,10 @@ public class NPC_RPG implements Actor_RPG {
 	public boolean getStarving() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public float[] getSubAbilities() {
+		return subAbilities;
 	}
 
 	@Override
@@ -165,7 +174,8 @@ public class NPC_RPG implements Actor_RPG {
 			statValues[i] = dstream.readInt();
 		}
 		statBlock = NPCStatblockLibrary.getInstance().getStatblock(ParserHelper.LoadString(dstream));
-
+		subAbilities = new float[4];
+		subAbilities[3] = 2;
 		statusEffectHandler = new StatusEffectHandler();
 		statusEffectHandler.load(dstream);
 		attributeMods = new short[13];
@@ -315,7 +325,7 @@ public class NPC_RPG implements Actor_RPG {
 
 	@Override
 	public float getSubAbility(int i) {
-		return 0;
+		return subAbilities[i];
 	}
 
 	@Override
@@ -343,5 +353,11 @@ public class NPC_RPG implements Actor_RPG {
 
 	public String getFlushScript() {
 		return statBlock.getFlushScript();
+	}
+
+	@Override
+	public void modSubAbility(int ability, float modifier) {
+		subAbilities[ability] += modifier / 100;
+
 	}
 }

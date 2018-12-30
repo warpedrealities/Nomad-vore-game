@@ -34,20 +34,20 @@ public class Ranked_RPG implements Actor_RPG {
 	private Actor actor;
 	private StatusEffectHandler statusEffectHandler;
 	private int busy;
-	
 
-	
+
+
 	private void loadRanks(String filename)
 	{
-		
+
 	}
-	
+
 	private void initialize()
 	{
 		moves.clear();
 		for (int i=0;i<13;i++)
 		{
-			attributes[i]=statBlock.getAttributes(i);	
+			attributes[i]=statBlock.getAttributes(i);
 		}
 		for (int i=0;i<2;i++)
 		{
@@ -56,9 +56,9 @@ public class Ranked_RPG implements Actor_RPG {
 		for (int i=0;i<statBlock.getNumCombatMoves();i++)
 		{
 			moves.add(statBlock.getCombatMove(i));
-		}		
+		}
 	}
-	
+
 	private void calcRanks()
 	{
 		initialize();
@@ -75,7 +75,7 @@ public class Ranked_RPG implements Actor_RPG {
 		stats = new float[2];
 		attributes=new int[13];
 		abilities=new int[6];
-		
+
 		calcRanks();
 		for (int i=0;i<2;i++)
 		{
@@ -182,7 +182,7 @@ public class Ranked_RPG implements Actor_RPG {
 		ParserHelper.SaveString(dstream, rankUnlocks);
 		statusEffectHandler.save(dstream);
 	}
-	
+
 	public Ranked_RPG(DataInputStream dstream, Actor actor) throws IOException {
 		this.actor = actor;
 		ranks=new ArrayList<NPC_Rank>();
@@ -190,13 +190,13 @@ public class Ranked_RPG implements Actor_RPG {
 		busy = dstream.readInt();
 		stats = new float[2];
 		attributes=new int[13];
-		abilities=new int[6];		
+		abilities=new int[6];
 		for (int i = 0; i < 2; i++) {
 			stats[i] = dstream.readFloat();
 		}
 		statBlock = NPCStatblockLibrary.getInstance().getStatblock(ParserHelper.LoadString(dstream));
 		loadRanks(statBlock.getNPCName());
-		
+
 		statusEffectHandler = new StatusEffectHandler();
 		statusEffectHandler.load(dstream);
 		calcRanks();
@@ -266,6 +266,7 @@ public class Ranked_RPG implements Actor_RPG {
 		statusEffectHandler.struggle(this, actor);
 	}
 
+	@Override
 	public boolean stealthCheck(int spot,boolean remove) {
 		return statusEffectHandler.stealthCheck(spot, this,remove);
 	}
@@ -320,10 +321,16 @@ public class Ranked_RPG implements Actor_RPG {
 		statusEffectHandler.setStealthState(stealthstate);
 
 	}
-	
+
 	@Override
 	public Actor getActor() {
 		return actor;
+	}
+
+	@Override
+	public void modSubAbility(int ability, float modifier) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

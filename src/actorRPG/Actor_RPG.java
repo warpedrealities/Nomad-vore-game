@@ -11,7 +11,7 @@ import faction.Faction;
 
 public interface Actor_RPG {
 	public static final int STRENGTH = 0; // melee attack, melee defence, carry
-											// capacity
+	// capacity
 	public static final int ENDURANCE = 1; // health
 	public static final int DEXTERITY = 2; // ranged attack, some skills
 	public static final int AGILITY = 3; // ranged defence, melee defence
@@ -88,6 +88,7 @@ public interface Actor_RPG {
 
 	public void modAttribute(int attribute, int modifier);
 
+	public void modSubAbility(int ability, float modifier);
 	public String getName();
 
 	public int getBusy();
@@ -121,9 +122,9 @@ public interface Actor_RPG {
 	public void recover(int i);
 
 	public float getSubAbility(int i);
-	
+
 	public default boolean isThreatening(Faction faction)
 	{
 		return false;
-	};	
+	};
 }

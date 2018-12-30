@@ -15,6 +15,8 @@ public interface Sense {
 	public Actor getNamedActor(Actor origin, int maxRange, boolean visibleOnly, String name);
 	public Actor getPlayer(Actor origin, boolean visibleOnly);
 	public Actor getActorInTile(int x, int y);
+
+	public boolean getTileVisible(int x, int y);
 	public Actor getActor(Actor origin, int maxrange, boolean visibleOnly,Sense_Criteria criteria);
 	public Sense_Criteria getCriteria(String properties);
 	public int getViolationLevel();
@@ -24,7 +26,7 @@ public interface Sense {
 	public boolean getPreference(String preference);
 
 	public void drawText(String text);
-	
+
 	public FlagField getGlobalFlags();
 
 }

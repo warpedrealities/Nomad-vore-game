@@ -8,7 +8,7 @@
 		<resourceExtraction item="plasma charge" ratio="10" destroy="0.5" dismantle="1.0" />			
 	</shipResource>
 	<shipWeapon>
-		<damage min="6" max="12" falloff="0" />
+		<damage min="7" max="12" falloff="0" />
 		<cooldown value="1" />
 		<special disruption="2" />	
 		<effects script="plasma" sheet="plasma" />

@@ -11,5 +11,5 @@
 	<zone x="0" y="0" type="CLOSED">Cave 2A</zone>
 	<zone x="1" y="0" type="CLOSED">Cave 2B</zone>
 	<zone x="1" y="0" type="CLOSED">grotto</zone>	
-	<ship name="transport" posX="1" posY="1"></ship>
+	<ship name="transport" posX="1" posY="0"></ship>
 </world>

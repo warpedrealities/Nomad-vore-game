@@ -5,12 +5,15 @@
 		<tile sprite="2" vision="EMPTY" movement="0"> dusty cave floor </tile>
 		<tile sprite="3" vision="BLOCKING" movement="2"> a rock boulder</tile>
 	</tileset>
+	<zoneConditions>
+	<modifierCondition ID="darkness" vision="0.5" />
+	</zoneConditions>
 	<description>
-	
+	The cave is bereft of light and you can only see a short distance in front of you. Only the occasional glitter of fuel crystal deposits urges you onwards into this foreboding darkness.
 	</description>
 	<mapgen>
 		<walloff wall="0" sides="northwesteastsouth">
-			<cavegen iterations="3" tile="0" threshold="45" bounds="100"
+			<cavegen iterations="3" tile="0" threshold="35" bounds="100"
 				minfloor="0.5">
 				<randprefab width="3" height="3">
 					<row>111</row>
@@ -20,11 +23,19 @@
 						y="1" ID="11">a tunnel to the surface</pairedportal>
 				</randprefab>
 				<auditpaths carve="0" />
-				<noise tile="2" scarcity="5" />
+				<noise tile="2" scarcity="6" />
+				<randprefab width="3" height="3">
+					<row>222</row>
+					<row>222</row>
+					<row>222</row>
+					<placeNPC name="Forakis_I/wendigo" x="1"
+						y="1" />
+				</randprefab>
 				<floodfill tile="1">
-					<Seedwidgets min="8" max="16" name="crystaloutcrop" />
+					<Seedwidgets min="12" max="16" name="crystaloutcrop" />
 				</floodfill>
 			</cavegen>
+			
 		</walloff>
 		<auditpaths carve="2" replace="1" />
 		<auditpaths carve="2" replace="1" exclude="impassable" />

@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<preference fetish="anthros" />
+	<preference fetish="herms" />	
+	<assertion evaluate="operatorOr">	
+		<preference fetish="cocktransformation" />
+		<preference fetish="cockvore" />		
+	</assertion>
+		<text> 
+			The beast lets out a ululating laugh as you reel from the last blow, grabbing ahold of your throat and tossing you down into the dirty ground. You feel the wendigo's breath against your scalp and her claw about your neck as 			
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				her other claw tearing away your
+				<readequipment slot="2" />
+				and exposing your hips and rear to her and then
+			</conditional> 
+			you feel something hot and firm prodding against your thighs. The wendigo letting out another chuckle as she feels you squirm in response to the implications of this.
+		</text>
+		<choice destination="rape0" text="*she's going to stick it in your pussy*">
+			<assertion evaluate="haspart" part="vagina" />
+		</choice>
+		<choice destination="analrape0" text="*She's going to stick it in your ass*"/>
+	</page>	
+	
+	<page ID="rape0">
+	<text>
+		The Wendigo pins you down to the dirt, grasping one wrist as well as your neck, as she lines her hermhood up with your nethers. The monster intent on violating you and deterred not at all by your futile squirms and struggles against her desires. The tip of her girthy cock pressing against your snatch, starting to part your netherlips around her thickness as she begins to push into you.. slowly at first, but then once her cocktip is fully popped into your sex she thrusts the entirety of her cock into you. Bulging your belly out around the outline of her large cock as she lets out a delighted growl, furred hips pressing against your ass.
+	</text>
+	<choice destination="rape1" text="*raped by a monster*"/>
+	</page>
+	
+	<page ID="rape1">
+	<text>
+		Pinned beneath the beast you feel its fur clad hips thrusting repeatedly against you, driving that cock into your nethers repeatedly. The wendigo rutting you as you helplessly squirm underneath its lustful assault, your pussy stretched out and reamed by her thick cock as you're forced to listen to her growling in delight as she picks up the pace. 
+	</text>
+		<choice destination="rape2" text="*to be filled with seed*"/>
+	</page>
+	
+	<page ID="rape2">
+	<text>
+		The wendigo pistons her hips, pounding away at your poor stretched and abused hole until she seems to be reaching her peak. Her hips spasming and pressing her cock deep inside you firmly before her cock erupts with spurts of seed sent deep within you. Her shaft throbbing, pumping hot jizz up into you until she has spent her load. Her grasp on your body loosening as she groans in pleasure in her afterglow.
+	</text>
+		<choice destination="struggleCheck0" text="*try to escape*">
+			<preference fetish="cockvore" />
+		</choice>
+<!-- 		<choice destination="ctf0A" text="*lay there and hope she's done with you*">
+			<preference fetish="cocktransformation" />	
+		</choice> -->
+	</page>
+
+
+	<check ID="struggleCheck0">
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="struggleEscape0" />
+		<outcome destination="cockvore0A" />
+	</check>	
+	
+	<page ID="struggleEscape0">
+	<text>
+		You feel your violator's grasp on your neck loosen and you wriggle your hand out from under her own and up to use both hands to shove her hand off your neck. Using the momentary freedom from her grasp you shove yourself forwards and up off of her cock. Her shaft popping out of your agape and abused nethers in a splash of jizz, flipping over to punch your assailant in the face and stun it so you can get to your feet. Your nethers are still oozing her cum and refusing to contract and close up again, but you're free of her grasp and depredations..at least for now.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
+	
+	<page ID="analrape0">
+	<text>
+	The wendigo growls as she presses her broad cocktip against your pucker, forcing your ass cheeks apart as she grinds it against your rear end before starting to shove at your brown starfish. Your tight sphincter proving a stubborn obstacle to the monster, but not one she's willing to relent for. The Wendigo battering at your defenceless ass with her cocktip before overcoming your resistance, shoving her shaft roughly into your bowels and stretching out your asshole with her girth as she lets out a triumphant growl.
+	</text>
+	<choice destination="analrape1" text="*my poor abused butt*"/>
+	</page>	
+	
+	<page ID="analrape1">
+	<text>
+	You can't help but groan as your guts are straightened out around her thick cock, her furred balls shoved against your ass as she fills you rear with schlong before pulling back. The Wendigo thrusting back in soon after, starting to thrust in and out and in so doing ream your asshole, her cock plunging deep into your rear with each thrust. Her heavy hairy nuts slapping against your ass with each vigorous thrust. The monster growling in delight above you as she picks up the pace and further unleashes her lust upon your ass.
+	</text>
+	<choice destination="analrape2" text="*this is going to end right?*"/>
+	</page>
+	
+	<page ID="analrape2">
+	<text>
+	The relentless rutting and abuse of your <macro ID="butt_size_desc" /> derriere continues. The wendigo keeping you pinned and helpless as she ravages you. Her growls and thrusting continuing well past the point of insult and humiliation before she shows any signs of nearing her climax. Her growls and grunts becoming more lustful as her balls slap against your ass until finally with a moan she unleashes her seed deep within your bowels. A hot warm sloshy mass congealing in your innards as she pumps her load into you, her grasp on your neck and arm loosening in her orgasm.
+	</text>
+		<choice destination="struggleCheck1" text="*try to escape*">
+			<preference fetish="cockvore" />
+		</choice>
+		<!-- <choice destination="ctf0B" text="*lay there and hope she's done with you*">
+			<preference fetish="cocktransformation" />	
+		</choice>	 -->
+	</page>
+	
+	<check ID="struggleCheck1">
+		<test what="STRUGGLE" DC="12" />
+		<outcome destination="struggleEscape1" />
+		<outcome destination="cockvore0B" />
+	</check>	
+	
+	<page ID="struggleEscape1">
+	<text>
+		You feel your violator's grasp on your neck loosen and you wriggle your hand out from under her own and up to use both hands to shove her hand off your neck. Using the momentary freedom from her grasp you shove yourself forwards and up off of her cock. Her shaft popping out of your ravaged asshole in a splash of jizz, flipping over to punch your assailant in the face and stun it so you can get to your feet. Your rear end is still oozing her cum and refusing to contract and close up again, but you're free of her grasp and depredations..at least for now.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>	
+	
+	<page ID="cockvore0A">
+	<text>
+		You feel your violator's grasp on your neck loosen and you wriggle your hand out from under her own and up to use both hands to shove her hand off your neck. Using the momentary freedom from her grasp you shove yourself forwards and up off of her cock. Her shaft popping out of your agape and abused nethers in a splash of jizz, you turn to lash out at her only to find her already recovered. The wendigo catching your wrist with one claw and utters a growling before grabbing your hip. The monster upending you as she picks you up. You come to face to tip with her slick cum covered black dick and hear her cackle as she can sense your realization.
+	</text>
+	<choice destination="cockvore1" text="she wants to cockvore you!"/>
+	</page>	
+	
+	<page ID="cockvore0B">
+	<text>
+		You feel your violator's grasp on your neck loosen and you wriggle your hand out from under her own and up to use both hands to shove her hand off your neck. Using the momentary freedom from her grasp you shove yourself forwards and up off of her cock. Her shaft popping out of your much abused asshole in a splash of jizz, you turn to lash out at her only to find her already recovered. The wendigo catching your wrist with one claw and utters a growling before grabbing your hip. The monster upending you as she picks you up. You come to face to tip with her slick cum covered black dick and hear her cackle as she can sense your realization.	
+	</text>
+	<choice destination="cockvore1" text="she wants to cockvore you!"/>	
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+		The wendigo's cackling sounds loud in your ears but only until the gooey squelch and schlorp of thick cum and hungry cock replace it as she shoves you down. The monster feeding you headfirst into her cock and those cackles change to pleasured growls as her shaft stretches around you and ripples powerfully to drag you deeper. The ebony shaft bulging out around your head and then shoulders as she shoves you in, pinning your arms against your sides to ease your passage into her most depraved parts.
+	</text>
+		<choice destination="cockvore2" text="*fed in*"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	You feel both her clawed hands roughly clutching your waist as she forces you inside, gradually walking up your legs as your hips are taken in. Her growls ever more lusty as your upper body is forced into the prodigious girth of her dick. That veiny schlong bulging mightily with your outline as she feeds you deeper in, her hands around your ankles now as she squats in place and feeds you through her shaft and into her balls. Dark fur clad orbs starting to bulge and hang lower as your shape is squeezed into her sack. Your legs finally disappearing entirely into her cock and the wendigo lets out a delighted growl of pleasure as they slide down to pile in atop the rest of you curled in her balls.
+	</text>
+	<choice destination="cockvore3" text="*cockfood*"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	You feel the monster's claw kneading against your shape contained within her sack as she lets out a taunting chuckle. The wendigo wrapping her other hand around her shaft and starting to slowly jack off as your cummy bath inside her balls becomes more of a sauna or wave pool. The sack walls squeezing and contracting around you, sloshing cum about your form and showing off your contours in sharp relief despite the fur. But not for too long, as you can already feel yourself softening. The loud glorps of her cum sounding loud in your ears accompanied by her growls and taunting chuckles.
+	</text>
+	<choice destination="cockvore4" text="*melted*"/>
+	</page>
+	
+	<gameover ID="cockvore4">
+	<text>
+	Within the cavern depths the monster self indulgently stroked off, the squirming in her sack gradually subsiding into liquid sloshing. Her chuckles giving way entirely to lewd and lusty growls as your form softens and melts away in her balls. The wendigo's jacking taking on a more vigorous tempo as the last part of you melts away and spreads out into the surrounding jizz, your form becoming one with her load as she works herself to orgasm. The dreadful monster finally cresting the top of that pleasurable wave with a howl, pumping your hot remnants out into a sticky puddle in front of the furred fiend. That ebon cock erupting for a good minute with spasming pulsing ejaculations before subsiding, softening after a few last weak splurts. The wendigo rises, and returns to the darkness, leaving your remains to be a cooling puddle on the floor.
+	</text>
+	</gameover>
+	
+	<page ID="ctf0A">
+	<text>
+	
+	</text>
+	
+	</page>	
+	
+	
+	<page ID="ctf0B">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+
+	
+</Conversation>

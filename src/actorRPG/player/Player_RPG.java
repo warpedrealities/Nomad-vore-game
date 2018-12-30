@@ -1077,9 +1077,9 @@ public class Player_RPG implements Actor_RPG {
 	}
 
 
-
-	public void modSubAbility(int attribute, int modifier) {
-		float v=((float)modifier)/100;
+	@Override
+	public void modSubAbility(int attribute, float modifier) {
+		float v=(modifier)/100;
 		subAbilities[attribute]+=v;
 	}
 

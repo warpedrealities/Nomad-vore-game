@@ -19,5 +19,5 @@
 			<text>you shoot TARGET for VALUE heat damage</text>
 		</hitText>
 	</combatMove>
-	<energy refill="ENERGY" efficiency="10" capacity="100" />
+	<energy refill="ENERGY E-cell advanced power-cell" efficiency="10" capacity="100" />
 </ItemWeapon>

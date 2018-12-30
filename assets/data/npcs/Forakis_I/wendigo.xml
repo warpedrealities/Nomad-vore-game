@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="wendigo.png" />
+	<name>Wendigo</name>
+	<description>
+	The humanoid is tall, yet lanky and stretched out. The feminine accents of her figure further concealed by thick and long coal black fur that clings to every part of her body. Her hands end in claws and despite her lack of bulk her movements speak of surety and power. But most unsettling is her head, a furless, skinless, fleshless animal skull bringing to mind a goat with its long curling horns. Yet it has sharp teeth in its lipless mouth that give it the appearance of sporting a perpetual menacing grin.
+	</description>
+	<rpg>
+		<experiencevalue value="600" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="6" />
+		<ability ability="ENDURANCE" value="6" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="75" />
+		<stat stat="RESOLVE" value="75" />
+		<attribute attribute="PARRY" value="8" />
+		<attribute attribute="MELEE" value="4" />		
+		<attribute attribute="DODGE" value="4" />			
+		<attribute attribute="WILLPOWER" value="4" />		
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="0" multiAttack="2">
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<missText count="4">
+				<text>Wendigo fails to claw TARGET</text>
+				<text>Wendigo attacks but TARGET evades</text>
+				<text>TARGET avoids a bite from the Wendigo</text>
+				<text>TARGET narrowly avoids the Wendigo's claws </text>	
+			</missText>
+			<hitText count="3">
+				<text>Wendigo claws TARGET for VALUE damage</text>
+				<text>Wendigo attacks TARGET for VALUE damage</text>
+				<text>Wendigo bites TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="cripple" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<effectStatus probability="90" rangedDecay="1">
+				<probabilityModifier value="ENDURANCE" />
+				<statusTag tag="slowing" />
+				<applyText>TARGET is slowed</applyText>
+				<statusSubAbilityMod uid="22" duration="20" icon="18" numModifiers="1">
+				<effect attribute="MOVECOST" modifier="200"/>
+				<removeText>
+				TARGET is no longer slowed
+				</removeText>
+				</statusSubAbilityMod>
+			</effectStatus>				
+			<missText count="4">
+				<text>Wendigo fails to cripple TARGET</text>
+				<text>Wendigo attempts to cripple TARGET but is unsuccessful</text>
+				<text>TARGET avoids a crippling from the Wendigo</text>
+				<text>TARGET narrowly avoids the Wendigo crippling them</text>	
+			</missText>
+			<hitText count="3">
+				<text>Wendigo cripples TARGET for VALUE damage</text>
+				<text>Wendigo viciously cripples TARGET for VALUE damage</text>
+				<text>Wendigo delivers a crippling blow to TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="stealth" pattern="SELF" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="2">
+			<hitText count="1">
+				<text></text>
+			</hitText>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<effectStatus probability="100">
+				<applyText></applyText>
+				<statusStealth uid="23" icon="5" duration="1000"
+					numModifiers="2" strength="17" interval="60">
+				</statusStealth>
+			</effectStatus>
+		</combatMove>
+		<combatMove name="self heal" pattern="SELF" bonusAttribute="SEDUCTION"
+			timeCost="2" bonusToHit="0">
+			<effectrecover modifier="ENDURANCE" modstrength="0.2"
+				modvalue="3" modifies="HEALTH">
+			</effectrecover>			
+			<effectrecover modifier="ENDURANCE" modstrength="0.2"
+				modvalue="3" modifies="RESOLVE">				
+			</effectrecover>
+			<missText count="1">
+				<text></text>
+			</missText>
+			<hitText count="1">
+				<text></text>
+			</hitText>
+		</combatMove>		
+	</rpg>
+	<respawn delay="2000" />
+<flying />	
+	<defeated conversation="Forakis_I/wendigo/defeat" />
+	<seduced conversation="Forakis_I/wendigo/defeat" />
+	<victory conversation="Forakis_I/wendigo/victory" />
+	<seducer conversation="Forakis_I/wendigo/victory" />
+	<controller AI="wendigo" />
+	<faction value="monster" />
+</NPC>

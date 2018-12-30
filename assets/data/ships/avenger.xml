@@ -64,9 +64,10 @@
 
 			<placeWidget x="6" y="8" name="hardpoint">
 				<facing value="1" />
-				<contains name="shipweapons/laser cannon">
+				<contains name="shipweapons/dagger missile launcher">
+					<resource type="dagger missile" value="12" />	
 				</contains>
-				<widgetItem>laser cannon</widgetItem>
+				<widgetItem>dagger missile launcher</widgetItem>
 			</placeWidget>
 
 			<placeWidget x="3" y="5" name="slot">

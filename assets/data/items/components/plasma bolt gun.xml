@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ItemWidget name="plasma bolt gun" weight="10" value="4000">
 	<description>A plasma bolt gun. The installation provides a stabilized mounting to allow maximum rate of fire.
-		6-12 damage, cooldown 1, 1 energy and 2 plasma to fire.</description>
+		7-12 damage, cooldown 1, 1 energy and 2 plasma to fire.</description>
 	<placeditem widget="shipweapons/plasma bolt gun" />
 </ItemWidget>

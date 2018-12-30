@@ -25,13 +25,14 @@
 			<pairedportal sprite="3" destination="Cave 2A" x="3" y="3"
 				ID="11">a tunnel into the depths</pairedportal>
 		</preloadprefab>
-		<prefab positionX="0" positionY="0" width="6">
-			<row>533333</row>
-			<row>555553</row>
-			<row>533333</row>
-			<row>533333</row>
-			<row>533333</row>
-			<row>555553</row>
+		<prefab positionX="0" positionY="0" width="7">
+			<row>5333333</row>
+			<row>5555533</row>
+			<row>5333333</row>
+			<row>5333333</row>
+			<row>5333333</row>
+			<row>5555533</row>
+			<row>5333333</row>			
 			<pairedportal sprite="11" destination="clifftop" x="2"
 				y="2" ID="22">an elevator, for going up things</pairedportal>
 		</prefab>

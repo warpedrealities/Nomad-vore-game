@@ -315,6 +315,11 @@ public class NPC extends Actor implements Controllable {
 
 
 	@Override
+	protected int getMoveCost() {
+		return (int) actorRPG.getSubAbility(Actor_RPG.MOVECOST);
+	}
+
+	@Override
 	public boolean move(int direction) {
 		if (actorRPG.getBindState() > -1) {
 			actorRPG.struggle();

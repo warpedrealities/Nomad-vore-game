@@ -39,8 +39,8 @@
 				<statusAttribMod uid="150" icon="0" duration="20"
 					numModifiers="2">
 					<removeText> TARGET defences have recovered</removeText>
-					<effect attribute="RANGED" modifier="-4" />
-					<effect attribute="MELEE" modifier="-4" />
+					<effect attribute="DODGE" modifier="-4" />
+					<effect attribute="PARRY" modifier="-4" />
 				</statusAttribMod>
 			</effectStatus>	
 		</combatmove>		

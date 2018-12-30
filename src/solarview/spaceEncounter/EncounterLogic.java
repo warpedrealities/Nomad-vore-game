@@ -7,8 +7,8 @@ import spaceship.stats.SpaceshipAnalyzer;
 
 public class EncounterLogic {
 
-	
-	
+
+
 	private EncounterShip[] shipList;
 	private float turn;
 	private TrailControl trailControl;
@@ -16,7 +16,7 @@ public class EncounterLogic {
 	public enum GameState{playing,victory,defeat,retreat};
 	private GameState gameState;
 	private EncounterWarpHandler warpHandler;
-	
+
 	public EncounterLogic(EncounterShip[] ships) {
 		shipList = ships;
 		effectHandler=new EffectHandler();
@@ -34,7 +34,7 @@ public class EncounterLogic {
 			for (int i=0;i<shipList.length;i++)
 			{
 				shipList[i].runAi(shipList,effectHandler);
-			}			
+			}
 		}
 		turn = 2;
 	}
@@ -46,7 +46,7 @@ public class EncounterLogic {
 
 		effectHandler.update(dt/2);
 		trailControl.update(dt/2);
-		
+
 		turn -= dt;
 		if (turn <= 0) {
 			turnEnd();
@@ -61,7 +61,7 @@ public class EncounterLogic {
 		}
 		testVictory();
 	}
-	
+
 	private void testVictory()
 	{
 		if (shipList[0].getShip().getShipStats().getResource("HULL").getResourceAmount()<=0)
@@ -72,13 +72,13 @@ public class EncounterLogic {
 		{
 			resolveVictory();
 		}
-		
+
 		if (warpHandler.getWarpLevel()>warpHandler.MAXIMUMCHARGE && warpHandler.isJumping())
 		{
 			resolveRetreat();
 		}
 	}
-	
+
 	private void resolveRetreat() {
 		gameState=GameState.retreat;
 	}
@@ -89,7 +89,7 @@ public class EncounterLogic {
 		//shipList[1].getShip().getShipController().event(scriptEvents.victory);
 		gameState=GameState.defeat;
 	}
-	
+
 	private void resolveVictory()
 	{
 		//decomposeStats();
@@ -101,18 +101,18 @@ public class EncounterLogic {
 	{
 		decomposeStats();
 	}
-	
+
 	private void decomposeStats()
 	{
-		for (int i=1;i<shipList.length;i++)
+		for (int i = 0; i < shipList.length; i++)
 		{
 			shipList[i].getShip().getShipStats().runDecompose();
-			new SpaceshipAnalyzer().decomposeResources(shipList[i].getShip().getShipStats(), 
+			new SpaceshipAnalyzer().decomposeResources(shipList[i].getShip().getShipStats(),
 					shipList[i].getShip());
 			shipList[i].getShip().setShipStats(null);
 		}
 	}
-	
+
 	public boolean isRunning() {
 		if (turn <= 0) {
 			return false;

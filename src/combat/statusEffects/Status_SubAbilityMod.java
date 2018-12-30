@@ -8,6 +8,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.Actor;
+import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.RPG_Helper;
 import actorRPG.player.Player_RPG;
@@ -30,7 +32,7 @@ public class Status_SubAbilityMod implements StatusEffect {
 		uid = Integer.parseInt(e.getAttribute("uid"));
 		if (e.getAttribute("icon").length()>0)
 		{
-			spriteIcon = Integer.parseInt(e.getAttribute("icon"));			
+			spriteIcon = Integer.parseInt(e.getAttribute("icon"));
 		}
 		if (e.getAttribute("duration").length() > 0) {
 			duration = Integer.parseInt(e.getAttribute("duration"));
@@ -70,8 +72,8 @@ public class Status_SubAbilityMod implements StatusEffect {
 		boolean b=dstream.readBoolean();
 		if (b)
 		{
-			removeText = ParserHelper.LoadString(dstream);			
-		}	
+			removeText = ParserHelper.LoadString(dstream);
+		}
 	}
 
 	@Override
@@ -99,7 +101,7 @@ public class Status_SubAbilityMod implements StatusEffect {
 	@Override
 	public void apply(Actor_RPG subject) {
 		for (int i = 0; i < modifiers.length; i++) {
-			((Player_RPG) subject).modSubAbility(modifiers[i].attribute, modifiers[i].modifier);
+			subject.modSubAbility(modifiers[i].attribute, modifiers[i].modifier);
 		}
 	}
 
@@ -112,12 +114,18 @@ public class Status_SubAbilityMod implements StatusEffect {
 	@Override
 	public void remove(Actor_RPG subject, boolean suppressMessages) {
 		for (int i = 0; i < modifiers.length; i++) {
-			((Player_RPG) subject).modSubAbility(modifiers[i].attribute, modifiers[i].modifier * -1);
+			subject.modSubAbility(modifiers[i].attribute, modifiers[i].modifier * -1);
 		}
 		if (removeText!=null && ViewScene.m_interface != null && !suppressMessages) {
 			ViewScene.m_interface.DrawText(removeText.replace("TARGET", subject.getName()));
 		}
-		((Player_RPG) subject).calcInventoryCapacity();
+		if (Player_RPG.class.isInstance(subject)) {
+			((Player_RPG) subject).calcInventoryCapacity();
+			Actor a = subject.getActor();
+			Player p = (Player) a;
+			p.reCalc();
+		}
+
 	}
 
 	@Override
@@ -154,15 +162,19 @@ public class Status_SubAbilityMod implements StatusEffect {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		Status_SubAbilityMod other = (Status_SubAbilityMod) obj;
-		if (uid != other.uid)
+		if (uid != other.uid) {
 			return false;
+		}
 		return true;
 	}
 
