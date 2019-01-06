@@ -4,6 +4,9 @@
 		A chemical explosive grenade. Not suitable as a close quarters
 		defensive weapon. 2AP Does 8-16 thermokinetic damage.
 	</description>
+	<modifier>
+
+	</modifier>	
 	<combatMove name="boom" ammoCost="1" pattern="BOMB"
 		bonusAttribute="RANGED" timeCost="2" bonusToHit="4" actionCost="2"
 		basicAction="true" moveType="FIGHT">

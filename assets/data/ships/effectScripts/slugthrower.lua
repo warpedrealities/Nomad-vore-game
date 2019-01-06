@@ -36,7 +36,7 @@ function fly(script,miss,scriptClock)
 	if ( miss == false ) then
 	
 	distance=script:getEffect(0):getPosition():getDistance(script:getTarget())
-	if (distance<0.5) then
+	if (distance<1) then
 		script:resolve()
 		script:makeSprite(2,script:getEffect(0):getPosition():replicate(),8,8,false,2)	
 		script:getEffect(2):setAnimationSpeed(4)

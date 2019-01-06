@@ -1,16 +1,16 @@
 package solarview.spaceEncounter;
 
-import solarview.spaceEncounter.EncounterEntities.CombatAction;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.CombatActionImpl;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.EncounterEntities.WeaponCheck;
 
 public class EncounterWeaponController {
 
 	private TargetingControls targeting;
-	private EncounterShip ship;
-	private EncounterShip [] ships;
+	private EncounterShipImpl ship;
+	private EncounterShipImpl [] ships;
 	
-	public EncounterWeaponController(EncounterShip ship, EncounterShip [] ships, TargetingControls targeting)
+	public EncounterWeaponController(EncounterShipImpl ship, EncounterShipImpl [] ships, TargetingControls targeting)
 	{
 		this.ships=ships;
 		this.ship=ship;
@@ -50,7 +50,7 @@ public class EncounterWeaponController {
 		{
 			return 0;
 		}		
-		ship.getActions().add(new CombatAction(ship.getWeapons().get(i),ships[targeting.getIndex()],i));
+		ship.getActions().add(new CombatActionImpl(ship.getWeapons().get(i),ships[targeting.getIndex()],i));
 		return 1;
 	}
 	

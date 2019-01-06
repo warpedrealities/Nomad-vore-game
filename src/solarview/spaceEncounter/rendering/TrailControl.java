@@ -5,7 +5,7 @@ import java.nio.FloatBuffer;
 import particlesystem.ParticleConeEmitter;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterEntities.CombatManouver;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.EncounterEntities.ShipEmitters;
 
 public class TrailControl {
@@ -13,8 +13,8 @@ public class TrailControl {
 	private float clock;
 	private ParticleConeEmitter [][] emitters;
 	private ShipEmitters [] shipEmitters;
-	private EncounterShip [] ships;
-	public TrailControl(EncounterShip [] ships)
+	private EncounterShipImpl [] ships;
+	public TrailControl(EncounterShipImpl [] ships)
 	{
 		this.ships=ships;
 		emitters=new ParticleConeEmitter[ships.length][];

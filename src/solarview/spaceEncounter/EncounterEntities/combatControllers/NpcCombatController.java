@@ -9,8 +9,8 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JsePlatform;
 
-import solarview.spaceEncounter.EncounterEntities.CombatAction;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.CombatActionImpl;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.EncounterEntities.WeaponCheck;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 
@@ -39,7 +39,7 @@ public class NpcCombatController implements CombatController {
 	}
 
 	@Override
-	public void run(EncounterShip encounterShip,EncounterShip[]allShips, EffectHandler effect) {
+	public void run(EncounterShipImpl encounterShip,EncounterShipImpl[]allShips, EffectHandler effect) {
 		sense.setShips(allShips);
 		sense.setControlledShip(encounterShip);
 		try {
@@ -112,7 +112,7 @@ public class NpcCombatController implements CombatController {
 		{
 			return;
 		}
-		sense.getControlledShip().getActions().add(new CombatAction(sense.getControlledShip().getWeapons().get(index),
+		sense.getControlledShip().getActions().add(new CombatActionImpl(sense.getControlledShip().getWeapons().get(index),
 				sense.getShips()[target],index));
 		return;
 	}

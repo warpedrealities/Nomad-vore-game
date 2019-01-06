@@ -1,6 +1,6 @@
 package solarview.spaceEncounter;
 
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.rendering.TrailControl;
 import spaceship.stats.SpaceshipAnalyzer;
@@ -9,7 +9,7 @@ public class EncounterLogic {
 
 
 
-	private EncounterShip[] shipList;
+	private EncounterShipImpl[] shipList;
 	private float turn;
 	private TrailControl trailControl;
 	private EffectHandler effectHandler;
@@ -17,14 +17,14 @@ public class EncounterLogic {
 	private GameState gameState;
 	private EncounterWarpHandler warpHandler;
 
-	public EncounterLogic(EncounterShip[] ships) {
+	public EncounterLogic(EncounterShipImpl[] ships) {
 		shipList = ships;
 		effectHandler=new EffectHandler();
 		gameState=GameState.playing;
 		warpHandler=new EncounterWarpHandler(shipList[0]);
 	}
 
-	public EncounterShip[] getShipList() {
+	public EncounterShipImpl[] getShipList() {
 		return shipList;
 	}
 

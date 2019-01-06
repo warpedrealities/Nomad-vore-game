@@ -1,10 +1,10 @@
 package solarview.spaceEncounter.EncounterEntities.combatControllers;
 
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 
 public interface CombatController {
 
-	void run(EncounterShip encounterShip,EncounterShip[]allShips,EffectHandler effectHandler);
+	void run(EncounterShipImpl encounterShip,EncounterShipImpl[]allShips,EffectHandler effectHandler);
 
 }

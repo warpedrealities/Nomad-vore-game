@@ -8,7 +8,7 @@ import input.MouseHook;
 import nomad.universe.Universe;
 import shared.SceneBase;
 import shared.Vec2f;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.gui.EncounterGUI;
 import solarview.spaceEncounter.rendering.EncounterRenderer;
 import solarview.spaceEncounter.rendering.Targeting;
@@ -24,7 +24,7 @@ public class SpaceEncounter extends SceneBase {
 	private EncounterGUI gui;
 	private Targeting targeting;
 	private TargetingControls targetingControl;
-	private EncounterShip[] buildShips(Spaceship playerShip, Spaceship[] alienShips) {
+	private EncounterShipImpl[] buildShips(Spaceship playerShip, Spaceship[] alienShips) {
 		if (playerShip.getShipStats()==null)
 		{
 			playerShip.setShipStats(new SpaceshipAnalyzer().generateStats(playerShip));
@@ -34,19 +34,19 @@ public class SpaceEncounter extends SceneBase {
 			c += alienShips.length;
 		}
 
-		EncounterShip[] list = new EncounterShip[c];
-		list[0] = new EncounterShip(playerShip, new Vec2f(0, 0), 0);
+		EncounterShipImpl[] list = new EncounterShipImpl[c];
+		list[0] = new EncounterShipImpl(playerShip, new Vec2f(0, 0), 0);
 		for (int i = 1; i < c; i++) {
-			
+
 			if (alienShips[i-1].getShipStats()==null)
 			{
 				alienShips[i-1].setShipStats(new SpaceshipAnalyzer().generateStats(alienShips[i-1]));
 			}
-			
-			list[i] = new EncounterShip(alienShips[i - 1],
+
+			list[i] = new EncounterShipImpl(alienShips[i - 1],
 					new Vec2f(-6 + (GameManager.m_random.nextInt(12)), 15 + GameManager.m_random.nextInt(10)),
 					GameManager.m_random.nextInt(8));
-		
+
 		}
 		return list;
 
@@ -80,21 +80,21 @@ public class SpaceEncounter extends SceneBase {
 				renderer.getWarpEffect().setLevel(logic.getWarpHandler().getWarpLevel());
 				if (logic.getWarpHandler().getWarpLevel()>logic.getWarpHandler().MAXIMUMCHARGE)
 				{
-					renderer.getWarpEffect().discharge();	
+					renderer.getWarpEffect().discharge();
 					logic.getShipList()[0].getSprite().setVisible(false);
 				}
 
 			}
 			renderer.position(logic.getShipList()[0].getPosition(), logic.getShipList()[0].getHeading());
-				renderer.getWarpEffect().update(dt);
+			renderer.getWarpEffect().update(dt);
 
-			
+
 		} else {
 			gui.update(dt);
 			targeting.update(dt);
 			targetingControl.update(dt);
 		}
-		
+
 	}
 
 	@Override

@@ -6,25 +6,25 @@ import java.util.List;
 
 import rendering.SpriteManager;
 import shared.Vec2f;
-import solarview.spaceEncounter.EncounterEntities.CombatAction;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
 import solarview.spaceEncounter.effectHandling.effects.Effect;
 import solarview.spaceEncounter.effectHandling.effects.EffectText;
+import solarview.spaceEncounter.interfaces.CombatAction;
+import solarview.spaceEncounter.interfaces.EncounterShip;
 
 public class EffectHandler implements EffectHandler_Interface {
 
 	List<EffectScript> scripts;
 	List<Effect> effects;
 	SpriteManager manager;
-	
+
 	public EffectHandler()
 	{
 		scripts=new ArrayList<EffectScript>();
 		effects=new ArrayList<Effect>();
 		manager=new SpriteManager("assets/art/encounter/effects/");
-		
+
 	}
-	
+
 	public void update(float dt)
 	{
 		for (int i=0;i<scripts.size();i++)
@@ -36,7 +36,7 @@ public class EffectHandler implements EffectHandler_Interface {
 				scripts.remove(i);
 				i--;
 			}
-		}		
+		}
 		for (int i=0;i<effects.size();i++)
 		{
 			effects.get(i).update(dt);
@@ -48,7 +48,7 @@ public class EffectHandler implements EffectHandler_Interface {
 			}
 		}
 	}
-	
+
 	public void draw(FloatBuffer matrix44Buffer, int objmatrix, int tintvar) {
 
 		manager.draw(objmatrix, tintvar, matrix44Buffer);
@@ -58,14 +58,15 @@ public class EffectHandler implements EffectHandler_Interface {
 		manager.discard();
 	}
 
+	@Override
 	public void addEffect(Effect effect)
 	{
 		effects.add(effect);
 		manager.addSprite(effect.getSprite(), effect.getSheet());
 	}
-	
-	public void addScript(EncounterShip origin,CombatAction action, boolean miss) {
-		
+
+	public void addScript(EncounterShip origin, CombatAction action, boolean miss) {
+
 		scripts.add(new EffectScript(origin,action,this,miss));
 	}
 
@@ -86,5 +87,8 @@ public class EffectHandler implements EffectHandler_Interface {
 		return manager;
 	}
 
+	public boolean effectsRunning() {
+		return !scripts.isEmpty();
+	}
 
 }

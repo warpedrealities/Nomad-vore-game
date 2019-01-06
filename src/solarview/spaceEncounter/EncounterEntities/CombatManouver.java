@@ -5,7 +5,7 @@ import spaceship.SpaceshipResource;
 
 public class CombatManouver {
 
-	private EncounterShip ship;
+	private EncounterShipImpl ship;
 	private float speed;
 	private float turn;
 	private Vec2f position;
@@ -18,7 +18,7 @@ public class CombatManouver {
 	public final static char half = 4;
 	public final static char full = 8;
 
-	public CombatManouver(EncounterShip ship, Vec2f position, int heading) {
+	public CombatManouver(EncounterShipImpl ship, Vec2f position, int heading) {
 		this.heading = heading;
 		this.ship = ship;
 		this.position = new Vec2f(position.x, position.y);

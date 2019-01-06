@@ -26,14 +26,14 @@ import shared.Vec2f;
 import solarview.spaceEncounter.EncounterLogic;
 import solarview.spaceEncounter.EncounterLogic.GameState;
 import solarview.spaceEncounter.EncounterWeaponController;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.rendering.CircleHandler;
 import spaceship.Spaceship;
 import vmo.Game;
 
 public class EncounterGUI implements MyListener {
 	private Spaceship playerShip;
-	private EncounterShip encounterShip;
+	private EncounterShipImpl encounterShip;
 	private Matrix4f m_viewMatrix;
 	private int[] textureIds;
 	private Window[] windows;
@@ -52,7 +52,7 @@ public class EncounterGUI implements MyListener {
 	private float clock;
 	private Screen screen;
 
-	public EncounterGUI(EncounterShip ship, EncounterLogic logic) {
+	public EncounterGUI(EncounterShipImpl ship, EncounterLogic logic) {
 		this.encounterShip = ship;
 		this.playerShip = ship.getShip();
 		this.logic = logic;

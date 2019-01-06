@@ -6,7 +6,7 @@ public class WeaponCheck {
 
 	
 	
-	static public boolean checkRange(EncounterShip ship, EncounterShip target, CombatWeapon weapon)
+	static public boolean checkRange(EncounterShipImpl ship, EncounterShipImpl target, CombatWeapon weapon)
 	{
 		float range=weapon.getWeapon().getWeapon().getMaxRange();
 		
@@ -45,7 +45,7 @@ public class WeaponCheck {
 		return angle;
 	}
 	
-	static public boolean checkArc(EncounterShip ship, EncounterShip target, CombatWeapon weapon)
+	static public boolean checkArc(EncounterShipImpl ship, EncounterShipImpl target, CombatWeapon weapon)
 	{
 		
 		//find the angle to the target

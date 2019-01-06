@@ -1,15 +1,15 @@
 package solarview.spaceEncounter;
 
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 
 public class EncounterWarpHandler {
 	private int warpLevel;
-	private EncounterShip playerShip;
+	private EncounterShipImpl playerShip;
 	private boolean charging;
 	public final static int MAXIMUMCHARGE=20;
 	private int jumping;
 	
-	public EncounterWarpHandler(EncounterShip playerShip)
+	public EncounterWarpHandler(EncounterShipImpl playerShip)
 	{
 		this.playerShip=playerShip;
 		warpLevel=0;

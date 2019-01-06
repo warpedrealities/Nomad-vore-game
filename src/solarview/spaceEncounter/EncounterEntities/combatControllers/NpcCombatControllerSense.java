@@ -1,22 +1,22 @@
 package solarview.spaceEncounter.EncounterEntities.combatControllers;
 
 import shared.Vec2f;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 
 public class NpcCombatControllerSense {
 
-	private EncounterShip []ships;
-	private EncounterShip controlledShip;
-	public void setShips(EncounterShip[] ships) {
+	private EncounterShipImpl []ships;
+	private EncounterShipImpl controlledShip;
+	public void setShips(EncounterShipImpl[] ships) {
 		this.ships = ships;
 	}
-	public void setControlledShip(EncounterShip controlledShip) {
+	public void setControlledShip(EncounterShipImpl controlledShip) {
 		this.controlledShip = controlledShip;
 	}
-	public EncounterShip[] getShips() {
+	public EncounterShipImpl[] getShips() {
 		return ships;
 	}
-	public EncounterShip getControlledShip() {
+	public EncounterShipImpl getControlledShip() {
 		return controlledShip;
 	}
 	

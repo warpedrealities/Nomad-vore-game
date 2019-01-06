@@ -5,12 +5,12 @@ import nomad.universe.Universe;
 import shared.Geometry;
 import shared.Vec2f;
 import solarview.SolarScene;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import vmo.Game;
 
 public class RetreatHandler {
 
-	public void run(EncounterShip encounterShip) {
+	public void run(EncounterShipImpl encounterShip) {
 		
 		Vec2f o=encounterShip.getShip().getPosition();
 		StarSystem system=Universe.getInstance().getCurrentStarSystem();

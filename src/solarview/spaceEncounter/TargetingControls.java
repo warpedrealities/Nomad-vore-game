@@ -4,20 +4,20 @@ import gui.TextColoured;
 import input.MouseHook;
 import rendering.SpriteBeam;
 import shared.Vec2f;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.rendering.Targeting;
 
 public class TargetingControls {
 
 	private Targeting targeting;
 	private TextColoured text;
-	private EncounterShip playerShip;
-	private EncounterShip []ships;
+	private EncounterShipImpl playerShip;
+	private EncounterShipImpl []ships;
 	private int index;
 	private SpriteBeam beam;
 	
 	
-	public TargetingControls(TextColoured text, EncounterShip player, Targeting targeting,EncounterShip []ships)
+	public TargetingControls(TextColoured text, EncounterShipImpl player, Targeting targeting,EncounterShipImpl []ships)
 	{
 		this.text=text;
 		this.targeting=targeting;

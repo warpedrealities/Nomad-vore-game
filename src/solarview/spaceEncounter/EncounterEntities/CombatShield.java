@@ -65,7 +65,7 @@ public class CombatShield {
 		return damage;
 	}
 
-	public int applyDefence(int damage, int disruption,EffectHandler_Interface effectHandler,EncounterShip ship) {
+	public int applyDefence(int damage, int disruption,EffectHandler_Interface effectHandler,EncounterShipImpl ship) {
 		if (status == ShieldStatus.FASTCHARGE) {
 			status = ShieldStatus.ON;
 		}

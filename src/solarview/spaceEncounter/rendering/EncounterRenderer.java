@@ -8,7 +8,7 @@ import org.lwjgl.util.vector.Matrix4f;
 import rendering.SpriteManager;
 import rendering.SpriteRotatable;
 import shared.Vec2f;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 
 public class EncounterRenderer {
@@ -25,7 +25,7 @@ public class EncounterRenderer {
 	
 	private WarpEffect warpEffect;
 	
-	public EncounterRenderer(EncounterShip[] ships) {
+	public EncounterRenderer(EncounterShipImpl[] ships) {
 		spriteManager = new SpriteManager("assets/art/solar/");
 		m_viewMatrix = new Matrix4f();
 		setMatrix();
@@ -39,7 +39,7 @@ public class EncounterRenderer {
 		warpEffect=new WarpEffect(ships[0].getPosition());
 	}
 
-	private void buildSprites(EncounterShip[] ships) {
+	private void buildSprites(EncounterShipImpl[] ships) {
 		for (int i = 0; i < ships.length; i++) {
 			SpriteRotatable sprite = new SpriteRotatable(ships[i].getShip().getPosition(), 1);
 			sprite.setCentered(true);

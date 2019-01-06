@@ -13,24 +13,24 @@ import shared.MyListener;
 import shared.Screen;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterLogic.GameState;
-import solarview.spaceEncounter.EncounterEntities.EncounterShip;
+import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
 import solarview.spaceEncounter.retreatHandler.RetreatHandler;
 import spaceship.ShipController.scriptEvents;
 
 public class Screen_Recap extends Screen implements MyListener {
 
-	private EncounterShip []ships;
+	private EncounterShipImpl []ships;
 	private GameState state;
 	private Monitor playerMonitor;
 	private int playerHull,expReward;
 	private Monitor enemyMonitor;
 	private Window window;
 	
-	public Screen_Recap(GameState state, EncounterShip playerShip, EncounterShip enemyShip) {
+	public Screen_Recap(GameState state, EncounterShipImpl playerShip, EncounterShipImpl enemyShip) {
 		this.state=state;
 		
-		ships=new EncounterShip[2];
+		ships=new EncounterShipImpl[2];
 		ships[0]=playerShip;
 		ships[1]=enemyShip;
 		

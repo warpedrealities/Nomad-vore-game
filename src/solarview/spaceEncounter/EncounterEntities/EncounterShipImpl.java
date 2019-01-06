@@ -16,10 +16,12 @@ import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
 import solarview.spaceEncounter.EncounterEntities.monitoring.Ship_Monitor;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
+import solarview.spaceEncounter.interfaces.CombatAction;
+import solarview.spaceEncounter.interfaces.EncounterShip;
 import spaceship.Spaceship;
 import vmo.GameManager;
 
-public class EncounterShip {
+public class EncounterShipImpl implements EncounterShip {
 
 	private Spaceship ship;
 	private CombatController controller;
@@ -32,7 +34,7 @@ public class EncounterShip {
 	private CombatActionHandler actionHandler;
 	private Monitor monitor;
 
-	public EncounterShip(Spaceship ship, Vec2f position, int heading) {
+	public EncounterShipImpl(Spaceship ship, Vec2f position, int heading) {
 		this.ship = ship;
 		monitor=new Ship_Monitor();
 		if (ship.getShipStats().getShield() != null) {
@@ -77,6 +79,7 @@ public class EncounterShip {
 		this.sprite = sprite;
 	}
 
+	@Override
 	public Vec2f getPosition() {
 		return manouver.getPosition();
 	}
@@ -107,7 +110,7 @@ public class EncounterShip {
 		emitters.update(manouver.getPosition(),manouver.getHeading());
 	}
 
-	public void runAi(EncounterShip [] allShips,EffectHandler effectHandler)
+	public void runAi(EncounterShipImpl [] allShips,EffectHandler effectHandler)
 	{
 		if (controller!=null)
 		{
@@ -136,7 +139,7 @@ public class EncounterShip {
 		return emitters.getOffsetWeaponEmitters().get(i);
 	}
 
-	public List<CombatAction> getActions() {
+	public List<CombatActionImpl> getActions() {
 		return actionHandler.getList();
 	}
 
@@ -144,7 +147,8 @@ public class EncounterShip {
 		return manouver.lead(v);
 	}
 
-	public void attack(float distance,CombatAction action, EffectHandler_Interface effectHandler) {
+	@Override
+	public void attack(float distance, CombatAction action, EffectHandler_Interface effectHandler) {
 		ShipWeapon weapon=action.getWeapon().getWeapon().getWeapon();
 		int damage=weapon.getMinDamage();
 		if (weapon.getMaxDamage()>weapon.getMinDamage())
@@ -183,4 +187,5 @@ public class EncounterShip {
 	public void setMonitor(Monitor monitor) {
 		this.monitor = monitor;
 	}
+
 }

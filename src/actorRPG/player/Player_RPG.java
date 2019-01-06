@@ -840,7 +840,7 @@ public class Player_RPG implements Actor_RPG {
 		for (int i = 0; i < 4; i++) {
 			if (inventory.getSlot(i) != null && ItemEquip.class.isInstance(inventory.getSlot(i).getItem())) {
 				ItemEquip item = (ItemEquip) inventory.getSlot(i).getItem();
-				if (item.getModifier().getImmunity() != null) {
+				if (item.getModifier() != null && item.getModifier().getImmunity() != null) {
 					conditionImmunities.add(item.getModifier().getImmunity());
 				}
 			}

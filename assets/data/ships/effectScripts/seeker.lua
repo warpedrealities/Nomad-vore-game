@@ -4,10 +4,6 @@ function launch(script,miss)
 		emitter=script:getEmitter()
 		target=script:getTarget():replicate()
 
-		if ( miss == true ) then
-			target.x=target.x+math.random(0,2)-1
-			target.y=target.y+math.random(0,2)-1
-		end
 		script:makeSprite(0,emitter:replicate(),0,3,true,1)
 		
 		velocity=origin:replicate()
@@ -23,7 +19,9 @@ function launch(script,miss)
 		e=script:getEffect(0)	
 		e:setRotation(-angle)
 		e:setVelocity(velocity.x,velocity.y)
-
+	
+		local vS=script:getEffect(0):getVelocity()
+		vS:rotate(script:getEffect(0):getRotation()	*0.785398)	
 end
 
 function seekAngle(current,target)

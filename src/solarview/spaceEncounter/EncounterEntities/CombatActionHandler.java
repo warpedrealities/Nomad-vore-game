@@ -10,24 +10,24 @@ import vmo.GameManager;
 
 public class CombatActionHandler {
 
-	private List<CombatAction> actions;
-	private EncounterShip ship;
+	private List<CombatActionImpl> actions;
+	private EncounterShipImpl ship;
 	private float clock;
 	
-	public CombatActionHandler(EncounterShip ship)
+	public CombatActionHandler(EncounterShipImpl ship)
 	{
 		clock=0;
 		this.ship=ship;
-		actions=new ArrayList<CombatAction>();
+		actions=new ArrayList<CombatActionImpl>();
 		
 	}
 	
-	public List<CombatAction> getList()
+	public List<CombatActionImpl> getList()
 	{
 		return actions;
 	}
 	
-	private boolean checkResources(CombatAction action)
+	private boolean checkResources(CombatActionImpl action)
 	{
 		for (int i=0;i<action.getWeapon().getWeapon().getWeapon().getWeaponCosts().size();i++)
 		{
@@ -45,7 +45,7 @@ public class CombatActionHandler {
 		return true;
 	}
 	
-	private void subtractResources(CombatAction action)
+	private void subtractResources(CombatActionImpl action)
 	{
 		for (int i=0;i<action.getWeapon().getWeapon().getWeapon().getWeaponCosts().size();i++)
 		{
@@ -55,7 +55,7 @@ public class CombatActionHandler {
 		}
 	}
 	
-	private void startEffect(CombatAction action, EffectHandler effectHandler)
+	private void startEffect(CombatActionImpl action, EffectHandler effectHandler)
 	{
 		//check resources
 		if (!checkResources(action))

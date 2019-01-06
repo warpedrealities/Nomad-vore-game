@@ -30,8 +30,10 @@ function sustain(script,miss,scriptClock)
 	if not miss then
 		target=script:getTarget()	
 		emitter=script:getEmitter()	
+		distance=emitter:getDistance(target)		
 		angle=script:getAngle(emitter.x,emitter.y,target.x,target.y)
 		effect=script:getEffect(0)	
+		effect:setVelocity(distance,0)	
 		effect:setRotation(angle)
 	end
 	
