@@ -2,8 +2,8 @@ package landingScreen;
 
 import java.util.ArrayList;
 
+import entities.World;
 import landingScreen.LandingElement.LandingClass;
-import nomad.World;
 import zone.Zone;
 import zone.Zone.zoneType;
 

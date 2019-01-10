@@ -8,7 +8,7 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JsePlatform;
 
-import nomad.Entity;
+import entities.Entity;
 
 public class WorldScript_Imp implements WorldScript {
 

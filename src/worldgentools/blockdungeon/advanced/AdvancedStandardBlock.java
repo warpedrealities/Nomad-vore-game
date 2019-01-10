@@ -22,7 +22,7 @@ public class AdvancedStandardBlock implements AdvancedBlock {
 	int[][] tiles;
 	ArrayList<WidgetDefinition> widgets;
 	ArrayList<SpawnDefinition> spawns;
-	
+
 	public AdvancedStandardBlock(Element enode) {
 		name = enode.getAttribute("name");
 		sideValues=new short[4];
@@ -139,4 +139,13 @@ public class AdvancedStandardBlock implements AdvancedBlock {
 		return true;
 	}
 
+	@Override
+	public int getTile(int x, int y) {
+		return tiles[x][y];
+	}
+
+	@Override
+	public String getName() {
+		return name;
+	}
 }

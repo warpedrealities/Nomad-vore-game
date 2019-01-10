@@ -12,7 +12,7 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JsePlatform;
 import org.w3c.dom.Element;
 
-import nomad.Entity;
+import entities.Entity;
 
 public class SpawnScript {
 	private Globals m_globals;

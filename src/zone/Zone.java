@@ -16,7 +16,7 @@ import actor.player.Player;
 import actorRPG.Actor_RPG;
 import artificial_intelligence.pathfinding.Path;
 import artificial_intelligence.pathfinding.Pathfinder;
-import nomad.Entity;
+import entities.Entity;
 import nomad.universe.Universe;
 import rlforj.los.ILosBoard;
 import shared.Geometry;

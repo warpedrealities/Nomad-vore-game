@@ -51,4 +51,34 @@
 <mutator cost="50" name="tonsure style">
 	<mutation part="hair" variable="style" set="16"/>
 </mutator>
+<mutator cost="50" name="blonde dye">
+	<mutation part="hair" variable="colour" set="0"/>
+</mutator>
+<mutator cost="50" name="brown dye">
+	<mutation part="hair" variable="colour" set="1"/>
+</mutator>
+<mutator cost="50" name="red dye">
+	<mutation part="hair" variable="colour" set="2"/>
+</mutator>
+<mutator cost="50" name="black dye">
+	<mutation part="hair" variable="colour" set="3"/>
+</mutator>
+<mutator cost="50" name="platinum dye">
+	<mutation part="hair" variable="colour" set="4"/>
+</mutator>
+<mutator cost="50" name="pink dye">
+	<mutation part="hair" variable="colour" set="5"/>
+</mutator>
+<mutator cost="50" name="purple dye">
+	<mutation part="hair" variable="colour" set="6"/>
+</mutator>
+<mutator cost="50" name="blue dye">
+	<mutation part="hair" variable="colour" set="7"/>
+</mutator>
+<mutator cost="50" name="aqua dye">
+	<mutation part="hair" variable="colour" set="8"/>
+</mutator>
+<mutator cost="50" name="green dye">
+	<mutation part="hair" variable="colour" set="9"/>
+</mutator>
 </mutator>

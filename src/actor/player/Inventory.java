@@ -278,4 +278,62 @@ public class Inventory {
 		m_items.sort(null);
 	}
 
+	public int countTaggedItems(int tag) {
+		int count = 0;
+		for (int i = 0; i < m_items.size(); i++) {
+			if (ItemKeyInstance.class.isInstance(m_items.get(i)) && m_items.get(i).getTag() == tag) {
+				count++;
+			}
+			if (m_items.get(i).getItem().getTag() == tag) {
+				if (ItemStack.class.isInstance(m_items.get(i))) {
+					ItemStack stack = (ItemStack) m_items.get(i);
+					count += stack.getCount();
+				} else {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+	public boolean removeTaggedItems(int tag, int count) {
+		for (int i = m_items.size() - 1; i >= 0; i--) {
+			if (ItemKeyInstance.class.isInstance(m_items.get(i)) && m_items.get(i).getTag() == tag) {
+				count--;
+				m_weight -= m_items.get(i).getWeight();
+				m_items.remove(i);
+				break;
+			}
+			if (m_items.get(i).getItem().getTag() == tag) {
+				if (ItemStack.class.isInstance(m_items.get(i))) {
+					ItemStack stack = (ItemStack) m_items.get(i);
+					if (stack.getCount() > count) {
+						m_weight -= count * stack.getItem().getWeight();
+						stack.setCount(stack.getCount() - count);
+						count = 0;
+						break;
+					} else {
+						m_weight -= stack.getWeight();
+						count -= stack.getCount();
+						m_items.remove(i);
+					}
+				} else {
+
+					count--;
+					m_weight -= m_items.get(i).getWeight();
+					m_items.remove(i);
+					if (count <= 0) {
+						break;
+					}
+
+				}
+
+			}
+		}
+		if (count <= 0) {
+			return true;
+		}
+		return false;
+	}
+
 }

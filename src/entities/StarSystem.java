@@ -1,4 +1,4 @@
-package nomad;
+package entities;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -13,6 +13,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import entities.stations.Station;
 import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;

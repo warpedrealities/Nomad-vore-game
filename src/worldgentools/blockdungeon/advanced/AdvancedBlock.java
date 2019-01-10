@@ -16,10 +16,14 @@ public interface AdvancedBlock{
 	void apply(int x, int y, Tile[][] grid, Zone zone, DungeonWidgetLoader loader, ArrayList<NPC> templates);
 
 	int getKeyHeat();
-	
+
 	public short getValueSide(int i);
 
 	default void mark(int x, int y, int[][] blockGrid, ArrayList<AdvancedOpening> openings) {}
 
 	boolean matchEdges(short[] edgeTypes);
+
+	int getTile(int x, int y);
+
+	String getName();
 }

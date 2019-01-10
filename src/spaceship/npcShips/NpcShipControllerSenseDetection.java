@@ -1,7 +1,7 @@
 package spaceship.npcShips;
 
+import entities.StarSystem;
 import faction.Faction;
-import nomad.StarSystem;
 import nomad.universe.Universe;
 import shared.Geometry;
 import shared.Vec2f;

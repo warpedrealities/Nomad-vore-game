@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import nomad.Entity;
+import entities.Entity;
 import spaceship.Spaceship;
 
 public class StubSystem {

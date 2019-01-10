@@ -1,4 +1,4 @@
-package nomad;
+package entities;
 
 import java.util.ArrayList;
 

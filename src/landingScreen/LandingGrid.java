@@ -2,9 +2,9 @@ package landingScreen;
 
 import java.nio.FloatBuffer;
 
+import entities.World;
 import gui.GUIBase;
 import landingScreen.LandingElement.LandingClass;
-import nomad.World;
 import shared.SceneBase;
 import shared.Vec2f;
 

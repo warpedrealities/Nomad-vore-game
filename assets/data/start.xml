@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <start>
-	<system value="Alpha Minoris" />
-	<world value="Alpha Minoris IIA" />
-	<zone value="escapepod" />
+	<system value="Auriga" />
+	<world value="avenger0" />
+	<zone value="avenger0" />
 	<position x="2" y="2" />
 	<item value="laser pistol" />
 	<item value="Knife" />

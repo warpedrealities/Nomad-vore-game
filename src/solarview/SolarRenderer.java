@@ -5,7 +5,7 @@ import java.nio.FloatBuffer;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 
-import nomad.StarSystem;
+import entities.StarSystem;
 import nomad.universe.Universe;
 import particlesystem.ParticleEmitterAdvanced;
 import rendering.Sprite;

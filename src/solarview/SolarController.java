@@ -3,7 +3,7 @@ package solarview;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-import nomad.StarSystem;
+import entities.StarSystem;
 import nomad.universe.Universe;
 import solarview.hazardSystem.SolarHazardSystem;
 import spaceship.Spaceship;

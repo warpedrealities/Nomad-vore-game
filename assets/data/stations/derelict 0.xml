@@ -2,4 +2,9 @@
 <Station numDocks="1">
 	<entitysprite filename="derelict_0" size="1.0" />
 	<zone x="0" y="0" surface="0">derelict_Ship</zone>
+		<dockingModel count="1">
+		<dockingPort>
+			<zone value="derelict_Ship"/>
+		</dockingPort>
+	</dockingModel>
 </Station>

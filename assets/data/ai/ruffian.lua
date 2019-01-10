@@ -34,19 +34,24 @@ function victimize(controllable,sense,pos,hostile)
 		end
 	end
 	
-	if (controllable:getRPG():getStat(0)==controllable:getValue(3)) and	
-		(controllable:getRPG():getStat(1)==controllable:getValue(4)) then
-		controllable:setValue(1,controllable:getValue(1)+1)	
-	else
-		controllable:setValue(1,0)
-		controllable:setValue(3,controllable:getRPG():getStat(0))
-		controllable:setValue(4,controllable:getRPG():getStat(1))	
-		return false;
+	if (controllable:getValue(1)<5) then
+		if (controllable:getRPG():getStat(0)==controllable:getValue(3)) and	
+			(controllable:getRPG():getStat(1)==controllable:getValue(4)) then
+			controllable:setValue(1,controllable:getValue(1)+1)	
+			print("increment count",controllable:getValue(1))
+		else
+			controllable:setValue(1,0)
+			controllable:setValue(3,controllable:getRPG():getStat(0))
+			controllable:setValue(4,controllable:getRPG():getStat(1))	
+			print("reset count")
+			return false;
+		end
 	end
 
-	if (controllable:getValue(1)==10) then
+	if (controllable:getValue(1)==5) then
 		victim=sense:getVictim(controllable,8,true,"station warden",false)		
 		if not (victim== nil) then
+			print("victim ",victim:getName())
 			if pos:getDistance(victim:getPosition())<2 then
 				controllable:startVoreScript("ruffian_warden_OV", victim)
 				return true;

@@ -4,13 +4,13 @@ import java.nio.FloatBuffer;
 
 import actor.npc.NPC;
 import actor.player.Inventory;
+import entities.Entity;
 import gui.Button;
 import gui.MultiLineText;
 import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
 import item.instances.ItemCaptureInstance;
-import nomad.Entity;
 import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;

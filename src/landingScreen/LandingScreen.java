@@ -2,10 +2,10 @@ package landingScreen;
 
 import java.nio.FloatBuffer;
 
+import entities.World;
 import gui.Button;
 import gui.Window;
 import input.MouseHook;
-import nomad.World;
 import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;

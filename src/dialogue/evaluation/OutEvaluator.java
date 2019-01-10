@@ -292,6 +292,14 @@ public class OutEvaluator {
 					return false;
 				}
 			}
+			if (eval.equals("HASTAGGEDITEM")) {
+				String operator = E.getAttribute("operator");
+				int value = Integer.parseInt(E.getAttribute("value"));
+				int tag = Integer.parseInt(E.getAttribute("tag"));
+				if (ConditionCheck(value, operator, m_player.getInventory().countTaggedItems(tag)) == false) {
+					return false;
+				}
+			}
 			if (eval.equals("GOLD")) {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));

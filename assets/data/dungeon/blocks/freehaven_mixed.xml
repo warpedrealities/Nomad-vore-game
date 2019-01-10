@@ -447,8 +447,8 @@
 	</block>	
 		
 	
-	<block name="transition SE">
-		<edge value="SOUTH" type="2" />
+	<block name="transition NE">
+		<edge value="NORTH" type="2" />
 		<edge value="EAST" type="1" />	
 		<row>00000000</row>
 		<row>01111111</row>

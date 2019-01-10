@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <ItemWeapon name="Zokol rifle" shortName="Zkol" weight="10" value="1500">
 <description>
-An automatic rifle famed for being simple and rugged. Can survive impact, dirt, mud, immersion and the digestive processes of larger and less discerning predators. No one said it was the most accurate or controllable weapon to fire though. Autofire does 6-30 damage
+An automatic rifle famed for being simple and rugged. Can survive impact, dirt, mud, immersion and the digestive processes of larger and less discerning predators. No one said it was the most accurate or controllable weapon to fire though. Autofire does 4-30 damage
 </description>
 <modifier>
 
 </modifier>
-<combatMove name="autofire" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="4" actionCost="4" basicAction="true" moveType="FIGHT"  multiAttack="3" rangeDecay="1">
-<effectDamage type="KINETIC" minValue="6" maxValue="10" modifier="NONE"/>
+<combatMove name="autofire" ammoCost="3" pattern="RANGED" bonusAttribute="RANGED" timeCost="2" rangedbias="2" actionCost="4" basicAction="true" moveType="FIGHT"  multiAttack="3" rangeDecay="2">
+<effectDamage type="KINETIC" minValue="4" maxValue="10" modifier="NONE"/>
 <missText count="2">
 <text>TARGET is not hit by your hail of bullets</text>
 <text>you spray rounds at TARGET without effect</text>

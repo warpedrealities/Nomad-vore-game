@@ -1,4 +1,4 @@
-package nomad;
+package entities;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

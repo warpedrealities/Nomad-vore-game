@@ -1,8 +1,9 @@
 package spaceship;
 
+import entities.World;
+import entities.stations.DockingScreen;
+import entities.stations.Station;
 import landingScreen.LandingScreen;
-import nomad.Station;
-import nomad.World;
 import nomad.universe.Universe;
 import shared.Vec2f;
 import shipsystem.WidgetDamage;
@@ -108,7 +109,7 @@ public class SpaceshipActionHandler {
 				if (ship.getSpriteObj().getBatch()!=null)
 				{
 					ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
-				}	
+				}
 				ship.getSpriteObj().discard();
 				ship.setSpriteObj(null);
 				// move ship to colocate with world
@@ -134,29 +135,32 @@ public class SpaceshipActionHandler {
 	public void dockStation(Spaceship ship, Station station) {
 		// TODO Auto-generated method stub
 		station.Generate();
-		if (station.dock(ship)) {
-			// remove ship from starsystem
-			Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
-			if (ship.getSpriteObj().getBatch()!=null)
-			{
-				ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
+		if (station.getDocked().getDockingPorts().length > 1) {
+			SolarScene.getInterface().setScreen(new DockingScreen(ship, station));
+		} else {
+			if (station.dock(ship, 0)) {
+				// remove ship from starsystem
+				Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+				if (ship.getSpriteObj().getBatch() != null) {
+					ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
+				}
+				ship.getSpriteObj().discard();
+				ship.setSpriteObj(null);
+				// move ship to colocate with world
+				ship.setPosition(new Vec2f(station.getPosition().x, station.getPosition().y));
+				// write ship into zone
+				ship.setShipState(ShipState.DOCK);
+				// connect ship
+
+				// switch current entity
+
+				Universe.getInstance().setCurrentEntity(station);
+
+				// switch view to viewscene
+				Game.sceneManager.SwapScene(new ViewScene());
+
+				// dont need to decompose, happens on scene switch
 			}
-			ship.getSpriteObj().discard();
-			ship.setSpriteObj(null);
-			// move ship to colocate with world
-			ship.setPosition(new Vec2f(station.getPosition().x, station.getPosition().y));
-			// write ship into zone
-			ship.setShipState(ShipState.DOCK);
-			// connect ship
-
-			// switch current entity
-
-			Universe.getInstance().setCurrentEntity(station);
-
-			// switch view to viewscene
-			Game.sceneManager.SwapScene(new ViewScene());
-
-			// dont need to decompose, happens on scene switch
 		}
 	}
 
@@ -168,7 +172,7 @@ public class SpaceshipActionHandler {
 				if (ship.getSpriteObj().getBatch()!=null)
 				{
 					ship.getSpriteObj().getBatch().getSprites().remove(ship.getSpriteObj());
-				}		
+				}
 				ship.getSpriteObj().discard();
 				ship.setSpriteObj(null);
 			}

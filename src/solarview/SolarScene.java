@@ -4,8 +4,8 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 
+import entities.StarSystem;
 import input.MouseHook;
-import nomad.StarSystem;
 import nomad.universe.Universe;
 import rendering.SpriteRotatable;
 import shared.Callback;

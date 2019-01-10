@@ -3,8 +3,8 @@ package widgets.capsules;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import nomad.StarSystem;
-import nomad.World;
+import entities.StarSystem;
+import entities.World;
 import nomad.universe.Universe;
 import shared.Geometry;
 import shared.ParserHelper;

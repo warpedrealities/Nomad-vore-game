@@ -1,6 +1,6 @@
 package widgets.capsules;
 
-import nomad.StarSystem;
+import entities.StarSystem;
 import nomad.universe.Universe;
 import shared.Geometry;
 import shared.Vec2f;

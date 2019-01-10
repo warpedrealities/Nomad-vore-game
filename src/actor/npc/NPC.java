@@ -288,7 +288,7 @@ public class NPC extends Actor implements Controllable {
 				}
 				if (actorRPG.getBusy()==0)
 				{
-					actorRPG.setBusy(4);
+					actorRPG.setBusy(8);
 				}
 			}
 			else

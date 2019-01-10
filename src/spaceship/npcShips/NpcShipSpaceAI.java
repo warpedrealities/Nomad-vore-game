@@ -11,10 +11,10 @@ import org.luaj.vm2.lib.jse.JsePlatform;
 
 import dialogue.DialogueScene;
 import dialogue.DialogueScene.dialogueOrigin;
+import entities.Entity;
+import entities.StarSystem;
 import faction.Faction;
-import nomad.Entity;
 import nomad.FlagField;
-import nomad.StarSystem;
 import nomad.universe.Universe;
 import rendering.SpriteRotatable;
 import shared.Vec2f;

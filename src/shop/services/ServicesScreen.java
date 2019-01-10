@@ -4,11 +4,11 @@ import java.nio.FloatBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
+import entities.stations.Station;
 import gui.Button;
 import gui.Text;
 import gui.Window;
 import input.MouseHook;
-import nomad.Station;
 import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
@@ -32,7 +32,7 @@ public class ServicesScreen extends Screen {
 		serviceHandlerList=new ArrayList<ServiceHandler>();
 		Universe universe=Universe.getInstance();
 		if (Station.class.isInstance(universe.getCurrentEntity())) {
-			ship = ((Station) universe.getCurrentEntity()).getDocked()[0];
+			ship = ((Station) universe.getCurrentEntity()).getDocked().getDockingPorts()[0].getDockedShip();
 		}
 		if (Spaceship.class.isInstance(universe.getCurrentEntity())) {
 			ship = (Spaceship) universe.getCurrentEntity();

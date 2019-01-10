@@ -8,11 +8,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import actor.player.Player;
+import entities.Entity;
+import entities.StarSystem;
 import faction.FactionLibrary;
 import item.ItemLibrary;
-import nomad.Entity;
 import nomad.Preferences;
-import nomad.StarSystem;
 import nomad.UIDGenerator;
 import nomad.integrityChecking.SaveIntegrityCheck;
 import nomad.universe.actionBar.ActionBarData;

@@ -10,8 +10,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import nomad.Entity;
-import nomad.Station;
+import entities.Entity;
+import entities.stations.Station;
 import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
@@ -491,8 +491,8 @@ public class Spaceship extends Entity {
 			ArrayList<WidgetPortal> portals = zone.getPortalWidgets();
 
 			Station station = (Station) Universe.getInstance().getCurrentWorld(this);
-			for (int i = 0; i < station.getDocked().length; i++) {
-				if (station.getDocked()[i] == this) {
+			for (int i = 0; i < station.getDocked().getDockingPorts().length; i++) {
+				if (station.getDocked().getDockingPorts()[i].getDockedShip().equals(this)) {
 					portals.get(0).setDestination(station.getZone(i).getName(), portals.get(i).getID());
 				}
 			}

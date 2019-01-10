@@ -365,6 +365,10 @@ public class EffectProcessor {
 			String item = node.getAttribute("item");
 			m_player.getInventory().removeItems(item, (int) value);
 		}
+		if (str.equals("removeTaggeditem")) {
+			int tag = Integer.parseInt(node.getAttribute("tag"));
+			m_player.getInventory().removeTaggedItems(tag, (int) value);
+		}
 		if (str.equals("imprison")) {
 			boolean suppress=node.getAttribute("suppress").equals("true");
 

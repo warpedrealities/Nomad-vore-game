@@ -1,4 +1,4 @@
-package nomad;
+package entities;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

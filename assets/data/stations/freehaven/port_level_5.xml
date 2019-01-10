@@ -32,7 +32,7 @@
 		<row>0112222222222222</row>
 		<row>0122222222222222</row>
 		<row>1122222222222222</row>
-		<row>1222222222222212</row>			
+		<row>2222222222222212</row>			
 	</prefab>
 	<prefab positionX="16" positionY="0" width="16">
 		<row>2100000000000000</row>
@@ -50,7 +50,7 @@
 		<row>2222222222222110</row>
 		<row>2222222222222210</row>
 		<row>2222222222222211</row>
-		<row>2122222222222221</row>			
+		<row>2122222222222222</row>			
 	</prefab>
 	<prefab positionX="0" positionY="16" width="16">
 		<row>1222222222222211</row>
@@ -117,6 +117,8 @@
 	<placeNPC name="freehaven/civilians/Laesha" x="23" y="23" />		
 	<placeNPC name="freehaven/civilians/Desharr" x="16" y="29" />	
 	<placeNPC name="freehaven/civilians/tourist" x="14" y="27" />	
+	<pairedportal x="0" y="15" destination="freehaven_alpha" sprite="1" ID="11" facing="2"> hatch </pairedportal>	
+	<pairedportal x="31" y="15" destination="freehaven_beta" sprite="1" ID="12" facing="6"> hatch </pairedportal>	
 		<partition xmin="2" xmax="30" ymin="11" ymax="19">
 			<SeedNPCs min="4" max="8" name="freehaven/wardens/warden">
 			</SeedNPCs>

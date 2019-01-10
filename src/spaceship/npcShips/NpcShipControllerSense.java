@@ -1,8 +1,8 @@
 package spaceship.npcShips;
 
+import entities.StarSystem;
 import faction.Faction;
 import nomad.FlagField;
-import nomad.StarSystem;
 import nomad.universe.Universe;
 import spaceship.Spaceship;
 import spaceship.boarding.BoardingHelper;

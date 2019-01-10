@@ -4,12 +4,12 @@ import java.nio.FloatBuffer;
 import java.util.Iterator;
 
 import actor.player.CompanionTool;
+import entities.World;
+import entities.stations.Station;
 import gui.Button;
 import gui.Text;
 import gui.Window;
 import input.MouseHook;
-import nomad.Station;
-import nomad.World;
 import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;

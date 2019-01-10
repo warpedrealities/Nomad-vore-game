@@ -2,7 +2,7 @@ package dialogue.worldscript;
 
 import java.util.List;
 
-import nomad.Entity;
+import entities.Entity;
 import zone.Landing;
 import zone.Tile;
 import zone.Zone;

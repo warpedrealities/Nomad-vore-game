@@ -1,4 +1,4 @@
-package nomad;
+package entities.stations;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -14,6 +14,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import entities.Entity;
 import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
@@ -27,7 +28,7 @@ import zone.Zone.zoneType;
 public class Station extends Entity {
 
 	ArrayList<Zone> stationZones;
-	Spaceship[] dockedShips;
+	DockingModel dockingModel;
 
 	float spriteSize;
 	String spriteName;
@@ -40,24 +41,20 @@ public class Station extends Entity {
 
 	@Override
 	public void postLoad(Zone zone) {
-		Spaceship dockedship = null;
-		for (int i = 0; i < stationZones.size(); i++) {
-			if (i >= dockedShips.length) {
-				break;
-			}
-			if (zone == stationZones.get(i)) {
-				dockedship = dockedShips[i];
-				break;
-			}
-		}
-		if (dockedship != null) {
-			for (int i = 0; i < zone.getWidth(); i++) {
-				for (int j = 0; j < zone.getHeight(); j++) {
-					if (zone.getTile(i, j) != null && zone.getTile(i, j).getWidgetObject() != null) {
-						if (WidgetPortal.class.isInstance(zone.getTile(i, j).getWidgetObject())) {
-							WidgetPortal widget = (WidgetPortal) zone.getTile(i, j).getWidgetObject();
-							if (widget.getPortalID() == -101) {
-								widget.setDestination(dockedship.getZone(0).getName(), -101);
+
+		for (int i = 0; i < dockingModel.getDockingPorts().length; i++) {
+			if (dockingModel.getDockingPorts()[i].getDockedShip() != null
+					&& zone.getName().equals(dockingModel.getDockingPorts()[i].getZoneAssociation())) {
+				for (int k = 0; k < zone.getWidth(); k++) {
+					for (int j = 0; j < zone.getHeight(); j++) {
+						if (zone.getTile(k, j) != null && zone.getTile(k, j).getWidgetObject() != null) {
+							if (WidgetPortal.class.isInstance(zone.getTile(k, j).getWidgetObject())) {
+								WidgetPortal widget = (WidgetPortal) zone.getTile(k, j).getWidgetObject();
+								if (widget.getPortalID() == -101) {
+									widget.setDestination(
+											dockingModel.getDockingPorts()[i].getDockedShip().getZone(0).getName(),
+											-101);
+								}
 							}
 						}
 					}
@@ -94,7 +91,7 @@ public class Station extends Entity {
 					e.printStackTrace();
 				}
 			} else
-			// if not normal load
+				// if not normal load
 			{
 				firstGenerate();
 			}
@@ -107,23 +104,25 @@ public class Station extends Entity {
 
 		Element n = (Element) doc.getFirstChild();
 		NodeList children = n.getChildNodes();
-		dockedShips = new Spaceship[Integer.parseInt(n.getAttribute("numDocks"))];
+
 		for (int i = 0; i < children.getLength(); i++) {
 			Node node = children.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element Enode = (Element) node;
+				if (Enode.getTagName().equals("dockingModel")) {
+					dockingModel=new DockingModel(Enode);
+				}
+
 				if (Enode.getTagName() == "zone") {
-					// add this world
-					boolean surface = false;
 
 					stationZones.add(new Zone(node.getTextContent(), Integer.parseInt(Enode.getAttribute("x")),
 							Integer.parseInt(Enode.getAttribute("y")), zoneType.CLOSED, this));
 				}
 				if (Enode.getTagName() == "ship") {
 					int index = Integer.parseInt(Enode.getAttribute("dock"));
-					dockedShips[index] = new Spaceship(Enode.getAttribute("name"), (int) entityPosition.x,
-							(int) entityPosition.y, ShipState.DOCK);
-					dockedShips[index].setPosition(new Vec2f(entityPosition.x, entityPosition.y));
+					dockingModel.getDockingPorts()[index].setDockedShip(new Spaceship(Enode.getAttribute("name"), (int) entityPosition.x,
+							(int) entityPosition.y, ShipState.DOCK));
+					dockingModel.getDockingPorts()[index].getDockedShip().setPosition(new Vec2f(entityPosition.x, entityPosition.y));
 				}
 			}
 
@@ -180,14 +179,8 @@ public class Station extends Entity {
 			}
 		}
 
-		for (int i = 0; i < dockedShips.length; i++) {
-			if (dockedShips[i] != null) {
-				if (dockedShips[i].getZone(0).getName().contains(name)) {
-					return dockedShips[i].getZone(0);
-				}
-			}
-		}
-		return null;
+		return dockingModel.getZone(name);
+
 	}
 
 	@Override
@@ -228,19 +221,7 @@ public class Station extends Entity {
 			} else {
 				dstream.writeInt(0);
 			}
-			if (dockedShips == null) {
-				dstream.writeInt(0);
-			} else {
-				dstream.writeInt(dockedShips.length);
-				for (int i = 0; i < dockedShips.length; i++) {
-					if (dockedShips[i] == null) {
-						dstream.writeBoolean(false);
-					} else {
-						dstream.writeBoolean(true);
-						dockedShips[i].save(dstream);
-					}
-				}
-			}
+			dockingModel.save(dstream);
 		}
 
 	}
@@ -262,17 +243,9 @@ public class Station extends Entity {
 				zone.load(dstream);
 			}
 		}
-		count = dstream.readInt();
-		dockedShips = new Spaceship[count];
-		for (int i = 0; i < count; i++) {
-			boolean b = dstream.readBoolean();
-			if (b == true) {
-				dockedShips[i] = new Spaceship();
-				int mystery = dstream.readInt();
-				dockedShips[i].load(dstream);
-			}
-		}
-		
+
+		dockingModel = new DockingModel(dstream);
+
 		dstream.close();
 		fstream.close();
 
@@ -325,32 +298,31 @@ public class Station extends Entity {
 		return null;
 	}
 
-	public boolean dock(Spaceship ship) {
+	public boolean dock(Spaceship ship, int portIndex) {
 
-		for (int i = 0; i < dockedShips.length; i++) {
-			if (dockedShips[i] == null) {
-				dockedShips[i] = ship;
-				// link up
-				WidgetPortal portal = ship.getZone(0).getPortalWidget(-101);
-				portal.setDestination(stationZones.get(i).getName(), -101);
-				stationZones.get(i).LoadZone();
-				portal = stationZones.get(i).getPortalWidget(-101);
-				portal.setDestination(ship.getZone(0).getName(), -101);
-				return true;
-			}
+		DockingPort port = dockingModel.getDockingPorts()[portIndex];
+		if (port.getDockedShip() != null) {
+			port.setDockedShip(ship);
+			// link up
+			WidgetPortal portal = ship.getZone(0).getPortalWidget(-101);
+			portal.setDestination(port.getZoneAssociation(), -101);
+			getZone(port.getZoneAssociation()).LoadZone();
+			portal = getZone(port.getZoneAssociation()).getPortalWidget(-101);
+			portal.setDestination(ship.getZone(0).getName(), -101);
+			return true;
 		}
 		return false;
 	}
 
-	public Spaceship[] getDocked() {
-		return dockedShips;
+	public DockingModel getDocked() {
+		return dockingModel;
 	}
 
 	public void unDock(Spaceship ship) {
 		// TODO Auto-generated method stub
-		for (int i = 0; i < dockedShips.length; i++) {
-			if (dockedShips[i] == ship) {
-				Zone z = stationZones.get(i);
+		for (int i = 0; i < dockingModel.getDockingPorts().length; i++) {
+			if (dockingModel.getDockingPorts()[i].getDockedShip().equals(ship)) {
+				Zone z = getZone(dockingModel.getDockingPorts()[i].getZoneAssociation());
 				for (int j = 0; j < z.getWidth(); j++) {
 					for (int k = 0; k < z.getHeight(); k++) {
 						if (z.getTile(j, k) != null) {
@@ -369,7 +341,7 @@ public class Station extends Entity {
 
 					}
 				}
-				dockedShips[i] = null;
+				dockingModel.getDockingPorts()[i].setDockedShip(null);
 			}
 		}
 	}
@@ -380,6 +352,7 @@ public class Station extends Entity {
 		return null;
 	}
 
+	@Override
 	public boolean isLoaded() {
 		if (stationZones == null) {
 			return false;

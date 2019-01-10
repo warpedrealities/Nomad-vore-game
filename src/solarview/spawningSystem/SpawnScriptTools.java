@@ -2,8 +2,8 @@ package solarview.spawningSystem;
 
 import java.util.List;
 
+import entities.Entity;
 import faction.FactionLibrary;
-import nomad.Entity;
 import nomad.FlagField;
 import nomad.universe.Universe;
 import shared.Geometry;

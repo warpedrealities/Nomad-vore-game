@@ -11,12 +11,12 @@ import static org.lwjgl.glfw.GLFW.GLFW_KEY_W;
 
 import org.lwjgl.glfw.GLFW;
 
+import entities.Entity;
+import entities.Star;
+import entities.StarSystem;
 import faction.Faction;
 import faction.FactionLibrary;
 import input.Keyboard;
-import nomad.Entity;
-import nomad.Star;
-import nomad.StarSystem;
 import nomad.universe.Universe;
 import rendering.SpriteRotatable;
 import shared.Vec2f;

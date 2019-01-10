@@ -52,6 +52,7 @@ public class AdvancedBlockDungeonGenerator {
 			blockGrid[i] = new int[zone.getHeight() / 8];
 
 		}
+
 	}
 
 	public void run(Element element, boolean[][] grid) {
@@ -95,6 +96,8 @@ public class AdvancedBlockDungeonGenerator {
 				}
 			}
 		}
+
+		new SanityChecker().checkSanity(blockList, zone);
 
 		while (true) {
 			grow(extent, grid);

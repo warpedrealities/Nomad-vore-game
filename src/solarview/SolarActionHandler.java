@@ -1,8 +1,8 @@
 package solarview;
 
-import nomad.Entity;
-import nomad.Station;
-import nomad.World;
+import entities.Entity;
+import entities.World;
+import entities.stations.Station;
 import spaceship.ShipController.scriptEvents;
 import spaceship.Spaceship;
 import spaceship.SpaceshipActionHandler;

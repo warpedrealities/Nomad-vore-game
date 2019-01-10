@@ -4,10 +4,10 @@ import java.util.List;
 
 import actor.player.Player;
 import actorRPG.Actor_RPG;
+import entities.Entity;
+import entities.StarSystem;
 import item.Item;
 import item.ItemCoin;
-import nomad.Entity;
-import nomad.StarSystem;
 import nomad.universe.Universe;
 import shared.Vec2f;
 import spaceship.Spaceship;

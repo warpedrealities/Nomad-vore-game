@@ -65,11 +65,11 @@ import font.FontSupport;
 import gui.SharedGUIResources;
 import input.Keyboard;
 import input.MouseHook;
+import menu.Menu;
 import nomad.universe.Universe;
 import shared.Scene;
 import shared.SceneBase;
 import shared.SceneManager;
-import spacetest.SpaceTest;
 
 public class Game implements SceneManager {
 
@@ -176,7 +176,7 @@ public class Game implements SceneManager {
 		var[4] = m_objvar1;
 
 		SceneBase.setVariables(var);
-		m_currentscene = new SpaceTest();
+		m_currentscene = new Menu(var);
 
 		//	universe.Newgame();
 		//		universe.Newgame();
