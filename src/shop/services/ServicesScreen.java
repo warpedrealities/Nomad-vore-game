@@ -32,7 +32,14 @@ public class ServicesScreen extends Screen {
 		serviceHandlerList=new ArrayList<ServiceHandler>();
 		Universe universe=Universe.getInstance();
 		if (Station.class.isInstance(universe.getCurrentEntity())) {
-			ship = ((Station) universe.getCurrentEntity()).getDocked().getDockingPorts()[0].getDockedShip();
+			Station station = (Station) universe.getCurrentEntity();
+			for (int i = 0; i < station.getDocked().getDockingPorts().length; i++) {
+				if (station.getDocked().getDockingPorts()[i].getDockedShip() != null) {
+					ship = ((Station) universe.getCurrentEntity()).getDocked().getDockingPorts()[i].getDockedShip();
+					break;
+				}
+			}
+
 		}
 		if (Spaceship.class.isInstance(universe.getCurrentEntity())) {
 			ship = (Spaceship) universe.getCurrentEntity();

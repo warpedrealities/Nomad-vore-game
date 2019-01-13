@@ -6,10 +6,14 @@ import gui.Button;
 import gui.SpriteImage;
 import gui.Window;
 import input.MouseHook;
+import nomad.universe.Universe;
 import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
 import spaceship.Spaceship;
+import spaceship.Spaceship.ShipState;
+import view.ViewScene;
+import vmo.Game;
 
 public class DockingScreen extends Screen implements Callback {
 	private Spaceship ship;
@@ -53,7 +57,7 @@ public class DockingScreen extends Screen implements Callback {
 		switch (ID) {
 
 		case 1:
-
+			dock();
 			break;
 		case 2:
 			// exit
@@ -63,10 +67,30 @@ public class DockingScreen extends Screen implements Callback {
 		}
 	}
 
+	private void dock() {
+		if (station.dock(ship, docking.getIndex())) {
+			Universe.getInstance().getcurrentSystem().getEntities().remove(ship);
+			// move ship to colocate with world
+			ship.setPosition(new Vec2f(station.getPosition().x, station.getPosition().y));
+			// write ship into zone
+			ship.setShipState(ShipState.DOCK);
+			// connect ship
+
+			// switch current entity
+
+			Universe.getInstance().setCurrentEntity(station);
+
+			// switch view to viewscene
+			Game.sceneManager.SwapScene(new ViewScene());
+
+		}
+	}
+
 	@Override
 	public void start(MouseHook hook) {
 		hook.Register(window);
 		hook.Register(docking);
+
 	}
 
 	@Override
@@ -80,7 +104,7 @@ public class DockingScreen extends Screen implements Callback {
 		window = new Window(new Vec2f(-16, -10), new Vec2f(26, 24), textures[1], true);
 
 		Button[] buttons = new Button[2];
-		buttons[0] = new Button(new Vec2f(4.2F, 0.2F), new Vec2f(6, 1.8F), textures[2], this, "Land", 1, 1);
+		buttons[0] = new Button(new Vec2f(4.2F, 0.2F), new Vec2f(6, 1.8F), textures[2], this, "Dock", 1, 1);
 		buttons[1] = new Button(new Vec2f(10.2F, 0.2F), new Vec2f(6, 1.8F), textures[2], this, "Cancel", 2, 1);
 		// add buttons to move things to and from the container
 		for (int i = 0; i < 2; i++) {
@@ -92,7 +116,7 @@ public class DockingScreen extends Screen implements Callback {
 		this.window.add(image);
 		image.AdjustPos(new Vec2f(2 + window.getPosition().x, 2 + window.getPosition().y));
 		this.callback = callback;
-
+		this.docking = new DockingUI(station, station.getDocked(), new Vec2f(-3.5F, 2));
 	}
 
 	@Override

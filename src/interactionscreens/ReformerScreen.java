@@ -18,7 +18,7 @@ public class ReformerScreen extends Screen {
 	private WidgetReformer reformer;
 	private Window window;
 	private Callback callback;
-	
+
 	public ReformerScreen(WidgetReformer widgetReformation) {
 		this.reformer=widgetReformation;
 	}
@@ -30,7 +30,7 @@ public class ReformerScreen extends Screen {
 
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc) {
-	
+
 		window.Draw(buffer, matrixloc);
 	}
 
@@ -42,33 +42,44 @@ public class ReformerScreen extends Screen {
 
 	private void registerMachine()
 	{
-		Long l=Universe.getInstance().getPlayer().getReformHandler().linkMachine(Universe.getInstance().getCurrentZone().getName());
+		Long l = Universe.getInstance().getPlayer().getReformHandler()
+				.linkMachine(Universe.getInstance().getCurrentZone().getName());
 		reformer.setUid(l);
 		reformer.setActive(true);
 	}
-	
+
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-	
+
 		switch (ID)
 		{
-			case 0:
-				callback.Callback();		
+		case 0:
+			callback.Callback();
 			break;
-			case 1:
-				if (reformer.isSuppressed())
-				{
-					reformer.setSuppressed(false);
-					ViewScene.m_interface.DrawText("reformer now operational");
-				}
-				else
-				{
-					registerMachine();
-					ViewScene.m_interface.DrawText("you've synchronized with this reformer");
-				}	
-				callback.Callback();
+		case 1:
+			if (reformer.isSuppressed())
+			{
+				reformer.setSuppressed(false);
+				ViewScene.m_interface.DrawText("reformer now operational");
+			}
+			else
+			{
+				registerMachine();
+				ViewScene.m_interface.DrawText("you've synchronized with this reformer");
+			}
+			callback.Callback();
+			break;
+		case 2:
+			unRegisterMachine();
 			break;
 		}
+	}
+
+	private void unRegisterMachine() {
+		// TODO Auto-generated method stub
+		Universe.getInstance().getPlayer().getReformHandler().unLinkMachine(Universe.getInstance().getCurrentZone().getName());
+		reformer.setUid(0);
+		reformer.setActive(false);
 	}
 
 	@Override
@@ -76,7 +87,7 @@ public class ReformerScreen extends Screen {
 		// TODO Auto-generated method stub
 		hook.Register(window);
 	}
-	
+
 	@Override
 	public void initialize(int[] textures, Callback callback) {
 		// 0 is bar
@@ -86,28 +97,32 @@ public class ReformerScreen extends Screen {
 		// 4 tint
 		window = new Window(new Vec2f(-12, -16), new Vec2f(24, 15), textures[1], true);
 		this.callback = callback;
-		
-		Button []buttons=new Button[2];
+
+		Button[] buttons = new Button[3];
 		buttons[0] = new Button(new Vec2f(17.5F, 0.5F), new Vec2f(6, 1.8F), textures[2], this, "Exit", 0, 1);
 		if (reformer.isSuppressed())
 		{
 			buttons[1] = new Button(new Vec2f(17.5F, 2.5F), new Vec2f(6, 1.8F), textures[2], this, "restore", 1, 1);
-	
+
 		}
 		else
 		{
-			buttons[1] = new Button(new Vec2f(17.5F, 2.5F), new Vec2f(6, 1.8F), textures[2], this, "link", 1, 1);
-		
+			if (reformer.isActive()) {
+				buttons[1] = new Button(new Vec2f(17.5F, 2.5F), new Vec2f(6, 1.8F), textures[2], this, "unlink", 2, 1);
+			} else {
+				buttons[1] = new Button(new Vec2f(17.5F, 2.5F), new Vec2f(6, 1.8F), textures[2], this, "link", 1, 1);
+			}
 		}
+
 		// add buttons to move things to and from the container
 		for (int i = 0; i < 2; i++) {
 			window.add(buttons[i]);
-		}	
+		}
 		Text text=new Text(new Vec2f(0.6F, 4.5F), "converter text", 1.0F, textures[4]);
-		
+
 		if (reformer.isSuppressed())
 		{
-			text.setString("reformation system suppressed");			
+			text.setString("reformation system suppressed");
 		}
 		else
 		{
@@ -118,11 +133,11 @@ public class ReformerScreen extends Screen {
 			}
 			else
 			{
-				text.setString("reformation system inactive, link pattern");	
-			}		
+				text.setString("reformation system inactive, link pattern");
+			}
 		}
 
-	
+
 		window.add(text);
 	}
 

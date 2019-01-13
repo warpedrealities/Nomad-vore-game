@@ -51,6 +51,7 @@ public class DockingPort {
 		}
 		if (dstream.readBoolean()) {
 			dockedShip = new Spaceship();
+			int safety = dstream.readInt();
 			dockedShip.load(dstream);
 		}
 	}

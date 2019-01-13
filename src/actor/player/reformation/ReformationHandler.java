@@ -38,7 +38,16 @@ public class ReformationHandler {
 		machines.add(new MachineEntry(zone,nextUid));
 		return nextUid++;
 	}
-	
+
+	public void unLinkMachine(String name) {
+		for (int i = 0; i < machines.size(); i++) {
+			if (machines.get(i).getZoneName().equals(name)) {
+				machines.remove(i);
+				return;
+			}
+		}
+	}
+
 	public void clear() {
 		machines.clear();
 	}
@@ -46,5 +55,6 @@ public class ReformationHandler {
 	public List<MachineEntry> getMachines() {
 		return machines;
 	}
+
 
 }

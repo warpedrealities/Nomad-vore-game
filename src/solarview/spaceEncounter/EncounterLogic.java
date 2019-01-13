@@ -106,10 +106,11 @@ public class EncounterLogic {
 	{
 		for (int i = 0; i < shipList.length; i++)
 		{
-			shipList[i].getShip().getShipStats().runDecompose();
-			new SpaceshipAnalyzer().decomposeResources(shipList[i].getShip().getShipStats(),
-					shipList[i].getShip());
-			shipList[i].getShip().setShipStats(null);
+			if (shipList[i].getShip().getShipStats() != null) {
+				shipList[i].getShip().getShipStats().runDecompose();
+				new SpaceshipAnalyzer().decomposeResources(shipList[i].getShip().getShipStats(), shipList[i].getShip());
+				shipList[i].getShip().setShipStats(null);
+			}
 		}
 	}
 

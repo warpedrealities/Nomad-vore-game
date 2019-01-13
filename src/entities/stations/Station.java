@@ -301,7 +301,7 @@ public class Station extends Entity {
 	public boolean dock(Spaceship ship, int portIndex) {
 
 		DockingPort port = dockingModel.getDockingPorts()[portIndex];
-		if (port.getDockedShip() != null) {
+		if (port.getDockedShip() == null) {
 			port.setDockedShip(ship);
 			// link up
 			WidgetPortal portal = ship.getZone(0).getPortalWidget(-101);
@@ -321,7 +321,7 @@ public class Station extends Entity {
 	public void unDock(Spaceship ship) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < dockingModel.getDockingPorts().length; i++) {
-			if (dockingModel.getDockingPorts()[i].getDockedShip().equals(ship)) {
+			if (ship.equals(dockingModel.getDockingPorts()[i].getDockedShip())) {
 				Zone z = getZone(dockingModel.getDockingPorts()[i].getZoneAssociation());
 				for (int j = 0; j < z.getWidth(); j++) {
 					for (int k = 0; k < z.getHeight(); k++) {

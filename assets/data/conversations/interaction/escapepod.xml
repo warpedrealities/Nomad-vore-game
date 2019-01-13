@@ -1,5 +1,15 @@
 <?xml version="1.0"?>
 <Conversation>
+
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"
+			flag="noEnergy" />	
+	<text>
+	The console is dark, unpowered, unresponsive.
+	</text>
+		<choice destination="end" text="*leave it be*" />	
+	</page>
+
 	<page ID="start">
 		<text>
 			HEINLEIN ESCAPE POD N.7 LBREAK
@@ -18,10 +28,32 @@
 		<choice destination="signals" text="perform signal scan" />
 		<choice destination="scan" text="replay descent sensor logs" />
 		<choice destination="survival_supplies" text="survival supplies" />	
-
+		<choice destination="recharge0" text="emergency survival equipment recharge"/>
 		<choice destination="end" text="exit" />
 	</page>
 
+	<page ID="recharge0">
+	<text>
+	RECHARGE SURVIVOR DEVICES USING ESCAPE POD POWER? LBREAK
+	Y/N LBREAK
+	WARNING: THIS WILL DEPLETE ESCAPE POD POWER RESERVES RESULTING IN DEACTIVATION LBREAK
+	</text>
+	<choice destination="recharge1" text="Y"/>
+	<choice destination="start" text="N"/>
+	</page>
+	
+	<page ID="recharge1">
+	<text>
+	RECHARGE CYCLE COMMENCED LBREAK
+	RECHARGE CYCLCE COMPLETED LBREAK
+	RESERVE POWER DEPLETED LBREAK
+	SYSTEM SHUTDOWN LBREAK
+	</text>
+		<effect type="setlocalflag" flag="noEnergy" value="1" />
+		<effect type="giveEnergy" value="10" />
+		<choice destination="end" text="exit"/>
+	</page>
+	
 	<page ID="survival_supplies">
 	<text>
 	SURVIVAL EQUIPMENT LBREAK
