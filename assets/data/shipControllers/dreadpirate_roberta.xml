@@ -5,7 +5,7 @@
 	<contact value="dreadpirate_roberta_contact" />
 	<ai value="pirateAI" />
 	<combat value="broadsider_shielded" />
-	<victory value="pirateSloopVictory" />
+	<victory value="dreadpirate_roberta_victory" />
 	<loss value="dreadpirate_roberta_loss" />
 	<experienceReward value="600" />	
 </controller>

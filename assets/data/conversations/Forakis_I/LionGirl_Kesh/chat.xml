@@ -12,7 +12,8 @@
 			value="1" />
 			<condition operator="equals" evaluate="LOCALFLAG" flag="leg"
 			value="0" />			
-		</choice>		
+		</choice>	
+			
 		<choice destination="who" text="$Who are you again?"/>
 		<choice destination="end" text="Live and drink"/>
 	</page>
