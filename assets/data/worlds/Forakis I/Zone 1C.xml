@@ -18,6 +18,11 @@
 	</description>
 	<transition direction="east">Zone 2C</transition>	
 	<mapgen>
+		<town minsize="4" maxsize="4" minhouses="4" maxhouses="4"
+				tile="7" gap="8" registerRooms="true">
+				<floodfill tile="8">			
+				</floodfill>
+		</town>		
 		<partition xmin="24" xmax="40" ymin="24" ymax="40">
 			<floodfill tile="1">
 
@@ -32,11 +37,7 @@
 		</perlin>			
 		</partition>	
 		<partition xmin="24" xmax="40" ymin="24" ymax="40">
-		<town minsize="4" maxsize="4" minhouses="4" maxhouses="4"
-				tile="7" gap="8" registerRooms="true">
-				<floodfill tile="8">			
-				</floodfill>
-		</town>			
+			
 		<SeedNPCs min="4" max="8" name="Forakis_I/LionGirl Guard" />
 		</partition>	
 		<perlin>
