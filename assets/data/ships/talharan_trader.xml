@@ -40,34 +40,42 @@
 				<contains name="modules/interplanetary reactor">
 					<resource type="FUEL" value="100" />
 				</contains>
+				<widgetItem>interplanetary reactor</widgetItem>	
 			</placeWidget>
 			<placeWidget x="2" y="1" name="slot">
 				<contains name="modules/solar plant">
 					<resource type="ENERGY" value="25" />
 				</contains>
+				<widgetItem>solar plant</widgetItem>	
 			</placeWidget>
 			<placeWidget x="10" y="1" name="slot">
 				<contains name="modules/battery bank">
 					<resource type="ENERGY" value="50" />
 				</contains>
+					<widgetItem>battery bank</widgetItem>	
 			</placeWidget>
 			<placeWidget x="11" y="1" name="slot">
 				<contains name="modules/space warper" />
+				<widgetItem>space warper</widgetItem>	
 			</placeWidget>
 			<placeWidget x="4" y="7" name="slot">
 				<contains name="modules/bunk bed" />
+				<widgetItem>bunk bed</widgetItem>	
 			</placeWidget>
 			<placeWidget x="8" y="7" name="slot">
 				<contains name="modules/bunk bed" />
+				<widgetItem>bunk bed</widgetItem>	
 			</placeWidget>
 			<placeWidget x="5" y="8" name="slot">
 				<contains name="modules/navconsole" />
+				<widgetItem>nav console</widgetItem>			
 			</placeWidget>
 			<placeWidget x="7" y="8" name="hardpoint">
 				<facing value="0" />
 				<contains name="shipweapons/space mortar">
 					<resource type="mortar round" value="40" />
-				</contains>
+				</contains>	
+				<widgetItem>space mortar</widgetItem>					
 			</placeWidget>
 
 			<placeWidget x="5" y="2" name="cargocontainer">

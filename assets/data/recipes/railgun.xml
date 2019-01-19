@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<recipe name="railgun" requiredskill="2" startunlocked="false">
+	<description>
+		A ship moounted railgun designed to fire heavy ferrous rounds at incredible velocity using Lorentz force. 20 damage, 6 energy and 1 round per shot, 3 round cooldown.
+	</description>
+	<ingredient item="battery" quantity="10" />	
+	<ingredient item="precision mechanisms" quantity="4" />
+	<ingredient item="computation valve" quantity="2" />	
+	<ingredient item="flux capacitor" quantity="1" />
+<attachedRecipe value="railgun round"/>	
+	<result item="railgun" />
+</recipe>

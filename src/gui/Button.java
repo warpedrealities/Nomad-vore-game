@@ -18,7 +18,7 @@ public class Button extends GUIBase {
 	protected int m_ID;
 	protected boolean m_active;
 	protected float clock;
-	
+
 	public Button(Vec2f pos, Vec2f size, int texture, MyListener listener, String string, int ID) {
 		m_active = true;
 		m_pos = pos;
@@ -79,7 +79,7 @@ public class Button extends GUIBase {
 			{
 				clock=0;
 				m_patch.toggle();
-				m_listener.ButtonCallback(m_ID, m_pos);		
+				m_listener.ButtonCallback(m_ID, m_pos);
 			}
 		}
 		if (clock<0)
@@ -90,7 +90,7 @@ public class Button extends GUIBase {
 				clock=0;
 			}
 		}
-		
+
 	}
 
 	@Override
@@ -127,6 +127,7 @@ public class Button extends GUIBase {
 
 	}
 
+	@Override
 	public void AdjustPos(Vec2f p) {
 		m_pos.x += p.x;
 		m_pos.y += p.y;
@@ -136,5 +137,9 @@ public class Button extends GUIBase {
 		 */
 		m_font.AdjustPos(p);
 		m_patch.AdjustPos(m_pos);
+	}
+
+	public void adjustFont(Vec2f p) {
+		m_font.AdjustPos(p);
 	}
 }

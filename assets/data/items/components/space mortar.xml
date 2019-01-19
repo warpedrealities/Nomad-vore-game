@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ItemWidget name="space mortar" weight="10" value="700">
+	<description>A mortar for space combat, uses a magnetic accelerator to
+		launch high explosive rounds at enemy ships.</description>
+	<placeditem widget="shipweapons/space mortar" />
+</ItemWidget>

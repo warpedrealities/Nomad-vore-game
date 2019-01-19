@@ -50,6 +50,7 @@ import shared.Scene_Int;
 import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
+import view.menuSystem.MenuSystem;
 import view.ui.ActionBar;
 import view.ui.CooldownDisplay;
 import view.ui.DropdownHandler;
@@ -110,6 +111,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	ActionBar actionBar;
 	Targeting targeter;
 	Screen_Fade screenFade;
+	MenuSystem menuSystem;
 
 	public ViewScene(int[] variables, Universe world) {
 		super(variables);
@@ -146,49 +148,46 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			m_text.BuildStrings();
 		}
 		m_bars = new BarFrame[4];
-		m_buttons = new Button2[5];
+		m_buttons = new Button2[2];
 		for (int i = 0; i < 4; i++) {
 
-			String str1 = null;
+
 			String str = null;
 			switch (i) {
 			case 0:
 				str = "health";
 
-				str1 = "inventory";
 				break;
 			case 1:
 				str = "resolve";
 
-				str1 = "appearance";
 				break;
 			case 2:
 				str = "satiation";
 
-				str1 = "character";
 				break;
 			case 3:
 				str = "action";
 
-				str1 = "file";
 				break;
 			}
 
-			m_buttons[i] = new Button2(new Vec2f(8.5F, 6.5F - (i * 2)), new Vec2f(8, 2), m_textureIds[7], this, str1, i,
-					m_textureIds[8], 1.2F);
+
 			if (i < 4) {
 				m_bars[i] = new BarFrame(new Vec2f(8.5F, 15.7F - (i * 1.0F)), str,
 						sceneController.getUniverse().player.getRPG().getStat(i),
 						sceneController.getUniverse().player.getRPG().getStatMax(i), 1 + i, m_textureIds[6]);
 				m_window.add(m_bars[i]);
 			}
-			m_window.add(m_buttons[i]);
+
 
 		}
-
-		m_buttons[4] = new Button2(new Vec2f(0.5F, 0.5F), new Vec2f(8, 2), m_textureIds[7], this, "look", 4,
+		m_buttons[0] = new Button2(new Vec2f(8.5F, 0.5F), new Vec2f(8, 2), m_textureIds[7], this, "menu", 0,
+				m_textureIds[8], 1.2F);
+		m_window.add(m_buttons[0]);
+		m_buttons[1] = new Button2(new Vec2f(0.5F, 0.5F), new Vec2f(8, 2), m_textureIds[7], this, "look", 4,
 				m_textureIds[8], 1);
-		m_window.add(m_buttons[4]);
+		m_window.add(m_buttons[1]);
 
 		// m_handler=new
 		// ZoneInteractionHandler(sceneController.getActiveZone(),this);
@@ -215,6 +214,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		cooldownDisplay.redraw();
 		targeter = new Targeting();
 		screenFade = new Screen_Fade(this);
+		menuSystem = new MenuSystem(m_textureIds[0], m_textureIds[7], m_textureIds[8], this);
 
 	}
 
@@ -256,49 +256,46 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			m_text.BuildStrings();
 		}
 		m_bars = new BarFrame[4];
-		m_buttons = new Button2[5];
+		m_buttons = new Button2[2];
 		for (int i = 0; i < 4; i++) {
 
-			String str1 = null;
+
 			String str = null;
 			switch (i) {
 			case 0:
 				str = "health";
 
-				str1 = "inventory";
 				break;
 			case 1:
 				str = "resolve";
 
-				str1 = "appearance";
 				break;
 			case 2:
 				str = "satiation";
 
-				str1 = "character";
 				break;
 			case 3:
 				str = "action";
 
-				str1 = "file";
 				break;
 			}
 
-			m_buttons[i] = new Button2(new Vec2f(8.5F, 6.5F - (i * 2)), new Vec2f(6, 2), m_textureIds[7], this, str1, i,
-					m_textureIds[8], 1.2F);
+
 			if (i < 4) {
-				m_bars[i] = new BarFrame(new Vec2f(7.5F, 15.7F - (i * 1.0F)), str,
+				m_bars[i] = new BarFrame(new Vec2f(8.5F, 15.7F - (i * 1.0F)), str,
 						sceneController.getUniverse().player.getRPG().getStat(i),
 						sceneController.getUniverse().player.getRPG().getStatMax(i), 1 + i, m_textureIds[6]);
 				m_window.add(m_bars[i]);
 			}
-			m_window.add(m_buttons[i]);
+
 
 		}
-
-		m_buttons[4] = new Button2(new Vec2f(0.5F, 0.5F), new Vec2f(8, 2), m_textureIds[7], this, "look", 4,
+		m_buttons[0] = new Button2(new Vec2f(8.5F, 0.5F), new Vec2f(8, 2), m_textureIds[7], this, "menu", 0,
+				m_textureIds[8], 1.2F);
+		m_window.add(m_buttons[0]);
+		m_buttons[1] = new Button2(new Vec2f(0.5F, 0.5F), new Vec2f(8, 2), m_textureIds[7], this, "look", 4,
 				m_textureIds[8], 1);
-		m_window.add(m_buttons[4]);
+		m_window.add(m_buttons[1]);
 
 		// m_screen=new
 		// InventoryScreen(m_textureIds[1],m_textureIds[0],m_textureIds[7],m_textureIds[8],m_world.m_player,m_variables[0],this);
@@ -329,6 +326,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		targeter = new Targeting();
 		screenFade = new Screen_Fade(this);
 
+		menuSystem = new MenuSystem(m_textureIds[0], m_textureIds[7], m_textureIds[8], this);
 
 		sceneController.getActiveZone().updateZoneEnvironment(sceneController.getUniverse().getPlayer());
 	}
@@ -466,11 +464,14 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	@Override
 	public void Update(float dt) {
 		m_dropdown.update(dt);
+		if (menuSystem.isActive()) {
+			menuSystem.update(dt);
+		}
 		if (!m_dropdown.getVisible())
 		{
-			if (!m_buttons[4].getVisible())
+			if (!m_buttons[1].getVisible())
 			{
-				m_buttons[4].setActive(true);
+				m_buttons[1].setActive(true);
 			}
 			m_window.update(dt);
 			int actionBarStatus = actionBar.update(dt);
@@ -480,13 +481,13 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			}
 			if (actionBarStatus == 2) {
 				m_mode = ViewMode.SPECIAL;
-				m_buttons[4].setString(sceneController.getUniverse().getPlayer().getCurrentMove().getMoveName());
+				m_buttons[1].setString(sceneController.getUniverse().getPlayer().getCurrentMove().getMoveName());
 				actionBar.setUpdateAction(0);
 			}
 		}
 		else
 		{
-			m_buttons[4].setActive(false);
+			m_buttons[1].setActive(false);
 		}
 		if (m_dropdown.getVisible() == false && m_mode.getValue()) {
 			m_mode = DropdownHandler.handleClosure(m_mode, Universe.getInstance().getPlayer(), m_buttons[4]);
@@ -887,6 +888,9 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		GL20.glUniform4f(m_variables[0], 1.0F, 1.0F, 1.0F, 1);
 
 		m_window.Draw(matrix44Buffer, SceneBase.getVariables()[2]);
+		if (menuSystem.isActive()) {
+			menuSystem.draw(matrix44Buffer, SceneBase.getVariables()[2]);
+		}
 		actionBar.Draw(matrix44Buffer, SceneBase.getVariables()[2]);
 		if (m_screen == null) {
 			m_text.Draw(matrix44Buffer, SceneBase.getVariables()[2]);
@@ -904,7 +908,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	public void start(MouseHook mouse) {
 		// TODO Auto-generated method stub
 		m_hook = mouse;
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 2; i++) {
 			mouse.Register(m_buttons[i]);
 		}
 
@@ -916,7 +920,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			mouse.Register(m_dropdown);
 			m_dropdown.setHook(mouse);
 		}
-
+		menuSystem.start(mouse);
 	}
 
 	@Override
@@ -939,6 +943,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		m_dropdown.discard();
 		m_interface = null;
 		screenFade.discard();
+
+		menuSystem.discard(m_hook);
 	}
 
 	@Override
@@ -948,9 +954,10 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 			switch (ID) {
 			case 0:
-				m_screen = new InventoryScreen(m_textureIds[0],m_textureIds[1], m_textureIds[7], m_textureIds[8],
-						sceneController.getUniverse().player, m_variables[0], this);
-				m_screen.start(m_hook);
+				if (!menuSystem.isActive()) {
+					menuSystem.activate();
+				}
+
 				break;
 			case 1:
 				// appearance
@@ -973,6 +980,36 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 					DropdownHandler.genStandardDropdown(m_dropdown, sceneController.getUniverse().player);
 					m_dropdown.AdjustPos(new Vec2f(p.x - 1.0F, p.y - 1.0F));
 				}
+				break;
+			case 30:
+				m_screen = new InventoryScreen(m_textureIds[0], m_textureIds[1], m_textureIds[7], m_textureIds[8],
+						sceneController.getUniverse().player, m_variables[0], this);
+				m_screen.start(m_hook);
+				menuSystem.deactivate();
+				break;
+			case 31:
+				Game.sceneManager.SwapScene(new CharacterScene());
+				break;
+			case 32:
+				setScreen(new AppearanceScreen());
+				menuSystem.deactivate();
+				break;
+			case 33:
+				m_text.AddText("journal system coming soon");
+				// setScreen(new JournalScreen());
+				menuSystem.deactivate();
+				break;
+			case 34:
+				m_screen = new ActionBarSelector(m_textureIds[0], m_textureIds[9], m_textureIds[7], m_textureIds[8],
+						sceneController.getUniverse().player, m_variables[0], this);
+				m_screen.start(m_hook);
+				menuSystem.deactivate();
+				break;
+			case 35:
+				Game.sceneManager.SwapScene(new Help_Scene());
+				break;
+			case 36:
+				Game.sceneManager.SwapScene(new Menu(SceneBase.m_variables));
 				break;
 			}
 
@@ -1006,11 +1043,32 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	}
 
 	private void keyboardHotkeys() {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_ESCAPE)) {
+			Game.sceneManager.SwapScene(new Menu(SceneBase.m_variables));
+		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F1)) {
 			Game.sceneManager.SwapScene(new Help_Scene());
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F2)) {
 			m_screen = new ActionBarSelector(m_textureIds[0], m_textureIds[9], m_textureIds[7], m_textureIds[8],
+					sceneController.getUniverse().player, m_variables[0], this);
+			m_screen.start(m_hook);
+		}
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F3)) {
+			//			m_screen = new JournalScreen();
+			//			m_screen.start(m_hook);
+			m_text.AddText("journal system coming soon");
+		}
+
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F4)) {
+			m_screen = new AppearanceScreen();
+			m_screen.start(m_hook);
+		}
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F5)) {
+			Game.sceneManager.SwapScene(new CharacterScene());
+		}
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F6)) {
+			m_screen = new InventoryScreen(m_textureIds[0], m_textureIds[1], m_textureIds[7], m_textureIds[8],
 					sceneController.getUniverse().player, m_variables[0], this);
 			m_screen.start(m_hook);
 		}
@@ -1023,17 +1081,17 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_L)) {
 				m_mode = ViewMode.LOOK;
-				m_buttons[4].setString("look");
+				m_buttons[1].setString("look");
 				m_time = 0.2F;
 			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_I)) {
 				m_mode = ViewMode.INTERACT;
-				m_buttons[4].setString("interact");
+				m_buttons[1].setString("interact");
 				m_time = 0.2F;
 			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_K)) {
 				m_mode = ViewMode.ATTACK;
-				m_buttons[4].setString("attack");
+				m_buttons[1].setString("attack");
 				Universe.getInstance().getPlayer().setMove(0);
 				m_time = 0.2F;
 			}
@@ -1063,7 +1121,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 	void handleDropdown() {
 		if (m_mode.getValue()) {
 			m_mode = DropdownHandler.selectMove(Universe.getInstance().getPlayer(), m_mode, m_dropdown.getSelect(),
-					m_buttons[4], m_dropdown);
+					m_buttons[1], m_dropdown);
 
 		} else {
 			if (m_dropdown.getSelect() == 3) {
@@ -1075,27 +1133,27 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 				switch (m_dropdown.getSelect()) {
 				case 0:
 					m_mode = ViewMode.LOOK;
-					m_buttons[4].setString("look");
+					m_buttons[1].setString("look");
 					break;
 				case 1:
 					m_mode = ViewMode.INTERACT;
-					m_buttons[4].setString("interact");
+					m_buttons[1].setString("interact");
 					break;
 				case 2:
 					m_mode = ViewMode.ATTACK;
-					m_buttons[4].setString("attack");
+					m_buttons[1].setString("attack");
 					Universe.getInstance().getPlayer().setMove(0);
 					break;
 				case 4:
 					m_mode = ViewMode.SPECIAL;
 					if (rpg.useQuickMove()) {
-						m_buttons[4].setString(rpg.getQuickAction());
+						m_buttons[1].setString(rpg.getQuickAction());
 					}
 
 					break;
 				}
 				m_dropdown.setVisible(false);
-				m_buttons[4].setActive(true);
+				m_buttons[1].setActive(true);
 			}
 		}
 

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<shipsystem sprite="112" name="railgun" health="30">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>A railgun designed to fire heavy ferrous rounds at incredible velocity using Lorentz force. 20 damage, 6 energy and 1 round per shot, 3 round cooldown. </description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipResource capacity="10" resource="railgun round">
+		<resourceConversion itemName="railgun round" value="1.0" />
+	</shipResource>
+	<shipWeapon>
+		<damage min="20" max="20" falloff="0" />
+		<cooldown value="3" />
+		<effects script="railgun" sheet="railgun" />
+		<special disruption="4" />	
+		<range arc="1" range="20" />
+		<weaponCost resource="railgun round" cost="1" />
+		<weaponCost resource="ENERGY" cost="6" />		
+		<description>
+
+		</description>
+	</shipWeapon>
+</shipsystem>

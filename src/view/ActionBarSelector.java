@@ -7,6 +7,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 
 import actor.player.Player;
+import gui.Button;
 import gui.Button4Colour;
 import gui.Window;
 import gui.lists.List;
@@ -70,6 +71,10 @@ public class ActionBarSelector extends Screen implements Callback {
 			window.add(buttons[i]);
 			window.add(buttons[i + 8]);
 		}
+
+		Button b = new Button(new Vec2f(12, 2), new Vec2f(6, 2), button, this, "exit", 2000);
+		window.add(b);
+
 		reset();
 
 	}
@@ -134,7 +139,8 @@ public class ActionBarSelector extends Screen implements Callback {
 			action.setActionName(ability);
 			reset();
 		}
-		if (ID >= 1010 && Universe.getInstance().getPlayer().getInventory().getNumItems() > itemList.getSelect()) {
+		if (ID != 2000 && ID >= 1010
+				&& Universe.getInstance().getPlayer().getInventory().getNumItems() > itemList.getSelect()) {
 			String item = Universe.getInstance().getPlayer().getInventory().getItem(itemList.getSelect()).getItem()
 					.getName();
 			Action action = actionBarData.getAction(ID - 1010);
@@ -144,6 +150,10 @@ public class ActionBarSelector extends Screen implements Callback {
 			reset();
 		}
 
+		if (ID == 2000) {
+			ViewScene.m_interface.UpdateInfo();
+			this.callback.Remove();
+		}
 	}
 
 	@Override

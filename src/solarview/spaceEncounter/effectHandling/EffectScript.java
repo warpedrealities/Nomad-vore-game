@@ -74,6 +74,9 @@ public class EffectScript {
 
 	public Effect getEffect(int i)
 	{
+		if (i >= 16) {
+			return null;
+		}
 		return effects[i];
 	}
 
@@ -84,6 +87,9 @@ public class EffectScript {
 
 	public Effect makeSprite(int index,Vec2f p,int startFrame,int numFrames,boolean loop,float size)
 	{
+		if (index >= 16) {
+			return null;
+		}
 		EffectSprite effect=new EffectSprite(p,sheet+".png",startFrame,numFrames,loop);
 		effect.setSize(size);
 		effectHandler.addEffect(effect);

@@ -385,7 +385,7 @@ public class EffectProcessor {
 			}
 
 		}
-		if (str.equals("giveEnergy")) {
+		if ("giveenergy".equals(str)) {
 			new RechargeHelper(m_player).run((int) value);
 		}
 	}

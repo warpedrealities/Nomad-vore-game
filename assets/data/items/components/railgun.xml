@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="railgun" weight="10" value="2500">
+	<description>A ship moounted railgun designed to fire heavy ferrous rounds at incredible velocity using Lorentz force. 20 damage, 6 energy and 1 round per shot, 3 round cooldown.</description>
+	<placeditem widget="shipweapons/railgun" />
+</ItemWidget>

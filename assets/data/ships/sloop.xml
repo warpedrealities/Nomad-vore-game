@@ -49,7 +49,7 @@
 			</placeWidget>	
 			<placeWidget x="3" y="3" name="slot">
 			<contains name="modules/navconsole" />
-			<widgetItem>nav computer</widgetItem>			
+			<widgetItem>nav console</widgetItem>			
 			</placeWidget>		
 			<placeWidget x="3" y="5" name="slot">	
 			<contains name="modules/simple reactor">

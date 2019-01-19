@@ -31,7 +31,7 @@ public class SystemScreen extends Screen implements MyListener {
 	private Button warpButton;
 	private WarpData data;
 	private float clock;
-	
+
 	public SystemScreen(Spaceship ship, Callback callback) {
 		this.callback = callback;
 		this.ship = ship;
@@ -45,9 +45,9 @@ public class SystemScreen extends Screen implements MyListener {
 		}
 		else
 		{
-			window.update(DT);	
+			window.update(DT);
 		}
-		
+
 		if (clock>0)
 		{
 			clock-=DT;
@@ -58,13 +58,13 @@ public class SystemScreen extends Screen implements MyListener {
 	public void draw(FloatBuffer buffer, int matrixloc) {
 		if (navMode)
 		{
-			navWindow.Draw(buffer, matrixloc);	
+			navWindow.Draw(buffer, matrixloc);
 		}
 		else
 		{
-			window.Draw(buffer, matrixloc);		
+			window.Draw(buffer, matrixloc);
 		}
-		
+
 	}
 
 	@Override
@@ -94,7 +94,7 @@ public class SystemScreen extends Screen implements MyListener {
 		}
 		return false;
 	}
-	
+
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
 		if (clock<=0)
@@ -104,7 +104,7 @@ public class SystemScreen extends Screen implements MyListener {
 				if (!handleButtons(ID)) {
 					toggleConverter(ID - 1);
 					clock=0.1F;
-				}		
+				}
 			}
 			else
 			{
@@ -114,7 +114,7 @@ public class SystemScreen extends Screen implements MyListener {
 					ship.setWarpHandler(new WarpHandler(data.destination,data.stress));
 					SolarScene.getInterface().updateGUI();
 					((SpriteRotatable)ship.getSpriteObj()).setFacing(data.facing);
-					callback.Callback();	
+					callback.Callback();
 					break;
 				case 21:
 					window.setActive(true);
@@ -123,7 +123,7 @@ public class SystemScreen extends Screen implements MyListener {
 					clock=0.1F;
 					break;
 				}
-			}			
+			}
 		}
 
 
@@ -164,93 +164,96 @@ public class SystemScreen extends Screen implements MyListener {
 		if (ship.getShipStats().getFTL()>0)
 		{
 			button = new Button(new Vec2f(0.1F, 0.1F), new Vec2f(4.8F, 2), textures[2], this, "nav", 20);
-			window.add(button);		
+			window.add(button);
 			genNavigation(textures,callback);
-			
+
 		}
 	}
 	class WarpData
 	{
 		public boolean canWarp;
+		public boolean warning;
 		public Vec2i position;
 		public Vec2i destination;
 		public float stress;
 		public int facing;
-		
+
 	};
-	
+
 	private WarpData genWarpData()
 	{
-		float navBonus=0.05F*((float)ship.getShipStats().getCrewStats().getNavigation());
+		float navBonus=0.05F*(ship.getShipStats().getCrewStats().getNavigation());
 		WarpNavigator navigator=new WarpNavigator();
 		WarpData warpData=new WarpData();
 		warpData.position=Universe.getInstance().getcurrentSystem().getPosition();
 		warpData.stress=navigator.calculateStress(ship.getPosition())*(1-navBonus);
 		warpData.facing=navigator.calcFacing(ship.getPosition());
 		warpData.destination=navigator.calculateDestination(warpData.facing);
-		
+		warpData.warning = navigator.calculateWarning(warpData.stress, ship.getShipStats());
 		if (warpData.destination!=null)
 		{
 			warpData.canWarp=true;
 		}
 		return warpData;
 	}
-	
+
 	private void genNavigation(int[] textures, Callback callback)
 	{
 		navWindow = new Window(new Vec2f(-4, -10), new Vec2f(15, 26), textures[1], true);
 		navWindow.setActive(false);
 		Button button = new Button(new Vec2f(10.1F, 0.1F), new Vec2f(4.8F, 2), textures[2], this, "back", 21);
 		navWindow.add(button);
-		
+
 		if (ship.getWarpHandler()!=null)
 		{
-			Text text = new Text(new Vec2f(0.1F, 12.5F), 
-					"charging FTL:"+ship.getWarpHandler().getCharge()+"%", 
+			Text text = new Text(new Vec2f(0.1F, 12.5F),
+					"charging FTL:"+ship.getWarpHandler().getCharge()+"%",
 					1.0F, textures[4]);
-			navWindow.add(text);			
+			navWindow.add(text);
 		}
 		else
 		{
 			data=genWarpData();
 			Text []text=new Text[5];
-			
-			text[0]= new Text(new Vec2f(0.1F, 12.5F), 
-					"plotting FTL track", 
+
+			text[0]= new Text(new Vec2f(0.1F, 12.5F),
+					"plotting FTL track",
 					1.0F, textures[4]);
-			text[1]= new Text(new Vec2f(0.1F, 11.5F), 
-					"pos:"+data.position.x+" "+data.position.y, 
+			text[1]= new Text(new Vec2f(0.1F, 11.5F),
+					"pos:"+data.position.x+" "+data.position.y,
 					1.0F, textures[4]);
-			text[2]= new Text(new Vec2f(0.1F, 10.5F), 
-					"GSI:"+data.stress, 
-					1.0F, textures[4]);		
-		
+			if (data.warning) {
+				text[2] = new Text(new Vec2f(0.1F, 10.5F), "GSI:" + data.stress + " WARNING!", 1.0F, textures[4]);
+			} else {
+				text[2] = new Text(new Vec2f(0.1F, 10.5F), "GSI:" + data.stress, 1.0F, textures[4]);
+			}
+
 			for (int i=0;i<3;i++)
 			{
 				navWindow.add(text[i]);
 			}
 			if (data.canWarp)
 			{
-				text[3]= new Text(new Vec2f(0.1F, 9.5F), 
-						"destination:"+data.destination.x+" "+data.destination.y, 
-						1.0F, textures[4]);	
-				text[4]= new Text(new Vec2f(0.1F, 8.5F), 
-						"warp jump plotted", 
-						1.0F, textures[4]);		
-				navWindow.add(text[3]);	
-				navWindow.add(text[4]);	
+				text[3]= new Text(new Vec2f(0.1F, 9.5F),
+						"destination:"+data.destination.x+" "+data.destination.y,
+						1.0F, textures[4]);
+				text[4]= new Text(new Vec2f(0.1F, 8.5F),
+						"warp jump plotted",
+						1.0F, textures[4]);
+				navWindow.add(text[3]);
+				navWindow.add(text[4]);
 				warpButton = new Button(new Vec2f(0.1F, 0.1F), new Vec2f(4.8F, 2), textures[2], this, "warp", 22);
-				navWindow.add(warpButton);					
+				navWindow.add(warpButton);
 			}
 			else
 			{
-				text[3]= new Text(new Vec2f(0.1F, 9.5F), 
-						"no star within warp range", 
-						1.0F, textures[4]);	
-				text[4]= new Text(new Vec2f(0.1F, 8.5F), 
-						"warp jump cannot be attempted", 
+				text[3]= new Text(new Vec2f(0.1F, 9.5F),
+						"no star within warp range",
 						1.0F, textures[4]);
-				navWindow.add(text[3]);	
+				text[4]= new Text(new Vec2f(0.1F, 8.5F),
+						"warp jump cannot be attempted",
+						1.0F, textures[4]);
+				navWindow.add(text[3]);
 				navWindow.add(text[4]);
 			}
 		}

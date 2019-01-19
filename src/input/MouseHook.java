@@ -21,7 +21,7 @@ public class MouseHook extends GLFWCursorPosCallback {
 	private Vec2f mouseDelta;
 	private long openGLWindow;
 	private ScrollHandler scrollHandler;
-	
+
 	static public MouseHook getInstance() {
 		return instance;
 	}
@@ -49,6 +49,9 @@ public class MouseHook extends GLFWCursorPosCallback {
 	}
 
 	public void Register(Clickable click) {
+		if (click == null) {
+			throw new RuntimeException();
+		}
 		m_clickables.add(click);
 	}
 
@@ -101,7 +104,7 @@ public class MouseHook extends GLFWCursorPosCallback {
 					scrollHandler.setScroll(0);
 					break;
 				}
-			}		
+			}
 		}
 	}
 

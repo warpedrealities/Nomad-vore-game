@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<recipe name="Thermal blade" requiredskill="1" startunlocked="false">
+<recipe name="Thermal blade" requiredskill="1" startunlocked="true">
 	<description>
 		A modification to the basic knife to superheat the blade to inflict thermal damage.
 	</description>

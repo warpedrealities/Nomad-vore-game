@@ -9,7 +9,7 @@
 	</shipResource>
 	<shipWeapon>
 		<damage min="9" max="12" falloff="0" />
-		<cooldown value="5" />
+		<cooldown value="3" />
 		<effects script="mortar" sheet="mortar" />
 		<range arc="1" range="20" />
 		<weaponCost resource="mortar round" cost="1" />

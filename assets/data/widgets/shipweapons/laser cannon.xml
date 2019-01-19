@@ -2,10 +2,10 @@
 <shipsystem sprite="75" name="laser cannon" health="30"
 	hardpoint="true">
 	<contains minimum="1" maximum="2">scrap metal</contains>
-	<description>A laser cannon based on earth technology.</description>
+	<description>A laser cannon based on earth technology. Damage drops off with range due to focusing issues.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipWeapon>
-		<damage min="7" max="12" falloff="0.5" />
+		<damage min="7" max="14" falloff="0.5" />
 		<cooldown value="3" />
 		<effects script="laser" sheet="laser" />
 		<range arc="2" range="20" />

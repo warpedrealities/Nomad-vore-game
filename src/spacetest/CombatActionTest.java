@@ -14,12 +14,12 @@ public class CombatActionTest implements CombatAction {
 
 	@Override
 	public String getEffectSheet() {
-		return "slugthrower";
+		return "railgun";
 	}
 
 	@Override
 	public String getEffectScript() {
-		return "slugthrower";
+		return "railgun";
 	}
 
 	@Override

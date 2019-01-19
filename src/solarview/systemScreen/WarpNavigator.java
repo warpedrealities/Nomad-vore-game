@@ -6,15 +6,16 @@ import shared.Geometry;
 import shared.Vec2f;
 import shared.Vec2i;
 import spaceship.Spaceship;
+import spaceship.stats.SpaceshipStats;
 public class WarpNavigator {
 
 	public WarpNavigator()
 	{
-		
+
 	}
-	
+
 	public double getAngle(float x0, float y0, float x1, float y1)
-	{	
+	{
 		Vec2f p=new Vec2f(y0-y1,x0-x1);
 		p.normalize();
 		double angle = Math.atan2(p.y,p.x);
@@ -23,7 +24,7 @@ public class WarpNavigator {
 			angle=(Math.PI*2)+angle;
 		}
 		angle=angle/0.785398F;
-		
+
 		return angle;
 	}
 
@@ -35,7 +36,7 @@ public class WarpNavigator {
 			dir=dir-8;
 		}
 		return dir;
-	}	
+	}
 	public Vec2i calculateDestination(int dir)
 	{
 		//calc angle
@@ -49,20 +50,32 @@ public class WarpNavigator {
 		{
 			return system.getPosition();
 		}
-		return null;	
+		return null;
 	}
-	
+
 	public float calculateStress(Vec2f position)
 	{
 		float distance=position.getDistance(new Vec2f(0,0));
 		float d=40-distance; if (d<3) {d=3;}
-		double s=Math.sqrt((double)d);
+		double s=Math.sqrt(d);
 		if (s<1)
 		{
 			s=1;
 		}
 		s=s/((Spaceship)Universe.getInstance().getCurrentEntity()).getShipStats().getFTL();
 		return (float) s;
+	}
+
+	public boolean calculateWarning(float stress, SpaceshipStats spaceshipStats) {
+		if (spaceshipStats.getResource("ENERGY") == null) {
+			return false;
+		}
+		float r = spaceshipStats.getResource("ENERGY").getResourceAmount();
+		float pCost = 40 * stress;
+		if (pCost > r) {
+			return true;
+		}
+		return false;
 	}
 
 }

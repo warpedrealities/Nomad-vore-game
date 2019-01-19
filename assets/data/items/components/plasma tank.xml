@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemWidget name="plasma tank" weight="10" value="1000">
+	<description>This system stores plasma feed stock by use of ship based plasma weaponry.</description>
+	<placeditem widget="modules/plasma tank" />
+</ItemWidget>

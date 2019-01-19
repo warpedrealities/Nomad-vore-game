@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <lootTable>
+	<loot item="blueprint" chance="2" addendum="railgun" />	
 	<loot item="blueprint" chance="2" addendum="ghetto armour" />
 	<loot item="blueprint" chance="2" addendum="spike gun" />
 	<loot item="blueprint" chance="2" addendum="hydraulic spike" />	

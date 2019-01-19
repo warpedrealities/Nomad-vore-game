@@ -78,10 +78,10 @@
 			</placeWidget>
 
 			<placeWidget x="5" y="5" name="slot">
-				<contains name="modules/generator">
+			<!-- 	<contains name="modules/generator">
 					<resource type="ENERGY" value="50" />
 				</contains>
-				<widgetItem>generator</widgetItem>
+				<widgetItem>generator</widgetItem> -->
 			</placeWidget>
 			<!-- <placeWidget x="5" y="4" name="DAMAGE" value="25" exterior="true" /> -->
 			<placeWidget x="2" y="3" name="slot">

@@ -40,39 +40,48 @@
 				<contains name="modules/interplanetary reactor">
 					<resource type="FUEL" value="150" />
 				</contains>
+					<widgetItem>interplanetary reactor</widgetItem>			
 			</placeWidget>
 			<placeWidget x="2" y="1" name="slot">
 				<contains name="modules/simple reactor">
 					<resource type="ENERGY" value="50" />
 				</contains>
+				<widgetItem>simple reactor</widgetItem>			
 			</placeWidget>
 			<placeWidget x="11" y="1" name="slot">
 				<contains name="modules/space warper" />
+					<widgetItem>space warper</widgetItem>	
 			</placeWidget>
 			<placeWidget x="12" y="1" name="slot">
 				<contains name="modules/plasma tank">
 					<resource type="PLASMA" value="40" />		
 				</contains>
+				<widgetItem>plasma tank</widgetItem>	
 			</placeWidget>			
 			
 			<placeWidget x="4" y="7" name="slot">
 				<contains name="modules/bunk bed" />
+				<widgetItem>bunk bed</widgetItem>					
 			</placeWidget>
 
 			<placeWidget x="5" y="8" name="slot">
 				<contains name="modules/navconsole" />
+				<widgetItem>nav console</widgetItem>			
 			</placeWidget>
 			<placeWidget x="7" y="8" name="hardpoint">
 				<facing value="0" />
 				<contains name="shipweapons/plasma pummel gun">
 					<resource type="PLASMA" value="20" />
 				</contains>
+				<widgetItem>plasma pummel gun</widgetItem>	
 			</placeWidget>
 			<placeWidget x="5" y="4" name="slot">
 				<contains name="modules/advanced_cargocontainer" />
+					<widgetItem>advanced cargo container</widgetItem>	
 			</placeWidget>
 			<placeWidget x="7" y="4" name="slot">
-					<contains name="modules/advanced_cargocontainer" />		
+					<contains name="modules/advanced_cargocontainer" />
+					<widgetItem>advanced cargo container</widgetItem>						
 			</placeWidget>
 			
 			<placeNPC name="space/talharan/talharan_grey" x="11" y="3" />

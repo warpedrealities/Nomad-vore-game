@@ -32,6 +32,7 @@ public class Window extends GUIBase {
 		m_contents.remove(element);
 	}
 
+	@Override
 	public void update(float DT) {
 		if (m_active == true) {
 			if (m_contents.size() > 0) {
@@ -53,6 +54,7 @@ public class Window extends GUIBase {
 
 	// pass clicks down, use hierarchies to make sure they get where they need
 	// to go
+	@Override
 	public boolean ClickEvent(Vec2f pos) {
 		if (m_active == true) {
 			if (pos.x > m_pos.x && pos.x < m_pos.x + m_size.x) {
@@ -70,6 +72,7 @@ public class Window extends GUIBase {
 		return false;
 	}
 
+	@Override
 	public void Draw(FloatBuffer buffer, int matrixloc) {
 		if (m_active == true) {
 			m_patch.Draw(buffer, matrixloc);

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<recipe name="laser cannon" requiredskill="0" startunlocked="true">
+<recipe name="laser cannon" requiredskill="1" startunlocked="true">
 	<description>
-		A ship mounted laser cannon based on earth technology. 4-24 damage,
-		cooldown 10, 4 energy to fire.
+		A ship mounted laser cannon based on earth technology. 7-14 damage,
+		cooldown 3s, 4 energy to fire.
 	</description>
 	<ingredient item="optics" quantity="10" />
 	<ingredient item="flux capacitor" quantity="1" />

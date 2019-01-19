@@ -23,14 +23,17 @@ public class AppearanceScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
-		window.update(DT);
+		if (window != null) {
+			window.update(DT);
+		}
 	}
 
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc) {
+		if (window != null) {
+			window.Draw(buffer, matrixloc);
+		}
 
-		window.Draw(buffer, matrixloc);
 	}
 
 	@Override

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ItemResource name="railgun round" weight="2" value="25">
+	<description>A heavy railgun round for use by spaceship mounted rail weapons.
+	</description>
+
+</ItemResource>

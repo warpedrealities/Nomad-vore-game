@@ -3,7 +3,7 @@
 	<description>A wrapped, bio-engineered hard candy, not a topical ointment.
 		Consume as directed to drop a cup size.</description>
 	<effectmutator>
-		<criteriaValue part="breasts" variable="size" value="1" />
+		<criteriaValue part="breasts" variable="size" value="2" />
 		<mutation part="breasts" variable="size" modifier="-1">
 			You pop the candy in your mouth and suck on it for a while.
 			It takes some time to swallow enough of its juices but after a while,

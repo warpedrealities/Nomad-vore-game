@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="railgun round" requiredskill="2" startunlocked="false">
+	<description>
+		A round for ship mounted railgun weapons.
+	</description>
+	<ingredient item="scrap metal" quantity="8" />	
+	<result item="railgun round" />
+</recipe>

@@ -2,7 +2,7 @@
 <Conversation>
 	<page ID="start">
 		<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
-				value="0" />
+				value="1" />
 		<condition operator="lessthan" evaluate="GLOBALFLAG" flag="AM_ELF_CAMPAIGN"
 				value="5" />				
 		<text>
