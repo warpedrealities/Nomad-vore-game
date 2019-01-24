@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<perk name="debilitating shot">
+	<requirement count="1">
+		<req>SKILLRANGED2</req>
+	</requirement>
+	<description>
+		Hit someone right and their ability to hit you is much reduced. So use a debilitating shot to lower enemy combat potential. (2x AP, -4 to offensive abilities, weapon tag: A)
+	</description>
+	<weaponMove name="dehibilating shot" tag="A" 
+		timeModifier="2" actionCost="2" moveType="FIGHT">
+		<change type="ADD">
+			<effectStatus probability="90">
+				<statusTag tag="weakening" />
+				<probabilityModifier value="ENDURANCE" />
+				<applyText>TARGET is weakened</applyText>
+				<statusAttribMod uid="150" icon="0" duration="20"
+					numModifiers="2">
+					<removeText> TARGET is no longer weakened</removeText>
+					<effect attribute="RANGED" modifier="-4" />
+					<effect attribute="MELEE" modifier="-4" />
+				</statusAttribMod>
+			</effectStatus>	
+		</change>
+	</weaponMove>	
+	<maxrank value="1" />
+
+</perk>

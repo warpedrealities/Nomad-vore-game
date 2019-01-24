@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <perk name="distracting">
 	<requirement count="1">
-		<req>PERKseductress</req>
+		<req>SKILLSEDUCTION2</req>
 	</requirement>
 	<description>
 		Those seduced seldom wish to practice the ways of war. Your seductive

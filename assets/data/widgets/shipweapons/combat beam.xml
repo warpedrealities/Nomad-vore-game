@@ -5,7 +5,7 @@
 	<description>starship combat beam for dev test.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>
 	<shipWeapon>
-		<damage min="4" max="24" falloff="1" />
+		<DamagingEffect min="4" max="24" falloff="1" />
 		<cooldown value="10" />
 		<effects script="laser" sheet="redbeam" />
 		<range arc="2" range="10" />

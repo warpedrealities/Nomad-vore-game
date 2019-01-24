@@ -8,7 +8,7 @@
 		<resourceConversion itemName="mortar round" value="1.0" />
 	</shipResource>
 	<shipWeapon>
-		<damage min="9" max="12" falloff="0" />
+		<DamagingEffect min="9" max="12" falloff="0" />
 		<cooldown value="3" />
 		<effects script="mortar" sheet="mortar" />
 		<range arc="1" range="20" />

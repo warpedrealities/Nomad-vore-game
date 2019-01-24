@@ -46,6 +46,7 @@ public class Player_RPG implements Actor_RPG {
 	int statMax[];
 	int attributes[];
 	float subAbilities[];
+	SkillSelection skillSelection;
 	Inventory playerInventory;
 	ArrayList<PerkInstance> playerPerks;
 	ArrayList<CombatMove> moveList;
@@ -218,7 +219,7 @@ public class Player_RPG implements Actor_RPG {
 		{
 			abilities[i]=5;
 		}
-
+		skillSelection = new SkillSelection();
 		playerPerks=new ArrayList<PerkInstance>();
 		conditionImmunities=new ArrayList<String>();
 
@@ -226,7 +227,7 @@ public class Player_RPG implements Actor_RPG {
 
 		//		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
 
-		playerExperience = 00;
+		playerExperience = 900;
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
 		//		statusEffects=new ArrayList<StatusEffect>();
@@ -481,9 +482,11 @@ public class Player_RPG implements Actor_RPG {
 		attributes[WILLPOWER]=getAbilityMod(INTELLIGENCE);
 		attributes[SCIENCE]=getAbilityMod(INTELLIGENCE);
 		attributes[TECH]=getAbilityMod(INTELLIGENCE);
+		attributes[PERCEPTION] = getAbilityMod(INTELLIGENCE);
 		attributes[LEADERSHIP]=1;
-		attributes[PERCEPTION]=getAbilityMod(INTELLIGENCE);
 
+
+		attributes = skillSelection.applyImprovements(attributes);
 
 		for (int i=0;i<playerPerks.size();i++)
 		{
@@ -709,6 +712,9 @@ public class Player_RPG implements Actor_RPG {
 		dstream.writeInt(playerExperience);
 		//save level
 		dstream.writeInt(playerLevel);
+
+		skillSelection.save(dstream);
+
 		//save abilities
 		for (int i=0;i<abilities.length;i++)
 		{
@@ -781,6 +787,9 @@ public class Player_RPG implements Actor_RPG {
 		playerExperience=dstream.readInt();
 		//load level
 		playerLevel=dstream.readInt();
+		// load skillselection
+		skillSelection = new SkillSelection(dstream);
+
 		//load abilities
 		for (int i=0;i<abilities.length;i++)
 		{
@@ -902,7 +911,10 @@ public class Player_RPG implements Actor_RPG {
 
 		playerExperience-=getNextLevel();
 		playerLevel++;
-		addPerk(perk);
+		if (perk != null) {
+			addPerk(perk);
+		}
+		Calcstats();
 		stats[0]=statMax[0];
 		stats[1]=statMax[1];
 		stats[3]=statMax[3];
@@ -1251,6 +1263,9 @@ public class Player_RPG implements Actor_RPG {
 		return false;
 	}
 
+	public SkillSelection getSkillSelection() {
+		return skillSelection;
+	}
 
 
 }

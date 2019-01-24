@@ -17,27 +17,25 @@ import shipsystem.ShipAbility;
 public class ShipWeapon extends ShipAbility {
 
 	private String description, name, effectScript, effectSheet;
-	private int minDamage, maxDamage, tracking, disruption, penetration, cooldown, volley = 1;
+	private int tracking, cooldown, volley = 1;
+	private List<ShipWeaponEffect> effects;
 	private List<WeaponCost> weaponCosts;
-	private float firingArc, falloff, rangePenalty, maxRange;
+	private float firingArc, rangePenalty, maxRange, falloff;
 
 	public ShipWeapon(Element enode, String m_name) {
 		abilityType = AbilityType.SA_WEAPON;
 		weaponCosts = new ArrayList<WeaponCost>();
 		NodeList children = enode.getChildNodes();
+		effects = new ArrayList<>();
 		name = m_name;
 		for (int i = 0; i < children.getLength(); i++) {
 			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
 				Element e = (Element) children.item(i);
-				if (e.getTagName().equals("damage")) {
-					minDamage = Integer.parseInt(e.getAttribute("min"));
-					maxDamage = Integer.parseInt(e.getAttribute("max"));
-					if (e.getAttribute("falloff").length() > 0) {
-						falloff = Float.parseFloat(e.getAttribute("falloff"));
-					}
-					if (e.getAttribute("volley").length() > 0) {
-						volley = Integer.parseInt(e.getAttribute("volley"));
-					}
+				if (e.getTagName().contains("effect")) {
+					effects.add(WeaponEffectLoader.readEffect(e));
+				}
+				if (e.getAttribute("volley").length() > 0) {
+					volley = Integer.parseInt(e.getAttribute("volley"));
 				}
 				if (e.getTagName().equals("cooldown")) {
 					cooldown = Integer.parseInt(e.getAttribute("value"));
@@ -53,12 +51,7 @@ public class ShipWeapon extends ShipAbility {
 					if (e.getAttribute("tracking").length() > 0) {
 						tracking = Integer.parseInt(e.getAttribute("tracking"));
 					}
-					if (e.getAttribute("penetration").length() > 0) {
-						penetration = Integer.parseInt(e.getAttribute("penetration"));
-					}
-					if (e.getAttribute("disruption").length() > 0) {
-						disruption = Integer.parseInt(e.getAttribute("disruption"));
-					}
+
 				}
 				if (e.getTagName().equals("range")) {
 					firingArc = Float.parseFloat(e.getAttribute("arc"));
@@ -81,11 +74,8 @@ public class ShipWeapon extends ShipAbility {
 		effectScript = ParserHelper.LoadString(dstream);
 		effectSheet = ParserHelper.LoadString(dstream);
 
-		minDamage = dstream.readInt();
-		maxDamage = dstream.readInt();
 		tracking = dstream.readInt();
-		disruption = dstream.readInt();
-		penetration = dstream.readInt();
+
 		cooldown = dstream.readInt();
 		volley = dstream.readInt();
 
@@ -95,10 +85,15 @@ public class ShipWeapon extends ShipAbility {
 			weaponCosts.add(new WeaponCost(dstream));
 		}
 
-		firingArc = dstream.readFloat();
-		falloff = dstream.readFloat();
+
 		rangePenalty = dstream.readFloat();
 		maxRange = dstream.readFloat();
+
+		c = dstream.readInt();
+		effects = new ArrayList<>(c);
+		for (int i = 0; i < c; i++) {
+			effects.add(WeaponEffectLoader.loadEffect(dstream));
+		}
 	}
 
 	@Override
@@ -109,11 +104,8 @@ public class ShipWeapon extends ShipAbility {
 		ParserHelper.SaveString(dstream, effectScript);
 		ParserHelper.SaveString(dstream, effectSheet);
 
-		dstream.writeInt(minDamage);
-		dstream.writeInt(maxDamage);
 		dstream.writeInt(tracking);
-		dstream.writeInt(disruption);
-		dstream.writeInt(penetration);
+
 		dstream.writeInt(cooldown);
 		dstream.writeInt(volley);
 
@@ -123,9 +115,14 @@ public class ShipWeapon extends ShipAbility {
 		}
 
 		dstream.writeFloat(firingArc);
-		dstream.writeFloat(falloff);
 		dstream.writeFloat(rangePenalty);
 		dstream.writeFloat(maxRange);
+
+		dstream.writeInt(effects.size());
+		for (int i = 0; i < effects.size(); i++) {
+			dstream.writeInt(effects.get(i).getType());
+			effects.get(i).save(dstream);
+		}
 	}
 
 	public String getDescription() {
@@ -144,24 +141,8 @@ public class ShipWeapon extends ShipAbility {
 		return effectSheet;
 	}
 
-	public int getMinDamage() {
-		return minDamage;
-	}
-
-	public int getMaxDamage() {
-		return maxDamage;
-	}
-
 	public int getTracking() {
 		return tracking;
-	}
-
-	public int getDisruption() {
-		return disruption;
-	}
-
-	public int getPenetration() {
-		return penetration;
 	}
 
 	public int getCooldown() {
@@ -176,10 +157,6 @@ public class ShipWeapon extends ShipAbility {
 		return firingArc;
 	}
 
-	public float getFalloff() {
-		return falloff;
-	}
-
 	public float getRangePenalty() {
 		return rangePenalty;
 	}
@@ -190,6 +167,10 @@ public class ShipWeapon extends ShipAbility {
 
 	public int getVolley() {
 		return volley;
+	}
+
+	public List<ShipWeaponEffect> getEffects() {
+		return effects;
 	}
 
 }

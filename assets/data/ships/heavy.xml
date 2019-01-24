@@ -37,7 +37,7 @@
 			<placeWidget x="1" y="1" name="slot" />
 			<placeWidget x="1" y="2" name="slot" />
 			<placeWidget x="9" y="4" name="slot" />
-			<placeWidget x="7" y="4" name="slot" />
+			<placeWidget x="7" y="4" name="support" />
 			<placeWidget x="6" y="4" name="hardpoint" />
 			<placeWidget x="5" y="4" name="slot" />
 			<placeWidget x="3" y="4" name="slot" />

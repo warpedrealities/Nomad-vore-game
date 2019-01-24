@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<perk name="survivor">
-	<description> And in the shadow of danger, in the valley of strife you
-		will SURVIVE! +5 health, +5 resolve </description>
-	<modifier affects="HEALTH" value="5" type="STAT" />
-	<modifier affects="RESOLVE" value="5" type="STAT" />
-	<maxrank value="3" />
-
-</perk>

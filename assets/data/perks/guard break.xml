@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<perk name="guard break">
+
+	<description>
+		A kick that reduces your enemies defences by mightily shattering their equilibrium. Reduces dodge and parry by 4 on the target. cost 6 AP.
+	</description>
+	<move count="1">
+		<combatmove name="break guard" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" cooldown="50" icon="16" pattern="MELEE"
+			actionCost="6" moveType="FIGHT">
+			<missText count="1">
+				<text>you fail to land a guard break on TARGET .</text>
+			</missText>
+			<hitText count="1">
+				<text>you deliver a guard breaking kick to TARGET and inflicts VALUE damage</text>
+			</hitText>
+			<effectDamage type="KINETIC" minValue="4" maxValue="6"
+				modifier="STRENGTH" />
+			<effectStatus probability="100">
+				<applyText>TARGET defences have been weakened</applyText>
+				<statusAttribMod uid="150" icon="0" duration="20"
+					numModifiers="2">
+					<removeText> TARGET defences have recovered</removeText>
+					<effect attribute="DODGE" modifier="-4" />
+					<effect attribute="PARRY" modifier="-4" />
+				</statusAttribMod>
+			</effectStatus>	
+		</combatmove>		
+	</move>
+	<maxrank value="1" />
+
+</perk>

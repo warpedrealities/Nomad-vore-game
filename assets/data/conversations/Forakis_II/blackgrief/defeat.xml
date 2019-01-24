@@ -38,7 +38,7 @@
 		<choice destination="holdinthere" text="ignore the pain, swallow harder" />
 	</page>
 	<check ID="holdinthere">
-		<test what="STRENGTH" DC="15" />
+		<test what="STRUGGLE" DC="16" />
 		<outcome destination="meal2" />
 		<outcome destination="justafleshwound" />
 	</check>

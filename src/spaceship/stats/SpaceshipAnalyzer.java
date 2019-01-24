@@ -17,6 +17,7 @@ import shipsystem.ShipShield;
 import shipsystem.ShipSimCrew;
 import shipsystem.WidgetDamage;
 import shipsystem.WidgetSystem;
+import shipsystem.WidgetSystem.SystemType;
 import shipsystem.conversionSystem.ShipConverter;
 import shipsystem.weapon.ShipWeapon;
 import spaceship.Spaceship;
@@ -47,12 +48,12 @@ public class SpaceshipAnalyzer {
 		stats.addResource("HULL", ship.getBaseStats().getMaxHullPoints(), ship.getBaseStats().getMaxHullPoints(),false);
 
 		int emitterIndex = 0;
-		
+
 		int driveCount=0;
 		int ftl=0;
-		
-		for (int i = 0; i < ship.getZone(0).getWidth(); i++) {
-			for (int j = 0; j < ship.getZone(0).getHeight(); j++) {
+		for (int j = ship.getZone(0).getHeight() - 1; j >= 0; j--) {
+			for (int i = 0; i < ship.getZone(0).getWidth(); i++) {
+
 				// check tile
 				Tile t = ship.getZone(0).getTile(i, j);
 				if (t != null && t.getWidgetObject() != null) {
@@ -106,7 +107,7 @@ public class SpaceshipAnalyzer {
 										int f=drive.getFTL()-driveCount;
 										if (f<0)
 										{
-											f=0;			
+											f=0;
 										}
 										ftl+=f;
 										driveCount++;
@@ -114,7 +115,7 @@ public class SpaceshipAnalyzer {
 									case SA_CREW:
 										ShipSimCrew sim=(ShipSimCrew)system.getShipAbilities().get(k);
 										stats.getCrewStats().addCrewSkill(sim.getCrew());
-										
+
 										break;
 									default:
 										break;
@@ -122,7 +123,7 @@ public class SpaceshipAnalyzer {
 
 								}
 							}
-							if (ws.isHardpoint()) {
+							if (ws.getType() == SystemType.HARDPOINT) {
 								emitterIndex++;
 							}
 						}
@@ -139,7 +140,7 @@ public class SpaceshipAnalyzer {
 		for (int i = 0; i < ship.getZone(0).getActors().size(); i++) {
 			Actor actor = ship.getZone(0).getActors().get(i);
 			if (ship.getZone(0).contains((int)actor.getPosition().x, (int)actor.getPosition().y) &&
-				NPC.class.isInstance(actor) && actor.getRPGHandler().getActive()) {
+					NPC.class.isInstance(actor) && actor.getRPGHandler().getActive()) {
 				stats.addCrew((NPC) actor);
 			}
 		}
@@ -149,10 +150,10 @@ public class SpaceshipAnalyzer {
 		stats.setWeapons(weapons);
 		if (ftl>0)
 		{
-			stats.setFTL(ftl);		
+			stats.setFTL(ftl);
 		}
 
-		
+
 		return stats;
 	}
 
@@ -244,16 +245,16 @@ public class SpaceshipAnalyzer {
 						}
 						else
 						{
-							systemDamage += d.getDamageValue();	
+							systemDamage += d.getDamageValue();
 						}
-					//	accounteddamage += ((WidgetDamage) t.getWidgetObject()).getDamageValue();
+						//	accounteddamage += ((WidgetDamage) t.getWidgetObject()).getDamageValue();
 					}
 				}
 
 			}
 		}
 		new SpaceshipDamageAnalyzer(damage,ship,hullDamage,systemDamage,statDamage,(int)stats.getResource("HULL").getResourceCap()).run();
-	
+
 		// convey changes one to the other
 		for (int i = 0; i < resources.size(); i++) {
 			if (!resources.get(i).getResourceName().equals("HULL")) {

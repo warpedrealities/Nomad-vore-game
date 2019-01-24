@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<perk name="marksman">
-	<description> Hitting the range is finally paying off. You think you
-		can hit the broadside of a barn now. +2 ranged. </description>
-	<modifier affects="RANGED" value="2" type="ATTRIBUTE" />
-	<maxrank value="3" />
-
-</perk>

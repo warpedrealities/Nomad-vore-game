@@ -48,7 +48,7 @@
 			</placeWidget>
 			<placeWidget x="4" y="10" name="slot">
 				<contains name="modules/navconsole" />
-				<widgetItem>nav computer</widgetItem>
+				<widgetItem>nav console</widgetItem>
 			</placeWidget>
 			<placeWidget x="5" y="10" name="slot">
 				<contains name="modules/specimenContainment" />

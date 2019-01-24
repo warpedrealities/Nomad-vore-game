@@ -49,7 +49,8 @@
 					<effect attribute="MELEE" modifier="-4" />
 				</statusAttribMod>
 			</effectStatus>	
-		</combatMove>				
+		</combatMove>		
+		<itemDrop chance="10" defeatOnly="true" item="loot box" />			
 	</rpg>
 
 	<respawn delay="4000" />

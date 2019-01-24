@@ -1,6 +1,7 @@
 package spacetest;
 
 import shared.Vec2f;
+import solarview.spaceEncounter.EncounterEntities.CombatShield;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 import solarview.spaceEncounter.interfaces.CombatAction;
 import solarview.spaceEncounter.interfaces.EncounterShip;
@@ -37,6 +38,12 @@ public class EncounterShipTest implements EncounterShip {
 	@Override
 	public Vec2f getLeading(float v) {
 		return position;
+	}
+
+	@Override
+	public CombatShield getShield() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

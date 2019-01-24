@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <perk name="assess">
-
+	<requirement count="1">
+		<req>SKILLPERCEPTION1</req>
+	</requirement>
 	<description> Use your perceptive skills to assess a targets defences. This will determine which damage types the enemy is most resistant to.
 	</description>
 	<move count="1">

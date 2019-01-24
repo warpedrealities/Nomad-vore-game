@@ -7,10 +7,9 @@
 		<resourceConversion itemName="railgun round" value="1.0" />
 	</shipResource>
 	<shipWeapon>
-		<damage min="20" max="20" falloff="0" />
+		<DamagingEffect min="20" max="20" falloff="0" disruption="4"/>
 		<cooldown value="3" />
 		<effects script="railgun" sheet="railgun" />
-		<special disruption="4" />	
 		<range arc="1" range="20" />
 		<weaponCost resource="railgun round" cost="1" />
 		<weaponCost resource="ENERGY" cost="6" />		

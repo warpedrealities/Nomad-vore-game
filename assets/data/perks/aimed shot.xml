@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <perk name="aimed shot">
 	<requirement count="1">
-		<req>DEPRECATED</req>
+		<req>SKILLRANGED1</req>
 	</requirement>
 	<description>
-		Through focus and steady hands you can increase your accuracy, +6 to hit, but
-		double ap cost. weapon tag: (A)
+		Steady your aim, hit the target, it seems rudimentary and yet it works. aimed shot which adds +6 to hit but removes criticals. requires A tagged weapons and doubles AP cost.
 	</description>
-	<weaponMove name="aimed shot" bonusToHit="4" tag="A"
+
+	<weaponMove name="aimed shot" bonusToHit="6" tag="A" noCriticals="true"
 		actionCost="2" moveType="FIGHT">
-	</weaponMove>
+	</weaponMove>	
 	<maxrank value="1" />
 
 </perk>

@@ -19,5 +19,5 @@
 			<text>you shoot TARGET for VALUE kinetic damage</text>
 		</hitText>
 	</combatMove>
-	<energy refill="metal spike" efficiency="1" capacity="6" />
+	<energy refill="metal spike" efficiency="1" capacity="8" />
 </ItemWeapon>

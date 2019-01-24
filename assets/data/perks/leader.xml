@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<perk name="leader">
-	<description> You have the kind of charisma that'll let others follow
-		where you lead. +1 to leadership. </description>
-	<modifier affects="LEADERSHIP" value="1" type="ATTRIBUTE" />
-
-	<maxrank value="1" />
-
-</perk>

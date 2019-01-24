@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<perk name="stunning blow">
+	<requirement count="1">
+		<req>SKILLMELEE1</req>
+	</requirement>
+	<description>
+		A stunning blow, if you hit someone right you can stun them, suppressing their ability to act temporarily (*2 ap cost, cooldown, weapon tag: P)
+	</description>
+
+	<weaponMove name="stunning blow" bonusToHit="0" tag="P" cooldown="40"
+		actionCost="2" moveType="FIGHT" icon="15">
+			<change type="ADD">
+			<effectStatus probability="50" rangedDecay="1">
+				<probabilityModifier value="ENDURANCE" />
+				<statusTag tag="life" />
+				<applyText>TARGET is stunned.</applyText>
+				<statusStun uid="9" duration="40">
+				TARGET recovers from stunning
+				</statusStun>
+			</effectStatus>
+		</change>
+	</weaponMove>	
+	<maxrank value="1" />
+
+</perk>

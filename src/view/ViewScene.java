@@ -1061,8 +1061,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		}
 
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F4)) {
-			m_screen = new AppearanceScreen();
-			m_screen.start(m_hook);
+			setScreen(new AppearanceScreen());
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F5)) {
 			Game.sceneManager.SwapScene(new CharacterScene());

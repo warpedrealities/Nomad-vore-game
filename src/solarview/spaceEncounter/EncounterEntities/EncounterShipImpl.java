@@ -19,7 +19,6 @@ import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 import solarview.spaceEncounter.interfaces.CombatAction;
 import solarview.spaceEncounter.interfaces.EncounterShip;
 import spaceship.Spaceship;
-import vmo.GameManager;
 
 public class EncounterShipImpl implements EncounterShip {
 
@@ -88,6 +87,7 @@ public class EncounterShipImpl implements EncounterShip {
 		return manouver.getHeading();
 	}
 
+	@Override
 	public CombatShield getShield() {
 		return shield;
 	}
@@ -134,6 +134,7 @@ public class EncounterShipImpl implements EncounterShip {
 		return emitters;
 	}
 
+	@Override
 	public Vec2f getEmitter(int i)
 	{
 		return emitters.getOffsetWeaponEmitters().get(i);
@@ -143,6 +144,7 @@ public class EncounterShipImpl implements EncounterShip {
 		return actionHandler.getList();
 	}
 
+	@Override
 	public Vec2f getLeading(float v) {
 		return manouver.lead(v);
 	}
@@ -150,32 +152,8 @@ public class EncounterShipImpl implements EncounterShip {
 	@Override
 	public void attack(float distance, CombatAction action, EffectHandler_Interface effectHandler) {
 		ShipWeapon weapon=action.getWeapon().getWeapon().getWeapon();
-		int damage=weapon.getMinDamage();
-		if (weapon.getMaxDamage()>weapon.getMinDamage())
-		{
-			damage+=GameManager.m_random.nextInt(weapon.getMaxDamage()-weapon.getMinDamage());
-		}
-		if (weapon.getFalloff()>0)
-		{
-			damage-=weapon.getFalloff()*distance;
-		}
-		//apply shield and get amount of shield resistance
-		if (shield!=null && shield.isActive())
-		{
-			damage=shield.applyDefence(damage, weapon.getDisruption(),effectHandler,this);
-		}
-
-		//apply armour
-		damage-=ship.getShipStats().getArmour();
-		if (damage<0)
-		{
-			damage=0;
-		}
-		effectHandler.drawText(manouver.getPosition().replicate(),Integer.toString(damage), 0);
-		if (damage>0)
-		{
-			monitor.reportDamage(damage);
-			ship.getShipStats().getResource("HULL").subtractResourceAmount(damage);
+		for (int i = 0; i < weapon.getEffects().size(); i++) {
+			weapon.getEffects().get(i).apply(distance, this, effectHandler);
 		}
 	}
 

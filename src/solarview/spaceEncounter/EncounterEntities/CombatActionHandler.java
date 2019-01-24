@@ -13,20 +13,20 @@ public class CombatActionHandler {
 	private List<CombatActionImpl> actions;
 	private EncounterShipImpl ship;
 	private float clock;
-	
+
 	public CombatActionHandler(EncounterShipImpl ship)
 	{
 		clock=0;
 		this.ship=ship;
 		actions=new ArrayList<CombatActionImpl>();
-		
+
 	}
-	
+
 	public List<CombatActionImpl> getList()
 	{
 		return actions;
 	}
-	
+
 	private boolean checkResources(CombatActionImpl action)
 	{
 		for (int i=0;i<action.getWeapon().getWeapon().getWeapon().getWeaponCosts().size();i++)
@@ -41,10 +41,10 @@ public class CombatActionHandler {
 			{
 				return false;
 			}
-		}		
+		}
 		return true;
 	}
-	
+
 	private void subtractResources(CombatActionImpl action)
 	{
 		for (int i=0;i<action.getWeapon().getWeapon().getWeapon().getWeaponCosts().size();i++)
@@ -54,7 +54,7 @@ public class CombatActionHandler {
 			r.setResourceAmount(r.getResourceAmount()-wp.getCost());
 		}
 	}
-	
+
 	private void startEffect(CombatActionImpl action, EffectHandler effectHandler)
 	{
 		//check resources
@@ -62,15 +62,15 @@ public class CombatActionHandler {
 		{
 			return;
 		}
-		
+
 		//subtract resources
 		subtractResources(action);
-		
+
 		//roll dice for attack
 		int roll=GameManager.m_random.nextInt(20)+ship.getShip().getShipStats().getCrewStats().getGunnery()+
 				action.getWeapon().getWeapon().getWeapon().getTracking();
 		int rPenalty=0;
-		if (action.getWeapon().getWeapon().getWeapon().getFalloff()>0)
+		if (action.getWeapon().getWeapon().getWeapon().getRangePenalty() > 0)
 		{
 			rPenalty=(int) (action.getWeapon().getWeapon().getWeapon().getRangePenalty()*action.getTarget().getPosition().getDistance(ship.getPosition()));
 		}
@@ -83,11 +83,11 @@ public class CombatActionHandler {
 
 		}
 		//create effect and pass hit or miss
-		ship.getMonitor().reportAttack(miss);	
+		ship.getMonitor().reportAttack(miss);
 		effectHandler.addScript(ship,action,miss);
 		action.getWeapon().useWeapon();
 	}
-	
+
 	public void update(float dt, EffectHandler effectHandler)
 	{
 		if (actions.size()>0)

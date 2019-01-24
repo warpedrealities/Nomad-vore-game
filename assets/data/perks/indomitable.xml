@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<perk name="indomitable">
-	<description> Your mind is not easily swayed, in the face of
-		blandishment, intoxication and subjugation you are less likely to
-		faulter. +2 to willpower </description>
-	<modifier affects="WILLPOWER" value="2" type="ATTRIBUTE" />
-	<maxrank value="3" />
-
-</perk>

@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<perk name="escape artist">
-	<description> You've put some thought into how to escape tight spaces
-		given the predilections of aliens you've encountered. +2 to struggle </description>
-	<modifier affects="STRUGGLE" value="2" type="ATTRIBUTE" />
-	<maxrank value="3" />
-
-</perk>

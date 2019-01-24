@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<perk name="power blow">
+	<requirement count="1">
+		<req>SKILLMELEE1</req>
+	</requirement>
+	<description>
+		A mighty blow to inflict more damage, yelling while striking your foes is optional (*2 ap cost, +50% damage, weapon tag: P)
+	</description>
+	<weaponMove name="powerblow" bonusToHit="0" tag="P"
+		actionCost="2" moveType="FIGHT">
+		<change type="MOD" proportionate="true">
+			<effectDamage type="KINETIC" minValue="50" maxValue="50"
+				modifier="STRENGTH" />
+		</change>
+	</weaponMove>
+	
+	<maxrank value="1" />
+
+</perk>

@@ -49,6 +49,7 @@
 		<floodfill tile="1" />		
 		<walloff wall="6" sides="northwestsouth" />	
 		<POINPC name="Forakis_I/LionGirl_Kesh" />		
+		<POIWidget name="craftingtable" />
 	</mapgen>
 
 </zone>

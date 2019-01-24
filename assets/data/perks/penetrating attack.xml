@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <perk name="penetrating attack">
 	<requirement count="1">
-		<req>DEPRECATED</req>
+		<req>SKILLMELEE1</req>
 	</requirement>
 	<description>
-		By aiming for weak points you can partially bypass enemy defences. Halves enemy soak against your attacks, double AP cost.
+	 A penetrating attack involves precision and careful aim to hit the areas where your opponent is weakest and thus bypass their armour. This halves their damage soak against your attack but double AP cost.
 	</description>
 	<weaponMove name="penetrating attack" bonusToHit="0" tag="S"
 		actionCost="2" moveType="FIGHT">
@@ -13,6 +13,4 @@
 				modifier="STRENGTH" />
 		</change>
 	</weaponMove>
-	<maxrank value="1" />
-
 </perk>

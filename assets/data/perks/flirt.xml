@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <perk name="flirt">
+	<requirement count="1">
+		<req>SKILLSEDUCTION1</req>
+	</requirement>
 	<description>
 		Your vivacious personality can weaken the resolve of individuals at a
 		distance, your seduce move is now ranged.

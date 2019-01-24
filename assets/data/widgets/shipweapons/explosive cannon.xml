@@ -8,7 +8,7 @@
 			value="1.0" />
 	</shipResource>
 	<shipWeapon>
-		<damage min="4" max="12" falloff="0" />
+		<DamagingEffect min="4" max="12" falloff="0" />
 		<cooldown value="1" />
 		<effects script="cannon" sheet="cannon" />
 		<range arc="2" range="20" />

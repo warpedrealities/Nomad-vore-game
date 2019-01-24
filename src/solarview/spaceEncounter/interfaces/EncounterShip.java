@@ -1,6 +1,7 @@
 package solarview.spaceEncounter.interfaces;
 
 import shared.Vec2f;
+import solarview.spaceEncounter.EncounterEntities.CombatShield;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
 
 public interface EncounterShip {
@@ -12,5 +13,7 @@ public interface EncounterShip {
 	Vec2f getEmitter(int weaponIndex);
 
 	Vec2f getLeading(float v);
+
+	CombatShield getShield();
 
 }

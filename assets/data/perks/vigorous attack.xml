@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
 <perk name="vigorous attack">
 	<requirement count="1">
-		<req>DEPRECATED</req>
+		<req>SKILLMELEE1</req>
 	</requirement>
 	<description>
-		Sometimes the best way to attack is as frenzied as possible to overwhelm an
-		enemies defences, requires a melee weapon. +6 to hit, no criticals, but double ap
-		cost.
+		Sheer aggression and a flurry of blows can overwhelm even the most vigilant guard, though the focus on speed comes at the cost of not inflicting the deepest of harms. (M tag, +6 to attack, doubled AP cost, cannot score criticals)
 	</description>
+
 	<weaponMove name="vigorous attack" bonusToHit="6" tag="M" noCriticals="true"
 		actionCost="2" moveType="FIGHT">
-	</weaponMove>
+	</weaponMove>	
 	<maxrank value="1" />
 
 </perk>

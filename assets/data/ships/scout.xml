@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Ship width="7" height="7" sprite="scout">
+
+	<shipstats>
+		<movecost value="20" />
+		<hullpoints value="50" />
+		<thrustcost value="1.5" />
+		<manouver value="0" />
+	</shipstats>
+
+	<emitters>
+		<weapon x="0.0" y="0.3" />
+		<weapon x="0.0" y="-0.3" />
+		<engine x="-0.1" y="-0.4" />
+		<engine x="-0.2" y="-0.4" />
+		<engine x="0.1" y="-0.4" />
+		<engine x="0.2" y="-0.4" />		
+	</emitters>
+
+	<layout width="16" height="16" spriteset="ship.png">
+		<tileset>
+			<tile sprite="1" vision="BLOCKING" movement="2">a metal wall</tile>
+			<tile sprite="2" vision="EMPTY" movement="0">a metal floor</tile>
+		</tileset>
+		<description>The scout ship interior isn't new, but it is at least servicable and well maintained. This ship may serve you well.</description>
+		<mapgen>
+			<prefab positionX="0" positionY="0" width="9">
+				<row>011121110</row>
+				<row>112222211</row>
+				<row>122222221</row>
+				<row>122111221</row>
+				<row>112212211</row>
+				<row>012121210</row>
+				<row>012222210</row>
+				<row>011222110</row>
+				<row>001222100</row>
+				<row>001222100</row>
+				<row>001121100</row>
+				<row>000111000</row>
+			</prefab>
+			<pairedportal x="4" y="0" sprite="1" ID="-101" facing="0">
+				Exterior hatch </pairedportal>
+			<placeWidget x="1" y="2" name="slot">
+
+			</placeWidget>
+			<placeWidget x="7" y="2" name="slot">
+			<contains name="modules/interplanetary reactor">
+					<resource type="FUEL" value="200" />
+				</contains>
+				<widgetItem>interplanetary reactor</widgetItem>	
+			<placeWidget>
+			<placeWidget x="1" y="3" name="slot"/>
+			<placeWidget x="7" y="3" name="slot"/>	
+			<placeWidget x="3" y="4" name="slot"/>
+			<placeWidget x="5" y="4" name="slot"/>	
+			<placeWidget x="4" y="5" name="support">
+				
+			</placeWidget>
+			<placeWidget x="4" y="2" name="hardpoint">
+				<facing value="4" />
+				
+			</placeWidget>
+			<placeWidget x="4" y="7" name="hardpoint">
+				<facing value="0" />
+				
+			</placeWidget>	
+			<placeWidget x="4" y="10" name="slot">
+				<contains name="modules/navconsole" />
+				<widgetItem>nav console</widgetItem>
+			</placeWidget>
+			<placeWidget x="3" y="9" name="slot"/>
+			<placeWidget x="5" y="9" name="slot"/>			
+		</mapgen>
+	</layout>
+	<exterior width="7">
+		<row>0000000</row>
+		<row>0110110</row>
+		<row>0111110</row>
+		<row>0111110</row>
+		<row>0011100</row>
+		<row>0011100</row>
+		<row>0011100</row>
+		<pairedportal x="3" y="1" sprite="10" ID="-101"
+			destination="scout" facing="4"> a ship hatch </pairedportal>
+	</exterior>
+</Ship>

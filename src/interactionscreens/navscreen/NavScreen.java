@@ -230,9 +230,7 @@ public class NavScreen extends Screen implements Callback {
 		SpaceshipWeapon weapon = shipStats.getWeapons().get(weaponIndex);
 		weaponTexts[0].setString(weapon.getWeapon().getName());
 
-		String str = "mindmg:" + weapon.getWeapon().getMinDamage() + " maxdmg:" + weapon.getWeapon().getMaxDamage()
-				+ " pen:" + weapon.getWeapon().getPenetration() + " dis:" + weapon.getWeapon().getDisruption()
-				+ " trac:" + weapon.getWeapon().getTracking();
+		String str = "";
 		weaponTexts[1].setString(str);
 
 		str = "facing:" + facingToStr(weapon.getFacing()) + " rof:" + weapon.getWeapon().getVolley() + " arc:"

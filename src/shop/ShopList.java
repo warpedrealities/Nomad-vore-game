@@ -15,6 +15,7 @@ import shared.ParserHelper;
 import shop.merchant.ShopMerchant;
 import shop.mutator.ShopMutator;
 import shop.services.ShopServices;
+import shop.shipyard.ShopShipyard;
 import shop.slaveTrader.ShopSlaveTrader;
 
 public class ShopList {
@@ -64,6 +65,9 @@ public class ShopList {
 		if ("mutator".equals(check)) {
 			return new ShopMutator(shopname);
 		}
+		if ("shipyard".equals(check)) {
+			return new ShopShipyard(shopname);
+		}
 		return null;
 	}
 
@@ -99,6 +103,9 @@ public class ShopList {
 			break;
 		case 3:
 			data = new ShopMutator(str, dstream);
+			break;
+		case 4:
+			data = new ShopShipyard(str, dstream);
 			break;
 		}
 		return data;

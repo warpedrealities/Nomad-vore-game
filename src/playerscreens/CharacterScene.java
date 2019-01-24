@@ -17,6 +17,7 @@ import gui.Window;
 import gui.lists.List;
 import input.MouseHook;
 import nomad.universe.Universe;
+import playerscreens.levelup.LevelUpScreen;
 import shared.Callback;
 import shared.MyListener;
 import shared.SceneBase;
@@ -68,13 +69,13 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		// 2nd is font
 		m_textureIds[0] = Tools.loadPNGTexture("assets/art/ninepatchblack.png", GL13.GL_TEXTURE0);
 		m_textureIds[1] = Tools.loadPNGTexture("assets/art/listWindow.png", GL13.GL_TEXTURE0);
-		 m_textureIds[2]=Tools.loadPNGTexture("assets/art/ninepatchgreen.png",
-		 GL13.GL_TEXTURE0);
+		m_textureIds[2]=Tools.loadPNGTexture("assets/art/ninepatchgreen.png",
+				GL13.GL_TEXTURE0);
 		// m_textureIds[3]=Tools.loadPNGTexture("assets/art/"+m_world.currentZone.getTileset(),
 		// GL13.GL_TEXTURE0);
 		m_textureIds[4] = Tools.loadPNGTexture("assets/art/window.png", GL13.GL_TEXTURE0);
-		 m_textureIds[5]=Tools.loadPNGTexture("assets/art/listWindow.png",
-		 GL13.GL_TEXTURE0);
+		m_textureIds[5]=Tools.loadPNGTexture("assets/art/listWindow.png",
+				GL13.GL_TEXTURE0);
 		// m_textureIds[6]=Tools.loadPNGTexture("assets/art/bars.png",
 		// GL13.GL_TEXTURE0);
 		m_textureIds[7] = Tools.loadPNGTexture("assets/art/button0.png", GL13.GL_TEXTURE0);
@@ -86,9 +87,9 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		window.update(DT);
 		for (int i=0;i<subWindows.length;i++)
 		{
-			subWindows[i].update(DT);	
+			subWindows[i].update(DT);
 		}
-	
+
 		if (m_screen == null) {
 			perkList.update(DT);
 		} else {
@@ -99,28 +100,29 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
+		if (m_screen == null) {
+			switch (ID) {
+			case 0:
+				subWindows[1].setActive(true);
+				subWindows[2].setActive(false);
+				break;
 
-		switch (ID) {
-		case 0:
-			subWindows[1].setActive(true);
-			subWindows[2].setActive(false);
-			break;
+			case 1:
+				subWindows[2].setActive(true);
+				subWindows[1].setActive(false);
+				break;
 
-		case 1:
-			subWindows[2].setActive(true);
-			subWindows[1].setActive(false);
-			break;
+			case 2:
+				Game.sceneManager.SwapScene(new ViewScene());
+				break;
 
-		case 2:
-			Game.sceneManager.SwapScene(new ViewScene());
-			break;
-
-		case 3:
-			// start level up process
-			if (m_screen==null && playerRPG.getPlayerExperience() >= playerRPG.getNextLevel()) {
-				levelUp();
+			case 3:
+				// start level up process
+				if (m_screen == null && playerRPG.getPlayerExperience() >= playerRPG.getNextLevel()) {
+					levelUp();
+				}
+				break;
 			}
-			break;
 		}
 	}
 
@@ -206,7 +208,7 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		// MyListener listener,String string, int ID, float s);
 		buttons[3] = new Button(new Vec2f(24, 28), new Vec2f(8, 2), button, this, "levelup", 3, 0.8F);
 		if ((playerRPG.getPlayerExperience() < playerRPG.getNextLevel()) ||
-			tooDangerous()){
+				tooDangerous()){
 			buttons[3].setActive(false);
 		}
 
@@ -244,7 +246,7 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		}
 
 		experienceNotes.setString("level " + playerRPG.getPlayerLevel() + " exp " + playerRPG.getPlayerExperience()
-				+ "/" + playerRPG.getNextLevel());
+		+ "/" + playerRPG.getNextLevel());
 	}
 
 	private void genAttributePage(int frame, int font, int tint) {
@@ -279,7 +281,7 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		Text[] text = new Text[11];
 		// generate texts
 		for (int i = 0; i < 11; i++) {
-			text[i] = new Text(new Vec2f(0.5F, 10.5F - (0.9F * (float) i)), "", 0.8F, tint);
+			text[i] = new Text(new Vec2f(0.5F, 10.5F - (0.9F * i)), "", 0.8F, tint);
 
 			subWindows[1].add(text[i]);
 		}
@@ -311,7 +313,7 @@ public class CharacterScene extends SceneBase implements Callback, MyListener {
 		Text[] text = new Text[9];
 		// generate texts
 		for (int i = 0; i < 9; i++) {
-			text[i] = new Text(new Vec2f(0.5F, 10.5F - (0.9F * (float) i)), "", 0.8F, tint);
+			text[i] = new Text(new Vec2f(0.5F, 10.5F - (0.9F * i)), "", 0.8F, tint);
 
 			subWindows[2].add(text[i]);
 		}

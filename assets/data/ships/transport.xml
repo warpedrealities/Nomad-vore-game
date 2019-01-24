@@ -66,7 +66,7 @@
 			<placeWidget x="1" y="11" name="slot" />
 			<placeWidget x="5" y="11" name="slot"/>
 			<placeWidget x="1" y="12" name="slot" />
-			<placeWidget x="5" y="12" name="slot"/>		
+			<placeWidget x="5" y="12" name="support"/>		
 			
 			<placeWidget x="3" y="11" name="slot">
 				<contains name="modules/navconsole" />

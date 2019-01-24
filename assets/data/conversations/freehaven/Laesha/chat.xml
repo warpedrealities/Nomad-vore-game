@@ -7,6 +7,7 @@
 	</text>
 	<choice destination="shop" text="$I have need of your services"/>
 	<choice destination="shopModules" text="$I would like to buy some ship equipment"/>	
+	<choice destination="shopShip" text="$I'm interested in buying a ship"/>	
 	<choice destination="questions" text="$Can I ask you some questions?"/>	
 	<choice destination="end" text="$nothing, i think i must of gotten lost, i'll be going now"/>
 	</page>
@@ -21,10 +22,11 @@
 	
 	<page ID="services">
 	<text>
-	"You came here on a ship right? I run the most trustworthy servicing operation here. Need refuelling, need someone to fix up some holes? Me and mine got you covered. And besides that I can offer you a few ship components."
+	"You came here on a ship right? I run the most trustworthy ship and ship services operation here. Need refuelling, need someone to fix up some holes? Me and mine got you covered. Have some credits to burn on buying a new ship? I can provide. And besides that I can offer you a few ship components."
 	</text>
 	<choice destination="shop" text="$excellent, show me what you're offering"/>
-	<choice destination="shopModules" text="$excellent, show me the ship components"/>	
+	<choice destination="shopModules" text="$excellent, show me the ship components"/>
+	<choice destination="shopShip" text="$I'm interested in buying a ship"/>
 	<choice destination="questions" text="$Can I ask you some questions?"/>
 	<choice destination="end" text="$good to know, i'll look you up if i need your services"/>
 	</page>
@@ -59,6 +61,13 @@
 	</text>
 	<choice destination="end" text="$that's horrifying, I think i've learned all I want to for the moment"/>
 	</page>
+	
+	<page ID="shopShip">
+	<text>
+	</text>
+		<special effect="shop" ID="freehaven_shipyard" />	
+	</page>
+	
 	
 	<page ID="shop">
 	<text>

@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <perk name="cleave">
 	<requirement count="1">
-		<req>DEPRECATED</req>
+		<req>SKILLMELEE1</req>
 	</requirement>
 	<description>
-		you're able to unleash a broad attack able to hit multiple foes at once so
-		long as they're close together (x2 AP, arc, weapon tag: S)
+	 Cleave is the art of hitting multiple enemies with a single blow. (x2 AP, arc, weapon tag: S)
 	</description>
 	<weaponMove name="cleave" bonusToHit="0" tag="S" pattern="SWEEP"
 		actionCost="2" moveType="FIGHT">

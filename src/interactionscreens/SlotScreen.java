@@ -16,6 +16,7 @@ import shared.Callback;
 import shared.Screen;
 import shared.Vec2f;
 import shipsystem.WidgetSystem;
+import shipsystem.WidgetSystem.SystemType;
 import widgets.Widget;
 import widgets.WidgetBreakable;
 import widgets.WidgetLoader;
@@ -92,7 +93,7 @@ public class SlotScreen extends Screen implements Callback {
 					is.setCount(is.getCount()-1);
 					if (is.getCount()<=0)
 					{
-						player.getInventory().RemoveItem(player.getInventory().getItem(v));	
+						player.getInventory().RemoveItem(player.getInventory().getItem(v));
 					}
 				}
 				else
@@ -115,16 +116,19 @@ public class SlotScreen extends Screen implements Callback {
 			}
 			else
 			{
-				iw=(ItemWidget) item;				
+				iw=(ItemWidget) item;
 			}
 		}
 		if (iw!=null) {
 			String name = iw.getWidgetName();
 			Widget widget = WidgetLoader.genWidget(name);
-			if (!slot.isHardpoint() && WidgetSystem.class.isInstance(widget))
+			if (WidgetSystem.class.isInstance(widget))
 			{
 				WidgetSystem ws=(WidgetSystem)widget;
-				if (ws.isHardPoint())
+				if (ws.getType() == SystemType.HARDPOINT && slot.getType() != SystemType.HARDPOINT) {
+					return false;
+				}
+				if (ws.getType() == SystemType.SUPPORT && slot.getType() != SystemType.SUPPORT)
 				{
 					return false;
 				}
@@ -215,11 +219,19 @@ public class SlotScreen extends Screen implements Callback {
 		weightValue = new Text(new Vec2f(14, 0.2F), "encumbrance", 0.7F, textures[4]);
 		window.add(weightValue);
 
-		if (slot.isHardpoint()) {
+		switch (slot.getType()) {
+		case HARDPOINT:
 			resource = new Text(new Vec2f(1.0F, 5.5F), "hardpoint facing " + facingToStr(slot.getFacing()), 1.0F,
 					textures[4]);
-		} else {
+			break;
+		case SUPPORT:
+			resource = new Text(new Vec2f(1.0F, 5.5F), "support slot ready, please install a support module", 0.8F,
+					textures[4]);
+			break;
+
+		case NORMAL:
 			resource = new Text(new Vec2f(1.0F, 5.5F), "system slot ready, please put in a module", 0.8F, textures[4]);
+			break;
 		}
 
 		window.add(resource);

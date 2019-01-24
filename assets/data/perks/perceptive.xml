@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<perk name="perceptive">
-	<description> There are two kinds of people in this galaxy. The alert
-		and the digested. Be the former and lauded not the latter and
-		lamented. +2 to perception </description>
-	<modifier affects="PERCEPTION" value="2" type="ATTRIBUTE" />
-	<maxrank value="3" />
-
-</perk>

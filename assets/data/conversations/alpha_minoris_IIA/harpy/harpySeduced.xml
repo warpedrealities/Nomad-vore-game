@@ -14,6 +14,7 @@
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
+		<choice destination="kiss" text="kiss her, you fool" />
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -22,12 +23,13 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-				<choice destination="capture" text="Use you capture device.">
+		<choice destination="capture" text="Use you capture device.">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="capture device" />
 		</choice>
 		<choice destination="end" text="do nothing" />
 	</page>
+	
 	<page ID="start">
 		<condition operator="greaterthan" evaluate="LOCALFLAG" flag="disposition"
 			value="2" />
@@ -42,6 +44,7 @@
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
+		<choice destination="kiss" text="kiss her, you fool" />
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -50,12 +53,13 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-						<choice destination="capture" text="Use you capture device.">
+		<choice destination="capture" text="Use you capture device.">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="capture device" />
 		</choice>
 		<choice destination="end" text="do nothing" />
 	</page>
+	
 	<page ID="start">
 		<text>The harpy gasps, eyes full of desire as she rubs one feathered
 			wing against the sopping cleft between her thighs. Aroused and
@@ -70,6 +74,7 @@
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
 		<choice destination="giveoral" text="give the girl attention" />
+		<choice destination="kiss" text="kiss her, you fool" />
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -78,7 +83,7 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-						<choice destination="capture" text="Use you capture device.">
+		<choice destination="capture" text="Use you capture device.">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="capture device" />
 		</choice>
@@ -609,5 +614,202 @@
 			now nothing more than a gush of her pleasure fluids as a result of
 			your mistake in trusting her womb to be safe.</text>
 	</gameover>
+	
+	<page ID="kiss">
+		<!-- kiss section written by MI. First time I've ever written anything in XML, so, how did I do? ;P -->
+		<!-- please note that the kiss section as it stands was written under the assumption that the player does not have a cock, because frankly I don't want to write that. Someone else can add that on if they want I guess... not that there's REALLY a point when there's already a standing cv scene in this file. -MI -->
+		<text>
+			As you lean in to kiss her, the harpy seems almost surprised, but she welcomes you all the same. Even as you pin her down and begin molesting her mouth with your tongue, she begins to run her needy pussy back and forth across your leg, humping you with wetter and wetter squelching noises.
+		</text>
+		<choice destination="kiss_oralvore0" text="This flavor you taste... you must have more." >
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="kiss_breastvore0" text="Your hungry tits begin to tingle as your thoughts start going a particular way." >
+			<assertion evaluate="hasperk" perk="breastvore" />
+		</choice>
+		<!-- <choice destination="kiss_tribbing0" text="You press your own pussy into hers, letting out a lewd giggle." >
+			<assertion evaluate="haspart" part="vagina" />
+		</choice>
+		
+		this would have been a proper lesbian sex scene that would either lead to two separate and novel unbirth scenes (player/harpy and harpy/player) with potential femcum digestion or a somewhat roundabout path into the womb healing scene. Another intended dialogue branch consists of an extended version of the sex scene where the player and harpy tire themselves out and fall asleep in each other's arms, only to be discovered and possibly gushed by a second harpy. I might come back and flesh that out later, but for now my inspiration for this little project is gone and I want to get it out there. It'll be finished later. By someone. Probably. :/ -MI
+		
+		-->
+		<choice destination="end" text="You kiss her for a while, before pulling away." />
+	</page>
+
+	<page ID="kiss_oralvore0">
+		<text>
+			You pull back from the kiss only for a moment, before wrapping your lips around the harpy's entire head. She stiffens, and a few jerking motions seem to indicate that she'll be fighting you all the way down, but two quick fingers in her pussy quiet her just as quickly. It seems you'll have to finger her halfway in.
+		</text>
+		<choice destination="kiss_oralvore1" text="Oh, no. What a hardship you must face..." />
+	</page>
+	
+	<page ID="kiss_oralvore1">
+		<text>
+			The flavor of the harpy captivates your tongue. You do your best to taste every part of her even as you shove her further into you by your lewd handhold. Her shoulders stretch your mouth, and you note the flavor of cotton candy as her feathers reach your tastebuds. As her breasts pass your lips, you almost want to stop and giggle at the strange sight your stretched-out throat must be, but the vast need in the depths of your stomach drives you onward.
+		</text>
+		<choice destination="kiss_oralvore2" text="Only harpy flesh can fulfill this need of yours." />
+	</page>
+	
+	<page ID="kiss_oralvore2">
+		<text>
+			Your throat, and then your belly, bulge outward as you hit the halfway mark. The taste of her snatch inside your mouth is truly delightful, especially when your questing tongue finds its way inside for a single exquisite moment. Her rear end disappears down your throat quickly, followed by her squirming legs. Your belly reaches a prodigious size indeed as the harpy finally curls up inside, her silence giving you the odd mental image of someone pouting on general principle.
+		</text>
+		<choice destination="kiss_oralout" text="You'll let her out eventually, of course." />
+		<choice destination="kiss_oraldigest" text="You go ahead and let your stomach get to work on your latest meal." />
+	</page>
+	
+	<page ID="kiss_oralout">
+		<text>
+			You enjoy the feeling of fullness only for a moment before you finally decide that it's time to let her out. That part of the experience isn't particularly fun, but it's beyond you to remove a taste like hers from the world just yet. It's done in under a minute, which you feel is kind of impressive, but the harpy doesn't seem to agree. She lays on the ground for a while, seemingly stunned that she survived that, before slowly beginning to groom her wet wings, giving you an occasional wary glance.
+		</text>
+		<special effect="nonhostile" />
+		<special effect="healnpc" />
+		<choice destination="end" text="You guess she isn't your stomach's biggest fan." />
+		<!-- notice that unlike most other vore paths in this file, doing oral doesn't actually give you any rep gain with the harpy. It kinda freaks her out, which I figured might be interesting. -MI -->
+	</page>
+
+	<page ID="kiss_oraldigest">
+		<text>
+			You aren't quite sure what your plan was a few minutes ago, but you know now that you can't let this one go. The emptiness in your stomach must be sated, and as you let it get to work, the harpy seems to get the general idea quickly enough. The churning dome of your belly writhes as the pleasure of melting away consumes her, but her body isn't up to it for long. Eventually, she smashes her softened form apart, breaking up into mere nutrients, feeding the unscrupulous predator who so recently seduced her into something like compliance. Even as your belly begins to flatten, her last real impact on the world is made evident - you burp once, and in the back of your throat, you detect a hint of chicken.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="You suppose you shouldn't be surprised." />
+		<!-- obvious joke is obvious, I suppose. :V -MI -->
+	</page>
+	
+	<page ID="kiss_breastvore0">
+		<text>
+			Your kiss is interrupted as you pull the harpy down, guiding her to the swell of your 
+			<macro ID="breast_size_desc" />
+			breasts. She quickly goes to work on them, licking and sucking and sensually nipping, but you have something more in mind. You press your arms together, squeezing your naked breasts between them, and using your hand on the back of her head, steadily push the somewhat willing harpy into your cleavage. 
+		</text>
+		<choice destination="kiss_breastvore1" text="You really should do this more often." />
+	</page>
+	
+	<page ID="kiss_breastvore1">
+		<text>
+			As your hand slowly, but surely, shoves the harpy in, she lets out a squawk of surprise. Evidently, the harpy race isn't too well acquainted with cleavages like yours. Her head enters a tunnel of squeezing sensual warmth, corresponding to no strictly real opening on your own body. As twin spikes of pleasure shoot into your mind, you are distracted from any complicated thoughts about the physical impossibility of your actions.
+		</text>
+		<choice destination="kiss_breastvore2" text="Leave thoughts like that for the philosophy majors. You can eat them while they're distracted." />
+	</page>
+	
+	<page ID="kiss_breastvore2">
+		<text>
+			The harpy doesn't quite seem to understand what's going on, and lies there near-frozen in confusion. You shrug, jiggling your tits and slightly disturbing the harpy. Far be it from you to not use this to your advantage. You grab her by the crotch, her juices dripping and slipping down your arm, and begin to shove her further inside. Her wings meet her sides as her shoulders are forced in, and you know that you have her.
+		</text>
+		<choice destination="kiss_breastvore3" text="She's going all the way in." />
+	</page>
+	
+	<page ID="kiss_breastvore3">
+		<text>
+			The harpy's own tits slide through yours. As your hungry
+			<macro ID="breast_size_desc" />
+			s continue to consume her, they begin to expand and stretch slightly, making you blush bright red
+			<conditional>
+				<assertion evaluate="haspart" part="vagina" />
+				and sending the pleasure from your naughty thoughts dripping out of your burning snatch
+			</conditional>
+			. Her waist vanishes into you next, and then her needy pussy. The scent of her arousal wafts into your nose as a spurt of translucent white fluid lances out of your cleavage.
+		</text>
+		<choice destination="kiss_breastvore4" text="Did she just cum? *giggle*" />
+	</page>
+	
+	<page ID="kiss_breastvore4">
+		<text>
+			Well, it seems the harpy is enjoying herself, anyway. A smile spreads itself across your face as you grab her by the heels, forcing her ever further into you. The tips of her feathery wings vanish into your ever-swelling breasts, as her knees and strange birdlike lower legs slide past your face. As the tips of her feet finally slide inside, you begin to fall to the ground from the weight. The question now is, what will you do with this harpy?
+		</text>
+		<choice destination="kiss_breastout0" text="You fall backward, tits flopping on top of you, and think about eventually letting her out." />
+		<choice destination="kiss_breastvore5" text="You fall forward, the sudden pressure doing all sorts of interesting things to her already softening form." />
+	</page>
+	
+	<page ID="kiss_breastout0">
+		<text>
+			Your butt meets the soft grass of the forest floor. For now, your breasts are massive, swollen enough to convincingly say that a living harpy lies inside of them. There's the key, of course: living. You've had your fun, and it's time to let this one out whole, perhaps to play with her more, or perhaps so she can fly back to her sisters and tell the tale of the two true tits.
+		</text>
+		<choice destination="kiss_breastout1" text="That joke sounded better in your head. Wait... you didn't say it out loud. Huh." />
+	</page>
+	
+	<page ID="kiss_breastout1">
+		<text>
+			It's only a few minutes before you can feel the harpy getting restless, the meat of your tits moving and jostling in many pleasurable ways. Even so, you have to concentrate now, before you melt her despite your best intentions. By the sheer force of your focus, the harpy begins to move within you, and she squawks again. You don't know if it's in surprise or pleasure. Slowly, your left breast begins to swell even further, and your right begins to shrink.
+		</text>
+		<choice destination="kiss_breastout2" text="Continue" />
+	</page>
+	
+	<page ID="kiss_breastout2">
+		<text>
+			The first part of the harpy to emerge from your left nipple is the crown of her head. Your nipple slowly, but surely, stretches over her, and suddenly her head is free, accompanied by a small trickle of white liquid. She gasps in the air of the alien moon she calls home, and suddenly, white light flashes over your vision like lightning. When you come back to your senses a few seconds later, you're spread eagle on the ground, panting hard and staring up at the upper body of the harpy, everything from her tits up - including her full wingspan - jutting oddly out of your left breast.
+		</text>
+		<choice destination="kiss_breastout3" text="Whoa..." />
+	</page>
+	
+	<page ID="kiss_breastout3">
+		<text>
+			You lie there, wave after wave of pleasure overcoming you, almost entirely uninvolved in the process of getting the harpy out of your tit as quickly as possible. She buffets and struggles against the surface of your breast, rapidly sliding her midsection out. With a pop, her butt breaks through, and you climax again. By now, your right breast has shrunk to its normal size, all the better for the harpy to begin pulling her legs and feet out.
+		</text>
+		<choice destination="kiss_breastout4" text="Oh God Oh God Oh God" />
+	</page>
+	
+	<page ID="kiss_breastout4">
+		<text>
+			The last electric jolts of pleasure leave your left breast slowly, as your still-stretched nipple and ducts gradually tighten up, reminding you less and less of a used plastic bag and more and more of a fine feminine tit. The harpy lies on the ground not too far away, licking the drops of milk off herself and grooming her slightly whitened wings. Her fascinated gaze never quite leaves your magnanimous cleavage.
+		</text>
+		<effect type="incrementlocalflag" flag="disposition" value="2" />
+		<choice destination="end" text="You're almost sure she lost a couple feathers." />
+		<special effect="healnpc" />
+		<special effect="nonhostile" />
+		<!-- well, someone has a new fan, huh? Perhaps she'd try this on her own with her sisters later on if there were any chance that she would ACTUALLY get out of this situation alive, haha -MI  -->
+	</page>
+	
+	<page ID="kiss_breastvore5">
+		<text>
+			You fall forward without a second thought, and the harpy lets out one last clarion cry as the weight and impact squish her. Twin jets of milk squirt from your nipples, but you pinch them shut as you shakily stand, your rounded, heavy tits weighing you down. The pressure of the milk against your fingers steadily builds, and small drips spill through despite your efforts.
+		</text>
+		<choice destination="kiss_breastvore6" text="Pull your tits up to your mouth." />
+		<choice destination="kiss_milkspray" text="Let this silly harpy splatter all over the ground." />
+		<!-- for those with short attention spans, this is a choice between being fed and going up a cup size. -MI -->
+	</page>
+	
+	<page ID="kiss_breastvore6">
+		<text>
+			These two milkbags conveniently attached to your chest violently propel their delicious contents past your tastebuds and down your throat with little prompting. The sweetness consumes your world, and when you leave that strange white space, your breasts have shrunk back down to 
+			<macro ID="breast_size_desc" />
+			, while your stomach has swelled with delicious, nutritious harpy milk. The extra step of preparation certainly worked out in your favor. You lick your lips, the last drops of your latest lover rolling down your chin. 
+			LBREAK
+			She was delicious.
+		</text>
+		<effect type="feed" value="95" />
+		<special effect="removenpc" />
+		<choice destination="end" text="That went well. For you, anyway." />
+	</page>
+	
+	<page ID="kiss_milkspray">
+		<text>
+			Twin jets of delicious white fluid shoot out of your chest, only to splatter on the ground and be wasted. As you knead your needy breasts, and a new wave of pleasure washes over you, the thought that this was all the harpy came to is almost enough to get you going by itself. If this is wrong, you don't know if you want to be right. Eventually, the flow of milk from your tits slows even as they shrink back to almost their normal size, and you're left with a mere puddle before you, already almost soaked into the dirt. You blink suddenly as you notice a peculiar object on the ground - picking it up, you see that this soggy scrap is in fact a single harpy feather, having somehow survived its trip through your milk ducts. Even as you hold it, it starts to finally fall apart, reduced to stray fibers and wet dust in your fingers.
+			LBREAK
+			You know, if you're not mistaken, she gave you another cup size. That was awfully nice of her.
+		</text>
+		<special effect="removenpc" />
+		<special effect="mutation">
+			<mutation part="breasts" modifier="1" variable="size"> </mutation>
+		</special>
+		<choice destination="end" text="You wonder if there are any more harpies around. They're entirely too fun to melt for you to let them live." />
+	</page>
+	
+	<!-- the continuation of the kiss tree should eventually go here. "Should" being the operative word... -MI -->
 
 </Conversation>
+
+
+
+
+
+
+
+
+
+
+
+

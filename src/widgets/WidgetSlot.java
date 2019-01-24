@@ -17,6 +17,8 @@ import item.instances.ItemDepletableInstance;
 import nomad.universe.Universe;
 import shared.ParserHelper;
 import shared.Vec2f;
+import shipsystem.WidgetSystem;
+import shipsystem.WidgetSystem.SystemType;
 import view.ViewScene;
 
 public class WidgetSlot extends Widget {
@@ -25,15 +27,19 @@ public class WidgetSlot extends Widget {
 	private String widgetItem;
 
 	private int facing;
-	private boolean hardpoint;
+	private WidgetSystem.SystemType systemType;
 
 	public WidgetSlot(Element root) {
 
 		isWalkable = true;
 		isVisionBlocking = false;
-		if (root.getAttribute("hardpoint").equals("true")) {
-			hardpoint = true;
-
+		systemType = SystemType.NORMAL;
+		String typeStr = root.getAttribute("type");
+		if (typeStr.equals("HARDPOINT")) {
+			systemType = systemType.HARDPOINT;
+		}
+		if (typeStr.equals("SUPPORT")) {
+			systemType = systemType.SUPPORT;
 		}
 		if (root.getAttribute("facing").length() > 0) {
 			facing = Integer.parseInt(root.getAttribute("facing"));
@@ -43,21 +49,30 @@ public class WidgetSlot extends Widget {
 	}
 
 	private void setDescSprite() {
-
-		if (hardpoint == true) {
-			widgetSpriteNumber = 6;
-			widgetDescription = "a hardpoint for weapon systems or other devices that require access to the outside of the ship";
-		} else {
+		switch (systemType) {
+		case NORMAL:
 			widgetSpriteNumber = 5;
-			widgetDescription = "a system slot";
+			widgetDescription = "a modular slot";
+			break;
+
+		case HARDPOINT:
+			widgetSpriteNumber = 6;
+			widgetDescription = "a hardpoint for weapons and external systems";
+			break;
+
+		case SUPPORT:
+			widgetSpriteNumber = 14;
+			widgetDescription = "a support slot";
+			break;
 		}
+
 	}
 
 	@Override
 	public void save(DataOutputStream dstream) throws IOException {
 		dstream.write(12);
 		commonSave(dstream);
-		dstream.writeBoolean(hardpoint);
+		dstream.writeInt(systemType.ordinal());
 		dstream.writeInt(facing);
 		// save widget
 		if (widget != null) {
@@ -81,7 +96,7 @@ public class WidgetSlot extends Widget {
 	public WidgetSlot(DataInputStream dstream) throws IOException {
 		commonLoad(dstream);
 
-		hardpoint = dstream.readBoolean();
+		systemType = SystemType.values()[dstream.readInt()];
 
 		facing = dstream.readInt();
 
@@ -94,13 +109,7 @@ public class WidgetSlot extends Widget {
 		{
 			widgetItem=ParserHelper.LoadString(dstream);
 		}
-		if (hardpoint == true) {
-			widgetSpriteNumber = 6;
-			widgetDescription = "a hardpoint, anything here can extend outside the ship";
-		} else {
-			widgetSpriteNumber = 5;
-			widgetDescription = "a system slot";
-		}
+		setDescSprite();
 	}
 
 	public WidgetBreakable getWidget() {
@@ -197,8 +206,8 @@ public class WidgetSlot extends Widget {
 		this.facing = facing;
 	}
 
-	public boolean isHardpoint() {
-		return hardpoint;
+	public SystemType getType() {
+		return systemType;
 	}
 
 	public boolean checkDismantle(CombatMove combatMove) {

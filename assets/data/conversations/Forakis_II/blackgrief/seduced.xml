@@ -34,7 +34,7 @@
 	</page>
 
 	<check ID="holdinthere">
-		<test what="STRENGTH" DC="17" />
+		<test what="STRUGGLE" DC="17" />
 		<outcome destination="meal2" />
 		<outcome destination="justafleshwound" />
 	</check>
@@ -108,7 +108,7 @@
 	<page ID="UBtail1">
 		<text>
 			Yes, yes it is. That is apparently the alien bug monster equivalent of a
-			vagina as you son realize when you go to poke it and the whole creature 
+			vagina as you soon realize when you go to poke it and the whole creature 
 			shudders as your hand slips inside. It's moist and warm from your wrist
 			up. You aren't sure you wanted to know this...
 		</text>

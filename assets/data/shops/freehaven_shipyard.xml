@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<shipyard useCredits="true">
+	<ship cost="10000" file="scout">
+	<description>
+	The scout ship design was originally a rugged but swift frontier vessel used by pioneers and explorers. With the fall of galactic civilization any distinction between the frontier and known space has become meaningless. The design has since been modified for greater armament and put to use amidst the lawless stars.
+	</description>
+	<image art="scout" width="7" height="7"/>
+	</ship>
+</shipyard>

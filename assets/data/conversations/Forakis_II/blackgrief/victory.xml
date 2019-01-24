@@ -52,12 +52,10 @@
 	<page ID="oralvoreEscape">
 		<text>
 			Your second wind comes not a moment too soon, and to great effect.
-			You take your
-			<readequipment slot="0" />
-			and slam it into one of the creatures eyes with all the force
-			you can muster. Clearly it was enough, as the creature recoils
-			swiping at the air. That hasn't gotten rid of it, and it might
-			just be madder now. You should probably leave.
+			You take your weapon and slam it into one of the creatures eyes 
+			with all the force you can muster. Clearly it was enough, as the 
+			creature recoils swiping at the air. That hasn't gotten rid of it, 
+			and it might just be madder now. You should probably run, fast.
 		</text>
 		<effect type="heal" value="0.1" />
 		<effect type="stunnpc" value="10" />
@@ -67,12 +65,10 @@
 	<page ID="gotchabitch">
 		<text>
 			Your second wind comes not a moment too soon, and to great effect.
-			You take your
-			<readequipment slot="0" />
-			and slam it into one of the creatures eyes with all the force
-			you can muster. Clearly it was enough, as the eye gives way and
-			the creature is left bleeding from it. It recoils, swiping at the
-			air before running off at great speeds.
+			You take your weapon and slam it into one of the creatures eyes 
+			with all the force you can muster. Clearly it was enough, as the 
+			eye gives way and the creature is left bleeding from it. It recoils, 
+			swiping at the air before running off at great speed.
 		</text>
 		<effect type="heal" value="0.1" />
 		<special effect="removenpc" />
@@ -83,32 +79,29 @@
 		<preference fetish="hardvore" />
 		<text>
 			Your second wind comes not a moment too soon, your head already in
-			the bug beasts mouth. You take your
-			<readequipment slot="0" />
-			and slam it into one of the creatures eyes with all the force
-			you can muster. This turns out to be a bad idea as its jaws slam
-			shut upon your head, crushing through your skull and tearing up
-			your brain. The grief somehow looks almost disappointed that you 
-			died so soon, but continues eating anyway. No longer bothering to
-			keep your body intact it starts eating you in chunks instead, not
-			even taking the time to lift its legs off of your own and instead
-			simply ripping them from their place on your body. In the end all
-			that's left of you is the red pool on the ground where you where
-			devoured, and a pair of legs that were quickly scavenged by formic.
+			the bug beasts mouth. You take your weapon and slam it into one of 
+			the creatures eyes with all the force you can muster. This turns 
+			out to be a bad idea as its jaws slam shut upon your head, crushing 
+			through your skull and tearing up your brain. The grief somehow 
+			looks almost disappointed that you died so soon, but continues 
+			eating anyway. No longer bothering to keep your body intact it 
+			starts eating you in chunks instead, not even taking the time to 
+			lift its legs off of your own and instead simply ripping them from 
+			their place on your body. In the end all that's left of you is the 
+			red pool on the ground where you where devoured, and a pair of legs 
+			that were quickly scavenged by formic.
 		</text>
 	</gameover>
 
 	<page ID="fumble">	
 		<text>
 			Your second wind comes not a moment too soon, your head already in
-			the bug beasts mouth. You take your
-			<readequipment slot="0" />
-			and slam it into one of the creatures eyes with all the force
-			you can muster. Your efforts are futile, as the creature simply
-			clenches its jaws tighter around your head. Now you can't even squirm
-			or its fangs will pierce into your throat. You simply have to wait
-			as the insect drags your body further and further into its waiting
-			gullet. 
+			the bug beasts mouth. You take your weapon and slam it into one of 
+			the creatures eyes with all the force you can muster. Your efforts 
+			are futile, as the creature simply clenches its jaws tighter around 
+			your head. Now you can't even squirm or its fangs will pierce into 
+			your throat. You simply have to wait as the insect drags your body 
+			further and further into its waiting gullet. 
 		</text>
 		<choice destination="oralvore1" text="no hope..." />
 	</page>
@@ -127,6 +120,5 @@
 			metabolism. Its stomach would be flat again within minutes.
 		</text>
 	</gameover>
-
 
 </Conversation>

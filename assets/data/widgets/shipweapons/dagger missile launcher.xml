@@ -9,7 +9,7 @@
 		<resourceExtraction item="dagger missile" ratio="1" destroy="0.5" dismantle="0.75" />
 	</shipResource>
 	<shipWeapon>
-		<damage min="8" max="12" falloff="0" />
+		<DamagingEffect min="8" max="12" falloff="0" />
 		<special tracking="4" />
 		<cooldown value="3" />
 		<effects script="seeker" sheet="missile" />

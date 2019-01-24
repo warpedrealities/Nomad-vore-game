@@ -21,14 +21,22 @@ import widgets.WidgetItemPile;
 
 public class WidgetSystem extends WidgetBreakable {
 
+	public enum SystemType {
+		NORMAL, HARDPOINT, SUPPORT
+	};
+
 	private ArrayList<ShipAbility> systemAbilities;
-	private boolean hardpoint;
-	
+	private SystemType systemType;
+
 	public WidgetSystem(Element node) {
 		super(node);
-		if ("true".equals(node.getAttribute("hardpoint")))
-		{
-			hardpoint=true;
+		systemType = SystemType.NORMAL;
+		String typeStr = node.getAttribute("type");
+		if (typeStr.equals("HARDPOINT")) {
+			systemType = systemType.HARDPOINT;
+		}
+		if (typeStr.equals("SUPPORT")) {
+			systemType = systemType.SUPPORT;
 		}
 		systemAbilities = new ArrayList<ShipAbility>();
 		NodeList children = node.getChildNodes();
@@ -82,7 +90,7 @@ public class WidgetSystem extends WidgetBreakable {
 		dstream.write(8);
 		commonSave(dstream);
 		super.saveBreakable(dstream);
-		dstream.writeBoolean(hardpoint);
+		dstream.writeInt(systemType.ordinal());
 		dstream.writeInt(systemAbilities.size());
 		for (int i = 0; i < systemAbilities.size(); i++) {
 			int v = systemAbilities.get(i).getAbilityType().ordinal();
@@ -96,7 +104,7 @@ public class WidgetSystem extends WidgetBreakable {
 
 		commonLoad(dstream);
 		load(dstream);
-		hardpoint=dstream.readBoolean();
+		systemType = SystemType.values()[dstream.readInt()];
 		systemAbilities = new ArrayList<ShipAbility>();
 		int count = dstream.readInt();
 		for (int i = 0; i < count; i++) {
@@ -122,10 +130,10 @@ public class WidgetSystem extends WidgetBreakable {
 				systemAbilities.add(new ShipShield(dstream, m_name));
 				break;
 			case SA_FTL:
-				systemAbilities.add(new ShipFTL(dstream, m_name));		
+				systemAbilities.add(new ShipFTL(dstream, m_name));
 				break;
 			case SA_CREW:
-				systemAbilities.add(new ShipSimCrew(dstream, m_name));			
+				systemAbilities.add(new ShipSimCrew(dstream, m_name));
 				break;
 			case SA_SPAWNER:
 				systemAbilities.add(new ShipDroneSystem(dstream, m_name));
@@ -157,10 +165,10 @@ public class WidgetSystem extends WidgetBreakable {
 		}
 	}
 
-	public boolean isHardPoint() {
-		return hardpoint;
+	public SystemType getType() {
+		return systemType;
 	}
-	
+
 	@Override
 	protected void destroy()
 	{
@@ -170,7 +178,7 @@ public class WidgetSystem extends WidgetBreakable {
 				if (m_contains.length > 1) {
 					for (int j = 1; j < m_contains.length; j++) {
 						Pile.AddItem(m_contains[j]);
-					}					
+					}
 				}
 				for (int i=0;i<systemAbilities.size();i++)
 				{
@@ -179,24 +187,25 @@ public class WidgetSystem extends WidgetBreakable {
 						ShipResource sr=(ShipResource)systemAbilities.get(i);
 						sr.extractResources(Pile,false);
 					}
-				}	
+				}
 				ViewScene.m_interface.ReplaceWidget(this, Pile);
 			} else {
 				ViewScene.m_interface.RemoveWidget(this);
 			}
-		}	
-		
-		
+		}
+
+
 	}
-	
+
+	@Override
 	public void handleDismantle(WidgetItemPile pile) {
 		for (int i=0;i<systemAbilities.size();i++)
 		{
 			if (ShipResource.class.isInstance(systemAbilities.get(i)))
 			{
 				ShipResource sr=(ShipResource)systemAbilities.get(i);
-				sr.extractResources(pile,true);		
+				sr.extractResources(pile,true);
 			}
 		}
-	}	
+	}
 }
