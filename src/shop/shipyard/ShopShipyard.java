@@ -63,6 +63,18 @@ public class ShopShipyard implements ShopData {
 		return 3;
 	}
 
+	public List<ShipyardItem> getShips() {
+		return ships;
+	}
+
+	public int getNumShips() {
+		return ships.size();
+	}
+
+	public boolean isUseCredits() {
+		return useCredits;
+	}
+
 	@Override
 	public String getName() {
 		return shopName;

@@ -14,9 +14,9 @@
 		<ability ability="INTELLIGENCE" value="5" />
 		<stat stat="HEALTH" value="70" />
 		<stat stat="RESOLVE" value="70" />
-		<attribute attribute="WILLPOWER" value="4" />
-		<attribute attribute="PARRY" value="4" />
-		<attribute attribute="DODGE" value="4" />		
+		<attribute attribute="WILLPOWER" value="6" />
+		<attribute attribute="PARRY" value="6" />
+		<attribute attribute="DODGE" value="6" />		
 		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="6" threatening="true">
 			<missText count="2">

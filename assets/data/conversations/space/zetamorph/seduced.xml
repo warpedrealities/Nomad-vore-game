@@ -18,6 +18,9 @@
 		<choice destination="cockvore0" text="cockvore her">
 			<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>
+		<choice destination="blowjob0" text="get your hands on that dick">
+		<preference fetish="herms" />
+		</choice>
 		<choice destination="CTF0" text="get cocked">
 			<preference fetish="cocktransformation" />
 			<assertion evaluate="haspart" part="vagina" />
@@ -42,6 +45,77 @@
 		<choice destination="end" text="not interested right now" />
 	</page>
 
+	<page ID="blowjob0">
+	<text>
+	You see her stroking that cock and decide you want a piece of the action. With an alluring smile you meet her gaze with your own then cast it down to her tip as you slide down onto your knees before the horny alien. Your hands sliding up to run over the hot and musky flesh of her throbbing shaft as your tongue darts out to taste her precum and drink in the hedonistic scents of her arousal.
+	</text>
+	<choice destination="blowjob1" text="suck her off"/>
+	<choice destination="sackslut0" text="you want to slide down this">
+		<preference fetish="cockvore" />
+	</choice>
+	</page>
+	
+	<page ID="blowjob1">
+	<text>
+	You stroke your hands up and down her shaft and close your eyes, breathing deeply of her scent and then opening wide. The zeta letting out a gasping moan as you encompass her tip, swirling your tongue over her cocktip before moving on to take her cock into your throat now. The alien letting out a far louder moan as you engulf her throbbing meat in the wet embrace past your lips.
+	</text>
+	<choice destination="blowjob2" text="*make her cum*"/>
+	</page>
+	
+	<page ID="blowjob2">
+	<text>
+	You take as much of her girth into your mouth as you can before beginning to bob, your lips lewdly slurping as you work over her slickened cock and hear her moaning lustfully..a clawed hand coming down to rest on the top of your head as you work up and down her cock and fondle her balls. You can feel her pleasure growing greater, those heavy balls getting ready to release her wonderful seed.
+	</text>
+	<choice destination="blowjob3" text="*any moment...*"/>
+	</page>
+	
+	<page ID="blowjob3">
+	<text>
+	You work that cock like it'll ejaculate rent money and the zetamorph moans and croons in delight as you do so. Her moans fading into a hissing cry of pure bliss as her cock erupts. Your mouth and throat filled with a seemingly never ending amount of hot cum, the alien pulling back out of your throat to splatter your face and paint your front with jizz and still her orgasm keeps on coming. The alien leaving you a sticky mess on the floor, when you recover she's nowhere to be seen and you peel yourself up off the floor to continue onwards...well that was a thing.
+	</text>
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+	
+	<page ID="sackslut0">
+	<text>
+	Looking at this throbbing horny, needy cock in front of you..all you can think of is sliding down to immerse yourself into her sticky warmth. The thought makes you shiver in delight and moan, nuzzling at her cocktip wanting in like the sackslut you are. The zeta letting out a moan as she realizes what you want, rocking her hips to thrust her cocktip against your face..teasing and then feeding as her shaft starts to stretch around your head wonderfully. That wonderfully hungry cock of hers starting to bulge with your head as you willingly set about feeding yourself in.
+	</text>
+	<choice destination="sackslut1" text="so good"/>
+	</page>
+	
+	<page ID="sackslut1">
+	<text>
+	You hear her moan, feel her cock ripple and tug around you schlorping you deeper inside that bulging purple shaft and it's all you can do to not lose yourself to the delightful sensations. Her hot pre oozing against your skin as her cocktip engulfs your shoulders with a toe curlingly lewd sound. Her cock gobbling you up inch by inch as she rocks her hips to help and you lean forwards into her hungry shaft, arms tucked against your sides as you dive headfirst into her balls.
+	</text>
+	<choice destination="sackslut2" text="where i belong"/>
+	</page>
+	
+	<page ID="sackslut2">
+	<text>
+	Her hands go down to her hungry cock as her balls bulge and your feet finally leave the floor. You can't help her make cockfood out of you anymore, but that's okay..she's delighted to be lifting your feet skywards as she angles her cock up and begins jacking you down into her sack. Her balls hanging low, bulging, swelling out with your shape as your upper body curls within her sack and your legs steadily disappear. It doesn't take too long, your moaning blissed out sackslutty self soon disappearing entirely past her cocktip. Your body plunging down to curl up entirely inside her balls as she strokes her feet down behind the bulge of your feet to work you down. Her claws lustfully fondling her sack with one pair and continuing to stroke her cock with the upper set as you writhe within her nuts.
+	</text>
+	<choice destination="sackslut3" text="yes..yes..melt me, i'm cumfuel"/>
+	</page>
+	
+	<page ID="sackslut3">
+	<text>
+	The zeta might not of heard or comprehended your words, but she seems to know what you want just the same as she strokes her cock eagerly. The alien fondling her sack as you squirm and moan in her balls, softening and melting away under the churning of her loins working you over and working you down. The zeta's moans and hisses of pleasures audible to you only until the glorping cum in your ears and around you drowns it out, and then soon after you don't have the ability to hear anything as you digest into spunk inside her sack...
+	</text>
+	<choice destination="sackslut4" text="*burble*"/>
+	</page>
+	
+	<gameover ID="sackslut4">
+	<text>
+	The Zeta's balls round out, and their contents yields easily under her fondling lower hands as she rubs over those massively rounded orbs..the high pressure contents craving a release she's only too happy to indulge, working herself to orgasm soon after melting you down. The alien hosing her surroundings down with hot and sticky lovejuice, sending your remnants out in heavy spurts to form a wonderful puddle in front of her. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				your cum soaked
+				<readequipment slot="2" />
+				landing amidst the goopy cumload as a sort of marker for the shameless sackslut who once wore it.
+			</conditional>
+	</text>
+	</gameover>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

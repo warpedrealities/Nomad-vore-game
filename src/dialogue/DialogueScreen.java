@@ -69,7 +69,7 @@ public class DialogueScreen extends Screen implements Callback {
 		m_window = new Window(new Vec2f(2.5F, -1), new Vec2f(17.5F, 17), frame, true);
 		m_choices = new String[16];
 
-		portraitImage = new Image(new Vec2f(-20, -1), new Vec2f(23, 17), "assets/art/portraits/test.png");
+		portraitImage = new Image(new Vec2f(-8.5F, 7.5F), new Vec2f(23, 17), "assets/art/portraits/test.png");
 		portraitImage.setVisible(false);
 
 		m_stagnation = 0.5F;

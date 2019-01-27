@@ -1,5 +1,47 @@
 <?xml version="1.0"?>
 <Conversation>
+
+	<page ID="start">
+		<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="shrink pill" />
+		<preference fetish="herms" />	
+		<preference fetish="cockvore" />				
+		<preference fetish="demis" />	
+		<text>
+		Roberta places a boot on your chest and shoves you back down when you try to stand again "You've been a troublesome squab. Plucky though." she says and slips a hand into her skirt "But you know, fight like this gets me all excited. Really only way to properly finish the fight." she says, stroking her fingers across what she's packing under that skirt..but then pausing and sniffing "mhmm, wait a minute" she says and slips her hand out of her skirt, and checks you over..soon coming up with your shrink pill "Thought i smelled one of these on you. Now where could you of gotten it.." she says and chuckles "open up, time to be a plaything" she says and shoves the pill at your lips, using her other hand to force your mouth open.
+		</text>
+		<choice destination="microvore0" text="*resist*"/>
+	</page>
+	
+	<page ID="microvore0">
+		<effect type="removeitem" item="shrink pill" value="1" />
+	<text>
+	You try to resist, but Roberta is rather persistent "Oh no squab, you don't get to choose see.." she taunts as she finally gets the pill past your lips and chuckles pushing your jaw shut behind the pill. All you can do is avoid swallowing, but Roberta is too canny to let you spit it out and holds your jaws closed with one hand as she leans in and licks at your neck..you swallow convulsively and seconds later find yourself shrinking down. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				you're briefly lost amidst the oversized pile of your
+				<readequipment slot="2" />
+				that you just shrunk out of. 
+				<readequipment slot="2" />
+			</conditional>
+		The dread pirate picking your miniaturized form up off the floor with a grin "Much better...being a plaything suits you squab."
+	</text>
+	<choice destination="microvore1" text="oh dear"/>
+	</page>
+	
+	<page ID="microvore1">
+	<text>
+	Your protests fall on deaf ears as she undoes her skirt and lets it fall to the floor. Roberta's actions exposing her erect shaft before you in a way that can only bode ill. This belief is quickly realized as she lowers her hand down with you within and presses you against the side of her cock "Mhmm ah give it a hug toy, you'll be going down soon" she says and grinds you up and down her shaft moaning as she does so.
+	</text>
+	<choice destination="microvore2" text="*used as a toy*"/>
+	</page>
+	
+	<page ID="microvore2">
+	<text>
+	
+	</text>
+	
+	</page>
+
 	<page ID="start">
 		<preference fetish="herms" />	
 			<preference fetish="cockvore" />				

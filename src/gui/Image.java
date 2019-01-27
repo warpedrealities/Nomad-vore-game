@@ -10,6 +10,7 @@ import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.util.vector.Matrix4f;
+import org.lwjgl.util.vector.Vector3f;
 
 import shared.Tools;
 import shared.Vec2f;
@@ -54,6 +55,13 @@ public class Image extends GUIBase {
 		this.isVisible = isVisible;
 	}
 
+	public void setSize(float x, float y) {
+		m_matrix = Matrix4f.setIdentity(m_matrix);
+		m_matrix.m30 = m_pos.x;
+		m_matrix.m31 = m_pos.y;
+		Matrix4f.scale(new Vector3f(x, y, 1), m_matrix, m_matrix);
+	}
+
 	protected void Generate(Vec2f size) {
 
 		m_VAO = GL30.glGenVertexArrays();
@@ -69,11 +77,13 @@ public class Image extends GUIBase {
 
 		// build the four vertexes for the square
 		Vertex v[] = new Vertex[4];
+		float halfHidth = size.x / 2;
+		float halfHeight = size.y / 2;
 
-		v[0] = new Vertex(0, 0, 0, 0, 1);
-		v[1] = new Vertex(0 + size.x, 0, 0, 1, 1);
-		v[2] = new Vertex(0 + size.x, 0 + size.y, 0, 1, 0);
-		v[3] = new Vertex(0, 0 + size.y, 0, 0, 0);
+		v[0] = new Vertex(-halfHidth, -halfHeight, 0, 0, 1);
+		v[1] = new Vertex(-halfHidth + size.x, -halfHeight, 0, 1, 1);
+		v[2] = new Vertex(-halfHidth + size.x, -halfHeight + size.y, 0, 1, 0);
+		v[3] = new Vertex(-halfHidth, -halfHeight + size.y, 0, 0, 0);
 
 		for (int k = 0; k < 4; k++) {
 			verticesBuffer.put(v[k].pos);

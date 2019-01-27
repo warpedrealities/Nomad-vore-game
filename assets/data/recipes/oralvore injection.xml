@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="oralvore injection" requiredskill="0" startunlocked="true">
+	<description>
+	A mutagenic compound that upon injection reworks your anatomy and biology to handle the ingestion of prey your own size or even larger and the digestion of the same.
+	</description>
+	<ingredient item="mutagen" quantity="1" />
+	<result item="oralvore injection" />
+</recipe>

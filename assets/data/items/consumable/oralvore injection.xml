@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ItemConsumable name="oralvore injection" weight="1" value="400">
+	<description>A mutagenic compound that upon injection reworks your anatomy and biology to handle the ingestion of prey your own size or even larger and the digestion of the same.</description>
+	<effectperk perk="cockvore" experiencevalue="200" />
+</ItemConsumable>

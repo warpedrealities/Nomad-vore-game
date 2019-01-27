@@ -12,13 +12,16 @@
 
 -->
 	<page ID="start">
-		<text> The deer-girl blushes bright red, shyly, nervously watchingyou with a hand
-			thrust between her legs, fingers delving into her furry snatch.
+		<text> The deer-girl blushes bright red, shyly, nervously watching you with a hand
+			thrust between her legs, fingers delving into her furred snatch.
 			You've charmed your way past her skittish nature and now, over-awed by your
 			presence, she makes no move to retreat at your approach.
 		</text>
 		<choice destination="meal0" text="She looks tasty.">
 			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="preyslut0" text="I wonder if I could fit in that belly">
+			<preference fetish="oralvore" />
 		</choice>
 		<choice destination="cockvore0" text="She'd make good cockfood.">
 			<assertion evaluate="hasperk" perk="cockvore" />
@@ -41,6 +44,54 @@
 		</choice>
 		<choice destination="end" text="Let her fondle herself in peace." />
 	</page>
+	
+	<page ID="preyslut0">
+	<text>
+	The lil fawn is cute, but you can't help but imagine how cute she'd look with a belly. Though you might need to be the one to do most of the work on this one. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				She looks on curiously and with desire as you strip off your
+				<readequipment slot="2" />
+				and expose your naked body before her. 
+			</conditional>
+			You bend forwards in front of the cutie and press your fingers at her lips. The fawn nuzzling at your hand affectionately and licking your fingers without realizing what you intend. Seems you're going to have to be a bit more pro active.
+	</text>
+	<choice destination="preyslut1" text="*shove your hands in*"/>
+	</page>
+	
+	<page ID="preyslut1">
+	<text>
+	You force the issue, pushing your hands past her lips. Her eyes widening as her lips stretch and she gets your flavour more intensely. But she doesn't even have time to acclimatize to this before you're leaning forwards, feeding your arms down her throat as she lets out adorable muffled noises. That throat is tight as well, just the thought of how tight this must mean her lil belly is makes you shiver with anticipation. Your chosen pred hasn't gotten into her role just yet though, and so you duck your head down and continue to wriggle your way further into her as she squirms around.
+	</text>
+	<choice destination="preyslut2" text="she'll warm up to it"/>
+	</page>
+	
+	<page ID="preyslut2">
+	<text>
+	The fawn reaches up to touch the sides of your naked body as you shove your head down past her lips and into her mouth. She seems to be taking her first attempt at swallowing, yielding to your desires and perhaps matching it with her own new found interest in putting you inside herself. Her cute belly going flat to bulging as your hands and then arms squeeze down inside her little body, you wriggle your hips and lean forwards as your descent begins to slow. The tightness of her stomach and the reluctance with which it yields works against the both of you. But her increasingly confident swallows are gradually taking charge of the process, and of you.
+	</text>
+	<choice destination="preyslut3" text="eat me you cute little thing"/>
+	</page>
+	
+	<page ID="preyslut3">
+	<text>
+	You moan into the depths of her belly as she swallows her way down around your belly, then hips..working your rear end steadily past her jaws and then only having your legs to work in. Her hands are on the growing wondrous bulge in her middle now as she lays back and angles your legs up above her so they can be swallowed down. She's going to do it, she's really going to do it, you'd be so proud if you weren't also lunch about now. Your legs gradually disappearing out of view past her lips as she swallows you up entirely at long last.
+	</text>
+	<choice destination="preyslut4" text="finally eaten"/>
+	</page>
+	
+	<page ID="preyslut4">
+	<text>
+	The fawn blushes and rubs her belly, the massive dome of her gut is such she can't get up or see past her bulging belly full of you. The lil cutie letting out an adorable mhmm and wriggling about a bit. Her stomach squeezing oh so wonderfully tight around you as her body awakens to the presences of an exceptional and unprecedented meal within her. The first gurgles and tensing ripples of her stretched out tummy walls around you hopefully a sign of what's to come.
+	</text>
+	<choice destination="preyslut5" text="you can digest me, i believe in you cutie"/>
+	</page>
+	
+	<gameover ID="preyslut5">
+	<text>
+	You can hardly squirm in the tight confines of her belly, but do perhaps in impatience as her stomach proves slow in getting to work on you. But get to work on you it does, proving even the lowliest and least predatory can have you as a meal given enough encouragement. Her stomach starts to gurgle and glorp loudly, squeezing on you as enzymes soak your body. And gradually the fawn finds your shape softening and compacting..she still can't believe what just happened, why you drove her wild with desire only to feed yourself to her..but it feels, so very good..as the last of you dissolves and digests away within her and her gut shrinks down she can only reflect in wonderment on her experience as every trace of you is absorbed. And were you around to think about it, you'd probably agree that letting her explore her predatory side was totally worth it.
+	</text>	
+	</gameover>
+	
 	<page ID="devour">
 		<text>
 			You have devoured her in some unspecified and unelaborated-on, yet surely satisfying way.
@@ -87,7 +138,7 @@
 			want to pull back. And as you rub her face into your scrotum and drown her nose with your musk,
 			that part that wants to back out gets smaller and smaller until, with a shudder and a moan,
 			she thrusts her hand back down into her crotch, overcome with adoring desire and compliance,
-			even knowing all she'll be real soon is sperm.
+			even knowing all she'll be real soon is seed.
 		</text>
 		<choice destination="cockvore1" text="Feed her to your cock." />
 	</page>

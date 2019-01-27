@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text> there's no interaction to be had with a defeated raijin yet.
-			but you can study them now!
+		<text> The raijin hisses and snaps a few sparks at you in defiance, but can't seem to get up. The little zappy lass is weakened and defenceless, unable to stand nor defend herself with electricity. Oh what you could do with the little sparker.
 		</text>
 		<choice destination="study" text="study her">
 			<assertnot evaluate="hasEntry" entry="lifeforms/raijin.xml" />
 			<assertnot evaluate="hasResearch" research="raijin" />
+		</choice>
+		<choice destination="unbirth0" text="stuff her up your cooch">
+			<assertion evaluate="hasperk" perk="unbirthing" />	
 		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
@@ -19,6 +21,36 @@
 		<choice destination="end" text="darn" />
 	</page>
 
+	<page ID="unbirth0">
+	<text>
+	Well it's not like there's anyone around to tell you that shoving the lil zapper up your nethers is a bad idea, in fact it sounds like a great idea. You stand astride her form and reach down, grabbing her head with one hand as you expose yourself to her. The thunder lizard's eyes widening as she's given a faceful of your moist nethers before you give her a closer look. She lets out a muffled squeel of protest into your folds as they part around her head, already finding herself being pushed inside.
+	</text>
+	<choice destination="unbirth1" text="*she's just puss food*"/>
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	You take in her shoulders and a jolt of pleasure runs through you, the raijin's weakened shock powers serving only to pleasure you as you engulf her all the more. You rock your hips and press them down over the tiny lizard, forcing her deeper and feeling your nethers stretch wondrously around her. The zappy reptile helpless against your desires as she starts to enter your womb.
+	</text>
+	<choice destination="unbirth2" text="*all the way*"/>
+	</page>
+	
+	<page ID="unbirth2">
+	<text>
+	Your belly swells, ever more gravid with her shape confined steadily within you..and all you can focus on is the desire for more, you clench and drag her feet up off the ground..her tail thrashing uselessly over the stones as you tug her up into your hungry nethers, lusty juices spilling down her legs onto the ground as she slides up and out of view. The raijin shocking you again in protest but only serving to please you further as she disappears entirely past your drooling lower lips.
+	</text>
+	<choice destination="unbirth3" text="*and now, liquidate her*"/>
+	</page>
+	
+	<page ID="unbirth3">
+	<text>
+	Sealed into your womb and feeling it clenching and squeezing over her in a way that implies her impending demise the raijin tries to shock you repeatedly as well as squirm. The sensations are enough to drive you wild, each jolt makes your knees weak and your womb clench down on her. The shocky lizard seeming to not realize she's only hastening her demise as she reduces you to a lusty mess sprawled on the floor with her repeated pleasurable shocks. The final shock succeeds in pulping her softened form into juices with a final mighty clench of your womb and drives you over the edge. Her remains gushing out onto the floor in a juicy splatter around your naughty fingers. The raijin forming a lewd puddle from which you must extricate yourself, a little dazed..but oh so very satisfied.
+	</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet
