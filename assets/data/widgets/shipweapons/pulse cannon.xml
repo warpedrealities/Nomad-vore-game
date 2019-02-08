@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<shipsystem sprite="113" name="pulse cannon" health="30">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>A pulse cannon firing jacketed photon bolts to inflict greatly destructive effect. 6-12 damage, 4 energy, 2 round cooldown. </description>
+	<resistance resists="KINETIC" strength="2"></resistance>
+	<shipWeapon>
+		<DamagingEffect min="6" max="12" falloff="0" disruption="0"/>
+		<cooldown value="2" />
+		<effects script="turbolaser" sheet="turbolaser" />
+		<range arc="1" range="20" />
+		<weaponCost resource="ENERGY" cost="4" />		
+		<description>
+
+		</description>
+	</shipWeapon>
+</shipsystem>

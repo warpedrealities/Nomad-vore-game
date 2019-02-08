@@ -372,12 +372,12 @@ public class ZoneBuildTools {
 					int index=0, read=0;
 					while (index<width && read<row.length())
 					{
-						char c=row.charAt(read);
+						String c = row.substring(index, index + 1);
 						read++;
-						if (Character.isDigit(c))
+						if (!Character.isWhitespace(c.charAt(0)))
 						{
 							if (grid[x + index][yindex] == true && (m_tiles[x + index][yindex] == null || override)) {
-								int value = Character.getNumericValue(c);
+								int value = Integer.parseInt(c, 16);
 								if (value > 0) {
 									m_tiles[x + index][yindex] = new Tile(x + index, yindex, m_library.getDef(value - 1), m_zone,
 											m_library);

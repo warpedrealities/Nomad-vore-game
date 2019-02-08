@@ -252,6 +252,7 @@ public class NavScreen extends Screen implements Callback {
 
 	private void launch() {
 		if (canLaunch == true) {
+			Universe.getInstance().setShipName(spaceship.getName());
 			if (spaceship.getState() == ShipState.LAND) {
 				if (shipStats.getCrewCapacity() < shipStats.getCrewCount()) {
 					offLoadCrew();

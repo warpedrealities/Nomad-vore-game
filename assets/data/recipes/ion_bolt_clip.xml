@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="ion bolt clip" requiredskill="1" startunlocked="false">
+	<description>
+		A five shot clip of bolts for the ion bow. Each bolt contains an ion field generator and a small battery cell to power it.
+	</description>
+	<ingredient item="scrap metal" quantity="3" />
+	<ingredient item="battery" quantity="1" />	
+	<result item="ion bolt clip" />
+</recipe>

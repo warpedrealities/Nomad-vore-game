@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<entry name="TK: Ion Bow">
+	<text>
+	The Ion bow is an anachronistic weapon combining ancient stylistic principles with advanced technology. The clip fed crossbow mechanism launches bolts that use a small battery cell to generate an ion envelope. Friction with the atmosphere only increases the charge levels until the bolt impacts the target discharging the electrical energy in a sudden burst. This burst can stun targets briefly allowing a skilled user to bring down a foe with repeated shots while their opponent is unable to retaliate. Some may call it an elegant weapon of a more civilized age, others may call it 'cool', but either way an ion bow could be a useful addition to your arsenal.
+	</text>
+	<requirement name="archeotech ranged weapon" count="1" />
+<recipe_reward recipe="ion_bow" />
+<recipe_reward recipe="Ion_bolt_clip" />
+</entry>

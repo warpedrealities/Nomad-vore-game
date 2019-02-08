@@ -4,6 +4,10 @@
 		<text> The raptor girl pants and whines in defeat as you approach.
 			It's clear you've bested her, she's at your mercy and she knows it.
 		</text>
+		<choice destination="study" text="study her">
+			<assertnot evaluate="hasEntry" entry="lifeforms/raptor.xml" />
+			<assertnot evaluate="hasResearch" research="raptor" />
+		</choice>
 		<choice destination="sex0" text="fuck her">
 			<assertion evaluate="haspart" part="penis" />
 		</choice>
@@ -28,6 +32,16 @@
 		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="study">
+		<text>
+			You study and probe the raptor in a thorough and probably rather
+			disagreeable way, the data you've collected should be very valuable.
+		</text>
+		<special effect="removenpc" />
+		<special effect="research" DC="12" data="raptor" />
+		<choice destination="end" text="time to do some research" />
+	</page>	
+	
 	<page ID="devour">
 		<text>
 			You have devoured her in some unspecified, unelaborated on yet

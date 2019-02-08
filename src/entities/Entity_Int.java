@@ -17,4 +17,7 @@ public interface Entity_Int {
 
 	Zone getLandableZone(int x, int y);
 
+	boolean isVisible();
+
+	void calcVisible();
 }

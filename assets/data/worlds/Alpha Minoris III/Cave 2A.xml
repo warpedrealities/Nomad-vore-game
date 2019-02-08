@@ -28,6 +28,20 @@
 			<pairedportal sprite="3" destination="Zone 2A" x="2" y="2"
 				ID="11">a tunnel to the surface</pairedportal>
 		</preloadprefab>
+		<randprefab width="4" height="4">
+				<row>2222</row>
+				<row>2222</row>
+				<row>2222</row>		
+				<row>2222</row>				
+				<placeWidget x="2" y="2" name="tech_research">
+				<research data="alien powersuit" DC="14"/>
+				</placeWidget>
+				<placeWidget x="1" y="0" name="DESCRIBER">
+				A ruined suit. Armoured and durable and with power assisted motors, sadly it has been mangled and damaged far beyond any hope of repair.
+				</placeWidget>
+				<placeWidget x="0" y="0" name="SPRITE" width="3" height="3"
+					file="brokensuit" />
+		</randprefab>
 		<cavegen iterations="2" tile="0" threshold="35" bounds="100"
 			minfloor="0.5">
 

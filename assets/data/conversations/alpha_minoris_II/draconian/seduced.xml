@@ -9,7 +9,10 @@
 		<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="sex0" text="#..I want to mate with you">
-		</choice>			
+		</choice>	
+		<choice destination="cockvoreprey0" text="# I want to cockvore you, i need you as my cum">
+		<preference fetish="cockvore"/>
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -19,7 +22,50 @@
 			</assertion>
 		</choice>	
 		<choice destination="end" text="*whatever it is you beat a hasty retreat*"/>	
-		</page>	
+		</page>
+
+		<page ID="cockvoreprey0">
+		<text>
+		The draconian states her desire to melt you as she strokes her shaft, looking at you in need and running her hand up and down her large and erect shaft. Her pre stained cocktip and hefty balls look equally inviting to you.
+		Her desire thrills you, and you cannot help but shiver with a matching desire to be the cum she needs you to be. 
+		</text>
+		<choice destination="cockvoreprey1" text="$thought you'd never ask, I'd love to be cockfood"/>
+		</page>
+		
+		<page ID="cockvoreprey1">
+		<text>
+		The draconian doesn't remark on how she didn't really ask. But just moans "Then..then get in me cockfood, my balls crave to churn you down.. i need to feel you melt in them." she declares with a growl and a thrust of her hips. The thrust splatting your cheek with pre and making you weak in the knees. You answer not with words but deeds and a thrust of your own, of your hands right into her dick. The hot pre letting out a lewd squelch that mingles with your moan and her growl to act as a delicious signifier of your deeds. Her cock bulging out around your hands and rippling hungrily as she thrusts her hips to engulf your forearms, working her shaft up towards your head with a moan. 
+		</text>
+		<choice destination="cockvoreprey2" text="*yes! duck your head down, thrust in, be cockfood!*"/>
+		</page>
+		
+		<page ID="cockvoreprey2">
+		<text>
+		The draconian growls in bliss "Yes, get in me..get in me cockfood." she demands lustfully as she takes in your head. All sounds except her throbbing cock and squelching pre are muffled as your head slides deeper into her rippling length. That wonderfully hungry dick of hers now bulging out gloriously as your chest slips in and you wriggle your hips to work your belly past her feasting cumslit. Her cock is wrapped around your waist now and soon she'll slurp you up entirely like the cocksnack you are. You're perhaps even more impatient for that to happen than she is, you feel her grasping her cock and lifting you upwards with ease. Your legs angle upwards and brush against her breasts and you know it won't be long now.
+		</text>
+		<choice destination="cockvoreprey3" text="*can't wait...just can't wait*"/>
+		</page>
+		
+		<page ID="cockvoreprey3">
+		<text>
+		Your predator's nuts welcome you with hot burbles and squelches as her cum oozes around you and you sink into the welcoming embrace of her loins. The draconian stroking her hands up and down her shaft, over the bulge you make in her dick as you slide on down. Her sack hanging low as your ass slides on down and you curl in the blissful cumbath of her sack. Soon after your legs vanish into her cumslit with a schlurp, her hands jerking you down her bulging shaft and fully feeding you down into her sack. 
+		</text>
+		<choice destiantion="cockvoreprey4" text="*can't wait to melt*"/>
+		</page>
+		
+		<page ID="cockvoreprey4">
+		<text>
+		"Mhmm, yes. I've wanted this so badly, and now..i have you right where I want you. You really are perfect cockfood." she says with a growl as she strokes her cock and feels you curled up and squirming around in her balls. Her sack bulging and bloated with your shape and starting to burble and churn as she tail sways and moans in deeper pleasure. Your form starting to soften and round out as you revel in the exquisite sensations of becoming her seed "You melt so easily..like you were made for it." she exclaims blissfully, you're only able to burble in response..not even moan as more and more of you is rendered down into creamy goo.
+		</text>
+		<choice destination="cockvoreprey5" text="*burble*"/>
+		</page>
+		
+		<gameover ID="cockvoreprey5">
+		<text>
+		The draconian moans and chuckles "you're..you're all gone aren't you..nothing but cum." she says and then licks her lips "My cum" she reiterates with possessive satisfaction and strokes off faster, more vigorously. The draconian moaning in bliss knowing that you've been rendered down into gooey jizz sloshing about in her bloated balls as she strokes off harder and faster and then harder and faster still. The mighty predator finally closing her eyes and letting out a roar as she reaches her peak and sends your remnants gushing and splattering out to form a sticky puddle in front of her. Your body sacrificed to be a glorious orgasm for her to enjoy as she pumps wad after wad of cum out. Thick jizz mounding atop itself into a gooey puddling mound like softened wax or melting butter. The lewd and prideful draconian's orgasm finally subsiding two minutes later and she strokes a little bit more of your goopy remnants out before flying off, well satisfied by the experience it seems. 
+		</text>
+		</gameover>
+		
 			<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

@@ -7,6 +7,9 @@
 		<!--<choice destination="cockvore0" text="Can you even fit them in your shaft?">
 				<assertion evaluate="hasperk" perk="cockvore" />
 		</choice>-->
+		<choice destination="cockprey0" text="*she is now helpless to resist your desire to feed her cock*">
+			<preference fetish="cockvore" />	
+		</choice>
 		<choice destination="devour" text="devour">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -23,7 +26,56 @@
 		</choice>
 		<choice destination="end" text="darn" />
 	</page>	
-		<page ID="devour">
+	
+	<page ID="cockprey0">
+	<text>
+	She is indeed helpless to resist, her systems at low power from damage but you can only assume has enough to get a hard on. To experiment you clamber atop her muscular abs and get to work stroking that cock, a distorted groan emanating from the guardian's throat as you set to work. That enormous ebony shaft firming up under your ministrations, clear lubricant oozing from her cocktip as that shaft of hers rises up to stand proudly from her hips and reaches its full size.
+	</text>
+	<choice destination="cockprey1" text="*clamber up to slide on in*"/>
+	</page>
+	
+	<page ID="cockprey1">
+	<text>
+	Her cock is nice and erect, it looks inviting and you pause a moment to admire your handiwork. Now of course the way her dick is standing up jutting at an angle from her hips might pose a challenge. But you're not to be deterred, and as she watches you with her glowing optics you straddle her dick. With your limbs wrapped around the hot pulsating cock you clamber upwards towards her tip, feeling her cock bob underneath you "What are you doing interloper?" asks the jackal, even as you come level with her cocktip, something akin to musk emanating from the hot glans inches from your face.
+	</text>
+	<choice destination="cockprey2" text="$sliding myself into your cock"/>
+	</page>
+	
+	<page ID="cockprey2">
+	<text>
+	"This behaviour is uncharacteristic for interlopers, but..proceed." the black guardian says, still weak it's not like she could stop her but it's nice to have her permission. Especially as you need to balance yourself above her cocktip, clambering ontop the cock head and grasping her broad shaft tip with both hands as you raise first one leg and then to the other to slide them into her cumslit with a squelch of displaced lubricating fluids. Your knees sliding into her welcoming dick as you start wriggling your way inside.
+	</text>
+	<choice destination="cockprey3" text="$glad you approve"/>
+	</page>
+	
+	<page ID="cockprey3">
+	<text>
+	The jackal moans as you wriggle your thighs into her cock and then give her the sensation of bulging her cocktip out around your hips as you feed those in as well. You're hip deep in her wonderful ebony spire. Feeling her cock starting to ripple and tug on you more hungrily now as you wriggle your legs around inside the sticky heat of her dick. Gravity and the hunger of her loins helping you slip on inside.
+	</text>
+	<choice destination="cockprey4" text="*go all the way*"/>
+	</page>
+	
+	<page ID="cockprey4">
+	<text>
+	Each wriggle you do slides you a few inches down her dick, and you're doing a lot of wriggling. Soon you can feel the wonderful embrace of her throbbing shaft rising up to encompass your entire body as your head slips past her cumslit followed shortly by your outstretched hands. Your shape now just a bulge in her girth, shifting and wriggling down her twitching and throbbing shaft. Gradually you slide on down, slipping through her cockbase and into the gooey confines of her balls. The jackal growling in pleasure and shifting around as you pile into her sack, curling up and making her balls bulge out and fill with your shape "Peculiar, I assume you wish for liquidation protocols?" asks the guardian as she reaches a hand down to stroke over her shaft.
+	</text>
+	<choice destination="cockprey5" text="$Absolutely, liquidate away"/>
+	</page>
+	
+	<page ID="cockprey5">
+	<text>
+	"Was going to do it anyway interloper." the guardian replies, her power returning as she strokes up and down her shaft and you feel her balls clench and churn around you. Her sack squeezing around your shape, outlining your form more tightly as the jackal moans and jacks off. And as she pleasures herself the bulges in her sack begin to round out, your squirms slowing down as you begin to soften and melt down into hot cum.
+	</text>
+	<choice destination="cockprey6" text="*so good*"/>
+	</page>
+	
+	<gameover ID="cockprey6">
+	<text>
+	The jackal strokes off, moaning as she sprawls and leisurely jerks herself off..the little naughty interloper in her balls melting away entirely, her nuts rounding out and sloshing and burbling hotly. The guardian letting a delighted smile decorate her muzzle as she half lids her optics and feels herself getting closer and closer to release. Your form now just a high pressure load of cum in her balls begging for that release to happen. And soon enough you both get what you want, her cock erupting sending your remnants souring out to splatter over her face and tits..arcing jets of cum hitting her and the floor behind her as she discharges your liquid remnants back out into the open air. Only when the last gloopy trace of your form has been pumped out does she get back to her feet, wiping off her front "You were peculiar interloper, but no matter how you got here..this was inevitable."
+	</text>
+	</gameover>
+	
+	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet
 			satisfying way.

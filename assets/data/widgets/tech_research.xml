@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<widgetresearch sprite="44" safeOnly="true" blocksVision="true">
+	<description>Tech fragments, can be analyzed for research purposes.</description>	
+</widgetresearch>

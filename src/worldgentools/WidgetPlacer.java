@@ -32,6 +32,7 @@ import widgets.WidgetDoor;
 import widgets.WidgetHarvestable;
 import widgets.WidgetItemPile;
 import widgets.WidgetReformer;
+import widgets.WidgetResearch;
 import widgets.WidgetScriptPortal;
 import widgets.WidgetScripted;
 import widgets.WidgetSlot;
@@ -317,7 +318,19 @@ public class WidgetPlacer {
 			widget = new WidgetCapture(root);
 		}
 		if (root.getTagName().contains("capsuleSystem")) {
-			widget = new WidgetCapsuleSystem(root);		
+			widget = new WidgetCapsuleSystem(root);
+		}
+		if (root.getTagName().contains("research")) {
+			WidgetResearch wr = new WidgetResearch(root);
+			widget=wr;
+			Element research=(Element)Enode.getElementsByTagName("research").item(0);
+			String group=null;
+			if (research.getAttribute("group").length() > 0) {
+				group = research.getAttribute("group");
+			}
+			wr.setData(research.getAttribute("data"),
+					research.getAttribute("research"),
+					Integer.parseInt(research.getAttribute("DC")), group);
 		}
 		if (root.getTagName().contains("scripted")) {
 			WidgetScripted scripted = new WidgetScripted(n);

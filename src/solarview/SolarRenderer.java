@@ -23,8 +23,8 @@ public class SolarRenderer extends SpriteManager {
 	private Vec2f currentPosition;
 	private StarSystem currentSystem;
 	private ParticleEmitterAdvanced particleEmitter;
-	
-	
+
+
 	public SolarRenderer(StarSystem system) {
 		super("assets/art/solar/");
 		currentSystem = system;
@@ -38,7 +38,7 @@ public class SolarRenderer extends SpriteManager {
 		particleEmitter=new ParticleEmitterAdvanced(256, "particles/white", currentPosition, 1, 1, 0.1F, true);
 		float []start={0.5F,0.5F,1.0F};
 		float []end={1.0F,0.0F,0.0F};
-		
+
 		particleEmitter.setColours(start,end);
 	}
 
@@ -86,6 +86,9 @@ public class SolarRenderer extends SpriteManager {
 				sprite = new Sprite(currentSystem.getEntities().get(i).getPosition(),
 						currentSystem.getEntities().get(i).getSpriteSize(), 1);
 			}
+			if (!currentSystem.getEntities().get(i).getVisible()) {
+				sprite.setVisible(false);
+			}
 			// sprite visible
 			sprite.setVisible(true);
 
@@ -94,10 +97,10 @@ public class SolarRenderer extends SpriteManager {
 			// attach to entity
 			currentSystem.getEntities().get(i).setSpriteObj(sprite);
 		}
-		
-		
+
+
 	}
-	
+
 	public void generateWarpHelpers(float distance, Universe universe)
 	{
 		Vec2i origin=Universe.getInstance().getCurrentStarSystem().getPosition();
@@ -107,7 +110,7 @@ public class SolarRenderer extends SpriteManager {
 			StarSystem system=universe.getSystem(origin.x+p.x, origin.y+p.y);
 			if (system!=null)
 			{
-				
+
 				Vec2f pos=new Vec2f (p.x*1,p.y*-1);
 				pos.normalize();
 				pos.x*=40;
@@ -120,16 +123,16 @@ public class SolarRenderer extends SpriteManager {
 	}
 
 	public void solarDraw(int viewMatrix, int objmatrix, int tintvar, FloatBuffer matrix44Buffer) {
-		
+
 		m_viewMatrix.store(matrix44Buffer);
 		matrix44Buffer.flip();
 		GL20.glUniformMatrix4fv(viewMatrix, false, matrix44Buffer);
 		particleEmitter.draw(matrix44Buffer, objmatrix, tintvar);
 		GL20.glUniform4f(tintvar, 1, 1,
-				1, 1);	
+				1, 1);
 		draw(objmatrix, tintvar, matrix44Buffer);
 
-	
+
 	}
 
 	public void end() {
@@ -147,5 +150,5 @@ public class SolarRenderer extends SpriteManager {
 		return particleEmitter;
 	}
 
-	
+
 }

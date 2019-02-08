@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ItemWeapon name="Blast Fission Gun" shortName="BFG" weight="10" value="3500">
+	<description>
+		A visionary answer to the quest for the galaxy's strongest personal weapon. The blast fission gun uses lasers to initiate a runaway fission cascade in an isotope rod. For safety's sake the cascading detonation is suspended in a stasis field and then launched at high velocity away from the user before the suspension effect wears off a split second later. Does 30-60 thermal damage.
+	</description>
+	<modifier>
+
+	</modifier>
+	<combatMove name="blast" ammoCost="1" pattern="NUKE"
+		bonusAttribute="RANGED" timeCost="2" rangedbias="0" bonusToHit="8"
+		actionCost="8" basicAction="true" moveType="FIGHT" rangeDecay="1">
+		<effectDamage type="THERMAL" minValue="30" maxValue="60"
+			modifier="NONE" />
+		<missText count="1">
+			<text>TARGET manages to avoid the effects of the weapon </text>
+		</missText>
+		<hitText count="1">
+			<text>TARGET is irradiated for VALUE thermal damage</text>
+		</hitText>
+	</combatMove>
+	<energy refill="isotope" efficiency="1" capacity="1" />
+</ItemWeapon>

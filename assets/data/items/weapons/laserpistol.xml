@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemWeapon name="laser pistol" weight="2" value="350">
+<ItemWeapon name="Laser pistol" weight="2" value="350">
 	<tagSet value="AH" />
 	<description>
 		A laser pistol for self defence against belligerent wildlife and other

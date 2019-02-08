@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ItemWidget name="pulse cannon" weight="10" value="2500">
+	<description>A ship mounted pulse cannon firing jacketed photon bolts.
+		6-12 damage, cooldown 2, 4 energy to fire.</description>
+	<placeditem widget="shipweapons/pulse cannon" />
+</ItemWidget>

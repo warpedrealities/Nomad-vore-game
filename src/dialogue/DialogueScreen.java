@@ -18,7 +18,7 @@ import dialogue.choiceHandler.ChoiceText;
 import dialogue.effectProcessing.EffectProcessor;
 import dialogue.evaluation.OutEvaluator;
 import dialogue.random.Randomizer_Library;
-import gui.Image;
+import gui.ImagePortrait;
 import gui.TextView;
 import gui.Window;
 import input.Keyboard;
@@ -45,7 +45,7 @@ public class DialogueScreen extends Screen implements Callback {
 	NodeList m_children;
 	TextView m_text;
 	Window m_window;
-	Image portraitImage;
+	ImagePortrait portraitImage;
 
 	ChoiceHandler choiceHandler;
 	ChoiceLoader choiceLoader;
@@ -69,7 +69,7 @@ public class DialogueScreen extends Screen implements Callback {
 		m_window = new Window(new Vec2f(2.5F, -1), new Vec2f(17.5F, 17), frame, true);
 		m_choices = new String[16];
 
-		portraitImage = new Image(new Vec2f(-8.5F, 7.5F), new Vec2f(23, 17), "assets/art/portraits/test.png");
+		portraitImage = new ImagePortrait(new Vec2f(-8.5F, 7.5F), new Vec2f(23, 17), "assets/art/portraits/test.png");
 		portraitImage.setVisible(false);
 
 		m_stagnation = 0.5F;
@@ -155,7 +155,6 @@ public class DialogueScreen extends Screen implements Callback {
 	public void draw(FloatBuffer buffer, int matrixloc) {
 		m_window.Draw(buffer, matrixloc);
 		m_text.Draw(buffer, matrixloc);
-
 		portraitImage.Draw(buffer, matrixloc);
 		choiceHandler.Draw(buffer, matrixloc);
 	}
@@ -246,13 +245,13 @@ public class DialogueScreen extends Screen implements Callback {
 	}
 
 	private void processPortrait(Element e) {
-		// TODO Auto-generated method stub
 		String str = e.getAttribute("source");
 		if (str == null) {
 			portraitImage.setVisible(false);
 		} else {
 			portraitImage.setVisible(true);
-			portraitImage.setTexture("assets/art/portraits/"+str+".png");
+			portraitImage.setTexture("assets/art/portraits/" + str + ".png",
+					Float.parseFloat(e.getAttribute("height")));
 		}
 
 	}
@@ -432,6 +431,9 @@ public class DialogueScreen extends Screen implements Callback {
 
 	@Override
 	public void update(float DT) {
+		if (portraitImage.isVisible()) {
+			portraitImage.update(DT);
+		}
 		m_window.update(DT);
 		if (m_stagnation > 0) {
 			m_stagnation -= 0.1F;

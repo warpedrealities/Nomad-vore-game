@@ -58,6 +58,21 @@
 			</keyBlock>
 
 			<keyBlock heat="1">
+				<row>00000000</row>
+				<row>22222220</row>
+				<row>21111122</row>
+				<row>11111111</row>
+				<row>11111111</row>
+				<row>21111122</row>
+				<row>21111120</row>
+				<row>22222220</row>
+				<edge value="WEST" />
+					<edge value="EAST" />			
+				<widget x="1" y="2" name="sprite" info="big_gun_a" variable="5#5"/>
+				<widget x="1" y="6" name="tech_research" info="large scale directed energy weapon A#tech/pulse_cannon.xml" variable="14"/>
+			</keyBlock>				
+			
+			<keyBlock heat="1">
 				<row>02222220</row>
 				<row>02551520</row>
 				<row>22111122</row>
@@ -103,6 +118,22 @@
 				<widget x="4" y="4" name="console"
 					info="interaction/spacehulk/spacehulkdatabase" variable="27" />
 			</keyBlock>
+			
+			<keyBlock heat="1">
+				<row>00000000</row>
+				<row>22222220</row>
+				<row>21111122</row>
+				<row>11111111</row>
+				<row>11111111</row>
+				<row>21111122</row>
+				<row>21111120</row>
+				<row>22222220</row>
+				<edge value="WEST" />
+					<edge value="EAST" />		
+				<widget x="1" y="2" name="sprite" info="big_gun_b" variable="5#5"/>
+				<widget x="1" y="6" name="tech_research" info="large scale directed energy weapon B#tech/pulse_cannon.xml" variable="14"/>
+			</keyBlock>			
+			
 			<keyBlock heat="2">
 				<row>21111112</row>
 				<row>21222212</row>

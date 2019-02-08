@@ -48,13 +48,21 @@ public class StarSystem {
 					Element Enode = (Element) node;
 					if (Enode.getTagName() == "World") {
 						// add this world
-						entitiesInSystem.add(new World(node.getTextContent(), Integer.parseInt(Enode.getAttribute("x")),
-								Integer.parseInt(Enode.getAttribute("y"))));
+						World world = new World(node.getTextContent(), Integer.parseInt(Enode.getAttribute("x")),
+								Integer.parseInt(Enode.getAttribute("y")));
+						if (Enode.getAttribute("visibility").length() > 0) {
+							world.setVisibilityScript(Enode.getAttribute("visibility"));
+						}
+						entitiesInSystem.add(world);
 					}
 					if (Enode.getTagName() == "Station") {
 						// add this world
-						entitiesInSystem.add(new Station(node.getTextContent(),
-								Integer.parseInt(Enode.getAttribute("x")), Integer.parseInt(Enode.getAttribute("y"))));
+						Station station= new Station(node.getTextContent(),
+								Integer.parseInt(Enode.getAttribute("x")), Integer.parseInt(Enode.getAttribute("y")));
+						if (Enode.getAttribute("visibility").length()>0) {
+							station.setVisibilityScript(Enode.getAttribute("visibility"));
+						}
+						entitiesInSystem.add(station);
 					}
 					if (Enode.getTagName() == "Star") {
 						entitiesInSystem.add(new Star(Integer.parseInt(Enode.getAttribute("intensity")),
@@ -70,6 +78,9 @@ public class StarSystem {
 							Document doc0 = ParserHelper.LoadXML("assets/data/shipControllers/" + Enode.getAttribute("controller") + ".xml");
 							Element n0 = (Element) doc0.getFirstChild();
 							ship.setShipController(new NpcShipController(n0));
+						}
+						if (Enode.getAttribute("visibility").length()>0) {
+							ship.setVisibilityScript(Enode.getAttribute("visibility"));
 						}
 
 						entitiesInSystem.add(ship);
@@ -133,7 +144,7 @@ public class StarSystem {
 	public ArrayList<Entity> getEntities() {
 		return entitiesInSystem;
 	}
-	
+
 	public void arrival()
 	{
 		if (entitiesInSystem==null)
@@ -152,22 +163,22 @@ public class StarSystem {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
-			
+
+
+
 		}
 	}
-	
+
 	public boolean fileExists(String filename) throws IOException
 	{
-		File file = new File("saves/" + filename + "/" + systemName + ".sav");	
+		File file = new File("saves/" + filename + "/" + systemName + ".sav");
 		if (file.exists())
 		{
 			return true;
 		}
 		return false;
 	}
-	
+
 	public void load(String filename) throws IOException {
 		File file = new File("saves/" + filename + "/" + systemName + ".sav");
 		FileInputStream fstream = new FileInputStream(file);
@@ -203,6 +214,6 @@ public class StarSystem {
 	public Vec2i getPosition() {
 		return systemPosition;
 	}
-	
-	
+
+
 }

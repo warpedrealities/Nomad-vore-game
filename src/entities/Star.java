@@ -96,4 +96,9 @@ public class Star extends Entity {
 		return intensity;
 	}
 
+	@Override
+	public boolean isVisible() {
+		return true;
+	}
+
 }

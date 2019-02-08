@@ -258,6 +258,14 @@ public class Spaceship extends Entity {
 		ParserHelper.SaveString(dstream, entityName);
 		// save position
 		entityPosition.Save(dstream);
+		// save visibility
+		dstream.writeBoolean(visibility);
+		if (visibilityScript != null) {
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, visibilityScript);
+		} else {
+			dstream.writeBoolean(false);
+		}
 		// save wrecked
 		if (unusableState != null) {
 			dstream.writeBoolean(true);
@@ -313,6 +321,10 @@ public class Spaceship extends Entity {
 		shipState = ShipState.valueOf(str);
 		entityName = ParserHelper.LoadString(dstream);
 		entityPosition = new Vec2f(dstream);
+		visibility = dstream.readBoolean();
+		if (dstream.readBoolean()) {
+			visibilityScript = ParserHelper.LoadString(dstream);
+		}
 		boolean b = dstream.readBoolean();
 		if (b) {
 			unusableState = ParserHelper.LoadString(dstream);

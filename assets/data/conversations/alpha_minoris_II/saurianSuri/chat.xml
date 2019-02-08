@@ -15,6 +15,9 @@
 			maybe...practice on you?"
 		</text>
 		<effect type="setlocalflag" flag="talked" value="1" />
+		<choice destination="tease0" text="Don't your species lay eggs though?">
+			<assertion evaluate="hasEntry" entry="lifeforms/raijin.xml" />
+		</choice>
 		<choice destination="unbirthA0" text="sure, sounds fun">
 			<preference fetish="unbirth" />
 					<preference fetish="demis" />
@@ -23,6 +26,18 @@
 		<choice destination="end" text="not interested" />
 	</page>
 
+	<page ID="tease0">
+	<text>
+	"...yeah and? I can want to feel like a mother and want someone inside me right?"
+	</text>
+		<choice destination="unbirthA0" text="sure, sounds fun">
+			<preference fetish="unbirth" />
+					<preference fetish="demis" />
+			<preference fetish="females" />	
+		</choice>
+	<choice destination="end" text="Well it's not quite the same thing"/>
+	</page>
+	
 	<page ID="start">
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"
 			flag="talked" />
@@ -35,6 +50,9 @@
 			anyone else, and I really wanna know how it feels to hold another
 			inside me like that."
 		</text>
+		<choice destination="tease0" text="Don't your species lay eggs though?">
+			<assertion evaluate="hasEntry" entry="lifeforms/raijin.xml" />
+		</choice>		
 		<choice destination="unbirthA0" text="yeah i changed my mind">
 			<preference fetish="unbirth" />
 						<preference fetish="demis" />

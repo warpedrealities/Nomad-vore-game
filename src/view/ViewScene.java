@@ -37,6 +37,7 @@ import input.MouseHook;
 import item.Item;
 import menu.Menu;
 import nomad.GameOver;
+import nomad.playerScreens.journal.JournalScreen;
 import nomad.universe.Universe;
 import playerscreens.AppearanceScreen;
 import playerscreens.CharacterScene;
@@ -995,8 +996,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 				menuSystem.deactivate();
 				break;
 			case 33:
-				m_text.AddText("journal system coming soon");
-				// setScreen(new JournalScreen());
+
+				setScreen(new JournalScreen());
 				menuSystem.deactivate();
 				break;
 			case 34:
@@ -1055,9 +1056,8 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			m_screen.start(m_hook);
 		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F3)) {
-			//			m_screen = new JournalScreen();
-			//			m_screen.start(m_hook);
-			m_text.AddText("journal system coming soon");
+
+			setScreen(new JournalScreen());
 		}
 
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F4)) {

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ItemAmmo name="ion bolt clip" weight="1" value="175.0">
+	<description>
+		A clip of ion bolts.
+	</description>
+	<energy capacity="5" />
+</ItemAmmo>

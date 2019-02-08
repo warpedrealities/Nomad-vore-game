@@ -502,7 +502,8 @@ public class Player_RPG implements Actor_RPG {
 				if (playerInventory.getSlot(i)!=null)
 				{
 					Item item=playerInventory.getSlot(i);
-					if (ItemEquip.class.isInstance(item)) {
+					Item baseItem = item.getItem();
+					if (ItemEquip.class.isInstance(baseItem)) {
 						ItemEquip equip = (ItemEquip) item.getItem();
 						if (equip.getModifier() != null) {
 							actor.getRPG().AddModifier(equip.getModifier());

@@ -17,6 +17,7 @@ import actorRPG.npc.NPCStatblockLibrary;
 import description.BodyLoader;
 import entities.StarSystem;
 import faction.FactionLibrary;
+import nomad.playerScreens.journal.JournalSystem;
 import nomad.universe.actionBar.ActionBarData;
 import nomad.universe.salvageShip.SalvageShip;
 import shared.FileTools;
@@ -170,6 +171,11 @@ public class UniverseStateChanger {
 		//load shops
 		ShopList list=ShopList.getInstance();
 		ShopList.getInstance().load(dstream);
+
+		if (dstream.readBoolean()) {
+			universe.setShipName(ParserHelper.LoadString(dstream));
+		}
+
 		int safety=dstream.readInt();
 		//load factions
 		FactionLibrary factions=FactionLibrary.getInstance();
@@ -208,6 +214,7 @@ public class UniverseStateChanger {
 		universe.getUIDGenerator().load(dstream);
 
 		universe.actionBarData = new ActionBarData(dstream);
+		universe.journal = new JournalSystem(dstream);
 
 		dstream.close();
 		fstream.close();

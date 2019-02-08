@@ -391,6 +391,7 @@ public class Player extends Actor {
 		playerInventory.m_slots[slot] = item;
 
 		playerInventory.m_weight += item.getWeight();
+
 		Player_RPG rpg = (Player_RPG) actorRPG;
 
 		rpg.genMoveList();
@@ -411,7 +412,7 @@ public class Player extends Actor {
 
 			Item r_item = playerInventory.m_slots[slot];
 			playerInventory.m_slots[slot] = null;
-			playerInventory.m_weight -= item.getWeight();
+			playerInventory.m_weight -= r_item.getWeight();
 			if (slot != Inventory.QUICK) {
 				Player_RPG rpg = (Player_RPG) actorRPG;
 				rpg.removeEquipStatus(5 + slot);

@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
 <start>
-	<system value="Auriga" />
-	<world value="freehaven" />
-	<zone value="port_level_5" />
-	<position x="14" y="14" />
-	<item value="laser pistol" />
+	<system value="Alpha Minoris" />
+	<world value="avenger1" />
+	<zone value="avenger1" />
+	<position x="2" y="2" />
+	<item value="Laser pistol" />
 	<item value="Knife" />
 	<item value="jumpsuit" />
 	<item value="medkit" />	
-	<item value="space meal" />>	
+	<item value="space meal" />
+
 	<appearance>
 		<bodypart partname="body">
 			<partvalue variablename="height" value="60" />

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<recipe name="Ion bow" requiredskill="1" startunlocked="false">
+	<description>
+		An elegant weapon from a more civilized age. The ion bow is a clip fed crossbow that fires electrically charged bolts. 
+	</description>
+	<ingredient item="scrap metal" quantity="3" />
+	<ingredient item="precision mechanisms" quantity="5" />	
+	<result item="Ion bows"/>
+</recipe>

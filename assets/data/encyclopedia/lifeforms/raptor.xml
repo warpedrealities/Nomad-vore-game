@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<entry name="LF:raptor">
+	<text>
+		description: These lizardlike humanoids stand at heights broadly in parallel with human baseline, their skeletal structure only deviates in the addition of a reptilian tail. Their morphology and facial structure conform to human norms. Their body is partially covered in scales though prominent areas have skin instead. Notably the face, much of the front of the torso, inner thigh and the palms of the hands are not covered by scales.  LBREAK
+		biological findings: The lifeforms designated raptors lack the mental degeneracy that typifies some of the other wild and uncivilized specimens. This raises the conjecture that while savage they could with proper raising of been civilized beings under other circumstances. Raptors deviate from more expected reproduction patterns in laying eggs rather than giving birth to live young. Finally raptors like many other specimens exhibit advantageous traits such as an accelerated metabolism but without any neurological atrophy. This may be adapted for your own use.
+		LBREAK
+		Tactical assessment: Elongated claws on their fingertips mean that raptors are dangerous despite being unarmed. In light of the mental faculties it is best to consider that their social dimension would permit some degree of pack hunting tactics. This tracks with observations as most raptors found in the wild are averse to conflict unless they have numbers on their side, preferring to retreat. It should be warned though that a retreating raptor may simply be seeking out a favourable numeric advantage before engaging. 
+	</text>
+	<requirement name="raptor" count="1" />
+	<recipe_reward recipe="metabolic accelerant" />
+</entry>

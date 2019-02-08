@@ -29,6 +29,7 @@
 	object detected at coordinates: -32,-28 LBREAK
 	object detected at coordinates: 23,25 LBREAK	
 	</text>
+	<effect type="setglobalflag" flag="SPACEHULK_SCAN" value="1" />		
 	<choice destination="end" text="exit"/>
 	</page>
 	

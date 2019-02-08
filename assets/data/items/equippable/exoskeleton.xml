@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ItemEquip name="exoskeleton" weight="12" slot="BODY" value="2000">
+	<description>
+	A motor equipped framework built upon a bodysuit. The exoskeleton increases your carrying capacity by assisting your movements with its motors and provides a degree of protection into the bargain. +3 kinetic, +2 carrying capacity multiplier, +1 thermal defence. 
+	</description>
+	<modifier>
+		<CARRY value="2" />
+		<kinetic value="3" />
+		<thermal value="1" />		
+	</modifier>
+</ItemEquip>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<recipe name="pulse cannon" requiredskill="1" startunlocked="false">
+	<description>
+		A ship mounted pulse cannon firing jacketed photon bolts. 6-12 damage,
+		cooldown 2s, 4 energy to fire.
+	</description>
+	<ingredient item="optics" quantity="6" />
+	<ingredient item="precision mechanisms" quantity="4" />	
+	<ingredient item="flux capacitor" quantity="1" />
+	<result item="pulse cannon" />
+</recipe>

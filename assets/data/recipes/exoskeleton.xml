@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<recipe name="exoskeleton" requiredskill="2" startunlocked="false">
+	<description>
+	A motor equipped framework built upon a bodysuit. The exoskeleton increases your carrying capacity by assisting your movements with its motors and provides a degree of protection into the bargain. +3 kinetic, +2 carrying capacity multiplier, +1 thermal defence. 
+	</description>
+	<ingredient item="scrap metal" quantity="8" />
+	<ingredient item="fabric" quantity="8" />
+	<ingredient item="precision mechanisms" quantity="4" />
+	<ingredient item="battery" quantity="2" />	
+	<ingredient item="computation valve" quantity="4" />		
+	<result item="exoskeleton"/>
+</recipe>

@@ -17,7 +17,9 @@ import widgets.WidgetDoor;
 import widgets.WidgetHarvestable;
 import widgets.WidgetItemPile;
 import widgets.WidgetPortal;
+import widgets.WidgetResearch;
 import widgets.WidgetScripted;
+import widgets.WidgetSprite;
 import widgets.traps.Widget_Trap;
 import worldgentools.LootTable;
 
@@ -45,6 +47,12 @@ public class DungeonWidgetLoader {
 	public Widget loadWidget(WidgetDefinition definition) {
 		if (definition.getWidgetName().equals("itempile")) {
 			return addItemPile(definition);
+		}
+		if (definition.getWidgetName().equals("sprite")) {
+			return addSprite(definition);
+		}
+		if (definition.getWidgetName().equals("describer")) {
+			return addDescriber(definition);
 		}
 		Document doc = ParserHelper.LoadXML("assets/data/widgets/" + definition.getWidgetName() + ".xml");
 		Element root = doc.getDocumentElement();
@@ -87,6 +95,11 @@ public class DungeonWidgetLoader {
 			LootTable lt = lootTables.get(definition.getWidgetInfo());
 			wc.setItems(lt.generateLoot());
 		}
+		if (root.getTagName().contains("research")) {
+			widget = new WidgetResearch(root);
+			WidgetResearch wr = (WidgetResearch) widget;
+			setupResearch(wr, definition);
+		}
 		if (root.getTagName().contains("conversation")) {
 			widget = new WidgetConversation(root);
 			WidgetConversation wc = (WidgetConversation) widget;
@@ -94,6 +107,27 @@ public class DungeonWidgetLoader {
 			wc.setSprite(Integer.parseInt(definition.getWidgetVariable()));
 		}
 		return widget;
+	}
+
+	private Widget addDescriber(WidgetDefinition definition) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private Widget addSprite(WidgetDefinition definition) {
+		String[] variable = definition.getWidgetVariable().split("#");
+		int x = Integer.parseInt(variable[0]);
+		int y = Integer.parseInt(variable[1]);
+		return new WidgetSprite(definition.getWidgetInfo(), x, y);
+	}
+
+	private void setupResearch(WidgetResearch wr, WidgetDefinition definition) {
+		String[] strings = definition.getWidgetInfo().split("#");
+		String group = null;
+		if (strings.length > 2) {
+			group = strings[2];
+		}
+		wr.setData(strings[0], strings[1], Integer.parseInt(definition.getWidgetVariable()), group);
 	}
 
 	public void loadLootTable(Element enode) {

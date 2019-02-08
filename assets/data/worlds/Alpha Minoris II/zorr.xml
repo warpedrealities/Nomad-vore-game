@@ -122,6 +122,21 @@
 				<widget x="3" y="4" name="chest" info="specialchest" />
 			</keyBlock>
 
+			<keyBlock heat="2">
+				<!--tech room -->
+				<row>00000000</row>
+				<row>02222220</row>
+				<row>02111120</row>
+				<row>02111120</row>
+				<row>02111120</row>
+				<row>02111120</row>
+				<row>02111120</row>
+				<row>02211220</row>
+				<edge value="NORTH" />
+				<widget x="2" y="2" name="tech_research" info="archeotech ranged weapon#tech/ion_bow.xml" variable="12"/>
+			</keyBlock>
+			
+			
 			<clean value="2" />
 			<lootTable identity="normalchest">
 				<loot item="key" chance="0.4" unique="3" addendum="gnomic brass" />

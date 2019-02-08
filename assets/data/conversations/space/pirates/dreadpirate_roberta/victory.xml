@@ -30,18 +30,46 @@
 	
 	<page ID="microvore1">
 	<text>
-	Your protests fall on deaf ears as she undoes her skirt and lets it fall to the floor. Roberta's actions exposing her erect shaft before you in a way that can only bode ill. This belief is quickly realized as she lowers her hand down with you within and presses you against the side of her cock "Mhmm ah give it a hug toy, you'll be going down soon" she says and grinds you up and down her shaft moaning as she does so.
+	Your protests fall on deaf ears as she undoes her skirt and lets it fall to the floor. Roberta's actions exposing her erect shaft before you in a way that can only bode ill. This belief is quickly realized as she lowers her hand down with you within and rubs your legs against her cocktip, teasing her cumslit with your feet and moaning "Mhmm good toy, lets see...myah" she moans and mhmms as she bucks her hips and slides your legs into her cock, working your tiny form hip deep into her cock and then letting go of you with a wicked grin "Squirm your way out of there, and i might let you go" she says. Though even as she does so her cock ripples and throbs, tugging you an inch deeper and engulfing your belly.
 	</text>
-	<choice destination="microvore2" text="*used as a toy*"/>
+	<choice destination="microvore2A" text="*try to squirm out*"/>
+	<choice destination="microvore2B" text="*slide down willingly*"/>
 	</page>
 	
-	<page ID="microvore2">
+	<page ID="microvore2A">
 	<text>
-	
+	Well a chance of being let go is always worth it. You set about squirming as she strokes her cock and moans in delight "that's it" she says and purrs "that's just right." she continues, seemingly delighted as you push against her cocktip and wriggle for traction against the slick insides of her dick. The kitty captain rocking her hips, her strokes working to slide you deeper down her cock despite your efforts. At times it seems you're winning and you get some headway, only to have it erased as she strokes you down a bit further into her cock. You begin to realize she's quite literally toying with you, her cock tip wrapped around your chest just below your arms. She glances down at your expression as your struggles slow "Tired already? that's okay, no one your size ever gets away." she says and then with a schlorp your head finishes into her cock, your arms following suit soon after.
 	</text>
+	<choice destination="microvore3" text="thought so"/>
+	</page>
 	
+	<page ID="microvore2B">
+	<text>
+	"Huh, normally that gets them squirming..you're supposed to try and escape not" roberta starts teasing, then lets out a gasp as you wriggle downwards. Her cock bulging out all the more as you worm your hips down into her cocktip and rub yourself against the inside of her shaft in ways that makes it spasm and ripple to schlurp you up "Nyah, spoil my fun? well i suppose it's good that a toy..knows her place." utters Roberta as she moans and strokes over her cock, your shape soon nothing but a bulge in the catgirl's dick as you slip into her length entirely.
+	</text>
+	<choice destination="microvore3" text="the inevitable"/>
+	</page>
+	
+	<page ID="microvore3">
+	<text>
+	Roberta mhmms as she strokes over her shaft, you can feel her length pressing tight around you each time she does so. Her throbbing cock entirely containing your shape as she works you down steadily until you plunge into her sack. Roberta smiling and licking her lips as she feels your shape settle in nestled between her legs, giving her a swollen sack and an exquisite sensation of satisfaction. Especially as her crew want in on the fun, you suddenly feel pressure nudging over your shape and hear a purr from close by..one of the kitties licking at Roberta's bulging nuts eagerly as they begin to burble, and churn.
+	</text>
+	<choice destination="microvore4" text="*turned into nutbutter*"/>
+	</page>
+	
+	<page ID="microvore4">
+	<text>
+	The kitty keeps on licking at your shape and you find Roberta's sack is making quick work of you, in what feels like no time your body has become soft and weak and hot inside her cumfilled nuts. The kitty pirate who is worshipping Roberta's sack lets out a giggle feeling how pliant and yielding you've become "She's nearly done, want a taste?" asks Roberta and chuckles at how quickly the other kitty wraps her lips around Roberta's staff.
+	</text>
+	<choice destination="microvore5" text="*burble*"/>
 	</page>
 
+	<gameover ID="microvore5">
+	<text>
+	Your last conscious awareness is of the sounds of glorping cum coupled with the sound of the two kitty's blissfully moaning as they engage in their play. Your contribution now somewhat secondary as you gurgle away into jizz completely and they get closer and closer to the culmination of their fun. Roberta thrusting into her subordinate's mouth and then letting out a myah as she climaxes, pumping your remnants into the kitty's throat and holding her there so as not to let her spill a drop. The captain looking down at her as she lets her pull off at last "Tastey wasn't she? should of known she'd end up this way carrying those around." she says and giggles "then again, she'd of ended up a mess either way."
+	</text>
+	</gameover>
+	
 	<page ID="start">
 		<preference fetish="herms" />	
 			<preference fetish="cockvore" />				

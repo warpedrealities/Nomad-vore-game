@@ -6,6 +6,7 @@
 	<text>
 	“Greetings, I have a gift for you my melt slut friend, please take it you might be able to understand what it is with your reformation magic. It has been in my family for generations.”
 	</text>
+		<picture source="neri_portrait" height="2.63"/>
 	<effect type="setlocalflag" flag="meltslut" value="2" />	
 	<effect type="giveitem" value="1" item="key" addendum="Neri's house"/>
 	<choice destination="huh" text="thanks, but..this is a key"/>
@@ -85,6 +86,7 @@
 			schlurp new visitors into my balls as part of the official Minyos
 			welcome. You look like you need a welcoming wouldn't you agree?"
 		</text>
+				<picture source="neri_portrait" height="2.63"/>
 		<effect type="setlocalflag" flag="talked" value="1" />
 		<choice destination="agree" text="agree" />
 		<choice destination="refuse" text="disagree" />
@@ -104,6 +106,7 @@
 			visitor the
 			village has. Especially ones as delightful as you."
 		</text>
+				<picture source="neri_portrait" height="2.63"/>
 		<choice destination="agree" text="yes" />
 		<choice destination="end" text="no, bye" />
 		<choice destination="question0"
@@ -122,6 +125,7 @@
 			herself through
 			her skirt lightly.
 		</text>
+				<picture source="neri_portrait" height="2.63"/>
 		<choice destination="agree" text="I need another welcome" />
 		<choice destination="offerCockvore0" text="$turn me into cum please Neri">
 			<condition evaluate="LOCALFLAG" operator="equals" value="1"
@@ -1004,6 +1008,7 @@
 			"I don't want to talk to you anymore." ah the joys of dealing with the
 			sulky and immature. Maybe leave her be?
 		</text>
+				<picture source="neri_portrait" height="2.63"/>
 		<choice destination="apologize0"
 			text="actually, i kinda want to apologize for what I said." />
 		<choice destination="end" text="yeah, dunno why I'm bothering you" />

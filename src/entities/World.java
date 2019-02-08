@@ -33,15 +33,15 @@ public class World extends Entity {
 
 	float spriteSize;
 	String spriteName;
-	
-	
+
+
 	public World(String name, int x, int y)
 	{
 		entityName=name;
 		entityPosition=new Vec2f(x,y);
 
 	}
-	
+
 	private boolean FileExists()
 	{
 		if (Universe.getInstance().getSaveName()!=null)
@@ -50,12 +50,12 @@ public class World extends Entity {
 			if (file.exists())
 			{
 				return true;
-			}		
+			}
 		}
 
 		return false;
 	}
-	
+
 	@Override
 	public void Generate()
 	{
@@ -76,56 +76,56 @@ public class World extends Entity {
 				}
 			}
 			else
-			//if not normal load
+				//if not normal load
 			{
 				firstGenerate();
 			}
 		}
 	}
-	
+
 	void firstGenerate()
 	{
-			m_landings=new ArrayList<Landing>();
-			m_zones=new ArrayList<Zone>();
-			Document doc=ParserHelper.LoadXML("assets/data/worlds/"+entityName+".xml");
-			Element root=doc.getDocumentElement();
-		    Element n=(Element)doc.getFirstChild();
-			NodeList children=n.getChildNodes();
-			for (int i=0;i<children.getLength();i++)
+		m_landings=new ArrayList<Landing>();
+		m_zones=new ArrayList<Zone>();
+		Document doc=ParserHelper.LoadXML("assets/data/worlds/"+entityName+".xml");
+		Element root=doc.getDocumentElement();
+		Element n=(Element)doc.getFirstChild();
+		NodeList children=n.getChildNodes();
+		for (int i=0;i<children.getLength();i++)
+		{
+			Node node=children.item(i);
+			if (node.getNodeType()==Node.ELEMENT_NODE)
 			{
-				Node node=children.item(i);
-				if (node.getNodeType()==Node.ELEMENT_NODE)
+				Element Enode=(Element)node;
+				if (Enode.getTagName()=="zone")
 				{
-					Element Enode=(Element)node;
-					if (Enode.getTagName()=="zone")
+					//add this world
+					zoneType z=zoneType.SURFACE;
+					if (Enode.getAttribute("type").length()>0)
 					{
-						//add this world
-						zoneType z=zoneType.SURFACE;
-						if (Enode.getAttribute("type").length()>0)
-						{
-							z=ZoneTools.zoneTypeFromString(Enode.getAttribute("type"));
+						z=ZoneTools.zoneTypeFromString(Enode.getAttribute("type"));
 
-						}
-						m_zones.add(new Zone(node.getTextContent(),
-								Integer.parseInt(Enode.getAttribute("x")),
-								Integer.parseInt(Enode.getAttribute("y")),
-								z,this));
 					}
-					if (Enode.getTagName()=="ship")
-					{
-						Spaceship ship=new Spaceship(Enode.getAttribute("name"),
-								(int)entityPosition.x,(int)entityPosition.y, ShipState.LAND);
-						if (Enode.getAttribute("unusableState").length()>0)
-						{
-							ship.setUnusableState(Enode.getAttribute("unusableState"));
-						}								
-						forceLand(ship,Integer.parseInt(Enode.getAttribute("posX")),Integer.parseInt(Enode.getAttribute("posY")));
-					}
+					m_zones.add(new Zone(node.getTextContent(),
+							Integer.parseInt(Enode.getAttribute("x")),
+							Integer.parseInt(Enode.getAttribute("y")),
+							z,this));
 				}
+				if (Enode.getTagName()=="ship")
+				{
+					Spaceship ship=new Spaceship(Enode.getAttribute("name"),
+							(int)entityPosition.x,(int)entityPosition.y, ShipState.LAND);
+					if (Enode.getAttribute("unusableState").length()>0)
+					{
+						ship.setUnusableState(Enode.getAttribute("unusableState"));
+					}
+					forceLand(ship,Integer.parseInt(Enode.getAttribute("posX")),Integer.parseInt(Enode.getAttribute("posY")));
+				}
+			}
 
-			}			
+		}
 	}
-	
+
 	public void loadGenerate()
 	{
 		if (m_zones==null)
@@ -134,7 +134,7 @@ public class World extends Entity {
 			m_zones=new ArrayList<Zone>();
 			Document doc=ParserHelper.LoadXML("assets/data/worlds/"+entityName+".xml");
 			Element root=doc.getDocumentElement();
-		    Element n=(Element)doc.getFirstChild();
+			Element n=(Element)doc.getFirstChild();
 			NodeList children=n.getChildNodes();
 			for (int i=0;i<children.getLength();i++)
 			{
@@ -158,17 +158,17 @@ public class World extends Entity {
 					}
 				}
 
-			}		
-		}		
+			}
+		}
 	}
-	
+
 	@Override
 	public Zone getZone(int index)
 	{
 		return m_zones.get(index);
-		
+
 	}
-	
+
 	@Override
 	public int getNumZones()
 	{
@@ -178,7 +178,7 @@ public class World extends Entity {
 		}
 		return m_zones.size();
 	}
-	
+
 	public Zone getLandedShipZone(String filename, int x, int y)
 	{
 		if (m_landings.size()>0)
@@ -189,11 +189,11 @@ public class World extends Entity {
 				{
 					return m_landings.get(i).getShip().getZone(0);
 				}
-			}	
+			}
 		}
 		return null;
 	}
-	
+
 	@Override
 	public Zone getZone(String name) {
 		for (int i=0;i<m_zones.size();i++)
@@ -204,7 +204,7 @@ public class World extends Entity {
 
 			}
 		}
-		
+
 		if (m_landings.size()>0)
 		{
 			for (int i=0;i<m_landings.size();i++)
@@ -215,10 +215,10 @@ public class World extends Entity {
 				}
 			}
 		}
-		
+
 		return null;
 	}
-	
+
 	@Override
 	public Zone getZone(String name, int x, int y)
 	{
@@ -230,7 +230,7 @@ public class World extends Entity {
 
 			}
 		}
-		
+
 		if (m_landings.size()>0)
 		{
 			for (int i=0;i<m_landings.size();i++)
@@ -239,18 +239,18 @@ public class World extends Entity {
 				{
 					if (m_landings.get(i).getX()==x && m_landings.get(i).getY()==y)
 					{
-						return m_landings.get(i).getShip().getZone(0);	
-					}		
+						return m_landings.get(i).getShip().getZone(0);
+					}
 				}
 			}
 		}
-		
+
 		return null;
 	}
-	
+
 	public boolean Land(Spaceship ship)
 	{
-		
+
 		for (int i=0;i<m_zones.size();i++)
 		{
 			if (m_zones.get(i).getType()==zoneType.SURFACE)
@@ -258,12 +258,12 @@ public class World extends Entity {
 				if (Land(ship,m_zones.get(i))==true)
 				{
 					return true;
-				}			
+				}
 			}
 		}
 		return false;
 	}
-	
+
 	public boolean LandFree(int x, int y)
 	{
 		for (int i=0;i<m_landings.size();i++)
@@ -275,7 +275,7 @@ public class World extends Entity {
 		}
 		return true;
 	}
-	
+
 	public boolean Land(Spaceship ship,Zone zone)
 	{
 		if (LandFree((int)zone.getPosition().x,(int)zone.getPosition().y)==false)
@@ -284,7 +284,7 @@ public class World extends Entity {
 		}
 		if (zone.getTiles()==null)
 		{
-			
+
 			int x=8;
 			if (zone.getWidth()>16)
 			{
@@ -296,10 +296,10 @@ public class World extends Entity {
 				x=(int) (zone.getLandingSite().x-(ship.getSize().x/2));
 				y=(int) (zone.getLandingSite().y-(ship.getSize().y/2));
 			}
-			
+
 			Vec2f p=new Vec2f(x,y);
 			Landing l=new Landing(ship, (int)zone.zonePosition.x, (int)zone.zonePosition.y,p);
-			
+
 			WidgetPortal portal=ship.getZone(0).getPortalWidget(-101);
 			if (portal!=null)
 			{
@@ -314,9 +314,9 @@ public class World extends Entity {
 			return true;
 
 		}
-		//find a spot in zone	
+		//find a spot in zone
 		int width=(int)ship.getSize().x; int height=(int)ship.getSize().y;
-		
+
 		//if we cant do land
 		Vec2f p=ZoneTools.getLandingLocation(width,height,zone,ship.getSize().x,ship.getSize().y);
 		if (p==null)
@@ -327,7 +327,7 @@ public class World extends Entity {
 		{
 			Landing l=new Landing(ship, (int)zone.zonePosition.x, (int)zone.zonePosition.y,p);
 			m_landings.add(l)
-			;		
+			;
 			//paint the ship onto the map using tile 0
 			ZoneBuildTools tools=new ZoneBuildTools(zone,zone.zoneTileGrid);
 			tools.AddShip(l);
@@ -341,7 +341,7 @@ public class World extends Entity {
 		}
 
 	}
-	
+
 	public boolean forceLand(Spaceship ship, int x, int y)
 	{
 
@@ -354,13 +354,13 @@ public class World extends Entity {
 				if (x==x0 && y==y0)
 				{
 					return Land(ship,m_zones.get(i));
-				}		
+				}
 			}
 
-		}		
+		}
 		return false;
 	}
-	
+
 	public boolean Land(Spaceship ship, int x, int y)
 	{
 
@@ -374,28 +374,28 @@ public class World extends Entity {
 				{
 					return Land(ship,m_zones.get(i));
 				}
-				
+
 			}
-		}		
+		}
 		return false;
 	}
-	
+
 	@Override
 	public Element LoadZone(Zone zone)
 	{
 		Document doc=ParserHelper.LoadXML("assets/data/worlds/"+entityName+"/"+zone.zoneName+".xml");
 
 		//read through the top level nodes
-		
-	    Element n=(Element)doc.getFirstChild();	
-		
-		
+
+		Element n=(Element)doc.getFirstChild();
+
+
 		return n;
 	}
-	
+
 	@Override
 	public ArrayList<Landing> getLandings() {
-		
+
 		return m_landings;
 	}
 
@@ -403,16 +403,16 @@ public class World extends Entity {
 	public void Save(String filename) throws IOException
 	{
 		if (m_zones!=null)
-		{	
+		{
 			File file=new File("saves/"+filename+"/"+entityName+".sav");
 			if (file.exists()==false)
 			{
 				file.createNewFile();
 			}
-	
+
 			FileOutputStream fstream=new FileOutputStream(file);
 			DataOutputStream dstream=new DataOutputStream(fstream);
-	
+
 			//save zones
 			if (m_zones!=null)
 			{
@@ -421,7 +421,7 @@ public class World extends Entity {
 				{
 					m_zones.get(i).Save(dstream);
 				}
-				
+
 			}
 			else
 			{
@@ -442,10 +442,10 @@ public class World extends Entity {
 			}
 			dstream.close();
 			fstream.close();
-			
+
 		}
 	}
-	
+
 	void load() throws IOException
 	{
 
@@ -453,7 +453,7 @@ public class World extends Entity {
 
 		FileInputStream fstream=new FileInputStream(file);
 		DataInputStream dstream=new DataInputStream(fstream);
-		
+
 		//read number of zone entries
 		int count=dstream.readInt();
 		for (int i=0;i<count;i++)
@@ -475,7 +475,7 @@ public class World extends Entity {
 			}
 		}
 		count=count+1;
-	
+
 		dstream.close();
 		fstream.close();
 	}
@@ -495,18 +495,18 @@ public class World extends Entity {
 	private void loadSprite()
 	{
 		Document doc=ParserHelper.LoadXML("assets/data/worlds/"+entityName+".xml");
-		
-	    Element n=(Element)doc.getFirstChild();
-		
+
+		Element n=(Element)doc.getFirstChild();
+
 		NodeList nodeList=n.getElementsByTagName("entitysprite");
-		
+
 		Element e=(Element)nodeList.item(0);
-		
+
 		spriteSize=Float.parseFloat(e.getAttribute("size"));
 		spriteName=e.getAttribute("filename");
-		
+
 	}
-	
+
 	@Override
 	public String getSprite() {
 		// TODO Auto-generated method stub
@@ -530,7 +530,7 @@ public class World extends Entity {
 	@Override
 	public void postLoad(Zone zone) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -543,7 +543,7 @@ public class World extends Entity {
 			{
 				return m_zones.get(i);
 			}
-			
+
 		}
 		return null;
 	}
@@ -556,11 +556,12 @@ public class World extends Entity {
 			{
 				return m_zones.get(i);
 			}
-			
+
 		}
 		return null;
 	}
 
+	@Override
 	public boolean isLoaded()
 	{
 		if (m_zones==null)
@@ -569,4 +570,5 @@ public class World extends Entity {
 		}
 		return true;
 	}
+
 }

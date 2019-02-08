@@ -68,14 +68,16 @@ public class WidgetLoader {
 			return new WidgetScriptedEvent(dstream);
 		case 21:
 			return new WidgetCapture(dstream);
-		case 22: 
+		case 22:
 			return new WidgetScripted(dstream);
 		case 23:
 			return new WidgetReformer(dstream);
 		case 24:
-			return new WidgetCapsule(dstream);	
+			return new WidgetCapsule(dstream);
 		case 25:
-			return new WidgetCapsuleSystem(dstream);				
+			return new WidgetCapsuleSystem(dstream);
+		case 26:
+			return new WidgetResearch(dstream);
 		}
 		return null;
 	}
@@ -138,6 +140,9 @@ public class WidgetLoader {
 		}
 		if (root.getTagName().equals("capsule")) {
 			widget = new WidgetCapsule(root);
+		}
+		if (root.getTagName().equals("research")) {
+			widget = new WidgetResearch(root);
 		}
 		return widget;
 	}

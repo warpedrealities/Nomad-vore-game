@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<entry name="TK: power suit">
+	<text>
+	The powersuit is clearly intended for operation in extremely hazardous environments. The exterior is heavily armoured, the interior is climate controlled and sealed against various indirect threats. The radiological powerplant in the suits backpack means the suit would also have formidable endurance. All of these things coupled with the increased strength the suit can provide the wearer should be capable of surviving most hazards. And yet you've found the suit torn apart and no sign of its operator. LBREAK
+	From your study of the suit you've been able to come up with a design that can replicate some, but far from all, of its features. This exoskeleton will pale in comparison to the original, but the completed powersuit is probably forever going to be beyond your capabilities to create with the tools and resources on hand.
+	</text>
+	<requirement name="alien powersuit" count="1" />
+<recipe_reward recipe="exoskeleton" />
+</entry>

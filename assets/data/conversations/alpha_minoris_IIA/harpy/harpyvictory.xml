@@ -24,7 +24,7 @@
 			to sate it once and for all.
 		</text>
 		<effect type="setglobalflag" flag="AMIIA_HARPIES" value="1" />
-		<picture source="harpyportrait"/>
+		<picture source="harpyportrait" height="1"/>
 		<choice destination="unbirth0" text="continue" />
 	</page>
 	<page ID="start">

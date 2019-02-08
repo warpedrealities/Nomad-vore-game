@@ -15,6 +15,7 @@ import item.ItemLibrary;
 import nomad.Preferences;
 import nomad.UIDGenerator;
 import nomad.integrityChecking.SaveIntegrityCheck;
+import nomad.playerScreens.journal.JournalSystem;
 import nomad.universe.actionBar.ActionBarData;
 import nomad.universe.eventSystem.UniverseEventSystem;
 import shared.FileTools;
@@ -39,8 +40,10 @@ public class Universe extends GameManager
 	public Zone currentZone;
 	public Player player;
 	public UniverseEventSystem eventSystem;
+	public JournalSystem journal;
 	ActionBarData actionBarData;
 	String saveName;
+	String shipName;
 
 	boolean isPlaying;
 
@@ -116,6 +119,7 @@ public class Universe extends GameManager
 		UniverseStateChanger stateChanger=new UniverseStateChanger(this);
 		stateChanger.LoadUniverse();
 		stateChanger.startGame(false);
+		journal = new JournalSystem();
 		eventSystem.reset();
 	}
 
@@ -326,6 +330,13 @@ public class Universe extends GameManager
 			starSystems.get(i).Save(filename);
 		}
 
+		if (shipName != null) {
+			dstream.writeBoolean(true);
+			ParserHelper.SaveString(dstream, shipName);
+		} else {
+			dstream.writeBoolean(false);
+		}
+
 		dstream.writeInt(42);
 		//save faction library
 		FactionLibrary.getInstance().save(dstream);
@@ -335,6 +346,8 @@ public class Universe extends GameManager
 		uidGenerator.save(dstream);
 
 		actionBarData.save(dstream);
+
+		journal.save(dstream);
 
 		dstream.close();
 		fstream.close();
@@ -437,6 +450,14 @@ public class Universe extends GameManager
 
 	public UniverseEventSystem getEventSystem() {
 		return eventSystem;
+	}
+
+	public String getShipName() {
+		return shipName;
+	}
+
+	public void setShipName(String shipName) {
+		this.shipName = shipName;
 	}
 
 }

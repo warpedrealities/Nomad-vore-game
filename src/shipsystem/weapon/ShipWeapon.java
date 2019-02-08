@@ -31,7 +31,7 @@ public class ShipWeapon extends ShipAbility {
 		for (int i = 0; i < children.getLength(); i++) {
 			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
 				Element e = (Element) children.item(i);
-				if (e.getTagName().contains("effect")) {
+				if (e.getTagName().contains("Effect")) {
 					effects.add(WeaponEffectLoader.readEffect(e));
 				}
 				if (e.getAttribute("volley").length() > 0) {
@@ -85,7 +85,7 @@ public class ShipWeapon extends ShipAbility {
 			weaponCosts.add(new WeaponCost(dstream));
 		}
 
-
+		tracking = dstream.readInt();
 		rangePenalty = dstream.readFloat();
 		maxRange = dstream.readFloat();
 

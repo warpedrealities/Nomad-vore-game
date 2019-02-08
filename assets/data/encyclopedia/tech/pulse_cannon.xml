@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<entry name="TK: Pulse Cannon">
+	<text>
+	This capital ship grade weapon seems to operate by firing a high intensity bolt of photonic energy contained in a jacket or sheathe to prevent dissipation or dispersal in flight. This keeps the energy concentrated until impact. Weapons of this scale are impractical to replicate but you have been able to scale down the operating principles to create a more feasible weapon.
+	</text>
+	<requirement name="large scale directed energy weapon A" count="1" />
+	<requirement name="large scale directed energy weapon B" count="1" />	
+	<recipe_reward recipe="pulse cannon" />
+</entry>

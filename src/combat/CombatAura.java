@@ -272,4 +272,22 @@ public class CombatAura {
 
 	}
 
+	public static MoveResult doNuke(CombatMove combatMove, Actor origin, Attackable target) {
+		CompiledFX explosion = new CompiledFX();
+
+		if (combatMove.isNonViolent()) {
+			explosion.setRGB(1, 0, 1);
+		} else {
+			explosion.setRGB(1, 0, 0);
+		}
+		if (vision == null) {
+			vision = new PrecisePermissive();
+		}
+		CombatProjector projector = new CombatProjector(origin, Universe.getInstance().getCurrentZone(), combatMove);
+		projector.setCompiledEffect(explosion);
+		ViewScene.m_interface.getFX().addEffect(explosion);
+		vision.visitFieldOfView(projector, (int) target.getPosition().x, (int) target.getPosition().y, 9);
+		return MoveResult.HIT;
+	}
+
 }

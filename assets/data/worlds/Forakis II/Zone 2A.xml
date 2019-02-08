@@ -17,6 +17,38 @@
 	<transition direction="west">Zone 1A</transition>
 	<mapgen>
 		<perlin>
+	<randprefab width="7" height="7">
+				<row>3333333</row>
+				<row>3133313</row>
+				<row>3133313</row>
+				<row>3133313</row>
+				<row>3133313</row>
+				<row>3111113</row>				
+				<row>3333333</row>
+				<placeWidget x="0" y="0" name="SPRITE" width="7" height="7"
+					file="snowcrash" />
+				<placeWidget x="1" y="0" name="DESCRIBER">
+				A spaceship, it looks blasted apart..scorched and rusted.
+				</placeWidget>		
+				<placeWidget x="2" y="4" name="cargocontainer">
+				<lootTable>
+						<loot item="isotope" chance="1.0" />
+						<loot item="isotope" chance="1.0" />
+						<loot item="isotope" chance="0.5" />
+						<loot item="isotope" chance="1.0" />
+						<loot item="isotope" chance="0.5" />			
+					<lootSubTable chance="0.5" file="resource_tier_1" />		
+					<lootSubTable chance="0.5" file="resource_tier_1" />
+					<lootSubTable chance="0.5" file="consumable_tier_1" />
+				</lootTable>
+			</placeWidget>	
+				<placeItem x="3" y="0">
+						<item itemname="Blast Fission Gun" energy="0" />
+							<item itemname="note" exposition="ari9" />	
+				</placeItem>		
+				<placeWidget x="3" y="4" name="craftingtable"/>	
+			</randprefab>			
+		
 			<band low="-1.0" high="-0.5">
 				<floodfill tile="7" />
 			</band>

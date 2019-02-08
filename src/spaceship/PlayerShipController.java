@@ -30,7 +30,7 @@ public class PlayerShipController implements ShipController {
 	private float controlClock;
 	private int busy;
 	private Faction faction;
-	
+
 	public PlayerShipController(StarSystem system) {
 		faction=FactionLibrary.getInstance().getFaction("player");
 		currentSystem = system;
@@ -44,7 +44,8 @@ public class PlayerShipController implements ShipController {
 			busy--;
 		}
 	}
-	
+
+	@Override
 	public void setBusy(int i)
 	{
 		busy=i;
@@ -66,7 +67,7 @@ public class PlayerShipController implements ShipController {
 
 	private boolean handleCollision(int x, int y, Spaceship ship) {
 		Entity e = collisionCheck(x, y, ship);
-		if (e != null) {
+		if (e != null && e.isVisible()) {
 			SolarActionHandler handler = new SolarActionHandler(ship, e);
 			handler.doAction();
 
@@ -77,10 +78,10 @@ public class PlayerShipController implements ShipController {
 	}
 
 	private void useFuel(Spaceship ship) {
-		float navBonus=((float)ship.getShipStats().getCrewStats().getNavigation())*0.05F;
+		float navBonus=(ship.getShipStats().getCrewStats().getNavigation())*0.05F;
 		float v = ship.getShipStats().getFuelEfficiency()*(1-navBonus);
 		ship.getShipStats().getResource("FUEL")
-				.setResourceAmount(ship.getShipStats().getResource("FUEL").getResourceAmount() - v);
+		.setResourceAmount(ship.getShipStats().getResource("FUEL").getResourceAmount() - v);
 	}
 
 	private boolean move(int v, Spaceship ship) {
@@ -108,10 +109,10 @@ public class PlayerShipController implements ShipController {
 				&& !Keyboard.isKeyDown(GLFW_KEY_A) && !Keyboard.isKeyDown(GLFW_KEY_RIGHT)
 				&& !Keyboard.isKeyDown(GLFW_KEY_D)) {
 			controlClock = 0;
-	 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5)||Keyboard.isKeyDown(GLFW.GLFW_KEY_SPACE)) {
+			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5)||Keyboard.isKeyDown(GLFW.GLFW_KEY_SPACE)) {
 				busy+=10;
 				return true;
-			}	
+			}
 			return false;
 		} else {
 			if (controlClock <= 0) {
@@ -201,7 +202,7 @@ public class PlayerShipController implements ShipController {
 			}
 			return altControl(ship);
 		}
- 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5)||Keyboard.isKeyDown(GLFW.GLFW_KEY_SPACE)) {
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_KP_5)||Keyboard.isKeyDown(GLFW.GLFW_KEY_SPACE)) {
 			busy+=10;
 		}
 		return false;
@@ -229,7 +230,7 @@ public class PlayerShipController implements ShipController {
 	@Override
 	public void setShip(Spaceship spaceship) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

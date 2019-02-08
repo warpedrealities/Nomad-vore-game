@@ -173,4 +173,19 @@ public class Encyclopedia {
 		}
 	}
 
+	public boolean hasResearch(String find) {
+		return researchList.get(find) != null;
+
+	}
+
+	public boolean hasData(String find) {
+		for (int i = 0; i < dataList.size(); i++) {
+			if (dataList.get(i).getName().equals(find)) {
+				return true;
+
+			}
+		}
+		return false;
+	}
+
 }

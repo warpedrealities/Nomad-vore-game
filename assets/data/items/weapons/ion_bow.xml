@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ItemWeapon name="Ion bow" weight="4" value="750">
+	<tagSet value="A" />
+	<description>
+		A clip fed crossbow with advanced technology and exotic ammunition. Fires ionized bolts that can shock and stun targets. Can easily be re-cocked to load another shot from the clip.  AP 3 8-15
+		electrokinetic damage, has a chance to stun, 3 TU per shot. (A)
+	</description>
+	<modifier>
+
+	</modifier>
+	<combatMove name="shoot" ammoCost="1" pattern="RANGED"
+		bonusAttribute="RANGED" timeCost="3" rangedbias="2" bonusToHit="0"
+		actionCost="3" basicAction="true" moveType="FIGHT">
+		<effectDamage type="SHOCK" minValue="4" maxValue="9"
+			modifier="NONE" />
+		<effectDamage type="KINETIC" minValue="4" maxValue="6"
+			modifier="NONE" />
+		<effectStatus probability="25">
+			<applyText>TARGET is stunned</applyText>
+			<statusStun uid="9" duration="6">
+				TARGET is no longer stunned
+			</statusStun>
+		</effectStatus>					
+		<missText count="1">
+			<text>you fail to shoot TARGET</text>
+		</missText>
+		<hitText count="1">
+			<text>you shoot TARGET for VALUE electrokinetic damage</text>
+		</hitText>
+	</combatMove>
+	<energy refill="ion bolt clip" efficiency="1" capacity="5" />
+</ItemWeapon>
