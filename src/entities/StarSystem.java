@@ -13,6 +13,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import entities.scripting.ScriptTool;
 import entities.stations.Station;
 import nomad.universe.Universe;
 import shared.ParserHelper;
@@ -55,6 +56,7 @@ public class StarSystem {
 						}
 						entitiesInSystem.add(world);
 					}
+
 					if (Enode.getTagName() == "Station") {
 						// add this world
 						Station station= new Station(node.getTextContent(),
@@ -204,6 +206,13 @@ public class StarSystem {
 	}
 
 	public void systemEntry() {
+
+		Document doc = ParserHelper.LoadXML("assets/data/systems/" + systemName + ".xml");
+		Element n = (Element) doc.getFirstChild();
+		if (n.getAttribute("script").length() > 0) {
+			new ScriptTool(n.getAttribute("script")).run();
+		}
+
 		new SpawningSystem(systemName).run(entitiesInSystem);
 		for (int i=0;i<entitiesInSystem.size();i++)
 		{

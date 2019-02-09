@@ -1,6 +1,6 @@
 package gui;
 
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Vec2f;
 
 public class Button4Colour extends Button {
@@ -8,7 +8,7 @@ public class Button4Colour extends Button {
 	int textures[];
 	int colourIndex;
 
-	public Button4Colour(Vec2f pos, Vec2f size, int[] textures, MyListener listener, String string, int ID,
+	public Button4Colour(Vec2f pos, Vec2f size, int[] textures, ButtonListener listener, String string, int ID,
 			float s) {
 		super(pos, size, textures[0], listener, string, ID, s);
 		this.textures = textures;

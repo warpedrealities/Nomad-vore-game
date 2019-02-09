@@ -12,7 +12,7 @@ import perks.Perk;
 import perks.PerkLibrary;
 import perks.PerkQualifier;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Vec2f;
 
 public class PerkScreen implements Callback {
@@ -22,7 +22,7 @@ public class PerkScreen implements Callback {
 	private ArrayList<Perk> availablePerks;
 	private MultiLineText description;
 	private int index = -1;
-	public PerkScreen(int[] variables, MyListener listener, Player_RPG rpg) {
+	public PerkScreen(int[] variables, ButtonListener listener, Player_RPG rpg) {
 		window = new Window(new Vec2f(-2, -16.0F), new Vec2f(22, 7), variables[1], true);
 		availablePerks = new ArrayList<Perk>();
 		buildPerksList();

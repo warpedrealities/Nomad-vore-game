@@ -10,6 +10,30 @@
 		<choice destination="end" text="*leave it be*" />	
 	</page>
 
+
+	<page ID="start">
+		<condition evaluate="GLOBALFLAG" operator="ESCAPEPOD" value="1"
+			flag="FIRST" />
+		<text>
+			HEINLEIN ESCAPE POD N.7 LBREAK
+			PLANETFALL SUCCESSFUL ON MOON OF
+			2ND PLANET LBREAK
+			WARNING NAVIGATIONAL SYSTEM DAMAGED LBREAK
+			GALACTIC
+			POSITIONING FIX FAILED LBREAK
+			EXACT LOCATION UNKNOWN LBREAK
+			AWAITING
+			INPUT
+		</text>
+		<choice destination="atmosphere" text="atmospheric readings" />
+		<choice destination="signals" text="perform signal scan" />
+		<choice destination="scan" text="replay descent sensor logs" />
+		<choice destination="survival_supplies" text="survival supplies" />	
+		<choice destination="recharge0" text="emergency survival equipment recharge"/>
+		<choice destination="end" text="exit" />
+	</page>
+
+
 	<page ID="start">
 		<text>
 			HEINLEIN ESCAPE POD N.7 LBREAK
@@ -22,7 +46,7 @@
 			AWAITING
 			INPUT
 		</text>
-		
+		<special effect="addJournal" file="main" name="quest0" />
 		<effect type="setglobalflag" flag="ESCAPEPOD" value="1" />
 		<choice destination="atmosphere" text="atmospheric readings" />
 		<choice destination="signals" text="perform signal scan" />

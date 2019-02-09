@@ -8,7 +8,7 @@ import org.lwjgl.opengl.GL20;
 import font.NuFont;
 import input.Keyboard;
 import input.MouseHook;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.NinePatch;
 import shared.Vec2f;
 import vmo.Game;
@@ -28,7 +28,7 @@ public class DropDown extends GUIBase {
 	float m_initialize;
 	float clock;
 
-	public DropDown(int background, Vec2f pos, Vec2f size, MyListener listener, int colour) {
+	public DropDown(int background, Vec2f pos, Vec2f size, ButtonListener listener, int colour) {
 		m_tintID = colour;
 		m_pos = pos;
 		m_size = size;

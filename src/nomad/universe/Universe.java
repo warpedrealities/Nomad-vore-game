@@ -460,4 +460,8 @@ public class Universe extends GameManager
 		this.shipName = shipName;
 	}
 
+	public JournalSystem getJournal() {
+		return journal;
+	}
+
 }

@@ -15,7 +15,7 @@ import nomad.universe.Universe;
 import particlesystem.ParticleEmitter;
 import preloader.PreloadReport;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.SceneBase;
 import shared.Screen;
 import shared.Sprite;
@@ -26,7 +26,7 @@ import vmo.Config;
 import vmo.Game;
 import vmo.GameManager;
 
-public class Menu extends SceneBase implements MyListener, Callback {
+public class Menu extends SceneBase implements ButtonListener, Callback {
 
 	Matrix4f m_GUImatrix;
 	Sprite m_sprite;

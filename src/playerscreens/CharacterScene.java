@@ -19,7 +19,7 @@ import input.MouseHook;
 import nomad.universe.Universe;
 import playerscreens.levelup.LevelUpScreen;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.SceneBase;
 import shared.Screen;
 import shared.Tools;
@@ -28,7 +28,7 @@ import view.ViewScene;
 import vmo.Game;
 import zone.Zone;;
 
-public class CharacterScene extends SceneBase implements Callback, MyListener {
+public class CharacterScene extends SceneBase implements Callback, ButtonListener {
 
 	Matrix4f m_GUImatrix;
 	Window window;

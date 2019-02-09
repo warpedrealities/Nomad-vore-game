@@ -9,7 +9,7 @@ import gui.Window;
 import input.MouseHook;
 import nomad.universe.Universe;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Screen;
 import shared.Vec2f;
 import solarview.spaceEncounter.EncounterLogic.GameState;
@@ -18,7 +18,7 @@ import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
 import solarview.spaceEncounter.retreatHandler.RetreatHandler;
 import spaceship.ShipController.scriptEvents;
 
-public class Screen_Recap extends Screen implements MyListener {
+public class Screen_Recap extends Screen implements ButtonListener {
 
 	private EncounterShipImpl []ships;
 	private GameState state;

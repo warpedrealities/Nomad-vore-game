@@ -3,7 +3,7 @@ package gui;
 import java.nio.FloatBuffer;
 
 import font.NuFont;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.NinePatch_Alternate;
 import shared.Vec2f;
 
@@ -19,7 +19,7 @@ public class Button extends GUIBase {
 	protected boolean m_active;
 	protected float clock;
 
-	public Button(Vec2f pos, Vec2f size, int texture, MyListener listener, String string, int ID) {
+	public Button(Vec2f pos, Vec2f size, int texture, ButtonListener listener, String string, int ID) {
 		m_active = true;
 		m_pos = pos;
 		m_size = size;
@@ -41,7 +41,7 @@ public class Button extends GUIBase {
 
 	}
 
-	public Button(Vec2f pos, Vec2f size, int texture, MyListener listener, String string, int ID, float s) {
+	public Button(Vec2f pos, Vec2f size, int texture, ButtonListener listener, String string, int ID, float s) {
 		m_active = true;
 		m_pos = pos;
 		m_size = size;

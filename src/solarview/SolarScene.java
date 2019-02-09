@@ -10,7 +10,7 @@ import nomad.universe.Universe;
 import rendering.SpriteRotatable;
 import shared.Callback;
 import shared.Geometry;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.SceneBase;
 import shared.Screen;
 import shared.Vec2f;
@@ -24,7 +24,7 @@ import spaceship.stats.SpaceshipAnalyzer;
 import view.ViewScene;
 import vmo.Game;
 
-public class SolarScene extends SceneBase implements MyListener, Solar_Interface, Callback {
+public class SolarScene extends SceneBase implements ButtonListener, Solar_Interface, Callback {
 
 	static Solar_Interface solarInt;
 

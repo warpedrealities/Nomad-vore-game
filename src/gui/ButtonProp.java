@@ -2,7 +2,7 @@ package gui;
 
 import java.nio.FloatBuffer;
 
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.ProportionBar;
 import shared.Vec2f;
 
@@ -10,7 +10,7 @@ public class ButtonProp extends Button {
 
 	private ProportionBar m_prop;
 
-	public ButtonProp(Vec2f pos, Vec2f size, int texture, MyListener listener, String string, int ID, int altTexture,
+	public ButtonProp(Vec2f pos, Vec2f size, int texture, ButtonListener listener, String string, int ID, int altTexture,
 			int max) {
 		super(pos, size, texture, listener, string, ID);
 		m_prop = new ProportionBar(pos, size, max, max, 0, texture, 1);

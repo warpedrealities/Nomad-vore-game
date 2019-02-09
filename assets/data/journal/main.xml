@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<journal>
+	<entry name="quest0" ID="1" priority="1" title="crashlanded">
+	Your escape pod has crashed on an alien world with no chance of rescue and little chance of encountering fellow humans. If you ever intend to return home to earth you will at a minimum need to get back into space. The escape pod is not going to be any help there. Even if its engines weren't burnt out they couldn't fight this world's pull. You've seen signs of alien technologies though, perhaps you can find an alternative spacecraft.
+	</entry>
+	<entry name="quest1" ID="1" priority="1" title="expanding horizons">
+	Your new craft is servicable enough for allowing you to travel beyond the first alien world you've reached. But it's obvious that both the wreck of the heinlein and earth itself are impossibly distant unless you find a way of overcoming the light barrier. You can't build a wormhole drive like the Heinlein had, but it's clear from what you can see now that a star spanning alien civilization touched these worlds at some point. Perhaps it exists still, at any rate you will need to find a way of acquiring the FTL technology that must of made their civilization possible.
+	</entry>
+	<entry name="quest2" ID="1" priority="1" title="faster than lightspeed">
+	You've done it. You've acquired an FTL engine capable of travelling faster than light. You should prepare for your trip but when ready you should engage the drive and see where it takes you. After that you'll need to find your way back to the Heinlein. However doing so will mean correlating the flight data of the escape pod with a gravitational map of the local cosmos. You possess the former, now you must find the latter.
+	</entry>
+</journal>

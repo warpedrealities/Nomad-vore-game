@@ -29,6 +29,7 @@
 			your service right? I mean, not for free..the queen'd not like
 			that..but..."
 		</text>
+		<special effect="removeJournal" ID="205"/>
 		<effect type="setlocalflag" flag="reward" value="1" />
 		<choice destination="shop" text="sure i'd like to buy something" />
 		<choice destination="end"
@@ -217,6 +218,7 @@
 			ever so
 			grateful if you can get it to work."
 		</text>
+		<special effect="addJournal" file="dammath" name="pump0" />
 		<effect type="setglobalflag" flag="dammathquest1" value="1" />
 		<choice destination="end" text="I'll give it a look, no promises though." />
 	</page>

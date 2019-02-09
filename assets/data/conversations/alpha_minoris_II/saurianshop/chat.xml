@@ -60,6 +60,7 @@
 			wish you
 			luck. May your ancestors watch over you in this endeavour."
 		</text>
+		<special effect="addJournal" file="dammath" name="serpent0" />
 		<effect type="setglobalflag" flag="dammathquest0" value="1" />
 		<choice destination="end" text="then i will slay this creature" />
 	</page>
@@ -73,6 +74,7 @@
 			our
 			gratitude."
 		</text>
+
 		<choice destination="shop" text="I would like to discuss your wares" />
 		<choice destination="end" text="that is good to hear, farewell" />
 	</page>
@@ -93,7 +95,7 @@
 			of gold and bestows the thanks and friendship of her
 			people upon you.
 		</text>
-
+		<special effect="removeJournal" ID="204"/>
 		<effect type="setglobalflag" flag="dammathquest0" value="3" />
 		<effect type="givegold" value="400" />
 		<effect type="experience" value="300" />

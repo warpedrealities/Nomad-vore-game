@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<journal>
+	<entry name="statue0" ID="101" priority="10" title="find the missing statue">
+	The priestess of the green elf village has lost a statue important to her. It should be around the village somewhere. If you find it you should return it to her for a reward.
+	</entry>
+	<entry name="rats0" ID="102" priority="10" title="rats in the basement">
+	The elf alchemist has a pest problem in her basement. If you get rid of the rats she's promised a reward and perhaps more importantly that she can resume doing her job.
+	</entry>	
+	<entry name="rats1" ID="102" priority="10" title="rats in the basement">
+	You've cleared the alchemist's basement in the elf village, you should go inform her so she knows its safe and you can get your reward. 
+	</entry>	
+	<entry name="sword0" ID="103" priority="10" title="sister's sword">
+	The shopkeeper in the elf village wants her sister's sword as something to remember her by. Her sister went off on an expedition to the ruins in the valley to the south of the village and never returned.
+	</entry>	
+	<entry name="hunt0" ID="104" priority="10" title="hunt the huntresses">
+	Awari has given you the task of culling 3 of the more dangerous raptor huntresses in the valley to the south of the village of minyos.
+	</entry>	
+	<entry name="hunt1" ID="104" priority="10" title="hunt the huntresses">
+	You've killed three raptor huntresses in the valley to the south of the elf village. You should return to Awari to inform her of your accomplishment.
+	</entry>	
+	<entry name="crash0" ID="105" priority="10" title="elves commissioned to dig">
+	You've paid for the elves to excavate the crashed ship for you in the haunted valley. It might take some time but you should check back with the elf priestess later to see if they've finished digging the ship up.
+	</entry>	
+	<entry name="campaign0" ID="108" priority="5" title="saurian elf war: kill the captain">
+		On behalf of elf kind the priestess has commissioned you to kill the saurian captain on the battlefield to the south west of the elf village. She is liable to have an escort.
+	</entry>	
+	<entry name="campaign1" ID="108" priority="5" title="saurian elf war: kill the captain">
+	You've defeated the saurian captain, this will be a setback for the perfidious reptiles. You should inform the priestess you have done this deed.
+	</entry>	
+</journal>

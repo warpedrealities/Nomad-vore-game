@@ -1,6 +1,6 @@
 package gui;
 
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Vec2f;
 
 public class Button2 extends Button {
@@ -8,7 +8,7 @@ public class Button2 extends Button {
 	int m_textures[];
 	boolean m_alternate;
 
-	public Button2(Vec2f pos, Vec2f size, int texture, MyListener listener, String string, int ID, int altexture,
+	public Button2(Vec2f pos, Vec2f size, int texture, ButtonListener listener, String string, int ID, int altexture,
 			float s) {
 		super(pos, size, texture, listener, string, ID, s);
 		m_textures = new int[2];

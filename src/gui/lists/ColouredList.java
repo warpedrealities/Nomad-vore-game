@@ -10,18 +10,18 @@ public class ColouredList extends List {
 
 	private float [][] colourList;
 	private int [] stringColours;
-	
+
 	public ColouredList(Vec2f position, int slots, int texture, int tint, shared.Callback callback,
 			float width,float [][]colourList) {
 		super(position, slots, texture, tint, callback, width);
 		this.colourList=colourList;
 	}
-	
+
 	public void setStringColour(int [] stringColours)
 	{
 		this.stringColours=stringColours;
 	}
-	
+
 	@Override
 	public void Draw(FloatBuffer buffer, int matrixloc) {
 		// TODO Auto-generated method stub
@@ -33,20 +33,20 @@ public class ColouredList extends List {
 				GL20.glUniform4f(m_tint, 0, 1, 0.5F, 1);
 				m_fonts[i].Draw(buffer, matrixloc);
 			} else {
-				if (stringColours.length>i+m_offset)
+				if (stringColours != null && stringColours.length > i + m_offset)
 				{
 					float [] colours=colourList[stringColours[i+m_offset]];
-					GL20.glUniform4f(m_tint, colours[0], colours[1], colours[2], 1);	
+					GL20.glUniform4f(m_tint, colours[0], colours[1], colours[2], 1);
 				}
 				else
 				{
-					GL20.glUniform4f(m_tint, 1,1,1, 1);			
+					GL20.glUniform4f(m_tint, 1,1,1, 1);
 				}
 				m_fonts[i].Draw(buffer, matrixloc);
 			}
 
 		}
-		GL20.glUniform4f(m_tint, 1,1,1, 1);		
+		GL20.glUniform4f(m_tint, 1,1,1, 1);
 		slider.Draw(buffer, matrixloc);
 	}
 

@@ -5,7 +5,7 @@ import java.nio.FloatBuffer;
 import gui.Button2;
 import gui.Window;
 import input.MouseHook;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Vec2f;
 
 public class MenuSystem {
@@ -14,7 +14,7 @@ public class MenuSystem {
 	private Window window;
 	private Vec2f innerCorner, outerCorner;
 	private Button2 buttons[];
-	public MenuSystem(int windowTexture, int button0, int button1, MyListener buttonListener) {
+	public MenuSystem(int windowTexture, int button0, int button1, ButtonListener buttonListener) {
 		active = false;
 		window = new Window(new Vec2f(13.0F, -1.0F), new Vec2f(7, 15), windowTexture, false);
 		buttons = new Button2[7];

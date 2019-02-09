@@ -3,11 +3,11 @@ package gui;
 import java.nio.FloatBuffer;
 
 import shared.Clickable;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Vec2f;
 
 public abstract class GUIBase implements Clickable {
-	protected MyListener m_listener;
+	protected ButtonListener m_listener;
 
 	public abstract void update(float DT);
 

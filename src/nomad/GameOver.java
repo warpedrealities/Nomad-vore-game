@@ -15,14 +15,14 @@ import gui.Window;
 import input.MouseHook;
 import menu.Menu;
 import nomad.universe.Universe;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.SceneBase;
 import shared.Tools;
 import shared.Vec2f;
 import view.ViewScene;
 import vmo.Game;
 
-public class GameOver extends SceneBase implements MyListener {
+public class GameOver extends SceneBase implements ButtonListener {
 
 	private Actor victor;
 	TextView m_text;

@@ -44,7 +44,7 @@ import playerscreens.CharacterScene;
 import playerscreens.InventoryScreen;
 import rendering.WorldView;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.ParserHelper;
 import shared.SceneBase;
 import shared.Scene_Int;
@@ -65,7 +65,7 @@ import widgets.WidgetItemPile;
 import zone.TileDef.TileMovement;
 import zone.Zone;
 
-public class ViewScene extends SceneBase implements ModelController_Int, Scene_Int, MyListener, Callback {
+public class ViewScene extends SceneBase implements ModelController_Int, Scene_Int, ButtonListener, Callback {
 
 	public static ModelController_Int m_interface;
 

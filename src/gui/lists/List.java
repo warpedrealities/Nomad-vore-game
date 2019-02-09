@@ -38,7 +38,7 @@ public class List extends GUIBase implements Callback {
 		m_fonts = new NuFont[slots];
 		for (int i = 0; i < slots; i++) {
 			m_fonts[i] = new NuFont(
-					new Vec2f(position.x + 0.5F, position.y + (slots * 0.8F) + 0.2F - ((float) i * 0.8F)), 64, 0.6F);
+					new Vec2f(position.x + 0.5F, position.y + (slots * 0.8F) + 0.2F - (i * 0.8F)), 64, 0.6F);
 			m_fonts[i].setString("penny for a tale");
 		}
 		m_corner = new Vec2f(position.x, position.y);
@@ -58,7 +58,7 @@ public class List extends GUIBase implements Callback {
 		m_fonts = new NuFont[slots];
 		for (int i = 0; i < slots; i++) {
 			m_fonts[i] = new NuFont(
-					new Vec2f(position.x + 0.5F, position.y + (slots * 0.8F) + 0.2F - ((float) i * 0.8F)), 64, 0.6F);
+					new Vec2f(position.x + 0.5F, position.y + (slots * 0.8F) + 0.2F - (i * 0.8F)), 120, 0.6F);
 			m_fonts[i].setString("penny for a tale");
 		}
 		m_corner = new Vec2f(position.x, position.y);
@@ -82,7 +82,7 @@ public class List extends GUIBase implements Callback {
 		m_fonts = new NuFont[slots];
 		for (int i = 0; i < slots; i++) {
 			m_fonts[i] = new NuFont(
-					new Vec2f(position.x + 0.5F, position.y + (slots * 0.8F) + 0.2F - ((float) i * 0.8F)), 64, 0.6F);
+					new Vec2f(position.x + 0.5F, position.y + (slots * 0.8F) + 0.2F - (i * 0.8F)), 64, 0.6F);
 			m_fonts[i].setString("penny for a tale");
 		}
 		m_corner = new Vec2f(position.x, position.y);
@@ -148,8 +148,8 @@ public class List extends GUIBase implements Callback {
 		m_offset=i;
 		slider.setIndex(m_offset);
 		GenFonts();
-	}	
-	
+	}
+
 	@Override
 	public boolean ClickEvent(Vec2f pos) {
 		if (active)
@@ -172,7 +172,7 @@ public class List extends GUIBase implements Callback {
 						}
 					}
 				}
-			}			
+			}
 		}
 
 		return false;
@@ -201,11 +201,11 @@ public class List extends GUIBase implements Callback {
 						if (m_offset>m_strings.length-1)
 						{
 							m_offset=m_strings.length-1;
-						}		
+						}
 						GenFonts();
 						m_delay = 0.2F;
 						slider.setIndex(m_offset);
-					
+
 					}
 					else
 					{
@@ -217,15 +217,15 @@ public class List extends GUIBase implements Callback {
 						GenFonts();
 						m_delay = 0.2F;
 						slider.setIndex(m_offset);
-				
+
 					}
 					return true;
 				}
 			}
 		}
-		return false;		
+		return false;
 	}
-	
+
 	public void GenList(String[] strings) {
 		m_strings = strings;
 

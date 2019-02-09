@@ -3,5 +3,8 @@ function main(factionlibrary, player)
 	var=flags:readFlag("Varless_monsterhunt0")
 	if var>0 and var<6 then
 		flags:incrementFlag("Varless_monsterhunt0");
+		if (var==5) then
+		player:addJournal("dammath","monsterhunt1")
+		end
 	end
 end

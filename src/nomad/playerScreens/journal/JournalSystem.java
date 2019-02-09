@@ -44,7 +44,17 @@ public class JournalSystem {
 	}
 
 	public void addEntry(JournalEntry entry) {
+		removeIdentical(entry.getID());
 		entryList.add(entry);
+	}
+
+	private void removeIdentical(int id) {
+		for (int i = 0; i < entryList.size(); i++) {
+			if (entryList.get(i).getID() == id) {
+				entryList.remove(i);
+				break;
+			}
+		}
 	}
 
 	public void sort() {

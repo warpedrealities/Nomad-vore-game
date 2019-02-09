@@ -11,10 +11,10 @@ import nomad.universe.Universe;
 import research.Encyclopedia;
 import research.Entry;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Vec2f;
 
-public class ComputerPedia implements Callback, MyListener {
+public class ComputerPedia implements Callback, ButtonListener {
 
 	private List entryList;
 	private Integer[] entryIndexes;

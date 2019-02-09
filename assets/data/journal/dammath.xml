@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<journal>
+	<entry name="monsterhunt0" ID="201" priority="9" title="proving your worth">
+	To prove your worthyness to Varless the armsmaster of the saurian village you must slay five gators in the swamps to the east and then return.
+	</entry>
+	<entry name="monsterhunt1" ID="201" priority="9" title="proving your worth">
+	You have killed five gators in the swamps to the east of the saurian village to prove your worthyness to Varless. You should return to her to inform her of your accomplishment.
+	</entry>
+	<entry name="monsterhunt2" ID="202" priority="9" title="proving your worth(again)">
+	To further prove yourself to Varless you must go to the mountains north of the saurian village and kill three of the tyrant lizards that live there.
+	</entry>
+	<entry name="monsterhunt3" ID="202" priority="9" title="proving your worth(again)">
+	You have killed three tyrant lizards and should return to Varless in the castle of Dammath to inform her of your triumph.
+	</entry>
+	<entry name="monsterhunt4" ID="203" priority="9" title="proving your worth(yet again)">
+	Varless insists that for your final challenge to prove your worth you should lay low one of the proud draconians that inhabit this world.
+	</entry>
+	<entry name="monsterhunt5" ID="203" priority="9" title="proving your worth(yet again)">
+	You have defeated a draconian at Varless's request, maybe now you are finally and completely worthy. You should go find Varless at the castle in Dammath and tell her to see if this is so.
+	</entry>
+	<entry name="serpent0" ID="204" priority="8" title="the eyes of the serpent in the dark">
+	The shopkeeper for dammath has told you that in order for her to offer metal wares you must defeat the great serpent that has taken over their iron mine. Apparently saurian warriors have tried and failed in this undertaking.
+	</entry>
+	<entry name="serpent1" ID="204" priority="8" title="the eyes of the serpent in the dark">
+	The shopkeeper for dammath should be informed you have defeated the great serpent and that the miners can return to work without fear.
+	</entry>
+	<entry name="pump0" ID="205" priority="8" title="A broken pump">
+	Nissa the mechanic in the village of dammath cannot repair the well pump on her own. You've volunteered to give her a hand, surely it will not prove too difficult for you to accomplish.
+	</entry>
+	<entry name="pump1" ID="205" priority="8" title="A formerly broken pump">
+	You should tell Nissa in the saurian village that you have fixed the pump. She should be right there next to it, go on, tell her.
+	</entry>
+	<entry name="herbs0" ID="206" priority="8" title="A little help in bed">
+	Myrai, a herm saurian in the village of dammath, needs a little help keeping up with her lover's needs. She says you can get some golden herb from the swamps to the east that may help. She does appreciate this is a little dangerous.
+	</entry>
+	<entry name="crash0" ID="207" priority="8" title="saurians commissioned to dig">
+		You've paid for the saurians to excavate the crashed ship for you in the haunted valley. It might take some time but you should check back with the saurian queen Laurisse later to see if they've finished digging the ship up.
+	</entry>
+	<entry name="campaign0" ID="208" priority="5" title="saurian elf war: kill the champion">
+		Laurisse believes it will be a setback to the elves if their champion on the battlefield to the north east were to come to an untimely end. You are to be her instrument in this ser knight..do not fail her.
+	</entry>	
+	<entry name="campaign1" ID="208" priority="5" title="saurian elf war: kill the champion">
+	You've defeated the elven champion on the field of battle. Laurisse will be pleased, you should inform the queen of dammath of your victory at once ser knight.
+	</entry>
+</journal>

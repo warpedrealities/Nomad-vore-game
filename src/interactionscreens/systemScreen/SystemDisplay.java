@@ -2,9 +2,9 @@ package interactionscreens.systemScreen;
 
 import gui.Window;
 import input.MouseHook;
-import shared.MyListener;
+import shared.ButtonListener;
 
-public interface SystemDisplay extends MyListener {
+public interface SystemDisplay extends ButtonListener {
 
 	void update(float dT);
 

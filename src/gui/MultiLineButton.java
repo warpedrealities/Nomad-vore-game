@@ -4,7 +4,7 @@ import java.nio.FloatBuffer;
 
 import font.NuFont;
 import input.MouseHook;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.NinePatch_Alternate;
 import shared.Vec2f;
 
@@ -25,7 +25,7 @@ public class MultiLineButton extends GUIBase {
 	private boolean mouseOver;
 	protected float clock;
 	
-	public MultiLineButton(Vec2f pos, Vec2f size, int texture, MyListener listener, String string, int ID,
+	public MultiLineButton(Vec2f pos, Vec2f size, int texture, ButtonListener listener, String string, int ID,
 			int altTexture) {
 
 		m_textures = new int[2];

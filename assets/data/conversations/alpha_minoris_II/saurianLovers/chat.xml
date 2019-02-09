@@ -269,6 +269,7 @@
 	<text>
 	"OH thankyou!" Myrai says with a delighted smile after accepting the herb. Oshy rather more physical in her thanks as she gives you a soft and emphatic hug that makes one faintly envious of Myrai. When she disentangles she gives Oshy a snug "I can't wait to see what this can do. Comeon Myrai." she says. Myrai pushes on the chest of her lover for a moment "We gotta reward our friend first." she says. Osshy looks impatient and eager but Myrai smiles and digs out a lumpy object "I figured with how scary it must of been out here the gold wouldn't be enough for ya. So I figured maybe you'd appreciate this more? I found it on the edge of the swamp and Nissa doesn't know what it is, but you're a space traveller..maybe it's reward enough" she says uncertainly as she hands it to you. But she doesn't get to discuss the matter more before practically having Oshy jump her bones. 
 	</text> 
+		<special effect="removeJournal" ID="206"/>
 		<effect type="giveitem" value="1" item="advanced power-cell" />
 		<effect type="experience" value="400" />	
 	<effect type="setlocalflag" flag="help" value="2" />		
@@ -314,6 +315,7 @@
 	<text>
 	"Oh thankyou. I mean, I appreciate what you're doing. I know the swamp is REALLY dangerous."
 	</text>
+	<special effect="addJournal" file="dammath" name="herbs0" />
 	<effect type="setlocalflag" flag="help" value="1" />
 	<choice destination="end" text="$Don't worry I'll be back with that herb soon"/>
 	</page>

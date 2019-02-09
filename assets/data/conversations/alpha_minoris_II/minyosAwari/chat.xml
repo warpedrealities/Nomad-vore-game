@@ -338,6 +338,7 @@
 	<text>
 	"Indeed? very well, then here is your reward. And more than that, I recognize your achievement. You came to me seeming weak and soft, now I see that you have a hidden well of strength. May your hunts be fruitful and your belly ever full traveller."
 	</text>
+	<special effect="removeJournal" ID="104" />
 	<effect type="givegold" value="750" />
 	<effect type="setglobalflag" flag="minyos_monsterhunt_0" value="5" />		
 	<choice destination="end" text="It's about time, farewell Awari and may your belly be ever full as well"/>
@@ -366,6 +367,7 @@
 	<text>
 	"They are fierce, but if you feel confident you are their match... very well, they have not come too close to the village yet. You may have to trek further south than you are used to in order to seek them out. I look forward to hearing of your triumph, or your defeat..whichever the fates have in store for you"
 	</text>
+	<special effect="addJournal" file="minyos" name="hunt0" />
 	<effect type="setglobalflag" flag="minyos_monsterhunt_0" value="1" />	
 	<choice destination="end" text="I will return soon and triumphant Awari, don't you worry about that"/>
 	</page>

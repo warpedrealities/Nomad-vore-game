@@ -80,6 +80,7 @@
 			can both try
 			it together.
 		</text>
+		<special effect="addJournal" file="dammath" name="pump1" />
 		<effect type="setglobalflag" flag="dammathquest1" value="2" />
 		<effect type="removeitem" item="scrap metal" value="2" />
 		<choice destination="end" text="success!" />

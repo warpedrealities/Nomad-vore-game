@@ -16,11 +16,11 @@ import item.Item;
 import nomad.universe.Universe;
 import nomad.universe.actionBar.Action;
 import nomad.universe.actionBar.ActionBarData;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Tools;
 import shared.Vec2f;
 
-public class ActionBar implements MyListener {
+public class ActionBar implements ButtonListener {
 
 	private Window window;
 	private int[] localTextureIds;

@@ -13,14 +13,14 @@ import org.w3c.dom.NodeList;
 import gui.MultiLineText;
 import input.Keyboard;
 import input.MouseHook;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.ParserHelper;
 import shared.SceneBase;
 import shared.Vec2f;
 import view.ViewScene;
 import vmo.Game;
 
-public class Help_Scene extends SceneBase implements MyListener {
+public class Help_Scene extends SceneBase implements ButtonListener {
 
 	float clock;
 	int pageNum;

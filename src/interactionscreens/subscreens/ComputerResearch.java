@@ -14,10 +14,10 @@ import playerscreens.Popup;
 import research.Encyclopedia;
 import research.Research;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Vec2f;
 
-public class ComputerResearch implements Callback, MyListener {
+public class ComputerResearch implements Callback, ButtonListener {
 
 	private Callback callback;
 	private Window window;

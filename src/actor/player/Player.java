@@ -52,6 +52,7 @@ import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
 import nomad.FlagField;
 import nomad.GameOver;
+import nomad.playerScreens.journal.JournalEntry;
 import nomad.universe.Universe;
 import perks.Perk;
 import research.Encyclopedia;
@@ -121,6 +122,15 @@ public class Player extends Actor {
 
 	public void setActorName(String name) {
 		actorName = name;
+	}
+
+	public void addJournal(String file, String name) {
+		Universe.getInstance().getJournal().addEntry(new JournalEntry(file, name));
+
+	}
+
+	public void removeJournal(int ID) {
+		Universe.getInstance().getJournal().removeEntry(ID);
 	}
 
 	public Inventory getInventory() {

@@ -59,6 +59,7 @@
 	<text>
 	"You have.." Robyn seems to pause for a moment, her usual perky cheerfulness seeming to faulter, but she throws herself back into the attitude once again and smiles anew even if the smile seems a bit more brittle than before "Well done, she was a dastardly pirate and you did well to dispose of her. And as I've mentioned there is the reward for it." she says and produces a stack of credit chits for you "Now is there anything else I can do for you?"
 	</text>
+	<special effect="removeJournal" ID="301" />
 	<effect type="setglobalflag" flag="piratebounty0" value="3" />		
 	<effect type="givecredits" value="25000" />
 	<choice destination="shop" text="$I'd like to spend some of these credits right here and now actually"/>
@@ -95,6 +96,7 @@
 	<text>
 	"Excellent. I look forward to hearing of your success." she says and smiles "want to do any shopping before you begin?"
 	</text>
+	<special effect="addJournal" file="freehaven" name="dreadpirate0"/>
 	<effect type="setglobalflag" flag="piratebounty0" value="1" />	
 	<choice destination="shop" text="$yes, let me browse a little"/>
 	<choice destination="end" text="$thankyou for the offer but I should get started"/>

@@ -40,6 +40,7 @@
 			be
 			very grateful."
 		</text>
+		<special effect="addJournal" file="minyos" name="sword0" />
 		<choice destination="end" text="I'd be happy to get your sword for you" />
 		<choice destination="end" text="I might get around to it" />
 		<effect type="setlocalflag" flag="swordquest" value="1" />
@@ -57,6 +58,7 @@
 			of coin for
 			your troubles.
 		</text>
+		<special effect="removeJournal" ID="103" />
 		<effect type="givegold" value="500" />
 		<effect type="experience" value="300" />
 		<effect type="setfactionflag" flag="friendship" value="1" />

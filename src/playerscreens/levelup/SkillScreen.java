@@ -11,11 +11,11 @@ import gui.Button2;
 import gui.Text;
 import gui.Window;
 import input.MouseHook;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Tools;
 import shared.Vec2f;
 
-public class SkillScreen implements MyListener {
+public class SkillScreen implements ButtonListener {
 
 	private Window window;
 	private Text[] texts;
@@ -24,7 +24,7 @@ public class SkillScreen implements MyListener {
 	private int textures[];
 	private int index = -1;
 
-	public SkillScreen(int[] variables, MyListener listener, Player_RPG rpg) {
+	public SkillScreen(int[] variables, ButtonListener listener, Player_RPG rpg) {
 		this.rpg = rpg;
 		window = new Window(new Vec2f(-20, -13.0F), new Vec2f(18, 29), variables[1], true);
 		textures = new int[2];

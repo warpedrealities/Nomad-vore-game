@@ -151,6 +151,7 @@
 	<text>
 	"We still contest the solid ground north of the pass with the elves. If they could be beaten back it would allow our forces free-er reign in their territory." explains queen laurisse then looks thoughtful "There is an elven champion who we've seen on the field, regrettably she's devoured several of our soldiers already. They seem to take heart from her successes, if she could be defeated the elves would surely realize the futility of their warring against us. A swift counter offensive could drive them from the battlefield while their morale is low."
 	</text>
+	<special effect="addJournal" file="dammath" name="campaign0" />
 	<effect type="setglobalflag" flag="AM_SAURIAN_MISSION0" value="1" />	
 	<choice destination="end" text="$This elf may have beaten the others, but she has never fought me."/>
 	</page>
@@ -170,6 +171,7 @@
 	<text>
 	"I have received the report already. You have done well my knight, my trust in your skills was well placed. Already my soldiers drive them back, their surety has been shaken. I suspect it will be more so when they realize how many of their warriors our soldiers devoured during this latest bout of fighting."
 	</text>
+		<special effect="removeJournal" ID="208"/>
 	<effect type="setglobalflag" flag="AM_SAURIAN_MISSION0" value="3" />		
 	<effect type="experience" value="500" />	
 	<choice destination="end" text="$I am pleased to hear it"/>
@@ -437,6 +439,7 @@
 			come to a satisfying agreement on this matter." she says and has a
 			guard receive the gold from you on her behalf.
 		</text>
+		<special effect="addJournal" file="dammath" name="crash0" />
 		<choice destination="end" text=" " />
 	</page>
 
@@ -457,6 +460,7 @@
 			Laurisse smiles "I have received reports that the digging has completed, your
 			ship has been unearthed."
 		</text>
+		<special effect="removeJournal" ID="207"/>
 		<effect type="setglobalflag" flag="hauntedValley" value="7" />
 		<special effect="worldScript" script="restoreShip" />
 		<choice destination="end"

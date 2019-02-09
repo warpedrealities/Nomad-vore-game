@@ -22,7 +22,7 @@ import input.MouseHook;
 import menu.Menu;
 import nomad.universe.Universe;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.ParserHelper;
 import shared.SceneBase;
 import shared.Tools;
@@ -30,7 +30,7 @@ import shared.Vec2f;
 import start.StartIntro;
 import vmo.Game;
 
-public class PlayerStartScene extends SceneBase implements MyListener, Callback {
+public class PlayerStartScene extends SceneBase implements ButtonListener, Callback {
 
 	// data
 	private Player player;

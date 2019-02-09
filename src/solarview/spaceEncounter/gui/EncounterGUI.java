@@ -18,7 +18,7 @@ import gui.Window;
 import input.Keyboard;
 import input.MouseHook;
 import nomad.universe.Universe;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.SceneBase;
 import shared.Screen;
 import shared.Tools;
@@ -31,7 +31,7 @@ import solarview.spaceEncounter.rendering.CircleHandler;
 import spaceship.Spaceship;
 import vmo.Game;
 
-public class EncounterGUI implements MyListener {
+public class EncounterGUI implements ButtonListener {
 	private Spaceship playerShip;
 	private EncounterShipImpl encounterShip;
 	private Matrix4f m_viewMatrix;

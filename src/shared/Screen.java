@@ -4,7 +4,7 @@ import java.nio.FloatBuffer;
 
 import input.MouseHook;
 
-public abstract class Screen implements MyListener {
+public abstract class Screen implements ButtonListener {
 
 	public abstract void update(float DT);
 

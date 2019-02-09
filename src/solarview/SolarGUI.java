@@ -14,7 +14,7 @@ import gui.Text;
 import gui.Window;
 import input.MouseHook;
 import nomad.universe.Universe;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Tools;
 import shared.Vec2f;
 import spaceship.Spaceship;
@@ -53,7 +53,7 @@ public class SolarGUI {
 		// GL13.GL_TEXTURE0);
 	}
 
-	public void generate(Spaceship ship, MyListener listener) {
+	public void generate(Spaceship ship, ButtonListener listener) {
 		window = new Window(new Vec2f(11, -10), new Vec2f(9, 26), textureIds[0], true);
 		playerShip = ship;
 

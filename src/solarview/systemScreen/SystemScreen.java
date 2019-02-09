@@ -10,7 +10,7 @@ import input.MouseHook;
 import nomad.universe.Universe;
 import rendering.SpriteRotatable;
 import shared.Callback;
-import shared.MyListener;
+import shared.ButtonListener;
 import shared.Screen;
 import shared.Vec2f;
 import shared.Vec2i;
@@ -19,7 +19,7 @@ import solarview.SolarScene;
 import spaceship.Spaceship;
 import spaceship.stats.WarpHandler;
 
-public class SystemScreen extends Screen implements MyListener {
+public class SystemScreen extends Screen implements ButtonListener {
 
 	private Spaceship ship;
 	private Callback callback;

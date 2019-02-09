@@ -21,6 +21,7 @@ import item.QuestItem;
 import item.instances.ItemKeyInstance;
 import mutation.Effect_Mutator;
 import nomad.FlagField;
+import nomad.playerScreens.journal.JournalEntry;
 import nomad.universe.Universe;
 import perks.PerkLibrary;
 import shared.Scene_Int;
@@ -82,6 +83,13 @@ public class EffectProcessor {
 		}
 		if (str.equals("makehostile")) {
 			m_npc.setPeace(false);
+		}
+		if (str.equals("addJournal")) {
+			JournalEntry entry = new JournalEntry(node.getAttribute("file"), node.getAttribute("name"));
+			Universe.getInstance().getJournal().addEntry(entry);
+		}
+		if (str.equals("removeJournal")) {
+			Universe.getInstance().getJournal().removeEntry(Integer.parseInt(node.getAttribute("ID")));
 		}
 		if (str.equals("opendoor")) {
 			DialogueHelper.openDoor(node.getAttribute("lock"));

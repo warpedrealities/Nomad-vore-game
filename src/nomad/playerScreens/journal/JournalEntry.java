@@ -17,7 +17,7 @@ public class JournalEntry implements Comparable<JournalEntry> {
 	private String title, text;
 
 	public JournalEntry(String file, String name) {
-		Document doc = ParserHelper.LoadXML("assets/data/journal/" + file);
+		Document doc = ParserHelper.LoadXML("assets/data/journal/" + file + ".xml");
 		Element root = doc.getDocumentElement();
 		Element n = (Element) doc.getFirstChild();
 		NodeList children = root.getElementsByTagName("entry");
@@ -25,7 +25,7 @@ public class JournalEntry implements Comparable<JournalEntry> {
 		for (int i = 0; i < children.getLength(); i++) {
 			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
 				Element e = (Element) children.item(i);
-				if (e.getAttribute("name") == name) {
+				if (e.getAttribute("name").equals(name)) {
 					ID = Integer.parseInt(e.getAttribute("ID"));
 					priority = Integer.parseInt(e.getAttribute("priority"));
 					title = e.getAttribute("title");
