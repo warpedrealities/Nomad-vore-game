@@ -10,6 +10,7 @@ import item.ItemWeapon;
 import item.handlers.ReloadingHandler;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
+import view.ViewScene;
 
 public class ActionBarItemHandler {
 	private Player player;
@@ -76,6 +77,7 @@ public class ActionBarItemHandler {
 			player.getInventory().AddItem(hand);
 		}
 		player.addBusy(1);
+		ViewScene.m_interface.redrawBars();
 	}
 
 }

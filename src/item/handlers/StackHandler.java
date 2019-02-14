@@ -21,7 +21,7 @@ public class StackHandler {
 				if (items.get(i).canStack() &&
 						items.get(i).getClass().getName().contains("Stack")) {
 					ItemStack stack = (ItemStack) items.get(i);
-					if (stack.getItem().equals(item.getItem())) {
+					if (stack.getItem().getItem().equals(item.getItem().getItem())) {
 
 
 						// add to stack

@@ -59,7 +59,7 @@ public class Effect_Movement extends Effect {
 	}
 
 	private int applyTarget(Actor origin, Actor target) {
-		int localDistance = origin.getRPG().getAbility(abilityMod) - origin.getRPG().getAbilityMod(abilityMod)
+		int localDistance = origin.getRPG().getAbilityMod(abilityMod) - origin.getRPG().getAbilityMod(abilityMod)
 				+ distance;
 		if (movementType == MovementType.target_towards) {
 			CombatMovementHandler.MoveTowards(target, origin, localDistance);

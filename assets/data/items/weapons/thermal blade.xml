@@ -2,7 +2,7 @@
 <ItemWeapon name="Thermal blade" weight="1" value="450">
 	<tagSet value="M" />
 	<description>
-		A blade with an integral heating element that brings the edge up to a sizzlingly hot temperature when used. Probably intended for less violent purposes than you're going to use it for. 2AP Does 3-13 thermokinetic damage.
+		A blade with an integral heating element that brings the edge up to a sizzlingly hot temperature when used. Probably intended for less violent purposes than you're going to use it for. 2AP Does 3-11 thermokinetic damage.
 	</description>
 	<modifier>
 		<parry value="0" />
@@ -11,7 +11,7 @@
 		timeCost="2" actionCost="2" basicAction="true" moveType="FIGHT">
 		<effectDamage type="KINETIC" minValue="2" maxValue="7"
 			modifier="DEXTERITY" />
-			<effectDamage type="THERMAL" minValue="1" maxValue="6"
+			<effectDamage type="THERMAL" minValue="1" maxValue="4"
 			modifier="DEXTERITY" />		
 		<missText count="1">
 			<text>you fail to stab TARGET </text>

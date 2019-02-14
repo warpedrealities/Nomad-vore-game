@@ -348,6 +348,7 @@ public class Spaceship extends Entity {
 			shipController=new NpcShipController();
 			shipController.load(dstream);
 			shipController.setShip(this);
+			this.visibility = true;
 		}
 		if (dstream.readBoolean())
 		{
@@ -462,6 +463,7 @@ public class Spaceship extends Entity {
 	}
 
 	public void setShipController(ShipController shipController) {
+		this.visibility = true;
 		this.shipController = shipController;
 		if (shipController!=null)
 		{

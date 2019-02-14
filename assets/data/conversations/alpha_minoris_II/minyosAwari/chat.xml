@@ -339,7 +339,7 @@
 	"Indeed? very well, then here is your reward. And more than that, I recognize your achievement. You came to me seeming weak and soft, now I see that you have a hidden well of strength. May your hunts be fruitful and your belly ever full traveller."
 	</text>
 	<special effect="removeJournal" ID="104" />
-	<effect type="givegold" value="750" />
+	<effect type="givegold" value="1500" />
 	<effect type="setglobalflag" flag="minyos_monsterhunt_0" value="5" />		
 	<choice destination="end" text="It's about time, farewell Awari and may your belly be ever full as well"/>
 	</page>

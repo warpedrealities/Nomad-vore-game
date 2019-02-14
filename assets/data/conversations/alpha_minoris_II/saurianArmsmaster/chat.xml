@@ -181,7 +181,7 @@
 	<text>
 	"Yes I suppose you have earned it, that draconian will plague us no more. Here, take it." she says and then smiles "And perhaps, when you are ready. I will give you the final bit of training, you will find it a complimentary experience to your last challenge I feel."
 	</text>
-		<effect type="givegold" value="2000" />
+		<effect type="givegold" value="4000" />
 		<special effect="removeJournal" ID="203" />
 		<effect type="setglobalflag" flag="Varless_monsterhunt2" value="3" />	
 		<choice destination="end" text="yet more training? well, i'm sure that will be interesting"/>
@@ -370,8 +370,8 @@
 	<text>
 	"And that is the lesson, surface is nothing but a mask. All things have hidden depths, to probe, to explore, to understand. Inside everyone are facets of their personality that even they might not be aware of. Do not trust first impressions, seek the truth in all things. As I will should I train you further." she says and rewards you with gold your efforts, gold and a side order of philosophy.
 	</text>
-		<special effect="removeJournal" ID="202 />
-		<effect type="givegold" value="1000" />
+		<special effect="removeJournal" ID="202" />
+		<effect type="givegold" value="2000" />
 		<effect type="setglobalflag" flag="Varless_monsterhunt1" value="5" />	
 		<choice destination="end" text="Further training? well, i'm sure that will be interesting"/>
 		<choice destination="end" text="I'm only interested in gold Varliss, gold and nothing else."/>
@@ -406,7 +406,7 @@
 	"Of course, I know the air of victory when I see it. That confidence that's born of triumph in the face of adversity." she says and smiles "So here is your reward...and soldier, if you need training...ask. I'm sure I could find a way for you to better serve."
 	</text>
 		<special effect="removeJournal" ID="201" />
-		<effect type="givegold" value="500" />
+		<effect type="givegold" value="1000" />
 		<effect type="setglobalflag" flag="Varless_monsterhunt0" value="7" />	
 		<choice destination="end" text="The way you talk of this training intrigues me, i might very well take you up on that"/>
 		<choice destination="end" text="It's just the gold I'm interested in, when we speak again it'll be on the subject of more work."/>

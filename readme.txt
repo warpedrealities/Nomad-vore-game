@@ -12,7 +12,7 @@ Bad ends and player victory: A bad end scene will be enacted by any enemy who re
 
 Autosave: the game autosaves each time you transition between zones in the slot marked 'autosave'
 
-Levelling up and experience: Defeating npcs and gaining quest rewards can give you experience you can use to level up, increasing stats and allowing you to pick a perk. This is done from the 'character' screen.
+Levelling up and experience: Defeating npcs and gaining quest rewards can give you experience you can use to level up. When you level up your stats increase, you get to raise a skill by 1 and every other level you can select a perk.
 
 Controls:
 WASD,Arrowkeys, numpad: movement. Moving into hostile enemies will automatically undertake your currently selected combat move on them.

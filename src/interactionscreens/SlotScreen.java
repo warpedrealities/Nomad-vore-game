@@ -100,6 +100,7 @@ public class SlotScreen extends Screen implements Callback {
 				{
 					player.getInventory().RemoveItem(player.getInventory().getItem(v));
 				}
+				player.reCalc();
 				callback.Callback();
 			}
 		}

@@ -56,7 +56,7 @@
 			</hitText>
 		</combatMove>
 			<combatMove name="spit" pattern="RANGED" bonusAttribute="MELEE"
-			timeCost="2" bonusToHit="6">
+			timeCost="2" bonusToHit="2">
 			<missText count="1">
 				<text>The lamia spits at TARGET but misses</text>
 			</missText>

@@ -112,9 +112,11 @@ public class JournalScreen extends Screen implements ButtonListener, Callback {
 						builder.append(" ");
 					}
 				}
+				strings.add(builder.toString());
+				builder = new StringBuilder();
 			}
 		}
-		strings.add(builder.toString());
+
 		list.GenList(strings.stream().toArray(String[]::new));
 	}
 

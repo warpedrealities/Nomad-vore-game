@@ -86,11 +86,13 @@ public class SolarRenderer extends SpriteManager {
 				sprite = new Sprite(currentSystem.getEntities().get(i).getPosition(),
 						currentSystem.getEntities().get(i).getSpriteSize(), 1);
 			}
-			if (!currentSystem.getEntities().get(i).getVisible()) {
+			if (!currentSystem.getEntities().get(i).isVisible()) {
 				sprite.setVisible(false);
 			}
+			else {
+				sprite.setVisible(true);
+			}
 			// sprite visible
-			sprite.setVisible(true);
 
 			// add to batch
 			addSprite(sprite, currentSystem.getEntities().get(i).getSprite() + ".png");

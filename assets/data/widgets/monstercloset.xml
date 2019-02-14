@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <trap sprite="10">
 	<discoverSprite value="11" />
-	<DC value="10" />
+	<DC value="12" />
 	<effect type="MONSTERCLOSET">
 		<doors lock="closet" radius="4" />
 	</effect>
 	<description>
-		A shock trap
+		A spressure plate
 	</description>
 </trap>

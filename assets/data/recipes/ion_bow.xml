@@ -4,6 +4,6 @@
 		An elegant weapon from a more civilized age. The ion bow is a clip fed crossbow that fires electrically charged bolts. 
 	</description>
 	<ingredient item="scrap metal" quantity="3" />
-	<ingredient item="precision mechanisms" quantity="5" />	
-	<result item="Ion bows"/>
+	<ingredient item="precision mechanisms" quantity="3" />	
+	<result item="Ion bow"/>
 </recipe>

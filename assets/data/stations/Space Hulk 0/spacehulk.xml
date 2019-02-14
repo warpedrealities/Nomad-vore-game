@@ -9,6 +9,7 @@
 		<tile sprite="20" vision="BLOCKING" movement="2"> a near invincible bit of
 			machinery</tile>
 		<tile sprite="21" vision="EMPTY" movement="0"> a dried creamy stain</tile>
+		<tile sprite="17" vision="EMPTY" movement="2"> a machine</tile>		
 	</tileset>
 	<zoneConditions>
 	<modifierCondition ID="darkness" vision="0.5" />
@@ -61,9 +62,9 @@
 				<row>00000000</row>
 				<row>22222220</row>
 				<row>21111122</row>
-				<row>11111111</row>
-				<row>11111111</row>
-				<row>21111122</row>
+				<row>11666111</row>
+				<row>11666111</row>
+				<row>21666122</row>
 				<row>21111120</row>
 				<row>22222220</row>
 				<edge value="WEST" />
@@ -104,7 +105,7 @@
 			</keyBlock>			
 			
 	
-			<keyBlock heat="2">
+			<keyBlock heat="1">
 				<row>00222200</row>
 				<row>02244220</row>
 				<row>22111122</row>
@@ -123,9 +124,9 @@
 				<row>00000000</row>
 				<row>22222220</row>
 				<row>21111122</row>
-				<row>11111111</row>
-				<row>11111111</row>
-				<row>21111122</row>
+				<row>11666111</row>
+				<row>11666111</row>
+				<row>21666122</row>
 				<row>21111120</row>
 				<row>22222220</row>
 				<edge value="WEST" />
@@ -134,7 +135,7 @@
 				<widget x="1" y="6" name="tech_research" info="large scale directed energy weapon B#tech/pulse_cannon.xml" variable="14"/>
 			</keyBlock>			
 			
-			<keyBlock heat="2">
+			<keyBlock heat="1">
 				<row>21111112</row>
 				<row>21222212</row>
 				<row>21111112</row>
@@ -151,7 +152,7 @@
 				<widget x="4" y="4" name="cargocontainer" info="ammochest" />
 			</keyBlock>
 
-			<prefabBlock heat="2" width="2" height="1" blockCount="2">
+			<prefabBlock heat="1" width="2" height="1" blockCount="2">
 				<edge value="EAST" />
 				<block>
 					<row>02222222</row>
@@ -197,6 +198,7 @@
 				<lootSubTable chance="0.75" file="spacehulk_consumables" />
 				<lootSubTable chance="0.50" file="spacehulk_resources" />
 				<lootSubTable chance="0.50" file="spacehulk_consumables" />
+				<loot chance="0.25" item="bullets"/>
 			</lootTable>
 			<lootTable identity="specialchest">
 				<loot item="flux capacitor" chance="1" />

@@ -59,7 +59,7 @@
 			your troubles.
 		</text>
 		<special effect="removeJournal" ID="103" />
-		<effect type="givegold" value="500" />
+		<effect type="givegold" value="1000" />
 		<effect type="experience" value="300" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
 

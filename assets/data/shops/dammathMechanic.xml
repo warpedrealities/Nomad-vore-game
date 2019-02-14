@@ -23,11 +23,11 @@
 	<inventoryitem name="optics" probability="25" quantity="2"
 		cost="400" />
 	<inventoryitem name="precision mechanisms" probability="100" quantity="1"
-		cost="100" />		
+		cost="250" />		
 	<inventoryitem name="precision mechanisms" probability="50" quantity="1"
-		cost="100" />
+		cost="250" />
 	<inventoryitem name="precision mechanisms" probability="25" quantity="2"
-		cost="100" />				
+		cost="250" />				
 	<inventoryitem name="spacebar" probability="25" quantity="1" />
 	<inventoryitem name="spacebar" probability="25" quantity="1" />
 	<inventoryitem name="spacebar" probability="25" quantity="1" />

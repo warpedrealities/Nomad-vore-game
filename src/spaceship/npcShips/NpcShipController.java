@@ -31,10 +31,10 @@ public class NpcShipController implements ShipController {
 	private FlagField flags;
 	private NpcShipSpaceAI ai;
 	private int experience;
-	
+
 	private void commonConstruction(Element element)
 	{
-		flags=new FlagField();		
+		flags=new FlagField();
 		NodeList children=element.getChildNodes();
 		scripts=new String[6];
 		for (int i=0;i<children.getLength();i++)
@@ -42,7 +42,7 @@ public class NpcShipController implements ShipController {
 			if (children.item(i).getNodeType()==Node.ELEMENT_NODE)
 			{
 				Element e=(Element)children.item(i);
-				
+
 				if (e.getTagName().equals("faction"))
 				{
 					faction=FactionLibrary.getInstance().getFaction(e.getAttribute("value"));
@@ -80,17 +80,18 @@ public class NpcShipController implements ShipController {
 		}
 
 	}
-	
+
 	public NpcShipController(Element element)
 	{
 		commonConstruction(element);
 	}
-	
+
 	public NpcShipController()
 	{
-		
+
 	}
-	
+
+	@Override
 	public void setShip(Spaceship ship)
 	{
 		ai.setShip(ship);
@@ -99,7 +100,7 @@ public class NpcShipController implements ShipController {
 			ship.Generate();
 		}
 	}
-	
+
 	public NpcShipController(String filename) {
 		Document doc0 = ParserHelper.LoadXML("assets/data/shipControllers/" + filename + ".xml");
 		Element root0 = doc0.getDocumentElement();
@@ -112,7 +113,7 @@ public class NpcShipController implements ShipController {
 	{
 		ParserHelper.SaveString(dstream,faction.getFilename());
 		flags.save(dstream);
-		
+
 		for (int i=0;i<6;i++)
 		{
 			if (scripts[i]!=null)
@@ -125,10 +126,10 @@ public class NpcShipController implements ShipController {
 				dstream.writeBoolean(false);
 			}
 		}
-		
+
 		dstream.writeInt(experience);
 	}
-	
+
 	@Override
 	public void load(DataInputStream dstream) throws IOException
 	{
@@ -150,7 +151,7 @@ public class NpcShipController implements ShipController {
 
 		experience=dstream.readInt();
 	}
-	
+
 	@Override
 	public void update(Spaceship ship) {
 		if (ai!=null)
@@ -164,7 +165,7 @@ public class NpcShipController implements ShipController {
 				ai.decrementBusy();
 			}
 		}
-	
+
 	}
 
 	@Override
@@ -182,6 +183,7 @@ public class NpcShipController implements ShipController {
 	public Faction getFaction() {
 		return faction;
 	}
+	@Override
 	public FlagField getflags()
 	{
 		return flags;
@@ -196,7 +198,7 @@ public class NpcShipController implements ShipController {
 			try {
 
 				LuaValue script=globals.load(
-						new FileReader("assets/data/shipControllers/scripts/" + 
+						new FileReader("assets/data/shipControllers/scripts/" +
 								scripts[event.getValue()] + ".lua"), "main.lua");
 				script.call();
 				LuaValue luaScript = CoerceJavaToLua.coerce(ai);
@@ -210,13 +212,14 @@ public class NpcShipController implements ShipController {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-			
+
 		}
 	}
 
+	@Override
 	public int getExperience() {
 		return experience;
 	}
-	
+
 
 }

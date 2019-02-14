@@ -89,6 +89,7 @@ public class UniverseStateChanger {
 		player.getFlags().clear();
 		player.getEncyclopedia().generateEntries();
 		new CompanionTool().removeAllCompanions(player);
+		universe.journal = new JournalSystem();
 		//move player to the first area.
 		if (!salvageShip(filename))
 		{

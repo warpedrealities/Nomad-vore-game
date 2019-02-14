@@ -420,7 +420,7 @@
 		<special effect="removeJournal" ID="102" />
 		<effect type="setglobalflag" flag="ratquest" value="5" />
 		<effect type="setfactionflag" flag="friendship" value="1" />
-		<effect type="givegold" value="500" />
+		<effect type="givegold" value="1000" />
 		<effect type="experience" value="200" />
 		<special effect="removeJournal" ID="102"/>
 		<choice destination="table" text="let me go look then">

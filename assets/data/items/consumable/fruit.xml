@@ -5,7 +5,7 @@
 		notion of eating it somewhat unappealing.</description>
 	<effectrecover modifier="ENDURANCE" modstrength="0.2"
 		modvalue="25" modifies="SATIATION">
-		You eat the fruit, it tastes strange and
+		You eat the fruit, it tastes strange and 
 		somehow unsatisfying.
 	</effectrecover>
 </ItemConsumable>

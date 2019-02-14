@@ -3,6 +3,7 @@
 	<description>
 		A modification to the basic knife to superheat the blade to inflict thermal damage.
 	</description>
+<ingredient item="Knife" quantity="1" />	
 	<ingredient item="scrap metal" quantity="3" />
 	<ingredient item="battery" quantity="1" />
 	<tokenRequirement item="gadgeteer" quantity="1" />

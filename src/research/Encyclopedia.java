@@ -179,12 +179,11 @@ public class Encyclopedia {
 	}
 
 	public boolean hasData(String find) {
-		for (int i = 0; i < dataList.size(); i++) {
-			if (dataList.get(i).getName().equals(find)) {
-				return true;
 
-			}
+		if (dataList.get(find) != null) {
+			return true;
 		}
+
 		return false;
 	}
 

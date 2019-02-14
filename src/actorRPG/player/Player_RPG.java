@@ -227,7 +227,7 @@ public class Player_RPG implements Actor_RPG {
 
 		//		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
 
-		playerExperience = 900;
+		playerExperience = 00;
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
 		//		statusEffects=new ArrayList<StatusEffect>();
@@ -923,6 +923,9 @@ public class Player_RPG implements Actor_RPG {
 
 	@Override
 	public CombatMove getCombatMove(int index) {
+		if (index >= moveList.size()) {
+			return moveList.get(0);
+		}
 		return moveList.get(index);
 	}
 

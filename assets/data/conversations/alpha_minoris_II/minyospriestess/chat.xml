@@ -594,7 +594,7 @@
 		<effect type="setfactionflag" flag="friendship" value="1" />
 		<effect type="removeitem" item="elf statue" value="1" />
 		<effect type="setlocalflag" flag="quest" value="2" />
-		<effect type="givegold" value="200" />
+		<effect type="givegold" value="400" />
 		<effect type="experience" value="100" />
 		<choice destination="end" text="you're welcome" />
 	</page>

@@ -44,8 +44,22 @@
 					numModifiers="2" strength="12" interval="60">
 				</statusStealth>
 			</effectStatus>
-
 		</combatMove>
+		<combatMove name="sneak" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4">
+			<effectDamage type="KINETIC" minValue="2" maxValue="7"
+				modifier="STRENGTH" />
+			<effectDamage type="KINETIC" minValue="2" maxValue="7"
+				modifier="STRENGTH" />				
+			<missText count="2">
+				<text>TARGET evades a sneak attack from a batgirl</text>
+				<text>batgirl launches a sneak attack on TARGET but is blocked</text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET suffers VALUE damage as a batgirl suddenly swoops down on the attack</text>
+				<text>TARGET suffers VALUE damage from a sneak attack as a batgirl makes her presence known</text>
+			</hitText>
+		</combatMove>		
 	</rpg>
 
 	<respawn delay="2000" />

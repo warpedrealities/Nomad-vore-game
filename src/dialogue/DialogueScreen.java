@@ -249,9 +249,13 @@ public class DialogueScreen extends Screen implements Callback {
 		if (str == null) {
 			portraitImage.setVisible(false);
 		} else {
+			float height = 1;
+			if (e.getAttribute("height").length() > 0) {
+				height = Float.parseFloat(e.getAttribute("height"));
+			}
 			portraitImage.setVisible(true);
 			portraitImage.setTexture("assets/art/portraits/" + str + ".png",
-					Float.parseFloat(e.getAttribute("height")));
+					height);
 		}
 
 	}

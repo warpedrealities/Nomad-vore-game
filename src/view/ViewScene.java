@@ -43,8 +43,8 @@ import playerscreens.AppearanceScreen;
 import playerscreens.CharacterScene;
 import playerscreens.InventoryScreen;
 import rendering.WorldView;
-import shared.Callback;
 import shared.ButtonListener;
+import shared.Callback;
 import shared.ParserHelper;
 import shared.SceneBase;
 import shared.Scene_Int;
@@ -175,7 +175,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 
 			if (i < 4) {
-				m_bars[i] = new BarFrame(new Vec2f(8.5F, 15.7F - (i * 1.0F)), str,
+				m_bars[i] = new BarFrame(new Vec2f(7.5F, 15.7F - (i * 1.0F)), str,
 						sceneController.getUniverse().player.getRPG().getStat(i),
 						sceneController.getUniverse().player.getRPG().getStatMax(i), 1 + i, m_textureIds[6]);
 				m_window.add(m_bars[i]);
@@ -283,7 +283,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 
 			if (i < 4) {
-				m_bars[i] = new BarFrame(new Vec2f(8.5F, 15.7F - (i * 1.0F)), str,
+				m_bars[i] = new BarFrame(new Vec2f(7.5F, 15.7F - (i * 1.0F)), str,
 						sceneController.getUniverse().player.getRPG().getStat(i),
 						sceneController.getUniverse().player.getRPG().getStatMax(i), 1 + i, m_textureIds[6]);
 				m_window.add(m_bars[i]);
@@ -379,7 +379,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 		for (int i = 0; i < 4; i++) {
 			m_bars[i].setValue(sceneController.getUniverse().player.getRPG().getStat(i));
 		}
-
+		m_reader.UpdateHand();
 		statusDisplay.redraw();
 		cooldownDisplay.redraw();
 		actionBar.reset();
@@ -491,7 +491,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			m_buttons[1].setActive(false);
 		}
 		if (m_dropdown.getVisible() == false && m_mode.getValue()) {
-			m_mode = DropdownHandler.handleClosure(m_mode, Universe.getInstance().getPlayer(), m_buttons[4]);
+			m_mode = DropdownHandler.handleClosure(m_mode, Universe.getInstance().getPlayer(), m_buttons[1]);
 		}
 		if (FXanimationControl.getActive() == true) {
 			FXanimationControl.Update();

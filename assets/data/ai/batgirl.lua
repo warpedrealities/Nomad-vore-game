@@ -6,6 +6,7 @@ end
 function attack(controllable,sense,pos,hostile)
 	if pos:getDistance(hostile:getPosition())<2 then
 	--if in melee range attack
+	controllable:setAttack(0);
 	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 	else
 	--if not move towards player
@@ -36,8 +37,9 @@ function combat(controllable,sense,pos,hostile)
 	
 		else 
 			if (pos:getDistance(hostile:getPosition())<2) then
-			controllable:getRPG():removeStatus(23)
-			attack(controllable, sense,pos,hostile)
+				controllable:getRPG():removeStatus(23)
+				controllable:setAttack(2);
+				controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
 			else
 			harmCheck(controllable)
 			end

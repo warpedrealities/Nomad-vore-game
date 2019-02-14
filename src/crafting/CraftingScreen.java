@@ -44,9 +44,9 @@ public class CraftingScreen extends Screen implements Callback {
 	private Window popup;
 	private Text popupText;
 	private Button2 []filterButtons;
-	
+
 	private CraftingTokenHandler tokenHandler;
-	
+
 	public CraftingScreen() {
 		player = Universe.getInstance().getPlayer();
 		craftingLibrary = player.getCraftingLibrary();
@@ -73,7 +73,7 @@ public class CraftingScreen extends Screen implements Callback {
 	@Override
 	public void update(float DT) {
 		possibleCrafts.update(DT);
-		root.update(DT);	
+		root.update(DT);
 		if (popupTimer > 0) {
 			popupTimer -= DT;
 		}
@@ -115,7 +115,7 @@ public class CraftingScreen extends Screen implements Callback {
 			filterButtons[0].setAlt(filterMissingTokens);
 			regen();
 			break;
-	
+
 		case 3:
 			filterTech=!filterTech;
 			filterButtons[1].setAlt(filterTech);
@@ -129,16 +129,16 @@ public class CraftingScreen extends Screen implements Callback {
 		craftables.clear();
 		generate(filterMissingTokens,filterTech);
 	}
-	
-	
-	
+
+
+
 	private void buildItem() {
-		
-	
+
+
 		// check item can be made
 		if (canMake) {
 			CraftingRecipe recipe = craftables.get(selection);
-			int startingEnergy=calcStartingEnergy(recipe);		
+			int startingEnergy=calcStartingEnergy(recipe);
 			// remove required items
 			for (int i = 0; i < recipe.getIngredients().size(); i++) {
 				player.getInventory().removeItems(recipe.getIngredients().get(i).getName(),
@@ -169,7 +169,7 @@ public class CraftingScreen extends Screen implements Callback {
 			buildRequirements();
 		}
 	}
-	
+
 	private Item findItem(String name)
 	{
 		for (int i=0;i<player.getInventory().getNumItems();i++)
@@ -183,7 +183,7 @@ public class CraftingScreen extends Screen implements Callback {
 	}
 
 	private int calcStartingEnergy(CraftingRecipe craftingRecipe) {
-		
+
 		Item it=findItem(craftingRecipe.getIngredients().get(0).getName());
 		if (it!=null)
 		{
@@ -236,13 +236,13 @@ public class CraftingScreen extends Screen implements Callback {
 		for (int i = 0; i < buttons.length; i++) {
 			root.add(buttons[i]);
 		}
-		
+
 		filterButtons=new Button2[2];
 		filterButtons[0] = new Button2(new Vec2f(24.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "filter:tokens", 2,textures[3], 1);
 		filterButtons[1] = new Button2(new Vec2f(18.0F, 0.0F), new Vec2f(6, 1.8F), textures[2], this, "filter:tech", 3,textures[3], 1);
 		for (int i = 0; i < filterButtons.length; i++) {
 			root.add(filterButtons[i]);
-		}	
+		}
 
 		// build info panel
 		description = new MultiLineText(new Vec2f(17.5F, 14.5F), 10, 40, 0.8F);
@@ -284,11 +284,11 @@ public class CraftingScreen extends Screen implements Callback {
 			if (recipe.getRequiredSkill()>player.getRPG().getAttribute(Actor_RPG.TECH))
 			{
 				canMake = false;
-				requirements[0].setTint(1, 0, 0);	
-				requirements[0].setString("requires skill of "+recipe.getRequiredSkill());	
+				requirements[0].setTint(1, 0, 0);
+				requirements[0].setString("requires skill of "+recipe.getRequiredSkill());
 				for (int i=1;i<8;i++)
 				{
-					requirements[i].setString("");		
+					requirements[i].setString("");
 				}
 
 			}
@@ -297,12 +297,12 @@ public class CraftingScreen extends Screen implements Callback {
 				if (recipe.getRequiredScience()>player.getRPG().getAttribute(Actor_RPG.SCIENCE))
 				{
 					canMake = false;
-					requirements[0].setTint(1, 0, 0);	
-					requirements[0].setString("requires science of "+recipe.getRequiredSkill());	
+					requirements[0].setTint(1, 0, 0);
+					requirements[0].setString("requires science of "+recipe.getRequiredSkill());
 					for (int i=1;i<8;i++)
 					{
-						requirements[i].setString("");		
-					}			
+						requirements[i].setString("");
+					}
 				}
 				else
 				{
@@ -311,20 +311,20 @@ public class CraftingScreen extends Screen implements Callback {
 					{
 						for (int i=0;i<l.size();i++)
 						{
-							requirements[0].setTint(1, 0, 0);	
-							requirements[0].setString("requires "+l.get(i).getName()+" "+l.get(i).getQuantity());		
+							requirements[0].setTint(1, 0, 0);
+							requirements[0].setString("requires "+l.get(i).getName()+" "+l.get(i).getQuantity());
 						}
 						canMake = false;
 					}
 					else
-					{					
+					{
 						for (int i=0; i < 8; i++) {
 							if (recipe.getIngredients().size() <= i) {
 								requirements[i].setString("");
 							} else {
-								requirements[i].setString(recipe.getIngredients().get(i).getName() + " x"
-										+ recipe.getIngredients().get(i).getQuantity());
-		
+								requirements[i].setString("x" + recipe.getIngredients().get(i).getQuantity() + " "
+										+ recipe.getIngredients().get(i).getName());
+
 								if (hasIngredient(recipe.getIngredients().get(i))) {
 									requirements[i].setTint(1, 1, 1);
 								} else {
@@ -332,8 +332,8 @@ public class CraftingScreen extends Screen implements Callback {
 									requirements[i].setTint(1, 0, 0);
 								}
 							}
-						}	
-					}			
+						}
+					}
 				}
 			}
 
@@ -385,27 +385,27 @@ public class CraftingScreen extends Screen implements Callback {
 					}
 				}
 			}
-			return true;			
+			return true;
 		}
 		return false;
 	}
-	
+
 	private void generateOne(boolean filterMissingTokens,CraftingRecipe recipe)
 	{
 		if (filterMissingTokens)
 		{
 			if (recipe.getUnmetRequirements(tokenHandler.getMap())==null)
 			{
-				craftables.add(recipe);	
+				craftables.add(recipe);
 			}
 		}
 		else
 		{
-			craftables.add(recipe);			
+			craftables.add(recipe);
 		}
 
 	}
-	
+
 	private void generate(boolean filterMissingTokens,boolean filterTech) {
 		int skill = player.getRPG().getAttribute(Actor_RPG.TECH);
 		// select all craftables that are unlocked and the player has crafting
@@ -418,15 +418,15 @@ public class CraftingScreen extends Screen implements Callback {
 			{
 				if (recipe.getUnlocked() == true && recipe.getRequiredSkill() <= skill) {
 					generateOne(filterMissingTokens,recipe);
-				}			
+				}
 			}
 			else
 			{
 				if (recipe.getUnlocked() == true && recipe.getRequiredSkill() <= skill+2) {
 					generateOne(filterMissingTokens,recipe);
-				}				
+				}
 			}
-			
+
 		}
 		// generate list
 		String[] names = new String[craftables.size()];

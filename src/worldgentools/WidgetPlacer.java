@@ -271,7 +271,7 @@ public class WidgetPlacer {
 		if (root.getTagName().contains("door")) {
 			WidgetDoor door = new WidgetDoor(n);
 			NodeList subnodes = Enode.getElementsByTagName("lock");
-			if (subnodes != null) {
+			if (subnodes != null && subnodes.getLength() > 0) {
 				Element e = (Element) subnodes.item(0);
 				door.setLockKey(e.getAttribute("key"));
 				door.setLockStrength(Integer.parseInt(e.getAttribute("strength")));

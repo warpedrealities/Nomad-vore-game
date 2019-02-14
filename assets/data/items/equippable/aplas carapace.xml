@@ -3,11 +3,11 @@
 	<description>
 		Armour made out of hardened alien plastics. Its form
 		fitting plates wrap snugly around your body and are remarkably
-		protective all things considered. +3 omnidefence
+		protective all things considered. +2 omnidefence
 	</description>
 	<modifier>
-		<kinetic value="3" />
-		<thermal value="3" />
-		<shock value="3" />
+		<kinetic value="2" />
+		<thermal value="2" />
+		<shock value="2" />
 	</modifier>
 </ItemEquip>

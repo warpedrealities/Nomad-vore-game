@@ -3,12 +3,11 @@
 	<description>
 		Armour made out of hardened alien plastics. Its form
 		fitting plates wrap snugly around your body and are remarkably
-		protective all things considered. It has been upgraded and enhanced by the black guardian Ptah to be even better.
-		+4 omnidefence
+		protective all things considered. It has been modified by Ptah with metal plating. +4 kinetic, +2 thermal, +1 shock.
 	</description>
 	<modifier>
 		<kinetic value="4" />
-		<thermal value="4" />
-		<shock value="4" />
+		<thermal value="2" />
+		<shock value="1" />
 	</modifier>
 </ItemEquip>
