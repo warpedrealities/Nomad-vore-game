@@ -372,7 +372,7 @@ public class ZoneBuildTools {
 					int index=0, read=0;
 					while (index<width && read<row.length())
 					{
-						String c = row.substring(index, index + 1);
+						String c = row.substring(read, read + 1);
 						read++;
 						if (!Character.isWhitespace(c.charAt(0)))
 						{
