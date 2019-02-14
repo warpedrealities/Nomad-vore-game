@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemResource name="fine scale" weight="0.1" value="75.0">
+<ItemResource name="fine scale" weight="0.1" value="150.0">
 	<description>A fine and shiny scale from a monstrous foe, might be worth a modest amount when sold.</description>
 
 </ItemResource>

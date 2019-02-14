@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemResource name="pearl" weight="0.1" value="400.0">
+<ItemResource name="pearl" weight="0.1" value="800.0">
 	<description>A pearl, shiny and a creamy white. You probably shouldn't explain where you got it though.</description>
 
 </ItemResource>
