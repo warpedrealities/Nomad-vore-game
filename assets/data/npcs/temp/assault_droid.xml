@@ -3,7 +3,7 @@
 <sprite value="laser_sentinel.png"/>
 <name>assault droid</name>
 <description>An automatic laser weapon on a eight-legged platorm. It easily keeps pace with you, it's weapon scanning for targets.</description>
-<volatility value="500"/>
+<volatility value="1000"/>
 <rpg>
 <experiencevalue value="0"/>
 <ability ability="STRENGTH" value="5" />

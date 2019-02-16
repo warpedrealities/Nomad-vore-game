@@ -3,8 +3,8 @@
 <sprite value="laser_sentinel.png"/>
 <name>brawler drone</name>
 <description>Standing seven feet tall, with heavy armor, the brawler looks around for enemies to beat into paste.</description>
-<volatility value="500"/>
-<rpg> xcvbg
+<volatility value="1000"/>
+<rpg> 
 <experiencevalue value="0"/>
 <ability ability="STRENGTH" value="5" />
 <ability ability="AGILITY" value="5" />

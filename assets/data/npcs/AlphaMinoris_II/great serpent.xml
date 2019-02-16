@@ -43,9 +43,9 @@
 			</hitText>
 		</combatMove>
 		<combatMove name="self heal" pattern="SELF" bonusAttribute="SEDUCTION"
-			timeCost="2" bonusToHit="0">
+			timeCost="4" bonusToHit="0">
 			<effectrecover modifier="ENDURANCE" modstrength="0.2"
-				modvalue="6" modifies="HEALTH">
+				modvalue="3" modifies="HEALTH">
 			</effectrecover>
 			<missText count="1">
 				<text></text>

@@ -3,7 +3,7 @@
 <sprite value="laser_sentinel.png"/>
 <name>sentinel drone</name>
 <description>The robot has plated armor, and fists at the ready, prepared to fight and, if need be, fall for it's maker.</description>
-<volatility value="500"/>
+<volatility value="1000"/>
 <rpg> xcvbg
 <experiencevalue value="0"/>
 <ability ability="STRENGTH" value="5" />

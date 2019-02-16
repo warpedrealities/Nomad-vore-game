@@ -3,7 +3,7 @@
 <sprite value="laser_sentinel.png"/>
 <name>spider droid</name>
 <description>An automatic laser weapon on a six-legged platorm. It seems small and fragile, but it easily keeps pace with you.</description>
-<volatility value="500"/>
+<volatility value="1000"/>
 <rpg>
 <experiencevalue value="0"/>
 <ability ability="STRENGTH" value="5" />
@@ -16,8 +16,8 @@
 <attribute attribute="PHEREMONE" value="10"/>
 <attribute attribute="PSYCHIC" value="10"/>
 <attribute attribute="SHOCK" value="-2"/>
-<stat stat="HEALTH" value="15"/>
-<stat stat="RESOLVE" value="15"/>
+<stat stat="HEALTH" value="30"/>
+<stat stat="RESOLVE" value="30"/>
 <combatMove name="laser" pattern="RANGED" bonusAttribute="RANGED" timeCost="0" bonusToHit="-1" rangedbias="1">
 <effectDamage type="THERMAL" minValue="1" maxValue="6" modifier="NONE"/>
 <missText count="2">

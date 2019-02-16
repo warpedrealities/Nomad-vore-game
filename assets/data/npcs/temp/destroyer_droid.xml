@@ -3,7 +3,7 @@
 <sprite value="laser_sentinel.png"/>
 <name>destroyer droid</name>
 <description>An massive laser cannon on a sturdy four-legged platorm, it's gait keeping up with you as it sweeps for enemies.</description>
-<volatility value="500"/>
+<volatility value="1000"/>
 <rpg>
 <experiencevalue value="0"/>
 <ability ability="STRENGTH" value="5" />

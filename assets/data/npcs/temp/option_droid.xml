@@ -3,7 +3,7 @@
 <sprite value="orangeO.png"/>
 <name>option droid</name>
 <description>A floating football sized robot contained in an orange coloured segmented metal shell. It's programmed to follow you around and add to your firepower.</description>
-<volatility value="500"/>
+<volatility value="1000"/>
 <rpg>
 <experiencevalue value="0"/>
 <ability ability="STRENGTH" value="5" />

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemConsumable name="laser sentinel" weight="8" value="800">
+<ItemConsumable name="laser sentinel" weight="4" value="800">
 	<description>A computer controlled laser gun mounted on a self
 		stabilizing tripod. Once deployed it won't last very long. But can be
 		useful when you need some extra firepower.</description>

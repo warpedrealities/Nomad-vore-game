@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <services>
-<service type="REFUEL" cost="500"/>
+<service type="REFUEL" cost="250"/>
 <service type="REPAIR" cost="1000"/>
 </services>
