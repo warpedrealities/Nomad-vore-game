@@ -507,7 +507,7 @@ public class Spaceship extends Entity {
 			Station station = (Station) Universe.getInstance().getCurrentWorld(this);
 			for (int i = 0; i < station.getDocked().getDockingPorts().length; i++) {
 				if (this.equals(station.getDocked().getDockingPorts()[i].getDockedShip())) {
-					portals.get(0).setDestination(station.getZone(i).getName(), portals.get(i).getID());
+					portals.get(0).setDestination(station.getZone(i).getName(), portals.get(0).getID());
 				}
 			}
 		}
