@@ -1,6 +1,6 @@
 package spacetest;
 
-import solarview.spaceEncounter.EncounterEntities.CombatWeapon;
+import solarview.spaceEncounter.EncounterEntities.CombatWeaponImpl;
 import solarview.spaceEncounter.interfaces.CombatAction;
 import solarview.spaceEncounter.interfaces.EncounterShip;
 
@@ -28,7 +28,7 @@ public class CombatActionTest implements CombatAction {
 	}
 
 	@Override
-	public CombatWeapon getWeapon() {
+	public CombatWeaponImpl getWeapon() {
 		// TODO Auto-generated method stub
 		return null;
 	}

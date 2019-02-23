@@ -6,7 +6,7 @@
 	</description>
 	<ingredient item="scrap metal" quantity="6" />
 	<ingredient item="computation valve" quantity="10" />
-	<ingredient item="flux capacitor" quantity="10" />	
+	<ingredient item="flux capacitor" quantity="1" />	
 <tokenRequirement item="roboticist" quantity="1" />	
 	<result item="guardian defence system" />
 </recipe>

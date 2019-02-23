@@ -25,8 +25,8 @@
 	</text>
 	<effect type="setlocalflag" flag="talked" value="1" />	
 	<choice destination="leg" text="$I am looking to buy a leg from a guardian">
-<condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
-			value="1" />
+<!-- <condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="1" /> -->
 <condition operator="equals" evaluate="LOCALFLAG" flag="leg"
 			value="0" />			
 	</choice>
@@ -51,7 +51,7 @@
 	<text>
 	"You must greatly desire this trophy. Some would say it is lessened to possess a trophy not your own. But no matter, it is well to be traded. May you prosper by it."
 	</text>
-	<effect type="giveitem" value="1" item="questitem" addendum="synth_leg" />	
+	<effect type="giveitem" value="1" item="questItem" addendum="synth_leg" />	
 	<effect type="setlocalflag" flag="leg" value="1" />		
 		<effect type="givegold" value="-2000" />	
 	<choice destination="end" text="$Live and Drink"/>

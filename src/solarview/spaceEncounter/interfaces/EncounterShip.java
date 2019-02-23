@@ -16,4 +16,6 @@ public interface EncounterShip {
 
 	CombatShield getShield();
 
+	float getHeading();
+
 }

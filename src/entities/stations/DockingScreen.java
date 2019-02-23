@@ -111,10 +111,10 @@ public class DockingScreen extends Screen implements Callback {
 			window.add(buttons[i]);
 		}
 
-		image = new SpriteImage(new Vec2f(2, 2), new Vec2f(22, 20),
+		image = new SpriteImage(new Vec2f(13, 12), new Vec2f(22, 20),
 				"assets/art/dockingImages/" + station.getDocked().getDockingImage() + ".png", 1);
 		this.window.add(image);
-		image.AdjustPos(new Vec2f(2 + window.getPosition().x, 2 + window.getPosition().y));
+		image.AdjustPos(new Vec2f(13 + window.getPosition().x, 12 + window.getPosition().y));
 		this.callback = callback;
 		this.docking = new DockingUI(station, station.getDocked(), new Vec2f(-3.5F, 2));
 	}

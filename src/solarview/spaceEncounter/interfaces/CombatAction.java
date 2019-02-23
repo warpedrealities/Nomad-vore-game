@@ -1,6 +1,6 @@
 package solarview.spaceEncounter.interfaces;
 
-import solarview.spaceEncounter.EncounterEntities.CombatWeapon;
+import solarview.spaceEncounter.EncounterEntities.CombatWeaponImpl;
 
 public interface CombatAction {
 
@@ -10,7 +10,7 @@ public interface CombatAction {
 
 	EncounterShip getTarget();
 
-	CombatWeapon getWeapon();
+	CombatWeaponImpl getWeapon();
 
 	int getWeaponIndex();
 

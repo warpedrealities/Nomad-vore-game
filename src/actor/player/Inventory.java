@@ -39,7 +39,7 @@ public class Inventory {
 		m_capacity = capacity;
 
 		m_slots = new Item[5];
-		playerCredits = 0000;
+		playerGold = 0000;
 	}
 
 	public Item getSlot(int i) {
@@ -70,7 +70,7 @@ public class Inventory {
 		ItemStack stack = (ItemStack) item;
 
 		Item r=stack.takeItem();
-		if (stack.getCount() == 0) {
+		if (stack.getCount() <= 0) {
 			m_items.remove(item);
 		}
 		m_weight -= item.getItem().getWeight();

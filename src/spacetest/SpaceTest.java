@@ -12,8 +12,11 @@ import rendering.SpriteManager;
 import rendering.SpriteRotatable;
 import shared.SceneBase;
 import shared.Vec2f;
+import solarview.spaceEncounter.EncounterEntities.CombatWeapon;
+import solarview.spaceEncounter.EncounterEntities.WeaponCheck;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.interfaces.CombatAction;
+import solarview.spaceEncounter.rendering.CircleHandler;
 import vmo.Game;
 
 public class SpaceTest extends SceneBase {
@@ -25,6 +28,9 @@ public class SpaceTest extends SceneBase {
 	private CombatAction action;
 	private EncounterShipTest origin, tship;
 	private Vec2f offset;
+	private CircleHandler circle;
+	private CombatWeapon weapon;
+	private boolean buttonToggle;
 
 	public SpaceTest() {
 		spriteManager = new SpriteManager("assets/art/solar/");
@@ -36,6 +42,13 @@ public class SpaceTest extends SceneBase {
 		tship.setPosition(new Vec2f(2, 2));
 		action = new CombatActionTest(tship);
 		offset = new Vec2f(0.5F, 0.5F);
+		circle = new CircleHandler();
+		// circle.setWidth(1);
+		circle.setPosition(new Vec2f(0, 0));
+		circle.setWidth(2.0F);
+		circle.setVisible(true);
+		weapon = new CombatWeaponTest(2.0F);
+
 	}
 
 	private void buildSprites() {
@@ -65,6 +78,17 @@ public class SpaceTest extends SceneBase {
 		if (!effectHandler.effectsRunning() && Keyboard.isKeyDown(GLFW.GLFW_KEY_D)) {
 			effectHandler.addScript(origin, action, true);
 		}
+		if (buttonToggle && !Keyboard.isKeyDown(GLFW.GLFW_KEY_SPACE)) {
+			buttonToggle = false;
+		}
+		if (!buttonToggle && Keyboard.isKeyDown(GLFW.GLFW_KEY_SPACE)) {
+			buttonToggle = true;
+			if (WeaponCheck.checkArc(origin, tship, weapon)) {
+				System.out.println("in arc");
+			} else {
+				System.out.println("out of arc");
+			}
+		}
 	}
 
 	private void setMatrix() {
@@ -87,6 +111,7 @@ public class SpaceTest extends SceneBase {
 		GL20.glUniformMatrix4fv(m_variables[1], false, matrix44Buffer);
 		spriteManager.draw(m_variables[2], m_variables[0], matrix44Buffer);
 		effectHandler.draw(matrix44Buffer, m_variables[2], m_variables[1]);
+		circle.draw(m_variables[2], m_variables[0], matrix44Buffer);
 	}
 
 	@Override
@@ -99,6 +124,7 @@ public class SpaceTest extends SceneBase {
 		// TODO Auto-generated method stub
 		spriteManager.discard();
 		effectHandler.discard();
+		circle.discard();
 	}
 
 }

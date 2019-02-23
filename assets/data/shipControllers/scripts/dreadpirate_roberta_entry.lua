@@ -1,5 +1,6 @@
 function moveAway(script,sense)
 	local pos=script:getPosition()
+	print("move away")
 	if (pos.x<200) then
 
 		script:reposition(pos.x+1000,pos.y+1000)
@@ -7,6 +8,7 @@ function moveAway(script,sense)
 end
 
 function moveBack(script,sense)
+	print("move back")
 	sense:getFlags():setFlag("boarding",0)
 	local pos=script:getPosition()
 	if (pos.x>200) then
@@ -35,6 +37,7 @@ end
 
 function checkBoarded(script,sense)
 	bounty=sense:getGlobalFlags():readFlag("piratebounty0")
+	print(bounty)
 	if (bounty>2)then
 		script:removeShip()
 	end

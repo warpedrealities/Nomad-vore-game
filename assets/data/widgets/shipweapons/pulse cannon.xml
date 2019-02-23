@@ -7,7 +7,7 @@
 		<DamagingEffect min="6" max="12" falloff="0" disruption="0"/>
 		<cooldown value="2" />
 		<effects script="turbolaser" sheet="turbolaser" />
-		<range arc="1" range="20" />
+		<range arc="3" range="20" />
 		<weaponCost resource="ENERGY" cost="4" />		
 		<description>
 

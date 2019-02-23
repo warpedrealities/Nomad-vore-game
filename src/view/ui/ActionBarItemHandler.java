@@ -53,7 +53,7 @@ public class ActionBarItemHandler {
 				ItemStack stack = (ItemStack) item;
 				stack.takeItem();
 				if (stack.getCount() <= 0) {
-					player.getInventory().RemoveItem(item);
+					player.getInventory().getItems().remove(stack);
 				}
 			} else {
 				player.getInventory().RemoveItem(item);

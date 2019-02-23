@@ -135,7 +135,9 @@ public class WarpScreen extends Screen  implements Callback{
 	public void Callback() {
 		((Player_RPG) Universe.getInstance().getPlayer().getRPG()).rest(currentSleep);
 		Universe.AddClock(currentSleep);
-		ViewScene.m_interface.UpdateInfo();
+		if (ViewScene.m_interface != null) {
+			ViewScene.m_interface.UpdateInfo();
+		}
 
 		refresh();
 	}

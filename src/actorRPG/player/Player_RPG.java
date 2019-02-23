@@ -227,7 +227,7 @@ public class Player_RPG implements Actor_RPG {
 
 		//		currentAttack=new Attack(new Damage(KINETIC,2,0), STRENGTH, 1.0F,false);
 
-		playerExperience = 00;
+		playerExperience = 000;
 		genDefaultMoves();
 		moveList=new ArrayList<CombatMove>();
 		//		statusEffects=new ArrayList<StatusEffect>();

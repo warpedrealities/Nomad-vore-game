@@ -4,18 +4,18 @@ import solarview.spaceEncounter.interfaces.CombatAction;
 
 public class CombatActionImpl implements CombatAction {
 
-	private CombatWeapon weapon;
+	private CombatWeaponImpl weapon;
 	private EncounterShipImpl target;
 	private int weaponIndex;
 
-	public CombatActionImpl(CombatWeapon weapon,EncounterShipImpl target, int weaponIndex)
+	public CombatActionImpl(CombatWeaponImpl weapon,EncounterShipImpl target, int weaponIndex)
 	{
 		this.weapon=weapon;
 		this.target=target;
 		this.weaponIndex=weaponIndex;
 	}
 
-	public CombatWeapon getWeapon() {
+	public CombatWeaponImpl getWeapon() {
 		return weapon;
 	}
 	public EncounterShipImpl getTarget() {

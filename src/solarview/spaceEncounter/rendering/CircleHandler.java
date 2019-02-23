@@ -14,21 +14,21 @@ public class CircleHandler {
 	private int texture;
 	private CircleOverlay circle;
 	private boolean visible;
-	
+
 	public CircleHandler()
 	{
-		texture = Tools.loadPNGTexture("assets/art/encounter/circle.png", GL13.GL_TEXTURE0);
+		texture = Tools.loadPNGTexture("assets/art/encounter/green.png", GL13.GL_TEXTURE0);
 		circle=new CircleOverlay();
 	}
-	
+
 	public void draw(int objmatrix, int tintvar, FloatBuffer matrix44fbuffer) {
 		if (visible)
 		{
-			GL11.glBindTexture(GL11.GL_TEXTURE_2D, texture);	
-			circle.draw(objmatrix, tintvar, matrix44fbuffer);		
+			GL11.glBindTexture(GL11.GL_TEXTURE_2D, texture);
+			circle.draw(objmatrix, tintvar, matrix44fbuffer);
 		}
 	}
-	
+
 	public void setWidth(float w)
 	{
 		circle.regen(w);
@@ -42,12 +42,12 @@ public class CircleHandler {
 	public void setPosition(Vec2f position) {
 		circle.reposition(position);
 	}
-	
+
 	public void setRotation(float angle)
 	{
 		circle.rotate(angle);
 	}
-	
+
 	public void setVisible(boolean v)
 	{
 		visible=v;

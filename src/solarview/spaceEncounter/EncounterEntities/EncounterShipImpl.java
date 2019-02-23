@@ -29,7 +29,7 @@ public class EncounterShipImpl implements EncounterShip {
 	private Square_Rotatable_Int sprite;
 	private ShipEmitters emitters;
 	private CombatShield shield;
-	private List<CombatWeapon> weapons;
+	private List<CombatWeaponImpl> weapons;
 	private CombatActionHandler actionHandler;
 	private Monitor monitor;
 
@@ -43,9 +43,9 @@ public class EncounterShipImpl implements EncounterShip {
 			this.controller = this.ship.getShipController().getCombat();
 		}
 		if (this.ship.getShipStats().getWeapons() != null && this.ship.getShipStats().getWeapons().size() > 0) {
-			weapons = new ArrayList<CombatWeapon>();
+			weapons = new ArrayList<CombatWeaponImpl>();
 			for (int i = 0; i < this.getShip().getShipStats().getWeapons().size(); i++) {
-				weapons.add(new CombatWeapon(this.getShip().getShipStats().getWeapons().get(i)));
+				weapons.add(new CombatWeaponImpl(this.getShip().getShipStats().getWeapons().get(i)));
 			}
 		}
 		buildEmitters();
@@ -100,7 +100,7 @@ public class EncounterShipImpl implements EncounterShip {
 		manouver.setCourse(course);
 	}
 
-	public List<CombatWeapon> getWeapons() {
+	public List<CombatWeaponImpl> getWeapons() {
 		return weapons;
 	}
 

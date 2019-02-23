@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ItemResource name="blue crystal" weight="2" value="50.0">
+<ItemResource name="blue crystal" weight="1" value="50.0">
 	<description>a lump of blue crystal, softly glowing from within due to
 		the energy it contains.</description>
 

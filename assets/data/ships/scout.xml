@@ -41,15 +41,21 @@
 			<pairedportal x="4" y="0" sprite="1" ID="-101" facing="0">
 				Exterior hatch </pairedportal>
 			<placeWidget x="1" y="2" name="slot">
-
+				<contains name="modules/generator">
+					<resource type="ENERGY" value="50" />
+				</contains>
+				<widgetItem>generator</widgetItem>	
 			</placeWidget>
 			<placeWidget x="7" y="2" name="slot">
-			<contains name="modules/interplanetary reactor">
+			<contains name="modules/fueltank">
 					<resource type="FUEL" value="200" />
 				</contains>
-				<widgetItem>interplanetary reactor</widgetItem>	
+				<widgetItem>fuel tank</widgetItem>	
 			</placeWidget>
-			<placeWidget x="1" y="3" name="slot"/>
+			<placeWidget x="1" y="3" name="slot">
+			<contains name="modules/space warper"/>
+			<widgetItem>space warper</widgetItem>	
+			</placeWidget>
 			<placeWidget x="7" y="3" name="slot"/>	
 			<placeWidget x="3" y="4" name="slot"/>
 			<placeWidget x="5" y="4" name="slot"/>	

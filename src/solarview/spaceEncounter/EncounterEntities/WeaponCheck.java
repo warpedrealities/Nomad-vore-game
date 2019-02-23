@@ -1,24 +1,25 @@
 package solarview.spaceEncounter.EncounterEntities;
 
 import shared.Vec2f;
+import solarview.spaceEncounter.interfaces.EncounterShip;
 
 public class WeaponCheck {
 
-	
-	
-	static public boolean checkRange(EncounterShipImpl ship, EncounterShipImpl target, CombatWeapon weapon)
+
+
+	static public boolean checkRange(EncounterShipImpl ship, EncounterShipImpl target, CombatWeaponImpl weapon)
 	{
 		float range=weapon.getWeapon().getWeapon().getMaxRange();
-		
+
 		float distance=ship.getPosition().getDistance(target.getPosition());
-		
+
 		if (range>=distance)
 		{
 			return true;
 		}
 		return false;
 	}
-	
+
 	static private Vec2f vFromFacing(float facing, float heading)
 	{
 		Vec2f p=new Vec2f (0,1);
@@ -27,12 +28,12 @@ public class WeaponCheck {
 
 		return p;
 	}
-	
+
 	static double angle(float x0, float y0,float x1,float y1)
 	{
 		double a=Math.atan2(x0,y0);
 		double b=Math.atan2(x1, y1);
-		
+
 		double angle=a-b;
 		if (angle>Math.PI)
 		{
@@ -44,21 +45,21 @@ public class WeaponCheck {
 		}
 		return angle;
 	}
-	
-	static public boolean checkArc(EncounterShipImpl ship, EncounterShipImpl target, CombatWeapon weapon)
+
+	static public boolean checkArc(EncounterShip ship, EncounterShip target, CombatWeapon weapon)
 	{
-		
+
 		//find the angle to the target
 		Vec2f v=target.getPosition().replicate().subtract(ship.getPosition());
 		//find the angle of the weapon mount
-		Vec2f w=vFromFacing(weapon.getWeapon().getFacing(),ship.getHeading());
+		Vec2f w = vFromFacing(weapon.getFacing(), ship.getHeading());
 		//find if the difference in angles is smaller than the arc
 		v.normalize();
 		w.normalize();
 		v.x=v.x*-1;
-		
-		double width=0.785398F*weapon.getWeapon().getWeapon().getFiringArc()/2;
-		
+
+		double width = 0.785398F * weapon.getFiringArc() / 2;
+
 		double r=angle(v.x,v.y,w.x,w.y);
 
 		if (r<=width && r>=width*-1)
@@ -67,6 +68,6 @@ public class WeaponCheck {
 		}
 		return false;
 	}
-	
-	
+
+
 }

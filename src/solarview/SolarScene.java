@@ -44,7 +44,7 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 	StarScape starscape;
 	DecorationLayer decorationLayer;
 	float incrementCounter;
-	
+
 	private boolean warpCheck(Spaceship spaceship)
 	{
 		if (spaceship.getWarpHandler()!=null)
@@ -54,13 +54,13 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 				Vec2i origin=Universe.getInstance().getcurrentSystem().getPosition();
 				Universe.getInstance().getSystem().getEntities().remove(spaceship);
 				StarSystem system=Universe.getInstance().getSystem(spaceship.getWarpHandler().getDestination().x, spaceship.getWarpHandler().getDestination().y);
-				
+
 				Universe.getInstance().setSystem(system);
 				system.arrival();
 				Universe.getInstance().getSystem().getEntities().add(spaceship);
-			
+
 				Vec2i destination=Universe.getInstance().getcurrentSystem().getPosition();
-				
+
 				int x=(origin.x-destination.x)*24;
 				int y=(destination.y-origin.y)*24;
 				Vec2f v=new Vec2f(x,y); v.normalize();
@@ -75,7 +75,7 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 		}
 		return false;
 	}
-	
+
 	public SolarScene(int r, Spaceship spaceship) {
 
 		if (spaceship.getShipStats()==null)
@@ -105,7 +105,7 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 		{
 			generateWarpHelpers();
 		}
-		
+
 		if (warp)
 		{
 			int dir=(int) Geometry.getAngle(0, 0, playerShip.getPosition().x,playerShip.getPosition().y*-1);
@@ -124,7 +124,7 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 	{
 		renderer.generateWarpHelpers(40, Universe.getInstance());
 	}
-	
+
 	@Override
 	public void Update(float dt) {
 
@@ -135,14 +135,14 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 		} else {
 			shipController.controlUpdate(dt);
 			if (clock <= 0) {
-				
+
 				if (shipController.canAct()) {
 					if (shipController.control(playerShip)) {
 						GUI.update();
 						renderer.setCurrentPosition(playerShip.getPosition());
 						starscape.setCurrentPosition(playerShip.getPosition());
 						decorationLayer.setCurrentPosition(playerShip.getPosition());
-						clock += 0.025F;
+						clock += 0.010F;
 					}
 					// clicking control
 					if (mouseHook.buttonDown()) {
@@ -152,7 +152,7 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 					}
 				} else {
 					controller.update();
-					clock += 0.025F;
+					clock += 0.010F;
 				}
 
 			} else {
@@ -186,7 +186,7 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 		matrix44Buffer.flip();
 		GL20.glUniform1fv(m_variables[1], matrix44Buffer);
 		starscape.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
-		GL20.glUniform1fv(m_variables[1], matrix44Buffer);	
+		GL20.glUniform1fv(m_variables[1], matrix44Buffer);
 		GL20.glUniform4f(m_variables[0], 1.0F, 1.0F, 1.0F, 1);
 		decorationLayer.draw(m_variables[1], m_variables[2], m_variables[0], matrix44Buffer);
 		GL20.glUniform4f(m_variables[0], 1.0F, 1.0F, 1.0F, 1);
@@ -211,7 +211,7 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 		{
 			playerShip.getShipStats().runDecompose();
 			new SpaceshipAnalyzer().decomposeResources(playerShip.getShipStats(), playerShip);
-			playerShip.setShipStats(null);		
+			playerShip.setShipStats(null);
 		}
 
 		playerShip.setShipController(null);
@@ -251,7 +251,7 @@ public class SolarScene extends SceneBase implements ButtonListener, Solar_Inter
 			if (renderer.getScale() < 8) {
 				renderer.setScale(renderer.getScale() * 2);
 				starscape.setScale(renderer.getScale() * 2);
-				decorationLayer.setScale(decorationLayer.getScale() * 2);	
+				decorationLayer.setScale(decorationLayer.getScale() * 2);
 			}
 			break;
 		case 3:

@@ -11,6 +11,7 @@ import org.lwjgl.opengl.GL30;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 
+import rendering.calculators.SectionRotator;
 import shared.Vec2f;
 import shared.Vertex;
 
@@ -19,7 +20,7 @@ public class CircleOverlay {
 	private int VBO,VIO,VAO,indiceCount;
 	protected Vec2f spritePosition;
 	protected Matrix4f matrix;
-	
+
 	public CircleOverlay()
 	{
 		matrix= new Matrix4f();
@@ -27,8 +28,30 @@ public class CircleOverlay {
 		matrix.m00=4;
 		matrix.m11=4;
 		generate();
+		generateIndices();
 	}
-	
+
+	private void generateIndices() {
+		IntBuffer indiceBuffer = BufferUtils.createIntBuffer(18);
+		int buffer[] = new int[18];
+		for (int i = 0; i < 3; i++) {
+			int index = i * 6;
+			int startVertex = i * 4;
+			buffer[index + 0] = startVertex + 0;
+			buffer[index + 1] = startVertex + 1;
+			buffer[index + 2] = startVertex + 3;
+			buffer[index + 3] = startVertex + 1;
+			buffer[index + 4] = startVertex + 2;
+			buffer[index + 5] = startVertex + 3;
+		}
+		indiceBuffer.put(buffer);
+		indiceBuffer.flip();
+		VIO = GL15.glGenBuffers();
+		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, VIO);
+		GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indiceBuffer, GL15.GL_STATIC_DRAW);
+		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
+	}
+
 	private void generate()
 	{
 
@@ -38,132 +61,60 @@ public class CircleOverlay {
 		VBO = GL15.glGenBuffers();
 		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, VBO);
 		// build the vertex buffer here
-		FloatBuffer verticesBuffer = BufferUtils.createFloatBuffer(5 * 6);
+		FloatBuffer verticesBuffer = BufferUtils.createFloatBuffer(12 * 6);
 		// build indice buffer, it's not complex its a repeating pattern of six
 		// offset through the sequence
-		IntBuffer indiceBuffer = BufferUtils.createIntBuffer(12);
 
 		// build the four vertexes for the square
-		Vertex v[] = new Vertex[5];
+		Vertex v[] = new Vertex[12];
 
-		v[0] = new Vertex(0, 0, 0, 0.5F, 0.5F);
-		v[1] = new Vertex(0.5F, 0.5F, 0, 1.0F, 0.0F);
-		v[2] = new Vertex(-0.5F, 0.5F, 0, 1.0F, 1.0F);
-		v[3] = new Vertex(-0.5F, -0.5F, 0, 1.0F, 0.0F);
-		v[4] = new Vertex(0.5F, -0.5F, 0, 0.0F, 0.0F);
+		v[0] = new Vertex(0.5F, 1.2F, 0, 0.0F, 0.0F);
+		v[1] = new Vertex(0.5F, 1.1F, 0, 1.0F, 0.0F);
+		v[2] = new Vertex(-0.5F, 1.1F, 0, 1.0F, 1.0F);
+		v[3] = new Vertex(-0.5F, 1.2F, 0, 1.0F, 0.0F);
+
+		v = SectionRotator.generateBlock(0, 4, v, 45);
+		v = SectionRotator.generateBlock(0, 8, v, -45);
 
 
-		for (int k = 0; k < 5; k++) {
+		for (int k = 0; k < 12; k++) {
 			verticesBuffer.put(v[k].pos);
 			verticesBuffer.put(v[k].tex);
 		}
 
-		int buffer[] = new int[12];
-		buffer[0] = 0;
-		buffer[1] = 2;
-		buffer[2] = 1;
-		buffer[3] = 0;
-		buffer[4] = 1;
-		buffer[5] = 3;
-		buffer[6] = 2;
-		buffer[7] = 4;
-		buffer[8] = 0;
-		buffer[9] = 0;
-		buffer[10] = 3;
-		buffer[11] = 4;
-		indiceBuffer.put(buffer);
-
 		verticesBuffer.flip();
-		indiceBuffer.flip();
-		indiceCount = 12;
+		indiceCount = 18;
 		GL15.glBufferData(GL15.GL_ARRAY_BUFFER, verticesBuffer, GL15.GL_DYNAMIC_DRAW);
 
 		GL20.glVertexAttribPointer(0, 4, GL11.GL_FLOAT, false, Vertex.size, 0);
 		GL20.glVertexAttribPointer(1, 2, GL11.GL_FLOAT, false, Vertex.size, 4 * 4);
 
-		VIO = GL15.glGenBuffers();
-		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, VIO);
-		GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indiceBuffer, GL15.GL_STATIC_DRAW);
-		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);		
-		
-		
-		
+		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
 	}
-	
-	private int getTriangleCount(float width)
-	{
-		if (width<=2)
-		{
-			return 1;
-		}
-		if (width<=6)
-		{
-			return 3;
-		}
-		return 4;
-		
-	}
-	
-	private Vertex []genFirstTriangle(float width, Vertex[] v)
-	{
-		if (width==1)
-		{
-			v[0] = new Vertex(0, 0, 0, 0.5F, 0.5F);
-			v[1] = new Vertex(0.25F, 0.5F, 0, 1.0F, 0.25F);
-			v[2] = new Vertex(-0.25F, 0.5F, 0, 1.0F, 0.75F);		
-		}
-		else
-		{
-			v[0] = new Vertex(0, 0, 0, 0.5F, 0.5F);
-			v[1] = new Vertex(0.5F, 0.5F, 0, 1.0F, 0.0F);
-			v[2] = new Vertex(-0.5F, 0.5F, 0, 1.0F, 1.0F);		
-		}	
-		return v;
-	}
-	
-	private Vertex []genSecondThirdTriangle(float width, Vertex[] v)
-	{
-		if (width==3)
-		{
-			v[3] = new Vertex(0.5F, 0.2F, 0, 0.7F, 0.0F);
-			v[4] = new Vertex(-0.5F, 0.2F, 0, 0.7F, 1.0F);			
-		}
-		if (width==4)
-		{
-			v[3] = new Vertex(0.5F, 0.0F, 0, 0.5F, 0.0F);
-			v[4] = new Vertex(-0.5F, 0.0F, 0, 0.5F, 1.0F);				
-		}
-		if (width==5)
-		{
-			v[3] = new Vertex(0.5F, -0.2F, 0, 0.3F, 0.0F);
-			v[4] = new Vertex(-0.5F, -0.2F, 0, 0.3F, 1.0F);			
-		}
-		if (width>=6)
-		{
-			v[3] = new Vertex(0.5F, -0.5F, 0, 0.0F, 0.0F);
-			v[4] = new Vertex(-0.5F, -0.5F, 0, 0.0F, 1.0F);			
-		}
-		
-		return v;
-	}
-	
+
 	public void regen(float width)
 	{
-		int triangleCount=getTriangleCount(width);
-		Vertex v[] = new Vertex[2+triangleCount];
-		int vCount=2+triangleCount;
-		if (vCount>5)
-		{
-			vCount=5;
+		int sectionCount = getSectionCount(width);
+		Vertex v[] = new Vertex[sectionCount * 4];
+
+		FloatBuffer verticesBuffer = BufferUtils.createFloatBuffer((sectionCount * 4) * 6);
+		indiceCount = sectionCount * 6;
+
+		v[0] = new Vertex(0.5F, 1.2F, 0, 0.0F, 0.0F);
+		v[1] = new Vertex(0.5F, 1.1F, 0, 1.0F, 0.0F);
+		v[2] = new Vertex(-0.5F, 1.1F, 0, 1.0F, 1.0F);
+		v[3] = new Vertex(-0.5F, 1.2F, 0, 1.0F, 0.0F);
+		if (width > 1) {
+			if (width == 2) {
+				v = SectionRotator.generateBlock(1, 4, v, 45);
+				v = SectionRotator.generateBlock(-1, 8, v, -45);
+			} else {
+				v = SectionRotator.generateBlock(0, 4, v, 45);
+				v = SectionRotator.generateBlock(0, 8, v, -45);
+			}
 		}
-		FloatBuffer verticesBuffer = BufferUtils.createFloatBuffer((vCount) * 6);	
-		indiceCount=triangleCount*3;
-		v=genFirstTriangle(width,v);
-		if (triangleCount>1)
-		{
-			v=genSecondThirdTriangle(width,v);
-		}	
-		for (int k = 0; k < vCount; k++) {
+
+		for (int k = 0; k < (sectionCount * 4); k++) {
 			verticesBuffer.put(v[k].pos);
 			verticesBuffer.put(v[k].tex);
 		}
@@ -173,7 +124,15 @@ public class CircleOverlay {
 		GL15.glBufferSubData(GL15.GL_ARRAY_BUFFER, 0, verticesBuffer);
 		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
 	}
-	
+
+	private int getSectionCount(float width) {
+		if (width == 1) {
+			return 1;
+		} else {
+			return 3;
+		}
+	}
+
 	public void draw(int objmatrix, int tintvar, FloatBuffer matrix44fbuffer) {
 		matrix.store(matrix44fbuffer);
 		matrix44fbuffer.flip();
@@ -190,9 +149,9 @@ public class CircleOverlay {
 			GL20.glDisableVertexAttribArray(0);
 			GL20.glDisableVertexAttribArray(1);
 			GL30.glBindVertexArray(0);
-		}	
+		}
 	}
-	
+
 	public void discard() {
 		if (VAO != -1) {
 			GL30.glBindVertexArray(VAO);
@@ -224,15 +183,15 @@ public class CircleOverlay {
 		matrix.m32 = 0;
 
 		// rotate things
-		Matrix4f.rotate(((float) angle) * -0.785398F, new Vector3f(0, 0, 1), matrix, matrix);
-		
-		
+		Matrix4f.rotate((angle) * -0.785398F, new Vector3f(0, 0, 1), matrix, matrix);
+
+
 	}
-	
+
 	public void reposition(Vec2f position) {
 		matrix.m30=position.x;
 		matrix.m31=position.y;
-		
+
 	}
-	
+
 }

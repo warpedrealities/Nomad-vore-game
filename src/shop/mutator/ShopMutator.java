@@ -41,6 +41,7 @@ public class ShopMutator implements ShopData {
 
 	public ShopMutator(String str, DataInputStream dstream) throws IOException {
 		shopName = str;
+		mutations = new ArrayList<>();
 		Document doc = ParserHelper.LoadXML("assets/data/shops/" + shopName + ".xml");
 		Element root = doc.getDocumentElement();
 		Element n = (Element) doc.getFirstChild();

@@ -85,7 +85,7 @@ public class ShipWeapon extends ShipAbility {
 			weaponCosts.add(new WeaponCost(dstream));
 		}
 
-		tracking = dstream.readInt();
+		firingArc = dstream.readFloat();
 		rangePenalty = dstream.readFloat();
 		maxRange = dstream.readFloat();
 

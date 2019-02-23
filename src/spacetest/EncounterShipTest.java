@@ -46,4 +46,10 @@ public class EncounterShipTest implements EncounterShip {
 		return null;
 	}
 
+	@Override
+	public float getHeading() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
