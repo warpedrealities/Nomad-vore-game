@@ -62,7 +62,9 @@
 						<loot item="space meal" chance="1.0" />
 					</lootTable>
 				</placeWidget>
+		
 			</randprefab>
+			
 		</partition>
 		<perlin>
 			<band low="-1.0" high="-0.5">

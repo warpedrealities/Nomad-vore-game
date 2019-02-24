@@ -19,7 +19,9 @@ end
 function combat(controllable,sense,pos,hostile)
 	a=controllable:getValue(0)
 	b=controllable:getHealth()
-	if (a>15 or b<40) then
+	resolve=controllable:getRPG():getStat(1)
+	
+	if (a>15 or b<40 or resolve<40) then
 		attack(controllable,sense,pos,hostile)
 		
 	else

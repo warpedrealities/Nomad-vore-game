@@ -36,10 +36,10 @@
 		<itemDrop chance="50" item="plasma canister" />		
 	</rpg>
 	<crew skill="NAVIGATION" value="2"/>
-	<defeated conversation="space/pirates/roberta/defeat" />
-	<seduced conversation="space/pirates/roberta/seduced" />
-	<victory conversation="space/pirates/roberta/victory" />
-	<seducer conversation="space/pirates/roberta/victory" />
+	<defeated conversation="space/pirates/dreadpirate_roberta/defeat" />
+	<seduced conversation="space/pirates/dreadpirate_roberta/seduced" />
+	<victory conversation="space/pirates/dreadpirate_roberta/victory" />
+	<seducer conversation="space/pirates/dreadpirate_roberta/victory" />
 	<controller AI="pirate_ranged" />
 	<faction value="pirate" />
 </NPC>

@@ -70,6 +70,10 @@ public class Player_RPG implements Actor_RPG {
 
 	public void genMoveList()
 	{
+		String currentMove = null;
+		if (!moveList.isEmpty()) {
+			currentMove = moveList.get(moveChoice).getMoveName();
+		}
 		//clear
 		moveList.clear();
 		for (int i=0;i<4;i++)
@@ -162,6 +166,21 @@ public class Player_RPG implements Actor_RPG {
 		//read perks
 		//	handlePerkBasedMoves();
 		new Player_RPG_moveHandler().handlePerkBasedMoves((Player)actor,moveList,moveLists, playerPerks);
+
+		if (currentMove != null) {
+			boolean noMatch = true;
+			for (int i = 0; i < moveList.size(); i++) {
+				if (moveList.get(i).getMoveName().equals(currentMove)) {
+					noMatch = false;
+					break;
+				}
+			}
+			if (noMatch) {
+				moveChoice = 0;
+				ViewScene.m_interface.redrawBars();
+			}
+		}
+		boolean noMatch = true;
 
 		cooldownHandler.updateList(Arrays.copyOf(moveList.toArray(),moveList.size(),CombatMove[].class));
 	}

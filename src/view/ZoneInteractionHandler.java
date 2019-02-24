@@ -403,6 +403,9 @@ public class ZoneInteractionHandler {
 		int xt = (int) p.x;
 		int yt = (int) p.y;
 		// check line of sight
+		if (player.getMove(number) == null) {
+			return false;
+		}
 		if (player.getMove(number).getAttackPattern() == AttackPattern.P_SELF) {
 			return useSelfMove(number, player);
 		}

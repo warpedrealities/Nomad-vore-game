@@ -51,6 +51,7 @@ import shared.Scene_Int;
 import shared.Screen;
 import shared.Tools;
 import shared.Vec2f;
+import view.helpers.TransferHelper;
 import view.menuSystem.MenuSystem;
 import view.ui.ActionBar;
 import view.ui.CooldownDisplay;
@@ -667,7 +668,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 					sceneController.getUniverse().player.getPosition().y));
 			break;
 		}
-		Safety(side);
+		TransferHelper.safety(side, sceneController);
 		sceneController.getActiveZone().RegenZone();
 
 		CompanionTool.moveCompanions(sceneController.getUniverse().getPlayer(), sceneController.getActiveZone());
@@ -706,40 +707,6 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 
 	}
 
-	void Safety(int side) {
-		Vec2f p = new Vec2f(sceneController.getUniverse().player.getPosition().x,
-				sceneController.getUniverse().player.getPosition().y);
-		if (sceneController.getActiveZone().passable((int) p.x, (int) p.y, false) == false) {
-			if (side == 0 || side == 2) {
-				if (p.x > sceneController.getActiveZone().zoneWidth / 2) {
-					p.x += -1;
-					while (sceneController.getActiveZone().passable((int) p.x, (int) p.y, false) == false) {
-						p.x = p.x - 1;
-					}
-				} else {
-					p.x += 1;
-					while (sceneController.getActiveZone().passable((int) p.x, (int) p.y, false) == false) {
-						p.x = p.x + 1;
-					}
-				}
-			}
-			if (side == 1 || side == 3) {
-				if (p.y > sceneController.getActiveZone().zoneHeight / 2) {
-					p.y += -1;
-					while (sceneController.getActiveZone().passable((int) p.x, (int) p.y, false) == false) {
-						p.y = p.y - 1;
-					}
-				} else {
-
-					p.y -= 1;
-					while (sceneController.getActiveZone().passable((int) p.x, (int) p.y, false) == false) {
-						p.y = p.y + 1;
-					}
-				}
-			}
-			sceneController.getUniverse().player.setPosition(p);
-		}
-	}
 
 	@Override
 	public void Transition(String destination, int x, int y) {
