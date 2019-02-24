@@ -535,6 +535,7 @@ public class Spaceship extends Entity {
 
 	@Override
 	public void systemEntry() {
+		super.systemEntry();
 		if (shipController!=null)
 		{
 			shipController.event(scriptEvents.systemEntry);
