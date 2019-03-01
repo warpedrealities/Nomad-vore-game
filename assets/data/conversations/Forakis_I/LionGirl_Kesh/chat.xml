@@ -25,8 +25,8 @@
 	</text>
 	<effect type="setlocalflag" flag="talked" value="1" />	
 	<choice destination="leg" text="$I am looking to buy a leg from a guardian">
-<!-- <condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
-			value="1" /> -->
+<condition operator="equals" evaluate="GLOBALFLAG" flag="ptahquest"
+			value="1" />
 <condition operator="equals" evaluate="LOCALFLAG" flag="leg"
 			value="0" />			
 	</choice>

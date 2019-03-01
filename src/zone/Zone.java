@@ -510,6 +510,9 @@ public class Zone implements Zone_int {
 
 	@Override
 	public Tile getTile(int x, int y) {
+		if (zoneTileGrid == null) {
+			return null;
+		}
 		if (x >= 0 && x < zoneWidth) {
 			if (y >= 0 && y < zoneHeight) {
 				if (zoneTileGrid[x][y] != null) {

@@ -38,17 +38,17 @@
 
 			<keyBlock heat="3">
 				<!--gate -->
-				<row>00000000</row>
-				<row>22222220</row>
-				<row>21111120</row>
+				<row>22222200</row>
+				<row>21111200</row>
+				<row>21212200</row>
 				<row>11111222</row>
 				<row>11111112</row>
 				<row>21111222</row>
 				<row>21111120</row>
 				<row>22222220</row>
 				<edge value="WEST" />
-				<widget x="5" y="4" name="invincible_door" info="zorrSanctum"
-					variable="99" />
+				<widget x="1" y="2" name="stonepanelV" info="gateCloset" variable="15" />
+				<widget x="3" y="2" name="stonepanelV" info="gateCloset" variable="15" />
 				<widget x="6" y="4" name="entranceW" variable="22" info="zorrSanctum" />
 				<widget x="4" y="6" name="mechanism" info="interaction/zorr/zorrColumnCalamity"
 					variable="32" />
@@ -57,6 +57,8 @@
 				<widget x="2" y="6" name="mechanism" info="interaction/zorr/zorrColumnLament"
 					variable="32" />					
 				<widget x="4" y="4" name="itempile" info="note4" />
+				<spawn x="1" y="1" tag="0" />
+				<spawn x="3" y="1" tag="0" />	
 			</keyBlock>
 
 			<keyBlock heat="2">

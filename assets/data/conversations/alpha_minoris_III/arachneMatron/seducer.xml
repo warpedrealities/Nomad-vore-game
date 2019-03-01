@@ -54,7 +54,7 @@
 	<text>
 	You rouse again, later though you don't know how much time later, to feel over yourself and find you have begun to change. Your legs fused together, their skin aberrant and strange under your fingers and strange nubs protruding from where once your hips existed. She's changing you, she's making you into one of her kind. And there's nothing you can do as your body is suborned and subverted by her own, alien DNA flowing through the placenta to overwrite your own. With a sense of futility you let sleep claim you once again.
 	</text>
-	<choice destination="unbtf3" text="*still longer*"/>
+	<choice destination="ubtf3" text="*still longer*"/>
 	</page>
 	
 	<page ID="ubtf3">

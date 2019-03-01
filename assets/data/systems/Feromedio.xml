@@ -2,6 +2,7 @@
 <System>
 	<Star x="0" y="0" sprite="star" intensity="15" />
 	<World x="-5" y="14">Feromedio IIA</World>
+	<World x="6" y="15">Feromedio III</World>	
 	<spawnRules>
 	<spawn script="pirates"/>
 	<spawn script="talharans"/>		

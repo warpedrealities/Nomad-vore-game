@@ -26,6 +26,7 @@
 	</text>
 	<effect type="giveitem" value="1" item="questItem" addendum="zorrLament"/>
 	<effect type="incrementglobalflag" flag="zorrDoor" value="-1" />	
+	<effect type="incrementglobalflag" flag="zorrAlarm" value="-1" />	
 	<effect type="setlocalflag" flag="amulet" value="0" />	
 	<choice destination="end" text="leave it be" />	
 	</page>
@@ -45,7 +46,8 @@
 	You decide to remove the amulet of the crown from its slot in the column. It comes out easily, maybe you'll try something else.
 	</text>
 	<effect type="giveitem" value="1" item="questItem" addendum="zorrCrown"/>	
-	<effect type="setlocalflag" flag="amulet" value="0" />	
+	<effect type="setlocalflag" flag="amulet" value="0" />
+	<effect type="incrementglobalflag" flag="zorrAlarm" value="-1" />		
 	<choice destination="end" text="leave it be" />	
 	</page>	
 	
@@ -65,6 +67,7 @@
 	</text>
 	<effect type="giveitem" value="1" item="questItem" addendum="zorrCalamity"/>
 	<effect type="setlocalflag" flag="amulet" value="0" />	
+	<effect type="incrementglobalflag" flag="zorrAlarm" value="-1" />	
 	<choice destination="end" text="leave it be" />	
 	</page>		
 	
@@ -93,6 +96,7 @@
 	<text>
 		You slot the amulet into the slot, it looks like it fits. The blazing circle is nestled nicely into the hole. 
 	</text>
+			<effect type="incrementglobalflag" flag="zorrAlarm" value="1" />	
 		<effect type="removeitem" item="calamity amulet" value="1" />
 		<effect type="setlocalflag" flag="amulet" value="3" />	
 		<choice destination="end" text="leave it there for now" />		
@@ -102,6 +106,7 @@
 	<text>
 		You slot the amulet into the slot, it looks like it fits. The crown symbol is nestled snugly into the hole. 
 	</text>
+			<effect type="incrementglobalflag" flag="zorrAlarm" value="1" />	
 		<effect type="removeitem" item="crown amulet" value="1" />
 		<effect type="setlocalflag" flag="amulet" value="2" />	
 		<choice destination="end" text="leave it there for now" />		

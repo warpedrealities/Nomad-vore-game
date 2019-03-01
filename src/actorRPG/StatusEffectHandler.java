@@ -25,7 +25,7 @@ public class StatusEffectHandler {
 	int stealthState;
 	private int factionState;
 	private boolean transformed;
-	
+
 	public StatusEffectHandler()
 	{
 		transformed=false;
@@ -35,8 +35,8 @@ public class StatusEffectHandler {
 		statusEffects=new ArrayList<StatusEffect>();
 		statusDefences=new ArrayList<Status_Defence>();
 	}
-	
-		
+
+
 	public void update(int time,Actor_RPG actor)
 	{
 		if (statusEffects.size()>0)
@@ -51,9 +51,9 @@ public class StatusEffectHandler {
 					statusEffects.remove(i);
 				}
 			}
-		}		
+		}
 	}
-	
+
 	private void handleRemoval(StatusEffect effect)
 	{
 		statusDefences.remove(effect);
@@ -62,7 +62,7 @@ public class StatusEffectHandler {
 			transformed=false;
 		}
 	}
-	
+
 	public void save(DataOutputStream dstream) throws IOException {
 		dstream.writeInt(statusEffects.size());
 		for (int i = 0; i < statusEffects.size(); i++) {
@@ -86,7 +86,7 @@ public class StatusEffectHandler {
 				transformed=true;
 			}
 		}
-		dstream.writeInt(bindState);	
+		dstream.writeInt(bindState);
 		dstream.writeInt(stealthState);
 		dstream.writeInt(factionState);
 	}
@@ -113,12 +113,12 @@ public class StatusEffectHandler {
 		factionState=dstream.readInt();
 	}
 
-	
+
 	public ArrayList<StatusEffect> getStatusEffects()
 	{
 		return statusEffects;
 	}
-	
+
 	public void reApplyStatuses(Actor_RPG subject)
 	{
 		for (int i=0;i<statusEffects.size();i++)
@@ -126,7 +126,7 @@ public class StatusEffectHandler {
 			statusEffects.get(i).apply(subject);
 		}
 	}
-	
+
 	public boolean applyStatus(StatusEffect effect, boolean replace,Actor_RPG subject)
 	{
 		boolean r=false;
@@ -146,11 +146,11 @@ public class StatusEffectHandler {
 				{
 					return false;
 				}
-				
+
 			}
 		}
-		
-		effect.apply(subject);	
+
+		effect.apply(subject);
 		statusEffects.add(effect);
 		if (Status_Stealth.class.isInstance(effect))
 		{
@@ -171,7 +171,7 @@ public class StatusEffectHandler {
 		{
 			transformed=true;
 		}
-		return true;	
+		return true;
 	}
 
 
@@ -183,7 +183,7 @@ public class StatusEffectHandler {
 	public void setBindState(int bindState) {
 		this.bindState = bindState;
 	}
-	
+
 	public boolean hasStatus(int uid)
 	{
 		for (int i=0;i<statusEffects.size();i++)
@@ -193,12 +193,15 @@ public class StatusEffectHandler {
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
-	
+
 	public void struggle(Actor_RPG rpg,Actor actor)
 	{
+		if (bindState >= statusEffects.size()) {
+			return;
+		}
 		int roll=Universe.m_random.nextInt(20)+rpg.getAttribute(Actor_RPG.STRUGGLE);
 		if (Status_Bind.class.isInstance(statusEffects.get(bindState)))
 		{
@@ -211,10 +214,10 @@ public class StatusEffectHandler {
 				}
 				sb.remove(rpg,false);
 				statusEffects.remove(sb);
-			}		
-		}	
+			}
+		}
 	}
-	
+
 	public Actor getBindOrigin()
 	{
 		if (bindState!=-1)
@@ -227,7 +230,7 @@ public class StatusEffectHandler {
 		}
 		return null;
 	}
-	
+
 	public void applyStatusEffects(Actor_RPG rpg)
 	{
 		for (int i=0;i<statusEffects.size();i++)
@@ -235,23 +238,23 @@ public class StatusEffectHandler {
 			statusEffects.get(i).apply(rpg);
 		}
 	}
-	
+
 	public void clearStatusEffects(Actor actor, Actor_RPG rpg, boolean messages)
 	{
 		if (statusEffects.size()>0)
 		{
 			for (int i=statusEffects.size()-1;i>=0;i--)
 			{
-					statusEffects.get(i).remove(rpg,messages);
-					statusEffects.remove(i);
-					if (Player_RPG.class.isInstance(actor))
-					{
-						ViewScene.m_interface.UpdateInfo();
-					}			
+				statusEffects.get(i).remove(rpg,messages);
+				statusEffects.remove(i);
+				if (Player_RPG.class.isInstance(actor))
+				{
+					ViewScene.m_interface.UpdateInfo();
+				}
 			}
-		}		
+		}
 	}
-	
+
 	public void removeStatus(int uid,Actor_RPG rpg)
 	{
 		for (int i=0;i<statusEffects.size();i++)
@@ -290,19 +293,19 @@ public class StatusEffectHandler {
 				{
 					stealthState=i;
 					break;
-				}		
+				}
 			}
 			return true;
 		}
 		Status_Stealth status=(Status_Stealth)statusEffects.get(stealthState);
-		
+
 		if (status.spotCheck(spot))
 		{
 			if (remove)
 			{
 				status.remove(actor,false);
 				statusEffects.remove(stealthState);
-				stealthState=-1;				
+				stealthState=-1;
 			}
 			return true;
 		}
@@ -321,13 +324,13 @@ public class StatusEffectHandler {
 						factionState = i;
 						break;
 					}
-				}		
-			}		
+				}
+			}
 		}
 
 		return factionState;
 	}
-	
+
 	public int runDefenceStack(int damage, int damageType)
 	{
 		for (int i=0;i<statusDefences.size();i++)
@@ -353,5 +356,5 @@ public class StatusEffectHandler {
 		}
 		return null;
 	}
-	
+
 }

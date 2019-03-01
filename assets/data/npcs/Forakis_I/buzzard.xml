@@ -35,7 +35,7 @@
 				<text>Harpy buzzard pecks TARGET for VALUE damage</text>
 				<text>Harpy buzzard bites TARGET for VALUE damage</text>
 				<text>Harpy buzzard kicks TARGET for VALUE damage</text>
-				<text>TARGEt is struck for VALUE damage by a Harpy buzzard</text>		
+				<text>TARGET is struck for VALUE damage by a Harpy buzzard</text>		
 			</hitText>
 		</combatMove>
 		<combatMove name="swoop" bonusAttribute="MELEE" timeCost="2"
