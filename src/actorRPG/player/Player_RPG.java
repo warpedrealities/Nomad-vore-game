@@ -177,7 +177,9 @@ public class Player_RPG implements Actor_RPG {
 			}
 			if (noMatch) {
 				moveChoice = 0;
-				ViewScene.m_interface.redrawBars();
+				if (ViewScene.m_interface != null) {
+					ViewScene.m_interface.redrawBars();
+				}
 			}
 		}
 		boolean noMatch = true;
