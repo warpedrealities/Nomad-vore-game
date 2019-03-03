@@ -171,6 +171,9 @@ public abstract class Actor implements Attackable {
 
 		if (collisionInterface.passable((int) p.x, (int) p.y, getFlying())) {
 			Tile t=collisionInterface.getTile((int) actorPosition.x, (int) actorPosition.y);
+			if (t == null) {
+				return false;
+			}
 			if (!swapPlaces((int)actorPosition.x,(int)actorPosition.y,(int)p.x,(int)p.y))
 			{
 				t.setActorInTile(null);
