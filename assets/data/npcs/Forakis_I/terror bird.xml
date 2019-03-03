@@ -32,7 +32,7 @@
 				<text>Terror bird pecks TARGET for VALUE damage</text>
 				<text>Terror bird bites TARGET for VALUE damage</text>
 				<text>Terror bird kicks TARGET for VALUE damage</text>
-				<text>TARGEt is struck for VALUE damage by a terror bird</text>		
+				<text>TARGET is struck for VALUE damage by a terror bird</text>		
 			</hitText>
 		</combatMove>
 		<combatMove name="leap" bonusAttribute="MELEE" timeCost="2"

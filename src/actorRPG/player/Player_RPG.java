@@ -71,7 +71,7 @@ public class Player_RPG implements Actor_RPG {
 	public void genMoveList()
 	{
 		String currentMove = null;
-		if (!moveList.isEmpty()) {
+		if (!moveList.isEmpty() && moveChoice < moveList.size()) {
 			currentMove = moveList.get(moveChoice).getMoveName();
 		}
 		//clear

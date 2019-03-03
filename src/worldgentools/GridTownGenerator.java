@@ -154,7 +154,10 @@ public class GridTownGenerator {
 		int maxhouses = Integer.parseInt(element.getAttribute("maxhouses"));
 		int tile = Integer.parseInt(element.getAttribute("tile"));
 		int path = Integer.parseInt(element.getAttribute("path"));
-		int housecount = GameManager.m_random.nextInt(maxhouses - minhouses) + minhouses;
+		int housecount = minhouses;
+		if (maxhouses > minhouses) {
+			housecount += GameManager.m_random.nextInt(maxhouses - minhouses);
+		}
 
 		boolean b = false;
 		if (element.getAttribute("registerRooms").length() > 0) {

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="ruinedCity.png">
+	<tileset count-x="8" count-y="8">
+		<tile sprite="33" vision="BLOCKING" movement="2"> a metal wall</tile>
+		<tile sprite="33" vision="EMPTY" movement="0"> a barren land</tile>		
+		<tile sprite="1" vision="BLOCKING" movement="2" smart="true"> brick walls</tile>
+		<tile sprite="17" vision="EMPTY" movement="0" smart="true"> concrete floor</tile>
+		<tile sprite="41" vision="BLOCKING" movement="2"> dead tree</tile>
+		<tile sprite="42" vision="BLOCKING" movement="2"> dead tree</tile>		
+		<tile sprite="43" vision="BLOCKING" movement="2"> dead tree</tile>
+		<tile sprite="34" vision="EMPTY" movement="0"> crater</tile>
+		<tile sprite="35" vision="EMPTY" movement="0"> blast crater</tile>
+		<tile sprite="36" vision="EMPTY" movement="0"> impact crater</tile>
+		<tile sprite="37" vision="EMPTY" movement="0"> metal debris </tile>
+		<tile sprite="38" vision="EMPTY" movement="0"> useless junk </tile>	
+		<tile sprite="39" vision="EMPTY" movement="0"> trash </tile>	
+	</tileset>
+	<description>
+	A ruined city towers up around you. Long empty windows look out unseeing on the world amidst the craters and scorchmarks of war.
+	</description>
+	<transition direction="north">Zone 1A</transition>	
+	<mapgen>
+	<partition xmin="4" xmax="60" ymin="4" ymax="60">
+			<towngrid minhouses="32" maxhouses="32" tile="2" path="3"
+				registerRooms="true">
+				<floodfill tile="3">
+				</floodfill>
+			</towngrid>	
+	</partition>
+	<perlin>
+			<band low="-1.0" high="-0.4">
+				<floodfill tile="3" />
+			</band>
+			<band low="-0.4" high="0.3">
+				<noise tile="7" scarcity="22" />		
+				<noise tile="8" scarcity="22" />		
+				<noise tile="9" scarcity="22" />
+			</band>		
+			<band low="0.3" high="1.0">
+				<noise tile="10" scarcity="22" />		
+				<noise tile="11" scarcity="22" />		
+				<noise tile="12" scarcity="22" />
+			</band>			
+	</perlin> 		
+		<noise tile="4" scarcity="22" />		
+		<noise tile="5" scarcity="22" />		
+		<noise tile="6" scarcity="22" />
+		<floodfill tile="1" />		
+	<walloff wall="2" sides="southeastwest" />	
+	</mapgen>
+
+</zone>
