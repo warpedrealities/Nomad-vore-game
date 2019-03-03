@@ -60,7 +60,7 @@ public class ShopShipyard implements ShopData {
 
 	@Override
 	public int getType() {
-		return 3;
+		return 4;
 	}
 
 	public List<ShipyardItem> getShips() {
