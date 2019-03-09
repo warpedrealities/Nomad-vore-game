@@ -26,7 +26,6 @@
 		<text>
 			SYST3M N0RM4L
 		</text>
-		<choice destination="lockdown" text="disable lockdown" />
 		<choice destination="end" text="exit" />
 	</page>
 

@@ -22,14 +22,15 @@ public class MapScreen extends Screen {
 	private Window window;
 	private Callback callback;
 	private MapGrid grid;
-	private int texture;
+	private MapIndicator indicator;
+	private int[] textures;
 	public MapScreen(int strength) {
-		setTexture();	
-		grid=new MapGrid(new Vec2f(0.5F,3),texture);
+		setTexture();
+		grid = new MapGrid(new Vec2f(0.5F, 3), textures[0]);
 		buildGrid(strength);
 		grid.setSize(27, 27);
 	}
-	
+
 	private void buildGrid(int strength)
 	{
 
@@ -68,15 +69,19 @@ public class MapScreen extends Screen {
 		{
 			vgrid[(int) Universe.getInstance().getPlayer().getPosition().x]
 					[(int) Universe.getInstance().getPlayer().getPosition().y]=12;
+			indicator = new MapIndicator(new Vec2f(0.5F, 3), textures[1], vgrid.length, vgrid[0].length);
+			indicator.setSize(27, 27);
 		}
-		grid.Generate(vgrid);	
+		grid.Generate(vgrid);
 	}
 
 	private void setTexture()
 	{
-		texture=Tools.loadPNGTexture("assets/art/map.png", GL13.GL_TEXTURE0);
+		textures = new int[2];
+		textures[0] = Tools.loadPNGTexture("assets/art/map.png", GL13.GL_TEXTURE0);
+		textures[1] = Tools.loadPNGTexture("assets/art/green.png", GL13.GL_TEXTURE0);
 	}
-	
+
 	@Override
 	public void update(float DT) {
 		// TODO Auto-generated method stub
@@ -85,7 +90,7 @@ public class MapScreen extends Screen {
 
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc) {
-	
+
 		window.Draw(buffer, matrixloc);
 	}
 
@@ -94,7 +99,8 @@ public class MapScreen extends Screen {
 
 		window.discard();
 		mouse.Remove(window);
-		GL11.glDeleteTextures(texture);
+		GL11.glDeleteTextures(textures[0]);
+		GL11.glDeleteTextures(textures[1]);
 	}
 
 	@Override
@@ -130,7 +136,9 @@ public class MapScreen extends Screen {
 		;
 		window.add(button);
 		window.add(grid);
-
+		if (indicator != null) {
+			window.add(indicator);
+		}
 	}
 
 }

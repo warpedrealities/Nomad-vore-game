@@ -36,7 +36,7 @@
 	</prefab>
 		<SeedNPCs min="4" max="4" name="freehaven/wardens/warden">
 		</SeedNPCs>	
-	<pairedportal x="14" y="7" sprite="7" ID="-101" facing="2"> airlock </pairedportal>	
+	<pairedportal x="14" y="7" sprite="7" ID="-101" facing="6"> airlock </pairedportal>	
 	<pairedportal x="0" y="7" destination="port_level_5" sprite="1" ID="12" facing="2"> hatch </pairedportal>	
 		
 	</mapgen>

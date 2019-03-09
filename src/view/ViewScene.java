@@ -476,15 +476,17 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 				m_buttons[1].setActive(true);
 			}
 			m_window.update(dt);
-			int actionBarStatus = actionBar.update(dt);
-			if (actionBarStatus == 1) {
-				UpdateInfo();
-				actionBar.setUpdateAction(0);
-			}
-			if (actionBarStatus == 2) {
-				m_mode = ViewMode.SPECIAL;
-				m_buttons[1].setString(sceneController.getUniverse().getPlayer().getCurrentMove().getMoveName());
-				actionBar.setUpdateAction(0);
+			if (m_screen != null) {
+				int actionBarStatus = actionBar.update(dt);
+				if (actionBarStatus == 1) {
+					UpdateInfo();
+					actionBar.setUpdateAction(0);
+				}
+				if (actionBarStatus == 2) {
+					m_mode = ViewMode.SPECIAL;
+					m_buttons[1].setString(sceneController.getUniverse().getPlayer().getCurrentMove().getMoveName());
+					actionBar.setUpdateAction(0);
+				}
 			}
 		}
 		else

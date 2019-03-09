@@ -4,12 +4,12 @@
 	<world value="Alpha Minoris IIA" />
 	<zone value="escapepod" />
 	<position x="2" y="2" />
-	<item value="Laser pistol" />
+	<item value="Laser Pistol" />
 	<item value="Knife" />
 	<item value="jumpsuit" />
-	<item value="medkit" />	
+	<item value="medkit" />
 	<item value="space meal" />
-	
+		
 	<appearance>
 		<bodypart partname="body">
 			<partvalue variablename="height" value="60" />

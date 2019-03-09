@@ -131,7 +131,7 @@
 			your
 			victory.
 		</text>
-		<choice destination="cockvore4" Text="$you'll make a very nice load" />
+		<choice destination="cockvore4" text="$you'll make a very nice load" />
 	</page>
 
 	<page ID="cockvore4">

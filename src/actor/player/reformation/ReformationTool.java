@@ -25,17 +25,17 @@ public class ReformationTool {
 	private boolean canReform;
 	private ReformationHandler handler;
 	private Entity entity;
-	
+
 	private Zone zone;
 	private Vec2f destination;
-	
+
 	public ReformationTool(Entity entity, ReformationHandler handler)
 	{
 		this.entity=entity;
 		this.handler=handler;
 		canReform=checkReform();
 	}
-	
+
 	private Vec2f findMachine(Zone z, Long l)
 	{
 		if (z.getTiles()==null)
@@ -55,10 +55,10 @@ public class ReformationTool {
 				if (w!=null && WidgetReformer.class.isInstance(w))
 				{
 					WidgetReformer reformer=(WidgetReformer)w;
-					if (reformer.getUid()==l && 
-							reformer.isActive() && 
+					if (reformer.getUid()==l &&
+							reformer.isActive() &&
 							!reformer.isSuppressed())
-					{	
+					{
 						return new Vec2f(i,j);
 					}
 				}
@@ -66,7 +66,7 @@ public class ReformationTool {
 		}
 		return null;
 	}
-	
+
 	private boolean checkReform()
 	{
 		if (checkEntity(entity))
@@ -75,7 +75,7 @@ public class ReformationTool {
 		}
 		return checkNearbyEntities();
 	}
-	
+
 	private boolean checkEntity(Entity e)
 	{
 		for (int i=0;i<handler.getMachines().size();i++)
@@ -92,10 +92,10 @@ public class ReformationTool {
 					return true;
 				}
 			}
-		}		
+		}
 		return false;
 	}
-	
+
 	private boolean checkNearbyEntities()
 	{
 		StarSystem system=Universe.getInstance().getcurrentSystem();
@@ -116,12 +116,12 @@ public class ReformationTool {
 	public boolean getCanReform() {
 		return canReform;
 	}
-	
+
 	private void placePile(WidgetItemPile pile)
 	{
 		Player player=Universe.getInstance().getPlayer();
 		Zone current=Universe.getInstance().getCurrentZone();
-		
+
 		Tile t=current.getTile((int)player.getPosition().x, (int)player.getPosition().y);
 		if (t.getWidgetObject()==null)
 		{
@@ -139,11 +139,11 @@ public class ReformationTool {
 					t.setWidget(pile);
 					return;
 				}
-				
+
 			}
 		}
 	}
-	
+
 	private void healNPCs()
 	{
 		Zone z=Universe.getInstance().getCurrentZone();
@@ -155,7 +155,7 @@ public class ReformationTool {
 			}
 		}
 	}
-	
+
 	public void reform()
 	{
 		healNPCs();
@@ -168,7 +168,7 @@ public class ReformationTool {
 		{
 			if (player.getInventory().getSlot(i)!=null)
 			{
-				items.add(player.UnEquip(i));			
+				items.add(player.UnEquip(i));
 			}
 		}
 		if (!items.isEmpty())
@@ -205,15 +205,15 @@ public class ReformationTool {
 		{
 			if (player.getRPG().getStat(i)<player.getRPG().getStatMax(i))
 			{
-				player.getRPG().setStat(i, player.getRPG().getStatMax(i));		
+				player.getRPG().setStat(i, player.getRPG().getStatMax(i));
 			}
 		}
 		if (!useEnergy(zone))
 		{
-			player.getRPG().setStat(Actor_RPG.SATIATION, player.getRPG().getStat(Actor_RPG.SATIATION)/2);		
+			player.getRPG().setStat(Actor_RPG.SATIATION, player.getRPG().getStat(Actor_RPG.SATIATION)/2);
 		}
 	}
-	
+
 	private boolean useEnergy(Zone currentZone) {
 		if (Spaceship.class.isInstance(currentZone.getZoneEntity()))
 		{
@@ -232,11 +232,12 @@ public class ReformationTool {
 				ship.setShipStats(null);
 				return false;
 			}
-			
+
 			ship.getShipStats().getResource("ENERGY").subtractResourceAmount(25);
 			analyzer.decomposeResources(ship.getShipStats(), ship);
-			
+
 			ship.setShipStats(null);
+			return true;
 		}
 		return false;
 	}
@@ -249,7 +250,7 @@ public class ReformationTool {
 		}
 		else
 		{
-			Universe.getInstance().setCurrentEntity(zone.getZoneEntity());		
+			Universe.getInstance().setCurrentEntity(zone.getZoneEntity());
 		}
 	}
 }

@@ -5,5 +5,5 @@
 	</text>
 	<requirement name="archeotech ranged weapon" count="1" />
 <recipe_reward recipe="ion_bow" />
-<recipe_reward recipe="Ion_bolt_clip" />
+<recipe_reward recipe="ion_bolt_clip" />
 </entry>
