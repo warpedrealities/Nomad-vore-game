@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <perk name="alluring scent">
-	<requirement count="1">
-		<req>RESEARCHlifeforms/mushroomfolk.xml</req>
-	</requirement>
+	<!-- <requirement count="1"> -->
+		<!-- <req>RESEARCHlifeforms/mushroomfolk.xml</req> -->
+	<!-- </requirement> -->
 	<description> You have the ability to secrete an arousing scent that
 		lowers the resolve of all those who are exposed to it, changing their
 		perceptions and making them more amenable to your will. It should be
