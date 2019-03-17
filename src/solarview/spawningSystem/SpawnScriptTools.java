@@ -19,7 +19,7 @@ public class SpawnScriptTools {
 	private Long clock;
 	private FlagField globalFlags;
 	private FactionLibrary factions;
-	
+
 	public SpawnScriptTools(List<Entity> entitiesInSystem, List<Entity> systemEntities) {
 		clock=GameManager.worldClock;
 		factions=FactionLibrary.getInstance();
@@ -47,7 +47,7 @@ public class SpawnScriptTools {
 	public FactionLibrary getFactions() {
 		return factions;
 	}
-	
+
 	public int countShips(String ship)
 	{
 		int count=0;
@@ -79,7 +79,7 @@ public class SpawnScriptTools {
 			}
 		}
 		return count;
-	}	
+	}
 	private Vec2f getPosition()
 	{
 		int r=0;
@@ -94,7 +94,7 @@ public class SpawnScriptTools {
 		p.add(systemEntities.get(r).getPosition());
 		return p;
 	}
-	
+
 	public void spawn(String ship,String controller)
 	{
 		//find a good spot to spawn it
@@ -103,6 +103,14 @@ public class SpawnScriptTools {
 		spaceship.setShipController(new NpcShipController(controller));
 		entitiesInSystem.add(spaceship);
 	}
+
+	public void spawn(String ship, String controller, int x, int y) {
+		// find a good spot to spawn it
+		Spaceship spaceship = new Spaceship(ship, x, y, Spaceship.ShipState.SPACE);
+		spaceship.setShipController(new NpcShipController(controller));
+		entitiesInSystem.add(spaceship);
+	}
+
 	public void deSpawn(String ship)
 	{
 		//find a good spot to spawn it
@@ -122,5 +130,5 @@ public class SpawnScriptTools {
 			}
 		}
 	}
-	
+
 }

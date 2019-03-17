@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<controller>
+	<faction value="freehaven_civilians" />
+	<systemEntry value="lucia_0_entry" />
+	<contact value="lucia_0_contact" />
+	<ai value="doNothingAI" />
+	<combat value="" />
+	<victory value="" />
+	<loss value="" />
+	<experienceReward value="0" />	
+</controller>

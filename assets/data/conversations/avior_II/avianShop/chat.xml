@@ -25,8 +25,43 @@
 	</choice>		
 	<choice destination="brightfeather6" text="So about that ore">
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="6" />
-	</choice>			
+	</choice>
+	<choice destination="brightfeather7" text="So can we finally move brightfeather's friends over?">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="7" />
+	</choice>				
 	<choice destination="end" text="Nothing, stay friendly"/>
+	</page>
+	
+	<page ID="brightfeather7">
+	<text>
+	"Now there's no need to get all impatient. We had to make sure our new neighbours would be nice and welcome didn't we? anyway, that's all done now. Though you're probably going to need to hire someone to round up all the harpies and move them to their new home for us."
+	</text>
+	<choice destination="brightfeather7A" text="$And where am I going to find someone to hire for a job like that?"/>
+	</page>
+	
+	<page ID="brightfeather7A">
+	<text>
+	"Oh well, probably Freehaven? I'd go myself but you're the one with the spaceship. So how about it? we're nearly done. Just need you to hire a suitable freighter captain at free haven."
+	</text>
+	<choice destination="freehaven" text="$and where exactly is free haven?"/>
+	<choice destination="brightfeather7B" text="Sure, I'll do it. I'm just glad this is nearly over."/>
+	<choice destination="end" text="$How about no."/>
+	</page>
+	
+	<page ID="freehaven">
+	<text>
+	"Just keep going galactic west past Forakis. It should be easy for you. I've never visited but I've heard its an interesting place. So now you know where to go you feel up for it?"
+	</text>
+	<choice destination="brightfeather7B" text="Sure, I'll do it. I'm just glad this is nearly over."/>
+	<choice destination="end" text="$How about no."/>	
+	</page>
+	
+	<page ID="brightfeather7B">
+	<text>
+	"Great. Great. I'll pay you back later for whatever you end up paying."
+	</text>
+		<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="8" />
+		<choice destination="end" text="$Alright, this might be a while, see you"/>	
 	</page>
 	
 	<page ID="brightfeather5">

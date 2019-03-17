@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Conversation>
+
+
+	<page ID="start">
+	<!--on quest-->
+	<condition evaluate="GLOBALFLAG" operator="equals" value="11"	flag="BRIGHTFEATHER_QUEST" />
+	<text>
+	"I'll get going soon. But you know what? I'll get going even sooner if I don't have you comming me while I'm trying to ready my ship." 
+	</text>
+	<choice destination="end" text="$Fair enough"/>
+	</page>
+
+	<page ID="start">
+	<!--subsequent meetings-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
+	<text>
+	"Good of you to drop by, you got the space now? cause I don't like leaving a job unfinished, especially when paid in advance but I'm starting to get the feeling you're messing me around"
+	</text>
+		<choice destination="job1A" text="Yes I have the capacity, transfer them over"/>
+		<condition evaluate="SPECIMENCONTAINMENT" operator="greaterthan" value="3"/>	
+		</choice>
+		<choice destination="job1C" text="No, I don't have the capacity"/>
+		<condition evaluate="LOCALFLAG" operator="lessthan" value="3"/>	
+		</choice>	
+	</page>
+	
+	<page ID="job1C">
+	<text>
+	"You know, you're making me feel unprofessional by proxy here right? come on, you're killing me with this. Get it done. The scenery here isn't nearly good enough for me to want to linger."
+	</text>
+	<choice destination="end" text="$Okay okay I'll be right back"/>
+	</page>
+	
+	<page ID="start">
+	<text>
+	"Finally. Bout time you showed up. Listen I gathered up all the birdies for you. Got most of them on my ship but I don't have room for all of them. You're going to have to take them off my hands afore I get going."
+	</text>
+
+	<choice destination="job0" text="$I'm paying you for this, why is it suddenly my job"/>
+	<choice destination="job1" text="$Very well, how many do I need to carry?"/>
+	</page>
+	
+	<page ID="job0">
+	<text>
+	"Because there was more than expected. I can't carry that many, my ship doesn't have the capacity. I ain't messing you around, it's not that I won't. It's that I can't. Understand?"
+	</text>
+	<choice destination="job1" text="$Very well, how many do I need to carry?"/>	
+	</page>
+
+	<page ID="job1">
+	<text>
+	"Three of them. Just three. You got specimen containment space for three? If so I'll transfer them over now."
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />	
+	<choice destination="job1A" text="Yes I have the capacity, transfer them over"/>
+	<condition evaluate="SPECIMENCONTAINMENT" operator="greaterthan" value="3"/>	
+	</choice>
+	<choice destination="job1B" text="No, I don't have the capacity"/>
+	<condition evaluate="LOCALFLAG" operator="lessthan" value="3"/>	
+	</choice>	
+	</page>
+	
+	<page ID="job1A">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="job1B">
+	<text>
+	"Well shit. Okay listen. I don't want to be sitting around here for ages. I have spare parts for a specimen containment system. I'll send it your way and you can set it up. There's no decent drinks here."
+	</text>
+	<effect type="giveitem" value="1" item="specimen containment"/>
+	<choice destination="end" text="$Okay I'll set it up I guess."/>
+	</page>
+	
+</Conversation>

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<!--on quest-->
+	<condition evaluate="GLOBALFLAG" operator="equals" value="9"	flag="BRIGHTFEATHER_QUEST" />
+	<text>
+	"You still here? you might be my employer, but I'm going to finish my drink first" 
+	</text>
+	<choice destination="end" text="$Fair enough"/>
+	</page>
+
+
+	<page ID="start">
+	<!--subsequent meetings-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
+	<text>
+	The foxgirl lets out a tolerant hmm as you approach her again.
+	</text>
+	<choice destination="joboffer" text="$I have your fee Lucia">
+<condition evaluate="CREDITS" operator="greaterthan" value="10000" />	
+		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="job" />	
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="8" />
+	</choice>	
+	<choice destination="job" text="$I'm here to offer you a job">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="job" />	
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="8" />
+	</choice>		
+	<choice destination="end" text="$Actually I'll leave you in peace"/>
+	</page>
+
+	<page ID="start">
+	<text>
+	The foxgirl regards you with a sort of unphased and disinterested glance up and down then lets her eyes settle on yours expectantly, one eyebrow faintly canted upwards.
+	</text>
+
+	<choice destination="initial0" text="$uh hello my name's PNAME"/>
+	</page>
+	
+	<page ID="initial0">
+	<text>
+	The foxgirl shrugs "Lucia, freighter captain. Was enjoying a drink between jobs, now entertaining random individuals attempting to strike up conversation."
+	</text>
+	<choice destination="job" text="$I'm here to offer you a job">
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="job" />		
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="8" />
+	</choice>
+	<choice destination="rude" text="$You know you're a little rude."/>
+	<choice destination="end" text="$...i'm just going to leave you alone now"/>
+	<effect type="setlocalflag" flag="talked" value="1" />	
+	</page>
+	
+	<page ID="job">
+	<text>
+	The foxgirl seems to suddenly go from bored to attentive "I'm listening." she says with a small smile, setting the glass to one side and turning to face you more fully.
+	</text>
+	<choice destination="job0" text="$I need someone to transport feral harpies from AM IIA to Avior II"/>
+	</page>
+	
+	<page ID="job0">
+	<text>
+	"Ferals to another planet? well I've got the containment systems. Be a bit of a difficulty wrangling them all up though...ten thousand credits."
+	</text>
+	<effect type="setlocalflag" flag="job" value="1" />	
+	<choice destination="price" text="$That seems a little expensive"/>
+	<choice destination="jobagree" text="$Okay, you have a deal">
+	<condition evaluate="CREDITS" operator="greaterthan" value="10000" />	
+	</choice>
+	<choice destination="jobcant" text="$I can't afford that right now">
+	<condition evaluate="CREDITS" operator="lessthan" value="10000" />	
+	</choice>	
+	</page>
+	
+	<page ID="price">
+	<text>
+	"You're welcome to find someone else, except you're probably not going to. That sort of a job is difficult..and others would be far more likely to supplement their pay by, shall we say, sampling the cargo? consider part of the expense my hands off fee."
+	</text>
+	<choice destination="jobagree" text="$Okay, you have a deal">
+	<condition evaluate="CREDITS" operator="greaterthan" value="10000" />	
+	</choice>
+	<choice destination="jobcant" text="$I can't afford that right now">
+	<condition evaluate="CREDITS" operator="lessthan" value="10000" />		
+	</page>
+	
+	<page ID="jobagree">
+	<text>
+	"Pleasure doing business with you. I'll meet you in orbit over AM IIA so you can be satisfied with the retrieval."
+	</text>
+		<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="9" />
+	<effect type="givecredits" value="-10000" />
+	<choice destination="end" text="$excellent."/>
+	</page>
+	
+	<page ID="jobcant">
+	<text>
+	"Well that's a shame. If you're lucky I'll still be back here when you manage to scrape together the credits. Till then" she says and turns as she picks up her drink again.
+	</text>
+	<choice destination="end" text="$..well, I guess I have some money to make"/>
+	</page>
+	
+	<page ID="rude">
+	<text>
+	"I suppose I am at that yes." says the foxgirl without a hint of contrition.
+	</text>
+	<choice destination="end" text="$...i'm just going to leave you alone now"/>
+	</page>
+	
+</Conversation>

@@ -106,6 +106,7 @@
 					<Seedwidgets min="16" max="32" name="fruitbush" />
 					<Seedwidgets min="8" max="16" name="gourdbush" />
 					<SeedNPCs min="8" max="16" name="Alpha_Minoris_IIA/harpy">
+						<script spawn="harpy_spawn"/>
 					</SeedNPCs>
 
 				</floodfill>

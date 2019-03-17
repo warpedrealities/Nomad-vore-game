@@ -79,6 +79,16 @@ public class WidgetCapture extends WidgetBreakable {
 		return capacity;
 	}
 
+	public int getFreeCapacity() {
+		int r = capacity;
+		for (int i = 0; i < capacity; i++) {
+			if (npcs[i] != null) {
+				r--;
+			}
+		}
+		return r;
+	}
+
 	public void setNPC(NPC npc, int index) {
 		npcs[index] = npc;
 	}

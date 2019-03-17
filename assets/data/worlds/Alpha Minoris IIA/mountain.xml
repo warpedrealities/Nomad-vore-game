@@ -42,7 +42,9 @@
 				<script value="mountainpass" />
 			</scriptportal>
 		</prefab>
-	<placeNPC name="Alpha_Minoris_IIA/goldharpy" x="8" y="12" />	
+	<placeNPC name="Alpha_Minoris_IIA/goldharpy" x="8" y="12">
+	<script spawn="harpy_spawn"/>
+		<placeNPC>
 	</mapgen>
 
 </zone>

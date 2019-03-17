@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<recipe name="pheremone gland mutagen injection" requiredskill="0" startunlocked="false">
+	<description>
+	A small injection of mutagens programmed to promote the creation of pheremone glands in the subject.
+	</description>
+	<ingredient item="mutagen" quantity="1" />
+	<result item="pheremone gland mutagen injection" />
+</recipe>

@@ -22,6 +22,7 @@ import nomad.universe.Universe;
 import perks.PerkInstance;
 import perks.PerkQualifier;
 import spaceship.Spaceship;
+import spaceship.stats.SpaceshipScanner;
 import view.SceneController;
 import vmo.GameManager;
 import widgets.Widget;
@@ -311,6 +312,13 @@ public class OutEvaluator {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));
 				if (ConditionCheck(value, operator, m_player.getInventory().getPlayerCredits()) == false) {
+					return false;
+				}
+			}
+			if (eval.equals("SPECIMENCONTAINMENT")) {
+				String operator = E.getAttribute("operator");
+				int value = Integer.parseInt(E.getAttribute("value"));
+				if (ConditionCheck(value, operator, new SpaceshipScanner(ship).getFreeSpecimenCapacity()) == false) {
 					return false;
 				}
 			}

@@ -49,5 +49,5 @@
 		creatures.
 	</text>
 	<requirement name="mushroomfolk" count="1" />
-
+	<recipe_reward recipe="pheremone_injection"/>
 </entry>

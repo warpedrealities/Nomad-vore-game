@@ -117,6 +117,9 @@
 	<placeNPC name="freehaven/civilians/Laesha" x="23" y="23" />		
 	<placeNPC name="freehaven/civilians/Desharr" x="16" y="29" />	
 	<placeNPC name="freehaven/civilians/tourist" x="14" y="27" />	
+	<placeNPC name="freehaven/civilians/Lucia" x="18" y="27">
+	<script spawn="lucia_spawn"/>
+	</placeNPC>
 	<pairedportal x="0" y="15" destination="freehaven_alpha" sprite="1" ID="11" facing="2"> hatch </pairedportal>	
 	<pairedportal x="31" y="15" destination="freehaven_beta" sprite="1" ID="12" facing="6"> hatch </pairedportal>	
 		<partition xmin="2" xmax="30" ymin="11" ymax="19">

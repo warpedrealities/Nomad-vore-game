@@ -14,4 +14,7 @@
 	<decoration x="-7" y="-4" size="1" sprite="barrenworld"/>	
 	<decoration x="-2" y="24" size="3" sprite="gasgiant"/>	
 	</decorations>
+	<spawnRules>
+	<spawn script="brightfeather_quest0"/>	
+	</spawnRules>	
 </System>
