@@ -114,9 +114,6 @@ public class SpawnScriptTools {
 	public void deSpawn(String ship)
 	{
 		//find a good spot to spawn it
-		Vec2f p=getPosition();
-		Spaceship spaceship=new Spaceship(ship,(int)p.x,(int)p.y,Spaceship.ShipState.SPACE);
-
 		for (int i=0;i<entitiesInSystem.size();i++)
 		{
 			if (Spaceship.class.isInstance(entitiesInSystem.get(i)))
@@ -126,6 +123,20 @@ public class SpawnScriptTools {
 				{
 					entitiesInSystem.remove(s);
 					break;
+				}
+			}
+		}
+	}
+
+	public void deSpawnFaction(String faction) {
+		for (int i=0;i<entitiesInSystem.size();i++)
+		{
+			if (Spaceship.class.isInstance(entitiesInSystem.get(i)))
+			{
+				Spaceship s=(Spaceship)entitiesInSystem.get(i);
+				if (s.getShipController() != null && s.getShipController().getFaction().getFilename().equals(faction))
+				{
+					entitiesInSystem.remove(s);
 				}
 			}
 		}

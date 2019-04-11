@@ -55,7 +55,7 @@
 	<text>
 	"Yes? what news have you got for me? completed the mission have you?"	
 	</text>
-	<choice destination="job5" text="$yes, Roberta has been dealt with"/>
+	<choice destination="job6" text="$yes, Roberta has been dealt with"/>
 	</page>
 	
 	<page ID="job6">

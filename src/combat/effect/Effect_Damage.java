@@ -64,7 +64,10 @@ public class Effect_Damage extends Effect {
 			break;
 
 		case Actor_RPG.TEASE:
-			target.addBusy(strength/2);
+			if (strength < 1) {
+				strength = 1;
+			}
+			strength = strength * 2;
 			break;
 		case Actor_RPG.PHEREMONE:
 			if (strength<1)

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <shipsystem sprite="79" name="plasma bolt gun" health="30"
-	hardpoint="true">
+	type="HARDPOINT">
 	<contains minimum="1" maximum="2">scrap metal</contains>
 	<description>A plasma bolt gun. The installation provides a stabilized mounting to allow maximum rate of fire.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>

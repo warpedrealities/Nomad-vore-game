@@ -6,6 +6,9 @@
 	<text>
 	"Hello again traveller, what can I do for you?"
 	</text>
+	<choice destination="mainquest" text="$I need someone to perform some complicated calculations on black box data">
+	<condition evaluate="GLOBAFLAG" operator="equals" value="2"	flag="MAIN" />
+	</choice>
 	<choice destination="offerOV" text="I was wondering if you were feeling hungry commander">
 		<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="preyslut" />
 	</choice>
@@ -15,6 +18,28 @@
 	<choice destination="end" text="nothing at the moment, just saying hi"/>
 	</page>
 
+	<page ID="mainquest">
+	<text>
+	"Well I'm not the one to ask, but Jehari is our resident scientist. She might be able to help? She's brilliant when she can focus." says Frei.
+	</text>
+	<choice destination="findjehari" text="$And where can I find this jehari"/>
+	<choice destination="whojehari" text="$who is Jehari exactly?"/>
+	</page>
+	
+	<page ID="whojehari">
+	<text>
+	"She's our resident scientist as I said. Also a Valk, which means technically she's a genetically engineered lifeform designed to be a super soldier. Not that you'd ever guess it from talking to her, poor dear can't hurt a fly. Fundamentally incapable of violence. They marked her as defective cause of that, their loss is our gain though. She's really clever, if a bit absentminded at times."
+	</text>
+	<choice destination="findjehari" text="$and where can i find her?"/>
+	</page>
+	
+	<page ID="findjehari">
+	<text>
+	"Her lab is just across from my office. Shouldn't have trouble finding her. Look for the white tiles and the big tauric reptile lady in a lab coat. Good luck, hope she can solve your problem for you."
+	</text>
+	<choice destination="end" text="$thanks Frei"/>
+	</page>
+	
 	<page ID="offerOV">
 	<text>
 	

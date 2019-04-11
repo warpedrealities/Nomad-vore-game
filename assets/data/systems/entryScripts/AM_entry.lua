@@ -9,6 +9,7 @@ function main(tools)
 		if (ship:getShipStats():getFTL()>0) then
 			tools:addJournal("main","quest2")
 			tools:getGlobalFlags():setFlag("MAIN",2)
+			tools:addResearch(true,"pod_blackbox 6")
 		end
 	end
 end

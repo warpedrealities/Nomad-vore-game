@@ -476,7 +476,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 				m_buttons[1].setActive(true);
 			}
 			m_window.update(dt);
-			if (m_screen != null) {
+			if (m_screen == null) {
 				int actionBarStatus = actionBar.update(dt);
 				if (actionBarStatus == 1) {
 					UpdateInfo();
@@ -1166,6 +1166,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			m_screen.discard(m_hook);
 			m_reader.UpdateHand();
 			m_screen = null;
+			actionBar.setClock(1);
 		}
 
 	}

@@ -2,6 +2,7 @@ package dialogue.effectProcessing;
 
 import javax.xml.soap.Node;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
@@ -24,7 +25,9 @@ import nomad.FlagField;
 import nomad.playerScreens.journal.JournalEntry;
 import nomad.universe.Universe;
 import perks.PerkLibrary;
+import shared.ParserHelper;
 import shared.Scene_Int;
+import shared.Vec2f;
 import shipsystem.WidgetDamage;
 import shop.ShopList;
 import solarview.spaceEncounter.SpaceCombatInitializer;
@@ -51,6 +54,8 @@ public class EffectProcessor {
 
 	private SceneController controller;
 	private Scene_Int scene;
+
+	private CaptureHandler captureHandler;
 
 	public EffectProcessor(Player player, SceneController controller, Scene_Int scene) {
 		m_player = player;
@@ -151,7 +156,7 @@ public class EffectProcessor {
 			if (node.getAttribute("group").length() > 0) {
 				group = node.getAttribute("group");
 			}
-			m_player.getEncyclopedia().addResearch(data, DC, r, group);
+			m_player.getEncyclopedia().addChanceResearch(data, DC, r, group);
 		}
 		if (str.equals("data")) {
 			String ID = node.getAttribute("ID");
@@ -189,6 +194,20 @@ public class EffectProcessor {
 			if (handler.capture(m_npc)) {
 				m_npc.Remove(false,true);
 			}
+		}
+		if (str.equals("addSpecimen")) {
+			String file = node.getAttribute("file");
+			CaptureHandler handler = new CaptureHandler(Universe.getInstance().getCurrentEntity(), m_player);
+			Document doc = ParserHelper.LoadXML("assets/data/npcs/" + file + ".xml");
+			Element n = (Element) doc.getFirstChild();
+			handler.addSpecimen(new NPC(n, new Vec2f(0, 0), file));
+
+		}
+		if (str.equals("removeSpecimens")) {
+			String name = node.getAttribute("name");
+			int count = Integer.parseInt(node.getAttribute("count"));
+			CaptureHandler handler = new CaptureHandler(Universe.getInstance().getCurrentEntity(), m_player);
+			handler.removeSpecimens(name, count);
 		}
 		if (str.equals("createNPC")) {
 			String filename = node.getAttribute("file");

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<shipsystem sprite="86" name="space mortar" health="30">
+<shipsystem sprite="86" name="space mortar" health="30" type="HARDPOINT">
 	<contains minimum="1" maximum="2">scrap metal</contains>
 	<description>A mortar for space combat, uses a magnetic accelerator to
 		launch high explosive rounds at enemy ships.</description>

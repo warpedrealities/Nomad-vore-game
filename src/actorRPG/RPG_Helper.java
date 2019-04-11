@@ -62,6 +62,9 @@ public class RPG_Helper {
 		if (str.contains("PHEREMONE")) {
 			return Actor_RPG.PHEREMONE;
 		}
+		if (str.contains("PHEROMONE")) {
+			return Actor_RPG.PHEREMONE;
+		}
 		if (str.contains("PSYCHIC")) {
 			return Actor_RPG.PSYCHIC;
 		}

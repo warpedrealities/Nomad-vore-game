@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<shipsystem sprite="113" name="pulse cannon" health="30">
+<shipsystem sprite="113" name="pulse cannon" health="30" type="HARDPOINT">
 	<contains minimum="1" maximum="2">scrap metal</contains>
 	<description>A pulse cannon firing jacketed photon bolts to inflict greatly destructive effect. 6-12 damage, 4 energy, 2 round cooldown. </description>
 	<resistance resists="KINETIC" strength="2"></resistance>

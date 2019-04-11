@@ -37,7 +37,7 @@ public class CaptureHandler {
 	private Zone getZone(ItemCaptureInstance item) {
 		if (item.getShip() != null) {
 			Zone zone = entity.getZone(item.getShip());
-			
+
 			if (zone != null) {
 				return zone;
 			}
@@ -45,11 +45,11 @@ public class CaptureHandler {
 			{
 				return zone=getZoneNearby(item.getShip());
 			}
-				
+
 		}
 		return null;
 	}
-	
+
 	private Zone getZoneNearby(String shipName)
 	{
 		StarSystem system=Universe.getInstance().getCurrentStarSystem();
@@ -57,14 +57,14 @@ public class CaptureHandler {
 		for (int i=0;i<system.getEntities().size();i++)
 		{
 			if (system.getEntities().get(i).getName().equals(shipName) &&
-				system.getEntities().get(i).getPosition().getDistance(entity.getPosition())<2)
+					system.getEntities().get(i).getPosition().getDistance(entity.getPosition())<2)
 			{
 				if (Spaceship.class.isInstance(system.getEntities().get(i)))
 				{
 					return system.getEntities().get(i).getZone(shipName);
 				}
 			}
-		}	
+		}
 		return null;
 	}
 
@@ -87,6 +87,47 @@ public class CaptureHandler {
 			}
 		}
 		return null;
+	}
+
+	private WidgetCapture getSpecimen(Zone zone, String name) {
+		for (int i = 0; i < zone.getWidth(); i++) {
+			for (int j = 0; j < zone.getHeight(); j++) {
+				if (zone.getTile(i, j) != null && zone.getTile(i, j).getWidgetObject() != null) {
+					if (WidgetSlot.class.isInstance(zone.getTile(i, j).getWidgetObject())) {
+						WidgetSlot slot = (WidgetSlot) zone.getTile(i, j).getWidgetObject();
+						if (WidgetCapture.class.isInstance(slot.getWidget())) {
+							WidgetCapture capture = (WidgetCapture) slot.getWidget();
+							for (int k = 0; k < capture.getCapacity(); k++) {
+								if (capture.getNPC(k) != null && capture.getNPC(k).getName().equals(name)) {
+									return capture;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return null;
+	}
+
+	public boolean addSpecimen(NPC npc) {
+		if (Spaceship.class.isInstance(Universe.getInstance().getCurrentEntity()) == false) {
+			return false;
+		}
+		Zone zone = Universe.getInstance().getCurrentEntity().getZone(0);
+		WidgetCapture capture = getCaptureWidget(zone);
+		if (capture == null) {
+			ViewScene.m_interface.DrawText("no specimen containment available");
+			return false;
+		}
+		for (int k = 0; k < capture.getCapacity(); k++) {
+			if (capture.getNPC(k) == null) {
+				capture.setNPC(npc, k);
+				ViewScene.m_interface.DrawText("specimen transported to containment");
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public boolean capture(NPC npc) {
@@ -115,6 +156,30 @@ public class CaptureHandler {
 			}
 		}
 		ViewScene.m_interface.DrawText("no capture device available");
+		return false;
+	}
+
+	public void removeSpecimen(Zone zone, String name) {
+		WidgetCapture capture = getSpecimen(zone, name);
+		if (capture == null) {
+			return;
+		}
+		for (int k = 0; k < capture.getCapacity(); k++) {
+			if (capture.getNPC(k) != null && capture.getNPC(k).getName().equals(name)) {
+				capture.setNPC(null, k);
+				return;
+			}
+		}
+	}
+
+	public boolean removeSpecimens(String name, int count) {
+		if (Spaceship.class.isInstance(Universe.getInstance().getCurrentEntity()) == false) {
+			return false;
+		}
+		Zone zone = Universe.getInstance().getCurrentEntity().getZone(0);
+		for (int i = 0; i < count; i++) {
+			removeSpecimen(zone, name);
+		}
 		return false;
 	}
 

@@ -46,6 +46,7 @@
 		<noise tile="5" scarcity="22" />		
 		<noise tile="6" scarcity="22" />
 		<floodfill tile="1" />		
+		<SeedNPCs min="4" max="4" name="Feromedio_III/feromedio">		
 	<walloff wall="2" sides="southeastwest" />	
 	</mapgen>
 

@@ -160,7 +160,9 @@
 					<preference fetish="herms" />
 		<preference fetish="demis" />	
 		</choice>						
-		<choice destination="follow" text="accompany me Zin"/>
+		<choice destination="follow" text="accompany me Zin">
+					<assertion evaluate="companionSlotFree" />	
+		</choice>
 		<choice destination="end" text="I don't need anything right now Zin"/>	
 	</page>
 	

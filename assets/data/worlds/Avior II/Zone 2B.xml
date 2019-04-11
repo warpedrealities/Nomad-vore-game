@@ -45,6 +45,9 @@
 				<floodfill tile="2" />
 			</band>
 		</perlin>
+		<SeedNPCs min="8" max="16" name="avior/harpy">
+			<script spawn="harpy_relocation"/>
+		</SeedNPCs>
 	</mapgen>
 
 </zone>

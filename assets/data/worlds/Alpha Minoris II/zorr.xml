@@ -49,6 +49,8 @@
 				<edge value="WEST" />
 				<widget x="1" y="2" name="stonepanelV" info="gateCloset" variable="15" />
 				<widget x="3" y="2" name="stonepanelV" info="gateCloset" variable="15" />
+				<widget x="5" y="4" name="invincible_door" info="zorrSanctum"
+					variable="99" />				
 				<widget x="6" y="4" name="entranceW" variable="22" info="zorrSanctum" />
 				<widget x="4" y="6" name="mechanism" info="interaction/zorr/zorrColumnCalamity"
 					variable="32" />

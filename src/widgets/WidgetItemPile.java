@@ -61,28 +61,33 @@ public class WidgetItemPile extends Widget {
 	@Override
 	public boolean Interact(Player player) {
 		// grab item
+		if (m_items.size() <= 0) {
+			ViewScene.m_interface.DrawText(
+					"You have attempted to interact with an empty item pile, empty item piles are abberations");
+			ViewScene.m_interface.RemoveWidget(this);
+		}
 		Item item = m_items.get(0);
 		if (ItemCoin.class.isInstance(item)) {
 			ItemCoin coin = (ItemCoin) item;
 			if (coin.isCredits())
 			{
-				player.getInventory().setPlayerCredits(player.getInventory().getPlayerCredits() + coin.getCount());		
+				player.getInventory().setPlayerCredits(player.getInventory().getPlayerCredits() + coin.getCount());
 			}
 			else
 			{
-				player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + coin.getCount());		
+				player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + coin.getCount());
 			}
 		}
 		else
 		{
-			player.getInventory().AddItem(item);			
+			player.getInventory().AddItem(item);
 		}
 		player.calcMove();
 		m_items.remove(0);
 
 		ViewScene.m_interface.DrawText("picked up " + item.getName());
 		// check item count
-		if (m_items.size() == 0) {
+		if (m_items.size() <= 0) {
 			ViewScene.m_interface.RemoveWidget(this);
 		}
 		// if item count 0, remove this widget

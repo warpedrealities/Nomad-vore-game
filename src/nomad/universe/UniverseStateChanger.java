@@ -87,7 +87,7 @@ public class UniverseStateChanger {
 		FactionLibrary.getInstance().clean();
 		//remove flags from player
 		player.getFlags().clear();
-		player.getEncyclopedia().generateEntries();
+		player.getEncyclopedia().clear();
 		new CompanionTool().removeAllCompanions(player);
 		universe.journal = new JournalSystem();
 		//move player to the first area.

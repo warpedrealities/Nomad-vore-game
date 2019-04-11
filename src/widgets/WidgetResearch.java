@@ -55,7 +55,7 @@ public class WidgetResearch extends Widget {
 			return false;
 		} else {
 			int r = Universe.m_random.nextInt(20) + player.getRPG().getAttribute(Actor_RPG.SCIENCE);
-			player.getEncyclopedia().addResearch(data, difficultyClass, r, group);
+			player.getEncyclopedia().addChanceResearch(data, difficultyClass, r, group);
 			ViewScene.m_interface
 			.DrawText("You study your findings and have acquired some research data for further analysis");
 			return true;

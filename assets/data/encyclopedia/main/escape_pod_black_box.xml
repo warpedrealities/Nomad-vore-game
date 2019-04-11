@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<entry name="D: Escape pod black box">
+	<text>
+	Gravitational effects on the pod during its centuries of ballistic drift through deep space have been mapped and charted. With this information you are both aware of the time passed and aware of the origin point for the escape pod. This will allow you to seek out the Heinlein in the hopes of recovering its navigational data and the pinpoint the location of earth.
+	</text>
+	<requirement name="pod_blackbox" count="1" />
+	<script_reward script="mainquest3" />
+</entry>

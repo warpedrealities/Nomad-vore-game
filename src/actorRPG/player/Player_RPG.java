@@ -940,6 +940,7 @@ public class Player_RPG implements Actor_RPG {
 		stats[0]=statMax[0];
 		stats[1]=statMax[1];
 		stats[3]=statMax[3];
+		genMoveList();
 	}
 
 	@Override

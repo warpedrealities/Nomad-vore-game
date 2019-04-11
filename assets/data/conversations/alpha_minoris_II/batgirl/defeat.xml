@@ -2,7 +2,7 @@
 <Conversation>
 	<page ID="start">
 		<text>
-			there's no interaction with a defeated batgirl yet
+			The defeated batgirl is struggling to pick herself up off the cave floor. It seems like her frail body wasn't built to stand up to heated combat.
 		</text>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
@@ -12,7 +12,10 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
-		<choice destination="end" text="darn" />
+	<choice destination="breast1" text="smother the cutie">
+			<assertion evaluate="hasperk" perk="breastvore" />
+		</choice>
+		<choice destination="end" text="leave her be" />
 	</page>
 
 	<page ID="devour">
@@ -24,5 +27,53 @@
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>
+
+<page ID="breast1">
+		<text>You pick the weakened batgirl off the ground and press her head in between your
+				<macro ID="breast_size_desc" />
+				breasts. She doesn't put up much of a fight. Either she's too tired to do anything about it or she likes this accomadation.
+				Whichever the case may be, she's all yours now.
+				
+		</text>
+		<choice destination="breast2" text="and now for the fun part" />
+	</page>
+
+<page ID="breast2">
+		<text> With the flying humanoid pacified, you begin the process of making her a part of you. You tighten your embrace around her fuzzy body, causing her to
+		sink deeper and deeper into your chest. Your breasts begin to swell in size as her head disappears inside you. You decide to let gravity
+		do the heavy lifting by angling the batgirl's limp body at an upward angle. Without much effort on your end, and not any fighting on her end, your hungry cleavage
+		swallows up her wings, followed by her petite booty, and finally her legs.
+				
+		</text>
+		<choice destination="breast3" text="bat milk" />
+	</page>
+
+
+<page ID="breast3">
+<text>
+		With the batgirl fully concealed inside your twins, your body works its biological magic and begins breaking her down into milk.
+		You feel a light amound of movement from inside your mammaries. Either your prey has finally figured out her fate and is trying to make a last ditch effort to escape, or she's trying
+		to make her final moments more comfortable. Whatever the case may be, you feel somewhat soothed by by her actions and you take a moment to rest up agianst the rocky wall.
+	</text>
+
+
+
+		<choice destination="breast4" text="claim your sweet reward" />
+</page>
+
+
+<page ID="breast4">
+<text>
+		After a few minutes pass by, you lightly poke your left tit to check on your guest. The sloshy reaction you get confirms your assertion. She's nothing but milk now.
+		You suckle on your left nipple and are greeted by a soft creamy taste. She may have been a bad predator, but she's doing a great job as a drink. You quickly drain your left
+		boob before giving the right one the same treatment. Using your hands to pick yourself off the cool cave floor, you get back to whatever it was you were supposed to be doing.
+	</text>
+<effect type="feed" value="100" />
+		<special effect="removenpc" />
+
+
+		<choice destination="end" text="carry on" />
+</page>
+
 
 </Conversation>

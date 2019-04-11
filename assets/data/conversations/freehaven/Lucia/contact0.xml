@@ -63,9 +63,13 @@
 	
 	<page ID="job1A">
 	<text>
-	
+	"Fantastic, I'll transfer them over and we can get going. I'll see you over Avior next."
 	</text>
-	
+		<special effect="addSpecimen" file="Alpha_Minoris_IIA/harpy_transfer"/>
+		<special effect="addSpecimen" file="Alpha_Minoris_IIA/harpy_transfer"/>		
+		<special effect="addSpecimen" file="Alpha_Minoris_IIA/harpy_transfer"/>
+		<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="11" />	
+		<choice destination="job1A" text="Okay good, meet you over Avior"/>		
 	</page>
 	
 	<page ID="job1B">

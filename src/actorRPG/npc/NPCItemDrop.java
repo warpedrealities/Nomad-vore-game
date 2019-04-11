@@ -15,7 +15,7 @@ public class NPCItemDrop {
 	private int probability;
 	private String itemName;
 	private boolean defeatOnly=false;
-	
+
 	public NPCItemDrop(Element element) {
 		probability = Integer.parseInt(element.getAttribute("chance"));
 		itemName = element.getAttribute("item");
@@ -56,22 +56,26 @@ public class NPCItemDrop {
 		Item item=Universe.getInstance().getLibrary().getItem(itemName);
 		return item;
 	}
-	
+
 	private void placeDrop(Vec2f p) {
-		
+
 		WidgetItemPile pile = null;
 		Widget w=ViewScene.m_interface.getSceneController().getWidget((int)p.x,(int)p.y);
 		if (WidgetItemPile.class.isInstance(w))
 		{
-			pile=(WidgetItemPile)w;
-			pile.AddItem(getItem());
+			Item item = getItem();
+			if (item != null) {
+				pile = (WidgetItemPile) w;
+				pile.AddItem(item);
+			}
 		}
 		else
 		{
-			pile=new WidgetItemPile(2, "a pile of items containing ",
-					getItem());
-			ViewScene.m_interface.placeWidget(pile, (int) p.x, (int) p.y, true);
-		
+			Item item = getItem();
+			if (item != null) {
+				pile = new WidgetItemPile(2, "a pile of items containing ", item);
+				ViewScene.m_interface.placeWidget(pile, (int) p.x, (int) p.y, true);
+			}
 		}
 
 	}
@@ -79,6 +83,6 @@ public class NPCItemDrop {
 	public boolean isDefeatOnly() {
 		return defeatOnly;
 	}
-	
-	
+
+
 }

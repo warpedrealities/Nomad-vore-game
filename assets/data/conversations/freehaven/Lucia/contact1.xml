@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Conversation>
+
+
+
+	<page ID="start">
+	<!--on quest-->
+	<condition evaluate="GLOBALFLAG" operator="equals" value="14"	flag="BRIGHTFEATHER_QUEST" />
+	<text>
+	"I like company as much as the next girl, but at the moment I have a stiff drink in freehaven with my name on it. And if the drink gets impatient it's likely to invite all its drink friends to wait for me as well. You're directly contributing to my hangover, so git." 
+	</text>
+	<choice destination="end" text="$Fair enough"/>
+	</page>
+
+	<page ID="start">
+	<text>
+	"Bout time you showed up. Now lets get this done before pirates crash the party. Your cargo come through intact?" 
+	</text>
+		<choice destination="cargoYes" text="$Yes, all safe and sound">
+			<condition evaluate="HASSPECIMEN" specimen="contained harpy" operator="greaterthan" value="3"/>	
+		</choice>
+		<choice destination="cargoLie" text="$Yes, no problems">
+			<condition evaluate="HASSPECIMEN" specimen="contained harpy" operator="lessthan" value="3"/>	
+		</choice>
+		<choice destination="cargoNo" text="$No unfortunately">
+			<condition evaluate="HASSPECIMEN" specimen="contained harpy" operator="lessthan" value="3"/>	
+		</choice>		
+	</page>
+	
+	<page ID="cargoYes">
+	<text>
+	"Fantastic. I'll take them off your hands and handle the delivery to the surface. I'm sure this Keliya will be pleased to take them all off our hands."
+	</text>
+	<special effect="removeSpecimens" name="contained harpy" count="3"/>	
+	<choice destination="finish" text="$Excellent, happy to do business with you"/>
+	</page>
+	
+	<page ID="finish">
+	<text>
+	"Likewise. Be seeing you around okay?"
+	</text>
+	<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="14" />	
+	</page>
+	
+	<page ID="cargoLie">
+	<text>
+	"You know, it's a damned good thing I haven't given a proper count to your friend yet. I reckon we should keep this between me and you. Transfer them over and I'll handle the rest though."
+	</text>
+		<special effect="removeSpecimens" name="contained harpy" count="3"/>	
+		<choice destination="finish" text="$Excellent, happy to do business with you"/>		
+	</page>
+	
+	<page ID="cargoNO">
+	<text>
+	"Shame, ah well. I'm sure your birdy friend won't notice a few went missing. No skin off my nose, but I could of done with knowing that it was something you considered acceptable as some of those harpies would of looked good in sune gut. Anyway, I'll take those off your hands and handle the transfer down to the surface for you."
+	</text>
+		<special effect="removeSpecimens" name="contained harpy" count="3"/>		
+		<choice destination="finish" text="$Excellent, happy to do business with you"/>	
+	</page>
+
+</Conversation>

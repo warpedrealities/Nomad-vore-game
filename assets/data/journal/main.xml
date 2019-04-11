@@ -7,6 +7,9 @@
 	Your new craft is servicable enough for allowing you to travel beyond the first alien world you've reached. But it's obvious that both the wreck of the heinlein and earth itself are impossibly distant unless you find a way of overcoming the light barrier. You can't build a wormhole drive like the Heinlein had, but it's clear from what you can see now that a star spanning alien civilization touched these worlds at some point. Perhaps it exists still, at any rate you will need to find a way of acquiring the FTL technology that must of made their civilization possible.
 	</entry>
 	<entry name="quest2" ID="1" priority="1" title="faster than lightspeed">
-	You've done it. You've acquired an FTL engine capable of travelling faster than light. You should prepare for your trip but when ready you should engage the drive and see where it takes you. After that you'll need to find your way back to the Heinlein. However doing so will mean correlating the flight data of the escape pod with a gravitational map of the local cosmos. You possess the former, now you must find the latter.
+	You've done it. You've acquired an FTL engine capable of travelling faster than light. You should prepare for your trip but when ready you should engage the drive and see where it takes you. After that you'll need to find your way back to the Heinlein. The secret to this is inside the black box data for the escape pod. But back tracking its course from that data will require the abilities of a scientific genius.
+	</entry>
+	<entry name="quest3" ID="1" priority="1" title="The wreck of the heinlein">
+	You've backtracked the escape pod's course. This will let you jump to the system where the Heinlein met its end and investigate. You need the navigational data from the Heinlein in order to determine your position relative to earth and plot a course back home. The Heinlein is located at stellar coordinates -1,-1 and you will need to jump stellar north west from the original star system to reach it.
 	</entry>
 </journal>

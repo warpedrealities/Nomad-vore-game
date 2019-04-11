@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <shipsystem sprite="85" name="dagger missile launcher"
-	health="30" hardpoint="true">
+	health="30" type="HARDPOINT">
 	<contains minimum="1" maximum="2">scrap metal</contains>
 	<description>An anti starfighter and small craft missile launcher,
 		typically used for perimeter security on warships.</description>

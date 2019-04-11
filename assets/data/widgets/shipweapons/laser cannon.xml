@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <shipsystem sprite="75" name="laser cannon" health="30"
-	hardpoint="true">
+	type="HARDPOINT">
 	<contains minimum="1" maximum="2">scrap metal</contains>
 	<description>A laser cannon based on earth technology. Damage drops off with range due to focusing issues.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>

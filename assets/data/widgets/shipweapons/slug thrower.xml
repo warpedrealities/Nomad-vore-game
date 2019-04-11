@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <shipsystem sprite="76" name="slug thrower" health="30"
-	hardpoint="true">
+	type="HARDPOINT">
 	<contains minimum="1" maximum="2">scrap metal</contains>
 	<description>A simple magnetic accelerator that throws a 40mm slug</description>
 	<resistance resists="KINETIC" strength="2"></resistance>

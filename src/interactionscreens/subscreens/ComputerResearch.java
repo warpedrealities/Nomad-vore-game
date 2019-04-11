@@ -3,7 +3,6 @@ package interactionscreens.subscreens;
 import java.nio.FloatBuffer;
 import java.util.Iterator;
 
-import actorRPG.Actor_RPG;
 import actorRPG.player.Player_RPG;
 import gui.Button;
 import gui.Window;
@@ -13,8 +12,8 @@ import nomad.universe.Universe;
 import playerscreens.Popup;
 import research.Encyclopedia;
 import research.Research;
-import shared.Callback;
 import shared.ButtonListener;
+import shared.Callback;
 import shared.Vec2f;
 
 public class ComputerResearch implements Callback, ButtonListener {
@@ -116,27 +115,10 @@ public class ComputerResearch implements Callback, ButtonListener {
 			}
 			Universe.AddClock(500);
 			callback.Callback();
-
-			int diceroll = Universe.m_random.nextInt(20)
-					+ Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.SCIENCE);
-
-			int finalroll = (diceroll + r.getRoll()) / 2;
-
-			if (finalroll >= r.getDC()) {
-				popup.setClock(10);
-				if (e.addData(r.getName(), r.getGroup())) {
-					popup.setText("you have successfully researched " + research
-							+ " and have compiled a new entry on your findings");
-				} else {
-					popup.setText("you have successfully researched " + research);
-				}
-
-			} else {
-				popup.setClock(10);
-				popup.setText("you have failed to reach meaningful conclusions on the topic of " + research
-						+ " you need more data");
+			if (r.attempt((Player_RPG) Universe.getInstance().getPlayer().getRPG(), popup, e)) {
+				e.getResearchList().remove(research);
 			}
-			e.getResearchList().remove(research);
+
 			genList();
 		}
 

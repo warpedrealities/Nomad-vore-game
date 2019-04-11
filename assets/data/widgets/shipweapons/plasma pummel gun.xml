@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <shipsystem sprite="78" name="plasma pummel gun" health="30"
-	hardpoint="true">
+	type="HARDPOINT">
 	<contains minimum="1" maximum="2">scrap metal</contains>
 	<description>A plasma bolt gun mounted on a pivoting weapon mount giving it a wider firing arc at the cost of reduced stability.</description>
 	<resistance resists="KINETIC" strength="2"></resistance>

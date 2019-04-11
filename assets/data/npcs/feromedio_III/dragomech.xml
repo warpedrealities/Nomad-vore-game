@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="dragomech.png" />
+	<name>Dragomech</name>
+	<description>
+	Standing twice your height at the shoulder this quadrepedal synth has the general outline of a saurian or flightless dragon. Powerful alloy claws grip the ground and broad paws support the mech and its black synth flesh is sheathed in strategic armour plating including a strip of articulated armour running up from the snout, past glowing red optics and all the way down the warmachines spine to its tail. The shoulders of the mech seem to contain ordinance launch hatches that can only increase the air of uncompromising and confident lethality the dragomech exudes.
+	</description>
+	<rpg>
+		<experiencevalue value="450" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="75" />
+		<stat stat="RESOLVE" value="75" />
+		<attribute attribute="TEASE" value="12" />
+		<attribute attribute="PHEROMONE" value="12" />		
+		<attribute attribute="KINETIC" value="4" />
+		<attribute attribute="SHOCK" value="-2" />	
+		<combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<missText count="3">
+				<text>Dragomech swipes at TARGET and misses</text>
+				<text>Dragomech lashes out at TARGET</text>
+				<text>TARGET evades the dragomech's claws</text>
+			</missText>
+			<hitText count="4">
+				<text>Dragomech stomps TARGET for VALUE damage</text>
+				<text>Dragomech strikes TARGET for VALUE damage</text>			
+				<text>Dragomech pummels TARGET for VALUE damage</text>
+				<text>Dragomech swats TARGET for VALUE damage</text>					
+			</hitText>
+		</combatMove>		
+		<combatMove name="swat" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="6" maxValue="12"
+				modifier="NONE" />
+			<missText count="1">
+				<text>Dragomech fails to swat TARGET away</text>
+
+			</missText>
+			<hitText count="1">
+				<text>Dragomech swats TARGET back for VALUE damage</text>
+			</hitText>
+			<effectMovement moveType="TARGET_AWAY" distance="4"
+				abilityMod="STRENGTH" />
+		</combatMove>
+		<combatMove name="laser eyes" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="THERMAL" minValue="2" maxValue="12"
+				modifier="NONE" />
+			<missText count="2">
+				<text>Dragomech shoots laser eyes at TARGET but misses</text>
+				<text>TARGET evades the Dragomech's laser eyes</text>				
+			</missText>
+			<hitText count="2">
+				<text>Dragomech blasts TARGET for VALUE thermal damage with its laser eyes</text>
+				<text>TARGET is blasted with laser eyes by the Dragomech for VALUE thermal damage</text>		
+			</hitText>
+		</combatMove>		
+		<combatMove name="missiles" pattern="BOMB" bonusAttribute="RANGED"
+			timeCost="4" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="4" maxValue="8"
+				modifier="NONE" />
+			<effectDamage type="THERMAL" minValue="4" maxValue="8"
+				modifier="NONE" />				
+			<missText count="2">
+				<text>TARGET evades a missile barrage</text>
+				<text>TARGET escapes the dragomech's missile assault</text>
+			</missText>
+			<hitText count="2">
+				<text>Dragomech bombards TARGET with missiles inflicting VALUE damage</text>
+				<text>TARGET reels as dragomech missiles rain down on them from above for VALUE damage</text>	
+			</hitText>
+		</combatMove>
+		<combatMove name="target lock" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="4" bonusToHit="4" >
+			<missText count="1">
+				<text>TARGET escapes being bracketed by the Dragomech's sensors</text>
+			</missText>
+			<hitText count="1">
+				<text>Dragomech brackets TARGET with sensors</text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET has suffered a target lock</applyText>
+				<statusAttribMod uid="170" icon="19" duration="20"
+				numModifiers="1">
+				<removeText> TARGET 's no longer under a target lock</removeText>
+				<effect attribute="DODGE" modifier="-2" />	
+				</statusAttribMod>
+			</effectStatus>
+		</combatMove>			
+	</rpg>
+	<respawn delay="8000" />
+<flying />	
+	<defeated conversation="feromedio_III/dragomech/defeat" />
+	<seduced conversation="feromedio_III/dragomech/defeat" />
+	<victory conversation="feromedio_III/dragomech/victory" />
+	<seducer conversation="feromedio_III/dragomech/victory" />
+	<controller AI="dragomech" />
+	<faction value="monster" />
+</NPC>

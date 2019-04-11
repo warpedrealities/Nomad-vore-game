@@ -322,6 +322,14 @@ public class OutEvaluator {
 					return false;
 				}
 			}
+			if (eval.equals("HASSPECIMEN")) {
+				String operator = E.getAttribute("operator");
+				int value = Integer.parseInt(E.getAttribute("value"));
+				if (ConditionCheck(value, operator,
+						new SpaceshipScanner(ship).getSpecimenCount(E.getAttribute("specimen"))) == false) {
+					return false;
+				}
+			}
 			if (eval.equals("TIMEPASSED")) {
 				String operator = E.getAttribute("operator");
 				int value = Integer.parseInt(E.getAttribute("value"));

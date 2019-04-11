@@ -49,6 +49,7 @@ public class Encyclopedia {
 			String str = it.next();
 			ParserHelper.SaveString(dstream, str);
 			Research r = researchList.get(str);
+			dstream.writeInt(r.getType());
 			r.save(dstream);
 		}
 
@@ -68,8 +69,18 @@ public class Encyclopedia {
 
 		for (int i = 0; i < count; i++) {
 			String str = ParserHelper.LoadString(dstream);
-			Research r = new Research();
-			r.load(dstream);
+			Research r = null;
+			switch (dstream.readInt()) {
+			case 0:
+				r = new Research_Chance();
+				r.load(dstream);
+				break;
+			case 1:
+				r = new Research_Threshold();
+				r.load(dstream);
+				break;
+			}
+
 			researchList.put(str, r);
 		}
 
@@ -124,6 +135,13 @@ public class Encyclopedia {
 		Collections.sort(entryList);
 	}
 
+	public void clear() {
+		dataList.clear();
+		entryList.clear();
+		researchList.clear();
+		generateEntries();
+	}
+
 	private void subLoad(String filename) {
 		File file = new File("assets/data/encyclopedia" + "/" + filename);
 		File[] files = file.listFiles();
@@ -165,10 +183,17 @@ public class Encyclopedia {
 		return entryList;
 	}
 
-	public void addResearch(String data, int DC, int roll, String group) {
+	public void addChanceResearch(String data, int DC, int roll, String group) {
 		if (researchList.get(data) == null) {
-			Research d = new Research(DC, roll, data);
+			Research_Chance d = new Research_Chance(DC, roll, data);
 			d.setGroup(group);
+			researchList.put(data, d);
+		}
+	}
+
+	public void addThresholdResearch(String data, int threshold, String group) {
+		if (researchList.get(data) == null) {
+			Research d = new Research_Threshold(threshold, data, group);
 			researchList.put(data, d);
 		}
 	}

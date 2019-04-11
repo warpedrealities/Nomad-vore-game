@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="harpy.png" />
+
+	<name>wild harpy</name>
+	<description>A part avian girl, her tanned skin fading into the dark
+		grey of wingfeathers at each shoulder. Her slender body clad only in a
+		dangerous smile and radiates an untamed desire for satiation and
+		pleasure. Her head is capped with unruly and untamed wild locks of
+		platinum hair spilling down her back and framing her face. While
+		shifting your gaze lower down you see from that downy patch of fuzz at
+		the cleft of her legs you can see the gleam of moisture on those
+		hungry lips.</description>
+	<rpg>
+		<experiencevalue value="200" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="45" />
+		<stat stat="RESOLVE" value="45" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />		
+		<combatMove name="claw" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="4" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>The harpy fails to claw TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>The harpy claws TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+			<itemDrop chance="25" defeatOnly="true" item="harpy feather" />		
+	</rpg>
+
+	<respawn delay="2000" />
+	<flying />
+	<defeated conversation="alpha_minoris_IIA/harpy/harpydefeat" />
+	<seduced conversation="alpha_minoris_IIA/harpy/harpySeduced" />
+	<victory conversation="alpha_minoris_IIA/harpy/harpyvictory" />
+	<seducer conversation="alpha_minoris_IIA/harpy/harpyvictory" />
+	<captive conversation="alpha_minoris_IIA/harpy/captive" />	
+	<controller AI="harpy_adv" />
+	<faction value="harpy" />
+</Harpy>

@@ -41,7 +41,9 @@ public class Entry implements Comparable<Entry> {
 				if (e.getTagName().equals("recipe_reward")) {
 					rewards.add(new Reward_Recipe(e));
 				}
-
+				if (e.getTagName().equals("recipe_script")) {
+					rewards.add(new Script_Reward(e));
+				}
 			}
 		}
 

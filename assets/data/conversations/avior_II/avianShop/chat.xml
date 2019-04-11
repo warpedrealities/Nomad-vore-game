@@ -28,8 +28,21 @@
 	</choice>
 	<choice destination="brightfeather7" text="So can we finally move brightfeather's friends over?">
 		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="7" />
-	</choice>				
+	</choice>	
+	<choice destination="brightfeather8" text="I've arranged the delivery of the harpies">
+		<condition operator="equals" evaluate="GLOBALFLAG" flag="BRIGHTFEATHER_QUEST" value="14" />
+	</choice>			
 	<choice destination="end" text="Nothing, stay friendly"/>
+	</page>
+	
+	<page ID="brightfeather8">
+	<text>
+	"Good. Good. Yes I hear, I hear, radio. Your friend captain Lucia has arranged delivery, the harpies are in their new home. As agreed here is your credits to re-imburse you for the price of the freighter hire."
+	</text>
+		<effect type="experience" value="1000" />	
+		<effect type="setglobalflag" flag="BRIGHTFEATHER_QUEST" value="15" />
+		<effect type="givecredits" value="10000" />	
+		<choice destination="end" text="Excellent, finally."/>
 	</page>
 	
 	<page ID="brightfeather7">
