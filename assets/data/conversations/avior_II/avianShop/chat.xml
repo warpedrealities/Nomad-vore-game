@@ -115,7 +115,7 @@
 	"Yes? have you got the ore we need?" she asks with a smile, cocking her head to the side.
 	</text>
 	<choice destination="brightfeather6A" text="$Yes I do">
-		<condition evaluate="HASITEM" operator="greaterthan" value="5"
+		<condition evaluate="HASITEM" operator="greaterthan" value="4"
 			item="raw ore" />
 	</choice>
 	<choice destination="shop" text="$not yet but i need to trade for some things"/>

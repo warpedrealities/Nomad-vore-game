@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text> no interaction to be had with a defeated arachne yet.
+		<text> The arachne tries to back away but stumbles, her abdomen crashing into the dirt as her legs aren't strong enough right now to support her. She raises her hands as you gaze roves over her ample breasts, a pleasing contrast to her earlier brazen displaying of those tits that speaks to her new found vulnerability in defeat.
 		</text>
 	
+		<choice destination="oralvore0" text="She'd make your belly nice and big, eat her up">
+			<assertion evaluate="hasperk" perk="oralvore" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -14,7 +17,28 @@
 		</choice>
 		<choice destination="end" text="leave her be" />
 	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	The spider taur seems to sense your intentions and lets out an uneasy chitter, reaching up to shove you away all thought of modesty forgotten as she grapples with more important dangers. Namely the fact she's about to be eaten alive and digested by a victorious predator, namely you. Her protests and attempts to resist come to naught however as not to be deterred or slowed you grab her hands and guide them not to your chest where she'd be able to shove you back, but to your lips where she finds her hands shoved down your throat instead. The arachne lets out a dismayed cry as you swallow and drag her shapely upper body towards your mouth.
+	</text>
+	<choice destination="oralvore1" text="*who says spider ain't good eating, nom nom gulp her down*"/>
+	</page>
 
+	<page ID="oralvore1">
+	<text>
+	The hefty arachne squirms around as you enjoy your feast, gulping her in eagerly. Her ample assets and tauric frame will only add to your satisfaction rather than impede your progress. Her cries are muffled by your hungry mouth, her bountiful bust presses against your tongue and squeezes down your throat. Your hands roam down to grab ahold of her lower spider legs and use them as handles to cram her into yourself all the way down to her hips. The arachne's lower exoskeletal taur half is all that remains outside you and you can hardly wait to feel that part of her stretching and filling out your tummy.
+	</text>
+	<choice destination="oralvore2" text="*continue*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	
+	</text>
+	
+	</page>
+	
 	<page ID="devour">
 		<text>
 			You have devoured her in some unspecified, unelaborated on yet

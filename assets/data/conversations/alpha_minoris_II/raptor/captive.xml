@@ -217,7 +217,7 @@
 	
 	<page ID="oralvorePreyA4">
 	<!--endo-->
-	<condition operator="equals" evaluate="LOCALFLAGROLL" flag="training"/>		
+	<condition operator="lessthan" evaluate="LOCALFLAGROLL" flag="training"/>		
 	<text>
 	The raptor rubs over her belly, chirring and satisfied. But then you feel her wrap her arms around her dome of a belly to embrace you affectionately. No enzymes in evidence, seems she's taken the hint of how you want to interact with your pets. The raptor settled sat comfortably with you deep inside her belly, you wriggle around to get a bit more comfortable then mhmm and settle in.
 	</text>

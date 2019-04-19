@@ -22,30 +22,28 @@ public class ShopSlaveTrader implements ShopData {
 	private String shopName;
 	private long lastVisited;
 	private float profitRatio;
-	private boolean useCredits;		
+	private boolean useCredits;
 	private List<SlaveLineItem> buyList;
 	private List<SlaveLineItem> sellList;
-	private FinanceFlags financeFlags;	
-	
+	private FinanceFlags financeFlags;
+
 	private void commonConstruct()
 	{
 		buyList=new ArrayList<SlaveLineItem>();
 		sellList=new ArrayList<SlaveLineItem>();
 	}
-	
+
 	public ShopSlaveTrader(String str, DataInputStream dstream) throws IOException {
 		commonConstruct();
 		this.shopName=str;
-		this.lastVisited=dstream.readLong();
-		this.profitRatio=dstream.readFloat();
 		this.loadStore(dstream);
-		
+
 	}
 
 	public ShopSlaveTrader(String shopname) {
 		commonConstruct();
 		this.shopName=shopname;
-		lastVisited=Universe.getClock();		
+		lastVisited=Universe.getClock();
 		refreshStore();
 	}
 
@@ -91,7 +89,7 @@ public class ShopSlaveTrader implements ShopData {
 	}
 
 	private void loadStore(DataInputStream dstream) throws IOException {
-		shopName=ParserHelper.LoadString(dstream);
+
 		lastVisited=dstream.readLong();
 		profitRatio=dstream.readFloat();
 		if (dstream.readBoolean()) {
@@ -103,7 +101,7 @@ public class ShopSlaveTrader implements ShopData {
 
 	@Override
 	public void save(DataOutputStream dstream) throws IOException {
-		ParserHelper.SaveString(dstream, shopName);
+
 		dstream.writeLong(lastVisited);
 		dstream.writeFloat(profitRatio);
 		dstream.writeBoolean(financeFlags!=null);
@@ -116,7 +114,7 @@ public class ShopSlaveTrader implements ShopData {
 	public Screen getScreen() {
 		return new ShopSlaveTraderScreen(this);
 	}
-	
+
 	public boolean isUseCredits() {
 		return useCredits;
 	}
@@ -132,6 +130,6 @@ public class ShopSlaveTrader implements ShopData {
 	public FinanceFlags getFinanceFlags() {
 		return financeFlags;
 	}
-	
+
 
 }

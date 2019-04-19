@@ -5,10 +5,13 @@ end
 
 function civilian(controllable,sense,pos)
 	player=sense:getPlayer(controllable,true)
+	if (player==nil) then
+		return;
+	end
 	counter=controllable:getValue(0)
 	xpos=controllable:getValue(1)
 	ypos=controllable:getValue(2)
-	if player:getPosition():getDistance(xpos,ypos)<8 then
+	if (player:getPosition():getDistance(xpos,ypos)<8) then
 		counter=counter+1
 	else
 		counter=counter-1
@@ -26,7 +29,7 @@ function civilian(controllable,sense,pos)
 			end			
 		end
 	else
-		if pos:getDistance(xpos,ypos)>2	then
+		if (pos:getDistance(xpos,ypos)>2) then
 			if controllable:HasPath() then
 				controllable:FollowPath()
 			else
@@ -54,7 +57,7 @@ function main(controllable, sense, script)
 	if sense:getViolationLevel()>0 then
 		combat(controllable,sense,pos)
 	else
-		civilian(controllable,sense)
+		civilian(controllable,sense,pos)
 	end
 	
 end  

@@ -30,7 +30,7 @@
 			<row>1222 2210 00</row>	
 			<row>1111 1110 00</row>				
 		</prefab>	
-	<placeWidget x="2" y="1" name="console" info="interaction/forakis_III/medconsole"
+	<placeWidget x="2" y="1" name="console" info="interaction/forakis_III/medcomputer"
 			variable="31" />		
 	<breakable name="ruined medical equipment" x="3" y="1" sprite="91" hp="10"
 			items="2">

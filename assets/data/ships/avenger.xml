@@ -105,7 +105,8 @@
 						<loot item="magazine(rifle)" chance="1.0" />						
 						<loot item="magazine(rifle)" chance="1.0" />		
 						<loot item="magazine(rifle)" chance="1.0"/>	
-						<loot item="Zokol rifle" chance="1.0" />							
+						<loot item="Zokol rifle" chance="1.0" />				
+						<loot item="capture device" chance="1.0" />										
 					</lootTable>				
 				</contains>
 				<widgetItem>advanced cargo container</widgetItem>
@@ -122,9 +123,7 @@
 				</contains>
 				<widgetItem>interplanetary reactor</widgetItem>	
 			</placeWidget>
-			<placeWidget x="7" y="3" name="tech_research">
-				<research data="archeotech ranged weapon" research="tech/ion_bow.xml" DC="14"/>
-				</placeWidget>
+		
 			<placeWidget x="7" y="1" name="slot">
 				<contains name="modules/space warper" />
 				<widgetItem>space warper</widgetItem>		

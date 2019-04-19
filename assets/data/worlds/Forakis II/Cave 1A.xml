@@ -14,8 +14,8 @@
 
 	<description>The caves are hot, geothermal currents interacting with
 		flowing water to create blasts of steam and flows of warm wet wind.</description>
-	<transition direction="east">Cave 1B</transition>
-	<transition direction="south">Cave 2A</transition>
+<!-- 	<transition direction="east">Cave 1B</transition>
+	<transition direction="south">Cave 2A</transition> -->
 	<mapgen>
 		<walloff wall="0" sides="northwest" />
 		<preloadprefab width="5" height="5" preloadID="4">
@@ -44,11 +44,12 @@
 				</SeedNPCs>
 			</floodfill>
 		</cavegen>
-		<recordEdges zone="Cave 1B" preloadID="3" side="east" />
+	<!-- 	<recordEdges zone="Cave 1B" preloadID="3" side="east" />
 		<recordEdges zone="Cave 2A" preloadID="0" side="south" />
 		<carveEdges preloadID="1" side="east" tile="1" replace="0" />
-		<carveEdges preloadID="2" side="south" tile="1" replace="0" />
+		<carveEdges preloadID="2" side="south" tile="1" replace="0" /> -->
 		<auditpaths carve="0" replace="1" />
+		<walloff wall="0" sides="northeastsouthwest" />
 	</mapgen>
 
 </zone>
