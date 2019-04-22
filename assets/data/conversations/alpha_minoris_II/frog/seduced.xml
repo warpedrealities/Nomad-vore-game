@@ -3,8 +3,11 @@
 
 	<page ID="start">
 		<text>
-			no interactions with a seduced frog girl yet. research maybe?
+			The froggy looks up at you lustfully, her green cheeks darkened and her bosom heaving mesmerizingly as she sits there marinating in the subtle aroma of her own arousal.
 		</text>
+		<choice destination="analvore0" text="*take a seat*">
+			<assertion evaluate="hasperk" perk="analvore" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -20,6 +23,35 @@
 		<choice destination="end" text="darn" />
 	</page>
 
+	<page ID="analvore0">
+	<text>
+	You smile at her and turn to face away as you step in front of her, exposing your <macro ID="butt_size_desc" /> rear to her in a way that makes her chirr hotly. Her hands sliding up to caress the cheeks of your rear. This pleases you but it's not what you're here for and so she finds your rear smooshing up against her face as you lean back, pressing your ass against her head until with a schlorp her head vanishes up your backside. Your amphibious prey letting out a pleased but muffled chirr as she finds herself lewdly sliding inside you. It's a surprise to her clearly, but hardly an unwelcome one as she doesn't try to pull out and just wriggles her shoulders against your pucker as you start to slide her deeper inside.
+	</text>
+	<choice destination="analvore1" text="she slides in soo smooth"/>
+	</page>
+	
+	<page ID="analvore1">
+	<text>
+	The froggy lets out a pleased moan as you start to squeeze her breasts past your sphincter and up into your steaming hot bowels. The amphibian's thicc body proving delightfully easy to slide up your rear like this as you sit down over her. The frog's own booty proving a good backstop to help slide her smooth and wriggling form up into you. A bulge of her face shows up on your tummy before your gut begins to bulge and stretch out mightily to contain your curvy buttfood. As your stretched booty reaches her hips you straighten back up, dangling her thicc thighs out of your ass and clenching to drag her deeper in.
+	</text>
+	<choice destination="analvore2" text="all the way"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	You feel the frog woman rubbing and kneading at your belly from inside as you work to cram her fully up inside yourself. Your hands now stroking and groping over your belly in delight as you feel her filling you out and disappearing into your ass. The amphibian's legs easily drawn in by nothing more than the clenches of your hungry behind until her feet pop past your rear cheeks and she disappears entirely. The lusty froggy wriggling around inside your gut as her legs slide up through your innards to join the rest of her curled within you. The way she's rubbing at your innards you know she'll have no qualms about getting digested and stacked onto your curves.
+	</text>
+	<choice destination="analvore3" text="give her what she wants, what she deserves"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	The frog wriggles around in the depths of your belly chirring and letting out delighted ribbits as she stews in your inner juices but you have things to do. The amphibian lets out a louder more delighted croak as she feels your enzymes soak into her, writhing around inside your belly as you clench down and squeeze over her. Your hands and bellywalls pressing in on her, rubbing enzymes into her..making her soft and bountifully curvy body gradually turn even softer and bountiful in a different way. It doesn't take long before the amphibian digests away entirely into goop, your gut rounding out and then shrinking back down filling your body with her nutrients and your mind with the satisfaction of a delightful assmeal.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
 
 	<page ID="study">
 		<text>

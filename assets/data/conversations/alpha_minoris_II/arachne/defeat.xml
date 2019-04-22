@@ -34,9 +34,18 @@
 	
 	<page ID="oralvore2">
 	<text>
-	
+	You hear her muffledly protesting against the inside of your bulging belly and shoving at your innards. But the kneading she's giving your guts only loosens them up further to accept more of her. You cram her thrashing legs past your lips greedily, forcing her to squish up in your belly as you gobble her up entirely. Your middle now bloated and domed out massively, the shape of the arachne squirming inside clearly visible in your tummy contours. Truly she's a wonderful meal, now to squeeze and gurgle her until she's all gone.
 	</text>
+	<choice destination="oralvore3" text="*oh yes, digest her*"/>
+	</page>
 	
+	<page ID="oralvore3">
+	<text>
+	Your gut gurgles and grinds, the soft curves and sturdy abdomen of the arachne now serving to please and feed you as your belly works her over. She doesn't go quietly, even apart from the noisy churns of your gut she lets out protesting cries and thrashes around powerfully in your bloated tummy. The spider taur making your rounded gut jostle and sway but her efforts to stop you breaking her down are as effective as they were at stopping you eating her in the first place. Her chitin softens, her curves round out and her squirms and protests weaken until only sloshing remains. And soon, as you soak up her nutrients and utterly absorb her, not even that remains. Your belly shrinking down steadily as all that was once her becomes fuel for your superior body.
+	</text>
+		<effect type="feed" value="150" />
+		<special effect="removenpc" />
+	<choice destination="end" text="carry on"/>
 	</page>
 	
 	<page ID="devour">

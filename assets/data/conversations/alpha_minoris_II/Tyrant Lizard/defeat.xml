@@ -7,6 +7,9 @@
 		<choice destination="oralvore0" text="show her who the real predator is">
 		<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
+		<choice destination="unbirth0" text="Conquer her with your feminine folds">
+			<assertion evaluate="hasperk" perk="unbirthing" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -18,9 +21,39 @@
 		<choice destination="end" text="leave her be" />
 	</page>
 
+	<page ID="unbirth0">
+	<text>
+	The beast is muscular, powerful..firm of body. In every way the anthropomorphic dinosaur is imposing..so it is an irresistable prospect to take that hardness and strength and submit it to the softness of your nethers. To take her and gush her up in your womb. You stand astrid her and grab her reptilian muzzle, shoving her head up between your thighs with a mhmmm. That snout of hers parting your netherlips, sliding into the hot and dripping channel of your sex. The tyrant lizard struggling in vain to resist her fate but unable to overcome your desire that she be conquered by your pussy.
+	</text>
+	<choice destination="unbirth1" text="conquer more"/>
+	</page>
+	
+	<page ID="unbirth1">
+	<text>
+	You squat down over the tyrant's shoulders, claiming more of the mighty lizard. She writhes and struggles against your silken embrace but as you pin her upper arms she can do even less to resist. Though her struggling squirms as she starts to slide up into your voracious womb feel exhilerating..scaled hard muscles rubbing against the inside of your nethers. Her frame well lubricated by your free flowing love juices and being conquered inch by inch as you start drawing her in with your internal muscles now, working over her chest and abs..your middle bulging out mightily as she's overcome, dominated and contained within you.
+	</text>
+	<choice destination="unbirth2" text="complete conquest"/>
+	</page>
+	
+	<page ID="unbirth2">
+	<text>
+	The tyrant growls impotently against the insides of your womb as her upper body becomes immensely gravid, pregnant and bulging with her form. Your lustful juices spill down her legs and tail as they protrude from your netherlips and are gradually drawn in and conquered. The dinosaur woman's might finally being conquered entirely as juices drip from her tail and claw -tips into the dirt. Your nethers sealing up behind her tailtip as a moan inducing thrill of satisfaction and dominance runs through you. Her powerful form writhing, sealed helplessly in your womb and soon to be reduced to mere feminine fluids.
+	</text>
+	<choice destination="unbirth3" text="and now..satisfaction"/>
+	</page>
+	
+	<page ID="unbirth3">
+	<text>
+	You slide one hand over your belly. You can feel the trapped dino woman thrash around under your skin in response to your possessive caress. But you slide your hand further down, between your legs, caressing your folds as you savour her squirms..and turn up the heat on her. Your moaning delight mingling with the muffled growls and grunts of your furiously squirming prey as your pleasure builds. Working up as she's ground down by your walls until with a sudden shift in pitch the tyrant lizard finds herself unmade, her growl turning into a squeel and then a sloshing as your womb clenches down upon her...the feeling making you weak in the knees and soon after you climax, sending her remnants splattering out in a flood onto the dirt. All that she was now just a flush on your cheeks and a puddle at your feet as you pant there and luxuriate in the aftermath of your conquest...
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+
 	<page ID="oralvore0">
 	<text>
-	This reptilian and beastial creature thought its raw might could make a prey out of you. It's only fitting then that you show her the depths of her mistake, and even if she won't comprehend it you've worked up an appetite that needs satisfying. Weakened from your triumph she fails to fend you off as you pin her clawed arms and grab ahold of her toothy snout, holding her jaws together and bringing them to meet your lips. The tyrant lizard lets out a growl as she realizes what you're about to do and struggles, thrashing around under you but she can't stop you from engulfing her head with your lips and start to swallow her alive.
+	This reptilian and beastial creature thought her raw might could make a prey out of you. It's only fitting then that you show her the depths of her mistake, and even if she won't comprehend it you've worked up an appetite that needs satisfying. Weakened from your triumph she fails to fend you off as you pin her clawed arms and grab ahold of her toothy snout, holding her jaws together and bringing them to meet your lips. The tyrant lizard lets out a growl as she realizes what you're about to do and struggles, thrashing around under you but she can't stop you from engulfing her head with your lips and start to swallow her alive.
 	</text>
 	<choice destination="oralvore1" text="show you're the apex"/>
 	</page>

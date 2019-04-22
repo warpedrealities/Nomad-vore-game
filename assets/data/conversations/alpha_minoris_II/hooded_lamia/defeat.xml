@@ -2,8 +2,11 @@
 <Conversation>
 	<page ID="start">
 		<text>
-		no interactions to be had with defeated hooded lamia yet.
+		The vexxing snake woman has been laid low at last. She hisses at you in warning, hood flaring and she attempts to spit up her venomous ooze. But nothing comes out and she wriggles in annoyance, wiping her mouth and glaring up at you. Even in defeat she's a pain.
 		</text>
+		<choice destination="cockvore0" text="only turning her into a load will make you feel better about this snake woman, so lets do that">
+			<assertion evaluate="hasperk" perk="cockvore" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -13,6 +16,13 @@
 			</assertion>
 		</choice>		
 		<choice destination="end" text="darn"/>
+	</page>
+
+	<page ID="cockvore0">
+	<text>
+	
+	</text>
+	
 	</page>
 
 	<page ID="devour">
