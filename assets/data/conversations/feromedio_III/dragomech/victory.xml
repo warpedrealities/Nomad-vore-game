@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Conversation>
+	
+	<page ID="start">
+		<preference fetish="ferals" />	
+		<text> 
+		The dragomech bounds over and looms over you, pinning you beneath a heavy paw the armoured war synth looks down at you "Victory attained, hostile combatant detained. Initiate prisoner processing." declares the dragomech as it looms.
+		</text>
+		<choice destination="oralvore0" text="*dragomech licks lips*">
+			<preference fetish="oralvore" />
+		</choice>
+		<choice destination="cockvore0" text="*something stirring between the synth's legs*">
+			<preference fetish="cockvore" />
+		</choice>
+		<choice destination="instakill" text="*fucking laser eyes*"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	"Defeated hostile combatant now defined as fuel." says the dragomech with a grin. And doesn't give you time to protest this before lunging forwards, jaws coming down around your head and shoulders. Hot lubricating fluid flowing over your skin and heat wafting out around you as the synth dragon's jaws clench tight around you. You can feel the weight of this armoured juggernaut shifting over you as its body bunches up, then mercifully that paw is lifted up off your body..but only so that the dragomech can grasp you bodily in its jaws and then fling its head back..your body carried with, upended by the hungry synth.
+	</text>
+	<choice destination="oralvore1" text="*fuel?!*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You find yourself resting upside down in the flexible, and flexing, throat of the fuel starved war machine. The dragomech letting out a growl as its tongue licks, laps over and in general tastes your helpless body. The dragon deriving a very real satisfaction despite her synthetic nature. But the war dragon doesn't linger too long in savouring you before it resumes swallowing, gulping your body down into its throat to make a hefty bulge. Your legs gradually disappearing past the victorious dragon's jaws as they flex open and closed to ease you down with gravity's aid.
+	</text>
+	<choice destination="oralvore2" text="*swallowed*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Down down down you go with the sounds of the dragon's growls of delight and that rippling throat loud around you as you slip on into its belly. Your legs disappearing entirely out of view, the war dragon's jaws snapping shut behind your feet "Hostile combatant, consumed, processing..imminent, satisfaction, impending." the dragon says happily as you slide down to form a bulge weighing down the large and powerful predator's belly. The stomach of the synth as hot, wet and tight as any other stomach you could expect to find yourself in and your shape now makes that gut sag between the dragomech's legs "Processing..commencing." 
+	</text>
+	<choice destination="oralvore3" text="*digested*"/>
+	</page>
+	
+	<gameover ID="oralvore3">
+	<text>
+	You don't get any time to protest this, nor does the dragomech pay any attention. The stomach of the dragomech clenches and grinds about you relentlessly, processing fluids flooding in even as internal processes knead and press all about you. Against this powerful onslaught your body puts up as much of a resistance as you had been able to put up against the military might of the warmech before it had bested you. In hardly any time at all the dragomech's stomach is contracting and tightening up "hostile combatant processing complete, fuel reserves increased." the dragomech says and then smirks "Victory was delicious."
+	</text>
+	</gameover>
+	
+	<page ID="cockvore0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="instakill">
+	<text>
+	The dragomech lowers its head towards your face "Prisoner elimination will now commence." says the dragomech..and those ocular lenses start to glow from within "I shoot fucking lasers out of my fucking eyes." the dragomech declares...
+	</text>
+	<choice destination="laserGO" text="uh oh"/>
+	</page>
+
+	<gameover ID="laserGO">
+	<text>
+	...Well at least that was..quick...
+	</text>
+	</gameover>
+
+</Conversation>
