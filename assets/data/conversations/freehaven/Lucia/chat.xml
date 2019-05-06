@@ -79,7 +79,8 @@
 	<condition evaluate="CREDITS" operator="greaterthan" value="10000" />	
 	</choice>
 	<choice destination="jobcant" text="$I can't afford that right now">
-	<condition evaluate="CREDITS" operator="lessthan" value="10000" />		
+	<condition evaluate="CREDITS" operator="lessthan" value="10000" />	
+	</choice>
 	</page>
 	
 	<page ID="jobagree">

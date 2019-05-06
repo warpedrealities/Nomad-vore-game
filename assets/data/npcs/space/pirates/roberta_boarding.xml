@@ -32,8 +32,8 @@
 	
 	</rpg>
 	<crew skill="NAVIGATION" value="2"/>
-	<victory conversation="space/pirates/roberta/victory" />
-	<seducer conversation="space/pirates/roberta/victory" />
+	<victory conversation="space/pirates/dreadpirate_roberta/victory" />
+	<seducer conversation="space/pirates/dreadpirate_roberta/victory" />
 	<controller AI="roberta_boarding" />
 	<faction value="pirate" />
 </NPC>

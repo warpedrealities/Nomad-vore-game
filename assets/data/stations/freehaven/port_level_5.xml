@@ -116,7 +116,8 @@
 	<placeWidget name="craftingtable" x="8" y="7" />		
 	<placeNPC name="freehaven/civilians/Laesha" x="23" y="23" />		
 	<placeNPC name="freehaven/civilians/Desharr" x="16" y="29" />	
-	<placeNPC name="freehaven/civilians/tourist" x="14" y="27" />	
+	<placeNPC name="freehaven/civilians/tourist" x="14" y="27" />
+	<placeNPC name="freehaven/civilians/Laang" x="15" y="20" />	
 	<placeNPC name="freehaven/civilians/Lucia" x="18" y="27">
 	<script spawn="lucia_spawn"/>
 	</placeNPC>

@@ -24,6 +24,16 @@
 			<towngrid minhouses="32" maxhouses="32" tile="2" path="3"
 				registerRooms="true">
 				<floodfill tile="3">
+				<Seedwidgets min="12" max="24" name="chest">
+					<lootTable>
+						<lootSubTable chance="1" file="warzone_tier_1" />
+						<lootSubTable chance="0.5" file="warzone_tier_1" />
+						<lootSubTable chance="0.25" file="warzone_tier_1" />
+						<lootSubTable chance="0.15" file="warzone_tier_1" />	
+						<lootSubTable chance="0.25" file="warzone_tier_1" />
+						<lootSubTable chance="0.15" file="warzone_tier_1" />							
+					</lootTable>
+				</Seedwidgets>
 				</floodfill>
 			</towngrid>	
 	</partition>

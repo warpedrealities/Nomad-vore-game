@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<lootTable>
+	<loot item="scrap metal" chance="8" />
+	<loot item="battery" chance="4" />
+	<loot item="optics" chance="4" />
+	<loot item="heavy plate" chance="4" />	
+	<loot item="precision mechanisms" chance="4" />
+	<loot item="computation valve" chance="4" />
+	<loot item="explosive grenade" chance="2" />		
+	<loot item="repair kit" chance="2" />
+	<loot item="spacebar" chance="2" />
+	<loot item="fuel canister(poor)" chance="2" />
+	<loot item="bullets" chance="2" />	
+	<loot item="rifle round" chance="2" />
+	<loot item="power-cell" chance="1" addendum="0" />	
+</lootTable>

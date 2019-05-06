@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<!--subsequent meetings-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
+	<text>
+
+	</text>
+	
+	</page>
+
+	<page ID="start">
+	<text>
+	The reptilian looks you over a moment "Finally, before we go any further I have some questions for you." she says somewhat imperiously.
+	</text>
+<!-- 	<effect type="setlocalflag" flag="talked" value="1" />	 -->
+	<choice destination="question0" text="Very well, ask your questions"/>
+	<choice destination="who" text="No, who are you and why do you think you can ask me questions"/>
+	<choice destination="end" text="Not on your life *walk away*"/>
+	</page>
+	
+	<page ID="questions0">
+	<text>
+	
+	</text>
+	
+	</page>
+	
+	<page ID="who">
+	<text>
+	"I am Princess L'aang of the A'shan people. You may address me as your highness or possibly if you are greatly honoured, mistress. And I am asking questions to determine your suitability."
+	</text>
+	<choice destination="bar" text="$your highness? then why are you holding court in a bar"/>
+	<choice destination="questions0" text="very well, ask your questions"/>
+	<choice destination="end" text="I see, still not answering your questions *walk away*"/>
+	</page>
+	
+	<page ID="bar">
+	<text>
+	"I am temporarily inconvenienced that is all. In time I will be restored to my rightful place."
+	</text>
+	
+	</page>
+	
+</Conversation>

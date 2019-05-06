@@ -4,7 +4,7 @@
 	<page ID="start">
 		<preference fetish="ferals" />	
 		<text> 
-		The dragomech bounds over and looms over you, pinning you beneath a heavy paw the armoured war synth looks down at you "Victory attained, hostile combatant detained. Initiate prisoner processing." declares the dragomech as it looms.
+		The dragomech bounds over and looms over you, pinning you beneath a heavy paw the armoured war synth looks down at you "Victory attained, hostile combatant detained. Now initiating prisoner processing." declares the dragomech as it looms over you.
 		</text>
 		<choice destination="oralvore0" text="*dragomech licks lips*">
 			<preference fetish="oralvore" />
@@ -14,6 +14,34 @@
 		</choice>
 		<choice destination="instakill" text="*fucking laser eyes*"/>
 	</page>
+		
+	<page ID="cockvore0">
+	<text>
+	The dragomech looks like its smirking as it looms over you, you wonder what it's doing..whether it's going to get to the processing...whether its glitched out in which case you might be able to escape. But the reason for that smirk becomes apparent, a hefty length of throbbing dickmeat extending from a port on the underside of the quadraped, draping down and firming up just ahead of hefty balls that you suddenly realize are to be your destination. The predatory synth lets out a chuckle "Yes, humiliation and liquidation." it declares, and shifts posture before shoving that girthy and drooling dick up against your feet.
+	</text>
+	<choice destination="cockvore1" text="*fed into synth dick*"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	The dragon thrusts forwards and your feet slide into that pulsating black rod with a squelch of hot lubricating fluids. That thick length bulging as the mighty war machine thrusts its length forwards again to engulf your calves, then yet again to engulf your thighs. A rumbling buzzing growl of what sounds very much like delight emanating from the dragonsynth above you as you sink into its voracious length. Your ass next to be consumed as the dragomech shifts and lifts that paw off you, content to squeeze you down into its cock. Your feet sliding into the synthbeast's sack now.
+	</text>
+	<choice destination="cockvore2" text="all the way in"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>	
+	"Hostile combatant, stimulating." the dragomech groans out as it clenches its shaft around your legs and slurps you deeper inside. Your upper body gradually vanishing under the dragon as you're crammed into its balls. Your shape making them swell and sag and hang low and heavy. With a final schlorp you vanish into its cocktip, your <macro id="hair_desc_short" /> hair the last anyone sees of you before that cumslit seals over the top of your head. The synth's voracious cock rippling as you're fed down entirely into the warmachine's balls.
+	</text>
+	<choice destination="cockvore3" text="doomed to be fluid"/>
+	</page>
+	
+	<gameover ID="cockvore3">
+	<text>
+	The beastial synth begins to rub its cock against surfaces as a form of stimulation as those balls you're trapped in stir to life. The sticky goo churning around you as the dragon growls and groans in delight, gradually melting you down into a hot load. Those balls contracting, rounding out..your every trace rendered down into goopy fluids. Is it any wonder the wardragon is soon letting out a roar of pleasure, standing proud with legs spread and a bucking and gushing cock jetting cum from betwixt its limbs. Your sticky remnants arcing out to form a gooey splatter across the war torn ground in front of it "Hostile combatant, is now the optimal form of pleasure fluid."
+	</text>
+	
+	</gameover>
 	
 	<page ID="oralvore0">
 	<text>
@@ -41,17 +69,11 @@
 	You don't get any time to protest this, nor does the dragomech pay any attention. The stomach of the dragomech clenches and grinds about you relentlessly, processing fluids flooding in even as internal processes knead and press all about you. Against this powerful onslaught your body puts up as much of a resistance as you had been able to put up against the military might of the warmech before it had bested you. In hardly any time at all the dragomech's stomach is contracting and tightening up "hostile combatant processing complete, fuel reserves increased." the dragomech says and then smirks "Victory was delicious."
 	</text>
 	</gameover>
-	
-	<page ID="cockvore0">
-	<text>
-	
-	</text>
-	
-	</page>
+
 	
 	<page ID="instakill">
 	<text>
-	The dragomech lowers its head towards your face "Prisoner elimination will now commence." says the dragomech..and those ocular lenses start to glow from within "I shoot fucking lasers out of my fucking eyes." the dragomech declares...
+	The dragomech lowers its head towards your face "Prisoner elimination will now commence." says the dragomech..and those ocular lenses start to glow from within "And I shoot lasers out of my fucking eyes." the dragomech declares...
 	</text>
 	<choice destination="laserGO" text="uh oh"/>
 	</page>
