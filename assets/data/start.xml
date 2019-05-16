@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <start>
-	<system value="Avior" />
-	<world value="avenger0" />
-	<zone value="avenger0" />
+	<system value="Alpha Minoris" />
+	<world value="avenger1" />
+	<zone value="avenger1" />
 	<position x="2" y="2" />
 	<item value="Laser pistol" />
 	<item value="Knife" />

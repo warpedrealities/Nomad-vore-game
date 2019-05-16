@@ -2,7 +2,7 @@
 <System>
 	<Star x="0" y="0" sprite="star" intensity="15" />
 	<World x="6" y="-6">Avior II</World>	
-	<Spaceship x="0" y="-2" file="avenger"/>	
+	<!-- <Spaceship x="0" y="-2" file="avenger"/>	 -->
 	<spawnRules>
 	<spawn script="pirates"/>
 	<spawn script="talharans"/>	

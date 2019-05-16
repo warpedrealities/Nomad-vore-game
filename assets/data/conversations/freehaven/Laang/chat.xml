@@ -2,45 +2,257 @@
 <Conversation>
 
 	<page ID="start">
-	<!--subsequent meetings-->
-	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
+	<!--insulted-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="insulted" />
 	<text>
-
+	Her highness L'aang narrows her gaze at you, she doesn't say anything..simply radiates hostility in her glare and agitated twitching.
+	</text>
+	<choice destination="end" text="*back off*"/>
+	</page>
+	
+	<page ID="start">
+	<!--is servant meetings-->	
+	<condition evaluate="GLOBALFLAG" operator="equals" value="1"	flag="laang_servant" />	
+	<text>
+	
 	</text>
 	
 	</page>
 
 	<page ID="start">
+	<!--subsequent meetings-->
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
 	<text>
-	The reptilian looks you over a moment "Finally, before we go any further I have some questions for you." she says somewhat imperiously.
+	L'aang smiles "Greetings again. What brings you to me?" she asks, patient and magnanimous as she holds court at her table in the bar.
 	</text>
-<!-- 	<effect type="setlocalflag" flag="talked" value="1" />	 -->
-	<choice destination="question0" text="Very well, ask your questions"/>
-	<choice destination="who" text="No, who are you and why do you think you can ask me questions"/>
-	<choice destination="end" text="Not on your life *walk away*"/>
+	<choice destination="what" text="$So what are you doing here?"/>
+	<choice destination="serve0" text="$would you be interested in taking me on as a servant your highness?">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="servant_info" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="servant_check" />
+	</choice>
+	<choice destination="end" text="$Nothing, merely paying my respects in passing"/>
 	</page>
 	
-	<page ID="questions0">
+	<page ID="serve0">
+	<text>
+	L'aang pauses a bit, then smiles "Well naturally, why wouldn't you. I may be willing to give you the honour of serving me. But first, I'd like to ask some questions. Purely to determine your suitability you understand. How good are you at organization? There are a great many things in a royal's life which they really must not be troubled with. Keeping Itineraries, schedules, that sort of tedium."
+	</text>
+	<choice destination="serve0A" text="$I would say I'm a highly organized person and happy to help organize for others"/>
+	<choice destination="serve0B" text="$organizing things? I have trouble putting on matching socks in the morning"/>
+	</page>
+	
+	<page ID="serve0A">
+	<text>
+	"Excellent. I am pleased to hear it."
+	</text>
+	<effect type="incrementlocalflag" flag="value" value="1" />		
+	<choice destination="serve1" text="*next question*"/>
+	</page>
+
+	<page ID="serve0B">
+	<text>
+	"Well. I suppose I can't expect everything. This isn't the homeworld and it's not like you were properly trained." says L'aang.
+	</text>
+	<choice destination="serve1" text="*next question*"/>
+	</page>
+	
+	<page ID="serve1">
+	<text>
+	L'aang smiles "Now. As an A'shani I have particular needs that you might not be familiar with, and as a royal I certain deserve my pampering. So I will ask, how are you when it comes to scales and claws. Polishing, cleaning, trimming, waxing, oiling. A finely bred A'shani such as myself needs a lot of attention to be at my best dear."
+	</text>
+	<choice destination="serve1A" text="$I know my way around caring for a creature as magnificently scale clad as yourself"/>
+	<choice destination="serve1B" text="$I just need to scrub you down with a lump of pumice right? that'll sort it out"/>
+	</page>
+	
+	<page ID="serve1A">
+	<text>
+	L'aang smiles with genuine pleasure and surprise "Well, you truly are an unexpected find. We'll see if your skills live up to your words. But you certainly express the right attitude."
+	</text>
+	<effect type="incrementlocalflag" flag="value" value="1" />		
+	<choice destination="serve2" text="*next question*"/>
+	</page>
+	
+	<page ID="serve1B">
+	<text>
+	L'aang actually winces, flinching back a little forming a more severe arch with her neck before continuing on with a forced bland tone as she untenses and shifts back into a relaxed posture "Not quite, still one cannot have everything and I suppose I was expecting too much."
+	</text>
+	<choice destination="serve2" text="*next question*"/>
+	</page>
+	
+	<page ID="serve2">
+	<text>
+	L'aang looks you over and then asks "And this is the final question and I believe perhaps the most pertinent one. When consumed do you know how to please your predator? I don't want a passive meal who simply sits inside me and waits to digest. Make no mistake, serving as my meal is part of serving me."
+	</text>
+	<choice destination="serve2A" text="$I will make you feel good I promise, I know how to squirm just right and i'm looking forward to feeding you"/>
+	<choice destination="serve2B" text="$I'm not overly enamoured by being food and I prefer to just get it over with if it happens"/>
+	</page>
+	
+	<page ID="serve2A">
+		<condition operator="greaterthan" evaluate="BODYVALUE"
+					bodypart="breasts" partvalue="size" value="9" />
+	<text>
+	"Oh yes, that's what I like to hear. Especially from a nicely endowed meal such as yourself." she says and glances at your chest "I look forward to feeling those bulging out my belly."
+	</text>
+	<choice destination="serve3" text="*final decision*"/>
+	</page>
+
+	
+	<page ID="serve2A">
+	<text>
+	"Mhmm, yes. I will enjoy you, perhaps I will even enjoy you frequently." she says and smiles in delight as she looks you over.
+	</text>
+	<choice destination="serve3" text="*final decision*"/>	
+	</page>
+	
+	
+	<page ID="serve2B">
+	<condition operator="greaterthan" evaluate="BODYVALUE"
+					bodypart="breasts" partvalue="size" value="9" />
+	<text>
+	"A pity, and you do have such magnificently tasty assets." says L'aang, making an uncharacteristically crude cupping motion with her palm at about chest level "But I suppose the proper attitude might take time to cultivate."
+	</text>
+	<choice destination="serve3" text="*final decision*"/>
+	</page>
+
+	
+	<page ID="serve2B">
+	<text>
+	"A pity, but i suppose the proper attitude might take time to cultivate." says L'aang unruffled by this it seems.
+	</text>
+	<choice destination="serve3" text="*final decision*"/>
+	</page>	
+
+	<page ID="serve3">
+	<condition evaluate="LOCALFLAG" operator="greaterthan" value="3"	flag="value" />
+	<text>
+	
+	</text>
+
+		<effect type="setlocalflag" flag="servant_check" value="1" />	
+	</page>
+	
+	<page ID="serve4A">
+	<text>
+	
+	</text>
+		<effect type="setglobalflag" flag="laang_servant" value="1" />		
+	</page>
+	
+	<page ID="serve4B">
 	<text>
 	
 	</text>
 	
 	</page>
 	
-	<page ID="who">
+	<page ID="serve3">
 	<text>
-	"I am Princess L'aang of the A'shan people. You may address me as your highness or possibly if you are greatly honoured, mistress. And I am asking questions to determine your suitability."
+	
 	</text>
-	<choice destination="bar" text="$your highness? then why are you holding court in a bar"/>
-	<choice destination="questions0" text="very well, ask your questions"/>
-	<choice destination="end" text="I see, still not answering your questions *walk away*"/>
+	<effect type="setlocalflag" flag="servant_check" value="1" />	
+	</page>
+	
+	<page ID="start">
+	<text>
+	The reptilian looks up from her affectation of disinterest and turns her gaze in your direction. She seems to be assessing you and doesn't seem impressed "Hmm, and who has the honour of approaching me?"
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />	
+	<choice destination="introduction" text="$my name is PNAME"/>
+	<choice destination="honour" text="$the honour of approaching you? who the hell do you think you are?"/>
+	</page>
+	
+	<page ID="introduction">
+	<text>
+	"I suppose your name is important very well, and I am her highness princess L'aang of the A'shan people." she informs you regally "You may refer to me as your highness, or possibly mistress should you have such a privilege bestowed upon you."
+	</text>
+	<choice destination="bar" text="I cant help but notice your highness you appear to be holding court in a bar"/>
+	<choice destination="respect" text="Then I am indeed honoured to meet you"/>
+	</page>
+	
+	<page ID="honour">
+	<text>
+	The reptilian bristles slightly "I am an A'shani royal, L'aang princess of the race and the empire. And you are neither blessed with royal title nor elevated to the race of A'shan. You will accord me due respect."
+	</text>
+	<choice destination="respect" text="Fine, I apologize."/>
+	<choice destination="bar" text="What sort of royalty holds court in a bar?"/>
+	<choice destination="disrespect" text="You must be joking, I'm not about to respect a lizard giraffe with delusions of grandeur"/>
 	</page>
 	
 	<page ID="bar">
 	<text>
-	"I am temporarily inconvenienced that is all. In time I will be restored to my rightful place."
+	"I am temporarily inconvenienced by political turmoil. But my status is undiminished, nor is the respect I am to be afforded. In time I will return to my throne, to dole out favours to those who aid me and punishment to those who slighted me." says L'aang, remarkably unruffled by the question. 
 	</text>
+	<choice destination="respect" text="I see, forgive my inquiry then your highness."/>
+	<choice destination="disrespect" text="$You're a delusional lizard playing pretend in other words"/>
+	</page>
 	
+	<page ID="respect">
+	<text>
+	L'aang graces you with a smile "And they say non a'shani are uncultured barbarians. You are well met then Vu'loi." says her highness "What brings you in front of me?" 
+	</text>
+	<choice destination="word0" text="$What does Vu'loi mean?"/>
+	<choice destination="curiousity" text="$Just curiousity, you are very different from the other creatures here"/>
+	<choice destination="what" text="$I was more wondering what you were doing here."/>
+	<choice destination="end" text="$Nothing, having made your acquaintance i will take my leave"/>
+	</page>
+	
+	<page ID="what">
+	<text>
+	"Well, I could spend my exile here cowering in my quarters. Or I could hold court at this table to see what comes of it. Perhaps I will find ones willing to aid me, do for me boons that I will return in kind when once more upon my throne. A throne i will regain all the sooner if one is willing to aid me in that. Or perhaps those who wish the privilege of being one of my." she pauses and seems to change what she was about to say "Servants." she finishes with a smile.
+	</text>
+	<choice destination="servant" text="$A servant?"/>
+	<choice destination="end" text="$I see, I wish you luck in your endeavours"/>
+	</page>
+	
+	<page ID="servant">
+	<text>
+	"Well of course, any of you should be honoured to have the privilege of serving an A'shani of such distinguished lineage and breeding as I. Alas, many are blind to this obvious fact. Still, it has been a while." she says, looking thoughtful and maybe a little despondent for a moment as she contemplates this fact.
+	</text>
+	<effect type="setlocalflag" flag="servant_info" value="1" />	
+		<choice destination="end" text="$thankyou for sharing but I have to go"/>
+	</page>
+	
+	<page ID="word0">
+	<text>
+	"Ah, it's as simple as to mean non A'shani." says L'aang with an expressive neck flex and a slow blink at being asked about it. Might be a slip of hers.
+	</text>
+	<choice destination="word1" text="$and that's all it means?"/>
+	<choice destination="what" text="$Okay, and now I'm curious what you're doing here in this bar."/>
+	<choice destination="end" text="$I see, I need to be somewhere else now"/>
+	</page>
+	
+	<page ID="word1">
+	<text>
+	L'aang's poise faulters only a moment as she hesitates "Well, it did imply something of a nature of inferiority and that your place was to serve as slaves and food. We've of course in our enlightened benevolence dropped our expectations that you serve in all cases." she says and smiles. 
+	</text>
+	<choice destination="what" text="$Okay, and now I'm curious what you're doing here in this bar."/>	
+	<choice destination="pride" text="$kind of an arrogant position to take"/>
+	<choice destination="end" text="$I see, I'll be going now."/>
+	</page>
+	
+	<page ID="curiousity">
+	<text>
+	"Well naturally, the inner grace and outer perfection of an A'shani would draw the eye of even those most blind to the concept of beauty." says L'aang.
+	</text>
+	<choice destination="what" text="$Okay, and now I'm curious what you're doing here in this bar."/>
+	<choice destination="pride" text="$you seem a little, prideful."/>
+	<choice destination="end" text="$I see, well I've drunk my fill of that outer perfection. I'll take my leave."/>
+	</page>
+	
+	<page ID="pride">
+	<text>
+	"Oh please, it's not my fault you weren't born A'shani. Do not take out your envy on me." says L'aang with a bemused scolding tone.
+	</text>
+	<choice destination="what" text="$Okay, and now I'm curious what you're doing here in this bar."/>
+	<choice destination="end" text="$Well if that's how you see it i'll take my envy elsewhere."/>	
+	</page>
+	
+	<page ID="disrespect">
+	<text>
+	L'aang's head darts backwards in shock and she stares, momentarily surprised but that surprise swiftly morphs into anger and those widened eyes narrow into a glare. "You dare...there was a time when I would have you flayed for such an insult..begone from my presence. Go away and stay away. With every breath you take I grow more and more of the opinion it is wrong for your kind to run free." 
+	</text>
+	<effect type="setlocalflag" flag="insulted" value="1" />		
+	<choice destination="end" text="$Not a problem, staying away from you will be a pleasure"/>
 	</page>
 	
 </Conversation>

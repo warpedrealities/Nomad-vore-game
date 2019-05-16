@@ -3,7 +3,7 @@
 	<sprite value="circle_L.png" />
 
 	<name>Laang</name>
-	<description>The lizard looks around with an air of despirited pride. Standing 8 feet tall and with an anthropomorphic body clad in jewelry and a gold trimmed thigh length purple mantle over a black bodysuit. Her body is undeniably feminine in her curves, especially around the bust and hips, though her overral frame seems slender and lengthened out. Her digitigrade legs end in painted claws. Every inch of her is covered in blue scales of varying hues from those toeclaws all the way up to her elongated and flexible neck surmounted by a reptilian head and tooth filled snout. A crest decorated with a jeweled chain surmounts her skull. And finally a long tail protrudes behind her with nearly six feet of taper from base to tip.</description>
+	<description>The lizard looks around with an air of despirited pride. Standing 8 feet tall and with an anthropomorphic body clad in jewelry and a gold trimmed thigh length purple mantle over a black bodysuit. Her body is undeniably feminine in her curves, especially around the bust and hips, though her overral frame seems slender and lengthened out. Her digitigrade legs end in painted claws. Every inch of her is covered in blue scales of varying hues from those toeclaws all the way up to her elongated and flexible neck surmounted by a reptilian head and tooth filled snout that brings more to mind geckos or komodo dragons than crocodiles or frogs. A crest decorated with a jeweled chain surmounts her skull. And finally a long tail protrudes behind her with nearly six feet of taper from base to tip.</description>
 	<rpg>
 		<experiencevalue value="15" />
 		<ability ability="STRENGTH" value="5" />
