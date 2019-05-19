@@ -14,6 +14,18 @@
 	<!--is servant meetings-->	
 	<condition evaluate="GLOBALFLAG" operator="equals" value="1"	flag="laang_servant" />	
 	<text>
+	L'aang gives you a toothsome smile of pleasure at your approach "Hello, How is my favourite servant?" she asks, motioning you closer and scrutizing you possessively. Even giving you a little sniff.
+	</text>
+	<choice destination="oralvore0" text="$I'm fine mistress, but i was wondering if you were hungry">
+		<preference fetish="oralvore" />
+		<preference fetish="females" />
+		<preference fetish="anthros" />
+	</choice>
+	<choice destination="end" text="$I'm fine mistress, just popping in to say hi"/>
+	</page>
+
+	<page ID="oralvore0">
+	<text>
 	
 	</text>
 	
@@ -125,31 +137,34 @@
 	<page ID="serve3">
 	<condition evaluate="LOCALFLAG" operator="greaterthan" value="3"	flag="value" />
 	<text>
-	
+	L'aang smiles "Well on balance I think I would be happy to have you as a servant. Alas my diminished means are such that I will not be able to keep you here with me. You will unfortunately have to see to your own upkeep, in gracious recognition of this I will allow you to come and go as you please. Though I do expect you will be here frequently to attend to your duties. I know this is discouraging, to serve an A'shani who cannot fulfil her obligations. But nevertheless, do you accept?"
 	</text>
-
+		<choice destination="serve4A" text="$Yes, I would still like to serve you L'aang"/>
+		<choice destination="serve4B" text="$No, I must refuse your offer"/>
 		<effect type="setlocalflag" flag="servant_check" value="1" />	
 	</page>
 	
 	<page ID="serve4A">
 	<text>
-	
+	L'aang smiles at that in delight "Mhmm, yes. Then I am happy to accept and honour you with the position of my servant. You may have the privilege of calling me mistress."
 	</text>
 		<effect type="setglobalflag" flag="laang_servant" value="1" />		
+		<choice destination="end" text="$Thankyou, mistress."/>
 	</page>
 	
 	<page ID="serve4B">
 	<text>
-	
+	L'aang looks, disappointed..but nods "Of course, you wouldn't want to serve an A'shani who couldn't afford to keep you clothed, rested and fed. I understand." she says and then smiles weakly "I respect your decision."
 	</text>
-	
+	<choice destination="end" text="$Sorry, I'll be going now"/>
 	</page>
 	
 	<page ID="serve3">
 	<text>
-	
+	"I'm afraid I've thought about it. And you really don't make the grade for a servant to an A'shani of my standing. A royal must have standards and you are I'm afraid below them. I am afraid I must refuse your desire to be my servant. Though I'm sure with training and diligence you will make another A'shani very happy some day."
 	</text>
 	<effect type="setlocalflag" flag="servant_check" value="1" />	
+	<choice destination="end" text="$I see, Farewell then"/>
 	</page>
 	
 	<page ID="start">
