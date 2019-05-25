@@ -25,12 +25,92 @@
 	</page>
 
 	<page ID="oralvore0">
+			<condition operator="greaterthan" evaluate="BODYVALUE"
+					bodypart="breasts" partvalue="size" value="9" />
+	
+	<text>
+	"For you? Always my delicious servant." she says and licks her lips, leaning in to pass that tongue of hers over your chest "Lets put these gorgeous tits of yours where they belong, bulging out my belly." she says with an anticipatory murr as she rises out of her seat <conditional>"Now, strip for your mistress"
+				<assertion evaluate="slothasitem" slot="2" /></conditional>
+	</text>
+	<choice destination="oralvore1" text="$Of course mistress"/>
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	"For you? Always my delicious servant." she says and licks her lips "Lets get you where you belong shall we?" she says and smiles as she looks you over and rises from her seat <conditional>"Now, strip for your mistress"
+				<assertion evaluate="slothasitem" slot="2" /></conditional>
+	</text>
+	<choice destination="oralvore1" text="$Of course mistress"/>
+	</page>
+
+	<page ID="oralvore1">
+	<text>
+	Soon, oh so very soon, you're standing naked before your mistress. Naked and ready for her to consume, the voracious reptilian royal standing likewise before you..her gaze drinking in your form, her snout moving closer to breath in your scent and taste your neck "Your mistress thanks you for this servant, you will be a pleasing meal." she says, placing her hands on your shoulders. She breathes in deeply of your scent for a moment longer, then her neck arches down and her jaws part to stretch over the top of your head. Her sweltering hot saliva drooling copiously down around your ears and soaking your <macro id="hair_desc_short" /> hair. L'aang moaning softly as she licks over your face.
+	</text>
+	<choice destination="oralvore2" text="*food for your mistress*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Your mistress savours you for a few glorious seconds before starting to gulp you up into her royal throat. That long neck of hers serving to wonderfully outline your head, then shoulders as she stretches her jaws and works them down over you. Her hands holding you in place now grasping on your hips as she licks her way down over your body.
+	</text>
+	<choice destination="oralvore3" text="*deeper in*"/>
+	</page>
+	
+	<page ID="oralvore3">
+			<condition operator="greaterthan" evaluate="BODYVALUE"
+					bodypart="breasts" partvalue="size" value="9" />
+	<text>
+		The jaws of the A'shani stretch to encompass your ample and copious tits. L'aang letting out a more pleased groan around your maw filling breasts as she works them fully into her mouth, licking over them before turning them into a hefty bulge in her neck. The bulge of your wondrous rack sliding on down through her as she starts to gulp down more and more of you, reaching your waist around the time your head starts to slide past her collarbone, chest and nears her belly.
+	</text>
+	<choice destination="oralvore4" text="*oh yes, get ate*"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	The A'shani works her mouth down around your chest, smoothly encompassing your assets and letting her tongue roam over them as she gobbles you up. Your head sliding deeper down her throat, leading the way to the wonderful belly of the reptilian princess. Your head continues sliding deeper as she works to gulp down more and more of you, reaching your waist around the time your head starts to slide past her collarbone, chest and nears her belly.
+	</text>
+	<choice destination="oralvore4" text="*oh yes, get ate*"/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	You start to slide your way down into the welcoming embrace of mistress's belly. Your chest squeezing behind her own nicely sizable scale clad breasts and then spilling down into her gut as well. The voracious reptile groping your ass as she helps squeeze you down into her belly, bulging out and swelling your predatory mistress nicely. Soon she's straightening up her neck and powerfully hefting your legs up into the air. Your upper body bulging her neck, before those bulges are replaced by those of your thighs..then calves, then ankles and feet as you slither easily down her long throat and pile entirely into her belly.
+	</text>
+	<choice destination="oralvore5" text="$How was your meal mistress?"/>
+	</page>
+
+	
+	<page ID="oralvore5">
+	<condition operator="greaterthan" evaluate="BODYVALUE"
+					bodypart="breasts" partvalue="size" value="9" />
+	<text>
+	"Oh delicious..mhmm..you feel so good, stretching me out." she growls and strokes her claws over the outline of your body in her gut before pressing in and expertly squeezing you around with her stomach muscles so that you're facing forwards..your legs press out against the sides of her bellies and your magnificent tits on display as a pair of bulges framed below her own "That's it....i'm sure you don't mind your mistress showing you off." says L'aang as she gropes over the shape of your tits pressing out her thinly scaled belly and even licks and nuzzles at the bulge of one of them as she revels in having you inside herself.
+	</text>
+	<choice destination="oralvore6A" text="$not at all..happy to be of service."/>
+	</page>
+	
+	<page ID="oralvore6A">
 	<text>
 	
 	</text>
 	
 	</page>
-
+	
+	<page ID="oralvore5">
+	<text>
+	"Oh delicious..mhmm you fit so well inside me." she growls out in pleasure, stroking her claws over the contours of her belly in which you're tightly confined and curled up. The possessive touch of her inner muscles and her stroking claws from outside reinforcing your place as a glorious meal for your mistress. L'aang letting out little delighted noises as she rubs her belly and it gurgles softly around you, soaking you with her enzymes as she leans in to nuzzle and kiss against the bulge of your head in her gut.
+	</text>
+	<choice destination="oralvore6B" text="*let her stomach claim you*"/>
+	</page>
+	
+	<page ID="oralvore6B">
+	<text>
+	
+	</text>
+	
+	</page>
+	
 	<page ID="start">
 	<!--subsequent meetings-->
 	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
