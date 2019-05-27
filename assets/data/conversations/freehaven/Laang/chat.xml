@@ -92,10 +92,30 @@
 	
 	<page ID="oralvore6A">
 	<text>
-	
+	"Good, just the right attitude..mhmm, but I can only hold off on melting such a treat as yourself for so long." says L'aang, continuing to possessively rub over the bulges of your tits as she stand and yes, poses for any onlookers to see your shape exquisitely outlined in her belly. Your voracious A'shani mistress looking incredibly proud of her tum for a few minutes before true to her word she can't hold back anymore. Her stomach beginning to gurgle and glorp, pressing and kneading all around you.
 	</text>
-	
+	<choice destination="oralvore7A" text="$Ah, yes..that's it..digest me mistress"/>
 	</page>
+	
+	<page ID="oralvore7A">
+	<text>
+	"Of course my delicious servant, become one with me..let me melt away your curves." says L'aang licking her lips and continuing to grope over her belly as you're squeezed snugly within. Her digestive enzymes soaking into your flesh, powerful stomach muscles grinding and squeezing over your form as the reptilian A'shani moans in delight, a sound you cannot help but add your own muffled voice to from within her as you feel yourself softening.
+	</text>
+	<choice destination="oralvore8A" text="$yes, i can feel it..all over, digest me!"/>
+	</page>
+	
+	<page ID="oralvore8A">
+	</text>
+	L'aang continues to squeeze and rub over the bulges, and strokes over the sides of her belly as your shape begins to lose definition and round out. Your predatory mistress moaning and occasionally leaning in to nuzzle at your softening titbulges as they become more and more indistinguishable from the smooth curves of her tum.
+	</text>
+	<choice destination="oralvore8A" text="$it's wonderful..it's..wonder.."/>	
+	</page>
+	
+	<gameover ID="oralvore9A">
+	<text>
+	Her highness princess L'aang, sighs out a long drawn out satisfied murr as she feels you glorp away. Her gut turning round and smooth as you're reduced to a nourishing liquid. That gut of hers starting to compact and shrink away "You really are a magnificent meal my servant." she says approvingly and then settles into her chair happily to enjoy the warm satisfying sensations of your nutrition coursing through her veins as her gut flattens out.
+	</text>
+	</gameover>
 	
 	<page ID="oralvore5">
 	<text>
@@ -106,11 +126,11 @@
 	
 	<page ID="oralvore6B">
 	<text>
-	
+	L'aang moans as her belly starts to gurgle more noisily around you, starting to soften you up with her relentless digestive processes. Your shape losing definition even as you squirm blissfully inside of her. Her claws continue to stroke over the curves of her gut as gradually they begin to round out under her kneading hands..it won't be long now, won't be long until you're one with her highness..nourishing and sustaining your mistress.
 	</text>
-	
+	<choice destination="oralvore9A" text="*soon...you can feel yourself going*"/>
 	</page>
-	
+
 	<page ID="start">
 	<!--subsequent meetings-->
 	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="talked" />
