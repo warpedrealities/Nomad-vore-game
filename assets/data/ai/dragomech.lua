@@ -11,7 +11,7 @@ end
 
 function ranged(hostile,controllable,sense,pos)
 	control=controllable:getValue(0)
-	if (control>10)
+	if (control>10) then
 		r=math.random(0,4)	
 		if (hostile:getRPG():hasStatus(170)) then
 			controllable:setAttack(3);
@@ -33,7 +33,7 @@ function ranged(hostile,controllable,sense,pos)
 	controllable:setValue(0,control)
 	controllable:setValue(1,1)
 	controllable:setValue(2,hostile:getPosition().x)
-	controllable:setValue(3,hostile:getPosition().y	
+	controllable:setValue(3,hostile:getPosition().y)	
 end
 
 function combat(hostile,controllable,sense,pos)

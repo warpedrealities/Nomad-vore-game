@@ -85,6 +85,7 @@
 	<seduced conversation="alpha_minoris_III/icetreader/seduced" />
 	<victory conversation="alpha_minoris_III/icetreader/victory" />
 	<seducer conversation="alpha_minoris_III/icetreader/victory" />
+	<captive conversation="alpha_minoris_III/icetreader/captive" />
 	<controller AI="icetreader" />
 	<faction value="monster" />
 </NPC>

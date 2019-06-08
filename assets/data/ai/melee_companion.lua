@@ -17,7 +17,7 @@ end
 
 function follow(controllable,sense,pos)
 player=sense:getPlayer(controllable,false)
-	if (pos:getDistance(player:getPosition())>3) then
+	if (pos:getDistance(player:getPosition())>2) then
 		if controllable:HasPath() then
 		controllable:FollowPath()
 		else
@@ -29,7 +29,7 @@ end
 
 function main(controllable, sense, script)  
 	pos=controllable:getPosition()
-	hostile=sense:getHostile(controllable,10,true)
+	hostile=sense:getHostile(controllable,8,true)
 	if not (hostile == nil ) then
 	--combat ai here
 		combat(controllable,sense,pos,hostile)

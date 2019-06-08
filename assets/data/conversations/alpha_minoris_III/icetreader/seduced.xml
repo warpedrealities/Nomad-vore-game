@@ -16,6 +16,10 @@
 					<preference fetish="demis" />
 				<preference fetish="herms" />		
 		</choice>
+		<!-- <choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice> -->		
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -26,6 +30,16 @@
 		</choice>
 		<choice destination="end" text="leave her to take care of it herself" />
 	</page>
+	
+	<page ID="capture">
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<special effect="captureNPC" />
+		<text>Yoink. The device worked.</text>
+
+		<choice destination="end" text="Carry on." />
+	</page>
+	
+	
 	<page ID="devour">
 		<text>
 			You have devoured your prey in some unspecified, unelaborated on yet

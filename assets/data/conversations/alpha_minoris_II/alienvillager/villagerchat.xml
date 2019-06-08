@@ -504,7 +504,6 @@
 		<choice destination="end" text="-Seeya.-" />
 	</page>
 
-
 	<page ID="cummify0">
 		<text>
 			Kicking back, feeling oh-so-satisfied, you rest your head on a
@@ -520,8 +519,27 @@
 		</text>
 		<choice destination="cummifycheck"
 			text="-Come on, it'll be the best thing you ever feel.-" />
+		<choice destination="meltdown" text="Too bad, you don't get a choice!" />	
 	</page>
+	
+	<page ID="meltdown">
+		<text>
+			"What!? Hey, you can't keep me here!"
+			She immediately thrusts her hands through an opening, working her way out of your balls. You're ready for any mutinous passengers however, hugging the base of your shaft firmly, you halt the elf's progress. Muffled complaints holler out from within the tight tube as your muscles contract, pulling her back into your sac. The green girl splashes back in, coating herself entirely with a new gooey layer. Still not giving up, she tries to worm her way out again. Although the back and forth is stimulating, you think of a way to make the indecisive girl stay put. Kneading both hands into your sac, you feel around for something specific. 
+			"Let me out, you ca-nmrphble!! MMPH!!"
+			Finding your mark, you grasp her head and push, holding her face down in the slowly rising spunk pool. You're making sure she won't be able to even try to escape a third time. The elf struggles under your grip, cum clogging her insides as she is forced to gulp it down. Her frenzied flailing finally peters out as she loses both consciousness, and solidity, soon melting down nicely into a fresh load.
+		</text>
+		<choice destination="meltdown2" text="That's better." />
+	</page>	
 
+	<page ID="meltdown2">
+		<text>
+			No longer having a person to hold down, you try for the opposite, eager to bring her melted form back up. Stroking and rubbing, you reach orgasm with ease, she really must have wanted to be out of there! You clench to delay the shot once, twice but can't hold on for the third. A powerful jet of spooge blasts out, almost knocking a nearby guard over as the sticky jism slams into her chest, drenching her and the surroundings with elf-turned-seed. The remaining shots aren't nearly as impressive, but by the time your balls are depleted, there's quite a large mess in front of you: a frayed skirt and masses of thick pearly jizz steaming on the dirt. The dripping guard looks at you disapprovingly, but luckily, it seems like littering isn't recognised as a crime here.
+		</text>
+		<effect value="95" type="feed" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Phew..." />
+	</page>	
 
 	<check ID="cummifycheck">
 		<test what="SEDUCTION" DC="10" />

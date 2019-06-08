@@ -14,6 +14,10 @@
 		</choice>
 		<choice destination="warm0"
 			text="it's cold, she looks warm, maybe she could help you warm up?" />
+		<!-- <choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice> -->
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -24,6 +28,15 @@
 		</choice>
 		<choice destination="end" text="leave her be for now" />
 	</page>
+
+	<page ID="capture">
+		<effect type="setlocalflag" flag="seduced" value="1" />
+		<special effect="captureNPC" />
+		<text>Yoink. The device worked.</text>
+
+		<choice destination="end" text="Carry on." />
+	</page>
+
 
 	<page ID="devour">
 		<text>

@@ -3,16 +3,16 @@
 	<page ID="start">
 		<assertion evaluate="isCompanion" />
 		<text>
-			Vala lays crumpled on the ground, breathing heavily. 
-			"PNAME, a minute is all I need. I don't need your help."
+			Vala stands, glassy-eyed and panting heavily. 
+			"PNAME, a minute is all I need. Come here for just a minute..."
 		</text>
 		<choice destination="help" text="Here, give me your hand." />
 		<choice destination="end" text="Suit yourself." />
 	</page>
 	<page ID="help">
 		<text>
-			Pursing her lips, Vala takes your hand and lets you help right her.
-			"..Thanks.."
+			Pursing her lips, Vala takes your hand and pulls you into a sloppy kiss.
+			"..Thanks.. For trusting me..."
 		</text>
 		<special effect="healnpc" />
 		<choice destination="end" text="You're welcome." />

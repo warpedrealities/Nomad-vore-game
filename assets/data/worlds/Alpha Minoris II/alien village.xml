@@ -32,6 +32,27 @@
 			</floodfill>
 
 		</partition>
+		
+		<prefab width="10" height="9" positionX="54" positionY="55" >
+				<row>9999959999</row>
+				<row>9555555559</row>
+				<row>9599899959</row>
+				<row>9598888959</row>
+				<row>9598888959</row>
+				<row>9598888959</row>
+				<row>9599999959</row>
+				<row>9555555559</row>
+				<row>9999999999</row>	
+				<placeWidget x="6" y="5" name="bunk bed"> </placeWidget>
+				<placeWidget x="3" y="5" name="bunk bed"> </placeWidget>
+				<placeWidget x="5" y="7" name="chest"> 
+					<lootTable>
+						<lootSubTable file="Vala"  chance="1"/>
+					</lootTable>
+				</placeWidget>
+				<placeNPC name="minoris2_elves/companionVala" x="5" y="5" />
+		</prefab>
+		
 		<placeNPC x="25" y="25" name="minoris2_elves/village_neri" />
 		<partition xmin="4" xmax="56" ymin="4" ymax="56">
 			<randprefab width="8" height="7">

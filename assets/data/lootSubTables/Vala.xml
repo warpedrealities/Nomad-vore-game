@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<lootTable>
+	<loot item="scrap metal" chance="10" />
+	<loot item="fabric" chance="10" />
+	<loot item="monster fur" chance="5" />
+	<loot item="beast scale" chance="5" />
+	<loot item="claw necklace" chance="1" />
+</lootTable>

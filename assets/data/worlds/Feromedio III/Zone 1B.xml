@@ -24,7 +24,7 @@
 			<towngrid minhouses="32" maxhouses="32" tile="2" path="3"
 				registerRooms="true">
 				<floodfill tile="3">
-				<Seedwidgets min="12" max="24" name="chest">
+				<Seedwidgets min="24" max="32" name="chest">
 					<lootTable>
 						<lootSubTable chance="1" file="warzone_tier_1" />
 						<lootSubTable chance="0.5" file="warzone_tier_1" />
@@ -56,7 +56,7 @@
 		<noise tile="5" scarcity="22" />		
 		<noise tile="6" scarcity="22" />
 		<floodfill tile="1" />		
-		<SeedNPCs min="4" max="4" name="Feromedio_III/feromedio">		
+		<SeedNPCs min="4" max="4" name="Feromedio_III/dragomech"/>		
 	<walloff wall="2" sides="southeastwest" />	
 	</mapgen>
 

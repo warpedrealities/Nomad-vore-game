@@ -2,33 +2,62 @@
 <NPC>
 	<sprite value="vala.png" />
 	<name>Vala</name>
-	<description>A slender pointy eared greenskin stands before you. A
-		shortsword sheathed and lashed to her waist. The rest of her outfit
-		barely enough for modesty wrapped around petite breasts and a less
-		pronounced ass than that of her kind.</description>
+	<description>A pointy eared greenskin stands before you, a shortsword sheathed and lashed to her waist. Her outfit, a roughly sewn tunic and pants, covered by a primitive jack of plate, is modest and practical compared to most others you've seen in the village. Her body is lithe, and surprisingly, she lacks the most prominent trait of the elves, having only a modest behind.
+	</description>
 	<rpg>
 		<experiencevalue value="20" />
-		<ability ability="STRENGTH" value="5" />
-		<ability ability="AGILITY" value="5" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="6" />
 		<ability ability="DEXTERITY" value="5" />
 		<ability ability="ENDURANCE" value="5" />
-		<ability ability="CHARM" value="5" />
+		<ability ability="CHARM" value="3" />
 		<ability ability="INTELLIGENCE" value="5" />
-		<stat stat="HEALTH" value="40" />
-		<stat stat="RESOLVE" value="40" />
-		<attribute attribute="DODGE" value="2" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="20" />
+		<attribute attribute="DODGE" value="3" />
 		<attribute attribute="PARRY" value="2" />
+		<attribute attribute="KINETIC" value="1" />
+		<attribute attribute="WILLPOWER" value="4" />
+		
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="Valaspear" >
+		<combatMove name="poke" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="3" maxValue="9"
+				modifier="STRENGTH" />
+			<missText count="5">
+				<text>Vala's spear thrust doesn't connect with TARGET</text>
+				<text>Vala attempts to poke TARGET but the hit doesn't connect</text>
+				<text>Vala fails to land a decisive thrust on TARGET </text>
+				<text>Vala's spear glances harmlessly off of TARGET </text>
+				<text>Air whips around TARGET, as Vala's spear misses it's mark </text>
+			</missText>
+			<hitText count="7">
+				<text>Vala hits TARGET for VALUE points of damage</text>
+				<text>Vala deftly pokes TARGET, for VALUE points of damage</text>
+				<text>Vala's spear lands true, dealing VALUE damage to TARGET</text>
+				<text>TARGET takes VALUE damage as Vala makes a clean thrust</text>
+				<text>Vala's spear embeds itself into TARGET for VALUE damage</text>
+				<text>With a whirl, Vala's spear pierces TARGET for VALUE damage</text>
+				<text>Vala sharply sticks TARGET with her spear, dealing VALUE damage </text>
+			</hitText>
+		</combatMove>
+		</condition>
 		<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE"
 			timeCost="2" bonusToHit="2">
-			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+			<effectDamage type="KINETIC" minValue="2" maxValue="6"
 				modifier="STRENGTH" />
-			<missText count="2">
+			<missText count="4">
 				<text>Vala's sword slash doesn't connect with TARGET</text>
 				<text>Vala attempts to stab TARGET but the blow doesn't connect</text>
+				<text>Vala fails to land a decisive blow on TARGET </text>
+				<text>Vala's sword glances harmlessly off of TARGET </text>
 			</missText>
-			<hitText count="2">
+			<hitText count="5">
 				<text>Vala hits TARGET for VALUE points of damage</text>
 				<text>Vala slashes TARGET for VALUE points of damage</text>
+				<text>Vala's sword lands true, dealing VALUE damage to TARGET</text>
+				<text>TARGET takes VALUE damage as Vala makes a clean cut</text>
+				<text>Vala's sword bites deep, dealing VALUE to TARGET</text>
 			</hitText>
 		</combatMove>
 	</rpg>
@@ -36,7 +65,7 @@
 	<respawn delay="300" />
 	<disposition value="55" />
 	<defeated conversation="alpha_minoris_II/vala/defeat" />
-	<seduced conversation="alpha_minoris_II/vala/defeat" />
+	<seduced conversation="alpha_minoris_II/vala/seduced" />
 	<talk conversation="alpha_minoris_II/vala/chat" />
 	<controller AI="melee_companion" />
 	<faction value="minyos" />
