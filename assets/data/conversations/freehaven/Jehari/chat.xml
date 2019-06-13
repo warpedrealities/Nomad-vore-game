@@ -8,6 +8,9 @@
 	Jehari turns around when you get her attention "Ah! you're back, yes?" she pauses a moment then nods "Yes, you're back. Sorry sometimes it's hard to keep things straight. What can I do for you today?"
 	</text>	
 	<choice destination="shop" text="$I'd like to see what you have for sale"/>
+	<choice destination="mainquest" text="$I need someone to decipher some black box data for me">
+		<condition evaluate="GLOBAFLAG" operator="equals" value="2"	flag="MAIN" />
+	</choice>
 	<choice destination="questions" text="$I'd like to ask you some questions"/>
 	<choice destination="end" text="$Nothing at the moment, I'll let you get back to your experiments"/>
 	</page>
@@ -18,6 +21,43 @@
 	The reptile taur is contemplatively musing to herself, seemingly deep in consideration of..something on her datapad only to look up saying something inscrutably technical to herself and darting over to a scanner and from there shortly to rummage in a cabinet all without noticing your presence. Just about the time you were starting to wonder whether it was a good idea to disturb her though she seems to catch a glimpse of you out of the corner of her eye and lets out a startled mip, the heavy taur jumping in surprise "Oh! I didn't see you there...you, how long have you been standing there, you didn't see me...no you don't look like you did. Uh, why are you here?"
 	</text>
 	<choice destination="initial0" text="$You're just off the station concourse, there's no do not disturb sign, I thought this was a shop"/>
+	</page>
+	
+	<page ID="mainquest">
+	<text>
+	Jehari brightens up "Oh may I see?" she asks with a worryingly toothsome smile, but she really is harmless right? "Don't worry, I won't damage it...just." she accepts the black box and after a minute or so has it hooked up and reading to a screen. Her attention seems to wander briefly once that's done.
+	</text>
+	<choice destination="mainquest0" text="$I need you to tell me the coordinates of the vessel's origin..can you do that...Jehari?"/>
+	</page>
+	
+	<page ID="mainquest0">
+	<text>
+	"Oh..oh!" she snaps her attention back to the screen and then frowns "Well..yes..and no..the calculations of gravitational influences are quite complex and.." she turns back to you and wringes her hands together apologetically "I am afraid due to my, condition, I would be quite unable to focus long enough to complete them."
+	</text>
+	<choice destination="mainquest1" text="$but you said it was yes, so you COULD do it somehow?"/>
+	</page>
+	
+	<page ID="mainquest1">
+	<text>
+	"Oh, yes! if you brought me an adaptive computation core I could use that to run the calculations. It would also be a great deal of help for my other work, maybe I could even cure my..."
+	</text>
+	<choice destination="mainquest2" text="$Your condition, yes. Where do I get one of these things?"/>
+	</page>
+
+	<page ID="mainquest2">
+	<text>
+	"Yes my condition thankyou, please it's a terrible burden and..oh right right, the adaptive computation core. Well I don't think I know where one is but...Robyn! Robynn would know..she's nice." says Jehari.
+	</text>
+	<choice destination="mainquest3" text="$..and where would i find Robynn?"/>
+	</page>
+	
+	<page ID="mainquest3">
+	<text>
+	"go out, turn right, go past the elevators, then enter her shop on the right. Tell her I said Hi." says Jehari with a smile.
+	</text>
+		<special effect="addJournal" file="main" name="adaptivecomputation" />	
+	<effect type="setglobalflag" flag="mainquest" value="3" />		
+	<choice destination="end" text="$Great, I'll go ask her then"/>
 	</page>
 
 	<page ID="initial0">
@@ -33,6 +73,9 @@
 	"I told you my name is Jehari already didn't I?" she says at that, then blinks "I didn't...did I? sorry. My name is Jehari, and yes I'm a valk, don't worry I'm REALLY harmless." she says forestalling a reaction that she's apparently gotten before "It's a pleasure to meet you." she says doing a sorta half bow half bob down then up again.
 	</text>
 	<choice destination="questions" text="$It's a pleasure to meet you, can I ask some questions?"/>
+	<choice destination="mainquest" text="$can you decipher some black box data for me?">
+		<condition evaluate="GLOBAFLAG" operator="equals" value="2"	flag="MAIN" />
+	</choice>
 	<choice destination="shop" text="$It's a pleasure, can you show me what you have for sale?"/>
 	<choice destination="end" text="$It's a pleasure to meet you, I'll be back later though, farewell"/>
 	</page>

@@ -336,10 +336,15 @@
 	
 	<page ID="hunting1Complete">
 	<text>
-	"Indeed? very well, then here is your reward. And more than that, I recognize your achievement. You came to me seeming weak and soft, now I see that you have a hidden well of strength. May your hunts be fruitful and your belly ever full traveller."
+	"Indeed? very well, then here is your reward. And more than that, I recognize your achievement. You came to me seeming weak and soft, now I see that you have a hidden well of strength. May your hunts be fruitful and your belly ever full traveller." 
+	<conditional>
+	<condition evaluate="GLOBALFLAG" operator="equals" flag="Vala" value="1" />
+	Before you leave, Vala quietly pulls you aside. "Gaining Awari's respect is something that I respect. Keep up the good work PNAME."
+	</conditional>
 	</text>
 	<special effect="removeJournal" ID="104" />
 	<effect type="givegold" value="1500" />
+	<effect type="incrementglobalflag" flag="Valascore" value="3" />
 	<effect type="setglobalflag" flag="minyos_monsterhunt_0" value="5" />		
 	<choice destination="end" text="It's about time, farewell Awari and may your belly be ever full as well"/>
 	</page>

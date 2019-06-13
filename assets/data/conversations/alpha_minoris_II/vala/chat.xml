@@ -2,6 +2,8 @@
 <Conversation>
 	
 	<page ID="start">
+		<condition evaluate="GLOBALFLAG" flag="Vala" value="0" />
+		<assertnot evaluate="isCompanion" />
 		<assertion evaluate="isFaction" faction="player" />
 		<text>
 		Vala sheathes her shortsword and stands at attention at your approach "Hello again PNAME. Do you have need of me?"

@@ -3,9 +3,57 @@
 
 	<page ID="start">
 		<text>
-			
+		The Icetreader is decamped with a whump as she drops from the vertical position she needed to be crammed into the system in down onto all four paws again. She looks at you and shifts from paw to paw uncertainly, her arms protecting her ample bust as she wonders what you have planned but mostly tries to get the cramps out of her muscles from being cooped up in that tube. Who knew suspending a taur this size in one of those things had side effects.
 		</text>
-		
+		<choice destination="oralvore0" text="*containment is a larder, that makes her food*">
+			<assertion evaluate="hasperk" perk="oralvore" />
+		</choice>
+		<choice destination="cockvore0A" text="*crawl down her dick*">
+		<condition evaluate="LOCALFLAG" flag="trained" value="0" />
+			<preference fetish="cockvore" />
+		</choice>
+			<choice destination="cockvore0B" text="*be cockfood*">
+		<condition evaluate="LOCALFLAG" flag="trained" value="1" />
+			<preference fetish="cockvore" />
+		</choice>
+		<choice destination="end" text="*that's enough, put her back inside*"/>
+	</page>
+
+	<page ID="cockvore0A">
+	<text>
+	
+	</text>
+	
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	You lick your lips and your belly gurgles in mere anticipation of the coming meal. The icetreader shifts uneasily, but there's nowhere for her to run to and you've already proven on a prior occasion how far fighting will get her. So though she backs up you confidently step up in front of her and grab her wrists, guiding her hands down to your mouth. You salivate all the more as you part your lips, and she lets out a whimper, but before she can pull away you shove her hands down into your mouth and swallow. You've got her now, all she'll find is how inescapable the grasp of your throat is if she tries to pull back.
+	</text>
+	<choice destination="oralvore1" text="*gobble up your big meal*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Greedily you gulp your way up her arms, tugging her down and working your way up towards her head and those nice ample tits as she's forced to lean forwards by the pull of your hungry throat as you gobble her up. The taur shifting around but unable to pull back despite the size disparity as you work on gobbling up her human half leaving only her furry lower body outside your mouth. The sensation of her tits pressing out against the inside of your throat as you prepare to gobble the rest of her up has to be said to be particularly exquisite.
+	</text>
+	<choice destination="oralvore2" text="*and now for the rest*"/>
+	</page>
+
+	<page ID="oralvore2">
+	<text>
+	Your belly begins to stretch and bulge out as her upper body crams inside. But you still have a far more hefty part of your meal left to devour. Those broad powerful furry haunches wriggling around as you swallow and stretch your mouth around the breadth of her body. But the sheer bulk of the taur you're gobbling up is nothing compared to the sheer depths of your hunger and you neither faulter nor relent. Soon you're working her hindquarters in. Your gut distending massively as she's squeezed up inside of you. Finally you get her broad hindpaws past your lips and have only that poofed up tail to devour, and devour it you do, sealing every last inch and ounce of your big meal inside of your belly.
+	</text>
+	<choice destination="oralvore3" text="*and now of course, the digestion*"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	You look at your massively bulging gut, the shape of the squirming taur exquisitely outlined in your stretched tummy flesh. The thought of breaking down someone this size makes your toes curl, and so that's exactly what you do. Your gut gurgling noisily, the icetreader whimpering and squirming as you melt her down..softening and smoothing out all those bulges and outlines until all that's left is a smooth sloshyness. A smooth sloshyness your body is easily able to absorb, shrinking that belly down as every bit of her is used to make a superior predator all the more capable of continuing her voracious ways. And that superior predator of course, is you.
+	</text>
+			<effect type="feed" value="130" />
+		<special effect="removeCaptive" />
+		<choice destination="end" text="carry on" />	
 	</page>
 
 </Conversation>

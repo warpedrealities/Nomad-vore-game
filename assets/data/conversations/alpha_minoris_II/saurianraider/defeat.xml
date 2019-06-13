@@ -23,6 +23,9 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
+		<choice destination="vala" text="*Let Vala handle it* (mild gore)" >
+			<condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Vala" />
+		</choice>
 		<choice destination="end"
 			text="$actually, it isn't. I don't intend to do anything to you" />
 	</page>
@@ -164,6 +167,21 @@
 		<effect type="feed" value="95" />
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
+	</page>
+	
+	<page ID="vala">
+		<text>
+		Vala looks down at the defeated saurian. 
+		"Yes, this is the only thing you should have expected". 
+		<random id="valaraid" />
+		"Good riddance. Send as many as you want, it will make no difference."
+		Looking over to you with a somewhat guilty expression, she her posture stiffens. 
+		"We can't afford to be defeated here, PNAME. Although it seems cruel, many of our number have fallen to these beasts in the past. I will follow Mother's teaching."
+		</text>
+		<picture source="valaportc" height="1"/>
+		<effect type="incrementglobalflag" flag="Valascore" value="1" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Savage." />
 	</page>
 
 </Conversation>
