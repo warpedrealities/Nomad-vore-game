@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ItemConsumable name="ark steak" weight="1.5" value="90"
+	tag="1">
+	<description>A cooked, salted and preserved portion of meat from an arkosaur. Was once tough and full of gristle, now it looks at least edible.</description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="90" modifies="SATIATION">
+		The meat is somewhat bland, but is cooked well and is a decent size. You feel much more ready to take on the unknown after finishing your meal.
+	</effectrecover>
+</ItemConsumable>

@@ -11,6 +11,9 @@
 	</entry>
 	<entry name="adaptivecomputation" ID="120" priority="2" title="an adaptive computation core">
 	You have met Jehari, the clever but absentminded scientist on freehaven. In order to decipher the black box data for you Jehari needs an adaptive computation core. She has told you that Robynn may know how to acquire one.
+	</entry>
+	<entry name="mallory" ID="120" priority="2" title="mallory should have the core">
+	Robynn has directed you towards Mallory, a supplier of hers who lives on deck 4 of freehaven in the starlight apartments. You should find Mallory, Robynn says Mallory owes her a favour and should give you the core when you call it in on her behalf.
 	</entry>	
 	<entry name="quest3" ID="1" priority="1" title="The wreck of the heinlein">
 	You've backtracked the escape pod's course. This will let you jump to the system where the Heinlein met its end and investigate. You need the navigational data from the Heinlein in order to determine your position relative to earth and plot a course back home. The Heinlein is located at stellar coordinates -1,-1 and you will need to jump stellar north west from the original star system to reach it.

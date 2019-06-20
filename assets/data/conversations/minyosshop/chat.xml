@@ -1,0 +1,469 @@
+﻿<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" value="1" operator="equals"
+			flag="first" />
+		<text>
+		"Greetings again, traveller from the stars. What can I do for you?" 
+			<conditional> <condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Vala" />
+		The buxom elf eyes you, fluttering her long eyelashes seductively. Vala, walking in behind you, snorts in disgust. The shopkeeper turns to her. 
+		"Oho? Vala dear, now this is a rare sight."
+			</conditional>
+		</text>
+		<choice destination="job0" text="*inquire about tasks*">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="swordquest"
+				value="0" />
+		</choice>
+		<choice destination="job1" text="*inquire about tasks*">
+			<condition operator="equals" evaluate="LOCALFLAG" flag="swordquest"
+				value="1" />
+		</choice>
+		<choice destination="meat" text="*Vala steps forward*" >
+			<condition evaluate="HASITEM" operator="equals" value="6" item="arkmeat" />
+			<condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Vala" />
+		</choice>
+		<choice destination="shop" text="ask to buy things" />
+		<choice destination="know" text="ask to know more about her people">
+			<preference fetish="analvore" />
+				<preference fetish="demis" />
+			<preference fetish="females" />			
+		</choice>
+		<choice destination="lands" text="ask about the surrounding lands" />
+		<choice destination="end" text="ask for nothing" />
+	</page>
+
+	<page ID="job0">
+		<!--quest start -->
+		<text>
+			Your inquiry about a job makes her smile "well traveller, seen
+			as you
+			want to make yourself useful...there is something you can do
+			for me.
+			My sister went missing investigating the ruins in the valley
+			to the
+			south. She was almost certainly devoured by a raptor, but if
+			you
+			could recover her sword so I have something to remember her by I'd
+			be
+			very grateful."
+		</text>
+		<special effect="addJournal" file="minyos" name="sword0" />
+		<choice destination="end" text="I'd be happy to get your sword for you" />
+		<choice destination="end" text="I might get around to it" />
+		<effect type="setlocalflag" flag="swordquest" value="1" />
+	</page>
+	<page ID="job1">
+		<!--quest completion -->
+		<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="sister sword" />
+		<text>
+			"You found it? oh thankyou traveller. It's in surprisingly good
+			condition
+			for how long its been down there isn't it. Now that's
+			workmanship."
+			she smiles and taking the sword from you hands you a bag
+			of coin for
+			your troubles.
+		</text>
+		<special effect="removeJournal" ID="103" />
+		<effect type="givegold" value="1000" />
+		<effect type="experience" value="300" />
+		<effect type="setfactionflag" flag="friendship" value="1" />
+
+		<effect type="setlocalflag" flag="swordquest" value="2" />
+		<effect type="removeitem" item="sister sword" value="1" />
+		<choice destination="end" text="your thanks is all I need" />
+	</page>
+	<page ID="job1">
+		<!--quest proceeding -->
+		<text>
+			"Have you found my sister's sword yet? I know the ruins are a
+			dangerous
+			place, but your strange devices should keep you safe down
+			there."
+		</text>
+		<choice destination="end" text="I'm still looking" />
+		<choice destination="end" text="i don't feel like the risk is worth it" />
+	</page>
+	<page ID="start">
+		<text>
+			"Oooh, you are something new.” Her voice calls out to you as you
+			approach
+			her. "A being from the stars? Oh I do hope so, I have
+			prepared for
+			many years to trade for Cargo."
+
+		</text>
+		<effect type="setlocalflag" flag="first" value="1" />
+		<choice destination="shop" text="ask to buy things" />
+		<choice destination="know" text="ask to know more about her people">
+			<preference fetish="analvore" />
+		</choice>
+		<choice destination="lands" text="ask about the surrounding lands" />
+		<choice destination="end" text="ask for nothing" />
+	</page>
+	<page ID="shop">
+		<text> "Well I don’t have much to interest a star traveller right now.
+			Pretty crystals, food and medicine mostly. If you happen to go south
+			I'd appreciate any Deku nuts you find in the valley. We are rather
+			partial to them."
+		</text>
+		<special effect="shop" ID="alphaminoris2shop" />
+	</page>
+
+	<page ID="lands">
+		<text>
+			"Hmm? Oh yes I suppose that is a prudent, if boring, question if
+			you plan
+			on adventuring. To the south are number of ravenous raptor
+			girls.
+			They’re shy enough when caught alone but will swarm you in a
+			pack.
+			There are also some rarer rajini down there, I would love to
+			inspect
+			one of them up close. To the west is dense jungle. Plenty of
+			fruit to
+			be found but it’s also inhabited by a large number of snake
+			women.
+			They will happily coil and devour a cute thing like you. All in
+			all
+			I’d recommending staying in the comfort of our village, where
+			surely
+			no one will try to consume you."
+		</text>
+		<choice destination="shop" text="I would like to buy things" />
+		<choice destination="know"
+			text="i would like to know more about your people">
+			<preference fetish="analvore" />
+		</choice>
+		<choice destination="end" text="another time perhaps" />
+	</page>
+
+	<page ID="know">
+		<text>
+			"Hmm, you must be from off world if you do not know about the
+			Quendi. We
+			are the dominant species on the planet after all." She lets
+			a small,
+			musical sigh. "But I can of course answer your questions.
+			Provided
+			they aren’t too ridiculous. What are they?"
+
+			You quickly bring
+			up the most pressing question about the elven aliens
+			on your mind.
+			Namely: Their shapely asses. How do they all get their
+			ass to be so
+			nice and round? It is truly a head puzzler.
+
+			"Ah yes, imagine such a
+			thing would be a mystery to one not versed in
+			our ways. It is a very
+			elaborate ritual which we undertake in order
+			create these perfect
+			derrieres. Would you like me to show you it?" 
+		<conditional> <condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Vala" />
+		Before you can answer, Vala tugs on your arm. "PNAME. I'd think about your answer carefully. You've been warned."
+		</conditional>
+		</text>
+		<choice destination="analvore0" text="yes" />
+		<choice destination="refuse" text="no" />
+	</page>
+
+	<page ID="refuse">
+		<text>
+			"Ah, a shame. Some other time then. Anything else I can help you
+			with?"
+		</text>
+		<choice destination="shop" text="I would like to buy things" />
+		<choice destination="lands"
+			text="I would like to know more about the surrounding lands" />
+		<choice destination="end" text="nothing at the moment" />
+	</page>
+	<!--written by serenity -->
+	<page ID="analvore0">
+		<text>
+			"Splendid. Now this is very much a two person job so I will need your
+			assistance!" You agree to help, after all you’re dying to know the
+			secret to a perfect ass.  
+		<conditional> <condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Vala" />
+		Vala sighs and exits, leaving both you, and the shop behind. 
+		</conditional> 
+			The shopkeeper walks over and quickly shuts the door,
+			before returning to the center of the room. Quickly slipping out of
+			her many pocketed robes
+			<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				she motions for you to do the same with your own clothes. Deciding that
+				when in Rome you might as well do as the Romans do, you peel off
+				your clothing.
+			</conditional>
+			A moment passes as you stand there awkwardly, naked as the day you
+			were born, and she looks you over. "Hmm, yes I do believe the ritual
+			will work for you, but only if you do exactly as I say."
+		</text>
+		<choice destination="analvore1" text="continue" />
+	</page>
+
+	<page ID="analvore1">
+		<text>
+			You are over joyed at the prospect. Finally all of your hopes
+			and dreams
+			will be realized, you will have the perfect ass. That will
+			make the
+			crash landing and all of your excessively dangerous and life
+			threatening adventures worth it. She instructs you to kneel down
+			before her and you excitedly do so.
+			LBREAK
+			"Now for the next step you
+			must raise your face towards the skies and
+			shut your eyes. Only then
+			will you gain your great surprise."
+			Ignoring the awful rhyme you do as
+			instructed. While at first nothing
+			seems to happen you soon feel
+			something press against your face and a
+			pressure grow around your
+			head. Opening your eyes to see what’s going
+			on, you see naught but
+			darkness. Smelly darkness. Lifting your arms
+			up to figure out what’s
+			going on you feel a pair of round, squishy
+			orbs descending around your
+			neck. A low moan echoes from above you.
+		</text>
+		<choice destination="analvore2" text="panic" />
+	</page>
+
+	<page ID="analvore2">
+		<text>
+			You decide that sheer, blind panic is the best way to solve this
+			situation. You flail wildly as the odd spheres continue to drop down
+			over you and stuff you into the fetid darkness. Once your arms are
+			pinned to your side, and you can no longer flail, you decide to stand
+			up and push whatever is on you off. This proves to be disastrous.
+			Rather than throw your attacker off, you are simply shoved further
+			into the slimy darkness, your entire torso pushing past those orbs.
+			There are some more echoing moans and you believe you hear a wet
+			squelching noise as your hips and legs are stuffed in as well by a
+			pair of hands.
+		</text>
+		<choice destination="analvore3" text="*ask if everything is all right*" />
+	</page>
+
+	<page ID="analvore3">
+		<text>
+			Well at least hands means that there’s still someone out there
+			right?
+			You’re not just disappearing into blind nothingness, there must
+			be
+			some reason for your surroundings. You call out, asking the
+			shopkeeper if everything’s alright. "Hmm? Oh yes dear, everything’s
+			fantastic. Do wiggle some more for me, it feels sublime!" Confused by
+			such an answer you ask where you are. "Where? Why you’re in my ass of
+			course! How else am I supposed to improve my tush?"
+		</text>
+		<choice destination="analvore4" text="*protest this turn of events*" />
+	</page>
+
+	<page ID="analvore4">
+		<text>
+			As you begin to complain that she was supposed to improve your
+			backside, not hers, you are tugged upwards by your surroundings. Your
+			feet finally enter her with an audible pop and you are drawn up, up,
+			up until you finally reach a hot, wet sack. Before you have a chance
+			to question where you are the acidic sting of your surroundings clues
+			you in. As you kick and squirm for your life you hear the shopkeeper
+			let out a rather loud moan.
+		</text>
+		<choice destination="analvoreGO" text="struggle" />
+	</page>
+
+	<gameover ID="analvoreGO">
+		<text>
+			"Ah, yes, please do kick more. It is quite enjoyable. You see my
+			species
+			gains significant pleasure from eating living beings. Ahh,
+			especially
+			feeling them move about inside. Fret not, though, you will
+			be put to
+			great use. As ass fat." Further taunts from her are drowned
+			out by
+			the sounds of your imminent digestion. Gurgles and groans fill
+			the
+			air as the stomach bubbles you down to mush and the intestines
+			then
+			convert you to yet another layer of fat on the shopkeeper’s
+			backside.
+		</text>
+
+	</gameover>
+
+	<page ID="meat">
+		<text>
+		"We've come to sell." 
+		Vala is curt, and poorly hides her contempt. You both take out the sizable hoard of meat, stacking it nearby on an empty sheet of cloth on the ground. The shopkeeper looks surprised, but calculating. She has an air of scheming as she watches the large pile of food grow. Adjusting her robe, she struts forwards. 
+		"Vala dear, I haven't seen you in so long and you're just going to be all business?" 
+		The shapely shopkeep grasps Vala's hands and turns her around. Vala raises her eyebrow, lip curled with disdain.
+		"Oh come now, how could you look at your poor auntie like that dear? You never visit anymore, I was SO worried about you too!" as she speaks sweetly, she steps in for a hug, squeezing Vala's face against her pronounced bosom. 
+		"Won't you stay for a while and let us catch up dear? Become close again, like the old days. Wouldn't that be nice?"
+		She gently strokes Vala's hair, holding her in her cleavage.
+		</text>
+		<picture source="valaportj" height="1"/>
+		<choice destination="meat1" text="*Vala struggles*" />
+	</page>
+	
+	<page ID="meat1">
+		<text>
+		Wrenching herself from the soft prison, Vala backs away quickly from the shrewd elven woman, pulling on her ear.
+		"And let your cajolery be the end of us both? Although we talk no longer, do not think I have forgotten who it is I seek to make a deal with."
+		The shopkeeper looks shocked and beyond wounded. She cocks a hip, chest jiggling.
+		"Vala, dear. I just care about you, that's all.. Did Gera not remember to teach you any manners? We're family!"
+		Vala scoffs.
+		"Family? The only time you've ever brought up family is to guilt someone for a favour. Cease this. We offer this meat from the plains beyond the jungle. State your price."
+		The shopkeep looks downtrodden, but a brief grin flashes upon her face as she speaks, pointing at Vala accusingly.
+		"You see the way she still treats me after all I've done for her traveller? I'll make a deal with you instead. Not that ungrateful child over there." 
+		Addressing you, the elven woman hefts her plump breasts. They overflow her hands easily, straining her robe. Small dark patches appear in her tented shirt as she squeezes.
+		"These babies aren't just for show, I've always been our family's wetnurse. That includes you, Vala dear. How about a quick suckle, as payment for the bounty you've brought to me?"
+		</text>
+		<picture source="valaportj2" height="1"/>
+		<choice destination="meat2" text="$Sounds like a fair trade." >
+			<preference fetish="demis"/>
+			<preference fetish="females"/>
+		</choice>
+		<choice destination="meatv" text="*Leave it to Vala*" />
+	</page>
+	
+	<page ID="meat2">
+		<text>
+		As if by magic, the shopkeeper's mood and posture changes dramatically, all traces of sadness replaced by a wide grin. She brushes between you two and closes the door of her shop. "I knew you'd make the right choice traveller! I've made a habit of this so as not to ever run dry." 
+		As she speaks, she carefully pulls each pillowy breast out of her robe, they flop out, jiggling madly and unrestrained. Her nipples and areolae are large, and milk dribbles from their dark green tips. Vala was going to say something to you in protest, but appears dazed from the uncovering of the magnificent mammaries.
+		"You may be surprised how often people choose this over gold! I do forgive you for being so rude Vala dear, I know it must have been hard without your mummy around. Who's hungry?"
+		The half-naked woman stands tall, and exudes confidence, her breasts swelling visibly as production ramps up. You can't look away from the leaky nipple, saliva pooling in your mouth. Something inside, something instinctual pulls you in. Crouching down, you reach out to hold her left breast, from the corner of your eye you see Vala doing the same to the other. Moving your head ever closer, you look up. From this vantage point, the mountains of heaving breast flesh in front of you seem enormous. At the mountain's peak, the motherly shopkeeper looks down at you both warmly, face flushed.
+		</text>
+		<picture source="valaporty" height="1"/>
+		<choice destination="meat3" text="*Drink deeply*" />
+	</page>
+	
+	<page ID="meat3">
+		<text>
+		Eager to take your fill of the reward, you throw yourself at the huge brimming breast. The engorged teat fills your mouth completely, and with only a small squeeze, floods your throat with it's liquid bounty. You gulp heartily, and although it's not quite the homogenised and pasteurised dairy you remember, the milk is sweet, thick and creamy. The shopkeeper moans in bliss at the relief of pressure, holding your head and arching her back, forcing you to continue to drink. 
+		"That's it dears, keep it up.. Ooohhh.. Isn't this better than some silly gold? Drink it all..." 
+		She gasps out, practically smothering you in her tits. Beside you, Vala is moaning and gulping, lost completely in the rich taste of the milk. The milk flows ceaselessly down your throat, stretching your stomach out with litres of the stuff. Just when you feel you can't possibly take it anymore, the shopkeeper releases you. You gasp for air and let out a sudden burp, the milk sloshing within you as you move about.
+		"There we are girls! It always feels so good to feed a hungry mouth." 
+		The shopkeeper sighs happily, breasts reduced back to their normal, large size.
+		</text>
+		<picture source="valaportq3" height="1"/>
+		<effect type="feed" value="75" />
+		<choice destination="meat4" text="Urp.." />
+	</page>
+	
+	<page ID="meat4">
+		<text>
+		Before you stand, the shopkeeper moves in close, still topless. Vala is laying on the floor, eyes shut tightly, petting her milk-engorged belly and murmuring nonense. She's a little out of it.
+		"Dear traveller... I have something of a favour to ask of you before you depart." 
+		She flutters her eyelashes at you suggestively, but speaks like a mother would to their child when they want a chore done. 
+		"You two really milked me dry.. I only said you'd earned a quick suckle. Isn't it only fair if you help me fill back up? It won't be hard..." 
+		As she speaks, the shopkeeper holds your chin up and pets your head, running her fingers through your <macro ID="hair_style_desc"/> hair. You can see her warm, comforting smile but her eyes are positively predatory. With Vala in no position to contribute, it's up to you to decide.
+		</text>
+		<picture source="valaportq2" height="1"/>
+		<choice destination="meat4a" text="Accept her offer." >
+			<preference fetish="breastvore"/>
+		</choice>	
+		<choice destination="meat4b" text="Decline." />
+	</page>
+	
+	<page ID="meat4a">
+		<text>
+		The shopkeeper's face lights up. 
+		"Wonderful. You don't have to do anything else dear, stay right there." 
+		She retreats to a shelf momentarily, muttering. 
+		"Always keep a few of these handy.." 
+		She returns with a small vial. Pouring the contained liquid over her bouncing chest, she rubs it in somewhat, looking down at you with glee. Without warning, you see only green. A loud, but muffled moan fills the room. Mashed into the shopkeep's cleavage, you feel her ample assets surround you. Your skin tingles pleasingly as your body is enveloped by the soft, squishy mass. Hands grasp all over you, lifting and cradling your form. You feel weightless, no longer kneeling on the matting in the shop. You're a little confused at first, wiggling around, but being engulfed by the pleasant warmth feels incredible, so it doesn't worry you for long. Feeling your small struggle die down, the shopkeeper coos soothingly amongst her groans of delight. 
+		"That's right, don't worry. You'll never have to worry about anything ever again, dear." LBREAK Agreeing, you drift away peacefully, never to wake as yourself again.
+		</text>
+		<picture source="valaportq3" height="1"/>
+		<choice destination="meat5" text="What of Vala?" />
+	</page>
+	
+	<page ID="meat5">
+		<text>
+		Awoken from her bout of torpidity by the noisy moans, Vala sits up, burping quietly. Blinking to refocus her eyes, she sees a pair of <macro ID="skin_colour_desc"/> legs, descending between her aunt's now massive mammaries. She stretches, yawning sleepily. Her eyes shoot open, comprehending the current situation. Jumping to her feet, she cries out at her aunt. 
+		"What are you doing?! PNAME, hold on!" 
+		Closing the distance as fast as possible, she's only a bit too late, your calves and feet sinking into the fleshy crevasse and away from sight. The shopkeeper whimpered with ecstasy, her wobbling chest ballooning outwards in size, as your body is absorbed and distributed on hers. 
+		Enhancement and refill complete, she tries in vain to cover her dribbling knockers with the now far too small robe. Vala stands shocked, arm outstretched, staring wide-eyed in disbelief. And arousal. Mostly disbelief. Noticing her, the shopkeeper crosses her arms to prop up her ridiculous rack. 
+		"Oh, Vala. Just finishing off with our friend from the stars here! Such a lovely gift you brought to me dear. Don't you worry, I'll be sure you get the first taste!" LBREAK
+		Vala takes everything in, before answering.
+		</text>
+		<picture source="valaportz2" height="1"/>
+		<choice destination="meatGO" text="Vala: That... I think. That would be nice..." >
+			<condition evaluate="GLOBALFLAG" operator="equals" value="0" flag="Valaopen" />
+		</choice>	
+		<choice destination="meatGO2" text="Vala: You.. How could you..!" >
+			<condition evaluate="GLOBALFLAG" operator="greaterthan" value="1" flag="Valaopen" />
+		</choice>
+	</page>
+	
+	<gameover ID="meatGO" noReform="true">
+		<text>
+		Having no choice but to accept the outcome, her new companion now only a load of titfat and litres of milk, Vala decided to remain with her aunt. A once rocky relationship restored, she came to follow and respect her new 'mother'. With the shopkeeper's help, Vala rejoined the elven community with open arms. With Vala's help, the shopkeeper expanded her business. And her figure. LBREAK In a few years, Vala had forgotten all about that mysterious traveller from the stars and their brief companionship. A few years after that, the shopkeeper had forgotten all about her helpful, gullible niece. It was hard to remember just one more meal of many, after all.
+		</text>
+	</gameover>
+	
+	<gameover ID="meatGO2" noReform="true">
+		<text>
+		Unwilling to accept you were gone, Vala hurled obscenities at her aunt, smashing as much of her stock as she could, before storming out of the wrecked building. Retreating to her house, she packed up her meagre possessions, ready to leave town. 
+		<conditional> <condition evaluate="GLOBALFLAG" operator="equals" flag="Valaeat2" value="1" /> Thinking of the reformer, she returned to your ship and waited. And waited. For months. Your consciousness never returned, and you never reformed. After all, you didn't actually die. Living on, a blissful, carefree existence as a pair of breasts. All thoughts fused, mingling with the other happy victims. Vala was grief-stricken. Unable to bring herself to kill her only family, the guilt ate away at her psyche. It was her fault. It was all her fault. Destroying the worthless machinery, and her 'immortality' with it, she left the village. 
+		</conditional>
+		Heading south towards the ruins, Vala never looked back.
+		</text>
+	</gameover>
+	
+	<page ID="meat4b">
+		<text>
+		Deciding that the delicious drink was enough, you're inclined to decline. The shopkeeper doesn't seem to mind too much. She helps you up.
+		"Oh well dear, maybe next time, hmm? Let's get you cleaned up. Here, on the house." 
+		She hands you a cloth from a robe pocket, before properly dressing herself and straightening out her clothes. You wipe yourself down, removing any excess milk from yourself and the surrounding area. Vala is roused from her stupor by her aunt and looks extremely embarrassed as she grabs a cloth and cleans herself off too. 
+		"Another pair of satisfied customers. Don't be a stranger, Vala dear. My store is always open for family. Or friends of family." 
+		The shopkeeper gives you a wink and a wave, leaving you two alone. Vala frowns at her large behind wobbling away, and then looks at you, rubbing at her sloshing middle. 
+		"Hmm. We may not have gotten any gold, but at least there's meat in the village now. I'll consider it a vic-URP!.. Ohh.. A victory."
+		</text>
+		<picture source="valaporta2" height="1"/>
+		<special effect="removeJournal" ID="106" />
+		<effect value="200" type="experience"/>
+		<effect type="removeitem" item="arkmeat" value="6" />
+		<effect type="incrementglobalflag" flag="Valascore" value="2" />
+		<effect type="setglobalflag" flag="Valameat" value="1" />
+		<choice destination="end" text="A victory indeed." />
+	</page>
+	
+	<page ID="meatv">
+		<text>
+		Vala cuts in at your pause, standing between you and her aunt. She seemed confident.
+		"Look. We went to great lengths to procure this. We will gladly accept only a small amount of gold. Think of it as a familial gesture." 
+		When Vala interrupted, the shopkeeper seemed disappointed, but an impish smile spread across her face as she continued. Vala gave her a stern glare.
+		"However. I expect you to do me something in return. Sell this meat to the others cheaply. Gauge their opinion on it and tell us when we return." 
+		The shopkeeper was about to decline, her earrings jingling as her head began to shake. Seems she is a little too fond of gold to even consider selling it at bargain price. Vala cut in again. 
+		"If this meat ends up being popular, we can make another deal. A herd of the beasts that this meat came from. With a farm, you'll have untold profit for the future." 
+		Vala spoke smugly, as she knew that her aunt wouldn't, and couldn't refuse. Caught mid-headshake, the shopkeep frowned. 
+		</text>
+		<picture source="valaportx2" height="1"/>
+		<choice destination="meatvend" text="Got her right where we want her." />
+	</page>
+	
+	<page ID="meatvend">
+		<text>
+		Frowning for only a moment, she grinned widely, rubbing her hands together.
+		"Fine! Okay dear, you've got a deal. You drive a hard bargain. Maybe Gera taught you more than I gave her credit. Since it's for you Vala, and only because we're family, I'll give the others a good price. Remember though, you owe me!" 
+		Pulling a bag of gold from one of her many pockets, she hands it to Vala. Vala then bows slightly, taking the bag and turning quickly on her heels, leaving the store. As she passes you and gives you the gold bag, you catch her disgusted expression. You don't know what this woman did to earn it, but it's unquestionable that Vala doesn't care for her. Maybe you could ask for details if you get the time.
+		</text>
+		<picture source="valaportj" height="1"/>
+		<special effect="removeJournal" ID="106" />
+		<effect type="givegold" value="450" />
+		<effect value="200" type="experience"/>
+		<effect type="removeitem" item="arkmeat" value="6" />
+		<effect type="incrementglobalflag" flag="Valascore" value="3" />
+		<effect type="setglobalflag" flag="Valameat" value="1" />
+		<choice destination="end" text="Good going." />
+	</page>
+</Conversation>

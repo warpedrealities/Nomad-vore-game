@@ -30,5 +30,11 @@
 	<inventoryitem name="tribal outfit" probability="100" quantity="1" />	
 	<inventoryitem name="tucksack" probability="100"
 		quantity="1" />
+	<conditionalitem name="ark steak" probability="100"	quantity="6">
+		<conditional operator="equals" value="1" flag="Valameat" />
+	</conditionalitem>
+	<conditionalitem name="ark feast" probability="100"	quantity="2">
+		<conditional operator="equals" value="1" flag="Valameat" />
+	</conditionalitem>
 	<buymodifier name="deku nut" cost="100" />
 </shop>

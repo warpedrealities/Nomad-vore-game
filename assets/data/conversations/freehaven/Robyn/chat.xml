@@ -41,7 +41,50 @@
 	<choice destination="job5" text="$About Roberta">
 		<condition evaluate="GLOBALFLAG" operator="equals" value="3"	flag="piratebounty0" />	
 	</choice>	
+	<choice destination="mainquest0" text="$I was told you knew where I could get an adaptive computation core">
+		<effect type="setglobalflag" flag="mainquest" value="3" />	
+			<effect type="setglobalflag" flag="adaptive_computation" value="0" />	
+	</choice>
+
 	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
+	</page>
+	
+	<page ID="mainquest0">
+	<text>
+	"Huh, I might know. Those are pretty hard to come by these days. But I ain't about to admit nuthin' till I know what you want one for and who told ya."
+	</text>
+	<choice destination="mainquest1" text="$Jehari needs it to decipher something for me, she told me to say hi"/>
+	</page>
+	
+	<page ID="mainquest1">
+	<text>
+	"Jehari wants it?" says Robyn and brightens up "Well why didn't ya say so in the beginning, she's such a sweet thing and she has a nice big.." she blushes and composes herself "Anyway. If its for Jehari I can totally swing this. I got a friend, well..supplier, shifty type. Lives on deck 4 at the starlight apartments, goes by the name of Mallory. Go talk to her, tell her I sent you and I'm calling in a favour." says Robyn.
+	</text>
+	<choice destination="mainquest2" text="$You're going to expend a favour for me? thankyou."/>
+	</page>
+	
+	<page ID="mainquest2">
+	<text>
+	"Not doing it for you stupid. Jehari is gonna be able to use that thing for her own stuff after you're gone. Maybe even help with her condition." explains Robyn.
+	</text>
+	<choice destination="mainquest2A" text="$Her condition?"/>
+	<choice destination="mainquest3" text="$Thanks anyway."/>
+	</page>
+	
+	<page ID="mainquest2A">
+	<text>
+	"You must of noticed she's a lil, distractible? absentminded? Yeah the same defect that made her the big lovable pacifist made her both a genius and mentally kind of flighty. She's been trying to work on a cure for herself, when she isn't distracted."
+	</text>
+	<choice destination="mainquest3" text="$I see, thanks anyway though"/>
+	</page>
+	
+	<page ID="mainquest3">
+	<text>
+	"Yeah yeah, gratitude. You're still the one hoofing it down to level 4 on an errand. Mallory, deck 4, starlight apartments got all that? and be careful down there, if you get robbed or eaten we'll all get inconvenienced." says Robyn and then with a smile shoos you away.
+	</text>
+		<special effect="addJournal" file="main" name="mallory" />	
+		<effect type="setglobalflag" flag="adaptive_computation" value="1" />	
+		<choice destination="end" text="$Bye Robyn"/>
 	</page>
 	
 	<page ID="job4">

@@ -10,6 +10,7 @@
 	<choice destination="shop" text="$I'd like to see what you have for sale"/>
 	<choice destination="mainquest" text="$I need someone to decipher some black box data for me">
 		<condition evaluate="GLOBAFLAG" operator="equals" value="2"	flag="MAIN" />
+					<effect type="setglobalflag" flag="adaptive_computation" value="0" />	
 	</choice>
 	<choice destination="questions" text="$I'd like to ask you some questions"/>
 	<choice destination="end" text="$Nothing at the moment, I'll let you get back to your experiments"/>
@@ -75,6 +76,7 @@
 	<choice destination="questions" text="$It's a pleasure to meet you, can I ask some questions?"/>
 	<choice destination="mainquest" text="$can you decipher some black box data for me?">
 		<condition evaluate="GLOBAFLAG" operator="equals" value="2"	flag="MAIN" />
+					<effect type="setglobalflag" flag="adaptive_computation" value="0" />	
 	</choice>
 	<choice destination="shop" text="$It's a pleasure, can you show me what you have for sale?"/>
 	<choice destination="end" text="$It's a pleasure to meet you, I'll be back later though, farewell"/>

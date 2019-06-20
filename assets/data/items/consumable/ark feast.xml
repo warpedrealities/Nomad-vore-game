@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ItemConsumable name="ark feast" weight="3" value="450"
+	tag="1">
+	<description>This large hunk of meat and organ is surrounded by alien flora and topped with pieces of deku nut. It seems like a high class meal compared to everything else you've seen in Minyos.</description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="185" modifies="SATIATION">
+		The once tough arkosaur meat melts splendidly in your mouth, complimented perfectly by the bitter taste of the roasted deku nut chunks. The strange texture of the salad mingles well with the tenderness of the meat. Ahhhh, delicious. If there was more food like this around, everyone would be happy. Too bad that it cost a fortune.
+	</effectrecover>
+</ItemConsumable>

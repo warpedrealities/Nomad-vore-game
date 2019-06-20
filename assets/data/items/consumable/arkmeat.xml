@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ItemConsumable name="arkmeat" weight="2.5" value="10">
+	<description>A large, thick cut of meat from an Arkosaur. Offal included. Still dripping. Ew.</description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="35" modifies="SATIATION">
+		Grimacing, you consume the tough and bloody raw flesh. It sits heavily in your stomach, but at least it's something.
+	</effectrecover>
+</ItemConsumable>

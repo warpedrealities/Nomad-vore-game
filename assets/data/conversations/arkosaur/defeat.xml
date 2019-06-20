@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text> The arkosaur has fallen to the ground, it seems to still have some energy left in it, but not enough to be a threat. The dimwitted lizard creature looks up at you as it struggles to stand up.
+		</text>
+		<choice destination="analvore0" text="Looks a bit big, BUTT maybe...">
+		<assertion evaluate="hasperk" perk="analvore" />
+		</choice>
+		<choice destination="devour" text="devour">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+				<assertion evaluate="hasperk" perk="breastvore" />
+			</assertion>
+		</choice>
+		<choice destination="meat" text="*Vala seems to want something*">
+			<condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Vala" />
+			<condition evaluate="GLOBALFLAG" operator="equals" value="0" flag="Valameat" />
+			<condition evaluate="HASITEM" operator="lessthan" value="6" item="arkmeat" />
+		</choice>
+		<choice destination="end" text="leave it alone" />
+	</page>
+
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+
+<page ID="analvore0">
+		<text>
+			As you look down on the defeated creature, a devious idea pops into your head.
+			These creatures are quite bovine-like despite being lizards. Perhaps you could
+			use it's tendacy to charge into things head-first to your advantage. With a smirk,
+			you turn around while still facing the creature. You shake your <macro ID="butt_size_desc"/> rear-end
+			at it, to which it responds with a annoyed snort. With a laugh, you give your <macro ID="butt_size_desc"/> a good
+			slap, pushing the reptile's patience to an end. The weak, but angry arkosaur finally stands up and charges head-first towards your ass.
+			You use both hands to spread your ass cheeks as wide as you can to prepare for the impact.
+		</text>
+		<choice destination="analvore1" text="right where you want it" />
+	</page>
+
+<page ID="analvore1">
+		<text>
+			The arkosaur rams its head right into your waiting anus. The sudden push causes you to jump a little, but not enough
+			to dislodge the retile's head from your ass. The slow-minded creature still does not realize that it has been tricked
+			and continues to push forward, right into your digestive system. With a statisfied moan, you spread your cheeks wider
+			to accomidate for the creature's wide body. With a loud "schlorp" you hungry pucker sucks in the arkosaur's front legs.
+			With it's legs no longer touching the ground, the arkosaur seems to finally realize that is has made a mistake, not that
+			it can do anything about it. As your vorcarious backside continues to eat up the large reptile, you get down on all fours
+			in a doggy style position to support the heavy weight entering your stomach. 
+			
+		</text>
+		<choice destination="analvore2" text="Easy butt food" />
+	</page>
+
+<page ID="analvore2">
+		<text>
+			As you stomach begins to fill with reptile meat you,look behind yourself to your rear end sucking in the creature's
+			back legs. With your stomach filling up underneath you, it is not long before your belly starts to lift the rest of your body off
+			the ground. With one last pull, your asshole sucks in the beast's tail, sealing its fate inside your ass. Resting on top
+			of your lizard-filled belly, you look at your surroundings to see other arkosaurs in the distance. The simple-minded creatures
+			probably have no idea what has happened to their friend, but if they do understand, you've certaintly sent them a message.
+			You take a quick nap to let your meal digest. When you wake up, your belly has shrunken down to size similar to a middle
+			stage pregnancy. You give your belly a rub as you stand back to venture forth.
+		</text>
+		<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+	<page ID="meat">
+		<condition evaluate="HASITEM" operator="equals" value="5" item="arkmeat" />
+		<text>
+		You've been at it for a while now, and as you pack the latest chunk of meat away, you're worried it'll take some time to get the awful smell and gruesome sounds out of your mind. Vala is terribly bloodied, looking like something out of an old horror movie. "That should be enough PNAME. Let us return."
+			<conditional> <condition evaluate="GLOBALFLAG" operator="greaterthan" value="1" flag="Valaopen" />
+		Vala wipes some of the blood from her face on her sleeve, hesitantly explaining. 
+		"Truthfully, I hope with a better meat source, we can reduce the amount of uhmm. Err. Unnecessary casualties in our tribe." 
+		She's blushing but quickly tweaks her eartip and sobers up. 
+		"If we had a tamer herd of these beasts in the immediate vicinity, it would be much less dangerous to find food. Though it all depends on the villagers, I suppose. They might not take to it as readily as I. We shall see."
+			</conditional>
+		</text>
+		<picture source="valaportbblood2" height="1"/>
+		<effect type="giveitem" item="arkmeat" value="1" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Let's go." />
+	</page>
+	
+	<page ID="meat">
+		<condition evaluate="HASITEM" operator="greaterthan" value="1" item="arkmeat" />
+		<text>
+		You nod towards Vala. She steps forward towards the weakened creature, sword raised, to procure the meat. You quickly look away, but the sound still penetrates your eardrums distressingly, as she slaughters and then carves the reptilian beast. Vala, covered in viscera and looking somewhat pleased with herself, hands you another lump of the grisly looking meat.
+		</text>
+		<picture source="valaportbblood" height="1"/>
+		<effect type="giveitem" item="arkmeat" value="1" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Still gross.." />
+	</page>
+	
+	<page ID="meat">
+		<condition evaluate="HASITEM" operator="equals" value="0" item="arkmeat" />
+		<text>
+		You tilt your head towards Vala, in an inquiring fashion. She speaks up.
+		"PNAME, I've got an idea. We normally don't hunt out here. Perhaps these beasts could feed the tribe? I propose we take some samples to sell in town." 
+		You don't see why not. At your okay, Vala ends the struggling beast, and gets to work.
+		Some time later, Vala hands you a large hunk of bloody meat. It smells disgusting. Vala is biting into part of what seems to be the arkosaur's liver, blood spattering around her mouth. Somehow, she doesn't seem to mind the mess.
+		</text>
+		<special effect="addJournal" file="minyos" name="meat0" />
+		<picture source="valaportablood" height="1"/>
+		<effect type="giveitem" item="arkmeat" value="1" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Gross." />
+	</page>
+	
+</Conversation>
