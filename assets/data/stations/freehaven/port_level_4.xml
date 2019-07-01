@@ -57,6 +57,21 @@
 								info="freehaven/guntrader/chat" variable="96" />
 						</keyBlock>			
 						<keyBlock heat="1">
+							<!--starlight-->
+							<row>01222100</row>
+							<row>01222100</row>
+							<row>11222110</row>
+							<row>12222211</row>
+							<row>12222221</row>
+							<row>12222211</row>
+							<row>12222210</row>
+							<row>11111110</row>
+							<edge value="SOUTH" type="1"/>				
+							<widget x="6" y="4" name="elevatorWC" variable="22" info="starlight#adaptive_computation#0#greaterThan#You have no business here" />
+							<widget x="1" y="3" name="sprite" info="starlight_logo" variable="5#5"/>
+						</keyBlock>										
+					<clean value="10" />	
+					<keyBlock heat="1">
 							<!--hairdresser-->
 							<row>01212100</row>
 							<row>01222100</row>
@@ -67,9 +82,9 @@
 							<row>15555510</row>
 							<row>11111110</row>
 							<edge value="SOUTH" type="2"/>
-							<spawn x="3" y="5" tag="0" />
+							<spawn x="3" y="5" tag="0" />		
 						</keyBlock>										
-					<clean value="10" />	
+					<clean value="10" />						
 					<npcType value="freehaven/civilians/Ulem" />						
 					</advancedBlockDungeon>
 				</partition>		

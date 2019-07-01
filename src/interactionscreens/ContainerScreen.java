@@ -85,12 +85,12 @@ public class ContainerScreen extends Screen implements Callback {
 				if (coin.isCredits())
 				{
 					player.getInventory().setPlayerCredits(player.getInventory().getPlayerCredits() + coin.getCount());
-									
+
 				}
 				else
 				{
 					player.getInventory().setPlayerGold(player.getInventory().getPlayerGold() + coin.getCount());
-			
+
 				}
 			} else {
 				player.getInventory().AddItem(item);
@@ -118,9 +118,9 @@ public class ContainerScreen extends Screen implements Callback {
 			{
 				take();
 			}
-			
+
 		}
-		
+
 		resetList();
 	}
 
@@ -135,7 +135,7 @@ public class ContainerScreen extends Screen implements Callback {
 					player.getInventory().setWeight(player.getInventory().getWeight()-stack.getWeight());
 					player.getInventory().getItems().remove(index);
 					//add to container inventory
-					container.addStack(stack);		
+					container.addStack(stack);
 				}
 
 			}
@@ -145,26 +145,24 @@ public class ContainerScreen extends Screen implements Callback {
 			}
 
 		}
-		
+
 		resetList();
 	}
-	
-	
+
+
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
 		switch (ID) {
 
 		case 1:
 			// put
-			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT)||Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT))
-			{
-				putStack();
+			if (container.getContainedWeight() >= container.getMaxWeight()) {
+				if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT) || Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT)) {
+					putStack();
+				} else {
+					put();
+				}
 			}
-			else
-			{
-				put();		
-			}
-
 			break;
 		case 2:
 			// take
@@ -174,7 +172,7 @@ public class ContainerScreen extends Screen implements Callback {
 			}
 			else
 			{
-				take();			
+				take();
 			}
 
 			break;
@@ -270,7 +268,7 @@ public class ContainerScreen extends Screen implements Callback {
 		for (int i = 0; i < 2; i++) {
 			window.add(weightValues[i]);
 		}
-		
+
 		Text text=new Text(new Vec2f(-6.0F, -0.5F), "hold shift to move stacks", 0.7F, textures[4]);
 		window.add(text);
 		resetList();

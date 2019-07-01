@@ -11,6 +11,7 @@ import item.Item;
 import shared.ParserHelper;
 import widgets.Widget;
 import widgets.WidgetBreakable;
+import widgets.WidgetConditionalPortal;
 import widgets.WidgetContainer;
 import widgets.WidgetConversation;
 import widgets.WidgetDoor;
@@ -68,6 +69,18 @@ public class DungeonWidgetLoader {
 			widget = new WidgetPortal(root);
 			WidgetPortal wp = (WidgetPortal) widget;
 			wp.setDestination(definition.getWidgetInfo(), Integer.parseInt(definition.getWidgetVariable()));
+		}
+		if (root.getTagName().contains("conditionalPortal")) {
+			String s[] = definition.getWidgetInfo().split("#");
+			widget = new WidgetConditionalPortal(root);
+			WidgetConditionalPortal wp = (WidgetConditionalPortal) widget;
+			wp.setFlag(s[1]);
+			wp.setValue(Integer.parseInt(s[2]));
+			if (s[3].equals("greaterThan")) {
+				wp.setGreaterthan(true);
+			}
+			wp.setForbidText(s[4]);
+			wp.setDestination(s[0], Integer.parseInt(definition.getWidgetVariable()));
 		}
 		if (root.getTagName().contains("harvestable")) {
 			widget = new WidgetHarvestable(root);

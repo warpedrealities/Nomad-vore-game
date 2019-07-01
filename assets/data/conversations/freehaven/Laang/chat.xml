@@ -205,6 +205,7 @@
 	<text>
 	"Oh yes, that's what I like to hear. Especially from a nicely endowed meal such as yourself." she says and glances at your chest "I look forward to feeling those bulging out my belly."
 	</text>
+	<effect type="incrementlocalflag" flag="value" value="2" />		
 	<choice destination="serve3" text="*final decision*"/>
 	</page>
 
@@ -213,6 +214,7 @@
 	<text>
 	"Mhmm, yes. I will enjoy you, perhaps I will even enjoy you frequently." she says and smiles in delight as she looks you over.
 	</text>
+	<effect type="incrementlocalflag" flag="value" value="1" />	
 	<choice destination="serve3" text="*final decision*"/>	
 	</page>
 	

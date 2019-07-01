@@ -9,8 +9,106 @@
 	<description>The air is stale, the caves are poorly lit and alive with
 		shifting shadows</description>
 	<mapgen>
-		<walloff wall="0" sides="northwesteastsouth">
-			<cavegen iterations="3" tile="0" threshold="45" bounds="100"
+		
+		<prefab positionX="0" positionY="0" width="16">
+			<row>1111 1111 1111 1111</row>
+			<row>1111 1111 1111 1111</row>
+			<row>1111 1111 1111 1111</row>
+			<row>1112 1111 1111 1111</row>
+			
+			<row>1122 2111 1111 2222</row>
+			<row>1222 2211 1122 2222</row>
+			<row>1222 2211 1222 2222</row>
+			<row>1222 2222 2222 2222</row>	
+			
+			<row>1222 2222 2222 2222</row>
+			<row>1222 2221 1222 2222</row>
+			<row>1122 2211 1122 2222</row>
+			<row>1111 2211 1111 2222</row>
+			
+			<row>1111 2221 1111 1111</row>	
+			<row>1111 1221 1111 1111</row>
+			<row>1111 1221 1111 1111</row>
+			<row>1111 1221 1111 1111</row>			
+			<pairedportal sprite="3" destination="Zone 1A" x="3"
+						y="3" ID="11">a tunnel to the surface</pairedportal>			
+		</prefab>
+
+	<prefab positionX="16" positionY="0" width="16">
+			<row>1111 1111 1111 1111</row>
+			<row>1111 1111 1111 1111</row>
+			<row>1111 1111 1111 1111</row>
+			<row>1112 1111 1111 1111</row>
+			
+			<row>2122 2111 1111 1111</row>
+			<row>2222 2211 1122 2111</row>
+			<row>2222 2211 1222 2221</row>
+			<row>2222 2222 2222 2221</row>	
+			
+			<row>2222 2222 2222 2211</row>
+			<row>2222 2221 1222 2211</row>
+			<row>2122 2211 1122 2111</row>
+			<row>2111 2211 1111 1111</row>
+			
+			<row>1111 2221 1111 1111</row>	
+			<row>1111 1221 1111 1111</row>
+			<row>1111 1221 1111 1111</row>
+			<row>1111 1221 1111 1111</row>			
+	</prefab>
+		
+		<prefab positionX="0" positionY="16" width="16">
+			<row>1111 1221 1111 1111</row>
+			<row>1111 2222 1111 1111</row>
+			<row>1111 2222 2111 1111</row>
+			<row>1112 2222 2211 1111</row>
+			
+			<row>1122 2111 2221 2211</row>
+			<row>1222 2211 2222 2221</row>
+			<row>1222 2221 2222 2222</row>
+			<row>1222 1122 2222 2222</row>	
+			
+			<row>1222 1122 2222 2222</row>
+			<row>1222 2221 1222 2222</row>
+			<row>1122 2211 1122 2222</row>
+			<row>1111 2211 1111 2222</row>
+			
+			<row>1111 2111 1111 1111</row>	
+			<row>1111 1111 1111 1111</row>
+			<row>1111 1111 1111 1111</row>
+		</prefab>
+		
+	<prefab positionX="16" positionY="16" width="16">
+			<row>1111 1221 1111 1111</row>	
+			<row>1111 1221 1111 1111</row>
+			<row>1111 2221 1111 1111</row>
+			<row>1112 2222 1111 1111</row>
+			
+			<row>1122 2222 1111 2211</row>
+			<row>1222 2221 1122 2211</row>
+			<row>2222 2211 1222 2221</row>
+			<row>2222 2222 2222 2221</row>	
+			
+			<row>2222 2222 2222 2221</row>
+			<row>2222 2221 1222 2111</row>
+			<row>2222 2211 1122 2111</row>
+			<row>2222 2111 1111 2111</row>
+			
+			<row>1111 2222 2221 1111</row>	
+			<row>1111 1222 2222 1111</row>
+			<row>1111 1112 1111 1111</row>
+			<row>1111 1111 1111 1111</row>	
+					<pairedportal sprite="3" destination="Deep Cave zone"
+						x="7" y="14" ID="15" facing="0">a tunnel deeper in</pairedportal>
+					<placeWidget x="7" y="13" name="DESCRIBER">
+						as you approach the tunnel that plunges yet deeper into the earth
+						you scent even stronger pheremones wafting up from there. None of
+						the small fungiforms you’ve seen could form such a dense
+						outpouring of mind altering aromas, something big dwells down
+						there and if you descend you may not be able to resist its allure.
+					</placeWidget>	
+			</prefab>		
+		
+		<!-- 	<cavegen iterations="3" tile="0" threshold="45" bounds="100"
 				minfloor="0.5">
 
 
@@ -38,17 +136,12 @@
 				<noise tile="2" scarcity="5" />
 				<auditpathsthroughvoid replace="1" carve="2" />	
 
-
-				<floodfill tile="1">
+ -->
+		
 					<Seedwidgets min="8" max="16" name="crystaldeposit" />
 					<SeedNPCs min="4" max="8" name="Alpha_Minoris_IIA/mushroom girl">
 					</SeedNPCs>
-				</floodfill>
-			</cavegen>
-		</walloff>
-		<auditpaths carve="2" replace="1" />
-		<auditpaths carve="2" replace="1" exclude="impassable" />
-		<auditpaths carve="0" replace="1" />
+
 	</mapgen>
 
 </zone>

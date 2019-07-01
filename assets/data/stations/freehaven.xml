@@ -2,9 +2,10 @@
 <Station numDocks="1">
 	<entitysprite filename="freehaven" size="1.0" />
 	<zone x="0" y="5" surface="0">port_level_5</zone>
-	<zone x="0" y="4" surface="0">freehaven_alpha</zone>
-	<zone x="0" y="6" surface="0">freehaven_beta</zone>	
-	<zone x="0" y="4" surface="0">port_level_4</zone>	
+	<zone x="-1" y="5" surface="0">freehaven_alpha</zone>
+	<zone x="1" y="5" surface="0">freehaven_beta</zone>	
+	<zone x="1" y="4" surface="0">starlight</zone>	
+	<zone x="0" y="4" surface="0">port_level_4</zone>		
 	<dockingModel count="3">
 		<image value="freehaven_station"/>
 		<dockingPort startsOpen="true">
