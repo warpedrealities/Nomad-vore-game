@@ -172,6 +172,7 @@
 	"I have received the report already. You have done well my knight, my trust in your skills was well placed. Already my soldiers drive them back, their surety has been shaken. I suspect it will be more so when they realize how many of their warriors our soldiers devoured during this latest bout of fighting."
 	</text>
 		<special effect="removeJournal" ID="208"/>
+				<effect type="setglobalflag" flag="AM_SAURIAN_CAMPAIGN" value="1" />
 	<effect type="setglobalflag" flag="AM_SAURIAN_MISSION0" value="3" />		
 	<effect type="experience" value="500" />	
 	<choice destination="end" text="$I am pleased to hear it"/>
@@ -190,6 +191,8 @@
 		<choice destination="campaign1" text="$My queen, let us discuss the war">
 				<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
 				value="1" />	
+				<condition operator="equals" evaluate="GLOBALFLAG"
+				flag="AM_SAURIAN_CAMPAIGN" value="0" />			
 		<condition operator="equals" evaluate="LOCALFLAG" flag="campaignDiscussion"
 			value="1" />			
 		</choice>		
