@@ -98,7 +98,7 @@
 			<row>1111 1112 1111 1111</row>
 			<row>1111 1111 1111 1111</row>	
 					<pairedportal sprite="3" destination="Deep Cave zone"
-						x="7" y="14" ID="15" facing="0">a tunnel deeper in</pairedportal>
+						x="7" y="14" ID="15" facing="4">a tunnel deeper in</pairedportal>
 					<placeWidget x="7" y="13" name="DESCRIBER">
 						as you approach the tunnel that plunges yet deeper into the earth
 						you scent even stronger pheremones wafting up from there. None of
