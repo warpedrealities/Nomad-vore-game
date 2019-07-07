@@ -18,7 +18,9 @@ import org.w3c.dom.NodeList;
 
 import actor.npc.NPC;
 import actor.npc.observerVore.VoreScript;
+import nomad.universe.Universe;
 import shared.ParserHelper;
+import shared.Vec2f;
 import view.ViewScene;
 import zone.Zone;
 
@@ -185,6 +187,19 @@ public class VoreScript_Impl implements VoreScript {
 				break;
 			}
 		}
+	}
+
+	@Override
+	public NPC getTarget() {
+		return target;
+	}
+
+	@Override
+	public void releasePrey() {
+		Vec2f p = Universe.getInstance().getCurrentZone().getEmptyTileNearP(origin.getPosition());
+		target.Heal();
+		target.setPosition(p);
+
 	}
 
 }

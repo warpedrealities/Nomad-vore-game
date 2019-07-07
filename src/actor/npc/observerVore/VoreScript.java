@@ -3,6 +3,7 @@ package actor.npc.observerVore;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import actor.npc.NPC;
 import zone.Zone;
 
 public interface VoreScript {
@@ -23,4 +24,7 @@ public interface VoreScript {
 
 	void linkActors(Zone zone);
 
+	NPC getTarget();
+
+	void releasePrey();
 }

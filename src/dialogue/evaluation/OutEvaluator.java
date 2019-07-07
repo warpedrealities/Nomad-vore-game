@@ -91,6 +91,14 @@ public class OutEvaluator {
 				return false;
 			}
 		}
+		if (eval.equals("hasPrey")) {
+			String name = E.getAttribute("name");
+			if (m_npc.getVoreScript() != null && m_npc.getVoreScript().getTarget().getName().equals(name)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 		if (eval.equals("hasperk")) {
 			PerkInstance perk = ((Player_RPG) m_player.getRPG()).getPerkInstance(E.getAttribute("perk"));
 			if (perk == null) {

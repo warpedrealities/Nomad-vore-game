@@ -1023,6 +1023,14 @@ public class NPC extends Actor implements Controllable {
 		return ((NPC_RPG) actorRPG).getFlushScript();
 	}
 
+	public VoreScript getVoreScript() {
+		return voreScript;
+	}
+
+	public void setVoreScript(VoreScript voreScript) {
+		this.voreScript = voreScript;
+	}
+
 	private void runFlushScript() {
 		Globals globals = JsePlatform.standardGlobals();
 

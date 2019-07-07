@@ -99,6 +99,12 @@ public class EffectProcessor {
 		if (str.equals("opendoor")) {
 			DialogueHelper.openDoor(node.getAttribute("lock"));
 		}
+
+		if (str.equals("removePrey")) {
+			m_npc.getVoreScript().releasePrey();
+			m_npc.setVoreScript(null);
+		}
+
 		if (str.equals("destroywidget")) {
 			ViewScene.m_interface.RemoveWidget(widget);
 		}
