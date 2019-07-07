@@ -47,6 +47,7 @@ import shared.Vec2f;
 import view.ViewScene;
 import view.ZoneInteractionHandler;
 import zone.Tile;
+import zone.Zone;
 import zone.Zone_int;
 
 public class NPC extends Actor implements Controllable {
@@ -584,7 +585,7 @@ public class NPC extends Actor implements Controllable {
 	@Override
 	public void Interact(Player player) {
 
-		if (voreScript!=null || isBusy)
+		if ((voreScript != null && voreScript.blocksConversation()) || isBusy)
 		{
 			ViewScene.m_interface.DrawText(actorName+" is busy right now");
 		}
@@ -692,6 +693,12 @@ public class NPC extends Actor implements Controllable {
 		} else {
 			dstream.writeBoolean(false);
 		}
+		if (voreScript != null) {
+			dstream.writeBoolean(true);
+			voreScript.save(dstream);
+		} else {
+			dstream.writeBoolean(false);
+		}
 	}
 
 	@Override
@@ -761,6 +768,16 @@ public class NPC extends Actor implements Controllable {
 		}
 		if (dstream.readBoolean()) {
 			crewSkill = new Crew(dstream);
+		}
+		if (dstream.readBoolean()) {
+			voreScript = new VoreScript_Impl(dstream, this);
+		}
+	}
+
+	@Override
+	public void linkActors(Zone zone) {
+		if (voreScript != null) {
+			voreScript.linkActors(zone);
 		}
 	}
 

@@ -15,6 +15,7 @@ import shared.Geometry;
 import shared.Vec2f;
 import zone.Tile;
 import zone.TileDef.TileMovement;
+import zone.Zone;
 import zone.Zone_int;
 
 public abstract class Actor implements Attackable {
@@ -281,5 +282,10 @@ public abstract class Actor implements Attackable {
 
 	public float getSpriteSize() {
 		return 1;
+	}
+
+	public void linkActors(Zone zone) {
+		// TODO Auto-generated method stub
+
 	}
 }

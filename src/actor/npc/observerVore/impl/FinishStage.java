@@ -11,12 +11,12 @@ public class FinishStage extends StageBase implements ScriptStage {
 
 	private void updateStart(boolean visible,boolean noEnemies,int lastDamaged)
 	{
-		if (lastDamaged>10)
+		if (lastDamaged > 10 && noEnemies)
 		{
-			progress(visible);				
+			progress(visible);
 		}
 	}
-	
+
 	private void updateContinue(boolean visible,boolean noEnemies)
 	{
 		progress(visible);
@@ -31,7 +31,7 @@ public class FinishStage extends StageBase implements ScriptStage {
 		{
 			updateContinue(visible,noEnemies);
 		}
-		
+
 		if (index>=size)
 		{
 			return 1;
@@ -49,4 +49,8 @@ public class FinishStage extends StageBase implements ScriptStage {
 		return false;
 	}
 
+	@Override
+	public boolean blocksAI() {
+		return true;
+	}
 }

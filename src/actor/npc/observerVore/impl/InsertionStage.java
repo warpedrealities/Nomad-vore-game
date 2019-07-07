@@ -28,4 +28,9 @@ public class InsertionStage extends StageBase implements ScriptStage {
 		return true;
 	}
 
+	@Override
+	public boolean blocksAI() {
+		return true;
+	}
+
 }

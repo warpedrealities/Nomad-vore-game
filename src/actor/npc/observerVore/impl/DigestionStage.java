@@ -28,4 +28,8 @@ public class DigestionStage extends StageBase implements ScriptStage {
 		return false;
 	}
 
+	@Override
+	public boolean blocksAI() {
+		return false;
+	}
 }

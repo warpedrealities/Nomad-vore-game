@@ -694,6 +694,9 @@ public class Zone implements Zone_int {
 					}
 				}
 			}
+			for (int i = 0; i < count; i++) {
+				zoneActors.get(i).linkActors(this);
+			}
 
 			// adjacentzonenames
 			for (int i = 0; i < 4; i++) {

@@ -1,7 +1,10 @@
 package actor.npc.observerVore.impl;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 import org.luaj.vm2.Globals;
 import org.luaj.vm2.LuaError;
@@ -17,31 +20,56 @@ import actor.npc.NPC;
 import actor.npc.observerVore.VoreScript;
 import shared.ParserHelper;
 import view.ViewScene;
+import zone.Zone;
 
 public class VoreScript_Impl implements VoreScript {
-	
+
 	private ScriptStage []stages;
-	private String luaScript;
+	private String luaScript, filename;
 	private int stageIndex;
-	private boolean blockAI,alive;
+	private boolean blocksConversation, alive;
 	private NPC target,origin;
-	private int lastDamaged;
-	
+	private int lastDamaged, uid;
+
 	public VoreScript_Impl(String filename,NPC target, NPC origin)
 	{
+		this.filename = filename;
 		genStages(filename);
 		stageIndex=0;
-		blockAI=true;
 		alive=true;
 		this.target=target;
 		this.origin=origin;
 		target.setBusy(true);
 	}
-	
+
+	public VoreScript_Impl(DataInputStream dstream, NPC origin) throws IOException {
+		this.origin = origin;
+		this.filename = ParserHelper.LoadString(dstream);
+		genStages(filename);
+		alive = true;
+		stageIndex = dstream.readInt();
+		this.stages[stageIndex].load(dstream);
+		this.uid = dstream.readInt();
+	}
+
+
+	@Override
+	public void save(DataOutputStream dstream) throws IOException {
+		// TODO Auto-generated method stub
+		ParserHelper.SaveString(dstream, filename);
+		dstream.writeInt(stageIndex);
+		this.stages[stageIndex].save(dstream);
+		dstream.writeInt(this.target.getUID());
+	}
+
 	private void genStages(String filename)
 	{
 		Document doc=ParserHelper.LoadXML("assets/data/observer Vore/"+filename+".xml");
-	    Element n=(Element)doc.getFirstChild();
+		Element n=(Element)doc.getFirstChild();
+		blocksConversation = true;
+		if (n.getAttribute("blocksConversation").equals("false")) {
+			blocksConversation = false;
+		}
 		NodeList children=n.getChildNodes();
 		stages=new ScriptStage[3];
 		for (int i=0;i<children.getLength();i++)
@@ -56,7 +84,7 @@ public class VoreScript_Impl implements VoreScript {
 				}
 				if (Enode.getTagName()=="digestion")
 				{
-					stages[1]=new DigestionStage(Enode);	
+					stages[1]=new DigestionStage(Enode);
 				}
 				if (Enode.getTagName()=="finish")
 				{
@@ -69,10 +97,10 @@ public class VoreScript_Impl implements VoreScript {
 			}
 		}
 	}
-	
+
 	@Override
 	public boolean blocksAI() {
-		return blockAI;
+		return stages[stageIndex].blocksAI();
 	}
 
 	@Override
@@ -114,7 +142,7 @@ public class VoreScript_Impl implements VoreScript {
 		}
 		try {
 			script.call();
-			
+
 			LuaValue luacontrollable = CoerceJavaToLua.coerce(origin);
 			LuaValue luaView = CoerceJavaToLua.coerce(ViewScene.m_interface);
 			LuaValue luacontrol = globals.get("main");
@@ -123,8 +151,8 @@ public class VoreScript_Impl implements VoreScript {
 			} else {
 				System.out.println("Lua function not found");
 			}
-		} catch (LuaError e) {			
-			System.err.println("script name"+luaScript);			
+		} catch (LuaError e) {
+			System.err.println("script name"+luaScript);
 			e.printStackTrace();
 		}
 	}
@@ -134,7 +162,7 @@ public class VoreScript_Impl implements VoreScript {
 		lastDamaged=0;
 		if (stages[stageIndex].isInterruptible())
 		{
-			target.setBusy(false);	
+			target.setBusy(false);
 			alive=false;
 		}
 	}
@@ -142,6 +170,21 @@ public class VoreScript_Impl implements VoreScript {
 	@Override
 	public boolean isActive() {
 		return alive;
+	}
+
+	@Override
+	public boolean blocksConversation() {
+		return blocksConversation;
+	}
+
+	@Override
+	public void linkActors(Zone zone) {
+		for (int i = 0; i < zone.getActors().size(); i++) {
+			if (zone.getActors().get(i).getUID() == uid && NPC.class.isInstance(zone.getActors().get(i))) {
+				this.target = (NPC) zone.getActors().get(i);
+				break;
+			}
+		}
 	}
 
 }
