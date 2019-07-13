@@ -778,6 +778,7 @@ public class NPC extends Actor implements Controllable {
 	public void linkActors(Zone zone) {
 		if (voreScript != null) {
 			voreScript.linkActors(zone);
+
 		}
 	}
 

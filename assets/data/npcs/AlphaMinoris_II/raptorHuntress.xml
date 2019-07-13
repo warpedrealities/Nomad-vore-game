@@ -38,7 +38,7 @@
 				<removeText> TARGET is no longer frenzied</removeText>
 				<effect attribute="MELEE" modifier="4" />	
 				<effect attribute="PARRY" modifier="4" />				
-				<effect attribute="WILLPOWER" modifier="4" />			
+				<effect attribute="WILLPOWER" modifier="12" />			
 			</statusAttribMod>
 			<missText count="1">
 				<text></text>

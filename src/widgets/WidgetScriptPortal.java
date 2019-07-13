@@ -42,7 +42,7 @@ public class WidgetScriptPortal extends WidgetPortal {
 	@Override
 	public void save(DataOutputStream dstream) throws IOException {
 		// TODO Auto-generated method stub
-		dstream.write(16);
+		dstream.write(27);
 		commonSave(dstream);
 		dstream.writeByte(portalFacing);
 		dstream.writeInt(portalID);
@@ -82,6 +82,7 @@ public class WidgetScriptPortal extends WidgetPortal {
 		}
 	}
 
+	@Override
 	public boolean Step() {
 		try {
 			script.call();

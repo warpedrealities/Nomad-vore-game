@@ -42,10 +42,9 @@
 		<condition evaluate="GLOBALFLAG" operator="equals" value="3"	flag="piratebounty0" />	
 	</choice>	
 	<choice destination="mainquest0" text="$I was told you knew where I could get an adaptive computation core">
-		<effect type="setglobalflag" flag="mainquest" value="3" />	
-			<effect type="setglobalflag" flag="adaptive_computation" value="0" />	
+		<condition evaluate="GLOBALFLAG" operator="equals" value="3"	flag="mainquest" />	
+		<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="adaptive_computation" />			
 	</choice>
-
 	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
 	</page>
 	

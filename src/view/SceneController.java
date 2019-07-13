@@ -99,6 +99,10 @@ public class SceneController implements Sense {
 		gameUniverse.getEventSystem().update(gameUniverse, 1);
 	}
 
+	public Universe getGameUniverse() {
+		return gameUniverse;
+	}
+
 	@Override
 	public Actor getHostile(Actor origin, int maxRange, boolean visibleOnly) {
 		Actor hostile = null;

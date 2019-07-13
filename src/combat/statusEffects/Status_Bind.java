@@ -3,6 +3,7 @@ package combat.statusEffects;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -116,6 +117,11 @@ public class Status_Bind extends Status_AttribMod {
 		removeText = ParserHelper.LoadString(dstream);
 		originDependent = dstream.readBoolean();
 		strength = dstream.readInt();
+		c = dstream.readInt();
+		struggleTexts = new String[c];
+		for (int i = 0; i < c; i++) {
+			struggleTexts[i] = ParserHelper.LoadString(dstream);
+		}
 		boolean b = dstream.readBoolean();
 		if (b == true) {
 			String originName = ParserHelper.LoadString(dstream);
@@ -142,6 +148,10 @@ public class Status_Bind extends Status_AttribMod {
 		dstream.writeBoolean(originDependent);
 		dstream.writeInt(strength);
 
+		dstream.writeInt(struggleTexts.length);
+		for (int i = 0; i < struggleTexts.length; i++) {
+			ParserHelper.SaveString(dstream, struggleTexts[i]);
+		}
 		if (origin != null) {
 			dstream.writeBoolean(true);
 			ParserHelper.SaveString(dstream, origin.getName());
@@ -221,4 +231,8 @@ public class Status_Bind extends Status_AttribMod {
 		return false;
 	}
 
+	@Override
+	public void linkActors(ArrayList<Actor> actors) {
+
+	}
 }

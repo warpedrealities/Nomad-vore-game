@@ -156,7 +156,7 @@ public class ContainerScreen extends Screen implements Callback {
 
 		case 1:
 			// put
-			if (container.getContainedWeight() >= container.getMaxWeight()) {
+			if (container.getContainedWeight() <= container.getMaxWeight()) {
 				if (Keyboard.isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT) || Keyboard.isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT)) {
 					putStack();
 				} else {

@@ -7,6 +7,7 @@ import item.ItemAmmo;
 import item.ItemHasEnergy;
 import item.instances.ItemDepletableInstance;
 import item.instances.ItemStack;
+import nomad.universe.Universe;
 
 public class ReloadingHandler {
 
@@ -99,6 +100,7 @@ public class ReloadingHandler {
 								inventory.remove(ammunition);
 							}
 							// time tick
+							Universe.getInstance().getPlayer().addBusy(4);
 						}
 						return true;
 					} else {
@@ -108,6 +110,7 @@ public class ReloadingHandler {
 						if (!inventory.contains(ammo)) {
 							inventory.add(ammo);
 						}
+						Universe.getInstance().getPlayer().addBusy(4);
 						return true;
 					}
 				}

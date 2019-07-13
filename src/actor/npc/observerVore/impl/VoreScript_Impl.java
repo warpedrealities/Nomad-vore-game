@@ -29,20 +29,26 @@ public class VoreScript_Impl implements VoreScript {
 	private ScriptStage []stages;
 	private String luaScript, filename;
 	private int stageIndex;
-	private boolean blocksConversation, alive;
+	private boolean alive;
 	private NPC target,origin;
 	private int lastDamaged, uid;
+	private boolean blocksConversation = true;
+
 
 	public VoreScript_Impl(String filename,NPC target, NPC origin)
 	{
 		this.filename = filename;
 		genStages(filename);
 		stageIndex=0;
+		if (this.stages[0] == null) {
+			stageIndex = 1;
+		}
 		alive=true;
 		this.target=target;
 		this.origin=origin;
 		target.setBusy(true);
 	}
+
 
 	public VoreScript_Impl(DataInputStream dstream, NPC origin) throws IOException {
 		this.origin = origin;
@@ -63,12 +69,13 @@ public class VoreScript_Impl implements VoreScript {
 		this.stages[stageIndex].save(dstream);
 		dstream.writeInt(this.target.getUID());
 	}
-
 	private void genStages(String filename)
 	{
 		Document doc=ParserHelper.LoadXML("assets/data/observer Vore/"+filename+".xml");
 		Element n=(Element)doc.getFirstChild();
 		blocksConversation = true;
+
+
 		if (n.getAttribute("blocksConversation").equals("false")) {
 			blocksConversation = false;
 		}

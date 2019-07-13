@@ -26,8 +26,23 @@
 					variable="1" />	
 		<placeWidget x="5" y="6" name="bed"
 					variable="1" />						
-		<pairedportal sprite="1" destination="port_level_4" x="1" facing="2"
-			y="2" ID="22">elevator</pairedportal>	
+		<scriptlockportal sprite="1" destination="port_level_4" x="1" facing="2"
+			y="2" ID="22">
+			<script>starlight_elevator</script>
+			<description>Elevator</description><forbidtext>I don't have what I came here for yet</forbidtext>
+			</scriptlockportal>	
+		<placeWidget x="2" y="6" name="cargocontainer">
+					<lootTable>
+						<loot item="questItem" chance="1.0" unique="3" addendum="mallory_keycard" />							
+					</lootTable>
+				</placeWidget>	
+			<placeNPC name="freehaven/criminals/erika" x="4" y="4">
+			<script spawn="mainquest/starlightcriminals"/>
+			</placeNPC>
+			<placeNPC name="freehaven/criminals/tanya" x="4" y="3">
+			<script spawn="mainquest/starlightcriminals"/>
+			</placeNPC>
+		<placeNPC name="freehaven/civilians/mallory" x="4" y="5" />				
 	</mapgen>
 
 </zone>

@@ -149,7 +149,7 @@ public class ActionBar implements ButtonListener {
 
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-		if (ID >= 1000 && active) {
+		if (ID >= 1000 && active && clock <= 0) {
 			processAction(ID - 1000);
 		}
 	}

@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
-		<text> The arkosaur has fallen to the ground, it seems to still have some energy left in it, but not enough to be a threat. The
-			dimwitted lizard creature looks up at you as it struggles to stand up.
+		<text> The arkosaur has fallen to the ground, it seems to still have some energy left in it, but not enough to be a threat. The dimwitted lizard creature looks up at you as it struggles to stand up.
 		</text>
 		<choice destination="analvore0" text="Looks a bit big, BUTT maybe...">
-<assertion evaluate="hasperk" perk="analvore" />
-</choice>
+		<assertion evaluate="hasperk" perk="analvore" />
+		</choice>
 		<choice destination="devour" text="devour">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -15,6 +14,11 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 				<assertion evaluate="hasperk" perk="breastvore" />
 			</assertion>
+		</choice>
+		<choice destination="meat" text="*Vala seems to want something*">
+			<condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Vala" />
+			<condition evaluate="GLOBALFLAG" operator="equals" value="0" flag="Valameat" />
+			<condition evaluate="HASITEM" operator="lessthan" value="6" item="arkmeat" />
 		</choice>
 		<choice destination="end" text="leave it alone" />
 	</page>
@@ -72,4 +76,47 @@
 		<choice destination="end" text="carry on" />
 	</page>
 
+	<page ID="meat">
+		<condition evaluate="HASITEM" operator="equals" value="5" item="arkmeat" />
+		<text>
+		You've been at it for a while now, and as you pack the latest chunk of meat away, you're worried it'll take some time to get the awful smell and gruesome sounds out of your mind. Vala is terribly bloodied, looking like something out of an old horror movie. "That should be enough PNAME. Let us return."
+			<conditional> <condition evaluate="GLOBALFLAG" operator="greaterthan" value="1" flag="Valaopen" />
+		Vala wipes some of the blood from her face on her sleeve, hesitantly explaining. 
+		"Truthfully, I hope with a better meat source, we can reduce the amount of uhmm. Err. Unnecessary casualties in our tribe." 
+		She's blushing but quickly tweaks her eartip and sobers up. 
+		"If we had a tamer herd of these beasts in the immediate vicinity, it would be much less dangerous to find food. Though it all depends on the villagers, I suppose. They might not take to it as readily as I. We shall see."
+			</conditional>
+		</text>
+		<picture source="valaportbblood2" height="1"/>
+		<effect type="giveitem" item="arkmeat" value="1" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Let's go." />
+	</page>
+	
+	<page ID="meat">
+		<condition evaluate="HASITEM" operator="greaterthan" value="1" item="arkmeat" />
+		<text>
+		You nod towards Vala. She steps forward towards the weakened creature, sword raised, to procure the meat. You quickly look away, but the sound still penetrates your eardrums distressingly, as she slaughters and then carves the reptilian beast. Vala, covered in viscera and looking somewhat pleased with herself, hands you another lump of the grisly looking meat.
+		</text>
+		<picture source="valaportbblood" height="1"/>
+		<effect type="giveitem" item="arkmeat" value="1" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Still gross.." />
+	</page>
+	
+	<page ID="meat">
+		<condition evaluate="HASITEM" operator="equals" value="0" item="arkmeat" />
+		<text>
+		You tilt your head towards Vala, in an inquiring fashion. She speaks up.
+		"PNAME, I've got an idea. We normally don't hunt out here. Perhaps these beasts could feed the tribe? I propose we take some samples to sell in town." 
+		You don't see why not. At your okay, Vala ends the struggling beast, and gets to work.
+		Some time later, Vala hands you a large hunk of bloody meat. It smells disgusting. Vala is biting into part of what seems to be the arkosaur's liver, blood spattering around her mouth. Somehow, she doesn't seem to mind the mess.
+		</text>
+		<special effect="addJournal" file="minyos" name="meat0" />
+		<picture source="valaportablood" height="1"/>
+		<effect type="giveitem" item="arkmeat" value="1" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Gross." />
+	</page>
+	
 </Conversation>

@@ -1337,6 +1337,7 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 			m_reader.UpdateHand();
 			m_screen = null;
 			actionBar.setActive(true);
+			actionBar.setClock(1);
 			m_time = 0.5F;
 		}
 		if (screen!=null)

@@ -16,10 +16,6 @@ public interface VoreScript {
 
 	boolean blocksAI();
 
-	boolean isActive();
-
-	boolean blocksConversation();
-
 	void save(DataOutputStream dstream) throws IOException;
 
 	void linkActors(Zone zone);
@@ -27,4 +23,9 @@ public interface VoreScript {
 	NPC getTarget();
 
 	void releasePrey();
+
+	boolean blocksConversation();
+
+	boolean isActive();
+
 }

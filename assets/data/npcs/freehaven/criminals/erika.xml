@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="criminalE.png" />
+
+	<name>Erika</name>
+	<description>A redheaded and somehow even more cocky wolfgirl with the fur of her ears and tail the colour of dried blood. She stands some inches over six feet is wearing a short tanktop and one can only assume intentionally torn pants. As if that isn't enough to make her bad news the calf high boots and studded baseball bat would seal the deal.</description>
+	<rpg>
+		<experiencevalue value="300" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="MELEE" value="4" />		
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="DODGE" value="4"/>		
+		<attribute attribute="WILLPOWER" value="4"/>	
+		<combatMove name="pummel" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0" threatening="true">
+			<effectDamage type="KINETIC" minValue="5" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Erika fails to hit TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Erika hits TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="break guard" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" cooldown="50" icon="16" pattern="MELEE"
+			actionCost="6" moveType="FIGHT">
+			<effectDamage type="KINETIC" minValue="4" maxValue="6"
+				modifier="STRENGTH" />			
+			<missText count="1">
+				<text>Erika fails to land a guard break on TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Erika delivers a guard breaking kick to TARGET and inflicts VALUE damage</text>
+			</hitText>
+			<effectStatus probability="100">
+				<applyText>TARGET defences have been weakened</applyText>
+				<statusAttribMod uid="150" icon="0" duration="20"
+					numModifiers="2">
+					<removeText> TARGET defences have recovered</removeText>
+					<effect attribute="RANGED" modifier="-4" />
+					<effect attribute="MELEE" modifier="-4" />
+				</statusAttribMod>
+			</effectStatus>	
+		</combatMove>		
+	
+	</rpg>
+	<respawn delay="4000" />	
+	<peacebond />
+	<defeated conversation="freehaven/erika/defeat" />
+	<seduced conversation="freehaven/erika/defeat" />
+	<victory conversation="freehaven/erika/victory" />
+	<seducer conversation="freehaven/erika/victory" />
+	<controller AI="freehaven_erika" />
+	<faction value="freehaven_gangs" />
+</Harpy>

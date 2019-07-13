@@ -36,11 +36,11 @@
 			<statusAttribMod uid="17" icon="12" duration="8"
 				numModifiers="5">
 				<removeText> TARGET is no longer staggered</removeText>
-				<effect attribute="RANGED" modifier="-4" />
-				<effect attribute="MELEE" modifier="-4" />			
-				<effect attribute="PARRY" modifier="-4" />
-				<effect attribute="DODGE" modifier="-4" />	
-				<effect attribute="SEDUCTION" modifier="-4" />				
+				<effect attribute="RANGED" modifier="-6" />
+				<effect attribute="MELEE" modifier="-6" />			
+				<effect attribute="PARRY" modifier="-6" />
+				<effect attribute="DODGE" modifier="-6" />	
+				<effect attribute="SEDUCTION" modifier="-6" />				
 			</statusAttribMod>
 			</effectStatus>	
 			

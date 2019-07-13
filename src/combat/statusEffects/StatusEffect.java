@@ -3,6 +3,7 @@ package combat.statusEffects;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import actor.Actor;
 import actorRPG.Actor_RPG;
@@ -35,5 +36,8 @@ public interface StatusEffect {
 
 	default boolean isEffective() {
 		return true;
+	}
+
+	public default void linkActors(ArrayList<Actor> actors) {
 	};
 }

@@ -35,6 +35,7 @@ import shared.ParserHelper;
 import shared.SceneBase;
 import view.ViewScene;
 import vmo.Game;
+import zone.Zone;
 
 
 public class Player_RPG implements Actor_RPG {
@@ -1293,5 +1294,7 @@ public class Player_RPG implements Actor_RPG {
 		return skillSelection;
 	}
 
-
+	public void linkActors(Zone zone) {
+		statusEffectHandler.linkActors(zone);
+	}
 }

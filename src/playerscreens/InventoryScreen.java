@@ -51,26 +51,26 @@ public class InventoryScreen extends Screen implements Callback {
 	Player m_player;
 	Window m_window;
 	Text m_slots[];
-	
+
 	int m_control;
-	
+
 	ScrollableMultiLineText m_description;
 	Rect m_rect[];
 	MouseHook m_hook;
 	ModelController_Int m_callback;
-	 
+
 	Text m_encumbrance;
 	TextColoured encumbranceWarning;
 	Text []currencyTexts;
 	DropDown m_dropdown;
 	String []m_dropdownstrings;
 	Button m_button;
-	
+
 	Popup popup;
 	UI_Popup popupBig;
-	
+
 	boolean screenAlive;
-	
+
 	public InventoryScreen(int frame,int list, int button, int buttonalt,Player player, int tint,ModelController_Int callback)
 	{
 		player.getInventory().sort();
@@ -85,40 +85,40 @@ public class InventoryScreen extends Screen implements Callback {
 			str[i]=m_player.getInventory().getItem(i).getName()+" "+m_player.getInventory().getItem(i).getWeight();
 		}
 		m_list.GenList(str);
-		
+
 		m_window=new Window(new Vec2f(-20,-16),new Vec2f(23,15),frame,true);
-	
+
 		//build text left of window for slot names
 		Text fonts[]=new Text[5];
-		
+
 		m_slots=new Text[5];
-	
+
 		m_rect=new Rect[5];
-		
+
 		fonts[0]=new Text(new Vec2f(0.2F,7.0F),"HAND",0.6F,0);
-		fonts[1]=new Text(new Vec2f(0.2F,6.2F),"ACCESSORY",0.6F,0);		
+		fonts[1]=new Text(new Vec2f(0.2F,6.2F),"ACCESSORY",0.6F,0);
 		fonts[2]=new Text(new Vec2f(0.2F,5.4F),"BODY",0.6F,0);
 		fonts[3]=new Text(new Vec2f(0.2F,4.6F),"HEAD",0.6F,0);
 		fonts[4]=new Text(new Vec2f(0.2F,3.8F),"QUICK",0.6F,0);
-		
-		m_slots[0]=new Text(new Vec2f(3.7F,7.0F),"",0.6F,tint);	
-		m_slots[1]=new Text(new Vec2f(3.7F,6.2F),"",0.6F,tint);	
-		m_slots[2]=new Text(new Vec2f(3.7F,5.4F),"",0.6F,tint);	
-		m_slots[3]=new Text(new Vec2f(3.7F,4.6F),"",0.6F,tint);		
-		m_slots[4]=new Text(new Vec2f(3.7F,3.8F),"",0.6F,tint);		
-				
+
+		m_slots[0]=new Text(new Vec2f(3.7F,7.0F),"",0.6F,tint);
+		m_slots[1]=new Text(new Vec2f(3.7F,6.2F),"",0.6F,tint);
+		m_slots[2]=new Text(new Vec2f(3.7F,5.4F),"",0.6F,tint);
+		m_slots[3]=new Text(new Vec2f(3.7F,4.6F),"",0.6F,tint);
+		m_slots[4]=new Text(new Vec2f(3.7F,3.8F),"",0.6F,tint);
+
 		m_rect[0]=new Rect(new Vec2f(14.7F-28,15.5F-18),new Vec2f(8,1.0F));
 		m_rect[1]=new Rect(new Vec2f(14.7F-28,14.0F-18),new Vec2f(8,1.0F));
 		m_rect[2]=new Rect(new Vec2f(14.7F-28,12.3F-18),new Vec2f(8,1.0F));
 		m_rect[3]=new Rect(new Vec2f(14.7F-28,10.9F-18),new Vec2f(8,1.0F));
-		m_rect[4]=new Rect(new Vec2f(14.7F-28,9.2F-18),new Vec2f(8,1.0F));	
-		
+		m_rect[4]=new Rect(new Vec2f(14.7F-28,9.2F-18),new Vec2f(8,1.0F));
+
 		for (int i=0;i<5;i++)
 		{
 
 			if (m_player.getInventory().getSlot(i)!=null)
 			{
-				m_slots[i].setString(m_player.getInventory().getSlot(i).getName());	
+				m_slots[i].setString(m_player.getInventory().getSlot(i).getName());
 			}
 			else
 			{
@@ -128,14 +128,14 @@ public class InventoryScreen extends Screen implements Callback {
 			m_window.add(fonts[i]);
 			m_window.add(m_slots[i]);
 		}
-		
+
 
 		m_description=new ScrollableMultiLineText(new Vec2f (0.5F,7),10,66,0.8F,new Vec2f(2,-12));
 		m_window.add(m_description);
-	//	m_description.AddText(m_player.getInventory().getItem(0).getDescription());
-		
+		//	m_description.AddText(m_player.getInventory().getItem(0).getDescription());
+
 		m_encumbrance=new Text(new Vec2f(3,-14.9F),"weight:"+Integer.toString(m_player.getInventory().getWeight())+"/"+Integer.toString(m_player.getInventory().getCapacity()),
-		0.7F,tint);
+				0.7F,tint);
 		encumbranceWarning=new TextColoured(new Vec2f(3,-15.6F),"warning",
 				0.7F,tint);
 		calculateWarning();
@@ -153,14 +153,14 @@ public class InventoryScreen extends Screen implements Callback {
 		m_dropdownstrings[4]="quick";
 		m_dropdownstrings[0]="";
 		m_dropdownstrings[1]="";
-		
+
 		m_button=new Button(new Vec2f(14.0F,-16.0F),new Vec2f(6,1.8F),button,this,"Exit",3,1);
-		
+
 		popup=new Popup(frame,new Vec2f(-18.5F,4));
-		
+
 		popupBig=new UI_Popup(new Vec2f(-14,-14),new Vec2f(28,28),frame);
 	}
-	
+
 	private void calculateWarning()
 	{
 		switch(m_player.getInventory().getEncumbrance())
@@ -171,20 +171,20 @@ public class InventoryScreen extends Screen implements Callback {
 			break;
 		case 2:
 			encumbranceWarning.setString("slowed");
-			encumbranceWarning.setTint(1, 1, 0);	
+			encumbranceWarning.setTint(1, 1, 0);
 			break;
 		case 3:
 			encumbranceWarning.setString("staggering");
-			encumbranceWarning.setTint(1, 0.5F, 0);	
-			break;		
+			encumbranceWarning.setTint(1, 0.5F, 0);
+			break;
 		case 4:
 			encumbranceWarning.setString("critical");
-			encumbranceWarning.setTint(1, 0, 0);	
-			break;		
-			
+			encumbranceWarning.setTint(1, 0, 0);
+			break;
+
 		}
 	}
-	
+
 	@Override
 	public void start(MouseHook hook)
 	{
@@ -196,7 +196,7 @@ public class InventoryScreen extends Screen implements Callback {
 		hook.Register(popupBig);
 		m_dropdown.setHook(hook);
 	}
-	
+
 
 	@Override
 	public void update(float DT)
@@ -225,43 +225,43 @@ public class InventoryScreen extends Screen implements Callback {
 						m_slots[i].setTint(true);
 						m_control=(i*-1)-1;
 						m_list.setSelect(-1);
-						GenDropDown();	
+						GenDropDown();
 
-				
+
 						break;
 					}
 				}
-				
-			}		
+
+			}
 		}
 		else
 		{
 			m_dropdown.update(DT);
 		}
 
-		
+
 		if (m_list.getSelect()!=-1 && m_control<0)
 		{
 			m_control=m_list.getSelect()+1;
 			for (int j=0;j<4;j++)
 			{
 				m_slots[j].setTint(false);
-			}	
-		//	m_description.AddText(m_player.getInventory().getItem(m_control-1).getDescription());
+			}
+			//	m_description.AddText(m_player.getInventory().getItem(m_control-1).getDescription());
 		}
 		if (m_list.getSelect()!=-1 && m_control!=m_list.getSelect()+1)
 		{
-		//	m_description.AddText(m_player.getInventory().getItem(m_control-1).getDescription());
+			//	m_description.AddText(m_player.getInventory().getItem(m_control-1).getDescription());
 		}
-		
+
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_ESCAPE))
 		{
 			m_player.calcMove();
-			m_callback.Remove();	
+			m_callback.Remove();
 		}
 	}
-	
-	
+
+
 	@Override
 	public void draw(FloatBuffer buffer, int matrixloc)
 	{
@@ -277,13 +277,13 @@ public class InventoryScreen extends Screen implements Callback {
 		m_button.Draw(buffer, matrixloc);
 		popup.Draw(buffer, matrixloc);
 		popupBig.Draw(buffer, matrixloc);
-		
+
 	}
-	
+
 	@Override
 	public void discard(MouseHook mouse)
 	{
-		
+
 		mouse.Remove(m_list);
 		mouse.Remove(m_window);
 		mouse.Remove(popup);
@@ -313,14 +313,14 @@ public class InventoryScreen extends Screen implements Callback {
 		if (r.getRequiredSkill()>m_player.getRPG().getAttribute(Actor_RPG.TECH))
 		{
 			ViewScene.m_interface.DrawText("you examine the plans on the blueprints and have unlocked the recipe for "
-					+ibi.getRecipe()+" but you lack the skill to craft this currently");		
+					+ibi.getRecipe()+" but you lack the skill to craft this currently");
 		}
 		else
 		{
 			java.util.List <CraftingIngredient> unmet=r.getUnmetRequirements((Player_RPG) m_player.getRPG());
 			if (unmet!=null)
 			{
-				ViewScene.m_interface.DrawText("you've learned the design for "+ibi.getRecipe()+ " but lack the specialist skills to craft it.");		
+				ViewScene.m_interface.DrawText("you've learned the design for "+ibi.getRecipe()+ " but lack the specialist skills to craft it.");
 			}
 			else
 			{
@@ -331,7 +331,7 @@ public class InventoryScreen extends Screen implements Callback {
 		if (ViewScene.m_interface.getLastMessage()!=null)
 		{
 			popup.setText(ViewScene.m_interface.getLastMessage());
-		}			
+		}
 	}
 
 	void UseItem()
@@ -351,21 +351,21 @@ public class InventoryScreen extends Screen implements Callback {
 			{
 				useBlueprint((ItemBlueprintInstance)item);
 				m_player.setBusy(2);
-				m_dropdown.setVisible(false);			
+				m_dropdown.setVisible(false);
 			}
 			if (item.getClass().getName().contains("Consumable"))
 			{
 				ItemConsumable consumable=(ItemConsumable)item;
 				for (int i=0;i<consumable.getNumEffects();i++)
 				{
-					m_player.ApplyEffect(consumable.getEffect(i));	
+					m_player.ApplyEffect(consumable.getEffect(i));
 					popup.setClock(10);
 					if (ViewScene.m_interface.getLastMessage()!=null)
 					{
 						popup.setText(ViewScene.m_interface.getLastMessage());
-					}			
+					}
 				}
-				
+
 				m_player.setBusy(2);
 				if (m_player.getInventory().getItem(m_control-1)==null)
 				{
@@ -373,13 +373,13 @@ public class InventoryScreen extends Screen implements Callback {
 				}
 				calculateWarning();
 			}
-	
-				//reset list				
-				ResetList();				
+
+			//reset list
+			ResetList();
 
 		}
 	}
-	
+
 	void DropItem()
 	{
 		//check slot
@@ -394,21 +394,21 @@ public class InventoryScreen extends Screen implements Callback {
 		{
 			item=m_player.UnEquip((m_control*-1)-1);
 		}
-		
+
 		if (item!=null)
 		{
 			m_callback.Drop((int)m_player.getPosition().x,(int)m_player.getPosition().y,item);
 		}
 		//time tick
-		
+
 		m_player.TakeAction();
-		
+
 		//reset list
 		ResetList();
 		m_dropdown.setVisible(false);
 		calculateWarning();
 	}
-	
+
 	void ResetList()
 	{
 		if (screenAlive)
@@ -417,25 +417,25 @@ public class InventoryScreen extends Screen implements Callback {
 			for (int i=0;i<str.length;i++)
 			{
 				str[i]=m_player.getInventory().getItem(i).getName()+" "+m_player.getInventory().getItem(i).getWeight();
-				
+
 			}
 			m_encumbrance.setString("weight:"+Integer.toString(m_player.getInventory().getWeight())+"/"+Integer.toString(m_player.getInventory().getCapacity()));
 			m_list.GenList(str);
-			
+
 			for (int i=0;i<5;i++)
 			{
 				if (m_player.getInventory().getSlot(i)!=null)
 				{
-					m_slots[i].setString(m_player.getInventory().getSlot(i).getName());	
+					m_slots[i].setString(m_player.getInventory().getSlot(i).getName());
 				}
 				else
 				{
 					m_slots[i].setString("none");
 				}
-			}		
+			}
 		}
 	}
-	
+
 	void Equip()
 	{
 		Item item=m_player.getInventory().getItem(m_control-1);
@@ -453,7 +453,7 @@ public class InventoryScreen extends Screen implements Callback {
 				m_player.getInventory().setWeight(m_player.getInventory().getWeight()-it.getWeight());
 				m_player.getInventory().getItems().remove(item);
 			}
-			
+
 			item=m_player.Equip(equip.getSlot(), it);
 			if (item!=null)
 			{
@@ -461,21 +461,21 @@ public class InventoryScreen extends Screen implements Callback {
 			}
 			switch (equip.getSlot())
 			{
-				case Inventory.HAND:
+			case Inventory.HAND:
 				m_player.setBusy(1);
 
 				break;
-				case Inventory.BODY:
-				m_player.setBusy(4);	
+			case Inventory.BODY:
+				m_player.setBusy(4);
 				break;
-				case Inventory.ACCESSORY:
-					m_player.setBusy(2);		
-					break;
-				case Inventory.HEAD:
-					m_player.setBusy(4);		
-					break;
+			case Inventory.ACCESSORY:
+				m_player.setBusy(2);
+				break;
+			case Inventory.HEAD:
+				m_player.setBusy(4);
+				break;
 			}
-			
+
 			calculateWarning();
 		}
 		m_control=0;
@@ -484,26 +484,26 @@ public class InventoryScreen extends Screen implements Callback {
 		m_dropdown.setVisible(false);
 		m_callback.UpdateInfo();
 	}
-	
+
 	void UnEquip()
 	{
 		Item item=m_player.UnEquip((m_control*-1)-1);
-		
+
 		if (item!=null)
 		{
-			m_player.getInventory().AddItem(item);		
-		}	
+			m_player.getInventory().AddItem(item);
+		}
 		m_control=0;
 		m_list.setSelect(-1);
-		ResetList();	
+		ResetList();
 		m_dropdown.setVisible(false);
 		m_callback.UpdateInfo();
 	}
-	
+
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
-	
-		
+
+
 		switch (ID)
 		{
 		case 0:
@@ -517,18 +517,18 @@ public class InventoryScreen extends Screen implements Callback {
 				UnEquip();
 			}
 			break;
-		
+
 		case 1:
 			//use
 			UseItem();
 			break;
-			
+
 		case 2:
 			//drop
 			DropItem();
 			break;
-		
-		
+
+
 		case 3:
 			m_player.calcMove();
 			m_player.getInventory().sort();
@@ -542,7 +542,7 @@ public class InventoryScreen extends Screen implements Callback {
 		}
 	}
 
-	
+
 	void UnequipEquiporUse()
 	{
 		if (m_dropdownstrings[0].equals("open"))
@@ -550,7 +550,7 @@ public class InventoryScreen extends Screen implements Callback {
 			Item it=m_player.getInventory().getItem(m_control-1);
 			if (ItemContainerInstance.class.isInstance(it))
 			{
-				ViewScene.m_interface.replaceScreen(new ItemContainerScreen((ItemContainerInstance)it));		
+				ViewScene.m_interface.replaceScreen(new ItemContainerScreen((ItemContainerInstance)it));
 			}
 
 		}
@@ -566,9 +566,9 @@ public class InventoryScreen extends Screen implements Callback {
 			}
 			else
 			{
-				UseItem();	
+				UseItem();
 			}
-	
+
 		}
 		if (m_dropdownstrings[0].equals("equip"))
 		{
@@ -579,8 +579,8 @@ public class InventoryScreen extends Screen implements Callback {
 			UnEquip();
 		}
 	}
-	
-	
+
+
 	void quickslot()
 	{
 		Item quick=m_player.getInventory().getItem(m_control-1);
@@ -593,25 +593,25 @@ public class InventoryScreen extends Screen implements Callback {
 		if (item!=null)
 		{
 			m_player.getInventory().setSlot(null, Inventory.QUICK);
-			m_player.addBusy(1);
+			m_player.addBusy(4);
 			m_player.getInventory().getItems().add(item);
 
 		}
 		//put item in quickslot
 		m_player.getInventory().setSlot(quick, Inventory.QUICK);
-		m_player.addBusy(1);
+		m_player.addBusy(4);
 		m_player.getInventory().getItems().remove(quick);
 		m_callback.UpdateInfo();
 		ResetList();
 		m_dropdown.setVisible(false);
 	}
-	
-	
+
+
 	void Reload(ItemDepletableInstance instance)
 	{
 		if (ReloadingHandler.reload(instance, m_player.getInventory().getItems()))
 		{
-			m_player.TakeAction();
+			m_player.addBusy(4);
 			//reset list
 			ResetList();
 		}
@@ -619,7 +619,7 @@ public class InventoryScreen extends Screen implements Callback {
 		m_callback.UpdateInfo();
 		calculateWarning();
 	}
-	
+
 	boolean DisposeAmmo(ItemHasEnergy def)
 	{
 		if (def.getEnergy().getRefill()==null)
@@ -628,8 +628,8 @@ public class InventoryScreen extends Screen implements Callback {
 		}
 		return false;
 	}
-	
-	
+
+
 	void Info()
 	{
 		if (m_control<0)
@@ -659,10 +659,10 @@ public class InventoryScreen extends Screen implements Callback {
 			{
 				m_description.addText(m_player.getInventory().getItem(m_control-1).getDescription());
 			}
-		
+
 		}
 	}
-	
+
 	private void split(ItemStack item)
 	{
 		if (item.getCount()>1)
@@ -671,7 +671,7 @@ public class InventoryScreen extends Screen implements Callback {
 			ResetList();
 		}
 	}
-	
+
 	void HandleDropdown()
 	{
 		switch (m_dropdown.getSelect())
@@ -679,11 +679,11 @@ public class InventoryScreen extends Screen implements Callback {
 		case 0:
 			UnequipEquiporUse();
 			break;
-		
+
 		case 1:
 			if (m_dropdownstrings[1].equals("reload"))
 			{
-				
+
 				ItemDepletableInstance instance=null;
 				if (m_control>0)
 				{
@@ -691,7 +691,7 @@ public class InventoryScreen extends Screen implements Callback {
 				}
 				if (m_control<0)
 				{
-					instance=(ItemDepletableInstance)m_player.getInventory().getSlot((m_control*-1)-1);	
+					instance=(ItemDepletableInstance)m_player.getInventory().getSlot((m_control*-1)-1);
 				}
 				Reload(instance);
 			}
@@ -704,15 +704,15 @@ public class InventoryScreen extends Screen implements Callback {
 				if (m_control<0 && ItemStack.class.isInstance(m_player.getInventory().getSlot((m_control*-1)-1)))
 				{
 					split((ItemStack)m_player.getInventory().getSlot((m_control*-1)-1));
-				}		
+				}
 			}
-	
+
 			break;
-		
+
 		case 2:
 			Info();
 			break;
-			
+
 		case 3:
 			DropItem();
 			break;
@@ -725,17 +725,17 @@ public class InventoryScreen extends Screen implements Callback {
 			{
 				UnEquip();
 			}
-	
+
 			break;
-		
+
 		}
 	}
 
 	void GenDropDown()
 	{
-		
+
 		m_dropdownstrings[4]="";
-		
+
 		//get control
 		Item item=null;
 		if (m_control>0)
@@ -756,13 +756,13 @@ public class InventoryScreen extends Screen implements Callback {
 				{
 					if (m_control<0)
 					{
-						m_dropdownstrings[4]="unequip";		
+						m_dropdownstrings[4]="unequip";
 					}
 					else
 					{
-						m_dropdownstrings[4]="quick";		
+						m_dropdownstrings[4]="quick";
 					}
-	
+
 				}
 			}
 			else
@@ -771,11 +771,11 @@ public class InventoryScreen extends Screen implements Callback {
 				{
 					if (m_control<0)
 					{
-						m_dropdownstrings[0]="unequip";				
+						m_dropdownstrings[0]="unequip";
 					}
 					else
 					{
-						m_dropdownstrings[0]="equip";	
+						m_dropdownstrings[0]="equip";
 						if (ItemWeapon.class.isInstance(item.getItem()))
 						{
 							m_dropdownstrings[4]="quick";
@@ -785,20 +785,20 @@ public class InventoryScreen extends Screen implements Callback {
 				}
 				if (item.getItem().getUse()==Item.ItemUse.USE)
 				{
-					m_dropdownstrings[0]="use";	
+					m_dropdownstrings[0]="use";
 					if (m_control<0)
 					{
-						m_dropdownstrings[4]="unequip";		
+						m_dropdownstrings[4]="unequip";
 					}
 					else
 					{
-						m_dropdownstrings[4]="quick";			
+						m_dropdownstrings[4]="quick";
 					}
-		
+
 				}
 				if (item.getItem().getUse()==Item.ItemUse.OPEN)
 				{
-					m_dropdownstrings[0]="open";		
+					m_dropdownstrings[0]="open";
 				}
 			}
 			if (ItemDepletableInstance.class.isInstance(item))
@@ -821,9 +821,9 @@ public class InventoryScreen extends Screen implements Callback {
 				}
 				else
 				{
-					m_dropdownstrings[1]="";		
+					m_dropdownstrings[1]="";
 				}
-				
+
 			}
 			else
 			{
@@ -833,18 +833,18 @@ public class InventoryScreen extends Screen implements Callback {
 				}
 				else
 				{
-					m_dropdownstrings[1]="";		
+					m_dropdownstrings[1]="";
 				}
 			}
 			m_dropdown.BuildFonts(m_dropdownstrings);
-			
+
 			m_dropdown.setVisible(true);
-			m_dropdown.AdjustPos(new Vec2f(m_hook.getPosition().x-1.0F,m_hook.getPosition().y-1.0F));	
+			m_dropdown.AdjustPos(new Vec2f(m_hook.getPosition().x-1.0F,m_hook.getPosition().y-1.0F));
 		}
-	
+
 	}
 
-	
+
 	boolean CanReload(ItemHasEnergy item)
 	{
 		//check for ammo
@@ -853,36 +853,36 @@ public class InventoryScreen extends Screen implements Callback {
 			if (ItemAmmo.class.isInstance(m_player.getInventory().getItem(i).getItem()))
 			{
 
-					if (item.getEnergy().getRefill().contains(m_player.getInventory().getItem(i).getItem().getName()))
+				if (item.getEnergy().getRefill().contains(m_player.getInventory().getItem(i).getItem().getName()))
+				{
+					if (ItemStack.class.isInstance(m_player.getInventory().getItem(i)))
 					{
-						if (ItemStack.class.isInstance(m_player.getInventory().getItem(i)))
+						return true;
+					}
+					else
+					{
+
+						ItemDepletableInstance instance=(ItemDepletableInstance)m_player.getInventory().getItem(i);
+						if (instance.getEnergy()>0)
 						{
 							return true;
 						}
-						else
-						{			
-							
-							ItemDepletableInstance instance=(ItemDepletableInstance)m_player.getInventory().getItem(i);
-							if (instance.getEnergy()>0)
-							{
-								return true;					
-							}					
-						}
+					}
 
-					}					
+				}
 
 			}
 		}
 		return false;
 	}
-	
+
 	@Override
 	public void Callback() {
 		if (m_dropdown.getVisible()==false)
 		{
 			m_list.setActive(false);
 			m_control=m_list.getSelect()+1;
-			GenDropDown();		
+			GenDropDown();
 		}
 		// TODO Auto-generated method stub
 

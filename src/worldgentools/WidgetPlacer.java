@@ -33,6 +33,7 @@ import widgets.WidgetHarvestable;
 import widgets.WidgetItemPile;
 import widgets.WidgetReformer;
 import widgets.WidgetResearch;
+import widgets.WidgetScriptLockPortal;
 import widgets.WidgetScriptPortal;
 import widgets.WidgetScripted;
 import widgets.WidgetSlot;
@@ -444,6 +445,47 @@ public class WidgetPlacer {
 
 	}
 
+	public void placeScriptLockPortal(Element enode, int offsetx, int offsety) {
+		int x = Integer.parseInt(enode.getAttribute("x")) + offsetx;
+		int y = Integer.parseInt(enode.getAttribute("y")) + offsety;
+		String string = null;
+		int id = 0;
+		if (enode.getAttribute("destination").length() > 0) {
+			string = enode.getAttribute("destination");
+		}
+		if (enode.getAttribute("ID") != null) {
+			id = Integer.parseInt(enode.getAttribute("ID"));
+		}
+		NodeList children = enode.getChildNodes();
+		String description = null;
+		String script = null;
+		String forbidText = null;
+
+		for (int i = 0; i < children.getLength(); i++) {
+			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) children.item(i);
+				if (element.getTagName().equals("description")) {
+					description = element.getTextContent().replace("\n", "");
+				}
+				if (element.getTagName().equals("script")) {
+					script = element.getAttribute("value");
+				}
+				if (element.getTagName().equals("forbidtext")) {
+					forbidText = element.getTextContent();
+				}
+			}
+		}
+		WidgetScriptLockPortal portal = new WidgetScriptLockPortal(Integer.parseInt(enode.getAttribute("sprite")),
+				description, id);
+		portal.setDestination(string, id);
+		if (enode.getAttribute("facing").length() > 0) {
+			portal.setFacing(Integer.parseInt(enode.getAttribute("facing")));
+		}
+		portal.setFilename(script);
+		portal.setForbidText(forbidText);
+		zone.getTile(x, y).setWidget(portal);
+	}
+
 	public void SeedWidgets(Element Enode, boolean[][] grid) {
 
 		// max population
@@ -540,5 +582,6 @@ public class WidgetPlacer {
 	public void placeSpawner(Element enode) {
 
 	}
+
 
 }

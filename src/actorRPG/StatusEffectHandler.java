@@ -16,6 +16,7 @@ import combat.statusEffects.Status_Stealth;
 import combat.statusEffects.Status_Transformed;
 import nomad.universe.Universe;
 import view.ViewScene;
+import zone.Zone;
 
 public class StatusEffectHandler {
 
@@ -355,6 +356,12 @@ public class StatusEffectHandler {
 			}
 		}
 		return null;
+	}
+
+	public void linkActors(Zone zone) {
+		for (int i = 0; i < statusEffects.size(); i++) {
+			statusEffects.get(i).linkActors(zone.getActors());
+		}
 	}
 
 }

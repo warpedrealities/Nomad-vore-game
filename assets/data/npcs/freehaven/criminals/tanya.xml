@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Harpy>
+	<sprite value="criminalT.png" />
+
+	<name>Tanya</name>
+	<description>A criminally minded and bicolour catgirl with a leather jacket, ring piercings on her black furred ear and a notch missing from her white one. She's carrying a handgun and an air of confidence in her taller and more muscled partner.</description>
+	<rpg>
+		<experiencevalue value="300" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="MELEE" value="4" />		
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="DODGE" value="4"/>		
+		<attribute attribute="WILLPOWER" value="4"/>	
+				<combatMove name="shoot" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="4" maxValue="7"
+				modifier="NONE" />
+			<missText count="1">
+				<text>Tanya fires at TARGET but misses</text>
+			</missText>
+			<hitText count="1">
+				<text>Tanya shoots TARGET for VALUE kinetic damage</text>
+			</hitText>
+		</combatMove>
+	
+	</rpg>
+	<respawn delay="4000" />	
+	<peacebond />
+	<defeated conversation="freehaven/tanya/defeat" />
+	<seduced conversation="freehaven/tanya/defeat" />
+	<victory conversation="freehaven/tanya/victory" />
+	<seducer conversation="freehaven/tanya/victory" />
+	<controller AI="freehaven_tanya" />
+	<faction value="freehaven_gangs" />
+</Harpy>

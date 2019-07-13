@@ -414,6 +414,9 @@ public class ZoneBuildTools {
 				if (Enode.getTagName() == "scriptportal") {
 					new WidgetPlacer(m_zone).placeScriptedPortal(Enode, x, y);
 				}
+				if (Enode.getTagName() == "scriptlockportal") {
+					new WidgetPlacer(m_zone).placeScriptLockPortal(Enode, x, y);
+				}
 				if (Enode.getTagName() == "recordVector") {
 					new PreloadTools(m_zone, pointsOfInterest).recordVector(Enode, x, y);
 				}
