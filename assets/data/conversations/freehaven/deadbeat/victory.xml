@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Conversation>
+	
+	<page ID="start">
+		<preference fetish="herms" />
+		<preference fetish="cockvore" />
+		<text> 
+		"Down you go, bitch!"
+		</text>
+		<choice destination="struggle" text="*shoved in cock*" />
+	</page>
+
+	<page ID="start">
+		<text> 
+		"Down you go, bitch!"
+		</text>
+		<choice destination="stabGO" text="*you're stabbed between the ribs*" />
+	</page>
+
+	<check ID="struggle">
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="struggleout" />
+		<outcome destination="strugglein" />
+	</check>	
+	
+	<page ID="struggleout">
+		<text>
+		You pull yourself out.
+		</text>
+		<effect value="0.1" type="heal"/>
+		<effect value="10" type="stunnpc"/>
+		<choice destination="end" text="close one" />
+	</page>
+	
+	<page ID="strugglein">
+		<text>
+		You try, but fail to get out.
+		</text>
+		<choice destination="inGO" text="*slurped and churned*" />
+	</page>
+	
+	<gameover ID="inGO">
+		<text>
+		You're melted into cum and splattered against the wall.
+		</text>
+	</gameover>
+	
+	<gameover ID="stabGO">
+		<text>
+		You bleed out on the floor.
+		</text>
+	</gameover>
+	
+</Conversation>

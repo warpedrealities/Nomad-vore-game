@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text> 
+		Aww come on.
+		</text>
+		<choice destination="devour" text="devour">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>
+		<choice destination="end" text="*mercy, for now*" />
+	</page>
+
+	
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="75" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>
+
+</Conversation>

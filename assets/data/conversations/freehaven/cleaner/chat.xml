@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<text>
+	Nodding her capped head, the cleaner greets you. 
+	"Visitor. Need something?" 
+	The warden seems friendly enough, willing to interrup her cleaning to speak with you.
+	</text>
+	<choice destination="reform" text="Hey, since you brought up reforming.." >
+		<condition evaluate="LOCALFLAG" operator="equals" flag="reform" value="1" />
+	</choice>	
+	<choice destination="job" text="$What's with the broom?"/>
+	<choice destination="end" text="$Nothing at the moment, just wanted to say hello."/>
+	</page>
+	
+	<page ID="reform">
+	<text>
+	The warden looks slightly surprised, her fluffy ears standing up. But she quickly grasps your meaning. She scolds you, placing her hands on her hips.
+	"Propositioning an officer? Don't you have any respect for the law?" 
+	Glancing at the time, she blushes and exhales, cheeks puffing up cutely.
+	"I... I could take my break right now. You can come too. If we're quick that is. We can use the staff bathroom."
+ 	</text>
+	<choice destination="bath" text="Sure, sounds lovely." >
+		<preference fetish="females"/>
+		<preference fetish="oralvore"/>
+	</choice>	
+	<choice destination="end" text="Sorry, on second thought, I've got somewhere to be." />
+	</page>
+	
+	<page ID="bath">
+	<text>
+	Following behind the cleaning bunny and her trolley, you end up at a security door. She swipes a badge and types something into the keypad and the door slides open. She quickly steps through and waves you in. Entering behind her, you find yourself in a spacious and pristine room that houses quite a few stalls and urinals. The cleaner puts her broom into the trolley and unzips her jumpsuit slightly, fanning at her chest. 
+	"Alright, it's unlikely we'll be interrupted in here. What'd you have in mind?"
+ 	</text>
+	<!--choice destination="bathpred" text="I think you already know why we're here.." -->
+	<choice destination="bathprey" text="You can't have a break without a snack, right?" />
+	</page>
+	
+	<page ID="bathpred">
+	<text>
+	
+ 	</text>
+	<choice destination="bathpred2" text="" />
+	</page>
+	
+	<page ID="bathpred2">
+	<text>
+	
+ 	</text>
+	<choice destination="" text="" />
+	</page>
+	
+	<page ID="bathprey">
+	<text>
+	The bunny woman is astonished, and maybe a bit disappointed.
+	"You'd open with that line and follow me all the way here just so I can eat you? I'm all for it but.." 
+	Trailing off, she eyes you up and down. Her stomach rumbles and she licks her lips. 
+	"Ok, fine. Get over here. At least you look tasty. Gotta be better than those lunchbars." 
+	She unzips fully, pulling her arms and shoulders out of the jumpsuit to stand half naked, Her sexy, lightly muscled body exposed to the chilly air inside the bathroom. 
+		<conditional> <assertion evaluate="slothasitem" slot="2" />You join her, though get fully naked instead. </conditional>
+	She holds out her arms in a come-hither fashion. You're happy to oblige.
+ 	</text>
+	<choice destination="bathprey2" text="*draw closer*" />
+	</page>
+	
+	<page ID="bathprey2">
+	<text>
+	Stepping into her embrace, your bodies rub together, stealing each other's warmth in this cold room. She gives you a quick peck on the nose.
+	"Mmmm.. Yep, definitely taste as good as you look." 
+	You hug each other for a minute while she licks your neck, her hard nipples pressing into your chest. 
+	"Sorry hun, I'd like to savour this more, but I can't stay on break forever." 
+	You watch as her mouth grows wider and closer, ready to consume her mid-break snack. Moving in, her maw envelops your head and you push yourself in, happy to help feed yourself to the bunny. Gulping you down pretty handily, especially with your help, you're soon on the way to being her food just as you wished.
+ 	</text>
+	<choice destination="bathprey3" text="*in you go*" />
+	</page>
+	
+	<page ID="bathprey3">
+	<text>
+	Wiggling around as you're downed and licked all over, it almost feels like some kind of perverted massage. The girl's tight middle stretches out to contain you and even though she might have preyish tendancies, she's no stranger to chowing down either. Each wet gulp pulls you in, your wonderful journey to her depths taking almost no time at all. Lifting you into the air, her lips move quickly down your waist, thighs, calves, feet and then close shut around you. With a few more swallows, you're curled neatly up inside the bunny's stomach, she cleaned you up as easily as she would have done with a patch of grime.
+ 	</text>
+	<choice destination="bathprey4" text="*nice and snug*" />
+	</page>
+	
+	<page ID="bathprey4">
+	<text>
+	She lets out a small burp, patting her full belly cheerily. "Urp.. So much better than our normal snacks.." 
+	The bunny re-dons her jumpsuit and gathers up your belongings, placing them on the trolley.
+	"Wherever you're from girl, please bring some friends next time. It's criminal that you tasted so good!" 
+	She rubs over your form for a moment, moaning happily as she remembers your taste. Her stomach burbles softly, preparing to digest it's willing occupant.
+	"Thanks. You could have picked any of the others, but I'm glad it was me you ended up feeding yourself to." 
+	Checking the time, the cleaner realises she should probably to get back to work. Talking to you one final time, she leaves the bathroom, dragging the trolley with her.
+	"You just sit tight in there and behave like the food you are. My gut will take care of the rest."
+ 	</text>
+	<choice destination="preygo" text="Easiest thing ever." />
+	</page>
+	
+	<gameover ID="preygo" >
+		<text>
+		Returning to her duties well-fed, the warden cleaner whistles a tune as she works. Her boring cleaning was made much more interesting today, so it's with enthusiasm that she does the best job she can. You drift off peacefully, letting the warm acids and gentle scrubbing and sweeping motions lull you to sleep. Even if her bulging and sloshing belly did get in the way a bit, her mood remained upbeat as she finished the last hours of her shift. The bunny's exertion stimulated her fit body's digestive process, so it wasn't long before her middle had rounded out, melting down her food with the same efficiency she worked with. The mush you became was already siphoning through her instestines as she clocked off, After a quick stop to the staff bathroom, her enjoyable work day came to end.
+		</text>
+	</gameover>
+	
+	<page ID="job">
+	<text>
+	Her ears twitch. She frowns.
+	"I'm keeping this place tidy. What does it look like?" 
+	Seeing your surprise at her sudden snap, her expression softens somewhat. 
+	"Ah, sorry. I know what you mean." 
+	She flicks the handle of the plastic broom she's holding. 
+	"Budgetary concerns. Don't have the creds to spare for anything fancy apparently. Ol' fashioned way it is."
+ 	</text>
+	<choice destination="job2" text="$The wardens do the cleaning too?" />
+	</page>
+	
+	<page ID="job2">
+	<text>
+	The bunnygirl chuckles, spinning the broom like a polearm and posing in a salute.
+	"We sure do. Clean up crime, clean up grime." 
+	Posture slacking, she sighs tiredly. 
+	"We rotate cleaning and maintenance duty as part of our job here, unfortunately. Everyone's gotta do it at some point. You're looking at one of this week's lucky cleaning girls." 
+ 	</text>
+	<choice destination="job3" text="$Sounds rough." >
+		<preference fetish="cockvore" />
+	</choice>	
+	<choice destination="end" text="$Thanks, I'll leave you to it."/>
+	</page>
+	
+	<page ID="job3">
+	<text>
+	"Ha! Got that right. This level isn't so bad, but it's impossible to keep the lower one entirely clean. Not with these." 
+	She gestures towards the trolley and it's various primitive mops and buckets. 
+	"Ever scraped dried cum off of the ceiling? Not fun, let me tell you. Not even gonna go into the graffiti problem." 
+	The bunny's ears droop as she sighs again. Grasping the broom to her chest, she straigtens. 
+	"It isn't all bad, I guess. We get free reformations for the week and a nice bonus at the end as an incentive to work properly."
+ 	</text>
+	<choice destination="job4" text="$Free reformations?" />
+	</page>
+	
+	<page ID="job4">
+	<text>
+	"Well, yeah. Easy to get jumped by ne'er-do-wells while scrubbing away at a wall." 
+	She looks a little ashamed as she explains further. 
+	"Someone's got a sick sense of humour down there. Once, just after I was done with a section, I got gulped from behind by a cock. Shot 'me' all over the damn place and undid all that hard work." 
+	The bunny didn't look amused as she paused and pictured it, but soon finished her anecdote regardless. 
+	"This is the screwed up part. I came back and was almost done cleaning 'myself' up but.. Right down a cock again. Probably the same one. Got back down there and, well.. I'm sure you get the picture. Long day that one was." 
+	From the cleaner's story, it's easy to see why the wardens might have a hard time with maintaining the lower decks. Though the bunny looks a bit flustered recounting her tale, perhaps she liked it more than she wanted to let on.
+	"Anyhow.. Appreciate the chat, but I've got to get back to work. Good day to you." 
+	She smiles, returning to her sweeping. 
+ 	</text>
+	<effect type="setlocalflag" flag="reform" value="1" />
+	<choice destination="end" text="$Thanks, good luck." />
+	</page>
+	
+</Conversation>

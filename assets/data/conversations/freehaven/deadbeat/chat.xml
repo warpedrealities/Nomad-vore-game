@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="callout" />
+	<text>
+	As you exit the elevator, a woman's voice calls out to you from your left.
+	"Oh! If you aren't a sight for sore eyes! Hey, c'mere a sec!" 
+	Turning, you see a shabby-looking, four-armed woman, leaning up against the wall. She's waving and eagerly motioning for you to come over.
+ 	</text>
+	<effect type="setlocalflag" flag="callout" value="1" />
+	<choice destination="approach" text="$Uhh, okay?" >
+		<preference fetish="herms" />
+		<preference fetish="cockvore" />
+	</choice>	
+	<choice destination="end" text="$Whatever it is, I don't want any."/>
+	</page>
+	
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="cummed" />
+	<text>
+	"Oh, it's you babe. Can't wait to get churned up again?" 
+	Donna hops off the wall, hands fondling both her breasts and balls. 
+ 	</text>
+	<choice destination="ok" text="You got it. Churn me up!" >
+		<preference fetish="herms" />
+		<preference fetish="cockvore" />
+	</choice>
+	<choice destination="end" text="Not this time, sorry." />
+	</page>
+	
+	<page ID="start">
+	<text>
+	"Back again babe? Heh, knew ya wouldn't be able to stay away!" 
+	Donna hops off the wall, hands fondling both her breasts and balls. 
+ 	</text>
+	<choice destination="what" text="What did you want again?" >
+		<preference fetish="herms" />
+		<preference fetish="cockvore" />
+	</choice>
+	<choice destination="end" text="Ugh, this was a mistake" />
+	</page>
+	
+	<page ID="what">
+	<text>
+	Grinning, she closes the distance between you with a large stride. Looking around conspiratorially, she leans in and speaks quietly.
+	"I'll tell you what I want babe." 
+	She grabs your shoulder and waist at the same time, pulling you into a side-hug. Your head is mashed against her chest by a third hand. You're assaulted by the smell of some kind of smoke, and her unwashed clothes. Breathing on your ear and neck, she whispers. 
+	"I wanna feel you sliding down my cock. Feel you squirming in my balls." 
+	She releases you, taking a step backward. Her balls are gurgling loudly and her pants are being stretched out by her half-chub. 
+	"But more than that, I wanna feel myself cum out what you'll soon be. Shoot you into some slut or onto the wall. You interested?"
+ 	</text>
+	<choice destination="ok" text="I might be interested.." />	
+	<choice destination="nope" text="Err, I don't think so." />
+	</page>
+	
+	<page ID="">
+	<text>
+	
+ 	</text>
+	<choice destination="" text="" />
+	</page>
+	
+	<page ID="">
+	<text>
+	
+ 	</text>
+	<choice destination="" text="" />
+	</page>
+	
+	<page ID="approach">
+	<text>
+	As you approach, you get a better look at the shady woman. Her hair is messy and her clothes look well worn, faded in colour and holey in places. Her shoulders are split something like the Vitruvian Man, two arms sprouting from each. Still leaning, she's positioned in a way that shows off both her sizable chest, and her straining pants. She watches you, grinning as your eyes follow the outline of her thick cock, which runs down her thigh, nearly at her knee. It looks a little silly, but you suppose with a dick that big it'd look funny no matter what she wore. 
+	"Looks like this won't take long. Yo, I'm Donna." 
+	Pushing off the wall, she stands with one set of hands in her jacket pockets, and the other behind her head. 
+	"You got a name babe?"
+ 	</text>
+	<choice destination="name" text="$It's PNAME." />
+	<choice destination="end" text="$Sorry uh, Donna? I have to go."/>
+	</page>
+	
+	<page ID="name">
+	<text>
+	Donna nods exaggeratedly, her breasts wobbling around in her tanktop, nipples erect and visible, not held in place by a bra. 
+	"I see, I see." 
+	She moves closer. She doesn't smell good. 
+	"Now, I'ma just cut out the bullshit. A hot piece like you doesn't belong down here in this place." 
+	She motions around, pointing to the less savoury alleys of the lower deck.
+	"But, you do belong down here, in this place." 
+	The deadbeat woman points down, at her other two hands fondling that large sac through her clothes. The bulge swells, cock beginning to plump up down her pant leg. 
+	"I could have a girl like you churned up and splattered out in seconds. Whatd'ya say?"
+ 	</text>
+	<choice destination="ok" text="$Well, uh. ..Okay?" />
+	<choice destination="nope" text="$You ..what? No." />
+	</page>
+	
+	<page ID="ok">
+	<text>
+	Her face lit up. 
+	"Knew you'd agree. Not always so easy, but I sure ain't complaining." 
+	She turned away, looking down the hall. Spotting a warden, she yelled out to her. 
+	"Oi! You heard that, right long ears?!" 
+	The bunnygirl's ears twitched. Waving dismissively, she speaks back to the thuggish woman.
+	"Yeah, yeah. I heard consent. Don't know how you do it Donna. You always got these random girls just throwin' 'emselves at you." 
+	Donna thrusts her groin suggestively towards the warden, hefting her balls.
+	"How 'bout you come find out babe, I could easily fit you too!" 
+	The bunny went bright red, mumbling something about being on duty and quickly left before she was too tempted. The shabby woman just laughed at her reaction, calling after her.
+	"Heh, I'll be back for you after your shift! No doubt you'll jump right on down too! ...Bunny sluts..." 
+	She came back over to you, dropping her pants with one set of arms and stroking herself with the other. 
+	"I need to cum. You gonna make me wait any longer cockstain?" 
+	Her long, partially erect shaft sprang upwards, thickening and swelling with blood. Precum dripped onto the metallic floor, the bloating tip gaping hungrily as it grew.
+ 	</text>
+	<choice destination="ok2" text="I-Mpmh!" />
+	</page>
+	
+	<page ID="ok2">
+	<text>
+	Donna apparently decided to make the choice for you. In a instant, her huge cock had latched onto your face and began to greedily suck you in. You push against the head of the beast, struggling to free yourself. The trashy woman laughed cruelly. 
+	"What, now you want out? Pfft, you're practically already dead babe." 
+	A strong grip on both your wrists wrenches your hands away, while another hand shoves the back of your head roughly. Up to your shoulders in the musky meat tube, you writhe around in her grip frantically but the rippling flesh continues it's advance down your body with a shlorp. 
+	"Ahhh yea.. That's the stuff.." 
+	Donna groaned, caressing her massive dick with her remaining two hands while she humped you further in. You try to wiggle free, but she forces your arms to your sides and her tip engulfs your shoulders, trapping them there. 
+	"I love how easily you worthless sluts just give it aaall up." 
+	The dirty woman taunted you, slapping your <macro ID="butt_size_desc"/> ass as her cockmouth gulped you with gusto. 
+	"More cash than sense up there. How did you even survive this long?"
+ 	</text>
+	<choice destination="ok3" text="MmmMmph!" />
+	</page>
+	
+	<page ID="ok3">
+	<text>
+	You can't manage to speak properly, being squeezed hard on all sides by the tight muscles of your devourer's cock. Impatient, she answers for you. 
+	"Ha! Who cares! You're just jizz now. Probably always have been, you somehow didn't realise yet." 
+	By now, most of you was inside, but you still hadn't reached her sac. Her dick must be over a metre long! You feel her tits mashing around her shaft from the outside, squeezing you tighter and deeper as she thrusts into her own cleavage. The musky heat from within grew ever stronger. Donna groans loudly, and you find yourself gulping down a huge load of cum. It flows in, up, and all around you. Donna holds your legs in place, stopping you from escaping with her load. A bunch of cum splatters from her tip and onto the floor, lubricating your body. Her muscles flex involuntarily with her sudden orgasm, your legs sliding in the rest of the way with a wet, loud schlurp. 
+	"Aahhlmost! Let you go! Too early!" she gasps out, spattering globs of cum down her body, staining her already dirty clothes.
+	
+ 	</text>
+	<choice destination="ok4" text="*trapped in the shaft*" />
+	</page>
+	
+	<page ID="ok4">
+	<text>
+	You're stuck in the tight, cum-filled flesh cylinder for what feels like hours. In reality, Donna put you away in around a minute. Moans and lewd slapping sounds surround you as you descend, finally being dumped mercilessly in a deep pool of gurgling spunk. The walls ripple and shift around you, sloshing and soaking you in a whirlpool of cum. 
+	"Not long now babe! Got any last words?" 
+	The thick goop clogs your throat, there's no way you can reply. Not that it would have mattered, as the woman clearly wasn't actually interested and wouldn't have listened. You're sloshed around from side to side and squeezed by her thighs rhythmically. Seems that Donna was on the move. Patting and rubbing at her sac, she slowly jerks her leaking dick, excess cum leaving a slimy, messy trail along the corridor as she walks off somewhere.
+ 	</text>
+	<choice destination="ok5" text="*along for the ride*" />
+	</page>
+	
+	<page ID="ok5">
+	<text>
+	Each footstep gently rocks your cummy prison, the warm sloshing bath would be quite nice, if not for the creeping tingling on your extremities, constantly reminding you that this was a one way trip. You hear Donna speaking to someone out there, laughing cruelly as a pair of much smaller hands rubs your softening form. Probably showing off to some poor sod, or perhaps trying to tempt them down that hungry shaft too. After a short while, you're on the move once more but feel considerably less solid. Paddling in the ever-rising gunk with weakening legs, you don't think you'll be able to stay afloat much longer, and when that happens you won't be awake for much longer either. Donna's gloating voice rings out, still stroking her huge shaft. 
+	"You seriously aren't spunk already? I'm a little surprised!" 
+	You feel her shake her sac around, trying to properly coat you. You decide to hold onto life as long as possible, just to spite her. She laughs.
+	"Haha, oh well. I'm too horny to wait. So long, whatever your name was!" 
+	Before you can even register what she's said, your life is snuffed out. Her balls contract, instantly breaking your weakened body apart with a glorp.
+ 	</text>
+	<effect type="setlocalflag" flag="cummed" value="1" />
+	<choice destination="okgo" text="*darkness takes you*" />
+	</page>
+	
+	<gameover ID="okgo">
+	<text>
+	The grubby woman moans in delight, revelling as her overfull balls work furiously to ready their newly churned payload for express delivery. A delivery that she's very eager to make. Donna jerks herself to completion in mere moments, shrieking as she blows the steaming load all over the place. 
+	<conditional> <assertion evaluate="slothasitem" slot="2" />Your cum-stained, ruined gear bursts forth, splattering against the dirty hallway walls. </conditional>
+	She continues to stroke her exploding dick with fervor, swinging it around and painting as much of the walls and ceiling with your remains as she can. By the time she's finished with her ridiculous orgasm, thick musky spunk drips from every surface in the area, and she's standing in a large, white, gunky puddle. Panting and coming down from her orgasmic high, she stuffs her still-dripping, half-erect penis back into her jizz soaked pants and surveys the efforts of her hard work. Beaming smugly, she speaks to what's left of you. 
+	"Phew... Thanks babe! I hadn't cum properly in like, an hour. Hope you enjoyed as much as I did! Ahahaha!" 
+	Donna walks off, shaking cum off of her boots and laughing to herself.
+ 	</text>
+	
+	</gameover>
+	
+	<page ID="nope">
+	<text>
+	The woman doesn't look disuaded in the slightest. She pats at her crotch, jiggling her balls around.
+	"Aww, c'mon. Don't be like that babe. I'm tryin' to help ya. If you go gurgle in my nuts right now, you're gonna save yourself a whole lotta time." 
+ 	</text>
+	<choice destination="ok" text="$If you're sure.. Ok." />
+	<choice destination="nope2" text="$Seriously, get out of my face. I'm not interested." />
+	</page>
+	
+	<page ID="nope2">
+	<text>
+	She laughs.
+	"Heh, alright then babe, have it your way." 
+	Backing off from you completely with her arms raised, she returns to her very important wall-leaning. Smirking, she calls out to you when you turn to leave. 
+	"Just don't say I didn't warn you. Not everyone's as nice as me. I'll probably be here when you change your mind." 
+	She grips her cock through her pants with one hand, pointing between you and it suggestively.
+ 	</text>
+	<choice destination="end" text="...Sure. " />
+	</page>
+	
+	<page ID="">
+	<text>
+	
+ 	</text>
+	<choice destination="" text="" />
+	</page>
+	
+</Conversation>

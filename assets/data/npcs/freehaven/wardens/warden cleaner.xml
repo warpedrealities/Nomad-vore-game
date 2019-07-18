@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="blueC.png" />
+
+	<name>warden cleaner</name>
+	<description>This bunny girl would be cute with her long grey ears and bobble of grey floof for a tail. But looks like she's no ordinary warden. Dragging a cleaning trolley behind her, she keeps a watchful eye out for dirt and grime. Her fit and athletic body is clad in a blue uniform jumpsuit, a blue cap on her head. She's traded her baton for a large broom, but still has her pistol.
+	</description>
+	<rpg>
+		<experiencevalue value="120" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="60" />
+		<stat stat="RESOLVE" value="60" />
+		<attribute attribute="DODGE" value="4" />		
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />		
+	
+		<combatMove name="hit" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="9"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>The cleaner whaps her broom at TARGET but the blow is deflected</text>
+			</missText>
+			<hitText count="1">
+				<text>The cleaner hits TARGET with her broom for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="shoot" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" bonusToHit="4" >
+			<effectDamage type="KINETIC" minValue="4" maxValue="7"
+				modifier="NONE" />
+			<missText count="1">
+				<text>The cleaner fires at TARGET but misses</text>
+			</missText>
+			<hitText count="1">
+				<text>The cleaner shoots TARGET for VALUE kinetic damage</text>
+			</hitText>
+		</combatMove>	
+	</rpg>
+
+	<respawn delay="2000" />
+	<victory conversation="freehaven/cleaner/victory" />
+	<talk conversation="freehaven/cleaner/chat" />		
+	<controller AI="station_guard" />
+	<faction value="freehaven_wardens" />
+</NPC>

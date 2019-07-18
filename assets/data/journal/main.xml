@@ -14,6 +14,9 @@
 	</entry>
 	<entry name="mallory" ID="120" priority="2" title="mallory should have the core">
 	Robynn has directed you towards Mallory, a supplier of hers who lives on deck 4 of freehaven in the starlight apartments. You should find Mallory, Robynn says Mallory owes her a favour and should give you the core when you call it in on her behalf.
+	</entry>
+	<entry name="mallory_free" ID="120" priority="2" title="get mallory to give you the core">
+	Mallory has been freed from a sticky situation brought about by owing a lot of money to some unsavoury people. She should be grateful, hopefully now you can get the adaptive computation core you need for Jehari.
 	</entry>	
 	<entry name="mallory_digested" ID="120" priority="2" title="mallory has been digested">
 	Mallory, the person you were hoping to get the computation core from, has been digested by a criminal. You will probably have to go back to Robynn to ask if there's another way of getting the core.

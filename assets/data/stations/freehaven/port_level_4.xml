@@ -23,8 +23,8 @@
 				<partition xmin="48" xmax="64" ymin="0" ymax="16" inverse="true">
 					<advancedBlockDungeon extent="48">
 						<loadBlocks file="freehaven_mixed"/>
-						<keyBlock x="4" y="4">
-							<!--entrance -->
+						<keyBlock x="4" y="4">							
+						<!--entrance -->
 							<row>01222100</row>
 							<row>11222111</row>
 							<row>22222222</row>
@@ -40,8 +40,10 @@
 							<widget x="6" y="5" name="lift"
 								info="interaction/freehaven/lift_level4" variable="1" />
 							<widget x="7" y="5" name="lift"
-								info="interaction/freehaven/lift_level4" variable="1" />								
-						</keyBlock>	
+								info="interaction/freehaven/lift_level4" variable="1" />
+							<spawn x="9" y="4" tag="0" />
+						</keyBlock>
+					
 						<keyBlock heat="2">
 							<!--guntrader-->
 							<row>33434330</row>
@@ -82,9 +84,10 @@
 							<row>15555510</row>
 							<row>11111110</row>
 							<edge value="SOUTH" type="2"/>
-							<spawn x="3" y="5" tag="0" />		
+							<spawn x="3" y="5" tag="1" />		
 						</keyBlock>										
-					<clean value="10" />						
+					<clean value="10" />					
+					<npcType value="freehaven/civilians/deadbeat" />					
 					<npcType value="freehaven/civilians/Ulem" />						
 					</advancedBlockDungeon>
 				</partition>		
@@ -92,6 +95,7 @@
 		</partition>		
 	</partition>	
 	<selectTile tile="1">
+	<SeedNPCs min="1" max="1" name="freehaven/wardens/warden cleaner"/>
 	<SeedNPCs min="8" max="12" name="freehaven/wardens/warden_level4" minDistance="12" />	
 	</selectTile>
 	<selectTile tile="3">

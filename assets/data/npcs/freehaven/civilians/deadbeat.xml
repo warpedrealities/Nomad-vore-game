@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="Deadbeat.png" />
+
+	<name>Deadbeat</name>
+	<description>
+	A scruffy, four-armed, but otherwise human-looking woman. She's wearing a shabby sleeveless denim jacket, a faded tanktop and tight pants. Said tight pants show off a prominent bulge, which runs down the entire length of her thigh. The woman is slouched against the wall as if waiting for something, one set of arms crossed beneath her decent-sized chest, the other idly tapping a tune.
+	</description>
+	<rpg>
+		<experiencevalue value="30" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+		<attribute attribute="DODGE" value="8"/>			
+		<combatMove name="punch" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0" threatening="true">
+			<effectDamage type="KINETIC" minValue="5" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Deadbeat fails to hit TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Deadbeat hits TARGET for VALUE damage</text>
+			</hitText>
+		</combatMove>		
+	</rpg>
+
+	<respawn delay="4000" />
+	<talk conversation="freehaven/Deadbeat/chat" />
+	<defeated conversation="freehaven/Deadbeat/defeat" />
+	<seduced conversation="freehaven/Deadbeat/seduced" />
+	<victory conversation="freehaven/Deadbeat/victory" />
+	<seducer conversation="freehaven/Deadbeat/victory" />
+	<controller AI="staystill" />
+	<faction value="freehaven_civilians"/>
+</NPC>

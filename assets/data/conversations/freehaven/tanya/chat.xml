@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="adaptive_computation" />		
+	<text>
+	"Ohey, lemme guess. You were wanting Mallory? well best hurry up and get shouting at Erika's gut, she don't have long left and she's already getting a mite untalkative."
+	</text>
+		<choice destination="end" text="$I see"/>
+	</page>
+	
+	<page ID="start">
+	<text>
+	"Listen, I got places to be. So how about you shut it and I go fucking off that aways and no one has to get shot in the face for being a prize cockwomble okay?"
+	</text>
+		<choice destination="end" text="$..cockwomble?"/>
+	</page>
+	
+</Conversation>

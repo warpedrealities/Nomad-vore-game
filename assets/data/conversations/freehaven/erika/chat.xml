@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<assertion evaluate="hasPrey" name="Mallory" />
+	<text>
+	"Yeah, what do you want?" asks the wolf with a smirk as she patpats her rounded gut and looks to with a confident and swaggering air.
+	</text>
+	<choice destination="mallory0" text="$I need to talk to mallory and I was told I'd find her here"/>
+	<choice destination="combat" text="$To beat the ever loving crap out of you"/>
+	<choice destination="end" text="$Nothing actually"/>
+	</page>
+
+	<page ID="combat">
+	<text>
+	The wolf takes that threat with a laugh and a grin, she hefts up the baseball bat and grins "Mallory didn't put up a propah fight, so bring it bitch, exercise'll just gurgle this meatslut up all the faster." she says and gestures to Tanya afore she turns to give you the drubbing of a lifetime.
+	</text>
+	<special effect="makehostile"/>
+	<choice destination="end" text="$You want a fight, you got it"/>
+	</page>
+	
+	<page ID="mallory0">
+	<text>
+	"Ah well, see. Mallory is in here, and about to end up padding my ass and thighs. So I'm sorry to say she won't be much help with whatever you wanted her for." says Erika, patting her gut meaningfully.
+	</text>
+	<choice destination="mallory1" text="$And why is she being eaten and digested?"/>
+	<choice destination="combat" text="$I've heard enough, just going to have to beat you down and take her back"/>
+	</page>
+	
+	<page ID="mallory1">
+	<text>
+	"Because she owes big money and she's welch'd on paying for the last time." says Erika and gives her gut a slap "So now she's payin' back by padding my ass and servin' as an object fucking lesson you don't cross the boss." she says. Mallory utters a protesting plead and squirms at this.
+	</text>
+	<choice destination="pay0" text="$Well I really need Mallory's help, so what if I paid part of her debt and you cough her up?"/>
+	<choice destination="persuade0" text="$Wouldn't it be better for her to actually repay what she's owed rather than this though?"/>
+	<choice destination="combat" text="$Well then, I'm afraid my business can't wait for the next life. So I guess I'll have to beat you and get her out before that happens"/>
+	</page>
+	
+	<page ID="pay0">
+	<text>
+	"Hot damn bitch you must REALLY need her help. Still, suppose that's allowed. Lets say 25000 credits and we leave you the fox, deal?"
+	</text>
+		<choice destination="pay1"
+			text="$Bit steep, but here. Here's your credits">
+			<condition evaluate="CREDITS" operator="greaterthan" value="25000" />
+		</choice>
+		<choice destination="combat"
+			text="$That's ridiculous, how about I just beat the shit out of you, you cough her up, how about that?">
+			<condition evaluate="CREDITS" operator="lessthan" value="25000" />
+		</choice>
+	</page>
+	
+	<page ID="pay1">
+	<text>
+	"Happy to be doing business with you. Give me a minute though." she says as she accepts the credit chit and then presses both hands to her gut as she doubles over and horks up the sticky and bedraggled foxgirl you'd come here to see. Before Mallory has even figured out what's going on Erika grins and wipes her lips "There you go, now lets bounce Tanya." she says and gestures to her friend as they leave "Though tell Mallory, she don't make more repayments. We'll be paying her another visit."
+	</text>
+		<special effect="removePrey"/>
+		<special effect="addJournal" file="main" name="mallory_free" />		
+		<effect type="givecredits" value="-25000" />
+		<effect type="setglobalflag" flag="adaptive_computation" value="5" />	
+		<choice destination="end" text="$Thankyou"/>
+	</page>
+	
+	<page ID="persuade0">
+	<text>
+	"She had her chances. Now she got to pay the price, be an object lesson." says Erika crossing her arms.
+	</text>
+	<choice destination="persuade1" text="$She can be a lesson and still pay you back though, I think this is a lesson she won't forget in a hurry"/>
+	<choice destination="combat" text="$Well I tried, guess I'm going to plan fuck your shit up and take her then"/>
+	</page>
+	
+		<check ID="persuade1">
+		<test what="PERSUADE" DC="10" />
+		<outcome destination="persuadeSuccess" />
+		<outcome destination="persuadeFailure" />
+	</check>
+	
+	<page ID="persuadeSuccess">
+	<text>
+	Erika rests a hand on her hip and nods thoughtfully "You know, you got a point. Though I don't know if the boss will buy it. Hear that Mallory, you're getting a reprieve. But only cause you got persuasive friends, and next time you better pay up." she says and pats her gut, which squirms around vigorously.
+	</text>
+	<choice destination="persuade2" text="$Thankyou, now can I have her please?"/>
+	</page>
+	
+	<page ID="persuade2">
+	<text>
+	"Sure sure. Give me a minute though." she says and then presses both hands to her gut as she doubles over and horks up the sticky and bedraggled foxgirl you'd come here to see. Before Mallory has even figured out what's going on Erika grins and wipes her lips "There you go, now lets bounce Tanya." she says and gestures to her friend as they leave "Though she best have our money when we come back here."
+	</text>
+		<special effect="removePrey"/>
+		<special effect="addJournal" file="main" name="mallory_free" />		
+		<effect type="setglobalflag" flag="adaptive_computation" value="5" />	
+		<choice destination="end" text="$Thankyou"/>
+	</page>
+		
+	
+	<page ID="persuadeFailure">
+	<text>
+	Erika raises an eyebrow "Mallory ain't going to learn, didn't learn as fox, ain't going to learn as pudge..but at least she'll stop making the boss mad what with owing her money. So how about you scram, I got a fox to digest."
+	</text>
+	<choice destination="pay0" text="$And if I paid part of her debts would that change your mind about digesting her? I need that fox."/>
+	<choice destination="combat" text="$Well I tried to be reasonable, I guess I'll just have to beat you like a pinata until Mallory falls out"/>	
+	</page>
+	
+	<page ID="start">
+	<text>
+	"Listen, it ain't that I don't like talking to you. It's just I got places to be. So bugger off. You got what you came for."
+	</text>
+	<choice destination="end" text="$fair enough"/>
+	</page>
+
+</Conversation>

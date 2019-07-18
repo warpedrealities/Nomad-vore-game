@@ -1,10 +1,61 @@
 <?xml version="1.0"?>
 <Conversation>
-
+	
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="beareform" />	
+	<text>
+	When you return, you notice Neri conversing with a much curvier, and much more confident looking Bea. Merrily greeting you, Neri explains that after she reformed she had found Bea sleeping in her bed. When Bea woke, they ended up talking a bunch. Surprisingly, they had a lot in common. It turns out the only thing Bea needed to build up some confidence was glut herself to immobility and cry a whole lot. Bea decided she couldn't really hold a grudge on Neri anymore, especially after digesting her, so they agreed to start over with a clean slate, as friends. Bea apologises profusely for eating you too, she didn't mean to get so worked up. Because she seems happy right now, it doesn't strike you as a good idea to bring up Kaia. After a while of catching up, you walk off, leaving them to their coversation. Maybe they'll help each other be better, more mature people? You can only hope their new friendship doesn't end with a gurgle and a splort.  
+	</text>
+	<effect type="setlocalflag" flag="beareform" value="2" />	
+	<choice destination="end" text="All's well that ends well??"/>
+	</page>
+	
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="nerireform" />
+	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="neriexplain" />	
+	<text>
+	When you return, you notice Neri conversing suggestively with another villager. From the flushed face and lusty expression on the random elf's face, she's laying it on pretty thick. On closer inspection, you see that her seduction tactics aren't the only pretty thick thing. Neri's erection is larger than ever, and her balls are swollen and gurgling, presumably with leftovers from your apology orgy. Still blushing heavily, the bottom-heavy villager leaves as you approach.
+	"See you soon~!" 
+	Neri calls to the retreating elf, waving goodbye exaggeratedly. Greeting you eagerly, she runs over and hugs you fiercely. 
+	"Thank you so much traveller! You wouldn't believe how good cumming that much felt! I could get addicted to a feeling like that! Ooohh.. I can't wait to melt you down again sometime.." 
+	Obviously, she had forgotten all about being mad. Her enlarged and fully erect cock rubs uncomfortably against you, as she explains what happened when she woke up.
+	</text>	
+	<choice destination="helpcvstory" text="*listen to the story*"/>
+	</page>
+	
+	<page ID="prehelpcvstory">
+	<text>
+	Neri looks confused for a second, then grins.
+	"..Big? Oh, you mean this..?" 
+	She grabs at her crotch, lifting her skirt. Yup, her dick is definitely bigger. Even her balls are big, probably still has some leftovers from earlier. It plumps up, growing erect as you watch. Neri jumps up and down excitedly, enlarged cock swinging wildly. 
+	"Isn't it great!?" She forcibly hugs you, rubbing her dick against your body. 
+	"Thanks so much! You guys made the biggest and best orgasm I've ever had! I could get addicted to a feeling like that!" 
+	Prying yourself free, you inquire as to what happened after you weren't around anymore. Neri gladly explains.
+	</text>
+	<choice destination="helpcvstory" text="*listen to the story*"/>
+	</page>
+	
+	<page ID="helpcvstory">
+	<text>
+	Besides waking up drenched in ridiculous amounts of seed, and having to hastily arrange repair for her house, it seems that somehow, her dick had grown bigger. Not that she minded at all. In fact, she was downright ecstatic. Apparently, the ceiling-destroying ejaculation had become a hot topic in town, spreading to everyone within the hour. That, and her dick's size increase, seems to have made Neri irresistible to her peers. She's getting more offers of sex, and more importantly to her, willing cockfood, than she ever did before. She tells you that she did feel bad about tormenting Bea so much, but the outcome was way worth it. Finishing her story and thanking you again, she skips off merrily to hit on a pair of girls, leaving you alone to think. 
+	</text>
+	<effect type="setlocalflag" flag="nerireform" value="2" />
+	<effect type="setlocalflag" flag="neriexplain" value="2" />	
+	<choice destination="helpcvstory2" text="She won't get carried away, right?"/>
+	<choice destination="end" text="Good for her, I guess." />
+	</page>
+	
+	<page ID="helpcvstory2">
+	<text>
+	Even though she's so excited about these new opportunities to churn up her fellow greenskins, you can't help but wonder about the effect this might have on Minyos. She wasn't serious about being addicted, was she? She wouldn't be so controlled by her horny desires that she'd end up turning the entire village into a de-populated cum swamp, would she? Surely this new popularity will just be a fad? Glancing over at her, you see that the pair of elves had already fallen to her charms. One elf was fondling Neri's bulging sac with glee, the other already fondling it from the inside, the green elf's orgasming face clealy visible as the sac churns around her. As you watch the lewd and public scene, and see Neri's enraptured expression as the second elf dives into her shaft, you can only hope you didn't accidentally create a serious problem.
+	</text>
+	<choice destination="end" text="Whoops??"/>
+	</page>
+	
 	<page ID="start">
 	<condition evaluate="LOCALFLAG" operator="equals" value="1"	flag="meltslut" />	
 	<text>
-	“Greetings, I have a gift for you my melt slut friend, please take it you might be able to understand what it is with your reformation magic. It has been in my family for generations.”
+	“Greetings, I have a gift for you my melt slut friend. Please take it, you might be able to understand what it is with your reformation magic. It's been in my family for generations.”
 	</text>
 		<picture source="neri_portrait" height="2.63"/>
 	<effect type="setlocalflag" flag="meltslut" value="2" />	
@@ -27,7 +78,7 @@
 			doubletakes, glances down. Then back to you and takes a step back
 			"but..."
 		</text>
-		<choice destination="explaination0" text="surprised? I come back" />
+		<choice destination="explaination0" text="$Surprised? I come back." />
 	</page>
 
 	<page ID="explaination0">
@@ -37,16 +88,16 @@
 			shock even further.
 		</text>
 		<choice destination="explaination1"
-			text="calm down, i'm not holding any hard feelings" />
+			text="$Calm down, I'm not holding any hard feelings." />
 	</page>
 
 	<page ID="explaination1">
 		<text>
-			"You're not mad?..well, i suppose that's good...was it fun?" she asks with a
-			headtilt and a smile, pondering this revelation of reforming
-			cockfood.
+			"You're not mad? ..Well, I suppose that's good...was it fun?" she asks with a
+			headtilt and a smile, pondering this revelation of reforming cockfood.
 		</text>
 		<effect type="setlocalflag" flag="digestion" value="2" />
+		<effect type="setlocalflag" flag="neriexplain" value="1" />	
 		<choice destination="explaination2" text="yes actually, I enjoyed it a lot" />
 		<choice destination="altStart"
 			text="Let's just put it behind us and act like everything is normal" />
@@ -54,19 +105,25 @@
 
 	<page ID="explaination2">
 		<text>
-			"ooh, well then. anytime you want to be cum just tell me and i'll happily
-			melt ya down again."
+			"Ooh, well then. Anytime you want to be cum just tell me, I'll happily
+			melt ya down again." 
 		</text>
 		<effect type="setlocalflag" flag="sackslut" value="1" />
+		<choice destination="prehelpcvstory" text="Wait, were you that big before?" >
+			<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="nerireform" />
+		</choice>
 		<choice destination="end"
-			text="mhmm, i'll have to take you up on that sometime." />
+			text="Mhmm, I'll have to take you up on that offer sometime." />
 	</page>
 
 	<page ID="altStart">
 		<text>
-			"alright so, what do you want?"
+			"alright so, what do you want? "
 		</text>
 		<choice destination="agree" text="I need another thorough wellcum" />
+		<choice destination="prehelpcvstory" text="Wait, were you that big before?" >
+			<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="nerireform" />
+		</choice>
 		<choice destination="end" text="nothing right now" />
 	</page>
 
@@ -118,6 +175,8 @@
 		<preference fetish="cockvore" />
 		<condition evaluate="LOCALFLAG" operator="equals" value="2"
 			flag="talked" />
+		<condition evaluate="LOCALFLAG" operator="equals" value="0"
+			flag="insult" />
 		<text>
 			"Oh hi again, nice to see you. Hope you've been enjoying
 			yourself here.
@@ -360,7 +419,7 @@
 			experience of the cute elf melting you into cum soaking into every
 			ounce of your body along with its gooey effects.
 		</text>
-		<effect type="setlocalflag" flag="meltslut" value="1" />		
+		<effect type="incrementlocalflag" flag="meltslut" value="1" />		
 		<choice destination="offerCockvoreGO" text="melt away" />
 	</page>
 
@@ -1048,453 +1107,254 @@
 	</page>
 
 	<page ID="apologise3">
-		<!-- content by alphaShows -->
+		<!-- content by AlphaShows -->
 		<text>
-			"Ohhh..? You reeaally want me to just let it go..?" she says slowly, taking a
-			few steps away from you. Suddenly she turns back, uncrossing her arms
-			and smiling mischievously
-			"I'll make sure to properly forgive you, but first I want to see how
-			you'll eeeever make it up to me Ms. meanie."
+			"Ohhh..? What's that you say..?" she says feigning ignorance, looking away from you.
+			Suddenly she turns back, uncrossing her arms, smiling mischievously
+			"I'll forgive you.. But.. How are you going make it up to me?"
+			Patting her growing bulge very deliberately, it seems Neri just won't give up.
 		</text>
-		<choice destination="apologycv0" text="Give her the 'apology' she wants" />
-		<choice destination="helpcv0" text="I think I'll need some help with this one" />
+		<choice destination="apologycv0" text="*Fine. Give her what she wants.*" />
+		<choice destination="helpcv0" text="*Get some help from the locals?*" >
+			<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="beareform" />	
+			<condition evaluate="LOCALFLAG" operator="equals" value="0"	flag="nerireform" />
+		</choice>	
+		<choice destination="end" text="$I don't believe this, goodbye" /> 
 	</page>
 
 	<page ID="apologycv0">
 		<text>
-			<conditional>
-				<assertion evaluate="slothasitem" slot="2" />
-				You undress slowly giving her a little turn, showing off your body
-				in the process.
+			<conditional><assertion evaluate="slothasitem" slot="2" />
+				You undress slowly, with a playful spin, showing off your body in the process.
 			</conditional>
-			Neri is clearly very excited, her short primitive skirt stretching to
-			the limit and
-			struggling to contain her twitching bulge. You sashay over to her, winking
-			seductively and you can hear the individual seams snapping one by
-			one.
-			Slowly moving closer, you trace your fingers up her thighs and she gives a
-			small shudder and suddenly her skirt can no longer
-			keep up with her growing cock and bursts open with a loud rip.
-			"Oooooouugh.." Neri moans in relief as she feels the pressure of the
-			tight skirt suddenly gone,
-			thick cock swinging up to stand at attention right in front of your eyes
-			"You're well on your way to being forgiven, buuut I'm sure you know
-			what you need to do next traveller.."
+			Neri is clearly very excited, her short primitive skirt stretching to the limit and struggling to contain her twitching bulge. You saunter over to her, winking seductively and you can hear the individual seams snapping one by one. Moving closer, you slowly trace your fingers up her inner thigh.	Neri gives a small shudder and her strained skirt can no longer hold, bursting open with a loud rip. 
+			"Oooooouugh.." 
+			she moans as the pressure is relieved, the tatters of her skirt falling, while her thick cock swings up to stand at attention in front of your eyes. 
+			"You're on your way to being forgiven, but you know what ya gotta do~!" 
 		</text>
-		<choice destination="apologycv1" text="Give it a taste" />
+		<choice destination="apologycv1" text="*give it a taste*" />
+		<effect type="incrementlocalflag" flag="digestion" value="1" />
+		<effect type="setlocalflag" flag="insult" value="0" />
 	</page>
 
 	<page ID="apologycv1">
 		<text>
-			Neri gently grabs your head and brings you closer, but stops just short
-			of her throbbing member, a huge dollop of precum welling from the
-			slit
-			"Well, what are you waiting for?" she says impatiently, her smug grin
-			widening. Face to face with the large green cock you swallow a little
-			saliva and lick your lips.
-			Although the tip gapes hungrily for your face, maybe you can get out of this
-			without being sucked down?
-			Kneeling down and fondling her balls, you lick from the base to the tip and
-			look back up at Neri.
-			She is staring directly into your eyes with an expression of lusty
-			anticipation, green skin tinged with a deep blush.
-			She pushes you softly back down and thrusts forward slightly starting to
-			get more impatient.
-			As quick as you can, you take her to the hilt and move back forth
-			rapidly, swirling your tongue and sucking while lingering on the tip
-			with each stroke.
-			Neri eeps with surprise at the sudden assault but is soon moaning and
-			thrusting in time with you.
+			Neri gently grabs your head, pulling you in, but stops just short of her throbbing member, a huge dollop of precum welling from the slit. 
+			"What are you waiting for?" 
+			she says somewhat impatiently as her smug grin widens. Face to face with the large green cock you stop to swallow a little saliva, licking your lips. Although the tip gapes hungrily for your face, maybe you can get out of this without being sucked down? Kneeling down and fondling her balls, you lick from the base to the tip and look up to Neri. She is staring directly into your eyes, overcome by an expression of lusty anticipation, her green skin tinged with a deep blush. She pushes you back down while involuntarily thrusting	forward, desire forcing her to lose control. As quick as you can, you take her to the hilt and move back forth rapidly, swirling your tongue and sucking while lingering on the tip	with each stroke. Neri eeps with surprise at the sudden assault but is soon moaning and	thrusting in time with you.
 		</text>
-		<choice destination="apologycv2" text="Finish her" />
+		<choice destination="apologycv2" text="*finish her*" />
 	</page>
 
 	<page ID="apologycv2">
 		<text>
-			Speeding up your ministrations until you feel her twitch and then slowing
-			back down to stop her from blowing, you continue on for a few more
-			minutes.
-			Thinking it's time to end this before you're tired, you hasten your movements
-			once more and look up to admire Neri's face, twisted in pleasure.
-			Right when you're sure she is about to erupt, you feel her quickly
-			pull backwards, yanking her shaft free.
-			Surprised, your momentum makes you lose balance and you fall forward.
-			With a grin and another loud moan, Neri thrusts forwards herself, her
-			cock schlorping over your head and pulling you in to your chest.
+			Speeding up your ministrations until you feel her twitch and then slowing down to stop her from blowing, you continue on for a few more minutes. Thinking it's time to end this before you're too tired, you hasten your movements once more and look up to admire Neri's face, twisted in pleasure. Right when you're sure she is about to erupt, you feel her quickly	pull backwards, yanking her shaft free of your throat.	Surprised, your forward momentum makes you lose balance, but luckily Neri is there to catch you. Flashing a grin, with another loud moan, Neri thrusts forwards decidedly, her cock schlorping over your head and pulling you in deep. The sweltering tube undulates around your form desperately, you can't believe how easily you slide in from there.
 		</text>
-		<choice destination="apologycv3" text="Wait, this wasn't the plan!" />
+		<choice destination="apologycv3" text="$Wait, this wasn't the plan!" />
 	</page>
 
 	<page ID="apologycv3">
 		<text>
-			"Sorry..? I didn't quite catch that!" Neri exclaims excitedly, grabbing your
-			ass roughly and shoving you down.
-			You're dunked headfirst into the hot churning cum you thought you'd be soon
-			be swallowing, but now you're tasting it in quite a different way!
-			"I diiiid tell you it wouldn't be a real apology if you didn't end up
-			in my balls didn't I~?" Neri teases playfully, with a tone as if
-			talking to a child.
-			Quickly schlurping up the rest of you, she continues where your lips left
-			off, stroking with her hands.
-			Feeling disoriented and curled upside down, the almost broiling spunk soaks
-			into your skin.
+			"I didn't quite catch that! You'll hafta speak up!" 
+			Neri exclaims excitedly, grabbing your ass roughly and shoving you down. You're dunked headfirst into the hot churning cum you thought you'd be soon be swallowing, but now you're tasting it in quite a different way! 
+			"I did tell ya it wouldn't be a real apology if you didn't end up in my balls didn't I?" 
+			Neri teases playfully as your legs decend. Quickly schlurping up the rest of you, she continues where your lips left off, passionately stroking up and down her engorged length. Feeling disoriented as you're curled upside down, the almost broiling spunk soaks into your skin, wasting no time in breaking you down as fast as possible to fuel the cheeky girl's impending orgasm.
 		</text>
-		<choice destination="apologyGO" text="B-but..." />
+		<choice destination="apologyGO" text="$B-but I...!" />
 	</page>
 
 	<gameover ID="apologyGO">
 		<text>
-			"Shhh... It's been fun traveller, but it's about to get a lot funner!" she
-			pants out, jacking off with one hand and fondling your rapidly
-			softening form with the other.
-			Almost exactly as your consciousness fades to black, Neri screams in
-			pleasure and unleashes a massive gout of thick steamy cream that
-			splatters wetly against the landing pad, forming a spreading puddle
-			on the stone work.
-			Neri almost loses consciousness herself, tongue lolling out as she can
-			think of nothing else besides the intense pleasure your untimely
-			demise is giving her.
-			Gasping for breath and wiping the sweat from her brow, cum still spurting
-			and running down the ship,
-			Neri pants out the words you wanted to hear so badly "Haa.. Haaa..
-			Apology... Accepted...."
-			It's quite unfortunate you were otherwise indisposed at the moment
-			and you couldn't quite hear her, or maybe disposed of is more apt...?
+			"Shhh... It was fun traveller, but it's about to get a lot funner!" 
+			she	pants out, jacking off with one hand and fondling your rapidly softening form with the other. Although you sort of expected this outcome, it all happened so fast..	Almost exactly as your consciousness fades to black, Neri screams in pleasure and unleashes a massive gout of thick steamy cream that splatters wetly against the landing pad, forming a spreading puddle on the stonework.	Neri almost loses consciousness herself, tongue lolling out as she can currently think of nothing else besides the intense pleasure your untimely demise has given her.	Gasping for breath and wiping the sweat from her brow, ropes of cum still spurting and splattering into the sticky pool of goop, Neri out gasps the words you wanted to hear so badly 
+			"Haa.. Haaa.. Apology... Accepted...." 
+			It's unfortunate you couldn't really hear her anymore, but at least Neri is no longer angry with you. Though whoever has to clean up this mess probably will be...
 		</text>
 
 	</gameover>
 
 	<page ID="helpcv0">
 		<text>
-			"Hey, c'mere a minute!" you call out to a rather tall and buxom elf girl
-			who was mid-conversation with another elf and motion for them to come
-			over
-			"You too babe!" you say winking to her friend. As they cautiously
-			approach, you admire the buxom elf's large top straining assests and
-			then look over to her friend.
-			Her sizeable thighs squish together as she walks over and her rear is so
-			large you can see it's outline clearly, even from the front.
-			"Sorry to interrupt your talk.." you tell them apologetically as they draw
-			near, trying very hard to look them in the eyes "I've offended your
-			official village greeter and would very much like your help to make
-			it up to her."
-			The two elves looks at you and then at Neri, "But we don't have an off-"
-			starts the taller girl but Neri quickly brings her finger to her
-			mouth shushing her and giving an impish grin
-			"What I mean is uh, we don't have an official apology custom in the
-			village..?" she says unconvincingly looking to Neri for approval who
-			then nods, happy with her answer.
-			"But uhm, sure I'll help! It'll be fun!" she says with an excited hop
-			towards you.
+			You call out to a rather tall and buxom elven girl who was mid-conversation with another, and motion for them both to come over. As they cautiously approach, you admire the buxom elf's large top straining assests, flashing her a smile and then look over to her friend. Her sizeable thighs squish together as she walks and her rear is so large you can see it's outline clearly, even from the front. You tell them the situation apologetically, concentrating hard to look them in the eyes as you speak.	The two elves look at you, and then at Neri. 
+			"But we don't have an off-" starts the taller girl but Neri quickly brings her finger to her mouth shushing her, giving them both an impish grin. 
+			"What I mean is uhm, we don't have an official.. Uhh.. Apology process? In the
+			village..?" she says unconvincingly, looking to Neri for approval. 
+			Neri nods, seemingly having no problem with her flimsy answer. 
+			"But uhm, sure I'll help! It'll be fun!" she says with an excited hop towards you, huge breasts hopping just as enthusastically.
 		</text>
-		<choice destination="helpcv1" text="What about you?" />
+		<choice destination="helpcv1" text="$What about you?" />
+		<effect type="setlocalflag" flag="insult" value="0" />
 	</page>
 
 	<page ID="helpcv1">
 		<text>
-			"O-oh me? Sure I guess if Kaia says it'll be fun.." You leer at her extra
-			wide hips and almost bursting skirt, wondering who fits these alien
-			clothes and wordlessly giving them a prayer of thanks
-			"H-hey Ner" the timid shorter elf stammers out, clearly uncomfortable with
-			being around her
-			"I haven't seen you since my sister had you over for dinner a few weeks
-			ago... Uhm, Good to see you..!"
-			Neri smiles widely at her before replying "And what a dinner it was~! How
-			is she doing anyways?" you see her skirt beginning to bulge with it's
-			expanding contents.
-			"W-well we uhh.. W-we haven't seen her since then either... I was-erm-We
-			were hoping you'd know where she was?" She stumbles out with a
-			hopeful look.
-			Neri has an expression of realisation and fondles herself through her
-			skirt thoughtfully smiling slyly
-			"Actually now that you mention it I do know where she went.. If we hurry and
-			get this started I think I'll be able to show you right after!"
-			"If you'd like I can bring over our pet doggy too? What do you think
-			Bea?" The tall elf you know know as Kaia asks, but Neri quickly
-			shakes her head
-			"Nonono, no pets at my place! I always err.. 'lose' them and then people nag
-			me about where they went, so I don't like having them over anymore..
-			Anyways, let's get going!" she points you to a wooden house and skips
-			quickly towards the door, the others following behind her.
+			"O-oh me? Sure I guess if Kaia says it'll be fun.." 
+			You leer at her extra wide hips and straining skirt, wondering who fits these alien
+			clothes and wordlessly giving them a prayer of thanks 
+			"H-hey Ner.." the timid, shorter elf stammers out, clearly uncomfortable with
+			being around her. 
+			"I haven't seen you since my sister had you over for dinner a few weeks ago... Uhm, Good to see you..!" 
+			Neri smiles widely at her. "And what a dinner it was~! How is she doing?" 
+			You can see her skirt beginning to strain with it's expanding contents. 
+			"W-well we uhh.. We haven't seen her for awhile... I was-erm-We were hoping she'd told you where she was going?" She stumbles out with a hopeful look.
+			With a smirk of realisation, Neri fondles herself through her skirt. 
+			"Actually now that you mention it, she did say something before she left.. I think I'll be able to show you where she went right after this!" 
+			The tall elf you know know as Kaia speaks up, asking "If you'd like I can bring over our doggy too? What do you think?"	
+			Neri quickly shakes her head. 
+			"Nono, no more animals! They always go missing soon after visiting and for some reason people think I'm irresponsible and it's somehow my fault! That's not important right now, c'mon!"
+			She points you to a wooden house and skips happily towards the door, the others following behind her.
 		</text>
-		<choice destination="helpcv2" text="Follow the girls!" />
+		<choice destination="helpcv2" text="*follow the girls*" />
 	</page>
 
 	<page ID="helpcv2">
 		<text>
-			As you enter the house, your nostrils are assaulted with the stench of
-			stale cum. Looking around inside, your face scrunching up
-			instinctively,
-			you see there are dried cumstains over almost everything in the house,
-			especially on the far walls near the bed.
-			"Welcome traveller! Neri exclaims with an exaggerated flourish, but seeing
-			the look on your face she looks around herself before realising
-			"Oh yeah.. Sorry about the clutter, my job as official village greeter
-			has given me a lot more uh, 'mess' to clean but no time to do it!
-			...Well then..."
-			Neri walks with a swagger over to the bed, Bea gasps as Neri strips off
-			her skirt and shows you all how ready she is "You want to start your
-			'apology'?"
+			As you enter the house, your nostrils are assaulted with the stench of stale cum. Your face scrunches up instinctively as you look around. There are dried cumstains over pretty much everything, especially on the far walls near the bed.	
+			"Welcome traveller!" 
+			Neri exclaims with an exaggerated flourish, but seeing the look on your face she looks around herself, before realising why. 
+			"Oh..! Sorry about the clutter, my official village greeter job	has given me a lot more uh, 'work', and I've got no time clean up!"	
+			After a brief, awkward pause, Neri shrugs, walking with a confident swagger over to the bed. Bea gasps as Neri strips off her skirt and stands tall, looking to dispel the uncomfortable moment. 
 		</text>
-		<choice destination="helpcv3-1" text="Demonstrate how it's done" />
+		<choice destination="helpcv3-1" text="*accompany her*" />
 	</page>
 
 	<page ID="helpcv3-1">
 		<text>
-			"Let me show you how we used to apologise where I came from" you say
-			<conditional>
-				<assertion evaluate="slothasitem" slot="2" />
-				while slipping out of your garments,
+			<conditional><assertion evaluate="slothasitem" slot="2" />
+				Slipping out of your garments and leaving your equipment in the entranceway, you being to follow Neri to the bed. 
 			</conditional>
-			running your hands over your naked body,
-			slapping Bea on the behind as you pass her and sauntering over to embrace
-			Neri.
-			You plant a kiss firmly on Neri's lips and wedge her member between your
-			legs,
-			wiggling your hips as you push her down onto the bed. Still kissing
-			passionately, your hands roam to her pert breasts
-			and you tweak her nipples softly, Neri moaning into your mouth begins to
-			fidget to give her schlong more friction and kisses you more
-			intensely.
-			The two elves fondle each other while watching, engrossed in the scene
-			playing out before them.
-			Breaking the kiss but still looking Neri directly in the eye, you wordlessly
-			motion for the others to join you on the bed.
-			They waste no time and strip down too, rushing over, Kaia envelops your
-			head in her soft warm cleavage and rubs her slit against Neri's
-			cocktip.
-			Bea is slower on the draw but no less enthusastic, leaving her shyness
-			behind on the floor with her clothes, she feels you up while making
-			out with Kaia.
+			Running your hands over your naked body, you give Bea a firm slap on the behind as you pass her, sauntering over to embrace	Neri. You plant a kiss firmly on Neri's lips and wedge her member between your thighs, wiggling your hips as you push her down onto the bed. Still kissing passionately, your hands roam to her pert breasts and you tweak her nipples softly. Neri, moaning into your mouth, begins to fidget to give her schlong more friction while kisses you more intensely. The two elves fondle each other while watching, engrossed in the scene playing out before them. Breaking the kiss, you gesture for the others to join you on the bed.	They waste no more time and strip down too, rushing over, Kaia envelops your head in her soft warm cleavage and rubs herself against Neri's	cocktip. Bea is slower on the draw but no less enthusastic, leaving her shyness	behind on the floor with her clothes, she feels you up while making	out with Kaia.
 		</text>
-		<choice destination="helpcv4-1" text="Getting hotter" />
+		<choice destination="helpcv4-1" text="*getting hotter*" />
 	</page>
 
 	<page ID="helpcv4-1">
 		<text>
-			As the room is heating up, limbs entangle and saliva is crossed, moans
-			and giggles echo out of the wooden house.
-			The foreplay continuing until finally, Neri breaks away from your hold
-			and begins to make demands.
-			"Let's get this started for real... Traveller, get over here!" She flips
-			you around so you're lying, back on the bed and thrusts her snatch
-			onto your face
-			"Get to work down there and Kaia, you get to be first!" Grabbing ahold of
-			her hips with a grunt,
-			she roughly thrusts in as best she can without letting you move much.
-			Kaia starts to cry out loudly but is silenced by Bea sitting on her
-			face.
-			Working as best you can to time your tongue with her thrusting while still
-			getting some oxygen, you hear some muffled complaints from up front
-			but can't really see what's going on.
-			After a few minutes, Neri can't keep up with all the stimulation and with
-			a girlish yell, begins to empty her load right into Kaia and spurting
-			liquid from her sex onto your face.
-			Given some reprieve and wiping your face clean of girlcum, you raise your
-			head to look down and can see Kaia being sucked right into Bea's
-			crack
-			"Ah, that'd be the complaining" you think just as a wad of thick cum
-			splashes back out of Kaia and straight into your eyes.
+			As the room is heating up, limbs entangle and saliva is crossed, moans and giggles echo out of the wooden house. The foreplay continuing until finally, Neri breaks away from your hold	and begins to make demands.	
+			"Let's get this started for real..." 
+			She throws you down, back on the bed, and shoves her snatch into your face. The faint, sweet aroma engulfs your senses.	
+			"You start down there, I'm gonna start here~!" 
+			Grabbing ahold of Kaia, she lines up their hips and with a grunt, thrusts herself inside to the hilt. Kaia cries out both in surprise and elation, back arching and huge boobs bouncing as Neri thrusts powerfully. Her pleasured moans are soon silenced though, as Bea sits on her face. Working as best you can to time your tongue with Neri's thrusting while still getting some oxygen, you hear muffled groans rising in volume and frequency from up front. You can't really see much from this position, however. 
 		</text>
-		<choice destination="helpcv5-1" text="Ackk!" />
+		<choice destination="helpcv4-2" text="$Mmph!" />
 	</page>
-
+	
+	<page ID="helpcv4-2">
+		<text>
+			"I'm gonnuh.. gonnaaa...!"
+			After a few minutes, Neri can't keep it up anymore and with	a girlish shriek, mashes her hips into Kaia, blowing her load deep inside and spurting girlcum all over your face. Given some reprieve, breathing deeply and wiping your face clean, you look down to see Kaia being sucked right into Bea's crack.	Her huge rump jiggled rhythmically as the busty elf struggled, unable to free herself as Neri gripped her tight and continued to unload into her. Understanding the situation, you move to help, just as a wad of thick cum	splashes back out of Kaia's abused pussy, straight into your eyes. Temporarily blinded by goop, you hear an ear piercing shriek of bliss at a volume you didn't think was possible from the once timid elf, as she continues to consume who you presumed to be her only friend with her ass.
+		</text>
+		<choice destination="helpcv5-1" text="$Ackk!" />
+	</page>
+			
 	<page ID="helpcv5-1">
 		<text>
-			Temporarily blinded, you hear moaning at such a volume you didn't think was
-			possible from the timid elf,
-			as she continues to consume who you presumed to be her only friend with
-			her ass.
 			Startled by a tongue on your face, you regain your vision and see Neri
-			licking up the spunk from around your eyes.
-			She silently mouths the word sorry and winks, before getting off you to
-			watch the rest of Kaia's legs be sucked into that huge derrière.
-			Still moaning but suddenly realising what she has done, Bea turns and
-			looks you two with tears welling in her eyes,
-			right before she has an orgasm where she stands as Kaia reaches her final
-			destination inside her.
-			"O-ohhh Kaia..!" She cries out as her legs jellify and she falls onto the
-			bed sobbing.
-			Neri looks from her then to you, the gurgling from Bea's distended middle
-			easily heard over her sobs.
-			"That was soooo hot!" Neri yells excitedely, her cock already standing
-			erect again "Sorry to interrupt Bea, but you did want me to take you
-			to your sister right..?"
+			licking up the spunk from around your eyes.	She silently mouths sorry, winking and getting off of you, to watch the rest of Kaia's legs be sucked into that huge derrière. Face flushed and still moaning, Bea suddenly realises what she is doing and looks to you two with tears welling in her eyes.	Her body convulses, wracked with orgasm as Kaia reaches her final destination inside her. 
+			"A-ahhh! Kgh-Kaia..!" She cries out as her legs jellify and she falls onto the bed sobbing. "I-I didn't mean to..!"	
+			The gurgling from Bea's distended middle is easily heard over her sobs, her orgasm having kickstarted Kaia's digestion to a point of no return.	
+			"That was so hot!" Neri yells excitedly, her cock already growing erect again. 
+			"Sorry to interrupt there, but you did want me tell you where your sister went right..?"
 		</text>
-		<choice destination="helpcv6-1" text="Let's see where this goes" />
-		<choice destination="bea1" text="Give her a break Neri..." />
+		<choice destination="helpcv6-1" text="*let's see where this goes*" />
+		<choice destination="bea1" text="$Give her a break Neri..." />
 	</page>
 
 	<page ID="helpcv6-1">
 		<text>
-			Bea looks up at Neri from the bed, her teary face looking quite a mess,
-			but hopeful "You really know where she is Neri?? ..I-I think I'll
-			need her help to get over losing Kaia like this.."
-			Looking down at her gut sadly, it gurgles loudly in response and she tries
-			to hold back a burp. "Ohhh yeah Bea I can show you exactly where she
-			is, even the exact path she took to get there!"
-			Neri says with glee, stroking her shaft and walking towards her.
-			"A-alright just let me put my clothes ba-" Bea begins but is cut off
-			as her head is sucked in with a loud schlorp.
-			"W-waiiit Neri what are you doing!!?" the muffled voice of Bea cries out
-			"Y-you don't mean that you..."
-			Rubbing the digesting body of Kaia inside Bea's belly as she leisurely
-			sucked her down, Neri winked at you and sat down on the edge of the
-			bed.
-			"Ahaha, yep! She begged for me to end her and shoot her all over the walls
-			in here, just like I did to your precious mummy! When she found out
-			she couldn't stay away!"
-			A despairing wail sounded out from somewhere inside Neri "Nooooo! I
-			don't believe it! M-mum... The predators outside the village got her
-			months ago!"
-			Neri, looking rather sadistic as the wails got worse, giggled at how she
-			had broken the poor girl.
-			"When I jizzed her out, a big heap fell into my washing bucket with her
-			clothes and necklace and I thought it was too perfect of an
-			opportunity to waste! I threw it outside town guilt free!"
-			Still sucking Bea down steadily, she gasped as she made it to those wide
-			hips and got stuck, grunting, she strained to fit them in.
-			"Anyways just like I said, I'm showing you where your sister went and even
-			how she got there! She got churned up in there and soon, like her,
-			you'll go straight into the wall!"
-			Gesturing for you to come over and help get her down, Neri ignored whatever
-			Bea had left to say, too distracted by her building pleasure.
+			Bea looks up at Neri from the bed, her hopeful, tear filled face looking quite a mess. 
+			"You really know where she is Neri?? ..I-I think I'll need her help to get over losing Kaia.." 
+			Looking down at her gut sadly, it gurgles loudly in response and she tries to hold back a burp. 
+			"Sure, I can show you exactly where she went and even path she took to get there!" 
+			Neri says with glee, stroking her shaft, pre dripping onto the already-stained floor. 
+			"A-alright just let me put my clothes ba-" Bea begins as she turns away, but is cut off as her head is sucked in with a loud schlorp. 
+			"Waiiit Neri what are you doing!!?" Bea cries out, muffled by flesh. "Y-you don't mean that you..."	
+			Rubbing the digesting body of Kaia inside Bea's belly as she leisurely sucked her down, Neri winks at you, sitting down on the edge of the bed.	
+			"Ahaha, yep! She's begged me for weeks to end her and shoot her all over the walls
+			in here, just like I did to your precious mummy! She somehow found out about that
+			and couldn't stay away!" 
+			A despairing wail sounded out from somewhere inside Neri 
+			"Wha-no?! I don't believe it! M-mum... Something outside the village got her! Everyone saw...!"	
+			Neri, looking rather sadistic as the wails got worse, giggled at how she had broken the poor girl's spirits. 
+			"When I jizzed her out, a big heap fell into my washing bucket with her clothes and necklace and I thought it was too perfect of an	opportunity to waste! I threw it out and knew I wouldn't get the blame!" 
+			Still sucking Bea down steadily, she gasped as she made it to those wide hips and got stuck, grunting, she strained to fit them in.	
+			"Anyways just like I said, I'm telling you where your sister went and even showing you how she got there! She got gurgled in my balls and soon, you'll join her on the wall!" 
+			Giggling, Neri ignored whatever Bea had left to say, too distracted by her building pleasure. She waves for you to come over and help get that huge ass down. 
 		</text>
-		<choice destination="helpcv7-1" text="A good push will end this!" />
+		<choice destination="helpcv7-1" text="*a good push will end this!*" />
 	</page>
 
 	<page ID="helpcv7-1">
 		<text>
-			As you were struggling to push Bea the rest of the way down, suddenly
-			with a great shudder,
-			Neri's cocktip opened wide and got past the blockage smoothly sucking her
-			in from there.
-			Unfortunately you were still pushing with both hands and they were sucked in,
-			quickly down to your elbows.
-			Falling forwards a little, unsteady in your footing you ask nervously,
-			"H-hey Neri? You're kinda getting me too? Think you could help me out
-			here?"
-			Neri just looks down at you and raises an eyebrow, grinning widely. Her
-			cocktip pulses around your arms, warm cum lubricating them as they
-			slide deeper.
-			Realising she is the last person on the planet who'd help you out right now,
-			you frantically try to escape before it's too late.
+			As you were struggling to push Bea the rest of the way in, suddenly	with a great shudder, Neri's huge cocktip gaped open wide, passing the blockage and smoothly sucking her in from there.	Unfortunately you were still pushing with both hands and you were engulfed down to your elbows. Being pulled forwards, your face slowly mashes into Bea's big jiggly thighs. Unsteady in your footing and vision somewhat obstructed, you ask nervously for some help. Neri just looks down at you and raises an eyebrow, grinning widely. Her cocktip pulses around your arms, warm cum lubricating them as they slide deeper. Realising she might be the last person on the planet who'd help you out right now, you frantically try to escape before it's too late.
 		</text>
-		<choice destination="helpcvGO1" text="Uh oh..." />
+		<choice destination="helpcvGO1" text="*Uh oh...*" />
 		<effect type="incrementlocalflag" flag="digestion" value="1" />
+		<effect type="incrementlocalflag" flag="nerireform" value="1" />
 	</page>
 
 	<gameover ID="helpcvGO1">
 		<text>
-			Not having any chance to regain your footing, you slip over on some cum
-			on the floor, practically feeding yourself the rest of the way in.
-			Feeling you dumped into her bubbling sac, Neri lays back pointing her
-			cock straight up, knowing she'd soon be making yet another mess she
-			wouldn't clean up.
-			You fall right onto the gooey Bea, sending cum splashing everywhere with
-			a squelch, saturating you. Digestion already setting in, you lock
-			eyes with Bea and apologise silently.
-			Funny, it was apologising that got you into this mess. You laugh softly as
-			you feel yourself spreading out and losing form, perhaps just a
-			little rest...
-			Meanwhile, Neri was doing anything but resting. Her extremely distented balls
-			sloshing widly with the digested remains of 3 people as she pumped
-			wildly.
-			Being this full, she couldn't hold back for long and with a series of
-			grunts, gasps and moans she let loose.
-			Ropes of incredibly thick semen exploded out of Neri's cock with insane
-			force. Shooting straight into the ceiling and busting through the
-			flimsy construction,
-			great amounts of spunk rained down on Neri and her house, her mind blank
-			and her everything focused completely on her powerful orgasm.
-			After what felt like years of continuous spurting, Neri had passed out
-			from pleasure overload and her cock continued to gush like a fountain
-			into the air.
-			The artificial rain she created eventually stopped coming down, the
-			house still dripping with a fresh new coat of white 'paint'.
-			With an extremely dopey smile on her face and cock still dribbling, Neri
-			slept peacefully, completely satisfied with your apology.
+			Not having any real chance to regain your footing, you slip on some cum, practically feeding yourself the rest of the way in. Feeling you fully dumped into her bubbling sac, Neri gropes herself happily, knowing she'd soon be making yet another mess she probably wouldn't clean up. You fall right onto the gooey Bea, sending cum splashing everywhere with a squelch, saturating you. Cummy digestion already setting in, you lock eyes with Bea and apologise silently.	Funny, it was apologising that got you into this mess. You laugh softly as
+			you feel yourself spreading out and losing form.. Outside, Neri was trying not to prematurely blow before you two were fully gone. Her extremely distended balls sloshed widly, filled with the gooey remains of 3 people as she pumped her shaft violently. Being this full, she couldn't hold back for long and with a series of grunts and moans she let loose. Ropes of incredibly thick semen exploded out of Neri's cock with insane force, shooting into the ceiling and busting through the flimsy construction. Mind blanking, Neri cried out, everything focused completely on her powerful orgasm. Great amounts of spunk rained down on both Neri, and the house, gathering in large sticky gobs. After what felt like to her, years of continuous spurting, Neri passed out from pleasure overload even while her cock continued to gush like a depraved fountain.	As her output eventually slowed and stopped, the floor was almost submerged with a veritable flood of viscous jizz, while the walls dripped with a brand new coat of off-white 'paint'.	With an extremely dopey smile on her face and softening cock still dribbling, Neri slept contentedly, completely satisfied with your apology.
 		</text>
 
 	</gameover>
 
 	<page ID="bea1">
 		<text>
-			Turning back to you frowning, Neri crossed her arms and huffed. "It's not my
-			fault, she ate her! Besides, I didn't even get to feel those huge
-			tits going down my shaft!"
-			Bea looked up at Neri, angrily wiping her teary eyes. Neri pointed
-			backwards to Bea as she continued "She was supposed to be mine after
-			I spunked this fatso and let her meet up with her dumb sister on the
-			wall!"
-			Surprising you again, Bea jumped up and grabbed Neri from behind closing the
-			distance in an instant. "What was that you were saying Neri?"
-			Still pouting and apparently feeling no danger from the upset elf, Neri
-			points to a pile of ruined and cumsoaked rags in the corner.
-			"Right there is where your stupid sister ended up! She begged me to end her
-			in my sac! Now let me go and hurry up and become my next load!"
-			Bea doesn't let go and for a moment, no one moves or says anything, the
-			only sound Bea's gurgling middle.
-			Without warning, gripping her tightly, Bea shoves Neri's head into her mouth
-			and swallows hurriedly before she can make any attempts to escape.
-			You watch in amazement as the shorter elf gulps and slurps her down
-			with ease, her stomach soon bulging out, outweighing even the size of
-			her huge behind.
-			Angry and out of breath, she looks over to the cumsoaked pile and tears
-			well up once again.
+			Turning back to you and frowning, Neri crossed her arms in a huff. 
+			"It's not my fault that she ate her! Besides, I didn't even get to feel those huge tits rubbing all the way down my shaft!"	
+			Bea looked up at Neri, angrily wiping her teary eyes. Neri pointed backwards at Bea as she continued. 
+			"She was going to be mine too! Right after I spunked this fatso and let her 'meet up' with her dumb sister on the wall!" 
+			Surprising you again, Bea jumped up and grabbed Neri from behind, closing the distance in an instant. 
+			"What's that you're saying Neri..?" Bea spat venomously. Still pouting and apparently feeling no danger from the upset girl that was currently digesting a much bigger, taller elf with ease. Neri points to a pile of ruined and cumsoaked rags in the corner.	
+			"Right there is where your slutty sister ended up! She begged me to end her	in my sac! Now let me go and you can hurry up and join her!" 
+			For a moment, no one moves or says anything, the only sound Bea's gurgling middle. Without warning, gripping her tightly, Bea shoves Neri's head into her mouth	and swallows hurriedly before she can make any attempts to escape. You watch in amazement as the shorter elf gulps and slurps her down with apparant skill, her stomach bulging out further, outweighing even her huge ass. Angry and out of breath, she looks over to the cumsoaked pile and her tears flow once again.
 		</text>
-		<choice destination="bea2" text="Time to leave!" />
+		<choice destination="bea2" text="*Time to leave!*" >
+			<condition evaluate="GLOBALFLAG" operator="lessthan" value="2"
+			flag="NERI_BASEMENT" />	
+		</choice>	
+		<choice destination="bea2reformer" text="*Time to leave!*" >
+			<condition evaluate="GLOBALFLAG" operator="equals" value="2"
+			flag="NERI_BASEMENT" />	
+		</choice>	
 	</page>
 
 	<page ID="bea2">
 		<text>
-			Feeling concerned about the new developments, you're thinking it
-			might be a good time to get out of here. You slowly
-			<conditional>
-				<assertion evaluate="slothasitem" slot="2" />
-				grab your gear and begin to
+			Feeling concerned about the new developments, you're thinking it might be a good time to get out of here. You slowly 
+			<conditional><assertion evaluate="slothasitem" slot="2" />
+			grab your gear and begin to 
 			</conditional>
-			back away towards the door, hoping she won't notice. Your foot slides
-			a little on the slick floor and you let out a gasp of surprise.
-			Bea, hearing this, suddenly turns, remembering you were there. "You...
-			This is all because you brought us here!" She spat out, a crazed,
-			hungry expression on her once timid face.
-			Though she is probably shorter than 5ft tall, Bea is looking rather
-			intimidating as she walks towards you.
-			"I may not be able to take back what happened, but at least I can ease
-			my conscience by getting rid of you!"
-			With speed that shouldn't be possible, she lunges at you and tackles you
-			to the floor, pinning you down with her large belly.
-			She grabs your legs and brings your feet to her mouth taking them in.
+			back away towards the door, hoping she won't notice. Your foot slides a little on the slick floor and you let out a gasp of surprise. Bea, hearing this, suddenly turns, remembering you were there. 
+			"You... This is all because you brought us here!" She spat out, a crazed, hungry expression on her once timid face.	Although the crying girl might not even be five feet tall, Bea looks pretty	intimidating as she walks towards you. 
+			"I may not be able to take back what happened, but at least I can ease my conscience by getting rid of you too!" 
+			With a burst of speed, she lunges and tackles you to the floor, pinning you underneath her large squirming belly. She grabs your legs and brings your feet to her mouth taking them in.
 		</text>
-		<effect type="incrementlocalflag" flag="digestion" value="1" />
 		<special effect="removenpc" />
-		<choice destination="beaGO" text="You don't have to do this!" />
+		<choice destination="beaGO" text="$You don't have to do this!" />
 	</page>
-
+	
+	<page ID="bea2reformer">
+		<text>
+			Feeling concerned about the new developments, you're thinking it might be a good time to get out of here. You slowly 
+			<conditional><assertion evaluate="slothasitem" slot="2" />
+			grab your gear and begin to 
+			</conditional>
+			back away towards the door, hoping she won't notice. Your foot slides a little on the slick floor and you let out a gasp of surprise. Bea, hearing this, suddenly turns, remembering you were there. 
+			"You... This is all because you brought us here!" She spat out, a crazed, hungry expression on her once timid face.	Although the crying girl might not even be five feet tall, Bea looks pretty	intimidating as she walks towards you. 
+			"I may not be able to take back what happened, but at least I can ease my conscience by getting rid of you too!" 
+			With a burst of speed, she lunges and tackles you to the floor, pinning you underneath her large squirming belly. She grabs your legs and brings your feet to her mouth taking them in.
+		</text>
+		<effect type="incrementlocalflag" flag="beareform" value="1" />
+		<choice destination="beaGO" text="$You don't have to do this!" />
+	</page>
+	
 	<gameover ID="beaGO">
 		<text>
-			Ignoring you and looking at you bitterly, Bea pulls you towards her with a
-			few gulps, wanting to waste no time getting her revenge.
-			She greedily slurps down your legs and past your waist, not wanting to
-			cause you any pleasure eats you as fast as she can.
-			What little fighting you do makes no difference and within moments you
-			are being dunked into a very crowded tight space.
-			Bea moans and rubs her overfull midsection as she stands back up,
-			sloshing and gurgling slowly back towards the bed.
-			You find Neri masturbating angrily, she is even now thinking of only one
-			thing. Figuring it's now or never, you squirm around and manoeuvre
-			yourself onto her shaft.
-			Saying nothing and pretending you don't exist, she thrusts roughly and
-			quickly into you, trying to spurt one last time.
-			As the tingling on your skin is getting painful, Neri shudders as she
-			climaxes inside you pulling out and closing her eyes.
-			Trying to also get off before time is up, you drift off with your hand
-			still moving up and down.
-			Bea lays uncomfortably on the jizz soaked bed, not really sad about the
-			events of the past hour anymore. Although she'll miss her friend,
-			the feeling of fullness as her stomach happily digests it's contents
-			almost makes it worth it.
+			Ignoring you and looking at you bitterly, Bea pulls you towards her with a few gulps, wanting to waste no time getting her revenge.	She greedily slurps down your legs and past your waist, not wanting to cause you any pleasure, she eats you as fast as she can.	What little fighting you manage makes no difference and within moments you are being dunked into a very crowded tight space. Bea moans in both pleasure and pain, rubbing her overfull midsection as she moves, sloshing and gurgling, slowly back towards the bed.	In the stifling gut, you find Neri masturbating desperately, even now thinking of only one thing. Figuring it's now or never, you squirm around and manoeuvre yourself onto her shaft. Saying nothing, Neri looks at you grumpily as she thrusts roughly and fervently into you, trying to spurt one last time.	As the tingling on your skin is getting painful, Neri shudders and she climaxes inside you, closing her eyes with a sigh. Also trying to get off before your time is up, you lose consciousness still moving on her softening shaft. Bea sits uncomfortably on the jizz soaked bed, not feeling to bad about the events of the past hour anymore. Although she'll miss her best friend,	this feeling of fullness as her stomach happily digests it's contents almost makes it worth it.
 		</text>
 
 	</gameover>
