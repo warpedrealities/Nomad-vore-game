@@ -7,6 +7,7 @@ import org.luaj.vm2.Globals;
 import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
+import org.luaj.vm2.lib.jse.CoerceLuaToJava;
 import org.luaj.vm2.lib.jse.JsePlatform;
 
 import nomad.universe.Universe;
@@ -20,7 +21,7 @@ public class ScriptTool {
 		this.file = file;
 		m_globals = JsePlatform.standardGlobals();
 		try {
-			m_script = m_globals.load(new FileReader("assets/data/systems/entryScripts/" + file + ".lua"), "main.lua");
+			m_script = m_globals.load(new FileReader("assets/data/systems/scripts/" + file + ".lua"), "main.lua");
 
 		} catch (FileNotFoundException exception) {
 
@@ -44,6 +45,27 @@ public class ScriptTool {
 			System.out.println("filename:" + file);
 			e.printStackTrace();
 		}
+	}
+
+	public boolean checkScript() {
+		boolean check = true;
+		try {
+			m_script.call();
+			LuaValue tools = CoerceJavaToLua.coerce(new EntryScriptToolkit(Universe.getInstance()));
+			LuaValue luacontrol = m_globals.get("main");
+
+			if (!luacontrol.isnil()) {
+				LuaValue returnVal = luacontrol.call(tools);
+				check = (boolean) CoerceLuaToJava.coerce(returnVal, Boolean.class);
+
+			} else {
+				System.out.println("Lua function not found");
+			}
+		} catch (LuaError e) {
+			System.out.println("filename:" + file);
+			e.printStackTrace();
+		}
+		return check;
 	}
 
 }

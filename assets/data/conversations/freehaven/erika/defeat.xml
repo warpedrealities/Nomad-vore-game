@@ -1,10 +1,30 @@
 <?xml version="1.0"?>
 <Conversation>
 	<page ID="start">
+	<assertion evaluate="hasPrey" name="Mallory" />	
 	<text>
-	
+	Erika falls heavily down to the ground and you loom over your bloated and defeated foe "..i ain't finished...yet." she protests, trying to get back to her feet..then stumbling and falling back down on her ass.
 	</text>
-		
+	<choice destination="release" text="$No, you are. Now give me the fox."/> 
+	</page>
+	
+	<page ID="release">
+	<text>
+	Erika nods, then rolls onto all fours to hork up the foxgirl with difficulty. Mallory emerging dazed and slimy to land on the floor with a miserable sounding splat. She doesn't look like much considering the difficulty you had rescuing her, but hopefully this is worth it. Erika manages to push herself to her feet and staggers away "This isn't the end of this." she threatens weakly, but makes her exit.
+	</text>
+	<special effect="removePrey"/>
+		<special effect="addJournal" file="main" name="mallory_free" />		
+		<effect type="givecredits" value="-25000" />
+		<effect type="setglobalflag" flag="adaptive_computation" value="5" />	
+		<special effect="removenpc" />		
+	<choice destination="end" text="$Next time will end worse for you Erika"/>
+	</page>
+	
+	<page ID="start">
+	<text>
+	No interaction available.
+	</text>
+	<choice destination="end" text="$darn"/>
 	</page>
 
 </Conversation>

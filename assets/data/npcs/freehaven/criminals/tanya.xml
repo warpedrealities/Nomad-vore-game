@@ -33,10 +33,10 @@
 	</rpg>
 	<respawn delay="4000" />	
 	<peacebond />
-	<defeated conversation="freehaven/tanya/defeat" />
-	<seduced conversation="freehaven/tanya/defeat" />
-	<victory conversation="freehaven/tanya/victory" />
-	<seducer conversation="freehaven/tanya/victory" />
+<!-- 	<defeated conversation="freehaven/tanya/defeat" /> 
+	<seduced conversation="freehaven/tanya/defeat" /> -->
+	<!-- <victory conversation="freehaven/tanya/victory" -->
+	<!-- <seducer conversation="freehaven/tanya/victory" /> -->
 	<controller AI="freehaven_tanya" />
 	<faction value="freehaven_gangs" />
 </Harpy>

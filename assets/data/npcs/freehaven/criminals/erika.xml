@@ -56,8 +56,8 @@
 	<peacebond />
 	<defeated conversation="freehaven/erika/defeat" />
 	<seduced conversation="freehaven/erika/defeat" />
-	<victory conversation="freehaven/erika/victory" />
-	<seducer conversation="freehaven/erika/victory" />
+	<!-- <victory conversation="freehaven/erika/victory" /> -->
+	<!-- <seducer conversation="freehaven/erika/victory" /> -->
 	<controller AI="freehaven_erika" />
 	<faction value="freehaven_gangs" />
 </Harpy>

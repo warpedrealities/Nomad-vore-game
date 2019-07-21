@@ -42,6 +42,8 @@ public class VoreScript_Impl implements VoreScript {
 		stageIndex=0;
 		if (this.stages[0] == null) {
 			stageIndex = 1;
+			target.setBusy(false);
+			target.Remove(false, true);
 		}
 		alive=true;
 		this.target=target;

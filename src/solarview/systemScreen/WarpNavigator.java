@@ -46,7 +46,7 @@ public class WarpNavigator {
 		p.y=p.y*-1;
 		p.add(coordinates);
 		StarSystem system=Universe.getInstance().getSystem(p.x, p.y);
-		if (system!=null)
+		if (system != null && system.canVisit())
 		{
 			return system.getPosition();
 		}

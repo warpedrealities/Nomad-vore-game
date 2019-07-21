@@ -6,7 +6,8 @@
 	<spawnRules>
 	<spawn script="pirates"/>
 	<spawn script="talharans"/>	
-	<spawn script="brightfeather_quest1"/>		
+	<spawn script="brightfeather_quest1"/>
+	<spawn script="talharan_bountyhunter"/>		
 	</spawnRules>
 
 </System>

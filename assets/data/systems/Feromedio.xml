@@ -6,7 +6,8 @@
 		<!-- <Spaceship x="4" y="11" file="avenger"/>	 -->
 	<spawnRules>
 	<spawn script="pirates"/>
-	<spawn script="talharans"/>		
+	<spawn script="talharans"/>	
+	<spawn script="talharan_bountyhunter"/>		
 	</spawnRules>	
 	<decorations>
 	<decoration x="-5" y="-5" size="1" sprite="barrenworld"/>		

@@ -224,5 +224,14 @@ public class StarSystem {
 		return systemPosition;
 	}
 
+	public boolean canVisit() {
+		Document doc = ParserHelper.LoadXML("assets/data/systems/" + systemName + ".xml");
+		Element n = (Element) doc.getFirstChild();
+		if (n.getAttribute("restrictionScript").length() > 0) {
+			return new ScriptTool(n.getAttribute("script")).checkScript();
+		}
+
+		return true;
+	}
 
 }

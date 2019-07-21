@@ -1,30 +1,7 @@
 
 function combat(controllable,sense,pos,hostile)
-	if pos:getDistance(hostile:getPosition())<2 then
-		--if in melee range attack
-		if (controllable:getValue(0)==3) then
-			controllable:setValue(0,0)		
-			controllable:setAttack(1)
-			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)			
-		else
-			controllable:setAttack(0)
-			result = controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-			if not (result==nil) then
-				if (result:getValue()==1) then
-					controllable:setValue(0,0)	
-				else
-					controllable:setValue(0,controllable:getValue(0)+1)
-				end
-			end	
-		end
-		
-	else
-		if controllable:HasPath() then
-			controllable:FollowPath()
-		else
-			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,3)
-		end
-	end		
+	controllable:setAttack(0)
+	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)		
 end
 
 function victimize(controllable,sense,pos,hostile)

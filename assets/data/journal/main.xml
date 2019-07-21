@@ -18,6 +18,9 @@
 	<entry name="mallory_free" ID="120" priority="2" title="get mallory to give you the core">
 	Mallory has been freed from a sticky situation brought about by owing a lot of money to some unsavoury people. She should be grateful, hopefully now you can get the adaptive computation core you need for Jehari.
 	</entry>	
+	<entry name="core_acquired" ID="120" priority="2" title="Mallory says she'll deliver the core">
+	You should check with Jehari that the core has arrived and been put to use.
+	</entry>		
 	<entry name="mallory_digested" ID="120" priority="2" title="mallory has been digested">
 	Mallory, the person you were hoping to get the computation core from, has been digested by a criminal. You will probably have to go back to Robynn to ask if there's another way of getting the core.
 	</entry>		

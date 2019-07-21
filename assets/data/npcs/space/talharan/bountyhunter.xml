@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="rena.png" />
+	<name>Rena</name>
+	<description>Five from toes to eartips this short foxgirl makes up for her inability to reach the highest shelves with confidence. Confidence, and a form fitting black outfit that covers most of her body except for her twin tails, head and hands. Her fur and hair are both reddish but for white splotches on her ear and tailtips. And she probably has reason to be confident, her belt is festooned with assorted implements of the bounty hunter's trade that make it clear she's a dangerous customer.</description>
+	<rpg>
+		<experiencevalue value="150" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="PARRY" value="4" />
+		<attribute attribute="DODGE" value="4" />
+		<attribute attribute="WILLPOWER" value="4" />	
+		<combatMove name="slash" pattern="MELEE"
+			bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="THERMAL" minValue="4" maxValue="9"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Rena slashes at TARGET with her lightsword but misses</text>
+			</missText>
+			<hitText count="1">
+				<text>Rena slashes TARGET for VALUE thermal damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="leap" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="8" pattern="RANGED" actionCost="2" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="4"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>Rena fails to leap towards TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>Rena leaps towards TARGET</text>
+			</hitText>
+		</combatMove>	
+		<combatMove name="flashbang" bonusAttribute="RANGED" timeCost="2"
+			bonusToHit="8" pattern="BOMB" actionCost="2" moveType="FIGHT">
+				<effectStatus probability="75">
+			<probabilityModifier value="ENDURANCE" />		
+			<applyText>TARGET is disorientated and their ability to attack is lowered</applyText>
+			<statusAttribMod uid="17" icon="12" duration="10"
+				numModifiers="5">
+				<removeText> TARGET recovers</removeText>
+				<effect attribute="RANGED" modifier="-8" />
+				<effect attribute="MELEE" modifier="-8" />			
+				<effect attribute="SEDUCTION" modifier="-8" />				
+			</statusAttribMod>
+		</effectStatus>	
+			<missText count="1">
+				<text>TARGET evades the flashbang</text>
+			</missText>
+			<hitText count="1">
+				<text>TARGET has been hit by a flash bang grenade</text>
+			</hitText>
+		</combatMove>				
+	</rpg>
+	<crew skill="GUNNERY" value="4"/>
+	<defeated conversation="space/talharan/rena/defeat" />
+	<seduced conversation="space/talharan/rena/seduced" />
+	<victory conversation="space/talharan/rena/victory" />
+	<seducer conversation="space/talharan/rena/victory" />
+	<controller AI="bountyhunter_rena" />
+	<faction value="talharan" />
+</NPC>

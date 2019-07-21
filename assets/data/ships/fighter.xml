@@ -5,6 +5,7 @@
 		<movecost value="20" />
 		<hullpoints value="20" />
 		<thrustcost value="0.5" />
+		<manouver value="2" />
 	</shipstats>
 
 	<emitters>
@@ -24,29 +25,34 @@
 				<row>12221</row>
 				<row>22221</row>
 				<row>12221</row>
+				<row>12221</row>
 				<row>11211</row>
 				<row>11111</row>
 
 			</prefab>
 			<pairedportal x="0" y="3" sprite="1" ID="-101" facing="2">
 				Exterior hatch </pairedportal>
-			<placeWidget x="2" y="5" name="hardpoint">
-				<contains name="shipweapons/explosive cannon">
-					<resource type="explosive shell" value="40" />
+			<placeWidget x="2" y="6" name="hardpoint">
+				<contains name="shipweapons/plasma bolt gun">
+					<resource type="PLASMA" value="20" />
 				</contains>
 			</placeWidget>
-
 			<placeWidget x="1" y="1" name="slot">
-				<contains name="modules/fueltank">
-					<resource type="modules/FUEL" value="40" />
+				<contains name="modules/interplanetary reactor">
+					<resource type="modules/FUEL" value="200" />
 				</contains>
 			</placeWidget>
-			<placeWidget x="2" y="1" name="slot">
-				<contains name="modules/defensive barrier" />
-			</placeWidget>
+			<placeWidget x="1" y="5" name="slot">
+				<contains name="modules/space warper" />
+			</placeWidget>			
 			<placeWidget x="3" y="1" name="slot">
-				<contains name="modules/generator" />
+				<contains name="modules/simple reactor">
+					<resource type="modules/ENERGY" value="50" />
+				</contains>
 			</placeWidget>
+			<placeWidget x="3" y="5" name="slot">
+				<contains name="modules/protective shield" />
+			</placeWidget>			
 			<placeWidget x="2" y="3" name="slot">
 				<contains name="modules/navconsole" />
 			</placeWidget>

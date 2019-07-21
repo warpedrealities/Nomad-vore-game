@@ -9,6 +9,7 @@
 	<spawn script="pirates"/>
 	<spawn script="dreadpirate_roberta"/>	
 	<spawn script="talharans"/>		
+	<spawn script="talharan_bountyhunter"/>			
 	</spawnRules>
 
 	<decorations>

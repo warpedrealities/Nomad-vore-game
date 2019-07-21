@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="DRESSED"/>
+	<text>
+	"Hi, can I do anything for you?"
+	
+	</text>
+		<choice destination="end" text="$Not right now thanks"/>
+	</page>
+
+	<page ID="start">
+	<text>
+	The foxgirl looks far worse than even a drowned rat would, enzymatic slime covering her body and her clothing entirely dissolved. Her demeanour is dazed and her posture enfeebled. She's had a close encounter with digestion indeed. After a few moments of panting and spitting fluid though she becomes aware of your presence, and it is not to say she's ungrateful as you suddenly find her latched about your legs smearing them with enzyme fluid "OH thankyou stranger! thankyou!"
+	</text>
+	<choice destination="happy0" text="$Happy to be of help"/>	
+	<choice destination="unhappy0" text="$Please stop covering me in stomach slime"/>
+	</page>
+	
+	<page ID="happy0">
+	<text>
+	"I'm Mallory. I don't know if those brutes told you that. But thankyou, thankyou. If you hadn't come..well...thankyou." Mallory reiterates, giving your legs another squeeze before relinquishing her hold on them.
+	</text>
+	<choice destination="reward0" text="$I know, Robyn sent me, said you could get me an adaptive computation core"/>
+	</page>
+	
+	<page ID="unhappy0">
+	<text>
+	Mallory lets out a yelp and swiftly pushes herself back "Sorry! sorry it's just, I thought they were going to digest me for sure that time. My name's Mallory by the way, and I'm so very thankfuly you came when you did."
+	</text>
+	<choice destination="reward0" text="$I know, Robyn sent me, said you could get me an adaptive computation core"/>
+	</page>
+	
+	<page ID="reward0">
+	<text>
+	"Sure, sure? calling in her marker is she? nevermind nevermind you saved me. Least I can do. Where do you want it delivered?" asks Mallory as she straightens up and then has to wipe at least a jug worth of goop out of her eyes and hair.
+	</text>
+	<choice destination="reward1" text="$Deliver it to Jehari"/>
+	</page>
+	
+	<page ID="reward1">
+	<text>
+	"Yes, Yes of course..but..before I go fetch it...can I please have a shower and put some clothes on?" says Mallory, dripping goopily still.
+	</text>
+	<choice destination="reward2" text="$Fine, but I expect the core to be delivered promptly afterwards"/>
+	</page>
+
+	<page ID="reward2">
+	<text>
+	Mallory nods, but as she has to wipe her eyes again she doesn't bother answering and goes to clean herself off and get into some clothes. You wait around a little but then may as well leave her to it.
+	</text>
+	<effect type="setlocalflag" flag="rescued" value="1" />	
+	<special effect="addJournal" file="main" name="core_acquired" />		
+		<effect type="setglobalflag" flag="adaptive_computation" value="6" />		
+	<choice destination="end" text="*leave, successfully*"/>
+	</page>
+
+</Conversation>

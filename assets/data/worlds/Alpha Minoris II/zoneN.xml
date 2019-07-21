@@ -53,27 +53,6 @@
 				</lootTable>
 			</placeWidget>
 		</randprefab>
-
-		<clumps lowerlimit="0" upperlimit="45">
-			<noise tile="5" scarcity="6" />
-			<floodfill tile="3"></floodfill>
-		</clumps>
-		<clumps lowerlimit="0" upperlimit="45">
-			<noise tile="6" scarcity="6" />
-			<floodfill tile="4"></floodfill>
-		</clumps>
-		<clumps lowerlimit="0" upperlimit="45">
-			<noise tile="7" scarcity="6" />
-			<floodfill tile="4"></floodfill>
-		</clumps>
-		<floodfill tile="2">
-
-		</floodfill>
-		<Seedwidgets min="16" max="32" name="fruitbush" />
-		<Seedwidgets min="8" max="16" name="gourdbush" />
-		<SeedNPCs min="8" max="16" name="AlphaMinoris_II/lamia" />
-		<SeedNPCs min="4" max="8" name="AlphaMinoris_II/hooded_lamia" />	
-		<walloff wall="7" sides="north" />
 		<prefab positionX="32" positionY="32" width="1" height="1">
 			<row>3</row>
 		</prefab>
@@ -84,7 +63,40 @@
 			<spawns count="1">
 				<data npc="AlphaMinoris_II/draconian" min="1" max="1" chance="25" deathScript="draconianDeath"/>
 			</spawns>
-		</placeWidget>
+		</placeWidget>		
+		<perlin>
+			<band low="-1.0" high="-0.5">
+				<noise tile="5" scarcity="6" />
+				<noise tile="6" scarcity="6" />
+				<noise tile="7" scarcity="6" />
+				<floodfill tile="1" />	
+			</band>
+			<band low="-0.5" high="0.0">
+
+				<floodfill tile="2">
+				</floodfill>
+			</band>
+			<band low="0.0" high="0.5">
+				<noise tile="5" scarcity="6" />
+				<noise tile="6" scarcity="6" />
+				<noise tile="7" scarcity="6" />
+				<floodfill tile="3">
+				</floodfill>
+			</band>			
+			<band low="0.5" high="1.0">
+				<noise tile="5" scarcity="6" />
+				<noise tile="6" scarcity="6" />
+				<noise tile="7" scarcity="6" />
+				<floodfill tile="4" />
+			</band>
+		</perlin>
+
+		<Seedwidgets min="16" max="32" name="fruitbush" />
+		<Seedwidgets min="8" max="16" name="gourdbush" />
+		<SeedNPCs min="8" max="16" name="AlphaMinoris_II/lamia" />
+		<SeedNPCs min="4" max="8" name="AlphaMinoris_II/hooded_lamia" />	
+		<walloff wall="7" sides="north" />
+
 	</mapgen>
 
 </zone>
