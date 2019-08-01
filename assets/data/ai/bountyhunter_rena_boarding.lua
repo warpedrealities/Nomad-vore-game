@@ -16,23 +16,10 @@ function move(controllable,sense,script)
 	end
 end
 
-function combat(controllable,script,hostile,pos)
-
-	if pos:getDistance(hostile:getPosition())<2 then
-		if controllable:HasPath() then
-			controllable:FollowPath()
-		else
-			controllable:specialCommand("flee")
-			controllable:FollowPath()		
-		end
-	else
-		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-	end
-end
 
 function retreatCheck(controllable,sense,script)
-	if (controllable:getRPG():getStat(0)<25) or (controllable:getRPG():getStat(1)<50) then
-		sense:drawText("Roberta: Nice try, but I'm out of here, eat ya next time")
+	if (controllable:getRPG():getStat(0)<50) or (controllable:getRPG():getStat(1)<50) then
+		sense:drawText("Rena: Well, this calls for a tactical retreat, don't think this is the end though")
 		controllable:Remove(false,true)
 		return true
 	else
@@ -41,7 +28,28 @@ function retreatCheck(controllable,sense,script)
 
 end
 
-function main(controllable, sense, script) 
+function combat(controllable,script,hostile,pos)
+
+	if pos:getDistance(hostile:getPosition())<2 then
+	--if in melee range attack
+		controllable:setAttack(0)
+		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+
+	else
+		a=controllable:getValue(2)
+		if (a>2) then
+			controllable:setAttack(1)
+			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+		else
+			a=a+1
+			controllable:setValue(2,a)
+			controllable:setAttack(2)
+			controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+		end
+	end
+end
+
+function main(controllable, sense, script)  
 	if not (retreatCheck(controllable,sense, script)) then
 		pos=controllable:getPosition()
 		hostile=sense:getHostile(controllable,10,true)

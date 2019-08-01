@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			You've defeated the bountyhunter, you can choose to board her ship, or not to risk it.
+		</text>
+			<effect type="setlocalflag" flag="boarded" value="1" />	
+		<choice destination="end"
+			text="leave her be" />
+		<choice destination="boarding"
+			text="board her ship" />
+	</page>
+
+	<page ID="boarding">
+		<text>
+		You bring your ship in to dock with the bounty hunter's fighter, the small and dangerous craft makes mo move to evade as you dock to it airlock to airlock. Steel yourself if you must, but one suspects only by bearding the lion in its lair or some such other metaphor will you end the threat of this bounty hunter.
+		</text>	
+		<choice destination="raid" text="time to board"/>
+	</page>
+	<page ID="raid">
+		<text>
+		</text>
+
+		<special effect="dock" />
+	</page>
+</Conversation>

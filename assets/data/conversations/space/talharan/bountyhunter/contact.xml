@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<condition operator="equals" evaluate="FACTIONFLAG" flag="bountyhunter_talked"
+				value="1" />	
+		<text>
+		"You know, it'd make things a lot easier for me if you'd just surrender. But I guess that isn't going to happen. Just know this is only ending one way." she says, licking her lips before she grabs her control levers.
+		</text>
+		<choice destination="attack" text="$here we go again"/>
+	</page>
+
+	<page ID="start">
+	<text>
+	"Well, what do we have here. Been looking all over for you." the foxgirl appearing on the monitor seems cheerful enough as she smiles and leans in to get a better look at what she can see on her own monitor.
+	</text>
+	<choice destination="who" text="$And who exactly are you?"/>
+	<choice destination="why" text="$Really? and why have you been looking for me?"/>
+	<choice destination="evade" text="$I think you must have me mistaken for someone else"/>
+			<effect type="setfactionflag" flag="bountyhunter_talked" value="1" />
+	</page>
+	
+	<page ID="who">
+	<text>
+	"Rena's the name, bounty hunter by occupation. And that brings me to the unfortunate matter that you have a price on your head, the league are a tad upset with you and have asked me to settle the matter for them."
+	</text>
+	<choice destination="who1" text="$I don't suppose I could change your mind"/>
+	</page>
+	
+	<page ID="who1">
+	<text>
+	"No that'd be terribly unprofessional. I'm contracted to kill you, it's nothing personal though. It's just business, anyway. Here we go."
+	</text>
+	<choice destination="attack" text="$Wait I wasn't done"/>
+	</page>
+	
+	<page ID="why">
+	<text>
+	"Because the Talharan commerce league are mighty upset with you and have asked me to make sure you don't upset them again."
+	</text>
+	<choice destination="why1" text="$I have no intention of upsetting them again though"/>
+	</page>
+	
+	<page ID="why1">
+	<text>
+	"Glad to hear it, unfortunately the league takes a real dim view of people getting off scott free. So I'm afraid my contract does sort of stipulate I'm going to have to quite fatally digest you. Anyway, time to be getting on with things."
+	</text>
+	<choice destination="attack" text="$Wait what? why!"/>
+	</page>
+	
+	<page ID="evade">
+	<text>
+	"No, I'm quite sure you're who I'm looking for. Shame though really, see I've been contracted to kill you."
+	</text>
+	<choice destination="evade1" text="$But why?"/>
+	</page>
+	
+	<page ID="evade1">
+	<text>
+	"Attacking Talharan ships? killing their crew? looting their cargo? stop me if this sounds familiar. Did you really think that there wouldn't be any repercussions?"
+	</text>
+	<choice destination="attack" text="$guess I didn't"/>
+	</page>
+	
+	
+	<page ID="attack">
+	<text>
+	The channel is cut and the bounty hunter ship arrows in to attack.
+	</text>
+		<special effect="spaceCombat" />
+	</page>
+
+</Conversation>

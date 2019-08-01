@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+			<preference fetish="females" />	
+			<preference fetish="demis" />
+			<preference fetish="oralvore" />	
+	<text>
+	Rena smirks as you fall before her, flicking her lightsword off and then tugging a small raygun from her pocket "Gotcha, finally. Now to make a little adjustment" she says with a giggle as she aims the device at you and fires..the energy waves emanating from the ray causing your body to diminish and shrink. <conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				You vanish into the folds of your
+				<readequipment slot="2" /> as the outfit falls around your form and you rapidly lose size. However it doesn't take long for Rena to find you apparently well familiar with this little game.
+				</conditional> Rena snaps your tiny self up off the floor with a broad grin and licks her lips "Much better, Don't want to ruin my figure..and besides, this way is so much more fun." she says and lifts your squirmy self up to her lips and licks over you. That tongue of her roaming shamelessly, her breath hot and warm and all about you as she tastes you and treats you like a doll as a prelude to your consumption.
+	</text>
+	<choice destination="oralvore0" text="$I'd really rather you didn't go through with this"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	Rena giggles "Nothing personal, but I'm obliged to." she says and licks over your feet, suckling them a moment then releasing them "Though I admit. I do get just a little personal satisfaction from it." she says as she upends you, suddenly you're looking downwards into her parting jaws. A strand of saliva momentarily straddling the gap between her lips before snapping as you see her tongue undulate underneath you and she lowers you in.
+	</text>
+	<choice destination="oralvore1" text="$oh fuck"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	Rena giggles again and mhmms pulling you back playfully from her lips at those words. The sune toying with you, her tails swaying back and force rthythmically with her amusement as she teasingly lowers you in again. Her mouth coming up around your head and shoulders, the warm wet waft of her breath enough to soak you further in saliva as she pulls you back yet again. But third time turns out to be the charm as when she lowers you in once more she seals her lips shut around your chest. 
+	</text>
+	<choice destination="oralvore2" text="*from toy to food, also MMMPH!*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	Rena toys with your legs protruding from her lips using her fingers and toys with your body using her tongue in equal measure. She slurps you deeper in, waist deep in her lips as she enjoys herself and perhaps even more rubs in just how helpless you are right now. Her tongue bullying you casually as she rubs it against your chest, around your shoulders and repeatedly mashes your face into her tastebuds. By the sound of her mhmms and murrs she's appreciating you an indecent amount and making it clear it's more than a little personal satisfaction.
+	</text>
+	<choice destination="oralvore3" text="*swallowed*"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	Rena keeps her head tilted back but releases your legs for what little good their freedom gives you. Your legs waving helplessly in the air before she gulps them inside. The sune tugging you down her throat with soft swallows until you vanish entirely down that throat of hers with a parting lick. Rena mhmms and licks her lips "Mhmm, you're actually particularly tastey you know. It's a shame you're a contract really, I'd of loved to keep you around as a toy." says Rena as she traces your path down her throat and to her belly with her hand. Not a trace of a bulge showing on her sleek shapely form as you plunge down into her guts.
+	</text>
+	<choice destination="oralvore4" text="*digestion is inevitable*"/>
+	</page>
+	
+	<page ID="oralvore4">
+	<text>
+	It's not like she'll even hear you let alone be moved by your pleas. Though being a tiny toy for a mischevious fox girl doesn't sound like a great fate. Though maybe it would of been a preferable fate to digestion. Inside the depths of her sweltering stomach you feel her stomach slime beginning to break you down, your form starting to tingle as enzymes soften you up. You try to clamber above the rising fluid, but this only gets a bout of giggles and chiding noises from Rena as you fail to escape. And already you can feel your body weakening and succumbing to her insides.
+	</text>
+	<choice destination="oralvore5" text="*liquidated*"/>
+	</page>
+	
+	<gameover ID="oralvore5">
+	<text>
+	You struggle against the inside of her belly, but the struggle is short lived and soon her gurgling gut has liquidated you entirely. Her fluids rise and you're reduced to a thick broth layered atop them. Rena lets out a giggle and gives her belly a pat, smiling as she accomplishes her goal and in a way that brings her a great deal of satisfaction.
+	</text>
+	
+	</gameover>
+
+	
+</Conversation>

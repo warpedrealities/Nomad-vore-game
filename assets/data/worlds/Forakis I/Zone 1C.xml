@@ -50,6 +50,7 @@
 		<walloff wall="6" sides="northwestsouth" />	
 		<POINPC name="Forakis_I/LionGirl_Kesh" />		
 		<POIWidget name="craftingtable" />
+		<POINPC name="Forakis_I/LionGirl_Sleeping" />		
 	</mapgen>
 
 </zone>

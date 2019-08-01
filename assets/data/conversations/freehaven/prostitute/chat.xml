@@ -28,15 +28,76 @@
 	<preference fetish="demis" />	
 	<preference fetish="unbirthing" />
 	</choice>
+	<choice destination="analvore0" text="$I want to be buttfood for you">
+		<preference fetish="females" />	
+	<preference fetish="demis" />	
+	<preference fetish="analvore" />	
+	</choice>
 	<choice destination="end" text="on second thoughts, I'll be on my way"/>
 	</page>
+	
+	
+	<page ID="analvore0">
+	<text>
+	"Mhmm, want to slide up and gurgle away? be forced up an ass and go moosh? A hundred credits and I'll make your dreams come true." asks the prostitute with a delighted grin. She seems eager to hear you agree, maybe prostitute for preysluts is an occupation worth pursuing. 
+	</text>
+		<choice destination="analvore1" text="$Absolutely, just call me buttfood">
+			<condition evaluate="CREDITS" operator="greaterthan" value="100"/>	
+	</choice>
+	<choice destination="end" text="$No that's not what I hand in mind, forget about it"/>
+	<choice destination="end" text="$That seems a bit steep for something where you get off on it that much, forget it"/>	
+	</page>	
+	
+	<page ID="analvore1">
+	<!-- do it as feetfirst analvore just for sheer variety -->
+	<text>
+	"Well they say the customer is always right, so whatever you say Buttfood."  she says and then places a hand on your shoulder "But lets make it fun..." she says and then grins, shoving you backwards with a sudden burst of assertiveness, you land on your ass on the decking ahead of her as she swishes her tails and twists around. She snags your feet as she does so, lifting her skirt up with one hand and raising those tails as she guides those feet right between those soft rumpcheeks. Her voracious pucker parting around your toes as she starts taking you in feet first. 
+	</text>
+	<choice destination="analvore2" text="$Well this is..unconventional"/>
+	</page>
+	
+	<page ID="analvore2">
+	<text>
+	"I get tired of always seeing feet the last to go, and besides..this way you...ngh..get to watch." says the foxy harlot as she clenches and drags your calves past her hungry sphincter. The tight heat of her rump as overpowering as it is alluring as she schlorps you deeper inside with a delighted moan. Your knees vanishing next into her ass. Your own rump starts to lift up off the decking as she tugs you in with those powerful internal ripples.
+	</text>
+	<choice destination="analvore3" text="$it's an interesting view"/>
+	</page>
+	
+	<page ID="analvore3">
+	<text>
+	"Mhmm, and the last you'll be seeing is out from between my cheeks darling." says the harlot with a moan as she squeezes your legs deeper in, your thighs starting to vanish into her ass as she continues drawing you in hungrily. Her insides squeezing and bending your legs to bunch them up deep inside of her. Her gut sagging low and heavy visibly before your eyes as she claims your hips and starts on your upper body with practiced ease.
+	</text>
+	<choice destination="analvore4" text="*stick your arms in*"/>
+	</page>
+	
+	<page ID="analvore4">
+	<text>
+	"Mhmm soon gonna..gonna have you all inside." she says happily as you shove your arms inside. Your arms soon nice and pinned to your flanks by the encroaching ass cheeks of your predator as she schlorps you up. You're fully lifted off the floor now, hanging from her rump as she starts to straighten up. Her hands going down to her belly to rub and squeeze over the shape you're making in her bloating out gut. The harlot is right, soon you're going to vanish into her rump entirely.
+	</text>
+	<choice destination="analvore5" text="*enjoy the view while you can*"/>
+	</page>
+	
+	<page ID="analvore5">
+	<text>
+	You feel her rump sliding up around your chest and then shoulders..squeezing you steadily up into her ass and letting out a fullthroated moan as the hot soft curves of her asscheeks framing your face. The foxgirl brushing her tails over your nose then swishing them up so that she can show your face off looking out of her ass before with a rippling clench she tugs your head inside. All of your body now claimed and contained inside the hot steamy squeezing depths of her body as she murrs "I love my job, such eager prey paying me to..mhmm, consume them." she says and pats her gut "I hope you're liking the experience, cause the next part..well, i don't get any complaints." she says as she finishes working you up through her innards and into her belly.
+	</text>
+	<choice destination="analvore6" text="$Oh yes, it was wonderful"/>
+	</page>
+	
+	<gameover ID="analvore6">
+	<text>
+	"I'm glad. Though, mhmm..hush up..or well, please moan but no words okay." she says and giggles as her gut begins to gurgle and churn glorping and grinding around your body. The sune whore cradling the exquisite belly bulge you make for her as you start to digest away. The harlot turning you into free advertising as she jiggles her belly up and down and rubs her gut showing you off to everyone walking by. Clearly she's doing a 'this could be you' but after a while you're a soft and rounded mass and not able to moan or move about that much. And a little longer after that you're a compacted and shrinking mass as you're utterly digested and absorbed.
+	</text>
+	
+	</gameover>
+	
 	
 	<page ID="unbirth0">
 	<text>
 	"Mhmm, you want to go sploosh after a trip up between my thighs do ya? you're my kind of customer, mhmm.. still have to charge ya though, 150 credits and i'll leave you a wonderful puddle." she says with a delighted smile and a little wriggle of her hips as if already excited by the prospect.
 	</text>
 		<choice destination="unbirth1" text="$sure, here's the money I don't want to keep you waiting">
-			<condition evaluate="CREDITS" operator="greaterthan" value="300"/>	
+			<condition evaluate="CREDITS" operator="greaterthan" value="150"/>	
 	</choice>
 	<choice destination="end" text="$You get to have that much fun and you charge as well? forget it."/>	
 	</page>

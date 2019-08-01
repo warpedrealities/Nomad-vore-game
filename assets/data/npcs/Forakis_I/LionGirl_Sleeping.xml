@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="lionGirl Sleeping.png" />
+	<name>Sleeping liongirl</name>
+	<description>
+	
+	</description>
+	<rpg>
+		<experiencevalue value="300" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
+		<attribute attribute="DODGE" value="6" />
+		<attribute attribute="PARRY" value="2" />		
+		<attribute attribute="WILLPOWER" value="4" />		
+	</rpg>
+
+	<talk conversation="Forakis_I/LionGirl_Sleeping/chat" />
+	<controller AI="staystill" />
+	<faction value="Forakhan_village" />
+</NPC>

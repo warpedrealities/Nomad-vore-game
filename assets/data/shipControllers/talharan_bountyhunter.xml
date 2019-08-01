@@ -3,7 +3,7 @@
 	<faction value="talharan" />
 	<systemEntry value="bountyhunter_entry" />
 	<contact value="bountyhunter_contact" />
-	<ai value="bountyhunter" />
+	<ai value="bountyhunterAI" />
 	<combat value="fighterAI" />
 	<victory value="bountyhunter_victory" />
 	<loss value="bountyhunter_defeated" />

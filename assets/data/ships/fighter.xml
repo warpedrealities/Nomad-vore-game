@@ -56,7 +56,7 @@
 			<placeWidget x="2" y="3" name="slot">
 				<contains name="modules/navconsole" />
 			</placeWidget>
-
+			<placeNPC name="space/talharan/bountyhunter" x="2" y="5"/>
 		</mapgen>
 	</layout>
 	<exterior width="5">
