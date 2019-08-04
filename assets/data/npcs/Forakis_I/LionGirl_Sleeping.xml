@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <NPC>
-	<sprite value="lionGirl Sleeping.png" />
+	<sprite value="lionGirl_sleeping.png" />
 	<name>Sleeping liongirl</name>
 	<description>
-	
+	A clearly sleeping lionine lady, her golden savannah blonde hair sprawled in a halo around her sleeping face. Her dark ebony skin is exposed utterly as in this heat she has no want for a blanket, sprawled on her side this eight foot tall beauty is magnificent in her curves. Her gold furred tail and ears adding an accent of animalistic and primal allure to her. And all of attractive qualities is capped by the magnificence of her hefty endowment, that thick flaccid trouser snake resting upon her bedding as she sleeps. The purple of her glans mostly concealed by folds of foreskin.
 	</description>
 	<rpg>
 		<experiencevalue value="300" />
@@ -21,7 +21,7 @@
 		<attribute attribute="WILLPOWER" value="4" />		
 	</rpg>
 
-	<talk conversation="Forakis_I/LionGirl_Sleeping/chat" />
+	<talk conversation="Forakis_I/LionGirl_sleeping/chat" />
 	<controller AI="staystill" />
 	<faction value="Forakhan_village" />
 </NPC>

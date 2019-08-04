@@ -7,7 +7,10 @@
 	<superRule subject="Kesh" level="2" violation="ATTACK">
 		<factionRelationship faction="Forakhan_village" mod="-10" />
 	</superRule>
-
+	<superRule subject="Sleeping liongirl" level="2" violation="ATTACK">
+		<factionRelationship faction="Forakhan_village" mod="-10" />
+	</superRule>
+	<witness name="Sleeping liongirl" />	
 	<witness name="LionGirl Guard" />
 	<witness name="Kesh" />
 

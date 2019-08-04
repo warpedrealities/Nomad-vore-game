@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<text>
+	The lioness sleeps peacefully, unmindful of how her attractive qualities are on display and might be vulnerable to the desires of an uninvited intruder in her bed chamber.
+	</text>
+	<choice destination="cock0" text="$get your hands on that cock of hers">
+		<preference fetish="herms" />	
+	</choice>
+	<choice destination="end" text="*leave her be*"/>
+	</page>
+	
+	<page ID="cock0">
+	<text>
+	Checking the liongirl is deep asleep you slip yourself discreetly onto her bedding. Not touching her body but close enough to feel the warmth radiating off her as you admire her sleeping face then turn your attention further down. Because past the ampleness of her tits is the prodigious glory that is her cock, and you can't wait to see what it looks like when hard. You reach out to stroke over that cock of hers, slowly and carefully working over her shaft with both hands. You hear her rumble in pleasure and take it slow so as not to wake her up. Her cock begins to throb warmly under your hands as it stiffens and firms up, growing larger as it grows hard. The liongirl stirring a bit as you molest her to full erection but somehow not waking up, she's an astoundingly deep sleeper and that might embolden you to try something even more audacious. 
+	</text>
+	<choice destination="cockvore0" text="*maybe you can feed her cock*">
+		<preference fetish="cockvore"/>
+	</choice>
+	<choice destination="end" text="*on second thought, leave her be*"/>
+	</page>
+	
+	<page ID="cockvore0">
+	<text>
+		<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+		You take the time to undress slowly while eyeing that thick cock with anticipation, wanting to experience this as fully as possible.		
+		</conditional> That cock of hers looks very nice and more importantly, very hungry, and the thought of feeding it while she sleeps turns you on even more. Maybe she'll have naughty dreams as she churns you away, it should give her a nice sticky orgasm to wake up to as well. You slip carefully closer to her, stroking her cock and then lifting your legs up. Bending your legs at the knees you position your feet at the tip of her hot cock, her cumslit parting easily with a slurp around your feet as you press them in. The liongirl lets out a groan of pleasure and shifts slightly so you freeze, letting her settle down as hot pre soaks your feet and oozes up around your ankles.
+	</text>
+		<choice destination="cockvore1" text="*go on feeding yourself in, she's properly asleep again*"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	You feel her cock throbbing around your feet and the cumslit nyumming and flexing around your ankles hungrily. While she might be asleep her cock has awakened to the offered meal and wants you inside, the thought brings colour to your cheeks and you start to wriggle your way further down slowly. Careful not to wake her as your every movement results in soft slurps and pleasured rumbles from the sleeping lioness, but she still doesn't wake even as you get knee deep in the dick. That throbbing girth of hers bulging out to even more majestic proportions around the shape of your legs stretching it out. You're now sure you can slide all the way down without her waking. And what's more you can feel the steady tugging of her hungry cock working to draw you even and aiding your efforts. 
+	</text>
+	<choice destination="cockvore2" text="*slide on in, let her cockvore you in her sleep*"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	Steadily you work your thighs and then hips past her cocktip with lewd squelches. That rumble of pleasure from her constant now though she only stirs occasionally and when that happens you stay still as best you're able. Though that is rapidly becoming something you're less able to do as the cock of this sleeping lionherm ripples and tugs more powerfully around your legs. That trouser snake of hers having a good grip on its prey now and not willing to relinquish you as your legs start to slide down into her balls, the rest of you will follow suit soon enough.
+	</text>
+	<choice destination="cockvore3" text="*all the way now*"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	You raise your arms over your head and let her cock have you. That throbbing girth up around your chest now as you plunge steadily inside. Her thickness tugging on you with irresistable hungry ripples and soon your shoulders and head are vanishing inside as well as she lets out a pleasured groan without waking. As you plunge into lewd musky darkness and your arms are slurped in you feel her abruptly shift position, rolling onto her back as you slide down the inside of her cock. The liongirl's balls welcoming you with lewd squelches and glorps of the hot cum into which you're plunging as you bulge her sack out nicely against her thighs. Those balls of hers soon nice and bulgey with your shape outlined inside as her satiated cock rests against her belly and breasts.
+	</text>
+	<choice destination="cockvore4" text="*be good cockfood and melt*"/>
+	</page>
+	
+	<page ID="cockvore4">
+	<text>
+	Despite your desire not to wake her as you churn inside her you can't help but squirm and moan softly in pleasure and delight. Her cum squelches around you and you feel it soaking through your body making you feel soft and hot and just all manners of delightful. Though there's probably little she can probably do now except melt down her unexpected cockfood should she wake now the thrill of keeping her unaware mingles with the sensation of your body melting down into creamy goo inside her loins to stir you on even as your moans and squirms become less noticeable. The churning cum becoming your whole world inside her sack as you become one with her seed. The liongirl's balls rounding out as you fade away and soon your shape comes apart entirely into a heavy load of cum.
+	</text>
+	<choice destination="cockvore5" text="*burble*"/>
+	</page>
+	
+	<gameover ID="cockvore5">
+	<text>
+	The liongirl slumbered throughout your conversion from pervy space traveller to gallons of nutbatter. The process causing her only a remarkably litany of lewd dreams and causing her to fondle herself in her sleep. She stirs sometime later, unaware of your deeds but incredibly aware of a needyness down below from her erect shaft and bloated and overfull balls. In her half awake state she brings her hand down to tend to herself, stroking along her shaft and growling in pleasure as she does so. Her pleasure rises and she bucks her hips up to meet her stroking hand, soon her shaft erupts sending hot cum exploding out of her cock in orgasm. An orgasm of such volume as to shock and surprise, driving her to full wakefulness with an oath of confused disbelief as her chest, face and bedding is drenched in your cummified remains. The orgasm that had pumped you out fades before the shock does, though perhaps the lion will put two and two together as to the reason for this lewd mess she's now caked in.
+	</text>
+	
+	</gameover>
+	
+</Conversation>
