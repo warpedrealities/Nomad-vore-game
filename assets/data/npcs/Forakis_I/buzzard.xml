@@ -52,7 +52,7 @@
 		<itemDrop chance="60" defeatOnly="true" item="harpy feather" />	
 		<itemDrop chance="20" defeatOnly="true" item="harpy feather" />	
 	</rpg>
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 <flying />	
 	<defeated conversation="Forakis_I/buzzard/defeat" />
 	<seduced conversation="Forakis_I/buzzard/defeat" />

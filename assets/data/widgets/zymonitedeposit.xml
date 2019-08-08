@@ -3,5 +3,5 @@
 	<contains minimum="1" maximum="1">zymonite</contains>
 	<usedescription>You manage to extract a good quality piece of zymonite</usedescription>
 	<description>A fissure containing the alien element zymonite</description>
-	<regeneration regentime="4000" />
+	<regeneration regentime="8000" />
 </widgetharvestable>

@@ -50,7 +50,7 @@
 		</combatMove>		
 	</rpg>
 	<flying />
-	<respawn delay="2000" />	
+	<respawn delay="4000" />	
 	<defeated conversation="Forakis_II/mothran/defeat" />
 	<seduced conversation="Forakis_II/mothran/seduced" />
 	<victory conversation="Forakis_II/mothran/seducer" />

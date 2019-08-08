@@ -30,7 +30,7 @@
 		</combatMove>
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 
 	<defeated conversation="alpha_minoris_II/gecko/defeat" />
 	<seduced conversation="alpha_minoris_II/gecko/defeat" />

@@ -46,7 +46,7 @@
 		</combatMove>
 		<itemDrop chance="25" defeatOnly="true" item="CREDITS500" />		
 	</rpg>
-	<respawn delay="4000" />
+	<respawn delay="8000" />
 
 	<defeated conversation="space/zetamorph/defeat" />
 	<seduced conversation="space/zetamorph/seduced" />

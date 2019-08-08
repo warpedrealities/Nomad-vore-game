@@ -35,7 +35,7 @@
 		</combatMove>
 	</rpg>
 	<disposition value="25" />
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<defeated conversation="alpha_minoris_II/zorr/raijin/defeat" />
 	<seduced conversation="alpha_minoris_II/zorr/raijin/seduced" />
 	<victory conversation="alpha_minoris_II/zorr/raijin/victory" />

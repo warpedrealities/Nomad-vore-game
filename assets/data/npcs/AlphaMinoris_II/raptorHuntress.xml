@@ -59,6 +59,6 @@
 	<seducer conversation="alpha_minoris_II/raptor/victory" />
 	<captive conversation="alpha_minoris_II/raptor/captive" />	
 	<controller AI="raptorHuntress" />
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<faction value="monster" />
 </NPC>

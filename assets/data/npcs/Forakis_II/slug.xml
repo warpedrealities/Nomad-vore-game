@@ -30,7 +30,7 @@
 			</hitText>
 		</combatMove>
 	</rpg>
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 
 	<victory conversation="Forakis_II/slug/victory" />
 	<seduced conversation="Forakis_II/slug/victory" />

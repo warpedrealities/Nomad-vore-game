@@ -31,7 +31,7 @@
 		</combatMove>
 	</rpg>
 
-	<respawn delay="1000" />
+	<respawn delay="4000" />
 
 	<defeated conversation="alpha_minoris_II/rat/defeat" />
 	<seduced conversation="alpha_minoris_II/rat/defeat" />

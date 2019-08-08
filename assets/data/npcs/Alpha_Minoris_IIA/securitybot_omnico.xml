@@ -40,7 +40,7 @@
 		<itemDrop chance="25" defeatOnly="true" item="scrap metal" />	
 	</rpg>
 
-	<respawn delay="4000" />
+	<respawn delay="8000" />
 	<defeated conversation="alpha_minoris_IIA/robot/robotdefeat" />
 	<controller AI="securitybot" />
 	<faction value="omnicofactory_robot" />

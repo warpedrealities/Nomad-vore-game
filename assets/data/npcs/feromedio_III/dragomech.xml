@@ -96,7 +96,7 @@
 			</effectStatus>
 		</combatMove>			
 	</rpg>
-	<respawn delay="8000" />
+	<respawn delay="16000" />
 <flying />	
 	<defeated conversation="feromedio_III/dragomech/defeat" />
 	<seduced conversation="feromedio_III/dragomech/defeat" />

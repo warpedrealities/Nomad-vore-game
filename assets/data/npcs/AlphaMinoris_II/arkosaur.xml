@@ -40,7 +40,7 @@
 		</statusTags>
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 
 	<defeated conversation="alpha_minoris_II/arkosaur/defeat" />
 	<seduced conversation="alpha_minoris_II/arkosaur/defeat" />

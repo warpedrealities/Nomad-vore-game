@@ -43,7 +43,7 @@
 		</combatMove>		
 	</rpg>
 
-	<respawn delay="2000" />	
+	<respawn delay="4000" />	
 	<defeated conversation="Forakis_III/cetan/defeat" />
 	<seduced conversation="Forakis_III/cetan/seduced" />
 	<victory conversation="Forakis_III/cetan/victory" />

@@ -53,7 +53,7 @@
 		<itemDrop chance="10" defeatOnly="true" item="loot box" />			
 	</rpg>
 
-	<respawn delay="4000" />
+	<respawn delay="8000" />
 	<defeated conversation="freehaven/ruffian/defeat" />
 	<seduced conversation="freehaven/ruffian/seduced" />
 	<victory conversation="freehaven/ruffian/victory" />

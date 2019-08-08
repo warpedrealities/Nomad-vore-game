@@ -98,7 +98,7 @@
 		</statusTags>
 	</rpg>
 
-	<respawn delay="4000" />	
+	<respawn delay="8000" />	
 	<defeated conversation="Forakis_I/scarab/defeat" />	
 	<controller AI="pyramid_scarab_bot" />
 	<faction value="ForakisBots" />

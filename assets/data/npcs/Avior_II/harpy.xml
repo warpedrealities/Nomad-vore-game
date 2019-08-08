@@ -38,7 +38,7 @@
 			<itemDrop chance="25" defeatOnly="true" item="harpy feather" />		
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<flying />
 	<defeated conversation="alpha_minoris_IIA/harpy/harpydefeat" />
 	<seduced conversation="alpha_minoris_IIA/harpy/harpySeduced" />

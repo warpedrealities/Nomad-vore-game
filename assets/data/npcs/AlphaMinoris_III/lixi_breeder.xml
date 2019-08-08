@@ -63,7 +63,7 @@
 		</combatMove>
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<defeated conversation="alpha_minoris_III/lixi_breeder/defeat" />
 	<seduced conversation="alpha_minoris_III/lixi_breeder/defeat" />
 	<victory conversation="alpha_minoris_III/lixi_breeder/victory" />

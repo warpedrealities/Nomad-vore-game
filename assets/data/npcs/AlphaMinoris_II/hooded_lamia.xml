@@ -71,7 +71,7 @@
 		<itemDrop chance="50" defeatOnly="true" item="fine scale" />			
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 
 	<disposition value="25" />
 	<defeated conversation="alpha_minoris_II/hooded_lamia/defeat" />

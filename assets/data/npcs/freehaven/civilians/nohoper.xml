@@ -18,7 +18,7 @@
 		<stat stat="RESOLVE" value="50" />
 	</rpg>
 
-	<respawn delay="4000" />
+	<respawn delay="8000" />
 	<peacebond />
 	<defeated conversation="freehaven/civilians/nohoper/defeat" />
 	<talk conversation="freehaven/civilians/nohoper/chat" />

@@ -4,7 +4,7 @@
 	<usedescription>You mine some blue crystals</usedescription>
 	<description>An outcropping that exposes crystals high in energy, possibly usable as
 		fuel</description>
-	<regeneration regentime="6000" />
+	<regeneration regentime="12000" />
 	<skillCheck item="blue crystal" dc="20" attribute="SCIENCE" min="3" max="8">
 	You have successfully increased the yield of crystals from this deposit with SCIENCE!
 	</skillCheck>	

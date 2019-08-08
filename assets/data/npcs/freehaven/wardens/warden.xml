@@ -44,7 +44,7 @@
 	<itemDrop chance="20" item="bullets" />		
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="8000" />
 	<victory conversation="freehaven/wardens/victory" />
 	<talk conversation="freehaven/wardens/chat" />		
 	<controller AI="station_guard" />

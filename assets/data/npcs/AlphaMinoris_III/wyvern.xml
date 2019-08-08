@@ -52,7 +52,7 @@
 				modifier="STRENGTH" />
 		</combatMove>
 	</rpg>
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<flying />
 	<defeated conversation="alpha_minoris_III/wyvern/defeat" />
 	<seduced conversation="alpha_minoris_III/wyvern/defeat" />

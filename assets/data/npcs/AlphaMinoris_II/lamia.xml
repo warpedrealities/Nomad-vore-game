@@ -64,7 +64,7 @@
 		<itemDrop chance="25" defeatOnly="true" item="fine scale" />	
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 
 	<disposition value="25" />
 	<defeated conversation="alpha_minoris_II/lamia/defeat" />

@@ -39,7 +39,7 @@
 			<itemDrop chance="25" defeatOnly="true" item="pearl" />	
 	</rpg>
 
-	<respawn delay="1000" />
+	<respawn delay="4000" />
 	<defeated conversation="alpha_minoris_III/lixi_worker/defeat" />
 	<seduced conversation="alpha_minoris_III/lixi_worker/defeat" />
 	<victory conversation="alpha_minoris_III/lixi_worker/victory" />

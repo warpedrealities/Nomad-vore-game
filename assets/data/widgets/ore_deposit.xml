@@ -3,7 +3,7 @@
 	<contains minimum="1" maximum="2">raw ore</contains>
 	<usedescription>You mine some raw ore</usedescription>
 	<description>An exposed deposit of raw metal ore that can be harvested to extract raw ore</description>
-	<regeneration regentime="6000" />
+	<regeneration regentime="12000" />
 	<skillCheck item="raw ore" dc="20" attribute="SCIENCE" min="1" max="2">
 	You have successfully increased the yield of ore from this deposit with SCIENCE!
 	</skillCheck>	

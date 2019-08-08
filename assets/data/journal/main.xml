@@ -20,6 +20,9 @@
 	</entry>	
 	<entry name="core_acquired" ID="120" priority="2" title="Mallory says she'll deliver the core">
 	You should check with Jehari that the core has arrived and been put to use.
+	</entry>
+	<entry name="computing_course" ID="120" priority="2" title="Jehari is calculating the black box data">
+	With the aid of her powerful new adaptive computation core Jehari is now processing the data on the black box to determine where the Heinlein was when it launched your escape pod. You should check back later as this may take some time to complete.
 	</entry>		
 	<entry name="mallory_digested" ID="120" priority="2" title="mallory has been digested">
 	Mallory, the person you were hoping to get the computation core from, has been digested by a criminal. You will probably have to go back to Robynn to ask if there's another way of getting the core.

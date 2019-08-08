@@ -30,7 +30,7 @@
 		</combatMove>
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<flying />
 	<defeated conversation="avior_II/bunnygirl/defeat" />
 	<seduced conversation="avior_II/bunnygirl/seduced" />

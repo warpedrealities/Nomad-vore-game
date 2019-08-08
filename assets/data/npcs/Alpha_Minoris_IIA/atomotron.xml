@@ -35,7 +35,7 @@
 		</statusTags>
 	<itemDrop chance="100" defeatOnly="true" item="fuel canister(poor)" />			
 	</rpg>
-	<respawn delay="4000" />
+	<respawn delay="8000" />
 	<controller AI="robot_atomotron" />
 	<faction value="omnicofactory_robot" />
 </NPC>

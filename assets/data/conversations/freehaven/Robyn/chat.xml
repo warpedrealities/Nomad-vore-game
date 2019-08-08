@@ -45,7 +45,17 @@
 		<condition evaluate="GLOBALFLAG" operator="equals" value="3"	flag="mainquest" />	
 		<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="adaptive_computation" />			
 	</choice>
+	<choice destination="mainquestPathA0" text="$Mallory had gotten herself into a sticky situation, but i helped her out and she said she'd deliver the core">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="5"	flag="adaptive_computation" />			
+	</choice>	
 	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
+	</page>
+	
+	<page ID="mainquestPathA0">
+	<text>
+	"Sounds like Mallory, still if she says she's getting you the core she should come through. You told her to give it to Jehari right? why don't you check if she has it yet?"
+	</text>
+	<choice destination="end" text="$Sure, I'll go do that"/>
 	</page>
 	
 	<page ID="mainquest0">
@@ -72,7 +82,7 @@
 	
 	<page ID="mainquest2A">
 	<text>
-	"You must of noticed she's a lil, distractible? absentminded? Yeah the same defect that made her the big lovable pacifist made her both a genius and mentally kind of flighty. She's been trying to work on a cure for herself, when she isn't distracted."
+	"You must of noticed she's a lil, distractible? absentminded? Yeah the same defect that made her the big lovable pacifist she is also made her both a genius and mentally kind of flighty. She's been trying to work on a cure for herself, when she isn't distracted."
 	</text>
 	<choice destination="mainquest3" text="$I see, thanks anyway though"/>
 	</page>

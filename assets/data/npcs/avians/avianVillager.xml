@@ -26,7 +26,7 @@
 		</combatMove>
 	</rpg>
 	<flying />
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<talk conversation="avior_II/avianVillager/chat" />
 	<controller AI="avianVillager" />
 	<faction value="avian" />

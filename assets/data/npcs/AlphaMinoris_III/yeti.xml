@@ -50,7 +50,7 @@
 		<itemDrop chance="25" defeatOnly="true" item="monster fur" />			
 		<itemDrop chance="25" defeatOnly="true" item="monster fur" />			
 	</rpg>
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<defeated conversation="alpha_minoris_III/yeti/defeat" />
 	<seduced conversation="alpha_minoris_III/yeti/defeat" />
 	<victory conversation="alpha_minoris_III/yeti/victory" />

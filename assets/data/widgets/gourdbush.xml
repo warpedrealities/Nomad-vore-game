@@ -4,5 +4,5 @@
 	<usedescription>You pick the gourd from the plant</usedescription>
 	<description>A peculiar alien plant that grows a large bulb or gourd
 		atop its stem, the gourd looks like it could be tastey</description>
-	<regeneration regentime="4000" />
+	<regeneration regentime="8000" />
 </widgetharvestable>

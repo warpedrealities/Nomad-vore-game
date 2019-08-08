@@ -10,10 +10,61 @@
 	<choice destination="shop" text="$I'd like to see what you have for sale"/>
 	<choice destination="mainquest" text="$I need someone to decipher some black box data for me">
 		<condition evaluate="GLOBAFLAG" operator="equals" value="2"	flag="MAIN" />
-					<effect type="setglobalflag" flag="adaptive_computation" value="0" />	
+			<condition evaluate="GLOBAFLAG" operator="equals" value="0"	flag="adaptive_computation" />
+
 	</choice>
+	<choice destination="mainquestPathA0" text="$I spoke to someone named Mallory and she said she'd deliver the computation core to you">
+		<condition evaluate="GLOBAFLAG" operator="equals" value="5"	flag="adaptive_computation" />
+	
+	</choice>
+	<choice destination="mainquestPathC0" text="$Have you completed the processing yet?">
+		<condition evaluate="GLOBAFLAG" operator="equals" value="6"	flag="adaptive_computation" />
+	</choice>	
 	<choice destination="questions" text="$I'd like to ask you some questions"/>
 	<choice destination="end" text="$Nothing at the moment, I'll let you get back to your experiments"/>
+	</page>
+	
+	<page ID="mainquestPathC0">
+	<condition evaluate="TIMEPASSED" operator="lessthan" value="5" />	
+	<text>
+	"What processing are you..oh." says Jehari glancing around and her gaze rests on her new shiny computer and she smiles a moment before leaning in to examine it more "No, no it doesn't look like it is. Come back later." she says and turns back to you and rubs her hands together "Come back later. Have I already said that?"
+	</text>
+		<choice destination="end" text="$Yes, but I'll come back later"/>
+	</page>
+	
+	<page ID="mainquestPathC0">	
+	<text>
+	"What processing? oh yes, yes! It's done." she says and goes and grabs a print out from the shiny computer "Here you go..oh and thankyou for the core. Have to remember that, have to remember to tell you that." she says as she proffers the print out towards you. 
+	</text>
+		<effect type="setglobalflag" flag="adaptive_computation" value="7" />	
+	<choice destination="mainquestPathC1" text="$Thankyou for this Jehari, and don't worry about it"/>
+	</page>	
+	
+	<page ID="mainquestPathC1">
+	<text>
+	"Fascinating though really. Your vessel came from somewhere in the system at coordinates -1,-1. Without a warp engine it must of taken decades at least to land where it did." says Jehari as you look at the same thing she's telling you, only on the printout. Jehari has added a helpful summary of all the vector math to that effect "I have thanked you for the core haven't I? it will be very useful for my research"
+	</text>
+		<special effect="removeJournal" ID="120" />	
+	<special effect="addJournal" file="main" name="quest3" />	
+	<effect type="setglobalflag" flag="mainquest" value="4" />	
+	<choice destination="end" text="$This is useful information, and yes you have Jehari. Take care."/>
+	</page>
+	
+	<page ID="mainquestPathA0">
+	<text>
+	"Oh was that her name? she didn't tell me..or maybe she did. Yes we have the core right here." she says and pats a freshly modified computer. Then she looks perplexed "What did we need it for again?" she asks and stares blankly at you for a distressing second "Oh right..uh, black box data. Do you want me to start processing that now?" she asks smiling and holding one hand in the other as she looks to you.
+	</text>
+	<choice destination="mainquestPathA1" text="$Of course, get started right away. I'm guessing this will take a while"/>
+	</page>
+	
+	<page ID="mainquestPathA1">
+	<text>
+	"Yes, yes it will. sorry." says Jehari "I just need to set this going and..." she gestures "Sorry. Hard to concentrate, talk and focus difficult"
+	</text>
+	<special effect="addJournal" file="main" name="computing_course" />	
+				<effect type="setglobalflag" flag="adaptive_computation" value="6" />	
+		<special effect="marktime" />	
+		<choice destination="end" text="$Okay, bye I'll come back later..I hope this goes well"/>
 	</page>
 	
 	<page ID="start">

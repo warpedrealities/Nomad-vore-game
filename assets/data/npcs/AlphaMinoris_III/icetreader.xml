@@ -80,7 +80,7 @@
 		<itemDrop chance="25" defeatOnly="true" item="monster fur" />			
 	</rpg>
 
-	<respawn delay="1000" />
+	<respawn delay="4000" />
 	<defeated conversation="alpha_minoris_III/icetreader/defeat" />
 	<seduced conversation="alpha_minoris_III/icetreader/seduced" />
 	<victory conversation="alpha_minoris_III/icetreader/victory" />

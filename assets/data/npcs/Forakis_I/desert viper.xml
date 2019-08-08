@@ -62,7 +62,7 @@
 		<itemDrop chance="25" defeatOnly="true" item="fine scale" />
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 
 	<defeated conversation="Forakis_I/viper/defeat" />
 	<seduced conversation="Forakis_I/viper/defeat" />

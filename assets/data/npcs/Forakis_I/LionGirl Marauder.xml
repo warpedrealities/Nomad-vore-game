@@ -55,7 +55,7 @@
 		<itemDrop chance="25" item="gourd" />		
 	</rpg>
 
-	<respawn delay="2000" />	
+	<respawn delay="4000" />	
 	<defeated conversation="Forakis_I/LionGirl_marauder/defeat" />
 	<seduced conversation="Forakis_I/LionGirl_marauder/seduced" />
 	<victory conversation="Forakis_I/LionGirl_marauder/victory" />

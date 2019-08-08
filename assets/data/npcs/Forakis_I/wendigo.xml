@@ -96,7 +96,7 @@
 			</hitText>
 		</combatMove>		
 	</rpg>
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 <flying />	
 	<defeated conversation="Forakis_I/wendigo/defeat" />
 	<seduced conversation="Forakis_I/wendigo/defeat" />

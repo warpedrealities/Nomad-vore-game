@@ -80,7 +80,7 @@
 		</combatMove>
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<defeated conversation="Forakis_II/blackgrief/defeat" />
 	<seduced conversation="Forakis_II/blackgrief/seduced" />
 	<victory conversation="Forakis_II/blackgrief/victory" />

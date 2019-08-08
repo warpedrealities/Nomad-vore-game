@@ -40,7 +40,7 @@
 		<itemDrop chance="50" defeatOnly="true" item="beast scale" />	
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<flying />
 	<defeated conversation="alpha_minoris_II/gator/defeat" />
 	<seduced conversation="alpha_minoris_II/gator/defeat" />

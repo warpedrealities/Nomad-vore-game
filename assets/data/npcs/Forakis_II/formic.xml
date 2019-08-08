@@ -33,7 +33,7 @@
 			</hitText>
 		</combatMove>
 	</rpg>
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<defeated conversation="Forakis_II/formic/defeat" />
 	<victory conversation="Forakis_II/formic/victory" />
 	<seducer conversation="Forakis_II/formic/victory" />

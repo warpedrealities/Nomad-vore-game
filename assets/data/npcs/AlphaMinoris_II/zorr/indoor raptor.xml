@@ -36,7 +36,7 @@
 			</hitText>
 		</combatMove>
 	</rpg>
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 	<disposition value="25" />
 	<defeated conversation="alpha_minoris_II/raptor/defeat" />
 	<seduced conversation="alpha_minoris_II/raptor/seduced" />

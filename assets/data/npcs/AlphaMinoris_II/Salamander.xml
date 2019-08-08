@@ -53,7 +53,7 @@
 		<itemDrop chance="25" defeatOnly="true" item="fine scale" />		
 	</rpg>
 
-	<respawn delay="2000" />
+	<respawn delay="4000" />
 
 	<defeated conversation="alpha_minoris_II/salamander/defeat" />
 	<seduced conversation="alpha_minoris_II/salamander/defeat" />
