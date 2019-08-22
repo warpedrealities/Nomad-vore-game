@@ -468,7 +468,7 @@ public class WidgetPlacer {
 					description = element.getTextContent().replace("\n", "");
 				}
 				if (element.getTagName().equals("script")) {
-					script = element.getAttribute("value");
+					script = element.getTextContent();
 				}
 				if (element.getTagName().equals("forbidtext")) {
 					forbidText = element.getTextContent();

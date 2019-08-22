@@ -12,8 +12,8 @@
 		<ability ability="ENDURANCE" value="5" />
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
-		<stat stat="HEALTH" value="50" />
-		<stat stat="RESOLVE" value="50" />
+		<stat stat="HEALTH" value="40" />
+		<stat stat="RESOLVE" value="40" />
 		<attribute attribute="MELEE" value="4" />		
 		<attribute attribute="PARRY" value="4" />
 		<attribute attribute="DODGE" value="4"/>		
@@ -33,6 +33,7 @@
 	</rpg>
 	<respawn delay="4000" />	
 	<peacebond />
+	<talk conversation="freehaven/tanya/chat" />	
 <!-- 	<defeated conversation="freehaven/tanya/defeat" /> 
 	<seduced conversation="freehaven/tanya/defeat" /> -->
 	<!-- <victory conversation="freehaven/tanya/victory" -->

@@ -2,12 +2,10 @@ package widgets;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 import org.luaj.vm2.Globals;
-import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.CoerceLuaToJava;
@@ -25,6 +23,7 @@ public class WidgetScriptLockPortal extends WidgetPortal {
 
 	public WidgetScriptLockPortal(Element element) {
 		super(element);
+		luaGlobals = JsePlatform.standardGlobals();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -57,39 +56,30 @@ public class WidgetScriptLockPortal extends WidgetPortal {
 		luaGlobals = JsePlatform.standardGlobals();
 		filename = ParserHelper.LoadString(dstream);
 		forbidText = ParserHelper.LoadString(dstream);
-		loadScript();
+
 	}
 
 	public WidgetScriptLockPortal(int sprite, String description, int id) {
 		super(sprite, description, id);
-	}
-
-	private void loadScript() {
-		try {
-			script = luaGlobals.load(new FileReader("assets/data/scripts/scriptlockportal/" + filename + ".lua"),
-					"main.lua");
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (LuaError e) {
-			e.printStackTrace();
-		}
+		luaGlobals = JsePlatform.standardGlobals();
 	}
 
 	public void setFilename(String filename) {
 		this.filename = filename;
+		//		loadScript();
 	}
 
 	private boolean check() {
-		Globals globals = JsePlatform.standardGlobals();
+
 		boolean evaluatedScriptValue = false;
 		try {
+			script = luaGlobals.load(new FileReader("assets/data/scripts/scriptlockportal/" + filename + ".lua"),
+					"main.lua");
 			script.call();
 			LuaValue view = CoerceJavaToLua.coerce(ViewScene.m_interface);
 			LuaValue player = CoerceJavaToLua
 					.coerce(ViewScene.m_interface.getSceneController().getUniverse().getPlayer());
-			LuaValue mainFunc = globals.get("main");
+			LuaValue mainFunc = luaGlobals.get("main");
 			LuaValue returnVal = mainFunc.call(view, player);
 			evaluatedScriptValue = (boolean) CoerceLuaToJava.coerce(returnVal, Boolean.class);
 			if (evaluatedScriptValue) {

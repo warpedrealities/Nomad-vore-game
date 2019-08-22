@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="3"	flag="adaptive_computation" />			
+		<text>
+		The grating for this atmosphere processor has a small electronic lock panel concealed around the rim. This must be Mallory's stash.
+		</text>
+		<choice destination="unlock" text="*use Mallory's key card*">
+		<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="mallory's card" />		
+		</choice>
+		<choice destination="end" text="*leave it be*"/>
+	</page>
+	
+	<page ID="unlock">
+	<text>
+	You use the card to open up Mallory's stash and find the computation core inside. It's quite a large and bulky item, but valuable and you're lucky to have found it here.
+	</text>
+		<effect type="setglobalflag" flag="adaptive_computation" value="4" />	
+		<effect type="giveitem" item="questItem" value="1" addendum="adaptive_computation_core" />	
+		<effect type="removeitem" item="mallory's card" value="1" />
+		<choice destination="end" text="*excellent*"/>
+	</page>
+
+	<page ID="start">
+		<text>
+		The grating for this atmosphere processor has a small electronic lock panel concealed around the rim. You can do nothing with this.
+		</text>
+		<choice destination="end" text="*leave it be*"/>
+	</page>
+	
+</Conversation>

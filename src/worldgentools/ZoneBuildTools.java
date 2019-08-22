@@ -566,6 +566,9 @@ public class ZoneBuildTools {
 						grid = GenOverlay();
 						preloadPrefab(Enode, grid);
 					}
+					if (Enode.getTagName() == "scriptlockportal") {
+						new WidgetPlacer(m_zone).placeScriptLockPortal(Enode, 0, 0);
+					}
 					if (Enode.getTagName() == "advancedBlockDungeon") {
 						grid = CloneOverlay(grid);
 						new AdvancedBlockDungeonGenerator(m_zone, m_tiles).run(Enode, grid);
@@ -830,6 +833,9 @@ public class ZoneBuildTools {
 				}
 				if (Enode.getTagName() == "pairedportal") {
 					PairedPortal(Enode, 0, 0);
+				}
+				if (Enode.getTagName() == "scriptlockportal") {
+					new WidgetPlacer(m_zone).placeScriptLockPortal(Enode, 0, 0);
 				}
 				if (Enode.getTagName() == "describer") {
 					Describer(Enode, 0, 0);

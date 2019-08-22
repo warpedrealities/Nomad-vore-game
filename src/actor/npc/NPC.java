@@ -276,7 +276,6 @@ public class NPC extends Actor implements Controllable {
 		if (actorRPG.getBusy() == 0 && !isBusy()) {
 			if (voreScript!=null)
 			{
-				voreScript.update(getVisible(),senseInterface.getHostile(this, 4,true)==null);
 				if (!voreScript.isActive())
 				{
 					voreScript=null;
@@ -287,10 +286,6 @@ public class NPC extends Actor implements Controllable {
 						controllerScript.RunAI(this, senseInterface);
 					}
 				}
-				if (actorRPG.getBusy()==0)
-				{
-					actorRPG.setBusy(8);
-				}
 			}
 			else
 			{
@@ -299,7 +294,9 @@ public class NPC extends Actor implements Controllable {
 				}
 			}
 		}
-
+		if (voreScript != null) {
+			voreScript.update(getVisible(), senseInterface.getHostile(this, 4, true) == null);
+		}
 		if (clock > 0 && !isBusy) {
 
 			clock--;

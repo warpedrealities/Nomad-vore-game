@@ -28,7 +28,7 @@ public class VoreScript_Impl implements VoreScript {
 
 	private ScriptStage []stages;
 	private String luaScript, filename;
-	private int stageIndex;
+	private int stageIndex, clock;
 	private boolean alive;
 	private NPC target,origin;
 	private int lastDamaged, uid;
@@ -37,6 +37,7 @@ public class VoreScript_Impl implements VoreScript {
 
 	public VoreScript_Impl(String filename,NPC target, NPC origin)
 	{
+		this.clock = 9;
 		this.filename = filename;
 		genStages(filename);
 		stageIndex=0;
@@ -60,6 +61,7 @@ public class VoreScript_Impl implements VoreScript {
 		stageIndex = dstream.readInt();
 		this.stages[stageIndex].load(dstream);
 		this.uid = dstream.readInt();
+		this.clock = dstream.readInt();
 	}
 
 
@@ -70,6 +72,7 @@ public class VoreScript_Impl implements VoreScript {
 		dstream.writeInt(stageIndex);
 		this.stages[stageIndex].save(dstream);
 		dstream.writeInt(this.target.getUID());
+		dstream.writeInt(clock);
 	}
 	private void genStages(String filename)
 	{
@@ -114,8 +117,7 @@ public class VoreScript_Impl implements VoreScript {
 		return stages[stageIndex].blocksAI();
 	}
 
-	@Override
-	public void update(boolean visible,boolean noEnemies) {
+	public void updateScene(boolean visible, boolean noEnemies) {
 		int progress=stages[stageIndex].update(visible, noEnemies,lastDamaged);
 		lastDamaged++;
 		if (progress==1)
@@ -134,6 +136,16 @@ public class VoreScript_Impl implements VoreScript {
 				}
 			}
 		}
+	}
+
+	@Override
+	public void update(boolean visible, boolean noEnemies) {
+		clock++;
+		if (clock == 10) {
+			clock = 0;
+			updateScene(visible, noEnemies);
+		}
+
 	}
 
 	private void runLuaScript() {
@@ -206,6 +218,7 @@ public class VoreScript_Impl implements VoreScript {
 	@Override
 	public void releasePrey() {
 		Vec2f p = Universe.getInstance().getCurrentZone().getEmptyTileNearP(origin.getPosition());
+		target.setBusy(false);
 		target.Heal();
 		target.setPosition(p);
 

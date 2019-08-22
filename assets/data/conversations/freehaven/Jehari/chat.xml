@@ -9,19 +9,31 @@
 	</text>	
 	<choice destination="shop" text="$I'd like to see what you have for sale"/>
 	<choice destination="mainquest" text="$I need someone to decipher some black box data for me">
-		<condition evaluate="GLOBAFLAG" operator="equals" value="2"	flag="MAIN" />
-			<condition evaluate="GLOBAFLAG" operator="equals" value="0"	flag="adaptive_computation" />
+		<condition evaluate="GLOBALFLAG" operator="equals" value="2"	flag="MAIN" />
+			<condition evaluate="GLOBALFLAG" operator="equals" value="0"	flag="adaptive_computation" />
 
 	</choice>
 	<choice destination="mainquestPathA0" text="$I spoke to someone named Mallory and she said she'd deliver the computation core to you">
-		<condition evaluate="GLOBAFLAG" operator="equals" value="5"	flag="adaptive_computation" />
-	
+		<condition evaluate="GLOBALFLAG" operator="equals" value="5"	flag="adaptive_computation" />
 	</choice>
 	<choice destination="mainquestPathC0" text="$Have you completed the processing yet?">
-		<condition evaluate="GLOBAFLAG" operator="equals" value="6"	flag="adaptive_computation" />
+		<condition evaluate="GLOBALFLAG" operator="equals" value="6"	flag="adaptive_computation" />
 	</choice>	
+	<choice destination="mainquestPathB0" text="$I have your adaptive computation core for you">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="4"	flag="adaptive_computation" />
+		<condition evaluate="HASITEM" operator="greaterthan" value="1"
+			item="adaptive computation core" />		
+	</choice>
 	<choice destination="questions" text="$I'd like to ask you some questions"/>
 	<choice destination="end" text="$Nothing at the moment, I'll let you get back to your experiments"/>
+	</page>
+	
+	<page ID="mainquestPathB0">
+	<text>
+	"Oh excellent, good I'll just take that and.." she takes the core and inserts it into a computer she'd somehow had the foresight to prepare earlier, then looks to you blankly "What did we need it for again?" she asks and seems to not remember for a distressing second "Oh right..uh, black box data. Do you want me to start processing that now?" she asks smiling and holding one hand in the other as she looks to you.	
+	</text>
+		<effect type="removeitem" item="adaptive computation core" value="1" />
+		<choice destination="mainquestPathA1" text="$Of course, get started right away. I'm guessing this will take a while"/>
 	</page>
 	
 	<page ID="mainquestPathC0">
@@ -126,7 +138,7 @@
 	</text>
 	<choice destination="questions" text="$It's a pleasure to meet you, can I ask some questions?"/>
 	<choice destination="mainquest" text="$can you decipher some black box data for me?">
-		<condition evaluate="GLOBAFLAG" operator="equals" value="2"	flag="MAIN" />
+		<condition evaluate="GLOBALFLAG" operator="equals" value="2"	flag="MAIN" />
 					<effect type="setglobalflag" flag="adaptive_computation" value="0" />	
 	</choice>
 	<choice destination="shop" text="$It's a pleasure, can you show me what you have for sale?"/>

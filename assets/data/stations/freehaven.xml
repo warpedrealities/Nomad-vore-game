@@ -6,6 +6,7 @@
 	<zone x="1" y="5" surface="0">freehaven_beta</zone>	
 	<zone x="1" y="4" surface="0">starlight</zone>	
 	<zone x="0" y="4" surface="0">port_level_4</zone>		
+	<zone x="0" y="3" surface="0">port_level_3</zone>			
 	<dockingModel count="3">
 		<image value="freehaven_station"/>
 		<dockingPort startsOpen="true">

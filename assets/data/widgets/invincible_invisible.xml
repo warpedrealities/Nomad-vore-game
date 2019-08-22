@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<widgetconversation sprite="10" name="something"
+	health="999">
+	<contains minimum="1" maximum="2">scrap metal</contains>
+	<description>this object does not look like it could be destroyed by
+		ordinary means</description>
+	<resistance resists="KINETIC" strength="999"></resistance>
+	<resistance resists="THERMAL" strength="999"></resistance>
+	<resistance resists="SHOCK" strength="999"></resistance>
+</widgetconversation>

@@ -70,13 +70,16 @@ function main(controllable,sense,script)
 		end
 	end
 	if (controllable:isPeace()) then
+
 		if (script:getShared():getValue(0)==1) then
+			
 			controllable:setPeace(false)
 		end
 	end
 	if (not controllable:isPeace()) then
 		if (script:getShared():getValue(0)==0) then
-			script:getShared():getValue(0,1)
+
+			script:getShared():setValue(0,1)
 		end
 	end
 end

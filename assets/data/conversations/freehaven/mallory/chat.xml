@@ -52,7 +52,7 @@
 	</text>
 	<effect type="setlocalflag" flag="rescued" value="1" />	
 	<special effect="addJournal" file="main" name="core_acquired" />		
-		<effect type="setglobalflag" flag="adaptive_computation" value="6" />		
+		<effect type="setglobalflag" flag="adaptive_computation" value="5" />		
 	<choice destination="end" text="*leave, successfully*"/>
 	</page>
 

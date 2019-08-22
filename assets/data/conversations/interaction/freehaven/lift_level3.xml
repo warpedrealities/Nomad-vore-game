@@ -5,8 +5,8 @@
 		Freehaven elevator services, select level to travel to	
 		</text>
 		<choice destination="level5" text="head to level 5"/>
-		<choice destination="level3" text="head down to level 3"/>		
-		<choice destination="end" text="remain on level 4"/>
+		<choice destination="level3" text="head up to level 4"/>		
+		<choice destination="end" text="remain on level 3"/>
 	</page>
 	
 	<page ID="level5">
@@ -19,9 +19,9 @@
 
 	<page ID="level3">
 	<text>
-	The lift whisks you swiftly down to level 3
+	The lift whisks you swiftly up to level 4
 	</text>
-		<special effect="transition" x="39" y="36" destination="port_level_3" />	
+		<special effect="transition" x="39" y="36" destination="port_level_4" />	
 	<choice destination="end" text="step out"/>
 	</page>
 

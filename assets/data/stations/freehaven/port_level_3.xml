@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<zone width="64" height="64" spriteset="stationlowerdeck.png">
+	<tileset count-x="8" count-y="10">
+		<tile sprite="49" vision="EMPTY" movement="2">Atmosphere processor</tile>
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
+		<tile sprite="33" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
+		<tile sprite="49" vision="EMPTY" movement="0" smart="true">a metal floor</tile>		
+		<tile sprite="68" vision="EMPTY" movement="0">tiled floor</tile>	
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
+		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>		
+		<tile sprite="72" vision="BLOCKING" movement="2">safety bulkhead</tile>			
+	</tileset>
+
+	<description>No pretence of cleanliness and diligent maintenance is even attempted down here. It is clear that order, civility and the upkeep of the same have not reached this far.</description>
+
+	<mapgen>
+	<partition xmin="0" xmax="16" ymin="0" ymax="16" inverse="true">
+		<partition xmin="48" xmax="64" ymin="48" ymax="64" inverse="true">
+			<partition xmin="0" xmax="16" ymin="48" ymax="64" inverse="true">
+				<partition xmin="48" xmax="64" ymin="0" ymax="16" inverse="true">
+					<advancedBlockDungeon extent="48">
+						<loadBlocks file="freehaven_grunge"/>
+						<keyBlock x="4" y="4">							
+						<!--entrance -->
+							<row>03444300</row>
+							<row>33444333</row>
+							<row>44444444</row>
+							<row>44444444</row>
+							<row>44444444</row>
+							<row>33444344</row>
+							<row>03444333</row>
+							<row>03444300</row>
+							<edge value="SOUTH" type="2" />
+							<edge value="EAST" type="2" />
+							<edge value="WEST" type="2" />
+							<edge value="NORTH" type="2" />							
+							<widget x="6" y="5" name="lift"
+								info="interaction/freehaven/lift_level3" variable="1" />
+							<widget x="7" y="5" name="lift"
+								info="interaction/freehaven/lift_level3" variable="1" />
+						</keyBlock>	
+						<keyBlock heat="1">
+							<row>33444330</row>
+							<row>34444433</row>
+							<row>44111444</row>
+							<row>44111444</row>
+							<row>44111444</row>
+							<row>34444433</row>
+							<row>33444330</row>
+							<row>03444300</row>
+							<edge value="WEST" type="2" />
+							<edge value="EAST" type="2" />				
+							<edge value="WEST" type="2" />
+							<edge value="EAST" type="2" />			
+							<widget x="1" y="1" name="sprite" info="atmosphereprocessor" variable="5#5"/>
+						</keyBlock>	
+						<keyBlock heat="1">
+							<row>33444330</row>
+							<row>34444433</row>
+							<row>44111444</row>
+							<row>44111444</row>
+							<row>44111444</row>
+							<row>34444433</row>
+							<row>33444330</row>
+							<row>03444300</row>
+							<edge value="WEST" type="2" />
+							<edge value="EAST" type="2" />				
+							<edge value="WEST" type="2" />
+							<edge value="EAST" type="2" />			
+							<widget x="1" y="1" name="sprite" info="atmosphereprocessor" variable="5#5"/>
+						</keyBlock>	
+						<keyBlock heat="1">
+							<row>33444330</row>
+							<row>34444433</row>
+							<row>44111444</row>
+							<row>44111444</row>
+							<row>44111444</row>
+							<row>34444433</row>
+							<row>33444330</row>
+							<row>03444300</row>
+							<edge value="WEST" type="2" />
+							<edge value="EAST" type="2" />				
+							<edge value="WEST" type="2" />
+							<edge value="EAST" type="2" />			
+							<widget x="1" y="1" name="sprite" info="atmosphereprocessor" variable="5#5"/>
+						</keyBlock>	
+						<keyBlock heat="1">
+							<row>33444330</row>
+							<row>34444433</row>
+							<row>44111444</row>
+							<row>44111444</row>
+							<row>44141444</row>
+							<row>34444433</row>
+							<row>33444330</row>
+							<row>03444300</row>
+							<edge value="WEST" type="2" />
+							<edge value="EAST" type="2" />				
+							<edge value="WEST" type="2" />
+							<edge value="EAST" type="2" />			
+							<widget x="1" y="1" name="sprite" info="atmosphereprocessor" variable="5#5"/>
+							<widget x="3" y="4" name="invincible_invisible" info="interaction/freehaven/mallory_stash" variable="10" />
+						</keyBlock>						
+					</advancedBlockDungeon>
+				</partition>		
+			</partition>			
+		</partition>		
+	</partition>	
+	<selectTile tile="3">
+	<SeedNPCs min="16" max="20" name="freehaven/civilians/nohoper" />	
+	<SeedNPCs min="24" max="32" name="freehaven/criminals/ruffian" minDistance="8" />	
+	</selectTile>	
+	
+	</mapgen>
+
+</zone>

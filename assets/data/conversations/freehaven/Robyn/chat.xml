@@ -48,7 +48,26 @@
 	<choice destination="mainquestPathA0" text="$Mallory had gotten herself into a sticky situation, but i helped her out and she said she'd deliver the core">
 		<condition evaluate="GLOBALFLAG" operator="equals" value="5"	flag="adaptive_computation" />			
 	</choice>	
+	<choice destination="mainquestPathB0" text="$I arrived but someone digested Mallory before I could stop them, what can we do?">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="2"	flag="adaptive_computation" />			
+	</choice>		
 	<choice destination="end" text="$You've given me a smile, that's enough. I'm just saying hi."/>
+	</page>
+	
+	<page ID="mainquestPathB0">
+	<text>
+	Robynn takes this news and myahs "Knew she'd always come to a sticky end sooner or later." she says and then nyahs in less a surprised exclamation and more an irritable sort of tone "But it's kind of a problem for us. She's the only person I can think of on this station who might of had one, it'll take ages to get one from anywhere else...but, if she did have it she wouldn't of had it on her. She'd of had it in her stash. I don't know where exactly it is, but I think it might be in the lifesupport machinery on deck 3. If you have her access card you might be able to get into it. It's a long shot I know."
+	</text>
+	<choice destination="mainquestPathB1" text="$What can you tell me about deck 3?"/>
+	</page>
+	
+	<page ID="mainquestPathB1">
+	<text>
+	"The wardens don't patrol down there. It's pretty dangerous, ordinarily I'd tell you not to go down there..but seen as Mallory has been inconveniently digested there's nothing else you can do if you want that core." says Robynn "Just try not to get gurgled yourself okay?
+	</text>
+			<special effect="addJournal" file="main" name="scavenger_hunt" />	
+		<effect type="setglobalflag" flag="adaptive_computation" value="3" />
+		<choice destination="end" text="$Not on my to do list, I'll see if i can find the core"/>
 	</page>
 	
 	<page ID="mainquestPathA0">
@@ -180,7 +199,7 @@
 	<choice destination="end" text="$Yeah maybe I'll do that."/>
 	</page>
 	
-	
+		
 	<page ID="pill0">
 	<text>
 	"Oh, well. There's you, so maybe you should tell me why you bought one. Unless it's just idle curiousity." she says and smiles playfully "I stock them purely to see who might buy something that has no other purpose than to make them tiny and easy to dominate and devour."
@@ -215,6 +234,7 @@
 	</text>
 	<effect type="removeitem" item="shrink pill" value="1" />
 	<choice destination="playA0" text="*make a run for it*"/>
+	<choice destination="playB0" text="*Hide!*"/>
 	</page>
 	
 	<page ID="playA0">
@@ -226,7 +246,7 @@
 	
 	<page ID="oralvore0">
 	<text>
-	"I said I sometimes did, sometimes it's enough to gobble up a little treat and know they're helpless inside me...and it's been a while, you wouldn't take me for an impulsive person though right?" she asks, but doesn't wait for you to answer..her mouth opening up as she tilts her head back, her warm wet breath washing over you as she lowers you past her lips. Her tongue undulating against you to press you up against the roof of her mouth and sample you as she pulls her fingers away and closes her mouth. Those teeth of hers sealing you in as she rolls you around in her mouth, tasting your body and brushing your feet against the entrance of her throat.
+	"I said I sometimes did, sometimes it's enough to gobble up a little treat and know they're helpless inside me...and it's been a while, you wouldn't take me for an impulsive person though right?" she asks, but doesn't wait for you to answer, her mouth opening up as she tilts her head back, her warm wet breath washing over you as she lowers you past her lips. Her tongue undulating against you to press you up against the roof of her mouth and sample you as she pulls her fingers away and closes her mouth. Those teeth of hers sealing you in as she rolls you around in her mouth, tasting your body and brushing your feet against the entrance of her throat.
 	</text>
 	<choice destination="oralvore1" text="*treated like candy*"/>
 	</page>
@@ -243,6 +263,9 @@
 	Robyn plays with you with her tongue for a few more moments, before tipping her head back.. your legs pressing against the entrance of her throat afore she swallows, closing her eyes as you plunge into her throat. The catgirl pressing a finger against her neck to feel the lump of your body vanishing down into her. That tight throat pressing around you as your tiny body is conveyed steadily and inexorably down into the depths of her belly, plunging abruptly through a sphincter and dropping into her tummy. The kitty letting out a giggle as she presses her fingers against her middle "It's roomier when you're that size isn't it.. i can feel you moving around in me." she says as you got to your feet in her stomach and tried to push out, but were unable to make even a dent in her tummy walls, not a bulge or trace of your presence inside her. You're hidden away in the kitty girl as a snack.
 	</text>
 	<choice destination="oralvore3" text="*digestion*"/>
+	<choice destination="oralvore3scat" text="*digestion* (disposal)" >
+	<preference fetish="disposal" />
+	</choice>
 	</page>
 	
 	<gameover ID="oralvore3">
@@ -250,7 +273,63 @@
 	You try to respond to her, but she's not able to hear someone so tiny over the gurgles of her gut as her enzymes begin to flow in and ooze from her stomach walls. Robyn getting comfortable as you look at the rising level of digestive fluids. It's a bit late to have second thoughts about being her snack though, the enzymes eating away at your legs as they rise up your thighs, digesting you rapidly as you feel her drum her fingers on her tummy. Abruptly your legs give way under you sending you crash into the fluid, a submersion into her potent stomach acids that you don't emerge from. Dunked into the fluids you break down in record time, only a mass of chunky ooze rising up the surface where you'd vanished within about a minute. Robyn smacking her lips and letting out a sigh as she feels her snack dissolve, mousie really is the best game to play with people.
 	</text>
 	</gameover>
+
+	<gameover ID="oralvore3scat">
+	<text>
+	You try to respond to her, but she's not able to hear someone so tiny over the gurgles of her gut as her enzymes begin to flow in and ooze from her stomach walls. Robyn getting comfortable as you look at the rising level of digestive fluids. It's a bit late to have second thoughts about being her snack though, the enzymes eating away at your legs as they rise up your thighs, digesting you rapidly as you feel her drum her fingers on her tummy. Abruptly your legs give way under you sending you crash into the fluid, a submersion into her potent stomach acids that you don't emerge from. Dunked into the fluids you break down in record time, only a mass of chunky ooze rising up the surface where you'd vanished within about a minute. Robyn smacking her lips and letting out a sigh as she feels her snack dissolve, mousie really is the best game to play with people. Later, when she is sat on her toilet squeezing out small logs studded with your tiny bones, she smiles, thinking of the tasty mousie she snacked on earlier.
+	</text>
+	</gameover>
+
+	<page ID="playB0">
+	<text>
+	You quickly dart behind some of the merchandise, obscuring her view of you for a few moments. When she snatches up the pot with a enthusiastic cry, she is surprised not to find you behind it. You had already run, leaping to the floor behind the counter. Robyn must have guessed your ploy, as she quickly drips to all fours, spying your fleeing form through the gap beneath the table. Her butt and tail wiggle excitedly in the air before she prowls after you.
+	</text>
+	<choice destination="oralvoreb0" text="*Run faster!*"/>
+	</page>
 	
+	<page ID="oralvoreb0">
+	<text>
+	She skitters around the coner on all fours and you desperately pump your legs, but in your panic you stumble on what would be a minor imperfection in the floor - if it wasn't for your reduced size. She watches you fall, and pauses, butt wiggling faster before she pounces on you with a victorious cry. You are roughly snatched up and held up over her like a prize as she rolls on to her back "Gotcha!".
+	</text>
+	<choice destination="oralvoreb0b" text="*wriggle in her grip*"/>
+	</page>
+
+	<page ID="oralvoreb0b">
+	<text>
+	"No no mousie, I've got you now!" she mewls playfully "Though if you really want me to let you go so much..." She drops you, her mouth opening up below you as you tumble towards it. You land heavily, your legs splating onto her tougue but you managing to catch yourself on her lip, holding on for dear life as her mouth closes over your lower half. Her tongue undulates against your legs, sampling you before she starts to suck on them. You struggle to fight against pull from her tasting you, but the suction is too great rfor yout tiny arms and, with a very mouslike *squeak* you are slurped inside, hose teeth of hers sealing you in as she rolls you around in her mouth, tasting your body and brushing your feet against the entrance of her throat.
+	</text>
+	<choice destination="oralvoreb1" text="*treated like candy*"/>
+	</page>
+	
+	<page ID="oralvoreb1">
+	<text>
+	You try to push against her tongue only to find it overwhelming as she mashes you against the inside of her mouth, being a bit rough with you at your small and delicate size. Your squirms just making her purr, a loud hum of her pleasure thrumming around you as her tongue laps between your legs, down your front only for her to press you into one cheek and turn you around afore sampling the flavour of your other side.
+	</text>
+	<choice destination="oralvoreb2" text="*and then*"/>
+	</page>
+	
+	<page ID="oralvoreb2">
+	<text>
+	Robyn plays with you with her tongue for a few more moments, before letting you slide down... your legs pressing against the entrance of her throat before she swallows, closing her eyes as you slide into her. The catgirl presses a finger against her neck to feel the lump of your body vanishing down into her, that tight throat pressing around you as your tiny body is conveyed steadily and inexorably down into the depths of her belly, pushed roughly through a sphincter and sliding into the bottom of her tummy. The kitty lets out a giggle as she presses her fingers against her middle "It's roomier when you're that size isn't it... i can feel you moving around in me." she says as you got to your feet in her stomach and tried to push out, but were unable to make even a dent in her tummy walls, not a bulge or trace of your presence inside her. You're hidden away in the kitty girl as a snack.
+	</text>
+	<choice destination="oralvoreb3" text="*digestion*"/>
+	<choice destination="oralvoreb3scat" text="*digestion* (disposal)" >
+	<preference fetish="disposal" />
+	</choice>
+	</page>
+	
+	<gameover ID="oralvoreb3">
+	<text>
+	You try to respond to her, but she's not able to hear someone so tiny over the gurgles of her gut as her enzymes begin to flow in and ooze from her stomach walls. Robyn curls up on the floor jostling you about inside her and making you splash into the steadily rising digestive fluids. It's a bit late to have second thoughts about being her snack though, the enzymes eating away at your legs as they rise up your thighs, digesting you rapidly as you feel her drum her fingers on her tummy. Abruptly your legs give way under you sending you crash into the fluid, a submersion into her potent stomach acids that you don't emerge from. Dunked into the fluids you break down in record time, only a mass of chunky ooze rising up the surface where you'd vanished within about a minute. Robyn licking her lips and letting out a sigh as she feels her snack dissolve, mousie really is the best game to play with people.
+	</text>
+	</gameover>
+
+	<gameover ID="oralvoreb3scat">
+	<text>
+	You try to respond to her, but she's not able to hear someone so tiny over the gurgles of her gut as her enzymes begin to flow in and ooze from her stomach walls. Robyn curls up on the floor jostling you about inside her and making you splash into the steadily rising digestive fluids. It's a bit late to have second thoughts about being her snack though, the enzymes eating away at your legs as they rise up your thighs, digesting you rapidly as you feel her drum her fingers on her tummy. Abruptly your legs give way under you sending you crash into the fluid, a submersion into her potent stomach acids that you don't emerge from. Dunked into the fluids you break down in record time, only a mass of chunky ooze rising up the surface where you'd vanished within about a minute. Robyn licking her lips and letting out a sigh as she feels her snack dissolve, mousie really is the best game to play with people. Later, when she is sat on her toilet squeezing out small logs studded with your tiny bones, she smiles, thinking of the tasty mousie she snacked on earlier.
+	</text>
+	</gameover>
+
 	<page ID="pillExit">
 	<text>
 	"It's not for everyone, but you wouldn't of been the first to be my little mouse if you'd of said yes." says Robynn, giving a wink and a smile. She seems to take the rejection in stride.
