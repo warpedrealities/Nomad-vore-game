@@ -9,7 +9,6 @@
 			<assertion evaluate="hasperk" perk="oralvore" />
 		</choice>
 		<choice destination="cockvore0A" text="*crawl down her dick*">
-		<condition evaluate="LOCALFLAG" flag="trained" value="0" />
 			<preference fetish="cockvore" />
 		</choice>
 			<choice destination="cockvore0B" text="*be cockfood*">
@@ -18,15 +17,21 @@
 		</choice>
 		<choice destination="end" text="*that's enough, put her back inside*"/>
 	</page>
-
-	<page ID="cockvore0A">
-	<text>
 	
-	</text>
-	
+        <page ID="cockvore0A">
+	<text> With anticipation, you look her down. She watches with curiosity, unsure of what you are planning on doing. She sturs a bit and waits for whats coming. Slowly you pull her into a hug and embrace in eachothers heat. "Don't worry about a thing.." you say without context. You eventually leave the comfort of her arms and trace a line down from her supple breasts, running across her torso, all the way down to her taur belly. All the while she is breathing heavily, waiting for whats coming. There you are, basking in the mass of flesh that is her human sized penis, slowly becoming erect. You snuggle close to her package and start rubbing her shaft everywhere you can reach. All the while she is moaning open mouthed and basking in this sensation. She never recieved this treatment in the wild. As time passes her cock grows in girth, so much so, it eventually starts to settle on the floor, like a giant snake. Try as you might, you are eventually so drawn to her cockslit you jump in. The sudden jerk you made sent her into overdrive, humping the air trying to get you down. Her tunnel of love undulating around you,precum flowing below you like a river. It's as if you were in a cave, spelunking for her sweet nectar. With half your torso inside, you start to crawl forward. Your form making a slight indentation on her cock form the outside. With a sudden force from the muscle encompassing your whole being, you are sent flying down her tunnel to her heavy balls. Gradually you fall into the pit of salty white cream. Craddled at all angles with firm yet soft walls of nutsack. She seems too be enjoying this to much, leaving you swaying back and forth as she humps the air.	</text>
+	<choice destination="cockvore1A" text="*a nice warm sauna*"/>
 	</page>
-
-	<page ID="oralvore0">
+	<page ID="cockvore1A">
+	<text>The world you were just in seems so far and distant in your mind, as if this is what you were raised in. Gradually the pool of cum rises to your chest, leaving you to soak in it like a bath. It feels as if its rinsing the stress and worries away from you. She appears to be enjoying it to, like the moaning and jerking wasn't a dead givaeaway. Just as you were starting to fall asleep, your chamber begins to sway violently signaling your exit...</text>
+        <choice destination="cockvore2A" text="*ejected with the stream*"/>
+        </page>
+        <page ID="cockvore2A">
+        <text>With a sudden shlurp and squeeze of the strong muscles around you. You were sent rocketing out of her sack with her cream, back into her tunnel. Inch by inch you were slowly pushed out with all her sacred nectar, the walls constantly making shlurping sounds. Just as you thought there was no end to this long tunnel, a vertical line of light fills your view. Slowly you are pressed out of her cock with the pool sized amount of cum she just unleashed. With a clean from her tongue and a hug of gratitude, you're back and good as new. Might have to do that again.</text>
+        <choice destination="end" text="Put her back in containment" />
+		</page>
+	
+        <page ID="oralvore0">
 	<text>
 	You lick your lips and your belly gurgles in mere anticipation of the coming meal. The icetreader shifts uneasily, but there's nowhere for her to run to and you've already proven on a prior occasion how far fighting will get her. So though she backs up you confidently step up in front of her and grab her wrists, guiding her hands down to your mouth. You salivate all the more as you part your lips, and she lets out a whimper, but before she can pull away you shove her hands down into your mouth and swallow. You've got her now, all she'll find is how inescapable the grasp of your throat is if she tries to pull back.
 	</text>

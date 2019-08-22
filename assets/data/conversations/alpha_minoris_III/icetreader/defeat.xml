@@ -14,10 +14,14 @@
 		</choice>
 		<choice destination="warm0"
 			text="it's cold, she looks warm, maybe she could help you warm up?" />
-		<!-- <choice destination="capture" text="Use you capture device.">
+		<choice destination="capture" text="Use you capture device.">
 			<condition evaluate="HASITEM" operator="greaterthan" value="1"
 				item="capture device" />
-		</choice> -->
+		</choice>
+		<choice destination="capture" text="Use your capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+                </choice> -->
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />

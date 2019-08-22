@@ -28,6 +28,10 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>
+		<choice destination="capture" text="Use you capture device.">
+			<condition evaluate="HASITEM" operator="greaterthan" value="1"
+				item="capture device" />
+		</choice>
 		<choice destination="end" text="leave her to take care of it herself" />
 	</page>
 	
