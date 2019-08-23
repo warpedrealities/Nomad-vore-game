@@ -2,7 +2,7 @@
 <Conversation>
 
 	<page ID="start">
-		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="DRESSED"/>
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="rescued"/>
 	<text>
 	"Hi, can I do anything for you?"
 	
