@@ -128,7 +128,6 @@ public class ReformerScreen extends Screen {
 		{
 			if (reformer.isActive())
 			{
-				buttons[1].setActive(false);
 				text.setString("reformation system synchronized with pattern");
 			}
 			else

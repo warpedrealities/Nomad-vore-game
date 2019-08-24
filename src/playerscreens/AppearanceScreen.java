@@ -77,7 +77,7 @@ public class AppearanceScreen extends Screen implements Callback {
 
 		window.add(button);
 		// build text paragrapher
-		description = new TextParagrapher(new Vec2f(0.5F, 31.5F), 32, 140, 0.8F);
+		description = new TextParagrapher(new Vec2f(0.5F, 31.5F), 32, 130, 0.8F);
 		window.add(description);
 		// dummyText();
 		buildText();

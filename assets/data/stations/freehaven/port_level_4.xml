@@ -69,7 +69,7 @@
 							<row>12222210</row>
 							<row>11111110</row>
 							<edge value="SOUTH" type="1"/>				
-							<widget x="6" y="4" name="elevatorWC" variable="22" info="starlight#adaptive_computation#0#greaterThan#You have no business here" />
+							<widget x="6" y="4" name="elevatorWC" variable="22" info="starlight#adaptive_computation#1#greaterThan#You have no business here" />
 							<widget x="1" y="3" name="sprite" info="starlight_logo" variable="5#5"/>
 						</keyBlock>										
 					<clean value="10" />	

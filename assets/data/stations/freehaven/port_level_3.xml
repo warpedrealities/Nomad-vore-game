@@ -107,10 +107,14 @@
 			</partition>			
 		</partition>		
 	</partition>	
-	<selectTile tile="3">
-	<SeedNPCs min="16" max="20" name="freehaven/civilians/nohoper" />	
-	<SeedNPCs min="24" max="32" name="freehaven/criminals/ruffian" minDistance="8" />	
-	</selectTile>	
+
+	<partition xmin="30" xmax="42" ymin="30" ymax="42" inverse="true">
+		<selectTile tile="3">
+			<SeedNPCs min="16" max="20" name="freehaven/civilians/nohoper" />	
+			<SeedNPCs min="12" max="24" name="freehaven/criminals/ruffian" minDistance="8" />
+		</selectTile>
+	</partition>
+	
 	
 	</mapgen>
 

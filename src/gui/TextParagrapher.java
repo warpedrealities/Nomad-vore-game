@@ -39,12 +39,12 @@ public class TextParagrapher extends GUIBase {
 		} else {
 			int index = 0;
 			while (true) {
-				int split = text.indexOf(" ", index + m_length - 5);
+				int split = text.indexOf(" ", index + m_length - 10);
 				if (split == -1) {
 					break;
 				}
 				if (split > index + m_length) {
-					split = text.indexOf(" ", index + m_length - 12);
+					split = text.indexOf(" ", index + m_length - 20);
 				}
 				String str = text.substring(index, split);
 
