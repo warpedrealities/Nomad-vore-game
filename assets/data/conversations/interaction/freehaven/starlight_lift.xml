@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+		Starlight apartment elevator, select apartment to travel to
+		</text>
+		<choice destination="apartment3" text="select apartment 3">
+			<condition evaluate="GLOBALFLAG" operator="greaterthan" value="1"
+			flag="adaptive_computation" />
+		</choice>
+	
+		<choice destination="end" text="exit"/>
+	</page>
+	
+	<page ID="apartment3">
+	<text>
+	The lift takes you to apartment 3
+	</text>
+		<special effect="transitionToPortal" id="801" destination="starlight_3" />	
+	<choice destination="end" text="step out"/>
+	</page>
+
+
+</Conversation>

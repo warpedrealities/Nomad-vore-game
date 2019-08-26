@@ -76,10 +76,11 @@ public class Spaceship extends Entity {
 		String s=Integer.toString(uID);
 		String o=Integer.toString(this.UID);
 		entityName= entityName.replace(o, s);
-		if (!entityName.contains(s)) {
-			entityName = entityName + s;
+
+		interiorZone.zoneName = entityName;
+		if (!interiorZone.zoneName.contains(s)) {
+			interiorZone.zoneName = entityName + s;
 		}
-		interiorZone.zoneName=entityName;
 		UID = uID;
 	}
 

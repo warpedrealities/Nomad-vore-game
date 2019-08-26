@@ -27,6 +27,7 @@ import view.ModelController_Int;
 import view.ZoneInteractionHandler;
 import vmo.GameManager;
 import widgets.Widget;
+import widgets.WidgetMarker;
 import widgets.WidgetPortal;
 import worldgentools.ZoneBuildTools;
 import zone.TileDef.TileMovement;
@@ -138,7 +139,14 @@ public class Zone implements Zone_int {
 								return p;
 							}
 						}
+						if (WidgetMarker.class.isInstance(zoneTileGrid[i][j].getWidgetObject())) {
+							WidgetMarker marker = (WidgetMarker) zoneTileGrid[i][j].getWidgetObject();
+							if (marker.getUID() == id) {
+								Vec2f p = new Vec2f(i, j);
+								return p;
+							}
 
+						}
 					}
 				}
 			}

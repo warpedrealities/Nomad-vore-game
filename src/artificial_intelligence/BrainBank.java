@@ -7,7 +7,7 @@ public class BrainBank {
 	private static BrainBank m_instance;
 	private ArrayList<Script_AI> m_ai;
 	private ScriptMemory sharedMemory;
-	
+
 	public BrainBank() {
 		m_ai = new ArrayList<Script_AI>();
 		sharedMemory=new ScriptMemory();
@@ -17,7 +17,7 @@ public class BrainBank {
 		// if any ai have the same name return that
 		if (m_ai.size() > 0) {
 			for (int i = 0; i < m_ai.size(); i++) {
-				if (m_ai.get(i).getName().contains(name)) {
+				if (m_ai.get(i).getName().equals(name)) {
 					return m_ai.get(i);
 				}
 			}

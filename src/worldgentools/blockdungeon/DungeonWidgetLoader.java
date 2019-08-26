@@ -17,6 +17,7 @@ import widgets.WidgetConversation;
 import widgets.WidgetDoor;
 import widgets.WidgetHarvestable;
 import widgets.WidgetItemPile;
+import widgets.WidgetMarker;
 import widgets.WidgetPortal;
 import widgets.WidgetResearch;
 import widgets.WidgetScripted;
@@ -54,6 +55,9 @@ public class DungeonWidgetLoader {
 		}
 		if (definition.getWidgetName().equals("describer")) {
 			return addDescriber(definition);
+		}
+		if (definition.getWidgetName().equals("marker")) {
+			return new WidgetMarker(Integer.parseInt(definition.widgetVariable));
 		}
 		Document doc = ParserHelper.LoadXML("assets/data/widgets/" + definition.getWidgetName() + ".xml");
 		Element root = doc.getDocumentElement();

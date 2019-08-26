@@ -27,7 +27,7 @@
 		<placeWidget x="5" y="6" name="bed"
 					variable="1" />						
 		<scriptlockportal sprite="1" destination="port_level_4" x="1" facing="2"
-			y="2" ID="22">
+			y="2" ID="801">
 			<script>starlight_elevator</script>
 			<description>Elevator</description><forbidtext>I don't have what I came here for yet</forbidtext>
 			</scriptlockportal>	

@@ -154,6 +154,12 @@ public class EffectProcessor {
 			String destination = node.getAttribute("destination");
 			ViewScene.m_interface.Transition(destination, x, y);
 		}
+		if (str.equals("transitionToPortal")) {
+			int id = Integer.parseInt(node.getAttribute("id"));
+
+			String destination = node.getAttribute("destination");
+			ViewScene.m_interface.Transition(destination, id);
+		}
 		if (str.equals("research")) {
 			int DC = Integer.parseInt(node.getAttribute("DC"));
 			String data = node.getAttribute("data");

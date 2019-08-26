@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+			<preference fetish="ferals" />
+		<preference fetish="oralvore" />
+		<text>
+		The serpanid rears up over you with a predatory clicking hissing sound, mandibles spreading wide and oozing saliva to drip down to the floor inches from you. Those spike tipped arms spread wide as it looms poised to strike. And then, without further delay, it lunges down at you. The mandible framed jaws engulfing your legs and soon seizing them tight.The serpanid's mandibles coming in to grip around your calves and feed them into its jaws hungrily.
+		</text>
+		<choice destination="oralvore0" text="*eaten by the monster*"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	 The alien monstrousity's copious drool soaks your legs, oozing out to cover your thighs even before they're crammed down its voracious gullet. Past the teeth and mandibles you slide as the serpanid repeatedly lunges forwards until its grasping your rear in its mandibles and lifting you upwards. You look down at its eyeless armoured face and gluttonous four parted mouth and see only pitiless and merciless intent in its unsettling lack of a gaze. The creature coils back and then flexes its jaws wide and lunges forwards before snapping them shut again, bringing you shoulders deep into the voracious space monster.
+	</text>	
+	<choice destination="oralvore1" text="*utterly consumed by the monster*"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	The serpanid's horrifying jaws ripple open repeatedly as gravity and the impossible tugging of its throat drag you inexorably down into the unwelcoming heat and pressure of the monster's insides. The underbelly of the slender space terror bulging out as you start to fill its belly. Your arms forced over your head by the encroaching jaws until the last thing you see of the outside world is framed by them and you're devoured utterly.
+	</text>
+	<choice destination="struggleCheck" text="*resist, marshall your strength and resist*"/>
+	<choice destination="submit" text="*all hope is lost, the monster will be your end*"/>
+	</page>
+	
+	<check ID="struggleCheck">
+		<test what="STRUGGLE" DC="15" />
+		<outcome destination="struggleSuccess" />
+		<outcome destination="struggleFail" />
+	</check>
+	
+	<page ID="struggleSuccess">
+	<text>
+	With much at stake you steel yourself and shove off against the insides of the beast, pushing to try and force your way up against the rippling strength of the its throat. When that doesn't work you set about an abusive series of struggles pushing against the delicate insides of the monster. The serpanid letting out an aggravated steam kettle hiss and lurching about before abruptly lurching forwards and vomiting you back up in a spray of oozing alien saliva. Well that was less than pleasant, but the ire of the serpanid might be equally unpleasant for you.
+	</text>
+		<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="get clear" />
+	</page>
+	
+	<page ID="struggleFail">
+	<text>
+	With much at stake you steel yourself and shove off against the insides of the beast, pushing to try and force your way up against the rippling strength of the its throat. But the serpanid's body is too strong for you and you make no headway, instead being shoved back down into its belly repeatedly to struggle amidst the rising stew of enzymes. Your attempts to pummel the insides of the monster seem equally fruitless though it does click and hiss irritably as you act out the part of a rowdy meal. But your body is already weakening from exposure to the beast's acids, the serpanid's stomach as merciless as the rest of it is.
+	</text>
+	<choice destination="struggleGO" text="*digestion*"/>
+	</page>
+	
+	<gameover ID="struggleGO">
+	<text>
+	The Serpanid lets out a satisfied gutteral clicking as it curls in place, squeezing your softening form in the increasingly caustic and gurgling depths of the monster's stomach. Your shape turning mushy and weak until you break down, glorping down into soup within the voracious space terror like so many before you and like all the ones who will face the same fate. Space has a terrible power.
+	</text>
+	</gameover>
+	
+	<page ID="submit">
+	<text>
+	The Serpanid settles as you come to rest in the depths of its steaming guts. The enzyme slurry surrounding you already working to break you down along with the vigorous rippling pressure of the stomach walls around you. There is no point in resisting your fate, and already the bulge you are making in the monster's body is softening as you steadily break down and digest inside of it.
+	</text>
+	<choice destination="submitGO" text="*digestion*"/>
+	</page>
+	
+	<gameover ID="submitGO">
+	<text>
+	The terrible Serpanid lets out a long menacing chatter along with a hiss like a kettle as you finally go smooth and still as opposed to lumpy and squirming. The shape in its belly diminishing into liquid and shrinking away then down to nothing. Your form utterly digested, your fate sealed. Space has a terrible power.
+	</text>
+	</gameover>
+	
+</Conversation>

@@ -80,6 +80,8 @@ public class WidgetLoader {
 			return new WidgetResearch(dstream);
 		case 27:
 			return new WidgetScriptLockPortal(dstream);
+		case 28:
+			return new WidgetMarker(dstream);
 		}
 		return null;
 	}

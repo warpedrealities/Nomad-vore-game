@@ -86,7 +86,7 @@
 	
 	<page ID="mainquest1">
 	<text>
-	"Jehari wants it?" says Robyn and brightens up "Well why didn't ya say so in the beginning, she's such a sweet thing and she has a nice big.." she blushes and composes herself "Anyway. If its for Jehari I can totally swing this. I got a friend, well..supplier, shifty type. Lives on deck 4 at the starlight apartments, goes by the name of Mallory. Go talk to her, tell her I sent you and I'm calling in a favour." says Robyn.
+	"Jehari wants it?" says Robyn and brightens up "Well why didn't ya say so in the beginning, she's such a sweet thing and she has a nice big.." she blushes and composes herself "Anyway. If its for Jehari I can totally swing this. I got a friend, well..supplier, shifty type. Lives on deck 4 at the starlight apartments, goes by the name of Mallory, room 3. Go talk to her, tell her I sent you and I'm calling in a favour." says Robyn.
 	</text>
 	<choice destination="mainquest2" text="$You're going to expend a favour for me? thankyou."/>
 	</page>
@@ -108,7 +108,7 @@
 	
 	<page ID="mainquest3">
 	<text>
-	"Yeah yeah, gratitude. You're still the one hoofing it down to level 4 on an errand. Mallory, deck 4, starlight apartments got all that? and be careful down there, if you get robbed or eaten we'll all get inconvenienced." says Robyn and then with a smile shoos you away.
+	"Yeah yeah, gratitude. You're still the one hoofing it down to level 4 on an errand. Mallory, deck 4, starlight apartments, room 3, got all that? and be careful down there, if you get robbed or eaten we'll all get inconvenienced." says Robyn and then with a smile shoos you away.
 	</text>
 		<special effect="addJournal" file="main" name="mallory" />	
 		<effect type="setglobalflag" flag="adaptive_computation" value="1" />	
