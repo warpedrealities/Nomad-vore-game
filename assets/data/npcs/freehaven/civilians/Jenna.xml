@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="greenJ.png" />
+
+	<name>Jenna</name>
+	<description>
+	The rodent girl is either furtively about or sat in a sort of dejected slump. Either way she's clad in worn and damaged garments and an air of resigned self pity. She'd probably stand four foot high if she stood up straight. Her face is pale and her cheeks slightly dirtied, her body is thin and lithe though in more of a malnourished than athletic sort of way. Her tail is long, hairless and extends more than her entire body length behind her. Her ears sit atop a mop of uncombed hair and their rounded alertness is slightly drooping and a chunk has been torn out of one ear.
+	</description>
+	<rpg>
+		<experiencevalue value="15" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+	</rpg>
+
+	<respawn delay="8000" />
+	<peacebond />
+	<defeated conversation="freehaven/civilians/nohoper/defeat" />
+	<talk conversation="freehaven/civilians/nohoper/chat" />
+
+	<controller AI="village_wander" />
+	<faction value="freehaven_civilians" />
+</NPC>
