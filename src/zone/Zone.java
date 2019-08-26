@@ -128,29 +128,30 @@ public class Zone implements Zone_int {
 
 	public Vec2f getPortal(int id) {
 		for (int i = 0; i < zoneWidth; i++) {
-			for (int j = 0; j < zoneHeight; j++) {
-				if (zoneTileGrid[i][j] != null) {
-					if (zoneTileGrid[i][j].getWidgetObject() != null) {
-						if (WidgetPortal.class.isInstance(zoneTileGrid[i][j].getWidgetObject())) {
-							WidgetPortal portal = (WidgetPortal) zoneTileGrid[i][j].getWidgetObject();
-							if (portal.getID() == id) {
-								Vec2f p = new Vec2f(i, j);
-								p = ZoneInteractionHandler.getPos(portal.getPortalFacing(), p);
-								return p;
+			if (zoneTileGrid[i] != null) {
+				for (int j = 0; j < zoneHeight; j++) {
+					if (zoneTileGrid[i][j] != null) {
+						if (zoneTileGrid[i][j].getWidgetObject() != null) {
+							if (WidgetPortal.class.isInstance(zoneTileGrid[i][j].getWidgetObject())) {
+								WidgetPortal portal = (WidgetPortal) zoneTileGrid[i][j].getWidgetObject();
+								if (portal.getID() == id) {
+									Vec2f p = new Vec2f(i, j);
+									p = ZoneInteractionHandler.getPos(portal.getPortalFacing(), p);
+									return p;
+								}
 							}
-						}
-						if (WidgetMarker.class.isInstance(zoneTileGrid[i][j].getWidgetObject())) {
-							WidgetMarker marker = (WidgetMarker) zoneTileGrid[i][j].getWidgetObject();
-							if (marker.getUID() == id) {
-								Vec2f p = new Vec2f(i, j);
-								return p;
-							}
+							if (WidgetMarker.class.isInstance(zoneTileGrid[i][j].getWidgetObject())) {
+								WidgetMarker marker = (WidgetMarker) zoneTileGrid[i][j].getWidgetObject();
+								if (marker.getUID() == id) {
+									Vec2f p = new Vec2f(i, j);
+									return p;
+								}
 
+							}
 						}
 					}
 				}
 			}
-
 		}
 		return null;
 	}

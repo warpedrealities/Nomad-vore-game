@@ -70,7 +70,7 @@
 							<row>11111110</row>
 							<edge value="SOUTH" type="1"/>				
 							<widget x="5" y="4" name="marker" variable="801" />
-							<widget x="6" y="5" name="lift"
+							<widget x="6" y="4" name="lift"
 								info="interaction/freehaven/starlight_lift" variable="1" />
 						<!-- 	<widget x="6" y="5" name="elevatorWC" variable="22" info="starlight#adaptive_computation#1#greaterThan#You have no business here" /> -->
 							<widget x="1" y="3" name="sprite" info="starlight_logo" variable="5#5"/>
