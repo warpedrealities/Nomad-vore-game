@@ -38,12 +38,12 @@ function victimize(controllable,sense,pos,hostile)
 		if (controllable:getRPG():getStat(0)==controllable:getValue(3)) and	
 			(controllable:getRPG():getStat(1)==controllable:getValue(4)) then
 			controllable:setValue(1,controllable:getValue(1)+1)	
-			print("increment count",controllable:getValue(1))
+			
 		else
 			controllable:setValue(1,0)
 			controllable:setValue(3,controllable:getRPG():getStat(0))
 			controllable:setValue(4,controllable:getRPG():getStat(1))	
-			print("reset count")
+
 			return false;
 		end
 	end

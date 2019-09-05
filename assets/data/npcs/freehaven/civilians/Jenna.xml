@@ -4,7 +4,7 @@
 
 	<name>Jenna</name>
 	<description>
-	The rodent girl is either furtively about or sat in a sort of dejected slump. Either way she's clad in worn and damaged garments and an air of resigned self pity. She'd probably stand four foot high if she stood up straight. Her face is pale and her cheeks slightly dirtied, her body is thin and lithe though in more of a malnourished than athletic sort of way. Her tail is long, hairless and extends more than her entire body length behind her. Her ears sit atop a mop of uncombed hair and their rounded alertness is slightly drooping and a chunk has been torn out of one ear.
+	The golden skinned and orange scaled lizard girl before you has a pair of stubby horns, a tightly bound ponytail of her hair, small spectacles and a cream and tan business outfit that is formfitting enough to be as alluring as it is serious. She seems pre occupied with a computing device of some kind in her hands though, probably best not to interrupt her as she paces around.
 	</description>
 	<rpg>
 		<experiencevalue value="15" />
@@ -18,10 +18,9 @@
 		<stat stat="RESOLVE" value="50" />
 	</rpg>
 
-	<respawn delay="8000" />
 	<peacebond />
-	<defeated conversation="freehaven/civilians/nohoper/defeat" />
-	<talk conversation="freehaven/civilians/nohoper/chat" />
+
+	<talk conversation="freehaven/civilians/Jenna/chat" />
 
 	<controller AI="village_wander" />
 	<faction value="freehaven_civilians" />

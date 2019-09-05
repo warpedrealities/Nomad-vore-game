@@ -8,7 +8,9 @@
 			<condition evaluate="GLOBALFLAG" operator="greaterthan" value="1"
 			flag="adaptive_computation" />
 		</choice>
-	
+			<choice destination="apartment2" text="select apartment 2">
+			<preference fetish="cockvore"/>
+		</choice>
 		<choice destination="end" text="exit"/>
 	</page>
 	
@@ -20,5 +22,14 @@
 	<choice destination="end" text="step out"/>
 	</page>
 
-
+	<page ID="apartment2">
+	<text>
+	The lift takes you to apartment 2
+	</text>
+		<special effect="transitionToPortal" id="801" destination="starlight_2" />	
+	<choice destination="end" text="step out"/>
+	</page>
+	
+	
+	
 </Conversation>

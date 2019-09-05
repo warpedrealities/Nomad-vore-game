@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="talked"/>
+	<text>
+	You intrude on the kitty again and she scowls and rises to her feet "You again?! what did I tell you, if you don't get out of my room right now my cock is going to make a meal out of you!" she says, she sounds serious.
+	</text>
+	<choice destination="cockvoreA0" text="$Now wait a minute, that seems uncalled for"/>
+	<choice destination="cockvoreB0" text="$That a threat or a promise kitty?"/>
+	<choice destination="exit" text="*leave now*"/>
+	</page>
+
+	<page ID="start">
+	<text>
+	As you enter the apartment you seem to have interrupted a kitty in a more than slightly compromising position. The redhead sprawled out on her bed wearing naught but a sheen of sweat as she works one hand over her cock and holds in the other a magazine of such astoundingly debauched material that nose bleeds might be the least of your worries. She takes a few panting and mrowling moments before she notices your arrival and her eyes widen in shock "YOU! what are you doing in my room! haven't you heard of knocking!? Leave, if you don't I'm sending you down this!" she says gesturing at her cock as she rolls into a seated position then gets to her feet.
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />	
+	<choice destination="cockvoreA0" text="$Knocking? there's an elevator you stupid cat!"/>
+	<choice destination="cockvoreB0" text="$That a threat or a promise kitty?"/>
+	<choice destination="exit" text="*leave now*"/>
+	</page>
+	
+	<page ID="exit">
+	<text>
+	You make a hasty exit before she makes good on her threat.
+	</text>
+	<special effect="transitionToPortal" id="801" destination="port_level_4" />	
+	<choice destination="end" text="exit"/>
+	</page>
+
+	<page ID="cockvoreA0">
+	<text>
+	"I don't want to hear it!" the kitty declares as she strides forwards, grabbing your head with one hand and her shaft with the other. before you can further protest she's shoving you downwards and bucking her hips up to bring her cumslit into contact with your face. The kitty letting out a growl of delight as your head plunges into her tip with a lewd schlorp and bulges her cock out "The only thing I want to hear out of you is churn slosh and SPLAT!" she says, somewhat of a taunt as she engulfs your shoulders and shoves you deeper inside. Her rippling shaft already dragging you inside with remarkable power, this kitty is clearly not one to under estimate...but its a bit late to realize your mistake as her ravenous cock devours your chest.
+	</text>
+	<choice destination="cockvoreA1" text="*try to fight anyway*"/>
+	</page>
+	
+	<page ID="cockvoreA1">
+	<text>
+	You struggle feistily as the kitty bucks her hips and shoves your middle past her cocktip. But it seems that your resistance clearly isn't working. Her mighty shaft and lustful punishment for your intrusion a fate you cannot avoid as she slurps you up. Her balls bulging out as you're plunged into the cummy depths of her loins, there no doubt to be boiled down into fapbatter for her next lewd session. Her already remarkably ample supplies of virile cream squelch and ooze around you as more of your form is crammed into her balls making them hang low and swollen. Your legs are steadily disappearing into her cock as she moans and mrowls and utters "That's the stuff, get in me!" in the midst of your consumption.
+	</text>
+	<choice destination="cockvoreA2" text="*be consumed utterly*"/>
+	</page>
+	
+	<page ID="cockvoreA2">
+	<text>
+	The kitty strokes over her cock vigorously as your body is reduced to a series of bulges in her naughty parts. Her mrowls now devolving into a constant steady purr as with a leaking splatter of precum and a final lewd loud schlorp her cock drags your feet inside. Your body utterly contained within the sticky depths of her own as she leans against the wall and continues stroking, working the bulges of your body down to fill her sack and make those balls of her sag even lower with your shape "Mhmm.. right where you belong, serves you right for being a perv." she says without an ounce of shame as she strokes her cock and rubs her thighs against her sack to make you squelch around in her cum.
+	</text>
+	<choice destination="cockvoreA3" text="$You're the perv..."/>
+	</page>
+	
+	<page ID="cockvoreA3">
+	<text>
+	The kitty myahs and squeezes you with her thighs, you feel your body tingle under the pressure grinding hot gurgling cum into your body "Not at all, I didn't go and intrude on someone when they were having some ME time now did I? this is just what has to happen to pervs like you." she says as her gurgling sack starts to rapidly melt you down, softening you into helpless goo in her balls as she shifts to take up a condom... 
+	</text>
+	<choice destination="cockvoreA4" text="*burbl*"/>
+		<special effect="removenpc" />	
+	</page>
+	
+	<gameover ID="cockvoreA4">
+	<text>
+	You can only burble and glorp in reply to her preposterous sentence as her sack grinds and churns you down. The kitty's balls soon turning round and sloshy as you're reduced to gooey fluids in her sack. She fits the condom down over her schlong with a mrowl and a smile, stroking off until with an explosive gushing and a lustful yowl she expels your liquefied remains into the condom. The bag hanging low and heavy full of goopy jizz "Well...you know, for a perv..you sure know how to put a smile back on my face." she says with a flush, tying off the bag of spooge she's filled with you "I think I'll go for a walk." she remarks, discarding of the cum balloon and setting about dressing as if nothing untoward had happened.
+	</text>
+	
+	</gameover>
+	
+	<page ID="cockvoreB0">
+	<text>
+	
+	</text>
+	
+	</page>
+
+</Conversation>

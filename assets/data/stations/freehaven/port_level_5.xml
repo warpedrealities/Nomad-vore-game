@@ -126,6 +126,8 @@
 		<partition xmin="2" xmax="30" ymin="11" ymax="19">
 			<SeedNPCs min="4" max="8" name="freehaven/wardens/warden">
 			</SeedNPCs>
+			<SeedNPCs min="1" max="1" name="freehaven/civilians/Jenna">
+			</SeedNPCs>
 		</partition>	
 	</mapgen>
 

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">	
+		<text>
+		The attractive reptile girl is walking with a distracted air, looking at the device in her hands and tail swishing as she interacts with it occasionally but has the look of someone not paying too much attention to her surroundings.
+		</text>
+		<choice destination="talk" text="*try to say hello*"/>
+		<choice destination="approach" text="*try to approach and get her attention*"/>
+		<choice destination="end" text="*leave her be*"/>
+	</page>
+	
+	<page ID="talk">
+	<text>
+	"Do you mind, this is very important." 
+	</text>
+	<choice destination="end" text="$well sorry"/>
+	</page>
+	
+	<page ID="approach">
+	<text>
+	You approach raising a hand to try and get her attention, apparently without success however as her abrupt change of course to avoid someone else sets her on an inevitable collision course with you. She lets out a yelp as she stumbles into you and then scowls "Watch where you're going, you're lucky the wardens are here or I'd eat you for being so clumsy."
+	</text>
+	<choice destination="approach1" text="$Well when you put it like that it's a shame the wardens are here">
+		<preference fetish="oralvore" />	
+	<preference fetish="females" />	
+	</choice>
+	<choice destination="approach0" text="$You walked into me, you're the clumsy one"/>
+	</page>
+	
+	<page ID="approach0">
+	<text>
+	Her scowl deepens and then she decides to disregard you and then just lets out a sniff and turns away with an abruptness that makes it an unmistakable dismissal as she storms off.
+	</text>
+	<choice destination="end" text="$...some people"/>
+	</page>
+	
+	<page ID="approach1">
+	<text>
+	Her scowl turns into a faintly perplexed but curious expression as she regards you in a new light and raises an eyebrow and rests a hand on her hip "And what's that supposed to mean?"
+	</text>
+	<choice destination="oralvore0" text="$That I'm the kinda girl who wants to get into you? comeon I don't need to spell it out do i?"/>
+	<choice destination="end" text="$ah, nothing, nevermind..sorry to bother you"/>
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	Her eyes widen and then she smirks "Ah, you're one of those girls. Well..seen as you're very much willing, yes. Yes I could do with a snack." she says and licks her lips "And yes, you'll do." she says looking you up and down now in a very much voracious light.
+	</text>
+	<choice destination="oralvore1" text="$Glad I meet your approval, and I hope I do the same for your belly"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+		<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+				You take the time to take off your
+				<readequipment slot="2" />
+				not wanting to disturb her digestion with your attire.
+			</conditional>
+			The golden lizard tucks her computer into a clasp on her belt and reaches up to undo and loosen the front of her form fitting garment starting at her neck and working down to her waist "Mhmm you really are playing to type, I don't run into girls like you often enough...then again, perhaps its for the best. My poor waistline you see."
+	</text>
+	<choice destination="oralvore2" text="$with hips like yours can you blame someone for wanting to add to them?"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	"Ohmy stopit you're going a bit overboard on me now. Come'ere, my belly is growling for you." she says and gestures for you to approach with both arms open to embrace you. She licks her lips and then licks over your face as you move over to accept her offer, covering your cheeks in her saliva as she mhmms..then stands up on tiptoes to plant her lips against your forehead and start to stretch them over the crown of your head.
+	</text>
+	<choice destination="oralvore3" text="$Now who is going over board?"/>
+	</page>
+	
+	<page ID="oralvore3">
+	<text>
+	The lizard mhmmphs in muffled reply and licks over your skull soaking your hair in saliva before she starts to engulf your head further. Her jaws sliding down to the line of your neck and shoulders. Her hands roaming over your naked frame and cupping your arse in quite a shameless fashion. Hardly what you expect of the somewhat serious seeming lizard but it seems she has a magnificently sexy predatory side to her. Your chest slides past her jaws, her tongue slathering your <macro ID="breast_size_desc" /> breasts in saliva as she crams you inside. Her mhmms of satisfaction loud around your ears as you plunge down her throat steadily.
+	</text>
+	<choice destination="oralvore4" text="*be a good snack and get gobbled up*"/>
+	</page>
+	
+	<page Id="oralvore4">
+	<text>
+	You're pushed down into her belly and start to stretch out her yellow tummyskin with the bulges made by your shape as she gobbles more of you up. Her jaws working down over your rump as she lifts you free of the floor. The goldskinned lizard girl having no problem gobbling you up entirely and seems entirely unmindful of the looks she's getting as your legs wave in the air before starting to slide down her throat. Your body piling into her gut as she packs you away, curling your frame within her bloated tummy. Soon enough she's polished you off entirely, tucking your toes past her lips and wiping her mouth almost daintily "Mhmm, delicious..I suppose that's true to form as well for girls like you." she says and mhmms, rubbing her hands over her gut pleasingly.
+	</text>
+	<choice destination="oralvore5" text="$ah, happy to hear it"/>
+	</page>
+	
+	<page ID="oralvore5">
+	<text>
+	The lizard woman chuckles "Yes yes, now be a good snack and digest." she says and gives her sagging gut a playful pat as her stomach walls clench around you with a gurgling glorp that sounds loud around your ears. Stomach juices flowing in to ooze over and coat your body as she fumbles with the top of her outfit, managing to button it up at her collar and letting her belly continue to spill out of the open frontage. As she unhooks her computer from her waistband you realize she has no trouble continuing to go about her day. The lizard apparently paying you no more heed as you start to soften and gurgle away, just a snack for the busy girl.
+	</text>
+	<choice destination="oralvore6" text="*don't bother her, just..digest*"/>
+	</page>
+	
+	<gameover ID="oralvore6">
+	<text>
+	The golden skinned predator is so quickly engrossed in her tablet as you squirm to get comfortable and then relax into the churning of her belly. She carries your weight with the capable ease of a seasoned veteran and gives her belly only occasional pats as you soften up inside of her. The shape in her stretched out tummy turning gradually smooth and round as you digest away into a goopy mess. A sensation that does make her smile a little when you come apart entirely and her gut starts to compact. Though she doesn't look up from her tablet as you start to flow into her, being absorbed from her shrinking gut until there's naught that remains except that smile. Her gut flattened out to its usual trim self as she reaches down, and zips her suit back up.
+	</text>
+	
+	</gameover>
+	
+</Conversation>

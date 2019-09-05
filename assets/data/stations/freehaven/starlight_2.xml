@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<zone width="16" height="16" spriteset="apartment.png">
+	<tileset count-x="8" count-y="4">
+		<tile sprite="1" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
+		<tile sprite="17" vision="EMPTY" movement="0" >a carpeted floor</tile>
+		<tile sprite="18" vision="EMPTY" movement="0" >a tiled floor</tile>
+		<tile sprite="19" vision="EMPTY" movement="1">a table</tile>		
+		<tile sprite="68" vision="EMPTY" movement="0">tiled floor</tile>		
+	</tileset>
+
+	<description>The apartment is well kept if curiously spartan, showing none of the hallmarks of long occupancy</description>
+
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="16">
+			<row>01111 1111 1111 100</row>
+			<row>11222 2221 3333 100</row>
+			<row>12222 2222 3343 100</row>
+			<row>11222 2222 3343 100</row>
+			
+			<row>01222 2221 3343 100</row>
+			<row>01222 2221 1333 100</row>
+			<row>01222 2221 1111 100</row>
+			<row>01111 1111 0000 000</row>
+	</prefab>
+		<placeWidget x="3" y="6" name="bed"
+					variable="1" />	
+		<placeWidget x="5" y="6" name="bed"
+					variable="1" />			
+		<pairedportal x="14" y="7" sprite="1" ID="801" facing="6" facing="2" destination="port_level_4"> elevator </pairedportal>						
+	
+		<placeNPC name="freehaven/civilians/Karla" x="4" y="5" />				
+	</mapgen>
+
+</zone>
