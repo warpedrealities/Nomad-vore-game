@@ -67,9 +67,38 @@
 	
 	<page ID="cockvoreB0">
 	<text>
+	The kitty blinks, surprised by this reaction and stopping in her tracks "Well now, if you'd of just said you were here to BE a good time rather than interrupt it." she says with a growing smile "But I guess you're MY kind of girl." she says pressing herself up against you, her erection sandwiched between the two of you "A depraved slut." she says with relish and a deep purr as she grinds her shaft against you.
+	</text>
+	<choice destination="cockvoreB1" text="$Sure am, want to put me where I belong?"/>
+	</page>
 	
+	<page ID="cockvoreB1">
+	<text>
+	"Mrowl, love it when they talk dirty as well. Yes it's time to put you where you belong sackslut." she says and murrs as she raises her hands and strokes over your cheeks, then grasps you firmly around the back of your head as she steps back..pushing you downwards to come face to tip with her voracious cock. That cumslit gaping open and oozing precum afore a spasm of eagerness makes her length bob and splat that droplet of musky fluid onto your face "Looks good on you" she comments with a smile and then, thrust..her hips move forwards as you're pushed to meet them and all goes dark and gooey. Alas you can do no more dirty talking as you get a mouthful of pre and she starts to get a cock full of, well, you.
+	</text>
+	<choice destination="cockvoreB2" text="*be the fun time*"/>
+	</page>
+
+	<page ID="cockvoreB2">
+	<text>
+	More hot precum washes down her shaft, soaking your hair and splashing over your shoulders as she works you deeper in. The kitty mrowling and moaning lustfully and exclaiming needily that she needs you to "Get in me slut!" as she thrusts her hips to shove her cocktip over your chest, squeezing you within the clenching rippling tunnel of her cock. Her shaft bulging out and growing larger as the ravenous organ stretches to encompass more of your body. By now she has both hands on her cock and is stroking vigorously, moving herself over to take her seat on the bed as her balls bulge and swell out more and more with your shape. Soon she'll have you utterly consumed and then, well, you'll be funtimes.
+	</text>
+	<choice destination="cockvoreB3" text="*all the way*"/>
+	</page>
+	
+	<page ID="cockvoreb3">
+	<text>
+	You feel her eagerly feed you in as your feet and her cocktip are angled towards the ceiling and you're just as eager to be cockfood as she is to make you. Your wriggling feet slide downwards to meet her hungry cocktip until with a final slurp they vanish inside and she consumes you utterly. The kitty's cock rippling as the bulges of your legs slide down under her palms to take up residence with the rest of you as a bulge between her legs "Mhmm, going to slosh you up good you slut. Thanks for being an obligin' slut and wantin' in though." she remarks and licks her lips "Makes it all the more fun."
+	</text>
+	<choice destination="cockvoreB4" text="$Happy to be your sackslut kitty"/>
+		<special effect="removenpc" />	
+	</page>
+
+	<gameover ID="cockvoreB4">
+	<text>
+	"Yes, now...mhmm" she snags a condom with one hand and her magazine with the other. She puts the condom on one handed then opens her magazine to where she left off. She resumes stroking off in pleasure with your steady churning and burbling inside her balls adding to her delight. Gradually your squirming turns to sloshing and those balls round out. And after that her stroking takes on a more frenetic pace as she works to stroke you out, soon enough blasting your sticky remnants into a condom and collapsing panting to the bed sheets.... "I should probably go for a walk." she mumbles, half to herself..half to the condom full of jizz..then laughs, ties it off and goes to put on some clothes so she can head out "Thanks for the fun time slut."
 	</text>
 	
-	</page>
+	</gameover>
 
 </Conversation>
