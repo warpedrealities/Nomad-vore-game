@@ -18,6 +18,7 @@ import org.w3c.dom.NodeList;
 import actor.Actor;
 import actor.Attackable;
 import actor.ThreatAssessment;
+import actor.npc.observerVore.ObserverVoreHelper;
 import actor.npc.observerVore.VoreScript;
 import actor.npc.observerVore.impl.VoreScript_Impl;
 import actor.player.Player;
@@ -372,6 +373,7 @@ public class NPC extends Actor implements Controllable {
 
 	public void Remove(boolean defeat, boolean noDrops) {
 
+		this.voreScript = null;
 		clock=0;
 		actorVisibility = false;
 		spriteInterface.setVisible(false);
@@ -579,6 +581,18 @@ public class NPC extends Actor implements Controllable {
 		if (voreScript == null) {
 			voreScript = new VoreScript_Impl(filename, (NPC) target, this);
 		}
+	}
+
+	public boolean attemptObserverVore() {
+		if (voreScript == null && ViewScene.m_interface.getSceneController().getHostile(this, 4, true) == null) {
+			voreScript = ObserverVoreHelper.checkForTargets(getPosition(),
+					((NPC_RPG) actorRPG).getObserverVoretargets());
+			if (voreScript != null) {
+				voreScript.setOrigin(this);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override

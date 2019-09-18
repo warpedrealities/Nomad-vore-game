@@ -12,7 +12,7 @@
 		<ability ability="ENDURANCE" value="5" />
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
-		<stat stat="HEALTH" value="60" />
+		<stat stat="HEALTH" value="50" />
 		<stat stat="RESOLVE" value="60" />
 		<attribute attribute="DODGE" value="4" />		
 		<attribute attribute="PARRY" value="4" />
@@ -41,7 +41,8 @@
 			</hitText>
 		</combatMove>
 	<itemDrop chance="10" item="enforcer pistol" />	
-	<itemDrop chance="20" item="bullets" />		
+	<itemDrop chance="20" item="bullets" />
+	
 	</rpg>
 
 	<respawn delay="8000" />

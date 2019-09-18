@@ -26,7 +26,7 @@
 					variable="1" />	
 		<placeWidget x="5" y="6" name="bed"
 					variable="1" />			
-		<pairedportal x="14" y="7" sprite="1" ID="801" facing="6" facing="2" destination="port_level_4"> elevator </pairedportal>						
+		<pairedportal x="1" y="2" sprite="1" ID="801" facing="2" destination="port_level_4"> elevator </pairedportal>						
 	
 		<placeNPC name="freehaven/civilians/Karla" x="4" y="5" />				
 	</mapgen>

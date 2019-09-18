@@ -16,7 +16,7 @@ public class WidgetMarker extends Widget {
 
 	@Override
 	public void save(DataOutputStream dstream) throws IOException {
-		dstream.writeInt(28);
+		dstream.write(28);
 		dstream.writeInt(UID);
 		commonSave(dstream);
 	}

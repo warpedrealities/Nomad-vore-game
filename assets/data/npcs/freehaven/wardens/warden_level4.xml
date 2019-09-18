@@ -12,7 +12,7 @@
 		<ability ability="ENDURANCE" value="5" />
 		<ability ability="CHARM" value="5" />
 		<ability ability="INTELLIGENCE" value="5" />
-		<stat stat="HEALTH" value="60" />
+		<stat stat="HEALTH" value="50" />
 		<stat stat="RESOLVE" value="60" />
 		<attribute attribute="DODGE" value="4" />		
 		<attribute attribute="PARRY" value="4" />
@@ -42,6 +42,9 @@
 		</combatMove>
 	<itemDrop chance="10" item="enforcer pistol" />	
 	<itemDrop chance="20" item="bullets" />		
+		<observerVoreTargets>
+		<vore target="ruffian" scene="warden_ruffian_OV" preference="oralvore"/>
+		</observerVoreTargets>	
 	</rpg>
 
 	<respawn delay="2000" />

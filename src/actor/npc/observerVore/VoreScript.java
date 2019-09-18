@@ -28,4 +28,6 @@ public interface VoreScript {
 
 	boolean isActive();
 
+	void setOrigin(NPC npc);
+
 }

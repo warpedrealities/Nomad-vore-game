@@ -8,6 +8,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import actor.npc.observerVore.ObserverVoreHelper;
+import actor.npc.observerVore.ObserverVoreTarget;
 import actorRPG.RPG_Helper;
 import actorRPG.npc.conditionalDescription.ConditionalDescription;
 import combat.CombatMove;
@@ -29,6 +31,7 @@ public class NPC_RPG_statblock {
 	private ArrayList<CombatMove> moveList;
 	private String[] statusTags;
 	private String flushScript;
+	private List<ObserverVoreTarget> observerVoreTargets;
 
 	private ConditionalDescription conditionalDescription;
 
@@ -93,6 +96,9 @@ public class NPC_RPG_statblock {
 				}
 				if (Enode.getTagName().equals("flushScript")) {
 					flushScript = Enode.getAttribute("value");
+				}
+				if (Enode.getTagName().equals("observerVoreTargets")) {
+					observerVoreTargets = ObserverVoreHelper.buildTargets(Enode);
 				}
 			}
 		}
@@ -262,5 +268,9 @@ public class NPC_RPG_statblock {
 
 	public String getFlushScript() {
 		return flushScript;
+	}
+
+	public List<ObserverVoreTarget> getObserverVoreTargets() {
+		return observerVoreTargets;
 	}
 }

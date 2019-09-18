@@ -50,7 +50,10 @@
 				</statusAttribMod>
 			</effectStatus>	
 		</combatMove>		
-		<itemDrop chance="10" defeatOnly="true" item="loot box" />			
+		<itemDrop chance="10" defeatOnly="true" item="loot box" />	
+		<observerVoreTargets>
+		<vore target="warden" scene="ruffian_warden_OV" preference="oralvore"/>
+		</observerVoreTargets>
 	</rpg>
 
 	<respawn delay="8000" />

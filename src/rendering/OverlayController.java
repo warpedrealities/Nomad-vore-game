@@ -73,12 +73,15 @@ public class OverlayController {
 	public void calcActive(Zone zone) {
 		active = false;
 		for (int i = 0; i < zone.getTiles().length; i++) {
-			for (int j = 0; j < zone.getTiles()[i].length; j++) {
-				if (zone.getTiles()[i][j] != null && zone.getTiles()[i][j].getOverlayImage() > -1) {
-					active = true;
-					return;
+			if (zone.getTiles()[i] != null) {
+				for (int j = 0; j < zone.getTiles()[i].length; j++) {
+					if (zone.getTiles()[i][j] != null && zone.getTiles()[i][j].getOverlayImage() > -1) {
+						active = true;
+						return;
+					}
 				}
 			}
+
 		}
 	}
 

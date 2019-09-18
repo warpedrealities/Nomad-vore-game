@@ -20,7 +20,7 @@
 
 	<peacebond />
 
-	<talk conversation="freehaven/civilians/Karla/chat" />
+	<talk conversation="freehaven/Karla/chat" />
 
 	<controller AI="instant_talk" />
 	<faction value="freehaven_civilians" />

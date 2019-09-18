@@ -53,6 +53,11 @@ public class VoreScript_Impl implements VoreScript {
 	}
 
 
+	@Override
+	public void setOrigin(NPC origin) {
+		this.origin = origin;
+	}
+
 	public VoreScript_Impl(DataInputStream dstream, NPC origin) throws IOException {
 		this.origin = origin;
 		this.filename = ParserHelper.LoadString(dstream);

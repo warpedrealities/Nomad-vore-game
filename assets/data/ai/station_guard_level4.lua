@@ -32,21 +32,21 @@ function pursue(controllable,sense,script)
 
 end
 
-function victimize(controllable,sense,script)
-	pos=controllable:getPosition()
-	victim=sense:getVictim(controllable,8,true,"Ruffian",false)
-	if not (victim==nil) then
-		if pos:getDistance(victim:getPosition())<2 then
-				controllable:startVoreScript("warden_ruffian_OV", victim)
-		else
-			if controllable:HasPath() then
-				controllable:FollowPath()
-			else
-				controllable:Pathto(victim:getPosition().x,victim:getPosition().y,8)
-			end		
-		end	
-	end
-end
+-- function victimize(controllable,sense,script)
+	-- pos=controllable:getPosition()
+	-- victim=sense:getVictim(controllable,8,true,"Ruffian",false)
+	-- if not (victim==nil) then
+		-- if pos:getDistance(victim:getPosition())<2 then
+				-- controllable:startVoreScript("warden_ruffian_OV", victim)
+		-- else
+			-- if controllable:HasPath() then
+				-- controllable:FollowPath()
+			-- else
+				-- controllable:Pathto(victim:getPosition().x,victim:getPosition().y,8)
+			-- end		
+		-- end	
+	-- end
+-- end
 
 function main(controllable, sense, script)  
 	hostile=sense:getHostile(controllable,10,true)
@@ -56,10 +56,14 @@ function main(controllable, sense, script)
 		if sense:getViolationLevel() > 0 then
 		pursue(controllable,sense,script)
 		else
-			if not victimize(controllable,sense,script) then
+			-- if not victimize(controllable,sense,script) then
 				a=math.random(0,8)
-				controllable:move(a);
-			end
+				if (a==8) then
+					controllable:attemptObserverVore();
+				else
+					controllable:move(a);
+				end
+			-- end
 		end
 	end  
 end

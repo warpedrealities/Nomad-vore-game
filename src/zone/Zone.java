@@ -386,10 +386,11 @@ public class Zone implements Zone_int {
 	public void ClearVisibleTiles() {
 		for (int i = 0; i < zoneWidth; i++) {
 			for (int j = 0; j < zoneHeight; j++) {
-				if (zoneTileGrid[i][j] != null) {
-					zoneTileGrid[i][j].Hide();
+				if (zoneTileGrid[i] != null) {
+					if (zoneTileGrid[i][j] != null) {
+						zoneTileGrid[i][j].Hide();
+					}
 				}
-
 			}
 		}
 	}

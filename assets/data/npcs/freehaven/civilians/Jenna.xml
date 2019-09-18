@@ -20,8 +20,8 @@
 
 	<peacebond />
 
-	<talk conversation="freehaven/civilians/Jenna/chat" />
+	<talk conversation="freehaven/Jenna/chat" />
 
-	<controller AI="village_wander" />
+	<controller AI="villager_wander" />
 	<faction value="freehaven_civilians" />
 </NPC>

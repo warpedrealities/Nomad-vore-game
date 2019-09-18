@@ -126,5 +126,6 @@ public interface Actor_RPG {
 	public default boolean isThreatening(Faction faction)
 	{
 		return false;
-	};
+	}
+
 }

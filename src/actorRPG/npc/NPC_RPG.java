@@ -10,6 +10,7 @@ import org.w3c.dom.Element;
 import actor.Actor;
 import actor.Modifier;
 import actor.npc.NPC;
+import actor.npc.observerVore.ObserverVoreTarget;
 import actorRPG.Actor_RPG;
 import actorRPG.StatusEffectHandler;
 import actorRPG.npc.conditionalDescription.ConditionalDescription;
@@ -359,5 +360,9 @@ public class NPC_RPG implements Actor_RPG {
 	public void modSubAbility(int ability, float modifier) {
 		subAbilities[ability] += modifier / 100;
 
+	}
+
+	public List<ObserverVoreTarget> getObserverVoretargets() {
+		return statBlock.getObserverVoreTargets();
 	}
 }
