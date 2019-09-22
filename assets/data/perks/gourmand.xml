@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<perk name="Gourmand">
+	<description>
+		A good appreciation for fine meals might be considered an odd skill for surviving a hostile galaxy. But your appreciation goes further than just your palate. +20% satiation from food</description>
+	<reactive>
+		<trigger stat="SATIATION" modifier="1.20"/>
+		<effect stat="NONE" modifier="0" />
+	</reactive>
+	<maxrank value="1" />
+
+</perk>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="blueS.png" />
+	<name>Serpanid</name>
+	<description>A sinous mixture of the worst aspects of reptiles and insects. Its body of a length between twelve and fifteen feet in length is clad in chitinous dark blue armour on its topside and mottled yellow scales on the underside coming across nonetheless as somewhat more reptilian, yet its limbs clustered near the forward part of its length are segmented and end in spike tips and its head has a broad exoskeletal crest, no eyes with which to make an emotive connection and a broad mouth that is a mandibular insectoid nightmare. </description>
+	<rpg>
+		<experiencevalue value="80" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="55" />
+		<stat stat="RESOLVE" value="55" />
+		<attribute attribute="KINETIC" value="2" />
+		<attribute attribute="DODGE" value="6" />
+		<attribute attribute="TEASE" value="8" />
+		<combatMove name="stab" pattern="MELEE"
+			bonusAttribute="MELEE" timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="1" maxValue="7"
+				modifier="STRENGTH" />
+			<missText count="3">
+				<text>TARGET evades the serpanid's claws</text>
+				<text>Serpanid slashes at TARGET without success</text>
+				<text>TARGET deflect's the Serpanid's attacks</text>
+			</missText>
+			<hitText count="3">
+				<text>Serpanid stabs TARGET with its claws inflicting VALUE damage</text>
+				<text>Serpanid slashes TARGET for VALUE damage</text>
+				<text>TARGET suffers VALUE damage as the Serpanid strikes them with its claws</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="darts" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="4" bonusToHit="4" multiAttack="3" rangeDecay="2">
+			<missText count="2">
+				<text>TARGET evades a spray of darts from the serpanid's crest</text>
+				<text>TARGET dodges the serpanid's needle spray</text>
+			</missText>
+			<hitText count="2">
+				<text>TARGET is struck by needles fired by the serpanid for VALUE damage</text>
+				<text>TARGET takes VALUE damage as they're struck with darts launched by the serpanid</text>
+			</hitText>
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<effectStatus probability="40">
+				<probabilityModifier value="ENDURANCE" />
+				<statusTag tag="poison" />
+				<applyText>TARGET has been poisoned.</applyText>
+				<statusDoT uid="50" icon="7" duration="120" numModifiers="1">
+					<removeText> TARGET is no longer poisoned.</removeText>
+					<affectText> TARGET is poisoned and loses VALUE health</affectText>
+					<resist strength="15" tag="poison" test="ENDURANCE" />
+					<effect stat="HEALTH" modifier="4" />
+				</statusDoT>
+			</effectStatus>
+		</combatMove>		
+		<itemDrop chance="25" defeatOnly="true" item="CREDITS1000" />		
+	</rpg>
+
+	<defeated conversation="space/serpanid/defeat" />
+	<seduced conversation="space/serpanid/defeat" />
+	<victory conversation="space/serpanid/victory" />
+	<seducer conversation="space/serpanid/victory" />
+	<controller AI="serpanid_AI" />
+	<faction value="monster" />
+</NPC>

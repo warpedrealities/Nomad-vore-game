@@ -1,5 +1,7 @@
 package actorRPG;
 
+import perks.PerkReactive.CharacterStat;
+
 public class RPG_Helper {
 	public static int abilityFromString(String str) {
 		if (str.contains("STRENGTH")) {
@@ -146,5 +148,22 @@ public class RPG_Helper {
 			return Actor_RPG.MOVEAPCOST;
 		}
 		return -1;
+	}
+
+	public static CharacterStat getCharacterStatFromString(String string) {
+
+		if (string.equals("HEALTH")) {
+			return CharacterStat.S_HEALTH;
+		}
+		if (string.equals("RESOLVE")) {
+			return CharacterStat.S_RESOLVE;
+		}
+		if (string.equals("SATIATION")) {
+			return CharacterStat.S_SATIATION;
+		}
+		if (string.equals("ACTION")) {
+			return CharacterStat.S_ACTION;
+		}
+		return CharacterStat.S_NONE;
 	}
 }

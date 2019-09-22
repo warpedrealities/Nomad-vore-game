@@ -7,7 +7,7 @@
 	You intrude on the kitty again and she scowls and rises to her feet "You again?! what did I tell you, if you don't get out of my room right now my cock is going to make a meal out of you!" she says, she sounds serious.
 	</text>
 	<choice destination="cockvoreA0" text="$Now wait a minute, that seems uncalled for"/>
-	<!-- <choice destination="cockvoreB0" text="$That a threat or a promise kitty?"/> -->
+	<choice destination="cockvoreB0" text="$That a threat or a promise kitty?"/>
 	<choice destination="exit" text="*leave now*"/>
 	</page>
 
@@ -17,7 +17,7 @@
 	</text>
 	<effect type="setlocalflag" flag="talked" value="1" />	
 	<choice destination="cockvoreA0" text="$Knocking? there's an elevator you stupid cat!"/>
-	<!-- <choice destination="cockvoreB0" text="$That a threat or a promise kitty?"/> -->
+	<choice destination="cockvoreB0" text="$That a threat or a promise kitty?"/>
 	<choice destination="exit" text="*leave now*"/>
 	</page>
 	

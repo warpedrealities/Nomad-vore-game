@@ -40,8 +40,8 @@ public class Hazard_Injury extends Hazard_Base {
 	@Override
 	public void runHazard(Spaceship ship, Queue<String> queue) {
 		int damage=min+Universe.m_random.nextInt(max-min);
-		
-		Universe.getInstance().getPlayer().getRPG().ReduceStat(Actor_RPG.HEALTH, damage);
+
+		Universe.getInstance().getPlayer().getRPG().ReduceStat(Actor_RPG.HEALTH, damage, true);
 		if (Universe.getInstance().getPlayer().getRPG().getStat(Actor_RPG.HEALTH)<=0)
 		{
 			Game.sceneManager.SwapScene(new GameOver(gameover,true));
@@ -51,8 +51,8 @@ public class Hazard_Injury extends Hazard_Base {
 			String dmg=Integer.toString(damage);
 			queue.add(description.replace("VALUE", dmg));
 		}
-		
-		
+
+
 	}
 
 }

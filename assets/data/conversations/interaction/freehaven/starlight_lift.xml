@@ -11,6 +11,7 @@
 			<choice destination="apartment2" text="select apartment 2">
 			<preference fetish="cockvore"/>
 		</choice>
+		<choice destination="apartment1" text="select apartment 1"/>
 		<choice destination="end" text="exit"/>
 	</page>
 	
@@ -30,6 +31,12 @@
 	<choice destination="end" text="step out"/>
 	</page>
 	
-	
+	<page ID="apartment1">
+	<text>
+	The lift takes you to apartment 1
+	</text>
+		<special effect="transitionToPortal" id="801" destination="starlight_1" />	
+	<choice destination="end" text="step out"/>
+	</page>	
 	
 </Conversation>

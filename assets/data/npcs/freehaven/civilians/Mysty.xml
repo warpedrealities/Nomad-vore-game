@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="blueM.png" />
+
+	<name>Mysty</name>
+	<description>
+	A small and yet perky blue gal wearing nothing more than lingerie, a smile and a palpable aura of perverse desire. She has long slender elfin ears and a pair of stubby horns poking out of her long platinum hair.
+	</description>
+	<rpg>
+		<experiencevalue value="15" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="50" />
+		<stat stat="RESOLVE" value="50" />
+	</rpg>
+
+	<peacebond />
+
+	<talk conversation="freehaven/Mysty/chat" />
+
+	<controller AI="mysty" />
+	<faction value="freehaven_civilians" />
+</NPC>

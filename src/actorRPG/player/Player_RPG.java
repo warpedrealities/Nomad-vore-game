@@ -17,6 +17,7 @@ import actor.player.Inventory;
 import actor.player.Player;
 import actorRPG.Actor_RPG;
 import actorRPG.StatusEffectHandler;
+import actorRPG.player.reactive.ReactiveAbilities;
 import combat.CombatMove;
 import combat.CooldownHandler;
 import combat.statusEffects.StatusEffect;
@@ -54,6 +55,7 @@ public class Player_RPG implements Actor_RPG {
 	private int moveLists[]=new int[4];
 	CooldownHandler cooldownHandler;
 	String quickAction;
+	private ReactiveAbilities reactiveAbilities;
 
 	private CombatMove[] defaultMoves;
 	private List <String> conditionImmunities;
@@ -223,6 +225,7 @@ public class Player_RPG implements Actor_RPG {
 
 	public Player_RPG(Actor actor)
 	{
+		reactiveAbilities = new ReactiveAbilities();
 		statusEffectHandler=new StatusEffectHandler();
 		//		bindState=-1;
 		this.actor=actor;
@@ -595,15 +598,6 @@ public class Player_RPG implements Actor_RPG {
 		return statMax[i];
 	}
 
-	@Override
-	public void IncreaseStat(int target, int value) {
-		stats[target]+=value;
-		if (stats[target]>statMax[target])
-		{
-			stats[target]=statMax[target];
-		}
-	}
-
 
 
 	@Override
@@ -704,10 +698,25 @@ public class Player_RPG implements Actor_RPG {
 	}
 
 
+	@Override
+	public void IncreaseStat(int target, float value, boolean canReact) {
+		float v = value;
+		if (canReact) {
+			v = reactiveAbilities.increase(target, value, this);
+		}
+		stats[target] += value;
+		if (stats[target] > statMax[target]) {
+			stats[target] = statMax[target];
+		}
+	}
 
 	@Override
-	public void ReduceStat(int stat, int value) {
-		stats[stat]-=value;
+	public void ReduceStat(int stat, float value, boolean canReact) {
+		float v = value;
+		if (canReact) {
+			v = reactiveAbilities.reduce(stat, value, this);
+		}
+		stats[stat] -= v;
 		if (value>0)
 		{
 			regenDelay=40;
@@ -795,6 +804,7 @@ public class Player_RPG implements Actor_RPG {
 		subAbilities=new float[6];
 		attributes=new int[21];
 		moveChoice=0;
+		reactiveAbilities = new ReactiveAbilities();
 		for (int i=0;i<14;i++)
 		{
 			attributes[i]=0;
@@ -859,7 +869,7 @@ public class Player_RPG implements Actor_RPG {
 		karmaMeter=dstream.readFloat();
 
 		cooldownHandler.load(dstream);
-
+		reactiveAbilities.processPerks(playerPerks);
 		boolean b=dstream.readBoolean();
 		if (b)
 		{
@@ -942,6 +952,7 @@ public class Player_RPG implements Actor_RPG {
 		stats[1]=statMax[1];
 		stats[3]=statMax[3];
 		genMoveList();
+		reactiveAbilities.processPerks(playerPerks);
 	}
 
 	@Override
@@ -1038,6 +1049,7 @@ public class Player_RPG implements Actor_RPG {
 		{
 			amount=1;
 		}
+		amount = reactiveAbilities.increase(Actor_RPG.SATIATION, amount, this);
 		stats[Actor_RPG.SATIATION]+=amount;
 		karmaMeter+=change;
 
@@ -1060,6 +1072,7 @@ public class Player_RPG implements Actor_RPG {
 		{
 			amount=1;
 		}
+		amount = reactiveAbilities.increase(Actor_RPG.SATIATION, amount, this);
 		stats[Actor_RPG.SATIATION]+=amount;
 
 		karmaMeter-=change;

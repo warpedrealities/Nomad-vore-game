@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">	
+		<condition evaluate="GLOBALFLAG" operator="equals" value="1"
+			flag="SPACEHULK_LIFT" />		
+		<text>
+			3L3V470R 0P3R4710N4L
+		</text>
+		<choice destination="goUp" text="Go up"/>
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="start">	
+		<condition evaluate="GLOBALFLAG" operator="equals" value="0"
+			flag="SPACEHULK_LIFT" />		
+		<text>
+			3L3V470R 0FFL1N3
+		</text>
+
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="goUp">
+	<text>
+	You are whisked downwards to a lower deck.
+	</text>
+		<special effect="transitionToPortal" id="400" destination="spacehulk_lowerdeck" />	
+		<choice destination="end" text="step out"/>
+	</page>
+	
+</Conversation>

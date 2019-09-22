@@ -164,7 +164,7 @@ public class Status_DoT implements StatusEffect {
 		if (clock >= 10) {
 			clock = 0;
 
-			subject.ReduceStat(modifiers[0].attribute, modifiers[0].modifier);
+			subject.ReduceStat(modifiers[0].attribute, modifiers[0].modifier, true);
 
 			if (subject.getActor().getVisible() == true && ViewScene.m_interface != null && affectText != null) {
 				String str = affectText.replace("VALUE", Integer.toString(modifiers[0].modifier));

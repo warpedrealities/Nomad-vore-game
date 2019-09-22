@@ -20,7 +20,7 @@ public class DamagingCondition implements EnvironmentalCondition {
 	private boolean active;
 	private String identifier;
 	private String message;
-	private String gameOver;	
+	private String gameOver;
 	private int damage;
 
 	public DamagingCondition() {
@@ -73,7 +73,7 @@ public class DamagingCondition implements EnvironmentalCondition {
 
 	@Override
 	public void run(Player player) {
-		player.getRPG().ReduceStat(Actor_RPG.HEALTH, damage);
+		player.getRPG().ReduceStat(Actor_RPG.HEALTH, damage, true);
 		ViewScene.m_interface.DrawText(message.replace("PNAME", player.getName()));
 		if (player.getRPG().getStat(Actor_RPG.HEALTH)<=0)
 		{

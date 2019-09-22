@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+		<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="talked"/>
+	<text>
+	"Oh hello again, naughty naughty intruder..entering a girl's room like this..who knows what lewd things you might do to a defenceless girl."
+	</text>
+	<choice destination="ravish0" text="$Why, fuck her of course">
+				<assertion evaluate="haspart" part="penis" />
+	</choice>
+	<choice destination="oralvore0B" text="$devour her">
+		<assertion evaluate="hasperk" perk="oralvore" />
+	</choice>
+	<choice destination="end" text="$Walk away from her"/>
+	</page>
+
+
+	<page ID="start">
+	<text>
+	"Oh my, an intruder in my room...you're probably the sort to do terrible things to a girl aren't you, ravishing, licking, devouring and oooh..digesting her away as she helplessly struggles inside you before you..ah, turn her into fat." she says with a flush and a look of somewhat who seems unsettlingly eager for something terrible to happen to her.
+	</text>
+	<effect type="setlocalflag" flag="talked" value="1" />	
+	<choice destination="ravish0" text="$Ravish you say?">
+				<assertion evaluate="haspart" part="penis" />
+	</choice>
+	<choice destination="oralvore0B" text="$devouring you? be happy to">
+		<assertion evaluate="hasperk" perk="oralvore" />
+	</choice>		
+	<choice destination="refuse0" text="$No I'm not that kind of person, who are you anyway"/>
+	</page>
+	
+	<page ID="ravish0">
+	<text>
+	"Oh oh my" she exclaims and her gaze drifts down to your crotch as a flush grows more prominent on her cheeks and presumably a wet spot grows more prominent on her panties "You're going to treat me like a...Oh my" she blushes and shifts over onto all fours "Use me like a slut..." she tells you, already raring to go it seems, you don't run into nearly enough girls like this.
+	</text>
+	<choice destination="ravish1" text="$mhmm that's it, a slut, my slut"/>
+	</page>
+	
+	<page ID="ravish1">
+	<text>
+	"Your slut" she agrees as you prepare yourself and line up your <macro ID="penis_size_desc" /> with her needy nethers. You brush her panties aside with your hand and brush along her nethers with your cock in a way that coaxes a needy whine from the blue perv before you finally give her what you want and thrust inside her. The long eared lusty lass letting out a delighted moan as you fill her with your dick.
+	</text>
+	<choice destination="ravish2" text="*fuck her*"/>
+	</page>
+	
+	<page ID="ravish2">
+	<text>
+	You start to thrust in and out of her, one hand on her hip and the other groping her arse and giving it a slap "Yes, yes..ravish me, I'm just a helpless slut...soo, use me" she moans out against the blankets as you pick up the pace, pounding away at the blue babe's nethers, giving her the ploughing she so desperately wanted.
+	</text>
+	<choice destination="ravish3" text="$You want it bad slut"/>
+	</page>
+	
+	<page ID="ravish3">
+	<text>
+	"Oh no no, I couldn't possibly resist...ah, some stranger just walking in and ravishing me..using me...making me their slut.." the blue girl says, having some odd notions but proving oh so receptive as she moans with each thrust. The elfin femme moaning in pleasure as you prepare to unload, feeling your orgasm building and roiling in your sack as you prepare to pump her full of cream.
+	</text>
+	<choice destination="ravish4" text="$SUUURE"/>
+	</page>
+	
+	<page ID="ravish4">
+	<text>
+	"It's tru-ooooh" she replies with a shuddering gasping moan as you climax, pumping hot seed spurt by spurt deep inside of her as she bites down and grips the blankets underneath her tightly. Her sex clenching needily around your cock as you pump her full of cream. With a final spurt you tug out of her, she pants on the bed in the aftermath "So lustful, so in charge..what are you going to do with your slut now?"
+	</text>
+	<choice destination="oralvore0A" text="$Well I have worked up an appetite">
+		<assertion evaluate="hasperk" perk="oralvore" />	
+	</choice>
+	<choice destination="end" text="$Nothing, I've had my fun"/>
+	</page>
+
+	<page ID="oralvore0A">
+	<text>
+	"Oh my, raped, eaten and digested by a home intruder...poor me." she utters with a blush and shiver as she turns around to look at you. Her gaze tracing from your tongue as you lick your lips down to your hungry belly in which she will soon be entombed.
+	</text>
+	<choice destination="oralvore1A" text="$wasn't rape if you were moaning for it, but now you're going to be food"/>
+	</page>
+	
+	<page ID="oralvore1A">
+	<text>
+	"It's not like I could stop you, I'm going to be nothing but titfat....going to gurgle away inside of you." she utters, seemingly turning herself on by telling herself this as you step in close and take the silly girl by the shoulders and wrap your lips around her head. You set about starting to swallow her down as she gasps and moans in helpless lustful need.
+	</text>
+	<choice destination="oralvore2A" text="*gobble gobble*"/>
+	</page>
+	
+	<page ID="oralvore2A">
+	<text>
+	You work on cramming the aroused elfin girl down into yourself, tongue lapping over her breasts as your hands grope, knead and lift up her arse. She really is quite tasty all told and she has the fingers of one hand busily working away between her thighs. As she's eaten she moans and utters silly self arousing declarations to herself while being muffled by your throat. She becomes only slightly more intelligible as her head pushes through the tight entrance of your belly and into its stretchy embrace, soon enough you'll have gobbled her up entirely.
+	</text>
+	<choice destination="oralvore3A" text="*eat her entirely, silly slut*"/>
+	</page>
+	
+	<page ID="oralvore3A">
+	<text>
+	"Ah sooo, warm and...tight..your belly, so possessive..mhmmm" the silly blue girl exclaims now that she isn't muffled so much by your insides. Her moans a fairly good sign she's still utterly lost to her lust at being taken and eaten by you. Your gut swells and stretches out wonderfully as she's curled up inside of you. By now you're up to her hips and added your tongue briefly to the work of her busy hand afore swallowing her down the rest of the way. Her legs steadily disappearing until those curling toes are sliding past your lips, over your tongue and down your throat. the blue babe now curled in your belly and still providing a steady stream of lustful nonsense and hearty squirms.
+	</text>
+	<choice destination="oralvore4A" text="$You're silly food, but fun food"/>
+	</page>
+	
+	<page ID="oralvore4A">
+	<text>
+	"Only cause I was taken against my will by an intruder who wandered into my room and ah....." she insists, to which you can't help but chuckle and pat your belly. She really is silly food, but now well..now its time to work on digesting her. You let her get a full on treatment with your enzymes and churning kneading stomach walls and she lets out a squeek followed by moans "YESSS! melt me, grind me down, i'm ah..nothing but food..make me into titfat! i want..i want to make my pred even sexier..."
+	</text>
+	<choice destination="oralvore5A" text="*digest the silly girl*"/>
+	</page>
+	
+	<page ID="oralvore5A">
+	<text>
+	You continue to knead and rub at your belly with both hands as the silly blue girl writhes and moans inside you. Your glorping and gurgling belly getting louder and louder as the cute but lusty long eared gutslut softens and fades, going quieter and weaker before finally her shape disappears into the rounded curve of a satisfied belly with a final sloppy sounding moan. A slut to the end your body makes quick work of absorbing her, feeding her nourishment into your veins and shrinking that gut bulge of yours down to nothing.
+	</text>
+	<effect type="feed" value="100" />
+		<special effect="removenpc" />
+		<choice destination="end" text="*carry on*" />
+	</page>
+	
+	<page ID="oralvore0B">
+	<text>
+	"Oh really? you'd eat a cute defenceless girl like me in her own home? really?" she asks with a mhmm, a shudder of desire running through her as she looks you over and lets her gaze drift from your mouth down to your belly.
+	</text>
+	<choice destination="oralvore1B" text="$Well when she's offering like you are"/>
+	</page>
+	
+	<page ID="oralvore1B">
+	<text>
+	"I'm not offering anything, you just wandered in and now you're going to helpless little me..." she says with a moan, blushing hotly as she shifts around on the bed and looks at you with a naked desire and come hither radiating from her eyes.
+	</text>
+	<choice destiantion="oralvore2B" text="$However you want to look at it*get on and eat her already*"/>
+	</page>
+	
+	<page ID="oralvore2B">
+	<text>
+	"That's totally what's happening. I'm just a helpless prey to a home intruder who is about to eat me up whole and then there'll be the churning and the grinding and the gurgling and the mhpphph" you wrap your lips around her head before she can really get any further with that and start swallowing the silly silly prey girl.
+	</text>
+	<page ID="oralvore2A" text="*that's it, eat her up*"/>
+	</page>
+	
+	<page ID="refuse0">
+	<text>
+	"Oh, well..that's okay as well. My name's Mysty." she says, seemingly oddly disappointed that an unrestrained sexual deviant and voracious predator wasn't invading her home "...why'd you come in here anyway then if it wasn't to eat me?"
+	</text>
+	<choice destination="end" text="$I'm just looking around, I'll be going now"/>
+	</page>
+	
+
+	
+</Conversation>

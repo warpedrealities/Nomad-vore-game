@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<perk name="Instant gratification">
+	<description>
+	Your body instantly puts calories to use when you get them. Heal a little with every meal, but satiation gained from every meal reduced by 20%
+	</description>
+	<reactive>
+		<trigger stat="SATIATION" modifier="0.80"/>
+		<effect stat="HEALTH" modifier="0.1" />
+	</reactive>
+	<maxrank value="1" />
+
+</perk>

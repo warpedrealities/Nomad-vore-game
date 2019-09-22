@@ -5,7 +5,9 @@ function combat(controllable,sense,script,hostile)
 	--if in melee range attack
 	controllable:setAttack(0)
 	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-
+		if (math.random(8)==1) then
+			controllable:setValue(2,10)
+		end
 	else
 		
 		a=math.random(0,2)
@@ -57,12 +59,12 @@ function main(controllable, sense, script)
 		pursue(controllable,sense,script)
 		else
 			-- if not victimize(controllable,sense,script) then
-				a=math.random(0,8)
-				if (a==8) then
-					controllable:attemptObserverVore();
-				else
-					controllable:move(a);
+			if (controllable:getValue(2)>0) then
+				controllable:setValue(2,controllable:getValue(2)-1);
+				if (controllable:attemptObserverVore()) then
+					controllable:setValue(2,0)
 				end
+			end
 			-- end
 		end
 	end  

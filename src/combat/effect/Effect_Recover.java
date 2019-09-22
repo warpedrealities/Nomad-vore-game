@@ -66,17 +66,17 @@ public class Effect_Recover extends Effect {
 		value = value + (int) mod;
 		switch (getModifies()) {
 		case Effect_Recover.SATIATION:
-			((Player_RPG) actor.getRPG()).feed(value, false);
+			((Player_RPG) actor.getRPG()).feed(value, true);
 			break;
 
 		case Effect_Recover.HEALTH:
-			actor.getRPG().IncreaseStat(Actor_RPG.HEALTH, value);
+			actor.getRPG().IncreaseStat(Actor_RPG.HEALTH, value, true);
 			break;
 		case Effect_Recover.RESOLVE:
-			actor.getRPG().IncreaseStat(Actor_RPG.RESOLVE, value);
+			actor.getRPG().IncreaseStat(Actor_RPG.RESOLVE, value, true);
 			break;
 		case Effect_Recover.ACTION:
-			actor.getRPG().IncreaseStat(Actor_RPG.ACTION, value);
+			actor.getRPG().IncreaseStat(Actor_RPG.ACTION, value, true);
 			break;
 		}
 		if (m_description.length()>1)

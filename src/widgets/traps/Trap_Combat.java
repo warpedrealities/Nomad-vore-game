@@ -37,12 +37,12 @@ public class Trap_Combat implements Trap_Effect {
 		ViewScene.m_interface.DrawText(str);
 		ViewScene.m_interface.UpdateInfo();
 		if (damageType > Actor_RPG.SHOCK) {
-			target.getRPG().ReduceStat(Actor_RPG.RESOLVE, v);
+			target.getRPG().ReduceStat(Actor_RPG.RESOLVE, v, true);
 			if (target.getRPG().getStat(Actor_RPG.RESOLVE) < 1) {
 				target.getRPG().setStat(Actor_RPG.RESOLVE, 1);
 			}
 		} else {
-			target.getRPG().ReduceStat(Actor_RPG.HEALTH, v);
+			target.getRPG().ReduceStat(Actor_RPG.HEALTH, v, true);
 			if (target.getRPG().getStat(Actor_RPG.HEALTH) < 1) {
 				target.getRPG().setStat(Actor_RPG.HEALTH, 1);
 			}

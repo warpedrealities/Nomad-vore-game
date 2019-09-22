@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<zone width="64" height="32" spriteset="spacehulk.png">
+
+	<tileset count-x="8" count-y="4">
+		<tile sprite="17" vision="EMPTY" movement="0"> a metal floor</tile>
+		<tile sprite="1" vision="BLOCKING" movement="2" smart="true"> a metal wall</tile>
+		<tile sprite="18" vision="EMPTY" movement="0"> a floor panel</tile>
+		<tile sprite="19" vision="BLOCKING" movement="2"> an absurdly sturdy console</tile>
+		<tile sprite="20" vision="BLOCKING" movement="2"> a near invincible bit of
+			machinery</tile>
+		<tile sprite="21" vision="EMPTY" movement="0"> a dried creamy stain</tile>
+		<tile sprite="17" vision="EMPTY" movement="2"> a machine</tile>		
+	</tileset>
+	<zoneConditions>
+	<modifierCondition ID="darkness" vision="0.5" />
+	</zoneConditions>
+	<description>
+	The lowerdecks of the spacehulk combine the darkness, must and disrepair of the upper levels with an even more oppressive ambience of threat and danger.
+	</description>
+	<mapgen>
+
+
+		<blockDungeon extent="24">
+			<loadBlocks file="spacehulk" />
+
+			<keyBlock x="4" y="1">
+				<row>22211222</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>11222111</row>
+				<row>11212111</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>22211222</row>
+				<edge value="SOUTH" />
+				<edge value="EAST" />
+				<edge value="WEST" />
+				<edge value="NORTH" />
+				<widget x="3" y="4" name="lift"
+				info="interaction/spacehulk/liftBottom" variable="1" />
+				<widget x="3" y="5" name="marker" variable="400" />			
+			</keyBlock>
+
+			<keyBlock heat="1">
+				<edge value="EAST" />
+					<row>02222222</row>
+					<row>02333332</row>
+					<row>22353532</row>
+					<row>21111111</row>
+					<row>21111111</row>
+					<row>22353532</row>
+					<row>02333332</row>
+					<row>02222222</row>
+					<spawn x="1" y="6" tag="1" />
+					<spawn x="1" y="1" tag="1" />
+					<widget x="1" y="3" name="cargocontainer" info="specialchest" />
+					<widget x="1" y="4" name="mechanism"
+						info="interaction/spacehulk/spacewarper" variable="54" />
+			</keyBlock>
+
+
+			<clean value="2" />
+			<lootTable identity="normalchest">
+				<lootSubTable chance="0.75" file="spacehulk_resources" />
+				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.5" file="consumable_advanced_tier_1" />				
+				<lootSubTable chance="0.75" file="spacehulk_resources" />
+				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.50" file="spacehulk_resources" />
+				<lootSubTable chance="0.50" file="spacehulk_consumables" />
+				<lootSubTable chance="0.50" file="spacehulk_ammo" />		
+			</lootTable>
+			<lootTable identity="specialchest">
+				<lootSubTable chance="0.75" file="spacehulk_resources" />
+				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.5" file="consumable_advanced_tier_1" />				
+				<lootSubTable chance="0.75" file="spacehulk_resources" />
+				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.50" file="spacehulk_resources" />
+				<lootSubTable chance="0.50" file="spacehulk_consumables" />
+				<lootSubTable chance="0.50" file="spacehulk_ammo" />	
+				<lootSubTable chance="0.75" file="spacehulk_resources" />
+				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.5" file="consumable_advanced_tier_1" />				
+				<lootSubTable chance="0.75" file="spacehulk_resources" />
+				<lootSubTable chance="0.75" file="spacehulk_consumables" />
+				<lootSubTable chance="0.50" file="spacehulk_resources" />
+				<lootSubTable chance="0.50" file="spacehulk_consumables" />
+				<lootSubTable chance="0.50" file="spacehulk_ammo" />					
+			</lootTable>			
+			<npcType value="space/zetamorph" />
+			<npcType value="space/black_zetamorph" />
+		</blockDungeon>
+		<partition xmin="24" xmax="48" ymin="8" ymax="16" inverse="true">
+			<SeedNPCs min="8" max="16" name="space/zetamorph">
+			</SeedNPCs>
+				<SeedNPCs min="4" max="8" name="space/serpanid">
+			</SeedNPCs>
+		</partition>
+	
+		<degrade chance="4" degradethis="0" replacewith="5" />
+
+	</mapgen>
+
+</zone>

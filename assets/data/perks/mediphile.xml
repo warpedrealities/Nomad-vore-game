@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<perk name="Mediphile">
+	<description>
+	Give me the good stuff doctor, that's the stuff. Medicine makes you feel good, medicine makes you feel fantastic, you love to take your medicine. +50% healing from medicine.
+	</description>
+	<reactive>
+		<trigger stat="HEALTH" modifier="1.50"/>
+		<effect stat="NONE" modifier="0" />
+	</reactive>
+	<maxrank value="1" />
+
+</perk>

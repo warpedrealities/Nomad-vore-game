@@ -8,6 +8,7 @@
 			R3S3RV3 P0W3R 4V41L4BL3
 		</text>
 		<choice destination="lights" text="restore lights" />		
+		<choice destination="lift" text="power the elevator" />		
 		<choice destination="sensors" text="direct power to primary sensor array" />
 		<choice destination="end" text="exit" />
 	</page>
@@ -20,6 +21,17 @@
 		<effect type="setlocalflag" flag="POWER" value="1" />
 		<choice destination="end" text="exit" />
 	</page>
+
+
+	<page ID="sensors">
+		<text>
+			D1R3CT1NG R3S3RV3 P0W3R T0 3L3V470R
+		</text>
+		<effect type="setglobalflag" flag="SPACEHULK_LIFT" value="1" />	
+		<effect type="setlocalflag" flag="POWER" value="1" />
+		<choice destination="end" text="exit" />
+	</page>
+	
 
 	<page ID="sensors">
 		<text>

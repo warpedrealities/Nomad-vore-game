@@ -1040,6 +1040,18 @@ public class ViewScene extends SceneBase implements ModelController_Int, Scene_I
 					sceneController.getUniverse().player, m_variables[0], this);
 			m_screen.start(m_hook);
 		}
+		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_F7)) {
+			m_time = 1.0F;
+			try {
+				if (Universe.getInstance().save("quickSave")) {
+					DrawText("Quick save successful");
+				} else {
+					DrawText("Quick save failed");
+				}
+			} catch (IOException e) {
+				DrawText("Something went wrong attempting to quicksave");
+			}
+		}
 		if (Keyboard.isKeyDown(GLFW.GLFW_KEY_Q)) {
 			sceneController.useQuickslot();
 			m_time = 0.2F;

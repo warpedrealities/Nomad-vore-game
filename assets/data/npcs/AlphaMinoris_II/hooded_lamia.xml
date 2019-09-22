@@ -7,7 +7,7 @@
 	From waist to chin this creature is a lovely and curvaceous figure of sensuality, bared full breasts and a shapely frame. From waist below though she is a serpent, a long green orange dappled tail as thick as a tree trunk supporting and carrying her. She seems marginally smaller than her cousins, but equally as predatory as her tongue flicks out and she turns your way. Her face framed not by hair but by a cobra esque hood of scaley orange flesh that flares outwards as she catches sight of her prey.
 	</description>
 	<rpg>
-		<experiencevalue value="45" />
+		<experiencevalue value="55" />
 		<ability ability="STRENGTH" value="5" />
 		<ability ability="AGILITY" value="5" />
 		<ability ability="DEXTERITY" value="5" />
@@ -56,7 +56,7 @@
 			</hitText>
 		</combatMove>
 			<combatMove name="spit" pattern="RANGED" bonusAttribute="MELEE"
-			timeCost="2" bonusToHit="2">
+			timeCost="3" bonusToHit="2">
 			<missText count="1">
 				<text>The lamia spits at TARGET but misses</text>
 			</missText>

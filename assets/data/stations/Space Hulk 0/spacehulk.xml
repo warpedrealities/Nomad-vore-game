@@ -41,6 +41,23 @@
 				<widget x="4" y="2" name="reinforced_door"/>		
 			</keyBlock>
 
+			<keyBlock x="4" y="1">
+				<row>22211222</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>11222111</row>
+				<row>11212111</row>
+				<row>21111112</row>
+				<row>21111112</row>
+				<row>22211222</row>
+				<edge value="SOUTH" />
+				<edge value="EAST" />
+				<edge value="WEST" />
+				<edge value="NORTH" />
+				<widget x="3" y="4" name="lift" variable="400"
+				info="interaction/spacehulk/liftTop" variable="1" /> 
+				<widget x="3" y="5" name="marker" variable="400" />					
+			</keyBlock>
 
 
 			<keyBlock heat="2">

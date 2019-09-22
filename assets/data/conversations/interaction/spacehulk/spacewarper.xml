@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<text>
+			The spacewarper could be removed from its mountings
+			with a
+			bit of work.
+		</text>
+		<choice destination="remove" text="do it" />
+		<choice destination="end" text="not now" />
+	</page>
+
+	<page ID="remove">
+		<text>
+			you detach the device from its connections and can now take it
+			with
+			you
+		</text>
+
+		<effect type="giveitem" value="1" item="space warper" />
+		<special effect="destroywidget" />
+		<choice destination="end" text="got what i came for" />
+	</page>
+
+</Conversation>

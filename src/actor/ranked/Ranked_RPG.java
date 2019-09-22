@@ -150,13 +150,13 @@ public class Ranked_RPG implements Actor_RPG {
 	@Override
 	public void Heal(float amount) {
 		float bonus = statBlock.getStatMaximum(HEALTH) * amount;
-		IncreaseStat(HEALTH, (int) bonus);
+		IncreaseStat(HEALTH, (int) bonus, false);
 		bonus = statBlock.getStatMaximum(RESOLVE) * amount;
-		IncreaseStat(RESOLVE, (int) bonus);
+		IncreaseStat(RESOLVE, (int) bonus, false);
 	}
 
 	@Override
-	public void IncreaseStat(int stat, int value) {
+	public void IncreaseStat(int stat, float value, boolean canReact) {
 		stats[stat] += value;
 		if (stats[stat] > statMax[stat]) {
 			stats[stat] = statMax[stat];
@@ -164,7 +164,7 @@ public class Ranked_RPG implements Actor_RPG {
 	}
 
 	@Override
-	public void ReduceStat(int stat, int value) {
+	public void ReduceStat(int stat, float value, boolean canReact) {
 		stats[stat] -= value;
 		((NPC) actor).setPeace(false);
 	}

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<perk name="Violent Focus">
+	<description>
+	Try to fight me, hurt me, with every blow I feel invigorated. Every strike gives me the drive I need to return them twice over. gain 20% of incoming damage as AP recovery.
+	</description>
+	<reactive>
+		<trigger stat="HEALTH" modifier="1.00"/>
+		<effect stat="ACTION" modifier="0.20" />
+	</reactive>
+	<maxrank value="1" />
+
+</perk>

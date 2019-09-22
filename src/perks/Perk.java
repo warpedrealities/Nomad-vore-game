@@ -46,6 +46,9 @@ public class Perk {
 				if (childnode.getTagName() == "craftingToken") {
 					elements.add(new PerkCraftingToken(childnode));
 				}
+				if (childnode.getTagName().equals("reactive")) {
+					elements.add(new PerkReactive(childnode));
+				}
 				if (childnode.getTagName() == "modifier") {
 					elements.add(new PerkModifier(childnode.getAttribute("affects"),
 							Integer.parseInt(childnode.getAttribute("value")),

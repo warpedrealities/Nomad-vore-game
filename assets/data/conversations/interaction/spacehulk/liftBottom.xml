@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">	
+		<text>
+			3L3V470R 0P3R4710N4L
+		</text>
+		<choice destination="goUp" text="Go up"/>
+		<choice destination="end" text="exit" />
+	</page>
+
+	<page ID="goUp">
+	<text>
+	You are whisked upwards to a higher deck.
+	</text>
+		<special effect="transitionToPortal" id="400" destination="spacehulk" />	
+		<choice destination="end" text="step out"/>
+	</page>
+	
+</Conversation>

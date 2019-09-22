@@ -136,7 +136,7 @@ public class Effect_Damage extends Effect {
 			if (target.getRPG().getStat(Actor_RPG.HEALTH)>0)
 			{
 				//if so apply to hp
-				target.getRPG().ReduceStat(Actor_RPG.HEALTH, damage);
+				target.getRPG().ReduceStat(Actor_RPG.HEALTH, damage, true);
 				if (target.getRPG().getStat(Actor_RPG.HEALTH)<=0)
 				{
 					target.Defeat(origin, false);
@@ -146,7 +146,7 @@ public class Effect_Damage extends Effect {
 		else if (target.getRPG().getStat(Actor_RPG.RESOLVE)>0)
 		{
 			//apply to resolve
-			target.getRPG().ReduceStat(Actor_RPG.RESOLVE, damage);
+			target.getRPG().ReduceStat(Actor_RPG.RESOLVE, damage, true);
 			if (target.getRPG().getStat(Actor_RPG.RESOLVE)<=0)
 			{
 				target.Defeat(origin, true);

@@ -76,9 +76,9 @@ public interface Actor_RPG {
 
 	public void Heal(float amount);
 
-	public void IncreaseStat(int stat, int value);
+	public void IncreaseStat(int stat, float value, boolean canReact);
 
-	public void ReduceStat(int stat, int value);
+	public void ReduceStat(int stat, float value, boolean canReact);
 
 	public void save(DataOutputStream dstream) throws IOException;
 

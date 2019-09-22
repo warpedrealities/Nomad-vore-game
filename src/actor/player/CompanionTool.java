@@ -62,8 +62,8 @@ public class CompanionTool {
 	}
 
 	static private void placeCompanion(Player player, Zone zone, Actor companion) {
-		companion.getRPG().IncreaseStat(Actor_RPG.RESOLVE, 5);
-		companion.getRPG().IncreaseStat(Actor_RPG.HEALTH, 5);
+		companion.getRPG().IncreaseStat(Actor_RPG.RESOLVE, 5, false);
+		companion.getRPG().IncreaseStat(Actor_RPG.HEALTH, 5, false);
 		companion.setActorVisibility(true);
 		companion.getSpriteInterface().setVisible(true);
 		companion.setCollisioninterface(zone);
@@ -75,7 +75,7 @@ public class CompanionTool {
 				z = z - 8;
 			}
 			Vec2f p = ZoneInteractionHandler.getPos(z, player.getPosition());
-			if (zone.getTile((int) p.x, (int) p.y).getDefinition().getMovement()==TileMovement.WALK && 
+			if (zone.getTile((int) p.x, (int) p.y).getDefinition().getMovement()==TileMovement.WALK &&
 					zone.getActor((int) p.x, (int) p.y) == null) {
 
 				companion.setPosition(new Vec2f(p.x, p.y));
@@ -154,7 +154,7 @@ public class CompanionTool {
 	public void removeAllCompanions(Player m_player) {
 		NPC[] list = m_player.companionSlots;
 		for (int i = 0; i < list.length; i++) {
-				list[i] = null;
+			list[i] = null;
 		}
 	}
 }
