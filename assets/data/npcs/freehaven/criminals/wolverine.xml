@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="wolverine.png" />
+
+	<name>Sienna</name>
+	<description>A muscular and buxom, but diminutive woman, standing around 4'7". A pair of short, rounded ears stick out from her messy brown-red hair and a bushy tail protrudes behind her. She's wearing a battered fur-lined jacket, a tanktop and short-shorts, and would look adorable because of her size, if not for her aggressive posture. And her wickedly sharp, clawed hands. And her constantly gnashing, pointed teeth. </description>
+	<rpg>
+		<experiencevalue value="300" />
+		<ability ability="STRENGTH" value="6" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="7" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="4" />
+		<stat stat="HEALTH" value="85" />
+		<stat stat="RESOLVE" value="75" />
+		<attribute attribute="MELEE" value="5" />		
+		<attribute attribute="PARRY" value="3" />
+		<attribute attribute="DODGE" value="3"/>		
+		<attribute attribute="WILLPOWER" value="3"/>
+		<attribute attribute="KINETIC" value="1" />
+		<attribute attribute="THERMAL" value="2" />
+		<combatMove name="slash" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="0" threatening="true">
+			<effectDamage type="KINETIC" minValue="6" maxValue="9" modifier="STRENGTH" />
+			<missText count="3">
+				<text>Air swishes past, the wolverine girl's claws narrowly missing TARGET</text>
+				<text>The wolverine girl swipes wide, missing TARGET</text>
+				<text>The wolverine girl's claws glance off TARGET, dealing no damage</text>
+			</missText>
+			<hitText count="3">
+				<text>The wolverine girl slices TARGET for VALUE damage</text>
+				<text>The wolverine girl's sharp claws gouge TARGET for VALUE damage</text>
+				<text>TARGET's flesh rips as the razor claws slice into them for VALUE damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="lunge" bonusAttribute="MELEE" timeCost="2"
+			bonusToHit="8" pattern="RANGED" actionCost="2" moveType="MOVEMENT">
+			<effectMovement moveType="SELF_TOWARDS" distance="5"
+				abilityMod="AGILITY" />
+			<missText count="1">
+				<text>The wolverine girl fails to lunge at TARGET</text>
+			</missText>
+			<hitText count="1">
+				<text>The wolverine girl lunges at TARGET</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="trip" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" bonusToHit="4" threatening="true">
+			<effectDamage type="KINETIC" minValue="3" maxValue="4" modifier="STRENGTH" />
+			<missText count="1">
+				<text>TARGET nimbly dodges the low kick from the wolverine girl</text>
+			</missText>
+			<hitText count="2">
+				<text>The wolverine girl sweeps TARGET's legs out from under them, who lands on the floor for VALUE damage</text>
+				<text>The wolverine trips TARGET over with her tail, before stomping on them for VALUE damage</text>
+			</hitText>
+			<effectStatus probability="100" value="STRENGTH" >
+			<applyText>TARGET has been knocked to the ground by the wolverine girl, briefly stunning them.</applyText>
+			<statusStun uid="9" duration="4">
+				TARGET gets back on their feet
+			</statusStun>
+		</effectStatus>
+		</combatMove>		
+	</rpg>
+	<peacebond />
+	<talk conversation="freehaven/wolverine/chat" />
+	<defeated conversation="freehaven/wolverine/defeat" />
+	<seduced conversation="freehaven/wolverine/seduced" />
+	<victory conversation="freehaven/wolverine/victory" />
+	<controller AI="wolverine" />
+	<faction value="freehaven_gangs" />
+</NPC>

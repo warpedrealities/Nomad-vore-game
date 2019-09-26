@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<Conversation>
+	
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" value="1" operator="equals" flag="join" />
+		<text>
+		Sienna doesn't look too pleased to see you, and looks like she has pretty much recovered from the earlier beatdown. She looks up at you, one hand on her hip.
+		"So, you talked to the boss yet? I called in and told them to expect you. Don't see why you'd be back here so soon, unless you just wanted to stare at my tits. Honestly can't blame ya."
+		</text>
+		<choice destination="end" text="No, I haven't yet." />
+	</page>
+	
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" value="1" operator="equals" flag="boss" />
+		<text>
+		The shortstack looks incredulous. And angry. 
+		"I made myself perfectly clear. I guess it'll take stewing in my gut to get it through your thick head!"
+		She lunges towards you, claws outstretched.
+		</text>
+		<special effect="makehostile"/>
+		<choice destination="end" text="Whoops" />
+	</page>
+	
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" value="1" operator="equals" flag="leave" />
+		<text>
+		The angry woman is dumbfounded when she sees you approach. 
+		"You.. I let you go, because I don't really like beating up the mentally handicapped. And yet.. For some reason.. You're still here. Looks like I'm gonna have to make an exception, just for you!" 
+		She runs towards you, baring her fangs.
+		</text>
+		<special effect="makehostile"/>
+		<choice destination="end" text="Shouldn't have come back!" />
+	</page>
+	
+	<page ID="start">
+	<condition evaluate="LOCALFLAG" value="1" operator="equals" flag="recruit" />
+		<text>
+		The short woman looks up at you. From this angle, her cleavage is ridiculous. You can't help but wonder how she even fits in her top. She scowls up at you.
+		"You still here? Come on, didn't I tell you to go bother one of those worthless wolves? Maybe then you can get some work done instead of pestering me."
+		</text>
+		<choice destination="question" text="I just had some questions, you seem more reliable than them." />
+		<choice destination="end" text="You're right, sorry, I'll get going." />
+	</page>
+	
+	<page ID="question">
+	<condition evaluate="LOCALFLAG" value="1" operator="equals" flag="you" />
+		<text>
+		Sienna clicks her tongue in annoyance.
+		"Yeah, what else do you want?"
+		</text>
+		<choice destination="you" text="I'm interested in you. What's your story?" />
+		<choice destination="guard" text="Why are you all the way here?" />
+		<choice destination="boss" text="You know the boss?" />
+		<choice destination="end" text="Nevermind." />
+	</page>
+	
+	<page ID="question">
+		<text>
+		Her face brightens and she looks rather smug. 
+		"Ha! Maybe you aren't as dumb as you look. You might have a future here after all! Ok, shoot."
+		</text>
+		<choice destination="you" text="I'm interested in you. What's your story?" />
+		<choice destination="guard" text="Why are you all the way here?" />
+		<choice destination="bossq" text="You know the boss?" />
+		<choice destination="end" text="Nevermind." />
+	</page>
+	
+	<page ID="you">
+		<text>
+		Her smugness is broken for a moment, but soon returns. She folds her arms across her chest. 
+		"Me? I'm hardly worth talking about. Stowed away on some rich snob's ship to get off the rock I used to call home. Snuck around eating them until I got caught. Bad idea for them to try and stop me." 
+		She flexes, her small frame covered in rock solid muscles. 
+		"After I beat the shit of them, I used my gut to beat them into shit. With my new ship, I ended up docking at Freehaven. Pawned everything valuable and then sold the ship to some chump on the upper deck. When the transaction was done, obviously I ate them." 
+		She pats at her stomach. Well, you assume it was her stomach, as her tits obscure most of her body.
+		"I was gonna just gurgle them and fly outta here with the cash, but someone musta called that big-dicked bunny-bitch and her slut brigade. While hiding out down here, I got picked up by the boss and have been around ever since. 
+		<conditional> <condition evaluate="LOCALFLAG" operator="equals" flag="join" value="0" /> Oh, and the name's Sienna. Maybe shoulda opened with that."
+		</conditional>
+		</text>
+		<effect type="setlocalflag" flag="you" value="1" />
+		<choice destination="question" text="Thanks, got another question.." />
+	</page>
+	
+	<page ID="guard">
+		<text>
+		She grins. 
+		"Officially, it's to guard the stash back there. Heh, like I can do a better job than that door." 
+		Her grin widens further. 
+		"The real reason is me and the wolves don't get along too well. They won't bother me here. The boss doesn't mind some infighting, but let's just say I was 'going through' too many of our personnel. They don't call my race gluttonous for nothing. Those bitches just piss me off. I ain't ashamed to admit I've got anger issues. The issue I've got is with people always making me angry."
+		</text>
+		<choice destination="question" text="I see.. Got another question." />
+	</page>
+	
+	<page ID="bossq">
+		<text>
+		"Yeah, not too well, but we've had a drink once. She's pretty impressive. One of the only people to not judge me by my size, but for what, or more specifically who, I could get done. I used to think of overthrowing her when I first got here, but I know now I probably couldn't. Not that I even want to. Got a nice gig here, all things considered."
+		</text>
+		<choice destination="question" text="Got another question.." />
+	</page>
+	
+	<page ID="start">
+		<text>
+		Further down the hallway, a muscular shortstack woman stands warily in front of an impressively fortified electronic door. Before you can get any closer, the short woman that seems to be a guard, angrily calls out. 
+		"Oi! I see you skulking about over there! Whatd'ya think you're doing!? This place is off limits! Get lost!" 
+		She snarls and bares her sharp teeth at you, trying to look as threatening as possible. Her muscles ripple and her tail swishes around violently behind her. The intimidation is dampened a little, because of her huge breasts that also sway violently, but she obviously won't hesitate to fight.
+		</text>
+		<effect type="setlocalflag" flag="talked" value="1" />
+		<choice destination="boss" text="I've got important business from the boss, move aside." />
+		<choice destination="recruit" text="Ah, I just recently joined. I don't know how you do things yet." />
+		<choice destination="dismiss" text="Nothing a guard like you needs to worry about." />
+		<choice destination="leave" text="Sorry, just passing by. I'll leave." />
+	</page>
+	
+	<page ID="boss">
+		<text>
+		She doesn't move, staring at you unblinking. 
+		"I've had no word to let someone like you past. No word to let anyone past. I'll let this slide this one time because you're either very confused, or just plain brain-dead. Get outta here. Go on."
+		</text>
+		<effect type="setlocalflag" flag="boss" value="1" />
+		<choice destination="boss1" text="The boss won't like you giving me lip. Step aside." />
+		<choice destination="end" text="Yeah, I'll leave." />
+	</page>
+	
+	<page ID="boss1">
+		<text>
+		The buxom short woman glares daggers at you. And points her dagger-like claws in your direction. 
+		"Who cares if you say the boss won't like me mouthing off! That's not how this works! You're delusional if you think I'm moving just because you tried talking to me sternly. If you don't get outta here in 10 seconds, I'll be giving you a lot more than lip." 
+		She opens her mouth wide, her sharp, jagged teeth glinting in the light. 
+		"You'll get the whole damn mouth, bitch."
+		</text>
+		<choice destination="end" text="Yeah I get it, I'm going." />
+	</page>
+	
+	<page ID="recruit">
+		<text>
+		The snarling girl grins, immediately looking less violent. 
+		"Fresh meat, eh? No wonder. Those useless dogshit-for-brains never train you newbies right." 
+		Grimacing, she spits on the floor. 
+		"Can't stand those stupid furry bitches. You're in the wrong place! No one gets in here without say so from the boss." 
+		She waves you off. 
+		"You're lucky I'm in a good mood. Just get back down there and tell someone this. 'Sienna says, if you want less of the new members fattening up her tits, look after them properly for once!'.. Got it? Now get outta here before I change my mind."
+		</text>
+		<effect type="setlocalflag" flag="recruit" value="1" />
+		<choice destination="end" text="Might be wise to listen to her.." />
+	</page>
+	
+	<page ID="dismiss">
+		<text>
+		The girl growls and brandishes her claws. 
+		"Ha! Just as I was getting bored! Even if you don't want to tell me, I'll gladly just beat it out of you!"
+		</text>
+		<special effect="makehostile"/>
+		<choice destination="end" text="Time to fight!" />
+	</page>
+	
+	<page ID="leave">
+		<text>
+		Before you can get anywhere, the short woman yells at you. 
+		"Hey! Wait right there! Just passing through?? What, you think I'm stupid?! No way you're not some kind of snitch for those cops! You expect me to believe you accidentally just happened to come down here?"
+		</text>
+		<choice destination="leaveper" text="I'm telling you the truth!" />
+	</page>
+	
+	<check ID="leaveper">
+		<test what="PERSUADE" DC="15" />
+		<outcome destination="leavea" />
+		<outcome destination="leaveb" />
+	</check>
+	
+	<page ID="leavea">
+		<text>
+		"Alright, keep your hair on.. Fine! I'll believe your lying ass. But this is the only chance you're gonna get. Get outta here and don't let me see you around again, if you know what's good for you." 
+		She motions for you to leave.
+		</text>
+		<effect type="setlocalflag" flag="leave" value="1" />
+		<choice destination="end" text="I guess that worked..?" />
+	</page>
+	
+	<page ID="leaveb">
+		<text>
+		Hearing your response, the girl laughs heartily, flashing a wide toothy grin. 
+		"Sure, and I'm the boss of the station! Forget it, you'll be squealing after a beat down! And if not, well.." 
+		Saying no more, she lunges towards you.
+		</text>
+		<special effect="makehostile"/>
+		<choice destination="end" text="Time to fight!" />
+	</page>
+
+</Conversation>

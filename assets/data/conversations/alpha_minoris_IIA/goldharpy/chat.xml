@@ -20,6 +20,10 @@
 		</choice>
 		<choice destination="why" text="Why did the harpy carry me up here?" />
 		<choice destination="different" text="you seem different from the others" />
+		<choice destination="test" text="Care to help me try out my new ability?" >
+			<condition evaluate="LOCALFLAG" value="1" operator="equals"
+			flag="gainedUB" />
+		</choice>
 		<choice destination="end" text="not right now" />
 	</page>
 	
@@ -293,6 +297,7 @@
 			she says playfully as she gets to her feet.
 		</text>
 		<special effect="giveperk" perk="unbirthing" />
+		<effect type="setlocalflag" flag="gainedUB" value="1" />
 		<choice destination="end" text="thank you bright" />
 	</page>
 
@@ -348,6 +353,150 @@
 		<choice destination="end" text="That's interesting, I must take my leave" />
 	</page>
 
-
+	<check ID="test">
+		<test what="PERSUADE" DC="14" />
+		<outcome destination="testOK" />
+		<outcome destination="testNOWAY" />
+	</check>
+	
+	<page ID="testOK">
+		<text>
+		Brightfeather strokes her feathers in thought for a moment, before assenting 
+		"I do believe it will be a good experience for the both of us. It should be safer than asking one of the others... I don't have too much faith they can resist ending me while in the throes of passion and gush out the sticky mess... And it has been so very long... Hmm.. Alright, I will permit it." 
+		As she finishes speaking she flutters in close, flushed face rubbing against yours. 
+		<conditional>
+				<assertion evaluate="slothasitem" slot="2" />
+			You throw yourself out of your clothes and gear, eager to begin.
+		</conditional>
+		</text>
+		<choice destination="fatal0" text="$How about some lubrication first?" />
+	</page>
+	
+	<page ID="testNOWAY">
+		<text>
+		Brightfeather cocks her head puzzled 
+		"I know you are eager to try your newly granted ability, but I don't believe it wise to let you experiment on one such as I" 
+		Smiling gently, she continues, patting your shoulder with a soft golden wing 
+		"I have much to do and inexperienced ones like yourself tend to have little self control... Being liquefied accidentally seems an easy catastrophe to avoid. You understand, yes?"
+		</text>
+		<choice destination="end" text="You're right, I suppose.." />
+	</page>
+	
+	<page ID="fatal0">
+		<text>
+		Pushing her down, you can feel her how glossy her hair is. And why does she smell so good..? Despite having no access to bodycare products. Hm. Perhaps there are more intelligent species around here. Maybe they stole them from somewhere else..? Interrupting that thought, Brightfeather croons softly eyeing up your 'alien' organs. 
+			<conditional>
+			<assertion evaluate="haspart" part="penis" />
+		Rubbing her wing across your shaft, you can't help but grow aroused at the strange texture of her feathers. Upon seeing your reaction, Bright grasps and fidgets to find sensitive spots. The tickling sensation, along with her enthusiasm to please you brings you full mast in no time. She lifts your balls gently to explore the entrance you agreed upon.		
+			</conditional>
+			<conditional>
+			<assertion evaluate="haspart" part="vagina" />
+		"Hmmm, not quite the same as me or my sisters... But I see my work was completed succesfully." 
+		Bright muses while she prods around, stretching your lower lips in inspection. Her feathery wingtip brushes softly, a small involuntary shudder runs down your spine, your folds dampen slightly, nipples growing erect.  
+			</conditional>
+			<conditional>
+			<assertnot evaluate="haspart" part="vagina" />
+		"Ahh..? I can hardly enter you if there is nothing to enter? Mhm, perhaps we can try another time?" 
+		Confused and disappointed, Brightfeather retreats and turns away to look over the cliffside dismissively. 
+			</conditional>
+		</text>
+		<choice destination="fatalUB" text="*in she goes..*" >
+			<assertion evaluate="haspart" part="vagina" />
+			<assertion evaluate="hasperk" perk="unbirthing" />
+		</choice>
+		<choice destination="CV" text="*not quite what she was expecting*" >
+			<assertion evaluate="haspart" part="penis" />
+			<assertion evaluate="hasperk" perk="cockvore" />
+		</choice>
+		<choice destination="end" text="Sorry, I have to go. I'll.. Be back again!" />
+	</page>
+	
+	<page ID="fatalUB">
+		<text>
+		Aiming to please, Brightfeather immediately gets to work on procuring the needed lubrication. She's quite skilled at using her tongue, but her enthusiasm is what gets you fully ready. She must be telling the truth about no action for a while, her glistening folds telling you all you need to know. You wrap your legs around and with only a slight pressure on the back of her head, she feeds herself in. Her feathers tickle as they slide deeper, new sensations as your nethers stretch around the golden bird-woman. You convulse under her touch as she continues to stimulate you as best she can, lowering yourself to the ground as she continues carefully.
+		</text>
+		<choice destination="fatalUB1" text="$Ohhh..!" />
+	</page>
+	
+	<page ID="fatalUB1">
+		<text>
+		You're taken along for the ride as she pushes herself in, still being new to this whole thing your mind races with sexy thoughts and you moan with increasing frequency. Bright is cooing happily, you suspect she has craved being inside someone for some time. Imagining the feeling of Bright's rippling insides from when the time you were inside of her, triggers an instinctual contraction and you experiment with new found control. Now consciously drawing her in, she stops helping feed herself to you, instead helping herself get off as she is consumed. The thrill of a rookie taking one so experienced excites you both as the pleasure builds. As she balls up and is pulled deeper, Bright is sure not to hurt your delicate parts with her talons, continuing to pleasure herself as she goes.
+		</text>
+		<choice destination="fatalUB2" text="$Deeper.." />
+	</page>
+	
+	<page ID="fatalUB2">
+		<text>
+		Bright's hips are her widest point, you gasp, progress halted, but with some extra effort and a little time she is soon on her way again. Your inner muscles contract, sealing the bird inside as your mid-section bulges. You can feel her enter your womb, her squirming is exquisite and you're wracked with delight, rubbing your hands over the the taught skin of your protuding middle. Bright coos and squawks mirthfully as she reaches orgasm, it must feel good in there for her too. Not really noticing much more with this incredible feeling rocking your body, you thrust your own fingers, then hand, then forearms inside your dripping snatch vigorously, orgasm building. 
+		</text>
+		<choice destination="fatalUB3" text="$Yes!" />
+	</page>
+	
+	<page ID="fatalUB3">
+		<text>
+		While you are having a blast on the outside, curled up snugly on the inside, Brightfeather pants in an post orgasmic afterglow. As she recovers, she realises that in her greed to feed herself to you, she didn't really teach you anything at all... Feeling the frenzied movement around her, Bright soon realises that she isn't quite as solid as she'd prefer either.. Cramming your fist in and out madly, rolling around in pleasure, you hear some panicked calls but really just don't seem to care. All you care about is the sudden added struggles inside you, driving you insane with lust. Coming to yet another realisation, the golden harpy being melted down thinks to herself.. She was smarter than her sisters and always strove for more in life, but as her extremities burble away, she feels quite stupid.
+		</text>
+		<choice destination="fatalUB4" text="*time to let her out*" />
+	</page>
+	
+	<page ID="fatalUB4">
+		<text>
+		Neither of you are able to hold on any longer, Bright resigning herself completely, while you are a lump of animalistic instinct that doesn't even comprehend what you've done yet. You thrash and scream, one final contraction inside reducing what's left of Brightfeather to fluid, fluid that is soon blasting out, soaking your legs and the rocks around you with slick sticky ejaculate. Flexing everything, your orgasm is so intense that all your other senses dull, overloaded synapses firing wildly as you gush the feathery fluid all over the place. The flow peters out over a minute or two, the harpy's clifftop resting place becoming her final one, as the last of her is forcefully ejected. You roll around in the pool of fluid, moaning and groaning, while your aching muscles twitch spontaneously, beginning to regain your sanity as you come down from the orgasmic high. With face flushed, you can hardly sit up off the stony ground, let alone stand. Something brushes against your leg, which you shakily pick up to inspect. As you look at the object in question, a dirty feather, you struggle to form a coherent thought train being so addled in post-orgasm haze. 
+		</text>
+		<choice destination="fatalUB5" text="$Isn't this..?" />
+	</page>	
+	
+	<page ID="fatalUB5">
+		<text>
+		The last realisation, is one of your own. You drop the partially melted feather into the puddle around you and stand unsteadily, wobbling over to your gear to clean yourself up. You struggle to care about what you've just done, the life you just ended, but the only thoughts that come to mind are about how incredible it felt. And how much you want to do it again. You feel energised and light on your feet as you leave the sticky mess behind, knowing the other harpies probably won't know who gushed Bright. They'll probably blame each other before they blame you, right? Before you leave, you silently thank Bright. Not only did she give you this gift, but she gave you an amazing first time and an amazing orgasm that you'll never forget. 
+		</text>
+		<effect value="120" type="feed"/>
+		<special effect="removenpc" />
+		<choice destination="end" text="I wonder how the other harpies would feel..." />
+	</page>
+	
+	<page ID="CV">
+		<text>
+		Although you negotiated for a willing partner to try out your new ability, you have a greater desire that cannot be denied. Your balls gurgle in anticipation, readying themselves for a nice poultry dinner. This'll probably make you the enemy of these harpies for good, but as you calmly stroke your growing erection, you can't think of a better reason to gain the ire of an entire race. Not to mention the multitude of meals they'll unwillingly bring. Before you've even taken this one, the fantasies of downing, gurgling and splattering hordes of harpies has you rock solid and dripping.
+		</text>
+		<choice destination="CV1" text="Time to start" />
+	</page>
+	
+	<page ID="CV1">
+		<text>
+		Arms outstreched, you wait for your chance to strike. With a smooth motion you thrust forward and pull her headfirst towards you. Squawking in surprise, Bright flails around, claws scrabbling on the stone to find a foothold. "Wha-!" is all she can make out before her voice is muffled as it enters your ravenous cockhead.
+		Her silky hair slides in without trouble and her struggles increase as she realises what'll happen if she can't escape. The bulging in your shaft as she wiggles feels extremely gratifying and you know you've made the right choice. It might be hard to get her down fully without blowing your load prematurely at this rate though! Groaning in pleasure, you fondle the bulge as it moves down, inner muscles rippling to take the golden harpy to where you've decided she belongs.  
+		</text>
+		<choice destination="CV2" text="Having a little trouble" />
+	</page>
+	
+	<page ID="CV2">
+		<text>
+		Shining feathers fall to the ground from Bright's frantic flapping, but she is steadily consumed despite her fervor. Most of her body is now a distended bulge slipping down your shaft, but just as you feel her head push into your sac, you find it much harder to pull her in. Twitching in impatience, your tip flares angrily, pre spurting, soaking her feathers and staining their gleaming gold. It seems Bright has managed to grasp a crack in the stone, holding fast with her talons. Frustration well up as your sac churns furiously, but her grip is stronger than your fevered shoving. Stuck in an awkward position, you groan weakly as Bright begins to wrench herself back out the way she came. 
+		</text>
+		<choice destination="CV3" text="Oh no you don't!" />
+	</page>
+	
+	<page ID="CV3">
+		<text>
+		Skin gleaming like the feathers surronding the area, a layer of sweat drips from you as the perverted tug of war continues, both your face and your cock bright red from exertion. Spasms of blissful agony torment your tired mind, but at this point you absolutely need her inside, no matter how quickly she'll splatter right on out. Mustering the last of your energy, you swing your hips from side to side, hoping to dislodge the stubborn bird. Still not enough, you have one last idea. Throwing yourself backwards and letting gravity do the work, you're hoping the hard cliff won't hurt too much. Panicked, muffled shrieks ring out as Bright loses ground, her talons gouging out a large chunk of rock. With nothing left to grip, she's finally slurped down. The lump of stone plugs your cocktip, but with a few strained pulses, it follows the avian woman, joining her in being melted to goop. As you sit on the ground panting and grinning, you rub both your sore butt and the softening lumps in your sac, finally churning away your hard earned meal. 
+		</text>
+		<choice destination="CV4" text="Phew.. No time to waste!" />
+	</page>
+	
+	<page ID="CV4">
+		<text>
+		One hunger sated, you fondle and squash down what is left of Brightfeather to sate another. Aiming your erection over the clifface, you prepare to release a steaming salvo of freshly churned cum. With minimal ministration, teeth gritted and eyes closed, ecstasy takes over. A waterfall of white explodes forth from your cocktip, gushing warm gooey globs onto the uneven ground before you. Most of the jizz flies straight off the side of the cliff and spattering sounds echo out into the valley. Trying to be discreet as possible for such a powerful orgasm, you bite down on your bottom lip hard enough to draw blood in a futile attempt to stifle involuntary moans. Your <macro ID="penis_size_desc"/> dick firing the sticky remains of what once was, for all you know, the only intelligent harpy on this planet. With each shot, your bloated sac returns to it's original, more managable size. Breathing heavily as you stand, the last dregs of cum, along with a large gummed up glob of half digested feathers splat onto the ground beneath you.
+		<conditional>
+		<assertion evaluate="slothasitem" slot="2" />
+		Gathering up your minorly cumstained belongings, you suit up and get ready to be on your way.
+		</conditional>
+		Looking over the cliff at your mess proudly, you noticed a harpy caked in jizz struggling to fly, creamy gunk dripping from her with every flap of her wings. They'll soon figure out what happened to Brightfeather, especially with all these partially cummified golden feathers around, so you're thinking it's time you flew the coop.
+		</text>
+		<effect type="manipulateDisposition" faction="harpy" value="-55" />
+		<effect value="120" type="feed"/>
+		<special effect="removenpc" />
+		<choice destination="end" text="Better watch the skies..." />
+	</page>
 
 </Conversation>

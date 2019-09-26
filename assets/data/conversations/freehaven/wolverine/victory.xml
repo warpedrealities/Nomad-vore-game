@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	<preference fetish="oralvore" />	
+	<preference fetish="females" />	
+	<preference fetish="demis" />	
+	<text>
+	You collapse, worn down by the onslaught of slashes, blood slowly oozing onto the metallic floor from the various cuts you sustained. The buxom wolverine girl looks down at you smugly, licking some of your blood off of one of her claws. 
+	<conditional> <condition evaluate="LOCALFLAG" operator="equals" flag="boss" value="1" /> 
+	"I don't believe how much of a dumb bitch you are! You wouldn't be lying in a puddle of your own blood if you just listened and shoved off when I gave you the chance!" 
+	</conditional>
+	<conditional> <condition evaluate="LOCALFLAG" operator="equals" flag="leave" value="1" /> 
+	"What the fuck were you even thinking?! Are you sick of living or something? It'd be funny if it wasn't so sad! I've got no clue why you'd come back, even after I pretended to believe you weren't a cop!" 
+	</conditional>
+	She grabs you by the top of the head, lifting you up and sneering. As you're lifted, her claws dig painfully into your skin, applying an uncomfortable amount of pressure. It feels like your skull is about to burst. She laughs as you squirm.
+	"Ha! How does it feel? Maybe you'll do a better job feeding me than you did fighting me? ..Pshh, not counting on it." 
+	With that, her mouth opens wide.
+	</text>
+	<choice destination="oral" text="*gulped*"/>
+	</page>
+	
+	<page ID="oral">
+	<text>
+	You're unceremoniously thrown headfirst into her toothy maw. It's not like the short woman chews, but she obviously doesn't watch her teeth as she takes your head and shoulders in with big, wet gulps. The heat inside her is tremendous already and you're nowhere near her stomach yet. The bulk of your body outside her throat is held up by, and enveloped in furry cleavage, but it's no real consolation as your predator isn't slowing down at all, slurping you in like a blood-soaked noodle. She growls in pleasure, shovelling you in much quicker than you'd have expected from such a small body. Finishing you off, the busty girl continues to groan happily.
+	</text>
+	<choice destination="oral1" text="*incredibly tight*"/>
+	</page>
+	
+	<page ID="oral1">
+	<text>
+	 Squeezed tightly on all sides, you can hardly move, let alone struggle, so your only option left is waiting for her throat muscles to pull you down. You're soon dumped into her stomach, but you realise it isn't going to be any easier to struggle, as your body is forced painfully into a compact ball. From outside, her middle stretchs out comically, but even though you are much larger than her, she easily continues to stand and licks the remainder of your blood from her claws. Inside, you're constricted heavily from every direction and moving at all is extremely difficult. The dense muscle around her organs pack them in place and it's pretty clear that now you're here, you almost certainly won't be able to escape. The sweltering stomach stings your cuts, immediately releasing it's digestive juices when you're fully squeezed in.    
+	</text>
+	<choice destination="oral2" text="*not over yet*"/>
+	</page>
+	
+	<page ID="oral2">
+	<text>
+	While there is still breath in your body, you try with all your might to escape. You feel like you're getting somewhere, but an impact from outside suddenly collides with your head, rattling and disorienting you. She just punched herself in the gut. You aren't sure if it hurt her, but it certainly hurt you. The shortstack laughs as your struggle dies down considerably, and with another ringing impact to your dome, stops almost completely. 
+	"Give up! No one's ever gotten out of there the way they came in! A worthless whore like you sure won't be the first!" 
+	Barely conscious, and being violently jostled and kneaded by her overactive stomach walls, you find yourself forced to agree. 
+	"This is your fault bitch. Sticking your big nose in where it doesn't belong. I'd say let this be a lesson, but you're obviously not smart enough to learn from it." 
+	It's a sweet release when your consciousness finally fades, because at the very least, all the pain stops when your life ends.
+	</text>
+	<choice destination="oralGO" text="*digested*"/>
+	</page>
+	
+	<gameover ID="oralGO">
+	<text>
+	In only a scant few minutes, you went from healthy, to beaten and bloodied, to a sloshing, melted mush at the hands of the crude, muscular wolverine girl. Her bulging midsection rapidly shrinks, as what's left of you drains away to be absorbed. Her metabolism works quickly and a soft layer of pudge is already forming over her toned abs. Her already ridiculously sized breasts swell, and not even her ass and thighs are spared from the repurposing of your nutrients, stretching her clothes dangerously close to bursting of off her expanding dimensions. 
+	"I don't believe this.. If none of my clothes fit after churning one dumb bitch.." 
+	She mutters to herself angrily, fondling her growing assets. Her tanktop has been stretched out so much by her tits that it looks more like a tiny tube top, and her shorts are pretty much a thong at this point. 
+	"If that slut had a reformer, I swear.. Gonna hunt her down.. Rip out her entrails.." 
+	She continues to grumpily complain under her breath, returning to her post well fed.
+	</text>
+	</gameover>
+	
+</Conversation>

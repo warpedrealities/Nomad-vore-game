@@ -54,8 +54,8 @@
 				<edge value="EAST" />
 				<edge value="WEST" />
 				<edge value="NORTH" />
-				<widget x="3" y="4" name="lift" variable="400"
-				info="interaction/spacehulk/liftTop" variable="1" /> 
+				<widget x="3" y="4" name="lift" variable="1"
+				info="interaction/spacehulk/liftTop" /> 
 				<widget x="3" y="5" name="marker" variable="400" />					
 			</keyBlock>
 

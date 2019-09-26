@@ -2,9 +2,8 @@
 <Conversation>
 	
 	<page ID="start">
-		<condition evaluate="GLOBALFLAG" flag="Vala" value="0" />
-		<assertnot evaluate="isCompanion" />
 		<assertion evaluate="isFaction" faction="player" />
+		<assertnot evaluate="isCompanion" />
 		<text>
 		Vala sheathes her shortsword and stands at attention at your approach "Hello again PNAME. Do you have need of me?"
 		</text>
@@ -15,8 +14,16 @@
 		<choice destination="end" text="$Nothing at the moment" />
 	</page>
 	
+	<page ID="">
+		<text>
+			
+		</text>
+		<choice destination="end" text="lets go" />
+	</page>
+	
 	<page ID="start">
 		<!--allied with elves, can recruit -->
+		<assertnot evaluate="isCompanion" />
 		<condition operator="equals" evaluate="FACTIONFLAG" flag="allegiance"
 			value="1" />
 		<text>
@@ -30,9 +37,10 @@
 	</page>
 	
 	<page ID="start">
-		<!-- not allied with elves, cannot recruit -->
+		<assertnot evaluate="isCompanion" />
 		<text>
-			An elven warrior sits on a bed in the corner of the room, polishing and inspecting a blade. She looks wary and alert, amber eyes flitting about restlessly. Her long ears twitch as if she listening to something far away. Looking you over, she grunts "Hmph. I'm not willing to associate with some outsider, go bother someone else."
+			An elven warrior sits on a bed in the corner of the room, polishing and inspecting a blade. She looks wary and alert, amber eyes flitting about restlessly. Her long ears twitch as if she listening to something far away. Looking you over, she grunts. 
+			"Hmph. I'm not willing to associate with some outsider, go bother someone else."
 		</text>
 		<picture source="valaportc" height="1"/>
 		<choice destination="end" text="Rude..." />
@@ -47,17 +55,15 @@
 		<picture source="valaporta" height="1"/>
 		<choice destination="chat" text="Can we talk for a minute?" />
 		<choice destination="leave" text="I think we should part ways, for now." />
-		<!--choice destination="spear" text="spear" -->
 		<choice destination="heal" text="Patch yourself up with this." >
-			<condition evaluate="HASITEM" operator="greaterthan" value="1"
-				item="medicine" />	
+			<condition evaluate="HASITEM" operator="greaterthan" value="1" item="medicine" />	
 		</choice>
 		<choice destination="end" text="Oh, nothing." />
 	</page>
 	
 	<page ID="start">
 		<text>
-		Vala's expression is one of incredulity as she wordless watches your approach.
+		Vala's expression is one of incredulity as she wordlessly watches your approach.
 		Shaking, she stammers out some gasping inaudible words, before clearing her throat and speaking.
 		"PNAME. Tell me this is no space or magic prank. ...I must have finally lost it."
 		</text>
@@ -78,7 +84,7 @@
 	
 	<page ID="digested1">
 		<text>
-		You take the time to explain the reformer and it's basic functionality to Vala, and more importantly, register her into the system. She still doesn't really believe it possible, but when you're done, she grabs you and squeezes you into a hug. Sniffling, she holds you for a decent amount of time, before becoming awkward. Right after breaking contact, she tugs on both ears at once. Maybe she'll be interested in offering herself up now that, in her words, she's 'One of the immortal gods'. You hope she doesn't just use it as an excuse to throw herself at the strongest beasts imaginable for training. The determined fire in her eyes says she intends to do just that. Oh boy...
+		You take the time to explain the reformer and it's basic functionality to Vala, and more importantly, register her into the system. She still doesn't really believe it possible, but when you're done, she grabs you and squeezes you into a hug. Sniffling, she holds you for a decent amount of time, before becoming awkward. Right after breaking contact, she tugs on both ears at once. Maybe she'll be interested in offering herself up now that, in her words, she's 'One of the immortal gods'? You hope she doesn't just use it as an excuse to throw herself at the strongest beasts imaginable for training. The determined fire in her eyes says she intends to do just that. Oh boy...
 		</text>
 		<picture source="valaportu" height="1"/>
 		<effect type="setglobalflag" flag="Valaeat" value="0" />
@@ -90,17 +96,10 @@
 		<text>
 		Taking the medicine, Vala looks much better afterwards. "Thanks, PNAME."
 		</text>
+		<picture source="valaportb" height="1"/>
 		<special effect="healnpc" />
 		<effect type="removeitem" item="medicine" value="1" />
 		<choice destination="end" text="No worries." />
-	</page>
-	
-	<page ID="spear">
-		<text>
-		Use spear??
-		</text>
-		<effect type="setlocalflag" flag="Valaspear" value="1" />
-		<choice destination="end" text="test" />
 	</page>
 	
 	<page ID="chat">
@@ -114,7 +113,13 @@
 		<choice destination="selfopen" text="So if you're open to new things...">
 			<condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Valaopen" />
 		</choice>
+		<choice destination="shopkeep" text="What's up with you and your aunt?" >
+			<condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="Valameat" />
+		</choice>	
 		<choice destination="people" text="Could you tell me about your people?" />
+		<choice destination="peoplespec" text="Can I ask about someone specific?" >
+			<condition evaluate="GLOBALFLAG" operator="equals" value="2" flag="Valaopen" />
+		</choice>	
 		<choice destination="funhub" text="Want to have some fun?" >
 			<condition evaluate="GLOBALFLAG" operator="equals" value="2" flag="Valaopen" />
 		</choice>
@@ -151,7 +156,7 @@
 		<condition evaluate="GLOBALFLAG" operator="greaterthan" value="4" flag="Valascore" />
 		<text>
 		It's been some time before you asked Vala about herself, maybe she'll answer now. Her expression however, says otherwise.
-		"Look PNAME, I know what I said last time. I'm just not sure I can trust you. Usually learning more about someone is to grasp their less obvious weaknesses. How about this then? Uhh, my favourite food is roasted deku nut salad. I admire strength. I dislike losing. Good enough?"
+		"Look PNAME, I know what I said last time. I'm just not sure I can trust you. Usually learning more about someone is to grasp their less obvious weaknesses. How about this then? Uhhh.. Hmm. My favourite food is roasted deku nut salad. I admire strength. I dislike losing. Good enough?"
 		You open your mouth to speak but Vala cuts in before you have the chance.
 		"Okay. I can see you may want to know more. I'll share it with you once I know you're entirely trustworthy. Sorry."
 		She nods then walks away, tugging at an ear.
@@ -164,23 +169,35 @@
 		<condition evaluate="GLOBALFLAG" operator="greaterthan" value="9" flag="Valascore" />
 		<text>
 		Vala's eyes grow wide, looks like she hoped you had forgotten.
-		"Oh, right. That. You truly want to know about me? Have we not travelled together enough?"
-		She sighs loudly, "...Alright, alright."
-		Vala, looking uncharacteristically sheepish, takes a deep breath and prepares to speak.
+		"Oh, right. That. You truly want to know about me? Truly? Have we not travelled together enough?" 
+		She is much less firm about the topic now, seems like she'll talk if you push a little further. 
+		</text>
+		<picture source="valaportg" height="1"/>
+		<choice destination="self1-1" text="$Yes, I really do want to know more about you." />
+		<choice destination="end" text="You're right, I'll drop it. For now." />
+	</page>
+	
+	<page ID="self1-1">
+		<text>
+		She sighs loudly. 
+		"...Alright, alright." 
+		Vala, looking uncharacteristically sheepish, takes a deep breath and prepares herself to speak. 
 		"Look, I wasn't always like this. So stiff. Formal. So on edge." 
 		She gestures to herself while continuing, 
 		"I was like everyone else in Minyos. ...Hedonistic. You know, thinking more about gulping acquaintances than becoming closer friends with them. It was beaten out of me by my mother. She used to be nice once. Is this really the sort of thing you want to know? Some sob story? It's not like it's that uncommon. I'm lucky to have even known my parents!"
 		You can see she doesn't want to talk. She sighs again.
 		</text>
 		<picture source="valaporte" height="1"/>
-		<choice destination="self1" text="..." />
+		<choice destination="self1-2" text="Go on.." />
 	</page>
 	
-	<page ID="self1">
+	<page ID="self1-2">
 		<text>
 		"My mother.. returned from a hunt one day. She entered our home to find her pregnant wife splattered all over the place. A ...cooling mess. Not too out of the ordinary around here, and many hunters don't even make it home to find their family gone. But.. It broke her, I think. They seemed so happy together."
-		Vala looks into the distance wistfully for a moment, but shakes her head.
-		"The thought that it could have been consensual was probably too much for her to take. It could have been anyone. Mother wasn't about to go out on a revenge massacre or anything, but she changed that day. She left that old house as it was and spent all she had to build a fenced off house on the outskirts of town." 	
+		Vala looks into the distance wistfully for a moment, but shakes her head. Her voice broke slightly as she continued. 
+		"The thought that it could have been consensual was probably too much for her to take. It could have been anyone. Mother wasn't about to go out on a revenge massacre or anything, but she changed that day." 
+		Vala inhales and exhales deliberately. 
+		"She left that old house as it was and spent all she had to build a fenced off house on the outskirts of town." 	
 		</text>
 		<picture source="valaporti" height="1"/>
 		<choice destination="self2" text="$What about you?" />
@@ -303,23 +320,344 @@
 	<page ID="people1">
 		<text>
 		"Not everyone is fine with it, of course. However, by our law, words hold power. If you agree to anything, you're held accountable. This leads to everyone trying to trap or trick each other with gambles, dares, wordplay, that sort of thing. Unsavvy women don't last long, sharp wit is our greatest asset. Well second greatest, if you ask anyone else."
-		Vala uses both of her arms to gesture a comically large backside over her petite one.
+		Vala uses both of her arms to gesture a comically large backside over her more petite one.
 		"I've warned you before, but those girls are sly. Accept any offers, you'd better be sure there's no way they can twist it into something untoward. Unless that's what you expected, I suppose."
 		A blush flashes across her face and it's not hard to guess what sort of thing she's imagining.
 		</text>
 		<picture source="valaportx" height="1"/>
-		<choice destination="people2" text="*Wait for her to continue*" />
+		<choice destination="people2" text="*wait for her to continue*" />
 	</page>
 	
 	<page ID="people2">
 		<text>
-		"Luckily for us, our race is fertile and young ones reach maturity quickly or we'd have been wiped out long ago. Our lack of longevity is making it hard to develop our village and keep experienced warriors around. If you hadn't come along, even I might have offered myself up to someone like eugh.. Neri. Sooner or later. The ones that do leave from her place always look so satisfied..."
+		"Luckily for us, our race is fertile and young ones reach maturity quickly. Or perhaps we'd have been wiped out long ago. Our lack of longevity is making it hard to develop our village and keep experienced warriors around. If you hadn't come along, even I might have offered myself up to someone like eugh.. Neri. Sooner or later. The ones that do leave from her place always look so satisfied..."
 		Vala's blush deepens and her eyes glaze over somewhat, but she suddenly pulls on one of her ears and shakes her head. With a sad little laugh she continues. 
-		"See what I mean? A simple thought and I was just about ready to break. Mother taught me to pull on my ear to clear my head of dirty thoughts. It works well enough. ..Anyway, we should probably get going. A good sweat is just what I need to take my mind off of stuff like churning and cumming."
+		"See what I mean? A simple thought and I was just about ready to break. Mother taught me to pull on my ear to clear my head of dirty thoughts. It works well enough. ..Anyway, we should probably get going. A good sweat is what I need to take my mind off of stuff like churning and cumming."
 		She jogs a small distance away, pulling on her ear again as she runs.
 		</text>
 		<picture source="valaporty" height="1"/>
 		<choice destination="end" text="Onward." />
+	</page>
+	
+	<page ID="peoplespec">
+		<text>
+		"Someone specific..?"
+		</text>
+		<picture source="valaportf" height="1"/>
+		<choice destination="peoplespecmin" text="About your planet.." />
+		<choice destination="peoplespeccomp" text="About our companions.." />
+		<choice destination="end" text="Ah, sorry. Never mind." />
+	</page>
+	
+	<page ID="peoplespecmin">
+		<text>
+		"Hmm. You want my opinion on someone from home? Well.. Okay. Who are you asking about?"
+		</text>
+		<picture source="valaportf" height="1"/>
+		<choice destination="awari" text="You're friends with Awari?" />
+		<choice destination="shanna" text="The priestess seems important. Know much about her?" />
+		<choice destination="avei" text="Know the alchemist?" />
+		<choice destination="neri" text="What's the deal with Neri?" />
+		<choice destination="warriors" text="Thoughts on the elven warriors as a whole?" />
+		<choice destination="saurians" text="What do you think of the saurians?" />
+		<choice destination="end" text="Ah, sorry. Never mind." />
+	</page>
+	
+	<page ID="peoplespeccomp">
+		<text>
+		"Companions, huh? Who are you talking about?"
+		</text>
+		<picture source="valaportf" height="1"/>
+		<choice destination="zin" text="Opinion of Zin?" >
+			<condition evaluate="GLOBALFLAG" operator="equals" value="2" flag="NERI_BASEMENT" />
+		</choice>	
+		<choice destination="eve" text="Your opinion of Eve?" >
+			<condition evaluate="GLOBALFLAG" operator="equals" value="1" flag="stagherm" />
+		</choice>	
+		<choice destination="end" text="Ah, sorry. Never mind." />
+	</page>
+	
+	<page ID="awari">
+		<text>
+		"Friends.. Might be a bit much. Rivals, is more accurate. Her mother and my own got along before, well uh. You know. Before that, they both trained warriors. Me and Awari included." 
+		Vala holds her blade up, giving it a few mock swings. 
+		"They had different opinions on optimal battle practises, and often made us fight each other. I wish I could say that I always won.. We don't talk much anymore, but Awari is quite capable. I trust she'll be Minyos's next champion or perhaps commander, she's just waiting for the opportunity, I think."
+		</text>
+		<picture source="valaportg" height="1"/>
+		<choice destination="peoplespecmin" text="Can I ask about someone else?" />
+		<choice destination="end" text="Thanks, that was all." />
+	</page>
+	
+	<page ID="shanna">
+		<text>
+		"Mother Shanna, huh? The spirit priestess is the most honoured and powerful position in Minyos. I believe that she was groomed from birth by the previous priestess, and is apparently more in-touch with the spirits than any other. I don't even know how old she is." 
+		Vala looks around, making sure no one can eavesdrop. 
+		"Look PNAME, what I'm about to say, you can't tell anyone. I may be executed for blasphemy if my people found out.." 
+		She looks serious, but apprehensive. Taking a deep breath, she continues. 
+		"I.. I stopped believing in the spirits. If I ever believed they existed at all. I've never felt, or seen anything of the sort." 
+		Those words seem to take a lot out of her. Vala looks to you pleadingly. 
+		"What do you think PNAME? I know it is our tradition, but somehow.. Especially after meeting you... It no longer made sense. The wonders of your technology..
+		<conditional> <condition evaluate="GLOBALFLAG" operator="equals" flag="Valaeat2" value="1" />I mean.. We can even come back from the dead!!
+		</conditional>" 
+		</text>
+		<picture source="valaportk" height="1"/>
+		<choice destination="shanna1" text="$My technology doesn't disprove anything though, does it?" />
+		<choice destination="shanna2" text="$I'll be honest, your religion does seem far-fetched." />
+		<choice destination="shanna3" text="$The universe is vast. There's always going to be things outside of our understanding. It's certainly possible." />
+	</page>
+	
+	<page ID="shanna1">
+		<text>
+		"Hmm, what you're saying is true. But.." 
+		She doesn't look convinced. 
+		"It's just.. If we did have protection from something greater, no calamity should ever befall our people, right?" 
+		Vala steps away, rubbing her sword's sheath anxiously.
+		"PNAME.. You probably didn't get treated with much respect when you first arrived in our village.." 
+		She slowly turns back to face you. 
+		"If you were mean-spirited, could you not have used some kind of technology and destroyed the place with ease? ..Or ..What if instead of us, you had happened upon the saurians first, and had helped them instead? They surely wish to eradicate my people. With you on their side, we would have little chance of survival." 
+		Drawing her sword, she traces her finger around it's inscription. 
+		"When I think of what so easily could have been, it's hard to believe my species special at all. Let alone blessed by a greater power." 
+		Vala stares at the sword for a minute or two. She suddenly gasps with realisation. 
+		"Oh! Sorry PNAME. You asked me about the priestess, and here I am, blathering on again. You could ask Mother Shanna herself whatever it is you seek. I usually tried to stay away from her."
+		</text>
+		<picture source="valaportg" height="1"/>
+		<choice destination="peoplespecmin" text="Can I ask about someone else?" />
+		<choice destination="end" text="Maybe I will, thanks." />
+	</page>
+	
+	<page ID="shanna2">
+		<text>
+		Vala nods in agreement. 
+		"As I thought. Does Shanna really expect me to believe that 'great ancestral spirits' are content with our village's tiny existence? That they protect us, when so many people's lives are lost, and without reasonable explanation?" 
+		She raises her voice as she continues. 
+		"Maybe she's just an old-fashioned hag that only spreads lies to keep herself on top! Her vast 'knowledge' is nothing but a fabricated.. Web of deceit..!!" 
+		Trailing off, she looks at her feet and sighs.
+		"Is what I'd like to say.. But there's no proof either way. And.. If everyone else believes in her, then that makes me the strange one, right? Mother always listened to her. She listened all the way to the grave..!" 
+		Shaking her head frustratedly, the elven woman walks off. It seems that rather than disbelieving in their religion, Vala is hung up with what happened to her mother, still angry at the priestess.
+		</text>
+		<picture source="valaportj" height="1"/>
+		<choice destination="end" text="I'll give her some time to cool off." />
+	</page>
+	
+	<page ID="shanna3">
+		<text>
+		Vala is surprised by your answer. 
+		"Even from your outside perspective, you think it possible..? Hmm.. It is true what you say." 
+		She rubs her chin in thought.
+		"There is so much I don't understand. If your arrival here has taught me anything, it's that." 
+		Tapping her chin, she paces back and forth a little.
+		"There could be spirits, certainly.. But even still, it's hard to believe that they bless and protect us. Ancestors or not." 
+		She shrugs. 
+		"In time.. Could we prove it to be false? Or perhaps.. Something turns up that makes our religion, and in turn, our steadfast belief in Mother Shanna, undeniably true?" 
+		Vala sighs, defeated.
+		"..I don't know. I can only wonder, PNAME. Did you need anything else?"
+		</text>
+		<picture source="valaportg" height="1"/>
+		<choice destination="peoplespecmin" text="Can I ask about someone else?" />
+		<choice destination="end" text="Nah, let's go." />
+	</page>
+	
+	<page ID="avei">
+		<text>
+		"You mean Avei? She's been around since before I was born. It's hard to say whether she's a genius, or crazy. There's no denying that her potions are magical." 
+		Vala mimes an expanding balloon and smiles. 
+		"Though.. I often wonder just how she could have concocted the formula for such things. Through many failed experiments, most likely.. If I was more sociable, I'd just ask her. But I hear she's extremely secretive. And people who snoop around tend to go missing." 
+		She pauses, leting out a great sigh.
+		"Haaaaa.. Sometimes, it feels like people from our village do nothing but go missing..."
+		</text>
+		<picture source="valaporte" height="1"/>
+		<choice destination="peoplespecmin" text="Can I ask about someone else?" />
+		<choice destination="end" text="Sure seems that way. That was all." />
+	</page>
+	
+	<page ID="neri">
+		<text>
+		Vala both grimaces, and blushes.
+		"Eughh... You want to know about her, do you? ..Well, I can tell you about my experiences with her."
+		Tweaking her ear, she begins the story.
+		"Do you remember, I once told you about that old group of friends I had? Before mother.. You know." 
+		Quickly shaking her head, Vala continues. 
+		"Neri was in that rival group. One of the only survivors from that day, too." 
+		She looks away from you, blushing deeper. 
+		"I was very nearly eaten by her in that struggle. Elbow deep in her shaft at one point, actually. I managed to yank my arm out, and thrust one of her friend's heads in instead. Paying no mind that it was her friend, she happily slurped her down.." 
+		Vala was panting slightly, green skin dyed as red as it could be. 
+		"At that point, the battle pretty much stopped for me. I could only watch and not pay much more attention. Watch as she reduced her own teammate, possibly friend, to jizz. The struggling bulge stop moving.. Losing definition.. It was so close to being me..."
+		</text>
+		<picture source="valaportk2" height="1"/>
+		<choice destination="neri1" text="$What happened next?" />
+	</page>
+	
+	<page ID="neri1">
+		<text>
+		"The leader of the rival group was shouting at Neri, but our leader ended up swallowing her while she was distracted. Ten girls and in the end, there was only four. With two left on either side, and everyone being full, we ended up calling off the feud. I don't know if you've met her, but Minyos's current champion was my old leader." 
+		Vala shook her head again.
+		"It seems from then on, Neri decided to treat me as 'the one that got away'. She was scared off by my mother, but after Mother didn't come back.. Neri began her advances. Pestering me when I went out, coming over unannounced, returning no matter how many times I denied her or threw her out. And well.. She was wearing me down. It's hard to forget that sensation.. The warm flesh slowly suckling.. That night, how close I was to being nothing but a load.. I confess, I still think of it to this day. If not for you, then I.." 
+		She trails off, pulling at her ears, then clears her throat. 
+		"Ahem.. Besides that, I don't know much about her, if I'm being honest."
+		</text>
+		<picture source="valaporta2" height="1"/>
+		<choice destination="peoplespecmin" text="Can I ask about someone else?" />
+		<choice destination="neri2" text="How about you err, 'talk' it out with her?" >
+			<condition evaluate="GLOBALFLAG" operator="equals" flag="Valaeat2" value="1" />
+		</choice>
+		<choice destination="end" text="Thanks for the story, let's go." />
+	</page>
+	
+	<page ID="neri2">
+		<text>
+		"By 'talk' to her, you actually mean..?" 
+		Vala gestures with a diving motion with both arms. You nod.
+		"I'll admit it. The thought has crossed my mind since the time you showed me the reformer. But.. No. Isn't it a bad idea to overly rely on your technology? I fear abusing it. Or rather, I fear it would be easy to get addicted to being gurgled.. And I've had fantasies for so long.." 
+		She stops speaking. Her eyes have glazed over, and her breath is haggard. Suddenly, she pulls on both of her ears. Hard. Snapping herself out of the lust-induced stupor, she eyes you questioningly. 
+		"PNAME. Teasing me like that when you know how we can get.. It's like you want to watch her spurt out my remains.. I'll have to decline. For now. There is just too much to do. But.. Perhaps, when the war with the saurians is over..?"
+		</text>
+		<picture source="valaporty" height="1"/>
+		<choice destination="peoplespecmin" text="Can I ask about someone else?" />
+		<choice destination="end" text="Fair enough, I'll hold you to it. Let's go. " />
+	</page>
+	
+	<page ID="warriors">
+		<text>
+		"Our warriors? Mother trained a lot of them, and they were a force to behold in the past, but years of peace have left them quite a bit weaker than I remember. Hmm." 
+		Vala scratches the back of her head.
+		"I suppose.. Until recently, with the re-appearance of the lizards, they only had to deal with minor incidents. Even the huntresses have had a relatively easy time these past few years. Well, as long as they work together properly, that is." 
+		She sighs, looking off into the distance.
+		"..I miss Mother.. She'd sort them out. And if she were there, I'm sure we'd have had no problems quelling the saurians.."
+		</text>
+		<picture source="valaportg" height="1"/>
+		<choice destination="peoplespecmin" text="Can I ask about someone else?" />
+		<choice destination="end" text="I'm sure.. Anyway, let's go." />
+	</page>
+	
+	<page ID="saurians">
+		<text>
+		"Ah, those lizards... I'll be honest with you PNAME, I'm surprised. From what I was taught, they were a sinister and vengeful people that sought to ransack everything our ancestors had worked for. But even after fighting them, they don't seem to be entirely different to us? Well, besides the scales." 
+		She pinches at her cheek in demonstration. 
+		"If we had made friends, and traded with strangers from the stars regularly all those years ago.. I do wonder what my people once owned, or what actions they made, that drew the saurians ire. Perhaps they really were evil.." 
+		Rubbing at her now-red cheek, she looks back to you. 
+		"But I was thinking.. Could years of isolation have mellowed them out somewhat? I know we're at war, but I've yet to see an atrocity committed greater than making a meal of one of us. Which is all too common in Minyos anyway... Hmm." 
+		</text>
+		<picture source="valaporta" height="1"/>
+		<choice destination="peoplespecmin" text="Can I ask about someone else?" />
+		<choice destination="end" text="You're not wrong.. That was all though, let's get going." />
+	</page>
+	
+	<page ID="zin">
+		<text>
+		Vala blinks at you in confusion. 
+		"...Zin? Ah, do you mean that naked woman? With the glowing eyes?" 
+		You nod at her, and she thinks for a moment. 
+		"Hmm.. I don't know. Something about it-her is ...unsettling. Unnatural. And she's so shameless! She just stares at me sometimes.."
+		Shaking her head, she looks unsure of what to say. 
+		"It's like.. I can't tell what that thing is thinking. Or is it thinking at all?  Eugh. Sorry PNAME, I try not to stay anywhere near uh, her. If I can help it. But I'm not scared, just so you know. I'm just keeping an eye on her. Make sure she doesn't try anything." 
+		Vala seems a little too defensive, so you give her a knowing look. She just frowns at you.
+		"Hey. PNAME. Stop that. I'm serious. You really think I'm scared of a naked woman? Well, I'm not. Definitely not."
+		</text>
+		<picture source="valaportj" height="1"/>
+		<choice destination="peoplespec" text="Ahaha, sure sure. Can I ask about someone else?" />
+		<choice destination="end" text="Hahaha, whatever you say. That was all I needed." />
+	</page>
+	
+	<page ID="eve">
+		<text>
+		Vala's ears perk up. She hops forward excitedly, pelting you with words.
+		"She's really something isn't she? Seems like she's a bit of an airhead, but I really look up to her. Literally. She's quite large. How lucky... Tall, strong, and sexy!  Although, she says that you made her like that." 
+		Vala grabs at your arm, face shining. Since she's normally pretty calm, it's kind of cute how worked up she is. 
+		"Hey, hey, PNAME. Think that you could make me bigger? Training more won't increase my height any, and I always wanted to be tall like my mother. Or taller even! I can imagine it now! Oh but uhm.. Without the penis, preferably." 
+		</text>
+		<picture source="valaportd" height="1"/>
+		<choice destination="eve1" text="I'm not sure if I can. Sorry." />
+	</page>
+	
+	<page ID="eve1">
+		<text>
+		She releases your arm, obviously disappointed.
+		"Yes. Yes, of course. I figured, but had to ask regardless..." 
+		Vala doesn't stay disheartened for long, she poses confidently.
+		"No matter. I'll just have to make sure I'm stronger than her. Then it doesn't matter how big she is! Assuming you don't cheat and make her any bigger, that is." 
+		Eyeing you suspiciously, she then breaks into a hopeful grin. 
+		"Maybe, somewhere.. We'll find something that can make me huge..! Ah well. Whether she's bigger than me or not, I'd like to become friends with her." 
+		<conditional> <condition evaluate="GLOBALFLAG" operator="equals" flag="Valaeat2" value="1" /> Blushing and rubbing her thighs together, Vala adds, 
+		"And now that I'm immortal.. That huge thing can't just be for show, can it? Do you think she'd.. Oooooh.. Please, tell her that if she's hungry sometime.. Well, just come find me.."
+		</conditional>
+		</text>
+		<picture source="valaportb" height="1"/>
+		<choice destination="peoplespec" text="Can I ask about someone else?" />
+		<choice destination="end" text="She'll be happy to hear that. That's all I wanted to ask." />
+	</page>
+	
+	<page ID="shopkeep">
+		<condition evaluate="GLOBALFLAG" operator="equals" value="0" flag="Valaopen" />
+		<text>
+		Vala frowns before you've even finished your question. 
+		"PNAME. I don't mean to be rude, but I must. It's none of your business." 
+		She doesn't talk any further, ears twitching slightly as she turns away.
+		</text>
+		<picture source="valaportc" height="1"/>
+		<choice destination="end" text="...Ok then." />
+	</page>
+	
+	<page ID="shopkeep">
+		<text>
+		The elven woman stiffens up at your question, muscles becoming tense. She soon relaxes into a sigh.  
+		"Heh. You really know how to ask about things I would rather not answer, PNAME.." 
+		You grin at her knowingly. She grins back but sighs once more. 
+		"And yet, answer I will. Maybe you know me too well.. Heh, who's fault is it, I wonder?" 
+		She ponders a moment, thinking on where to begin. 
+		"This one isn't too grand of a tale. I just don't like her. The woman is deplorable. She puts way too much effort into accruing gold and trinkets. Pretends to value family, but abuses their trust. Vala watches you carefully, obviously hoping that's all she has to say. 
+		</text>
+		<picture source="valaporth" height="1"/>
+		<choice destination="shopkeep1" text="$Is that really the whole story?" />
+		<choice destination="end" text="Good enough for me. Let's get going." />
+	</page>
+	
+	<page ID="shopkeep1">
+		<text>
+		Vala chuckles. 
+		"No use trying to hide it, eh? I have no proof, so it may be for nothing, now I think more on it." 
+		Vala holds up her sword, sliding her fingers down the sheath.
+		"This sword is part of a series. Warriors from my mother's side of the family, my aunt too, all have one. They're passed down to their children." 
+		She blushes, before adding, 
+		"The ones that can be recovered, of course." 
+		Letting the sword go, Vala pinches her earlobe and explains further. 
+		"At some point, My aunt decided that she wanted the whole collection. I don't know why. Quite a few of my other aunts went missing, one by one, until only she remained. She was bigger everytime I saw her, and the swords always seemed to find their way into her possession."
+		</text>
+		<picture source="valaportd2" height="1"/>
+		<choice destination="shopkeep2" text="$Think she had something to do with it?" />
+	</page>
+	
+	<page ID="shopkeep2">
+		<text>
+		"Hmm. Whether she did or not doesn't really matter PNAME. She can't have done anything illegal or the guards would have done something." 
+		She paused for a moment, shrugging. Clasping your arm, she looks fiercely into your eyes.
+		"But yes, I do. She's quick-witted and smooth-talking. Not to mention greedy. You've seen first-hand, have you not?" 
+		You think back to the earlier dealings, you admit it wouldn't be too much of a stretch. Vala grips your arm tighter.
+		"I fear she was after my sword too, especially after Mother never returned from her expedition." 
+		Letting you go, her ears flopped down, face pink. 
+		"I won't deny she is attractive. She tried many times to seduce me. Or perhaps, she was just trying to be nice. It's difficult to say. She is the only blood-family I have left so I'd have liked to trust in her." 
+		You begin to wonder if the circumstances around the disappearances were just coincidences. Could it be that the shopkeeper was only trying to honour the fallen from her family? Vala looked unsure.
+		"The consequence would have been too great if she was untrustworthy. I only have one life." 
+			<conditional> <condition evaluate="GLOBALFLAG" operator="equals" flag="Valaeat2" value="1" /> She suddenly remembers the reformer. "Had. Had one life. Hmm. It's hard to get used to this immortality thing." Scratching behind her ear, she shrugs again.
+			</conditional>
+		</text>
+		<picture source="valaportk2" height="1"/>
+		<effect type="incrementglobalflag" flag="Valameat" value="1" />
+		<choice destination="shopkeep3" text="$Do you want to bring it up with her?" />
+		<choice destination="end" text="That's all." />
+	</page>
+	
+	<page ID="shopkeep3">
+		<text>
+		Thinking about it, Vala shook her head. 
+		"I don't think so. At least, not right now." 
+		She looks to you proudly, hands on her hips. 
+		"We have things to do, do we not? My family issues should be lower on our priority list." 
+		Beaming at you, she gives you a friendly hug. 
+		"Thank you for caring though PNAME, it means a lot." 
+		</text>
+		<picture source="valaportm" height="1"/>
+		<effect type="incrementglobalflag" flag="Valalove" value="1" />
+		<choice destination="end" text="$Anytime." />
 	</page>
 	
 	<page ID="selfopen">
@@ -334,7 +672,7 @@
 		<text>
 		"You want to watch me eat? Alright. Give me the word and I'll show you what I can do. I'd be lying if I said I haven't craved it again all these years."
 		</text>
-		<picture source="valaporth" height="1"/>
+		<picture source="valaporth2" height="1"/>
 		<choice destination="fun" text="$What about something more personal?" />
 	</page>
 	
@@ -364,14 +702,14 @@
 	<page ID="sex">
 		<text>
 		Blushing deeply, Vala replies bashfully.
-		"Our people always are. I won't say no, well to you, at least."
+		"Our people always are. I won't say no. Well.. To you, at least."
 		</text>
 		<picture source="valaportw" height="1"/>
-		<choice destination="penetration" text="Horny?" >
+		<choice destination="penetration" text="sex?" >
 			<condition evaluate="GLOBALFLAG" operator="equals" value="10" flag="Valalove" />
 		</choice>	
-		<choice destination="oral" text="Hungry?" />
-		<choice destination="hand" text="lets go" />
+		<choice destination="oral" text="oral" />
+		<choice destination="hand" text="handy" />
 	</page>
 	
 	<page ID="penetration">
@@ -404,7 +742,7 @@
 		"You want to be eaten? Really? ..I can't guarantee your safety. I've never been able to hold back my digestion for long. I lack the practise I suppose. If you're sure, we can try.. But do tell me as soon as you want out, or if it gets too hot inside, I don't want to lose you."
 		Vala takes off her armour, pulling it over her head. As it does, her shirt lifts, briefly showing off her toned abs. Her stomach rumbles loudly, startling her.
 		"Ahaha, I'm already imagining tasting you.. It's been so hard to control myself for so long. You look so good I could just.."
-		Planting a wet kiss upon your lips, she mashes her face into yours. As she pulls back,  large strands of saliva trailing between your lips and hers. Vala's eyes are half-lidded and she's panting hard, a wet patch slowly growing in the groin of her pants.
+		Planting a wet kiss upon your lips, she mashes her face into yours. As she pulls back,  large strands of saliva trail between your lips and hers. Vala's eyes are half-lidded and she's panting hard, a wet patch slowly growing in the groin of her pants.
 		</text>
 		<picture source="valaportw" height="1"/>
 		<choice destination="vore1" text="It's what you want.." />
@@ -420,7 +758,7 @@
 	
 	<page ID="vore2">
 		<text>
-		You're hit with a wave of heat and a distinct acrid smell from further down the tight passage, you can hear the groaning of the hungry organ as it prepares to churn it's impending meal. Vala is gulping with as much vigor as she can muster, moaning uncontrollably all the while. The scarcity of such rich food obviously not having any diminished effect on her digestive processes. As she swallows past your <macro ID="breast_size_desc"/> chest, you wonder how often she partook before her 'fasting period', her skilled handling of you suggests it may have been more often than she'd admit. You also wonder if she remembers what she said merely moments ago, because when you reach the already deathly hostile stomach, you realise there isn't any way you're coming out intact, even if she immediately lets you back out.
+		You're hit with a wave of heat and a distinct acrid smell from further down the tight passage, you can hear the groaning of the hungry organ as it prepares to churn it's impending meal. Vala is gulping with as much vigor as she can muster, moaning uncontrollably all the while. The scarcity of such rich food obviously not having any diminished effect on her digestive processes. As she swallows past your <macro ID="breast_size_desc"/> chest, you wonder how often she partook before her 'fasting period', her skilled handling of you suggests it may have been more often than she'd admit. You also wonder if she remembers what she said merely moments ago, because when you reach the already deathly hostile stomach, you realise there isn't any way you're coming out intact. Even if she immediately lets you back out.
 		</text>
 		<picture source="valaportq" height="1"/>
 		<choice destination="vore3" text="*all the way*" />
@@ -429,17 +767,18 @@
 	<page ID="vore3">
 		<text>
 		You curl into the stinging prison, not really bothering to struggle much. Hopefully Vala won't be too distressed after she realises what she's done. She's currently in a trance, rubbing her stretching middle as she ingets the rest of your body, gasping with pleasure. "Auuuuh... PNAME you fuh-feeell. So good in there.."
-		Vala now laying on the ground, cradles her middle in a full-body hug. Gurgling out ecstatic gibberish, she rolls around happily and wishes that the bulging gut would remain that way forever. Inside however, you're jostled around and mashed into the ground as the gurgling organ works you down. Vala is wracked with orgasm after orgasm, assaulting you  with bubbling waves of warmth. Looks like the forever she wished for won't come though. Not feeling much any more, with your last thoughts, you can't help but be pleased at how much joy you've just given out, at only the low cost of your entire body. The enraptured elven woman doesn't even notice your passing, the sloshing of her belly slowly dying down. Her movements become laboured as her repeated esctasies end, the tides of her stomach soon lulling her to a peaceful sleep.
+		Vala now laying on the ground, cradles her middle in a full-body hug. Gurgling out ecstatic gibberish, she rolls around happily and wishes that the bulging gut would remain that way forever. Inside however, you're jostled around and mashed into the ground as the gurgling organ works you down. Vala is wracked with orgasm after orgasm, her movement causing the acid inside to assault you with bubbling waves of warmth. Looks like the forever she wished for won't come, especially with how active her stomach is. Not feeling much any more, with your last thoughts, you can't help but be pleased at how much joy you've just given out. It only cost you the low price of your entire body. The enraptured elven woman doesn't even notice your passing, the sloshing of her belly slowly dying down. Her movements become laboured as her repeated ecstasies end, the tides of her stomach soon lulling her to a peaceful sleep.
 		</text>
 		<picture source="valaportr" height="1"/>
+		<effect type="incrementglobalflag" flag="Valalove" value="1" />
 		<effect type="setglobalflag" flag="Valaeat" value="1" />
 		<choice destination="vore4" text="Zzzzz.." />
 	</page>
 	
 	<gameover ID="vore4" >
 		<text>
-		By the Vala awakens, her efficient system has long since processed it's passenger, padding her modest rear out somewhat, stretching her flimsy cloth pants to their seams. A few more meals like that and she'll be just as huge as the other girls from her village. Now in a much more lucid, if dazed state, she panics and wonders what she'll do from here on out. 
-		"PNAME.. I didn't mean to, I just."
+		By the Vala awakens, her efficient system has long since processed it's passenger, padding her modest rear out somewhat, stretching her flimsy cloth pants to their seams. A few more meals like that and she'll be just as huge as the other girls from her village. Now in a much more lucid, if still dazed state, she panics and wonders what she'll do from here on out. 
+		"I.. I didn't mean to, I just." 
 		...Vala shakes her head. No. She wanted it. You warned her. You did the right thing. Continually telling herself similar reassurances, Vala cleans up sluggishly. She feels wetness beginning to gather in the corners of her eyes. Holding back her feelings, she sets out once more, vowing once again to keep moving forward. And to make some new pants.
 		</text>
 	</gameover>	
@@ -460,9 +799,9 @@
 		<text>
 		"Auhhhhhhgnnn..!"
 		Vala lets out a strange noise and shudders violently, you're pretty sure she just came from imagination alone. "Tha.. That isn't fair PNAME. I told you how we can get.. Something like that, I may hold you to. I won't be much good with a sword anymore at that size though. Haaah..!" 
-		Shaking against your body, the panting mess of a woman cries out once more. Practically holding all her weight against you, she nuzzles against your <macro ID="breast_size_desc"/> breasts, the fragrance of lust radiating from her body as you roam your hands over her supple body. Helping her undress,  
-		<conditional> <assertion evaluate="slothasitem" slot="2" />you do as well, </conditional>
-		you begin to fold her clothes, purposely postponing her meal.
+		Shaking against your body, the panting mess of a woman cries out once more. Practically holding all her weight against you, she nuzzles against your <macro ID="breast_size_desc"/> breasts, the fragrance of lust radiating from her body as you roam your hands over her supple form. Helping her with her armour,  
+		<conditional> <assertion evaluate="slothasitem" slot="2" />removing your own clothes as well, </conditional>
+		you take your time and slowly drop it to the ground, purposely postponing her meal.
 		</text>
 		<picture source="valaportp" height="1"/>
 		<choice destination="voreb2" text="*Grabbed and lifted*" />
@@ -480,13 +819,13 @@
 		<text>
 		Recognising the willpower it must be taking Vala to eat you this slowly, you're impressed. She can't hold out for much longer though, and with a series of jerking motions, she gulps with much more strength, bringing you almost eye to eye with her in seconds. Giggling, you duck down and plant a kiss on her forehead. She raises her eyebrows in surprise, flushing deeply and finishing you off completely. You wiggle on the way down, with great effect, if the happy noises that Vala then makes are any indication. Tucking yourself away in the much less violent this time around stomach, you rub the inside linings and struggle against her gently, stimulating the organ somewhat. Acid tingles your extremities, but it looks like Vala wants to keep you as long as she possibly can this time.
 		</text>
-		<picture source="valaportq" height="1"/>
+		<picture source="valaportq3" height="1"/>
 		<choice destination="voreb4" text="Nice and calming..." />
 	</page>
 	
 	<gameover ID="voreb4" >
 		<text>
-		You and Vala have some mild conversation, discussing battle tactics and explaining technology, while you gradually dissolve inside the warm pit. Vala eventually falls into a food-induced coma, while you continue to stimulate her insides to give her pleasant dreams. It takes almost 2 hours before you can't think well enough to hold a thought together anymore, and not long after that, your fibers can't hold your body together anymore either. You drift off satisfied, thinking of the changes you'll make, whilst Vala, still asleep, cradles her swollen belly like a perverse body pillow. The protein rich mush you made soon filters out, to be absorbed and futher pad out the elven warrior's body.
+		You and Vala have some mild conversation, discussing battle tactics and explaining technology, while you gradually dissolve inside the warm pit. Vala eventually falls into a food-induced coma, while you continue to stimulate her insides to give her pleasant dreams. It takes almost 2 hours before you can't think well enough to hold a proper train of thought together, and not long after that, your fibers can't hold your body together anymore either. You drift off satisfied, last thoughts wondering what changes you'll make, whilst Vala, still asleep, cradles her swollen belly like a perverse body pillow. The protein rich mush you made soon filters out, to be absorbed and futher pad out the elven warrior's body.
 		</text>
 	</gameover>	
 	
@@ -520,13 +859,6 @@
 		<picture source="valaporte" height="1"/>
 		<effect type="incrementglobalflag" flag="Valascore" value="1" />
 		<choice destination="end" text="$Thanks for the warning, let's go." />
-	</page>
-	
-	<page ID="">
-		<text>
-			
-		</text>
-		<choice destination="end" text="lets go" />
 	</page>
 
 	<page ID="join">

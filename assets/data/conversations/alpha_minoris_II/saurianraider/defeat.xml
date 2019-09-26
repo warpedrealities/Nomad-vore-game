@@ -175,8 +175,8 @@
 		"Yes, this is the only thing you should have expected". 
 		<random id="valaraid" />
 		"Good riddance. Send as many as you want, it will make no difference."
-		Looking over to you with a somewhat guilty expression, she her posture stiffens. 
-		"We can't afford to be defeated here, PNAME. Although it seems cruel, many of our number have fallen to these beasts in the past. I will follow Mother's teaching."
+		Looking over to you with a somewhat guilty expression, her posture stiffens. 
+		"We can't afford to be defeated here, PNAME. Although it seems cruel, many of our number have fallen to these beasts in the past. I will follow continue to follow Mother's teaching."
 		</text>
 		<picture source="valaportc" height="1"/>
 		<effect type="incrementglobalflag" flag="Valascore" value="1" />

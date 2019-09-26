@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+	
+	<text>
+	The short woman staggers backwards, falling onto her butt, her disproportionately huge breasts swinging upwards and smacking her in the face.	She pants in exertion, rubbing at her nose. 
+	"Phew.. You're pretty tough, huh? Haa.. Don't suppose you.. want to join us..? The boss is.. The boss is looking for people who can get things done. I can.. Put a good word in for you.."  
+	On one hand, it might be a good way to more easily get into where all the juicy illegal stuff is happening. On the other, the defeated diminutive girl would make for an equally juicy meal..
+	</text>
+		<choice destination="join" text="$Tempting offer. What's in it for me?" />
+		<choice destination="oral" text="$I've got something better you can do for me in mind.">
+			<assertion evaluate="hasperk" perk="oralvore" />		
+		</choice>
+		<choice destination="devour" text="devour her">
+			<assertion evaluate="operatorOr">
+				<assertion evaluate="hasperk" perk="oralvore" />
+				<assertion evaluate="hasperk" perk="cockvore" />
+				<assertion evaluate="hasperk" perk="unbirthing" />
+				<assertion evaluate="hasperk" perk="analvore" />
+			</assertion>
+		</choice>	
+		<choice destination="end" text="Not worth my time."/>
+	</page>
+	
+	<page ID="join">
+	<text>
+	The tired woman gets up shakily, still panting slightly. 
+	"I'll can get you in the front door without you having to pay or screw around with any of those dumb mutts. Can get you a good price on some of our dealings too. You know, ship parts, drugs, thugs, whatever it is you might need. Sure it's a better deal than whatever those long eared bitches up above'll do for ya." 
+	She rubs at a spot on one of her breasts that will surely be bruised from the clobbering you gave her. 
+	"Though.. With how strong you are, you could make a fortune doing some hired muscle work for the boss I reckon."
+ 	</text>
+	<effect type="setlocalflag" flag="join" value="1" />
+	<choice destination="join1" text="$Sounds good, actually. I accept." />
+	</page>
+	
+	<page ID="join1">
+	<text>
+	She stands taller, already seeming much more energetic than moments before, holding out a hand.
+	"Heh, alright then! I guess we'll be working together soon. Name's Sienna. I'd say don't piss me off, but since you beat me once already, threats mightn't work as well as on the other newbies." 
+	You reach down and clasp her hand. It's much warmer than you'd expect, and her grip is firm. She shakes it once, before letting go and slumping against the wall somewhat. 
+	"Just.. Gimme a minute to catch my breath. By the time you get down there, they'll let you in with no trouble. And hey, if anyone does give you any grief, get their name or remember what they look like. I'll sort 'em out." 
+	Her final words are punctuated with a loud grumble from her stomach.
+ 	</text>
+	<special effect="nonhostile" />
+	<special effect="healnpc" />
+	<choice destination="end" text="$Thanks, I'll see you around." />
+	</page>
+	
+	<page ID="oral">
+	<text>
+	You lick your lips. It's too good of a chance to pass up, you decide. Even though she's so short, her muscular body will make for a filling meal. You inch closer. The furry woman inches backwards.  
+	"H-hey, let's not be hasty here.. Without me there's no way you'll open that door.." 
+	You continue to close in on her, gazing hungrily into her eyes. 
+	"Uhh.. Fine! If it's money or drugs you want, I'll can get it for you..!" 
+	You stop for a moment, pretending to consider her offer. You wait long enough for her to breathe a sigh of relief, and then you strike. Quickly grabbing her tail, you haul in your prize.
+ 	</text>
+	<choice destination="oral1" text="$None of that is worth giving up such an easy meal!" />
+	</page>
+	
+	<page ID="oral1">
+	<text>
+	She digs her claws into the metal floor, a terrible high pitched screeching ringing out as you continue to pull her towards you. 
+	"E-easy?! Fuck you, you stupid bitch! I've beaten and eaten people three times your size! I'll rip you apart from the inside!!" 
+	The furious and frantic girl screams at you, writhing against your grip, but is too beaten to really put up too much of a fight anymore. All she really does is shake her massive breasts around. You wince a little from the sheer volume of her voice, but you know she'll soon be writhing down your throat. In fact, you stop playing around. Mouth opening wide, you start gulping her tail down, eager to rid yourself of the noisy nuisance.
+ 	</text>
+	<choice destination="oral2" text="*swallow her down*" />
+	</page>
+	
+	<page ID="oral2">
+	<text>
+	No longer wasting any more time because the wolverine girl is still loudly screaming insults, you move her legs to your mouth and continue to consume her. Her struggles don't amount to much, but you actually find it hard to lift her off of the floor as you move down her ample, toned thighs. Her body is quite hot to the touch, her metabolism must be pretty active. As you lift her, it does surprise you just how much she weighs. Her body is incredibly dense and packed with muscle, and it feels like each one of her tits weighs many kilos on their own. You don't let it stop you though, swallowing past her tightly packed abs and reaching the somewhat daunting task of those two malleable mounds. 
+	"I hope you choke on my tits, bitch!" 
+	The still-struggling woman actually does sound hopeful, because if you can gulp those down, she has realised she's probably doomed.
+ 	</text>
+	<choice destination="oral3" text="*quash her hopes*" />
+	</page>
+	
+	<page ID="oral3">
+	<text>
+	Choking on tits, while sounding fun, isn't really what you feel like today. With some effort, gulping with all your might, mashing and squeezing her breasts hard, they eventually slide down your throat, bulging it out considerably. With the greatest hurdle out of the way, and one last 'fuck you' from your meal, you close your mouth over her head, and slurp up her wiggling arms, putting her 'safely' in your stomach for processing. She sits rather heavily in your gut, weighing you down much more than you'd have expected. Not to mention the bulging from her struggling and uncomfortable poking from her claws. With impaired mobility and a noisy, bouncing belly, you walk to the corner of the hallway to sit and digest.
+ 	</text>
+	<choice destination="oral4" text="*churn her away*" />
+	</page>
+	
+	<page ID="oral4">
+	<text>
+	Rubbing over the churning organ beneath you, you hope some soothing belly rubs will stop the indigestion from the shortstack's mad struggle inside. So far it hasn't. You and your stomach both groan with discomfort, and with how dense her body is, you feel like you're in for the long haul. After what feels like hours of sweating and pain, the surprisngly hardy girl in your gut finally seems to be giving up. Whether it was her spirit that broke down first, or her body, is hard to say, but you're glad the pain has lessened. Your belly has rounded out, now sloshing gently as you slowly stroke it. A sudden air bubble forces it's way out from somwhere within and you let out a large burp. A slimy, boot and an acid-destroyed jacket splatter wetly onto the floor in front of you. You shrug. With the discomfort finally gone, you stand and stretch happily, energised and ready to get going. Patting your shrinking middle one last time, you can feel the protein-rich goop that was once a crude shortstack being siphoned into your intestines to be absorbed.
+ 	</text>
+	<effect type="feed" value="150" />
+	<special effect="removenpc" />
+	<choice destination="end" text="Urpp.. Worth it.." />
+	</page>
+	
+	<page ID="devour">
+		<text>
+			You have devoured your prey in some unspecified, unelaborated on yet
+			satisfying way.
+		</text>
+		<effect type="feed" value="150" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />
+	</page>	
+	
+</Conversation>

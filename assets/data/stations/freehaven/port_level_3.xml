@@ -6,7 +6,7 @@
 		<tile sprite="33" vision="BLOCKING" movement="2" smart="true">a metal wall</tile>
 		<tile sprite="49" vision="EMPTY" movement="0" smart="true">a metal floor</tile>		
 		<tile sprite="68" vision="EMPTY" movement="0">tiled floor</tile>	
-		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
+		<tile sprite="72" vision="BLOCKING" movement="2">fortified security door</tile>
 		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
 		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>
 		<tile sprite="71" vision="BLOCKING" movement="2">not used</tile>		
@@ -101,7 +101,20 @@
 							<edge value="EAST" type="2" />			
 							<widget x="1" y="1" name="sprite" info="atmosphereprocessor" variable="5#5"/>
 							<widget x="3" y="4" name="invincible_invisible" info="interaction/freehaven/mallory_stash" variable="10" />
-						</keyBlock>						
+						</keyBlock>					
+						<keyBlock heat="1">
+							<row>33444333</row>
+							<row>33444433</row>
+							<row>33444433</row>
+							<row>33444433</row>
+							<row>33444433</row>
+							<row>33444433</row>
+							<row>33366333</row>
+							<row>33333333</row>
+							<edge value="SOUTH" type="4" />			
+							<spawn x="5" y="5" tag="0" />
+						</keyBlock>
+						<npcType value="freehaven/criminals/wolverine" />						
 					</advancedBlockDungeon>
 				</partition>		
 			</partition>			
