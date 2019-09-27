@@ -6,7 +6,7 @@
 		<text>
 			3L3V470R 0P3R4710N4L
 		</text>
-		<choice destination="goUp" text="Go up"/>
+		<choice destination="goUp" text="Go down"/>
 		<choice destination="end" text="exit" />
 	</page>
 
