@@ -228,7 +228,7 @@ public class StarSystem {
 		Document doc = ParserHelper.LoadXML("assets/data/systems/" + systemName + ".xml");
 		Element n = (Element) doc.getFirstChild();
 		if (n.getAttribute("restrictionScript").length() > 0) {
-			return new ScriptTool(n.getAttribute("script")).checkScript();
+			return new ScriptTool(n.getAttribute("restrictionScript")).checkScript();
 		}
 
 		return true;

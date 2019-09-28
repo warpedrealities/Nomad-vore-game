@@ -6,6 +6,6 @@
 	<ai value="bountyhunterAI" />
 	<combat value="fighterAI" />
 	<victory value="bountyhunterVictory" />
-	<loss value="bountyhunterDefeated" />
+	<loss value="bountyhunterDefeat" />
 	<experienceReward value="300" />	
 </controller>

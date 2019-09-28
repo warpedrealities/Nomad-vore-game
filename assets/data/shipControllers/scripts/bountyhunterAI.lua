@@ -1,6 +1,7 @@
 
 function pursue(script,sense,hostile)
-	if (hostile:getPosition():getDistance(script:getPosition())<2) then
+	if (hostile:getPosition():getDistance(script:getPosition())<2 and
+	hostile:getShipController():getFaction():getFilename()=="player") then
 		script:startFight()
 	else
 		print("attempting to move")

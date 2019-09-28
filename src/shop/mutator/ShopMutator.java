@@ -23,6 +23,7 @@ public class ShopMutator implements ShopData {
 
 	public ShopMutator(String shopname) {
 		mutations = new ArrayList<>();
+		this.shopName = shopname;
 		Document doc = ParserHelper.LoadXML("assets/data/shops/" + shopname + ".xml");
 		Element root = doc.getDocumentElement();
 		Element n = (Element) doc.getFirstChild();
@@ -70,7 +71,6 @@ public class ShopMutator implements ShopData {
 
 	@Override
 	public void refreshStore() {
-		// TODO Auto-generated method stub
 
 	}
 

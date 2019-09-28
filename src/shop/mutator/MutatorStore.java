@@ -34,7 +34,6 @@ public class MutatorStore extends Screen {
 
 	@Override
 	public void update(float DT) {
-		// TODO Auto-generated method stub
 		window.update(DT);
 		list.update(DT);
 		lowerWindow.update(DT);

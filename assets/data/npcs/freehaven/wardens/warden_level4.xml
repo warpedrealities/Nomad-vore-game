@@ -43,7 +43,7 @@
 	<itemDrop chance="10" item="enforcer pistol" />	
 	<itemDrop chance="20" item="bullets" />		
 		<observerVoreTargets>
-		<vore target="ruffian" scene="warden_ruffian_OV" preference="oralvore"/>
+		<vore target="Ruffian" scene="warden_ruffian_OV" preference="oralvore"/>
 		</observerVoreTargets>	
 	</rpg>
 

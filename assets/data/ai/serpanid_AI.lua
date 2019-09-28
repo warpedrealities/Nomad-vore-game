@@ -22,8 +22,9 @@ function main(controllable, sense, script)
 		hostile=sense:getHostile(controllable,10,true)
 		if not (hostile == nil ) then
 			if controllable:HasPath() then
-			controllable:FollowPath()
-			moveTo(controllable,sense,pos,hostile)
+				controllable:FollowPath()
+				moveTo(controllable,sense,pos,hostile)
+			end
 		else
 			controllable:Pathto(hostile:getPosition().x,hostile:getPosition().y,2)
 			controllable:FollowPath()	

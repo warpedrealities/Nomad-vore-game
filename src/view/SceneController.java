@@ -351,6 +351,21 @@ public class SceneController implements Sense {
 	}
 
 	@Override
+	public Actor getActorInTile(int x, int y, boolean activeOnly) {
+		if (activeZone.getActor(x, y) != null) {
+			if (activeOnly) {
+				if (activeZone.getActor(x, y).getRPGHandler().getActive()) {
+					return activeZone.getActor(x, y);
+				}
+			} else {
+				return activeZone.getActor(x, y);
+			}
+
+		}
+		return null;
+	}
+
+	@Override
 	public boolean getTileVisible(int x, int y) {
 		Tile t = activeZone.getTile(x, y);
 		if (t != null && t.getVisible()) {

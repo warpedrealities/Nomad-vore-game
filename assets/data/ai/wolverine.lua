@@ -60,12 +60,14 @@ end
 function main(controllable,sense,script)
 	pos=controllable:getPosition()
 	hostile=sense:getHostile(controllable,10,true)
-	if(not (hostile == nil ) and not controllable:isPeace()) then
-		--combat ai here
-		combat(controllable,sense,pos,hostile)
-	else
-		if (controllable:isPeace()) and pos:getDistance(hostile:getPosition())<6 and (controllable:getFlag("talked")==0) then
-			controllable:startConversation()
+	if not (hostile == nil ) then
+		if not controllable:isPeace() then
+			--combat ai here
+			combat(controllable,sense,pos,hostile)
+		else
+			if (controllable:isPeace()) and pos:getDistance(hostile:getPosition())<6 and (controllable:getFlag("talked")==0) then
+				controllable:startConversation()
+			end
 		end
 	end
 end

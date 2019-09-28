@@ -70,7 +70,7 @@ public class CombatManouver {
 		Vec2f vector = getVector(dt);
 		return new Vec2f(position.x+vector.x,position.y+vector.y);
 	}
-	
+
 	private Vec2f getVector(float dt)
 	{
 		Vec2f vector = new Vec2f(0, 0);
@@ -80,12 +80,12 @@ public class CombatManouver {
 		if ((course & full) != 0) {
 			vector.y = speed * dt;
 		}
-		vector.rotate(((float) heading) * 0.785398F);	
+		vector.rotate((heading) * 0.785398F);
 		return vector;
 	}
-	
+
 	private void doMove(float dt) {
-	
+
 		Vec2f vector=getVector(dt);
 
 		position.x += vector.x;

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<System script="AM_entry">
+<System script="AM_entry" restrictionScript="tau_mainquest">
 	<Star x="0" y="0" sprite="reddwarf" intensity="5" />
-	<restrictionScript script="tau_mainquest"/>
+
 </System>

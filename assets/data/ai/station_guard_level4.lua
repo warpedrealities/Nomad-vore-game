@@ -3,11 +3,10 @@ function combat(controllable,sense,script,hostile)
 	pos=controllable:getPosition()
 	if pos:getDistance(hostile:getPosition())<2 then
 	--if in melee range attack
-	controllable:setAttack(0)
-	controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
-		if (math.random(8)==1) then
-			controllable:setValue(2,10)
-		end
+		controllable:setAttack(0)
+		controllable:Attack(hostile:getPosition().x,hostile:getPosition().y)
+		controllable:setValue(2,10)
+
 	else
 		
 		a=math.random(0,2)
@@ -64,6 +63,9 @@ function main(controllable, sense, script)
 				if (controllable:attemptObserverVore()) then
 					controllable:setValue(2,0)
 				end
+			else
+				a=math.random(0,8)
+				controllable:move(a);
 			end
 			-- end
 		end

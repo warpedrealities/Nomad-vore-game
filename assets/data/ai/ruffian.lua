@@ -48,7 +48,7 @@ function main(controllable,sense,script)
 		combat(controllable,sense,pos,hostile)
 		
 	else
-		a=math.random(0,16)
+		a=math.random(0,8)
 		if (a<8) then
 			controllable:move(a);
 		end

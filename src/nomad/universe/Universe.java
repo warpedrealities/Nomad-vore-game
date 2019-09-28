@@ -236,7 +236,8 @@ public class Universe extends GameManager
 	{
 		for (int i=0;i<starSystems.size();i++)
 		{
-			if (starSystems.get(i).getPosition().x==x && starSystems.get(i).getPosition().y==y)
+			if (starSystems.get(i).getPosition().x == x && starSystems.get(i).getPosition().y == y
+					&& starSystems.get(i).canVisit())
 			{
 				return starSystems.get(i);
 			}

@@ -40,11 +40,11 @@ public class ObserverVoreHelper {
 		}
 		for (int i = 0; i < 8; i++) {
 			Vec2f p = Geometry.getPos(i, position);
-			Actor npc = ViewScene.m_interface.getSceneController().getActorInTile((int) p.x, (int) p.y);
+			Actor npc = ViewScene.m_interface.getSceneController().getActorInTile((int) p.x, (int) p.y, false);
 			if (npc != null && !npc.getRPGHandler().getActive()) {
 				ObserverVoreTarget target = getTarget(npc.getName(), list);
 				if (target != null) {
-					return new VoreScript_Impl(target.getTarget(), (NPC) npc, null);
+					return new VoreScript_Impl(target.getScene(), (NPC) npc, null);
 				}
 
 			}

@@ -121,8 +121,11 @@ public class ComputerScreen extends Screen implements Callback {
 	public void Callback() {
 		// TODO Auto-generated method stub
 
-		screenFade.run();
-		ViewScene.m_interface.UpdateInfo();
+		if (ViewScene.m_interface != null) {
+			screenFade.run();
+
+			ViewScene.m_interface.UpdateInfo();
+		}
 
 	}
 

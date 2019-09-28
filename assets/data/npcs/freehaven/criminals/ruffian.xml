@@ -52,7 +52,7 @@
 		</combatMove>		
 		<itemDrop chance="10" defeatOnly="true" item="loot box" />	
 		<observerVoreTargets>
-		<vore target="warden" scene="ruffian_warden_OV" preference="oralvore"/>
+		<vore target="station warden" scene="ruffian_warden_OV" preference="oralvore"/>
 		</observerVoreTargets>
 	</rpg>
 

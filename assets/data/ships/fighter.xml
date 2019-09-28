@@ -9,7 +9,8 @@
 	</shipstats>
 
 	<emitters>
-
+		<weapon x="0.0" y="0.3" />
+		<engine x="0.0" y="-0.3" />
 	</emitters>
 
 	<layout width="16" height="16" spriteset="ship.png">
@@ -39,7 +40,7 @@
 			</placeWidget>
 			<placeWidget x="1" y="1" name="slot">
 				<contains name="modules/interplanetary reactor">
-					<resource type="modules/FUEL" value="200" />
+					<resource type="FUEL" value="200" />
 				</contains>
 			</placeWidget>
 			<placeWidget x="1" y="5" name="slot">
@@ -47,7 +48,7 @@
 			</placeWidget>			
 			<placeWidget x="3" y="1" name="slot">
 				<contains name="modules/simple reactor">
-					<resource type="modules/ENERGY" value="50" />
+					<resource type="ENERGY" value="50" />
 				</contains>
 			</placeWidget>
 			<placeWidget x="3" y="5" name="slot">
