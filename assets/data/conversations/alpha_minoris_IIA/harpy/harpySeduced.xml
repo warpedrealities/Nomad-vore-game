@@ -769,6 +769,7 @@
 		</text>
 		<choice destination="kiss_breastvore6" text="Pull your tits up to your mouth." />
 		<choice destination="kiss_milkspray" text="Let this silly harpy splatter all over the ground." />
+		<choice destination="kiss_milkcollect1" text="Try to collect as much milk as possible for later." />
 		<!-- for those with short attention spans, this is a choice between being fed and going up a cup size. -MI -->
 	</page>
 	
@@ -796,6 +797,35 @@
 			<mutation part="breasts" modifier="1" variable="size"> </mutation>
 		</special>
 		<choice destination="end" text="You wonder if there are any more harpies around. They're entirely too fun to melt for you to let them live." />
+	</page>
+	<!-- Added milk collection part  -Rubiont-47 -->
+	<page ID="kiss_milkcollect1">
+		<text>
+			Not wanting to drink or pour your precious milk onto the ground, you decided to keep it for later. To do this, you decided to get a few bottles, which was not easy considering the situation you were in. If you let the nipples out of your hands, then all the milk will certainly spill out. Looking around for a solution, you noticed a couple of harpies flying somewhere. You called them and was able to attract attention. A couple of curious girls flew up to you and looked with interest at your swollen breasts. With gestures you tried to explain what you want from them. The harpies looked at your body movements in surprise.
+		</text>
+		
+		<choice destination="milkcheck" text="You squeezed your nipples and sprayed a little milk attracting the attention of the harpies." />
+	</page>
+	
+	<page ID="kiss_milkcollect3">
+		<text>
+			The girls smiled and approached your breasts, they wanted to help you, but a little not as you expected. They put their mouths against your nipples and began to suck avidly, not even suspecting that not so long ago this milk was the same harpy as they are. Using your free hands, you took out a couple of bottles. You stroked the head of one of the harpies, and having released your nipple, she smiled, licking the flowing milk from her lips. You put a bottle under the teat and filled it with milk. Then you repeated it with the second breast. 
+		</text>
+		<effect type="giveitem" value="2" item="Your homemade milk" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Two full bottles of milk and two happy full harpies, a pretty good ending." />
+	</page>
+
+	<check ID="milkcheck">
+		<test what="PERSUADE" DC="10" />
+		<outcome destination="kiss_milkcollect3" />
+		<outcome destination="kiss_milkcollect2" />
+	</check>
+	<page ID="kiss_milkcollect2">
+		<text>The silly harpies got scared when you sprayed milk on them and flew away. Growling displeased, you tried somehow to hold two nipples with one hand at a time while you were getting bottles. But while you were doing this, a nipple wet from the flowing milk slipped out of your hands and a massive breast flopped onto the ground splashing out its milk. It seemed that the former harpy was very eager to go outside, the breast was diminishing right before our eyes. Therefore, you had no choice but to take milk only from the second boob, restoring their size to the same state.</text>
+		<effect type="giveitem" value="1" item="Your homemade milk" />
+		<special effect="removenpc" />
+		<choice destination="end" text="At least you have one bottle." />
 	</page>
 	
 	<!-- the continuation of the kiss tree should eventually go here. "Should" being the operative word... -MI -->

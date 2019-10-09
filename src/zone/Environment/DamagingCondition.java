@@ -74,7 +74,10 @@ public class DamagingCondition implements EnvironmentalCondition {
 	@Override
 	public void run(Player player) {
 		player.getRPG().ReduceStat(Actor_RPG.HEALTH, damage, true);
-		ViewScene.m_interface.DrawText(message.replace("PNAME", player.getName()));
+		if (ViewScene.m_interface != null) {
+			ViewScene.m_interface.DrawText(message.replace("PNAME", player.getName()));
+		}
+
 		if (player.getRPG().getStat(Actor_RPG.HEALTH)<=0)
 		{
 			Game.sceneManager.SwapScene(new GameOver(gameOver));

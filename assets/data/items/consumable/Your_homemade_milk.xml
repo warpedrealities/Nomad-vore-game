@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ItemConsumable name="Your homemade milk" weight="1.5" value="80" tag="1">
+	<description>A large bottle of fresh rich milk made by your own breasts. All the most useful that is left of your victim is concentrated in this certanly delicious liquid.
+	</description>
+	<effectrecover modifier="ENDURANCE" modstrength="0.2"
+		modvalue="80" modifies="SATIATION">
+		Trying not to miss a drop of this thick tasty milk, you hungrily swallows all the liquid without a trace. Finishing your meal with a heartily burp and pat on the stomach.
+	</effectrecover>
+</ItemConsumable>

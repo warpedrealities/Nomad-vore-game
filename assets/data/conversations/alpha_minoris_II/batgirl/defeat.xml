@@ -59,6 +59,7 @@
 
 
 		<choice destination="breast4" text="claim your sweet reward" />
+		<choice destination="breast4alt" text="Prepare a bottle for her" />
 </page>
 
 
@@ -75,5 +76,15 @@
 		<choice destination="end" text="carry on" />
 </page>
 
+<page ID="breast4alt">
+<text>
+		You bent down to look for a bottle in your bags for your guest. Your incredibly big breast sagged to the ground, letting a few white drops fall to the floor. It looks like this mouse is eager to leave your comfortable cozy flesh and find yourself in a more spacious place. Finally, you were able to find a suitable transparent bottle and brought it to your nipple, now it was only up to her. Soon your teat became completely soft and rich milk flowed into the bottle. You waited until your breasts took their original <macro ID="breast_size_desc" /> size and then closed the bottle with a stopper. A bottle of homemade milk is ready!
+	</text>
+        <effect type="giveitem" value="1" item="Your homemade milk" />
+		<special effect="removenpc" />
+
+
+		<choice destination="end" text="carry on" />
+</page>
 
 </Conversation>

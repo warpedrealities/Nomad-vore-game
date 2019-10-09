@@ -66,27 +66,27 @@
 		</placeWidget>		
 		<perlin>
 			<band low="-1.0" high="-0.5">
-				<noise tile="5" scarcity="6" />
-				<noise tile="6" scarcity="6" />
-				<noise tile="7" scarcity="6" />
+				<noise tile="5" scarcity="8" />
+				<noise tile="6" scarcity="8" />
+				<noise tile="7" scarcity="8" />
 				<floodfill tile="1" />	
 			</band>
-			<band low="-0.5" high="0.0">
+			<band low="-0.5" high="0.1">
 
 				<floodfill tile="2">
 				</floodfill>
 			</band>
-			<band low="0.0" high="0.5">
-				<noise tile="5" scarcity="6" />
-				<noise tile="6" scarcity="6" />
-				<noise tile="7" scarcity="6" />
+			<band low="0.1" high="0.5">
+				<noise tile="5" scarcity="8" />
+				<noise tile="6" scarcity="8" />
+				<noise tile="7" scarcity="8" />
 				<floodfill tile="3">
 				</floodfill>
 			</band>			
 			<band low="0.5" high="1.0">
-				<noise tile="5" scarcity="6" />
-				<noise tile="6" scarcity="6" />
-				<noise tile="7" scarcity="6" />
+				<noise tile="5" scarcity="8" />
+				<noise tile="6" scarcity="8" />
+				<noise tile="7" scarcity="8" />
 				<floodfill tile="4" />
 			</band>
 		</perlin>

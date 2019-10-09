@@ -2,7 +2,7 @@
 <zone width="64" height="64" spriteset="medieval.png">
 	<landingsite x="9" y="9" />
 	<zonerules ruleset="saurianvillage" />
-	<tileset count-x="4" count-y="4">
+	<tileset count-x="8" count-y="8">
 		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
 		<tile sprite="1" vision="EMPTY" movement="0"> stone cobbles </tile>
 		<tile sprite="3" vision="EMPTY" movement="0"> stone floor </tile>
@@ -11,6 +11,7 @@
 		<tile sprite="6" vision="EMPTY" movement="2"> plant </tile>
 		<tile sprite="7" vision="EMPTY" movement="0"> grass </tile>
 		<tile sprite="8" vision="BLOCKING" movement="2"> natural stone </tile>
+		<tile sprite="9" vision="EMPTY" movement="0" smart="true"> red carpet </tile>
 	</tileset>
 	<transition direction="north">zoneW</transition>		
 	<transition direction="east">zoneS</transition>
@@ -41,19 +42,19 @@
 					<row>0000000000000000</row>
 					<row>0443440000044344</row>
 					<row>0433344444443334</row>
-					<row>0433333333333334</row>
+					<row>0439999999999934</row>
 
-					<row>0433343333343334</row>
-					<row>0443343333343344</row>
-					<row>0543343333343345</row>
-					<row>0543343333343345</row>
+					<row>0433343999343334</row>
+					<row>0443343999343344</row>
+					<row>0543343999343345</row>
+					<row>0543343999343345</row>
 
-					<row>0543343333343345</row>
-					<row>0543343333343345</row>
-					<row>0543343333343345</row>
+					<row>0543343999343345</row>
+					<row>0543343999343345</row>
+					<row>0543343999343345</row>
 					<row>0443333333333344</row>
 
-					<row>0433343333343334</row>
+					<row>0433343999343334</row>
 					<row>0433343333343334</row>
 					<row>0433344444443334</row>
 					<row>0444445555544444</row>

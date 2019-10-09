@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="orangeE.png" />
+	<name>Equoid</name>
+	<description>
+		The creature is a powerful hoofed beast of largely equine appearance covered in muscles and long dark hair that provide it with an air of the formidable and of danger that's unexpected in a supposed herbivore.
+
+	</description>
+	<rpg>
+		<experiencevalue value="10" />
+		<ability ability="STRENGTH" value="8" />
+		<ability ability="AGILITY" value="10" />
+		<ability ability="DEXTERITY" value="10" />
+		<ability ability="ENDURANCE" value="8" />
+		<ability ability="CHARM" value="10" />
+		<ability ability="INTELLIGENCE" value="10" />
+		<stat stat="HEALTH" value="30" />
+		<stat stat="RESOLVE" value="20" />
+		
+	</rpg>
+
+	<respawn delay="1000" />
+	<talk conversation="alpha_minoris_II/equoid/chat" />
+	<controller AI="staystill" />
+	<faction value="minyos" />
+</NPC>

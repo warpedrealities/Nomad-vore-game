@@ -2,21 +2,25 @@
 <zone width="64" height="64" spriteset="jungle.png">
 	<landingsite x="32" y="32" />
 	<zonerules ruleset="alienvillage" />
-	<tileset count-x="4" count-y="4">
+	<tileset count-x="8" count-y="4">
 		<tile sprite="1" vision="BLOCKING" movement="2"> a metal wall</tile>
 		<tile sprite="1" vision="EMPTY" movement="0"> a platform of crude masonry </tile>
 		<tile sprite="2" vision="EMPTY" movement="0"> jungle vegetation</tile>
 		<tile sprite="3" vision="EMPTY" movement="0"> jungle mud</tile>
 		<tile sprite="4" vision="EMPTY" movement="0"> jungle grass</tile>
+		
 		<tile sprite="6" vision="BLOCKING" movement="2"> drooping jungle tree</tile>
 		<tile sprite="7" vision="BLOCKING" movement="2"> thick and proud jungle tree</tile>
 		<tile sprite="11" vision="EMPTY" movement="0"> straw matting</tile>
 		<tile sprite="10" vision="BLOCKING" movement="2"> lashed together wooden
 			wall</tile>
 		<tile sprite="8" vision="BLOCKING" movement="2"> twisted jungle tree</tile>
+		
 		<tile sprite="14" vision="BLOCKING" movement="2"> shelves</tile>
 		<tile sprite="15" vision="EMPTY" movement="2"> table</tile>
 		<tile sprite="16" vision="EMPTY" movement="2"> a clay pot</tile>
+		<tile sprite="17" vision="TRANSPARENT" movement="2"> stable fence</tile>
+		<tile sprite="18" vision="EMPTY" movement="0"> stable dirt</tile>
 	</tileset>
 	<transition direction="south">zoneE</transition>
 	<transition direction="west">zoneN</transition>
@@ -52,7 +56,22 @@
 				</placeWidget>
 				<placeNPC name="minoris2_elves/companionVala" x="5" y="5" />
 		</prefab>
-		
+	
+		<prefab width="10" height="9" positionX="5" positionY="53" >
+				<row>EEEEEEEEEE</row>
+				<row>EFFFFFFFFE</row>
+				<row>EFFFFFFFFE</row>
+				<row>EFFFFFFFFE</row>
+				<row>9999889999</row>
+				<row>9888888889</row>
+				<row>8888888889</row>
+				<row>9888888889</row>
+				<row>9999889999</row>	
+				<placeNPC name="minoris2_elves/equoid" x="2" y="2" />
+				<placeNPC name="minoris2_elves/equoid" x="6" y="2" />
+		</prefab>
+
+	
 		<placeNPC x="25" y="25" name="minoris2_elves/village_neri" />
 		<partition xmin="4" xmax="56" ymin="4" ymax="56">
 			<randprefab width="8" height="7">

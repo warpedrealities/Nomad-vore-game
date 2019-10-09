@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Conversation>
+
+	<page ID="start">
+	<text>
+		The broad shouldered beast grazes upon the unsatisfactory fodder inside its pen. One eye fixed upon you to scrutinize in turn as you look it over and consider approaching.
+	</text>
+		<choice destination="oralvore0" text="*approach, what's the worst that could happen">
+			<preference fetish="ferals" />
+			<preference fetish="oralvore" />	
+		</choice>
+		<choice destination="end" text="This seems like a bad idea"/>
+	</page>
+
+	<page ID="oralvore0">
+	<text>
+	
+	</text>
+	
+	</page>
+
+</Conversation>
