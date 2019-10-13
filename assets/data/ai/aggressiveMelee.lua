@@ -13,7 +13,7 @@ function combat(controllable,sense,pos,hostile)
 		controllable:FollowPath()		
 		end
 	end
-
+	
 end
 
 function main(controllable, sense, script)  

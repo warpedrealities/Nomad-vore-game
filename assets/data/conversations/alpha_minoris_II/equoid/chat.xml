@@ -14,9 +14,30 @@
 
 	<page ID="oralvore0">
 	<text>
+	The equine like beast lets out a snort as you approach but otherwise takes no aggressive action. Lulled into a false sense of security you get closer still, reaching out only to have the beast abruptly grunt and slam into you. The alien horse knocking you down onto your arse and then lunging down over the top of your head. The wet mouth of the beast engulfing your head, soaking your hair as the powerful creature shoves you down its throat.
+	</text>
+	<choice destination="oralvore1" text="*eaten by an equoiod*"/>
+	</page>
 	
+	<page ID="oralvore1">
+	<text>
+	You let out a cry of startlement, but the beast's only response is to swallow firmly around your head and cram your shoulders inside its mouth as well. Your arms pinned against you before you can even meaningfully struggle. Though this constraint does little to stop you struggling as the voracious horse creature shoves its jaws further and further down over the atop of you, encompassing your <macro ID="breast_size_desc" /> chest and squeeze you down its throat without slowing or savouring. Such a terribly hungry beast you've encountered.
+	</text>
+	<choice destination="oralvore2" text="*continue*"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The beast continued to devour you amidst the stables confines, showing no sign of slowing down as you slide deep into its body. The fetid clenching heat of its insides embracing you from all sides as you're worked in down to your hips. The horse beast then tosses its head back, swallowing powerfully to squeeze your arse and legs down past its lips. Your body steadily spilling down into the churning depths of the horse's tummy to make it bulge and sag down between its legs as you're gobbled up entirely.
+	</text>
+	<choice destination="oralvore3" text="*food for the beast*"/>
+	</page>
+	
+	<gameover ID="oralvore3">
+	<text>
+	The equoiod snorts and paws at the ground as it adjusts its posture to deal with the sagging bloated weight now occupying its belly. But after that it pays you no more mind, the stomach walls clenching and squeezing around you as enzymes and digestive slime oozes in to break you down. Your shape being ground down and mulched into goo by the merciless action of the beast's digestive tract just like any other meal to run afoul of such a process. The beast's tummy turning round and soft and contracting up between its legs anew as you're turned into simple nourishment for the beast.
 	</text>
 	
-	</page>
+	</gameover>
 
 </Conversation>
