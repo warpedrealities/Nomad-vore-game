@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
+import solarview.spaceEncounter.gui.EncounterLog;
 
 public interface ShipWeaponEffect {
 
@@ -12,5 +13,5 @@ public interface ShipWeaponEffect {
 
 	public void save(DataOutputStream dstream) throws IOException;
 
-	public void apply(float distance, EncounterShipImpl ship, EffectHandler_Interface effectHandler);
+	public void apply(float distance, EncounterShipImpl ship, EffectHandler_Interface effectHandler, EncounterLog log);
 }

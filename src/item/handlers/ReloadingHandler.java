@@ -113,11 +113,32 @@ public class ReloadingHandler {
 						Universe.getInstance().getPlayer().addBusy(4);
 						return true;
 					}
+				} else {
+					return reload(device, inventory);
 				}
 			}
 		}
 
 		return false;
+	}
+
+	public static Item findAmmunition(String name, List<Item> inventory) {
+		for (int i = 0; i < inventory.size(); i++) {
+			Item item = inventory.get(i);
+			if (item.getItem().getName().equals(name)) {
+				if (ItemAmmo.class.isInstance(item.getItem())) {
+					if (ItemStack.class.isInstance(item)) {
+						return item;
+					}
+				}
+				ItemDepletableInstance ammo = (ItemDepletableInstance) item;
+				if (ammo.getEnergy() > 0) {
+					return item;
+				}
+			}
+
+		}
+		return null;
 	}
 
 	public static boolean DisposeAmmo(ItemHasEnergy def)

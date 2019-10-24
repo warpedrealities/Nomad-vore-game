@@ -361,7 +361,11 @@ public class DialogueScreen extends Screen implements Callback {
 				if (Enode.getTagName().equals("measurement")) {
 					String part = Enode.getAttribute("part");
 					String variable = Enode.getAttribute("variable");
-					buffer.append(m_player.getLook().getPart(part).getValue(variable));
+					int division = 1;
+					if (Enode.getAttribute("divider").length() > 0) {
+						division = Integer.parseInt(Enode.getAttribute("divider"));
+					}
+					buffer.append(m_player.getLook().getPart(part).getValue(variable) / division);
 				}
 				if (Enode.getTagName().equals("result")) {
 					int result=m_processor.getResult();

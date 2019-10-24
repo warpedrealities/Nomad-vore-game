@@ -8,6 +8,7 @@ import org.w3c.dom.Element;
 
 import solarview.spaceEncounter.EncounterEntities.EncounterShipImpl;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
+import solarview.spaceEncounter.gui.EncounterLog;
 import vmo.GameManager;
 
 public class DamagingEffect implements ShipWeaponEffect {
@@ -52,7 +53,7 @@ public class DamagingEffect implements ShipWeaponEffect {
 	}
 
 	@Override
-	public void apply(float distance, EncounterShipImpl ship, EffectHandler_Interface effectHandler) {
+	public void apply(float distance, EncounterShipImpl ship, EffectHandler_Interface effectHandler, EncounterLog log) {
 		int damage=minDamage;
 		if (maxDamage>minDamage)
 		{
@@ -75,6 +76,7 @@ public class DamagingEffect implements ShipWeaponEffect {
 			damage=0;
 		}
 		effectHandler.drawText(ship.getPosition().replicate(), Integer.toString(damage), 0);
+		log.drawText("hit dmg:" + damage);
 		if (damage>0)
 		{
 			ship.getMonitor().reportDamage(damage);

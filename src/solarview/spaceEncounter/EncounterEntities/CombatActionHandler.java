@@ -5,6 +5,7 @@ import java.util.List;
 
 import shipsystem.weapon.WeaponCost;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
+import solarview.spaceEncounter.gui.EncounterLog;
 import spaceship.SpaceshipResource;
 import vmo.GameManager;
 
@@ -12,12 +13,14 @@ public class CombatActionHandler {
 
 	private List<CombatActionImpl> actions;
 	private EncounterShipImpl ship;
+	private EncounterLog encounterLog;
 	private float clock;
 
 	public CombatActionHandler(EncounterShipImpl ship)
 	{
 		clock=0;
 		this.ship=ship;
+
 		actions=new ArrayList<CombatActionImpl>();
 
 	}
@@ -74,7 +77,8 @@ public class CombatActionHandler {
 		{
 			rPenalty=(int) (action.getWeapon().getWeapon().getWeapon().getRangePenalty()*action.getTarget().getPosition().getDistance(ship.getPosition()));
 		}
-		int defence=(int) (6+action.getTarget().getShip().getShipStats().getManouverability())+
+		int defence = 6 + action.getTarget().getEvasion()
+				+
 				action.getTarget().getShip().getShipStats().getCrewStats().getNavigation();
 		boolean miss=false;
 		if (roll-rPenalty<defence)
@@ -82,6 +86,9 @@ public class CombatActionHandler {
 			miss=true;
 
 		}
+		String result = !miss ? "hit" : "miss";
+		encounterLog.drawText("attk:" + ship.getShip().getName() + ">" + action.getTarget().getShip().getName() + " DC:"
+				+ defence + " roll:" + roll + "-" + rPenalty + " result:" + result);
 		//create effect and pass hit or miss
 		ship.getMonitor().reportAttack(miss);
 		effectHandler.addScript(ship,action,miss);
@@ -100,5 +107,9 @@ public class CombatActionHandler {
 				clock=0.1F;
 			}
 		}
+	}
+
+	public void setLog(EncounterLog log) {
+		this.encounterLog = log;
 	}
 }

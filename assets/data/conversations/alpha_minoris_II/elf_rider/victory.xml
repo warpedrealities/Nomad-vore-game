@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Conversation>
+	<page ID="start">
+		<preference fetish="oralvore" />
+		<preference fetish="ferals" />
+		<text>
+		"Ha, victory!" the elf crows from atop her war beast, raising a fist in triumph and then looking down at you and tromping her equoiod mount towards you. She grins as the muzzle of the beast sniffs at your legs and the creature lets out a chuffing snort "Looks like my steed thinks you're tasty." she remarks and then pats the flank of the broad shouldered beast "Eat her up girl."
+		</text>
+		<choice destination="oralvore0" text="this is very not good" />
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	You barely have time to let her words sink in before the equoiod makes good on the suggestion from its rider. The beast lunging forwards with a heavy stamp and engulfing your feet in its hungry mouth, hot oozing saliva soaking your feet as blunt teeth nibble over your calves. The voracious throat of the equoiod soon bulging out as your feet slide down its neck, the beast throwing its head forwards and swallowing vigorously to engulf more of you "Good girl, gobble her up." says the rider approvingly and strokes over the neck bulge with a smile as she watches more of your legs disappear into her mount.
+	</text>
+	<choice destination="oralvore1" text="this is exceptionally not good!"/>
+	</page>
+	
+	<page ID="oralvore1">
+	<text>
+	You put up a spirited if weakened and ultimately futile struggle as the beast devours you steadily. Your legs disappearing accompanied by copious encouragement from the beast's rider as you're drawn into the depths of the four legged steed, lifted up off the ground inch by inch as the equoiod continued its feast, its devouring of your body.Your shoulders lift up off the ground as it reaches your middle, then its gobbling up your chest and you're being lifted up off the ground completely. Won't be long until the mighty beast has devoured you completely.
+	</text>
+	<choice destination="oralvore2" text="maximum not good"/>
+	</page>
+	
+	<page ID="oralvore2">
+	<text>
+	The equoiod rears upwards and tosses its head back, gobbling down your head and arms with a hearty glucking gulping noise. The voracious horsebeast's jaws soon enough sealing up past your vanishing hands as it finishes its meal, you. Your form being shoved down to curl and be squeezed over in the depths of the beast's belly, making that gut hang low and making the rider chuckle and patpat the bulge approvingly...
+	</text>
+	<choice destination="oralvoreStruggle" text="*i'm not done yet, i'm getting out of here*"/>
+	<choice destination="oralvoreSubmit" text="*accept your fate*"/>
+	</page>
+	
+	<check ID="oralvoreStruggle">
+		<test what="STRUGGLE" DC="14" />
+		<outcome destination="escape" />
+		<outcome destination="gurgle" />
+	</check>
+
+	<page ID="escape">
+	<text>
+	You muster every ounce of strength and gather your second wind before starting to attempt your escape. You shove against the gurgling walls of the beast's stomach. The equiod letting out an irritable snort and grunt as you jostle and sway its gut about before making a break for freedom. You shove off against the inside of the heaving gut and push back into the beast's throat, sliding up towards the jaws and the open air beyond. The beast stamping and shifting around, tossing its body to and fro and trying to gulp you back down but without success. Your hands breach the maw of the horselike beast and soon you're pulling yourself out and free. Landing wetly upon the ground you look back up at the beast, both rider and steed temporarily out of consideration as regurgitating you sat poorly with the mount and the rider is forced to calm it.
+	</text>
+	<effect type="heal" value="0.1" />
+		<effect type="stunnpc" value="10" />
+		<choice destination="end" text="*back up*" />
+	</page>
+	
+	<page ID="gurgle">
+	<text>
+	You muster every ounce of strength and gather your second wind before starting to attempt your escape. You shove against the gurgling walls of the beast's stomach. The equiod letting out an irritable snort and grunt as you jostle and sway its gut about before making a break for freedom. You shove off against the inside of the heaving gut and push back into the beast's throat, sliding up towards those jaws. The beast stamps and shifts around, swallowing against your escape efforts...slowing your progress, forcing you back. You find you're no match for the implacable stamina of this broad shouldered beast and with a sound of despair you're forced back down into its belly. Your struggles for naught, the horsebeast triumphant yet again. The elf riding atop the beast patting its side approvingly and smiling as the gurgles around you redouble in intensity.
+	</text>
+	<choice destination="gurgleGO" text="*digestion*"/>
+	</page>
+	
+	<gameover ID="gurgleGO">
+	<text>
+	You slump into the grinding depths of the beast's innards having proved escape is futile. The equine beast letting out soft pleased noises as its sagging gut gurgles loudly. And gradually under the patting of the rider's palm you're broken down, gurgled away into a slop inside the horse creature. The gut turning rounded and shrinking away as you're absorbed, not a trace left to remain.
+	</text>
+	</gameover>
+
+	<page ID="oralvoreSubmit">
+	<text>
+	You shudder as you feel goopy stomach fluids oozing over your form, though if fear or arousal no other could say. The digestive processes beginning as you submit to the inevitability of your fate. The beast walking contently as its meal doesn't put up a fuss, your form swaying back and forth beneath it with each stride it took. The rider smiling "Mhmm, you're going to look so glossy after this aren't you." she says and patpats the equoiod's neck with affection "Got to find you more sluts to gobble up."
+	</text>
+	<choice destination="oralvoreSubmitGO" text="*just a mealslut, get melted*"/>
+	</page>
+	
+	<gameover ID="oralvoreSubmitGO">
+	<text>
+	The beast strides on as mount and rider made their way onwards you found yourself softening more and more. The gut that sagged beneath the equoiod turning smooth and round, then shrinking away as it glorps you down to nothing. The beasty digesting you with little more effort than it'd taken to get you down and with equal approval from its rider. All your ambition and you're nothing but food for that broad butt'd broad's beast.
+	</text>
+	
+	<gameover>
+
+</Conversation>

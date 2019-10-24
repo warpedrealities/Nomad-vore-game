@@ -16,6 +16,7 @@ import solarview.spaceEncounter.EncounterEntities.monitoring.Monitor;
 import solarview.spaceEncounter.EncounterEntities.monitoring.Ship_Monitor;
 import solarview.spaceEncounter.effectHandling.EffectHandler;
 import solarview.spaceEncounter.effectHandling.EffectHandler_Interface;
+import solarview.spaceEncounter.gui.EncounterLog;
 import solarview.spaceEncounter.interfaces.CombatAction;
 import solarview.spaceEncounter.interfaces.EncounterShip;
 import spaceship.Spaceship;
@@ -32,6 +33,7 @@ public class EncounterShipImpl implements EncounterShip {
 	private List<CombatWeaponImpl> weapons;
 	private CombatActionHandler actionHandler;
 	private Monitor monitor;
+	private EncounterLog log;
 
 	public EncounterShipImpl(Spaceship ship, Vec2f position, int heading) {
 		this.ship = ship;
@@ -51,7 +53,7 @@ public class EncounterShipImpl implements EncounterShip {
 		buildEmitters();
 		manouver = new CombatManouver(this, position, heading);
 
-		actionHandler=new CombatActionHandler(this);
+		actionHandler = new CombatActionHandler(this);
 
 	}
 
@@ -64,6 +66,11 @@ public class EncounterShipImpl implements EncounterShip {
 		NodeList children = n.getElementsByTagName("emitters");
 		emitters = new ShipEmitters((Element) children.item(0));
 
+	}
+
+	public void setLog(EncounterLog log) {
+		this.actionHandler.setLog(log);
+		this.log = log;
 	}
 
 	public Spaceship getShip() {
@@ -83,6 +90,7 @@ public class EncounterShipImpl implements EncounterShip {
 		return manouver.getPosition();
 	}
 
+	@Override
 	public float getHeading() {
 		return manouver.getHeading();
 	}
@@ -153,7 +161,7 @@ public class EncounterShipImpl implements EncounterShip {
 	public void attack(float distance, CombatAction action, EffectHandler_Interface effectHandler) {
 		ShipWeapon weapon=action.getWeapon().getWeapon().getWeapon();
 		for (int i = 0; i < weapon.getEffects().size(); i++) {
-			weapon.getEffects().get(i).apply(distance, this, effectHandler);
+			weapon.getEffects().get(i).apply(distance, this, effectHandler, log);
 		}
 	}
 
@@ -164,6 +172,19 @@ public class EncounterShipImpl implements EncounterShip {
 
 	public void setMonitor(Monitor monitor) {
 		this.monitor = monitor;
+	}
+
+	public int getEvasion() {
+		if ((manouver.getCourse() & manouver.full) != 0 || (manouver.getCourse() & manouver.half) != 0) {
+			if ((manouver.getCourse() & manouver.left) != 0 || (manouver.getCourse() & manouver.right) != 0) {
+				return (int) ship.getShipStats().getManouverability() + 2;
+			}
+			return (int) ship.getShipStats().getManouverability();
+		}
+		if (ship.getShipStats().getManouverability() < 0) {
+			return (int) ship.getShipStats().getManouverability();
+		}
+		return 0;
 	}
 
 }

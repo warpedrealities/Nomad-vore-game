@@ -26,14 +26,14 @@ public class SpaceshipStats {
 	float manouverability;
 	float armour;
 	float solar;
-	private int FTL;	
+	private int FTL;
 	boolean looseItems;
 	SpaceshipShield shield;
 	List<SpaceshipWeapon> weapons;
 
 	SpaceshipResource solarResource;
 	SpaceshipResource nothingResource;
-	
+
 	public SpaceshipStats() {
 		resources = new HashMap<String, SpaceshipResource>();
 		converters = new ArrayList<ShipConverter>();
@@ -41,15 +41,15 @@ public class SpaceshipStats {
 		crewCapacity = 0;
 		crewStats=new CrewStats();
 		setInitialCrewStats();
-		
+
 		solarResource=new SpaceshipResource("SOLAR",9999,9999,true);
 		nothingResource=new SpaceshipResource("NOTHING",9999,9999,true);
 	}
-	
+
 	private void setInitialCrewStats()
 	{
-		int piloting=Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.NAVIGATION);
-		int gunnery=Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.GUNNERY);
+		int piloting = Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.NAVIGATION);
+		int gunnery = Universe.getInstance().getPlayer().getRPG().getAttribute(Actor_RPG.GUNNERY);
 		crewStats.setGunnery(gunnery);
 		crewStats.setNavigation(piloting);
 	}
@@ -85,7 +85,7 @@ public class SpaceshipStats {
 	}
 
 	public void addCrew(NPC npc) {
-		
+
 		if (npc.getCrewSkill()!=null && npc.getActorFaction().getFilename().equals("player"))
 		{
 			crewStats.addCrewSkill(npc.getCrewSkill());
@@ -189,7 +189,7 @@ public class SpaceshipStats {
 		if (type.equals("SOLAR"))
 		{
 			return solarResource;
-		}		
+		}
 		return resources.get(type);
 	}
 

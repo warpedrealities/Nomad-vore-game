@@ -58,6 +58,7 @@ public class SpaceEncounter extends SceneBase {
 		renderer.setEffectHandler(logic.getEffectHandler());
 		logic.setTrailControl(renderer.getTrailControl());
 		gui = new EncounterGUI(logic.getShipList()[0], logic);
+
 		renderer.position(new Vec2f(0.0F,0.0F), logic.getShipList()[0].getHeading());
 		gui.setCircle(renderer.getCircle());
 		targeting=new Targeting();

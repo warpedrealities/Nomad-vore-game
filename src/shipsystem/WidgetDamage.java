@@ -116,7 +116,7 @@ public class WidgetDamage extends Widget {
 			if (player.getInventory().countItem("repair kit")>=1)
 			{
 				repair(player);
-				player.getInventory().removeItems("repair kit", 2);
+				player.getInventory().removeItems("repair kit", 1);
 				player.setBusy(20);
 			}
 			else

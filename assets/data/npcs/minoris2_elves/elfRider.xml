@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<NPC>
+	<sprite value="elf_rider.png" />
+	<name>elf beastrider</name>
+	<description>A green skinned and pointy eared warrior stands astride a long furred black hued equiod beast of war. The warrior is clad in a studded jacket and carrying both a bow and a spear. The thick beast beneath the warrior stamps its feet irritably and paws at the ground with its hooves.</description>
+	<rpg>
+		<experiencevalue value="30" />
+		<ability ability="STRENGTH" value="5" />
+		<ability ability="AGILITY" value="5" />
+		<ability ability="DEXTERITY" value="5" />
+		<ability ability="ENDURANCE" value="5" />
+		<ability ability="CHARM" value="5" />
+		<ability ability="INTELLIGENCE" value="5" />
+		<stat stat="HEALTH" value="60" />
+		<stat stat="RESOLVE" value="60" />
+		<attribute attribute="KINETIC" value="1" />
+		<attribute attribute="PARRY" value="1" />
+		<attribute attribute="DODGE" value="1" />		
+		<combatMove name="stab" pattern="MELEE" bonusAttribute="MELEE"
+			timeCost="2" threatening="true" bonusToHit="1">
+			<effectDamage type="KINETIC" minValue="1" maxValue="8"
+				modifier="STRENGTH" />
+			<missText count="2">
+				<text>Elf rider jabs at TARGET but misses</text>
+				<text>Elf rider stabs TARGET but the blow doesn't
+					connect</text>
+			</missText>
+			<hitText count="2">
+				<text>Elf warrior hits TARGET for VALUE points of damage</text>
+				<text>Elf warrior impales TARGET for VALUE points of damage</text>
+			</hitText>
+		</combatMove>
+		<combatMove name="arrow" pattern="RANGED" bonusAttribute="RANGED"
+			timeCost="2" rangedbias="4"  bonusToHit="1">
+			<effectDamage type="KINETIC" minValue="1" maxValue="6"
+				modifier="STRENGTH" />
+			<missText count="1">
+				<text>Elf rider looses an arrow at TARGET but it misses</text>
+			</missText>
+			<hitText count="1">
+				<text>Elf rider fires an arrow at TARGET for VALUE points of
+					damage</text>
+			</hitText>
+		</combatMove>
+		<itemDrop chance="50" item="primitive meal" />		
+		<itemDrop chance="50" item="primitive meal" />	
+		<itemDrop chance="25" defeatOnly="true" item="GOLD100" />			
+	</rpg>
+
+	<defeated conversation="alpha_minoris_II/elf_rider/defeat" />
+	<seduced conversation="alpha_minoris_II/elf_rider/seduced" />
+	<victory conversation="alpha_minoris_II/elf_rider/victory" />
+	<seducer conversation="alpha_minoris_II/elf_rider/victory" />
+	<talk conversation="alpha_minoris_II/elfraider/chat" />
+	<controller AI="elf_raider" />
+	<faction value="minyos" />
+</NPC>

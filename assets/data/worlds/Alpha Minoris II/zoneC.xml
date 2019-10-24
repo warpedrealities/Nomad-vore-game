@@ -112,9 +112,11 @@
 			<radius value="8" />
 			<spawnLimit value="6" />
 			<script value="alphaminorisbattlespawns" />
-			<spawns count="1">
+			<spawns count="2">
 				<data npc="minoris2_elves/elfraider" min="3" max="5"
 					chance="50" />
+				<data npc="minoris2_elves/elfRider" min="1" max="1"
+					chance="50" />		
 			</spawns>
 		</placeWidget>						
 		</prefab>	

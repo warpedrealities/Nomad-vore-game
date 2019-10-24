@@ -8,8 +8,18 @@
 		<text>
 			The batgirl grins as you flop on your butt in front of her.
 			Seems like
-			she just won the battle and got you for… fun? The girl
-			winks and
+			she just won the battle and got you for… fun? The girls
+			head tilts to the side, contemplating
+			what it is she wants to do perhaps? As you ponder over
+			her own pondering she suddenly...
+		</text>
+		<choice destination="absorb" text="approaches you" />
+		<choice destination="ass-sorb" text="jumps!" />
+	</page>
+
+	<page ID="absorb">
+		<text>
+			The girl winks and
 			moves closer, wrapping her large wings around you and
 			enveloping you
 			in the feeling of private warmth and her body all
@@ -18,7 +28,7 @@
 			her naked
 			boobies.
 		</text>
-		<choice destination="absorb0" text="hugs arent dangerous" />
+		<choice destination="absorb0" text="hugs aren't dangerous" />
 	</page>
 
 	<page ID="absorb0">
@@ -286,6 +296,103 @@
 			beyond
 			these things not a trace of you remains, that was an impressive
 			disappearing act.
+		</text>
+	</gameover>
+
+	<page ID="ass-sorb">
+		<text>
+			Before you can react the batgirl leaps into the air, vanishing
+			into the darkness of the cave that she had first attacked from.
+			Confused, you start to lift yourself off the ground. She... left?
+			As you wonder why the girl had attacked you, only to disappear
+			again afterwards, you're powerless to stop yourself from falling
+			straight backwards as something round and soft slams into your
+			face, or rather, two somethings. The bat has planted her rear
+			end directly upon your face.
+		</text>
+		<choice destination="ass-sorb0" text="Bwuh!?" />
+	</page>
+
+	<page ID="ass-sorb0">
+		<text>
+			It takes you a moment to figure out how to respond to having
+			an ass sat firmly on your face. The batgirl bounces up and
+			down and wiggles in place, but shows no intention of leaving
+			her position. Did she really just attack you because she 
+			thought your face looked comfortable, or is there something
+			else?
+		</text>
+		<choice destination="ass-sorb1" text="Well... this is nice" />
+		<choice destination="pushcheck" text="I am not a chair!" />
+		<choice destination="pleasurecheck" text="Make it worth her time" />
+	</page>
+
+	<page ID="ass-sorb1">
+		<text>
+			You find yourself actually enjoying the experience quite a
+			bit. In spite of the hard cave floor at your back. The
+			batgirl appears to be enjoying it too, as evidenced by her
+			pleased chirrs as she settles into a comfy position. The
+			soft warmth upon your face as she leans back is pleasent.
+			Strangely so perhaps. Soon enough, the warmth almost feels
+			as though it is spreading. You only realize what is happening
+			when the bat rolls onto her side, and your head follows, as 
+			though glued into place.
+		</text>
+		<choice destination="ass-sorb2A" text="Uh oh..." />
+		<choice destination="ass-sorb2B" text="Oooh~" />
+	</page>
+
+	<page ID="ass-sorb2A">
+		<text>
+			Not interested in padding out the bats rear, you try to
+			push yourself away. But it's no use, from the way her rump
+			pulls upon you, you're confident that at best you would
+			be severely injured if you were forcefully separated.
+			The batgirl responds to your attempts at freedom, reaching
+			back and placing a wing on the back of your head. Then,
+			she pushes, burying you yet deeper into her ass. Even
+			though you're only in face deep, it feels as though your
+			entire world has been taken over by these cheeks.
+		</text>
+		<choice destination="ass-sorb3A" text="*Into Marshmallow Hell*" />
+	</page>
+
+	<page ID="ass-sorb3A">
+		<text>
+			Not willing to resign yourself to being assfat, you try
+			your best to fight against your captor. You kick your
+			legs, swing at the batgirls sides as best you can,
+			and generally thrash about to try and motivate her to
+			release you. You definitely manage to force a response
+			but it's not the one you hoped for. The bat thrusts her
+			hips back, and suddenly...
+		</text>			
+		<choice destination="ass-sorb4" text="*BWORP*" />
+	</page>
+
+	<page ID="ass-sorb4">
+		<text>
+			With a loud bworp, your body goes limp as the batgirls
+			rear expands visibly. The rest of your head, brain 
+			included, has been converted directly into buttfat. She
+			immediately begins shaking her butt up and down, each
+			rise lifting your body and allowing it to sink further
+			and further into the happy batgirls rear.
+		</text>
+		<choice destination="ass-sorbGO" text="Bootyfuel" />
+	</page>
+
+	<gameover ID="ass-sorbGO">
+		<text>
+			The girl continues her movement uninterrupted, steadily
+			twerking you further and further into her ever growing
+			rump. Soon enough, even your feet have vanished into the
+			batgirls rear. She continues shaking for a few moments,
+			enjoying her new heft, before she rises. The bat reaches
+			back a wing, squeezes the magnificent rear you have
+			contributed too, and vanishes once again into the shadows
+			of the cave she calls home.
 		</text>
 	</gameover>
 

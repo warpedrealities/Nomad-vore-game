@@ -48,6 +48,7 @@ public class EncounterGUI implements ButtonListener {
 	private CircleHandler circle;
 	private int weaponIndex;
 	private TextColoured rangeText;
+	private EncounterLog encounterLog;
 	private EncounterWeaponController weaponController;
 	private float clock;
 	private Screen screen;
@@ -59,6 +60,9 @@ public class EncounterGUI implements ButtonListener {
 		setMatrix();
 		setupTextures();
 		buildUI();
+		for (int i = 0; i < logic.getShipList().length; i++) {
+			logic.getShipList()[i].setLog(encounterLog);
+		}
 	}
 
 	private void buildUI() {
@@ -85,7 +89,7 @@ public class EncounterGUI implements ButtonListener {
 			resourceTexts[(i * 2) + 1] = new Text(new Vec2f(0.2F, 15.1F - i),
 					(int)playerShip.getShipStats().getResource(resourceStrings[i]).getResourceAmount() + "/"
 							+ (int)playerShip.getShipStats().getResource(resourceStrings[i]).getResourceCap(),
-					0.6F, 0);
+							0.6F, 0);
 			windows[1].add(resourceTexts[i * 2]);
 			windows[1].add(resourceTexts[(i * 2) + 1]);
 		}
@@ -103,15 +107,18 @@ public class EncounterGUI implements ButtonListener {
 
 		if (encounterShip.getShip().getShipStats().getFTL()>0)
 		{
-			warpText = new Text(new Vec2f(0.2F, 3.5F), "warp ready", 0.6F, 0);	
-			windows[1].add(warpText);		
+			warpText = new Text(new Vec2f(0.2F, 3.5F), "warp ready", 0.6F, 0);
+			windows[1].add(warpText);
 			Button button = new Button(new Vec2f(0.1F, 4.4F), new Vec2f(5.9F, 2), textureIds[1], this, "retreat", 15);
-			windows[1].add(button);	
+			windows[1].add(button);
 		}
-		
-		rangeText = new TextColoured(new Vec2f(3.2F, 0.7F), "text", 1.6F, SceneBase.getVariables()[0]);	
+
+		rangeText = new TextColoured(new Vec2f(3.2F, 0.7F), "text", 1.6F, SceneBase.getVariables()[0]);
 		rangeText.setTint(1,0,0);
 		windows[0].add(rangeText);
+
+		encounterLog = new EncounterLog(new Vec2f(-14, 15));
+		windows[0].add(encounterLog);
 
 		buildManouver();
 	}
@@ -194,7 +201,7 @@ public class EncounterGUI implements ButtonListener {
 		{
 			for (int i = 0; i < 2; i++) {
 				windows[i].Draw(matrix44Buffer, objmatrix);
-			}			
+			}
 		}
 
 	}
@@ -227,7 +234,7 @@ public class EncounterGUI implements ButtonListener {
 							circle.setRotation(encounterShip.getWeapons().get(i).getWeapon().getFacing()+encounterShip.getHeading());
 							circle.setWidth(encounterShip.getWeapons().get(i).getWeapon().getWeapon().getFiringArc());
 							circle.setPosition(encounterShip.getPosition());
-							break;				
+							break;
 						}
 						v=true;
 
@@ -238,13 +245,13 @@ public class EncounterGUI implements ButtonListener {
 			{
 				weaponIndex=-1;
 			}
-			circle.setVisible(v);	
-			buttons();			
+			circle.setVisible(v);
+			buttons();
 		}
 	}
 
 	public void updateUI() {
-		
+
 		if (logic.getGameState()==GameState.playing)
 		{
 			updateStats();
@@ -288,12 +295,12 @@ public class EncounterGUI implements ButtonListener {
 							+ encounterShip.getWeapons().get(i).getCooldown());
 				}
 			}
-		}	
+		}
 		if (encounterShip.getShip().getShipStats().getFTL()>0)
 		{
 			if (logic.getWarpHandler().isCharging())
 			{
-				warpText.setString("warp "+ logic.getWarpHandler().getWarpLevel()+"/20");			
+				warpText.setString("warp "+ logic.getWarpHandler().getWarpLevel()+"/20");
 			}
 			else
 			{
@@ -301,7 +308,7 @@ public class EncounterGUI implements ButtonListener {
 			}
 		}
 	}
-	
+
 	private void writeShieldStatus() {
 		switch (encounterShip.getShield().getStatus()) {
 		case OFF:
@@ -339,7 +346,7 @@ public class EncounterGUI implements ButtonListener {
 	}
 
 	public void discard() {
-		
+
 		if (screen!=null)
 		{
 			screen.discard(mouse);
@@ -351,7 +358,7 @@ public class EncounterGUI implements ButtonListener {
 		for (int i = 0; i < textureIds.length; i++) {
 			GL11.glDeleteTextures(textureIds[i]);
 		}
-		
+
 
 	}
 
@@ -385,7 +392,7 @@ public class EncounterGUI implements ButtonListener {
 		}
 
 	}
-	
+
 	private void triggerWeapon(int index)
 	{
 		if (index>=encounterShip.getWeapons().size())
@@ -396,7 +403,7 @@ public class EncounterGUI implements ButtonListener {
 		switch (result)
 		{
 		case 0:
-			
+
 			break;
 		case 1:
 			weaponButtons[index].setString("FIRING");
@@ -405,10 +412,10 @@ public class EncounterGUI implements ButtonListener {
 			weaponButtons[index].setString(encounterShip.getWeapons().get(index).getWeapon().getWeapon().getName() + " "
 					+ encounterShip.getWeapons().get(index).getCooldown());
 			break;
-		
-		}	
+
+		}
 	}
-	
+
 	private void buttons()
 	{
 		if (clock<=0)
@@ -421,13 +428,13 @@ public class EncounterGUI implements ButtonListener {
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_2))
 			{
 				triggerWeapon(1);
-				clock=1;		
-			}			
+				clock=1;
+			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_3))
 			{
 				triggerWeapon(2);
-				clock=1;	
-			}		
+				clock=1;
+			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_4))
 			{
 				triggerWeapon(3);
@@ -437,12 +444,12 @@ public class EncounterGUI implements ButtonListener {
 			{
 				triggerWeapon(4);
 				clock=1;
-			}			
+			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_6))
 			{
 				triggerWeapon(5);
 				clock=1;
-			}		
+			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_7))
 			{
 				triggerWeapon(6);
@@ -452,22 +459,22 @@ public class EncounterGUI implements ButtonListener {
 			{
 				triggerWeapon(7);
 				clock=1;
-			}			
+			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_9))
 			{
 				triggerWeapon(8);
 				clock=1;
-			}		
+			}
 			if (Keyboard.isKeyDown(GLFW.GLFW_KEY_0))
 			{
 				triggerWeapon(9);
 				clock=1;
-			}				
-					
+			}
+
 		}
-		
+
 	}
-	
+
 	@Override
 	public void ButtonCallback(int ID, Vec2f p) {
 		if (screen==null && !logic.isRunning())
@@ -498,7 +505,7 @@ public class EncounterGUI implements ButtonListener {
 			}
 			if (ID >= 20) {
 				triggerWeapon(ID-20);
-			}			
+			}
 		}
 	}
 
@@ -513,6 +520,9 @@ public class EncounterGUI implements ButtonListener {
 	public void setWeaponController(EncounterWeaponController weaponController) {
 		this.weaponController = weaponController;
 	}
-	
-	
+
+	public EncounterLog getEncounterLog() {
+		return encounterLog;
+	}
+
 }

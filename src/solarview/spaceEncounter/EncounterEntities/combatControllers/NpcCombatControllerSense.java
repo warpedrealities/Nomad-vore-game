@@ -34,7 +34,7 @@ public class NpcCombatControllerSense {
 		{
 			angle=(Math.PI*2)+angle;
 		}
-		angle=angle/0.785398F;
+		angle=angle/57.2958F;
 		return angle;
 	}
 

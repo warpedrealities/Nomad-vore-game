@@ -12,11 +12,11 @@ public class CombatManouver {
 	private float heading;
 	private byte course;
 
-	public final static char stop = 0;
-	public final static char left = 1;
-	public final static char right = 2;
-	public final static char half = 4;
-	public final static char full = 8;
+	public final static byte stop = 0;
+	public final static byte left = 1;
+	public final static byte right = 2;
+	public final static byte half = 4;
+	public final static byte full = 8;
 
 	public CombatManouver(EncounterShipImpl ship, Vec2f position, int heading) {
 		this.heading = heading;
