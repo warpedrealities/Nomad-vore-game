@@ -11,6 +11,7 @@
 			addresses with a carefully feigned and indifferent "Well, I suspect
 			you have something you wish to explain to me."
 		</text>
+			<picture source="laurissefinn" height="1"/>
 		<choice destination="explaination0" text="I can come back" />
 	</page>
 
@@ -105,6 +106,7 @@
 			as you cross
 			the point where customarily you'd pay your respects.
 		</text>
+					<picture source="laurissefinn" height="1"/>
 		<choice destination="talk" text="don't kneel" />
 		<choice destination="respect0" text="kneel anyway" />
 	</page>
@@ -118,6 +120,7 @@
 			stone floor in front of her throne of pillows as if expecting
 			something of you.
 		</text>
+					<picture source="laurissefinn" height="1"/>
 		<choice destination="respect0" text="kneel" />
 		<choice destination="disrespect0" text="don't kneel" />
 	</page>

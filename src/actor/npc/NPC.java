@@ -57,6 +57,7 @@ public class NPC extends Actor implements Controllable {
 	VoreScript voreScript;
 
 	protected int uid;
+	private int observerVoreRestrainer = 0;
 	protected int attackIndex;
 	protected int controllermemory[];
 	Path actorPath;
@@ -101,6 +102,7 @@ public class NPC extends Actor implements Controllable {
 
 	public NPC(NPC npc, Vec2f p) // clone
 	{
+
 		threatAssessment=new ThreatAssessment();
 		uid = Universe.getInstance().getUIDGenerator().getnpcUID();
 		moveCost = npc.moveCost;
@@ -272,6 +274,9 @@ public class NPC extends Actor implements Controllable {
 	@Override
 	public void Update() {
 		super.Update();
+		if (observerVoreRestrainer > 0) {
+			observerVoreRestrainer--;
+		}
 		threatAssessment.update();
 		actorRPG.update();
 		if (actorRPG.getBusy() == 0 && !isBusy()) {
@@ -584,6 +589,10 @@ public class NPC extends Actor implements Controllable {
 	}
 
 	public boolean attemptObserverVore() {
+		if (observerVoreRestrainer > 0) {
+			return false;
+		}
+		observerVoreRestrainer = 10;
 		if (voreScript == null && ViewScene.m_interface.getSceneController().getHostile(this, 4, true) == null) {
 			voreScript = ObserverVoreHelper.checkForTargets(getPosition(),
 					((NPC_RPG) actorRPG).getObserverVoretargets());
