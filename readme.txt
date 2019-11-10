@@ -27,6 +27,11 @@ o =targeting mode toggle, replaces movement keys with sequential targeting, use 
 
 F1 will access an ingame help system
 F2 will access the options that allow you to configure your 8 quickslots
+F3 will access the journal
+F4 will access the appearance description
+F5 will access the character screen
+F6 will access the inventory
+F7 will attempt to quick save the game
 
 text window hotkeys:
 page up/page down=scroll text window up and down

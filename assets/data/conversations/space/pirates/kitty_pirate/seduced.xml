@@ -16,6 +16,7 @@
 		<choice destination="sex0" text="$Well, it starts with your legs spread and ends with you yowling for joy">
 			<assertion evaluate="haspart" part="penis"/>	
 		</choice>
+		
 		<choice destination="CTF0" text="$I'm going to add your sexy body to my member, you're going to be extra inches on my dick">
 			<assertion evaluate="hasperk" perk="cockmerging" />
 		</choice>

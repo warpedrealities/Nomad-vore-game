@@ -7,6 +7,9 @@
 		<choice destination="oralvore0" text="$Don't be looking at you like food? but you are food">
 			<assertion evaluate="hasperk" perk="oralvore" />		
 		</choice>
+		<choice destination="cockvore0" text="$All I see is a worthless ballfodder in denial about where they're about to go">
+			<assertion evaluate="hasperk" perk="cockvore" />	
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -16,6 +19,51 @@
 			</assertion>
 		</choice>	
 		<choice destination="end" text="leave her be"/>
+	</page>
+
+	<page ID="cockvore0">
+	<text>
+	"What? no! you can't just do that to me, I ain't gonna let you.." she says as you <conditional>
+				<assertion evaluate="slothasitem" slot="2" />free your beast and</conditional> stroke your member to a nice big and hungry state of arousal. You can see the ruffian mustering up her strength and ire as you prepare yourself "..you'll see, I'm gonna clobber ya but good if you try and lay a-glomp that thing on me." she says, her gaze drifting to that gaping drooling cumslit before she shook her head, reared back and took a swing at you. Her move was slowed by her weakness and nicely telegraphed though, which makes your response choreographed as you grabbed her plunging fist and guided it straight into your cocktip. The ruffian letting out a yelp as she sinks elbow deep in your cock in one unfortunate move.
+	</text>
+	<choice destination="cockvore1" text="$See, you're nothing but a pitiful cocksnack"/>
+	</page>
+	
+	<page ID="cockvore1">
+	<text>
+	"I ain't, I ain't and I'll show you..you can't just..I won't just.." she whimpers as she tries to pull back against your hungry cock and it doesn't seem to be doing her much good. She's no match for the ravenous clenching tug of your shaft pulling her deeper in, her eyes widen as she's brought closer to that cocktip and your musk provides an overpowering scent for the wolfy. You further reinforce her inevitable fate though by shoving your hips forwards, the wolfy letting out a yelp as you engulf her head and dominate the ruffian with your dick. She's just cockfood, destined to be melted up good. And while she might struggle, that she's going to be your seed is not in doubt. The thought makes your cock throb and ripple hungrily around the girl and drag her deeper inside.
+	</text>
+	<choice destination="cockvore2" text="$That's it, just accept it....you're just a walking refill"/>
+	</page>
+	
+	<page ID="cockvore2">
+	<text>
+	The wolfgirl's reply is muffled as your feisty cocksnack slides deeper and deeper inside of your shaft. Her squirms making your shaft bob and sway as you engulf her shoulders and chest and fill the halls with the sounds of your moans and lewdly schlurping cocktip. Your shaft bulging out even more as you cram her hips and especially her arse into your length. The muffled protests of her humiliating fate are now coming out more coherent and mixed in with splutters and gurgles as she begins to slide down into the place where she belongs, where all cockfood belongs, your ravenous balls.
+	</text>
+	<choice destination="cockvore3" text="$mhmm, so good, get in me cumfuel"/>
+	</page>
+	
+	<page ID="cockvore3">
+	<text>
+	The wolfgirl protests "Not cumfuel! gonna get out of here, not giving up, going to whoop your ass once I--gah" she splutters loudly, defiant even as she's fed down into your sack. The ruffian putting on a brave and tough facade as you slurp up her legs and she vanishes into your loins entirely. The feisty toughgirl reduced to a jostling and bouncing set of bulges making your balls all satiated and saggy. Her protests and struggles bring a smile to your face and a throbbing insistent hardness to your well fed cock as she squirms and sloshes about in your seed.
+	</text>
+		<choice destination="cockvore4" text="$mhmm, really..but how are you going to do anything to me when you get out of there...you're going to be cum"/>
+	</page>
+	
+	<page ID="cockvore4">
+	<text>
+	"I'm not..I'm gonna...melting? i'm melting in here..let me out.." her tough facade breaks and yields up a pleading and desperate demeanour as your churning balls start to break her down. The loud glorps of cum around her toecurlingly exquisite for you and goopily panic inducing for her. Your cockfood puts up a nice struggle, but second by second and churn by churn you feel her weaken and fade away. Fade away until there's nothing but...cum.
+	</text>
+	<choice destination="cockvore5" text="$mhmm, all gone, time to let you out and see if you can give me that..whooping..silly wolf"/>
+	</page>
+	
+	<page ID="cockvore5">
+	<text>
+	You make good on your indulgent promise with self indulgence. Feeling the wolfy rendered down entirely into sloshing cum inside of your sack you begin to stroke off. Your masturbation is leisurely at first, but then more vigorous as you feel the heady need to cum out all that seed become more insistent. Finally like a volcano of pure lust you erupt, sending her remains gushing out of your cock to splatter on the deck. The wolfy ruffian turned into a mere creamy splatter and puddle of your satisfaction. Her clothing resulted in brief spasming ripples of your cock as they interrupted the flow but are soon mired in the mess made of the rest of her. For all her fight, your cock made an easy meal of her.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />		
 	</page>
 
 	<page ID="oralvore0">
