@@ -4,9 +4,9 @@
 	<text>
 	The wolfy ruffian pants, cheeks flushed as its all she can do to stand tall and keep her hands at her sides and not digging in to seek out the source of that wet spot on her pants. She's putting her best efforts into not succumbing to her animal needs, but its more adorable than effective.
 	</text>
-	<!-- 	<choice destination="unbirth0" text="$Well, you're pussy food if ever I saw you wuff. How's about we make you go sploosh?">
+		<choice destination="unbirth0" text="$Well, you're pussy food if ever I saw you wuff. How's about we make you go sploosh?">
 			<assertion evaluate="hasperk" perk="unbirthing" />	
-		</choice> -->
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -20,10 +20,35 @@
 
 	<page ID="unbirth0">
 	<text>
-	
+	Her eyes widen and a soft whine emanates from her throat at your brazen suggestion that she boil away into lust slop in your womb.<conditional>
+	<assertion evaluate="slothasitem" slot="2" />That whine taking on a slightly more overawed tone as you don't waste time in exposing your yearning voracious nethers as you undress. </conditional> You slide one hand down to caress your wet and hungry folds as you step closer to her. You haven't even waited for her assent before deciding for her that its what they'll be doing. She opens her mouth to respond, protest perhaps, but before she can get a word out you place a hand on her shoulder and coax her down. The wolfy urged into submission with little resistance as she kneels before you. You adjust your grip, bringing your hand around the back of her head and move her closer to your netherlips. The wolfgirl letting out a strangled murr as her nose fills with the scent of your sex.
 	</text>
-	
+		<choice destination="unbirth1" text="$Mhmm yes, that's where you're going..time to put you away"/>
 	</page>
+
+	<page ID="unbirth1">
+	<text>
+	"But I don't want to be a-MPH!" you quieten her conflicted and silly protests that she doesn't want to be gushed by pressing her face into your nethers. Your folds parting around her. Your sex muffling her and making her murr as you moan and begin to take her in. The wolfgirl despite her words not exactly struggling as you grind your hips down and press her head and shoulders up into the hungry heat of your birthing channel and womb. Her body only squirming lightly as you squat down over her and shove her inside yourself with a slurp from your nethers and a gasp pushed forth from your lips as you treat her almost like a giant dildo. But soon you've crammed her waist deep in your sex, her body forcibly curled to bulge out your middle and soon to be all the way inside.
+	</text>
+	<choice destination="unbirth2" text="*cram her in the rest of the way*"/>
+	</page>
+	
+	<page ID="unbirth2">
+	<text>
+	The toughgirl exterior of the wolfy has fully melted away as she murrs and rubs up against the snug confines of your wondrous womb. You can only imagine how good it will be to melt her away in actuality as you clench and drag the lustful lupine into your sex. Her legs lifting up off the floor as you stand legs spread and draw her inside. Your lustful fluids dribbling down the length of her legs to splat on the deck below as your nethers ooze an excess of lubrication and work on drawing her inside completely. The wolfy letting out deep moans as her hands creep between her thighs and her feet slip up past your sexlips and are sealed inside of you.
+	</text>
+	<choice destination="unbirth3" text="$That's it, gonna make you into..fun"/>
+	</page>
+
+	<page ID="unbirth3">
+	<text>
+	"Ahhh yes...yes..do it..please" the wolfgirl says, so lost in lust as to crave her fate as she furiously pleasures herself while curled up within you. Really you could hardly refuse such a plea, squatting down slightly in order to give yourself better access as you begin to rub your nethers as she does the same. Your lustful cauldron starting to boil her up, clenching..squeezing, you can hear her climax once, twice, thrice..quieter and weaker each time before you reach your own peak. Your womb clenching down and squeezing her into a splatter of liquid and saturated clothes to gush out onto the deck plates beneath you.
+	</text>
+		<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="carry on" />	
+	</page>
+
 
 	<page ID="devour">
 		<text>
