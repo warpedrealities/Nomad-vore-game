@@ -10,6 +10,9 @@
 		<choice destination="facefuck0" text="$I'm gonna use your mouth, and you're gonna like it">
 		<assertion evaluate="haspart" part="penis"/>	
 		</choice>
+		<choice destination="unbirth0" text="$why, I want you inside me kitty">
+			<assertion evaluate="hasperk" perk="unbirthing" />	
+		</choice>
 		<choice destination="sex0" text="$Well, it starts with your legs spread and ends with you yowling for joy">
 			<assertion evaluate="haspart" part="penis"/>	
 		</choice>
@@ -25,6 +28,13 @@
 			</assertion>
 		</choice>	
 		<choice destination="end" text="darn"/>
+	</page>
+
+	<page ID="unbirth0">
+	<text>
+	
+	</text>
+	
 	</page>
 
 	<page ID="CTF0">

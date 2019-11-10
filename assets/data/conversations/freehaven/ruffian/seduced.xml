@@ -2,8 +2,11 @@
 <Conversation>
 	<page ID="start">
 	<text>
-		no interaction to be had with a seduced ruffian yet.
+	The wolfy ruffian pants, cheeks flushed as its all she can do to stand tall and keep her hands at her sides and not digging in to seek out the source of that wet spot on her pants. She's putting her best efforts into not succumbing to her animal needs, but its more adorable than effective.
 	</text>
+	<!-- 	<choice destination="unbirth0" text="$Well, you're pussy food if ever I saw you wuff. How's about we make you go sploosh?">
+			<assertion evaluate="hasperk" perk="unbirthing" />	
+		</choice> -->
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -12,7 +15,14 @@
 				<assertion evaluate="hasperk" perk="analvore" />
 			</assertion>
 		</choice>	
-		<choice destination="end" text="darn"/>
+		<choice destination="end" text="Cute, but not what I'm here for, moving on"/>
+	</page>
+
+	<page ID="unbirth0">
+	<text>
+	
+	</text>
+	
 	</page>
 
 	<page ID="devour">
