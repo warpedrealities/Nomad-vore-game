@@ -30,7 +30,24 @@
 				<text>Eve punches TARGET for VALUE damage</text>
 			</hitText>
 		</combatMove>
-		
+		<observerVoreTargets>
+			<vore target="pirate kitty" scene="eve_pirate_OV" preference="cockvore">
+				<req flag="cockvore" global="false" value="1" evaluate="EQUALS"/>
+					<req flag="CVTALK" global="false" value="1" evaluate="EQUALS"/>
+			</vore>
+			<vore target="saurian warrior" scene="eve_saurian_OV" preference="cockvore">
+				<req flag="cockvore" global="false" value="1" evaluate="EQUALS"/>
+					<req flag="CVTALK" global="false" value="1" evaluate="EQUALS"/>
+			</vore>
+			<vore target="talharan greysuit" scene="eve_talharan_OV" preference="cockvore">
+				<req flag="cockvore" global="false" value="1" evaluate="EQUALS"/>
+					<req flag="CVTALK" global="false" value="1" evaluate="EQUALS"/>
+			</vore>
+			<vore target="Fawn" scene="eve_fawn_OV" preference="cockvore">
+				<req flag="cockvore" global="false" value="1" evaluate="EQUALS"/>
+					<req flag="CVTALK" global="false" value="1" evaluate="EQUALS"/>
+			</vore>
+		</observerVoreTargets>	
 	</rpg>
 	<defeated conversation="alpha_minoris_IIA/stagHerm/defeat" />
 	<seduced conversation="alpha_minoris_IIA/stagHerm/defeat" />

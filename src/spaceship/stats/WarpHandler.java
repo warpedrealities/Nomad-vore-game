@@ -10,7 +10,7 @@ import spaceship.Spaceship;
 import spaceship.SpaceshipResource;
 
 public class WarpHandler {
-	
+
 	private long initializationTime;
 	private long flightDuration;
 	private float chargeLevel;
@@ -19,20 +19,20 @@ public class WarpHandler {
 
 	public WarpHandler()
 	{
-		
+
 	}
 	public WarpHandler(Vec2i destination, float stress) {
 		this.destination=destination;
 		this.stress=stress;
 
-		
+
 	}
 
 	public float getCharge()
 	{
 		return Math.round(chargeLevel);
 	}
-	
+
 	private boolean chargeUp(Spaceship ship)
 	{
 		SpaceshipResource resource=ship.getShipStats().getResource("ENERGY");
@@ -40,19 +40,19 @@ public class WarpHandler {
 		{
 			return false;
 		}
-		
+
 		if (resource.getResourceAmount()<=1.0F)
 		{
 			return false;
 		}
-		
+
 		resource.setResourceAmount(resource.getResourceAmount()-1.0F);
-		
+
 		chargeLevel+=2.5F/stress;
-		
+
 		return true;
 	}
-	
+
 	public boolean update(Spaceship ship)
 	{
 		//check we have enough energy to keep powering up the drive
@@ -62,13 +62,13 @@ public class WarpHandler {
 			{
 				return false;
 			}
-			else 
+			else
 			{
 				if (chargeLevel>=100)
 				{
 					initializationTime=Universe.getClock();
 					flightDuration=6000/ship.getShipStats().getFTL();
-					float navBonus=((float)ship.getShipStats().getCrewStats().getNavigation())*0.05F;
+					float navBonus=(ship.getShipStats().getCrewStats().getNavigation())*0.05F;
 					flightDuration=(long) (flightDuration*(1-navBonus));
 					return true;
 				}
@@ -78,7 +78,7 @@ public class WarpHandler {
 	}
 
 	public boolean flightElapsed() {
-		if (initializationTime+flightDuration<Universe.getClock())
+		if (initializationTime + flightDuration <= Universe.getClock())
 		{
 			return true;
 		}

@@ -49,11 +49,8 @@ import static org.lwjgl.opengl.GL11.glViewport;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintStream;
 
 import org.lwjgl.glfw.Callbacks;
 import org.lwjgl.glfw.GLFW;
@@ -106,11 +103,11 @@ public class Game implements SceneManager {
 		sceneManager = this;
 		graphicsConfiguration = new Config();
 		//
-		try {
-			System.setErr(new PrintStream(new FileOutputStream(System.getProperty("user.dir") + "/error.log")));
-		} catch (FileNotFoundException ex) {
-			ex.printStackTrace();
-		}
+		//		try {
+		//			System.setErr(new PrintStream(new FileOutputStream(System.getProperty("user.dir") + "/error.log")));
+		//		} catch (FileNotFoundException ex) {
+		//			ex.printStackTrace();
+		//		}
 		//		//
 
 		// Initialize GLFW. Most GLFW functions will not work before doing this.

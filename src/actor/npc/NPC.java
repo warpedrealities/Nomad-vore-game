@@ -595,7 +595,7 @@ public class NPC extends Actor implements Controllable {
 		observerVoreRestrainer = 10;
 		if (voreScript == null && ViewScene.m_interface.getSceneController().getHostile(this, 4, true) == null) {
 			voreScript = ObserverVoreHelper.checkForTargets(getPosition(),
-					((NPC_RPG) actorRPG).getObserverVoretargets());
+					((NPC_RPG) actorRPG).getObserverVoretargets(), this);
 			if (voreScript != null) {
 				voreScript.setOrigin(this);
 				return true;

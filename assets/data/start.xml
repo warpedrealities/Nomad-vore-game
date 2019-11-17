@@ -2,7 +2,7 @@
 <start>
 	<system value="Alpha Minoris" />
 	<world value="Alpha Minoris IIA" />
-	<zone value="escapepod" />
+	<zone value="Sewer 00" />
 	<position x="2" y="2" />
 	<item value="Laser pistol" />
 	<item value="Knife" />

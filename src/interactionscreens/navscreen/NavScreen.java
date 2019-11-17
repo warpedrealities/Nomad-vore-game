@@ -41,48 +41,48 @@ public class NavScreen extends Screen implements Callback {
 	public NavScreen(Spaceship ship) {
 		spaceship = ship;
 		shipStats = new SpaceshipAnalyzer().generateStats(spaceship);
-		setCanLaunch();
+		canLaunch = setCanLaunch();
 	}
 
-	public void setCanLaunch() {
-		canLaunch = true;
+	public boolean setCanLaunch() {
+		boolean canLaunch = true;
 		if (spaceship.getShipState() == ShipState.SOS) {
 			canLaunch = false;
 			statustext = "SOS beacon activated";
-			return;
+			return canLaunch;
 		}
 		if (spaceship.isWrecked() == true) {
 			canLaunch = false;
 			String str = spaceship.getUnusableState();
 			statustext = "flight impossible: " + str;
-			return;
+			return canLaunch;
 		}
 		if (shipStats.isLooseItems()) {
 			canLaunch = false;
 			statustext = "unsecured items, thrust unsafe, secure items";
-			return;
+			return canLaunch;
 		}
 		if (shipStats.getResource("HULL").getResourceAmount() <= 0) {
 			canLaunch = false;
 			statustext = "thrust unsafe, hull compromised, repairs required";
-			return;
+			return canLaunch;
 		}
 		if (shipStats.getResource("FUEL") == null) {
 			statustext = "no fuel tanks connected to drive system, correct fault";
 			canLaunch = false;
-			return;
+			return canLaunch;
 		}
 		if (shipStats.getResource("FUEL").getResourceAmount() <= spaceship.getBaseStats().getThrustCost()
 				&& spaceship.getShipState() == ShipState.LAND) {
 			canLaunch = false;
 			statustext = "insufficient fuel for launch, more fuel required";
-			return;
+			return canLaunch;
 		}
 		if (shipStats.getResource("FUEL").getResourceAmount() <= shipStats.getFuelEfficiency()
 				&& spaceship.getShipState() != ShipState.LAND) {
 			canLaunch = false;
 			statustext = "fuel pressure low, more fuel required";
-			return;
+			return canLaunch;
 		}
 		for (int i=0;i<shipStats.getCrewCount();i++)
 		{
@@ -101,8 +101,8 @@ public class NavScreen extends Screen implements Callback {
 			} else {
 				statustext = "system okay";
 			}
-
 		}
+		return canLaunch;
 	}
 
 	@Override

@@ -24,6 +24,7 @@ public class WarpScreen extends Screen  implements Callback{
 	private int currentSleep;
 	private Spaceship ship;
 	private Text description;
+	private Button controlButton;
 	//	private Vortex_Renderer vortex;
 
 
@@ -73,6 +74,11 @@ public class WarpScreen extends Screen  implements Callback{
 				currentSleep=(int) ship.getWarpHandler().getTimeLeft();
 				screenFade.run();
 				break;
+
+			case 5:
+				WarpScreenNavHelper.takeControl(ship);
+				callback.Callback();
+				break;
 			}
 		}
 
@@ -99,9 +105,13 @@ public class WarpScreen extends Screen  implements Callback{
 		buttons[0] = new Button(new Vec2f(33.7F, 0.2F), new Vec2f(6, 1.8F), textures[2], this, "Exit", 3, 1);
 		buttons[1] = new Button(new Vec2f(33.7F, 2.2F), new Vec2f(6, 1.8F), textures[2], this, "wait", 2, 1);
 		buttons[2] = new Button(new Vec2f(33.7F, 4.2F), new Vec2f(6, 1.8F), textures[2], this, "skip", 4, 1);
+		controlButton = new Button(new Vec2f(33.7F, 6.2F), new Vec2f(6, 1.8F), textures[2], this, "control", 5, 1);
 		for (int i = 0; i < 3; i++) {
 			window.add(buttons[i]);
 		}
+		controlButton.setActive(false);
+		window.add(controlButton);
+
 		this.callback = callback;
 
 		screenFade = new Screen_Fade(this);
@@ -121,7 +131,7 @@ public class WarpScreen extends Screen  implements Callback{
 		long l=ship.getWarpHandler().getTimeLeft();
 		if (l<0)
 		{
-			callback.Callback();
+			controlButton.setActive(true);
 			ViewScene.m_interface.DrawText("warp jump completed, warp out when ready");
 		}
 		else
@@ -137,6 +147,9 @@ public class WarpScreen extends Screen  implements Callback{
 		Universe.AddClock(currentSleep);
 		if (ViewScene.m_interface != null) {
 			ViewScene.m_interface.UpdateInfo();
+			if (ship.getWarpHandler().getTimeLeft() <= 0) {
+				controlButton.setActive(true);
+			}
 		}
 
 		refresh();
