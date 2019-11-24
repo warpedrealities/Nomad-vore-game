@@ -101,7 +101,20 @@
 							<edge value="EAST" type="2" />			
 							<widget x="1" y="1" name="sprite" info="atmosphereprocessor" variable="5#5"/>
 							<widget x="3" y="4" name="invincible_invisible" info="interaction/freehaven/mallory_stash" variable="10" />
-						</keyBlock>					
+						</keyBlock>	
+						<keyBlock heat="1">
+							<row>00000000</row>
+							<row>33333333</row>
+							<row>44444444</row>
+							<row>44444444</row>
+							<row>44444444</row>
+							<row>33343333</row>
+							<row>00343000</row>
+							<row>00333000</row>
+							<edge value="EAST" type="4" />	
+							<edge value="WEST" type="4" />			
+							<widget x="3" y="6" name="entrance" variable="31" info="the_den" />
+						</keyBlock>						
 						<keyBlock heat="1">
 							<row>33444333</row>
 							<row>33444433</row>

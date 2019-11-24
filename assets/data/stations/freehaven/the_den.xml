@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<zone width="32" height="16" spriteset="station_den.png">
+
+	<tileset count-x="4" count-y="4">
+		<tile sprite="1" vision="BLOCKING" movement="2">a metal wall</tile>
+		<tile sprite="2" vision="EMPTY" movement="2">a metal wall</tile>
+		<tile sprite="3" vision="EMPTY" movement="0">club floor</tile>
+		<tile sprite="4" vision="EMPTY" movement="2">club table </tile>
+		<tile sprite="5" vision="EMPTY" movement="2">bar table</tile>
+		<tile sprite="6" vision="EMPTY" movement="2">DJ mix deck</tile>	
+		<tile sprite="7" vision="EMPTY" movement="2">raised section boundary</tile>	
+		<tile sprite="8" vision="EMPTY" movement="0">stairs</tile>	
+		<tile sprite="9" vision="EMPTY" movement="2">pit</tile>		
+		<tile sprite="10" vision="EMPTY" movement="2">pit</tile>		
+		<tile sprite="11" vision="EMPTY" movement="0">stage</tile>		
+		<tile sprite="12" vision="BLOCKING" movement="2">stripper pole</tile>
+		<tile sprite="13" vision="EMPTY" movement="0">dance floor</tile>		
+		<tile sprite="14" vision="EMPTY" movement="0">dance floor</tile>		
+	</tileset>
+
+	<description>Music thuds and booms from the DJ's speakers drowning out the ambient sound of words for those more than a few feet away. This club is clearly a den of iniquity.</description>
+
+	<mapgen>
+	<prefab positionX="0" positionY="0" width="32">
+		<row>00000000113110000000000000000000</row>	
+		<row>11111111133311111111111111111111</row>
+		<row>13333333333333333333333333333331</row>
+		<row>13633333EDEDEDEDEDEDEDE334335331</row>
+		<row>13633433DEDEDEDEDEDEDED333335331</row>
+		<row>13333333EDEDEDEDEDEDEDE334335331</row>	
+		<row>13433433DEDEDEDEDEDEDED333333331</row>
+		<row>13333333EDEDEDEDEDEDEDE334334331</row>
+		<row>13433433DEDEDEDEDEDEDED333333331</row>
+		<row>13333333333333333333333333333331</row>
+		<row>1433777334A333333333A43377733431</row>
+		<row>1333BBB33397777877779333BBB33331</row>
+		<row>1433BCB33493333333339433BCB33431</row>
+		<row>1333BBB33393434343439333BBB33331</row>
+		<row>1433BBB33493333333339433BBB33431</row>		
+		<row>12222222222222222222222222222221</row>		
+	</prefab>
+	<pairedportal x="10" y="0" destination="port_level_3" sprite="1" ID="31" facing="0"> hatch </pairedportal>	
+		
+	</mapgen>
+
+</zone>
