@@ -10,6 +10,9 @@
 		<choice destination="cockvore0" text="$All I see is a worthless ballfodder in denial about where they're about to go">
 			<assertion evaluate="hasperk" perk="cockvore" />	
 		</choice>
+		<choice destination="unbirth0" text="Put that doggy tongue of your to work and I won't report you to the wardens">
+			<assertion evaluate="hasperk" perk="unbirthing" />
+		</choice>
 		<choice destination="devour" text="devour her">
 			<assertion evaluate="operatorOr">
 				<assertion evaluate="hasperk" perk="oralvore" />
@@ -105,4 +108,66 @@
 		<special effect="removenpc" />
 		<choice destination="end" text="carry on" />
 	</page>		
-</Conversation>
+	
+	<page ID="unbirth0">
+	<text> 
+		“You… You can’t be serious?” the wounded wolf girl asked with incredulity. 
+		“Dead serious.” You have to force yourself not to laugh at your “OH SO CLEVER” play on words.
+		The Thug paused taking a brief look around, either looking for back up, or to be sure there were no onlookers to witness her disgrace. “Fuck it. I ain’t too good to fer this shit ‘f it means I ain’t gonna get put away.”
+
+	</text>
+	<choice destination="unbirth1" text="You absolutely won’t be going to jail for this."/>
+		</page>		
+	
+		<page ID="unbirth1">
+	<text> 
+	You wonder to yourself if this station even has a Jail, or if the criminal element just ends up on authoritarial elements asses. If what you are about to do is any indication, the latter would be correct. You lean back and spread your legs. “Sorry I don’t have any peanut butter for you doggy.” You joke at the brutish girl. “That is a Rasicks stereotype and a repent the asseration.” She retorted. As she dips down to begin her dirty deed, you ponder how she could have gotten such an inaccurate idea of what that sentence was supposed to be. You assume she must have only ever heard the phrase from a distance, through an exploding minefield, with water bubbles in her ears.
+	</text>
+	<choice destination="unbirth2" text="That long tongue of yours is good for something outside of helping you say the dumbest shit I’ve ever heard."/>
+		</page>		
+	
+		<page ID="unbirth2">
+	<text> 
+		“Thulk loo!” she muffles out having actually buried her face nose deep in your pink pussy. Her tongue is rough, long, flat, and best of all contours to your insides making this stage of your plan actually remarkably more pleasurable then you anticipated. If she keeps this up you won’t even need to force her into your quivering cunnie. You absolutely are going to no matter how good she does or how many times she makes you cum, the best part is turning someone’s life into a few moments of pleasure, and you aren’t about to pass that up.
+	</text>
+	<choice destination="unbirth3" text="‘Huff’ Deeper Bitch!  ‘Huff’ or do you like the idea of one of those long eared half pints turning you to fat?"/>
+		</page>		
+	
+		<page ID="unbirth3">
+	<text> 
+		The punk presses forward, popping her whole head into your horny pussy. She licks your inner walls, though now you find that she is having to work harder to keep your pumps primed, as she now has to turn her head to actually reach unattended and rapidly cooling areas of taco meat. “How shallow do you think my pussy is when I say deeper I mean DEEPER!” you clench your cunt tightly drawing in the poor and confused girl up to the waist.
+	</text>
+	<choice destination="unbirth4" text="You’ve got 30 seconds to make me cum, or you are going all the way in, and aren’t coming out till your gallons for me to gush."/>
+		</page>		
+		
+		<page ID="unbirth4">
+	<text> 
+		You hear a yipe originate from within your belly, as your captive begins frantically tonging everything with ravenous gluttony. She hungers to live, you think, you hunger to cum. 30……….. 29………… 28………. You feel the intensity of the ruffian increase with each passing count. The fingers on her left hand just barely free of your pussy work their way around and start polishing your pearl in the vain hope of progressing things more positively. Her fingers are actually a bit masterful and you realize she might just get you to cum before her deadline is up. 23…… 22…. 21.. 2019181716151413976321. You got really loosy goosy  there towards the end, in both saying the numbers fully, and saying them at all, and you actually started engulfing her on two, but who’s going to hold you accountable to the rules, a Warden?
+	</text>
+	<choice destination="unbirth5" text="Time’s up, you were really shit at this weren’t you."/>
+		</page>		
+		
+		<page ID="unbirth5">
+	<text> 
+		“Fucking Cheating lying Bitch!” She screams from your gut. “Bitch? ‘Huff’ No that’s you Wuffy.” You gasp out, “But soon you won’t even be a worthless dog. You’ll just be a puddle I pay the whores upstairs 5 credits to lick out of me. Unlike you I’m sure they can accomplish that much. 5 credits is the most anyone would ever spend on someone as pathetic as you, so I hope you appreciate the sacrifice I’m making.” You cruelly taunt. “No No NO NOOO!!! Anyone but you. Please! PLEASE! WARDENS!!! POLICE!!! HELP ME PLEASE! PLEASE!!!”
+	</text>
+	<choice destination="unbirth6" text="Pipe down in there."/>
+		</page>		
+		
+		<page ID="unbirth6">
+	<text> 
+		You slap your distended stomach right about where her face looks to be. “If you are going to shout in there you might as well try and find my G spot and yell into that. Pay me back at least a little for the 5 credits I’m about to waste on you.” The Ruffian probably would have responded, but her mouth fills with Roiling lady Juices. Your belly burbles with contentment. As the girl’s shape slowly softens, and juices languidly thicken. Your face reddens with pleasure, as the pressure in your belly grown, until you are ready to pop.
+	</text>
+	<choice destination="unbirth7" text="Make a mess for that Idiot cleaner Warden to mop up."/>	
+		</page>		
+	
+		<page ID="unbirth7">
+	<text> 
+		You decide to save yourself the 5 creds, you were really only saying it to be hurtful anyway. You blast your whole heaping load of Lady spoodge all over the hall, careful to get it on as many surfaces as possible, and in any cracks or crannies you can find. You must have been quite a sight, gut out to there, gushing thick waterfalls of spunk, running around spreading it about as much as possible, like you were marking your territory, all the while shrieking in ecstasy like a cat in heat. Much too soon for your liking your work is done. One fewer losers in the world, one more mess for other losers to clean up.
+	</text>
+			<effect type="feed" value="120" />
+		<special effect="removenpc" />
+		<choice destination="end" text="Fuck, one dumb bitch ain't enough, I need more." />
+		</page>
+			
+	</Conversation>

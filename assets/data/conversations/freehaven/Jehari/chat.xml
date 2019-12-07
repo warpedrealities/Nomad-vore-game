@@ -24,8 +24,18 @@
 		<condition evaluate="HASITEM" operator="greaterthan" value="1"
 			item="adaptive computation core" />		
 	</choice>
+	<choice destination="oralvore0" text="$So when are you going to gobble me up like you agreed Jehari?">
+	<condition evaluate="LOCALFLAG" operator="equals" value="1" flag="know_distraction"/>
+	</choice>
 	<choice destination="questions" text="$I'd like to ask you some questions"/>
 	<choice destination="end" text="$Nothing at the moment, I'll let you get back to your experiments"/>
+	</page>
+	
+	<page ID="oralvore0">
+	<text>
+	
+	</text>
+	
 	</page>
 	
 	<page ID="mainquestPathB0">
@@ -168,6 +178,7 @@
 	<text>
 	"All sorts really, it ALL interests me. But I particularly want to try and correct some of my own defects, Frei says I'm really smart but I keep getting distracted. I can't focus really easily and I keep on forgetting things. I did mention this already didn't I?"
 	</text>
+	<effect type="setlocalflag" flag="know_distraction" value="1" />
 	<choice destination="questions" text="$I have more questions"/>
 	<choice destination="shop" text="$I have no more questions, can I see what you have for sale?"/>
 	<choice destination="end" text="$Thankyou, I have no more questions"/>
